@@ -7,10 +7,13 @@ import helmet from 'helmet';
 import cors from 'cors';
 import { env } from './env';
 import compression from "compression";
+import mongoose from "mongoose";
 
 const app = express();
-const PORT = env.PORT;
+const PORT = env.PORT ?? 3000;
+const mongoURI = env.MONGO_URI ?? "";
 
+mongoose.connect(mongoURI).then(() => console.log("mongodb connected")).catch(err => console.error("mongodb connection failed: ", err));
 
 //middleware
 app.use(helmet()); //security header
@@ -20,7 +23,7 @@ app.use(express.json({ limit: "1mb" })); //parses json bodies
 
 //attach middleware to routes that need sessions later
 
-app.get('/', (req: Request, res: Response) => {
+app.get('/', (_req: Request, res: Response) => {
 
     res.send({
         status: 'online',
