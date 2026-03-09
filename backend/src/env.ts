@@ -12,6 +12,7 @@ const envSchema = z.object({
     SPOTIFY_CLIENT_SECRET: z.string().min(1, "spotify secret is required"),
     SPOTIFY_REDIRECT_URI: z.string().url(),
     JWT_SECRET: z.string().min(32, "JWT Secret should be at least 32 characters"),
+    REDIS_URI: z.string().url(),
 
 });
 

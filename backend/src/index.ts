@@ -8,6 +8,8 @@ import cors from 'cors';
 import { env } from './env';
 import compression from "compression";
 import mongoose from "mongoose";
+import morgan from "morgan";
+import "./utils/redis"
 
 const app = express();
 const PORT = env.PORT ?? 3000;
@@ -19,6 +21,7 @@ mongoose.connect(mongoURI).then(() => console.log("mongodb connected")).catch(er
 app.use(helmet()); //security header
 app.use(cors()); //enables cross origin requests
 app.use(compression());
+app.use(morgan('dev'));
 app.use(express.json({ limit: "1mb" })); //parses json bodies
 
 //attach middleware to routes that need sessions later
