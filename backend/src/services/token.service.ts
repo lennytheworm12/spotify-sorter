@@ -2,7 +2,7 @@
 import redis from "../utils/redis";
 
 //write the access token to the redis db 
-export const setAcessToken = async (spotifyId: string, accessToken: string): Promise<void> => {
+export const setAccessToken = async (spotifyId: string, accessToken: string): Promise<void> => {
     await redis.set(`user:${spotifyId}:accessToken`, accessToken, 'EX', 3600)
 }
 
