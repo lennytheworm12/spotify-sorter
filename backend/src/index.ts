@@ -9,6 +9,7 @@ import { env } from './env';
 import compression from "compression";
 import mongoose from "mongoose";
 import morgan from "morgan";
+import authRouter from "./routes/auth.routes";
 import "./utils/redis"
 
 const app = express();
@@ -23,6 +24,7 @@ app.use(cors()); //enables cross origin requests
 app.use(compression());
 app.use(morgan('dev'));
 app.use(express.json({ limit: "1mb" })); //parses json bodies
+app.use('/auth', authRouter);
 
 //attach middleware to routes that need sessions later
 
