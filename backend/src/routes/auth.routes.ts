@@ -10,6 +10,8 @@ import { SpotifyCallback } from "../controllers/auth.spotifyCallback"
 router.get('/spotify/login', SpotifyUserLogin);
 router.get('/spotify/callback', SpotifyCallback);
 
+
+
 export default router;
 
 
