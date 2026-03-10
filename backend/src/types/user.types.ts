@@ -12,5 +12,4 @@ export interface DatabaseUser extends BaseUser {
     createdAt: Date;
     updatedAt: Date;
 }
-
-
+export type PublicUser = Pick<DatabaseUser, 'spotifyId' | 'displayName' | 'profilePictureUrl'>
