@@ -34,3 +34,24 @@ export const getUserInfo = async (spotifyId: string): Promise<PublicUser | null>
 
 }
 
+
+//method to retrieve the refreshtoken 
+export const getRefreshToken = async (spotifyId: string): Promise<string | null> => {
+    const user = await UserModel.findOne({ spotifyId });
+    if (!user) return null;
+    return user.refreshToken;
+
+}
+
+
+export const updateRefreshToken = async (spotifyId: string, refreshToken: string): Promise<void> => {
+
+    await UserModel.findOneAndUpdate(
+        { spotifyId },
+        {
+            $set: { refreshToken: refreshToken },
+        }, { new: true }
+    )
+
+
+}
