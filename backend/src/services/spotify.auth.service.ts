@@ -15,10 +15,10 @@ export const exchangeToken = async (code: string): Promise<SpotifyToken> => {
             code: code as string,
             redirect_uri: env.SPOTIFY_REDIRECT_URI,
         });
-
+        const url = 'https://accounts.spotify.com/api/token';
         //given this information request with axios and returns a spotify token
         const response = await axios.post<SpotifyToken>(
-            'https://accounts.spotify.com/api/token',
+            url,
             paramBody.toString(),
             {
                 headers: {
