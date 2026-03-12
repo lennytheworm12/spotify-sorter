@@ -10,7 +10,7 @@ export const logoutUser = async (req: Request, res: Response) => {
     } catch (error) {
         //if redis throws
         console.error("failed to delete redis token", error);
-        return res.status(200).json({message: "logged out"});
+        return res.status(200).json({ message: "logged out" });
 
     }
 }

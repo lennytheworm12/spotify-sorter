@@ -2,7 +2,7 @@
 import redis from "../utils/redis";
 import { getRefreshToken, updateRefreshToken } from "../services/mongo.user.services";
 import type { SpotifyToken } from "../types/spotify.types";
-import {refreshAccessToken} from "../services/spotify.user.service";
+import { refreshAccessToken } from "../services/spotify.user.service";
 
 //write the access token to the redis db 
 export const setAccessToken = async (spotifyId: string, accessToken: string): Promise<void> => {
@@ -35,13 +35,12 @@ export const getValidAccessToken = async (spotifyId: string): Promise<string> =>
     const refreshToken = await getRefreshToken(spotifyId);
     if (!refreshToken) throw new Error("no refresh token found for this id");
     const responseSpotifyToken = await refreshAccessToken(refreshToken);
-    
+
     if (responseSpotifyToken.refresh_token && responseSpotifyToken.refresh_token != refreshToken) {
         await updateRefreshToken(spotifyId, responseSpotifyToken.refresh_token);
     }
     await setAccessToken(spotifyId, responseSpotifyToken.access_token);
     return responseSpotifyToken.access_token;
-
 
 
 }

@@ -8,6 +8,7 @@ export interface BaseUser {
 
 // what Mongoose gives back when you query
 export interface DatabaseUser extends BaseUser {
+    refreshToken: string; //enforce refresh token for database users
     lastChecked: Date | null;
     createdAt: Date;
     updatedAt: Date;

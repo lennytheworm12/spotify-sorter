@@ -7,6 +7,7 @@ import { SpotifyCallback } from "../controllers/auth.spotifyCallback"
 import {getMe} from "../controllers/auth.getMe";
 import {verifyUser} from "../middleware/auth.middleware";
 import {logoutUser} from "../controllers/auth.logoutUser";
+
 //first auth request will be redirecting the user to spotify screen with the correct scopes
 //
 

@@ -24,7 +24,7 @@
         // "noPropertyAccessFromIndexSignature": true,
         // Recommended Options
         "moduleResolution": "node",
-        "epModueInterop": true,
+        "esModuleInterop": true,
         "strict": true,
         "jsx": "react-jsx",
         "verbatimModuleSyntax": true,
