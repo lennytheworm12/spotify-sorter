@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1773281552213" clover="3.2.0">
-  <project timestamp="1773281552213" name="All files">
-    <metrics statements="79" coveredstatements="79" conditionals="32" coveredconditionals="32" methods="11" coveredmethods="11" elements="122" coveredelements="122" complexity="0" loc="79" ncloc="79" packages="5" files="6" classes="6"/>
+<coverage generated="1773284703987" clover="3.2.0">
+  <project timestamp="1773284703987" name="All files">
+    <metrics statements="129" coveredstatements="129" conditionals="34" coveredconditionals="34" methods="17" coveredmethods="17" elements="180" coveredelements="180" complexity="0" loc="129" ncloc="129" packages="5" files="11" classes="11"/>
     <package name="controllers">
-      <metrics statements="25" coveredstatements="25" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+      <metrics statements="52" coveredstatements="52" conditionals="10" coveredconditionals="10" methods="4" coveredmethods="4"/>
+      <file name="auth.getMe.ts" path="/home/bphan944/PersonalProjects/spotifyProject/backend/src/controllers/auth.getMe.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+      </file>
+      <file name="auth.logoutUser.ts" path="/home/bphan944/PersonalProjects/spotifyProject/backend/src/controllers/auth.logoutUser.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
       <file name="auth.spotifyCallback.ts" path="/home/bphan944/PersonalProjects/spotifyProject/backend/src/controllers/auth.spotifyCallback.ts">
         <metrics statements="25" coveredstatements="25" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
@@ -32,21 +53,36 @@
         <line num="39" count="3" type="stmt"/>
         <line num="40" count="3" type="stmt"/>
       </file>
+      <file name="auth.spotifyLogin.ts" path="/home/bphan944/PersonalProjects/spotifyProject/backend/src/controllers/auth.spotifyLogin.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="9" type="stmt"/>
+        <line num="11" count="9" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="23" count="8" type="stmt"/>
+        <line num="24" count="8" type="stmt"/>
+        <line num="33" count="8" type="stmt"/>
+        <line num="35" count="8" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+      </file>
     </package>
     <package name="middleware">
       <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <file name="auth.middleware.ts" path="/home/bphan944/PersonalProjects/spotifyProject/backend/src/middleware/auth.middleware.ts">
         <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="15" count="5" type="cond" truecount="4" falsecount="0"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="18" count="4" type="stmt"/>
-        <line num="19" count="4" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
-        <line num="22" count="2" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="15" count="15" type="cond" truecount="4" falsecount="0"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="18" count="12" type="stmt"/>
+        <line num="19" count="12" type="stmt"/>
+        <line num="21" count="10" type="stmt"/>
+        <line num="22" count="10" type="stmt"/>
         <line num="26" count="2" type="stmt"/>
       </file>
     </package>
@@ -61,7 +97,7 @@
       </file>
     </package>
     <package name="services">
-      <metrics statements="36" coveredstatements="36" conditionals="16" coveredconditionals="16" methods="8" coveredmethods="8"/>
+      <metrics statements="59" coveredstatements="59" conditionals="16" coveredconditionals="16" methods="11" coveredmethods="11"/>
       <file name="mongo.user.services.ts" path="/home/bphan944/PersonalProjects/spotifyProject/backend/src/services/mongo.user.services.ts">
         <metrics statements="14" coveredstatements="14" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
         <line num="3" count="1" type="stmt"/>
@@ -78,6 +114,35 @@
         <line num="42" count="1" type="stmt"/>
         <line num="47" count="1" type="stmt"/>
         <line num="49" count="1" type="stmt"/>
+      </file>
+      <file name="spotify.auth.service.ts" path="/home/bphan944/PersonalProjects/spotifyProject/backend/src/services/spotify.auth.service.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+      </file>
+      <file name="spotify.user.service.ts" path="/home/bphan944/PersonalProjects/spotifyProject/backend/src/services/spotify.user.service.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="28" count="5" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="30" count="5" type="stmt"/>
+        <line num="35" count="5" type="stmt"/>
+        <line num="45" count="4" type="stmt"/>
       </file>
       <file name="token.service.ts" path="/home/bphan944/PersonalProjects/spotifyProject/backend/src/services/token.service.ts">
         <metrics statements="22" coveredstatements="22" conditionals="10" coveredconditionals="10" methods="4" coveredmethods="4"/>
