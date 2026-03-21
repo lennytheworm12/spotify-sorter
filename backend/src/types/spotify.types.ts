@@ -128,6 +128,25 @@ export interface SpotifyPlaylistItem {
 }
 
 
+//playlist obj 
+export interface SpotifySimplifiedPlaylist {
+        id: string
+    name: string
+    description: string | null
+    collaborative: boolean
+    public: boolean | null
+    snapshot_id: string
+    images: SpotifyImage[]
+    external_urls: SpotifyExternalUrls
+    href: string
+    uri: string
+    type: 'playlist'
+    owner: Pick<SpotifyUser, 'id' | 'href' | 'uri' | 'external_urls' | 'type'>
+    tracks: { href: string; total: number }  // deprecated but still returned
+    items: { href: string; total: number } | null  
+}
+
+
 //liked/saved songs
 //--------------------------------------------------------------- //
 //liked songs have a different structure
@@ -140,3 +159,4 @@ export interface SpotifyLikedTrack {
 //instead of paginating in the other files we can export this
 export type SpotifyLikedSongsResponse = SpotifyPaginated<SpotifyLikedTrack>;
 export type SpotifyPlaylistItemsResponse = SpotifyPaginated<SpotifyPlaylistItem>;
+export type SpotifyUserPlaylistsResponse = SpotifyPaginated<SpotifySimplifiedPlaylist>;
