@@ -53,7 +53,7 @@ export const getPlaylistTracks = async (accessToken: string, playlistId: string)
 
     while (url) {
         const response = await axios.get<SpotifyPlaylistItemsResponse>(url, {
-            headers: { Athorization: `Bearer ${accessToken}` }
+            headers: { Authorization: `Bearer ${accessToken}` }
         })
         allTracks.push(...response.data.items);
         url = response.data.next ?? '';
