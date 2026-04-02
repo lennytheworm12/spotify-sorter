@@ -10,6 +10,8 @@ import compression from "compression";
 import mongoose from "mongoose";
 import morgan from "morgan";
 import authRouter from "./routes/auth.routes";
+import playlistRouter from "./routes/playlist.routes";
+import libraryRouter from "./routes/library.routes";
 import "./utils/redis"
 
 const app = express();
@@ -25,6 +27,8 @@ app.use(compression());
 app.use(morgan('dev'));
 app.use(express.json({ limit: "1mb" })); //parses json bodies
 app.use('/auth', authRouter);
+app.use('/playlists', playlistRouter);
+app.use('/library', libraryRouter);
 
 //attach middleware to routes that need sessions later
 
