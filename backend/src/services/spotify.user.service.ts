@@ -25,8 +25,8 @@ export const getSpotifyUserData = async (accessToken: string): Promise<SpotifyUs
 export const refreshAccessToken = async (refreshToken: string):Promise<SpotifyToken>  => {
     //method to given refresh token from our db to grab a new access token
     const url = 'https://accounts.spotify.com/api/token';
-    const crendentials = `${env.SPOTIFY_CLIENT_ID}:${env.SPOTIFY_CLIENT_SECRET}`;
-    const encoded = Buffer.from(crendentials).toString('base64');
+    const credentials = `${env.SPOTIFY_CLIENT_ID}:${env.SPOTIFY_CLIENT_SECRET}`;
+    const encoded = Buffer.from(credentials).toString('base64');
     const paramBody = new URLSearchParams({
         grant_type: 'refresh_token',
         refresh_token: refreshToken,

@@ -71,7 +71,7 @@ export interface SpotifySimplifiedArtist {
 export interface SpotifyArtist extends SpotifySimplifiedArtist {
     genres: string[];
     images: SpotifyImage[];
-    followers: { hrefs: string | null, total: number };
+    followers: { href: string | null, total: number };
     popularity: number;
 }
 
@@ -101,7 +101,7 @@ export interface SpotifyTrack {
     name: string;
     duration_ms: number;
     explicit: boolean;
-    tracker_number: number;
+    track_number: number;
     disc_number: number;
     is_local: boolean;
     is_playable?: boolean;
@@ -111,7 +111,7 @@ export interface SpotifyTrack {
     href: string;
     uri: string;
     type: 'track';
-    restrctions?: SpotifyRestrictions;
+    restrictions?: SpotifyRestrictions;
 }
 
 
@@ -142,8 +142,8 @@ export interface SpotifySimplifiedPlaylist {
     uri: string
     type: 'playlist'
     owner: Pick<SpotifyUser, 'id' | 'href' | 'uri' | 'external_urls' | 'type'>
-    tracks: { href: string; total: number }  // deprecated but still returned
-    items: { href: string; total: number } | null  
+    items: { href: string; total: number }   // current field — track count stub on simplified playlist
+    tracks?: { href: string; total: number } // deprecated, still returned by Spotify but use items instead
 }
 
 
