@@ -61,3 +61,37 @@ export const getPlaylistTracks = async (accessToken: string, playlistId: string)
     return allTracks;
 }
 
+
+// Creates a new playlist for the user and returns the new playlist ID.
+export const createPlaylist = async (
+    accessToken: string,
+    userId: string,
+    name: string
+): Promise<string> => {
+    const response = await axios.post<{ id: string }>(
+        `https://api.spotify.com/v1/users/${userId}/playlists`,
+        { name, public: false },
+        { headers: { Authorization: `Bearer ${accessToken}`, 'Content-Type': 'application/json' } }
+    );
+    return response.data.id;
+}
+
+
+const TRACK_BATCH_SIZE = 100; // Spotify limit for POST /v1/playlists/{id}/tracks
+
+// Adds track URIs to a playlist in batches of 100.
+export const addTracksToPlaylist = async (
+    accessToken: string,
+    playlistId: string,
+    trackUris: string[]
+): Promise<void> => {
+    for (let i = 0; i < trackUris.length; i += TRACK_BATCH_SIZE) {
+        const batch = trackUris.slice(i, i + TRACK_BATCH_SIZE);
+        await axios.post(
+            `https://api.spotify.com/v1/playlists/${playlistId}/tracks`,
+            { uris: batch },
+            { headers: { Authorization: `Bearer ${accessToken}`, 'Content-Type': 'application/json' } }
+        );
+    }
+}
+
