@@ -12,6 +12,7 @@ import morgan from "morgan";
 import authRouter from "./routes/auth.routes";
 import playlistRouter from "./routes/playlist.routes";
 import libraryRouter from "./routes/library.routes";
+import sortRouter from "./routes/sort.routes";
 import "./utils/redis"
 
 const app = express();
@@ -29,6 +30,7 @@ app.use(express.json({ limit: "1mb" })); //parses json bodies
 app.use('/auth', authRouter);
 app.use('/playlists', playlistRouter);
 app.use('/library', libraryRouter);
+app.use('/sort', sortRouter);
 
 //attach middleware to routes that need sessions later
 
