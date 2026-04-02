@@ -27,6 +27,12 @@ export const sort = async (req: Request, res: Response) => {
     const { sourceType, playlistId, outputMode, editablePlaylistIds }: SortBody = req.body;
     const spotifyId = req.user!.spotifyId;
 
+    if (!['liked', 'playlist'].includes(sourceType)) {
+        return res.status(400).json({ message: 'sourceType must be liked or playlist' });
+    }
+    if (!['auto-create', 'sort-into-existing'].includes(outputMode)) {
+        return res.status(400).json({ message: 'outputMode must be auto-create or sort-into-existing' });
+    }
     if (outputMode === 'sort-into-existing' && (!editablePlaylistIds || editablePlaylistIds.length === 0)) {
         return res.status(400).json({ message: 'editablePlaylistIds required for sort-into-existing mode' });
     }

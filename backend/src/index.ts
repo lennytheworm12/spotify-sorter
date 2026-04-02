@@ -5,6 +5,7 @@ main file/server for the project
 import express, { type Request, type Response } from 'express';
 import helmet from 'helmet';
 import cors from 'cors';
+import cookieParser from "cookie-parser";
 import { env } from './env';
 import compression from "compression";
 import mongoose from "mongoose";
@@ -23,7 +24,8 @@ mongoose.connect(mongoURI).then(() => console.log("mongodb connected")).catch(er
 
 //middleware
 app.use(helmet()); //security header
-app.use(cors()); //enables cross origin requests
+app.use(cors({ origin: env.FRONTEND_URL, credentials: true }));
+app.use(cookieParser());
 app.use(compression());
 app.use(morgan('dev'));
 app.use(express.json({ limit: "1mb" })); //parses json bodies
@@ -45,6 +47,6 @@ app.get('/', (_req: Request, res: Response) => {
 //
 app.listen(PORT, () => {
 
-    console.log(`server up at https://localhost:${PORT}`);
+    console.log(`server up at http://localhost:${PORT}`);
     console.log(`env: ${env.NODE_ENV}`);
 })

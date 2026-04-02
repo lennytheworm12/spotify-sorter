@@ -61,7 +61,7 @@ export function matchBucketToPlaylist(
     playlistNames: Map<string, string>
 ): string | null {
     let bestId: string | null = null;
-    let bestScore = -1;
+    let bestScore = 0; // require a positive score — zero means no meaningful match
 
     for (const [playlistId, profile] of playlistProfiles) {
         let score: number;
