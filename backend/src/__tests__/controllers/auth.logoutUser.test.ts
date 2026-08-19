@@ -80,6 +80,10 @@ describe("logoutUser", () => {
     // A cleared cookie is set with Max-Age=0 or Expires in the past
     expect(cookieString).toContain("jwt=");
     expect(cookieString).toMatch(/Max-Age=0|Expires=.*1970/);
+    // The clear options must mirror the set options (SameSite, HttpOnly, Path)
+    expect(cookieString).toContain("SameSite=Lax");
+    expect(cookieString).toContain("HttpOnly");
+    expect(cookieString).toContain("Path=/");
   });
 
   // ── deleteAccessToken called with correct spotifyId ────────────────────────

@@ -152,7 +152,7 @@ export interface SpotifySimplifiedPlaylist {
 //liked songs have a different structure
 export interface SpotifyLikedTrack {
     added_at: string;
-    track: SpotifyTrack;
+    track: SpotifyTrack | null;
 }
 
 

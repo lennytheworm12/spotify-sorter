@@ -1,0 +1,18 @@
+prompts/private/
+prompts/*.local.md
+
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+backend/src/coverage/
+
+# Local configuration and data
+.env
+.env.*
+!.env.example
+backend/mongo-data/
+
+# Tooling and OS noise
+.DS_Store
+*.log

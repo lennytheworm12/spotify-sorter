@@ -42,10 +42,12 @@ jest.mock("jsonwebtoken", () => ({
 
 jest.mock("../../env", () => ({
     env: {
+        NODE_ENV: "test",
         JWT_SECRET: "test-secret",
         SPOTIFY_CLIENT_ID: "test-client-id",
         SPOTIFY_CLIENT_SECRET: "test-client-secret",
         SPOTIFY_REDIRECT_URI: "http://localhost:3000/auth/spotify/callback",
+        FRONTEND_URL: "http://localhost:5173",
     },
 }));
 
@@ -105,51 +107,65 @@ describe("SpotifyCallback — guard cases", () => {
     // ── Spotify returned an error ─────────────────────────────────────────────
     // User denied access on the Spotify consent screen.
     // The 'error' query param will be set, e.g. ?error=access_denied
-    it("returns 404 when Spotify returns an error param", async () => {
+    it("redirects to the frontend with an access_denied marker when Spotify returns an error param", async () => {
         const res = await request(app)
             .get("/auth/spotify/callback")
             .set("Cookie", `spotify_auth_state=${STORED_STATE}`)
             .query({ error: "access_denied", state: STORED_STATE });
 
-        expect(res.status).toBe(404);
-        expect(res.body.message).toBe("user access was denied");
+        expect(res.status).toBe(302);
+        expect(res.headers.location).toBe("http://localhost:5173/?auth=error&reason=access_denied");
     });
 
     // ── State mismatch ────────────────────────────────────────────────────────
     // The state in the URL doesn't match the cookie. This is a CSRF check.
     // We reject immediately — don't proceed with the code.
-    it("returns 404 when state param doesn't match the stored cookie", async () => {
+    it("redirects with a state_mismatch marker when state param doesn't match the stored cookie", async () => {
         const res = await request(app)
             .get("/auth/spotify/callback")
             .set("Cookie", `spotify_auth_state=${STORED_STATE}`)
             .query({ code: "some-code", state: "WRONG-STATE" });
 
-        expect(res.status).toBe(404);
-        expect(res.body.message).toBe("state was not matched");
+        expect(res.status).toBe(302);
+        expect(res.headers.location).toBe("http://localhost:5173/?auth=error&reason=state_mismatch");
         expect(mockExchangeToken).not.toHaveBeenCalled();
     });
 
     // ── Missing state ─────────────────────────────────────────────────────────
-    it("returns 404 when state param is missing entirely", async () => {
+    it("redirects with a missing_state marker when state param is missing entirely", async () => {
         const res = await request(app)
             .get("/auth/spotify/callback")
             .set("Cookie", `spotify_auth_state=${STORED_STATE}`)
             .query({ code: "some-code" }); // no state
 
-        expect(res.status).toBe(404);
+        expect(res.status).toBe(302);
+        expect(res.headers.location).toBe("http://localhost:5173/?auth=error&reason=missing_state");
     });
 
     // ── No code ───────────────────────────────────────────────────────────────
     // State matched but no authorization code — shouldn't happen in normal flow,
     // but we guard against it anyway.
-    it("returns 404 when code is missing from query params", async () => {
+    it("redirects with a missing_code marker when code is missing from query params", async () => {
         const res = await request(app)
             .get("/auth/spotify/callback")
             .set("Cookie", `spotify_auth_state=${STORED_STATE}`)
             .query({ state: STORED_STATE }); // no code
 
-        expect(res.status).toBe(404);
-        expect(res.body.message).toBe("code was not found");
+        expect(res.status).toBe(302);
+        expect(res.headers.location).toBe("http://localhost:5173/?auth=error&reason=missing_code");
+    });
+
+    // ── OAuth state cookie is always cleared after the callback ──────────────
+    it("clears the spotify_auth_state cookie even on guard failures", async () => {
+        const res = await request(app)
+            .get("/auth/spotify/callback")
+            .set("Cookie", `spotify_auth_state=${STORED_STATE}`)
+            .query({ error: "access_denied" });
+
+        const cookies = res.headers["set-cookie"] as string[] | string;
+        const cookieString = Array.isArray(cookies) ? cookies.join(";") : cookies;
+        expect(cookieString).toContain("spotify_auth_state=");
+        expect(cookieString).toMatch(/Max-Age=0|Expires=.*1970/);
     });
 });
 
@@ -189,7 +205,7 @@ describe("SpotifyCallback — successful OAuth flow", () => {
         );
     });
 
-    it("sets an httpOnly JWT cookie on success", async () => {
+    it("sets an httpOnly SameSite=Lax JWT cookie on success", async () => {
         const res = await validCallbackRequest();
 
         // Supertest exposes set-cookie headers
@@ -198,11 +214,23 @@ describe("SpotifyCallback — successful OAuth flow", () => {
 
         expect(cookieString).toContain("jwt=mock-jwt-token");
         expect(cookieString).toContain("HttpOnly");
+        expect(cookieString).toContain("SameSite=Lax");
+        expect(cookieString).toContain("Path=/");
     });
 
-    it("returns 200 on a fully successful flow", async () => {
+    it("clears the OAuth state cookie on success", async () => {
         const res = await validCallbackRequest();
-        expect(res.status).toBe(200);
+        const cookies = res.headers["set-cookie"] as string[] | string;
+        const cookieString = Array.isArray(cookies) ? cookies.join(";") : cookies;
+
+        expect(cookieString).toContain("spotify_auth_state=");
+        expect(cookieString).toMatch(/Max-Age=0|Expires=.*1970/);
+    });
+
+    it("redirects to the configured frontend URL with an auth=success marker", async () => {
+        const res = await validCallbackRequest();
+        expect(res.status).toBe(302);
+        expect(res.headers.location).toBe("http://localhost:5173/?auth=success");
     });
 });
 
@@ -211,7 +239,7 @@ describe("SpotifyCallback — successful OAuth flow", () => {
 // =============================================================================
 describe("SpotifyCallback — service error handling", () => {
 
-    it("returns 500 when exchangeToken throws", async () => {
+    it("redirects with callback_failed marker when exchangeToken throws", async () => {
         mockExchangeToken.mockRejectedValue(new Error("Spotify API down"));
 
         const res = await request(app)
@@ -219,11 +247,11 @@ describe("SpotifyCallback — service error handling", () => {
             .set("Cookie", `spotify_auth_state=${STORED_STATE}`)
             .query({ code: "auth-code-123", state: STORED_STATE });
 
-        expect(res.status).toBe(500);
-        expect(res.body.error).toBe("failed to initiate callback");
+        expect(res.status).toBe(302);
+        expect(res.headers.location).toBe("http://localhost:5173/?auth=error&reason=callback_failed");
     });
 
-    it("returns 500 when getSpotifyUserData throws", async () => {
+    it("redirects with callback_failed marker when getSpotifyUserData throws", async () => {
         mockGetSpotifyUserData.mockRejectedValue(new Error("rate limited"));
 
         const res = await request(app)
@@ -231,10 +259,11 @@ describe("SpotifyCallback — service error handling", () => {
             .set("Cookie", `spotify_auth_state=${STORED_STATE}`)
             .query({ code: "auth-code-123", state: STORED_STATE });
 
-        expect(res.status).toBe(500);
+        expect(res.status).toBe(302);
+        expect(res.headers.location).toBe("http://localhost:5173/?auth=error&reason=callback_failed");
     });
 
-    it("returns 500 when upsertUser throws", async () => {
+    it("redirects with callback_failed marker when upsertUser throws", async () => {
         mockUpsertUser.mockRejectedValue(new Error("DB write failed"));
 
         const res = await request(app)
@@ -242,6 +271,7 @@ describe("SpotifyCallback — service error handling", () => {
             .set("Cookie", `spotify_auth_state=${STORED_STATE}`)
             .query({ code: "auth-code-123", state: STORED_STATE });
 
-        expect(res.status).toBe(500);
+        expect(res.status).toBe(302);
+        expect(res.headers.location).toBe("http://localhost:5173/?auth=error&reason=callback_failed");
     });
 });

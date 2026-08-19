@@ -3,6 +3,7 @@
 import type { Request, Response } from "express";
 import crypto from "crypto";
 import { env } from "../env";
+import { setOAuthStateCookie } from "../utils/cookies";
 
 export const SpotifyUserLogin = async (_req: Request, res: Response) => {
     //login a user by redirecting them to spotify login but with extra requests
@@ -30,8 +31,7 @@ export const SpotifyUserLogin = async (_req: Request, res: Response) => {
             
 
         })
-        res.cookie('spotify_auth_state', state, { httpOnly: true, maxAge: 10 * 60 * 1000 })
-        //we store the state in the cookies to expire in 10 minutes
+        setOAuthStateCookie(res, state);
         res.redirect(`https://accounts.spotify.com/authorize?${params.toString()}`);
 
     } catch (error) {

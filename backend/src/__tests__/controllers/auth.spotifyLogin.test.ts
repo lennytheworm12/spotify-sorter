@@ -106,6 +106,7 @@ describe("SpotifyUserLogin", () => {
         expect(cookieString).toContain("HttpOnly");
         // Max-Age should be 600 seconds (10 minutes)
         expect(cookieString).toContain("Max-Age=600");
+        expect(cookieString).toContain("SameSite=Lax");
     });
 
     // ── State in URL matches state in cookie ──────────────────────────────────
