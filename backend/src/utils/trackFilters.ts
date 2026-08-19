@@ -57,3 +57,22 @@ export function dedupeArtistIds(tracks: SpotifyTrack[]): string[] {
     }
     return [...ids];
 }
+
+// Concise, token-free summary of a track for bucket-level API results.
+export interface TrackSummary {
+    id: string;
+    name: string;
+    artists: string[];
+    albumName: string;
+    spotifyUrl: string;
+}
+
+export function trackToSummary(track: SpotifyTrack): TrackSummary {
+    return {
+        id: track.id,
+        name: track.name,
+        artists: track.artists.map(artist => artist.name),
+        albumName: track.album?.name ?? "",
+        spotifyUrl: track.external_urls?.spotify ?? "",
+    };
+}

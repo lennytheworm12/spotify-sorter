@@ -1,5 +1,8 @@
+import { useEffect } from 'react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { useAuth } from './hooks/useAuth'
+import { cleanupOAuthUrlParams } from './utils/oauthCleanup'
+import { userFacingErrorMessage } from './api/client'
 import { ConnectScreen } from './components/ConnectScreen'
 import { Dashboard } from './components/Dashboard'
 import './App.css'
@@ -14,7 +17,21 @@ const queryClient = new QueryClient({
 })
 
 function AppShell() {
-  const { user, isChecking, authError, retryAuth, logout } = useAuth()
+  const { user, isChecking, authError, retryAuth, logout, isLoggingOut } = useAuth()
+
+  useEffect(() => {
+    if (isChecking) {
+      return
+    }
+    if (user) {
+      cleanupOAuthUrlParams()
+      return
+    }
+    const params = new URLSearchParams(window.location.search)
+    if (params.get('auth') !== 'error') {
+      cleanupOAuthUrlParams()
+    }
+  }, [isChecking, user])
 
   if (isChecking) {
     return (
@@ -26,12 +43,22 @@ function AppShell() {
   }
 
   if (!user) {
-    return <ConnectScreen connectionError={authError} onRetry={() => void retryAuth()} />
+    return (
+      <ConnectScreen
+        connectionError={
+          authError
+            ? userFacingErrorMessage(
+                authError,
+                'We couldn’t reach the organizer service. Your saved Spotify session is unchanged; check the backend and retry.',
+              )
+            : null
+        }
+        onRetry={() => void retryAuth()}
+      />
+    )
   }
 
-  return (
-    <Dashboard user={user} onLogout={logout} />
-  )
+  return <Dashboard user={user} onLogout={logout} isSigningOut={isLoggingOut} />
 }
 
 function App() {

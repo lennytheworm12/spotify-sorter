@@ -5,6 +5,7 @@ import {
     playlistTracksToSortable,
     playlistTracksToCopyableUris,
     dedupeArtistIds,
+    trackToSummary,
 } from "../../utils/trackFilters";
 import type { SpotifyPlaylistItem, SpotifyTrack } from "../../types/spotify.types";
 
@@ -134,5 +135,46 @@ describe("dedupeArtistIds", () => {
         ] });
 
         expect(dedupeArtistIds([t1, t2])).toEqual(["a1", "a2", "a3"]);
+    });
+});
+
+describe("trackToSummary", () => {
+    it("builds a concise token-free summary from SpotifyTrack fields", () => {
+        const track = makeTrack({
+            id: "t1",
+            name: "First",
+            album: {
+                ...makeTrack().album,
+                name: "First Album",
+            },
+            artists: [
+                { id: "a1", name: "A1", href: "", uri: "", external_urls: { spotify: "" }, type: "artist" },
+                { id: "a2", name: "A2", href: "", uri: "", external_urls: { spotify: "" }, type: "artist" },
+            ],
+            external_urls: { spotify: "https://open.spotify.com/track/t1" },
+        });
+
+        expect(trackToSummary(track)).toEqual({
+            id: "t1",
+            name: "First",
+            artists: ["A1", "A2"],
+            albumName: "First Album",
+            spotifyUrl: "https://open.spotify.com/track/t1",
+        });
+    });
+
+    it("falls back to empty strings when album or external urls are missing", () => {
+        const track = makeTrack({
+            album: {} as SpotifyTrack["album"],
+            external_urls: {} as SpotifyTrack["external_urls"],
+        });
+
+        expect(trackToSummary(track)).toEqual({
+            id: "t1",
+            name: "Track",
+            artists: ["A1"],
+            albumName: "",
+            spotifyUrl: "",
+        });
     });
 });

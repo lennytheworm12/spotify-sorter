@@ -1,13 +1,16 @@
+import { useState } from 'react'
 import { spotifyLoginUrl } from '../api/client'
+import { cleanupOAuthUrlParams } from '../utils/oauthCleanup'
 import heroImg from '../assets/listening-room-hero.png'
 
 export function ConnectScreen({
-  connectionError = false,
+  connectionError = null,
   onRetry,
 }: {
-  connectionError?: boolean
+  connectionError?: string | null
   onRetry?: () => void
 }) {
+  const [dismissed, setDismissed] = useState(false)
   const query = new URLSearchParams(window.location.search)
   const authFailed = query.get('auth') === 'error'
   const reason = query.get('reason')
@@ -17,6 +20,11 @@ export function ConnectScreen({
       : reason === 'state_mismatch' || reason === 'missing_state'
         ? 'The login request expired or could not be verified. Please start again.'
         : 'Spotify login could not be completed. Please try again.'
+
+  function dismissAuthError() {
+    setDismissed(true)
+    cleanupOAuthUrlParams()
+  }
 
   return (
     <main className="connect">
@@ -37,17 +45,23 @@ export function ConnectScreen({
         </p>
         {connectionError ? (
           <div className="connect__error" role="alert">
-            <p>We couldn’t reach the organizer service. Check that the backend is running.</p>
+            <p>
+              {connectionError ||
+                'We couldn’t reach the organizer service. Your saved Spotify session is unchanged; check the backend and retry.'}
+            </p>
             {onRetry ? (
               <button className="connect__retry" type="button" onClick={onRetry}>
                 Retry connection
               </button>
             ) : null}
           </div>
-        ) : authFailed ? (
-          <p className="connect__error" role="alert">
-            {authMessage}
-          </p>
+        ) : authFailed && !dismissed ? (
+          <div className="connect__error" role="alert">
+            <p>{authMessage}</p>
+            <button className="connect__retry" type="button" onClick={dismissAuthError}>
+              Dismiss
+            </button>
+          </div>
         ) : null}
         <a className="button button--primary connect__cta" href={spotifyLoginUrl()}>
           <span className="connect__spotify" aria-hidden="true">

@@ -1,6 +1,6 @@
 // Express app assembly. Kept separate from index.ts so integration tests can
 // mount the full route stack without opening a port or connecting to Mongo.
-import express, { type Request, type Response } from "express";
+import express, { type Express, type Request, type Response } from "express";
 import helmet from "helmet";
 import cors from "cors";
 import cookieParser from "cookie-parser";
@@ -12,7 +12,10 @@ import playlistRouter from "./routes/playlist.routes";
 import libraryRouter from "./routes/library.routes";
 import sortRouter from "./routes/sort.routes";
 
-export const app = express();
+// Keep the exported declaration tied to Express's public type. Without this
+// annotation, TypeScript can infer a pnpm-internal type path that is not
+// portable across clean installs when declaration files are emitted.
+export const app: Express = express();
 
 // security header
 app.use(helmet());

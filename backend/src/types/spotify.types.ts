@@ -160,3 +160,9 @@ export interface SpotifyLikedTrack {
 export type SpotifyLikedSongsResponse = SpotifyPaginated<SpotifyLikedTrack>;
 export type SpotifyPlaylistItemsResponse = SpotifyPaginated<SpotifyPlaylistItem>;
 export type SpotifyUserPlaylistsResponse = SpotifyPaginated<SpotifySimplifiedPlaylist>;
+
+// Minimal shape returned by playlist write endpoints (add/replace items) and
+// the `fields=snapshot_id` playlist read.
+export interface SpotifySnapshotResponse {
+    snapshot_id: string;
+}

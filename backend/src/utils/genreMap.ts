@@ -1,5 +1,5 @@
 // Static genre normalization table
-// Maps Spotify's granular genre strings into ~15 fixed buckets via keyword matching.
+// Maps Spotify's granular genre strings into 16 fixed buckets via keyword matching.
 // Rules are priority-ordered — first match wins.
 
 export const GENRE_BUCKETS = [

@@ -75,15 +75,23 @@ describe("SpotifyUserLogin", () => {
     });
 
     // ── Scopes are present ────────────────────────────────────────────────────
-    // We don't assert the exact scope string (it's long and order could change),
-    // but we verify the key scopes are included.
-    it("includes required scopes in the redirect URL", async () => {
+    // Least-privilege contract: only the scopes the app actually needs are
+    // requested. We verify every kept scope is present and every removed scope
+    // (email/profile/image upload) is absent.
+    it("requests exactly the minimal required scopes in the redirect URL", async () => {
         const res = await request(app).get("/auth/spotify/login");
 
         const location = decodeURIComponent(res.headers.location as string);
         expect(location).toContain("playlist-read-private");
-        expect(location).toContain("user-read-email");
+        expect(location).toContain("playlist-read-collaborative");
+        expect(location).toContain("playlist-modify-private");
         expect(location).toContain("playlist-modify-public");
+        expect(location).toContain("user-library-read");
+
+        // Removed scopes must never be requested again.
+        expect(location).not.toContain("ugc-image-upload");
+        expect(location).not.toContain("user-read-email");
+        expect(location).not.toContain("user-read-private");
     });
 
     // ── State param is set ────────────────────────────────────────────────────
