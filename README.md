@@ -173,6 +173,8 @@ Open `http://127.0.0.1:5173` in the browser.
 
 **Latest verified run:** backend 23 suites / 247 tests passing; frontend build and lint pass. Backend tests use `mongodb-memory-server` with Redis and axios mocked, so no real Spotify credentials are needed to run them. Update these numbers after future runs instead of treating them as permanent.
 
+CI (GitHub Actions) runs the backend build and Jest suite plus the frontend lint and build on every pull request to `main` and push to `main`.
+
 ## API routes
 
 | Method | Path | Auth | Description |
