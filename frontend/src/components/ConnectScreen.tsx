@@ -47,7 +47,7 @@ export function ConnectScreen({
           <div className="connect__error" role="alert">
             <p>
               {connectionError ||
-                'We couldn’t reach the organizer service. Check that the backend is running.'}
+                'We couldn’t reach the organizer service. Your saved Spotify session is unchanged; check the backend and retry.'}
             </p>
             {onRetry ? (
               <button className="connect__retry" type="button" onClick={onRetry}>

@@ -24,6 +24,25 @@ export class ApiError extends Error {
   }
 }
 
+export const NETWORK_ERROR_MESSAGE =
+  'We couldn’t reach the organizer service. Your saved Spotify session is unchanged; check the backend and retry.'
+
+/**
+ * Transport-level failures (offline, DNS, connection refused, CORS) surface
+ * from fetch as TypeError. We normalize those into this error so the browser's
+ * raw network error text never reaches the UI.
+ */
+export class NetworkError extends Error {
+  constructor(message: string = NETWORK_ERROR_MESSAGE) {
+    super(message)
+    this.name = 'NetworkError'
+  }
+}
+
+export function userFacingErrorMessage(error: unknown, fallback: string): string {
+  return error instanceof Error && error.message.trim() ? error.message : fallback
+}
+
 function jsonHeaders(init?: RequestInit): HeadersInit | undefined {
   if (init?.body == null) {
     return init?.headers
@@ -34,11 +53,19 @@ function jsonHeaders(init?: RequestInit): HeadersInit | undefined {
 }
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(`${API_BASE}${path}`, {
-    credentials: 'include',
-    ...init,
-    headers: jsonHeaders(init),
-  })
+  let response: Response
+  try {
+    response = await fetch(`${API_BASE}${path}`, {
+      credentials: 'include',
+      ...init,
+      headers: jsonHeaders(init),
+    })
+  } catch (error) {
+    if (error instanceof TypeError) {
+      throw new NetworkError()
+    }
+    throw error
+  }
 
   if (response.status === 204) {
     return undefined as T

@@ -20,8 +20,9 @@ Hand-sorting a large library by genre is tedious and inconsistent. Spotify Sorte
 - **Liked / playlist sources** — sort from Liked Songs or from an owned/collaborative playlist; source playlists are never modified or deleted and can never be selected as a destination.
 - **Safety-first backups** — optionally copy every replayable source track into a new private backup before any genre write; a backup failure aborts the sort before destinations are touched.
 - **Auto-create destinations** — one new private playlist per genre bucket.
-- **Existing destinations with safe defaults** — append tracks to the best-matching selected playlists (genre-profile matching with a name-keyword fallback). The default mode creates safe private copies of the selected playlists and leaves the originals untouched. An explicit direct mode appends to the originals, and only when every original item is Web-API replayable so undo can rebuild them exactly.
-- **Selective undo** — Redis stores the latest user-scoped sort action for 24 hours with per-destination baselines, timestamps, and expected Spotify snapshot IDs. Undo reconstructs baseline + remaining buckets and preflights every affected destination's snapshot first; any mismatch aborts with a 409 before a single write.
+- **Existing destinations with safe defaults** — append tracks to the best-matching selected playlists (genre-profile matching with a name-keyword fallback). The default mode creates safe private copies of the selected playlists — each copy can be given a custom trimmed, nonblank name up to 100 characters, defaulting to `"<Original playlist name> — Spotify Sorter Copy"` — and leaves the originals untouched. An explicit direct mode appends to the originals, and only when every original item is Web-API replayable so undo can rebuild them exactly.
+- **Selective undo** — Redis stores the latest user-scoped sort action for 24 hours with per-destination baselines, timestamps, and expected Spotify snapshot IDs. In the UI every bucket is shown as Applied by default; checking a row only selects it for undo, and Spotify is not changed until the user presses Undo (select-all-applied and clear are available). Undo reconstructs baseline + remaining buckets and preflights every affected destination's snapshot first; any mismatch aborts with a 409 before a single write. Playlists are never deleted or unfollowed — undoing everything on an empty baseline leaves the playlist present but empty.
+- **Resilient frontend networking** — transport-level failures are normalized so the browser's raw `Failed to fetch` never reaches the UI; the `/auth/me` session check retries only network failures twice with short backoff, and reconnect plus a manual Retry remain available.
 - **Pagination** — all Spotify reads follow `next` links, 50 items per page.
 - **Batching and pacing** — artist lookups are grouped by 50 (Spotify's limit) and playlist writes by 100, with 250 ms pacing between write batches and up to 3 retries on 429 responses honoring `Retry-After`.
 - **MongoDB artist cache** — artist genres are cached for 14 days; only missing or stale artists hit Spotify.
@@ -41,7 +42,7 @@ Express API (TypeScript)
    └── Spotify Web API ── playlist/library reads, artist lookups, playlist writes
 ```
 
-- **React SPA** — login screen, authenticated dashboard, source/output/safety selection, sort run, results ledger, undo panel, and logout. It talks to the backend with `credentials: 'include'` and reads `VITE_API_URL` (default `http://127.0.0.1:3000`).
+- **React SPA** — login screen, authenticated dashboard with in-page Setup/Results/Undo navigation, source/output/safety selection, sort run, results ledger, undo panel, and logout. It talks to the backend with `credentials: 'include'` and reads `VITE_API_URL` (default `http://127.0.0.1:3000`).
 - **Express API** — owns the OAuth handshake, issues and verifies the JWT cookie, restricts CORS to `FRONTEND_URL`, validates sort and undo bodies with Zod, and orchestrates every Spotify call, token refresh, and undo preflight/rebuild.
 - **MongoDB** — `User` documents (Spotify profile + long-lived refresh token) and `Artist` documents (genre cache keyed by Spotify artist ID with `lastFetchedAt`).
 - **Redis** — ephemeral cache of Spotify access tokens plus the user-scoped undo action records.
@@ -171,7 +172,7 @@ Open `http://127.0.0.1:5173` in the browser.
 | frontend | `pnpm lint` | ESLint |
 | frontend | `pnpm preview` | Previews the production build |
 
-**Latest verified run:** backend 23 suites / 247 tests passing; frontend build and lint pass. Backend tests use `mongodb-memory-server` with Redis and axios mocked, so no real Spotify credentials are needed to run them. Update these numbers after future runs instead of treating them as permanent.
+**Current automated baseline:** backend 23 suites / 255 tests passing; frontend build and lint pass. Backend tests use `mongodb-memory-server` with Redis and axios mocked, so no real Spotify credentials are needed to run them. Update these numbers after future runs instead of treating them as permanent.
 
 CI (GitHub Actions) runs the backend build and Jest suite plus the frontend lint and build on every pull request to `main` and push to `main`.
 
@@ -187,13 +188,13 @@ CI (GitHub Actions) runs the backend build and Jest suite plus the frontend lint
 | `GET` | `/library/liked` | JWT | Liked songs (paginated) |
 | `GET` | `/playlists` | JWT | User's playlists (paginated) |
 | `GET` | `/playlists/:id/tracks` | JWT | Tracks for a playlist (paginated) |
-| `POST` | `/sort` | JWT | Genre sort orchestration with optional playlist backup (Zod-validated; returns backup, per-bucket results, destination copies, and excluded playlists) |
+| `POST` | `/sort` | JWT | Genre sort orchestration with optional playlist backup and per-destination safe-copy names (Zod-validated; returns backup, per-bucket results, destination copies, and excluded playlists) |
 | `GET` | `/sort/actions/latest` | JWT | Latest undoable sort action for the user, or `204` when none |
 | `POST` | `/sort/actions/:actionId/undo` | JWT | Selective bucket undo; preflights all affected Spotify snapshots and returns `409` on any conflict before writing |
 
 ## Manual end-to-end checklist
 
-The automated checks pass (see above), and an **earlier MVP build** was exercised against a real Spotify account: the user reported a real local OAuth return, dashboard load, and a playlist-source sort that wrote 13 tracks to destinations. That happened before the latest safe-copy, undo, and write-pacing changes, so it is evidence the earlier MVP path worked — not proof that every current mode or undo has been manually smoke-tested.
+The automated checks pass (see above), and the app has been exercised against a real Spotify account: the user reported a successful local OAuth return, dashboard load, and a playlist-source sort that wrote 13 tracks to destinations. The latest tracked action also shows three buckets successfully undone with one bucket still applied. This is useful integration evidence, but the newest connectivity copy, custom safe-copy-name editor, select-all undo UI, and fully-undone state have not yet had a user real-account smoke test.
 
 The **current release still needs a short real Spotify smoke test after restart**. Do not mark the current release complete until these pass:
 
@@ -201,10 +202,10 @@ The **current release still needs a short real Spotify smoke test after restart*
 - [ ] `docker compose up -d`; backend and frontend both running; open `http://127.0.0.1:5173`
 - [ ] "Connect Spotify" → authorize → browser returns to the frontend and the dashboard shows your account
 - [ ] Liked Songs → auto-create → new private playlists appear for every bucket that has tracks, and the ledger shows per-bucket counts and track details
-- [ ] Playlist source → sort into existing playlists with **Create safe copies**: private copies appear, originals are unchanged, the source playlist is disabled as a destination, and non-editable playlists appear under "Excluded playlists"
+- [ ] Playlist source → sort into existing playlists with **Create safe copies**: private copies appear with the chosen custom names (blank or >100-character names are rejected), originals are unchanged, the source playlist is disabled as a destination, and non-editable playlists appear under "Excluded playlists"
 - [ ] Playlist source → **Add directly to originals** on a fully replay-safe playlist: tracks are appended to the originals and the undo panel becomes available
 - [ ] With "Create a backup copy first" enabled, a private backup appears before genre outputs; the source remains unchanged
-- [ ] Undo: select one bucket → the affected playlist is rebuilt to baseline + remaining buckets
+- [ ] Undo: checking rows changes nothing on Spotify until Undo is pressed; select-all-applied and clear behave, and undoing one bucket rebuilds the affected playlist to baseline + remaining buckets
 - [ ] Undo conflict: edit a destination playlist after the sort, then attempt undo → the operation is rejected with a 409 and no writes
 - [ ] Sign out clears the session and returns to the connect screen
 - [ ] Re-run a sort on the same source and confirm the ledger and playlist refresh behave as expected (note: the MVP appends tracks again; it does not deduplicate)

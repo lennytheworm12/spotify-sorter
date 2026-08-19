@@ -86,7 +86,7 @@ export function UndoPanel({
 
   if (new Date(action.expiresAt).getTime() <= renderNow) {
     return (
-      <section className="undo" aria-labelledby="undo-heading">
+      <section className="undo" id="undo" aria-labelledby="undo-heading">
         <h2 id="undo-heading">Undo last action</h2>
         <p className="undo__empty">
           No recent undo available — the 24-hour recovery window has ended.
@@ -119,6 +119,9 @@ export function UndoPanel({
     (bucket) => bucket.status === 'applied',
   ).length
   const undoneCount = action.buckets.length - appliedCount
+  const appliedBucketNames = action.buckets
+    .filter((bucket) => bucket.status === 'applied')
+    .map((bucket) => bucket.bucket)
   const undoneBucketCount = lastResponse
     ? lastResponse.undoneDestinations.reduce(
         (sum, destination) => sum + destination.undoneBuckets.length,
@@ -135,9 +138,19 @@ export function UndoPanel({
   function toggleBucket(bucketName: string, checked: boolean) {
     onSelectionChange(
       checked
-        ? [...selectedBuckets, bucketName]
+        ? selectedBuckets.includes(bucketName)
+          ? selectedBuckets
+          : [...selectedBuckets, bucketName]
         : selectedBuckets.filter((name) => name !== bucketName),
     )
+  }
+
+  function selectAllApplied() {
+    onSelectionChange(appliedBucketNames)
+  }
+
+  function clearSelection() {
+    onSelectionChange([])
   }
 
   function handleUndo() {
@@ -148,18 +161,22 @@ export function UndoPanel({
   }
 
   return (
-    <section className="undo" aria-labelledby="undo-heading">
+    <section className="undo" id="undo" aria-labelledby="undo-heading">
       <div className="undo__heading">
         <h2 id="undo-heading">Undo last action</h2>
         <span className="undo__window">
           Ran {formatDateTime(action.createdAt) || 'recently'} · available until{' '}
           {formatDateTime(action.expiresAt) || 'the window ends'}
         </span>
+        <span className="undo__count">
+          {appliedCount} applied · {undoneCount} undone
+        </span>
       </div>
 
       <p className="undo__explainer">
-        The timestamp is history metadata. Undo compares each playlist’s current Spotify
-        snapshot before changing anything, so newer edits you’ve made are protected.
+        Checking a row only selects it — nothing changes on Spotify until you press the undo
+        button. Undo compares each playlist’s current Spotify snapshot before changing
+        anything, so newer edits you’ve made are protected.
       </p>
 
       {lastResponse ? (
@@ -241,16 +258,34 @@ export function UndoPanel({
         </p>
       ) : null}
 
+      {appliedCount === 0 ? (
+        <div className="undo__all-undone" role="status">
+          <p className="undo__all-undone-title">
+            Everything from this run has been undone.
+          </p>
+          <p className="undo__all-undone-copy">
+            All additions were removed and the destination playlists remain — a playlist
+            whose baseline was empty is now empty again.
+          </p>
+        </div>
+      ) : null}
+
       {groups.map((group) => (
         <div className="undo__group" key={group.playlistId || 'other'}>
           <h3 className="undo__group-title">{group.playlistName}</h3>
           <ul className="undo__list">
             {group.buckets.map((bucket) => {
               const undone = bucket.status === 'undone'
+              const selected = !undone && selectedBuckets.includes(bucket.bucket)
+              const statusLabel = undone
+                ? 'Undone'
+                : selected
+                  ? 'Selected for undo'
+                  : 'Applied'
               const inputId = bucketInputId(action.id, bucket.bucket)
               return (
                 <li
-                  className={`undo__row${undone ? ' undo__row--undone' : ''}`}
+                  className={`undo__row${undone ? ' undo__row--undone' : ''}${selected ? ' undo__row--selected' : ''}`}
                   key={bucket.bucket}
                 >
                   <div className="undo__row-main">
@@ -258,7 +293,7 @@ export function UndoPanel({
                       type="checkbox"
                       id={inputId}
                       className="undo__checkbox"
-                      checked={selectedBuckets.includes(bucket.bucket)}
+                      checked={selected}
                       disabled={undone || isUndoing}
                       onChange={(event) =>
                         toggleBucket(bucket.bucket, event.target.checked)
@@ -272,9 +307,9 @@ export function UndoPanel({
                       </span>
                     </label>
                     <span
-                      className={`undo__status${undone ? ' undo__status--undone' : ''}`}
+                      className={`undo__status${undone ? ' undo__status--undone' : ''}${selected ? ' undo__status--selected' : ''}`}
                     >
-                      {undone ? 'Undone' : 'Applied'}
+                      {statusLabel}
                     </span>
                   </div>
                   <details className="undo__details">
@@ -293,21 +328,45 @@ export function UndoPanel({
         </div>
       ))}
 
-      <div className="undo__actions">
-        <p className="undo__selection-hint">
-          {selectedBuckets.length === 0
-            ? 'Select at least one applied bucket to undo.'
-            : `${selectedBuckets.length} bucket${selectedBuckets.length === 1 ? '' : 's'} selected.`}
-        </p>
-        <button
-          className="button button--ghost"
-          type="button"
-          disabled={selectedBuckets.length === 0 || isUndoing}
-          onClick={handleUndo}
-        >
-          Undo selected additions
-        </button>
-      </div>
+      {appliedCount > 0 ? (
+        <div className="undo__actions">
+          <div className="undo__selection-tools">
+            <button
+              className="button button--ghost button--small"
+              type="button"
+              disabled={isUndoing}
+              onClick={selectAllApplied}
+            >
+              Select all applied
+            </button>
+            <button
+              className="button button--ghost button--small"
+              type="button"
+              disabled={selectedBuckets.length === 0 || isUndoing}
+              onClick={clearSelection}
+            >
+              Clear selection
+            </button>
+          </div>
+          <div className="undo__actions-row">
+            <p className="undo__selection-hint">
+              {selectedBuckets.length === 0
+                ? 'Select at least one applied bucket to undo.'
+                : `${selectedBuckets.length} bucket${selectedBuckets.length === 1 ? '' : 's'} selected.`}
+            </p>
+            <button
+              className="button button--ghost"
+              type="button"
+              disabled={selectedBuckets.length === 0 || isUndoing}
+              onClick={handleUndo}
+            >
+              {selectedBuckets.length === 0
+                ? 'Undo selected additions'
+                : `Undo ${selectedBuckets.length} selected addition${selectedBuckets.length === 1 ? '' : 's'}`}
+            </button>
+          </div>
+        </div>
+      ) : null}
 
       {isUndoing ? (
         <div className="undo__progress" role="status" aria-live="polite">
@@ -316,12 +375,6 @@ export function UndoPanel({
         </div>
       ) : null}
 
-      {undoneCount > 0 ? (
-        <p className="undo__note">
-          {undoneCount} bucket{undoneCount === 1 ? '' : 's'} already undone from
-          this run.
-        </p>
-      ) : null}
     </section>
   )
 }

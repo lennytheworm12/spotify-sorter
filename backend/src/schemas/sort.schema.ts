@@ -18,6 +18,20 @@ export const sortRequestSchema = z
             .array(z.string().trim().min(1))
             .min(1, "editablePlaylistIds must contain at least one playlist id")
             .optional(),
+        // Optional per-destination names for safe-copy clones. Keys must be
+        // original destination playlist ids selected via editablePlaylistIds;
+        // values are trimmed, nonblank, and at most 100 characters. Omitted
+        // keys keep the automatic "{original} — Spotify Sorter Copy" fallback.
+        safeCopyNames: z
+            .record(
+                z.string(),
+                z
+                    .string()
+                    .trim()
+                    .min(1, "safe copy name must not be blank")
+                    .max(100, "safe copy name must be at most 100 characters")
+            )
+            .optional(),
         createBackup: z.boolean().optional(),
     })
     .superRefine((data, ctx) => {
@@ -49,6 +63,36 @@ export const sortRequestSchema = z
                 message:
                     "existingPlaylistWriteMode is only valid when outputMode is sort-into-existing",
             });
+        }
+        if (data.safeCopyNames && data.outputMode !== "sort-into-existing") {
+            ctx.addIssue({
+                code: z.ZodIssueCode.custom,
+                path: ["safeCopyNames"],
+                message: "safeCopyNames is only valid when outputMode is sort-into-existing",
+            });
+        }
+        if (
+            data.safeCopyNames &&
+            data.outputMode === "sort-into-existing" &&
+            (data.existingPlaylistWriteMode ?? "copy") !== "copy"
+        ) {
+            ctx.addIssue({
+                code: z.ZodIssueCode.custom,
+                path: ["safeCopyNames"],
+                message:
+                    "safeCopyNames is only valid when existingPlaylistWriteMode is copy",
+            });
+        }
+        if (data.safeCopyNames) {
+            for (const key of Object.keys(data.safeCopyNames)) {
+                if (!data.editablePlaylistIds?.includes(key)) {
+                    ctx.addIssue({
+                        code: z.ZodIssueCode.custom,
+                        path: ["safeCopyNames", key],
+                        message: `safeCopyNames key '${key}' is not in editablePlaylistIds`,
+                    });
+                }
+            }
         }
         if (
             data.sourceType === "playlist" &&

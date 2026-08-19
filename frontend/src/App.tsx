@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { useAuth } from './hooks/useAuth'
 import { cleanupOAuthUrlParams } from './utils/oauthCleanup'
+import { userFacingErrorMessage } from './api/client'
 import { ConnectScreen } from './components/ConnectScreen'
 import { Dashboard } from './components/Dashboard'
 import './App.css'
@@ -44,7 +45,14 @@ function AppShell() {
   if (!user) {
     return (
       <ConnectScreen
-        connectionError={authError?.message ?? null}
+        connectionError={
+          authError
+            ? userFacingErrorMessage(
+                authError,
+                'We couldn’t reach the organizer service. Your saved Spotify session is unchanged; check the backend and retry.',
+              )
+            : null
+        }
         onRetry={() => void retryAuth()}
       />
     )

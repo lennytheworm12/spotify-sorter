@@ -85,7 +85,9 @@ See `backend/.env.example` for every supported env var.
 - `GET /playlists/:id/tracks` — playlist tracks (protected)
 - `POST /sort` — genre sort orchestration (protected; optional `createBackup`
   for playlist sources; `existingPlaylistWriteMode: 'copy' | 'direct'` for
-  `sort-into-existing`)
+  `sort-into-existing`; optional `safeCopyNames` — a map from selected original
+  playlist IDs to trimmed, nonblank, ≤100-character copy names, valid only in
+  copy mode)
 - `GET /sort/actions/latest` — latest undoable sort action for the current
   user (protected; `204` when none)
 - `POST /sort/actions/:actionId/undo` — selectively undo buckets from a sort
@@ -93,8 +95,9 @@ See `backend/.env.example` for every supported env var.
 
 ## Notes
 
-- Auth boundary: stateless JWT in an HttpOnly cookie; access token in Redis
-  (1-hour TTL); refresh token in MongoDB. This is not server-side sessions.
+- Auth boundary: stateless JWT (14-day expiry / cookie Max-Age) in an HttpOnly
+  cookie; access token in Redis (1-hour TTL); refresh token in MongoDB. This is
+  not server-side sessions.
 - OAuth consent requests only the scopes the app uses: `playlist-read-private`,
   `playlist-read-collaborative`, `playlist-modify-private`,
   `playlist-modify-public`, and `user-library-read` (no email/profile/image
@@ -111,9 +114,12 @@ See `backend/.env.example` for every supported env var.
   never be used as a sort destination (`sort-into-existing`).
 - `sort-into-existing` protects selected playlists by default:
   `existingPlaylistWriteMode` defaults to `copy`, which clones each matched
-  destination once as `"<name> — Spotify Sorter Copy"`, copies the original's
-  existing tracks into the clone first, then appends the sorted candidates —
-  the original is never modified. Set `existingPlaylistWriteMode: "direct"` to
+  destination once, copies the original's existing tracks into the clone
+  first, then appends the sorted candidates — the original is never modified.
+  An optional `safeCopyNames` map names the clones per original playlist ID
+  (values are trimmed, nonblank, and at most 100 characters); omitted IDs fall
+  back to `"<name> — Spotify Sorter Copy"`. Set
+  `existingPlaylistWriteMode: "direct"` to
   append candidates to the originals explicitly. Direct mode only writes to
   destinations whose full item list is Web-API-replayable (no local,
   unavailable/null, unplayable, or malformed items); any other destination is
@@ -129,9 +135,12 @@ See `backend/.env.example` for every supported env var.
 - Each successful sort persists a 24-hour undo action in Redis (keyed by
   Spotify user id) with destination baselines, applied buckets, and the final
   expected Spotify `snapshot_id`. Undo preflights every affected destination's
-  current snapshot and aborts with `409` before any write on a mismatch.
-  Sorting still succeeds if action persistence fails; the response carries an
-  `actionWarning` instead of an `action`.
+  current snapshot and aborts with `409` before any write on a mismatch. Undo
+  rebuilds each destination as its baseline plus still-applied buckets and
+  never deletes or unfollows playlists: undoing everything on an empty
+  baseline leaves the playlist present but empty. Sorting still succeeds if
+  action persistence fails; the response carries an `actionWarning` instead
+  of an `action`.
 - The backend never deletes or edits source playlists/tracks — sort is
   copy-only.
 

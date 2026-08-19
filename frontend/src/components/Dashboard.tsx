@@ -6,6 +6,7 @@ import {
   fetchPlaylists,
   runSort,
   undoSortAction,
+  userFacingErrorMessage,
 } from '../api/client'
 import type {
   CurrentUser,
@@ -23,6 +24,10 @@ import type {
   UndoResponse,
 } from '../api/types'
 import { UndoPanel } from './UndoPanel'
+
+function defaultCopyName(playlist: Playlist | undefined): string {
+  return `${playlist?.name ?? 'Original'} — Spotify Sorter Copy`
+}
 
 function trackCount(playlist: Playlist): number | null {
   const total = playlist.items?.total ?? playlist.tracks?.total
@@ -70,6 +75,9 @@ function DashboardHeader({
           <div className="header__meta">
             <span className="header__name">{user.displayName ?? user.spotifyId}</span>
             <span className="header__status">Connected</span>
+            <span className="header__session">
+              Session remembered securely in this browser
+            </span>
             {logoutError ? <span className="header__error">{logoutError}</span> : null}
           </div>
           <button
@@ -225,6 +233,8 @@ function OutputFieldset({
   outputMode,
   writeMode,
   editablePlaylistIds,
+  destinationIds,
+  safeCopyNames,
   playlists,
   spotifyId,
   sourcePlaylistId,
@@ -232,10 +242,13 @@ function OutputFieldset({
   onOutputModeChange,
   onWriteModeChange,
   onEditableChange,
+  onSafeCopyNameChange,
 }: {
   outputMode: OutputMode
   writeMode: ExistingPlaylistWriteMode
   editablePlaylistIds: string[]
+  destinationIds: string[]
+  safeCopyNames: Record<string, string>
   playlists: Playlist[]
   spotifyId: string
   sourcePlaylistId: string | null
@@ -243,6 +256,7 @@ function OutputFieldset({
   onOutputModeChange: (value: OutputMode) => void
   onWriteModeChange: (value: ExistingPlaylistWriteMode) => void
   onEditableChange: (playlistId: string, checked: boolean) => void
+  onSafeCopyNameChange: (playlistId: string, value: string) => void
 }) {
   const unavailable = playlists.filter(
     (playlist) => !isEditable(playlist, spotifyId) && playlist.id !== sourcePlaylistId,
@@ -349,6 +363,55 @@ function OutputFieldset({
               )
             })}
           </div>
+          {writeMode === 'copy' && destinationIds.length > 0 ? (
+            <div className="copy-names">
+              <h3 className="copy-names__title">Name safe copies</h3>
+              <p className="copy-names__note">
+                Each safe copy is a new private playlist. Edit the names below —
+                your originals stay unchanged.
+              </p>
+              <div className="copy-names__list">
+                {destinationIds.map((playlistId) => {
+                  const playlist = playlists.find((item) => item.id === playlistId)
+                  const value = safeCopyNames[playlistId] ?? defaultCopyName(playlist)
+                  const trimmed = value.trim()
+                  const invalid = trimmed.length === 0 || trimmed.length > 100
+                  const inputId = `safe-copy-name-${playlistId}`
+                  const errorId = `${inputId}-error`
+                  return (
+                    <div
+                      className={`copy-name${invalid ? ' copy-name--invalid' : ''}`}
+                      key={playlistId}
+                    >
+                      <label className="copy-name__label" htmlFor={inputId}>
+                        {playlist?.name ?? 'Selected playlist'}
+                      </label>
+                      <input
+                        id={inputId}
+                        className="copy-name__input"
+                        type="text"
+                        value={value}
+                        maxLength={100}
+                        disabled={disabled}
+                        onChange={(event) =>
+                          onSafeCopyNameChange(playlistId, event.target.value)
+                        }
+                        aria-invalid={invalid || undefined}
+                        aria-describedby={invalid ? errorId : undefined}
+                      />
+                      {invalid ? (
+                        <p className="copy-name__error" id={errorId}>
+                          {trimmed.length === 0
+                            ? 'Enter a name for this safe copy.'
+                            : 'Keep the name to 100 characters or fewer.'}
+                        </p>
+                      ) : null}
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          ) : null}
           {unavailable.length > 0 ? (
             <p className="group__note">
               {unavailable.length} playlist{unavailable.length === 1 ? '' : 's'} shown{' '}
@@ -382,6 +445,7 @@ function SortWorkspace({
   const [outputMode, setOutputMode] = useState<OutputMode>('auto-create')
   const [writeMode, setWriteMode] = useState<ExistingPlaylistWriteMode>('copy')
   const [editablePlaylistIds, setEditablePlaylistIds] = useState<string[]>([])
+  const [safeCopyNames, setSafeCopyNames] = useState<Record<string, string>>({})
   const [isSorting, setIsSorting] = useState(false)
   const [sortError, setSortError] = useState<string | null>(null)
   const [progressStage, setProgressStage] = useState<'analyzing' | 'adding'>('analyzing')
@@ -424,7 +488,16 @@ function SortWorkspace({
     (sourceType === 'liked' || playlistId !== '') &&
     (outputMode === 'auto-create' || destinationIds.length > 0)
 
-  const canSubmit = ready && !isSorting
+  const copyNamesValid =
+    outputMode !== 'sort-into-existing' ||
+    writeMode !== 'copy' ||
+    destinationIds.every((id) => {
+      const playlist = playlists.find((item) => item.id === id)
+      const trimmed = (safeCopyNames[id] ?? defaultCopyName(playlist)).trim()
+      return trimmed.length > 0 && trimmed.length <= 100
+    })
+
+  const canSubmit = ready && copyNamesValid && !isSorting
 
   function handleSourceChange(value: SourceType) {
     setSourceType(value)
@@ -432,6 +505,14 @@ function SortWorkspace({
       setPlaylistId('')
     }
     setEditablePlaylistIds((current) => current.filter((id) => id !== playlistId))
+    setSafeCopyNames((current) => {
+      if (!(playlistId in current)) {
+        return current
+      }
+      const next = { ...current }
+      delete next[playlistId]
+      return next
+    })
   }
 
   function handlePlaylistChange(value: string) {
@@ -439,6 +520,15 @@ function SortWorkspace({
       current.filter((id) => id !== playlistId && id !== value),
     )
     setPlaylistId(value)
+    setSafeCopyNames((current) => {
+      if (!(playlistId in current) && !(value in current)) {
+        return current
+      }
+      const next = { ...current }
+      delete next[playlistId]
+      delete next[value]
+      return next
+    })
   }
 
   function handleEditableChange(playlistIdToToggle: string, checked: boolean) {
@@ -447,6 +537,16 @@ function SortWorkspace({
         ? [...current, playlistIdToToggle]
         : current.filter((id) => id !== playlistIdToToggle),
     )
+    if (!checked) {
+      setSafeCopyNames((current) => {
+        if (!(playlistIdToToggle in current)) {
+          return current
+        }
+        const next = { ...current }
+        delete next[playlistIdToToggle]
+        return next
+      })
+    }
   }
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -458,6 +558,12 @@ function SortWorkspace({
     setSortError(null)
     onSortStart()
 
+    const copyNamePayload: Record<string, string> = {}
+    for (const id of destinationIds) {
+      const playlist = playlists.find((item) => item.id === id)
+      copyNamePayload[id] = (safeCopyNames[id] ?? defaultCopyName(playlist)).trim()
+    }
+
     const payload: SortRequest = {
       sourceType,
       outputMode,
@@ -467,6 +573,7 @@ function SortWorkspace({
         ? {
             editablePlaylistIds: destinationIds,
             existingPlaylistWriteMode: writeMode,
+            ...(writeMode === 'copy' ? { safeCopyNames: copyNamePayload } : {}),
           }
         : {}),
     }
@@ -476,9 +583,10 @@ function SortWorkspace({
       onSortSuccess(response)
     } catch (error) {
       setSortError(
-        error instanceof Error
-          ? error.message
-          : 'The sort didn’t complete. Check that the backend is running, then try again.',
+        userFacingErrorMessage(
+          error,
+          'The sort didn’t complete. Check that the backend is running, then try again.',
+        ),
       )
     } finally {
       setIsSorting(false)
@@ -493,7 +601,11 @@ function SortWorkspace({
         : 'Analyzing genres…'
 
   return (
-    <form className={`workspace${isSorting ? ' workspace--busy' : ''}`} onSubmit={handleSubmit}>
+    <form
+      id="setup"
+      className={`workspace${isSorting ? ' workspace--busy' : ''}`}
+      onSubmit={handleSubmit}
+    >
       <SourceFieldset
         sourceType={sourceType}
         playlistId={playlistId}
@@ -512,6 +624,8 @@ function SortWorkspace({
         outputMode={outputMode}
         writeMode={writeMode}
         editablePlaylistIds={editablePlaylistIds}
+        destinationIds={destinationIds}
+        safeCopyNames={safeCopyNames}
         playlists={playlists}
         spotifyId={spotifyId}
         sourcePlaylistId={sourceType === 'playlist' ? playlistId || null : null}
@@ -520,10 +634,14 @@ function SortWorkspace({
           setOutputMode(value)
           if (value === 'auto-create') {
             setEditablePlaylistIds([])
+            setSafeCopyNames({})
           }
         }}
         onWriteModeChange={setWriteMode}
         onEditableChange={handleEditableChange}
+        onSafeCopyNameChange={(playlistId, value) =>
+          setSafeCopyNames((current) => ({ ...current, [playlistId]: value }))
+        }
       />
 
       {sortError ? (
@@ -828,6 +946,25 @@ export function Dashboard({
     }
   }, [results])
 
+  // Normalize selections: dedupe bucket names and drop any that were undone or
+  // disappeared when the tracked action data changes. Deriving at render time
+  // guarantees the undo payload can never include stale names.
+  const normalizedSelectedUndoBuckets = useMemo(() => {
+    if (selectedUndoBuckets.length === 0) {
+      return selectedUndoBuckets
+    }
+    const appliedNames = new Set(
+      latestAction
+        ? latestAction.buckets
+            .filter((bucket) => bucket.status === 'applied')
+            .map((bucket) => bucket.bucket)
+        : [],
+    )
+    return Array.from(new Set(selectedUndoBuckets)).filter((name) =>
+      appliedNames.has(name),
+    )
+  }, [selectedUndoBuckets, latestAction])
+
   const playlists = playlistsQuery.data ?? []
 
   return (
@@ -865,93 +1002,111 @@ export function Dashboard({
         {playlistsQuery.isPending ? <LoadingList /> : null}
         {playlistsQuery.isError ? (
           <PlaylistLoadError
-            message={playlistsQuery.error?.message ?? ''}
+            message={userFacingErrorMessage(
+              playlistsQuery.error,
+              'We couldn’t load your playlists. Check that the backend is running, then try again.',
+            )}
             onRetry={() => void playlistsQuery.refetch()}
           />
         ) : null}
 
         {playlistsQuery.isSuccess ? (
-          <div className="dashboard__grid">
-            <SortWorkspace
-              playlists={playlists}
-              spotifyId={user.spotifyId}
-              onSortStart={() => {
-                setResults(null)
-                setExcluded(null)
-                setBackup(null)
-                setDestinationCopies(null)
-                setSortActionWarning(null)
-                setSelectedUndoBuckets([])
-                setLastUndoResponse(null)
-                setUndoConflict(null)
-                setUndoError(null)
-              }}
-              onSortSuccess={(response) => {
-                setResults(response.results)
-                setExcluded(response.excluded ?? null)
-                setBackup(response.backup ?? null)
-                setDestinationCopies(response.destinationCopies ?? null)
-                setSortActionWarning(response.actionWarning ?? null)
-                if (response.action) {
-                  queryClient.setQueryData(
-                    ['latest-sort-action', user.spotifyId],
-                    response.action,
-                  )
-                  setSelectedUndoBuckets([])
-                }
-                void playlistsQuery.refetch()
-              }}
-            />
-            <div className="dashboard__side">
-              {latestActionQuery.isError ? (
-                <div className="undo-history-warning" role="status">
-                  <p>Undo history couldn’t be loaded right now.</p>
-                  <button
-                    className="button button--ghost"
-                    type="button"
-                    onClick={() => void latestActionQuery.refetch()}
-                  >
-                    Retry
-                  </button>
-                </div>
-              ) : null}
-              {sortActionWarning ? (
-                <div className="action-warning" role="alert">
-                  <p className="action-warning__title">
-                    Playlist changes succeeded, but this run can’t be undone.
-                  </p>
-                  <p className="action-warning__detail">
-                    {sortActionWarning} An older tracked action may still appear below and remains
-                    protected by Spotify’s snapshot check.
-                  </p>
-                </div>
-              ) : null}
+          <>
+            <nav className="section-nav" aria-label="On this page">
+              <a className="section-nav__link" href="#setup">
+                Setup
+              </a>
+              <a className="section-nav__link" href="#results">
+                Results
+              </a>
               {latestAction ? (
-                <UndoPanel
-                  action={latestAction}
-                  isUndoing={undoMutation.isPending}
-                  selectedBuckets={selectedUndoBuckets}
-                  onSelectionChange={setSelectedUndoBuckets}
-                  onUndo={(buckets) => {
-                    undoMutation.mutate({
-                      actionId: latestAction.id,
-                      buckets,
-                    })
-                  }}
-                  lastResponse={lastUndoResponse}
-                  conflict={undoConflict}
-                  undoError={undoError}
-                />
+                <a className="section-nav__link" href="#undo">
+                  Undo
+                </a>
               ) : null}
-              <ResultsLedger
-                results={results}
-                excluded={excluded}
-                backup={backup}
-                destinationCopies={destinationCopies}
-                undoneBuckets={undoneBucketNames}
+            </nav>
+            <div className="dashboard__grid">
+              <SortWorkspace
+                playlists={playlists}
+                spotifyId={user.spotifyId}
+                onSortStart={() => {
+                  setResults(null)
+                  setExcluded(null)
+                  setBackup(null)
+                  setDestinationCopies(null)
+                  setSortActionWarning(null)
+                  setSelectedUndoBuckets([])
+                  setLastUndoResponse(null)
+                  setUndoConflict(null)
+                  setUndoError(null)
+                }}
+                onSortSuccess={(response) => {
+                  setResults(response.results)
+                  setExcluded(response.excluded ?? null)
+                  setBackup(response.backup ?? null)
+                  setDestinationCopies(response.destinationCopies ?? null)
+                  setSortActionWarning(response.actionWarning ?? null)
+                  if (response.action) {
+                    queryClient.setQueryData(
+                      ['latest-sort-action', user.spotifyId],
+                      response.action,
+                    )
+                    setSelectedUndoBuckets([])
+                  }
+                  void playlistsQuery.refetch()
+                }}
               />
+              <div className="dashboard__side">
+                {latestActionQuery.isError ? (
+                  <div className="undo-history-warning" role="status">
+                    <p>Undo history couldn’t be loaded right now.</p>
+                    <button
+                      className="button button--ghost"
+                      type="button"
+                      onClick={() => void latestActionQuery.refetch()}
+                    >
+                      Retry
+                    </button>
+                  </div>
+                ) : null}
+                {sortActionWarning ? (
+                  <div className="action-warning" role="alert">
+                    <p className="action-warning__title">
+                      Playlist changes succeeded, but this run can’t be undone.
+                    </p>
+                    <p className="action-warning__detail">
+                      {sortActionWarning} An older tracked action may still appear below and remains
+                      protected by Spotify’s snapshot check.
+                    </p>
+                  </div>
+                ) : null}
+                {latestAction ? (
+                  <UndoPanel
+                    action={latestAction}
+                    isUndoing={undoMutation.isPending}
+                    selectedBuckets={normalizedSelectedUndoBuckets}
+                    onSelectionChange={setSelectedUndoBuckets}
+                    onUndo={(buckets) => {
+                      undoMutation.mutate({
+                        actionId: latestAction.id,
+                        buckets,
+                      })
+                    }}
+                    lastResponse={lastUndoResponse}
+                    conflict={undoConflict}
+                    undoError={undoError}
+                  />
+                ) : null}
+                <ResultsLedger
+                  results={results}
+                  excluded={excluded}
+                  backup={backup}
+                  destinationCopies={destinationCopies}
+                  undoneBuckets={undoneBucketNames}
+                />
+              </div>
             </div>
-          </div>
+          </>
         ) : null}
       </main>
     </div>

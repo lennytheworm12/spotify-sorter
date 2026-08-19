@@ -75,7 +75,7 @@ export const sort = async (req: Request, res: Response) => {
             issues: parsed.error.issues,
         });
     }
-    const { sourceType, playlistId, outputMode, editablePlaylistIds, createBackup, existingPlaylistWriteMode } = parsed.data;
+    const { sourceType, playlistId, outputMode, editablePlaylistIds, createBackup, existingPlaylistWriteMode, safeCopyNames } = parsed.data;
     const spotifyId = req.user!.spotifyId;
 
     try {
@@ -402,7 +402,10 @@ export const sort = async (req: Request, res: Response) => {
 
         for (const [originalId, assignments] of assignmentsByOriginal) {
             const original = playlistById.get(originalId)!;
-            const cloneName = `${original.name} — Spotify Sorter Copy`;
+            // Custom names apply only to actual matched originals (validated
+            // keys are selected editable playlists); omitted entries keep the
+            // automatic fallback name.
+            const cloneName = safeCopyNames?.[originalId] ?? `${original.name} — Spotify Sorter Copy`;
             const baseUris = playlistTracksToCopyableUris(playlistItemsByPlaylist.get(originalId) ?? []);
             let cloneId: string | undefined;
             try {

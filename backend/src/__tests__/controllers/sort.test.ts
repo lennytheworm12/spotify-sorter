@@ -255,6 +255,91 @@ describe("POST /sort — validation", () => {
         expect(jest.requireMock("../../services/token.service").getValidAccessToken).not.toHaveBeenCalled();
         expect(mockGetUserLikedSongs).not.toHaveBeenCalled();
     });
+
+    it("returns 400 for a blank safeCopyNames value before any token/Spotify calls", async () => {
+        const res = await request(app)
+            .post("/sort")
+            .set("Cookie", "jwt=valid")
+            .send({
+                sourceType: "liked",
+                outputMode: "sort-into-existing",
+                editablePlaylistIds: ["pl-hiphop"],
+                safeCopyNames: { "pl-hiphop": "   " },
+            });
+
+        expect(res.status).toBe(400);
+        expect(res.body.message).toContain("safe copy name must not be blank");
+        expect(jest.requireMock("../../services/token.service").getValidAccessToken).not.toHaveBeenCalled();
+        expect(mockGetUserLikedSongs).not.toHaveBeenCalled();
+    });
+
+    it("returns 400 for a >100 character safeCopyNames value before any token/Spotify calls", async () => {
+        const res = await request(app)
+            .post("/sort")
+            .set("Cookie", "jwt=valid")
+            .send({
+                sourceType: "liked",
+                outputMode: "sort-into-existing",
+                editablePlaylistIds: ["pl-hiphop"],
+                safeCopyNames: { "pl-hiphop": "x".repeat(101) },
+            });
+
+        expect(res.status).toBe(400);
+        expect(res.body.message).toContain("at most 100 characters");
+        expect(jest.requireMock("../../services/token.service").getValidAccessToken).not.toHaveBeenCalled();
+        expect(mockGetUserLikedSongs).not.toHaveBeenCalled();
+    });
+
+    it("returns 400 when a safeCopyNames key is not in editablePlaylistIds, before any token/Spotify calls", async () => {
+        const res = await request(app)
+            .post("/sort")
+            .set("Cookie", "jwt=valid")
+            .send({
+                sourceType: "liked",
+                outputMode: "sort-into-existing",
+                editablePlaylistIds: ["pl-hiphop"],
+                safeCopyNames: { "pl-other": "Custom Name" },
+            });
+
+        expect(res.status).toBe(400);
+        expect(res.body.message).toContain("'pl-other' is not in editablePlaylistIds");
+        expect(jest.requireMock("../../services/token.service").getValidAccessToken).not.toHaveBeenCalled();
+        expect(mockGetUserLikedSongs).not.toHaveBeenCalled();
+    });
+
+    it("rejects safeCopyNames for auto-create before any token/Spotify calls", async () => {
+        const res = await request(app)
+            .post("/sort")
+            .set("Cookie", "jwt=valid")
+            .send({
+                sourceType: "liked",
+                outputMode: "auto-create",
+                safeCopyNames: { "pl-any": "Custom Name" },
+            });
+
+        expect(res.status).toBe(400);
+        expect(res.body.message).toContain("safeCopyNames is only valid when outputMode is sort-into-existing");
+        expect(jest.requireMock("../../services/token.service").getValidAccessToken).not.toHaveBeenCalled();
+        expect(mockGetUserLikedSongs).not.toHaveBeenCalled();
+    });
+
+    it("rejects safeCopyNames for direct mode before any token/Spotify calls", async () => {
+        const res = await request(app)
+            .post("/sort")
+            .set("Cookie", "jwt=valid")
+            .send({
+                sourceType: "liked",
+                outputMode: "sort-into-existing",
+                editablePlaylistIds: ["pl-hiphop"],
+                existingPlaylistWriteMode: "direct",
+                safeCopyNames: { "pl-hiphop": "Custom Name" },
+            });
+
+        expect(res.status).toBe(400);
+        expect(res.body.message).toContain("safeCopyNames is only valid when existingPlaylistWriteMode is copy");
+        expect(jest.requireMock("../../services/token.service").getValidAccessToken).not.toHaveBeenCalled();
+        expect(mockGetUserLikedSongs).not.toHaveBeenCalled();
+    });
 });
 
 // =============================================================================
@@ -738,6 +823,126 @@ describe("POST /sort — existing-mode copy protection", () => {
                 status: "success",
             },
         ]);
+    });
+
+    it("uses trimmed custom safe-copy names and propagates them into destination copies, results, and undo state", async () => {
+        mockGetUserLikedSongs.mockResolvedValue([
+            likedItem(makeTrack("t1", ["a1"])), // Hip Hop
+            likedItem(makeTrack("t2", ["a2"])), // Pop
+        ]);
+        mockGetUserPlaylists.mockResolvedValue([
+            makePlaylist("pl-hiphop", "Hip Hop Mix", "user1"),
+            makePlaylist("pl-pop", "Pop Mix", "user1"),
+        ]);
+        mockGetPlaylistTracks.mockImplementation(async (_token: string, id: string) => {
+            if (id === "pl-hiphop") return [playlistItem(makeTrack("pt1", ["t-a1"]))];
+            if (id === "pl-pop") return [playlistItem(makeTrack("pt2", ["t-a2"]))];
+            return [];
+        });
+        mockCreatePlaylist
+            .mockResolvedValueOnce("clone-hiphop")
+            .mockResolvedValueOnce("clone-pop");
+        mockAddTracksToPlaylist
+            .mockResolvedValueOnce("snap-base-1")
+            .mockResolvedValueOnce("snap-base-2")
+            .mockResolvedValueOnce("snap-hiphop")
+            .mockResolvedValueOnce("snap-pop");
+
+        const res = await request(app)
+            .post("/sort")
+            .set("Cookie", "jwt=valid")
+            .send({
+                sourceType: "liked",
+                outputMode: "sort-into-existing",
+                editablePlaylistIds: ["pl-hiphop", "pl-pop"],
+                safeCopyNames: {
+                    "pl-hiphop": "  My Custom Hip Hop  ",
+                    "pl-pop": "My Pop Copy",
+                },
+            });
+
+        expect(res.status).toBe(200);
+        // Values are trimmed before reaching the service boundary.
+        expect(mockCreatePlaylist).toHaveBeenCalledWith("access-token", "My Custom Hip Hop");
+        expect(mockCreatePlaylist).toHaveBeenCalledWith("access-token", "My Pop Copy");
+        // Propagated into the response destination copies.
+        expect(res.body.destinationCopies).toEqual([
+            {
+                sourcePlaylistId: "pl-hiphop",
+                sourcePlaylistName: "Hip Hop Mix",
+                playlistId: "clone-hiphop",
+                playlistName: "My Custom Hip Hop",
+                tracksCopied: 1,
+                status: "success",
+            },
+            {
+                sourcePlaylistId: "pl-pop",
+                sourcePlaylistName: "Pop Mix",
+                playlistId: "clone-pop",
+                playlistName: "My Pop Copy",
+                tracksCopied: 1,
+                status: "success",
+            },
+        ]);
+        // Propagated into per-bucket results.
+        expect(res.body.results.map((r: { bucket: string; playlistName: string }) => [r.bucket, r.playlistName])).toEqual([
+            ["Hip Hop", "My Custom Hip Hop"],
+            ["Pop", "My Pop Copy"],
+        ]);
+        // Propagated into the recorded undo action state.
+        const actionInput = mockCreateSortAction.mock.calls[0][0] as {
+            destinations: { playlistName: string }[];
+            buckets: { bucket: string; playlistName: string }[];
+        };
+        expect(actionInput.destinations.map(d => d.playlistName)).toEqual([
+            "My Custom Hip Hop",
+            "My Pop Copy",
+        ]);
+        expect(actionInput.buckets.map(b => [b.bucket, b.playlistName])).toEqual([
+            ["Hip Hop", "My Custom Hip Hop"],
+            ["Pop", "My Pop Copy"],
+        ]);
+        expect(res.body.action.destinations.map((d: { playlistName: string }) => d.playlistName)).toEqual([
+            "My Custom Hip Hop",
+            "My Pop Copy",
+        ]);
+    });
+
+    it("falls back to the automatic copy name when safeCopyNames omits a matched destination", async () => {
+        mockGetUserLikedSongs.mockResolvedValue([
+            likedItem(makeTrack("t1", ["a1"])), // Hip Hop
+            likedItem(makeTrack("t2", ["a2"])), // Pop
+        ]);
+        mockGetUserPlaylists.mockResolvedValue([
+            makePlaylist("pl-hiphop", "Hip Hop Mix", "user1"),
+            makePlaylist("pl-pop", "Pop Mix", "user1"),
+        ]);
+        mockGetPlaylistTracks.mockImplementation(async (_token: string, id: string) => {
+            if (id === "pl-hiphop") return [playlistItem(makeTrack("pt1", ["t-a1"]))];
+            if (id === "pl-pop") return [playlistItem(makeTrack("pt2", ["t-a2"]))];
+            return [];
+        });
+        mockCreatePlaylist
+            .mockResolvedValueOnce("clone-hiphop")
+            .mockResolvedValueOnce("clone-pop");
+
+        const res = await request(app)
+            .post("/sort")
+            .set("Cookie", "jwt=valid")
+            .send({
+                sourceType: "liked",
+                outputMode: "sort-into-existing",
+                editablePlaylistIds: ["pl-hiphop", "pl-pop"],
+                safeCopyNames: { "pl-hiphop": "Custom Hip Hop" },
+            });
+
+        expect(res.status).toBe(200);
+        expect(mockCreatePlaylist).toHaveBeenCalledWith("access-token", "Custom Hip Hop");
+        expect(mockCreatePlaylist).toHaveBeenCalledWith("access-token", "Pop Mix — Spotify Sorter Copy");
+        expect(res.body.destinationCopies[0].playlistName).toBe("Custom Hip Hop");
+        expect(res.body.destinationCopies[1].playlistName).toBe("Pop Mix — Spotify Sorter Copy");
+        expect(res.body.results[0].playlistName).toBe("Custom Hip Hop");
+        expect(res.body.results[1].playlistName).toBe("Pop Mix — Spotify Sorter Copy");
     });
 
     it("fails only the affected destination when its base-item copy fails, retaining the clone id", async () => {

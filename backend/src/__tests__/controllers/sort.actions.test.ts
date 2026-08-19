@@ -338,6 +338,70 @@ describe("POST /sort/actions/:actionId/undo — success", () => {
         ]);
     });
 
+    it("clears an empty-baseline destination when every applied bucket is selected", async () => {
+        // Mirrors an auto-create/copy destination: the playlist was created
+        // empty and only contains sort-applied buckets, so undoing all of them
+        // rebuilds it as an empty list (never deletes/unfollows the playlist).
+        const action = makeAction({
+            destinations: [
+                {
+                    playlistId: "new-hiphop",
+                    playlistName: "Hip Hop",
+                    baselineUris: [],
+                    expectedSnapshotId: "snap-sort",
+                    bucketOrder: ["Hip Hop", "Pop"],
+                },
+            ],
+            buckets: [
+                {
+                    bucket: "Hip Hop",
+                    playlistId: "new-hiphop",
+                    playlistName: "Hip Hop",
+                    trackUris: ["spotify:track:t1"],
+                    tracks: [],
+                    status: "applied",
+                },
+                {
+                    bucket: "Pop",
+                    playlistId: "new-hiphop",
+                    playlistName: "Hip Hop",
+                    trackUris: ["spotify:track:t2"],
+                    tracks: [],
+                    status: "applied",
+                },
+            ],
+        });
+        mockGetSortAction.mockResolvedValue(action);
+
+        const res = await request(app)
+            .post("/sort/actions/action-1/undo")
+            .set("Cookie", "jwt=valid")
+            .send({ buckets: ["Hip Hop", "Pop"] });
+
+        expect(res.status).toBe(200);
+        expect(res.body.status).toBe("complete");
+        // Empty baseline + no still-applied buckets -> rebuild with [].
+        expect(mockReplacePlaylistItems).toHaveBeenCalledTimes(1);
+        expect(mockReplacePlaylistItems).toHaveBeenCalledWith(
+            "access-token",
+            "new-hiphop",
+            []
+        );
+        expect(res.body.undoneDestinations).toEqual([
+            {
+                playlistId: "new-hiphop",
+                playlistName: "Hip Hop",
+                undoneBuckets: ["Hip Hop", "Pop"],
+                newSnapshotId: "snap-undone",
+            },
+        ]);
+        // Every selected bucket is marked undone in the persisted state.
+        expect(res.body.action.buckets.every((bucket: { status: string }) => bucket.status === "undone"))
+            .toBe(true);
+        expect(res.body.action.destinations[0].expectedSnapshotId).toBe("snap-undone");
+        expect(mockUpdateSortAction).toHaveBeenCalledWith(res.body.action);
+    });
+
     it("rebuilds each selected destination exactly once when buckets span playlists", async () => {
         const action = makeAction({
             destinations: [

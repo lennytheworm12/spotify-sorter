@@ -210,12 +210,15 @@ describe("SpotifyCallback — successful OAuth flow", () => {
 
         // Supertest exposes set-cookie headers
         const cookies = res.headers["set-cookie"] as string[] | string;
-        const cookieString = Array.isArray(cookies) ? cookies.join(";") : cookies;
+        const cookieArray = Array.isArray(cookies) ? cookies : [cookies];
+        const jwtCookie = cookieArray.find(c => c.startsWith("jwt="))!;
 
-        expect(cookieString).toContain("jwt=mock-jwt-token");
-        expect(cookieString).toContain("HttpOnly");
-        expect(cookieString).toContain("SameSite=Lax");
-        expect(cookieString).toContain("Path=/");
+        expect(jwtCookie).toContain("jwt=mock-jwt-token");
+        // Persistent 14-day browser session: 14 days in seconds.
+        expect(jwtCookie).toContain("Max-Age=1209600");
+        expect(jwtCookie).toContain("HttpOnly");
+        expect(jwtCookie).toContain("SameSite=Lax");
+        expect(jwtCookie).toContain("Path=/");
     });
 
     it("clears the OAuth state cookie on success", async () => {

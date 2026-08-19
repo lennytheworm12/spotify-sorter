@@ -37,3 +37,17 @@ the WSL dev server.
 - All API requests send `credentials: 'include'` so the JWT cookie is
   forwarded. Starting OAuth is a full browser navigation to
   `GET /auth/spotify/login`.
+- Transport failures are normalized: raw `Failed to fetch` network errors are
+  replaced with a friendly backend-unreachable message. The `/auth/me` session
+  check retries only network failures (twice, with short backoff) and
+  auto-refetches when the browser reconnects; a manual Retry remains.
+- The authenticated dashboard has in-page Setup / Results / Undo navigation.
+- In safe-copy mode, each selected destination copy can be given a custom
+  trimmed, nonblank name up to 100 characters (default
+  `"<Original playlist name> — Spotify Sorter Copy"`); originals are unchanged.
+- Undo UI: all buckets are shown as Applied by default; checking a row only
+  selects it for undo and Spotify is not changed until the user presses Undo.
+  Select-all-applied and clear-selection are available. Undo is snapshot-safe
+  and rebuilds each destination as its baseline plus still-applied buckets;
+  undoing everything on an empty baseline leaves the playlist present but
+  empty — undo never deletes or unfollows playlists.

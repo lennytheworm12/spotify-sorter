@@ -31,6 +31,13 @@ export interface SortRequest {
   editablePlaylistIds?: string[]
   existingPlaylistWriteMode?: ExistingPlaylistWriteMode
   createBackup?: boolean
+  /**
+   * Optional user-chosen names for safe copies in sort-into-existing copy
+   * mode, keyed by selected original destination playlist IDs. Values are
+   * trimmed, nonblank, and at most 100 characters. The backend falls back to
+   * "Original — Spotify Sorter Copy" for missing entries.
+   */
+  safeCopyNames?: Record<string, string>
 }
 
 export interface Track {
