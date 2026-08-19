@@ -2,6 +2,7 @@ export default {
     preset: 'ts-jest',
     testEnvironment: 'node',
     rootDir: './src',
+    moduleFileExtensions: ['ts', 'js', 'json', 'node'],
     testMatch: ['**/__tests__/**/*.test.ts'],
     moduleNameMapper: {
         '^(\\.{1,2}/.*)\\.js$': '$1'
