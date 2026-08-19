@@ -24,19 +24,31 @@ const mockGetArtists = getArtists as jest.Mock;
 
 let mongod: MongoMemoryServer;
 
+// The first MongoMemoryServer.create() on a fresh runner downloads the MongoDB
+// binary (~120 MB), which can exceed Jest's default 5s hook timeout. Give the
+// startup hook an explicit generous timeout so a legitimate cold-start download
+// doesn't fail the suite. Teardown is guarded so a failed startup can't mask the
+// original setup error with undefined stop() calls or disconnected dropDatabase
+// noise.
+const MONGO_STARTUP_TIMEOUT_MS = 120_000;
+
 beforeAll(async () => {
     mongod = await MongoMemoryServer.create();
     await mongoose.connect(mongod.getUri());
-});
+}, MONGO_STARTUP_TIMEOUT_MS);
 
 afterAll(async () => {
-    await mongoose.disconnect();
-    await mongod.stop();
+    if (mongod) {
+        await mongoose.disconnect();
+        await mongod.stop();
+    }
 });
 
 afterEach(async () => {
     jest.clearAllMocks();
-    await mongoose.connection.dropDatabase();
+    if (mongoose.connection.readyState === 1) {
+        await mongoose.connection.dropDatabase();
+    }
 });
 
 const makeArtist = (id: string, genres: string[]): SpotifyArtist => ({
