@@ -8,6 +8,11 @@ export const sortRequestSchema = z
         outputMode: z.enum(["auto-create", "sort-into-existing"], {
             message: "outputMode must be 'auto-create' or 'sort-into-existing'",
         }),
+        existingPlaylistWriteMode: z
+            .enum(["copy", "direct"], {
+                message: "existingPlaylistWriteMode must be 'copy' or 'direct'",
+            })
+            .optional(),
         playlistId: z.string().trim().min(1).optional(),
         editablePlaylistIds: z
             .array(z.string().trim().min(1))
@@ -37,6 +42,14 @@ export const sortRequestSchema = z
                 message: "createBackup is only valid when sourceType is playlist",
             });
         }
+        if (data.outputMode === "auto-create" && data.existingPlaylistWriteMode) {
+            ctx.addIssue({
+                code: z.ZodIssueCode.custom,
+                path: ["existingPlaylistWriteMode"],
+                message:
+                    "existingPlaylistWriteMode is only valid when outputMode is sort-into-existing",
+            });
+        }
         if (
             data.sourceType === "playlist" &&
             data.outputMode === "sort-into-existing" &&
@@ -49,6 +62,15 @@ export const sortRequestSchema = z
                 message: "source playlist cannot be a destination",
             });
         }
-    });
+    })
+    // Default existing-mode writes to cloning so clients that omit the field
+    // can never mutate the selected originals.
+    .transform((data) => ({
+        ...data,
+        existingPlaylistWriteMode:
+            data.outputMode === "sort-into-existing"
+                ? (data.existingPlaylistWriteMode ?? "copy")
+                : undefined,
+    }));
 
 export type SortRequest = z.infer<typeof sortRequestSchema>;

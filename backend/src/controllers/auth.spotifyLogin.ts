@@ -11,16 +11,15 @@ export const SpotifyUserLogin = async (_req: Request, res: Response) => {
     try {
         const state = crypto.randomUUID();//get a random state for the req
 
-        //define the scope of our request
-        let scope= [
+        // Minimal scopes: read playlists/liked songs and write to playlists.
+        // No email, profile, or image-upload scopes are requested.
+        const scope = [
             "playlist-read-private",
             "playlist-read-collaborative",
             "playlist-modify-private",
             "playlist-modify-public",
             "user-library-read",
-            "ugc-image-upload",
-            "user-read-email", "user-read-private"
-        ]
+        ];
         const scopeString = scope.join(' ');
         const params = new URLSearchParams({
             response_type: "code",

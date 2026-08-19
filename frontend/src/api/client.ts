@@ -1,30 +1,43 @@
 import type {
   CurrentUser,
   Playlist,
+  SortAction,
   SortRequest,
   SortResponse,
+  UndoResponse,
 } from './types'
 
-const API_BASE = (import.meta.env.VITE_API_URL ?? 'http://localhost:3000').replace(
+const API_BASE = (import.meta.env.VITE_API_URL ?? 'http://127.0.0.1:3000').replace(
   /\/+$/,
   '',
 )
 
-class ApiError extends Error {
+export class ApiError extends Error {
   status: number
+  body: unknown
 
-  constructor(message: string, status: number) {
+  constructor(message: string, status: number, body: unknown = null) {
     super(message)
     this.status = status
+    this.body = body
     this.name = 'ApiError'
   }
+}
+
+function jsonHeaders(init?: RequestInit): HeadersInit | undefined {
+  if (init?.body == null) {
+    return init?.headers
+  }
+  const headers = new Headers(init.headers)
+  headers.set('Content-Type', 'application/json')
+  return headers
 }
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const response = await fetch(`${API_BASE}${path}`, {
     credentials: 'include',
-    headers: { 'Content-Type': 'application/json' },
     ...init,
+    headers: jsonHeaders(init),
   })
 
   if (response.status === 204) {
@@ -43,7 +56,7 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
       body && typeof body === 'object' && 'message' in body
         ? String((body as { message: unknown }).message)
         : `Request failed (${response.status})`
-    throw new ApiError(message, response.status)
+    throw new ApiError(message, response.status, body)
   }
 
   return body as T
@@ -77,4 +90,22 @@ export async function runSort(payload: SortRequest): Promise<SortResponse> {
     method: 'POST',
     body: JSON.stringify(payload),
   })
+}
+
+export async function fetchLatestSortAction(): Promise<SortAction | null> {
+  const action = await request<SortAction | undefined>('/sort/actions/latest')
+  return action ?? null
+}
+
+export async function undoSortAction(
+  actionId: string,
+  bucketNames: string[],
+): Promise<UndoResponse> {
+  return request<UndoResponse>(
+    `/sort/actions/${encodeURIComponent(actionId)}/undo`,
+    {
+      method: 'POST',
+      body: JSON.stringify({ buckets: bucketNames }),
+    },
+  )
 }

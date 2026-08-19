@@ -48,6 +48,13 @@ jest.mock("../../services/token.service", () => ({
     getValidAccessToken: jest.fn(),
 }));
 
+jest.mock("../../services/sort.action.service", () => ({
+    createSortAction: jest.fn(),
+    getLatestSortAction: jest.fn(),
+    getSortAction: jest.fn(),
+    updateSortAction: jest.fn(),
+}));
+
 import { exchangeToken } from "../../services/spotify.auth.service";
 import { getSpotifyUserData } from "../../services/spotify.user.service";
 import { upsertUser, getUserInfo } from "../../services/mongo.user.services";

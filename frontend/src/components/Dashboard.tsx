@@ -1,16 +1,28 @@
 import { useEffect, useMemo, useState } from 'react'
-import { useQuery } from '@tanstack/react-query'
-import { fetchPlaylists, runSort } from '../api/client'
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import {
+  ApiError,
+  fetchLatestSortAction,
+  fetchPlaylists,
+  runSort,
+  undoSortAction,
+} from '../api/client'
 import type {
   CurrentUser,
+  DestinationCopy,
   ExcludedPlaylist,
+  ExistingPlaylistWriteMode,
   OutputMode,
   Playlist,
   SortBackup,
   SortRequest,
   SortResultItem,
+  SortResponse,
   SourceType,
+  UndoConflictResponse,
+  UndoResponse,
 } from '../api/types'
+import { UndoPanel } from './UndoPanel'
 
 function trackCount(playlist: Playlist): number | null {
   const total = playlist.items?.total ?? playlist.tracks?.total
@@ -39,10 +51,12 @@ function DashboardHeader({
   user,
   onLogout,
   logoutError,
+  isSigningOut,
 }: {
   user: CurrentUser
   onLogout: () => void
   logoutError: string | null
+  isSigningOut: boolean
 }) {
   return (
     <header className="header">
@@ -58,8 +72,13 @@ function DashboardHeader({
             <span className="header__status">Connected</span>
             {logoutError ? <span className="header__error">{logoutError}</span> : null}
           </div>
-          <button className="button button--ghost" type="button" onClick={onLogout}>
-            Sign out
+          <button
+            className="button button--ghost"
+            type="button"
+            disabled={isSigningOut}
+            onClick={onLogout}
+          >
+            {isSigningOut ? 'Signing out…' : 'Sign out'}
           </button>
         </div>
       </div>
@@ -77,13 +96,18 @@ function LoadingList() {
 }
 
 function PlaylistLoadError({
+  message,
   onRetry,
 }: {
+  message: string
   onRetry: () => void
 }) {
   return (
     <div className="workspace__status workspace__status--error" role="alert">
-      <p>We couldn’t load your playlists. Check that the backend is running, then try again.</p>
+      <p>
+        {message ||
+          'We couldn’t load your playlists. Check that the backend is running, then try again.'}
+      </p>
       <button className="button button--ghost" type="button" onClick={onRetry}>
         Retry
       </button>
@@ -96,6 +120,8 @@ function SourceFieldset({
   playlistId,
   playlists,
   createBackup,
+  spotifyId,
+  disabled,
   onSourceChange,
   onPlaylistChange,
   onCreateBackupChange,
@@ -104,6 +130,8 @@ function SourceFieldset({
   playlistId: string
   playlists: Playlist[]
   createBackup: boolean
+  spotifyId: string
+  disabled: boolean
   onSourceChange: (value: SourceType) => void
   onPlaylistChange: (value: string) => void
   onCreateBackupChange: (checked: boolean) => void
@@ -118,6 +146,7 @@ function SourceFieldset({
             name="source"
             value="liked"
             checked={sourceType === 'liked'}
+            disabled={disabled}
             onChange={() => onSourceChange('liked')}
           />
           <span className="radio__label">Liked Songs</span>
@@ -128,6 +157,7 @@ function SourceFieldset({
             name="source"
             value="playlist"
             checked={sourceType === 'playlist'}
+            disabled={disabled}
             onChange={() => onSourceChange('playlist')}
           />
           <span className="radio__label">Existing Playlist</span>
@@ -144,24 +174,39 @@ function SourceFieldset({
               id="source-playlist"
               className="select"
               value={playlistId}
+              disabled={disabled}
               onChange={(event) => onPlaylistChange(event.target.value)}
             >
               <option value="" disabled>
                 Select a playlist…
               </option>
-              {playlists.map((playlist) => (
-                <option key={playlist.id} value={playlist.id}>
-                  {playlist.name}
-                  {trackCount(playlist) !== null ? ` · ${trackCount(playlist)} tracks` : ''}
-                </option>
-              ))}
+              {playlists.map((playlist) => {
+                const readable = isEditable(playlist, spotifyId)
+                const countLabel =
+                  trackCount(playlist) !== null ? ` · ${trackCount(playlist)} tracks` : ''
+                return (
+                  <option key={playlist.id} value={playlist.id} disabled={!readable}>
+                    {playlist.name}
+                    {countLabel}
+                    {!readable ? ' · Track access unavailable' : ''}
+                  </option>
+                )
+              })}
             </select>
           </div>
+          {playlists.some((playlist) => !isEditable(playlist, spotifyId)) ? (
+            <p className="group__note">
+              Only playlists you own or collaborate on can be read as a source — Spotify hides
+              track contents for other playlists, so those are disabled. Liked Songs is always
+              available.
+            </p>
+          ) : null}
           <label className="checkbox checkbox--wide backup-option">
             <input
               type="checkbox"
               name="create-backup"
               checked={createBackup}
+              disabled={disabled}
               onChange={(event) => onCreateBackupChange(event.target.checked)}
             />
             <span className="checkbox__name">Create a backup copy first</span>
@@ -178,19 +223,25 @@ function SourceFieldset({
 
 function OutputFieldset({
   outputMode,
+  writeMode,
   editablePlaylistIds,
   playlists,
   spotifyId,
   sourcePlaylistId,
+  disabled,
   onOutputModeChange,
+  onWriteModeChange,
   onEditableChange,
 }: {
   outputMode: OutputMode
+  writeMode: ExistingPlaylistWriteMode
   editablePlaylistIds: string[]
   playlists: Playlist[]
   spotifyId: string
   sourcePlaylistId: string | null
+  disabled: boolean
   onOutputModeChange: (value: OutputMode) => void
+  onWriteModeChange: (value: ExistingPlaylistWriteMode) => void
   onEditableChange: (playlistId: string, checked: boolean) => void
 }) {
   const unavailable = playlists.filter(
@@ -207,6 +258,7 @@ function OutputFieldset({
             name="output"
             value="auto-create"
             checked={outputMode === 'auto-create'}
+            disabled={disabled}
             onChange={() => onOutputModeChange('auto-create')}
           />
           <span className="radio__label">Create genre playlists automatically</span>
@@ -217,6 +269,7 @@ function OutputFieldset({
             name="output"
             value="sort-into-existing"
             checked={outputMode === 'sort-into-existing'}
+            disabled={disabled}
             onChange={() => onOutputModeChange('sort-into-existing')}
           />
           <span className="radio__label">Sort into my existing playlists</span>
@@ -225,6 +278,45 @@ function OutputFieldset({
 
       {outputMode === 'sort-into-existing' ? (
         <div className="group__sub">
+          <fieldset className="safety">
+            <legend>Destination safety</legend>
+            <label className="radio">
+              <input
+                type="radio"
+                name="destination-write-mode"
+                value="copy"
+                checked={writeMode === 'copy'}
+                disabled={disabled}
+                onChange={() => onWriteModeChange('copy')}
+              />
+              <span className="radio__body">
+                <span className="radio__label">
+                  Create safe copies <span className="pill">Recommended</span>
+                </span>
+                <span className="radio__meta">
+                  Clones each selected playlist and adds tracks to the copies — your originals stay
+                  unchanged.
+                </span>
+              </span>
+            </label>
+            <label className="radio radio--warning">
+              <input
+                type="radio"
+                name="destination-write-mode"
+                value="direct"
+                checked={writeMode === 'direct'}
+                disabled={disabled}
+                onChange={() => onWriteModeChange('direct')}
+              />
+              <span className="radio__body">
+                <span className="radio__label">Add directly to originals</span>
+                <span className="radio__meta">
+                  This changes the originals. A 24-hour undo is available only when tracking
+                  succeeds and Spotify confirms the playlists have not changed since the sort.
+                </span>
+              </span>
+            </label>
+          </fieldset>
           <p className="group__hint">
             Only playlists you own (or can collaborate on) can receive tracks — the source playlist
             is never a destination. Pick at least one.
@@ -247,7 +339,7 @@ function OutputFieldset({
                 >
                   <input
                     type="checkbox"
-                    disabled={blocked}
+                    disabled={disabled || blocked}
                     checked={editablePlaylistIds.includes(playlist.id)}
                     onChange={(event) => onEditableChange(playlist.id, event.target.checked)}
                   />
@@ -259,9 +351,10 @@ function OutputFieldset({
           </div>
           {unavailable.length > 0 ? (
             <p className="group__note">
-              {unavailable.length} playlist{unavailable.length === 1 ? '' : 's'} hidden from
-              selection {unavailable.length === 1 ? 'because' : 'because they’re'} not owned by you
-              or collaborative. The source playlist is shown above but never used as a destination.
+              {unavailable.length} playlist{unavailable.length === 1 ? '' : 's'} shown{' '}
+              {unavailable.length === 1 ? 'is' : 'are'} disabled — only playlists you own or
+              collaborate on can receive tracks. The source playlist is shown above but never used
+              as a destination.
             </p>
           ) : null}
         </div>
@@ -280,18 +373,39 @@ function SortWorkspace({
   spotifyId: string
   onSortStart: () => void
   onSortSuccess: (
-    results: SortResultItem[],
-    excluded?: ExcludedPlaylist[],
-    backup?: SortBackup,
+    response: SortResponse,
   ) => void
 }) {
   const [sourceType, setSourceType] = useState<SourceType>('liked')
   const [playlistId, setPlaylistId] = useState('')
   const [createBackup, setCreateBackup] = useState(true)
   const [outputMode, setOutputMode] = useState<OutputMode>('auto-create')
+  const [writeMode, setWriteMode] = useState<ExistingPlaylistWriteMode>('copy')
   const [editablePlaylistIds, setEditablePlaylistIds] = useState<string[]>([])
   const [isSorting, setIsSorting] = useState(false)
   const [sortError, setSortError] = useState<string | null>(null)
+  const [progressStage, setProgressStage] = useState<'analyzing' | 'adding'>('analyzing')
+
+  useEffect(() => {
+    if (!isSorting) {
+      setProgressStage('analyzing')
+      return
+    }
+    setProgressStage('analyzing')
+    const timer = window.setTimeout(() => setProgressStage('adding'), 5000)
+    return () => window.clearTimeout(timer)
+  }, [isSorting])
+
+  useEffect(() => {
+    if (sourceType !== 'playlist' || playlistId === '') {
+      return
+    }
+    const selected = playlists.find((playlist) => playlist.id === playlistId)
+    if (!selected || !isEditable(selected, spotifyId)) {
+      setPlaylistId('')
+      setEditablePlaylistIds((current) => current.filter((id) => id !== playlistId))
+    }
+  }, [playlists, playlistId, sourceType, spotifyId])
 
   const editableIds = useMemo(
     () => playlists.filter((playlist) => isEditable(playlist, spotifyId)).map((playlist) => playlist.id),
@@ -352,13 +466,14 @@ function SortWorkspace({
       ...(outputMode === 'sort-into-existing'
         ? {
             editablePlaylistIds: destinationIds,
+            existingPlaylistWriteMode: writeMode,
           }
         : {}),
     }
 
     try {
       const response = await runSort(payload)
-      onSortSuccess(response.results, response.excluded, response.backup)
+      onSortSuccess(response)
     } catch (error) {
       setSortError(
         error instanceof Error
@@ -370,13 +485,22 @@ function SortWorkspace({
     }
   }
 
+  const progressCopy =
+    progressStage === 'adding'
+      ? 'Adding tracks in paced batches…'
+      : outputMode === 'sort-into-existing' && writeMode === 'copy'
+        ? 'Analyzing genres and preparing safe copies…'
+        : 'Analyzing genres…'
+
   return (
-    <form className="workspace" onSubmit={handleSubmit}>
+    <form className={`workspace${isSorting ? ' workspace--busy' : ''}`} onSubmit={handleSubmit}>
       <SourceFieldset
         sourceType={sourceType}
         playlistId={playlistId}
         playlists={playlists}
         createBackup={createBackup}
+        spotifyId={spotifyId}
+        disabled={isSorting}
         onSourceChange={(value) => {
           handleSourceChange(value)
         }}
@@ -386,16 +510,19 @@ function SortWorkspace({
 
       <OutputFieldset
         outputMode={outputMode}
+        writeMode={writeMode}
         editablePlaylistIds={editablePlaylistIds}
         playlists={playlists}
         spotifyId={spotifyId}
         sourcePlaylistId={sourceType === 'playlist' ? playlistId || null : null}
+        disabled={isSorting}
         onOutputModeChange={(value) => {
           setOutputMode(value)
           if (value === 'auto-create') {
             setEditablePlaylistIds([])
           }
         }}
+        onWriteModeChange={setWriteMode}
         onEditableChange={handleEditableChange}
       />
 
@@ -403,6 +530,22 @@ function SortWorkspace({
         <p className="form-error" role="alert">
           {sortError}
         </p>
+      ) : null}
+
+      {isSorting ? (
+        <div className="sort-progress" role="status" aria-live="polite">
+          <div
+            className="sort-progress__bar"
+            role="progressbar"
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-valuetext={progressCopy}
+          >
+            <span className="sort-progress__fill" aria-hidden="true" />
+          </div>
+          <p className="sort-progress__stage">{progressCopy}</p>
+          <p className="sort-progress__note">Large playlists may take a few minutes.</p>
+        </div>
       ) : null}
 
       <button className="button button--primary button--organize" type="submit" disabled={!canSubmit}>
@@ -416,10 +559,14 @@ function ResultsLedger({
   results,
   excluded,
   backup,
+  destinationCopies,
+  undoneBuckets,
 }: {
   results: SortResultItem[] | null
   excluded: ExcludedPlaylist[] | null
   backup: SortBackup | null
+  destinationCopies: DestinationCopy[] | null
+  undoneBuckets: Set<string>
 }) {
   if (!results) {
     return (
@@ -435,6 +582,9 @@ function ResultsLedger({
   const successful = results.filter((result) => result.status === 'success')
   const failed = results.filter((result) => result.status === 'failed')
   const tracksAdded = successful.reduce((sum, result) => sum + result.tracksAdded, 0)
+  const uniqueCopies = (destinationCopies ?? []).filter(
+    (copy, index, all) => all.findIndex((other) => other.playlistId === copy.playlistId) === index,
+  )
 
   return (
     <section className="ledger ledger--reveal" id="results" aria-live="polite">
@@ -443,7 +593,7 @@ function ResultsLedger({
         <p>
           {results.length === 0
             ? 'No tracks to organize'
-            : `${successful.length} playlist${successful.length === 1 ? '' : 's'} updated · ${tracksAdded} track${tracksAdded === 1 ? '' : 's'} added`}
+            : `${successful.length} bucket${successful.length === 1 ? '' : 's'} updated · ${tracksAdded} track${tracksAdded === 1 ? '' : 's'} added`}
         </p>
       </div>
 
@@ -462,6 +612,38 @@ function ResultsLedger({
         </div>
       ) : null}
 
+      {uniqueCopies.length > 0 ? (
+        <div className="ledger__copies">
+          <h3>Destination safe copies</h3>
+          <p className="ledger__copies-note">
+            Source backups protect the source playlist; destination safe copies protect the
+            playlists you selected as targets.
+          </p>
+          <ul className="ledger__copy-list">
+            {uniqueCopies.map((copy) => (
+              <li
+                className={`ledger__copy ledger__copy--${copy.status}`}
+                key={copy.playlistId}
+              >
+                <div className="ledger__bucket">
+                  <span className="ledger__status" aria-hidden="true" />
+                  {copy.playlistName || 'Copy'}
+                </div>
+                <div className="ledger__detail">
+                  <span className="ledger__count">Copy of {copy.sourcePlaylistName}</span>
+                  <span className="ledger__count">
+                    Base tracks copied: {copy.tracksCopied}
+                  </span>
+                  {copy.error ? (
+                    <span className="ledger__error">{copy.error}</span>
+                  ) : null}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+
       {results.length === 0 ? (
         <div className="ledger__empty">
           <p>
@@ -471,28 +653,76 @@ function ResultsLedger({
         </div>
       ) : (
         <ul className="ledger__list">
-          {results.map((result) => (
-            <li className={`ledger__row ledger__row--${result.status}`} key={result.bucket}>
-              <div className="ledger__bucket">
-                <span className="ledger__status" aria-hidden="true" />
-                {result.bucket}
-              </div>
-              <div className="ledger__detail">
-                {result.status === 'success' ? (
-                  <>
-                    <span className="ledger__dest">
-                      {result.playlistName || 'New playlist'}
+          {results.map((result) => {
+            const tracks = result.tracks ?? []
+            const undone =
+              result.status === 'success' && undoneBuckets.has(result.bucket)
+            return (
+              <li
+                className={`ledger__row ledger__row--${result.status}${undone ? ' ledger__row--undone' : ''}`}
+                key={result.bucket}
+              >
+                <details className="ledger__details">
+                  <summary className="ledger__summary">
+                    <span className="ledger__bucket">
+                      <span className="ledger__status" aria-hidden="true" />
+                      {result.bucket}
                     </span>
-                    <span className="ledger__count">
-                      {result.tracksAdded} track{result.tracksAdded === 1 ? '' : 's'} added
+                    <span className="ledger__detail">
+                      {result.status === 'success' ? (
+                        <>
+                          <span className="ledger__dest">
+                            {result.playlistName || 'New playlist'}
+                          </span>
+                          <span className="ledger__count">
+                            {undone
+                              ? `Undone · ${result.tracksAdded} track${result.tracksAdded === 1 ? '' : 's'} removed`
+                              : `${result.tracksAdded} track${result.tracksAdded === 1 ? '' : 's'} added`}
+                            {tracks.length > 0
+                              ? ` · ${tracks.length} candidate${tracks.length === 1 ? '' : 's'}`
+                              : ''}
+                          </span>
+                        </>
+                      ) : (
+                        <span className="ledger__error">
+                          {result.error ?? 'Failed to write tracks'}
+                        </span>
+                      )}
                     </span>
-                  </>
-                ) : (
-                  <span className="ledger__error">{result.error ?? 'Failed to write tracks'}</span>
-                )}
-              </div>
-            </li>
-          ))}
+                  </summary>
+                  <div className="ledger__tracks">
+                    {tracks.length > 0 ? (
+                      <ul className="ledger__tracks-list">
+                        {tracks.map((track, trackIndex) => (
+                          <li className="ledger__track" key={track.id || `${result.bucket}-${trackIndex}`}>
+                            <span className="ledger__track-name">{track.name}</span>
+                            <span className="ledger__track-meta">
+                              {track.artists.join(', ')}
+                              {track.albumName ? ` · ${track.albumName}` : ''}
+                            </span>
+                            {track.spotifyUrl ? (
+                              <a
+                                className="ledger__track-link"
+                                href={track.spotifyUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                Open on Spotify
+                              </a>
+                            ) : null}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="ledger__tracks-empty">
+                        No candidate tracks were reported for this bucket.
+                      </p>
+                    )}
+                  </div>
+                </details>
+              </li>
+            )
+          })}
         </ul>
       )}
 
@@ -524,19 +754,72 @@ function ResultsLedger({
 export function Dashboard({
   user,
   onLogout,
+  isSigningOut,
 }: {
   user: CurrentUser
   onLogout: () => void
+  isSigningOut: boolean
 }) {
+  const queryClient = useQueryClient()
   const [logoutError, setLogoutError] = useState<string | null>(null)
   const [results, setResults] = useState<SortResultItem[] | null>(null)
   const [excluded, setExcluded] = useState<ExcludedPlaylist[] | null>(null)
   const [backup, setBackup] = useState<SortBackup | null>(null)
+  const [destinationCopies, setDestinationCopies] = useState<DestinationCopy[] | null>(null)
+  const [sortActionWarning, setSortActionWarning] = useState<string | null>(null)
+  const [selectedUndoBuckets, setSelectedUndoBuckets] = useState<string[]>([])
+  const [lastUndoResponse, setLastUndoResponse] = useState<UndoResponse | null>(null)
+  const [undoConflict, setUndoConflict] = useState<UndoConflictResponse | null>(null)
+  const [undoError, setUndoError] = useState<string | null>(null)
 
   const playlistsQuery = useQuery({
-    queryKey: ['playlists'],
+    queryKey: ['playlists', user.spotifyId],
     queryFn: fetchPlaylists,
   })
+
+  const latestActionQuery = useQuery({
+    queryKey: ['latest-sort-action', user.spotifyId],
+    queryFn: fetchLatestSortAction,
+    retry: false,
+  })
+
+  const undoMutation = useMutation({
+    mutationFn: ({ actionId, buckets }: { actionId: string; buckets: string[] }) =>
+      undoSortAction(actionId, buckets),
+    onSuccess: (response) => {
+      queryClient.setQueryData(['latest-sort-action', user.spotifyId], response.action)
+      setSelectedUndoBuckets([])
+      setLastUndoResponse(response)
+      setUndoConflict(null)
+      setUndoError(null)
+    },
+    onError: (error: Error) => {
+      setLastUndoResponse(null)
+      setUndoConflict(null)
+      setUndoError(null)
+      if (error instanceof ApiError && error.status === 409) {
+        setUndoConflict(error.body as UndoConflictResponse)
+      } else {
+        setUndoError(
+          error.message ||
+            'The undo didn’t complete. Check that the backend is running, then try again.',
+        )
+      }
+    },
+  })
+
+  const latestAction = latestActionQuery.data ?? null
+  const undoneBucketNames = useMemo(
+    () =>
+      new Set(
+        latestAction
+          ? latestAction.buckets
+              .filter((bucket) => bucket.status === 'undone')
+              .map((bucket) => bucket.bucket)
+          : [],
+      ),
+    [latestAction],
+  )
 
   useEffect(() => {
     if (results) {
@@ -551,12 +834,20 @@ export function Dashboard({
     <div className="app">
       <DashboardHeader
         user={user}
+        isSigningOut={isSigningOut}
         onLogout={async () => {
+          if (isSigningOut) {
+            return
+          }
           setLogoutError(null)
           try {
             await onLogout()
-          } catch {
-            setLogoutError('Sign out didn’t complete. Please try again.')
+          } catch (error) {
+            setLogoutError(
+              error instanceof Error && error.message
+                ? error.message
+                : 'Sign out didn’t complete. Please try again.',
+            )
           }
         }}
         logoutError={logoutError}
@@ -573,7 +864,10 @@ export function Dashboard({
 
         {playlistsQuery.isPending ? <LoadingList /> : null}
         {playlistsQuery.isError ? (
-          <PlaylistLoadError onRetry={() => void playlistsQuery.refetch()} />
+          <PlaylistLoadError
+            message={playlistsQuery.error?.message ?? ''}
+            onRetry={() => void playlistsQuery.refetch()}
+          />
         ) : null}
 
         {playlistsQuery.isSuccess ? (
@@ -585,15 +879,78 @@ export function Dashboard({
                 setResults(null)
                 setExcluded(null)
                 setBackup(null)
+                setDestinationCopies(null)
+                setSortActionWarning(null)
+                setSelectedUndoBuckets([])
+                setLastUndoResponse(null)
+                setUndoConflict(null)
+                setUndoError(null)
               }}
-              onSortSuccess={(nextResults, nextExcluded, nextBackup) => {
-                setResults(nextResults)
-                setExcluded(nextExcluded ?? null)
-                setBackup(nextBackup ?? null)
+              onSortSuccess={(response) => {
+                setResults(response.results)
+                setExcluded(response.excluded ?? null)
+                setBackup(response.backup ?? null)
+                setDestinationCopies(response.destinationCopies ?? null)
+                setSortActionWarning(response.actionWarning ?? null)
+                if (response.action) {
+                  queryClient.setQueryData(
+                    ['latest-sort-action', user.spotifyId],
+                    response.action,
+                  )
+                  setSelectedUndoBuckets([])
+                }
                 void playlistsQuery.refetch()
               }}
             />
-            <ResultsLedger results={results} excluded={excluded} backup={backup} />
+            <div className="dashboard__side">
+              {latestActionQuery.isError ? (
+                <div className="undo-history-warning" role="status">
+                  <p>Undo history couldn’t be loaded right now.</p>
+                  <button
+                    className="button button--ghost"
+                    type="button"
+                    onClick={() => void latestActionQuery.refetch()}
+                  >
+                    Retry
+                  </button>
+                </div>
+              ) : null}
+              {sortActionWarning ? (
+                <div className="action-warning" role="alert">
+                  <p className="action-warning__title">
+                    Playlist changes succeeded, but this run can’t be undone.
+                  </p>
+                  <p className="action-warning__detail">
+                    {sortActionWarning} An older tracked action may still appear below and remains
+                    protected by Spotify’s snapshot check.
+                  </p>
+                </div>
+              ) : null}
+              {latestAction ? (
+                <UndoPanel
+                  action={latestAction}
+                  isUndoing={undoMutation.isPending}
+                  selectedBuckets={selectedUndoBuckets}
+                  onSelectionChange={setSelectedUndoBuckets}
+                  onUndo={(buckets) => {
+                    undoMutation.mutate({
+                      actionId: latestAction.id,
+                      buckets,
+                    })
+                  }}
+                  lastResponse={lastUndoResponse}
+                  conflict={undoConflict}
+                  undoError={undoError}
+                />
+              ) : null}
+              <ResultsLedger
+                results={results}
+                excluded={excluded}
+                backup={backup}
+                destinationCopies={destinationCopies}
+                undoneBuckets={undoneBucketNames}
+              />
+            </div>
           </div>
         ) : null}
       </main>
