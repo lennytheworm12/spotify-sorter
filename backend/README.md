@@ -71,6 +71,7 @@ See `backend/.env.example` for every supported env var.
 | `pnpm build` | rimraf + tsc → `dist/` |
 | `pnpm start` | node `dist/index.js` |
 | `pnpm test` | Jest (all suites) |
+| `pnpm test:scale` | Jest, in-band, running only the synthetic scale profile |
 | `pnpm test:coverage` | Jest with coverage report |
 
 ## Routes
@@ -150,3 +151,40 @@ Unit and integration suites mock external services (Spotify HTTP, Redis, and
 Mongo CRUD); Mongo persistence tests use an in-memory MongoDB. The suite does
 not run against the real Spotify API, so there is no real Spotify end-to-end
 coverage — verify manual login/sort flows against a live account separately.
+
+### Synthetic scale profile
+
+`pnpm test:scale` runs one deterministic, fully mocked test
+(`src/__tests__/integration/scale.synthetic.profile.test.ts`) that pushes the
+production pipeline — paginated `getPlaylistTracks`,
+`playlistTracksToSortable` + `dedupeArtistIds`, `getArtistGenresCached`,
+`buildBucketMap`, and `addTracksToPlaylist` — through 1,000 / 5,000 / 10,000
+unique sortable tracks (one unique artist each, all with a recognized genre).
+Axios and the `ArtistModel` persistence boundary are mocked; no network,
+Spotify credentials, or MongoDB instance are used.
+
+The test verifies, for every profile:
+
+- every 50-item read page is consumed and source order is preserved;
+- artist lookups batch at 50, never exceed 50 IDs per request, and cover every
+  unique artist exactly once, with responses derived from the requested IDs;
+- the cache bulk upsert receives every artist exactly once;
+- bucketing keeps every track exactly once;
+- every successful write batch is ≤ 100 items, and flattened successful writes
+  equal the source URIs in order with no drops or duplicates;
+- expected read/artist/write request counts and write pacing.
+
+The 10,000-track profile additionally injects one deterministic 429 on the
+first write, honors `Retry-After` with exactly one retry, re-sends the same
+first batch, and confirms no duplicate server-side accepted items — with a
+faked sleep so the focused suite stays fast. It also asserts a generous heap
+growth guardrail (< 192 MiB across fixture creation and pipeline completion) as
+a regression guardrail, not a universal memory benchmark.
+
+This is mocked deterministic validation of the pipeline's pagination,
+batching, caching, and retry code — not a live Spotify benchmark, not load
+testing, and not a claim that Spotify supports a 10,000-track playlist cap.
+Spotify currently documents a maximum of
+[50 items per playlist read](https://developer.spotify.com/documentation/web-api/reference/get-playlists-items)
+and [100 items per write request](https://developer.spotify.com/documentation/web-api/reference/add-items-to-playlist);
+10,000 is our verified synthetic scale profile.
