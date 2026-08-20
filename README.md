@@ -166,13 +166,26 @@ Open `http://127.0.0.1:5173` in the browser.
 |---|---|---|
 | backend | `pnpm build` | Compiles TypeScript to `backend/dist` |
 | backend | `pnpm test` | Jest suite |
+| backend | `pnpm test:scale` | Jest, in-band, running only the synthetic scale profile |
 | backend | `pnpm test:coverage` | Jest with coverage report |
 | backend | `pnpm start` | Runs the compiled `dist` output |
 | frontend | `pnpm build` | TypeScript check + Vite production build |
 | frontend | `pnpm lint` | ESLint |
 | frontend | `pnpm preview` | Previews the production build |
 
-**Current automated baseline:** backend 23 suites / 255 tests passing; frontend build and lint pass. Backend tests use `mongodb-memory-server` with Redis and axios mocked, so no real Spotify credentials are needed to run them. Update these numbers after future runs instead of treating them as permanent.
+**Current automated baseline:** backend 24 suites / 258 tests passing; frontend build and lint pass. Backend tests use `mongodb-memory-server` with Redis and axios mocked, so no real Spotify credentials are needed to run them. Update these numbers after future runs instead of treating them as permanent.
+
+`pnpm test:scale` is a deterministic, fully mocked synthetic scale profile: it
+drives the production read → filter → artist-cache → bucket → write pipeline
+with 1,000 / 5,000 / 10,000 unique tracks and verifies pagination (50/page),
+artist batching (50/request, every artist exactly once), cache bulk upserts,
+bucketing, write batching (100/request), order preservation, and the 10,000
+case's single deterministic 429 retry with `Retry-After`. This is mocked
+validation of the pipeline's batching/pagination/retry code — not a live
+Spotify benchmark, not load testing, and not a claim that Spotify currently
+caps playlists at 10,000 tracks (Spotify currently documents a maximum of
+[50 items per playlist read](https://developer.spotify.com/documentation/web-api/reference/get-playlists-items)
+and [100 items per write request](https://developer.spotify.com/documentation/web-api/reference/add-items-to-playlist)).
 
 CI (GitHub Actions) runs the backend build and Jest suite plus the frontend lint and build on every pull request to `main` and push to `main`.
 
