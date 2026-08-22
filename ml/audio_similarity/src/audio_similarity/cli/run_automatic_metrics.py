@@ -100,7 +100,13 @@ def main() -> int:
     seed = args.seed or config.get("evaluation", {}).get("seed", 20260822)
 
     manifest = load_manifest(args.manifest)
-    conventional_matrix, _ = load_conventional_features(args.features, manifest["track_id"].to_numpy())
+    import pyarrow.parquet as pq
+
+    encoded_track_ids = np.asarray(
+        sorted(set(pq.read_table(args.embeddings, columns=["track_id"]).column("track_id").to_pylist())),
+        dtype=np.int64,
+    )
+    conventional_matrix, _ = load_conventional_features(args.features, encoded_track_ids)
     index = RetrievalIndex(args.embeddings, manifest, conventional_matrix=conventional_matrix)
 
     if args.queries:

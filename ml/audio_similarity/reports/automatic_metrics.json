@@ -1,0 +1,188 @@
+{
+  "n_indexed": 7997,
+  "representations": {
+    "melody": {
+      "n_queries": 200,
+      "genre_overlap@5": 0.292,
+      "genre_overlap_excl_artist@5": 0.26300000000000007,
+      "same_artist@5": 0.046000000000000006,
+      "genre_overlap@10": 0.261,
+      "genre_overlap_excl_artist@10": 0.23850000000000002,
+      "same_artist@10": 0.030999999999999996,
+      "genre_overlap@20": 0.24224999999999997,
+      "genre_overlap_excl_artist@20": 0.22475,
+      "same_artist@20": 0.02375
+    },
+    "rhythm": {
+      "n_queries": 200,
+      "genre_overlap@5": 0.3440000000000001,
+      "genre_overlap_excl_artist@5": 0.317,
+      "same_artist@5": 0.053,
+      "genre_overlap@10": 0.32199999999999995,
+      "genre_overlap_excl_artist@10": 0.2965,
+      "same_artist@10": 0.04650000000000001,
+      "genre_overlap@20": 0.29774999999999996,
+      "genre_overlap_excl_artist@20": 0.27699999999999997,
+      "same_artist@20": 0.034249999999999996
+    },
+    "timbre": {
+      "n_queries": 200,
+      "genre_overlap@5": 0.42900000000000005,
+      "genre_overlap_excl_artist@5": 0.3940000000000001,
+      "same_artist@5": 0.067,
+      "genre_overlap@10": 0.41200000000000003,
+      "genre_overlap_excl_artist@10": 0.38299999999999995,
+      "same_artist@10": 0.053500000000000006,
+      "genre_overlap@20": 0.39125,
+      "genre_overlap_excl_artist@20": 0.37024999999999997,
+      "same_artist@20": 0.03675
+    },
+    "mert_general": {
+      "n_queries": 200,
+      "genre_overlap@5": 0.478,
+      "genre_overlap_excl_artist@5": 0.41100000000000003,
+      "same_artist@5": 0.15,
+      "genre_overlap@10": 0.45799999999999996,
+      "genre_overlap_excl_artist@10": 0.3995,
+      "same_artist@10": 0.1035,
+      "genre_overlap@20": 0.4205,
+      "genre_overlap_excl_artist@20": 0.3765,
+      "same_artist@20": 0.07225000000000001
+    },
+    "conventional_features": {
+      "n_queries": 200,
+      "genre_overlap@5": 0.423,
+      "genre_overlap_excl_artist@5": 0.34700000000000003,
+      "same_artist@5": 0.134,
+      "genre_overlap@10": 0.3939999999999999,
+      "genre_overlap_excl_artist@10": 0.3295,
+      "same_artist@10": 0.1,
+      "genre_overlap@20": 0.36174999999999996,
+      "genre_overlap_excl_artist@20": 0.31675000000000003,
+      "same_artist@20": 0.07024999999999999
+    }
+  },
+  "cross_factor_jaccard": {
+    "melody_vs_rhythm@5": 0.005694444444444444,
+    "melody_vs_rhythm@10": 0.009685771744595274,
+    "melody_vs_rhythm@20": 0.009386844913160702,
+    "melody_vs_timbre@5": 0.010972222222222222,
+    "melody_vs_timbre@10": 0.010760233918128654,
+    "melody_vs_timbre@20": 0.010967971366952689,
+    "rhythm_vs_timbre@5": 0.01103174603174603,
+    "rhythm_vs_timbre@10": 0.0173546611627107,
+    "rhythm_vs_timbre@20": 0.01882634293160609
+  },
+  "score_correlations": {
+    "pearson": {
+      "melody": {
+        "melody": 1.0,
+        "rhythm": -0.0331,
+        "timbre": 0.0956,
+        "mert_general": 0.2023
+      },
+      "rhythm": {
+        "melody": -0.0331,
+        "rhythm": 1.0,
+        "timbre": 0.0444,
+        "mert_general": 0.1745
+      },
+      "timbre": {
+        "melody": 0.0956,
+        "rhythm": 0.0444,
+        "timbre": 1.0,
+        "mert_general": 0.3226
+      },
+      "mert_general": {
+        "melody": 0.2023,
+        "rhythm": 0.1745,
+        "timbre": 0.3226,
+        "mert_general": 1.0
+      }
+    },
+    "spearman": {
+      "melody": {
+        "melody": 1.0,
+        "rhythm": -0.0316,
+        "timbre": 0.0835,
+        "mert_general": 0.2016
+      },
+      "rhythm": {
+        "melody": -0.0316,
+        "rhythm": 1.0,
+        "timbre": 0.0485,
+        "mert_general": 0.1633
+      },
+      "timbre": {
+        "melody": 0.0835,
+        "rhythm": 0.0485,
+        "timbre": 1.0,
+        "mert_general": 0.3525
+      },
+      "mert_general": {
+        "melody": 0.2016,
+        "rhythm": 0.1633,
+        "timbre": 0.3525,
+        "mert_general": 1.0
+      }
+    }
+  },
+  "search_latency": {
+    "top10_search_p50_ms": 2.728756000578869,
+    "top10_search_p95_ms": 11.983221751506786,
+    "index_matrix_build_sec_approx": 2.6039997464977205e-06
+  },
+  "query_ids": [
+    145742,
+    68899,
+    47260,
+    78841,
+    105671,
+    10447,
+    123935,
+    121474,
+    40598,
+    115850,
+    81523,
+    130135,
+    125824,
+    48456,
+    14653,
+    137175,
+    41962,
+    37136,
+    145059,
+    90583,
+    112133,
+    142088,
+    130752,
+    80836,
+    126226,
+    84743,
+    39488,
+    107189,
+    85840,
+    89859,
+    3538,
+    132787,
+    90625,
+    137898,
+    3775,
+    142098,
+    113698,
+    149082,
+    61592,
+    81457,
+    6606,
+    82157,
+    137211,
+    134939,
+    110653,
+    97987,
+    40161,
+    87644,
+    137720,
+    75441,
+    "...truncated"
+  ]
+}

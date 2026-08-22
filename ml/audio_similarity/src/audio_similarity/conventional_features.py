@@ -18,12 +18,14 @@ def load_conventional_features(
     track_ids: np.ndarray,
 ) -> tuple[np.ndarray, list[str]]:
     """Return (matrix [len(track_ids), d] aligned to sorted track_ids, feature names)."""
-    frame = pd.read_csv(features_csv)
-    feature_cols = [c for c in frame.columns if c != "track_id" and pd.api.types.is_numeric_dtype(frame[c])]
-    frame = frame.set_index("track_id")[feature_cols]
-
-    aligned = frame.reindex(pd.Index(track_ids.astype(frame.index.dtype)))
-    matrix = aligned.to_numpy(dtype=np.float64)
+    frame = pd.read_csv(features_csv, index_col=0, header=[0, 1, 2])
+    frame.columns = ["|".join(map(str, c)) for c in frame.columns]
+    feature_cols = [c for c in frame.columns if pd.api.types.is_numeric_dtype(frame[c])]
+    feature_frame = frame[feature_cols].copy()
+    feature_frame.index = feature_frame.index.astype(np.int64)
+    feature_frame.index.name = "track_id"
+    aligned = feature_frame.reindex(pd.Index(track_ids.astype(feature_frame.index.dtype)))
+    matrix = np.array(aligned.to_numpy(dtype=np.float64), copy=True)
 
     # median-fill missing values (per feature), computed on the aligned subset
     medians = np.nanmedian(np.where(np.isfinite(matrix), matrix, np.nan), axis=0)

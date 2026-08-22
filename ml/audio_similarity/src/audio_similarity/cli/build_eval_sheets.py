@@ -49,7 +49,7 @@ def build_sheets(
     for _, q in queries.iterrows():
         query_id = int(q["track_id"])
         for factor in FACTORS:
-            merit_neighbors = index.search(factor, query_id, k=NEIGHBERS_PER_FACTOR)
+            merit_neighbors = index.search(factor, query_id, k=NEIGHBORS_PER_FACTOR)
             general_neighbors = index.search("mert_general", query_id, k=NEIGHBORS_PER_FACTOR)
 
             # ---- direct utility sheet (blinded: no representation names) ----
