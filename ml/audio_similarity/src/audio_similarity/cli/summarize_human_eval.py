@@ -22,13 +22,21 @@ import pandas as pd
 VALID_RATINGS = {"0", "1", "2", "3", "X"}
 
 
+def _read_csv_if_present(path: Path) -> pd.DataFrame | None:
+    if not path.exists() or path.stat().st_size == 0:
+        return None
+    try:
+        return pd.read_csv(path)
+    except pd.errors.EmptyDataError:
+        return None
+
+
 def summarize(sheets_dir: str | Path) -> dict:
     sheets = Path(sheets_dir)
     report: dict = {}
 
-    factor_path = sheets / "judgments_factor.csv"
-    if factor_path.exists() and factor_path.stat().st_size > 0:
-        frame = pd.read_csv(factor_path)
+    frame = _read_csv_if_present(sheets / "judgments_factor.csv")
+    if frame is not None:
         rated = frame[frame["rating"].astype(str).str.strip() != ""]
         invalid = set(rated["rating"].astype(str)) - VALID_RATINGS
         if invalid:
@@ -51,16 +59,9 @@ def summarize(sheets_dir: str | Path) -> dict:
             f: v["gate_median_ge_2"] and v["gate_share_ge_2_pct60"] for f, v in per_factor.items()
         }
 
-    ab_path = sheets / "judgments_ab.csv"
-    key_path = sheets / "key_ab.csv"
-    if (
-        ab_path.exists()
-        and key_path.exists()
-        and ab_path.stat().st_size > 0
-        and key_path.stat().st_size > 0
-    ):
-        ab = pd.read_csv(ab_path)
-        keys = pd.read_csv(key_path)
+    ab = _read_csv_if_present(sheets / "judgments_ab.csv")
+    keys = _read_csv_if_present(sheets / "key_ab.csv")
+    if ab is not None and keys is not None:
         answered = ab[ab["choice"].astype(str).isin(["A", "B", "Tie", "Neither"])].merge(keys, on="ab_id")
         decisive = answered[answered["choice"].isin(["A", "B"])].copy()
         decisive["merit_side"] = np.where(

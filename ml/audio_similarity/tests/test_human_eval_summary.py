@@ -71,7 +71,7 @@ def test_ab_preference_rate(tmp_path):
     ab_rows = [
         {"ab_id": "1:melody:1", "question": "q", "choice": "A"},
         {"ab_id": "1:melody:2", "question": "q", "choice": "B"},
-        {"ab_id": "1:melody:3", "question": "q", "choice": "A"},
+        {"ab_id": "1:melody:3", "question": "q", "choice": "B"},  # merit on side B wins
         {"ab_id": "1:melody:4", "question": "q", "choice": "Tie"},  # excluded
         {"ab_id": "5:rhythm:1", "question": "q", "choice": "B"},
         {"ab_id": "5:rhythm:2", "question": "q", "choice": "B"},
