@@ -46,7 +46,7 @@ from audio_similarity.signal_views import (
 )
 from audio_similarity.sampling import sample_segments
 
-DEFAULT_MODEL = "openrouter/0x-alpha"
+DEFAULT_MODEL = "stealth/ox-alpha"
 VIEWS = ("waveform", "linear_stft", "log_mel")
 REPLICATES = 3
 SAMPLING_IDENTITY = "three20_v1"
