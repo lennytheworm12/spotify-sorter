@@ -11,6 +11,8 @@ dependencies = [
     "transformers>=4.45",
     "huggingface-hub>=0.24",
     "pyyaml>=6",
+    "pandas>=2.3.3",
+    "pyarrow>=25.0.1",
 ]
 
 [dependency-groups]

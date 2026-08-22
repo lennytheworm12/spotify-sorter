@@ -21,10 +21,13 @@ prompts/
 *.log
 
 # Phase 1 ML experiment (ml/audio_similarity)
+# data/: FMA audio + manifests (large, reproducible)
+# artifacts/: embeddings, indexes, reports (regenerable)
+# models/: downloaded MERIT heads
 ml/**/.venv/
 ml/**/__pycache__/
 ml/**/*.pyc
 ml/**/.pytest_cache/
-ml/data/            # FMA audio, manifests (large, reproducible)
-ml/artifacts/       # embeddings, indexes, reports (regenerable)
-ml/models/          # downloaded MERIT heads
+ml/**/data/
+ml/**/artifacts/
+ml/**/models/
