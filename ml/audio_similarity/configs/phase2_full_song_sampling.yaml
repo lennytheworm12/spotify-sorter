@@ -1,0 +1,61 @@
+# Phase 2 pre-gate config (design section 33).
+# Encoder selection is intentionally unresolved until the Phase 1 human gate.
+experiment_id: full_song_sampling_v1
+
+dataset:
+  name: musdb18            # preferred corpus; MedleyDB is the documented fallback
+  root: data/musdb18       # gitignored; never committed
+  development_split: train
+  holdout_split: test
+
+sampling:
+  strategies:
+    - first30_v1
+    - center30_v1
+    - three20_v1
+    - three30_v1
+    - five20_v1
+    - dense30_hop15_v1
+
+aggregation:
+  primary: mean_l2_v1
+
+encoder:
+  selected_after_phase1_human_gate: true   # MERIT factors / MERT general / other — TBD
+
+signal_views:
+  canonical_sample_rate: 24000
+  linear_stft_v1:
+    n_fft: 2048
+    hop_length: 512
+    amplitude: db
+    top_db: 80
+    frequency_axis: linear
+    image_width: 1024
+    image_height: 512
+  log_mel_v1:
+    n_fft: 2048
+    hop_length: 512
+    n_mels: 128
+    fmin: 20
+    fmax: 12000
+    top_db: 80
+    image_width: 1024
+    image_height: 512
+  waveform_v1:
+    image_width: 1024
+
+ox_alpha:
+  prompt_version: ox_pairwise_v1
+  comparison_mode: pairwise
+  replicates: 3            # characterization only; not a production policy
+  cache_path: reports/phase2/ox_alpha_cache.jsonl
+  max_requests_default: 50 # every live run must respect --max-requests
+
+retrieval:
+  metric: cosine
+  exact: true              # no ANN in Phase 2A
+  k: [5, 10]
+
+evaluation:
+  seed: 20260822
