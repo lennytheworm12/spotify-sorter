@@ -31,3 +31,6 @@ ml/**/.pytest_cache/
 ml/**/data/
 ml/**/artifacts/
 ml/**/models/
+
+# Fly.io deploy bundle (contains audio subset)
+ml/**/deploy_bundle/

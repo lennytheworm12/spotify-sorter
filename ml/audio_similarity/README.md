@@ -150,6 +150,40 @@ The evaluator is deliberately reusable: it serves whatever blinded sheets +
 key files sit in `--sheets`, so future human-input gates (Phase 2 sampling
 comparisons, cluster-label checks) can reuse it by generating new sheets.
 
+## Hosting on Fly.io (friends on other networks)
+
+The Pages site can't stream audio from your home machine, so for remote
+reviewers deploy the evaluator itself:
+
+```bash
+# one-time bundle build (only the ~455 MB of referenced clips, full quality)
+uv run python -m audio_similarity.cli.build_deploy_bundle \
+    --sheets reports/human_eval \
+    --manifest data/manifests/fma_small.parquet \
+    --queries reports/phase1_queries.csv \
+    --audio-root data/fma/fma_small \
+    --output deploy_bundle \
+    --app-name your-unique-app-name
+
+cd deploy_bundle
+fly launch --no-deploy     # creates the app (needs a fly.io account)
+fly deploy                 # builds the image (~455 MB) and ships it
+fly status                 # gives you https://your-unique-app-name.fly.dev
+```
+
+The container runs the same evaluator in server mode: audio streams from
+the VM and ratings persist to the CSVs **inside the running machine**.
+Two caveats:
+
+1. **Ratings live on the VM** — copy them back with
+   `fly ssh sftp get /app/reports/human_eval/judgments_factor.csv`
+   (same for `judgments_ab.csv`) after reviewers finish, or have reviewers
+   use the export/import flow. Rebuilding from a fresh bundle wipes VM
+   state; `fly ssh sftp put` restored sheets before redeploys that matter.
+2. **Licensing**: ATTRIBUTION.csv ships inside the image. Keep the app
+   URL unlisted among friends; public promotion of CC-audio hosting needs
+   a per-track attribution review.
+
 ## Licensing boundary
 
 - MERIT code: MIT
