@@ -184,6 +184,37 @@ Two caveats:
    URL unlisted among friends; public promotion of CC-audio hosting needs
    a per-track attribution review.
 
+## Phase 2 pre-gate framework (encoder-agnostic)
+
+While the Phase 1 human gate is open, these pieces are safe to build and use
+(design sections 9, 29, 47, 50):
+
+| Module | Purpose |
+|---|---|
+| `sampling.py` | Deterministic versioned segment strategies: first30, center30, three20, three30, five20, dense30_hop15 (terminal-anchor rule) |
+| `aggregation.py` | MeanL2 v1 song embedding + typed failures |
+| `encoder.py` | Minimal `AudioEncoder` protocol + deterministic `FakeEncoder` (no models) |
+| `signal_views.py` | Deterministic waveform / linear-STFT / log-mel PNG renderers with full provenance; no metadata inputs exist |
+| `ox_alpha.py` | Strict comparison schema (A/B/Tie/Abstain), versioned prompt, fake client, JSONL resume cache, request budget guardrail |
+| `cli/ox_alpha_smoke.py` | Live-gated smoke runner — refuses without `--live` **and** `OPENROUTER_API_KEY`; prints model/prompt/renderer/planned-count/cap/cache before any request |
+
+Fast tests never download models or call providers:
+
+```bash
+uv run pytest
+```
+
+Optional live smoke (spends requests; requires credentials):
+
+```bash
+export OPENROUTER_API_KEY=...
+uv run python -m audio_similarity.cli.ox_alpha_smoke --live \
+    --model <model-id> --cases 6 --max-requests 54
+```
+
+Phase 2 config: `configs/phase2_full_song_sampling.yaml`. The full sampling
+matrix waits for the Phase 1 human gate; see the vault Phase 2 design doc.
+
 ## Licensing boundary
 
 - MERIT code: MIT
