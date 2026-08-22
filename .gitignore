@@ -19,3 +19,12 @@ prompts/
 # Tooling and OS noise
 .DS_Store
 *.log
+
+# Phase 1 ML experiment (ml/audio_similarity)
+ml/**/.venv/
+ml/**/__pycache__/
+ml/**/*.pyc
+ml/**/.pytest_cache/
+ml/data/            # FMA audio, manifests (large, reproducible)
+ml/artifacts/       # embeddings, indexes, reports (regenerable)
+ml/models/          # downloaded MERIT heads

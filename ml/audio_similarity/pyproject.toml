@@ -1,0 +1,42 @@
+[project]
+name = "audio-similarity"
+version = "0.1.0"
+description = "Phase 1 — MERIT + FMA audio representation experiment (frozen MERT-v1-330M backbone + melody/rhythm/timbre projection heads)"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "numpy>=1.26,<3",
+    "torch>=2.4,<3",
+    "torchaudio>=2.4,<3",
+    "transformers>=4.45",
+    "huggingface-hub>=0.24",
+    "pyyaml>=6",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu124" }]
+torchaudio = [{ index = "pytorch-cu124" }]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/audio_similarity"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "heavy: downloads/executes the real MERT-v1-330M + MERIT heads; run deliberately, not in fast CI",
+]
+addopts = "-m 'not heavy'"
