@@ -154,6 +154,8 @@
       <option value="timbre">timbre</option>
     </select>
     <label><input type="checkbox" id="hide-notes"> Hide notes</label>
+    <label title="Above ~150% distortion may creep in">🔊 <input type="range" id="volume" min="0" max="200" step="5" value="100" style="width:110px">
+      <span id="vol-label">100%</span></label>
     <button class="cb" style="flex:none;width:auto;padding:0 14px" id="next-unrated">Next unrated ⏎</button>
     <span class="hint hint-keys"><kbd>space</kbd>/<kbd>Q</kbd> play · <kbd>0-3</kbd>/<kbd>X</kbd> rate ·
       <kbd>A</kbd>/<kbd>B</kbd>/<kbd>T</kbd>/<kbd>N</kbd> choose</span>
@@ -218,6 +220,26 @@ function loadStoreFor(name) {
 }
 let localStore = {factor:{}, ab:{}};
 let player = new Audio(); let playingUrl = null;
+let audioCtx = null, gainNode = null;
+state.volume = parseFloat(localStorage.getItem('lt-volume') ?? '1');
+
+function ensureAudioGraph() {
+  // route through a gain node so >100% amplification is possible
+  try {
+    if (!audioCtx) {
+      const Ctx = window.AudioContext || window.webkitAudioContext;
+      if (!Ctx) return;
+      audioCtx = new Ctx();
+      gainNode = audioCtx.createGain();
+      gainNode.gain.value = state.volume;
+      const source = audioCtx.createMediaElementSource(player);
+      source.connect(gainNode);
+      gainNode.connect(audioCtx.destination);
+    }
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    gainNode.gain.value = state.volume;
+  } catch { /* fall back to element-level volume */ }
+}
 const noteTimers = {};
 const pendingNotes = {};
 
@@ -388,6 +410,7 @@ function queueNoteSave(kind, id, text) {
 
 /* ---------------------------------------------------------------- player */
 function play(url, btn) {
+  ensureAudioGraph();
   const resolved = audioUrl(url);
   if (!resolved) { alert('No audio server configured. Open ⚙ Settings and set the URL of the machine running:\n\n  uv run python -m audio_similarity.cli.eval_server --host 0.0.0.0'); return; }
   if (playingUrl === resolved && !player.paused) { player.pause(); btn?.classList.remove('playing'); playingUrl = null; return; }
@@ -395,6 +418,7 @@ function play(url, btn) {
   document.querySelectorAll('.play.playing').forEach(b => b.classList.remove('playing'));
   btn?.classList.add('playing'); playingUrl = resolved;
 }
+player.volume = Math.min(1, state.volume);
 player.addEventListener('ended', () => {
   document.querySelectorAll('.play.playing').forEach(b => b.classList.remove('playing')); playingUrl = null; });
 
@@ -517,6 +541,18 @@ document.getElementById('gear').addEventListener('click', () =>
 document.getElementById('filter-status').addEventListener('change', e => { state.filterStatus = e.target.value; render(); });
 document.getElementById('filter-factor').addEventListener('change', e => { state.filterFactor = e.target.value; render(); });
 document.getElementById('hide-notes').addEventListener('change', render);
+
+const volEl = document.getElementById('volume');
+volEl.value = Math.round(state.volume * 100);
+document.getElementById('vol-label').textContent = volEl.value + '%';
+volEl.addEventListener('input', e => {
+  const pct = parseInt(e.target.value, 10);
+  state.volume = pct / 100;
+  document.getElementById('vol-label').textContent = pct + '%';
+  if (gainNode) gainNode.gain.value = state.volume;
+  else player.volume = Math.min(1, state.volume); // pre-graph fallback
+  localStorage.setItem('lt-volume', String(state.volume));
+});
 
 document.getElementById('reviewer').addEventListener('change', e => {
   flushPendingNotes();
