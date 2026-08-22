@@ -168,9 +168,11 @@
       <span class="hint" id="audio-status"></span>
     </div>
     <div class="srow" style="display:none" id="static-actions">
-      <span class="hint">Ratings live in this browser until you export them:</span>
-      <button class="cb" style="flex:none;width:auto;padding:0 14px" id="export-ratings">⬇ Export ratings (.json)</button>
-      <button class="cb" style="flex:none;width:auto;padding:0 14px" id="import-ratings">⬆ Import ratings</button>
+      <span class="hint">Ratings live in this browser until you send them back:</span>
+      <button class="cb" style="flex:none;width:auto;padding:0 14px" id="share-ratings">📤 Send to maintainer</button>
+      <button class="cb" style="flex:none;width:auto;padding:0 14px" id="export-ratings">⬇ Export file</button>
+      <button class="cb" style="flex:none;width:auto;padding:0 14px" id="copy-ratings">📋 Copy JSON</button>
+      <button class="cb" style="flex:none;width:auto;padding:0 14px" id="import-ratings">⬆ Import</button>
       <input type="file" id="import-file" accept=".json" style="display:none">
     </div>
     <div class="srow" style="display:none" id="server-import">
@@ -234,8 +236,8 @@ function applyModeChrome() {
     banner.style.display = 'none';
     document.getElementById('server-import').style.display = 'flex';
   } else {
-    banner.innerHTML = '<b>Offline mode.</b> Ratings are saved in this browser. Use ⚙ Settings to point at your' +
-      ' audio server for playback, and export your ratings when done.';
+    banner.innerHTML = '<b>Offline mode.</b> Ratings are saved in this browser. Use 📤 Send to hand them back' +
+      ' (share sheet / clipboard), and ⚙ Settings to point at your audio server for playback.';
     banner.style.display = 'block';
     document.getElementById('srv-row').style.display = 'flex';
     document.getElementById('static-actions').style.display = 'flex';
@@ -511,8 +513,8 @@ document.getElementById('audio-base').addEventListener('change', e => {
   state.audioBase = e.target.value.trim(); localStorage.setItem('lt-audio-base', state.audioBase);
 });
 
-document.getElementById('export-ratings').addEventListener('click', () => {
-  const rows = {
+function buildExportText() {
+  return JSON.stringify({
     exported_at: new Date().toISOString(), reviewer: reviewerName(),
     format: 'listening-test-v1',
     factor_cells: Object.entries(localStore.factor)
@@ -521,12 +523,36 @@ document.getElementById('export-ratings').addEventListener('click', () => {
     ab_trials: Object.entries(localStore.ab)
       .filter(([,v]) => v.choice || v.note)
       .map(([ab_id, v]) => ({ab_id, choice: v.choice || '', note: v.note || '', rated_by: v.rated_by || ''})),
-  };
-  const blob = new Blob([JSON.stringify(rows, null, 2)], {type:'application/json'});
+  }, null, 1);
+}
+
+document.getElementById('export-ratings').addEventListener('click', () => {
+  const blob = new Blob([buildExportText()], {type:'application/json'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = `listening-test-${new Date().toISOString().slice(0,10)}.json`;
+  a.download = `listening-test-${(reviewerName() || 'ratings').replace(/\W+/g,'-')}-${new Date().toISOString().slice(0,10)}.json`;
   a.click(); URL.revokeObjectURL(a.href);
+});
+
+document.getElementById('copy-ratings').addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(buildExportText()); alert('Copied — paste it to the maintainer.'); }
+  catch { alert('Clipboard blocked; use ⬇ Export file instead.'); }
+});
+
+document.getElementById('share-ratings').addEventListener('click', async () => {
+  const text = buildExportText();
+  const filename = `listening-test-${(reviewerName() || 'ratings').replace(/\W+/g,'-')}.json`;
+  try {
+    const file = new File([text], filename, {type:'application/json'});
+    if (navigator.canShare && navigator.canShare({files:[file]})) {
+      await navigator.share({files:[file], title:'Listening test ratings'});
+      return;
+    }
+    if (navigator.share) { await navigator.share({title:'Listening test ratings', text}); return; }
+  } catch (err) { if (err.name === 'AbortError') return; }
+  // fallback: clipboard
+  try { await navigator.clipboard.writeText(text); alert('Sharing unavailable here — JSON copied to clipboard instead. Paste it to the maintainer.'); }
+  catch { alert('Sharing unavailable — use ⬇ Export file.'); }
 });
 
 function importRows(rows) {
