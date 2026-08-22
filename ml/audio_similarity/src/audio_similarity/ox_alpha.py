@@ -138,10 +138,24 @@ def _finite_float(value, name: str, low: float = 0.0, high: float = 1.0) -> floa
     return value
 
 
+def _strip_code_fences(raw: str) -> str:
+    """Models often wrap JSON in markdown fences; strip only the fence."""
+    text = raw.strip()
+    if text.startswith("```"):
+        first_newline = text.find("\n")
+        if first_newline != -1:
+            text = text[first_newline + 1 :]
+        if text.rstrip().endswith("```"):
+            text = text.rstrip()[:-3]
+    return text.strip()
+
+
 def parse_ox_response(raw: str) -> OxComparisonResult:
     """Parse + strictly validate one model response. Raises typed errors."""
+    if raw is None or not str(raw).strip():
+        raise OxJsonParseError("response contained no content")
     try:
-        payload = json.loads(raw)
+        payload = json.loads(_strip_code_fences(str(raw)))
     except json.JSONDecodeError as exc:
         raise OxJsonParseError(f"response is not valid JSON: {exc.msg} (col {exc.colno})") from exc
 

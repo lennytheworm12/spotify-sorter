@@ -53,6 +53,11 @@ class argparse_namespace:
         self.max_requests = 100
         self.cache = "unused.jsonl"
         self.force = False
+        self.source = "synthetic"
+        self.manifest = "data/manifests/fma_small.parquet"
+        self.embeddings = "artifacts/phase1_full/embeddings.parquet"
+        self.audio_root = "data/fma/fma_small"
+        self.queries = "reports/phase1_queries.csv"
         for k, v in kw.items():
             setattr(self, k, v)
 

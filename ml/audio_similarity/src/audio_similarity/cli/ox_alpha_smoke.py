@@ -79,6 +79,71 @@ def synthetic_cases(count: int) -> list[dict]:
     return cases
 
 
+def real_fma_cases(
+    count: int,
+    manifest_path: str,
+    embeddings_path: str,
+    audio_root: str,
+    queries_csv: str | None = None,
+    candidate_b_rank: int = 12,
+) -> list[dict]:
+    """Real-music smoke cases driven by Phase 1 retrieval.
+
+    Candidate A is a near-top base-retrieval neighbor; candidate B is a
+    clearly lower-ranked neighbor. Both are real FMA clips; identity stays
+    hidden behind opaque labels. Requires local FMA + Phase 1 embeddings.
+    """
+    import torch  # local decode only
+
+    from audio_similarity.audio import preprocess_file
+    from audio_similarity.manifest import load_manifest
+    from audio_similarity.retrieval import RetrievalIndex
+
+    manifest = load_manifest(manifest_path)
+    index = RetrievalIndex(embeddings_path, manifest)
+    meta = manifest.set_index("track_id")
+
+    if queries_csv and Path(queries_csv).exists():
+        query_ids = [int(t) for t in pd_read_col(queries_csv)]
+    else:
+        step = max(1, len(index.track_ids) // count)
+        query_ids = [int(t) for t in index.track_ids[::step][:count]]
+
+    sr_expected = 24000
+    cases: list[dict] = []
+    for n, qid in enumerate(query_ids[:count]):
+        neighbors = index.search("timbre", qid, k=candidate_b_rank + 2, exclude_same_artist=True)
+        cand_a = next(nbr for nbr in neighbors if nbr.rank == 2)
+        cand_b = next(nbr for nbr in neighbors if nbr.rank == min(candidate_b_rank, len(neighbors)))
+
+        def load(tid: int) -> np.ndarray:
+            path = Path(audio_root) / meta.at[tid, "relative_audio_path"]
+            wav = preprocess_file(path)
+            assert wav.shape[0] == sr_expected * 30
+            return wav.numpy().astype(np.float64)
+
+        cases.append(
+            {
+                "case_id": f"fma-{qid}",
+                "query": load(qid),
+                "candidate_a": load(int(cand_a.track_id)),
+                "candidate_b": load(int(cand_b.track_id)),
+                "sample_rate": sr_expected,
+                "query_audio_hash": str(meta.at[qid, "audio_sha256"]),
+                "a_audio_hash": str(meta.at[int(cand_a.track_id), "audio_sha256"]),
+                "b_audio_hash": str(meta.at[int(cand_b.track_id), "audio_sha256"]),
+            }
+        )
+    return cases
+
+
+def pd_read_col(queries_csv: str) -> list[int]:
+    import pandas as pd
+
+    frame = pd.read_csv(queries_csv)
+    return list(frame["track_id"].astype(int))
+
+
 def render_case_views(waveform: np.ndarray, sample_rate: int, config: RendererConfig) -> dict[str, bytes]:
     return {
         "waveform": render_waveform_v1(waveform, sample_rate, config).image_png,
@@ -122,9 +187,15 @@ class OpenRouterClient:
             method="POST",
         )
         try:
-            with urllib.request.urlopen(request, timeout=120) as response:
+            with urllib.request.urlopen(request, timeout=180) as response:
                 payload = json.loads(response.read())
-            text = payload["choices"][0]["message"]["content"]
+            choice = payload["choices"][0]["message"]
+            text = choice.get("content")
+            if not text:
+                reason = str(choice.get("finish_reason") or payload.get("error") or "empty content")
+                return OxCallResult(None, "", "provider_error",
+                                    (time.perf_counter() - start) * 1000,
+                                    error_message=f"empty completion ({reason[:200]})")
             revision = str(payload.get("model", self.model_id))
         except Exception as exc:  # provider/network failure -> typed call result
             return OxCallResult(None, "", "provider_error", (time.perf_counter() - start) * 1000,
@@ -141,7 +212,18 @@ class OpenRouterClient:
 
 def run_smoke(args: argparse.Namespace) -> int:
     cfg = RendererConfig(image_width=768, image_height=384)
-    cases = synthetic_cases(args.cases)
+    if getattr(args, "source", "synthetic") == "fma":
+        print(f"  case source:        FMA Small via Phase 1 retrieval ({args.embeddings})")
+        cases = real_fma_cases(
+            args.cases,
+            manifest_path=args.manifest,
+            embeddings_path=args.embeddings,
+            audio_root=args.audio_root,
+            queries_csv=args.queries,
+        )
+    else:
+        print("  case source:        synthetic tones")
+        cases = synthetic_cases(args.cases)
     prompt = build_prompt()
     client = OpenRouterClient(args.model) if args.live else FakeOxAlphaClient()
     mode = "LIVE" if args.live else "FAKE"
@@ -181,7 +263,7 @@ def run_smoke(args: argparse.Namespace) -> int:
                     query_audio_hash=case["query_audio_hash"],
                     candidate_a_audio_hash=case["a_audio_hash"],
                     candidate_b_audio_hash=case["b_audio_hash"],
-                    sampling_strategy_identity=SAMPLING_IDENTITY,
+                    sampling_strategy_identity=("fma_clip30_v1" if args.source == "fma" else SAMPLING_IDENTITY),
                     renderer_name=view,
                     renderer_version=1,
                     ox_model_id=client.model_id,
@@ -197,7 +279,11 @@ def run_smoke(args: argparse.Namespace) -> int:
                     print("request cap reached — stopping early (cache keeps progress)")
                     _report(stats, preferences_by_view)
                     return 0
-                call = client.compare(prompt, query_views[view], a_views[view], b_views[view])
+                try:
+                    call = client.compare(prompt, query_views[view], a_views[view], b_views[view])
+                except Exception as exc:  # one bad call must never kill the run
+                    print(f"call failed ({case['case_id']}/{view}/rep{replicate}): {str(exc)[:150]}")
+                    continue
                 record = {
                     "cache_key": key,
                     "case_id": case["case_id"],
@@ -241,6 +327,11 @@ def main() -> int:
     parser.add_argument("--max-requests", type=int, default=50)
     parser.add_argument("--cache", default="reports/phase2/ox_alpha_cache.jsonl")
     parser.add_argument("--force", action="store_true", help="recompute completed cache entries")
+    parser.add_argument("--source", choices=["synthetic", "fma"], default="synthetic")
+    parser.add_argument("--manifest", default="data/manifests/fma_small.parquet")
+    parser.add_argument("--embeddings", default="artifacts/phase1_full/embeddings.parquet")
+    parser.add_argument("--audio-root", default="data/fma/fma_small")
+    parser.add_argument("--queries", default="reports/phase1_queries.csv")
     args = parser.parse_args()
 
     live = args.live or args.enable_ox_alpha
