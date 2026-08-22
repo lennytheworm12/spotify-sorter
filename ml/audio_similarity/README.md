@@ -64,6 +64,56 @@ The heavy suite is the Stage A gate: 3/3 clips must decode, encode, satisfy the
 128-D unit-norm contract, repeat deterministically on the same stack, and give
 ~1.0 factor cosine for duplicate waveforms.
 
+## Workflow (Phase 1 stages)
+
+```bash
+# Stage B: build the frozen manifest
+uv run python -m audio_similarity.cli.build_manifest \
+    --audio-dir data/fma/fma_small \
+    --metadata-csv data/fma/fma_metadata/tracks.csv \
+    --output data/manifests/fma_small.parquet
+
+# Freeze the human-eval query set BEFORE inspecting neighbors
+uv run python -m audio_similarity.cli.freeze_queries \
+    --manifest data/manifests/fma_small.parquet \
+    --output reports/phase1_queries.csv
+
+# Stage C/G: resumable batch encode (safe to interrupt and re-run)
+uv run python -m audio_similarity.cli.encode_fma \
+    --config configs/phase1_fma_small.yaml \
+    --audio-root data/fma/fma_small \
+    --output-dir artifacts/phase1_full
+
+# Automatic metrics (genre overlap, Jaccard, correlations, latency)
+uv run python -m audio_similarity.cli.run_automatic_metrics \
+    --embeddings artifacts/phase1_full/embeddings.parquet \
+    --features data/fma/fma_metadata/features.csv \
+    --manifest data/manifests/fma_small.parquet \
+    --output reports/automatic_metrics.json
+
+# Human-eval sheets (blinded; keys kept separate)
+uv run python -m audio_similarity.cli.build_eval_sheets \
+    --embeddings artifacts/phase1_full/embeddings.parquet \
+    --queries reports/phase1_queries.csv \
+    --output-dir reports/human_eval
+
+# Listening-test evaluator UI (plays the real MP3s; autosaves ratings)
+uv run python -m audio_similarity.cli.eval_server \
+    --sheets reports/human_eval \
+    --audio-root data/fma/fma_small
+# -> http://127.0.0.1:8616  (Factor Utility tab: 0/1/2/3/X per cell;
+#    A/B Compare tab: A/B/Tie/Neither; keyboard: space/Q play, 0-3/X rate,
+#    A/B/T/N choose, Enter next unrated)
+
+# After rating: aggregate into the predeclared gates
+uv run python -m audio_similarity.cli.summarize_human_eval \
+    --sheets reports/human_eval --output reports/human_eval_summary.json
+```
+
+The evaluator is deliberately reusable: it serves whatever blinded sheets +
+key files sit in `--sheets`, so future human-input gates (Phase 2 sampling
+comparisons, cluster-label checks) can reuse it by generating new sheets.
+
 ## Licensing boundary
 
 - MERIT code: MIT

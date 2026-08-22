@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phase 1 Listening Test</title>
+<style>
+  :root {
+    --bg: #101418; --panel: #1a2027; --panel2: #212a33; --text: #e6edf3;
+    --muted: #8b98a5; --accent: #4da3ff; --good: #3fb950; --warn: #d29922;
+    --bad: #f85149; --radius: 10px;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); }
+  header { position: sticky; top: 0; z-index: 5; background: var(--panel); padding: 10px 18px;
+           display: flex; align-items: center; gap: 16px; box-shadow: 0 1px 6px rgba(0,0,0,.4); }
+  h1 { font-size: 15px; margin: 0 8px 0 0; font-weight: 600; }
+  .progress { flex: 1; max-width: 420px; }
+  .bar { height: 8px; background: var(--panel2); border-radius: 4px; overflow: hidden; display: flex; }
+  .bar > div { height: 100%; transition: width .25s ease; }
+  .bar .pf { background: var(--accent); }
+  .bar .pa { background: var(--good); }
+  .plabels { font-size: 11px; color: var(--muted); margin-top: 3px; display: flex; gap: 14px; }
+  nav.tabs { margin-left: auto; display: flex; gap: 6px; }
+  nav.tabs button { background: transparent; border: 1px solid var(--panel2); color: var(--muted);
+                    padding: 6px 14px; border-radius: 8px; cursor: pointer; font-size: 13px; }
+  nav.tabs button.active { color: var(--text); border-color: var(--accent); background: rgba(77,163,255,.08); }
+  main { max-width: 980px; margin: 0 auto; padding: 18px 16px 80px; }
+  .toolbar { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+  .toolbar label { font-size: 13px; color: var(--muted); display: flex; gap: 6px; align-items: center; cursor: pointer; }
+  select { background: var(--panel2); color: var(--text); border: 1px solid #333c46; border-radius: 6px; padding: 4px 8px; }
+  .hint { font-size: 12px; color: var(--muted); }
+  kbd { background: var(--panel2); border-radius: 4px; padding: 1px 5px; font-size: 11px; border: 1px solid #333c46; }
+
+  .card { background: var(--panel); border: 1px solid #232c36; border-radius: var(--radius);
+          padding: 12px 14px; margin-bottom: 10px; }
+  .card.rated { border-color: rgba(63,185,80,.35); }
+  .card.active { outline: 2px solid var(--accent); }
+  .qline { font-size: 13px; color: var(--muted); }
+  .qline b { color: var(--text); font-weight: 600; }
+  .chip { display: inline-block; font-size: 11px; padding: 1px 8px; border-radius: 10px;
+          background: var(--panel2); color: var(--accent); margin-left: 6px; text-transform: uppercase; letter-spacing: .04em; }
+  .row { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+  .play { background: var(--panel2); color: var(--text); border: 1px solid #333c46; border-radius: 8px;
+          padding: 7px 12px; cursor: pointer; font-size: 13px; min-width: 200px; text-align: left; }
+  .play:hover { border-color: var(--accent); }
+  .play.playing { border-color: var(--accent); background: rgba(77,163,255,.15); }
+  .ratebtns { display: flex; gap: 6px; margin-top: 10px; }
+  .rb { width: 42px; height: 34px; border-radius: 8px; border: 1px solid #333c46; background: var(--panel2);
+        color: var(--text); font-size: 15px; cursor: pointer; }
+  .rb:hover { border-color: var(--accent); }
+  .rb.sel { background: var(--accent); color: #06101c; font-weight: 700; }
+  .rb.x { width: auto; padding: 0 12px; }
+  .abgrid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 8px; align-items: center; margin-top: 10px; }
+  .abside button.play { width: 100%; }
+  .vs { color: var(--muted); font-size: 12px; }
+  .choicebtns { display: flex; gap: 6px; margin-top: 10px; }
+  .cb { flex: 1; height: 34px; border-radius: 8px; border: 1px solid #333c46; background: var(--panel2);
+        color: var(--text); font-size: 13px; cursor: pointer; }
+  .cb:hover { border-color: var(--accent); }
+  .cb.sel { background: var(--good); color: #04120a; font-weight: 700; }
+  audio { width: 100%; margin-top: 6px; display: none; }
+  .saved { color: var(--good); font-size: 12px; opacity: 0; transition: opacity .3s; }
+  .saved.show { opacity: 1; }
+  .empty { text-align: center; color: var(--muted); padding: 60px 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Listening Test</h1>
+  <div class="progress">
+    <div class="bar"><div class="pf" id="bar-f"></div><div class="pa" id="bar-a"></div></div>
+    <div class="plabels"><span id="lbl-f"></span><span id="lbl-a"></span></div>
+  </div>
+  <nav class="tabs">
+    <button data-tab="factor" class="active">Factor Utility</button>
+    <button data-tab="ab">A/B Compare</button>
+  </nav>
+</header>
+<main>
+  <div class="toolbar" id="toolbar">
+    <label><input type="checkbox" id="unrated-only"> Unrated only</label>
+    <select id="filter-factor"><option value="">All factors</option>
+      <option value="melody">melody</option><option value="rhythm">rhythm</option><option value="timbre">timbre</option></select>
+    <button class="cb" style="flex:none;width:auto;padding:0 14px" id="next-unrated">Next unrated ⏎</button>
+    <span class="hint">Shortcuts: <kbd>space</kbd> replay neighbor · <kbd>Q</kbd> query · <kbd>0-3</kbd>/<kbd>X</kbd> rate · <kbd>A</kbd>/<kbd>B</kbd>/<kbd>T</kbd>/<kbd>N</kbd> choose</span>
+    <span class="saved" id="saved">saved ✓</span>
+  </div>
+  <div id="list"></div>
+  <audio id="player"></audio>
+</main>
+<script>
+const state = { tab: 'factor', cells: [], trials: [], filterUnrated: false, filterFactor: '', activeId: null };
+let player = new Audio();
+let playingUrl = null;
+
+function fmtProgress(p) {
+  document.getElementById('lbl-f').textContent = `Factor: ${p.factor_rated}/${p.factor_total}`;
+  document.getElementById('lbl-a').textContent = `A/B: ${p.ab_rated}/${p.ab_total}`;
+  const f = p.factor_total ? p.factor_rated / p.factor_total : 0;
+  const a = p.ab_total ? p.ab_rated / p.ab_total : 0;
+  document.getElementById('bar-f').style.width = (f * 100) + '%';
+  document.getElementById('bar-a').style.width = (a * 100) + '%';
+}
+
+async function refresh() {
+  const s = await (await fetch('/api/session')).json();
+  state.cells = s.factor_cells; state.trials = s.ab_trials;
+  fmtProgress(s.progress);
+  render();
+}
+
+function flashSaved() {
+  const el = document.getElementById('saved');
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 900);
+}
+
+async function post(url, body) {
+  const r = await fetch(url, { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body) });
+  if (!r.ok) { alert((await r.json()).error || 'save failed'); return false; }
+  return true;
+}
+
+function play(url, btn) {
+  if (playingUrl === url && !player.paused) { player.pause(); btn?.classList.remove('playing'); playingUrl = null; return; }
+  player.src = url; player.play();
+  document.querySelectorAll('.play.playing').forEach(b => b.classList.remove('playing'));
+  btn?.classList.add('playing'); playingUrl = url;
+}
+player.addEventListener('ended', () => { document.querySelectorAll('.play.playing').forEach(b => b.classList.remove('playing')); playingUrl = null; });
+
+function visibleCells() {
+  return state.cells.filter(c =>
+    (!state.filterUnrated || !c.rating) && (!state.filterFactor || c.target_factor === state.filterFactor));
+}
+function visibleTrials() {
+  return state.trials.filter(t => !state.filterUnrated || !t.choice);
+}
+
+function cellCard(c) {
+  const ratings = ['0','1','2','3','X'];
+  return `<div class="card ${c.rating ? 'rated' : ''}" data-id="${c.cell_id}">
+    <div class="qline">Query: <b>${esc(c.query_title)}</b> — ${esc(c.query_artist)}<span class="chip">${c.target_factor}</span></div>
+    <div class="qline" style="margin-top:2px">Neighbor #${c.neighbor_rank}: <b>${esc(c.neighbor_title)}</b> — ${esc(c.neighbor_artist)}</div>
+    <div class="row">
+      <button class="play" data-url="${c.query_audio}">▶ Query</button>
+      <button class="play" data-url="${c.neighbor_audio}">▶ Neighbor</button>
+    </div>
+    <div class="ratebtns">
+      ${ratings.map(r => `<button class="rb ${c.rating===r?'sel':''}" data-rate="${r}">${r}</button>`).join('')}
+      <span class="hint" style="align-self:center;margin-left:8px">0 unrelated · 1 weak · 2 useful · 3 strong · X can't judge</span>
+    </div></div>`;
+}
+
+function trialCard(t) {
+  return `<div class="card ${t.choice ? 'rated' : ''}" data-id="${t.ab_id}">
+    <div class="qline">Query: <b>${esc(t.query_title)}</b> — ${esc(t.query_artist)}<span class="chip">${t.target_factor}</span></div>
+    <div class="abgrid">
+      <div class="abside"><button class="play" data-url="${t.a_audio}">▶ A: ${esc(t.a_title)}<br><small>${esc(t.a_artist)}</small></button></div>
+      <div class="vs">vs</div>
+      <div class="abside"><button class="play" data-url="${t.b_audio}">▶ B: ${esc(t.b_title)}<br><small>${esc(t.b_artist)}</small></button></div>
+    </div>
+    <div class="qline" style="margin-top:6px">${esc(t.question)}</div>
+    <div class="choicebtns">
+      ${['A','B','Tie','Neither'].map(ch => `<button class="cb ${t.choice===ch?'sel':''}" data-choice="${ch}">${ch}</button>`).join('')}
+    </div></div>`;
+}
+
+function esc(s) { return String(s ?? '').replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m])); }
+
+function render() {
+  const list = document.getElementById('list');
+  const items = state.tab === 'factor' ? visibleCells().map(cellCard) : visibleTrials().map(trialCard);
+  list.innerHTML = items.length ? items.join('') :
+    `<div class="empty">${state.tab==='factor' ? 'No cells match the filter.' : 'No trials match the filter.'}</div>`;
+}
+
+document.addEventListener('click', async e => {
+  const playBtn = e.target.closest('.play');
+  if (playBtn) { play(playBtn.dataset.url, playBtn); return; }
+
+  const card = e.target.closest('.card');
+  if (!card) return;
+  state.activeId = card.dataset.id;
+
+  const rb = e.target.closest('.rb');
+  if (rb && state.tab === 'factor') {
+    const ok = await post('/api/rate', { cell_id: card.dataset.id, rating: rb.dataset.rate });
+    if (ok) { flashSaved(); await refresh(); scrollPreserve(card.dataset.id); }
+    return;
+  }
+  const cb = e.target.closest('.cb[data-choice]');
+  if (cb && state.tab === 'ab') {
+    const ok = await post('/api/rate_ab', { ab_id: card.dataset.id, choice: cb.dataset.choice });
+    if (ok) { flashSaved(); await refresh(); scrollPreserve(card.dataset.id); }
+  }
+});
+
+function scrollPreserve(id) {
+  const el = document.querySelector(`.card[data-id="${CSS.escape(id)}"]`);
+  if (el) el.scrollIntoView({ block: 'nearest' });
+}
+
+document.querySelectorAll('nav.tabs button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('nav.tabs button').forEach(x => x.classList.remove('active'));
+  b.classList.add('active');
+  state.tab = b.dataset.tab;
+  render();
+}));
+document.getElementById('unrated-only').addEventListener('change', e => { state.filterUnrated = e.target.checked; render(); });
+document.getElementById('filter-factor').addEventListener('change', e => { state.filterFactor = e.target.value; render(); });
+
+document.getElementById('next-unrated').addEventListener('click', jumpNext);
+
+function jumpNext() {
+  let item;
+  if (state.tab === 'factor') item = visibleCells().find(c => !c.rating) || visibleCells()[0];
+  else item = visibleTrials().find(t => !t.choice) || visibleTrials()[0];
+  if (!item) return;
+  const id = state.tab === 'factor' ? item.cell_id : item.ab_id;
+  const el = document.querySelector(`.card[data-id="${CSS.escape(id)}"]`);
+  if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); el.classList.add('active');
+            setTimeout(() => el.classList.remove('active'), 1200); state.activeId = id; }
+}
+
+document.addEventListener('keydown', e => {
+  if (['INPUT','SELECT','TEXTAREA'].includes(e.target.tagName)) return;
+  const key = e.key.toLowerCase();
+  const card = document.querySelector(`.card[data-id="${CSS.escape(state.activeId ?? '')}"]`)
+             || document.querySelector('.card');
+  if (!card) return;
+  state.activeId = card.dataset.id;
+
+  if (key === 'enter') { e.preventDefault(); jumpNext(); return; }
+  const plays = [...card.querySelectorAll('.play')];
+  if (key === ' ') { e.preventDefault(); plays.at(-1)?.click(); return; }   // neighbor / B side
+  if (key === 'q') { plays[0]?.click(); return; }
+  if (state.tab === 'factor' && '0123x'.includes(key)) {
+    const btn = card.querySelector(`.rb[data-rate="${key.toUpperCase()}"]`);
+    btn?.click(); return;
+  }
+  if (state.tab === 'ab') {
+    const map = { a: 'A', b: 'B', t: 'Tie', n: 'Neither' };
+    if (map[key]) card.querySelector(`.cb[data-choice="${map[key]}"]`)?.click();
+  }
+});
+
+refresh();
+</script>
+</body>
+</html>
