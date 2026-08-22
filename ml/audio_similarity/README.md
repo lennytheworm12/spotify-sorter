@@ -101,14 +101,33 @@ uv run python -m audio_similarity.cli.build_eval_sheets \
 uv run python -m audio_similarity.cli.eval_server \
     --sheets reports/human_eval \
     --audio-root data/fma/fma_small
+# add --host 0.0.0.0 to rate from a phone on the same network
 # -> http://127.0.0.1:8616  (Factor Utility tab: 0/1/2/3/X per cell;
 #    A/B Compare tab: A/B/Tie/Neither; keyboard: space/Q play, 0-3/X rate,
 #    A/B/T/N choose, Enter next unrated)
+
+# Public Pages UI (offline mode): https://lennytheworm12.github.io/spotify-sorter/
+# Regenerate its bundle after sheets change (auto-deploys on push):
+uv run python -m audio_similarity.cli.export_static_site \
+    --sheets reports/human_eval \
+    --manifest data/manifests/fma_small.parquet \
+    --output site
 
 # After rating: aggregate into the predeclared gates
 uv run python -m audio_similarity.cli.summarize_human_eval \
     --sheets reports/human_eval --output reports/human_eval_summary.json
 ```
+
+Reviewer flow (both modes): enter your name top-right so ratings are
+attributed; optional ✎ note per item for later LLM/human review; status
+filters (unrated / unrated-by-me / rated-by-me). In offline/Pages mode,
+ratings live in the browser — export JSON via ⚙ and merge back with
+⚙ Import into CSVs on a machine running the server (`/api/import`).
+
+Phone setup: simplest is opening the LAN-served UI directly
+(`http://YOUR-PC-IP:8616` with `--host 0.0.0.0`). The HTTPS Pages site
+cannot play HTTP audio directly (browser mixed-content rules), but can
+still be used for rating + notes with export/import.
 
 The evaluator is deliberately reusable: it serves whatever blinded sheets +
 key files sit in `--sheets`, so future human-input gates (Phase 2 sampling
