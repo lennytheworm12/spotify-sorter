@@ -169,11 +169,19 @@
     </div>
     <div class="srow" style="display:none" id="static-actions">
       <span class="hint">Ratings live in this browser until you send them back:</span>
-      <button class="cb" style="flex:none;width:auto;padding:0 14px" id="share-ratings">📤 Send to maintainer</button>
+      <button class="cb" style="flex:none;width:auto;padding:0 14px" id="drive-upload">☁️ Save to Drive</button>
+      <button class="cb" style="flex:none;width:auto;padding:0 14px" id="share-ratings">📤 Share / Send</button>
       <button class="cb" style="flex:none;width:auto;padding:0 14px" id="export-ratings">⬇ Export file</button>
       <button class="cb" style="flex:none;width:auto;padding:0 14px" id="copy-ratings">📋 Copy JSON</button>
       <button class="cb" style="flex:none;width:auto;padding:0 14px" id="import-ratings">⬆ Import</button>
       <input type="file" id="import-file" accept=".json" style="display:none">
+    </div>
+    <div class="srow" style="display:none" id="drive-config">
+      <span class="hint">Drive setup (one-time): paste an OAuth Client ID
+        (<i>Google Cloud Console → APIs & Services → Credentials → OAuth client ID, type Web</i>;
+        authorize <code>https://lennytheworm12.github.io</code> + this page's origin; enable the Google Drive API).</span>
+      <input id="drive-client-id" placeholder="1234567890.apps.googleusercontent.com" autocomplete="off"
+             style="flex:1;min-width:200px">
     </div>
     <div class="srow" style="display:none" id="server-import">
       <span class="hint">Merge an exported ratings file into the sheets on this machine:</span>
@@ -193,6 +201,7 @@ const state = {
   filterStatus: '', filterFactor: '', activeId: null,
   reviewer: localStorage.getItem('lt-reviewer') || '',
   audioBase: localStorage.getItem('lt-audio-base') || 'http://127.0.0.1:8616',
+  driveClientId: localStorage.getItem('lt-drive-client-id') || '',
 };
 const LS_KEY = 'lt-local-ratings-v1';
 let localStore = loadLocal();
@@ -241,7 +250,9 @@ function applyModeChrome() {
     banner.style.display = 'block';
     document.getElementById('srv-row').style.display = 'flex';
     document.getElementById('static-actions').style.display = 'flex';
+    document.getElementById('drive-config').style.display = 'flex';
     document.getElementById('audio-base').value = state.audioBase;
+    document.getElementById('drive-client-id').value = state.driveClientId;
     document.getElementById('phone-hint').textContent =
       'Phone tip: the simplest phone setup is opening the local server directly (same UI), e.g. http://YOUR-PC-IP:8616.';
   }
@@ -553,6 +564,79 @@ document.getElementById('share-ratings').addEventListener('click', async () => {
   // fallback: clipboard
   try { await navigator.clipboard.writeText(text); alert('Sharing unavailable here — JSON copied to clipboard instead. Paste it to the maintainer.'); }
   catch { alert('Sharing unavailable — use ⬇ Export file.'); }
+});
+
+/* --------------------------------------------------- Google Drive upload */
+let gsiPromise = null;
+function loadGsi() {
+  if (window.google?.accounts?.oauth2) return Promise.resolve();
+  if (!gsiPromise) {
+    gsiPromise = new Promise((resolve, reject) => {
+      const s = document.createElement('script');
+      s.src = 'https://accounts.google.com/gsi/client';
+      s.async = true; s.onload = resolve; s.onerror = () => reject(new Error('Failed to load Google sign-in'));
+      document.head.appendChild(s);
+    });
+  }
+  return gsiPromise;
+}
+
+function driveMultipartUpload(token, text, filename) {
+  const boundary = '-------lt' + Date.now();
+  const meta = {name: filename, parents: [], mimeType: 'application/json'};
+  const body =
+    `--${boundary}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n` +
+    JSON.stringify(meta) +
+    `\r\n--${boundary}\r\nContent-Type: application/json\r\n\r\n${text}\r\n--${boundary}--`;
+  return fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id,name,webViewLink', {
+    method: 'POST',
+    headers: {Authorization: `Bearer ${token}`, 'Content-Type': `multipart/related; boundary=${boundary}`},
+    body,
+  }).then(r => r.json());
+}
+
+document.getElementById('drive-client-id').addEventListener('change', e => {
+  state.driveClientId = e.target.value.trim();
+  localStorage.setItem('lt-drive-client-id', state.driveClientId);
+});
+
+document.getElementById('drive-upload').addEventListener('click', () => {
+  // iOS Safari: token request must start synchronously within this tap handler
+  const clientId = state.driveClientId;
+  if (!clientId) {
+    alert('Paste your Google OAuth Client ID in ⚙ Settings first (one-time setup — see the Drive setup hint there).');
+    return;
+  }
+  const text = buildExportText();
+  const filename = `listening-test-${(reviewerName() || 'ratings').replace(/\W+/g,'-')}-${new Date().toISOString().slice(0,10)}.json`;
+  const statusEl = document.getElementById('audio-status');
+
+  loadGsi().then(() => {
+    const tokClient = google.accounts.oauth2.initTokenClient({
+      client_id: clientId,
+      scope: 'https://www.googleapis.com/auth/drive.file',
+      callback: resp => {
+        if (resp.error) {
+          statusEl.textContent = 'Drive auth failed: ' + resp.error;
+          alert('Google auth failed (' + resp.error + '). You can still use 📤 Share / ⬇ Export.');
+          return;
+        }
+        statusEl.textContent = 'Uploading to Drive…';
+        driveMultipartUpload(resp.access_token, text, filename).then(f => {
+          if (f.error) {
+            statusEl.textContent = '';
+            alert('Drive upload failed: ' + (f.error.message || f.error));
+          } else {
+            statusEl.textContent = '';
+            alert('Saved to your Google Drive as:\n' + f.name +
+                  '\n\nOpen it in the Drive app and share with the maintainer.' +
+                  (f.webViewLink ? '\n' + f.webViewLink : ''));
+          }
+        }).catch(err => { statusEl.textContent = ''; alert('Drive upload failed: ' + err.message); });
+      },
+    });
+    tokClient.requestAccessToken({prompt: ''});  // silent if previously granted; popup otherwise
+  }).catch(err => alert(err.message + '\nUse 📤 Share as fallback.'));
 });
 
 function importRows(rows) {

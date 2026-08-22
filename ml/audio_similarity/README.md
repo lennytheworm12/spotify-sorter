@@ -121,8 +121,25 @@ uv run python -m audio_similarity.cli.summarize_human_eval \
 Reviewer flow (both modes): enter your name top-right so ratings are
 attributed; optional ✎ note per item for later LLM/human review; status
 filters (unrated / unrated-by-me / rated-by-me). In offline/Pages mode,
-ratings live in the browser — export JSON via ⚙ and merge back with
-⚙ Import into CSVs on a machine running the server (`/api/import`).
+ratings live in the browser — send them back via ☁️ Save to Drive,
+📤 Share (native share sheet on phones), ⬇ Export file, or 📋 Copy JSON;
+merge locally with ⚙ Import into CSVs (`/api/import`).
+
+Google Drive export (offline mode, works on iPhone Safari): requires a
+one-time OAuth Client ID. Steps:
+
+1. <https://console.cloud.google.com> → create/select a project
+2. APIs & Services → Library → enable **Google Drive API**
+3. APIs & Services → Credentials → Create credentials → **OAuth client
+   ID** → type *Web application* → Authorized JavaScript origins:
+   `https://lennytheworm12.github.io` and `http://localhost:8616`
+4. Paste the client ID (`….apps.googleusercontent.com`) into ⚙ Settings
+
+Uploads land in the reviewer's own Drive as
+`listening-test-<name>-<date>.json`; they share it with the maintainer
+from the Drive app. Scope is `drive.file` (only files this app created).
+If Google auth is blocked (popup blockers etc.), the UI falls back to the
+share sheet / clipboard paths.
 
 Phone setup: simplest is opening the LAN-served UI directly
 (`http://YOUR-PC-IP:8616` with `--host 0.0.0.0`). The HTTPS Pages site
