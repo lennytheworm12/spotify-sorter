@@ -28,59 +28,11 @@ from audio_similarity.merit_encoder import (
     load_head_state,
     validate_factor_vector,
 )
+from tests.helpers import FakeBackboneOutput, make_fake_encoder
 
 
-class FakeHiddenStates(list):
-    pass
-
-
-class FakeBackboneOutput:
-    def __init__(self, seq_len: int = 100, dim: int = 1024, seed: int = 0):
-        gen = torch.Generator().manual_seed(seed)
-        # hidden_states[0] is the CNN output; layers 1..24 are transformer layers
-        self.hidden_states = FakeHiddenStates(
-            torch.randn(1, seq_len, dim, generator=gen) for _ in range(max(EXTRACT_LAYERS) + 1)
-        )
-
-
-class FakeBackbone(torch.nn.Module):
-    """Stands in for frozen MERT; returns deterministic hidden states."""
-
-    def __init__(self, seed: int = 0):
-        super().__init__()
-        self.seed = seed
-        self.calls = 0
-        self.dummy = torch.nn.Parameter(torch.zeros(1))
-
-    def forward(self, **kwargs):
-        self.calls += 1
-        return FakeBackboneOutput(seed=self.seed + self.calls)
-
-
-class FakeProcessor:
-    sampling_rate = 24000
-
-    def __call__(self, wav, sampling_rate, return_tensors):
-        assert return_tensors == "pt"
-        tensor = torch.as_tensor(np.asarray(wav), dtype=torch.float32).unsqueeze(0)
-        return {"input_values": tensor}
-
-
-def make_encoder(seed: int = 0) -> tuple[MeritEncoder, FakeBackbone]:
-    torch.manual_seed(1234)
-    backbone = FakeBackbone(seed=seed)
-    heads = {name: ProjectionHead() for name in ("melody", "rhythm", "timbre")}
-    provenance = ModelProvenance(
-        backbone_id=MERT_MODEL_ID,
-        backbone_revision="test",
-        merit_repo_id=MERIT_REPO_ID,
-        merit_revision="test",
-        preprocessing_version=PREPROCESSING_VERSION,
-        extract_layers=EXTRACT_LAYERS,
-        head_sha256={name: "deadbeef" for name in heads},
-    )
-    encoder = MeritEncoder(model=backbone, processor=FakeProcessor(), heads=heads, provenance=provenance)
-    return encoder, backbone
+def make_encoder(seed: int = 0):
+    return make_fake_encoder(seed=seed)
 
 
 def sample_waveform() -> torch.Tensor:

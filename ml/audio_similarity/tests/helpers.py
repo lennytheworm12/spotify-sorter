@@ -61,3 +61,72 @@ def corrupt_file(tmp_path: Path) -> Path:
     p = tmp_path / "corrupt.mp3"
     p.write_bytes(bytes(range(256)) * 64)
     return p
+
+
+# ---------------------------------------------------------------------------
+# Fake MERT backbone / processor for fast encoder + batch tests
+# ---------------------------------------------------------------------------
+
+class FakeHiddenStates(list):
+    pass
+
+
+class FakeBackboneOutput:
+    def __init__(self, seq_len: int = 100, dim: int = 1024, seed: int = 0):
+        gen = torch.Generator().manual_seed(seed)
+        self.hidden_states = FakeHiddenStates(
+            torch.randn(1, seq_len, dim, generator=gen) for _ in range(24)
+        )
+
+
+class FakeBackbone(torch.nn.Module):
+    def __init__(self, seed: int = 0):
+        super().__init__()
+        self.seed = seed
+        self.calls = 0
+        self.dummy = torch.nn.Parameter(torch.zeros(1))
+
+    def forward(self, **kwargs):
+        self.calls += 1
+        return FakeBackboneOutput(seed=self.seed + self.calls)
+
+
+class FakeProcessor:
+    sampling_rate = 24000
+
+    def __call__(self, wav, sampling_rate, return_tensors):
+        assert return_tensors == "pt"
+        import numpy as np
+
+        tensor = torch.as_tensor(np.asarray(wav), dtype=torch.float32).unsqueeze(0)
+        return {"input_values": tensor}
+
+
+def make_fake_encoder(seed: int = 0):
+    """Return (MeritEncoder with fakes, FakeBackbone)."""
+    from audio_similarity.merit_encoder import (
+        EXTRACT_LAYERS,
+        MERIT_REPO_ID,
+        MERT_MODEL_ID,
+        PREPROCESSING_VERSION,
+        MeritEncoder,
+        ModelProvenance,
+        ProjectionHead,
+    )
+
+    torch.manual_seed(1234)
+    backbone = FakeBackbone(seed=seed)
+    heads = {name: ProjectionHead() for name in ("melody", "rhythm", "timbre")}
+    provenance = ModelProvenance(
+        backbone_id=MERT_MODEL_ID,
+        backbone_revision="test",
+        merit_repo_id=MERIT_REPO_ID,
+        merit_revision="test",
+        preprocessing_version=PREPROCESSING_VERSION,
+        extract_layers=EXTRACT_LAYERS,
+        head_sha256={name: "deadbeef" for name in heads},
+    )
+    from audio_similarity.merit_encoder import MeritEncoder as _M  # noqa: F811
+
+    encoder = _M(model=backbone, processor=FakeProcessor(), heads=heads, provenance=provenance)
+    return encoder, backbone
