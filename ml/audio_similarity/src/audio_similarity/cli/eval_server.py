@@ -34,14 +34,27 @@ def make_handler(store: SheetStore) -> type:
         protocol_version = "HTTP/1.1"
 
         # ------------------------------------------------------------ utils
+        def _cors(self) -> None:
+            # allows the GitHub Pages UI to talk to a LAN/local server
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+            self.send_header("Access-Control-Allow-Headers", "Content-Type")
+
         def _json(self, payload: dict | list, status: int = 200) -> None:
             body = json.dumps(payload).encode()
             self.send_response(status)
             self.send_header("Content-Type", "application/json")
             self.send_header("Content-Length", str(len(body)))
             self.send_header("Cache-Control", "no-store")
+            self._cors()
             self.end_headers()
             self.wfile.write(body)
+
+        def do_OPTIONS(self) -> None:  # noqa: N802
+            self.send_response(204)
+            self.send_header("Content-Length", "0")
+            self._cors()
+            self.end_headers()
 
         def _file(self, path: Path, content_type: str, range_header: str | None = None) -> None:
             if not path.is_file():
@@ -74,6 +87,7 @@ def make_handler(store: SheetStore) -> type:
             self.send_header("Accept-Ranges", "bytes")
             if status == 206:
                 self.send_header("Content-Range", f"bytes {start}-{end}/{size}")
+            self._cors()
             self.end_headers()
             with open(path, "rb") as fh:
                 fh.seek(start)
@@ -92,6 +106,8 @@ def make_handler(store: SheetStore) -> type:
         def do_GET(self) -> None:  # noqa: N802
             if self.path in ("/", "/index.html"):
                 return self._file(_STATIC_DIR / "index.html", "text/html; charset=utf-8")
+            if self.path == "/api/ping":
+                return self._json({"ok": True, "mode": "server"})
             if self.path == "/api/session":
                 try:
                     return self._json(store.build_session())
@@ -120,16 +136,38 @@ def make_handler(store: SheetStore) -> type:
                 return self._json({"error": "bad json"}, 400)
             if self.path == "/api/rate":
                 try:
-                    store.rate_factor_cell(str(payload["cell_id"]), str(payload["rating"]))
+                    store.rate_factor_cell(
+                        str(payload["cell_id"]), str(payload["rating"]), str(payload.get("rated_by", ""))
+                    )
                 except (ValueError, KeyError) as exc:
                     return self._json({"error": str(exc)}, 400)
                 return self._json({"ok": True})
             if self.path == "/api/rate_ab":
                 try:
-                    store.rate_ab_trial(str(payload["ab_id"]), str(payload["choice"]))
+                    store.rate_ab_trial(
+                        str(payload["ab_id"]), str(payload["choice"]), str(payload.get("rated_by", ""))
+                    )
                 except (ValueError, KeyError) as exc:
                     return self._json({"error": str(exc)}, 400)
                 return self._json({"ok": True})
+            if self.path == "/api/note":
+                try:
+                    store.set_note(
+                        str(payload["kind"]),
+                        str(payload["id"]),
+                        str(payload.get("note", "")),
+                        str(payload.get("rated_by", "")),
+                    )
+                except (ValueError, KeyError) as exc:
+                    return self._json({"error": str(exc)}, 400)
+                return self._json({"ok": True})
+            if self.path == "/api/import":
+                applied = store.import_ratings(
+                    list(payload.get("factor_cells", [])),
+                    list(payload.get("ab_trials", [])),
+                    overwrite_existing=bool(payload.get("overwrite_existing", False)),
+                )
+                return self._json({"ok": True, "applied": applied})
             return self._json({"error": "not found"}, 404)
 
     return EvalHandler
@@ -140,12 +178,15 @@ def serve(
     manifest_path: str | Path,
     audio_root: str | Path,
     port: int = 8616,
+    host: str = "127.0.0.1",
     open_browser: bool = True,
 ) -> None:
     store = SheetStore(sheets_dir, manifest_path, audio_root)
-    server = ThreadingHTTPServer(("127.0.0.1", port), make_handler(store))
-    url = f"http://127.0.0.1:{port}"
+    server = ThreadingHTTPServer((host, port), make_handler(store))
+    url = f"http://{'localhost' if host in ('0.0.0.0', '127.0.0.1') else host}:{port}"
     print(f"evaluator running at {url}  (Ctrl-C to stop)")
+    if host == "0.0.0.0":
+        print("bound to all interfaces — reachable from phones/other devices on your network")
     print(f"sheets: {Path(sheets_dir).resolve()}")
     if open_browser:
         webbrowser.open(url)
@@ -161,10 +202,18 @@ def main() -> int:
     parser.add_argument("--manifest", default="data/manifests/fma_small.parquet")
     parser.add_argument("--audio-root", default="data/fma/fma_small")
     parser.add_argument("--port", type=int, default=8616)
+    parser.add_argument("--host", default="127.0.0.1", help="0.0.0.0 to allow phone/LAN access")
     parser.add_argument("--no-browser", action="store_true")
     args = parser.parse_args()
 
-    serve(args.sheets, args.manifest, args.audio_root, port=args.port, open_browser=not args.no_browser)
+    serve(
+        args.sheets,
+        args.manifest,
+        args.audio_root,
+        port=args.port,
+        host=args.host,
+        open_browser=not args.no_browser,
+    )
     return 0
 
 

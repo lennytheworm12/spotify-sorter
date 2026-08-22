@@ -133,3 +133,56 @@ def test_unknown_audio_404(server):
     except urllib.error.HTTPError as exc:
         raised = exc.code == 404
     assert raised
+
+
+def post_raw(base: str, path: str, payload: dict, headers: dict | None = None):
+    body = json.dumps(payload).encode()
+    request = urllib.request.Request(
+        base + path, data=body,
+        headers={"Content-Type": "application/json", **(headers or {})}, method="POST",
+    )
+    return urllib.request.urlopen(request)
+
+
+def test_ping_and_cors_headers(server):
+    base, _ = server
+    response = get(base, "/api/ping")
+    assert json.loads(response.read())["mode"] == "server"
+    assert response.headers["Access-Control-Allow-Origin"] == "*"
+
+    # preflight from a cross-origin Pages UI
+    req = urllib.request.Request(base + "/api/rate", method="OPTIONS")
+    pre = urllib.request.urlopen(req)
+    assert pre.status == 204
+    assert "POST" in pre.headers["Access-Control-Allow-Methods"]
+
+
+def test_note_via_http(server):
+    base, _ = server
+    response = post_raw(base, "/api/note", {"kind": "factor", "id": "1:melody:1", "note": "ambiguous clip"})
+    assert response.status == 200
+    session = json.loads(get(base, "/api/session").read())
+    assert session["factor_cells"][0]["note"] == "ambiguous clip"
+
+
+def test_rating_with_reviewer_attribution(server):
+    base, _ = server
+    post_raw(base, "/api/rate", {"cell_id": "1:melody:1", "rating": "2", "rated_by": "carol"})
+    session = json.loads(get(base, "/api/session").read())
+    cell = session["factor_cells"][0]
+    assert cell["rating"] == "2"
+    assert cell["rated_by"] == "carol"
+
+
+def test_import_via_http(server):
+    base, _ = server
+    payload = {
+        "factor_cells": [{"cell_id": "1:melody:1", "rating": "3", "note": "from phone", "rated_by": "dave"}],
+        "ab_trials": [{"ab_id": "1:melody:1", "choice": "Tie"}],
+    }
+    result = json.loads(post_raw(base, "/api/import", payload).read())
+    assert result["ok"] is True
+    session = json.loads(get(base, "/api/session").read())
+    assert session["factor_cells"][0]["rating"] == "3"
+    assert session["factor_cells"][0]["note"] == "from phone"
+    assert session["ab_trials"][0]["choice"] == "Tie"

@@ -134,3 +134,92 @@ def test_audio_resolution_for_blinded_ab_sides(eval_env):
 
 def test_missing_audio_returns_none(eval_env):
     assert eval_env.audio_path_for_request("track", "999") is None
+
+
+# ---------------------------------------------------------------------------
+# reviewer attribution, notes, import
+# ---------------------------------------------------------------------------
+
+
+def test_rating_records_reviewer(eval_env):
+    eval_env.rate_factor_cell("1:melody:1", "3", reviewer="alice")
+    frame = pd.read_csv(eval_env.sheets_dir / "judgments_factor.csv", dtype=str)
+    row = frame[frame["cell_id"] == "1:melody:1"].iloc[0]
+    assert row["rating"] == "3"
+    assert row["rated_by"] == "alice"
+
+
+def test_note_persists_and_migrates_legacy_sheets(tmp_path):
+    """Sheets created before note/rated_by columns must keep working."""
+    sheets = tmp_path / "sheets"
+    sheets.mkdir()
+    pd.DataFrame(
+        [{"cell_id": "9:timbre:2", "query_track_id": 9, "target_factor": "timbre",
+          "neighbor_rank": 2, "rating": "", "neighbor_title": "t", "neighbor_artist": "a"}]
+    ).to_csv(sheets / "judgments_factor.csv", index=False)
+    pd.DataFrame(
+        [{"cell_id": "9:timbre:2", "representation": "merit_timbre", "neighbor_track_id": 12}]
+    ).to_csv(sheets / "key_factor.csv", index=False)
+    pd.DataFrame(
+        [{"ab_id": "9:timbre:2", "question": "q", "a_title": "a", "a_artist": "x",
+          "b_title": "b", "b_artist": "y", "choice": ""}]
+    ).to_csv(sheets / "judgments_ab.csv", index=False)
+    pd.DataFrame(
+        [{"ab_id": "9:timbre:2", "a_representation": "m", "b_representation": "g",
+          "a_track_id": 10, "b_track_id": 11}]
+    ).to_csv(sheets / "key_ab.csv", index=False)
+
+    manifest = pd.DataFrame(
+        [
+            {"track_id": 9, "relative_audio_path": "009/000009.wav", "title": "q",
+             "artist": "qa", "top_genre": "g", "decode_status": "SUCCESS"},
+            {"track_id": 12, "relative_audio_path": "012/000012.wav", "title": "n",
+             "artist": "na", "top_genre": "g", "decode_status": "SUCCESS"},
+        ]
+    )
+    manifest_path = tmp_path / "manifest.parquet"
+    manifest.to_parquet(manifest_path, index=False)
+
+    store = SheetStore(sheets, manifest_path, tmp_path)  # audio files absent; ok for notes
+    store.set_note("factor", "9:timbre:2", "clip sounds corrupted", reviewer="bob")
+    session = store.build_session()
+    cell = session["factor_cells"][0]
+    assert cell["note"] == "clip sounds corrupted"
+    assert cell["rated_by"] == "bob"
+
+    store.set_note("ab", "9:timbre:2", "A and B both plausible")
+    assert session is not None
+
+
+def test_import_ratings_fills_empty_only_by_default(eval_env):
+    eval_env.rate_factor_cell("1:melody:1", "3", reviewer="alice")
+    report = eval_env.import_ratings(
+        factor_rows=[
+            {"cell_id": "1:melody:1", "rating": "0"},  # conflicts -> skipped by default
+            {"cell_id": "1:rhythm:1", "rating": "2"},
+        ],
+        ab_rows=[{"ab_id": "1:melody:1", "choice": "B"}],
+    )
+    frame = pd.read_csv(eval_env.sheets_dir / "judgments_factor.csv", dtype=str)
+    assert frame.loc[frame["cell_id"] == "1:melody:1", "rating"].iloc[0] == "3"  # kept
+    assert frame.loc[frame["cell_id"] == "1:rhythm:1", "rating"].iloc[0] == "2"
+    assert report["factor"] == 1
+
+    eval_env.import_ratings(
+        factor_rows=[{"cell_id": "1:melody:1", "rating": "1"}],
+        ab_rows=[],
+        overwrite_existing=True,
+    )
+    frame = pd.read_csv(eval_env.sheets_dir / "judgments_factor.csv", dtype=str)
+    assert frame.loc[frame["cell_id"] == "1:melody:1", "rating"].iloc[0] == "1"
+
+
+def test_import_ignores_invalid_values_and_unknown_ids(eval_env):
+    report = eval_env.import_ratings(
+        factor_rows=[
+            {"cell_id": "1:melody:1", "rating": "9"},
+            {"cell_id": "nope", "rating": "3"},
+        ],
+        ab_rows=[{"ab_id": "nope", "choice": "A"}],
+    )
+    assert report["factor"] == 0
