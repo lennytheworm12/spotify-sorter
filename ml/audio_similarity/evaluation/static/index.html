@@ -203,16 +203,28 @@ const state = {
   audioBase: localStorage.getItem('lt-audio-base') || 'http://127.0.0.1:8616',
   driveClientId: localStorage.getItem('lt-drive-client-id') || '',
 };
-const LS_KEY = 'lt-local-ratings-v1';
-let localStore = loadLocal();
-let player = new Audio(); let playingUrl = null;
-const noteTimers = {};
-
-function loadLocal() {
-  try { return JSON.parse(localStorage.getItem(LS_KEY)) || {factor:{}, ab:{}}; }
+const LS_LEGACY = 'lt-local-ratings-v1';
+function storeKey(name) {
+  return 'lt-ratings:' + (name || 'anonymous').toLowerCase();
+}
+function loadStoreFor(name) {
+  let raw = localStorage.getItem(storeKey(name));
+  if (!raw && !localStorage.getItem(storeKey('')) && name) {
+    raw = localStorage.getItem(LS_LEGACY); // migrate pre-reviewer-key data
+    if (raw) localStorage.setItem(storeKey(name), raw);
+  }
+  try { return JSON.parse(raw || '') || {factor:{}, ab:{}}; }
   catch { return {factor:{}, ab:{}}; }
 }
-function saveLocal() { localStorage.setItem(LS_KEY, JSON.stringify(localStore)); }
+let localStore = {factor:{}, ab:{}};
+let player = new Audio(); let playingUrl = null;
+const noteTimers = {};
+const pendingNotes = {};
+
+function saveLocal() {
+  if (state.reviewer !== undefined)
+    localStorage.setItem(storeKey(state.reviewer), JSON.stringify(localStore));
+}
 
 function esc(s) { return String(s ?? '').replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m])); }
 function flashSaved() { const el = document.getElementById('saved'); el.classList.add('show');
@@ -227,6 +239,7 @@ function audioUrl(path) {
 /* ------------------------------------------------------- bootstrap / mode */
 async function boot() {
   document.getElementById('reviewer').value = state.reviewer;
+  localStore = loadStoreFor(state.reviewer);
   try {
     const r = await fetch('api/session', {headers:{'Accept':'application/json'}});
     const j = await r.json();
@@ -289,6 +302,15 @@ function mergeLocal(payload) {
   };
 }
 
+function progressNow() {
+  const cells = Object.values(localStore.factor).filter(v => v.rating).length;
+  const trials = Object.values(localStore.ab).filter(v => v.choice).length;
+  return {
+    factor_rated: cells, factor_total: state.cells.length || 360,
+    ab_rated: trials, ab_total: state.trials.length || 352,
+  };
+}
+
 function fmtProgress(p) {
   document.getElementById('lbl-f').textContent = `Factor: ${p.factor_rated}/${p.factor_total}`;
   document.getElementById('lbl-a').textContent = `A/B: ${p.ab_rated}/${p.ab_total}`;
@@ -325,9 +347,32 @@ async function setRating(kind, id, value) {
   flashSaved(); await refresh(); scrollPreserve(id); return true;
 }
 
+function flushPendingNotes() {
+  for (const [id, payload] of Object.entries(pendingNotes)) {
+    delete noteTimers[id];
+    if (state.mode === 'server') {
+      fetch('/api/note', {method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify(payload)}).catch(()=>{});
+    } else {
+      const bucket = payload.kind === 'factor' ? localStore.factor : localStore.ab;
+      bucket[payload.id] = {...(bucket[payload.id] || {}), note: payload.note,
+        rated_by: bucket[payload.id]?.rated_by || reviewerName(), updated_at: Date.now()};
+    }
+    delete pendingNotes[id];
+  }
+  if (state.mode !== 'server') saveLocal();
+}
+
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'hidden') flushPendingNotes();
+});
+window.addEventListener('pagehide', flushPendingNotes);
+
 function queueNoteSave(kind, id, text) {
-  clearTimeout(noteTimers[id]);
-  noteTimers[id] = setTimeout(async () => {
+  pendingNotes[`${kind}:${id}`] = {kind, id, note: text};
+  clearTimeout(noteTimers[`${kind}:${id}`]);
+  noteTimers[`${kind}:${id}`] = setTimeout(async () => {
+    delete pendingNotes[`${kind}:${id}`];
     if (state.mode === 'server') {
       await fetch('/api/note', {method:'POST', headers:{'Content-Type':'application/json'},
         body: JSON.stringify({kind, id, note:text, rated_by: reviewerName()})});
@@ -474,8 +519,30 @@ document.getElementById('filter-factor').addEventListener('change', e => { state
 document.getElementById('hide-notes').addEventListener('change', render);
 
 document.getElementById('reviewer').addEventListener('change', e => {
-  state.reviewer = e.target.value.trim(); localStorage.setItem('lt-reviewer', state.reviewer); render();
+  flushPendingNotes();
+  const previous = state.reviewer;
+  const next = e.target.value.trim();
+  if (previous === next) return;
+  state.reviewer = previous;           // ensure current store saves under the OLD key
+  saveLocal();
+  state.reviewer = next;
+  localStorage.setItem('lt-reviewer', next);
+  localStore = loadStoreFor(next);
+  refresh().then(() => {
+    const p = progressNow();
+    if (p.factor_rated + p.ab_rated > 0) {
+      banner(`Welcome back, ${next || 'reviewer'} — ${p.factor_rated}/${p.factor_total} factor cells and ${p.ab_rated}/${p.ab_total} A/B trials already done in this browser.`);
+      setTimeout(clearBanner, 6000);
+    }
+  });
 });
+
+let bannerTimer;
+function banner(text) {
+  const el = document.getElementById('mode-banner');
+  el.innerHTML = text; el.style.display = 'block';
+}
+function clearBanner() { applyModeChrome(); }
 
 document.getElementById('next-unrated').addEventListener('click', jumpNext);
 function jumpNext() {
