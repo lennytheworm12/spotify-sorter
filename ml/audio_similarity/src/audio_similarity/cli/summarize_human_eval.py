@@ -27,7 +27,7 @@ def summarize(sheets_dir: str | Path) -> dict:
     report: dict = {}
 
     factor_path = sheets / "judgments_factor.csv"
-    if factor_path.exists():
+    if factor_path.exists() and factor_path.stat().st_size > 0:
         frame = pd.read_csv(factor_path)
         rated = frame[frame["rating"].astype(str).str.strip() != ""]
         invalid = set(rated["rating"].astype(str)) - VALID_RATINGS
@@ -53,7 +53,12 @@ def summarize(sheets_dir: str | Path) -> dict:
 
     ab_path = sheets / "judgments_ab.csv"
     key_path = sheets / "key_ab.csv"
-    if ab_path.exists() and key_path.exists():
+    if (
+        ab_path.exists()
+        and key_path.exists()
+        and ab_path.stat().st_size > 0
+        and key_path.stat().st_size > 0
+    ):
         ab = pd.read_csv(ab_path)
         keys = pd.read_csv(key_path)
         answered = ab[ab["choice"].astype(str).isin(["A", "B", "Tie", "Neither"])].merge(keys, on="ab_id")
