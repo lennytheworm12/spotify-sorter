@@ -97,6 +97,10 @@ class MeanL2Aggregator:
     name: str = "mean_l2"
     version: int = 1
 
+    @property
+    def identity(self) -> str:
+        return f"{self.name}_v{self.version}"
+
     def aggregate(self, embeddings: list[np.ndarray]) -> AggregationResult:
         vector = mean_l2(list(embeddings))
         return AggregationResult(
