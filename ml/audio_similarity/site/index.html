@@ -475,7 +475,11 @@ function play(url, btn) {
   const resolved = audioUrl(url);
   if (!resolved) { alert('No audio server configured. Open ⚙ Settings and set the URL of the machine running:\n\n  uv run python -m audio_similarity.cli.eval_server --host 0.0.0.0'); return; }
   if (playingUrl === resolved && !player.paused) { player.pause(); btn?.classList.remove('playing'); playingUrl = null; return; }
-  player.src = resolved; player.play().catch(() => alert('Could not reach the audio server.\nCheck the URL in ⚙ Settings.'));
+  player.src = resolved; player.play().catch(() => alert(
+  state.mode === 'server'
+    ? 'Playback failed. If the server was just updated, its process may need a restart.'
+    : 'Could not reach the audio server. Check ⚙ Settings.'
+));
   document.querySelectorAll('.play.playing').forEach(b => b.classList.remove('playing'));
   btn?.classList.add('playing'); playingUrl = resolved;
 }
