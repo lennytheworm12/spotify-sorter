@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import pandas as pd
@@ -223,3 +224,92 @@ def test_import_ignores_invalid_values_and_unknown_ids(eval_env):
         ab_rows=[{"ab_id": "nope", "choice": "A"}],
     )
     assert report["factor"] == 0
+
+
+# ---------------------------------------------------------------------------
+# multi-reviewer aggregation: never override, always log
+# ---------------------------------------------------------------------------
+
+
+def test_second_reviewer_does_not_override_primary(eval_env):
+    eval_env.rate_factor_cell("1:melody:1", "2", reviewer="alice")
+    eval_env.rate_factor_cell("1:melody:1", "3", reviewer="bob")
+
+    frame = pd.read_csv(eval_env.sheets_dir / "judgments_factor.csv", dtype=str)
+    row = frame[frame["cell_id"] == "1:melody:1"].iloc[0]
+    assert row["rating"] == "2"                       # first judgment stands
+    assert row["rated_by"] == "alice, bob"
+    log = json.loads(row["rating_log"])
+    assert [e["v"] for e in log] == ["2", "3"]
+    assert [e["by"] for e in log] == ["alice", "bob"]
+
+
+def test_same_reviewer_self_correction_updates_primary(eval_env):
+    eval_env.rate_factor_cell("1:melody:1", "2", reviewer="alice")
+    eval_env.rate_factor_cell("1:melody:1", "3", reviewer="alice")  # changed mind
+
+    frame = pd.read_csv(eval_env.sheets_dir / "judgments_factor.csv", dtype=str)
+    row = frame[frame["cell_id"] == "1:melody:1"].iloc[0]
+    assert row["rating"] == "3"                        # her own entry updated
+    log = json.loads(row["rating_log"])
+    assert len(log) == 1                               # not a second opinion
+    assert row["rated_by"] == "alice"
+
+
+def test_session_reports_judgment_count(eval_env):
+    eval_env.rate_factor_cell("1:melody:1", "2", reviewer="alice")
+    eval_env.rate_factor_cell("1:melody:1", "3", reviewer="bob")
+    session = eval_env.build_session()
+    cell = next(c for c in session["factor_cells"] if c["cell_id"] == "1:melody:1")
+    assert cell["n_ratings"] == 2
+
+
+def test_ab_conflicting_choices_logged_not_overridden(eval_env):
+    eval_env.rate_ab_trial("1:melody:1", "A", reviewer="alice")
+    eval_env.rate_ab_trial("1:melody:1", "B", reviewer="bob")
+
+    frame = pd.read_csv(eval_env.sheets_dir / "judgments_ab.csv", dtype=str)
+    row = frame[frame["ab_id"] == "1:melody:1"].iloc[0]
+    assert row["choice"] == "A"                        # primary preserved
+    log = json.loads(row["choice_log"])
+    assert [(e["v"], e["by"]) for e in log] == [("A", "alice"), ("B", "bob")]
+
+
+def test_import_conflict_preserves_and_logs(eval_env):
+    eval_env.rate_factor_cell("1:melody:1", "3", reviewer="alice")
+    report = eval_env.import_ratings(
+        factor_rows=[{"cell_id": "1:melody:1", "rating": "0", "rated_by": "phone-sarah"}],
+        ab_rows=[],
+    )
+    assert report["factor_logged"] == 1
+    frame = pd.read_csv(eval_env.sheets_dir / "judgments_factor.csv", dtype=str)
+    row = frame[frame["cell_id"] == "1:melody:1"].iloc[0]
+    assert row["rating"] == "3"
+    log = json.loads(row["rating_log"])
+    assert any(e["by"] == "phone-sarah" and e["v"] == "0" for e in log)
+
+
+def test_legacy_sheet_without_log_columns_still_rates(tmp_path):
+    sheets = tmp_path / "sheets"
+    sheets.mkdir()
+    pd.DataFrame(
+        [{"cell_id": "5:rhythm:1", "query_track_id": 5, "target_factor": "rhythm",
+          "neighbor_rank": 1, "rating": "", "neighbor_title": "t", "neighbor_artist": "a"}]
+    ).to_csv(sheets / "judgments_factor.csv", index=False)
+    pd.DataFrame(
+        [{"cell_id": "5:rhythm:1", "representation": "m", "neighbor_track_id": 10}]
+    ).to_csv(sheets / "key_factor.csv", index=False)
+
+    manifest = pd.DataFrame(
+        [{"track_id": 5, "relative_audio_path": "005/000005.wav", "title": "q",
+          "artist": "qa", "top_genre": "g", "decode_status": "SUCCESS"}]
+    )
+    manifest_path = tmp_path / "manifest.parquet"
+    manifest.to_parquet(manifest_path, index=False)
+
+    store = SheetStore(sheets, manifest_path, tmp_path)
+    store.rate_factor_cell("5:rhythm:1", "1", reviewer="carol")
+    frame = pd.read_csv(sheets / "judgments_factor.csv", dtype=str)
+    row = frame.iloc[0]
+    assert row["rating"] == "1"
+    assert json.loads(row["rating_log"])[0]["by"] == "carol"

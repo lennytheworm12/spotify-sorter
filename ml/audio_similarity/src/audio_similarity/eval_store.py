@@ -10,7 +10,9 @@ starting the HTTP server.
 
 from __future__ import annotations
 
+import json
 import threading
+import time
 from pathlib import Path
 
 import pandas as pd
@@ -32,12 +34,15 @@ class SheetStore:
 
     def _read(self, name: str) -> pd.DataFrame:
         frame = pd.read_csv(self.sheets_dir / name, dtype={"rating": str, "choice": str})
-        # migrate sheets created before note/rated_by columns existed, and
-        # normalize NaN to "" so truthiness checks behave predictably
-        for col in ("note", "rated_by"):
+        # migrate sheets created before note/rated_by/log columns existed,
+        # and normalize NaN to "" so truthiness checks behave predictably
+        for col in ("note", "rated_by", "rating_log", "choice_log"):
             if col not in frame.columns:
                 frame[col] = ""
-        for col in ("rating", "choice", "note", "rated_by"):
+        for col in ("rating_log", "choice_log"):
+            if col in frame.columns:
+                frame[col] = frame[col].fillna("")
+        for col in ("rating", "choice", "note", "rated_by", "rating_log", "choice_log"):
             if col in frame.columns:
                 frame[col] = frame[col].fillna("")
         return frame
@@ -72,12 +77,14 @@ class SheetStore:
             neighbor_track_id = int(key_by_cell[row["cell_id"]])
             query_id = int(row["query_track_id"])
             q_meta = self.manifest.loc[query_id]
+            n_ratings = len(self._parse_log(row.get("rating_log"))) or (1 if str(row["rating"] or "").strip() else 0)
             factor_cells.append(
                 {
                     "cell_id": row["cell_id"],
                     "target_factor": row["target_factor"],
                     "neighbor_rank": int(row["neighbor_rank"]),
                     "rating": str(row["rating"]),
+                    "n_ratings": int(n_ratings),
                     "rated_by": str(row["rated_by"]) if pd.notna(row["rated_by"]) else "",
                     "note": str(row["note"]) if pd.notna(row["note"]) else "",
                     "neighbor_title": row["neighbor_title"],
@@ -111,6 +118,7 @@ class SheetStore:
                     "b_title": row["b_title"],
                     "b_artist": row["b_artist"],
                     "choice": str(row["choice"]),
+                    "n_ratings": len(self._parse_log(row.get("choice_log"))) or (1 if str(row["choice"] or "").strip() else 0),
                     "rated_by": str(row["rated_by"]) if pd.notna(row["rated_by"]) else "",
                     "note": str(row["note"]) if pd.notna(row["note"]) else "",
                     "query_title": str(q_meta["title"]),
@@ -143,6 +151,59 @@ class SheetStore:
     def _clean_reviewer(reviewer: str | None) -> str:
         return str(reviewer or "").strip()[:80]
 
+    @staticmethod
+    def _parse_log(raw) -> list[dict]:
+        """Parse a serialized judgment log; [] when absent/legacy."""
+        if raw is None or (isinstance(raw, float) and pd.isna(raw)):
+            return []
+        try:
+            parsed = json.loads(str(raw))
+            return parsed if isinstance(parsed, list) else []
+        except (json.JSONDecodeError, TypeError):
+            return []
+
+    @staticmethod
+    def _serialize_log(log: list[dict]) -> str:
+        return json.dumps(log[-50:], ensure_ascii=False)  # bound cell size
+
+    def _apply_judgment(
+        self,
+        frame: pd.DataFrame,
+        mask,
+        value_col: str,
+        log_col: str,
+        value: str,
+        reviewer: str,
+    ) -> None:
+        """Multi-reviewer semantics: first judgment stays primary; later
+        reviewers append to the log; the same reviewer may self-correct."""
+        row_idx = frame.index[mask][0]
+        reviewer = self._clean_reviewer(reviewer)
+        log = self._parse_log(frame.at[row_idx, log_col])
+
+        prior_own = next((e for e in log if e.get("by") == reviewer), None)
+        if prior_own is not None:
+            prior_own["v"] = value
+            prior_own["at"] = int(time.time())
+        else:
+            log.append({"v": value, "by": reviewer, "at": int(time.time())})
+
+        frame.at[row_idx, log_col] = self._serialize_log(log)
+
+        current = str(frame.at[row_idx, value_col] or "").strip()
+        is_first_rater = bool(log) and log[0].get("by") == reviewer
+        if not current or is_first_rater:
+            # empty cell or the original rater self-correcting -> primary updates
+            frame.at[row_idx, value_col] = value
+
+        names = []
+        for entry in log:
+            who = str(entry.get("by") or "")
+            if who and who not in names:
+                names.append(who)
+        if names:
+            frame.at[row_idx, "rated_by"] = ", ".join(names)[:200]
+
     def rate_factor_cell(self, cell_id: str, rating: str, reviewer: str = "") -> None:
         rating = str(rating).strip().upper()
         if rating not in self.VALID_RATINGS:
@@ -152,10 +213,7 @@ class SheetStore:
             mask = frame["cell_id"] == cell_id
             if not mask.any():
                 raise KeyError(f"unknown cell '{cell_id}'")
-            frame.loc[mask, "rating"] = rating
-            clean = self._clean_reviewer(reviewer)
-            if clean:
-                frame.loc[mask, "rated_by"] = clean
+            self._apply_judgment(frame, mask, "rating", "rating_log", rating, reviewer)
             self._write_atomic("judgments_factor.csv", frame)
 
     def rate_ab_trial(self, ab_id: str, choice: str, reviewer: str = "") -> None:
@@ -167,10 +225,7 @@ class SheetStore:
             mask = frame["ab_id"] == ab_id
             if not mask.any():
                 raise KeyError(f"unknown trial '{ab_id}'")
-            frame.loc[mask, "choice"] = choice
-            clean = self._clean_reviewer(reviewer)
-            if clean:
-                frame.loc[mask, "rated_by"] = clean
+            self._apply_judgment(frame, mask, "choice", "choice_log", choice, reviewer)
             self._write_atomic("judgments_ab.csv", frame)
 
     def set_note(self, kind: str, ident: str, note: str, reviewer: str = "") -> None:
@@ -199,7 +254,7 @@ class SheetStore:
         Rows without a value are skipped. Existing values are kept unless
         ``overwrite_existing`` is set.
         """
-        applied = {"factor": 0, "factor_notes": 0, "ab": 0, "ab_notes": 0}
+        applied = {"factor": 0, "factor_logged": 0, "factor_notes": 0, "ab": 0, "ab_logged": 0, "ab_notes": 0}
         with self._lock:
             factor = self._read("judgments_factor.csv").set_index("cell_id")
             for row in factor_rows:
@@ -208,13 +263,20 @@ class SheetStore:
                     continue
                 rating = str(row.get("rating") or "").strip().upper()
                 note = str(row.get("note") or "").strip()
-                if rating and (overwrite_existing or not str(factor.at[cid, "rating"] or "").strip()):
-                    if rating in self.VALID_RATINGS:
+                if rating and rating in self.VALID_RATINGS:
+                    existing = str(factor.at[cid, "rating"] or "").strip()
+                    who = self._clean_reviewer(row.get("rated_by"))
+                    if not existing or overwrite_existing:
                         factor.at[cid, "rating"] = rating
                         applied["factor"] += 1
-                        who = self._clean_reviewer(row.get("rated_by"))
                         if who:
                             factor.at[cid, "rated_by"] = who
+                    elif existing != rating:
+                        # second opinion: preserve in log; never overrides primary
+                        log = self._parse_log(factor.at[cid, "rating_log"])
+                        log.append({"v": rating, "by": who or "imported", "at": int(time.time())})
+                        factor.at[cid, "rating_log"] = self._serialize_log(log)
+                        applied["factor_logged"] += 1
                 if note and (overwrite_existing or not str(factor.at[cid, "note"] or "").strip()):
                     factor.at[cid, "note"] = note[:2000]
                     applied["factor_notes"] += 1
@@ -227,13 +289,19 @@ class SheetStore:
                     continue
                 choice = str(row.get("choice") or "").strip().capitalize()
                 note = str(row.get("note") or "").strip()
-                if choice and (overwrite_existing or not str(ab.at[aid, "choice"] or "").strip()):
-                    if choice in self.VALID_CHOICES:
+                if choice and choice in self.VALID_CHOICES:
+                    existing_choice = str(ab.at[aid, "choice"] or "").strip()
+                    who = self._clean_reviewer(row.get("rated_by"))
+                    if not existing_choice or overwrite_existing:
                         ab.at[aid, "choice"] = choice
                         applied["ab"] += 1
-                        who = self._clean_reviewer(row.get("rated_by"))
                         if who:
                             ab.at[aid, "rated_by"] = who
+                    elif existing_choice != choice:
+                        choice_log = self._parse_log(ab.at[aid, "choice_log"])
+                        choice_log.append({"v": choice, "by": who or "imported", "at": int(time.time())})
+                        ab.at[aid, "choice_log"] = self._serialize_log(choice_log)
+                        applied["ab_logged"] += 1
                 if note and (overwrite_existing or not str(ab.at[aid, "note"] or "").strip()):
                     ab.at[aid, "note"] = note[:2000]
                     applied["ab_notes"] += 1

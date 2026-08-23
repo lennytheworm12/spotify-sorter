@@ -474,7 +474,7 @@ function cellCard(c) {
   const rates = ['0','1','2','3','X'];
   return `<div class="card ${c.rating?'rated':''}" data-id="${esc(c.cell_id)}">
     <div class="qline">Query: <b>${esc(c.query_title)}</b> — ${esc(c.query_artist)}<span class="chip">${c.target_factor}</span>
-      ${c.rated_by ? `<span class="by">by ${esc(c.rated_by)}</span>` : ''}</div>
+      ${c.rated_by ? `<span class="by">by ${esc(c.rated_by)}</span>` : ''}${c.n_ratings > 1 ? ` <span class="by">· ${c.n_ratings} ratings</span>` : ''}</div>
     <div class="qline" style="margin-top:2px">Neighbor #${c.neighbor_rank}: <b>${esc(c.neighbor_title)}</b> — ${esc(c.neighbor_artist)}</div>
     <div class="row">
       <button class="play" data-url="${c.query_audio}">▶ Query</button>
@@ -490,7 +490,7 @@ function cellCard(c) {
 function trialCard(t) {
   return `<div class="card ${t.choice?'rated':''}" data-id="${esc(t.ab_id)}">
     <div class="qline">Query: <b>${esc(t.query_title)}</b> — ${esc(t.query_artist)}<span class="chip">${t.target_factor}</span>
-      ${t.rated_by ? `<span class="by">by ${esc(t.rated_by)}</span>` : ''}</div>
+      ${t.rated_by ? `<span class="by">by ${esc(t.rated_by)}</span>` : ''}${t.n_ratings > 1 ? ` <span class="by">· ${t.n_ratings} ratings</span>` : ''}</div>
     <div class="row" style="margin-bottom:2px"><button class="play" data-url="${t.query_audio}">▶ Query</button></div>
     <div class="abgrid">
       <div class="abside"><button class="play" data-url="${t.a_audio}">▶ A: ${esc(t.a_title)}<br><small>${esc(t.a_artist)}</small></button></div>
@@ -569,6 +569,20 @@ volEl.addEventListener('input', e => {
   localStorage.setItem('lt-volume', String(state.volume));
 });
 
+function adoptAnonymousIfNeeded(next) {
+  if (!next) return;
+  const anonRaw = localStorage.getItem(storeKey('anonymous'));
+  const targetRaw = localStorage.getItem(storeKey(next));
+  if (!anonRaw || targetRaw) return;
+  try {
+    const anon = JSON.parse(anonRaw);
+    const n = Object.keys(anon.factor || {}).length + Object.keys(anon.ab || {}).length;
+    if (n > 0 && confirm(`Found ${n} rating(s) made without a name on this device.\nAttach them to "${next}"?`)) {
+      localStorage.setItem(storeKey(next), anonRaw);
+    }
+  } catch { /* corrupt legacy data: ignore */ }
+}
+
 document.getElementById('reviewer').addEventListener('change', e => {
   flushPendingNotes();
   const previous = state.reviewer;
@@ -578,6 +592,7 @@ document.getElementById('reviewer').addEventListener('change', e => {
   saveLocal();
   state.reviewer = next;
   localStorage.setItem('lt-reviewer', next);
+  adoptAnonymousIfNeeded(next);
   localStore = loadStoreFor(next);
   refresh().then(() => {
     const p = progressNow();

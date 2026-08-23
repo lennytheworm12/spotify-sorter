@@ -16,10 +16,23 @@ import argparse
 import json
 from pathlib import Path
 
+import json
+
 import numpy as np
 import pandas as pd
 
 VALID_RATINGS = {"0", "1", "2", "3", "X"}
+
+
+def _parse_log(raw) -> list[str]:
+    """Flatten a serialized judgment log into raw values."""
+    if raw is None or (isinstance(raw, float) and pd.isna(raw)):
+        return []
+    try:
+        parsed = json.loads(str(raw))
+        return [str(e.get("v")) for e in parsed] if isinstance(parsed, list) else []
+    except (json.JSONDecodeError, TypeError, AttributeError):
+        return []
 
 
 def _read_csv_if_present(path: Path) -> pd.DataFrame | None:
@@ -37,22 +50,33 @@ def summarize(sheets_dir: str | Path) -> dict:
 
     frame = _read_csv_if_present(sheets / "judgments_factor.csv")
     if frame is not None:
-        rated = frame[frame["rating"].astype(str).str.strip() != ""]
-        invalid = set(rated["rating"].astype(str)) - VALID_RATINGS
+        # every logged judgment counts once (multi-reviewer cells contribute
+        # all their opinions); legacy single-rating rows fall back gracefully
+        judgments: list[dict] = []
+        for _, row in frame.iterrows():
+            log_values = _parse_log(row.get("rating_log"))
+            values = log_values or ([str(row["rating"])] if str(row.get("rating") or "").strip() else [])
+            for v in values:
+                judgments.append({"target_factor": row["target_factor"], "value": v})
+        judged_frame = pd.DataFrame(judgments, columns=["target_factor", "value"])
+        invalid = set(judged_frame["value"]) - VALID_RATINGS if not judged_frame.empty else set()
         if invalid:
             raise ValueError(f"invalid ratings present: {invalid}")
-        numeric = rated[rated["rating"].astype(str) != "X"].copy()
-        numeric["rating"] = numeric["rating"].astype(float)
+        numeric = judged_frame[judged_frame["value"] != "X"].copy() if not judged_frame.empty else judged_frame
+        if not numeric.empty:
+            numeric["value"] = numeric["value"].astype(float)
 
         per_factor = {}
         for factor, group in numeric.groupby("target_factor"):
+            all_rows = judged_frame[judged_frame["target_factor"] == factor]
             per_factor[factor] = {
                 "n_rated": int(len(group)),
-                "n_excluded_x": int(len(rated) - len(numeric)),
-                "median_rating": float(group["rating"].median()),
-                "share_rating_ge_2": float((group["rating"] >= 2).mean()),
-                "gate_median_ge_2": bool(group["rating"].median() >= 2),
-                "gate_share_ge_2_pct60": bool((group["rating"] >= 2).mean() >= 0.60),
+                "n_judgments_total": int(len(all_rows)),
+                "n_excluded_x": int((all_rows["value"].astype(str) == "X").sum()),
+                "median_rating": float(group["value"].median()),
+                "share_rating_ge_2": float((group["value"] >= 2).mean()),
+                "gate_median_ge_2": bool(group["value"].median() >= 2),
+                "gate_share_ge_2_pct60": bool((group["value"] >= 2).mean() >= 0.60),
             }
         report["factor_utility"] = per_factor
         report["factor_gate_pass"] = {
