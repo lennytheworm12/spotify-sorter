@@ -46,6 +46,8 @@ def export(sheets_dir: str | Path, manifest_path: str | Path, output_dir: str | 
     out = Path(output_dir)
     out.mkdir(parents=True, exist_ok=True)
     shutil.copy(_STATIC_DIR / "index.html", out / "index.html")
+    if (_STATIC_DIR / "examples").exists():
+        shutil.copytree(_STATIC_DIR / "examples", out / "examples", dirs_exist_ok=True)
     with open(out / "session.json", "w") as fh:
         json.dump(payload, fh, indent=1)
 

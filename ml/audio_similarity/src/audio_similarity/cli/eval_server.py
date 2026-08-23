@@ -106,6 +106,9 @@ def make_handler(store: SheetStore) -> type:
         def do_GET(self) -> None:  # noqa: N802
             if self.path in ("/", "/index.html"):
                 return self._file(_STATIC_DIR / "index.html", "text/html; charset=utf-8")
+            if self.path.startswith("/examples/"):
+                name = Path(self.path).name  # basename only; no traversal
+                return self._file(_STATIC_DIR / "examples" / name, "audio/mpeg")
             if self.path == "/api/ping":
                 return self._json({"ok": True, "mode": "server"})
             if self.path == "/api/session":

@@ -122,6 +122,52 @@
 <main>
   <div class="banner" id="mode-banner"></div>
 
+  <details class="legend">
+    <summary>🎵 Examples: what "similar" means for each factor</summary>
+    <div style="margin-top:10px">
+      <div class="qline"><b>Melody</b> — same tune, different instrument &amp; speed. Judge the notes, not the sound.</div>
+      <div class="row">
+        <button class="play" data-url="/examples/melody_query.mp3">▶ Melody query</button>
+        <button class="play" data-url="/examples/melody_neighbor.mp3">▶ Neighbor: SAME melody ✔</button>
+      </div>
+      <div class="qline" style="margin-top:8px"><b>Rhythm</b> — same groove/beats, different pitches underneath.</div>
+      <div class="row">
+        <button class="play" data-url="/examples/rhythm_query.mp3">▶ Rhythm query</button>
+        <button class="play" data-url="/examples/rhythm_neighbor.mp3">▶ Neighbor: SAME groove ✔</button>
+      </div>
+      <div class="qline" style="margin-top:8px"><b>Timbre</b> — same instrument/sound palette, entirely different tunes.</div>
+      <div class="row">
+        <button class="play" data-url="/examples/timbre_query.mp3">▶ Timbre query</button>
+        <button class="play" data-url="/examples/timbre_neighbor.mp3">▶ Neighbor: SAME tone color ✔</button>
+      </div>
+      <p class="hint" style="margin-top:8px">These demo pairs are synthesized — they are not part of the test set.</p>
+    </div>
+  </details>
+
+  <details class="legend">
+    <summary>❓ FAQ</summary>
+    <div style="margin-top:10px; font-size:13px; line-height:1.55">
+      <p><b>The clip sounds like a podcast / spoken word / weird field recording.</b><br>
+      That happens — the test library includes experimental material. If the asked factor
+      doesn't apply (melody of a speech clip?), rate <b>X</b>. X is excluded from statistics
+      but still counts as done. Genuinely useful signal!</p>
+      <p><b>Should I judge genre, lyrics, or whether I like it?</b><br>
+      No — only the named factor on the card.</p>
+      <p><b>Can I change a rating?</b><br>
+      Yes — tap another button; if it was your rating it updates, others' ratings are kept.</p>
+      <p><b>Someone else rated the same card.</b><br>
+      Great — every opinion is kept and shown as "· N ratings". Your tap adds yours.</p>
+      <p><b>Progress saved?</b><br>
+      Instantly, always. Close the tab whenever you like — come back later,
+      enter your name, and continue where you stopped.</p>
+      <p><b>Too quiet / too loud?</b><br>
+      Use the 🔊 slider (up to 200%). Above ~150% distortion may affect your judgment.</p>
+      <p><b>Why does this exist?</b><br>
+      We're measuring whether an AI music-similarity system agrees with human hearing.
+      Your ratings are the human half of that comparison.</p>
+    </div>
+  </details>
+
   <details class="legend" open>
     <summary>How to rate (rubric)</summary>
     <div id="legend-factor">
