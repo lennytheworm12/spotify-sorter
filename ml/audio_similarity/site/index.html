@@ -333,6 +333,19 @@ function progressNow() {
   };
 }
 
+async function updateProgressOnly() {
+  if (document.hidden) return;                 // background tabs: don't poll
+  try {
+    let payload;
+    if (state.mode === 'server') payload = await (await fetch('/api/session')).json();
+    else payload = mergeLocal(await (await fetch('session.json')).json());
+    fmtProgress(payload.progress);
+  } catch { /* transient network hiccup: keep last known values */ }
+}
+
+// collective/live progress: after own presses AND periodic polling
+setInterval(updateProgressOnly, 20000);
+
 function fmtProgress(p) {
   document.getElementById('lbl-f').textContent = `Factor: ${p.factor_rated}/${p.factor_total}`;
   document.getElementById('lbl-a').textContent = `A/B: ${p.ab_rated}/${p.ab_total}`;
@@ -366,7 +379,9 @@ async function setRating(kind, id, value) {
                   rated_by: who, updated_at: Date.now()};
     saveLocal();
   }
-  flashSaved(); await refresh(); scrollPreserve(id); return true;
+  flashSaved(); await refresh(); scrollPreserve(id);
+  updateProgressOnly();                        // push the shared counter immediately
+  return true;
 }
 
 function flushPendingNotes() {
