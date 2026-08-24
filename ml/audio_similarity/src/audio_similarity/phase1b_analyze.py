@@ -16,8 +16,10 @@ import pandas as pd
 
 from .mir_metrics import (
     BackgroundCalibration,
+    factor_scores,
     melody_components,
     rhythm_components,
+    specificity,
     timbre_components,
 )
 from .mir_features import FeatureCache
@@ -31,19 +33,22 @@ from .mir_features import FeatureCache
 class EmbeddingLookup:
     def __init__(self, embeddings_path: str | Path):
         table = pd.read_parquet(embeddings_path)
-        rows = {int(r["track_id"]): r for r in table.to_pylist()}
-        self.rows = rows
+        self.rows: dict[int, dict[str, np.ndarray]] = {}
+        for _, row in table.iterrows():
+            tid = int(row["track_id"])
+            entry: dict[str, np.ndarray] = {}
+            for factor in ("melody", "rhythm", "timbre", "mert_general"):
+                vec = np.asarray(row[factor], dtype=np.float64)
+                norm = np.linalg.norm(vec)
+                entry[factor] = vec / norm if norm > 0 else vec
+            self.rows[tid] = entry
 
     def cosine(self, a: int, b: int, factor: str) -> float:
         ra, rb = self.rows.get(int(a)), self.rows.get(int(b))
         if ra is None or rb is None:
             return float("nan")
-        va = np.asarray(ra[factor], dtype=np.float64)
-        vb = np.asarray(rb[factor], dtype=np.float64)
-        na, nb = np.linalg.norm(va), np.linalg.norm(vb)
-        if na == 0 or nb == 0:
-            return float("nan")
-        return float(np.dot(va, vb) / (na * nb))
+        va, vb = ra[factor], rb[factor]
+        return float(np.dot(va, vb))
 
 
 # ---------------------------------------------------------------------------
