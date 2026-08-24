@@ -169,7 +169,10 @@ def flag_cross_factor_leakage(corr: pd.DataFrame) -> list[str]:
 
 
 def disagreement_analysis(master: pd.DataFrame) -> dict:
-    valid = master[master["human_valid"] == True]  # noqa: E712 — explicit bool check
+    valid = master[
+        (master["human_valid"] == True)  # noqa: E712
+        & (master["retrieval_source"] == "merit_target")
+    ]
     useful = valid[pd.to_numeric(valid["human_rating"]) >= 2]
     not_useful = valid[pd.to_numeric(valid["human_rating"]) <= 1]
 
