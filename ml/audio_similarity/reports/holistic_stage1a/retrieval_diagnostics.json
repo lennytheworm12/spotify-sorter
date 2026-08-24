@@ -1,0 +1,18 @@
+{
+ "muq_mulan_large": {
+  "same_artist_rate@10": 0.15,
+  "genre_overlap@10": 0.578
+ },
+ "mert_5120": {
+  "same_artist_rate@10": 0.13,
+  "genre_overlap@10": 0.445
+ },
+ "mert_generic": {
+  "same_artist_rate@10": 0.105,
+  "genre_overlap@10": 0.395
+ },
+ "laion_clap": {
+  "same_artist_rate@10": 0.192,
+  "genre_overlap@10": 0.588
+ }
+}
