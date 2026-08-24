@@ -140,7 +140,9 @@ class MertVariantEncoder:
         import torch
         from transformers import AutoModel
 
-        self.model = AutoModel.from_pretrained(backbone_id).to(self.device).eval()
+        self.model = AutoModel.from_pretrained(
+            backbone_id, trust_remote_code=True
+        ).to(self.device).eval()
 
     def encode_segment(self, waveform: np.ndarray, sample_rate: int) -> "HolisticEmbedding":
         import torch
@@ -201,7 +203,7 @@ class LaionClapEncoder:
     ):
         self.spec = spec or AdapterSpec(
             encoder_id="laion_clap",
-            checkpoint="630k-audioset-best.pt",
+            checkpoint="music_audioset_epoch_15_esc_90.14.pt",
             declared_dim=512,
         )
         self.encoder_id = self.spec.encoder_id
@@ -227,7 +229,10 @@ class LaionClapEncoder:
             wav = wav.mean(axis=-1)
         if sample_rate != self.INPUT_SR:
             wav = librosa.resample(wav, orig_sr=sample_rate, target_sr=self.INPUT_SR)
-        embeds = self.model.get_audio_embedding_from_data(x=wav, use_tensor=False)
+        # library expects a 2-D float batch; quantizes internally
+        embeds = self.model.get_audio_embedding_from_data(
+            x=wav.reshape(1, -1).astype(np.float64), use_tensor=False
+        )
         vec = _l2(np.asarray(embeds)[0])
         if len(vec) != self.embedding_dim:
             raise EncoderContractError(f"expected {self.embedding_dim}-D, got {len(vec)}")
