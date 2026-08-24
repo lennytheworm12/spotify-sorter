@@ -154,22 +154,30 @@ class FeatureCache:
         return self.dir / f"{audio_hash[:24]}_{self.config_hash}.npz"
 
     def get(self, audio_hash: str) -> TrackFeatures | None:
-        path = self._path(audio_hash)
-        if not path.exists():
-            return None
-        try:
-            data = np.load(path, allow_pickle=False)
-            return TrackFeatures(
-                audio_hash=str(data["audio_hash"]),
-                chroma_mean=data["chroma_mean"],
-                chroma_sequence=data["chroma_sequence"],
-                onset_envelope=data["onset_envelope"],
-                periodicity_profile=data["periodicity_profile"],
-                tempo_bpm=float(data["tempo_bpm"]),
-                timbre_vector=data["timbre_vector"],
-            )
-        except Exception:
-            return None  # corrupt cache entry -> recompute
+        candidates = [self._path(audio_hash)]
+        # tolerate files renamed without the config suffix (rekey migration)
+        prefix_matches = sorted(self.dir.glob(f"{audio_hash[:24]}_*.npz")) + \
+            sorted(self.dir.glob(f"{audio_hash[:24]}.npz"))
+        for candidate in prefix_matches:
+            if candidate not in candidates:
+                candidates.append(candidate)
+        for path in candidates:
+            if not path.exists():
+                continue
+            try:
+                data = np.load(path, allow_pickle=False)
+                return TrackFeatures(
+                    audio_hash=str(data["audio_hash"]),
+                    chroma_mean=data["chroma_mean"],
+                    chroma_sequence=data["chroma_sequence"],
+                    onset_envelope=data["onset_envelope"],
+                    periodicity_profile=data["periodicity_profile"],
+                    tempo_bpm=float(data["tempo_bpm"]),
+                    timbre_vector=data["timbre_vector"],
+                )
+            except Exception:
+                continue  # corrupt cache entry -> try next / recompute
+        return None
 
     def put(self, feats: TrackFeatures) -> None:
         np.savez_compressed(
@@ -183,7 +191,32 @@ class FeatureCache:
             timbre_vector=feats.timbre_vector.astype(np.float32),
         )
 
-    def get_or_extract(self, waveform: np.ndarray, sample_rate: int = SAMPLE_RATE) -> TrackFeatures:
+    def get_or_extract(
+        self,
+        waveform: np.ndarray,
+        sample_rate: int = SAMPLE_RATE,
+        audio_key: str | None = None,
+    ) -> TrackFeatures:
+        """Extract+cache. When ``audio_key`` (e.g., the source-file SHA-256)
+        is supplied, it becomes the cache identity so other pipelines can
+        resolve features by file hash without decoding."""
+        if audio_key:
+            cached = self.get(audio_key)
+            if cached is not None:
+                return cached
+            feats = extract_features(waveform, sample_rate)
+            keyed = TrackFeatures(
+                audio_hash=audio_key,
+                chroma_mean=feats.chroma_mean,
+                chroma_sequence=feats.chroma_sequence,
+                onset_envelope=feats.onset_envelope,
+                periodicity_profile=feats.periodicity_profile,
+                tempo_bpm=feats.tempo_bpm,
+                timbre_vector=feats.timbre_vector,
+            )
+            self.put(keyed)
+            return keyed and self.get(audio_key)
+
         probe_hash = _hash_waveform(
             waveform if sample_rate == SAMPLE_RATE else _resample_probe(waveform, sample_rate)
         )

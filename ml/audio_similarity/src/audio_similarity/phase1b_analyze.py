@@ -58,17 +58,17 @@ class EmbeddingLookup:
 
 def background_distributions(
     cache: FeatureCache,
-    track_ids: list[int],
+    id_to_hash: dict[int, str],
     n_pairs: int,
     seed: int = 424242,
 ) -> dict[str, np.ndarray]:
     """Raw metric distributions over deterministic random track pairs."""
     rng = np.random.default_rng(seed)
-    ids = np.array(track_ids)
+    ids = np.array(sorted(id_to_hash))
     melody, rhythm, timbre = [], [], []
     for _ in range(n_pairs):
         a, b = rng.choice(ids, size=2, replace=False)
-        fa, fb = cache.get(str(a)), cache.get(str(b))
+        fa, fb = cache.get(id_to_hash[int(a)]), cache.get(id_to_hash[int(b)])
         if fa is None or fb is None:
             continue
         m = melody_components(fa.chroma_sequence, fb.chroma_sequence)

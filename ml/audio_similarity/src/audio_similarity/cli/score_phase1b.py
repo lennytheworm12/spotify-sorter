@@ -18,8 +18,10 @@ import numpy as np
 import pandas as pd
 
 from audio_similarity.mir_features import FeatureCache, cache_stats, feature_config_hash
+from audio_similarity.mir_metrics import BackgroundCalibration
 from audio_similarity.phase1b_analyze import (
     AnalysisContext,
+    save_calibration,
     EmbeddingLookup,
     background_distributions,
     load_human_joins,
@@ -94,13 +96,15 @@ def main() -> int:
 
     bg_rng = np.random.default_rng(424242)
     all_ids = np.array(sorted({int(t) for t in manifest["track_id"]}))
-    have_hash = {str(t): str(manifest.set_index("track_id").at[t, "audio_sha256"]) for t in all_ids}
-    available = [t for t in all_ids if cache.get(have_hash[int(t)]) is not None]
+    manifest_indexed = manifest.set_index("track_id")
+    have_hash = {int(t): str(manifest_indexed.at[t, "audio_sha256"]) for t in all_ids if t in manifest_indexed.index}
+    available = [t for t in all_ids if int(t) in have_hash and cache.get(have_hash[int(t)]) is not None]
+    id_to_hash = have_hash
     print(f"features available for {len(available)} / {len(all_ids)} corpus tracks")
 
     bg_ids = [int(t) for t in bg_rng.choice(available, size=min(4000, len(available)), replace=False)]
     calib_path = out_dir / "background_calibration.npz"
-    dists = background_distributions(cache, bg_ids, n_pairs=2000, seed=424242)
+    dists = background_distributions(cache, {t: have_hash[t] for t in bg_ids}, n_pairs=2000, seed=424242)
     calibration = BackgroundCalibration(dists)
     save_calibration(
         calibration, calib_path,
@@ -168,7 +172,7 @@ def main() -> int:
     }
     (out_dir / "phase1b_summary.json").write_text(json.dumps(summary, indent=1))
 
-    from audio_similarity.phase1b_render import render_report
+    lines = ["| Area | Melody | Rhythm | Timbre |", "|---|---:|---:|---:|"]
     report_md = render_report(
         summary, spec_report, comparisons, corr, leakage_flags, human_stats,
         gates, disagreements.get("disagreement_rows"), decision_table_md,
@@ -176,7 +180,6 @@ def main() -> int:
     (out_dir / "phase1b_cross_reference_report.md").write_text(report_md)
 
     # ---- decision table (design section 30)
-    lines = ["| Area | Melody | Rhythm | Timbre |", "|---|---:|---:|---:|"]
     for label, key in [
         ("Construct validity", "construct_validity"),
         ("Factor specificity", "factor_specificity"),

@@ -173,8 +173,8 @@ def disagreement_analysis(master: pd.DataFrame) -> dict:
         (master["human_valid"] == True)  # noqa: E712
         & (master["retrieval_source"] == "merit_target")
     ]
-    useful = valid[pd.to_numeric(valid["human_rating"]) >= 2]
-    not_useful = valid[pd.to_numeric(valid["human_rating"]) <= 1]
+    useful = valid[pd.to_numeric(valid["human_rating"], errors="coerce") >= 2]
+    not_useful = valid[pd.to_numeric(valid["human_rating"], errors="coerce") <= 1]
 
     def target_scores(frame: pd.DataFrame) -> dict[str, list[float]]:
         out: dict[str, list[float]] = {f: [] for f in ("melody", "rhythm", "timbre")}
