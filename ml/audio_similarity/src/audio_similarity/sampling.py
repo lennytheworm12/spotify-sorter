@@ -181,11 +181,18 @@ class SamplingStrategy:
         return f"{self.name}_v{self.version}"
 
 
+def _center5(duration: float, cfg: dict) -> list[tuple[float, float]]:
+    w = cfg["window"]
+    center = duration / 2.0
+    return [(max(0.0, center - w / 2.0), min(duration, center + w / 2.0))]
+
+
 STRATEGIES: dict[str, SamplingStrategy] = {
     s.name: s
     for s in [
         SamplingStrategy("first30", 1, _first30, {"window": 30.0}),
         SamplingStrategy("center30", 1, _center30, {"window": 30.0}),
+        SamplingStrategy("center5", 1, _center5, {"window": 5.0}),
         SamplingStrategy("three20", 1, _three20, {"center_fractions": [0.25, 0.50, 0.75], "window": 20.0}),
         SamplingStrategy("three30", 1, _three30, {"center_fractions": [0.20, 0.50, 0.80], "window": 30.0}),
         SamplingStrategy("five20", 1, _five20, {"count": 5, "window": 20.0}),
@@ -196,6 +203,7 @@ STRATEGIES: dict[str, SamplingStrategy] = {
 DEFAULT_STRATEGY_NAMES = [
     "first30",
     "center30",
+    "center5",
     "three20",
     "three30",
     "five20",
