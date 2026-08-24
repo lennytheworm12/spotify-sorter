@@ -1,0 +1,60 @@
+# Stage 1A frozen benchmark contract (pivot design sections 6, 10; roadmap Stage 1)
+experiment_id: holistic_encoder_stage1a
+
+corpus:
+  name: fma_small
+  manifest: data/manifests/fma_small.parquet
+  known_decode_failures: [99134, 108925, 133297]
+
+excerpt:
+  strategy: center5_v1          # one deterministic 5-s window, centered
+  sample_rate: 24000            # canonical decode rate (CLAP resamples per its own contract)
+  channels: mono
+  note: >
+    Identical excerpt content for every encoder. Model-specific internal
+    resampling/windowing (e.g. CLAP 48 kHz/10 s) is recorded per encoder
+    as preprocessing provenance, never as different musical content.
+
+encoders:
+  - id: muq_mulan_large
+    hf_repo: OpenMuQ/MuQ-MuLan-large
+    embedding_dim: 512
+    input_sr: 24000
+    license_code: MIT
+    license_weights: CC-BY-NC-4.0
+  - id: mert_5120
+    backbone: m-a-p/MERT-v1-330M
+    variant: layers_3_4_5_6_23_concat_meanpool
+    embedding_dim: 5120
+  - id: mert_generic
+    backbone: m-a-p/MERT-v1-330M
+    variant: last_layer_meanpool   # predeclared generic challenger
+    embedding_dim: 1024
+  - id: laion_clap
+    checkpoint: 630k-audioset-best.pt
+    embedding_dim: 512
+    input_sr: 48000                # model contract; resample documented
+    window_seconds: 10             # model pads/repeats to fixed window
+
+normalization: l2_cosine
+retrieval:
+  metric: cosine
+  exact: true
+  k: 10
+same_artist_exclusion: available_flag_only
+
+queries:
+  count: 40
+  seed: 20260823
+  stratification: fma_top_genre_balanced   # sampling aid only, not ground truth
+
+candidate_union:
+  per_encoder_top_k: 10
+  informative_disagreement_focus: true
+  anchor_negatives: few
+
+evaluation:
+  primary_question: "Which candidate sounds more like the query overall?"
+  choices: [A, B, Tie, Neither]
+  blind: [encoder_names, genre, artist, scores]
+  target_judgments: "40 queries x 8 comparisons x 3 raters (~960)"
