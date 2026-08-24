@@ -130,6 +130,12 @@ def main() -> int:
     human_stats = human_factor_stats(master)
     disagreements = disagreement_analysis(master)
 
+    target_rows = master[master["retrieval_source"] == "merit_target"]
+    summary_extra = {
+        "tempo_match_only_count": int(target_rows["tempo_match_only"].sum()) if "tempo_match_only" in master.columns else 0,
+        "rhythm_target_rows": int((target_rows["retrieval_factor"] == "rhythm").sum()),
+    }
+
     components = evidence_components(master, spec_report, comparisons, corr, human_stats)
     gates = original_phase1_gate({
         f: {
@@ -155,11 +161,19 @@ def main() -> int:
         "original_phase1_gate": gates,
         "evidence_components": components,
         "leakage_flags": leakage_flags,
+        **summary_extra,
         "feature_cache": cache_stats(args.cache_dir),
         "missing_pairs_skipped": missing_pairs,
         "master_rows": len(master),
     }
     (out_dir / "phase1b_summary.json").write_text(json.dumps(summary, indent=1))
+
+    from audio_similarity.phase1b_render import render_report
+    report_md = render_report(
+        summary, spec_report, comparisons, corr, leakage_flags, human_stats,
+        gates, disagreements.get("disagreement_rows"), decision_table_md,
+    )
+    (out_dir / "phase1b_cross_reference_report.md").write_text(report_md)
 
     # ---- decision table (design section 30)
     lines = ["| Area | Melody | Rhythm | Timbre |", "|---|---:|---:|---:|"]

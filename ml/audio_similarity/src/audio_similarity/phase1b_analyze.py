@@ -180,9 +180,18 @@ def score_master_table(cases_path: str | Path, ctx: AnalysisContext) -> pd.DataF
                     "onset_dtw_sim": r.onset_dtw_sim,
                     "tempogram_cos": r.tempogram_cos,
                     "timbre_cos": t.timbre_cos,
+                    "bpm_difference": r.bpm_difference,
                 }
-                pcts = ctx.calibration.percentiles(raws)
+                raws_out = {k: v for k, v in raws.items() if k != "bpm_difference"}
+                pct_inputs = {k: v for k, v in raws.items() if k != "bpm_difference"}
+                pcts = ctx.calibration.percentiles(pct_inputs)
                 scores = factor_scores(pcts)
+
+                # tempo-collapse diagnostic (design section 10.4): similar BPM
+                # but weak onset/tempogram evidence -> TEMPO_MATCH_ONLY
+                bpm_close = bool(r.bpm_difference <= 3.0)
+                pattern_weak = pcts["onset_cos_fixed"] < 50 and pcts["tempogram_cos"] < 50
+                tempo_match_only = bool(bpm_close and pattern_weak)
 
                 merit_sims = {
                     f"merit_{f}_similarity": ctx.lookup.cosine(qid, cid, f) for f in ("melody", "rhythm", "timbre")
@@ -204,7 +213,9 @@ def score_master_table(cases_path: str | Path, ctx: AnalysisContext) -> pd.DataF
                         "merit_rhythm_similarity": merit_sims["merit_rhythm_similarity"],
                         "merit_timbre_similarity": merit_sims["merit_timbre_similarity"],
                         "mert_general_similarity": mert_sim["mert_general_similarity"],
-                        **{f"mir_{k}": raws[k] for k in raws},
+                        **{f"mir_{k}": raws_out[k] for k in raws_out},
+                        "bpm_difference": r.bpm_difference,
+                        "tempo_match_only": tempo_match_only,
                         **{f"pct_{k}": pcts[k] for k in pcts},
                         "independent_melody_score": scores["melody"],
                         "independent_rhythm_score": scores["rhythm"],
