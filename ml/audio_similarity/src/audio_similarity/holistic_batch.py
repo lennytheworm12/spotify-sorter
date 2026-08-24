@@ -19,6 +19,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import numpy as np
+import pandas as pd
 import pyarrow as pa
 import pyarrow.parquet as pq
 
@@ -148,8 +149,8 @@ def run_holistic_batch(
         t0 = time.perf_counter()
         try:
             wav = preprocess_file(audio_root / row["relative_audio_path"])
-            seg = _excerpt_bounds(wav, excerpt_strategy)
-            result = encoder.encode_segment(wav[seg], 24000)
+            start, end = _excerpt_bounds(wav, excerpt_strategy)
+            result = encoder.encode_segment(wav[start:end], 24000)
             pending.append(
                 {
                     "track_id": tid,
