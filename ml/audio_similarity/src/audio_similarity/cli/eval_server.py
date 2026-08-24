@@ -109,6 +109,11 @@ def make_handler(store: SheetStore) -> type:
             if self.path.startswith("/examples/"):
                 name = Path(self.path).name  # basename only; no traversal
                 return self._file(_STATIC_DIR / "examples" / name, "audio/mpeg")
+            if self.path == "/api/holistic_session":
+                try:
+                    return self._json(store.build_holistic_session())
+                except FileNotFoundError as exc:
+                    return self._json({"error": str(exc)}, 500)
             if self.path == "/api/ping":
                 return self._json({"ok": True, "mode": "server"})
             if self.path == "/api/session":
@@ -160,6 +165,15 @@ def make_handler(store: SheetStore) -> type:
                         str(payload["id"]),
                         str(payload.get("note", "")),
                         str(payload.get("rated_by", "")),
+                    )
+                except (ValueError, KeyError) as exc:
+                    return self._json({"error": str(exc)}, 400)
+                return self._json({"ok": True})
+            if self.path == "/api/rate_holistic":
+                try:
+                    store.rate_holistic_trial(
+                        str(payload["trial_id"]), str(payload["choice"]),
+                        str(payload.get("rated_by", "")), payload.get("note"),
                     )
                 except (ValueError, KeyError) as exc:
                     return self._json({"error": str(exc)}, 400)

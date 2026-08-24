@@ -253,7 +253,7 @@
 'use strict';
 /* ------------------------------------------------------------------ state */
 const state = {
-  mode: null, tab: 'factor', cells: [], trials: [],
+  mode: null, tab: 'factor', cells: [], trials: [], holistic: [],
   filterStatus: 'unrated', filterFactor: '', activeId: null,
   reviewer: localStorage.getItem('lt-reviewer') || '',
   audioBase: localStorage.getItem('lt-audio-base') || 'http://127.0.0.1:8616',
@@ -361,6 +361,15 @@ async function refresh() {
   let payload;
   if (state.mode === 'server') {
     payload = await (await fetch('/api/session')).json();
+    try {
+      const hresp = await fetch('/api/holistic_session');
+      if (hresp.ok) {
+        const hpayload = await hresp.json();
+        state.holistic = hpayload.trials || [];
+        payload.progress.ab_total += hpayload.progress.ab_total;
+        payload.progress.ab_rated += hpayload.progress.ab_rated;
+      }
+    } catch { /* holistic sheets absent */ }
   } else {
     payload = await (await fetch('session.json')).json();
     payload = mergeLocal(payload);
@@ -431,6 +440,13 @@ function reviewerName() { return document.getElementById('reviewer').value.trim(
 async function setRating(kind, id, value) {
   if (!requireReviewer()) return false;
   const who = reviewerName();
+  if (kind === 'holistic' && state.mode === 'server') {
+    const r = await fetch('/api/rate_holistic', {method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({trial_id:id, choice:value, rated_by:who})});
+    if (!r.ok) { alert((await r.json()).error || 'save failed'); return false; }
+    flashSaved(); await refresh(); scrollPreserve(id); return true;
+  }
   if (state.mode === 'server') {
     const url = kind === 'factor' ? '/api/rate' : '/api/rate_ab';
     const body = kind === 'factor' ? {cell_id:id, rating:value} : {ab_id:id, choice:value};
@@ -516,6 +532,17 @@ function visibleCells() {
     return true;
   });
 }
+function visibleHolistic() {
+  const me = reviewerName();
+  return state.holistic.filter(t => {
+    const done = t.choice;
+    if (state.filterStatus === 'unrated' && done) return false;
+    if (state.filterStatus === 'unrated-mine' && (done || t.rated_by !== me)) return false;
+    if (state.filterStatus === 'mine' && !(done && t.rated_by === me)) return false;
+    return true;
+  });
+}
+
 function visibleTrials() {
   const me = reviewerName();
   return state.trials.filter(t => {
@@ -573,11 +600,35 @@ function trialCard(t) {
   </div>`;
 }
 
+function holisticCard(t) {
+  const raters = formatRaters(t.rated_by, t.n_ratings || (t.choice ? 1 : 0));
+  return `<div class="card ${t.choice?'rated':''}" data-id="${esc(t.trial_id)}">
+    <div class="qline">Query: <b>${esc(t.query_title)}</b> — ${esc(t.query_artist)}
+      ${raters ? `<span class="by">${raters}</span>` : ''}</div>
+    <div class="row"><button class="play" data-url="${t.query_audio}">▶ Query</button></div>
+    <div class="abgrid">
+      <div class="abside"><button class="play" data-url="${t.a_audio}">▶ A: ${esc(t.a_title)}<br><small>${esc(t.a_artist)}</small></button></div>
+      <div class="vs">vs</div>
+      <div class="abside"><button class="play" data-url="${t.b_audio}">▶ B: ${esc(t.b_title)}<br><small>${esc(t.b_artist)}</small></button></div>
+    </div>
+    <div class="qline" style="margin-top:8px">${esc(t.question)}</div>
+    <div class="choicebtns">
+      ${['A','B','Tie','Neither'].map(ch => `<button class="cb ${t.choice===ch?'sel':''}" data-choice="${ch}">${ch}</button>`).join('')}
+    </div>
+    ${noteBlock('holistic', t.trial_id, t.note, !!t.note)}
+  </div>`;
+}
+
 function render() {
   document.getElementById('legend-factor').style.display = state.tab==='factor' ? '' : 'none';
-  document.getElementById('legend-ab').style.display = state.tab==='ab' ? '' : 'none';
+  document.getElementById('legend-ab').style.display = state.tab==='holistic' ? 'none' : '';
   const list = document.getElementById('list');
-  const items = state.tab==='factor' ? visibleCells().map(cellCard) : visibleTrials().map(trialCard);
+  let items;
+  if (state.tab==='factor') items = visibleCells().map(cellCard);
+  else if (state.tab==='holistic') items = visibleHolistic().map(holisticCard);
+  else items = visibleTrials().map(trialCard);
+  list.innerHTML = items.length ? items.join('') :
+    `<div class="empty">${state.tab==='holistic' ? 'No holistic trials match the filter.' : (state.tab==='factor' ? 'No cells match the filter.' : 'No trials match the filter.')}</div>`;
   list.innerHTML = items.length ? items.join('') :
     `<div class="empty">${state.tab==='factor' ? 'No cells match the filter.' : 'No trials match the filter.'}</div>`;
 }
@@ -606,7 +657,10 @@ document.addEventListener('click', async e => {
   const rb = e.target.closest('.rb');
   if (rb && state.tab==='factor') { await setRating('factor', card.dataset.id, rb.dataset.rate); return; }
   const cb = e.target.closest('.cb[data-choice]');
-  if (cb && state.tab==='ab') { await setRating('ab', card.dataset.id, cb.dataset.choice); }
+  if (cb) {
+    const kind = state.tab==='holistic' ? 'holistic' : 'ab';
+    await setRating(kind, card.dataset.id, cb.dataset.choice);
+  }
 });
 
 document.addEventListener('input', e => {
@@ -682,6 +736,7 @@ document.getElementById('next-unrated').addEventListener('click', jumpNext);
 function jumpNext() {
   let item;
   if (state.tab==='factor') item = visibleCells().find(c=>!c.rating) || visibleCells()[0];
+  else if (state.tab==='holistic') item = visibleHolistic().find(t=>!t.choice) || visibleHolistic()[0];
   else item = visibleTrials().find(t=>!t.choice) || visibleTrials()[0];
   if (!item) return;
   const id = state.tab==='factor' ? item.cell_id : item.ab_id;

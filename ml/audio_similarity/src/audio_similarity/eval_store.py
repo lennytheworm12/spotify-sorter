@@ -308,6 +308,74 @@ class SheetStore:
             self._write_atomic("judgments_ab.csv", ab.reset_index())
         return applied
 
+    # -------------------------------------------------------- holistic
+
+    def _read_holistic(self) -> pd.DataFrame:
+        frame = pd.read_csv(self.sheets_dir / "holistic_trials.csv", dtype=str)
+        for col in ("note", "rated_by"):
+            if col not in frame.columns:
+                frame[col] = ""
+        for col in ("choice", "note", "rated_by"):
+            frame[col] = frame[col].fillna("")
+        return frame
+
+    def build_holistic_session(self) -> dict:
+        frame = self._read_holistic()
+        trials = []
+        for _, row in frame.iterrows():
+            qid = int(row["query_track_id"])
+            q_meta = self.manifest.loc[qid]
+            trials.append({
+                "trial_id": row["trial_id"],
+                "question": row["question"],
+                "a_title": row["a_title"], "a_artist": row["a_artist"],
+                "b_title": row["b_title"], "b_artist": row["b_artist"],
+                "choice": str(row["choice"]),
+                "note": str(row["note"]),
+                "rated_by": str(row["rated_by"]),
+                "n_ratings": 0,
+                "query_title": str(q_meta["title"]),
+                "query_artist": str(q_meta["artist"]),
+                "query_audio": f"/audio/track/{qid}",
+                "a_audio": f"/audio/track/{self._holistic_candidate(row['trial_id'], 'A')}",
+                "b_audio": f"/audio/track/{self._holistic_candidate(row['trial_id'], 'B')}",
+            })
+        trials.sort(key=lambda t: (int(t["trial_id"].split(":")[0]), t["trial_id"]))
+        return {
+            "trials": trials,
+            "progress": {
+                "ab_rated": sum(1 for t in trials if t["choice"]),
+                "ab_total": len(trials),
+                "factor_rated": 0, "factor_total": 0,
+            },
+        }
+
+    def _holistic_candidate(self, trial_id: str, side: str) -> int | None:
+        try:
+            keys = json.loads((Path(self.sheets_dir) / "holistic_trial_keys.json").read_text())
+            info = keys["trials"][trial_id]
+            key = "candidate_a" if side == "A" else "candidate_b"
+            return int(info[key])
+        except Exception:
+            return None
+
+    def rate_holistic_trial(self, trial_id: str, choice: str, reviewer: str = "", note: str | None = None) -> None:
+        choice = str(choice).strip().capitalize()
+        if choice not in {"A", "B", "Tie", "Neither"}:
+            raise ValueError(f"invalid choice '{choice}'")
+        with self._lock:
+            frame = self._read("holistic_trials.csv")
+            mask = frame["trial_id"] == trial_id
+            if not mask.any():
+                raise KeyError(f"unknown trial '{trial_id}'")
+            frame.loc[mask, "choice"] = choice
+            clean = self._clean_reviewer(reviewer)
+            if clean:
+                frame.loc[mask, "rated_by"] = clean
+            if note is not None:
+                frame.loc[mask, "note"] = str(note)[:2000]
+            self._write_atomic("holistic_trials.csv", frame)
+
     # --------------------------------------------------------------- audio
 
     def audio_path_for_request(self, kind: str, ident: str, side: str | None = None) -> Path | None:
