@@ -1,5 +1,5 @@
 {
- "exported_at": "2026-08-24T22:47:26.695609+00:00",
+ "exported_at": "2026-08-24T23:04:08.576811+00:00",
  "format": "listening-test-session-v1",
  "factor_cells": [
   {
@@ -310,9 +310,9 @@
    "cell_id": "14601:melody:5",
    "target_factor": "melody",
    "neighbor_rank": 5,
-   "rating": "",
-   "n_ratings": 0,
-   "rated_by": "",
+   "rating": "X",
+   "n_ratings": 1,
+   "rated_by": "lenny",
    "note": "",
    "neighbor_title": "Song From South Of Iran",
    "neighbor_artist": "Sound: The Encounter",
@@ -12454,7 +12454,7 @@
   }
  ],
  "progress": {
-  "factor_rated": 67,
+  "factor_rated": 68,
   "factor_total": 360,
   "ab_rated": 0,
   "ab_total": 352

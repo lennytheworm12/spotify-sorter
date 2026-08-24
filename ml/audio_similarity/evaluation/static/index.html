@@ -107,9 +107,9 @@
       <span>You:</span><input id="reviewer" placeholder="your name" autocomplete="off">
     </div>
     <nav class="tabs">
-      <button data-tab="factor" class="active">Factor Utility</button>
-      <button data-tab="ab">A/B Compare</button>
-      <button data-tab="holistic">Holistic A/B</button>
+      <button data-tab="holistic" class="active">Overall Similarity</button>
+      <button data-tab="factor">Legacy: Factors</button>
+      <button data-tab="ab">Legacy: A/B</button>
       <button data-tab="" id="gear" title="Settings">⚙</button>
     </nav>
   </div>
@@ -254,7 +254,7 @@
 'use strict';
 /* ------------------------------------------------------------------ state */
 const state = {
-  mode: null, tab: 'factor', cells: [], trials: [], holistic: [],
+  mode: null, tab: 'holistic', cells: [], trials: [], holistic: [],
   filterStatus: 'unrated', filterFactor: '', activeId: null,
   reviewer: localStorage.getItem('lt-reviewer') || '',
   audioBase: localStorage.getItem('lt-audio-base') || 'http://127.0.0.1:8616',
@@ -524,34 +524,38 @@ player.addEventListener('ended', () => {
 
 /* --------------------------------------------------------------- filters */
 function visibleCells() {
-  const me = reviewerName();
+  const me = reviewerName().toLowerCase();
   return state.cells.filter(c => {
     if (state.filterFactor && c.target_factor !== state.filterFactor) return false;
     if (state.filterStatus === 'unrated' && c.rating) return false;
-    if (state.filterStatus === 'unrated-mine' && (c.rating || c.rated_by !== me)) return false;
-    if (state.filterStatus === 'mine' && !(c.rating && c.rated_by === me)) return false;
+    if (state.filterStatus === 'unrated-mine' && (c.rating || !sameReviewer(c.rated_by, me))) return false;
+    if (state.filterStatus === 'mine' && !(c.rating && sameReviewer(c.rated_by, me))) return false;
     return true;
   });
 }
+function sameReviewer(a, b) {
+  return (a || '').trim().toLowerCase() === (b || '').trim().toLowerCase();
+}
+
 function visibleHolistic() {
-  const me = reviewerName();
+  const me = reviewerName().toLowerCase();
   return state.holistic.filter(t => {
     const done = t.choice;
     if (state.filterStatus === 'unrated' && done) return false;
-    if (state.filterStatus === 'unrated-mine' && (done || t.rated_by !== me)) return false;
-    if (state.filterStatus === 'mine' && !(done && t.rated_by === me)) return false;
+    if (state.filterStatus === 'unrated-mine' && (done || !sameReviewer(t.rated_by, me))) return false;
+    if (state.filterStatus === 'mine' && !(done && sameReviewer(t.rated_by, me))) return false;
     return true;
   });
 }
 
 function visibleTrials() {
-  const me = reviewerName();
+  const me = reviewerName().toLowerCase();
   return state.trials.filter(t => {
     if (state.filterFactor && t.target_factor !== state.filterFactor) return false;
     const done = t.choice;
     if (state.filterStatus === 'unrated' && done) return false;
-    if (state.filterStatus === 'unrated-mine' && (done || t.rated_by !== me)) return false;
-    if (state.filterStatus === 'mine' && !(done && t.rated_by === me)) return false;
+    if (state.filterStatus === 'unrated-mine' && (done || !sameReviewer(t.rated_by, me))) return false;
+    if (state.filterStatus === 'mine' && !(done && sameReviewer(t.rated_by, me))) return false;
     return true;
   });
 }
@@ -622,7 +626,7 @@ function holisticCard(t) {
 
 function render() {
   document.getElementById('legend-factor').style.display = state.tab==='factor' ? '' : 'none';
-  document.getElementById('legend-ab').style.display = state.tab==='holistic' ? 'none' : '';
+  document.getElementById('legend-ab').style.display = state.tab==='ab' ? '' : 'none';
   const list = document.getElementById('list');
   let items;
   if (state.tab==='factor') items = visibleCells().map(cellCard);
