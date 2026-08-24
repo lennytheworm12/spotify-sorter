@@ -57,7 +57,7 @@ class QueryCandidates:
 def build_unions(
     embeddings_by_encoder: dict[str, tuple[dict[int, np.ndarray], str]],
     queries: list[int],
-    top_k: int = TOP_K,
+    top_k_count: int = TOP_K,
 ) -> dict[int, QueryCandidates]:
     unions: dict[int, QueryCandidates] = {}
     for qid in queries:
@@ -66,7 +66,7 @@ def build_unions(
         for enc, (vecs, _) in embeddings_by_encoder.items():
             ids = sorted(vecs)
             matrix = np.stack([vecs[t] for t in ids])
-            tops = top_k(ids, matrix, qid, top_k)
+            tops = top_k(ids, matrix, qid, top_k_count)
             per_encoder[enc] = tops
             claimed.update(t for t, _ in tops)
         unions[qid] = QueryCandidates(qid, per_encoder)
