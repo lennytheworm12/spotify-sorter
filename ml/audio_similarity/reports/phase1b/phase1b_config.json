@@ -1,0 +1,39 @@
+{
+  "experiment_id": "phase1b_cross_reference_v1",
+  "frozen_at": "2026-08-24T04:27:05.532944+00:00",
+  "git_commit": "259b661a81b5",
+  "seeds": {
+    "random_negatives": 20260823,
+    "hard_negatives": 20260823
+  },
+  "artifact_hashes": {
+    "manifest": "a81c6fe64a895d6600c0d2c1fd8accf3bb39dfe271835d000f4cddaafe9883ba",
+    "embeddings": "b494220a62445ee6fd3bca5fcf835ed1ecd01b72a31bcd1013ddadcf2d382914",
+    "key_factor": "a913a2698e2c12a9dd306d694a44491417cf3f7f89d53c8008ee86514b56d987",
+    "conventional_features_source": "a035d04941e15fc3240aadd6880c519471d218329bbfe0e82c17553ba50e9e16",
+    "queries": "162509779389cf44b2df2eeb8f60b92a82230f6f0f222f58a7a73b3a5e28c8d1",
+    "human_ratings_snapshot": "6f06f8104bbe908ee2e6f096da6ac31795cbbfb961583c79cd074fff532093b5"
+  },
+  "feature_params": {
+    "sample_rate": 24000,
+    "mono": true,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "chroma": "cqt_v1",
+    "n_mfcc": 20,
+    "tempogram_win_length": 384,
+    "top_db_rhythm": null
+  },
+  "metric_params": {
+    "background_pairs": 2000,
+    "background_seed": 424242,
+    "dtw_metric": "euclidean",
+    "transposition_shifts": 12,
+    "timbre_standardization": "corpus_zscore_l2_v1"
+  },
+  "control_sizes": {
+    "random_negatives": 5,
+    "hard_negatives": 5
+  },
+  "n_cases": 72
+}
