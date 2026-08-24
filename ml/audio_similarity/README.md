@@ -215,6 +215,28 @@ uv run python -m audio_similarity.cli.ox_alpha_smoke --live \
 Phase 2 config: `configs/phase2_full_song_sampling.yaml`. The full sampling
 matrix waits for the Phase 1 human gate; see the vault Phase 2 design doc.
 
+## Holistic encoder benchmark (Stage 1A — active)
+
+Benchmarking MuQ-MuLan-large vs MERT variants vs LAION-CLAP on identical
+frozen 5-s excerpts, selected by blinded human overall-similarity preference.
+
+```bash
+# encode corpus per encoder (resumable)
+uv run python -m audio_similarity.cli.encode_holistic --encoder all
+
+# rebuild retrieval unions + blinded A/B sheets
+uv run python -m audio_similarity.cli.build_holistic_sheets
+
+# serve rating UI with both MERIT and holistic sheets live
+mkdir -p reports/live_sheets && cp reports/human_eval/*.csv reports/live_sheets/ \
+  && cp reports/holistic_stage1a/holistic_*.csv reports/holistic_stage1a/holistic_trial_keys.json reports/live_sheets/
+uv run python -m audio_similarity.cli.eval_server --sheets reports/live_sheets --host 0.0.0.0
+```
+
+Report: `reports/holistic_encoder_stage1a.md`. Model licenses: MuQ weights
+CC-BY-NC-4.0 (code MIT); CLAP/MERT research use. Heavy model deps (`muq`,
+`laion-clap`) are only needed for encoding/rating, not for fast tests.
+
 ## Licensing boundary
 
 - MERIT code: MIT
