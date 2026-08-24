@@ -1,0 +1,118 @@
+{
+ "experiment_id": "phase1b_cross_reference_v1",
+ "generated_at": "2026-08-24T08:33:43.004344+00:00",
+ "git_commit": "e46f56d00780",
+ "human_stats": {
+  "melody": {
+   "n_pairs": 120,
+   "n_valid": 15,
+   "x_count": 3,
+   "x_rate": 0.025,
+   "median_rating": 2.0,
+   "share_ge_2": 0.6666666666666666
+  },
+  "rhythm": {
+   "n_pairs": 120,
+   "n_valid": 10,
+   "x_count": 0,
+   "x_rate": 0.0,
+   "median_rating": 1.0,
+   "share_ge_2": 0.2
+  },
+  "timbre": {
+   "n_pairs": 120,
+   "n_valid": 39,
+   "x_count": 0,
+   "x_rate": 0.0,
+   "median_rating": 1.0,
+   "share_ge_2": 0.46153846153846156
+  }
+ },
+ "original_phase1_gate": {
+  "melody": "PASS",
+  "rhythm": "FAIL",
+  "timbre": "FAIL"
+ },
+ "evidence_components": {
+  "melody": {
+   "construct_validity": 0.8596,
+   "construct_components": {
+    "lift_over_random": 25.433333333333337,
+    "lift_over_hard_negatives": 22.683333333333337,
+    "merit_target_vs_target_mir_correlation": 0.263
+   },
+   "factor_specificity": 0.6375,
+   "baseline_advantage": 0.1667,
+   "baseline_components": {
+    "vs_general_mert_median_delta": 0.041666666666671404,
+    "vs_conventional_median_delta": -8.925000000000011
+   },
+   "human_usefulness": 0.5556,
+   "human_components": {
+    "median_rating": 2.0,
+    "share_ge_2": 0.6666666666666666,
+    "x_rate": 0.025
+   },
+   "composite": 0.6199,
+   "decision": "CONDITIONAL GO",
+   "anti_compensation_triggered": false
+  },
+  "rhythm": {
+   "construct_validity": 0.8054,
+   "construct_components": {
+    "lift_over_random": 3.0916666666666686,
+    "lift_over_hard_negatives": 2.0749999999999957,
+    "merit_target_vs_target_mir_correlation": 0.133
+   },
+   "factor_specificity": 0.0,
+   "baseline_advantage": 0.6,
+   "baseline_components": {
+    "vs_general_mert_median_delta": 1.99166666666666,
+    "vs_conventional_median_delta": -4.1000000000000085
+   },
+   "human_usefulness": 0.0,
+   "human_components": {
+    "median_rating": 1.0,
+    "share_ge_2": 0.2,
+    "x_rate": 0.0
+   },
+   "composite": 0.4422,
+   "decision": "NO-GO / REPLACE FACTOR",
+   "anti_compensation_triggered": false
+  },
+  "timbre": {
+   "construct_validity": 0.8579,
+   "construct_components": {
+    "lift_over_random": 23.225,
+    "lift_over_hard_negatives": 16.125,
+    "merit_target_vs_target_mir_correlation": 0.259
+   },
+   "factor_specificity": 0.6,
+   "baseline_advantage": 0.0,
+   "baseline_components": {
+    "vs_general_mert_median_delta": -17.924999999999997,
+    "vs_conventional_median_delta": -3.1999999999999886
+   },
+   "human_usefulness": 0.1346,
+   "human_components": {
+    "median_rating": 1.0,
+    "share_ge_2": 0.46153846153846156,
+    "x_rate": 0.0
+   },
+   "composite": 0.5134,
+   "decision": "CONDITIONAL GO",
+   "anti_compensation_triggered": false
+  }
+ },
+ "leakage_flags": [
+  "merit_rhythm correlates most with mir_timbre (0.269) instead of mir_rhythm (0.133) \u2014 cross-factor leakage"
+ ],
+ "tempo_match_only_count": 9,
+ "rhythm_target_rows": 120,
+ "feature_cache": {
+  "entries": 4585,
+  "bytes": 301255649
+ },
+ "missing_pairs_skipped": 0,
+ "master_rows": 2520
+}

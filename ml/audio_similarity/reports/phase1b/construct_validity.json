@@ -1,0 +1,242 @@
+{
+ "melody": {
+  "random_negative": {
+   "n_target_pairs": 120,
+   "n_control_pairs": 360,
+   "n_queries_paired": 24,
+   "target_median": 71.34166666666667,
+   "control_median": 45.90833333333333,
+   "median_delta_vs_control": 17.27555555555555,
+   "ci95_of_delta": [
+    7.583333333333336,
+    23.03222222222223
+   ],
+   "cliffs_delta": 0.3710185185185185
+  },
+  "hard_negative": {
+   "n_target_pairs": 120,
+   "n_control_pairs": 360,
+   "n_queries_paired": 24,
+   "target_median": 71.34166666666667,
+   "control_median": 48.65833333333333,
+   "median_delta_vs_control": 14.50888888888888,
+   "ci95_of_delta": [
+    7.095555555555563,
+    21.44111111111112
+   ],
+   "cliffs_delta": 0.3537962962962963
+  },
+  "merit_rhythm": {
+   "n_target_pairs": 120,
+   "n_control_pairs": 240,
+   "n_queries_paired": 24,
+   "target_median": 71.34166666666667,
+   "control_median": 58.13333333333334,
+   "median_delta_vs_control": 7.76166666666667,
+   "ci95_of_delta": [
+    0.2533333333333161,
+    18.90666666666666
+   ],
+   "cliffs_delta": 0.25763888888888886
+  },
+  "merit_timbre": {
+   "n_target_pairs": 120,
+   "n_control_pairs": 240,
+   "n_queries_paired": 24,
+   "target_median": 71.34166666666667,
+   "control_median": 57.108333333333334,
+   "median_delta_vs_control": 9.740000000000002,
+   "ci95_of_delta": [
+    1.1133333333333297,
+    14.68999999999999
+   ],
+   "cliffs_delta": 0.20805555555555555
+  },
+  "mert_general": {
+   "n_target_pairs": 120,
+   "n_control_pairs": 360,
+   "n_queries_paired": 24,
+   "target_median": 71.34166666666667,
+   "control_median": 71.3,
+   "median_delta_vs_control": 0.8966666666666683,
+   "ci95_of_delta": [
+    -4.5866666666666305,
+    5.843333333333348
+   ],
+   "cliffs_delta": 0.005208333333333333
+  },
+  "conventional": {
+   "n_target_pairs": 120,
+   "n_control_pairs": 360,
+   "n_queries_paired": 24,
+   "target_median": 71.34166666666667,
+   "control_median": 80.26666666666668,
+   "median_delta_vs_control": -4.425000000000011,
+   "ci95_of_delta": [
+    -11.64,
+    0.4233333333333178
+   ],
+   "cliffs_delta": -0.21270833333333333
+  }
+ },
+ "rhythm": {
+  "random_negative": {
+   "n_target_pairs": 120,
+   "n_control_pairs": 360,
+   "n_queries_paired": 24,
+   "target_median": 51.95833333333333,
+   "control_median": 48.86666666666666,
+   "median_delta_vs_control": 6.140000000000008,
+   "ci95_of_delta": [
+    -1.0177777777777788,
+    10.132222222222225
+   ],
+   "cliffs_delta": 0.10233796296296296
+  },
+  "hard_negative": {
+   "n_target_pairs": 120,
+   "n_control_pairs": 360,
+   "n_queries_paired": 24,
+   "target_median": 51.95833333333333,
+   "control_median": 49.88333333333333,
+   "median_delta_vs_control": 4.173888888888889,
+   "ci95_of_delta": [
+    -1.198888888888888,
+    10.141111111111119
+   ],
+   "cliffs_delta": 0.08462962962962962
+  },
+  "merit_melody": {
+   "n_target_pairs": 120,
+   "n_control_pairs": 240,
+   "n_queries_paired": 24,
+   "target_median": 51.95833333333333,
+   "control_median": 44.45833333333333,
+   "median_delta_vs_control": 4.2033333333333385,
+   "ci95_of_delta": [
+    0.7833333333333226,
+    14.966666666666676
+   ],
+   "cliffs_delta": 0.14208333333333334
+  },
+  "merit_timbre": {
+   "n_target_pairs": 120,
+   "n_control_pairs": 240,
+   "n_queries_paired": 24,
+   "target_median": 51.95833333333333,
+   "control_median": 47.21666666666667,
+   "median_delta_vs_control": 2.014999999999998,
+   "ci95_of_delta": [
+    -4.26666666666668,
+    7.000000000000007
+   ],
+   "cliffs_delta": 0.081875
+  },
+  "mert_general": {
+   "n_target_pairs": 120,
+   "n_control_pairs": 360,
+   "n_queries_paired": 24,
+   "target_median": 51.95833333333333,
+   "control_median": 49.96666666666667,
+   "median_delta_vs_control": 5.861666666666666,
+   "ci95_of_delta": [
+    1.0433333333333366,
+    8.829999999999984
+   ],
+   "cliffs_delta": 0.1125
+  },
+  "conventional": {
+   "n_target_pairs": 120,
+   "n_control_pairs": 360,
+   "n_queries_paired": 24,
+   "target_median": 51.95833333333333,
+   "control_median": 56.05833333333334,
+   "median_delta_vs_control": 2.763333333333346,
+   "ci95_of_delta": [
+    -5.983333333333334,
+    5.323333333333327
+   ],
+   "cliffs_delta": 0.016041666666666666
+  }
+ },
+ "timbre": {
+  "random_negative": {
+   "n_target_pairs": 120,
+   "n_control_pairs": 360,
+   "n_queries_paired": 24,
+   "target_median": 79.25,
+   "control_median": 56.025,
+   "median_delta_vs_control": 14.864999999999991,
+   "ci95_of_delta": [
+    9.10666666666667,
+    18.80833333333333
+   ],
+   "cliffs_delta": 0.29886574074074074
+  },
+  "hard_negative": {
+   "n_target_pairs": 120,
+   "n_control_pairs": 360,
+   "n_queries_paired": 24,
+   "target_median": 79.25,
+   "control_median": 63.125,
+   "median_delta_vs_control": 11.391666666666652,
+   "ci95_of_delta": [
+    3.6100000000000136,
+    22.900000000000006
+   ],
+   "cliffs_delta": 0.26534722222222223
+  },
+  "merit_melody": {
+   "n_target_pairs": 120,
+   "n_control_pairs": 240,
+   "n_queries_paired": 24,
+   "target_median": 79.25,
+   "control_median": 72.25,
+   "median_delta_vs_control": 1.0450000000000017,
+   "ci95_of_delta": [
+    -4.710000000000008,
+    10.830000000000005
+   ],
+   "cliffs_delta": 0.02347222222222222
+  },
+  "merit_rhythm": {
+   "n_target_pairs": 120,
+   "n_control_pairs": 240,
+   "n_queries_paired": 24,
+   "target_median": 79.25,
+   "control_median": 81.325,
+   "median_delta_vs_control": -6.974999999999994,
+   "ci95_of_delta": [
+    -10.509999999999991,
+    -0.9799999999999969
+   ],
+   "cliffs_delta": -0.08555555555555555
+  },
+  "mert_general": {
+   "n_target_pairs": 120,
+   "n_control_pairs": 360,
+   "n_queries_paired": 24,
+   "target_median": 79.25,
+   "control_median": 97.175,
+   "median_delta_vs_control": -20.515000000000008,
+   "ci95_of_delta": [
+    -28.659999999999997,
+    -16.654999999999987
+   ],
+   "cliffs_delta": -0.5408333333333334
+  },
+  "conventional": {
+   "n_target_pairs": 120,
+   "n_control_pairs": 360,
+   "n_queries_paired": 24,
+   "target_median": 79.25,
+   "control_median": 82.44999999999999,
+   "median_delta_vs_control": -4.135000000000005,
+   "ci95_of_delta": [
+    -11.759999999999991,
+    2.3900000000000006
+   ],
+   "cliffs_delta": -0.08666666666666667
+  }
+ }
+}
