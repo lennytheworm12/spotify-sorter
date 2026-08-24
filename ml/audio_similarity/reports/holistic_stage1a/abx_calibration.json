@@ -1,0 +1,65 @@
+{
+ "experiment": "inst_sim_abx_calibration",
+ "results": {
+  "muq_mulan_large": {
+   "high_agreement_80": {
+    "n_triplets_scored": 71,
+    "skipped_missing_features": 0,
+    "agreement_rate": 0.5492957746478874,
+    "se": 0.059049982004012055
+   },
+   "all_mix_triplets": {
+    "n_triplets_scored": 109,
+    "skipped_missing_features": 0,
+    "agreement_rate": 0.5321100917431193,
+    "se": 0.04779245478127931
+   },
+   "published_baseline_pct": 72.4
+  },
+  "mert_5120": {
+   "high_agreement_80": {
+    "n_triplets_scored": 71,
+    "skipped_missing_features": 0,
+    "agreement_rate": 0.5352112676056338,
+    "se": 0.05919175887556613
+   },
+   "all_mix_triplets": {
+    "n_triplets_scored": 109,
+    "skipped_missing_features": 0,
+    "agreement_rate": 0.5229357798165137,
+    "se": 0.047840901276010615
+   },
+   "published_baseline_pct": null
+  },
+  "mert_generic": {
+   "high_agreement_80": {
+    "n_triplets_scored": 71,
+    "skipped_missing_features": 0,
+    "agreement_rate": 0.5070422535211268,
+    "se": 0.05933319697178109
+   },
+   "all_mix_triplets": {
+    "n_triplets_scored": 109,
+    "skipped_missing_features": 0,
+    "agreement_rate": 0.5045871559633027,
+    "se": 0.04788929876059328
+   },
+   "published_baseline_pct": null
+  },
+  "laion_clap": {
+   "high_agreement_80": {
+    "n_triplets_scored": 71,
+    "skipped_missing_features": 0,
+    "agreement_rate": 0.5492957746478874,
+    "se": 0.059049982004012055
+   },
+   "all_mix_triplets": {
+    "n_triplets_scored": 109,
+    "skipped_missing_features": 0,
+    "agreement_rate": 0.5229357798165137,
+    "se": 0.047840901276010615
+   },
+   "published_baseline_pct": 71.9
+  }
+ }
+}
