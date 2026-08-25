@@ -43,7 +43,13 @@ def main() -> int:
 
     manifest = pd.read_parquet(args.manifest)
     unions = build_unions(embeddings, queries)
-    trials, provenance = build_trials(unions, manifest, n_trials_per_query=args.trials_per_query)
+
+    # audio-level near-duplicate suppression uses MuQ as the reference geometry
+    muq_vectors = embeddings["muq_mulan_large"][0]
+    trials, provenance = build_trials(
+        unions, manifest, n_trials_per_query=args.trials_per_query,
+        reference_vectors=muq_vectors,
+    )
     write_blinded_sheets(trials, provenance, args.output_dir)
 
     n = len(trials)

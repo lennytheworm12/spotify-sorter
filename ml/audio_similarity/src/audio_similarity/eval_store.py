@@ -321,6 +321,16 @@ class SheetStore:
 
     def build_holistic_session(self) -> dict:
         frame = self._read_holistic()
+        key_path = Path(self.sheets_dir) / "holistic_trial_keys.json"
+        known_ids = set()
+        if key_path.exists():
+            try:
+                import json as _json
+
+                known_ids = set(json.loads(key_path.read_text()).get("trials", {}))
+            except Exception:
+                known_ids = set()
+        frame = frame[frame["trial_id"].isin(known_ids)]
         trials = []
         for _, row in frame.iterrows():
             qid = int(row["query_track_id"])

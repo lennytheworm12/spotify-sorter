@@ -80,8 +80,15 @@ def build_trials(
     manifest: pd.DataFrame,
     n_trials_per_query: int = TRIALS_PER_QUERY,
     seed: int = 20260823,
-    anchor_pool_size: int = 300,
+    reference_vectors: dict[int, np.ndarray] | None = None,
+    query_dupe_threshold: float = 0.85,
+    pair_dupe_threshold: float = 0.90,
 ) -> tuple[list[dict], dict]:
+    """``reference_vectors`` enables audio-level near-duplicate suppression:
+    candidates whose similarity to the query exceeds ``query_dupe_threshold``
+    are dropped (re-uploads/remixes make trials trivially confusing), and
+    A/B pairs above ``pair_dupe_threshold`` mutual similarity are skipped."""
+
     """Deterministic informative trials:
 
     - cross-model disagreements: each encoder's best vs another encoder's best
@@ -102,9 +109,23 @@ def build_trials(
         pool_pairs: list[tuple[int, int, str]] = []
         query_seen: set[frozenset] = seen_pairs_by_query.setdefault(qid, set())
 
+        def _is_query_duplicate(tid: int) -> bool:
+            if reference_vectors is None or qid not in reference_vectors:
+                return False
+            qv = reference_vectors[qid]
+            cv = reference_vectors.get(int(tid))
+            if cv is None:
+                return False
+            return float(np.dot(qv, cv)) >= query_dupe_threshold
+
         def _offer(a: int, b: int, kind: str) -> None:
-            if a == b:
+            if a == b or _is_query_duplicate(a) or _is_query_duplicate(b):
                 return
+            if (reference_vectors is not None
+                    and int(a) in reference_vectors and int(b) in reference_vectors):
+                mutual = float(np.dot(reference_vectors[int(a)], reference_vectors[int(b)]))
+                if mutual >= pair_dupe_threshold:
+                    return
             pair = frozenset((a, b))
             if pair in query_seen:
                 return
