@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -89,32 +90,41 @@ def build_trials(
     """
     rng = np.random.default_rng(seed)
     meta = manifest.set_index("track_id")
-
-    # global anchor pool: tracks dissimilar to the query under all encoders,
-    # approximated by sampling outside all union candidates
     all_candidates = {qid: uc.claimed for qid, uc in unions.items()}
 
     trials: list[dict] = []
     provenance: dict = {"trials": {}, "seed": seed}
+    seen_pairs_by_query: dict[int, set[frozenset]] = defaultdict(set)
 
     for qid in sorted(unions):
         uc = unions[qid]
         encs = sorted(uc.per_encoder)
         pool_pairs: list[tuple[int, int, str]] = []
+        query_seen: set[frozenset] = seen_pairs_by_query.setdefault(qid, set())
+
+        def _offer(a: int, b: int, kind: str) -> None:
+            if a == b:
+                return
+            pair = frozenset((a, b))
+            if pair in query_seen:
+                return
+            query_seen.add(pair)
+            pool_pairs.append((a, b, kind))
 
         # cross-model best-vs-best
         for i, enc_a in enumerate(encs):
             for enc_b in encs[i + 1:]:
                 a_best = uc.per_encoder[enc_a][0][0]
                 b_best = uc.per_encoder[enc_b][0][0]
-                if a_best != b_best:
-                    pool_pairs.append((a_best, b_best, f"disagree:{enc_a}_vs_{enc_b}"))
+                _offer(a_best, b_best, f"disagree:{enc_a}_vs_{enc_b}")
 
-        # competitive: rank-2 of first two encoders
+        # competitive: rank-2 of adjacent encoders
         for enc_a, enc_b in zip(encs, encs[1:]):
             if len(uc.per_encoder[enc_a]) > 1 and len(uc.per_encoder[enc_b]) > 1:
-                pool_pairs.append(
-                    (uc.per_encoder[enc_a][1][0], uc.per_encoder[enc_b][1][0], "competitive_rank2")
+                _offer(
+                    uc.per_encoder[enc_a][1][0],
+                    uc.per_encoder[enc_b][1][0],
+                    "competitive_rank2",
                 )
 
         # anchor negative: random non-candidate track
@@ -122,7 +132,7 @@ def build_trials(
         if non_candidates:
             anchor = int(rng.choice(non_candidates))
             first_enc = encs[0]
-            pool_pairs.append((uc.per_encoder[first_enc][0][0], anchor, "anchor_negative"))
+            _offer(uc.per_encoder[first_enc][0][0], anchor, "anchor_negative")
 
         selected = pool_pairs[:n_trials_per_query]
 

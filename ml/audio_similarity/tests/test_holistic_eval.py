@@ -112,3 +112,26 @@ def test_write_blinded_sheets_roundtrip(tmp_path):
     keys = json.loads((tmp_path / "holistic_trial_keys.json").read_text())
     assert "trials" in keys
 
+
+
+def test_no_duplicate_pairs_for_same_query(tmp_path):
+    """Same query must never present the identical candidate pair twice."""
+    unions = {
+        1: type("Q", (), {
+            "query_id": 1,
+            # muq best (10) is also clap rank-2 -> competitive pair would
+            # duplicate the disagreement pair without dedupe
+            "per_encoder": {
+                "e1": [(10, 0.9), (11, 0.8), (12, 0.7)],
+                "e2": [(11, 0.85), (10, 0.8), (13, 0.7)],
+                "e3": [(10, 0.8), (12, 0.75), (13, 0.7)],
+            },
+            "claimed": {1, 10, 11, 12, 13},
+        })(),
+    }
+    manifest = pd.DataFrame(
+        [{"track_id": t, "title": f"t{t}", "artist": f"a{t}"} for t in range(1, 40)]
+    )
+    trials, prov = build_trials(unions, manifest, n_trials_per_query=8, seed=5)
+    pairs = [frozenset((p["candidate_a"], p["candidate_b"])) for p in prov["trials"].values()]
+    assert len(pairs) == len(set(pairs)), f"duplicate pairs generated: {pairs}"
