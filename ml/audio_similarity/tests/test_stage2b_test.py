@@ -11,6 +11,7 @@ from audio_similarity.stage2b_test import (
     paired_query_bootstrap,
     verify_test_lock,
 )
+from audio_similarity.stage2b_verify import verify_existing_test
 
 ROOT = Path(__file__).parents[1]
 CONFIG = ROOT / "configs/holistic_stage2b_fusion_single_reviewer.yaml"
@@ -48,8 +49,18 @@ def test_refuses_existing_final_output(tmp_path):
 
 
 def test_real_selection_checkpoint_is_tracked_clean_committed_pushed_and_hash_locked():
-    lock = verify_test_lock(CONFIG, ROOT)
+    lock = verify_test_lock(CONFIG, ROOT, allow_existing=True)
     assert len(lock["selection_sha256"]) == 64
     assert lock["selection"]["test_labels_accessed"] is False
     assert lock["selection"]["frozen_test_trial_count"] == 96
     assert lock["head"]
+
+
+def test_existing_one_time_reveal_hashes_verify_without_rerun():
+    verified = verify_existing_test(CONFIG, ROOT)
+    assert verified["verified"] is True
+    assert verified["verdict"] in {
+        "FUSION_WINS", "SINGLE_ENCODER_WINS",
+        "STATISTICALLY_EQUIVALENT_PICK_SIMPLER", "INSUFFICIENT_HUMAN_EVIDENCE",
+    }
+    assert len(verified["test_metrics_sha256"]) == 64

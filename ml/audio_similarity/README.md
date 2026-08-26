@@ -111,7 +111,17 @@ TEST exactly once (the command refuses an existing output):
 ```bash
 uv run python -m audio_similarity.cli.evaluate_stage2b_test \
   --config configs/holistic_stage2b_fusion_single_reviewer.yaml
+
+# After reveal, verify existing hashes without rerunning selection or TEST.
+uv run python -m audio_similarity.cli.evaluate_stage2b_test \
+  --config configs/holistic_stage2b_fusion_single_reviewer.yaml --verify
 ```
+
+Stage 2B closed under `single_reviewer_v2` as **`SINGLE_ENCODER_WINS`**.
+LAION-CLAP achieved 0.7719 held-out query-macro accuracy versus 0.7594 for
+the validation-preselected CLAP+MuQ fusion (difference -0.0125; paired 95%
+query-bootstrap CI [-0.1260, 0.0969]). This is personal perceptual-alignment
+evidence for the designated reviewer, not a population-level claim.
 
 ## Stage 2A residual signal screen
 

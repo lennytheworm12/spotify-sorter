@@ -13,7 +13,6 @@ from audio_similarity.stage2b_selection import (
     FUSIONS,
     SINGLES,
     load_train_validation_rows,
-    run_model_selection,
 )
 
 ROOT = Path(__file__).parents[1]
@@ -61,12 +60,9 @@ def test_test_feature_and_label_columns_have_zero_selection_influence(tmp_path):
     np.testing.assert_array_equal(validation_a.labels, validation_b.labels)
 
 
-def test_real_selection_is_deterministic_train_scaled_no_intercept_and_exact_ablations():
-    first = run_model_selection(CONFIG, ROOT)
+def test_frozen_real_selection_is_train_scaled_no_intercept_and_exact_ablations():
     first_bytes = (REPORT / "model_selection.json").read_bytes()
-    second = run_model_selection(CONFIG, ROOT)
-    assert first == second
-    assert (REPORT / "model_selection.json").read_bytes() == first_bytes
+    first = json.loads(first_bytes)
     assert first["test_labels_accessed"] is False
     assert set(first["single_results"]) == {"+".join(value) for value in SINGLES}
     assert set(first["fusion_results"]) == {"+".join(value) for value in FUSIONS}
