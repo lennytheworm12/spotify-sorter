@@ -180,6 +180,15 @@ class SheetStore:
         row_idx = frame.index[mask][0]
         reviewer = self._clean_reviewer(reviewer)
         log = self._parse_log(frame.at[row_idx, log_col])
+        current = str(frame.at[row_idx, value_col] or "").strip()
+
+        # Lazily migrate judgments saved before append-only logs existed. Without
+        # this seed, the next reviewer would be mistaken for the first reviewer
+        # and overwrite both the primary value and its attribution.
+        if current and not log:
+            recorded_by = str(frame.at[row_idx, "rated_by"] or "").strip()
+            primary_reviewer = recorded_by.split(",", 1)[0].strip()
+            log.append({"v": current, "by": primary_reviewer, "at": 0, "migrated": True})
 
         prior_own = next((e for e in log if e.get("by") == reviewer), None)
         if prior_own is not None:
@@ -190,7 +199,6 @@ class SheetStore:
 
         frame.at[row_idx, log_col] = self._serialize_log(log)
 
-        current = str(frame.at[row_idx, value_col] or "").strip()
         is_first_rater = bool(log) and log[0].get("by") == reviewer
         if not current or is_first_rater:
             # empty cell or the original rater self-correcting -> primary updates
@@ -312,10 +320,13 @@ class SheetStore:
 
     def _read_holistic(self) -> pd.DataFrame:
         frame = pd.read_csv(self.sheets_dir / "holistic_trials.csv", dtype=str)
-        for col in ("note", "rated_by"):
+        # ``rating_log`` was accidentally added by the generic sheet reader in
+        # older server versions. Holistic trials only have pairwise choices.
+        frame = frame.drop(columns=["rating_log"], errors="ignore")
+        for col in ("note", "rated_by", "choice_log"):
             if col not in frame.columns:
                 frame[col] = ""
-        for col in ("choice", "note", "rated_by"):
+        for col in ("choice", "note", "rated_by", "choice_log"):
             frame[col] = frame[col].fillna("")
         return frame
 
@@ -343,7 +354,8 @@ class SheetStore:
                 "choice": str(row["choice"]),
                 "note": str(row["note"]),
                 "rated_by": str(row["rated_by"]),
-                "n_ratings": 0,
+                "n_ratings": len(self._parse_log(row.get("choice_log")))
+                or (1 if str(row["choice"] or "").strip() else 0),
                 "query_title": str(q_meta["title"]),
                 "query_artist": str(q_meta["artist"]),
                 "query_audio": f"/audio/track/{qid}",
@@ -351,12 +363,22 @@ class SheetStore:
                 "b_audio": f"/audio/track/{self._holistic_candidate(row['trial_id'], 'B')}",
             })
         trials.sort(key=lambda t: (int(t["trial_id"].split(":")[0]), t["trial_id"]))
+        judgments_recorded = sum(int(t["n_ratings"]) for t in trials)
         return {
             "trials": trials,
             "progress": {
+                # Legacy keys remain for older evaluator clients.
                 "ab_rated": sum(1 for t in trials if t["choice"]),
                 "ab_total": len(trials),
-                "factor_rated": 0, "factor_total": 0,
+                "factor_rated": 0,
+                "factor_total": 0,
+                # Current constrained pilot gate: cover every available trial
+                # once. Additional independent judgments remain useful and are
+                # counted, but are not required to complete this pilot pass.
+                "judgments_recorded": judgments_recorded,
+                "judgments_target": len(trials),
+                "trials_started": sum(1 for t in trials if t["n_ratings"]),
+                "trials_total": len(trials),
             },
         }
 
@@ -374,14 +396,11 @@ class SheetStore:
         if choice not in {"A", "B", "Tie", "Neither"}:
             raise ValueError(f"invalid choice '{choice}'")
         with self._lock:
-            frame = self._read("holistic_trials.csv")
+            frame = self._read_holistic()
             mask = frame["trial_id"] == trial_id
             if not mask.any():
                 raise KeyError(f"unknown trial '{trial_id}'")
-            frame.loc[mask, "choice"] = choice
-            clean = self._clean_reviewer(reviewer)
-            if clean:
-                frame.loc[mask, "rated_by"] = clean
+            self._apply_judgment(frame, mask, "choice", "choice_log", choice, reviewer)
             if note is not None:
                 frame.loc[mask, "note"] = str(note)[:2000]
             self._write_atomic("holistic_trials.csv", frame)

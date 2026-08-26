@@ -50,6 +50,13 @@ def server(tmp_path: Path):
         [{"ab_id": "1:melody:1", "a_representation": "m", "b_representation": "g",
           "a_track_id": 1, "b_track_id": 1}]
     ).to_csv(sheets / "key_ab.csv", index=False)
+    pd.DataFrame(
+        [{"trial_id": "1:H1", "query_track_id": 1, "a_title": "a", "a_artist": "x",
+          "b_title": "b", "b_artist": "y", "question": "overall?", "choice": ""}]
+    ).to_csv(sheets / "holistic_trials.csv", index=False)
+    (sheets / "holistic_trial_keys.json").write_text(json.dumps({
+        "trials": {"1:H1": {"candidate_a": 1, "candidate_b": 1}}
+    }))
 
     store = SheetStore(sheets, manifest_path, audio_root)
     from http.server import ThreadingHTTPServer
@@ -79,7 +86,9 @@ def test_index_served(server):
     base, _ = server
     response = get(base, "/")
     assert response.status == 200
-    assert b"Listening Test" in response.read()
+    body = response.read()
+    assert b"Overall Similarity Listening Test" in body
+    assert b'id="lbl-overall"' in body
 
 
 def test_session_endpoint(server):
@@ -186,3 +195,33 @@ def test_import_via_http(server):
     assert session["factor_cells"][0]["rating"] == "3"
     assert session["factor_cells"][0]["note"] == "from phone"
     assert session["ab_trials"][0]["choice"] == "Tie"
+
+
+def test_holistic_export_downloads_authoritative_csv(server):
+    base, _ = server
+    response = get(base, "/api/export_holistic")
+    assert response.status == 200
+    assert response.headers["Content-Type"].startswith("text/csv")
+    assert response.headers["Content-Disposition"] == (
+        'attachment; filename="overall-similarity-ratings.csv"'
+    )
+    body = response.read()
+    assert b"trial_id" in body and b"1:H1" in body
+
+
+def test_holistic_multi_reviewer_votes_survive_http_roundtrip(server):
+    base, _ = server
+    post_raw(base, "/api/rate_holistic", {
+        "trial_id": "1:H1", "choice": "B", "rated_by": "cody"
+    })
+    post_raw(base, "/api/rate_holistic", {
+        "trial_id": "1:H1", "choice": "A", "rated_by": "lenny"
+    })
+
+    session = json.loads(get(base, "/api/holistic_session").read())
+    trial = session["trials"][0]
+    assert trial["choice"] == "B"
+    assert trial["rated_by"] == "cody, lenny"
+    assert trial["n_ratings"] == 2
+    assert session["progress"]["judgments_recorded"] == 2
+    assert session["progress"]["judgments_target"] == 1

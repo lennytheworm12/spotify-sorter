@@ -89,3 +89,15 @@ collected human preferences on held-out queries.
    shared 5-s excerpt — unavoidable model-contract difference, recorded.
 3. Single-genre-stratified query sampling uses FMA genres as a balancing aid,
    never as similarity ground truth.
+
+## Human-pilot update — 2026-08-25
+
+The constrained 136-trial pass is complete. See
+`reports/holistic_stage1a/human_encoder_pilot.md` and the frozen raw export
+`reports/holistic_stage1a/holistic_human_ratings.csv`.
+
+Observed ranking is provisionally LAION-CLAP first and MERT-5120 second, but
+their query-bootstrap interval overlaps parity. MuQ-MuLan is unresolved because
+MuQ-geometry duplicate suppression reduced each direct MuQ comparison to only
+five trials. Treat CLAP as an exploratory baseline, retain MERT-5120 as the
+challenger, and do not claim a final encoder winner from this pilot.

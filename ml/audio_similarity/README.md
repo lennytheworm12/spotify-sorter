@@ -233,6 +233,13 @@ mkdir -p reports/live_sheets && cp reports/human_eval/*.csv reports/live_sheets/
 uv run python -m audio_similarity.cli.eval_server --sheets reports/live_sheets --host 0.0.0.0
 ```
 
+No tunnel is required for local rating: use `http://127.0.0.1:8616` on the
+host, or `http://<host-LAN-IP>:8616` from a device on the same network. The
+active constrained pilot tracks coverage of all 136 available blinded trials
+with at least one judgment each; additional independent judgments remain
+useful. Use **⬇ Export overall ratings** in the toolbar to download the
+authoritative CSV, including reviewer attribution and append-only choice logs.
+
 Report: `reports/holistic_encoder_stage1a.md`. Model licenses: MuQ weights
 CC-BY-NC-4.0 (code MIT); CLAP/MERT research use. Heavy model deps (`muq`,
 `laion-clap`) are only needed for encoding/rating, not for fast tests.

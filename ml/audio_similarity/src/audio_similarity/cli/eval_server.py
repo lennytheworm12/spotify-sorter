@@ -56,7 +56,13 @@ def make_handler(store: SheetStore) -> type:
             self._cors()
             self.end_headers()
 
-        def _file(self, path: Path, content_type: str, range_header: str | None = None) -> None:
+        def _file(
+            self,
+            path: Path,
+            content_type: str,
+            range_header: str | None = None,
+            download_name: str | None = None,
+        ) -> None:
             if not path.is_file():
                 return self._json({"error": "not found"}, 404)
             size = path.stat().st_size
@@ -85,6 +91,8 @@ def make_handler(store: SheetStore) -> type:
             self.send_header("Content-Type", content_type)
             self.send_header("Content-Length", str(length))
             self.send_header("Accept-Ranges", "bytes")
+            if download_name:
+                self.send_header("Content-Disposition", f'attachment; filename="{download_name}"')
             if status == 206:
                 self.send_header("Content-Range", f"bytes {start}-{end}/{size}")
             self._cors()
@@ -114,6 +122,12 @@ def make_handler(store: SheetStore) -> type:
                     return self._json(store.build_holistic_session())
                 except FileNotFoundError as exc:
                     return self._json({"error": str(exc)}, 500)
+            if self.path == "/api/export_holistic":
+                return self._file(
+                    store.sheets_dir / "holistic_trials.csv",
+                    "text/csv; charset=utf-8",
+                    download_name="overall-similarity-ratings.csv",
+                )
             if self.path == "/api/ping":
                 return self._json({"ok": True, "mode": "server"})
             if self.path == "/api/session":

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Listening Test — MERIT Phase 1</title>
+<title>Overall Similarity Listening Test</title>
 <style>
   :root {
     --bg:#101418; --panel:#1a2027; --panel2:#212a33; --text:#e6edf3; --muted:#8b98a5;
@@ -18,7 +18,7 @@
   .progress { flex:1; min-width:180px; max-width:420px; }
   .bar { height:8px; background:var(--panel2); border-radius:4px; overflow:hidden; display:flex; }
   .bar > div { height:100%; transition:width .25s ease; }
-  .pf { background:var(--accent); } .pa { background:var(--good); }
+  .po { background:var(--good); }
   .plabels { font-size:11px; color:var(--muted); margin-top:3px; display:flex; gap:14px; }
   nav.tabs { display:flex; gap:6px; }
   nav.tabs button { background:transparent; border:1px solid var(--panel2); color:var(--muted);
@@ -102,7 +102,7 @@
 <body>
 <header>
   <div class="hrow">
-    <h1>Listening Test</h1>
+    <h1>Overall Similarity Listening Test</h1>
     <div class="who">
       <span>You:</span><input id="reviewer" placeholder="your name" autocomplete="off">
     </div>
@@ -115,8 +115,8 @@
   </div>
   <div class="hrow">
     <div class="progress">
-      <div class="bar"><div class="pf" id="bar-f"></div><div class="pa" id="bar-a"></div></div>
-      <div class="plabels"><span id="lbl-f"></span><span id="lbl-a"></span></div>
+      <div class="bar"><div class="po" id="bar-overall"></div></div>
+      <div class="plabels"><span id="lbl-overall">Overall similarity: loading…</span></div>
     </div>
   </div>
 </header>
@@ -179,7 +179,13 @@
 
   <details class="legend" open>
     <summary>How to rate (rubric)</summary>
-    <div id="legend-factor">
+    <div id="legend-holistic">
+      <p style="margin:8px 0 0">Listen to the query, then both candidates. Pick which candidate
+      <b>sounds more like the query overall</b>. Judge the complete audible impression—not one
+      isolated factor, genre label, lyrics, or personal preference.</p>
+      <p style="margin:8px 0 0"><b>Tie</b> = equally similar · <b>Neither</b> = neither sounds like the query.</p>
+    </div>
+    <div id="legend-factor" style="display:none">
       <table>
         <tr><td class="k">0</td><td>Unrelated on the target factor</td></tr>
         <tr><td class="k">1</td><td>Weak / incidental similarity only</td></tr>
@@ -198,9 +204,9 @@
 
   <div class="toolbar">
     <select id="filter-status">
-      <option value="unrated" selected>Unrated (anyone)</option>
+      <option value="unrated-mine" selected>Unrated by me</option>
+      <option value="unrated">Not yet rated by anyone</option>
       <option value="">All items</option>
-      <option value="unrated-mine">Unrated by me</option>
       <option value="mine">Rated by me</option>
     </select>
     <select id="filter-factor">
@@ -212,6 +218,7 @@
     <label title="Above ~150% distortion may creep in">🔊 <input type="range" id="volume" min="0" max="200" step="5" value="100" style="width:110px">
       <span id="vol-label">100%</span></label>
     <button class="cb" style="flex:none;width:auto;padding:0 14px" id="next-unrated">Next unrated ⏎</button>
+    <button class="cb" style="display:none;flex:none;width:auto;padding:0 14px" id="export-holistic">⬇ Export overall ratings</button>
     <span class="hint hint-keys"><kbd>space</kbd>/<kbd>Q</kbd> play · <kbd>0-3</kbd>/<kbd>X</kbd> rate ·
       <kbd>A</kbd>/<kbd>B</kbd>/<kbd>T</kbd>/<kbd>N</kbd> choose</span>
     <span class="saved" id="saved">saved ✓</span>
@@ -255,7 +262,7 @@
 /* ------------------------------------------------------------------ state */
 const state = {
   mode: null, tab: 'holistic', cells: [], trials: [], holistic: [],
-  filterStatus: 'unrated', filterFactor: '', activeId: null,
+  filterStatus: 'unrated-mine', filterFactor: '', activeId: null,
   reviewer: localStorage.getItem('lt-reviewer') || '',
   audioBase: localStorage.getItem('lt-audio-base') || 'http://127.0.0.1:8616',
   driveClientId: localStorage.getItem('lt-drive-client-id') || '',
@@ -344,7 +351,9 @@ function applyModeChrome() {
   if (state.mode === 'server') {
     banner.style.display = 'none';
     document.getElementById('server-import').style.display = 'flex';
+    document.getElementById('export-holistic').style.display = '';
   } else {
+    document.getElementById('export-holistic').style.display = 'none';
     banner.innerHTML = '<b>Offline mode.</b> Ratings are saved in this browser. Use 📤 Send to hand them back' +
       ' (share sheet / clipboard), and ⚙ Settings to point at your audio server for playback.';
     banner.style.display = 'block';
@@ -360,6 +369,7 @@ function applyModeChrome() {
 
 async function refresh() {
   let payload;
+  let overallProgress = null;
   if (state.mode === 'server') {
     payload = await (await fetch('/api/session')).json();
     try {
@@ -367,8 +377,7 @@ async function refresh() {
       if (hresp.ok) {
         const hpayload = await hresp.json();
         state.holistic = hpayload.trials || [];
-        payload.progress.ab_total += hpayload.progress.ab_total;
-        payload.progress.ab_rated += hpayload.progress.ab_rated;
+        overallProgress = hpayload.progress;
       }
     } catch { /* holistic sheets absent */ }
   } else {
@@ -376,7 +385,7 @@ async function refresh() {
     payload = mergeLocal(payload);
   }
   state.cells = payload.factor_cells; state.trials = payload.ab_trials;
-  fmtProgress(payload.progress);
+  fmtOverallProgress(overallProgress);
   render();
 }
 
@@ -408,23 +417,24 @@ function progressNow() {
 }
 
 async function updateProgressOnly() {
-  if (document.hidden) return;                 // background tabs: don't poll
+  if (document.hidden || state.mode !== 'server') return;
   try {
-    let payload;
-    if (state.mode === 'server') payload = await (await fetch('/api/session')).json();
-    else payload = mergeLocal(await (await fetch('session.json')).json());
-    fmtProgress(payload.progress);
+    const payload = await (await fetch('/api/holistic_session')).json();
+    fmtOverallProgress(payload.progress);
   } catch { /* transient network hiccup: keep last known values */ }
 }
 
 // collective/live progress: after own presses AND periodic polling
 setInterval(updateProgressOnly, 20000);
 
-function fmtProgress(p) {
-  document.getElementById('lbl-f').textContent = `Factor: ${p.factor_rated}/${p.factor_total}`;
-  document.getElementById('lbl-a').textContent = `A/B: ${p.ab_rated}/${p.ab_total}`;
-  document.getElementById('bar-f').style.width = (p.factor_total ? 100*p.factor_rated/p.factor_total : 0) + '%';
-  document.getElementById('bar-a').style.width = (p.ab_total ? 100*p.ab_rated/p.ab_total : 0) + '%';
+function fmtOverallProgress(p) {
+  const recorded = p?.judgments_recorded ?? p?.ab_rated ?? 0;
+  const started = p?.trials_started ?? p?.ab_rated ?? 0;
+  const total = p?.trials_total ?? p?.ab_total ?? 0;
+  document.getElementById('lbl-overall').textContent = total
+    ? `Overall similarity: ${started}/${total} trials rated · ${recorded} judgments saved`
+    : 'Overall similarity: available in server mode';
+  document.getElementById('bar-overall').style.width = (total ? 100 * started / total : 0) + '%';
 }
 
 /* ------------------------------------------------------------- mutations */
@@ -527,23 +537,27 @@ function visibleCells() {
   const me = reviewerName().toLowerCase();
   return state.cells.filter(c => {
     if (state.filterFactor && c.target_factor !== state.filterFactor) return false;
+    const mine = sameReviewer(c.rated_by, me);
     if (state.filterStatus === 'unrated' && c.rating) return false;
-    if (state.filterStatus === 'unrated-mine' && (c.rating || !sameReviewer(c.rated_by, me))) return false;
-    if (state.filterStatus === 'mine' && !(c.rating && sameReviewer(c.rated_by, me))) return false;
+    if (state.filterStatus === 'unrated-mine' && mine) return false;
+    if (state.filterStatus === 'mine' && !mine) return false;
     return true;
   });
 }
 function sameReviewer(a, b) {
-  return (a || '').trim().toLowerCase() === (b || '').trim().toLowerCase();
+  const target = (b || '').trim().toLowerCase();
+  if (!target) return false;
+  return String(a || '').split(',').some(name => name.trim().toLowerCase() === target);
 }
 
 function visibleHolistic() {
   const me = reviewerName().toLowerCase();
   return state.holistic.filter(t => {
     const done = t.choice;
+    const mine = sameReviewer(t.rated_by, me);
     if (state.filterStatus === 'unrated' && done) return false;
-    if (state.filterStatus === 'unrated-mine' && (done || !sameReviewer(t.rated_by, me))) return false;
-    if (state.filterStatus === 'mine' && !(done && sameReviewer(t.rated_by, me))) return false;
+    if (state.filterStatus === 'unrated-mine' && mine) return false;
+    if (state.filterStatus === 'mine' && !mine) return false;
     return true;
   });
 }
@@ -553,9 +567,10 @@ function visibleTrials() {
   return state.trials.filter(t => {
     if (state.filterFactor && t.target_factor !== state.filterFactor) return false;
     const done = t.choice;
+    const mine = sameReviewer(t.rated_by, me);
     if (state.filterStatus === 'unrated' && done) return false;
-    if (state.filterStatus === 'unrated-mine' && (done || !sameReviewer(t.rated_by, me))) return false;
-    if (state.filterStatus === 'mine' && !(done && sameReviewer(t.rated_by, me))) return false;
+    if (state.filterStatus === 'unrated-mine' && mine) return false;
+    if (state.filterStatus === 'mine' && !mine) return false;
     return true;
   });
 }
@@ -625,6 +640,7 @@ function holisticCard(t) {
 }
 
 function render() {
+  document.getElementById('legend-holistic').style.display = state.tab==='holistic' ? '' : 'none';
   document.getElementById('legend-factor').style.display = state.tab==='factor' ? '' : 'none';
   document.getElementById('legend-ab').style.display = state.tab==='ab' ? '' : 'none';
   const list = document.getElementById('list');
@@ -738,6 +754,9 @@ function banner(text) {
 function clearBanner() { applyModeChrome(); }
 
 document.getElementById('next-unrated').addEventListener('click', jumpNext);
+document.getElementById('export-holistic').addEventListener('click', () => {
+  window.location.assign('/api/export_holistic');
+});
 function jumpNext() {
   let item;
   if (state.tab==='factor') item = visibleCells().find(c=>!c.rating) || visibleCells()[0];

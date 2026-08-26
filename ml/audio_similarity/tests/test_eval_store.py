@@ -66,6 +66,14 @@ def eval_env(tmp_path: Path) -> SheetStore:
           "b_representation": "mert_general", "a_track_id": 10, "b_track_id": 11}]
     ).to_csv(sheets / "key_ab.csv", index=False)
 
+    pd.DataFrame(
+        [{"trial_id": "1:H1", "query_track_id": 1, "a_title": "t10", "a_artist": "x",
+          "b_title": "t11", "b_artist": "y", "question": "overall?", "choice": ""}]
+    ).to_csv(sheets / "holistic_trials.csv", index=False)
+    (sheets / "holistic_trial_keys.json").write_text(json.dumps({
+        "trials": {"1:H1": {"candidate_a": 10, "candidate_b": 11}}
+    }))
+
     return SheetStore(sheets, manifest_path, audio_root)
 
 
@@ -273,6 +281,46 @@ def test_ab_conflicting_choices_logged_not_overridden(eval_env):
     assert row["choice"] == "A"                        # primary preserved
     log = json.loads(row["choice_log"])
     assert [(e["v"], e["by"]) for e in log] == [("A", "alice"), ("B", "bob")]
+
+
+def test_holistic_second_reviewer_is_preserved_and_reported(eval_env):
+    eval_env.rate_holistic_trial("1:H1", "B", reviewer="cody")
+    eval_env.rate_holistic_trial("1:H1", "A", reviewer="lenny")
+
+    frame = pd.read_csv(eval_env.sheets_dir / "holistic_trials.csv", dtype=str)
+    row = frame[frame["trial_id"] == "1:H1"].iloc[0]
+    assert row["choice"] == "B"
+    assert row["rated_by"] == "cody, lenny"
+    assert "rating_log" not in frame.columns
+    log = json.loads(row["choice_log"])
+    assert [(e["v"], e["by"]) for e in log] == [("B", "cody"), ("A", "lenny")]
+
+    session = eval_env.build_holistic_session()
+    trial = session["trials"][0]
+    assert trial["choice"] == "B"
+    assert trial["rated_by"] == "cody, lenny"
+    assert trial["n_ratings"] == 2
+    assert session["progress"]["judgments_recorded"] == 2
+    assert session["progress"]["judgments_target"] == 1
+    assert session["progress"]["trials_started"] == 1
+
+
+def test_legacy_primary_is_seeded_before_second_reviewer(eval_env):
+    factor_path = eval_env.sheets_dir / "judgments_factor.csv"
+    frame = pd.read_csv(factor_path, dtype=str).fillna("")
+    mask = frame["cell_id"] == "1:melody:1"
+    frame.loc[mask, "rating"] = "2"
+    frame.loc[mask, "rated_by"] = "cody"
+    frame.to_csv(factor_path, index=False)
+
+    eval_env.rate_factor_cell("1:melody:1", "3", reviewer="lenny")
+
+    row = pd.read_csv(factor_path, dtype=str).fillna("").loc[mask].iloc[0]
+    assert row["rating"] == "2"
+    assert row["rated_by"] == "cody, lenny"
+    log = json.loads(row["rating_log"])
+    assert [(e["v"], e["by"]) for e in log] == [("2", "cody"), ("3", "lenny")]
+    assert log[0]["migrated"] is True
 
 
 def test_import_conflict_preserves_and_logs(eval_env):
