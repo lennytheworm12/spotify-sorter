@@ -1,0 +1,80 @@
+# Stage 4 protocol. Corpus-derived hashes are frozen by `stage4_contract freeze`
+# only after both official datasets pass readiness validation.
+experiment_id: holistic_stage4_full_song_benchmark
+contract_version: 1
+rollback_commit: 57bc409
+seed: 20260904
+designated_reviewer_id: ""
+claim_boundary: personal_perceptual_alignment_single_designated_reviewer
+corpus:
+  musdb18:
+    release: MUSDB18
+    archive: data/musdb18/musdb18.zip
+    extracted_root: data/musdb18/extracted
+    expected_tracks: 150
+  medleydb:
+    release: MedleyDB_2.0
+    root: data/medleydb/MedleyDB_V2
+    expected_full_tracks: 179
+    excluded_v1_excerpts: 17
+  normalized_manifest: reports/holistic_stage4/combined_corpus_manifest.parquet
+  manual_duplicate_aliases: configs/stage4_duplicate_aliases.yaml
+canonical_audio:
+  preprocessing_version: full_mono_24khz_v1
+  sample_rate: 24000
+  channels: mono
+  retain_complete_decode: true
+  silence_trimming: false
+sampling:
+  version: five5_fractional_v1
+  centers: [0.10, 0.30, 0.50, 0.70, 0.90]
+  window_samples: 120000
+encoder:
+  id: laion_clap
+  revision: stage2b_frozen
+  checkpoint: models/630k-audioset-best.pt
+  checkpoint_sha256: 8053c9775516af2f4902e1e8281e356cc1bf7a85e8b761908170767b77c3f037
+  embedding_dimension: 512
+  adapter: src/audio_similarity/holistic_encoders.py
+  adapter_sha256: 4e78ec190eb5729bf1dc369650a533b417698362d97b9f5e489c91dac8feffca
+  native_sample_rate: 48000
+  native_window_seconds: 10
+  native_windowing: library_internal_fixed_window
+architectures:
+  - uniform_mean_v1
+  - bounded_recurrence_mean_v1
+  - mean_top100_symmetric_top2_v1
+retrieval:
+  metric: exact_cosine
+  first_stage_depth: 100
+  stable_tie_break: track_id
+query_selection:
+  per_corpus: 40
+  technical_reserves_per_corpus: 10
+  interim_per_corpus: 20
+  continuation_per_corpus: 20
+  strata: normalized_official_genre_x_duration_quintile
+  allocation: deterministic_largest_remainder
+  artist_cap: 2
+trials:
+  method_pairs: [[uniform_mean_v1, bounded_recurrence_mean_v1], [uniform_mean_v1, mean_top100_symmetric_top2_v1], [bounded_recurrence_mean_v1, mean_top100_symmetric_top2_v1]]
+  initial_depth: 20
+  expansion_depth: 50
+  target: 240
+  minimum_valid: 216
+  minimum_pair_balance_ratio: 0.90
+  choices: [A, B, Tie, Neither]
+metrics:
+  bootstrap_draws: 50000
+  bootstrap_seed: 20260904
+  confidence: 0.95
+  material_improvement: 0.05
+interim:
+  queries: 40
+  minimum_represented_non_neither_queries: 30
+  drop_if_upper_improvement_below: 0.05
+verdict:
+  allowed: [UNIFORM_MEAN_WINS, RECURRENCE_WEIGHTING_WINS, LATE_INTERACTION_WINS, INSUFFICIENT_EVIDENCE_PICK_SIMPLER]
+paths:
+  report_dir: reports/holistic_stage4
+  artifacts: artifacts/holistic_stage4

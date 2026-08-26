@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-09-04",
+  "stage": "4.0",
+  "status": "STOP_GATE_MEDLEYDB_ASSETS_ABSENT",
+  "automatic_download_attempted": false,
+  "musdb18": {
+    "archive": "data/musdb18/musdb18.zip",
+    "archive_sha256": "2765dd51fed264bbe2dac5c382f7120b7cf1932698fc67d100aa0f3811479152",
+    "license_files": ["README.md"],
+    "mixture_stream": 0,
+    "track_count": 150,
+    "validated": true
+  },
+  "medleydb": {
+    "expected_root": "data/medleydb/MedleyDB_V2",
+    "expected_full_tracks": 179,
+    "expected_excluded_v1_excerpts": 17,
+    "validated": false,
+    "failure": "official MedleyDB 2.0 assets absent: data/medleydb/MedleyDB_V2"
+  },
+  "next_gate": "The user must place official MedleyDB 2.0 full-track assets, metadata YAML, and license/provenance files at the expected ignored local root. Then rerun the readiness contract freeze before extraction, scoring, query freeze, or labels."
+}
