@@ -83,7 +83,15 @@ uv run pytest tests/test_stage2b_contract.py tests/test_stage2b_trials.py
 ```
 
 The Stage 2B contract and split must be committed and pushed before disagreement
-retrieval. Later commands are added only as their stage gates are implemented;
+retrieval. Collect independent ratings only through the isolated exact-PCM mode:
+
+```bash
+uv run python -m audio_similarity.cli.stage2b_eval_server
+# http://127.0.0.1:8620 — requires a stable non-empty rater ID
+```
+
+The server plays raw little-endian float32 `center5_v1` samples and maintains
+append-only authoritative, TRAIN/VALIDATION-only, and TEST-only blinded exports.
 TEST scoring remains locked until a pushed train/validation selection artifact
 exists.
 
