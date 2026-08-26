@@ -92,6 +92,14 @@ uv run python -m audio_similarity.cli.stage2b_eval_server
 
 The server plays raw little-endian float32 `center5_v1` samples and maintains
 append-only authoritative, TRAIN/VALIDATION-only, and TEST-only blinded exports.
+The approved `single_reviewer_v2` analysis amendment narrows conclusions to the
+designated reviewer's preferences while preserving the selection/TEST lock:
+
+```bash
+uv run python -m audio_similarity.cli.freeze_stage2b_ratings \
+  --config configs/holistic_stage2b_fusion_single_reviewer.yaml
+```
+
 TEST scoring remains locked until a pushed train/validation selection artifact
 exists.
 
