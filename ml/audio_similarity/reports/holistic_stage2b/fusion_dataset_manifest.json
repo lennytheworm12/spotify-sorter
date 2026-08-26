@@ -1,0 +1,27 @@
+{
+  "anti_symmetry_validated": true,
+  "binary_row_count": 157,
+  "binary_rows_by_split": {
+    "TEST": 59,
+    "TRAIN": 67,
+    "VALIDATION": 31
+  },
+  "canonical_labels_sha256": "626ce604a265046829ca1ab690e9196af24c08eebf0467874c61aa1d2efc4019",
+  "config_sha256": "9c3bf274cbea6bc8bdc891c51d0e04289bfb0dc3712aad151d530ef65f9114c5",
+  "embedding_sha256": {
+    "laion_clap": "40dd8ca0bb1883cce1af02081b36364160ce90be20dca0167c69c18f8e26471b",
+    "mert_5120": "54289f762dca1a8371dc8b72249ababba2eb6476c21b15f3da1e18a6fa56f4b4",
+    "muq_mulan_large": "12cc654e75efc373aca75d10ea73b192c579ea1ec09bbe85f007b74f9dac33ba"
+  },
+  "excluded_row_count": 83,
+  "exclusion_counts": {
+    "neither": 19,
+    "tie": 64
+  },
+  "experiment_id": "holistic_stage2b_fusion_benchmark",
+  "feature_orientation": "sim(query,A)-sim(query,B)",
+  "fusion_dataset_sha256": "bab2a248a47e5d3938c201bb7753c3cb9c35b3e9226b4690b9b8886fd759dacd",
+  "protocol_version": "single_reviewer_v2",
+  "row_count": 240,
+  "trial_keys_sha256": "375f1533d6c1d02edc0ba14b999f32b81709ffdb4a845bd61b5b4283d8ebfc66"
+}

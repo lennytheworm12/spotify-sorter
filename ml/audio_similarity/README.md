@@ -98,6 +98,10 @@ designated reviewer's preferences while preserving the selection/TEST lock:
 ```bash
 uv run python -m audio_similarity.cli.freeze_stage2b_ratings \
   --config configs/holistic_stage2b_fusion_single_reviewer.yaml
+uv run python -m audio_similarity.cli.build_stage2b_dataset \
+  --config configs/holistic_stage2b_fusion_single_reviewer.yaml
+uv run python -m audio_similarity.cli.select_stage2b_model \
+  --config configs/holistic_stage2b_fusion_single_reviewer.yaml
 ```
 
 TEST scoring remains locked until a pushed train/validation selection artifact
