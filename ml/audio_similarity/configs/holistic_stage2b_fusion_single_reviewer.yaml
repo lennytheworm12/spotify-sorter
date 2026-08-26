@@ -1,0 +1,187 @@
+# Approved Stage 2B protocol amendment. The original multi-rater collection
+# contract remains frozen and auditable in holistic_stage2b_fusion.yaml.
+experiment_id: holistic_stage2b_fusion_benchmark
+protocol_version: single_reviewer_v2
+seed: 20260829
+rollback_commit: 3779fa2
+
+protocol_amendment:
+  approved_date: 2026-08-26
+  supersedes_rating_semantics_from: configs/holistic_stage2b_fusion.yaml
+  original_frozen_config_blob_sha: f02e67c11212f7bbcbe41e65ac41633266b0558e
+  original_contract_commit: a1e4ff8b0a606bbadb238c8a0503801d355f7272
+  collection_state_at_approval:
+    primary_trials_covered: 240
+    distinct_raters: 1
+  scope: single_reviewer_personal_perceptual_alignment
+  preserves:
+    - frozen_query_universe
+    - train_validation_test_query_split
+    - encoder_neutral_duplicate_policy
+    - exact_center5_v1_human_model_evidence
+    - balanced_trial_generation
+    - encoder_scores_and_representations
+    - test_selection_lock
+  claim_limits:
+    - no_population_level_human_consensus_claim
+    - no_inter_rater_reliability_claim
+    - no_general_human_preference_claim
+  note: Additional raters may be used later as external replication but are not required to close Stage 2B v2.
+
+inputs:
+  manifest:
+    path: data/manifests/fma_small.parquet
+    sha256: a81c6fe64a895d6600c0d2c1fd8accf3bb39dfe271835d000f4cddaafe9883ba
+  frozen_queries:
+    path: reports/holistic_stage1a/frozen_queries.csv
+    sha256: 690ef2482d52c3a4ffc195469cc8a1efa6b26bb258d44ba1be90686bb46203ca
+  frozen_query_manifest:
+    path: reports/holistic_stage1a/frozen_query_manifest.json
+    sha256: 060f30d7bfa29e1227373c94d20b18cfda2287cb1f416920505fc4817e64c5a6
+  embeddings:
+    laion_clap:
+      path: artifacts/holistic_stage1a/laion_clap.parquet
+      sha256: 40dd8ca0bb1883cce1af02081b36364160ce90be20dca0167c69c18f8e26471b
+      analysis_key: b0fee4bc6fd340e4
+      dimensions: 512
+    mert_5120:
+      path: artifacts/holistic_stage1a/mert_5120.parquet
+      sha256: 54289f762dca1a8371dc8b72249ababba2eb6476c21b15f3da1e18a6fa56f4b4
+      analysis_key: 8069b221c47dd7c0
+      dimensions: 5120
+    muq_mulan_large:
+      path: artifacts/holistic_stage1a/muq_mulan_large.parquet
+      sha256: 12cc654e75efc373aca75d10ea73b192c579ea1ec09bbe85f007b74f9dac33ba
+      analysis_key: fbd16084793f3ecf
+      dimensions: 512
+  historical_reports:
+    stage1a:
+      path: reports/holistic_stage1a/human_encoder_pilot.md
+      sha256: 7c55297115e187ece9f2c92d7d2ec919fd527b993de14a9b506c8df38b8cde86
+    stage2a:
+      path: reports/holistic_stage2a/decision_report.md
+      sha256: c0a46e033d320442c8e506a301e99220a386a5d68064a5ed64e97aab5821307d
+
+provenance:
+  canonical_preprocessing: pp-v1
+  excerpt_strategy: center5_v1
+  source_sample_rate: 24000
+  channels: mono
+  source_seconds: 30
+  excerpt_seconds: 5
+  encoders:
+    laion_clap:
+      checkpoint: models/630k-audioset-best.pt
+      checkpoint_sha256: 8053c9775516af2f4902e1e8281e356cc1bf7a85e8b761908170767b77c3f037
+      native_sample_rate: 48000
+      native_window_seconds: 10
+      native_windowing: library_internal_fixed_window
+    mert_5120:
+      model: m-a-p/MERT-v1-330M
+      revision: 5240c2708a5acaee1007f43fb9735c7dcd0b78c9
+      variant: layers_3_4_5_6_23_concat_meanpool
+      native_sample_rate: 24000
+    muq_mulan_large:
+      model: OpenMuQ/MuQ-MuLan-large
+      revision: 2e01c796b71dca71b45251384c04cd7b237c9020
+      native_sample_rate: 24000
+  implementation:
+    audio.py: db8e2414e9aca9c0dcf828f93ceea9489e95eb36ee8b1a47bd3de31fdbf1023c
+    holistic_batch.py: 293561c00f3121f376ed6bf2a58fe86a83fb10c2a23d418780bad50f01acf0ba
+    holistic_encoders.py: 4e78ec190eb5729bf1dc369650a533b417698362d97b9f5e489c91dac8feffca
+    holistic_eval.py: 962efac8f7ee1a32dd495144e43f710052bbfd141632539bb44dc1676d4638e1
+
+candidate_policy:
+  exclude_all_query_ids: true
+  exclude_same_artist: false
+  duplicate_rules: [same_track_id, identical_source_sha256, identical_canonical_30s_pcm_sha256, identical_center5_v1_pcm_sha256]
+  forbidden_duplicate_inputs: [laion_clap_score, mert_5120_score, muq_mulan_large_score]
+  retrieval_metric: exact_cosine
+  normalization: l2
+  initial_depth: 30
+  single_expansion_depth: 50
+  expansion_timing: before_labels
+
+split:
+  counts: {TRAIN: 16, VALIDATION: 8, TEST: 16}
+  per_genre: {TRAIN: 2, VALIDATION: 1, TEST: 2}
+  artist_normalization: unicode_nfkc_casefold_whitespace
+  group_first: true
+  tie_break: seeded_sha256
+
+trials:
+  source_pairs:
+    - [laion_clap, mert_5120]
+    - [laion_clap, muq_mulan_large]
+    - [mert_5120, muq_mulan_large]
+  strict_disagreements_per_pair_query: 2
+  source_balance_min_ratio: 0.90
+  pair_deduplicate_within_query: true
+  orientation: sha256_seed_plus_canonical_trial_identity
+  trial_ids: opaque
+  anchors_enter_fit: false
+
+ratings:
+  question: Which candidate sounds more like the query overall?
+  choices: [A, B, Tie, Neither]
+  rater_id: required_normalized_nonempty
+  required_distinct_raters_per_trial: 1
+  train_validation:
+    initial_distinct_raters: 1
+    third_on_exact_disagreement: false
+    maximum_distinct_raters: 1
+  test:
+    distinct_raters: 1
+  canonical_label: single_reviewer_latest_choice
+  binary_denominator: A_or_B_single_reviewer_only
+  preserve_ambiguity: true
+  additional_raters: optional_external_replication_only
+
+selection:
+  permitted_representation_sets:
+    - [laion_clap]
+    - [mert_5120]
+    - [muq_mulan_large]
+    - [laion_clap, mert_5120]
+    - [laion_clap, muq_mulan_large]
+    - [mert_5120, muq_mulan_large]
+    - [laion_clap, mert_5120, muq_mulan_large]
+  single_baselines: native_cosine_margin_unscaled_unsupervised
+  fusion_model:
+    implementation: sklearn.linear_model.LogisticRegression
+    penalty: l2
+    solver: lbfgs
+    fit_intercept: false
+    C_grid: [0.01, 0.1, 1, 10, 100]
+  scaling_fit_split: TRAIN
+  hyperparameter_selection_split: VALIDATION
+  primary_metric: query_macro_accuracy
+  zero_margin_accuracy_credit: 0.5
+  C_practical_tie: 0.005
+  C_tiebreak: [lower_log_loss, smaller_C]
+  fusion_subset_practical_tie: 0.01
+  fusion_subset_tiebreak: [fewer_encoders, lower_log_loss, canonical_subset_order]
+  equal_weight_three_encoder: diagnostic_only
+  test_lock:
+    require_selection_tracked_clean_committed_pushed: true
+    refuse_existing_test_output: true
+    test_identity_hash_only_before_reveal: true
+
+uncertainty:
+  interpretation: query_variation_for_this_single_reviewers_preferences
+  paired_query_bootstrap_draws: 50000
+  coefficient_query_bootstrap_refits: 2000
+  confidence: 0.95
+
+verdict:
+  allowed: [FUSION_WINS, SINGLE_ENCODER_WINS, STATISTICALLY_EQUIVALENT_PICK_SIMPLER, INSUFFICIENT_HUMAN_EVIDENCE]
+  fusion_min_improvement: 0.02
+  confidence_lower_bound_must_exceed_zero: true
+  insufficiency_protocol_only: true
+  protocol_failures: [source_balance, incomplete_single_reviewer_ratings, split_or_query_coverage_loss, test_query_without_ab_choice]
+  claim_scope: single_reviewer_personal_perceptual_alignment
+
+paths:
+  audio_root: data/fma/fma_small
+  pcm_identity_cache: data/holistic_stage2b_pcm_cache
+  report_dir: reports/holistic_stage2b
