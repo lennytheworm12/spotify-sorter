@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 from audio_similarity.stage2_screen import (component_metrics, family_decisions,
-    query_bootstrap, query_macro_accuracy, rescue_stats, score_table)
+    query_bootstrap, query_macro_accuracy, rescue_stats, score_table, write_outputs)
 
 
 def _rows():
@@ -85,3 +85,19 @@ def test_slices_keep_ab_primary_and_tie_neither_anchor_diagnostics_network_free(
     result=score_table(pd.DataFrame(rows),cfg)
     assert result["denominators"] == {"canonical_trials":5,"raw_judgments":5,"primary_ab":2,
       "direct_disagreement_ab":1,"anchor_ab":1,"tie":1,"neither":1,"rater_conflict":0}
+
+
+def test_end_to_end_fixture_writes_deterministic_artifacts_without_network(tmp_path):
+    table = pd.DataFrame([{"trial_id":"1:H1","query_track_id":1,"slice":"direct_disagreement",
+        "canonical_label":"A","label_status":"CANONICAL","primary_eligible":True,"raw_judgment_count":1,
+        "clap_sim_a":.8,"clap_sim_b":.2,"mert_sim_a":.7,"mert_sim_b":.3,"x_sim_a":.9,"x_sim_b":.1}])
+    cfg={"experiment_id":"fixture","seed":3,"active_baselines":["clap","mert"],
+         "components":{"family":["x"]},"diagnostics":[],"bootstrap":{"count":100},
+         "decision":{"min_disagreements_each_baseline":10,"min_positive_probability":.8},
+         "paths":{"report_dir":"out"},"excerpt":{"strategy":"center5_v1"}}
+    result=score_table(table,cfg)
+    first=write_outputs(table,[{"v":"A"}],result,cfg,tmp_path,{"ratings":"hash"})
+    second=write_outputs(table,[{"v":"A"}],result,cfg,tmp_path,{"ratings":"hash"})
+    assert first == second
+    assert {p.name for p in (tmp_path/"out").iterdir()} == {
+        "canonical_trial_features.csv","metrics.json","decision_report.md","input_provenance_manifest.json"}

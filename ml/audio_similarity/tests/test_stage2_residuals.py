@@ -7,7 +7,8 @@ import torch
 
 from audio_similarity.holistic_batch import _excerpt_bounds
 from audio_similarity.stage2_residuals import (MERIT_KEYS, MIR_KEYS, cache_identity,
-    canonicalize_ratings, extract_track, pair_residuals)
+    canonicalize_ratings, extract_track, pair_residuals, stage2_excerpt_bounds,
+    validate_input_hashes)
 
 
 def test_canonicalization_preserves_agreeing_and_flags_conflicting_logs():
@@ -28,7 +29,25 @@ def test_canonicalization_preserves_agreeing_and_flags_conflicting_logs():
 def test_center5_v1_alias_uses_exact_stage1_bounds():
     wav = np.zeros(30 * 24000, np.float32)
     stage1 = _excerpt_bounds(wav, "center5", 24000)
+    assert stage2_excerpt_bounds(wav, _cfg()) == stage1
     assert stage1 == (12 * 24000 + 12000, 17 * 24000 + 12000)
+
+
+def test_input_hash_validation_accepts_exact_and_rejects_mutation(tmp_path):
+    paths = {}
+    for name in ("ratings", "trial_keys", "competitive_model_pairs", "manifest"):
+        path = tmp_path / name; path.write_text(name); paths[name] = path
+    emb = tmp_path / "embedding"; emb.write_text("embedding")
+    import hashlib
+    digest = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
+    cfg = {"inputs": {**{name: path.name for name, path in paths.items()},
+        **{f"{name}_sha256": digest(path) for name, path in paths.items()},
+        "embeddings": {"base": {"path": emb.name, "sha256": digest(emb)}}}}
+    assert len(validate_input_hashes(cfg, tmp_path)) == 5
+    paths["ratings"].write_text("changed")
+    import pytest
+    with pytest.raises(ValueError, match="SHA256_MISMATCH:ratings"):
+        validate_input_hashes(cfg, tmp_path)
 
 
 def _cfg():

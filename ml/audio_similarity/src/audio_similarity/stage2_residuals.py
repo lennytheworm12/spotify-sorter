@@ -77,6 +77,12 @@ def canonicalize_ratings(frame: pd.DataFrame) -> tuple[pd.DataFrame, list[dict]]
     return pd.DataFrame(rows), raw
 
 
+def stage2_excerpt_bounds(wav: np.ndarray, cfg: dict) -> tuple[int, int]:
+    """Resolve persisted ``center5_v1`` to Stage 1's exact sampler implementation."""
+    strategy = "center5" if cfg["excerpt"]["strategy"] == "center5_v1" else cfg["excerpt"]["strategy"]
+    return _excerpt_bounds(wav, strategy, cfg["excerpt"]["sample_rate"])
+
+
 def cache_identity(audio_sha256: str, cfg: dict) -> str:
     payload = {"audio_sha256": audio_sha256, "excerpt": cfg["excerpt"],
                "revisions": cfg["inputs"]["revisions"]}
@@ -110,10 +116,7 @@ def extract_track(path: Path, audio_sha256: str, cfg: dict, cache_dir: Path, mer
     need_merit = merit_encoder is not None and not all(k in values for k in MERIT_KEYS)
     if need_mir or need_merit:
         wav = preprocess_file(path)
-        # Stage 1 persisted the provenance name ``center5_v1`` while its
-        # sampler registry calls the identical implementation ``center5``.
-        strategy = "center5" if cfg["excerpt"]["strategy"] == "center5_v1" else cfg["excerpt"]["strategy"]
-        start, end = _excerpt_bounds(wav, strategy, cfg["excerpt"]["sample_rate"])
+        start, end = stage2_excerpt_bounds(wav, cfg)
         excerpt = wav[start:end]
         expected = cfg["excerpt"]["seconds"] * cfg["excerpt"]["sample_rate"]
         if len(excerpt) != expected:

@@ -23,8 +23,8 @@ def _credit(pred: int, truth: int) -> float:
     return 0.5 if pred == 0 else float(pred == truth)
 
 
-def query_macro_accuracy(frame: pd.DataFrame, margin_col: str) -> float:
-    if frame.empty: return float("nan")
+def query_macro_accuracy(frame: pd.DataFrame, margin_col: str) -> float | None:
+    if frame.empty: return None
     values = frame.apply(lambda r: _credit(_prediction(float(r[margin_col])), _truth(r.canonical_label)), axis=1)
     return float(values.groupby(frame.query_track_id).mean().mean())
 
@@ -43,7 +43,7 @@ def rescue_stats(frame: pd.DataFrame, baseline_col: str, residual_col: str) -> d
     return {"n_trials": n, "n_queries": len(per_query), "disagreement_count": disagreements,
             "rescue_count": rescues, "rescue_rate": rescues / disagreements if disagreements else 0.0,
             "conflict_count": conflicts, "conflict_rate": conflicts / disagreements if disagreements else 0.0,
-            "net_rescue": rescues - conflicts, "net_rescue_rate": (rescues - conflicts) / n if n else float("nan"),
+            "net_rescue": rescues - conflicts, "net_rescue_rate": (rescues - conflicts) / n if n else None,
             "query_effects": {str(k): float(np.mean(v)) for k, v in per_query.items()}}
 
 
