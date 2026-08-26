@@ -105,7 +105,13 @@ uv run python -m audio_similarity.cli.select_stage2b_model \
 ```
 
 TEST scoring remains locked until a pushed train/validation selection artifact
-exists.
+exists. After that checkpoint is tracked, clean, committed, and pushed, reveal
+TEST exactly once (the command refuses an existing output):
+
+```bash
+uv run python -m audio_similarity.cli.evaluate_stage2b_test \
+  --config configs/holistic_stage2b_fusion_single_reviewer.yaml
+```
 
 ## Stage 2A residual signal screen
 
