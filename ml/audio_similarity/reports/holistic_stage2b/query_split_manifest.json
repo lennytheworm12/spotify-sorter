@@ -1,0 +1,311 @@
+{
+  "algorithm": "genre_artist_group_validation_then_train_seeded_sha256_v1",
+  "config_sha256": "89ec902f82d4f2ac9938283bf078d98fcffbd4036b21e6ef36c306d91154d2ef",
+  "counts": {
+    "TEST": 16,
+    "TRAIN": 16,
+    "VALIDATION": 8
+  },
+  "deviations": [],
+  "experiment_id": "holistic_stage2b_fusion_benchmark",
+  "queries": [
+    {
+      "artist": "Michael Holt",
+      "artist_normalized": "michael holt",
+      "query_id": 3921,
+      "split": "TRAIN",
+      "top_genre": "Folk"
+    },
+    {
+      "artist": "Funky Terrorist",
+      "artist_normalized": "funky terrorist",
+      "query_id": 10435,
+      "split": "TEST",
+      "top_genre": "Experimental"
+    },
+    {
+      "artist": "6th Sense",
+      "artist_normalized": "6th sense",
+      "query_id": 11790,
+      "split": "TRAIN",
+      "top_genre": "Hip-Hop"
+    },
+    {
+      "artist": "Ergo Phizmiz",
+      "artist_normalized": "ergo phizmiz",
+      "query_id": 20364,
+      "split": "TEST",
+      "top_genre": "Instrumental"
+    },
+    {
+      "artist": "Plushgoolash",
+      "artist_normalized": "plushgoolash",
+      "query_id": 32340,
+      "split": "TEST",
+      "top_genre": "Pop"
+    },
+    {
+      "artist": "File Under Toner",
+      "artist_normalized": "file under toner",
+      "query_id": 38896,
+      "split": "VALIDATION",
+      "top_genre": "Experimental"
+    },
+    {
+      "artist": "Duncan Cameron",
+      "artist_normalized": "duncan cameron",
+      "query_id": 41605,
+      "split": "TRAIN",
+      "top_genre": "Experimental"
+    },
+    {
+      "artist": "Waylon Thornton and the Heavy Hands",
+      "artist_normalized": "waylon thornton and the heavy hands",
+      "query_id": 42844,
+      "split": "TRAIN",
+      "top_genre": "Rock"
+    },
+    {
+      "artist": "Rozsa has become... Mad\u00e1rka",
+      "artist_normalized": "rozsa has become... mad\u00e1rka",
+      "query_id": 43586,
+      "split": "TRAIN",
+      "top_genre": "International"
+    },
+    {
+      "artist": "Bass Assassin",
+      "artist_normalized": "bass assassin",
+      "query_id": 48442,
+      "split": "TEST",
+      "top_genre": "Electronic"
+    },
+    {
+      "artist": "Phemale",
+      "artist_normalized": "phemale",
+      "query_id": 52393,
+      "split": "TEST",
+      "top_genre": "Pop"
+    },
+    {
+      "artist": "Jahzzar",
+      "artist_normalized": "jahzzar",
+      "query_id": 62450,
+      "split": "VALIDATION",
+      "top_genre": "Pop"
+    },
+    {
+      "artist": "Starring",
+      "artist_normalized": "starring",
+      "query_id": 64567,
+      "split": "TEST",
+      "top_genre": "Rock"
+    },
+    {
+      "artist": "Howie Mitchell",
+      "artist_normalized": "howie mitchell",
+      "query_id": 68840,
+      "split": "TEST",
+      "top_genre": "Folk"
+    },
+    {
+      "artist": "Howie Mitchell",
+      "artist_normalized": "howie mitchell",
+      "query_id": 68844,
+      "split": "TEST",
+      "top_genre": "Folk"
+    },
+    {
+      "artist": "Geese",
+      "artist_normalized": "geese",
+      "query_id": 75317,
+      "split": "TRAIN",
+      "top_genre": "Pop"
+    },
+    {
+      "artist": "Le Perche Oreille",
+      "artist_normalized": "le perche oreille",
+      "query_id": 84095,
+      "split": "TRAIN",
+      "top_genre": "Electronic"
+    },
+    {
+      "artist": "Fever Dream",
+      "artist_normalized": "fever dream",
+      "query_id": 86441,
+      "split": "TRAIN",
+      "top_genre": "Rock"
+    },
+    {
+      "artist": "Eric & Magill",
+      "artist_normalized": "eric & magill",
+      "query_id": 87190,
+      "split": "TRAIN",
+      "top_genre": "Pop"
+    },
+    {
+      "artist": "The Fucked Up Beat",
+      "artist_normalized": "the fucked up beat",
+      "query_id": 92885,
+      "split": "TRAIN",
+      "top_genre": "Experimental"
+    },
+    {
+      "artist": "Tha Silent Partner",
+      "artist_normalized": "tha silent partner",
+      "query_id": 94465,
+      "split": "VALIDATION",
+      "top_genre": "Hip-Hop"
+    },
+    {
+      "artist": "Egg Nebula",
+      "artist_normalized": "egg nebula",
+      "query_id": 105408,
+      "split": "VALIDATION",
+      "top_genre": "Electronic"
+    },
+    {
+      "artist": "Night Rally",
+      "artist_normalized": "night rally",
+      "query_id": 106277,
+      "split": "TEST",
+      "top_genre": "Rock"
+    },
+    {
+      "artist": "Alaclair Ensemble",
+      "artist_normalized": "alaclair ensemble",
+      "query_id": 107027,
+      "split": "TEST",
+      "top_genre": "Hip-Hop"
+    },
+    {
+      "artist": "Vanya Zhuk",
+      "artist_normalized": "vanya zhuk",
+      "query_id": 107249,
+      "split": "TEST",
+      "top_genre": "International"
+    },
+    {
+      "artist": "Kellee Maize & J. Glaze Productions",
+      "artist_normalized": "kellee maize & j. glaze productions",
+      "query_id": 110262,
+      "split": "TEST",
+      "top_genre": "Hip-Hop"
+    },
+    {
+      "artist": "Mary Caroline",
+      "artist_normalized": "mary caroline",
+      "query_id": 113167,
+      "split": "TRAIN",
+      "top_genre": "Folk"
+    },
+    {
+      "artist": "TaaPet",
+      "artist_normalized": "taapet",
+      "query_id": 113284,
+      "split": "TEST",
+      "top_genre": "International"
+    },
+    {
+      "artist": "Squire Tuck",
+      "artist_normalized": "squire tuck",
+      "query_id": 114223,
+      "split": "TRAIN",
+      "top_genre": "Instrumental"
+    },
+    {
+      "artist": "Ultratech",
+      "artist_normalized": "ultratech",
+      "query_id": 115700,
+      "split": "TRAIN",
+      "top_genre": "Electronic"
+    },
+    {
+      "artist": "Aaron Mist",
+      "artist_normalized": "aaron mist",
+      "query_id": 120770,
+      "split": "TEST",
+      "top_genre": "Instrumental"
+    },
+    {
+      "artist": "Six Umbrellas",
+      "artist_normalized": "six umbrellas",
+      "query_id": 124913,
+      "split": "TEST",
+      "top_genre": "Electronic"
+    },
+    {
+      "artist": "Derek Clegg",
+      "artist_normalized": "derek clegg",
+      "query_id": 125193,
+      "split": "VALIDATION",
+      "top_genre": "Folk"
+    },
+    {
+      "artist": "Blue Dot Sessions",
+      "artist_normalized": "blue dot sessions",
+      "query_id": 125814,
+      "split": "TRAIN",
+      "top_genre": "Instrumental"
+    },
+    {
+      "artist": "Colin Ska Johnson",
+      "artist_normalized": "colin ska johnson",
+      "query_id": 127359,
+      "split": "TRAIN",
+      "top_genre": "International"
+    },
+    {
+      "artist": "Suburban Howl",
+      "artist_normalized": "suburban howl",
+      "query_id": 131410,
+      "split": "TEST",
+      "top_genre": "Experimental"
+    },
+    {
+      "artist": "C-Doc",
+      "artist_normalized": "c-doc",
+      "query_id": 134823,
+      "split": "TRAIN",
+      "top_genre": "Hip-Hop"
+    },
+    {
+      "artist": "Turku, Nomads of the Silk Road",
+      "artist_normalized": "turku, nomads of the silk road",
+      "query_id": 134930,
+      "split": "VALIDATION",
+      "top_genre": "International"
+    },
+    {
+      "artist": "Twin Guns",
+      "artist_normalized": "twin guns",
+      "query_id": 143098,
+      "split": "VALIDATION",
+      "top_genre": "Rock"
+    },
+    {
+      "artist": "Fatal Injection",
+      "artist_normalized": "fatal injection",
+      "query_id": 149712,
+      "split": "VALIDATION",
+      "top_genre": "Instrumental"
+    }
+  ],
+  "query_source_sha256": "690ef2482d52c3a4ffc195469cc8a1efa6b26bb258d44ba1be90686bb46203ca",
+  "schema_version": 1,
+  "seed": 20260829,
+  "validated_input_hashes": {
+    "artifacts/holistic_stage1a/laion_clap.parquet": "40dd8ca0bb1883cce1af02081b36364160ce90be20dca0167c69c18f8e26471b",
+    "artifacts/holistic_stage1a/mert_5120.parquet": "54289f762dca1a8371dc8b72249ababba2eb6476c21b15f3da1e18a6fa56f4b4",
+    "artifacts/holistic_stage1a/muq_mulan_large.parquet": "12cc654e75efc373aca75d10ea73b192c579ea1ec09bbe85f007b74f9dac33ba",
+    "data/manifests/fma_small.parquet": "a81c6fe64a895d6600c0d2c1fd8accf3bb39dfe271835d000f4cddaafe9883ba",
+    "models/630k-audioset-best.pt": "8053c9775516af2f4902e1e8281e356cc1bf7a85e8b761908170767b77c3f037",
+    "reports/holistic_stage1a/frozen_queries.csv": "690ef2482d52c3a4ffc195469cc8a1efa6b26bb258d44ba1be90686bb46203ca",
+    "reports/holistic_stage1a/frozen_query_manifest.json": "060f30d7bfa29e1227373c94d20b18cfda2287cb1f416920505fc4817e64c5a6",
+    "reports/holistic_stage1a/human_encoder_pilot.md": "7c55297115e187ece9f2c92d7d2ec919fd527b993de14a9b506c8df38b8cde86",
+    "reports/holistic_stage2a/decision_report.md": "c0a46e033d320442c8e506a301e99220a386a5d68064a5ed64e97aab5821307d",
+    "src/audio_similarity/audio.py": "db8e2414e9aca9c0dcf828f93ceea9489e95eb36ee8b1a47bd3de31fdbf1023c",
+    "src/audio_similarity/holistic_batch.py": "293561c00f3121f376ed6bf2a58fe86a83fb10c2a23d418780bad50f01acf0ba",
+    "src/audio_similarity/holistic_encoders.py": "4e78ec190eb5729bf1dc369650a533b417698362d97b9f5e489c91dac8feffca",
+    "src/audio_similarity/holistic_eval.py": "962efac8f7ee1a32dd495144e43f710052bbfd141632539bb44dc1676d4638e1"
+  }
+}

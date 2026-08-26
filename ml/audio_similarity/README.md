@@ -64,6 +64,26 @@ The heavy suite is the Stage A gate: 3/3 clips must decode, encode, satisfy the
 128-D unit-norm contract, repeat deterministically on the same stack, and give
 ~1.0 factor cosine for duplicate waveforms.
 
+## Stage 2B balanced holistic fusion benchmark
+
+Stage 2B is a stage-gated corrective benchmark over the frozen 40-query
+universe. It compares CLAP, MERT-5120, and MuQ using identical `center5_v1`
+evidence, encoder-neutral identity duplicate rules, and new multi-rater labels.
+Stage 1A and Stage 2A remain immutable.
+
+```bash
+# Validate frozen inputs and deterministically regenerate the 16/8/16 split.
+uv run python -m audio_similarity.cli.stage2b_contract
+
+# Focused contract tests (no retrieval or model execution).
+uv run pytest tests/test_stage2b_contract.py
+```
+
+The Stage 2B contract and split must be committed and pushed before disagreement
+retrieval. Later commands are added only as their stage gates are implemented;
+TEST scoring remains locked until a pushed train/validation selection artifact
+exists.
+
 ## Stage 2A residual signal screen
 
 Stage 1 is closed as a constrained preliminary pilot. Stage 2A is an
