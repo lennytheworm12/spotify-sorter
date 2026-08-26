@@ -64,6 +64,37 @@ The heavy suite is the Stage A gate: 3/3 clips must decode, encode, satisfy the
 128-D unit-norm contract, repeat deterministically on the same stack, and give
 ~1.0 factor cosine for duplicate waveforms.
 
+## Stage 2A residual signal screen
+
+Stage 1 is closed as a constrained preliminary pilot. Stage 2A is an
+**exploratory, unfitted** screen over the frozen labels—not a final encoder,
+population, production, or inter-rater study. It independently checks tonal,
+rhythm, timbre, and MERIT component margins against provisional CLAP and
+MERT-5120 baselines. It does not train a reranker or select fusion weights.
+
+Listeners heard full FMA clips, while all Stage 2A baseline/residual inputs use
+the exact deterministic centered five-second `center5_v1` excerpt at 24 kHz
+mono. The decision report preserves this stimulus/input limitation.
+
+```bash
+# MIR extraction is network-free and resumable; this deliberately leaves MERIT absent
+uv run python -m audio_similarity.cli.extract_stage2_residuals \
+  --config configs/holistic_stage2a_residual_screen.yaml
+
+# Required real experiment: opt-in heavy MERT/MERIT inference.
+# Cached Hugging Face weights make this offline; uncached weights require deliberate acquisition.
+uv run python -m audio_similarity.cli.extract_stage2_residuals \
+  --config configs/holistic_stage2a_residual_screen.yaml --enable-heavy
+
+# Build the canonical 136-trial feature table and run 50,000 query bootstraps
+uv run python -m audio_similarity.cli.score_stage2_residual_screen \
+  --config configs/holistic_stage2a_residual_screen.yaml
+```
+
+Scoring is deterministic and network-free. Local feature/model caches remain
+ignored; only lightweight config, canonical table, summaries, and reports are
+versioned under `reports/holistic_stage2a/`.
+
 ## Workflow (Phase 1 stages)
 
 ```bash

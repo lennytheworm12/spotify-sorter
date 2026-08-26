@@ -1,0 +1,24 @@
+{
+  "canonical_trial_count": 136,
+  "excerpt": {
+    "channels": "mono",
+    "listener_stimulus_limitation": "listeners_heard_full_fma_clip",
+    "sample_rate": 24000,
+    "seconds": 5,
+    "strategy": "center5_v1"
+  },
+  "experiment_id": "holistic_stage2a_residual_screen",
+  "input_sha256": {
+    "competitive_model_pairs": "5183a655c8ebaf0a6395cb9fe185dbed156a7ee84ed0268ee8f3217fa0821f86",
+    "embedding:laion_clap": "40dd8ca0bb1883cce1af02081b36364160ce90be20dca0167c69c18f8e26471b",
+    "embedding:mert_5120": "54289f762dca1a8371dc8b72249ababba2eb6476c21b15f3da1e18a6fa56f4b4",
+    "manifest": "a81c6fe64a895d6600c0d2c1fd8accf3bb39dfe271835d000f4cddaafe9883ba",
+    "ratings": "038081b7aecb7d6c63a4670c1ba0b509837eec8575e0487b93d9371f21ea1672",
+    "trial_keys": "6ecb31573463dbaef8ceda4d870e6ac2a2fec6c91174281b867a896bc1b67c92"
+  },
+  "metrics_sha256": "bcd10157ae7fbc16f26c0589e31291864a6b0669a3af4d48357720f67374c7b6",
+  "network_used_for_scoring": false,
+  "raw_judgment_count": 137,
+  "report_sha256": "c0a46e033d320442c8e506a301e99220a386a5d68064a5ed64e97aab5821307d",
+  "table_sha256": "49c73058745982858e98fecb6a775c25ae7d03f8e3dbff0e60b8d9c3ee8dd37b"
+}

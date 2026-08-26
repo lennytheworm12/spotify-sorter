@@ -1,0 +1,59 @@
+experiment_id: holistic_stage2a_residual_screen
+seed: 20260826
+exploratory: true
+inputs:
+  ratings: reports/holistic_stage1a/holistic_human_ratings.csv
+  ratings_sha256: 038081b7aecb7d6c63a4670c1ba0b509837eec8575e0487b93d9371f21ea1672
+  trial_keys: reports/holistic_stage1a/holistic_trial_keys.json
+  trial_keys_sha256: 6ecb31573463dbaef8ceda4d870e6ac2a2fec6c91174281b867a896bc1b67c92
+  competitive_model_pairs: reports/holistic_stage1a/competitive_trial_model_pairs.json
+  competitive_model_pairs_sha256: 5183a655c8ebaf0a6395cb9fe185dbed156a7ee84ed0268ee8f3217fa0821f86
+  manifest: data/manifests/fma_small.parquet
+  manifest_sha256: a81c6fe64a895d6600c0d2c1fd8accf3bb39dfe271835d000f4cddaafe9883ba
+  embeddings:
+    laion_clap:
+      path: artifacts/holistic_stage1a/laion_clap.parquet
+      sha256: 40dd8ca0bb1883cce1af02081b36364160ce90be20dca0167c69c18f8e26471b
+    mert_5120:
+      path: artifacts/holistic_stage1a/mert_5120.parquet
+      sha256: 54289f762dca1a8371dc8b72249ababba2eb6476c21b15f3da1e18a6fa56f4b4
+  revisions:
+    holistic_batch_sha256: 293561c00f3121f376ed6bf2a58fe86a83fb10c2a23d418780bad50f01acf0ba
+    mir_features_sha256: 611b4b0ca5c4f658034e5ff936a173b7bcc927a522b09e3c1a1371be36ea05bc
+    mir_metrics_sha256: 5eed06600252100c428825cd423ea689bd81ffdb788a21d6b3cf0c0d4fd384fc
+    merit_encoder_sha256: 4cec377a1de8d9b1e5763e8a731947eccc77278e0d4c3d3076a8e2d299b476b5
+    mert_backbone_revision: 5240c2708a5acaee1007f43fb9735c7dcd0b78c9
+    merit_repo_revision: a85df30eca1ba112eb594285f3ba1d96488e7883
+    merit_head_sha256:
+      melody: d40dbf84ee023b38ad4de766732a9c54a888e326598be0ddfdb4b29f3e98323e
+      rhythm: 242c6552cb096141bb8dc2ba48a46eec3477549008ff380d70c10a9b2b506d39
+      timbre: 9b44d58f20afacea43e2269958d07ac6fabeda3a1d14cda3261767551a386f49
+excerpt:
+  strategy: center5_v1
+  sample_rate: 24000
+  channels: mono
+  seconds: 5
+  listener_stimulus_limitation: listeners_heard_full_fma_clip
+active_baselines: [laion_clap, mert_5120]
+components:
+  tonal: [chroma_global_cos, chroma_dtw_sim, transposition_best_cos]
+  rhythm: [onset_cos_fixed, onset_dtw_sim, tempogram_cos]
+  timbre: [timbre_cos]
+  merit: [merit_melody_cos, merit_rhythm_cos, merit_timbre_cos]
+diagnostics: [log_tempo_ratio]
+slices:
+  primary: [direct_disagreement, competitive_rank2]
+  diagnostics: [direct_disagreement, anchor_negative, ambiguity]
+bootstrap:
+  count: 50000
+  group: query_track_id
+  confidence: 0.95
+decision:
+  min_disagreements_each_baseline: 10
+  min_positive_probability: 0.80
+  promising_requires_positive_net_rescue: true
+  promising_requires_nonnegative_direct_net_rescue: true
+paths:
+  audio_root: data/fma/fma_small
+  cache_dir: data/holistic_stage2a_cache
+  report_dir: reports/holistic_stage2a
