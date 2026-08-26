@@ -75,8 +75,11 @@ Stage 1A and Stage 2A remain immutable.
 # Validate frozen inputs and deterministically regenerate the 16/8/16 split.
 uv run python -m audio_similarity.cli.stage2b_contract
 
-# Focused contract tests (no retrieval or model execution).
-uv run pytest tests/test_stage2b_contract.py
+# Build the balanced disagreement trials from validated local embeddings/audio.
+uv run python -m audio_similarity.cli.build_stage2b_trials
+
+# Focused contract/trial tests (retrieval tests are network-free).
+uv run pytest tests/test_stage2b_contract.py tests/test_stage2b_trials.py
 ```
 
 The Stage 2B contract and split must be committed and pushed before disagreement
