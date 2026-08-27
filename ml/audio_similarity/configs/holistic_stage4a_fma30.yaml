@@ -25,8 +25,8 @@ sampling:
 encoder:
   id: laion_clap
   revision: stage2b_frozen
-  checkpoint: models/630k-audioset-best.pt
-  checkpoint_sha256: 8053c9775516af2f4902e1e8281e356cc1bf7a85e8b761908170767b77c3f037
+  checkpoint: models/music_audioset_epoch_15_esc_90.14.pt
+  checkpoint_sha256: fae3e9c087f2909c28a09dc31c8dfcdacbc42ba44c70e972b58c1bd1caf6dedd
   adapter: src/audio_similarity/holistic_encoders.py
   adapter_sha256: 4e78ec190eb5729bf1dc369650a533b417698362d97b9f5e489c91dac8feffca
   embedding_dimension: 512
