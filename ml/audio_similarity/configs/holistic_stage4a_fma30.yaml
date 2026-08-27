@@ -1,0 +1,56 @@
+# Governing amended Stage 4A contract; supersedes the full-track corpus gate.
+experiment_id: holistic_stage4a_fma30_representation_benchmark
+contract_version: 1
+rollback_commit: a14e9e8
+historical_reusable_commits: [c42fe95, a14e9e8]
+seed: 20260905
+claim_boundary: personal_perceptual_alignment_on_fma_30_second_excerpts
+corpus:
+  id: fma_small
+  audio_root: data/fma/fma_small
+  manifest: data/manifests/fma_small.parquet
+  manifest_sha256: a81c6fe64a895d6600c0d2c1fd8accf3bb39dfe271835d000f4cddaafe9883ba
+  minimum_duration_sec: 29.5
+  expected_eligible: 7994
+  candidate_manifest: reports/holistic_stage4a/fma_small_candidate_manifest.parquet
+canonical_audio: {preprocessing_version: fma_full_mono_24khz_no_pad_v1, sample_rate: 24000, channels: mono, padding: false, silence_trimming: false}
+sampling:
+  cache_version: fma30_centers_3_5_9_15_21_25_27_v1
+  window_samples: 120000
+  cache_centers_sec: [3, 5, 9, 15, 21, 25, 27]
+  representations:
+    CENTER5: {version: center5_v1, centers_sec: [15]}
+    UNIFORM3_MEAN: {version: uniform3_mean_v1, centers_sec: [5, 15, 25]}
+    UNIFORM5_MEAN: {version: uniform5_mean_v1, centers_sec: [3, 9, 15, 21, 27]}
+encoder:
+  id: laion_clap
+  revision: stage2b_frozen
+  checkpoint: models/630k-audioset-best.pt
+  checkpoint_sha256: 8053c9775516af2f4902e1e8281e356cc1bf7a85e8b761908170767b77c3f037
+  adapter: src/audio_similarity/holistic_encoders.py
+  adapter_sha256: 4e78ec190eb5729bf1dc369650a533b417698362d97b9f5e489c91dac8feffca
+  embedding_dimension: 512
+queries:
+  existing_manifest: reports/holistic_stage1a/frozen_query_manifest.json
+  existing_sha256: 060f30d7bfa29e1227373c94d20b18cfda2287cb1f416920505fc4817e64c5a6
+  existing_count: 40
+  additional_count: 40
+  total: 80
+  artist_cap: 2
+  output: reports/holistic_stage4a/frozen_queries.json
+retrieval: {metric: exact_cosine, stable_tie_break: track_id, duplicate_rules: [track_id, source_sha256, canonical_pcm_sha256]}
+trials:
+  method_pairs: [[CENTER5, UNIFORM3_MEAN], [UNIFORM3_MEAN, UNIFORM5_MEAN], [CENTER5, UNIFORM5_MEAN]]
+  initial_depth: 20
+  expansion_depth: 50
+  maximum_total: 240
+  question: Considering the available 30-second recordings overall, which candidate sounds more like the query?
+  choices: [A, B, Tie, Neither]
+metrics: {bootstrap_draws: 50000, bootstrap_seed: 20260905, material_improvement: 0.05}
+verdict: {allowed: [CENTER5_SUFFICIENT, UNIFORM3_WINS, UNIFORM5_WINS, INSUFFICIENT_EVIDENCE_PICK_CHEAPER], preference: smallest_K_practically_equivalent_to_best}
+stage4b: {automatic: false, trigger: multi_window_materially_beats_center5}
+fma_large: {bulk_encoding_authorized: false}
+paths:
+  report_dir: reports/holistic_stage4a
+  artifacts: artifacts/holistic_stage4a
+  pcm_cache: data/holistic_stage4/pcm_identities.json

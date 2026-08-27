@@ -1,0 +1,20 @@
+{
+  "candidate_count": 7994,
+  "candidate_manifest_sha256": "cd6daafcaf2296d8ffc839ab0ff8b78c8db3093adf4d6d3946b4b1378ccb8b99",
+  "claim_boundary": "personal_perceptual_alignment_on_fma_30_second_excerpts",
+  "config_sha256": "43c36caa7ca02a8de6c70b3c33395e52fb54a682cb066faa9bc91b0ab1241786",
+  "contract_sha256": "8aceb21f560cfdf5f5f7527931cc6558250e10684275f94002b59b8fe8328f74",
+  "experiment_id": "holistic_stage4a_fma30_representation_benchmark",
+  "fma_large_bulk_authorized": false,
+  "implementation_sha256": {
+    "src/audio_similarity/holistic_encoders.py": "4e78ec190eb5729bf1dc369650a533b417698362d97b9f5e489c91dac8feffca",
+    "src/audio_similarity/stage4a_contract.py": "ba6862658cb4e5727f16481e656fcf8b727d472625f05ceed5eb1bc3ad2ad9e8",
+    "src/audio_similarity/stage4a_sampling.py": "cd697b36ebad7c3833b1553def36aace9163e3efda2e37ba4da924d77721ee28",
+    "src/audio_similarity/stage4a_scoring.py": "e58acb18bb94600f54bc71ff4dffe3819f423a5ff342fe44ef896ee7a0c77f1c"
+  },
+  "pcm_cache_sha256": "f8c06b55ea5fb4d24def16f1cd5d88cf3030a73bf025aebd57f37b08fe9a54c3",
+  "pcm_duplicate_rows": 24,
+  "query_count": 80,
+  "query_manifest_sha256": "7ccd54d329c5eae733e4df0df4ca71c58d0cebf9ba8af04dd0d269d2d62a2ea0",
+  "stage4b_automatic": false
+}
