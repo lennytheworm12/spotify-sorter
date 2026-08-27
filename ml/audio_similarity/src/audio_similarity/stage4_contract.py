@@ -55,7 +55,13 @@ def freeze_readiness_contract(root: str | Path, config_path: str | Path, output:
     root, config_path, output = Path(root), Path(config_path), Path(output)
     config = load_config(config_path)
     verify_static_inputs(root, config)
-    corpus = readiness(root / config["corpus"]["musdb18"]["archive"], root / config["corpus"]["medleydb"]["root"])
+    medley = config["corpus"]["medleydb"]
+    corpus = readiness(
+        root / config["corpus"]["musdb18"]["archive"],
+        root / medley["audio_root"],
+        root / medley["metadata_root"],
+        medley["metadata_git_revision"],
+    )
     implementation = {name: sha256_file(root / name) for name in IMPLEMENTATION_FILES}
     duplicate_file = root / config["corpus"]["manual_duplicate_aliases"]
     payload = {

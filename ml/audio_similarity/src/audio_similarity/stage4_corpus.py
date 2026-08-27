@@ -96,49 +96,90 @@ def verify_mixture_stream(path: str | Path) -> dict:
     return {"stream_index": 0, "codec": streams[0].get("codec_name"), "channels": streams[0].get("channels"), "sample_rate": streams[0].get("sample_rate")}
 
 
-def _metadata_files(root: Path) -> list[Path]:
-    return sorted([*root.rglob("*.yaml"), *root.rglob("*.yml")])
-
-
 def _mix_files(root: Path) -> list[Path]:
     return sorted(path for path in root.rglob("*") if path.is_file() and "_MIX" in path.stem and path.suffix.lower() in {".wav", ".flac", ".mp3", ".aiff", ".aif"})
 
 
-def _is_v1_excerpt(meta: dict, path: Path) -> bool:
-    text = " ".join(str(meta.get(key, "")) for key in ("version", "dataset", "excerpt", "track_type", "origin")).casefold()
-    return bool(meta.get("is_excerpt") is True or ("v1" in text and "excerpt" in text) or "excerpt" in path.as_posix().casefold())
+def _read_tracklist(metadata_root: Path, name: str) -> list[str]:
+    path = metadata_root / "medleydb" / "resources" / name
+    if not path.is_file():
+        raise CorpusReadinessError(f"official MedleyDB tracklist absent: {path}")
+    values = [line.strip() for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+    if len(values) != len(set(values)):
+        raise CorpusReadinessError(f"duplicate IDs in official {name}")
+    return values
 
 
-def inspect_medleydb(root: str | Path, expected_full: int = EXPECTED_MEDLEYDB2_FULL, expected_excerpts: int = EXPECTED_MEDLEYDB1_EXCERPTS) -> dict:
-    root = Path(root)
-    if not root.is_dir():
-        raise CorpusReadinessError(f"official MedleyDB 2.0 assets absent: {root}")
-    licenses = sorted(path for path in root.rglob("*") if path.is_file() and any(token in path.name.casefold() for token in ("license", "readme", "provenance")))
+def _load_metadata(metadata_root: Path, track_id: str) -> tuple[Path, dict]:
+    path = metadata_root / "medleydb" / "data" / "Metadata" / f"{track_id}_METADATA.yaml"
+    if not path.is_file():
+        raise CorpusReadinessError(f"official metadata absent for {track_id}")
+    try:
+        payload = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    except Exception as exc:
+        raise CorpusReadinessError(f"invalid metadata YAML {path}: {exc}") from exc
+    if not isinstance(payload, dict) or not payload.get("mix_filename"):
+        raise CorpusReadinessError(f"metadata lacks mix_filename: {path}")
+    return path, payload
+
+
+def _git_revision(root: Path) -> str:
+    try:
+        return subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], check=True, capture_output=True, text=True).stdout.strip()
+    except (OSError, subprocess.CalledProcessError) as exc:
+        raise CorpusReadinessError(f"MedleyDB metadata must retain its official git revision: {exc}") from exc
+
+
+def inspect_medleydb(audio_root: str | Path, metadata_root: str | Path, expected_full: int = EXPECTED_MEDLEYDB2_FULL, expected_excerpts: int = EXPECTED_MEDLEYDB1_EXCERPTS, expected_revision: str | None = None) -> dict:
+    """Validate the frozen V1+V2 release policy using official tracklists.
+
+    The approved denominator is 122 V1 + 74 V2 - 17 V1 excerpts = 179.
+    Six V2 rows marked ``excerpt: yes`` remain included by that explicit policy;
+    this fact is surfaced in provenance instead of silently changing the count.
+    """
+    audio_root, metadata_root = Path(audio_root), Path(metadata_root)
+    if not audio_root.is_dir():
+        raise CorpusReadinessError(f"official MedleyDB 2.0 assets absent: {audio_root}")
+    if not metadata_root.is_dir():
+        raise CorpusReadinessError(f"official MedleyDB metadata absent: {metadata_root}")
+    revision = _git_revision(metadata_root)
+    if expected_revision and revision != expected_revision:
+        raise CorpusReadinessError(f"MedleyDB metadata revision mismatch: expected {expected_revision}, found {revision}")
+    licenses = sorted(path for path in metadata_root.iterdir() if path.is_file() and any(token in path.name.casefold() for token in ("license", "readme", "provenance")))
     if not licenses:
-        raise CorpusReadinessError("MedleyDB 2.0 license/provenance files absent")
-    mixes = _mix_files(root)
-    metadata = _metadata_files(root)
-    if not mixes or not metadata:
-        raise CorpusReadinessError("MedleyDB requires official metadata YAML and *_MIX audio")
-    excerpt_ids = set()
-    for path in metadata:
-        try:
-            payload = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
-        except Exception as exc:
-            raise CorpusReadinessError(f"invalid metadata YAML {path}: {exc}") from exc
-        if isinstance(payload, dict) and _is_v1_excerpt(payload, path):
-            excerpt_ids.add(path.stem.replace("_METADATA", ""))
-    full = [path for path in mixes if not any(alias in path.stem for alias in excerpt_ids)]
-    if len(full) != expected_full:
-        raise CorpusReadinessError(f"MedleyDB 2.0 expected {expected_full} full tracks after 17 v1 excerpts, found {len(full)}")
-    if len(excerpt_ids) != expected_excerpts:
-        raise CorpusReadinessError(f"MedleyDB expected {expected_excerpts} marked v1 excerpts, found {len(excerpt_ids)}")
-    return {"release": "MedleyDB_2.0", "root": str(root), "full_track_count": len(full), "excluded_v1_excerpt_count": len(excerpt_ids), "license_files": [str(p.relative_to(root)) for p in licenses], "metadata_count": len(metadata)}
+        raise CorpusReadinessError("MedleyDB license/provenance files absent")
+    v1, v2 = _read_tracklist(metadata_root, "tracklist_v1.txt"), _read_tracklist(metadata_root, "tracklist_v2.txt")
+    metadata: dict[str, tuple[Path, dict]] = {track_id: _load_metadata(metadata_root, track_id) for track_id in v1 + v2}
+    v1_excerpts = [track_id for track_id in v1 if str(metadata[track_id][1].get("excerpt", "")).casefold() == "yes"]
+    v2_excerpts = [track_id for track_id in v2 if str(metadata[track_id][1].get("excerpt", "")).casefold() == "yes"]
+    if len(v1_excerpts) != expected_excerpts:
+        raise CorpusReadinessError(f"MedleyDB expected {expected_excerpts} marked v1 excerpts, found {len(v1_excerpts)}")
+    eligible = [track_id for track_id in v1 + v2 if track_id not in set(v1_excerpts)]
+    if len(eligible) != expected_full:
+        raise CorpusReadinessError(f"MedleyDB expected {expected_full} tracks after frozen v1-excerpt policy, found {len(eligible)}")
+    mix_index: dict[str, list[Path]] = {}
+    for path in _mix_files(audio_root):
+        mix_index.setdefault(path.name, []).append(path)
+    missing, ambiguous = [], []
+    for track_id in eligible:
+        filename = str(metadata[track_id][1]["mix_filename"])
+        matches = mix_index.get(filename, [])
+        if not matches:
+            missing.append(track_id)
+        elif len(matches) != 1:
+            ambiguous.append(track_id)
+    if missing or ambiguous:
+        raise CorpusReadinessError(f"MedleyDB mixture set invalid: missing={len(missing)}, ambiguous={len(ambiguous)}; examples={(missing + ambiguous)[:5]}")
+    metadata_hash = hashlib.sha256()
+    source_files = [metadata_root / "medleydb" / "resources" / "tracklist_v1.txt", metadata_root / "medleydb" / "resources" / "tracklist_v2.txt", *[metadata[t][0] for t in v1 + v2], *licenses]
+    for path in sorted(source_files):
+        metadata_hash.update(str(path.relative_to(metadata_root)).encode() + b"\0" + bytes.fromhex(sha256_file(path)))
+    return {"release": "MedleyDB_2.0", "audio_root": str(audio_root), "metadata_root": str(metadata_root), "metadata_git_revision": revision, "metadata_bundle_sha256": metadata_hash.hexdigest(), "tracklist_v1_count": len(v1), "tracklist_v2_count": len(v2), "eligible_track_count": len(eligible), "excluded_v1_excerpt_count": len(v1_excerpts), "included_v2_excerpt_count": len(v2_excerpts), "license_files": [str(p.relative_to(metadata_root)) for p in licenses]}
 
 
-def readiness(musdb_archive: str | Path, medley_root: str | Path) -> dict:
+def readiness(musdb_archive: str | Path, medley_root: str | Path, medley_metadata_root: str | Path, medley_metadata_revision: str | None = None) -> dict:
     """Stop-gate validation; never downloads copyrighted assets."""
-    return {"musdb18": inspect_musdb_archive(musdb_archive), "medleydb": inspect_medleydb(medley_root)}
+    return {"musdb18": inspect_musdb_archive(musdb_archive), "medleydb": inspect_medleydb(medley_root, medley_metadata_root, expected_revision=medley_metadata_revision)}
 
 
 def write_manifest(rows: Iterable[SourceTrack], path: str | Path) -> str:

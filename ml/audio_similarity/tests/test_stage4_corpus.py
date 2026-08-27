@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import zipfile
 from pathlib import Path
+import subprocess
 
 import pandas as pd
 import pytest
@@ -29,16 +30,27 @@ def test_safe_archive_paths(tmp_path):
     assert not (tmp_path / "escape").exists()
 
 
-def test_medley_requires_assets_metadata_and_license(tmp_path):
-    with pytest.raises(CorpusReadinessError, match="absent"):
-        inspect_medleydb(tmp_path / "missing", 1, 1)
-    root = tmp_path / "medley"; root.mkdir(); (root / "LICENSE.txt").write_text("license")
-    (root / "full_METADATA.yaml").write_text("version: v2\n")
-    (root / "excerpt_METADATA.yaml").write_text("version: v1 excerpt\nis_excerpt: true\n")
-    (root / "full_MIX.wav").write_bytes(b"wav")
-    (root / "excerpt_MIX.wav").write_bytes(b"wav")
-    result = inspect_medleydb(root, expected_full=1, expected_excerpts=1)
-    assert result["full_track_count"] == 1 and result["excluded_v1_excerpt_count"] == 1
+def test_medley_requires_assets_metadata_license_and_official_tracklists(tmp_path):
+    with pytest.raises(CorpusReadinessError, match="assets absent"):
+        inspect_medleydb(tmp_path / "missing", tmp_path / "metadata", 2, 1)
+    audio = tmp_path / "audio"; audio.mkdir()
+    root = tmp_path / "metadata"; (root / "medleydb/resources").mkdir(parents=True); (root / "medleydb/data/Metadata").mkdir(parents=True)
+    (root / "LICENSE").write_text("license")
+    (root / "medleydb/resources/tracklist_v1.txt").write_text("fullv1\nexcerptv1\n")
+    (root / "medleydb/resources/tracklist_v2.txt").write_text("excerptv2\n")
+    for track_id, excerpt in (("fullv1", "no"), ("excerptv1", "yes"), ("excerptv2", "yes")):
+        (root / f"medleydb/data/Metadata/{track_id}_METADATA.yaml").write_text(f"excerpt: '{excerpt}'\nmix_filename: {track_id}_MIX.wav\n")
+    (audio / "fullv1_MIX.wav").write_bytes(b"wav")
+    (audio / "excerptv2_MIX.wav").write_bytes(b"wav")
+    subprocess.run(["git", "-C", str(root), "init", "-q"], check=True)
+    subprocess.run(["git", "-C", str(root), "add", "."], check=True)
+    subprocess.run(["git", "-C", str(root), "-c", "user.name=test", "-c", "user.email=test@example.com", "commit", "-qm", "metadata"], check=True)
+    revision = subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], check=True, capture_output=True, text=True).stdout.strip()
+    result = inspect_medleydb(audio, root, expected_full=2, expected_excerpts=1, expected_revision=revision)
+    assert result["eligible_track_count"] == 2
+    assert result["excluded_v1_excerpt_count"] == 1
+    assert result["included_v2_excerpt_count"] == 1
+    assert len(result["metadata_bundle_sha256"]) == 64
 
 
 def test_normalized_manifest_rejects_duplicate_ids(tmp_path):

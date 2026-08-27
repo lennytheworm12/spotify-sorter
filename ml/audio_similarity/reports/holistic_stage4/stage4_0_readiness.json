@@ -1,8 +1,8 @@
 {
   "checked_at": "2026-09-04",
   "stage": "4.0",
-  "status": "STOP_GATE_MEDLEYDB_ASSETS_ABSENT",
-  "automatic_download_attempted": false,
+  "status": "STOP_GATE_MEDLEYDB_AUDIO_ACCESS_RESTRICTED_AND_ASSETS_ABSENT",
+  "automatic_copyrighted_audio_download_attempted": false,
   "musdb18": {
     "archive": "data/musdb18/musdb18.zip",
     "archive_sha256": "2765dd51fed264bbe2dac5c382f7120b7cf1932698fc67d100aa0f3811479152",
@@ -12,11 +12,21 @@
     "validated": true
   },
   "medleydb": {
-    "expected_root": "data/medleydb/MedleyDB_V2",
-    "expected_full_tracks": 179,
-    "expected_excluded_v1_excerpts": 17,
-    "validated": false,
-    "failure": "official MedleyDB 2.0 assets absent: data/medleydb/MedleyDB_V2"
+    "expected_audio_root": "data/medleydb/MedleyDB_V2",
+    "metadata_repository": "https://github.com/marl/medleydb.git",
+    "metadata_git_revision": "537bb7bad0601fc58e4fff8404f71658b86ef60e",
+    "metadata_downloaded_to_ignored_storage": true,
+    "tracklist_v1_count": 122,
+    "tracklist_v2_count": 74,
+    "excluded_v1_excerpts": 17,
+    "expected_tracks_after_frozen_policy": 179,
+    "included_v2_rows_marked_excerpt": 6,
+    "audio_validated": false,
+    "failure": "official MedleyDB 2.0 assets absent: data/medleydb/MedleyDB_V2",
+    "zenodo_original_record": "https://zenodo.org/records/1649325",
+    "zenodo_v2_record": "https://zenodo.org/records/1715175",
+    "zenodo_access_right_observed": "restricted",
+    "zenodo_public_files_observed": 0
   },
-  "next_gate": "The user must place official MedleyDB 2.0 full-track assets, metadata YAML, and license/provenance files at the expected ignored local root. Then rerun the readiness contract freeze before extraction, scoring, query freeze, or labels."
+  "next_gate": "The user must obtain authorized access to both restricted Zenodo audio records and place the official V1+V2 assets at the expected ignored local root. Then rerun the readiness contract freeze before extraction, scoring, query freeze, or labels."
 }

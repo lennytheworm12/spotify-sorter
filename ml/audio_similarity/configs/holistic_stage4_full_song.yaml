@@ -14,8 +14,11 @@ corpus:
     expected_tracks: 150
   medleydb:
     release: MedleyDB_2.0
-    root: data/medleydb/MedleyDB_V2
-    expected_full_tracks: 179
+    audio_root: data/medleydb/MedleyDB_V2
+    metadata_root: data/medleydb/metadata_repo
+    metadata_git_revision: 537bb7bad0601fc58e4fff8404f71658b86ef60e
+    included_tracklists: [tracklist_v1.txt, tracklist_v2.txt]
+    expected_tracks_after_policy: 179
     excluded_v1_excerpts: 17
   normalized_manifest: reports/holistic_stage4/combined_corpus_manifest.parquet
   manual_duplicate_aliases: configs/stage4_duplicate_aliases.yaml
