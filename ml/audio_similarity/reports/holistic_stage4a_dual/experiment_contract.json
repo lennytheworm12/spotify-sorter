@@ -1,0 +1,91 @@
+{
+  "candidate_count": 7994,
+  "candidate_manifest_sha256": "cd6daafcaf2296d8ffc839ab0ff8b78c8db3093adf4d6d3946b4b1378ccb8b99",
+  "config_sha256": "51ab854dc9da11206c8a3065a829f09dbf0c0086dd807785ab73db2ee0e186ff",
+  "contract_sha256": "aeda95167b6297edff0cc0de4653e8cbea270da6f0faac16a40960fa514468fa",
+  "encoders": {
+    "clap": {
+      "center_artifact": "artifacts/holistic_stage1a/laion_clap.parquet",
+      "center_artifact_sha256": "40dd8ca0bb1883cce1af02081b36364160ce90be20dca0167c69c18f8e26471b",
+      "checkpoint": "models/music_audioset_epoch_15_esc_90.14.pt",
+      "checkpoint_sha256": "fae3e9c087f2909c28a09dc31c8dfcdacbc42ba44c70e972b58c1bd1caf6dedd",
+      "dimension": 512,
+      "id": "laion_clap",
+      "revision": "stage2b_reproducibly_observed"
+    },
+    "muq": {
+      "center_artifact": "artifacts/holistic_stage1a/muq_mulan_large.parquet",
+      "center_artifact_sha256": "12cc654e75efc373aca75d10ea73b192c579ea1ec09bbe85f007b74f9dac33ba",
+      "config_sha256": "8fefc545ef87ecd9bcde7417dd03464370c48c321f36dcff20266a752079e468",
+      "dimension": 512,
+      "hf_repo": "OpenMuQ/MuQ-MuLan-large",
+      "id": "muq_mulan_large",
+      "revision": "2e01c796b71dca71b45251384c04cd7b237c9020",
+      "weights_sha256": "d42ae3f7cb9b66759ee0089ddc70e2f28b130c2d8ba621457358272d32dd0444"
+    }
+  },
+  "implementation_sha256": {
+    "src/audio_similarity/holistic_encoders.py": "4e78ec190eb5729bf1dc369650a533b417698362d97b9f5e489c91dac8feffca",
+    "src/audio_similarity/stage4a_dual_contract.py": "38f4118e4c60e6b33da7c90e479dd691ae9f6185b61dda83e3f859e68db0af9c",
+    "src/audio_similarity/stage4a_dual_scoring.py": "2c2ec95ad6774926cbfb4babde4fb31b37116e5d85c7989f93f9953191b47710",
+    "src/audio_similarity/stage4a_sampling.py": "cd697b36ebad7c3833b1553def36aace9163e3efda2e37ba4da924d77721ee28"
+  },
+  "new_fusion_fit": false,
+  "query_count": 80,
+  "query_manifest_sha256": "7ccd54d329c5eae733e4df0df4ca71c58d0cebf9ba8af04dd0d269d2d62a2ea0",
+  "ranking": {
+    "effective_raw_weights": {
+      "clap": 3.6972354707,
+      "muq": 1.4571559923
+    },
+    "normalized_weights": {
+      "clap": 0.7172981519,
+      "muq": 0.2827018481
+    },
+    "refit_from_stage4_labels": false,
+    "stage2b_coefficients": {
+      "clap": 0.7077157719045892,
+      "muq": 0.26276431727207517
+    },
+    "stage2b_feature_scales": {
+      "clap": 0.19141755441824396,
+      "muq": 0.1803268275095138
+    },
+    "version": "stage2b_clap_muq_raw_ratio_v1"
+  },
+  "sampling": {
+    "representations": {
+      "CENTER5_DUAL": {
+        "K": 1,
+        "centers_sec": [
+          15
+        ]
+      },
+      "UNIFORM3_DUAL_MEAN": {
+        "K": 3,
+        "centers_sec": [
+          5,
+          15,
+          25
+        ]
+      },
+      "UNIFORM5_DUAL_MEAN": {
+        "K": 5,
+        "centers_sec": [
+          3,
+          9,
+          15,
+          21,
+          27
+        ]
+      }
+    },
+    "shared_source_intervals": true,
+    "version": "fma30_centers_3_5_9_15_21_25_27_v1"
+  },
+  "schema_version": "stage4a-dual-contract-v1",
+  "stage2b_rerun": false,
+  "stage2b_verdict": "SINGLE_ENCODER_WINS",
+  "superseded_clap_only_manifest_sha256": "2cd74c00634193537d9f7d1bafdb054ddf6582961a08c0429e44af53007aec8c",
+  "superseded_clap_only_rating_rows": 3
+}

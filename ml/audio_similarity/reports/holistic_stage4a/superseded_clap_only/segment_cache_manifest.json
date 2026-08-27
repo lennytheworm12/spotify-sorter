@@ -1,0 +1,19 @@
+{
+  "complete_tracks": 7994,
+  "expected_centers": [
+    3,
+    5,
+    9,
+    15,
+    21,
+    25,
+    27
+  ],
+  "failure_rows": 0,
+  "ok_rows": 55958,
+  "path": "artifacts/holistic_stage4a/segments.sqlite",
+  "rows": 55958,
+  "schema_version": "stage4a-segment-cache-sqlite-v1",
+  "sqlite_sha256": "17e5b0a9d2a8fdabefdba1d39a382260254c47a62b4c8e05c0e6d0fd91b895c4",
+  "tracks_with_rows": 7994
+}

@@ -1,0 +1,18 @@
+{
+  "files": {
+    "aggregate_manifest.json": "751406286dbe9776ffdb2faa3cb97b641095be97b217c91a1c3cf7ee19aa8e64",
+    "evaluator_bundle.json": "d2945f7cde4cf25352823e51a967ab530e57f15a8ca1c05bdd6181ee2405eb1a",
+    "fma30_trials.csv": "bbed890f8ba2ea98f5cadd9a89b633d83d42468c6b67f604c51882b2e7714061",
+    "human_ratings.csv": "7f5f58963c0dd601b24ccb5a35118533eb586af5cb3623d363127c370c7c2af4",
+    "retrieval_diagnostics.json": "d7085e4378d068791c00410ca9cb18393915796867b85fce140b87d236a3220c",
+    "segment_cache_manifest.json": "a9dea397ad40c274fe7cf4f7b53e863ff025951cea7e92ef1b20520bb4367719",
+    "trial_balance.json": "19b5b628193bd0da844c70c922ded03c62eb85cef5c8b1cb856fd240ebcb970e",
+    "trial_keys.json": "e205a3c5db154e870c05279df18630b68398ff4e173ae327fb95e5939b8e5e4f"
+  },
+  "manifest_sha256": "2cd74c00634193537d9f7d1bafdb054ddf6582961a08c0429e44af53007aec8c",
+  "rating_rows_at_supersession": 3,
+  "ratings_policy": "historical_diagnostic_only_never_dual_primary_denominator",
+  "reason": "dual_encoder_engineering_activation",
+  "schema_version": "stage4a-clap-only-supersession-v1",
+  "source_commit": "9a79d25"
+}

@@ -1,0 +1,19 @@
+{
+  "identity_exclusion_rules": [
+    "track_id",
+    "source_sha256",
+    "canonical_pcm_sha256"
+  ],
+  "maximum": 240,
+  "method_pair_counts": {
+    "CENTER5__UNIFORM3_MEAN": 80,
+    "CENTER5__UNIFORM5_MEAN": 80,
+    "UNIFORM3_MEAN__UNIFORM5_MEAN": 80
+  },
+  "opaque_public_columns": [
+    "trial_id",
+    "question"
+  ],
+  "query_count": 80,
+  "trial_count": 240
+}

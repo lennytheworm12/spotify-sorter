@@ -1,0 +1,12 @@
+{
+  "artifact_path": "artifacts/holistic_stage4a/aggregates.parquet",
+  "artifact_sha256": "939971af7c18e37682bb885776fc8856e72ee7f5ae24a07af78aa2f67bf41267",
+  "exact_regeneration_from_segment_cache": true,
+  "representations": [
+    "CENTER5",
+    "UNIFORM3_MEAN",
+    "UNIFORM5_MEAN"
+  ],
+  "rows": 23982,
+  "tracks": 7994
+}

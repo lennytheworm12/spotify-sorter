@@ -1,0 +1,40 @@
+{
+  "accepted_ratings": 0,
+  "audio_evidence": "complete canonical 24kHz mono FMA recording",
+  "browser_verification": {
+    "autosave_resume": "passed",
+    "canonical_pcm_hash_header": "dcd8fea11353987512635d1fc5b5ef2aaa6b7336a46bddf42453059036f4f0a2",
+    "console_errors": 0,
+    "engine": "Chromium 140.0.7339.16 via Playwright 1.60.0",
+    "network_failures": 0,
+    "playback_toggle": "passed",
+    "screenshot_sha256": "2d5af5140e68f6c9c76b7f2decbb49860844f684d26efa4d37a6b94c15ededab",
+    "trials_rendered": 240
+  },
+  "bundle_sha256": "054cdaa7b753ae8717c5b1934de0a6109f2122b72b1e51584916cbbe11e1bb20",
+  "files": {
+    "configs/holistic_stage4a_evaluator.yaml": "f4f29704810ef3f470c4dd47c3b71b5c9e54d2f5e0a66b2bc9cb685b582400aa",
+    "evaluation/static/stage4a.html": "66474b99c466d758c6411e2fe7b5e4de9570648a11f452850f76620d8329414b",
+    "reports/holistic_stage4a/aggregate_manifest.json": "751406286dbe9776ffdb2faa3cb97b641095be97b217c91a1c3cf7ee19aa8e64",
+    "reports/holistic_stage4a/fma30_trials.csv": "bbed890f8ba2ea98f5cadd9a89b633d83d42468c6b67f604c51882b2e7714061",
+    "reports/holistic_stage4a/human_ratings.csv": "8880799a88a503dc711b44d73d600f0ea3511a0ec6218496ee8a9b75e1b0707a",
+    "reports/holistic_stage4a/retrieval_diagnostics.json": "d7085e4378d068791c00410ca9cb18393915796867b85fce140b87d236a3220c",
+    "reports/holistic_stage4a/segment_cache_manifest.json": "a9dea397ad40c274fe7cf4f7b53e863ff025951cea7e92ef1b20520bb4367719",
+    "reports/holistic_stage4a/trial_balance.json": "19b5b628193bd0da844c70c922ded03c62eb85cef5c8b1cb856fd240ebcb970e",
+    "reports/holistic_stage4a/trial_keys.json": "e205a3c5db154e870c05279df18630b68398ff4e173ae327fb95e5939b8e5e4f",
+    "src/audio_similarity/cli/stage4a_eval_server.py": "7d4ec5a61239d6fb17f94322cd41bf2f0626752aa1e57346dc83b94b100409f5",
+    "src/audio_similarity/stage4a_analysis.py": "0555f19189a676b239a24a489da527f11fdfc378a667bd4499102fbcf2fdfe81",
+    "src/audio_similarity/stage4a_cache.py": "e3aef8cfcc22f6c9358ec0f3e9d1797b49c5108243b05a617e605b8b90538b9c",
+    "src/audio_similarity/stage4a_store.py": "e09f4079e314dd68917a7fab0b0ab8bdf6c3dda302885b6f3caa3d48bb520529"
+  },
+  "payload_blinding": [
+    "architecture",
+    "score",
+    "genre",
+    "artist",
+    "title",
+    "album",
+    "candidate provenance"
+  ],
+  "schema_version": "stage4a-evaluator-bundle-v1"
+}
