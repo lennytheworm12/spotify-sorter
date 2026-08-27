@@ -1,0 +1,16 @@
+{
+  "fusion_weights": {
+    "clap": 0.7172981519,
+    "muq": 0.2827018481
+  },
+  "path": "artifacts/holistic_stage4a_dual/dual_aggregates.parquet",
+  "per_encoder_pooling": true,
+  "representations": [
+    "CENTER5_DUAL",
+    "UNIFORM3_DUAL_MEAN",
+    "UNIFORM5_DUAL_MEAN"
+  ],
+  "rows": 23982,
+  "sha256": "46baa8c506578b11786eeca2aa96fd0ff2004ebeffee5f4ec5054031a5289925",
+  "tracks": 7994
+}

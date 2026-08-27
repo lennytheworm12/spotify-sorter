@@ -1,0 +1,58 @@
+{
+  "aggregate_artifact_sha256": "46baa8c506578b11786eeca2aa96fd0ff2004ebeffee5f4ec5054031a5289925",
+  "cache_sha256": {
+    "clap": "17e5b0a9d2a8fdabefdba1d39a382260254c47a62b4c8e05c0e6d0fd91b895c4",
+    "muq": "7f8a59db837b8ba5dfc213f1e751f82d91b9a9be3387e411f926d97576b8c0c6"
+  },
+  "candidate_count": 7994,
+  "component_retrieval_agreement": {
+    "CENTER5_DUAL": {
+      "fused_clap_top20_overlap": 0.6806249999999999,
+      "fused_muq_top20_overlap": 0.31625
+    },
+    "UNIFORM3_DUAL_MEAN": {
+      "fused_clap_top20_overlap": 0.7212500000000001,
+      "fused_muq_top20_overlap": 0.36500000000000005
+    },
+    "UNIFORM5_DUAL_MEAN": {
+      "fused_clap_top20_overlap": 0.719375,
+      "fused_muq_top20_overlap": 0.38625
+    }
+  },
+  "dual_method_rank_variation": {
+    "CENTER5_DUAL__UNIFORM3_DUAL_MEAN": 0.4699999999999999,
+    "CENTER5_DUAL__UNIFORM5_DUAL_MEAN": 0.4956250000000001,
+    "UNIFORM3_DUAL_MEAN__UNIFORM5_DUAL_MEAN": 0.25250000000000006
+  },
+  "engineering_cost": {
+    "CENTER5_DUAL": {
+      "K": 1,
+      "clap_segments_per_track": 1,
+      "muq_segments_per_track": 1,
+      "raw_segment_vector_bytes_per_track": 4096,
+      "total_forwards_per_track": 2
+    },
+    "UNIFORM3_DUAL_MEAN": {
+      "K": 3,
+      "clap_segments_per_track": 3,
+      "muq_segments_per_track": 3,
+      "raw_segment_vector_bytes_per_track": 12288,
+      "total_forwards_per_track": 6
+    },
+    "UNIFORM5_DUAL_MEAN": {
+      "K": 5,
+      "clap_segments_per_track": 5,
+      "muq_segments_per_track": 5,
+      "raw_segment_vector_bytes_per_track": 20480,
+      "total_forwards_per_track": 10
+    },
+    "fma_large_projection_formula": "eligible_tracks * total_forwards_per_track",
+    "measured_clap_segment_hours": 0.45122908153631014,
+    "measured_muq_segment_hours": 0.6060507508810972
+  },
+  "query_count": 80,
+  "weights": {
+    "clap": 0.7172981519,
+    "muq": 0.2827018481
+  }
+}

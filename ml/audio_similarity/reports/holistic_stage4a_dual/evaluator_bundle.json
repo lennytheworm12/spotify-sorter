@@ -1,0 +1,47 @@
+{
+  "accepted_primary_ratings": 0,
+  "audio_evidence": "complete canonical 24kHz mono FMA recording",
+  "browser_verification": {
+    "autosave_resume": "passed",
+    "canonical_pcm_hash_header": "ba68f28b8a6e9e5bbe89814882ffdff61916eb62849d5db67e891099d129c3e5",
+    "console_errors": 0,
+    "engine": "Chromium via Playwright 1.60.0",
+    "network_failures": 0,
+    "playback_toggle": "passed",
+    "screenshot_sha256": "e481af7e7d24e97c69a9f3fcbbfac09b8828acbb36023b395f004bc66c7bfa24",
+    "trials_rendered": 240
+  },
+  "bundle_sha256": "33fdb0b88fe45f0ee97ec4b7903f0bc58172d08048470967a95c619efe179418",
+  "files": {
+    "configs/holistic_stage4a_dual.yaml": "51ab854dc9da11206c8a3065a829f09dbf0c0086dd807785ab73db2ee0e186ff",
+    "configs/holistic_stage4a_dual_evaluator.yaml": "7a3dda54010bba711ff2e2a1aa2097e8440a82847519ef11dc5f31b407ece1d7",
+    "evaluation/static/stage4a.html": "66474b99c466d758c6411e2fe7b5e4de9570648a11f452850f76620d8329414b",
+    "reports/holistic_stage4a_dual/aggregate_manifest.json": "aa29c2bc1913db8527d769f737b7ccb9584e63eccc240b5c22fc89056a1b3356",
+    "reports/holistic_stage4a_dual/cache_manifest.json": "ed6615809997dd57957b6a4144beb73c0d3f7af38b6e04a230c80b79bc5a6d03",
+    "reports/holistic_stage4a_dual/dual_trials.csv": "95ceedf181b40fcc43fb274114d1bff2a3a2536ecb0a6b0f41475c9cd0aa7502",
+    "reports/holistic_stage4a_dual/human_ratings.csv": "8880799a88a503dc711b44d73d600f0ea3511a0ec6218496ee8a9b75e1b0707a",
+    "reports/holistic_stage4a_dual/retrieval_diagnostics.json": "59f77e95f0f310f71d220162d4834aef1003f9ba396c96d8414d4377962f3449",
+    "reports/holistic_stage4a_dual/trial_balance.json": "a08c1c3cfa64063ba7c828459864728ec1a892eafba29eaf5adfc8bea296cae7",
+    "reports/holistic_stage4a_dual/trial_keys.json": "060c425f4383ea03e464fc0d1582dfe0a30f054cdcca63ef8d15a6fc410f244d",
+    "src/audio_similarity/cli/stage4a_eval_server.py": "7d4ec5a61239d6fb17f94322cd41bf2f0626752aa1e57346dc83b94b100409f5",
+    "src/audio_similarity/stage4a_dual_analysis.py": "c771543372ac5a9730cf5f5e2aadd67db1cfc7f63e21d4293af6fcf6afd2403a",
+    "src/audio_similarity/stage4a_dual_cache.py": "7047c08301f2a6c024ac08d1501cd549da33ded817b147323be0965a37b418ad",
+    "src/audio_similarity/stage4a_dual_metrics.py": "e30f7aa7b6210e9758d3de0d6e700d5b85ae17c9862556f04b4ea7b8e63c95ab",
+    "src/audio_similarity/stage4a_dual_scoring.py": "2c2ec95ad6774926cbfb4babde4fb31b37116e5d85c7989f93f9953191b47710",
+    "src/audio_similarity/stage4a_store.py": "e09f4079e314dd68917a7fab0b0ab8bdf6c3dda302885b6f3caa3d48bb520529"
+  },
+  "payload_blinding": [
+    "encoder identity",
+    "K",
+    "component scores",
+    "fused scores",
+    "genre",
+    "artist",
+    "title",
+    "album",
+    "candidate provenance"
+  ],
+  "primary_denominator": "dual_encoder_bundle_only",
+  "schema_version": "stage4a-dual-evaluator-bundle-v1",
+  "superseded_clap_only_ratings_included": false
+}
