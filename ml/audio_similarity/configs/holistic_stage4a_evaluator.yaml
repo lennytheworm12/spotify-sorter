@@ -1,0 +1,12 @@
+experiment_id: holistic_stage4a_fma30_evaluator
+version: 1
+designated_reviewer_id: lenny
+question: Considering the available 30-second recordings overall, which candidate sounds more like the query?
+choices: [A, B, Tie, Neither]
+evidence: complete_canonical_fma_30_second_recording
+append_only: true
+self_correction: latest_event_per_trial
+claim_boundary: personal_perceptual_alignment_single_designated_reviewer
+trials: reports/holistic_stage4a/fma30_trials.csv
+trial_keys: reports/holistic_stage4a/trial_keys.json
+ratings: reports/holistic_stage4a/human_ratings.csv

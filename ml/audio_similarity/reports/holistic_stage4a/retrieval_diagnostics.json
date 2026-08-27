@@ -1,0 +1,40 @@
+{
+  "aggregate_artifact_sha256": "939971af7c18e37682bb885776fc8856e72ee7f5ae24a07af78aa2f67bf41267",
+  "candidate_count": 7994,
+  "engineering_cost": {
+    "CENTER5": {
+      "raw_vector_bytes_per_track": 2048,
+      "segments_per_track": 1
+    },
+    "UNIFORM3_MEAN": {
+      "raw_vector_bytes_per_track": 6144,
+      "segments_per_track": 3
+    },
+    "UNIFORM5_MEAN": {
+      "raw_vector_bytes_per_track": 10240,
+      "segments_per_track": 5
+    },
+    "fma_large_projection_formula": "eligible_track_count * selected_K",
+    "measured_new_segment_inferences": 47964,
+    "measured_segment_encode_hours": 0.45122908153631014,
+    "observed_segments_per_hour": 106296.34029060329
+  },
+  "method_rank_variation": {
+    "CENTER5__UNIFORM3_MEAN": 0.488125,
+    "CENTER5__UNIFORM5_MEAN": 0.5262500000000001,
+    "UNIFORM3_MEAN__UNIFORM5_MEAN": 0.27874999999999994
+  },
+  "query_count": 80,
+  "same_artist_excluded_sensitivity": {
+    "CENTER5": {
+      "mean_top10_overlap_after_exclusion": 0.8612500000000001
+    },
+    "UNIFORM3_MEAN": {
+      "mean_top10_overlap_after_exclusion": 0.8175000000000001
+    },
+    "UNIFORM5_MEAN": {
+      "mean_top10_overlap_after_exclusion": 0.81875
+    }
+  },
+  "segment_cache_sqlite_sha256": "17e5b0a9d2a8fdabefdba1d39a382260254c47a62b4c8e05c0e6d0fd91b895c4"
+}
