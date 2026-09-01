@@ -206,7 +206,7 @@ textarea {
       <select id="filter"><option value="unfinished">Tracks with unlabeled candidates</option><option value="all">All tracks</option><option value="complete">Completed tracks</option></select>
       <span id="pending" class="pending" aria-live="polite">All changes saved</span>
     </div>
-    <div class="utility-right"><a href="/api/export">Export CSV</a><button id="previous" type="button">← Previous</button><button id="next" type="button">Next unfinished →</button></div>
+    <div class="utility-right"><a id="export" href="/api/export">Export CSV</a><button id="previous" type="button">← Previous</button><button id="next" type="button">Next unfinished →</button></div>
   </div>
 </footer>
 <script>
@@ -218,11 +218,13 @@ const progressNumber = document.querySelector("#progress-number");
 const progressLabel = document.querySelector("#progress-label");
 const progressFill = document.querySelector("#progress-fill");
 const pendingCopy = document.querySelector("#pending");
+const exportLink = document.querySelector("#export");
 const LABELS = ["IDEAL", "ACCEPTABLE", "WRONG", "UNCERTAIN"];
 const LETTERS = ["A", "B", "C", "D", "E"];
 let session = null;
 let index = 0;
 let pendingSaves = 0;
+let exporting = false;
 const saveQueues = new Map();
 const noteTimers = new Map();
 
@@ -346,12 +348,51 @@ function saveCandidate(item, candidate) {
     renderRail();
   });
   saveQueues.set(key, next);
+  return next;
 }
 function debounceSave(item, candidate, delay = 650) {
   const key = `${item.stable_track_id}:${candidate.video_id}`;
-  clearTimeout(noteTimers.get(key));
+  const pending = noteTimers.get(key);
+  if (pending) clearTimeout(pending.timer);
   setStatus(item, candidate, "", "Waiting to autosave…");
-  noteTimers.set(key, setTimeout(() => { noteTimers.delete(key); saveCandidate(item, candidate); }, delay));
+  const timer = setTimeout(() => { noteTimers.delete(key); saveCandidate(item, candidate); }, delay);
+  noteTimers.set(key, { timer, item, candidate });
+}
+function flushPendingNotes() {
+  const saves = [];
+  for (const [key, pending] of [...noteTimers.entries()]) {
+    clearTimeout(pending.timer);
+    noteTimers.delete(key);
+    saves.push(saveCandidate(pending.item, pending.candidate));
+  }
+  return saves;
+}
+async function exportReview(event) {
+  event.preventDefault();
+  if (exporting) return;
+  exporting = true;
+  exportLink.setAttribute("aria-disabled", "true");
+  pendingCopy.textContent = "Saving notes before export…";
+  pendingCopy.classList.add("busy");
+  if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
+  flushPendingNotes();
+  await Promise.all([...saveQueues.values()]);
+  const failed = session.cases.flatMap(item => item.candidates).filter(candidate => candidate._saveError).length;
+  if (failed) {
+    pendingCopy.textContent = `Export blocked · ${failed} autosave${failed === 1 ? "" : "s"} failed`;
+    pendingCopy.classList.remove("busy");
+    pendingCopy.classList.add("error");
+  } else {
+    const download = document.createElement("a");
+    download.href = `/api/export?saved=${Date.now()}`;
+    download.download = "stage5b1b-heldout-review.csv";
+    document.body.append(download);
+    download.click();
+    download.remove();
+    updateProgress();
+  }
+  exporting = false;
+  exportLink.removeAttribute("aria-disabled");
 }
 function updateCandidateVisual(card, candidate) {
   card.classList.toggle("reviewed", Boolean(candidate.review.label));
@@ -418,7 +459,8 @@ function candidateCard(item, candidate) {
   note.oninput = () => { candidate.review.note = note.value; debounceSave(item, candidate); };
   note.onblur = () => {
     const key = `${item.stable_track_id}:${candidate.video_id}`;
-    if (noteTimers.has(key)) { clearTimeout(noteTimers.get(key)); noteTimers.delete(key); saveCandidate(item, candidate); }
+    const pending = noteTimers.get(key);
+    if (pending) { clearTimeout(pending.timer); noteTimers.delete(key); saveCandidate(item, candidate); }
   };
   noteWrap.append(noteLabel, note);
   const status = node("div", "candidate-status");
@@ -471,7 +513,8 @@ function render() {
   trackArea.oninput = () => { item.track_note = trackArea.value; debounceSave(item, firstCandidate); };
   trackArea.onblur = () => {
     const key = `${item.stable_track_id}:${firstCandidate.video_id}`;
-    if (noteTimers.has(key)) { clearTimeout(noteTimers.get(key)); noteTimers.delete(key); saveCandidate(item, firstCandidate); }
+    const pending = noteTimers.get(key);
+    if (pending) { clearTimeout(pending.timer); noteTimers.delete(key); saveCandidate(item, firstCandidate); }
   };
   const trackSave = node("div", "save-state", "Autosaves after you stop typing");
   trackNote.append(trackLabel, trackArea, trackSave);
@@ -520,6 +563,7 @@ document.querySelector("#next").onclick = nextUnfinished;
 window.addEventListener("beforeunload", event => {
   if (pendingSaves || noteTimers.size) { event.preventDefault(); event.returnValue = ""; }
 });
+exportLink.onclick = exportReview;
 load();
 </script>
 </body>

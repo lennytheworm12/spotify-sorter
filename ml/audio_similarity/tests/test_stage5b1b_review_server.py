@@ -228,7 +228,25 @@ def test_http_site_loads_autosaves_and_exports(review_server):
     assert exported.headers["Content-Disposition"] == (
         'attachment; filename="stage5b1b-heldout-review.csv"'
     )
-    assert b"ACCEPTABLE" in exported.read()
+    exported_rows = list(csv.DictReader(exported.read().decode().splitlines()))
+    exported_first = next(
+        row
+        for row in exported_rows
+        if row["stable_track_id"] == "s5b1b_001"
+        and row["candidate_video_id"] == first["video_id"]
+    )
+    assert exported_first["candidate_review_label"] == "ACCEPTABLE"
+    assert exported_first["candidate_note"] == "safe source"
+    assert exported_first["track_note"] == "multiple candidates may be usable"
+
+
+def test_export_ui_flushes_debounced_notes_before_download(review_server):
+    html = request(review_server, "/").read().decode()
+    assert 'id="export"' in html
+    assert "async function exportReview(event)" in html
+    assert "flushPendingNotes();" in html
+    assert "await Promise.all([...saveQueues.values()]);" in html
+    assert "Export blocked" in html
 
 
 def test_http_errors_are_bounded_json(review_server):
