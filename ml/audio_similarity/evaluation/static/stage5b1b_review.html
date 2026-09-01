@@ -266,6 +266,12 @@ function updateProgress() {
   pendingCopy.classList.toggle("busy", pendingSaves > 0 && failed === 0);
   pendingCopy.classList.toggle("error", failed > 0);
 }
+function updateTrackCount(item) {
+  const value = document.querySelector("#track-count");
+  if (!value || session.cases[index] !== item) return;
+  const reviewed = item.candidates.filter(candidate => Boolean(savedLabel(candidate))).length;
+  value.textContent = `${reviewed} / ${item.candidates.length} labeled on this track`;
+}
 function renderRail() {
   rail.replaceChildren();
   session.cases.forEach((item, position) => {
@@ -274,7 +280,7 @@ function renderRail() {
     if (isStarted(item)) button.classList.add("started");
     if (isComplete(item)) button.classList.add("complete");
     if (position === index) button.classList.add("current");
-    button.title = `${position + 1}. ${item.track.title} — ${item.candidates.filter(candidate => candidate.review.label).length}/${item.candidates.length} labeled`;
+    button.title = `${position + 1}. ${item.track.title} — ${item.candidates.filter(candidate => Boolean(savedLabel(candidate))).length}/${item.candidates.length} labeled`;
     button.setAttribute("aria-label", button.title);
     button.onclick = () => goTo(position);
     rail.append(button);
@@ -332,6 +338,7 @@ function saveCandidate(item, candidate) {
     const data = await response.json();
     if (!response.ok) throw new Error(data.error || "Autosave failed");
     candidate._savedLabel = snapshot.label;
+    updateTrackCount(item);
     if (candidate._saveVersion === version) {
       candidate._saveError = null;
       setStatus(item, candidate, "saved", "Saved");
@@ -531,7 +538,9 @@ function render() {
   const head = node("div", "work-head");
   const heading = node("div");
   heading.append(node("div", "eyebrow", "Ordered yt-dlp candidates"), node("h2", "", "Label every candidate"), node("p", "", "Open YouTube when needed. Each choice saves immediately; notes autosave after a short pause. Automatic resolver features are hidden during held-out review."));
-  head.append(heading, node("div", "track-count", `${item.candidates.filter(candidate => candidate.review.label).length} / ${item.candidates.length} labeled on this track`));
+  const trackCount = node("div", "track-count", `${item.candidates.filter(candidate => Boolean(savedLabel(candidate))).length} / ${item.candidates.length} labeled on this track`);
+  trackCount.id = "track-count";
+  head.append(heading, trackCount);
   app.append(head);
   const list = node("section", "candidate-list");
   item.candidates.forEach(candidate => list.append(candidateCard(item, candidate)));

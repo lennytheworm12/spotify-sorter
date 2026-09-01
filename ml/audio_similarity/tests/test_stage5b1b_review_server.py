@@ -249,6 +249,13 @@ def test_export_ui_flushes_debounced_notes_before_download(review_server):
     assert "Export blocked" in html
 
 
+def test_per_track_saved_counter_updates_after_autosave(review_server):
+    html = request(review_server, "/").read().decode()
+    assert 'trackCount.id = "track-count"' in html
+    assert "function updateTrackCount(item)" in html
+    assert "candidate._savedLabel = snapshot.label;\n    updateTrackCount(item);" in html
+
+
 def test_http_errors_are_bounded_json(review_server):
     with pytest.raises(urllib.error.HTTPError) as missing:
         request(review_server, "/missing")
