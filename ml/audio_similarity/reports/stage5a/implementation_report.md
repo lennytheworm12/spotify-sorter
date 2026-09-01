@@ -89,7 +89,7 @@ Executed results so far:
 
 - Focused Stage 5A: 14 passed.
 - Relevant audio/sampling/encoder/cache/manifest regressions: 92 passed.
-- Full non-heavy suite: 459 passed, 2 failed, 12 deselected. The two failures are the pre-existing Stage 2B repository lock tests, whose deliberate precondition is that current `HEAD` has already been pushed to its upstream. They will be rerun after the final push.
+- Full non-heavy suite after pushing the implementation checkpoints: 461 passed, 12 deselected, 0 failed. The 12 deselected tests are explicitly marked heavy tests excluded by the repository's default pytest configuration.
 
 ## FMA Large manifest and smoke
 
