@@ -123,6 +123,8 @@
     "gradients": false,
     "evaluation_mode": true,
     "deterministic": true,
+    "compute_dtype": "float32",
+    "autocast": false,
     "device": "explicit CLI argument; frozen full run uses cuda",
     "batch_support": true,
     "embedding_validation": [
