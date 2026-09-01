@@ -69,6 +69,15 @@ def _preflight_run_artifacts(config: Stage5B1AConfig, *, overwrite: bool) -> Non
             raise FileExistsError(f"review artifact already exists: {review}")
 
 
+def firecrawl_transport(
+    config: Stage5B1AConfig,
+    environment: Mapping[str, str] = os.environ,
+) -> FirecrawlHTTPTransport:
+    """Prefer an environment API key and otherwise use Firecrawl keyless REST."""
+    variable = config.provider.api_key_environment_variable
+    return FirecrawlHTTPTransport(config.provider, environment.get(variable))
+
+
 def build_candidate_review(config_path: str | Path, *, overwrite: bool = False) -> dict:
     config, manifest = _inputs(config_path)
     results = load_discovery_results(
@@ -98,14 +107,8 @@ def run_real_discovery(
     overwrite: bool = False,
 ) -> dict:
     config, manifest = _inputs(config_path)
-    variable = config.provider.api_key_environment_variable
-    api_key = environment.get(variable, "")
-    if not api_key:
-        raise Stage5B1AValidationError(
-            f"{variable} is required for a real experiment; status={NOT_RUN_STATUS}"
-        )
     _preflight_run_artifacts(config, overwrite=overwrite)
-    transport = FirecrawlHTTPTransport(config.provider, api_key)
+    transport = firecrawl_transport(config, environment)
     adapter = FirecrawlDiscoveryAdapter(config.provider, config.query, transport)
     results = run_discovery_experiment(manifest, config, adapter)
     write_discovery_results(
@@ -118,6 +121,7 @@ def run_real_discovery(
         "status": results["status"],
         "results": str(config.artifacts["discovery_results"]),
         "review": review_status["review"],
+        "authentication_mode": transport.authentication_mode,
         "summary": results["summary"],
     }
 

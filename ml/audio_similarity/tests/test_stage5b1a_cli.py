@@ -5,9 +5,8 @@ from pathlib import Path
 import pytest
 
 from audio_similarity.cli.stage5b1a import (
-    NOT_RUN_STATUS,
     _preflight_run_artifacts,
-    run_real_discovery,
+    firecrawl_transport,
     verify_inputs,
 )
 from audio_similarity.stage5b1a_config import load_config
@@ -34,9 +33,16 @@ def test_verify_inputs_is_network_free_and_reports_frozen_gate():
     }
 
 
-def test_real_run_without_credential_fails_clear_and_does_not_fallback():
-    with pytest.raises(Stage5B1AValidationError, match=NOT_RUN_STATUS):
-        run_real_discovery(CONFIG, environment={})
+def test_transport_selection_uses_keyless_when_credential_is_absent():
+    config = load_config(CONFIG)
+    transport = firecrawl_transport(config, environment={})
+    assert transport.authentication_mode == "keyless"
+
+
+def test_transport_selection_prefers_environment_credential():
+    config = load_config(CONFIG)
+    transport = firecrawl_transport(config, environment={"FIRECRAWL_API_KEY": "secret"})
+    assert transport.authentication_mode == "api_key"
 
 
 def test_real_run_preflight_protects_existing_results_and_human_labels(tmp_path):

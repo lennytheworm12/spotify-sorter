@@ -297,35 +297,38 @@ def deduplicate_candidates(
 
 
 class FirecrawlHTTPTransport:
-    """Small injectable REST client with bounded retries and response size."""
+    """Small injectable REST client with API-key or keyless authentication."""
 
     def __init__(
         self,
         config: ProviderConfig,
-        api_key: str,
+        api_key: str | None,
         *,
         opener: Callable[..., Any] = urlopen,
         sleep: Callable[[float], None] = time.sleep,
     ):
-        if not isinstance(api_key, str) or not api_key.strip():
-            raise Stage5B1AValidationError("FIRECRAWL_API_KEY is required for real discovery")
+        if api_key is not None and not isinstance(api_key, str):
+            raise Stage5B1AValidationError("Firecrawl API key must be a string when supplied")
         self.config = config
-        self._api_key = api_key.strip()
+        self._api_key = api_key.strip() if api_key else None
+        self.authentication_mode = "api_key" if self._api_key else "keyless"
         self._opener = opener
         self._sleep = sleep
 
     def search(self, payload: dict[str, Any]) -> FirecrawlTransportResponse:
         encoded = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode()
         for attempt in range(1, self.config.max_attempts + 1):
+            headers = {
+                "Content-Type": "application/json",
+                "User-Agent": "spotify-audio-similarity-stage5b1a/1",
+            }
+            if self._api_key:
+                headers["Authorization"] = f"Bearer {self._api_key}"
             request = Request(
                 self.config.endpoint,
                 data=encoded,
                 method="POST",
-                headers={
-                    "Authorization": f"Bearer {self._api_key}",
-                    "Content-Type": "application/json",
-                    "User-Agent": "spotify-audio-similarity-stage5b1a/1",
-                },
+                headers=headers,
             )
             try:
                 with self._opener(
@@ -432,6 +435,11 @@ class FirecrawlDiscoveryAdapter:
             provider={
                 "name": "firecrawl",
                 "discovery_version": self.provider.discovery_version,
+                "authentication_mode": getattr(
+                    self.transport,
+                    "authentication_mode",
+                    "injected",
+                ),
                 "attempts": response.attempts,
                 "job_id": root.get("id") if isinstance(root.get("id"), str) else None,
                 "credits_used": root.get("creditsUsed") if isinstance(root.get("creditsUsed"), int) else None,

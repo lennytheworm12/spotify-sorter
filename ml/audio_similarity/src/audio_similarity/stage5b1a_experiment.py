@@ -61,6 +61,11 @@ def run_discovery_experiment(
                 "provider": {
                     "name": "firecrawl",
                     "discovery_version": config.provider.discovery_version,
+                    "authentication_mode": getattr(
+                        getattr(adapter, "transport", None),
+                        "authentication_mode",
+                        "injected",
+                    ),
                     "attempts": exc.attempts,
                     "job_id": None,
                     "credits_used": None,

@@ -205,7 +205,22 @@ def test_http_transport_does_not_retry_permanent_http_error_or_leak_key():
     assert len(calls) == 1
 
 
-def test_real_transport_requires_environment_credential_value():
+def test_keyless_transport_omits_authorization_header():
     config = load_config(CONFIG_PATH)
-    with pytest.raises(Stage5B1AValidationError, match="FIRECRAWL_API_KEY"):
-        FirecrawlHTTPTransport(config.provider, "")
+    calls = []
+
+    def opener(request, timeout):
+        calls.append((request, timeout))
+        return FakeResponse(b'{"success":true,"data":{"web":[]}}')
+
+    transport = FirecrawlHTTPTransport(config.provider, None, opener=opener)
+    response = transport.search({"query": "test"})
+    assert response.attempts == 1
+    assert transport.authentication_mode == "keyless"
+    assert calls[0][0].get_header("Authorization") is None
+
+
+def test_transport_rejects_non_string_credential():
+    config = load_config(CONFIG_PATH)
+    with pytest.raises(Stage5B1AValidationError, match="must be a string"):
+        FirecrawlHTTPTransport(config.provider, 123)
