@@ -1,0 +1,67 @@
+{
+  "append_only_events": 275,
+  "bootstrap": {
+    "draws": 50000,
+    "seed": 20260905,
+    "unit": "query"
+  },
+  "canonical_trials": 238,
+  "designated_reviewer": "lenny",
+  "method_pairs": {
+    "UNIFORM3_vs_CENTER5": {
+      "higher_method": "UNIFORM3_DUAL_MEAN",
+      "higher_pairwise_preference": 0.6027397260273972,
+      "higher_query_macro_preference": 0.6027397260273972,
+      "improvement_95_ci": [
+        0.006849315068493178,
+        0.1986301369863014
+      ],
+      "improvement_over_0_5": 0.10273972602739723,
+      "lower_method": "CENTER5_DUAL",
+      "neither_rate": 0.0759493670886076,
+      "preference_denominator": 73,
+      "represented_queries": 73,
+      "tie_rate": 0.22784810126582278,
+      "trials": 79
+    },
+    "UNIFORM5_vs_CENTER5": {
+      "higher_method": "UNIFORM5_DUAL_MEAN",
+      "higher_pairwise_preference": 0.5,
+      "higher_query_macro_preference": 0.5,
+      "improvement_95_ci": [
+        -0.09722222222222221,
+        0.09722222222222221
+      ],
+      "improvement_over_0_5": 0.0,
+      "lower_method": "CENTER5_DUAL",
+      "neither_rate": 0.1,
+      "preference_denominator": 72,
+      "represented_queries": 72,
+      "tie_rate": 0.225,
+      "trials": 80
+    },
+    "UNIFORM5_vs_UNIFORM3": {
+      "higher_method": "UNIFORM5_DUAL_MEAN",
+      "higher_pairwise_preference": 0.5733333333333334,
+      "higher_query_macro_preference": 0.5733333333333334,
+      "improvement_95_ci": [
+        -0.026666666666666672,
+        0.17333333333333334
+      ],
+      "improvement_over_0_5": 0.07333333333333336,
+      "lower_method": "UNIFORM3_DUAL_MEAN",
+      "neither_rate": 0.05063291139240506,
+      "preference_denominator": 75,
+      "represented_queries": 75,
+      "tie_rate": 0.17721518987341772,
+      "trials": 79
+    }
+  },
+  "primary_denominator": "dual_encoder_bundle_only",
+  "protocol_failure": true,
+  "required_trials": 240,
+  "schema_version": "stage4a-dual-final-metrics-v1",
+  "stage4b_triggered": false,
+  "superseded_clap_only_ratings_included": false,
+  "verdict": "INSUFFICIENT_EVIDENCE_PICK_CHEAPER"
+}
