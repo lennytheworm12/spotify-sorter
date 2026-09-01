@@ -52,6 +52,12 @@ def test_candidate_remix_conflicts_with_plain_target():
     assert relations("Roses", "Roses (Imanbek Remix)")["remix"] == CONFLICT
 
 
+def test_named_remix_qualifier_can_appear_after_core_title():
+    assert relations(
+        "Roses - Imanbek Remix", '"Roses" Imanbek Remix (Official Audio)'
+    )["remix"] == MATCH
+
+
 @pytest.mark.parametrize(
     ("target_title", "candidate_title", "family", "expected"),
     [
@@ -125,6 +131,7 @@ def test_explicit_cover_performer_conflict_is_ineligible():
     ("candidate", "expected"),
     [
         ({"uploader": "Adele - Topic", "title": "Hello"}, SourceType.ART_TRACK_TOPIC),
+        ({"title": "Hello", "description": "Provided to YouTube by Universal Music Group"}, SourceType.ART_TRACK_TOPIC),
         ({"title": "Adele - Hello (Official Audio)"}, SourceType.OFFICIAL_AUDIO),
         ({"title": "Adele - Hello (Lyrics)"}, SourceType.LYRIC_VIDEO),
         ({"title": "Adele - Hello (Official Music Video)"}, SourceType.OFFICIAL_MUSIC_VIDEO),
