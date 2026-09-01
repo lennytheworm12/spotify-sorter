@@ -144,9 +144,13 @@ This is a small-project engineering gate, not a scientific population claim. Any
 
 ## Tests and known limitations
 
-Focused Stage 5B.1A tests currently cover track validation, hash locking, case coverage, query construction, YouTube ID parsing, normalization, deduplication, ordering, empty results, provider errors, bounded retries, secret handling, sequential failure isolation, atomic persistence, review generation/labels, Recall@1/@3/@5, `UNCERTAIN` denominator behavior, gate boundaries, CLI credential handling, and artifact identity binding.
+Focused Stage 5B.1A tests cover track validation, hash locking, case coverage, query construction, YouTube ID parsing, normalization, deduplication, ordering, empty results, provider errors, bounded retries, secret handling, sequential failure isolation, atomic persistence, review generation/labels, Recall@1/@3/@5, `UNCERTAIN` denominator behavior, gate boundaries, CLI credential handling, and artifact identity binding.
 
-Final focused, Stage 5A regression, and full non-heavy counts are recorded after the remaining test gates run.
+Executed test gates:
+
+- Focused Stage 5B.1A: 48 passed, 0 failed.
+- Relevant Stage 5A regressions: 14 passed, 0 failed.
+- Full non-heavy `ml/audio_similarity` suite: 509 passed, 12 heavy tests deselected by the repository default, 0 failed.
 
 Known limitations are intentional at this gate:
 
