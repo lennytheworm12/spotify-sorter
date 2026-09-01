@@ -88,6 +88,26 @@ def test_session_groups_248_candidates_under_50_frozen_targets(review_store):
     assert "version_relationships" not in serialized
 
 
+def test_targeted_case_filter_limits_session_but_keeps_authoritative_store(tmp_path):
+    config = load_stage5b1b_config(CONFIG)
+    manifest = load_heldout_manifest(
+        config.heldout_manifest_path,
+        expected_sha256=config.heldout_manifest_sha256,
+    )
+    review = tmp_path / "review.csv"
+    shutil.copyfile(config.artifacts["heldout_review"], review)
+    selected = manifest.stable_track_ids[:2]
+    store = Stage5B1BReviewStore(manifest, review, case_filter=selected)
+    session = store.session()
+    assert session["mode"] == "stage5b1b_targeted_sol_audit"
+    assert [case["stable_track_id"] for case in session["cases"]] == list(selected)
+    assert session["progress"]["total_tracks"] == 2
+    assert session["progress"]["total_candidates"] == 10
+
+    with pytest.raises(Stage5B1AValidationError, match="case filter"):
+        Stage5B1BReviewStore(manifest, review, case_filter=("missing",))
+
+
 def test_submit_atomically_persists_candidate_label_and_verbatim_notes(review_store):
     first = review_store.session()["cases"][0]["candidates"][0]
     saved = review_store.submit(

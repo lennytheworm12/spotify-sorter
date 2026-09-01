@@ -21,13 +21,24 @@ UI_LABELS = ("IDEAL", "ACCEPTABLE", "WRONG", "UNCERTAIN")
 class Stage5B1BReviewStore:
     """Read frozen candidate evidence and atomically persist reviewer-owned fields."""
 
-    def __init__(self, manifest: HeldoutManifest, review_path: str | Path) -> None:
+    def __init__(
+        self,
+        manifest: HeldoutManifest,
+        review_path: str | Path,
+        *,
+        case_filter: tuple[str, ...] | None = None,
+    ) -> None:
         self.manifest = manifest
         self.review_path = Path(review_path)
         self._lock = threading.RLock()
         self._manifest_by_id = {
             item.track.stable_track_id: item for item in self.manifest.tracks
         }
+        if case_filter is not None:
+            unknown = set(case_filter) - set(self._manifest_by_id)
+            if unknown or not case_filter or len(case_filter) != len(set(case_filter)):
+                raise Stage5B1AValidationError("invalid manual audit case filter")
+        self.case_filter = case_filter
         self._read_rows()
 
     def _read_rows(self) -> list[dict[str, str]]:
@@ -110,7 +121,8 @@ class Stage5B1BReviewStore:
             for row in rows:
                 grouped[row["stable_track_id"]].append(row)
             cases = []
-            for stable_id in self.manifest.stable_track_ids:
+            displayed_ids = self.case_filter or self.manifest.stable_track_ids
+            for stable_id in displayed_ids:
                 item = self._manifest_by_id[stable_id]
                 candidate_rows = grouped[stable_id]
                 track = item.track
@@ -145,7 +157,11 @@ class Stage5B1BReviewStore:
             total = sum(len(case["candidates"]) for case in cases)
             return {
                 "schema_version": "stage5b1b-review-session-v1",
-                "mode": "stage5b1b_heldout_candidate_review",
+                "mode": (
+                    "stage5b1b_targeted_sol_audit"
+                    if self.case_filter is not None
+                    else "stage5b1b_heldout_candidate_review"
+                ),
                 "manifest_sha256": self.manifest.sha256,
                 "labels": list(UI_LABELS),
                 "progress": {

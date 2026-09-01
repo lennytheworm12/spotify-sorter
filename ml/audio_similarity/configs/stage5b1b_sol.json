@@ -1,0 +1,41 @@
+{
+  "schema_version": "stage5b1b-sol-evaluator-config-v1",
+  "experiment_id": "stage5b1b_candidate_resolution_sol_audit",
+  "inputs": {
+    "manifest_path": "reports/stage5b1b/heldout_tracks.json",
+    "manifest_expected_sha256": "39557ede8f07bde129ad23d2bc64a0faf0fff755356cd87f2054e14f91d81e5a",
+    "discovery_path": "reports/stage5b1b/heldout_ytdlp_discovery.json",
+    "discovery_expected_sha256": "2c318ac0853ffe3395c6a934265585afcb0a39a2f9ce73e5a00ba35276d056e4",
+    "resolver_features_path": "reports/stage5b1b/heldout_candidate_features.json",
+    "resolver_features_expected_sha256": "f4260fe01b95770ceb4c47f8298033a0b865e597780a488bca1dfaac22a604a6"
+  },
+  "evaluator": {
+    "provider": "codex_cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "high",
+    "prompt_version": "stage5b1b-sol-blinded-candidate-review-v1",
+    "output_schema_path": "configs/stage5b1b_sol_output.schema.json",
+    "batch_track_count": 5,
+    "max_attempts": 2,
+    "timeout_seconds": 900,
+    "description_max_characters": 1200,
+    "tools_allowed": false,
+    "isolated_working_directory": true,
+    "ignore_user_config": true,
+    "ignore_rules": true
+  },
+  "resolver_proposal": {
+    "version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+    "production_auto_match_enabled": false
+  },
+  "audit": {
+    "random_seed": "stage5b1b-sol-audit-v1-frozen",
+    "random_agreement_track_count": 10
+  },
+  "artifacts": {
+    "sol_evaluations": "reports/stage5b1b/sol_evaluations.json",
+    "comparison": "reports/stage5b1b/sol_resolver_comparison.json",
+    "manual_audit": "reports/stage5b1b/sol_manual_audit.json",
+    "manual_audit_queue": "reports/stage5b1b/sol_manual_audit_queue.json"
+  }
+}

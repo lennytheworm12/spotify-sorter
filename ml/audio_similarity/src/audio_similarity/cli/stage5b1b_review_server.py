@@ -13,6 +13,7 @@ from audio_similarity.stage5b1a_models import Stage5B1AValidationError
 from audio_similarity.stage5b1b_config import load_stage5b1b_config
 from audio_similarity.stage5b1b_manifest import load_heldout_manifest
 from audio_similarity.stage5b1b_review_store import Stage5B1BReviewStore
+from audio_similarity.stage5b1b_sol_comparison import load_audit_queue
 
 
 STATIC = Path(__file__).resolve().parents[3] / "evaluation" / "static" / "stage5b1b_review.html"
@@ -147,6 +148,10 @@ def main() -> None:
     parser.add_argument(
         "--review", help="optional review CSV override for a disposable or exported copy"
     )
+    parser.add_argument(
+        "--queue",
+        help="optional targeted-audit queue; only listed tracks are shown while labels autosave to the review CSV",
+    )
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8768)
     parser.add_argument("--no-browser", action="store_true")
@@ -161,6 +166,10 @@ def main() -> None:
             manifest,
             Path(args.review).resolve()
             if args.review else config.artifacts["heldout_review"],
+            case_filter=(
+                load_audit_queue(Path(args.queue).resolve(), manifest.sha256)
+                if args.queue else None
+            ),
         )
     except (FileNotFoundError, Stage5B1AValidationError) as exc:
         raise SystemExit(str(exc)) from exc
