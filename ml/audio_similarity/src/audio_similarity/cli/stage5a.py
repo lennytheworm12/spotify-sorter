@@ -62,10 +62,22 @@ def _smoke(args) -> dict:
     checkpoint_hash = hashlib.sha256(checkpoint.read_bytes()).hexdigest()
     if checkpoint_hash != clap_contract.provenance["checkpoint_sha256"]:
         raise ValueError("CLAP checkpoint hash does not match Audio Representation v1")
+    muq_contract = contract.encoder("muq_mulan_large")
+    muq_snapshot = (
+        Path.home()
+        / ".cache/huggingface/hub/models--OpenMuQ--MuQ-MuLan-large/snapshots"
+        / muq_contract.provenance["revision"]
+    )
+    for name, expected in (
+        ("pytorch_model.bin", muq_contract.provenance["weights_sha256"]),
+        ("config.json", muq_contract.provenance["config_sha256"]),
+    ):
+        actual = hashlib.sha256((muq_snapshot / name).read_bytes()).hexdigest()
+        if actual != expected:
+            raise ValueError(f"MuQ {name} hash does not match Audio Representation v1")
     from audio_similarity.holistic_encoders import LaionClapEncoder, MuQMulanEncoder
 
     clap = LaionClapEncoder(checkpoint_path=str(checkpoint))
-    muq_contract = contract.encoder("muq_mulan_large")
     muq = MuQMulanEncoder(revision=muq_contract.provenance["revision"])
     with Stage5ACache(args.cache) as cache:
         stats = materialize(
