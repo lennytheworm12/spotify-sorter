@@ -1,0 +1,133 @@
+{
+  "experiment_id": "stage5b1a_firecrawl_youtube_discovery_feasibility",
+  "frozen_before_live_discovery": true,
+  "purpose": "A deliberately varied engineering smoke set for candidate recall, not a population sample.",
+  "schema_version": "stage5b1a-frozen-track-manifest-v1",
+  "tracks": [
+    {
+      "case_rationale": "Straightforward globally popular studio recording; establishes the easy-case baseline.",
+      "case_tags": ["straightforward_major_hit", "pop"],
+      "track": {"album": "25", "artists": ["Adele"], "duration_ms": null, "isrc": null, "release_year": 2015, "spotify_track_id": null, "stable_track_id": "s5b1a_001", "title": "Hello"}
+    },
+    {
+      "case_rationale": "Older popular recording with many uploads and a short common title.",
+      "case_tags": ["older_popular_recording", "ambiguous_title", "pop"],
+      "track": {"album": "In the Zone", "artists": ["Britney Spears"], "duration_ms": null, "isrc": null, "release_year": 2003, "spotify_track_id": null, "stable_track_id": "s5b1a_002", "title": "Toxic"}
+    },
+    {
+      "case_rationale": "Major collaboration represented by multiple structured artists.",
+      "case_tags": ["multiple_artists", "pop", "r_and_b"],
+      "track": {"album": "Dangerously in Love", "artists": ["Beyonc\u00e9", "JAY-Z"], "duration_ms": null, "isrc": null, "release_year": 2003, "spotify_track_id": null, "stable_track_id": "s5b1a_003", "title": "Crazy in Love"}
+    },
+    {
+      "case_rationale": "Featured artist appears as Spotify-style title noise as well as structured artist metadata.",
+      "case_tags": ["featured_artist", "feat_in_title", "hip_hop"],
+      "track": {"album": "Mail on Sunday", "artists": ["Flo Rida", "T-Pain"], "duration_ms": null, "isrc": null, "release_year": 2007, "spotify_track_id": null, "stable_track_id": "s5b1a_004", "title": "Low (feat. T-Pain)"}
+    },
+    {
+      "case_rationale": "Artist punctuation and periods must survive deterministic query construction.",
+      "case_tags": ["artist_symbols", "punctuation", "alternative"],
+      "track": {"album": "Kala", "artists": ["M.I.A."], "duration_ms": null, "isrc": null, "release_year": 2007, "spotify_track_id": null, "stable_track_id": "s5b1a_005", "title": "Paper Planes"}
+    },
+    {
+      "case_rationale": "Long parenthetical title carries essential target-version evidence and must not be stripped.",
+      "case_tags": ["parentheses", "version_markers", "long_title", "pop"],
+      "track": {"album": "Red (Taylor's Version)", "artists": ["Taylor Swift"], "duration_ms": null, "isrc": null, "release_year": 2021, "spotify_track_id": null, "stable_track_id": "s5b1a_006", "title": "All Too Well (10 Minute Version) (Taylor's Version) (From The Vault)"}
+    },
+    {
+      "case_rationale": "The intended target is a specifically named later mix of an older composition.",
+      "case_tags": ["remastered_or_remixed_recording", "older_composition", "rock"],
+      "track": {"album": "Abbey Road (Super Deluxe Edition)", "artists": ["The Beatles"], "duration_ms": null, "isrc": null, "release_year": 2019, "spotify_track_id": null, "stable_track_id": "s5b1a_007", "title": "Here Comes The Sun - 2019 Mix"}
+    },
+    {
+      "case_rationale": "Explicit title has a well-known clean-title counterpart, exposing version ambiguity.",
+      "case_tags": ["explicit_version", "clean_counterpart", "r_and_b"],
+      "track": {"album": "The Lady Killer", "artists": ["CeeLo Green"], "duration_ms": null, "isrc": null, "release_year": 2010, "spotify_track_id": null, "stable_track_id": "s5b1a_008", "title": "Fuck You"}
+    },
+    {
+      "case_rationale": "Common one-word title with many unrelated songs and covers.",
+      "case_tags": ["ambiguous_title", "multiple_artists", "pop"],
+      "track": {"album": "Unapologetic", "artists": ["Rihanna", "Mikky Ekko"], "duration_ms": null, "isrc": null, "release_year": 2012, "spotify_track_id": null, "stable_track_id": "s5b1a_009", "title": "Stay"}
+    },
+    {
+      "case_rationale": "Canonical popular electronic recording with many mixes and long-form uploads.",
+      "case_tags": ["electronic", "many_remixes", "older_popular_recording"],
+      "track": {"album": "Discovery", "artists": ["Daft Punk"], "duration_ms": null, "isrc": null, "release_year": 2001, "spotify_track_id": null, "stable_track_id": "s5b1a_010", "title": "One More Time"}
+    },
+    {
+      "case_rationale": "Popular hip-hop track with soundtrack, lyric, clean, explicit, and unofficial uploads.",
+      "case_tags": ["hip_hop", "many_unofficial_uploads", "version_ambiguity"],
+      "track": {"album": "8 Mile", "artists": ["Eminem"], "duration_ms": null, "isrc": null, "release_year": 2002, "spotify_track_id": null, "stable_track_id": "s5b1a_011", "title": "Lose Yourself"}
+    },
+    {
+      "case_rationale": "Long-lived rock/alternative hit with covers, live versions, and remixes.",
+      "case_tags": ["rock_alternative", "many_covers", "older_popular_recording"],
+      "track": {"album": "Hot Fuss", "artists": ["The Killers"], "duration_ms": null, "isrc": null, "release_year": 2004, "spotify_track_id": null, "stable_track_id": "s5b1a_012", "title": "Mr. Brightside"}
+    },
+    {
+      "case_rationale": "Popular R&B studio recording with frequent unofficial and lyric uploads.",
+      "case_tags": ["r_and_b", "many_unofficial_uploads"],
+      "track": {"album": "channel ORANGE", "artists": ["Frank Ocean"], "duration_ms": null, "isrc": null, "release_year": 2012, "spotify_track_id": null, "stable_track_id": "s5b1a_013", "title": "Thinkin Bout You"}
+    },
+    {
+      "case_rationale": "Latin hit exercises non-ASCII title punctuation and language-independent URL discovery.",
+      "case_tags": ["latin", "diacritics", "global_crossover"],
+      "track": {"album": "Un Verano Sin Ti", "artists": ["Bad Bunny"], "duration_ms": null, "isrc": null, "release_year": 2022, "spotify_track_id": null, "stable_track_id": "s5b1a_014", "title": "Tit\u00ed Me Pregunt\u00f3"}
+    },
+    {
+      "case_rationale": "Country recording with a common title and an unusually dense cover ecosystem.",
+      "case_tags": ["country", "many_covers", "ambiguous_title"],
+      "track": {"album": "Traveller", "artists": ["Chris Stapleton"], "duration_ms": null, "isrc": null, "release_year": 2015, "spotify_track_id": null, "stable_track_id": "s5b1a_015", "title": "Tennessee Whiskey"}
+    },
+    {
+      "case_rationale": "K-pop/global crossover with official video, choreography, performance, and lyric variants.",
+      "case_tags": ["k_pop", "global_crossover", "many_official_variants"],
+      "track": {"album": "BE", "artists": ["BTS"], "duration_ms": null, "isrc": null, "release_year": 2020, "spotify_track_id": null, "stable_track_id": "s5b1a_016", "title": "Dynamite"}
+    },
+    {
+      "case_rationale": "The famous official video is semantically important and differs from a plain audio presentation.",
+      "case_tags": ["official_video_differs", "hip_hop", "video_first_release"],
+      "track": {"album": null, "artists": ["Childish Gambino"], "duration_ms": null, "isrc": null, "release_year": 2018, "spotify_track_id": null, "stable_track_id": "s5b1a_017", "title": "This Is America"}
+    },
+    {
+      "case_rationale": "Multi-artist crossover hit with many covers, parodies, and lyric uploads.",
+      "case_tags": ["multiple_artists", "many_covers", "alternative_pop"],
+      "track": {"album": "Making Mirrors", "artists": ["Gotye", "Kimbra"], "duration_ms": null, "isrc": null, "release_year": 2011, "spotify_track_id": null, "stable_track_id": "s5b1a_018", "title": "Somebody That I Used to Know"}
+    },
+    {
+      "case_rationale": "The intended commercial target is explicitly a remix rather than the similarly named original.",
+      "case_tags": ["actual_remix", "version_markers", "electronic"],
+      "track": {"album": null, "artists": ["SAINt JHN", "Imanbek"], "duration_ms": null, "isrc": null, "release_year": 2019, "spotify_track_id": null, "stable_track_id": "s5b1a_019", "title": "Roses - Imanbek Remix"}
+    },
+    {
+      "case_rationale": "The intended target is an actual official live recording, reversing the usual live-version risk.",
+      "case_tags": ["actual_live_recording", "version_markers", "rock_alternative"],
+      "track": {"album": "Live in Buenos Aires", "artists": ["Coldplay"], "duration_ms": null, "isrc": null, "release_year": 2018, "spotify_track_id": null, "stable_track_id": "s5b1a_020", "title": "Fix You - Live in Buenos Aires"}
+    },
+    {
+      "case_rationale": "Global crossover with capitalization, non-English context, and many dance/performance uploads.",
+      "case_tags": ["global_crossover", "k_pop", "many_performance_variants"],
+      "track": {"album": "PSY 6 (Six Rules), Pt. 1", "artists": ["PSY"], "duration_ms": null, "isrc": null, "release_year": 2012, "spotify_track_id": null, "stable_track_id": "s5b1a_021", "title": "GANGNAM STYLE"}
+    },
+    {
+      "case_rationale": "Comma, apostrophe, and contraction punctuation stress exact deterministic quoting.",
+      "case_tags": ["punctuation_heavy_title", "rock_alternative"],
+      "track": {"album": "From Under the Cork Tree", "artists": ["Fall Out Boy"], "duration_ms": null, "isrc": null, "release_year": 2005, "spotify_track_id": null, "stable_track_id": "s5b1a_022", "title": "Sugar, We're Goin Down"}
+    },
+    {
+      "case_rationale": "The official music video is much longer than the studio track and competes with audio uploads.",
+      "case_tags": ["official_video_duration_differs", "multiple_artists", "pop"],
+      "track": {"album": "The Fame Monster", "artists": ["Lady Gaga", "Beyonc\u00e9"], "duration_ms": null, "isrc": null, "release_year": 2009, "spotify_track_id": null, "stable_track_id": "s5b1a_023", "title": "Telephone"}
+    },
+    {
+      "case_rationale": "All-caps title with terminal punctuation and explicit/clean variants.",
+      "case_tags": ["punctuation_heavy_title", "explicit_version", "hip_hop"],
+      "track": {"album": "DAMN.", "artists": ["Kendrick Lamar"], "duration_ms": null, "isrc": null, "release_year": 2017, "spotify_track_id": null, "stable_track_id": "s5b1a_024", "title": "HUMBLE."}
+    },
+    {
+      "case_rationale": "Recent straightforward pop hit checks that the frozen set is not limited to legacy catalog behavior.",
+      "case_tags": ["straightforward_major_hit", "recent_release", "pop"],
+      "track": {"album": "Short n' Sweet", "artists": ["Sabrina Carpenter"], "duration_ms": null, "isrc": null, "release_year": 2024, "spotify_track_id": null, "stable_track_id": "s5b1a_025", "title": "Espresso"}
+    }
+  ]
+}
