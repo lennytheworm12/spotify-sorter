@@ -59,7 +59,7 @@ Failures never create successful zero vectors. Categories include decode, invali
 
 Schema version: `audio-representation-dataset-v1`.
 
-Each success row contains corpus/version, stable track identity, source and canonical hashes, representation/artifact/vector-contract identities, preprocessing and sampling versions, exact centers, aggregation version, independent encoder provenance JSON, independent fixed-size float32 embeddings and dimensions, status, representation identity, and materialization timestamp.
+Each success row contains corpus/version, stable track identity, source and canonical hashes, representation/artifact/vector-contract identities, preprocessing and sampling versions, exact centers, aggregation version, frozen similarity weights, independent encoder analysis identities and provenance JSON, independent fixed-size float32 embeddings with their SHA-256 hashes and dimensions, status, representation identity, and materialization timestamp.
 
 Rows sort by `(corpus, corpus_version, stable_track_id, representation_identity)`. The default bounded shard size is 10,000 rows. Files are named `part-00000.parquet`, use Zstandard compression, and are accompanied by `dataset_manifest.json` with counts, shard bounds, and SHA-256 hashes. Output replacement is atomic. No pairwise similarities or fused opaque vectors are stored.
 

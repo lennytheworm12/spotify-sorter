@@ -45,14 +45,20 @@ def _schema(clap_dimension: int, muq_dimension: int) -> pa.Schema:
             pa.field("sampling_version", pa.string(), nullable=False),
             pa.field("segment_centers_sec", pa.list_(pa.int16(), 3), nullable=False),
             pa.field("aggregation_version", pa.string(), nullable=False),
+            pa.field("clap_similarity_weight", pa.float64(), nullable=False),
             pa.field("clap_encoder_id", pa.string(), nullable=False),
+            pa.field("clap_analysis_identity", pa.string(), nullable=False),
             pa.field("clap_provenance_json", pa.string(), nullable=False),
             pa.field("clap_embedding", pa.list_(pa.float32(), clap_dimension), nullable=False),
+            pa.field("clap_embedding_sha256", pa.string(), nullable=False),
             pa.field("clap_embedding_dtype", pa.string(), nullable=False),
             pa.field("clap_embedding_dimension", pa.int32(), nullable=False),
+            pa.field("muq_similarity_weight", pa.float64(), nullable=False),
             pa.field("muq_encoder_id", pa.string(), nullable=False),
+            pa.field("muq_analysis_identity", pa.string(), nullable=False),
             pa.field("muq_provenance_json", pa.string(), nullable=False),
             pa.field("muq_embedding", pa.list_(pa.float32(), muq_dimension), nullable=False),
+            pa.field("muq_embedding_sha256", pa.string(), nullable=False),
             pa.field("muq_embedding_dtype", pa.string(), nullable=False),
             pa.field("muq_embedding_dimension", pa.int32(), nullable=False),
             pa.field("status", pa.string(), nullable=False),
@@ -88,8 +94,12 @@ def _validated(records: list[dict], clap_dimension: int, muq_dimension: int) -> 
         if centers != [5, 15, 25]:
             raise Stage5ADatasetError(f"invalid Audio Representation v1 centers: {centers}")
         row["segment_centers_sec"] = centers
-        row["clap_embedding"] = validate_vector(row["clap_embedding"], clap_dimension).tolist()
-        row["muq_embedding"] = validate_vector(row["muq_embedding"], muq_dimension).tolist()
+        clap = validate_vector(row["clap_embedding"], clap_dimension)
+        muq = validate_vector(row["muq_embedding"], muq_dimension)
+        row["clap_embedding"] = clap.tolist()
+        row["muq_embedding"] = muq.tolist()
+        row["clap_embedding_sha256"] = hashlib.sha256(clap.tobytes()).hexdigest()
+        row["muq_embedding_sha256"] = hashlib.sha256(muq.tobytes()).hexdigest()
     return ordered
 
 

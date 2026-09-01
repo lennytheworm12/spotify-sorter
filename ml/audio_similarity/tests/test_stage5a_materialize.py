@@ -80,6 +80,18 @@ def test_resume_then_idempotent_rerun_uses_no_unnecessary_inference(tmp_path):
     rows = read_dataset(output)
     assert len(rows) == 1
     assert rows[0]["segment_centers_sec"] == [5, 15, 25]
+    assert rows[0]["clap_similarity_weight"] == 0.7172981519
+    assert rows[0]["muq_similarity_weight"] == 0.2827018481
+    assert len(rows[0]["clap_analysis_identity"]) == 64
+    assert len(rows[0]["muq_analysis_identity"]) == 64
+    assert len(rows[0]["clap_embedding_sha256"]) == 64
+    assert len(rows[0]["muq_embedding_sha256"]) == 64
+    assert rows[0]["clap_embedding_sha256"] == hashlib.sha256(
+        np.asarray(rows[0]["clap_embedding"], dtype="<f4").tobytes()
+    ).hexdigest()
+    assert rows[0]["muq_embedding_sha256"] == hashlib.sha256(
+        np.asarray(rows[0]["muq_embedding"], dtype="<f4").tobytes()
+    ).hexdigest()
     assert rows[0]["clap_embedding"] != rows[0]["muq_embedding"]
     assert np.linalg.norm(rows[0]["clap_embedding"]) == pytest.approx(1, abs=1e-6)
     assert np.linalg.norm(rows[0]["muq_embedding"]) == pytest.approx(1, abs=1e-6)

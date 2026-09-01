@@ -90,6 +90,10 @@ def _extract_embedding(encoded) -> np.ndarray:
     return np.asarray(getattr(encoded, "embedding", encoded), dtype=np.float32)
 
 
+def _embedding_sha256(vector: np.ndarray) -> str:
+    return hashlib.sha256(np.asarray(vector, dtype="<f4").tobytes()).hexdigest()
+
+
 def _identity_fields(
     contract: RepresentationContract,
     encoder_id: str,
@@ -272,6 +276,7 @@ def _record_from_cache(
     corpus_version: str,
 ) -> dict:
     vectors: dict[str, np.ndarray] = {}
+    analysis_identities: dict[str, str] = {}
     for encoder in contract.encoders:
         analysis_identity = contract.encoder_analysis_identity(
             corpus=corpus,
@@ -285,8 +290,9 @@ def _record_from_cache(
         if vector is None:
             raise Stage5ACacheError("successful track is missing a pooled encoder vector")
         vectors[encoder.encoder_id] = vector
-    clap = contract.encoders[0]
-    muq = contract.encoders[1]
+        analysis_identities[encoder.encoder_id] = analysis_identity
+    clap = contract.encoder("laion_clap")
+    muq = contract.encoder("muq_mulan_large")
     return {
         "corpus": corpus,
         "corpus_version": corpus_version,
@@ -300,14 +306,20 @@ def _record_from_cache(
         "sampling_version": contract.sampling_version,
         "segment_centers_sec": list(contract.centers_sec),
         "aggregation_version": contract.aggregation_version,
+        "clap_similarity_weight": contract.clap_weight,
         "clap_encoder_id": clap.encoder_id,
+        "clap_analysis_identity": analysis_identities[clap.encoder_id],
         "clap_provenance_json": clap.provenance_json,
         "clap_embedding": vectors[clap.encoder_id],
+        "clap_embedding_sha256": _embedding_sha256(vectors[clap.encoder_id]),
         "clap_embedding_dtype": contract.embedding_dtype,
         "clap_embedding_dimension": clap.dimension,
+        "muq_similarity_weight": contract.muq_weight,
         "muq_encoder_id": muq.encoder_id,
+        "muq_analysis_identity": analysis_identities[muq.encoder_id],
         "muq_provenance_json": muq.provenance_json,
         "muq_embedding": vectors[muq.encoder_id],
+        "muq_embedding_sha256": _embedding_sha256(vectors[muq.encoder_id]),
         "muq_embedding_dtype": contract.embedding_dtype,
         "muq_embedding_dimension": muq.dimension,
         "status": "SUCCESS",
@@ -389,9 +401,9 @@ def materialize(
 
         pooled: dict[str, np.ndarray] = {}
         failures: list[tuple[str, str]] = []
-        for index, encoder_contract in enumerate(contract.encoders):
+        for encoder_contract in contract.encoders:
             identity = _identity_fields(contract, encoder_contract.encoder_id, corpus=corpus, corpus_version=corpus_version, track=track, canonical_hash=canonical_hash)
-            encoder_stats = stats.clap if index == 0 else stats.muq
+            encoder_stats = stats.clap if encoder_contract.encoder_id == "laion_clap" else stats.muq
             vector, failure = _encode_one(cache=cache, contract=contract, identity=identity, encoder=encoders[encoder_contract.encoder_id], windows=windows, waveform=waveform, stats=encoder_stats, on_segment_saved=on_segment_saved)
             if vector is not None:
                 pooled[encoder_contract.encoder_id] = vector
@@ -410,7 +422,13 @@ def materialize(
 
     stats.failure_categories = cache.failure_counts()
     try:
-        stats.dataset_manifest = write_dataset(records, output_dir, clap_dimension=contract.encoders[0].dimension, muq_dimension=contract.encoders[1].dimension, rows_per_shard=rows_per_shard)
+        stats.dataset_manifest = write_dataset(
+            records,
+            output_dir,
+            clap_dimension=contract.encoder("laion_clap").dimension,
+            muq_dimension=contract.encoder("muq_mulan_large").dimension,
+            rows_per_shard=rows_per_shard,
+        )
     except Exception as exc:
         raise RuntimeError(f"PERSISTENCE_MATERIALIZATION_FAILURE: {exc}") from exc
     stats.elapsed_seconds = time.perf_counter() - started
