@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "experiment_id": "glap_stage2b_challenger_v1",
+  "audit_date": "2026-09-01",
+  "repository_start_commit": "80074a6271f5f487ec39d3465e26e787578b0bb5",
+  "branch": "ml/glap-stage2b-challenger-v1",
+  "historical_evidence": {
+    "trials": 240,
+    "eligible_binary_trials": 157,
+    "excluded_tie": 64,
+    "excluded_neither": 19,
+    "binary_by_split": {
+      "TRAIN": 67,
+      "VALIDATION": 31,
+      "TEST": 59
+    },
+    "test_queries": 16,
+    "unique_audio_tracks": 246,
+    "source_files_present": 246,
+    "source_sha256_matches": 246,
+    "source_sha256_mismatches": 0,
+    "identity_contradictions": 0
+  },
+  "laion_clap_reproduction": {
+    "method": "load the hash-validated frozen LAION-CLAP parquet, reconstruct cosine A-minus-B margins from trial_keys.json, apply canonical A/B labels and the frozen exact-tie credit, then aggregate by query",
+    "TRAIN": {
+      "pairwise_accuracy": 0.7164179104477612,
+      "query_macro_accuracy": 0.7055555555555555,
+      "binary_trials": 67,
+      "represented_queries": 15
+    },
+    "VALIDATION": {
+      "pairwise_accuracy": 0.7096774193548387,
+      "query_macro_accuracy": 0.7166666666666666,
+      "binary_trials": 31,
+      "represented_queries": 7
+    },
+    "TEST": {
+      "pairwise_accuracy": 0.7627118644067796,
+      "query_macro_accuracy": 0.771875,
+      "binary_trials": 59,
+      "represented_queries": 16,
+      "embedding_margin_ties": 0
+    },
+    "frozen_test_query_macro_accuracy": 0.771875,
+    "exact_match": true,
+    "gate": "PASS"
+  },
+  "stop_condition_triggered": false
+}

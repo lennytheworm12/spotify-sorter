@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "experiment_id": "glap_stage2b_challenger_v1",
+  "contract_status": "FROZEN_PRE_OUTCOME",
+  "frozen_on": "2026-09-01",
+  "research_question": "Does GLAP agree with the existing Stage 2B human similarity choices at least as well as the validated LAION-CLAP representation?",
+  "claim_scope": "frozen_historical_single_reviewer_personal_perceptual_alignment_challenger",
+  "non_goals": [
+    "change Audio Representation v1",
+    "rewrite the historical Stage 2B scientific verdict",
+    "collect new human ratings",
+    "fit any GLAP fusion",
+    "use K=3 or centered30_v1",
+    "tune GLAP on TEST"
+  ],
+  "historical_evidence": {
+    "root": "ml/audio_similarity",
+    "stage2b_config": {
+      "path": "configs/holistic_stage2b_fusion_single_reviewer.yaml",
+      "sha256": "9c3bf274cbea6bc8bdc891c51d0e04289bfb0dc3712aad151d530ef65f9114c5"
+    },
+    "query_manifest": {
+      "path": "reports/holistic_stage1a/frozen_queries.csv",
+      "sha256": "690ef2482d52c3a4ffc195469cc8a1efa6b26bb258d44ba1be90686bb46203ca"
+    },
+    "query_split_manifest": {
+      "path": "reports/holistic_stage2b/query_split_manifest.json",
+      "sha256": "58deca7c46ed5a706f13f826f3b52977151013c08fab62a982f806c5b956cbab"
+    },
+    "trial_manifest": {
+      "path": "reports/holistic_stage2b/trial_keys.json",
+      "sha256": "375f1533d6c1d02edc0ba14b999f32b81709ffdb4a845bd61b5b4283d8ebfc66",
+      "trial_count": 240,
+      "unique_audio_track_count": 246
+    },
+    "canonical_labels": {
+      "path": "reports/holistic_stage2b/canonical_labels.csv",
+      "sha256": "626ce604a265046829ca1ab690e9196af24c08eebf0467874c61aa1d2efc4019",
+      "protocol": "single_reviewer_v2",
+      "binary_denominator_policy": "A_or_B_single_reviewer_only",
+      "binary_count": 157,
+      "binary_by_split": {
+        "TRAIN": 67,
+        "VALIDATION": 31,
+        "TEST": 59
+      },
+      "excluded": {
+        "Tie": 64,
+        "Neither": 19
+      }
+    },
+    "pcm_identity_manifest": {
+      "path": "reports/holistic_stage2b/pcm_identity_manifest.json",
+      "sha256": "01bf2699bdea2cb27c041c0cc015d5f468310e98f2fcbb2c508f1f27e6caa72b"
+    },
+    "laion_clap_embeddings": {
+      "path": "artifacts/holistic_stage1a/laion_clap.parquet",
+      "sha256": "40dd8ca0bb1883cce1af02081b36364160ce90be20dca0167c69c18f8e26471b",
+      "analysis_key": "b0fee4bc6fd340e4",
+      "dimensions": 512
+    },
+    "frozen_test_metrics": {
+      "path": "reports/holistic_stage2b/test_metrics.json",
+      "sha256": "ac7828e73a7055908ac2ba06d33b7c28066549f3a0c14bfcf7f45b717ca2818b",
+      "laion_clap_test_query_macro_accuracy": 0.771875,
+      "historical_verdict": "SINGLE_ENCODER_WINS",
+      "historical_selected_representation": "laion_clap"
+    }
+  },
+  "audio_evidence": {
+    "canonical_preprocessing": "pp-v1",
+    "canonical_audio": "first 30 seconds, mono, 24000 Hz, float32",
+    "historical_excerpt": "center5_v1",
+    "excerpt_start_sample_at_24000_hz": 300000,
+    "excerpt_end_sample_at_24000_hz": 420000,
+    "excerpt_start_seconds": 12.5,
+    "excerpt_end_seconds": 17.5,
+    "excerpt_duration_seconds": 5.0,
+    "glap_input_conversion": "extract the exact frozen center5_v1 excerpt first, then deterministic torchaudio resampling from 24000 Hz mono to 16000 Hz mono",
+    "forbidden_substitutions": [
+      "centered30_v1",
+      "UNIFORM3_DUAL_MEAN",
+      "different source audio",
+      "different interval"
+    ]
+  },
+  "challenger": {
+    "representation_namespace": "glap_stage2b_challenger_v1",
+    "model_name": "GLAP (Generalized Language Audio Pretraining)",
+    "official_repository": "https://github.com/xiaomi-research/dasheng-glap",
+    "repository_revision": "8b323fa057cd1afe8771da8d828dfe244d33fa98",
+    "model_identifier": "mispeech/GLAP",
+    "model_revision": "79b13014511e2d5628cb57c4712a90edd19cebbd",
+    "model_file": "model.safetensors",
+    "model_file_sha256": "ee8fd92bba30d03b4c31c624739b1599a222506f0e045cde7cb51c34e3223864",
+    "model_file_bytes": 3422036400,
+    "tokenizer_file": "sentencepiece.source.256000.model",
+    "tokenizer_file_sha256": "14bb8dfb35c0ffdea7bc01e56cea38b9e3d5efcdcb9c251d6b40538e1aab555a",
+    "remote_model_code_sha256": "c3aac580c92f28ac198c306deb5fa7b12b6390fbc2928b71f1760680d8ee6b43",
+    "remote_config_sha256": "bb3cf4cdd1e16ca02a497d8e198808b042159ae480584205957dc6d509bf50cb",
+    "license": "Apache-2.0",
+    "expected_sample_rate": 16000,
+    "channel_handling": "mono",
+    "embedding_dimensions": 1024,
+    "model_output_normalization": "L2 normalization in the released encode_audio implementation",
+    "stored_dtype": "float32",
+    "inference_api": "transformers.AutoModel.from_pretrained with trust_remote_code=True and the frozen local snapshot"
+  },
+  "runtime": {
+    "python": "3.11.16",
+    "glap-model": "0.0.13",
+    "dasheng": "0.0.9",
+    "torch": "2.6.0+cu124",
+    "torchaudio": "2.6.0+cu124",
+    "transformers": "5.15.1",
+    "numpy": "1.26.4",
+    "soundfile": "0.14.0",
+    "sentencepiece": "0.2.2",
+    "safetensors": "0.8.0",
+    "huggingface-hub": "1.28.0"
+  },
+  "inference": {
+    "gradients": false,
+    "evaluation_mode": true,
+    "deterministic": true,
+    "device": "explicit CLI argument; frozen full run uses cuda",
+    "batch_support": true,
+    "embedding_validation": [
+      "shape is exactly 1024",
+      "all values finite",
+      "positive norm",
+      "near-unit L2 norm"
+    ],
+    "failure_policy": "record FAILED explicitly; never substitute a zero vector",
+    "cache_identity_inputs": [
+      "representation namespace",
+      "model identifier and revision",
+      "model file SHA-256",
+      "source audio SHA-256",
+      "center5_v1 PCM SHA-256",
+      "preprocessing and resampling versions",
+      "embedding dtype and dimensions"
+    ]
+  },
+  "similarity": {
+    "definition": "cosine similarity between independently L2-normalized query and candidate audio embeddings",
+    "margin_orientation": "cosine(query, candidate_A) - cosine(query, candidate_B)",
+    "prediction": "A when margin > 0; B when margin < 0",
+    "exact_tie_credit": 0.5,
+    "tie_policy": "identical to frozen Stage 2B accuracy_contributions"
+  },
+  "metrics": {
+    "primary": "TEST query-macro human agreement",
+    "reported": [
+      "overall pairwise agreement",
+      "query-macro agreement",
+      "TRAIN, VALIDATION, and TEST metrics",
+      "eligible comparison and tie counts",
+      "per-query agreement",
+      "both correct / CLAP-only / GLAP-only / both wrong",
+      "score margins and GLAP-vs-CLAP correlation"
+    ],
+    "paired_difference": "GLAP minus LAION-CLAP per-query accuracy",
+    "bootstrap_unit": "query",
+    "bootstrap_draws": 50000,
+    "bootstrap_seed": 20260901,
+    "confidence": 0.95,
+    "interval": "percentile paired query bootstrap"
+  },
+  "language_audit": {
+    "status": "exploratory_only",
+    "rule": "Use only reliable pre-existing language/vocal-language metadata, or a bounded outcome-blind annotation completed before GLAP-vs-CLAP inspection; otherwise report that Stage 2B cannot support a reliable multilingual subgroup analysis."
+  },
+  "decision_rules": {
+    "GLAP_REJECTED_AS_GLOBAL_CHALLENGER": "GLAP TEST delta is negative with paired 95% CI upper bound below zero, and diagnostics show no compelling outcome-blind subgroup or complementarity case.",
+    "GLAP_COMPETITIVE_BUT_UNPROVEN": "GLAP is not statistically distinguishable from LAION-CLAP at the paired query level and does not satisfy either promotion rule.",
+    "GLAP_PROMOTE_TO_MULTILINGUAL_CHALLENGER": "Overall GLAP is competitive or better, reliable exploratory language evidence exists, and that evidence shows meaningful complementary non-English behavior; this verdict is unavailable when reliable language metadata is absent.",
+    "GLAP_PROMOTE_TO_REPRESENTATION_V2_CHALLENGER": "GLAP TEST delta is positive with paired 95% CI lower bound above zero, query-level results are not dominated by a small pathological subset, and compute/storage/license costs do not negate the measured benefit.",
+    "fallback": "If evidence does not meet a promotion or rejection rule, emit GLAP_COMPETITIVE_BUT_UNPROVEN.",
+    "production_effect": "No verdict changes Audio Representation v1; any migration requires a separate frozen design and experiment."
+  }
+}
