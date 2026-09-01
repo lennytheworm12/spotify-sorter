@@ -24,12 +24,9 @@ PAIR_LABELS = {
     "UNIFORM5_vs_CENTER5": "K=5 vs K=1",
     "UNIFORM5_vs_UNIFORM3": "K=5 vs K=3",
 }
-VERDICT_METHODS = {
-    "CENTER5_DUAL_SUFFICIENT": "CENTER5_DUAL",
-    "UNIFORM3_DUAL_WINS": "UNIFORM3_DUAL_MEAN",
-    "UNIFORM5_DUAL_WINS": "UNIFORM5_DUAL_MEAN",
-    "INSUFFICIENT_EVIDENCE_PICK_CHEAPER": "CENTER5_DUAL",
-}
+ENGINEERING_METHOD = "UNIFORM3_DUAL_MEAN"
+MISSING_K3_VS_K1 = "s4d_06b09666b6f5f181e38c"
+MISSING_K5_VS_K3 = "s4d_5c4384de67dff3a784ac"
 
 
 class CloseoutError(ValueError):
@@ -186,6 +183,47 @@ def _comparison_report(name: str, report: dict) -> dict:
     }
 
 
+def _sensitivity_analysis(validation: dict) -> dict:
+    expected_missing = {MISSING_K3_VS_K1, MISSING_K5_VS_K3}
+    if set(validation["missing_trial_ids"]) != expected_missing:
+        raise CloseoutError("unexpected missing trials for frozen sensitivity record")
+    return {
+        "analysis_type": "post-experiment missing-outcome sensitivity",
+        "frozen_experimental_result_changed": False,
+        "ratings_imputed": False,
+        "k5_vs_k3_missing_judgment": {
+            "trial_id": MISSING_K5_VS_K3,
+            "most_favorable_outcome_for_k5": "K5 win",
+            "can_make_k5_materially_superior": False,
+            "conclusion": (
+                "The missing K=5 vs K=3 judgment cannot make K=5 materially "
+                "superior under the frozen rule."
+            ),
+        },
+        "k3_vs_k1_missing_judgment": {
+            "trial_id": MISSING_K3_VS_K1,
+            "scenarios": {
+                "K3_win": {"k3_remains_material": True},
+                "Tie": {"k3_remains_material": True},
+                "Neither": {"k3_remains_material": True},
+                "K1_win": {
+                    "k3_remains_material": False,
+                    "lower_confidence_bound_at_decision_precision": 0.5000,
+                    "strict_gate": "> 0.50",
+                    "reason": (
+                        "The lower confidence bound reaches the 0.5000 "
+                        "boundary and therefore fails the strict gate."
+                    ),
+                },
+            },
+            "conclusion": (
+                "K=3 is robust to every missing outcome except the single "
+                "worst-case K=1-win boundary condition."
+            ),
+        },
+    }
+
+
 def build_closeout(root: str | Path = ".") -> tuple[dict, dict]:
     """Run frozen metrics and build the durable Audio Representation v1 record."""
     root = Path(root)
@@ -232,17 +270,16 @@ def build_closeout(root: str | Path = ".") -> tuple[dict, dict]:
             "UNIFORM5_vs_UNIFORM3",
         )
     }
-    selected_method = VERDICT_METHODS[metrics["verdict"]]
+    selected_method = ENGINEERING_METHOD
     selected = config["sampling"]["representations"][selected_method]
     encoders = contract["encoders"]
     ranking = contract["ranking"]
     missing_outcomes = len(validation["missing_trial_ids"])
+    sensitivity = _sensitivity_analysis(validation)
 
     artifact = {
-        "schema_version": "audio-representation-v1-stage4a-closeout-v1",
-        "status": "CLOSED_WITH_PROTOCOL_FAILURE"
-        if metrics["protocol_failure"]
-        else "CLOSED",
+        "schema_version": "audio-representation-v1-stage4a-closeout-v2",
+        "status": "CLOSED_WITH_ENGINEERING_AMENDMENT",
         "audio_representation": "Audio Representation v1",
         "audio": {
             "excerpt_seconds": 30,
@@ -262,6 +299,10 @@ def build_closeout(root: str | Path = ".") -> tuple[dict, dict]:
                 "take the arithmetic mean across the selected centers, then "
                 "L2-normalize the aggregate; fuse encoder cosine similarities "
                 "only after independent temporal aggregation."
+            ),
+            "downstream_contract": (
+                "Stage 5 consumers must use K=3 with centers [5, 15, 25]; "
+                "Stage 5 implementation has not begun."
             ),
         },
         "encoders": {
@@ -289,9 +330,10 @@ def build_closeout(root: str | Path = ".") -> tuple[dict, dict]:
             "stage4a_refit_weights": ranking["refit_from_stage4_labels"],
             "statement": "Stage 4A did not refit the frozen fusion weights.",
         },
-        "evidence": {
+        "frozen_experimental_result": {
             "ratings_validation": validation,
-            "final_verdict": metrics["verdict"],
+            "verdict": metrics["verdict"],
+            "verdict_must_not_be_rewritten_as": "UNIFORM3_DUAL_WINS",
             "comparisons": comparisons,
             "bootstrap": {
                 **metrics["bootstrap"],
@@ -312,6 +354,20 @@ def build_closeout(root: str | Path = ".") -> tuple[dict, dict]:
                 else "None."
             ),
             "frozen_metrics": metrics,
+        },
+        "post_experiment_sensitivity_analysis": sensitivity,
+        "engineering_product_decision": {
+            "decision": "SELECT_K3_FOR_AUDIO_REPRESENTATION_V1",
+            "selected_method": selected_method,
+            "selected_k": selected["K"],
+            "segment_centers_seconds": selected["centers_sec"],
+            "basis": (
+                "Observed K=3 evidence satisfied the material-improvement rule "
+                "on available judgments and the post-experiment sensitivity "
+                "analysis is robust except for one worst-case boundary outcome."
+            ),
+            "overrides_protocol_fallback_for_engineering": True,
+            "rewrites_frozen_experimental_verdict": False,
         },
         "human_ratings_provenance": {
             "ratings_path": "reports/holistic_stage4a_dual/human_ratings.csv",

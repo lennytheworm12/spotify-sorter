@@ -3,7 +3,11 @@ from pathlib import Path
 
 import pandas as pd
 
-from audio_similarity.stage4a_dual_closeout import build_closeout, validate_ratings
+from audio_similarity.stage4a_dual_closeout import (
+    build_closeout,
+    sha256,
+    validate_ratings,
+)
 from audio_similarity.stage4a_dual_metrics import summarize
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -127,7 +131,8 @@ def test_frozen_stage4a_closeout_recomputes_exactly():
 
     assert actual_metrics == expected_metrics
     assert actual_closeout == expected_closeout
-    validation = actual_closeout["evidence"]["ratings_validation"]
+    frozen = actual_closeout["frozen_experimental_result"]
+    validation = frozen["ratings_validation"]
     assert validation["frozen_trial_keys"] == 240
     assert validation["latest_designated_reviewer_outcomes"] == 238
     assert validation["missing_trial_ids"] == [
@@ -136,19 +141,62 @@ def test_frozen_stage4a_closeout_recomputes_exactly():
     ]
     assert actual_metrics["protocol_failure"]
     assert actual_metrics["verdict"] == "INSUFFICIENT_EVIDENCE_PICK_CHEAPER"
+    assert frozen["verdict"] == "INSUFFICIENT_EVIDENCE_PICK_CHEAPER"
     assert not actual_metrics["stage4b_triggered"]
-    assert actual_closeout["temporal_sampling"]["selected_k"] == 1
-    assert actual_closeout["temporal_sampling"]["segment_centers_seconds"] == [15]
-    comparisons = actual_closeout["evidence"]["comparisons"]
-    assert comparisons["UNIFORM3_vs_CENTER5"]["usable_judgments"] == 73
-    assert comparisons["UNIFORM3_vs_CENTER5"][
-        "satisfies_material_improvement_rule"
+    assert sha256(report_dir / "final_metrics.json") == (
+        "db16e90134b2388159a65cb24c3fe1a6c92112544ca02449b6b569905642c030"
+    )
+
+    temporal = actual_closeout["temporal_sampling"]
+    assert temporal["selected_method"] == "UNIFORM3_DUAL_MEAN"
+    assert temporal["selected_k"] == 3
+    assert temporal["segment_centers_seconds"] == [5, 15, 25]
+    decision = actual_closeout["engineering_product_decision"]
+    assert decision["overrides_protocol_fallback_for_engineering"]
+    assert not decision["rewrites_frozen_experimental_verdict"]
+
+    sensitivity = actual_closeout["post_experiment_sensitivity_analysis"]
+    assert not sensitivity["ratings_imputed"]
+    assert not sensitivity["k5_vs_k3_missing_judgment"][
+        "can_make_k5_materially_superior"
     ]
-    assert comparisons["UNIFORM5_vs_CENTER5"]["usable_judgments"] == 72
-    assert not comparisons["UNIFORM5_vs_CENTER5"][
-        "satisfies_material_improvement_rule"
+    k3_scenarios = sensitivity["k3_vs_k1_missing_judgment"]["scenarios"]
+    assert k3_scenarios["K3_win"]["k3_remains_material"]
+    assert k3_scenarios["Tie"]["k3_remains_material"]
+    assert k3_scenarios["Neither"]["k3_remains_material"]
+    assert not k3_scenarios["K1_win"]["k3_remains_material"]
+    assert (
+        k3_scenarios["K1_win"][
+            "lower_confidence_bound_at_decision_precision"
+        ]
+        == 0.5000
+    )
+
+    comparisons = frozen["comparisons"]
+    k3_vs_k1 = comparisons["UNIFORM3_vs_CENTER5"]
+    assert k3_vs_k1["usable_judgments"] == 73
+    assert round(k3_vs_k1["query_macro_preference_for_higher_cost"], 4) == 0.6027
+    assert [round(value, 4) for value in k3_vs_k1["query_bootstrap_95_ci"]] == [
+        0.5068,
+        0.6986,
     ]
-    assert comparisons["UNIFORM5_vs_UNIFORM3"]["usable_judgments"] == 75
-    assert not comparisons["UNIFORM5_vs_UNIFORM3"][
-        "satisfies_material_improvement_rule"
-    ]
+    assert round(k3_vs_k1["improvement_over_cheaper"], 4) == 0.1027
+    assert k3_vs_k1["satisfies_material_improvement_rule"]
+
+    k5_vs_k1 = comparisons["UNIFORM5_vs_CENTER5"]
+    assert k5_vs_k1["usable_judgments"] == 72
+    assert k5_vs_k1["query_macro_preference_for_higher_cost"] == 0.5
+    assert not k5_vs_k1["satisfies_material_improvement_rule"]
+
+    k5_vs_k3 = comparisons["UNIFORM5_vs_UNIFORM3"]
+    assert k5_vs_k3["usable_judgments"] == 75
+    assert round(k5_vs_k3["query_macro_preference_for_higher_cost"], 4) == 0.5733
+    assert not k5_vs_k3["satisfies_material_improvement_rule"]
+
+    assert actual_closeout["fusion"]["clap_weight"] == 0.7172981519
+    assert actual_closeout["fusion"]["muq_weight"] == 0.2827018481
+    assert not actual_closeout["fusion"]["stage4a_refit_weights"]
+    assert actual_closeout["claim_boundary"][
+        "stage2b_scientific_conclusion"
+    ] == "SINGLE_ENCODER_WINS / CLAP"
+    assert not actual_closeout["stage4b_triggered"]
