@@ -1,0 +1,13 @@
+{
+  "config_sha256": "e68dfd6ac2a20c6f6d6ee4c2ca6a9f506dc80ddfc9d1264997ee4b778ed57d1a",
+  "credential_available": false,
+  "credential_environment_variable": "FIRECRAWL_API_KEY",
+  "experiment_id": "stage5b1a_firecrawl_youtube_discovery_feasibility",
+  "feasibility_verdict": "PENDING_REAL_DISCOVERY_AND_HUMAN_REVIEW",
+  "firecrawl_requests_made": 0,
+  "manifest_sha256": "f3592bb8c8dea689959a22da222d8b7ce4911c1804392acb501cffe768700c57",
+  "reason": "FIRECRAWL_API_KEY was not present in the execution environment. No fallback discovery provider is permitted for Stage 5B.1A.",
+  "review_template": "reports/stage5b1a/review_template.csv",
+  "schema_version": "stage5b1a-run-status-v1",
+  "status": "IMPLEMENTED_BUT_REAL_DISCOVERY_NOT_RUN"
+}
