@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recording Match Review · Stage 5B.1A2</title>
+<style>
+:root {
+  color-scheme: light;
+  --ink: #142033;
+  --ink-soft: #566176;
+  --paper: #f4f1e9;
+  --sheet: #fffdf7;
+  --navy: #17264a;
+  --cyan: #0c8fa1;
+  --cyan-pale: #d7f0f0;
+  --mango: #f2a73b;
+  --rose: #c94f62;
+  --line: #d8d4c8;
+  --focus: #087d8c;
+  --shadow: 0 18px 55px rgba(23, 38, 74, .13);
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: var(--paper); color: var(--ink); }
+button, textarea, select { font: inherit; }
+button, a, textarea, select { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 3px solid rgba(12, 143, 161, .35); outline-offset: 3px;
+}
+.masthead {
+  min-height: 78px; padding: 16px clamp(18px, 4vw, 54px); background: var(--navy); color: white;
+  display: flex; align-items: center; justify-content: space-between; gap: 28px;
+  border-bottom: 5px solid var(--mango);
+}
+.brand { display: flex; align-items: center; gap: 15px; min-width: 0; }
+.mark {
+  width: 42px; height: 42px; border: 2px solid rgba(255,255,255,.7); border-radius: 50%;
+  display: grid; place-items: center; font: 800 13px/1 ui-monospace, monospace; letter-spacing: -.08em;
+  position: relative; flex: 0 0 auto;
+}
+.mark::after { content: ""; width: 10px; height: 10px; border: 2px solid var(--mango); border-radius: 50%; }
+.kicker { color: #8dd9df; font: 750 11px/1.2 ui-monospace, monospace; text-transform: uppercase; letter-spacing: .16em; }
+h1 { margin: 3px 0 0; font-size: clamp(19px, 2.7vw, 29px); line-height: 1.05; letter-spacing: -.025em; }
+.progress-copy { text-align: right; white-space: nowrap; }
+.progress-copy strong { display: block; font: 780 18px/1.1 ui-monospace, monospace; }
+.progress-copy span { color: #b9c5de; font-size: 12px; }
+.review-tape {
+  height: 30px; display: grid; grid-template-columns: repeat(25, minmax(10px, 1fr)); gap: 3px;
+  padding: 6px clamp(18px, 4vw, 54px); background: #0f1a34;
+}
+.tape-cell { border: 0; border-radius: 1px; background: #34415f; padding: 0; cursor: pointer; position: relative; }
+.tape-cell.done { background: var(--cyan); }
+.tape-cell.current { background: var(--mango); }
+.tape-cell.done.current { box-shadow: inset 0 0 0 2px white; }
+.workspace {
+  width: min(1480px, 100%); margin: 0 auto; padding: clamp(20px, 3vw, 42px) clamp(16px, 3.5vw, 52px) 120px;
+  display: grid; grid-template-columns: minmax(245px, .72fr) minmax(560px, 2fr); gap: clamp(24px, 4vw, 60px);
+}
+.target { align-self: start; position: sticky; top: 24px; }
+.section-label { color: var(--cyan); font: 800 11px/1.2 ui-monospace, monospace; letter-spacing: .14em; text-transform: uppercase; }
+.case-number { margin-top: 16px; color: var(--ink-soft); font: 700 13px/1 ui-monospace, monospace; }
+.target h2 { font-size: clamp(32px, 4.1vw, 57px); letter-spacing: -.055em; line-height: .98; margin: 14px 0 12px; max-width: 9ch; }
+.artist { font-size: 20px; line-height: 1.25; color: var(--navy); font-weight: 700; }
+.release { color: var(--ink-soft); margin-top: 8px; }
+.rationale { border-left: 4px solid var(--mango); margin: 28px 0 22px; padding: 2px 0 2px 15px; color: #414b5e; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { color: #42506a; background: #e5e1d7; padding: 5px 8px; font: 650 10px/1.2 ui-monospace, monospace; text-transform: uppercase; }
+.query { margin-top: 28px; }
+.query code { display: block; margin-top: 8px; color: #4a5364; font: 12px/1.5 ui-monospace, monospace; overflow-wrap: anywhere; }
+.deck { min-width: 0; }
+.deck-head { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+.deck-head h2 { margin: 5px 0 0; font-size: clamp(24px, 3vw, 37px); letter-spacing: -.04em; }
+.deck-nav { display: flex; gap: 7px; }
+.icon-button, .text-button {
+  border: 1px solid #c6c1b4; background: transparent; color: var(--ink); min-height: 42px; cursor: pointer;
+}
+.icon-button { width: 44px; font-size: 18px; }
+.icon-button:hover, .text-button:hover { border-color: var(--cyan); color: var(--cyan); }
+.deck-help { margin: -2px 0 14px; color: var(--ink-soft); font-size: 13px; }
+.candidate-list { border-left: 1px solid var(--line); border-right: 1px solid var(--line); }
+.candidate {
+  display: grid; grid-template-columns: 48px minmax(0, 1fr) auto; gap: 13px; align-items: center;
+  min-height: 96px; padding: 12px 14px; border-bottom: 1px solid var(--line); background: var(--sheet);
+  transition: background-color 140ms ease, box-shadow 140ms ease;
+}
+.candidate:hover { background: #fff; }
+.candidate.chosen { background: var(--cyan-pale); box-shadow: inset 5px 0 0 var(--cyan); }
+.rank {
+  border: 1px solid #b9b4a8; background: transparent; color: var(--ink); width: 42px; height: 42px; border-radius: 50%;
+  font: 800 16px/1 ui-monospace, monospace; cursor: pointer;
+}
+.candidate.chosen .rank { background: var(--cyan); border-color: var(--cyan); color: white; }
+.candidate-copy { min-width: 0; }
+.candidate-title { font-size: 15px; line-height: 1.25; font-weight: 770; overflow-wrap: anywhere; }
+.candidate-meta { color: var(--ink-soft); font: 12px/1.4 ui-monospace, monospace; margin-top: 5px; }
+.candidate-description { color: #5c6575; font-size: 12px; line-height: 1.35; margin-top: 5px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.candidate-tools { display: flex; gap: 7px; align-items: center; }
+.external {
+  border: 1px solid #c6c1b4; background: transparent; color: var(--ink); min-height: 36px; padding: 7px 10px;
+  text-decoration: none; font-size: 12px; font-weight: 750; cursor: pointer;
+}
+.external:hover { background: var(--navy); border-color: var(--navy); color: white; }
+.decision {
+  margin-top: 24px; padding: 20px; background: var(--sheet); border: 1px solid var(--line); box-shadow: 8px 8px 0 #dfdbd0;
+}
+.decision-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.decision h3 { margin: 0; font-size: 18px; }
+.unsaved { color: var(--rose); font: 700 11px/1.2 ui-monospace, monospace; text-transform: uppercase; }
+.outcomes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 14px; }
+.outcome {
+  border: 1px solid #c6c1b4; background: white; color: var(--ink); min-height: 46px; padding: 8px 11px; cursor: pointer; font-size: 13px; font-weight: 750;
+}
+.outcome.selected { background: var(--navy); border-color: var(--navy); color: white; }
+.note-label { display: block; color: var(--ink-soft); font-size: 12px; font-weight: 700; margin: 16px 0 6px; }
+textarea { width: 100%; min-height: 72px; border: 1px solid #c6c1b4; background: #fff; color: var(--ink); padding: 10px; resize: vertical; }
+.save-row { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 13px; }
+.save {
+  border: 0; background: var(--cyan); color: white; min-height: 48px; padding: 10px 24px; font-weight: 800; cursor: pointer;
+}
+.save:hover { background: #087d8c; }
+.save:disabled { opacity: .48; cursor: not-allowed; }
+.shortcut { color: var(--ink-soft); font: 11px/1.4 ui-monospace, monospace; }
+.message { min-height: 20px; color: var(--cyan); font-size: 13px; font-weight: 700; margin-top: 12px; }
+.error { color: var(--rose); }
+.empty-case { padding: 40px; text-align: center; border: 1px solid var(--line); background: var(--sheet); }
+.loading { min-height: 60vh; display: grid; place-items: center; color: var(--ink-soft); }
+.utility-bar {
+  position: fixed; z-index: 5; bottom: 0; left: 0; right: 0; background: rgba(244,241,233,.96); border-top: 1px solid var(--line);
+  padding: 10px clamp(16px, 3.5vw, 52px); display: flex; justify-content: space-between; align-items: center; gap: 14px;
+  backdrop-filter: blur(12px);
+}
+.utility-bar select, .text-button { min-height: 38px; padding: 7px 11px; }
+.utility-right { display: flex; align-items: center; gap: 9px; }
+@media (max-width: 900px) {
+  .workspace { grid-template-columns: 1fr; }
+  .target { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+  .target h2 { max-width: none; }
+  .target .rationale, .target .query { margin-top: 16px; }
+}
+@media (max-width: 640px) {
+  .masthead { align-items: flex-start; }
+  .progress-copy { text-align: left; }
+  .review-tape { gap: 2px; }
+  .workspace { padding-top: 24px; }
+  .target { display: block; }
+  .target h2 { font-size: 38px; }
+  .candidate { grid-template-columns: 42px minmax(0, 1fr); }
+  .candidate-tools { grid-column: 2; }
+  .outcomes { grid-template-columns: 1fr; }
+  .save-row, .utility-bar { align-items: stretch; }
+  .utility-bar { position: static; flex-wrap: wrap; }
+  .utility-right { margin-left: auto; }
+  .shortcut { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="brand"><div class="mark" aria-hidden="true"></div><div><div class="kicker">Stage 5B.1A2 · human verification</div><h1>Recording match review</h1></div></div>
+  <div class="progress-copy"><strong id="progress-number">— / 25</strong><span id="progress-label">Loading review state</span></div>
+</header>
+<nav id="review-tape" class="review-tape" aria-label="Review cases"></nav>
+<div id="app" class="loading" role="status">Loading the frozen discovery experiment…</div>
+<footer class="utility-bar">
+  <label>Show <select id="filter"><option value="all">All 25 cases</option><option value="remaining">Remaining only</option><option value="reviewed">Reviewed only</option></select></label>
+  <div class="utility-right"><a class="text-button" href="/api/export">Export CSV</a><button class="text-button" id="next-remaining">Next remaining →</button></div>
+</footer>
+<script>
+"use strict";
+const app = document.querySelector("#app");
+const tape = document.querySelector("#review-tape");
+const filter = document.querySelector("#filter");
+const progressNumber = document.querySelector("#progress-number");
+const progressLabel = document.querySelector("#progress-label");
+let session = null;
+let index = 0;
+const drafts = new Map();
+
+function node(tag, className, text) {
+  const value = document.createElement(tag);
+  if (className) value.className = className;
+  if (text !== undefined && text !== null) value.textContent = String(text);
+  return value;
+}
+function formatDuration(seconds) {
+  if (seconds === null || seconds === undefined || !Number.isFinite(Number(seconds))) return "duration unavailable";
+  const total = Math.round(Number(seconds));
+  return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, "0")}`;
+}
+function reviewFor(item) {
+  return drafts.get(item.stable_track_id) || { label: item.review.label, note: item.review.note, dirty: false };
+}
+function syncCandidateSelection(label) {
+  document.querySelectorAll(".candidate").forEach(row => {
+    const rank = row.querySelector(".rank");
+    const selected = Boolean(rank) && label === rank.dataset.rank;
+    row.classList.toggle("chosen", selected);
+    if (rank) {
+      rank.setAttribute("aria-pressed", String(selected));
+      rank.title = selected ? `Candidate ${rank.dataset.rank} selected` : `Mark candidate ${rank.dataset.rank} as the correct recording`;
+    }
+  });
+}
+function setDraft(item, changes, rerender = true) {
+  const next = { ...reviewFor(item), ...changes, dirty: true };
+  drafts.set(item.stable_track_id, next);
+  syncCandidateSelection(next.label);
+  if (rerender) {
+    renderDecision(item);
+  } else {
+    const state = document.querySelector(".decision-top span");
+    if (state) { state.className = "unsaved"; state.textContent = "Unsaved changes"; }
+    const save = document.querySelector(".save");
+    if (save) save.disabled = !next.label;
+  }
+  renderTape();
+}
+function visibleIndices() {
+  if (!session) return [];
+  return session.cases.map((item, position) => ({ item, position })).filter(({ item }) => {
+    const reviewed = Boolean(reviewFor(item).label);
+    return filter.value === "all" || (filter.value === "remaining" ? !reviewed : reviewed);
+  }).map(value => value.position);
+}
+function goTo(nextIndex) {
+  index = Math.max(0, Math.min(session.cases.length - 1, nextIndex));
+  render();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+function step(direction) {
+  const visible = visibleIndices();
+  if (!visible.length) return;
+  const at = visible.indexOf(index);
+  const next = at < 0 ? 0 : (at + direction + visible.length) % visible.length;
+  goTo(visible[next]);
+}
+function nextRemaining() {
+  const next = session.cases.findIndex((item, position) => position > index && !reviewFor(item).label);
+  const wrapped = session.cases.findIndex(item => !reviewFor(item).label);
+  if (next >= 0 || wrapped >= 0) goTo(next >= 0 ? next : wrapped);
+}
+function renderTape() {
+  tape.replaceChildren();
+  session.cases.forEach((item, position) => {
+    const button = node("button", "tape-cell");
+    const review = reviewFor(item);
+    if (review.label) button.classList.add("done");
+    if (position === index) button.classList.add("current");
+    button.type = "button";
+    button.title = `${position + 1}. ${item.track.title} — ${review.label || "not reviewed"}${review.dirty ? " (unsaved)" : ""}`;
+    button.setAttribute("aria-label", button.title);
+    button.onclick = () => goTo(position);
+    tape.append(button);
+  });
+  const reviewed = session.cases.filter(item => Boolean(item.review.label)).length;
+  const dirty = [...drafts.values()].filter(value => value.dirty).length;
+  progressNumber.textContent = `${reviewed} / ${session.cases.length}`;
+  progressLabel.textContent = dirty ? `${session.cases.length - reviewed} remaining · ${dirty} unsaved` : `${session.cases.length - reviewed} remaining`;
+}
+function candidateRow(item, candidate) {
+  const review = reviewFor(item);
+  const row = node("article", "candidate");
+  if (review.label === String(candidate.rank)) row.classList.add("chosen");
+  const rank = node("button", "rank", candidate.rank);
+  rank.type = "button";
+  rank.dataset.rank = String(candidate.rank);
+  rank.setAttribute("aria-pressed", String(review.label === String(candidate.rank)));
+  rank.title = review.label === String(candidate.rank) ? `Candidate ${candidate.rank} selected` : `Mark candidate ${candidate.rank} as the correct recording`;
+  rank.onclick = () => setDraft(item, { label: String(candidate.rank) });
+  const copy = node("div", "candidate-copy");
+  copy.append(node("div", "candidate-title", candidate.title || "Untitled YouTube result"));
+  const owner = candidate.channel || candidate.uploader || "channel unavailable";
+  copy.append(node("div", "candidate-meta", `${owner} · ${formatDuration(candidate.duration_seconds)} · ${candidate.youtube_video_id || "no ID"}`));
+  if (candidate.description) copy.append(node("div", "candidate-description", candidate.description));
+  const tools = node("div", "candidate-tools");
+  const external = node("a", "external", "Watch on YouTube ↗");
+  external.href = `https://www.youtube.com/watch?v=${encodeURIComponent(candidate.youtube_video_id || "")}`;
+  external.target = "_blank";
+  external.rel = "noopener noreferrer";
+  tools.append(external);
+  row.append(rank, copy, tools);
+  return row;
+}
+function outcomeButton(item, label, copy) {
+  const button = node("button", "outcome", copy);
+  button.type = "button";
+  if (reviewFor(item).label === label) button.classList.add("selected");
+  button.onclick = () => setDraft(item, { label });
+  return button;
+}
+function renderDecision(item) {
+  const host = document.querySelector("#decision-host");
+  if (!host) return;
+  host.replaceChildren();
+  const review = reviewFor(item);
+  const decision = node("section", "decision");
+  const top = node("div", "decision-top");
+  top.append(node("h3", "", "Record your judgment"), node("span", review.dirty ? "unsaved" : "", review.dirty ? "Unsaved changes" : item.review.label ? "Saved" : "Not reviewed"));
+  const outcomes = node("div", "outcomes");
+  outcomes.append(outcomeButton(item, "NOT_IN_TOP_5", "Correct recording is not in the top 5"), outcomeButton(item, "UNCERTAIN", "Uncertain — needs another look"));
+  const noteLabel = node("label", "note-label", "Optional reviewer note");
+  noteLabel.htmlFor = "review-note";
+  const note = node("textarea");
+  note.id = "review-note";
+  note.maxLength = 2000;
+  note.placeholder = "What made this ambiguous? Which version did you expect?";
+  note.value = review.note;
+  note.oninput = () => setDraft(item, { note: note.value }, false);
+  const saveRow = node("div", "save-row");
+  saveRow.append(node("span", "shortcut", "Keys 1–5 select · N not found · U uncertain · Ctrl/⌘+Enter saves"));
+  const save = node("button", "save", "Save & next remaining");
+  save.type = "button";
+  save.disabled = !review.label || !review.dirty;
+  save.onclick = () => saveReview(item);
+  saveRow.append(save);
+  const message = node("div", "message");
+  message.id = "save-message";
+  message.setAttribute("aria-live", "polite");
+  decision.append(top, outcomes, noteLabel, note, saveRow, message);
+  host.append(decision);
+}
+async function saveReview(item) {
+  const review = reviewFor(item);
+  if (!review.label || !review.dirty) return;
+  const button = document.querySelector(".save");
+  const message = document.querySelector("#save-message");
+  button.disabled = true;
+  button.textContent = "Saving…";
+  try {
+    const response = await fetch("/api/review", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ stable_track_id: item.stable_track_id, label: review.label, note: review.note }) });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error || "Save failed");
+    item.review = data.review;
+    drafts.delete(item.stable_track_id);
+    renderTape();
+    if (session.cases.some(value => !reviewFor(value).label)) nextRemaining();
+    else render();
+  } catch (error) {
+    message.textContent = error.message;
+    message.classList.add("error");
+    button.disabled = false;
+    button.textContent = "Save & next remaining";
+  }
+}
+function render() {
+  if (!session) return;
+  const visible = visibleIndices();
+  if (!visible.includes(index) && visible.length) index = visible[0];
+  app.className = "workspace";
+  app.replaceChildren();
+  renderTape();
+  if (!visible.length) {
+    app.className = "workspace";
+    app.append(node("div", "empty-case", filter.value === "remaining" ? "All 25 cases are reviewed." : "No cases match this filter."));
+    return;
+  }
+  const item = session.cases[index];
+  const target = node("aside", "target");
+  target.append(node("div", "section-label", "Expected Spotify recording"), node("div", "case-number", `CASE ${String(index + 1).padStart(2, "0")} / ${session.cases.length}`), node("h2", "", item.track.title), node("div", "artist", item.track.artists.join(" · ")));
+  const releaseParts = [item.track.album, item.track.release_year].filter(Boolean);
+  target.append(node("div", "release", releaseParts.join(" · ") || "Release details unavailable"));
+  target.append(node("p", "rationale", item.case_rationale));
+  const tags = node("div", "tags");
+  item.case_tags.forEach(value => tags.append(node("span", "tag", value.replaceAll("_", " "))));
+  target.append(tags);
+  const query = node("div", "query");
+  query.append(node("div", "section-label", "Frozen search query"), node("code", "", item.query));
+  target.append(query);
+  const deck = node("main", "deck");
+  const head = node("div", "deck-head");
+  const heading = node("div");
+  heading.append(node("div", "section-label", "yt-dlp search · ordered results"), node("h2", "", "Choose the same recording"));
+  const nav = node("div", "deck-nav");
+  const previous = node("button", "icon-button", "←"); previous.type = "button"; previous.title = "Previous case"; previous.onclick = () => step(-1);
+  const next = node("button", "icon-button", "→"); next.type = "button"; next.title = "Next case"; next.onclick = () => step(1);
+  nav.append(previous, next); head.append(heading, nav); deck.append(head);
+  deck.append(node("p", "deck-help", "Watch a candidate on YouTube, then return here and select its numbered circle. This reviewer does not download media."));
+  const candidates = node("section", "candidate-list");
+  if (item.candidates.length) item.candidates.forEach(candidate => candidates.append(candidateRow(item, candidate)));
+  else candidates.append(node("div", "empty-case", "This search returned no YouTube candidates."));
+  deck.append(candidates);
+  const decisionHost = node("div"); decisionHost.id = "decision-host"; deck.append(decisionHost);
+  app.append(target, deck);
+  renderDecision(item);
+}
+async function load() {
+  try {
+    const response = await fetch("/api/session");
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error || "Could not load review cases");
+    session = data;
+    const firstRemaining = session.cases.findIndex(item => !item.review.label);
+    index = firstRemaining < 0 ? 0 : firstRemaining;
+    render();
+  } catch (error) {
+    app.className = "loading error";
+    app.textContent = error.message;
+  }
+}
+filter.onchange = render;
+document.querySelector("#next-remaining").onclick = nextRemaining;
+document.addEventListener("keydown", event => {
+  if (!session || event.target.matches("textarea, input, select")) {
+    if ((event.ctrlKey || event.metaKey) && event.key === "Enter" && session) {
+      event.preventDefault(); saveReview(session.cases[index]);
+    }
+    return;
+  }
+  const item = session.cases[index];
+  if (/^[1-5]$/.test(event.key)) setDraft(item, { label: event.key });
+  else if (event.key.toLowerCase() === "n") setDraft(item, { label: "NOT_IN_TOP_5" });
+  else if (event.key.toLowerCase() === "u") setDraft(item, { label: "UNCERTAIN" });
+  else if (event.key === "ArrowLeft") step(-1);
+  else if (event.key === "ArrowRight") step(1);
+});
+window.addEventListener("beforeunload", event => { if ([...drafts.values()].some(value => value.dirty)) { event.preventDefault(); event.returnValue = ""; } });
+load();
+</script>
+</body>
+</html>

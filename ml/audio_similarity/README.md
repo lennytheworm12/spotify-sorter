@@ -64,6 +64,21 @@ The heavy suite is the Stage A gate: 3/3 clips must decode, encode, satisfy the
 128-D unit-norm contract, repeat deterministically on the same stack, and give
 ~1.0 factor cosine for duplicate waveforms.
 
+## Stage 5B.1A2 recording-match review
+
+Review the frozen 25-track yt-dlp discovery experiment in the local browser UI:
+
+```bash
+uv run python -m audio_similarity.cli.stage5b1a2_review_server
+# http://127.0.0.1:8767
+```
+
+The page opens each of the five ordered candidates on YouTube and saves explicit
+rank/`NOT_IN_TOP_5`/`UNCERTAIN` judgments plus optional notes directly to
+`reports/stage5b1a_ytdlp/ytdlp_review.csv`. Watching a candidate never labels
+it. Saves are atomic and resume from the existing CSV; use **Export CSV** for a
+portable copy. No audio or video is downloaded by the review server.
+
 ## Stage 2B balanced holistic fusion benchmark
 
 Stage 2B is a stage-gated corrective benchmark over the frozen 40-query

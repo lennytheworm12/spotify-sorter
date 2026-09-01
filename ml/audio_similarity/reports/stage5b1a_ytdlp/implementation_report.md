@@ -1,8 +1,8 @@
 # Stage 5B.1A2 — yt-dlp YouTube search feasibility
 
-Status: **`DISCOVERY_COMPLETE_AWAITING_HUMAN_REVIEW`**
+Status: **`HUMAN_REVIEW_COMPLETE`** — **`PASS`**
 
-The frozen 25-track metadata-only discovery run is complete. No human labels were fabricated, no Recall@K values were calculated, and no PASS/CONDITIONAL/FAIL verdict is claimed.
+The frozen 25-track metadata-only discovery run and subsequent human review are complete. All 25 labels came from the reviewer-supplied CSV; no labels were inferred or fabricated. Recall@5 is 100%, so yt-dlp passes the predeclared feasibility gate for this bounded personal-project experiment.
 
 ## Purpose and provider role
 
@@ -116,13 +116,27 @@ Metadata populated across the 125 candidates:
 
 - Review template: `reports/stage5b1a_ytdlp/review_template.csv`
 - Candidate review: `reports/stage5b1a_ytdlp/ytdlp_review.csv`
-- Completed labels: 0 of 25
+- Completed labels: 25 of 25
 - Allowed labels: `1`, `2`, `3`, `4`, `5`, `NOT_IN_TOP_5`, `UNCERTAIN`
-- Recall@1/@3/@5: pending human review
-- Feasibility verdict: `PENDING_HUMAN_REVIEW`
-- Metrics artifact: intentionally absent until review labels are completed
+- Recall@1: 11/25 = 44%
+- Recall@3: 23/25 = 92%
+- Recall@5: 25/25 = 100%
+- `NOT_IN_TOP_5`: 0
+- `UNCERTAIN`: 0
+- Feasibility verdict: **`PASS`**
+- Metrics artifact: `reports/stage5b1a_ytdlp/ytdlp_metrics.json`
 
-The metric implementation reuses the Firecrawl denominator semantics: confirmed ranks plus `NOT_IN_TOP_5` are evaluable; `UNCERTAIN` and unreviewed rows are excluded. Any incomplete review keeps the verdict pending.
+The metric implementation reuses the Firecrawl denominator semantics: confirmed ranks plus `NOT_IN_TOP_5` are evaluable; `UNCERTAIN` and unreviewed rows are excluded. The imported review artifact matched every frozen non-review field exactly. Reviewer notes were preserved verbatim; 19 are non-empty, including the substantive Telephone duration observation and several `saved` markers.
+
+### Local human-review site
+
+The reviewer can be launched from `ml/audio_similarity` with:
+
+```bash
+uv run python -m audio_similarity.cli.stage5b1a2_review_server
+```
+
+It serves `http://127.0.0.1:8767`, renders the expected Spotify metadata beside all five ordered yt-dlp candidates, opens each exact candidate in YouTube's own player, and records only the reviewer-owned `review_label` and `optional_note` CSV fields. Watching a video never creates a label. Explicit saves use an atomic file replacement and reload the existing CSV before each write, preserving completed work across restarts. The UI also supports keyboard selection, remaining/reviewed filters, progress navigation, notes, and CSV export. The server performs no yt-dlp search, download, encoder, or Stage 5A work.
 
 ## Objective Firecrawl comparison
 
@@ -137,28 +151,28 @@ Artifact: `reports/stage5b1a_ytdlp/provider_comparison.json`
 | Total deduplicated candidates | 76 | 125 |
 | Mean candidates per track | 3.04 | 5.00 |
 
-yt-dlp also supplied uploader/channel/duration for every candidate, fields Firecrawl Search did not supply. This is an operational coverage/metadata comparison only. Both reviews remain unlabeled, so provider correctness and Recall@1/@3/@5 are not compared.
+yt-dlp also supplied uploader/channel/duration for every candidate, fields Firecrawl Search did not supply. yt-dlp correctness is now available, but the historical Firecrawl review remains unlabeled, so correctness cannot yet be compared provider-to-provider.
 
 ## Artifacts and hashes
 
 - Discovery results: `reports/stage5b1a_ytdlp/ytdlp_discovery_results.json` — SHA-256 `63344ac9228c1a2d22846e4cc2621fe717c5f619a21736a00bccf8476463c605`
-- Human review: `reports/stage5b1a_ytdlp/ytdlp_review.csv` — SHA-256 `af6208ac1dd206434ff2f2b4ccdefd96f4ef65d0782e03004d80b77425958071`
-- Provider comparison: `reports/stage5b1a_ytdlp/provider_comparison.json` — SHA-256 `3d3ed0863f64b1266b4f8254f2b7ae7ac187f161c067f6b85a07ceffe8bc7ee2`
-- Run status: `reports/stage5b1a_ytdlp/run_status.json` — SHA-256 `393f31f324fbc7220441c4d19553aa857cb94c524184b9e0b7071ca396179219`
+- Human review: `reports/stage5b1a_ytdlp/ytdlp_review.csv` — SHA-256 `b6f165a3b321fecbd96403970b36eddbcc4c9b8d83d807f67f2e81597a118d9d`
+- Metrics: `reports/stage5b1a_ytdlp/ytdlp_metrics.json` — SHA-256 `87d61c60f1ef64e461fa6c3cfe7c9b1062bd350d46e18a16646322501b2a12aa`
+- Provider comparison: `reports/stage5b1a_ytdlp/provider_comparison.json` — SHA-256 `6b712de0dd63e5bfe269665a59739f73e18c91dc2b5554f2aeacfd59ed8b1659`
+- Run status: `reports/stage5b1a_ytdlp/run_status.json` — SHA-256 `fdec513ad71fc5cbb8726aead82eb36b912071b3b74226748d9824e4827ea28a`
 
 ## Tests
 
-- Focused Stage 5B.1A2: 17 passed, 0 failed
-- Combined Stage 5B.1A2 + existing Stage 5B.1A provider tests: 67 passed, 0 failed
-- Relevant Stage 5A regressions: 14 passed, 0 failed
-- Full non-heavy `ml/audio_similarity` suite: 528 passed, 12 heavy tests deselected, 0 failed
+- Focused Stage 5B.1A2 provider + review-site tests: 26 passed, 0 failed
+- Full non-heavy `ml/audio_similarity` suite: 537 passed, 12 heavy tests deselected, 0 failed
+- Headless Chromium review workflow: desktop and 390px mobile rendering, five-candidate coverage, exact YouTube watch links, visual candidate selection, character-by-character note entry, explicit save/advance, responsive overflow, and console-error checks passed
 
-All normal tests mock the yt-dlp boundary and require no YouTube access.
+The review-site browser check used a disposable CSV copy under `/tmp`. All normal tests mock the yt-dlp boundary and require no YouTube access.
 
 ## Known limitations
 
-- Correctness remains unknown until humans label the candidates; coverage is not Recall.
+- This 25-track feasibility result is an engineering smoke result, not a population estimate.
 - YouTube search results and extraction behavior can vary over time, geography, and IP reputation despite frozen inputs.
 - Flat search deliberately avoids per-video extraction, so availability/live status and some descriptions are absent.
-- This run used no cookies, proxy rotation, browser impersonation, account logic, or Playwright.
+- The discovery run used no cookies, proxy rotation, browser impersonation, account logic, or Playwright. Playwright was used later only to validate the local human-review UI against already-persisted candidates.
 - A successful 25-track run does not prove long-running cold-start reliability; the captured pacing/warning behavior is evidence for later worker design, not that worker itself.

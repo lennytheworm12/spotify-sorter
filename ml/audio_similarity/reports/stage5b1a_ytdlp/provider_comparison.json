@@ -33,7 +33,24 @@
       "role": "preserved_historical_provider_experiment"
     },
     "yt_dlp": {
-      "correctness": null,
+      "correctness": {
+        "feasibility_verdict": "PASS",
+        "recall_at_1": {
+          "denominator": 25,
+          "numerator": 11,
+          "value": 0.44
+        },
+        "recall_at_3": {
+          "denominator": 25,
+          "numerator": 23,
+          "value": 0.92
+        },
+        "recall_at_5": {
+          "denominator": 25,
+          "numerator": 25,
+          "value": 1.0
+        }
+      },
       "coverage": {
         "candidate_count_histogram": {
           "0": 0,
