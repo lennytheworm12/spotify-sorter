@@ -1,0 +1,5458 @@
+{
+  "agreement_definition": "Sol independently labels the resolver-selected source IDEAL or ACCEPTABLE; WRONG is a safety disagreement. Sol and resolver uncertainty are excluded.",
+  "cases": [
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "fHI8X4OXluQ",
+          "o6ytLPKscrU",
+          "4NRXx6U8ABQ"
+        ],
+        "eligible_candidate_count": 4,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 1.039999999999992,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=On The 2020 MTV VMAs",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "The Weeknd - Blinding Lights (Live On The 2020 MTV VMAs)",
+            "video_id": "ewfdRy5jfF8"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.03999999999999204,
+          "ordering_key": [
+            false,
+            0.03999999999999204,
+            -3,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            3,
+            3
+          ],
+          "rank": 3,
+          "source_type": "LYRIC_VIDEO",
+          "title": "The Weeknd - Blinding Lights (Lyrics)"
+        },
+        "selected_video_id": "XwxLwG2_Sxk",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "fHI8X4OXluQ",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_001"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "LIIDh-qI9oI"
+        ],
+        "eligible_candidate_count": 2,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 97.987,
+            "rank": 2,
+            "reasons": [
+              "explicit version conflict: extended: target=none, candidate=extended",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "The Weeknd - Save Your Tears (Extended Remix ft. Ariana Grande)",
+            "video_id": "AGbauxS14yI"
+          },
+          {
+            "duration_delta_seconds": 57.986999999999995,
+            "rank": 4,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "The Weeknd - Save Your Tears (Official Music Video)",
+            "video_id": "XXYlFuWEuKI"
+          },
+          {
+            "duration_delta_seconds": 23.986999999999995,
+            "rank": 5,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "The Weeknd, Ariana Grande, Dua Lipa - Save Your Tears (Mashup)",
+            "video_id": "DPKT4P5UyKI"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.9869999999999948,
+          "ordering_key": [
+            false,
+            0.9869999999999948,
+            -3,
+            0,
+            1,
+            -1.0,
+            -0.7027027027027027,
+            false,
+            4,
+            3
+          ],
+          "rank": 3,
+          "source_type": "LYRIC_VIDEO",
+          "title": "The Weeknd & Ariana Grande - Save Your Tears (Remix) (Lyrics)"
+        },
+        "selected_video_id": "gXXySBAyZVo",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "gXXySBAyZVo",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_002"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "qod03PVTLqk",
+          "Lmo3tegS3vw"
+        ],
+        "eligible_candidate_count": 3,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 658.265,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: extended: target=none, candidate=extended",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Elton John Dua Lipa - Cold Heart PNAU Remix Extended",
+            "video_id": "lImsPi5RGGo"
+          },
+          {
+            "duration_delta_seconds": 104.26499999999999,
+            "rank": 5,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=Dodger Stadium, USA / 2022",
+              "target version evidence is absent",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Elton John, Dua Lipa - Cold Heart (Live From Dodger Stadium, USA / 2022)",
+            "video_id": "mSFPhdyfY2A"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.26499999999998636,
+          "ordering_key": [
+            false,
+            0.26499999999998636,
+            -1,
+            1,
+            1,
+            -1.0,
+            -0.6896551724137931,
+            false,
+            2,
+            2
+          ],
+          "rank": 2,
+          "source_type": "OTHER",
+          "title": "Elton John & Dua Lipa - Cold Heart (PNAU Remix)"
+        },
+        "selected_video_id": "oGZ1PVwJyPQ",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "oGZ1PVwJyPQ",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_003"
+    },
+    {
+      "comparison_class": "UNSAFE_SELECTION_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "lPsO2cIZCtU",
+          "XPbN2pQXe1o"
+        ],
+        "eligible_candidate_count": 3,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 6.087999999999994,
+            "rank": 2,
+            "reasons": [
+              "explicit version conflict: radio_edit: target=none, candidate=radio edit",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Lana Del Rey - Summertime Sadness (Cedric Gervais Remix) [2013 Radio Edit]",
+            "video_id": "wlw-9R80U5E"
+          },
+          {
+            "duration_delta_seconds": 198.088,
+            "rank": 5,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Summertime Sadness [Lana Del Rey vs. Cedric Gervais]",
+            "video_id": "4YAuhS8EEz4"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 63.087999999999994,
+          "ordering_key": [
+            false,
+            63.087999999999994,
+            -1,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            2,
+            4
+          ],
+          "rank": 4,
+          "source_type": "OTHER",
+          "title": "Lana Del Rey - Summertime Sadness (Cedric Remix) (Bass Boosted)"
+        },
+        "selected_video_id": "c4uFoSPlFh0",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "WRONG",
+      "sol_selected_video_id": "wlw-9R80U5E",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_004"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "llBfELHME-U",
+          "u3VFzuUiTGw",
+          "0rgwj1n637Y"
+        ],
+        "eligible_candidate_count": 4,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 39.06700000000001,
+            "rank": 1,
+            "reasons": [
+              "explicit version conflict: content_rating: target=none, candidate=explicit",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Mike Posner - I Took A Pill In Ibiza (Seeb Remix) (Explicit)",
+            "video_id": "foE1mO2yM04"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.06700000000000728,
+          "ordering_key": [
+            false,
+            0.06700000000000728,
+            -5,
+            0,
+            1,
+            -1.0,
+            -0.21621621621621623,
+            false,
+            3,
+            3
+          ],
+          "rank": 3,
+          "source_type": "ART_TRACK_TOPIC",
+          "title": "I Took A Pill In Ibiza (Seeb Remix)"
+        },
+        "selected_video_id": "Og_tTWbZP9Q",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "Og_tTWbZP9Q",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_005"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "umAL-6-j1Ew"
+        ],
+        "eligible_candidate_count": 2,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 178.77300000000002,
+            "rank": 3,
+            "reasons": [
+              "explicit version conflict: radio_edit: target=none, candidate=radio edit",
+              "target-relative version conflict"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Yeah Yeah Yeahs - Heads Will Roll (A-Trak Remix Radio Edit) (Lyrics)",
+            "video_id": "hRxv0EmgEaY"
+          },
+          {
+            "duration_delta_seconds": 179.77300000000002,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: radio_edit: target=none, candidate=radio edit",
+              "target-relative version conflict"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Heads Will Roll (A-Trak Remix Radio Edit)",
+            "video_id": "2Z9WTSGfWzE"
+          },
+          {
+            "duration_delta_seconds": 1.2269999999999754,
+            "rank": 5,
+            "reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "[Project X Movie Music] Heads Will Roll (A-Trak Remix) - Yeah Yeah Yeahs",
+            "video_id": "O3c4dPxN1qM"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.22699999999997544,
+          "ordering_key": [
+            false,
+            0.22699999999997544,
+            -5,
+            0,
+            0,
+            -1.0,
+            -0.35294117647058826,
+            false,
+            2,
+            1
+          ],
+          "rank": 1,
+          "source_type": "ART_TRACK_TOPIC",
+          "title": "Heads Will Roll (A-Trak Remix)"
+        },
+        "selected_video_id": "XEA6-RlhSb4",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "XEA6-RlhSb4",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_006"
+    },
+    {
+      "comparison_class": "RESOLVER_UNCERTAIN",
+      "resolver": {
+        "eligible_candidate_count": 0,
+        "production_auto_match_enabled": false,
+        "reason": "no candidate has exact title + explicit performer + resolved version evidence",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 4.586999999999989,
+            "rank": 1,
+            "reasons": [
+              "explicit version conflict: remix: target=none, candidate=Robin Schulz",
+              "primary performer is not explicitly matched",
+              "target version evidence is absent",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Lilly Wood & The Prick and Robin Schulz - Prayer In C (Robin Schulz Remix) (Official)",
+            "video_id": "fiore9Z5iUg"
+          },
+          {
+            "duration_delta_seconds": 0.5869999999999891,
+            "rank": 2,
+            "reasons": [
+              "primary performer is not explicitly matched"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Prayer in C (Robin Schulz Radio Edit)",
+            "video_id": "20NRv-A_a4c"
+          },
+          {
+            "duration_delta_seconds": 0.5869999999999891,
+            "rank": 3,
+            "reasons": [
+              "primary performer is not explicitly matched"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Prayer in C (Robin Schulz Radio Edit)",
+            "video_id": "n8vmGiZ-YhU"
+          },
+          {
+            "duration_delta_seconds": 3.586999999999989,
+            "rank": 4,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "01 lilly wood and the prick and robin schulz   prayer in c robin schulz radio edit",
+            "video_id": "Xin1tuov224"
+          },
+          {
+            "duration_delta_seconds": 133.587,
+            "rank": 5,
+            "reasons": [
+              "explicit version conflict: remix: target=none, candidate=Robin Schulz",
+              "primary performer is not explicitly matched",
+              "target version evidence is absent",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Lilly Wood & The Prick and Robin Schulz - Prayer In C (Robin Schulz Remix)",
+            "video_id": "B4HvaBWCYVc"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "sol_selected_video_id": "20NRv-A_a4c",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_007"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "pyHSdm_HkqE",
+          "DoCPvMCNnbM",
+          "rHUJdW68la4",
+          "BlRsJbK3wGg"
+        ],
+        "eligible_candidate_count": 5,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.13100000000000023,
+          "ordering_key": [
+            false,
+            0.13100000000000023,
+            -4,
+            0,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            1,
+            1
+          ],
+          "rank": 1,
+          "source_type": "OFFICIAL_AUDIO",
+          "title": "Disturbed - The Sound Of Silence (CYRIL Remix) [Official Audio]"
+        },
+        "selected_video_id": "uIBJJ3M76Mg",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "uIBJJ3M76Mg",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_008"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "loSuMqwQA38",
+          "PyAUbttMK4Y"
+        ],
+        "eligible_candidate_count": 3,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 0.9329999999999927,
+            "rank": 2,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "Lil Nas X - Old Town Road (Official Video) ft. Billy Ray Cyrus",
+            "video_id": "r7qovpFAGrQ"
+          },
+          {
+            "duration_delta_seconds": 151.933,
+            "rank": 5,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Lil Nas X - Old Town Road (Official Movie) ft. Billy Ray Cyrus",
+            "video_id": "w2Ov5jzm3j8"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.9329999999999927,
+          "ordering_key": [
+            false,
+            0.9329999999999927,
+            -1,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            3,
+            3
+          ],
+          "rank": 3,
+          "source_type": "OTHER",
+          "title": "Lil Nas X - Old Town Road (feat. Billy Ray Cyrus) [Remix]"
+        },
+        "selected_video_id": "7ysFgElQtjI",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "7ysFgElQtjI",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_009"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "FatzlG2DNdY"
+        ],
+        "eligible_candidate_count": 2,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 57.998999999999995,
+            "rank": 3,
+            "reasons": [
+              "explicit version conflict: remix: target=Savage (feat. Beyoncé, candidate=Major Lazer",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OFFICIAL_AUDIO",
+            "title": "Megan Thee Stallion - Savage (Major Lazer Remix) [Official Audio]",
+            "video_id": "-EG4_0I22rw"
+          },
+          {
+            "duration_delta_seconds": 25.998999999999995,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: remix: target=Savage (feat. Beyoncé, candidate=Girls In Hood & Savage Performance [BET Awards 2020",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Megan Thee Stallion - Girls In The Hood & Savage Remix Performance [BET Awards 2020]",
+            "video_id": "3XJiirJIwXQ"
+          },
+          {
+            "duration_delta_seconds": 3.9989999999999952,
+            "rank": 5,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=the 63rd GRAMMYs ®️ 2021; remix: target=Savage (feat. Beyoncé, candidate=Body / Savage [Live from 63rd GRAMMYs ®️ 2021",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Megan Thee Stallion - Body / Savage Remix [Live from the 63rd GRAMMYs ®️ 2021]",
+            "video_id": "VFdcOboiVOQ"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.0010000000000047748,
+          "ordering_key": [
+            false,
+            0.0010000000000047748,
+            -4,
+            0,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            1,
+            1
+          ],
+          "rank": 1,
+          "source_type": "OFFICIAL_AUDIO",
+          "title": "Megan Thee Stallion - Savage Remix (feat. Beyoncé) [Official Audio]"
+        },
+        "selected_video_id": "lEIqjoO0-Bs",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "lEIqjoO0-Bs",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_010"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [],
+        "eligible_candidate_count": 1,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 3.4499999999999886,
+            "rank": 1,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Ed Sheeran - Perfect ft Beyoncé (Lyrics)",
+            "video_id": "o0vfVTzdLsY"
+          },
+          {
+            "duration_delta_seconds": 1.4499999999999886,
+            "rank": 2,
+            "reasons": [
+              "explicit version conflict: karaoke: target=none, candidate=Karaoke Version",
+              "normalized core title is not exact",
+              "primary performer is not explicitly matched",
+              "target-relative version conflict"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Perfect (Karaoke Version)",
+            "video_id": "yx8NVHKJqPs"
+          },
+          {
+            "duration_delta_seconds": 4.449999999999989,
+            "rank": 3,
+            "reasons": [
+              "explicit version conflict: karaoke: target=none, candidate=Ed Sheeran & Beyoncé | Karaoke Version | KaraFun",
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Perfect Duet - Ed Sheeran & Beyoncé | Karaoke Version | KaraFun",
+            "video_id": "qegLWI99Wg0"
+          },
+          {
+            "duration_delta_seconds": 32.44999999999999,
+            "rank": 5,
+            "reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "Perfect Duet - Ed Sheeran & Beyonce ('50s Prom Cover) ft. Mario Jose, India Carney & Dave Koz",
+            "video_id": "zlU5jsQi25E"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.44999999999998863,
+          "ordering_key": [
+            false,
+            0.44999999999998863,
+            -3,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            2,
+            4
+          ],
+          "rank": 4,
+          "source_type": "LYRIC_VIDEO",
+          "title": "Ed Sheeran - Perfect Duet (with Beyoncé) (Lyrics)"
+        },
+        "selected_video_id": "4DFV8XXxmLY",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "4DFV8XXxmLY",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_011"
+    },
+    {
+      "comparison_class": "SOL_UNCERTAIN_ON_RESOLVER_SELECTION",
+      "resolver": {
+        "alternative_video_ids": [
+          "N000qglmmY0",
+          "WHuBW3qKm9g",
+          "TUVcZfQe-Kw"
+        ],
+        "eligible_candidate_count": 4,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 34.93600000000001,
+            "rank": 4,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "Dua Lipa - ‘Levitating’ at the AMAs 2020",
+            "video_id": "57bNHupO3MU"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.06399999999999295,
+          "ordering_key": [
+            false,
+            0.06399999999999295,
+            -3,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            5,
+            5
+          ],
+          "rank": 5,
+          "source_type": "LYRIC_VIDEO",
+          "title": "Dua Lipa - Levitating (Lyrics)"
+        },
+        "selected_video_id": "ovG2QwiObhk",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "UNCERTAIN",
+      "sol_selected_video_id": "TUVcZfQe-Kw",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [
+        "ovG2QwiObhk"
+      ],
+      "stable_track_id": "s5b1b_012"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [],
+        "eligible_candidate_count": 1,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 0.6800000000000068,
+            "rank": 1,
+            "reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "The 1975 – About You Live from Madison Square Garden | Amazon Music",
+            "video_id": "28Lj4qt3lCc"
+          },
+          {
+            "duration_delta_seconds": 6.680000000000007,
+            "rank": 2,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "The 1975 - About You (Live at Madison Square Garden 2022) PRO SHOT FULL HD",
+            "video_id": "0fedQNu85M0"
+          },
+          {
+            "duration_delta_seconds": 4.319999999999993,
+            "rank": 4,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "The 1975  - About You (Radio 1's Big Weekend 2023)",
+            "video_id": "sNJjT9yorqo"
+          },
+          {
+            "duration_delta_seconds": 3.319999999999993,
+            "rank": 5,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "The 1975 - About You (Official)",
+            "video_id": "tGv7CUutzqU"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 10.680000000000007,
+          "ordering_key": [
+            false,
+            10.680000000000007,
+            -1,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            3,
+            3
+          ],
+          "rank": 3,
+          "source_type": "OTHER",
+          "title": "The 1975 - About You (Live from Madison Square Garden)"
+        },
+        "selected_video_id": "2Swd2Fpqj4Q",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "28Lj4qt3lCc",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_013"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [],
+        "eligible_candidate_count": 1,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 72.507,
+            "rank": 2,
+            "reasons": [
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Yellow, Coldplay en Buenos Aires  02/11/22 #coldplay #yellow #argentina",
+            "video_id": "iSdjJfRx0ag"
+          },
+          {
+            "duration_delta_seconds": 37.492999999999995,
+            "rank": 3,
+            "reasons": [
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Coldplay - Yellow [4K] - Buenos Aires, Argentina (05/11/2022)",
+            "video_id": "E7mUCJy5LdU"
+          },
+          {
+            "duration_delta_seconds": 135.493,
+            "rank": 4,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "Coldplay - Yellow (Live in Buenos Aires) 29/10/2022",
+            "video_id": "VFaxbUeg_WY"
+          },
+          {
+            "duration_delta_seconds": 105.507,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Coldplay - Yellow [4K] - Buenos Aires, Argentina (08/11/2022)",
+            "video_id": "t9mIHj1DKi4"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 61.507000000000005,
+          "ordering_key": [
+            false,
+            61.507000000000005,
+            -5,
+            0,
+            1,
+            -1.0,
+            -0.17142857142857143,
+            false,
+            1,
+            1
+          ],
+          "rank": 1,
+          "source_type": "ART_TRACK_TOPIC",
+          "title": "Yellow (Live in Buenos Aires)"
+        },
+        "selected_video_id": "tLB9dRq0BKA",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "tLB9dRq0BKA",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_014"
+    },
+    {
+      "comparison_class": "RESOLVER_UNCERTAIN",
+      "resolver": {
+        "eligible_candidate_count": 0,
+        "production_auto_match_enabled": false,
+        "reason": "no candidate has exact title + explicit performer + resolved version evidence",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 62.90699999999998,
+            "rank": 1,
+            "reasons": [
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Adele performing Someone Like You | BRIT Awards 2011",
+            "video_id": "qemWRToNYJY"
+          },
+          {
+            "duration_delta_seconds": 198.90699999999998,
+            "rank": 2,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Adele - Someone Like You",
+            "video_id": "LLoD6NOchXs"
+          },
+          {
+            "duration_delta_seconds": 527.9069999999999,
+            "rank": 3,
+            "reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact",
+              "primary performer is not explicitly matched",
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Sexy Vibrato! How To Get It! How To Use It To Your Advantage! Ken Tamplin Vocal Academy 4K",
+            "video_id": "5IoNZbJzB6I"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "sol_selected_video_id": "qemWRToNYJY",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [
+        "LLoD6NOchXs"
+      ],
+      "stable_track_id": "s5b1b_015"
+    },
+    {
+      "comparison_class": "RESOLVER_UNCERTAIN",
+      "resolver": {
+        "eligible_candidate_count": 0,
+        "production_auto_match_enabled": false,
+        "reason": "no candidate has exact title + explicit performer + resolved version evidence",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 10.733000000000004,
+            "rank": 1,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "A-ha - Take on Me (MTV Unplugged - Summer Solstice) [Tradução]",
+            "video_id": "hyPudrPNSuQ"
+          },
+          {
+            "duration_delta_seconds": 8.266999999999996,
+            "rank": 2,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Take On Me (MTV Unplugged)",
+            "video_id": "92SGEe8l2Ng"
+          },
+          {
+            "duration_delta_seconds": 22.733000000000004,
+            "rank": 3,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Take On Me (MTV Unplugged / Edit)",
+            "video_id": "jg5mXCCbd0U"
+          },
+          {
+            "duration_delta_seconds": 31.733000000000004,
+            "rank": 4,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "a-ha ➡️  Take On Me  (Unplugged)ᴴᴰ",
+            "video_id": "Z1b-ITPXmdY"
+          },
+          {
+            "duration_delta_seconds": 215.733,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact",
+              "primary performer is not explicitly matched"
+            ],
+            "source_type": "OTHER",
+            "title": "'Take On Me' (MTV Unplugged)",
+            "video_id": "m7VvOziBbT8"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "sol_selected_video_id": "92SGEe8l2Ng",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [
+        "Z1b-ITPXmdY"
+      ],
+      "stable_track_id": "s5b1b_016"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "5oWyMakvQew"
+        ],
+        "eligible_candidate_count": 2,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 6.199999999999989,
+            "rank": 2,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "Fleetwood Mac - Dreams (Official Music Video) [4K]",
+            "video_id": "Y3ywicffOj4"
+          },
+          {
+            "duration_delta_seconds": 0.19999999999998863,
+            "rank": 4,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Fleetwood Mac - Dreams (HQ)",
+            "video_id": "4ceYRvXZuBE"
+          },
+          {
+            "duration_delta_seconds": 0.19999999999998863,
+            "rank": 5,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OFFICIAL_AUDIO",
+            "title": "Fleetwood Mac - Dreams (Official Audio)",
+            "video_id": "PgagPdVM7bk"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.19999999999998863,
+          "ordering_key": [
+            false,
+            0.19999999999998863,
+            -5,
+            0,
+            0,
+            -1.0,
+            -0.24242424242424243,
+            false,
+            1,
+            3
+          ],
+          "rank": 3,
+          "source_type": "ART_TRACK_TOPIC",
+          "title": "Dreams (2004 Remaster)"
+        },
+        "selected_video_id": "swJOIjjW69U",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "5oWyMakvQew",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_017"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [],
+        "eligible_candidate_count": 1,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 1.839999999999975,
+            "rank": 2,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Running Up That Hill (A Deal With God)",
+            "video_id": "D1Fw6CbGAX4"
+          },
+          {
+            "duration_delta_seconds": 0.160000000000025,
+            "rank": 3,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Kate Bush - Running Up That Hill (A Deal With God) (Audio)",
+            "video_id": "Cj5zLX63_4c"
+          },
+          {
+            "duration_delta_seconds": 7.839999999999975,
+            "rank": 4,
+            "reasons": [
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "Kate Bush - Running Up That Hill (Music Video) | Max's Song | Stranger Things Season 4 Soundtrack MV",
+            "video_id": "2pdkKo-Cj5Y"
+          },
+          {
+            "duration_delta_seconds": 8.160000000000025,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "Kate Bush -- \"Running Up That Hill (A Deal With God)\" (2018 remaster)",
+            "video_id": "wynsPAalArE"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.160000000000025,
+          "ordering_key": [
+            false,
+            0.160000000000025,
+            -5,
+            1,
+            0,
+            -1.0,
+            -0.1694915254237288,
+            false,
+            2,
+            1
+          ],
+          "rank": 1,
+          "source_type": "ART_TRACK_TOPIC",
+          "title": "Running Up That Hill (A Deal With God) (2018 Remaster)"
+        },
+        "selected_video_id": "HYwNM1t9ltI",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "HYwNM1t9ltI",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_018"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "ShjjS8Kev4U"
+        ],
+        "eligible_candidate_count": 2,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 2.8530000000000086,
+            "rank": 3,
+            "reasons": [
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "New Order - Blue Monday 88 (Official Video), Full HD (Digitally Remastered and Upscaled)",
+            "video_id": "YOSl6FT5OkY"
+          },
+          {
+            "duration_delta_seconds": 27.85300000000001,
+            "rank": 4,
+            "reasons": [
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "New Order  -  Blue Monday '88 (HQ) (HD) mp3",
+            "video_id": "OsTahpjMQDM"
+          },
+          {
+            "duration_delta_seconds": 179.147,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Blue Monday ('88) (12\" Version)",
+            "video_id": "DPQI0H-CZDE"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 3.1469999999999914,
+          "ordering_key": [
+            false,
+            3.1469999999999914,
+            -5,
+            0,
+            0,
+            -1.0,
+            -0.21621621621621623,
+            false,
+            1,
+            1
+          ],
+          "rank": 1,
+          "source_type": "ART_TRACK_TOPIC",
+          "title": "Blue Monday '88 (2015 Remaster)"
+        },
+        "selected_video_id": "46ZIiCYxccA",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "46ZIiCYxccA",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [
+        "YOSl6FT5OkY"
+      ],
+      "stable_track_id": "s5b1b_019"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [],
+        "eligible_candidate_count": 1,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 24.079999999999984,
+            "rank": 2,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "NIRVANA - \"SMELLS LIKE TEEN SPIRIT\" - REMASTERED HQ AUDIO* / 4K VIDEO",
+            "video_id": "_FtTXM63wN0"
+          },
+          {
+            "duration_delta_seconds": 0.07999999999998408,
+            "rank": 3,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Nirvana - Smells Like Teen Spirit (Remastered)",
+            "video_id": "ehoM8CQrkao"
+          },
+          {
+            "duration_delta_seconds": 22.920000000000016,
+            "rank": 4,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Nirvana - Smells Like Teen Spirit (AI UPSCALED 4K 60FPS)",
+            "video_id": "0zECaCDpgJE"
+          },
+          {
+            "duration_delta_seconds": 0.07999999999998408,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Nirvana - Smells Like Teen Spirit. Hi Res Audio played in 4k. Highest audio quality possible on YT",
+            "video_id": "ERDELSJ7xAs"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.9200000000000159,
+          "ordering_key": [
+            false,
+            0.9200000000000159,
+            -1,
+            1,
+            0,
+            -1.0,
+            -1.0,
+            false,
+            1,
+            1
+          ],
+          "rank": 1,
+          "source_type": "OTHER",
+          "title": "NIRVANA - Smells Like Teen Spirit (Remastered 2021) (HQ)"
+        },
+        "selected_video_id": "haJXClyz6II",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "haJXClyz6II",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [
+        "ERDELSJ7xAs",
+        "_FtTXM63wN0"
+      ],
+      "stable_track_id": "s5b1b_020"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [],
+        "eligible_candidate_count": 1,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 5.234000000000009,
+            "rank": 1,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Taylor Swift - Love Story (Taylor’s Version) [Official Lyric Video]",
+            "video_id": "aXzVF3XeS8M"
+          },
+          {
+            "duration_delta_seconds": 2.234000000000009,
+            "rank": 2,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Taylor Swift - Love Story (Taylor’s Version) (Lyrics)",
+            "video_id": "26rLLPVaxuk"
+          },
+          {
+            "duration_delta_seconds": 0.23400000000000887,
+            "rank": 3,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Taylor Swift - Love Story (Taylor’s Version) (Official HD Audio)",
+            "video_id": "aGgnOChmbCo"
+          },
+          {
+            "duration_delta_seconds": 8.234000000000009,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "※(Taylor Swift - Love Story) (Taylor's Version ) Lyric / Love Story (Music Video ) MTV",
+            "video_id": "CDlE0Jn5sns"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 8.234000000000009,
+          "ordering_key": [
+            false,
+            8.234000000000009,
+            -2,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            3,
+            4
+          ],
+          "rank": 4,
+          "source_type": "OFFICIAL_MUSIC_VIDEO",
+          "title": "Taylor Swift - Love Story (Taylor's Version) (Music Video 4K)"
+        },
+        "selected_video_id": "GtjGLR64IBc",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "aXzVF3XeS8M",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_021"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "BZ-rLBkUZf4"
+        ],
+        "eligible_candidate_count": 2,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 2.9740000000000464,
+            "rank": 3,
+            "reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "All Too Well (10 Minute Version) (Taylor's Version) (From The Vault) [CLEAN VERSION] - Taylor Swift",
+            "video_id": "8z_UFBoTgvI"
+          },
+          {
+            "duration_delta_seconds": 282.97400000000005,
+            "rank": 4,
+            "reasons": [
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Taylor Swift - All Too Well: The Short Film",
+            "video_id": "tollGa3S0o8"
+          },
+          {
+            "duration_delta_seconds": 8.025999999999954,
+            "rank": 5,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Taylor Swift - All Too Well (10 Minute Version) (B95)",
+            "video_id": "YNrIWU0URtI"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.025999999999953616,
+          "ordering_key": [
+            false,
+            0.025999999999953616,
+            -5,
+            1,
+            1,
+            -1.0,
+            -0.2972972972972973,
+            false,
+            2,
+            2
+          ],
+          "rank": 2,
+          "source_type": "ART_TRACK_TOPIC",
+          "title": "All Too Well (10 Minute Version) (Taylor's Version) (From The Vault)"
+        },
+        "selected_video_id": "aPnqx56V8-0",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "aPnqx56V8-0",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_022"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "RrjEgZbN4wc",
+          "2JgvVfOfoWI",
+          "2c3VO1u2acY"
+        ],
+        "eligible_candidate_count": 4,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 0.1670000000000016,
+            "rank": 5,
+            "reasons": [
+              "explicit version conflict: mix: target=none, candidate=2014",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Taylor Swift - Style (Taylor's Version) (2014 Mix)",
+            "video_id": "qTAGMoBn-p4"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.8329999999999984,
+          "ordering_key": [
+            false,
+            0.8329999999999984,
+            -3,
+            0,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            4,
+            4
+          ],
+          "rank": 4,
+          "source_type": "LYRIC_VIDEO",
+          "title": "Taylor Swift - Style (Taylor's Version) (Lyric Video)"
+        },
+        "selected_video_id": "R1X5qyp5ung",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "2JgvVfOfoWI",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_023"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "WnblENPgF9A",
+          "v38zVbLYcHU",
+          "pUK6HlzNWEg"
+        ],
+        "eligible_candidate_count": 4,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 17.333,
+            "rank": 5,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=The Apollo Theater",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Sam Smith - Latch - Acoustic (Live At The Apollo Theater)",
+            "video_id": "ME3LqHxa8Ds"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.6670000000000016,
+          "ordering_key": [
+            false,
+            0.6670000000000016,
+            -5,
+            1,
+            1,
+            -1.0,
+            -0.17391304347826086,
+            false,
+            2,
+            2
+          ],
+          "rank": 2,
+          "source_type": "ART_TRACK_TOPIC",
+          "title": "Latch (Acoustic)"
+        },
+        "selected_video_id": "YVZZFZCq-Cw",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "YVZZFZCq-Cw",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_024"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [],
+        "eligible_candidate_count": 1,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 79.733,
+            "rank": 2,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=Howard Stern",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Foo Fighters - \"Everlong\" (Acoustic) Live at Howard Stern",
+            "video_id": "0-89uZOIFok"
+          },
+          {
+            "duration_delta_seconds": 435.267,
+            "rank": 3,
+            "reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Foo Fighters | Everlong (Acoustic - March 20, 2021)",
+            "video_id": "vLkBybsH73k"
+          },
+          {
+            "duration_delta_seconds": 90.267,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=on 2 Meter Sessions, 1999",
+              "target version evidence is absent",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Foo Fighters - Everlong (Live on 2 Meter Sessions, 1999)",
+            "video_id": "gsRJXbITkVo"
+          },
+          {
+            "duration_delta_seconds": 0.7330000000000041,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "Foo Fighters - Everlong Acoustic (Greatest Hits version)",
+            "video_id": "OgMkST2rUR8"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.7330000000000041,
+          "ordering_key": [
+            false,
+            0.7330000000000041,
+            -5,
+            0,
+            0,
+            -1.0,
+            -0.32432432432432434,
+            false,
+            1,
+            1
+          ],
+          "rank": 1,
+          "source_type": "ART_TRACK_TOPIC",
+          "title": "Everlong (Acoustic Version)"
+        },
+        "selected_video_id": "YLRlOvzs-XU",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "YLRlOvzs-XU",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_025"
+    },
+    {
+      "comparison_class": "SOL_UNCERTAIN_ON_RESOLVER_SELECTION",
+      "resolver": {
+        "alternative_video_ids": [
+          "Gi005IFLlq8"
+        ],
+        "eligible_candidate_count": 2,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 67.714,
+            "rank": 3,
+            "reasons": [
+              "explicit version conflict: remix: target=none, candidate=Razihel Extended",
+              "normalized core title is not exact",
+              "target version evidence is absent",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Öwnboss, Sevek - Move Your Body (Razihel Extended Remix) FREE DOWNLOAD]",
+            "video_id": "YjhicY3Co84"
+          },
+          {
+            "duration_delta_seconds": 49.714,
+            "rank": 4,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "ÖWNBOSS, Sevek – Move Your Body (Extended Mix)",
+            "video_id": "57bgL8rgeo0"
+          },
+          {
+            "duration_delta_seconds": 112.714,
+            "rank": 5,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Öwnboss, Sevek - Move Your Body (Tiësto Edit) [Official Visualizer]",
+            "video_id": "_I6j9d3Q8Zs"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 51.714,
+          "ordering_key": [
+            false,
+            51.714,
+            -5,
+            0,
+            0,
+            -1.0,
+            -0.17647058823529413,
+            false,
+            1,
+            1
+          ],
+          "rank": 1,
+          "source_type": "ART_TRACK_TOPIC",
+          "title": "Move Your Body (Extended Mix)"
+        },
+        "selected_video_id": "R0PWjDLTcgc",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "UNCERTAIN",
+      "sol_selected_video_id": null,
+      "sol_selection_status": "UNCERTAIN",
+      "sol_uncertain_candidate_ids": [
+        "57bgL8rgeo0",
+        "Gi005IFLlq8",
+        "R0PWjDLTcgc"
+      ],
+      "stable_track_id": "s5b1b_026"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "iRA82xLsb_w"
+        ],
+        "eligible_candidate_count": 2,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 155.09299999999996,
+            "rank": 2,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=Tomorrowland 2017",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Eric Prydz - Opus [Live Tomorrowland 2017]",
+            "video_id": "h-nQ63LCV7I"
+          },
+          {
+            "duration_delta_seconds": 6007.907,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: mix: target=none, candidate=Opus\" FULL ALBUM CONTINUOUS",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "\"Eric Prydz - Opus\" FULL ALBUM CONTINUOUS MIX",
+            "video_id": "KNSNwzozVjM"
+          },
+          {
+            "duration_delta_seconds": 215.09299999999996,
+            "rank": 5,
+            "reasons": [
+              "explicit version conflict: radio_edit: target=none, candidate=radio edit",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Eric Prydz - Opus [Radio edit]",
+            "video_id": "Ib-9szQU9jM"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.9070000000000391,
+          "ordering_key": [
+            false,
+            0.9070000000000391,
+            -2,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            2,
+            3
+          ],
+          "rank": 3,
+          "source_type": "OFFICIAL_MUSIC_VIDEO",
+          "title": "Eric Prydz - Opus (Official Video)(Roger Mendez)"
+        },
+        "selected_video_id": "oo9y-ndmjrs",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "iRA82xLsb_w",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_027"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "eoiWhRo3A7w",
+          "JHVAsBmb2BI",
+          "qOXF9W1Z49Y",
+          "DyDfgMOUjCI"
+        ],
+        "eligible_candidate_count": 5,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.1599999999999966,
+          "ordering_key": [
+            false,
+            0.1599999999999966,
+            -1,
+            0,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            3,
+            3
+          ],
+          "rank": 3,
+          "source_type": "OTHER",
+          "title": "Billie Eilish - bad guy (with Justin Bieber) [Audio]"
+        },
+        "selected_video_id": "2pnXjQCegVc",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "2pnXjQCegVc",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_028"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "1Cga6DfY8wk",
+          "up4Q-oYp5kU"
+        ],
+        "eligible_candidate_count": 3,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 5.826999999999998,
+            "rank": 1,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "GAYLE - abcdefu (angrier) visualizer",
+            "video_id": "w_tiAmnLieI"
+          },
+          {
+            "duration_delta_seconds": 20.173000000000002,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "[Nightcore] - ABCDEFU (Angrier) (lyrics) | Gayle",
+            "video_id": "3tJDBCifwec"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.8269999999999982,
+          "ordering_key": [
+            false,
+            0.8269999999999982,
+            -5,
+            1,
+            1,
+            -1.0,
+            -0.2,
+            false,
+            1,
+            2
+          ],
+          "rank": 2,
+          "source_type": "ART_TRACK_TOPIC",
+          "title": "abcdefu (angrier)"
+        },
+        "selected_video_id": "3i_MBzr7LWs",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "3i_MBzr7LWs",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_029"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "GAjREHV2MmU"
+        ],
+        "eligible_candidate_count": 2,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 1.6800000000000068,
+            "rank": 3,
+            "reasons": [
+              "explicit version conflict: content_rating: target=none, candidate=clean",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "GAYLE - abcdefu (chill) (Clean)",
+            "video_id": "Sqt5gPUxipY"
+          },
+          {
+            "duration_delta_seconds": 0.3199999999999932,
+            "rank": 4,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "GAYLE - ABCDEFU (chill version) (Audio)",
+            "video_id": "2qmFstpYlH0"
+          },
+          {
+            "duration_delta_seconds": 0.3199999999999932,
+            "rank": 5,
+            "reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "​abcdefu (chill) - GAYLE (Lyrics)",
+            "video_id": "erThdD0E-VA"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.3199999999999932,
+          "ordering_key": [
+            false,
+            0.3199999999999932,
+            -5,
+            1,
+            1,
+            -1.0,
+            -0.2222222222222222,
+            false,
+            1,
+            1
+          ],
+          "rank": 1,
+          "source_type": "ART_TRACK_TOPIC",
+          "title": "abcdefu (chill)"
+        },
+        "selected_video_id": "lNarDaEr7EY",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "lNarDaEr7EY",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_030"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "IKqV7DB8Iwg",
+          "uS9A9lqd7-k"
+        ],
+        "eligible_candidate_count": 3,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 0.30699999999998795,
+            "rank": 3,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "The Black Eyed Peas - Let's Get It Started HQ",
+            "video_id": "V6nXQY0c4iA"
+          },
+          {
+            "duration_delta_seconds": 36.30699999999999,
+            "rank": 5,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=,BBC Later With, Jools Holland,HD 1080p",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Black Eyed Peas ,HD,  Let's Get It Started ,Live ,BBC Later With, Jools Holland,HD 1080p",
+            "video_id": "ATBgEUB-Pj4"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 1.306999999999988,
+          "ordering_key": [
+            false,
+            1.306999999999988,
+            -5,
+            1,
+            1,
+            -1.0,
+            -0.22857142857142856,
+            false,
+            3,
+            4
+          ],
+          "rank": 4,
+          "source_type": "ART_TRACK_TOPIC",
+          "title": "Let's Get It Started"
+        },
+        "selected_video_id": "xx87PIYdYZ8",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "xx87PIYdYZ8",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_031"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "gNpW_dzGALg",
+          "6-UFmEPCsGg"
+        ],
+        "eligible_candidate_count": 3,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 0.4130000000000109,
+            "rank": 3,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "P!NK - F**king Perfect",
+            "video_id": "m-lRe5A2z9A"
+          },
+          {
+            "duration_delta_seconds": 1.413000000000011,
+            "rank": 4,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "P!nk F  kin' Perfect",
+            "video_id": "hr3doMWoYW8"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.5869999999999891,
+          "ordering_key": [
+            false,
+            0.5869999999999891,
+            -3,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            1,
+            1
+          ],
+          "rank": 1,
+          "source_type": "LYRIC_VIDEO",
+          "title": "P!nk - F**kin' Perfect (Lyrics)"
+        },
+        "selected_video_id": "ecSijSDlpi8",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "ecSijSDlpi8",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_032"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [],
+        "eligible_candidate_count": 1,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 148.493,
+            "rank": 1,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "NewJeans (뉴진스) 'Ditto' Official MV (side A)",
+            "video_id": "pSUydWEqKwE"
+          },
+          {
+            "duration_delta_seconds": 4.492999999999995,
+            "rank": 2,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "NewJeans (뉴진스) 'Ditto' Performance Video",
+            "video_id": "Km71Rr9K-Bw"
+          },
+          {
+            "duration_delta_seconds": 91.493,
+            "rank": 3,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "NewJeans (뉴진스) 'Ditto' Official MV (side B)",
+            "video_id": "V37TaRdVUQY"
+          },
+          {
+            "duration_delta_seconds": 5.492999999999995,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "NewJeans (뉴진스) 'Ditto' Dance Practice",
+            "video_id": "G_1zDzhAz9w"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.492999999999995,
+          "ordering_key": [
+            false,
+            0.492999999999995,
+            -1,
+            1,
+            1,
+            -1.0,
+            -0.0,
+            false,
+            5,
+            4
+          ],
+          "rank": 4,
+          "source_type": "OTHER",
+          "title": "Ditto"
+        },
+        "selected_video_id": "5emU4TSPxc8",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "Km71Rr9K-Bw",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_033"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [],
+        "eligible_candidate_count": 1,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 1.8129999999999882,
+            "rank": 1,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "IVE 아이브 'LOVE DIVE' MV",
+            "video_id": "Y8JFxS1HlDo"
+          },
+          {
+            "duration_delta_seconds": 10.812999999999988,
+            "rank": 3,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "아이브 (IVE) _ LOVE DIVE | 러브 다이브 | 1theKILLPO | 원더킬포 | 킬포인트 | 킬링파트 | Performance | 유진 가을 레이 원영 리즈 이서",
+            "video_id": "NrTskRd3NUY"
+          },
+          {
+            "duration_delta_seconds": 0.18700000000001182,
+            "rank": 4,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "IVE 'LOVE DIVE' Lyrics (아이브 LOVE DIVE 가사) (Color Coded Lyrics)",
+            "video_id": "qYh3NhMRDjY"
+          },
+          {
+            "duration_delta_seconds": 0.8129999999999882,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "IVE 아이브 'LOVE DIVE' DANCE PRACTICE",
+            "video_id": "Bo2aD_I7-1U"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.8129999999999882,
+          "ordering_key": [
+            false,
+            0.8129999999999882,
+            -1,
+            1,
+            1,
+            -1.0,
+            -0.5,
+            false,
+            4,
+            2
+          ],
+          "rank": 2,
+          "source_type": "OTHER",
+          "title": "LOVE DIVE"
+        },
+        "selected_video_id": "l-jZOXa7gQY",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "l-jZOXa7gQY",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_034"
+    },
+    {
+      "comparison_class": "RESOLVER_UNCERTAIN",
+      "resolver": {
+        "eligible_candidate_count": 0,
+        "production_auto_match_enabled": false,
+        "reason": "no candidate has exact title + explicit performer + resolved version evidence",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 33.947,
+            "rank": 1,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "TWICE \"The Feels\" M/V",
+            "video_id": "f5_wn8mexmM"
+          },
+          {
+            "duration_delta_seconds": 6.947000000000003,
+            "rank": 2,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "TWICE 'The Feels' Lyrics (Color Coded Lyrics)",
+            "video_id": "1eZRyXPwIhM"
+          },
+          {
+            "duration_delta_seconds": 4.947000000000003,
+            "rank": 3,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "TWICE \"The Feels\" Choreography Video (Moving Ver.)",
+            "video_id": "9j6_KM-uzfY"
+          },
+          {
+            "duration_delta_seconds": 5.947000000000003,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=TWICE “The Feels” @ Amazon Music Live",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "TWICE “The Feels” @ Amazon Music Live",
+            "video_id": "2CRISIrpObg"
+          },
+          {
+            "duration_delta_seconds": 7.947000000000003,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "TWICE \"The Feels\" Choreography Video",
+            "video_id": "90mwhuwIQco"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "sol_selected_video_id": "9j6_KM-uzfY",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_035"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [],
+        "eligible_candidate_count": 1,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 1.4490000000000123,
+            "rank": 2,
+            "reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Seven (feat. Latto) - Explicit Ver.",
+            "video_id": "5McUFZz2s-w"
+          },
+          {
+            "duration_delta_seconds": 27.449000000000012,
+            "rank": 3,
+            "reasons": [
+              "explicit version conflict: remaster: target=none, candidate=4K 60FPS Remaster",
+              "target-relative version conflict"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "Jung Kook - Seven ft. Latto (4K 60FPS Remaster) [Explicit Version] (Official Video)",
+            "video_id": "KjK32vDk7mA"
+          },
+          {
+            "duration_delta_seconds": 2.5509999999999877,
+            "rank": 4,
+            "reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact",
+              "primary performer is not explicitly matched"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Jungkook feat. Latto 'SEVEN' (explicit version) (color coded lyrics)",
+            "video_id": "p079SbNCtp4"
+          },
+          {
+            "duration_delta_seconds": 1.4490000000000123,
+            "rank": 5,
+            "reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Seven (feat. Latto) - Explicit Ver.",
+            "video_id": "1PkSePIyfHk"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 1.4490000000000123,
+          "ordering_key": [
+            false,
+            1.4490000000000123,
+            -1,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            1,
+            1
+          ],
+          "rank": 1,
+          "source_type": "OTHER",
+          "title": "Jung Kook - Seven (Explicit Ver.) [Audio]"
+        },
+        "selected_video_id": "XS48lWkH84Q",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "5McUFZz2s-w",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_036"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "GchEVSx9XEA",
+          "vAA_Z9DaOeo",
+          "tg00YEETFzg"
+        ],
+        "eligible_candidate_count": 4,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 13.774000000000001,
+            "rank": 5,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=The BRITs 2012",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Rihanna - We Found Love (Live at The BRITs 2012)",
+            "video_id": "2-ST8O5vMo8"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.2259999999999991,
+          "ordering_key": [
+            false,
+            0.2259999999999991,
+            -3,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            3,
+            2
+          ],
+          "rank": 2,
+          "source_type": "LYRIC_VIDEO",
+          "title": "Rihanna - We Found Love (Lyrics) ft. Calvin Harris"
+        },
+        "selected_video_id": "QrJosGJj7w0",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "GchEVSx9XEA",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_037"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "552t6kKSC7Y",
+          "6swmTBVI83k"
+        ],
+        "eligible_candidate_count": 3,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 37.123999999999995,
+            "rank": 3,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=Lounge",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Lil Nas X - MONTERO (CALL ME BY YOUR NAME) in the Live Lounge",
+            "video_id": "FV1yJUMor3E"
+          },
+          {
+            "duration_delta_seconds": 33.123999999999995,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: extended: target=none, candidate=extended",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Lil Nas X - MONTERO (Call Me By Your Name) [SATAN’S EXTENDED VERSION]",
+            "video_id": "NIlz3g3DgCU"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.12399999999999523,
+          "ordering_key": [
+            false,
+            0.12399999999999523,
+            -3,
+            0,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            2,
+            2
+          ],
+          "rank": 2,
+          "source_type": "LYRIC_VIDEO",
+          "title": "Lil Nas X - MONTERO (Call Me By Your Name) (Lyrics)"
+        },
+        "selected_video_id": "nsXwi67WgOo",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "nsXwi67WgOo",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_038"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "yZKThkBA42M",
+          "ZBAF9GuBlY0",
+          "ekauErew4Bs"
+        ],
+        "eligible_candidate_count": 4,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 2.3729999999999905,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=Live",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Rina Sawayama - This Hell (Live) | Vevo Studio Performance",
+            "video_id": "7cilizyYBdQ"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.37299999999999045,
+          "ordering_key": [
+            false,
+            0.37299999999999045,
+            -4,
+            0,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            2,
+            2
+          ],
+          "rank": 2,
+          "source_type": "OFFICIAL_AUDIO",
+          "title": "Rina Sawayama - This Hell (Official Audio)"
+        },
+        "selected_video_id": "vapT7WBkBdY",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "vapT7WBkBdY",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_039"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "jLkgSla-gPs",
+          "IvCcN4URNmQ"
+        ],
+        "eligible_candidate_count": 3,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 4.507000000000005,
+            "rank": 1,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=Video",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Luke Combs - Fast Car (Official Live Video)",
+            "video_id": "Fr7oYjnt3bM"
+          },
+          {
+            "duration_delta_seconds": 0.507000000000005,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: remaster: target=none, candidate=2023",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Luke Combs - Fast Car (2023 Remastered)",
+            "video_id": "MBgLXvY0Nrk"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.507000000000005,
+          "ordering_key": [
+            false,
+            0.507000000000005,
+            -3,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            1,
+            2
+          ],
+          "rank": 2,
+          "source_type": "LYRIC_VIDEO",
+          "title": "Luke Combs - Fast Car (Lyrics)"
+        },
+        "selected_video_id": "b4Zp75xe6tE",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "b4Zp75xe6tE",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [
+        "IvCcN4URNmQ"
+      ],
+      "stable_track_id": "s5b1b_040"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "9UyYjXVnQTE",
+          "LRP8d7hhpoQ"
+        ],
+        "eligible_candidate_count": 3,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 0.040000000000020464,
+            "rank": 2,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "Hallelujah – Pentatonix (From A Pentatonix Christmas Special)",
+            "video_id": "haFHrfmfHbc"
+          },
+          {
+            "duration_delta_seconds": 14.04000000000002,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=Live",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Pentatonix - Hallelujah (Live)",
+            "video_id": "Se0BmDdZuX0"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.040000000000020464,
+          "ordering_key": [
+            false,
+            0.040000000000020464,
+            -1,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            3,
+            3
+          ],
+          "rank": 3,
+          "source_type": "OTHER",
+          "title": "Pentatonix - Hallelujah"
+        },
+        "selected_video_id": "Gwcb70P6aMk",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "LRP8d7hhpoQ",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_041"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "m-Q0Ng61bT4",
+          "DY34c5mEL5Q",
+          "9XaS93WMRQQ"
+        ],
+        "eligible_candidate_count": 4,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 21.194999999999993,
+            "rank": 3,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Bad Wolves Zombie (Lyrics)",
+            "video_id": "5N5DS-3YpYI"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.19499999999999318,
+          "ordering_key": [
+            false,
+            0.19499999999999318,
+            -5,
+            0,
+            0,
+            -1.0,
+            -0.25,
+            false,
+            5,
+            5
+          ],
+          "rank": 5,
+          "source_type": "ART_TRACK_TOPIC",
+          "title": "Zombie"
+        },
+        "selected_video_id": "ab54PrUx9kw",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "ab54PrUx9kw",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_042"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "JF8BRvqGCNs"
+        ],
+        "eligible_candidate_count": 2,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 7.293000000000006,
+            "rank": 3,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "Rihanna feat Mikky Ekko - Stay [Music Video] HD",
+            "video_id": "kxvsJf5OkyA"
+          },
+          {
+            "duration_delta_seconds": 17.293000000000006,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=on SNL",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Rihanna - Stay (Live on SNL) ft. Mikky Ekko",
+            "video_id": "C-dW7z0QBNg"
+          },
+          {
+            "duration_delta_seconds": 29.293000000000006,
+            "rank": 5,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=The Concert For Valor 2014",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Rihanna - Stay Live at The Concert For Valor 2014",
+            "video_id": "fE-L6XcEXMg"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 2.7069999999999936,
+          "ordering_key": [
+            false,
+            2.7069999999999936,
+            -3,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            2,
+            2
+          ],
+          "rank": 2,
+          "source_type": "LYRIC_VIDEO",
+          "title": "Rihanna - Stay (Lyrics) ft. Mikky Ekko"
+        },
+        "selected_video_id": "_bXqoIzH0N8",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "JF8BRvqGCNs",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_043"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "fOSagyzlxUE"
+        ],
+        "eligible_candidate_count": 2,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 0.492999999999995,
+            "rank": 1,
+            "reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "\"Mad World\" (feat. Gary Jules) - Official Music Video",
+            "video_id": "etSbOs3aUqI"
+          },
+          {
+            "duration_delta_seconds": 2.507000000000005,
+            "rank": 2,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=Video",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Gary Jules - Mad World (20th Anniversary) Official Live Video",
+            "video_id": "CHPL9kGWNY4"
+          },
+          {
+            "duration_delta_seconds": 6.507000000000005,
+            "rank": 3,
+            "reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Mad World - Gary Jules (Lyrics)",
+            "video_id": "Oa-ae6_okmg"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 1.507000000000005,
+          "ordering_key": [
+            false,
+            1.507000000000005,
+            -1,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            2,
+            4
+          ],
+          "rank": 4,
+          "source_type": "OTHER",
+          "title": "Gary Jules - Mad World [HQ]"
+        },
+        "selected_video_id": "7pXRSPAUCTU",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "etSbOs3aUqI",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_044"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "u8pT_tQYNZ8",
+          "aNzCDt2eidg"
+        ],
+        "eligible_candidate_count": 3,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 2.0800000000000125,
+            "rank": 2,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Birdy - Skinny Love Lyrics (HQ)",
+            "video_id": "59nAovgXpVk"
+          },
+          {
+            "duration_delta_seconds": 107.91999999999999,
+            "rank": 5,
+            "reasons": [
+              "explicit version conflict: remix: target=none, candidate=Vanic",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Birdy - Skinny Love (Vanic Remix)",
+            "video_id": "37DIzz5Q2bM"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 1.9199999999999875,
+          "ordering_key": [
+            false,
+            1.9199999999999875,
+            -2,
+            0,
+            0,
+            -1.0,
+            -1.0,
+            false,
+            2,
+            3
+          ],
+          "rank": 3,
+          "source_type": "OFFICIAL_MUSIC_VIDEO",
+          "title": "Birdy - Skinny Love (One Take Music Video)"
+        },
+        "selected_video_id": "lT67liGjZhw",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "u8pT_tQYNZ8",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_045"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "J9yzoTHP9HY",
+          "VHoT4N43jK8",
+          "7pKrVB5f2W0"
+        ],
+        "eligible_candidate_count": 4,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 152.933,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "Jamel Debbouze Helps Stromae Compose Alors On Danse",
+            "video_id": "yXglp-lvBbI"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 2.9329999999999927,
+          "ordering_key": [
+            false,
+            2.9329999999999927,
+            -3,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            3,
+            2
+          ],
+          "rank": 2,
+          "source_type": "LYRIC_VIDEO",
+          "title": "Stromae - Alors on Danse (Lyrics) [TikTok Song]"
+        },
+        "selected_video_id": "8nW4jypamrA",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "8nW4jypamrA",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_046"
+    },
+    {
+      "comparison_class": "UNSAFE_SELECTION_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "LmUZbrNzpYY",
+          "K5KAc5CoCuk"
+        ],
+        "eligible_candidate_count": 3,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 4.507000000000005,
+            "rank": 3,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=AB 54 - Live",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "INDILA - Dernière Danse (AB 54 - Live) HDR",
+            "video_id": "ZiQ38s-2XeA"
+          },
+          {
+            "duration_delta_seconds": 26.507000000000005,
+            "rank": 4,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "Dernière Danse – Indila | Dark Gothic Orchestral | Cover",
+            "video_id": "hkQtrn1RPw4"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.492999999999995,
+          "ordering_key": [
+            false,
+            0.492999999999995,
+            -1,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            2,
+            5
+          ],
+          "rank": 5,
+          "source_type": "OTHER",
+          "title": "Indila - Dernière danse (Ho My Session! Acoustique)"
+        },
+        "selected_video_id": "eehzpPOzdgI",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "WRONG",
+      "sol_selected_video_id": "K5KAc5CoCuk",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_047"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [],
+        "eligible_candidate_count": 1,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 8.909999999999997,
+            "rank": 1,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "BAD BUNNY x JHAY CORTEZ - DÁKITI | EL ÚLTIMO TOUR DEL MUNDO (Official Video)",
+            "video_id": "TmKh7lAwnBI"
+          },
+          {
+            "duration_delta_seconds": 709.91,
+            "rank": 3,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Bad Bunny -DÁKITI (Letra/Lyrics)",
+            "video_id": "z0gcip-ecTM"
+          },
+          {
+            "duration_delta_seconds": 107.09,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=Bad Bunny in Japan 】 @spotify",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Bad Bunny / DÁKITI【 Spotify's Billions Club Live Bad Bunny in Japan 】 @spotify",
+            "video_id": "1HElnRYNd8A"
+          },
+          {
+            "duration_delta_seconds": 30.090000000000003,
+            "rank": 5,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=Stream Experience 2021; remix: target=none, candidate=David Guetta",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Bad Bunny & Jhay Cortez - Dákiti (David Guetta Remix) [Live @ Fun Radio Live Stream Experience 2021]",
+            "video_id": "x4at2O0dWvI"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 5.909999999999997,
+          "ordering_key": [
+            false,
+            5.909999999999997,
+            -1,
+            1,
+            1,
+            -1.0,
+            -0.6,
+            false,
+            3,
+            2
+          ],
+          "rank": 2,
+          "source_type": "OTHER",
+          "title": "Bad Bunny, Jhay Cortez - DÁKITI (Audio)"
+        },
+        "selected_video_id": "rSPnrtPpnbk",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "TmKh7lAwnBI",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [
+        "z0gcip-ecTM"
+      ],
+      "stable_track_id": "s5b1b_048"
+    },
+    {
+      "comparison_class": "RESOLVER_UNCERTAIN",
+      "resolver": {
+        "eligible_candidate_count": 0,
+        "production_auto_match_enabled": false,
+        "reason": "no candidate has exact title + explicit performer + resolved version evidence",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 0.37299999999999045,
+            "rank": 1,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "Eliza Rose & Interplanetary Criminal - B.O.T.A. (Baddest Of Them All) [Official Video]",
+            "video_id": "KtGFByAJRQQ"
+          },
+          {
+            "duration_delta_seconds": 0.37299999999999045,
+            "rank": 2,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Eliza Rose - B.O.T.A. (Baddest Of Them All) (Lyrics)",
+            "video_id": "uiG3psqZYh0"
+          },
+          {
+            "duration_delta_seconds": 132.373,
+            "rank": 3,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "B.O.T.A. (Baddest Of Them All)",
+            "video_id": "YvlhbCh-pnA"
+          },
+          {
+            "duration_delta_seconds": 3.3729999999999905,
+            "rank": 4,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Eliza Rose - B.O.T.A (Baddest Of Them All) (Chore Edit)",
+            "video_id": "Sk2Y4jmvNU4"
+          },
+          {
+            "duration_delta_seconds": 0.37299999999999045,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Eliza Rose - B.O.T.A. (Baddest Of Them All) - Edit (Lyrics)",
+            "video_id": "qo8xE5KbYS4"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "sol_selected_video_id": "KtGFByAJRQQ",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [
+        "Sk2Y4jmvNU4"
+      ],
+      "stable_track_id": "s5b1b_049"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "ZAn3JdtSrnY",
+          "WGRhaFx1Zpw"
+        ],
+        "eligible_candidate_count": 3,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 9.067000000000007,
+            "rank": 2,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "Alvvays | Archie, Marry Me (CBC Music Festival 2016)",
+            "video_id": "3cfm0hjtesc"
+          },
+          {
+            "duration_delta_seconds": 9.067000000000007,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=on KEXP",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Alvvays - Archie, Marry Me (Live on KEXP)",
+            "video_id": "TguNuNicPc0"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 1.0670000000000073,
+          "ordering_key": [
+            false,
+            1.0670000000000073,
+            -1,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            4,
+            5
+          ],
+          "rank": 5,
+          "source_type": "OTHER",
+          "title": "Alvvays - Archie, Marry Me"
+        },
+        "selected_video_id": "3S3Bc1wJEF0",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "WGRhaFx1Zpw",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_050"
+    }
+  ],
+  "disagreement_cases": [
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "fHI8X4OXluQ",
+          "o6ytLPKscrU",
+          "4NRXx6U8ABQ"
+        ],
+        "eligible_candidate_count": 4,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 1.039999999999992,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=On The 2020 MTV VMAs",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "The Weeknd - Blinding Lights (Live On The 2020 MTV VMAs)",
+            "video_id": "ewfdRy5jfF8"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.03999999999999204,
+          "ordering_key": [
+            false,
+            0.03999999999999204,
+            -3,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            3,
+            3
+          ],
+          "rank": 3,
+          "source_type": "LYRIC_VIDEO",
+          "title": "The Weeknd - Blinding Lights (Lyrics)"
+        },
+        "selected_video_id": "XwxLwG2_Sxk",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "fHI8X4OXluQ",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_001"
+    },
+    {
+      "comparison_class": "UNSAFE_SELECTION_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "lPsO2cIZCtU",
+          "XPbN2pQXe1o"
+        ],
+        "eligible_candidate_count": 3,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 6.087999999999994,
+            "rank": 2,
+            "reasons": [
+              "explicit version conflict: radio_edit: target=none, candidate=radio edit",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Lana Del Rey - Summertime Sadness (Cedric Gervais Remix) [2013 Radio Edit]",
+            "video_id": "wlw-9R80U5E"
+          },
+          {
+            "duration_delta_seconds": 198.088,
+            "rank": 5,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Summertime Sadness [Lana Del Rey vs. Cedric Gervais]",
+            "video_id": "4YAuhS8EEz4"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 63.087999999999994,
+          "ordering_key": [
+            false,
+            63.087999999999994,
+            -1,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            2,
+            4
+          ],
+          "rank": 4,
+          "source_type": "OTHER",
+          "title": "Lana Del Rey - Summertime Sadness (Cedric Remix) (Bass Boosted)"
+        },
+        "selected_video_id": "c4uFoSPlFh0",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "WRONG",
+      "sol_selected_video_id": "wlw-9R80U5E",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_004"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [],
+        "eligible_candidate_count": 1,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 0.6800000000000068,
+            "rank": 1,
+            "reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "The 1975 – About You Live from Madison Square Garden | Amazon Music",
+            "video_id": "28Lj4qt3lCc"
+          },
+          {
+            "duration_delta_seconds": 6.680000000000007,
+            "rank": 2,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "The 1975 - About You (Live at Madison Square Garden 2022) PRO SHOT FULL HD",
+            "video_id": "0fedQNu85M0"
+          },
+          {
+            "duration_delta_seconds": 4.319999999999993,
+            "rank": 4,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "The 1975  - About You (Radio 1's Big Weekend 2023)",
+            "video_id": "sNJjT9yorqo"
+          },
+          {
+            "duration_delta_seconds": 3.319999999999993,
+            "rank": 5,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "The 1975 - About You (Official)",
+            "video_id": "tGv7CUutzqU"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 10.680000000000007,
+          "ordering_key": [
+            false,
+            10.680000000000007,
+            -1,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            3,
+            3
+          ],
+          "rank": 3,
+          "source_type": "OTHER",
+          "title": "The 1975 - About You (Live from Madison Square Garden)"
+        },
+        "selected_video_id": "2Swd2Fpqj4Q",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "28Lj4qt3lCc",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_013"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "5oWyMakvQew"
+        ],
+        "eligible_candidate_count": 2,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 6.199999999999989,
+            "rank": 2,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "Fleetwood Mac - Dreams (Official Music Video) [4K]",
+            "video_id": "Y3ywicffOj4"
+          },
+          {
+            "duration_delta_seconds": 0.19999999999998863,
+            "rank": 4,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Fleetwood Mac - Dreams (HQ)",
+            "video_id": "4ceYRvXZuBE"
+          },
+          {
+            "duration_delta_seconds": 0.19999999999998863,
+            "rank": 5,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OFFICIAL_AUDIO",
+            "title": "Fleetwood Mac - Dreams (Official Audio)",
+            "video_id": "PgagPdVM7bk"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.19999999999998863,
+          "ordering_key": [
+            false,
+            0.19999999999998863,
+            -5,
+            0,
+            0,
+            -1.0,
+            -0.24242424242424243,
+            false,
+            1,
+            3
+          ],
+          "rank": 3,
+          "source_type": "ART_TRACK_TOPIC",
+          "title": "Dreams (2004 Remaster)"
+        },
+        "selected_video_id": "swJOIjjW69U",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "5oWyMakvQew",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_017"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [],
+        "eligible_candidate_count": 1,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 5.234000000000009,
+            "rank": 1,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Taylor Swift - Love Story (Taylor’s Version) [Official Lyric Video]",
+            "video_id": "aXzVF3XeS8M"
+          },
+          {
+            "duration_delta_seconds": 2.234000000000009,
+            "rank": 2,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Taylor Swift - Love Story (Taylor’s Version) (Lyrics)",
+            "video_id": "26rLLPVaxuk"
+          },
+          {
+            "duration_delta_seconds": 0.23400000000000887,
+            "rank": 3,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Taylor Swift - Love Story (Taylor’s Version) (Official HD Audio)",
+            "video_id": "aGgnOChmbCo"
+          },
+          {
+            "duration_delta_seconds": 8.234000000000009,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "※(Taylor Swift - Love Story) (Taylor's Version ) Lyric / Love Story (Music Video ) MTV",
+            "video_id": "CDlE0Jn5sns"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 8.234000000000009,
+          "ordering_key": [
+            false,
+            8.234000000000009,
+            -2,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            3,
+            4
+          ],
+          "rank": 4,
+          "source_type": "OFFICIAL_MUSIC_VIDEO",
+          "title": "Taylor Swift - Love Story (Taylor's Version) (Music Video 4K)"
+        },
+        "selected_video_id": "GtjGLR64IBc",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "aXzVF3XeS8M",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_021"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "RrjEgZbN4wc",
+          "2JgvVfOfoWI",
+          "2c3VO1u2acY"
+        ],
+        "eligible_candidate_count": 4,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 0.1670000000000016,
+            "rank": 5,
+            "reasons": [
+              "explicit version conflict: mix: target=none, candidate=2014",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Taylor Swift - Style (Taylor's Version) (2014 Mix)",
+            "video_id": "qTAGMoBn-p4"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.8329999999999984,
+          "ordering_key": [
+            false,
+            0.8329999999999984,
+            -3,
+            0,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            4,
+            4
+          ],
+          "rank": 4,
+          "source_type": "LYRIC_VIDEO",
+          "title": "Taylor Swift - Style (Taylor's Version) (Lyric Video)"
+        },
+        "selected_video_id": "R1X5qyp5ung",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "2JgvVfOfoWI",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_023"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "iRA82xLsb_w"
+        ],
+        "eligible_candidate_count": 2,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 155.09299999999996,
+            "rank": 2,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=Tomorrowland 2017",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Eric Prydz - Opus [Live Tomorrowland 2017]",
+            "video_id": "h-nQ63LCV7I"
+          },
+          {
+            "duration_delta_seconds": 6007.907,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: mix: target=none, candidate=Opus\" FULL ALBUM CONTINUOUS",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "\"Eric Prydz - Opus\" FULL ALBUM CONTINUOUS MIX",
+            "video_id": "KNSNwzozVjM"
+          },
+          {
+            "duration_delta_seconds": 215.09299999999996,
+            "rank": 5,
+            "reasons": [
+              "explicit version conflict: radio_edit: target=none, candidate=radio edit",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Eric Prydz - Opus [Radio edit]",
+            "video_id": "Ib-9szQU9jM"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.9070000000000391,
+          "ordering_key": [
+            false,
+            0.9070000000000391,
+            -2,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            2,
+            3
+          ],
+          "rank": 3,
+          "source_type": "OFFICIAL_MUSIC_VIDEO",
+          "title": "Eric Prydz - Opus (Official Video)(Roger Mendez)"
+        },
+        "selected_video_id": "oo9y-ndmjrs",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "iRA82xLsb_w",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_027"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [],
+        "eligible_candidate_count": 1,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 148.493,
+            "rank": 1,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "NewJeans (뉴진스) 'Ditto' Official MV (side A)",
+            "video_id": "pSUydWEqKwE"
+          },
+          {
+            "duration_delta_seconds": 4.492999999999995,
+            "rank": 2,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "NewJeans (뉴진스) 'Ditto' Performance Video",
+            "video_id": "Km71Rr9K-Bw"
+          },
+          {
+            "duration_delta_seconds": 91.493,
+            "rank": 3,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "NewJeans (뉴진스) 'Ditto' Official MV (side B)",
+            "video_id": "V37TaRdVUQY"
+          },
+          {
+            "duration_delta_seconds": 5.492999999999995,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "NewJeans (뉴진스) 'Ditto' Dance Practice",
+            "video_id": "G_1zDzhAz9w"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.492999999999995,
+          "ordering_key": [
+            false,
+            0.492999999999995,
+            -1,
+            1,
+            1,
+            -1.0,
+            -0.0,
+            false,
+            5,
+            4
+          ],
+          "rank": 4,
+          "source_type": "OTHER",
+          "title": "Ditto"
+        },
+        "selected_video_id": "5emU4TSPxc8",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "Km71Rr9K-Bw",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_033"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [],
+        "eligible_candidate_count": 1,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 1.4490000000000123,
+            "rank": 2,
+            "reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Seven (feat. Latto) - Explicit Ver.",
+            "video_id": "5McUFZz2s-w"
+          },
+          {
+            "duration_delta_seconds": 27.449000000000012,
+            "rank": 3,
+            "reasons": [
+              "explicit version conflict: remaster: target=none, candidate=4K 60FPS Remaster",
+              "target-relative version conflict"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "Jung Kook - Seven ft. Latto (4K 60FPS Remaster) [Explicit Version] (Official Video)",
+            "video_id": "KjK32vDk7mA"
+          },
+          {
+            "duration_delta_seconds": 2.5509999999999877,
+            "rank": 4,
+            "reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact",
+              "primary performer is not explicitly matched"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Jungkook feat. Latto 'SEVEN' (explicit version) (color coded lyrics)",
+            "video_id": "p079SbNCtp4"
+          },
+          {
+            "duration_delta_seconds": 1.4490000000000123,
+            "rank": 5,
+            "reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Seven (feat. Latto) - Explicit Ver.",
+            "video_id": "1PkSePIyfHk"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 1.4490000000000123,
+          "ordering_key": [
+            false,
+            1.4490000000000123,
+            -1,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            1,
+            1
+          ],
+          "rank": 1,
+          "source_type": "OTHER",
+          "title": "Jung Kook - Seven (Explicit Ver.) [Audio]"
+        },
+        "selected_video_id": "XS48lWkH84Q",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "5McUFZz2s-w",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_036"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "GchEVSx9XEA",
+          "vAA_Z9DaOeo",
+          "tg00YEETFzg"
+        ],
+        "eligible_candidate_count": 4,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 13.774000000000001,
+            "rank": 5,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=The BRITs 2012",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Rihanna - We Found Love (Live at The BRITs 2012)",
+            "video_id": "2-ST8O5vMo8"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.2259999999999991,
+          "ordering_key": [
+            false,
+            0.2259999999999991,
+            -3,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            3,
+            2
+          ],
+          "rank": 2,
+          "source_type": "LYRIC_VIDEO",
+          "title": "Rihanna - We Found Love (Lyrics) ft. Calvin Harris"
+        },
+        "selected_video_id": "QrJosGJj7w0",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "GchEVSx9XEA",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_037"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "9UyYjXVnQTE",
+          "LRP8d7hhpoQ"
+        ],
+        "eligible_candidate_count": 3,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 0.040000000000020464,
+            "rank": 2,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "Hallelujah – Pentatonix (From A Pentatonix Christmas Special)",
+            "video_id": "haFHrfmfHbc"
+          },
+          {
+            "duration_delta_seconds": 14.04000000000002,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=Live",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Pentatonix - Hallelujah (Live)",
+            "video_id": "Se0BmDdZuX0"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.040000000000020464,
+          "ordering_key": [
+            false,
+            0.040000000000020464,
+            -1,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            3,
+            3
+          ],
+          "rank": 3,
+          "source_type": "OTHER",
+          "title": "Pentatonix - Hallelujah"
+        },
+        "selected_video_id": "Gwcb70P6aMk",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "LRP8d7hhpoQ",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_041"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "JF8BRvqGCNs"
+        ],
+        "eligible_candidate_count": 2,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 7.293000000000006,
+            "rank": 3,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "Rihanna feat Mikky Ekko - Stay [Music Video] HD",
+            "video_id": "kxvsJf5OkyA"
+          },
+          {
+            "duration_delta_seconds": 17.293000000000006,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=on SNL",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Rihanna - Stay (Live on SNL) ft. Mikky Ekko",
+            "video_id": "C-dW7z0QBNg"
+          },
+          {
+            "duration_delta_seconds": 29.293000000000006,
+            "rank": 5,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=The Concert For Valor 2014",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Rihanna - Stay Live at The Concert For Valor 2014",
+            "video_id": "fE-L6XcEXMg"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 2.7069999999999936,
+          "ordering_key": [
+            false,
+            2.7069999999999936,
+            -3,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            2,
+            2
+          ],
+          "rank": 2,
+          "source_type": "LYRIC_VIDEO",
+          "title": "Rihanna - Stay (Lyrics) ft. Mikky Ekko"
+        },
+        "selected_video_id": "_bXqoIzH0N8",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "JF8BRvqGCNs",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_043"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "fOSagyzlxUE"
+        ],
+        "eligible_candidate_count": 2,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 0.492999999999995,
+            "rank": 1,
+            "reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "\"Mad World\" (feat. Gary Jules) - Official Music Video",
+            "video_id": "etSbOs3aUqI"
+          },
+          {
+            "duration_delta_seconds": 2.507000000000005,
+            "rank": 2,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=Video",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Gary Jules - Mad World (20th Anniversary) Official Live Video",
+            "video_id": "CHPL9kGWNY4"
+          },
+          {
+            "duration_delta_seconds": 6.507000000000005,
+            "rank": 3,
+            "reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Mad World - Gary Jules (Lyrics)",
+            "video_id": "Oa-ae6_okmg"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 1.507000000000005,
+          "ordering_key": [
+            false,
+            1.507000000000005,
+            -1,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            2,
+            4
+          ],
+          "rank": 4,
+          "source_type": "OTHER",
+          "title": "Gary Jules - Mad World [HQ]"
+        },
+        "selected_video_id": "7pXRSPAUCTU",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "etSbOs3aUqI",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_044"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "u8pT_tQYNZ8",
+          "aNzCDt2eidg"
+        ],
+        "eligible_candidate_count": 3,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 2.0800000000000125,
+            "rank": 2,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Birdy - Skinny Love Lyrics (HQ)",
+            "video_id": "59nAovgXpVk"
+          },
+          {
+            "duration_delta_seconds": 107.91999999999999,
+            "rank": 5,
+            "reasons": [
+              "explicit version conflict: remix: target=none, candidate=Vanic",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Birdy - Skinny Love (Vanic Remix)",
+            "video_id": "37DIzz5Q2bM"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 1.9199999999999875,
+          "ordering_key": [
+            false,
+            1.9199999999999875,
+            -2,
+            0,
+            0,
+            -1.0,
+            -1.0,
+            false,
+            2,
+            3
+          ],
+          "rank": 3,
+          "source_type": "OFFICIAL_MUSIC_VIDEO",
+          "title": "Birdy - Skinny Love (One Take Music Video)"
+        },
+        "selected_video_id": "lT67liGjZhw",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "u8pT_tQYNZ8",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_045"
+    },
+    {
+      "comparison_class": "UNSAFE_SELECTION_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "LmUZbrNzpYY",
+          "K5KAc5CoCuk"
+        ],
+        "eligible_candidate_count": 3,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 4.507000000000005,
+            "rank": 3,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=AB 54 - Live",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "INDILA - Dernière Danse (AB 54 - Live) HDR",
+            "video_id": "ZiQ38s-2XeA"
+          },
+          {
+            "duration_delta_seconds": 26.507000000000005,
+            "rank": 4,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "Dernière Danse – Indila | Dark Gothic Orchestral | Cover",
+            "video_id": "hkQtrn1RPw4"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.492999999999995,
+          "ordering_key": [
+            false,
+            0.492999999999995,
+            -1,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            2,
+            5
+          ],
+          "rank": 5,
+          "source_type": "OTHER",
+          "title": "Indila - Dernière danse (Ho My Session! Acoustique)"
+        },
+        "selected_video_id": "eehzpPOzdgI",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "WRONG",
+      "sol_selected_video_id": "K5KAc5CoCuk",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_047"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [],
+        "eligible_candidate_count": 1,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 8.909999999999997,
+            "rank": 1,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "BAD BUNNY x JHAY CORTEZ - DÁKITI | EL ÚLTIMO TOUR DEL MUNDO (Official Video)",
+            "video_id": "TmKh7lAwnBI"
+          },
+          {
+            "duration_delta_seconds": 709.91,
+            "rank": 3,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Bad Bunny -DÁKITI (Letra/Lyrics)",
+            "video_id": "z0gcip-ecTM"
+          },
+          {
+            "duration_delta_seconds": 107.09,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=Bad Bunny in Japan 】 @spotify",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Bad Bunny / DÁKITI【 Spotify's Billions Club Live Bad Bunny in Japan 】 @spotify",
+            "video_id": "1HElnRYNd8A"
+          },
+          {
+            "duration_delta_seconds": 30.090000000000003,
+            "rank": 5,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=Stream Experience 2021; remix: target=none, candidate=David Guetta",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Bad Bunny & Jhay Cortez - Dákiti (David Guetta Remix) [Live @ Fun Radio Live Stream Experience 2021]",
+            "video_id": "x4at2O0dWvI"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 5.909999999999997,
+          "ordering_key": [
+            false,
+            5.909999999999997,
+            -1,
+            1,
+            1,
+            -1.0,
+            -0.6,
+            false,
+            3,
+            2
+          ],
+          "rank": 2,
+          "source_type": "OTHER",
+          "title": "Bad Bunny, Jhay Cortez - DÁKITI (Audio)"
+        },
+        "selected_video_id": "rSPnrtPpnbk",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "TmKh7lAwnBI",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [
+        "z0gcip-ecTM"
+      ],
+      "stable_track_id": "s5b1b_048"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "ZAn3JdtSrnY",
+          "WGRhaFx1Zpw"
+        ],
+        "eligible_candidate_count": 3,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 9.067000000000007,
+            "rank": 2,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "Alvvays | Archie, Marry Me (CBC Music Festival 2016)",
+            "video_id": "3cfm0hjtesc"
+          },
+          {
+            "duration_delta_seconds": 9.067000000000007,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=on KEXP",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Alvvays - Archie, Marry Me (Live on KEXP)",
+            "video_id": "TguNuNicPc0"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 1.0670000000000073,
+          "ordering_key": [
+            false,
+            1.0670000000000073,
+            -1,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            4,
+            5
+          ],
+          "rank": 5,
+          "source_type": "OTHER",
+          "title": "Alvvays - Archie, Marry Me"
+        },
+        "selected_video_id": "3S3Bc1wJEF0",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "WGRhaFx1Zpw",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_050"
+    }
+  ],
+  "discovery_sha256": "2c318ac0853ffe3395c6a934265585afcb0a39a2f9ce73e5a00ba35276d056e4",
+  "limitations": [
+    "Sol judgments are independent semantic triage, not human ground truth.",
+    "The resolver proposal is deliberately uncalibrated and cannot activate AUTO_MATCH.",
+    "Agreement can share systematic metadata-only errors; random human audits are required."
+  ],
+  "manifest_sha256": "39557ede8f07bde129ad23d2bc64a0faf0fff755356cd87f2054e14f91d81e5a",
+  "production_auto_match_enabled": false,
+  "random_audit_track_ids": [
+    "s5b1b_024",
+    "s5b1b_006",
+    "s5b1b_008",
+    "s5b1b_038",
+    "s5b1b_031",
+    "s5b1b_028",
+    "s5b1b_011",
+    "s5b1b_029",
+    "s5b1b_034",
+    "s5b1b_014"
+  ],
+  "resolver_features_sha256": "f4260fe01b95770ceb4c47f8298033a0b865e597780a488bca1dfaac22a604a6",
+  "resolver_uncertain_cases": [
+    {
+      "comparison_class": "RESOLVER_UNCERTAIN",
+      "resolver": {
+        "eligible_candidate_count": 0,
+        "production_auto_match_enabled": false,
+        "reason": "no candidate has exact title + explicit performer + resolved version evidence",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 4.586999999999989,
+            "rank": 1,
+            "reasons": [
+              "explicit version conflict: remix: target=none, candidate=Robin Schulz",
+              "primary performer is not explicitly matched",
+              "target version evidence is absent",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Lilly Wood & The Prick and Robin Schulz - Prayer In C (Robin Schulz Remix) (Official)",
+            "video_id": "fiore9Z5iUg"
+          },
+          {
+            "duration_delta_seconds": 0.5869999999999891,
+            "rank": 2,
+            "reasons": [
+              "primary performer is not explicitly matched"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Prayer in C (Robin Schulz Radio Edit)",
+            "video_id": "20NRv-A_a4c"
+          },
+          {
+            "duration_delta_seconds": 0.5869999999999891,
+            "rank": 3,
+            "reasons": [
+              "primary performer is not explicitly matched"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Prayer in C (Robin Schulz Radio Edit)",
+            "video_id": "n8vmGiZ-YhU"
+          },
+          {
+            "duration_delta_seconds": 3.586999999999989,
+            "rank": 4,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "01 lilly wood and the prick and robin schulz   prayer in c robin schulz radio edit",
+            "video_id": "Xin1tuov224"
+          },
+          {
+            "duration_delta_seconds": 133.587,
+            "rank": 5,
+            "reasons": [
+              "explicit version conflict: remix: target=none, candidate=Robin Schulz",
+              "primary performer is not explicitly matched",
+              "target version evidence is absent",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Lilly Wood & The Prick and Robin Schulz - Prayer In C (Robin Schulz Remix)",
+            "video_id": "B4HvaBWCYVc"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "sol_selected_video_id": "20NRv-A_a4c",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_007"
+    },
+    {
+      "comparison_class": "RESOLVER_UNCERTAIN",
+      "resolver": {
+        "eligible_candidate_count": 0,
+        "production_auto_match_enabled": false,
+        "reason": "no candidate has exact title + explicit performer + resolved version evidence",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 62.90699999999998,
+            "rank": 1,
+            "reasons": [
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Adele performing Someone Like You | BRIT Awards 2011",
+            "video_id": "qemWRToNYJY"
+          },
+          {
+            "duration_delta_seconds": 198.90699999999998,
+            "rank": 2,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Adele - Someone Like You",
+            "video_id": "LLoD6NOchXs"
+          },
+          {
+            "duration_delta_seconds": 527.9069999999999,
+            "rank": 3,
+            "reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact",
+              "primary performer is not explicitly matched",
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Sexy Vibrato! How To Get It! How To Use It To Your Advantage! Ken Tamplin Vocal Academy 4K",
+            "video_id": "5IoNZbJzB6I"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "sol_selected_video_id": "qemWRToNYJY",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [
+        "LLoD6NOchXs"
+      ],
+      "stable_track_id": "s5b1b_015"
+    },
+    {
+      "comparison_class": "RESOLVER_UNCERTAIN",
+      "resolver": {
+        "eligible_candidate_count": 0,
+        "production_auto_match_enabled": false,
+        "reason": "no candidate has exact title + explicit performer + resolved version evidence",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 10.733000000000004,
+            "rank": 1,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "A-ha - Take on Me (MTV Unplugged - Summer Solstice) [Tradução]",
+            "video_id": "hyPudrPNSuQ"
+          },
+          {
+            "duration_delta_seconds": 8.266999999999996,
+            "rank": 2,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Take On Me (MTV Unplugged)",
+            "video_id": "92SGEe8l2Ng"
+          },
+          {
+            "duration_delta_seconds": 22.733000000000004,
+            "rank": 3,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Take On Me (MTV Unplugged / Edit)",
+            "video_id": "jg5mXCCbd0U"
+          },
+          {
+            "duration_delta_seconds": 31.733000000000004,
+            "rank": 4,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "a-ha ➡️  Take On Me  (Unplugged)ᴴᴰ",
+            "video_id": "Z1b-ITPXmdY"
+          },
+          {
+            "duration_delta_seconds": 215.733,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact",
+              "primary performer is not explicitly matched"
+            ],
+            "source_type": "OTHER",
+            "title": "'Take On Me' (MTV Unplugged)",
+            "video_id": "m7VvOziBbT8"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "sol_selected_video_id": "92SGEe8l2Ng",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [
+        "Z1b-ITPXmdY"
+      ],
+      "stable_track_id": "s5b1b_016"
+    },
+    {
+      "comparison_class": "RESOLVER_UNCERTAIN",
+      "resolver": {
+        "eligible_candidate_count": 0,
+        "production_auto_match_enabled": false,
+        "reason": "no candidate has exact title + explicit performer + resolved version evidence",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 33.947,
+            "rank": 1,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "TWICE \"The Feels\" M/V",
+            "video_id": "f5_wn8mexmM"
+          },
+          {
+            "duration_delta_seconds": 6.947000000000003,
+            "rank": 2,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "TWICE 'The Feels' Lyrics (Color Coded Lyrics)",
+            "video_id": "1eZRyXPwIhM"
+          },
+          {
+            "duration_delta_seconds": 4.947000000000003,
+            "rank": 3,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "TWICE \"The Feels\" Choreography Video (Moving Ver.)",
+            "video_id": "9j6_KM-uzfY"
+          },
+          {
+            "duration_delta_seconds": 5.947000000000003,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=TWICE “The Feels” @ Amazon Music Live",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "TWICE “The Feels” @ Amazon Music Live",
+            "video_id": "2CRISIrpObg"
+          },
+          {
+            "duration_delta_seconds": 7.947000000000003,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "TWICE \"The Feels\" Choreography Video",
+            "video_id": "90mwhuwIQco"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "sol_selected_video_id": "9j6_KM-uzfY",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [],
+      "stable_track_id": "s5b1b_035"
+    },
+    {
+      "comparison_class": "RESOLVER_UNCERTAIN",
+      "resolver": {
+        "eligible_candidate_count": 0,
+        "production_auto_match_enabled": false,
+        "reason": "no candidate has exact title + explicit performer + resolved version evidence",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 0.37299999999999045,
+            "rank": 1,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "Eliza Rose & Interplanetary Criminal - B.O.T.A. (Baddest Of Them All) [Official Video]",
+            "video_id": "KtGFByAJRQQ"
+          },
+          {
+            "duration_delta_seconds": 0.37299999999999045,
+            "rank": 2,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Eliza Rose - B.O.T.A. (Baddest Of Them All) (Lyrics)",
+            "video_id": "uiG3psqZYh0"
+          },
+          {
+            "duration_delta_seconds": 132.373,
+            "rank": 3,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "B.O.T.A. (Baddest Of Them All)",
+            "video_id": "YvlhbCh-pnA"
+          },
+          {
+            "duration_delta_seconds": 3.3729999999999905,
+            "rank": 4,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Eliza Rose - B.O.T.A (Baddest Of Them All) (Chore Edit)",
+            "video_id": "Sk2Y4jmvNU4"
+          },
+          {
+            "duration_delta_seconds": 0.37299999999999045,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Eliza Rose - B.O.T.A. (Baddest Of Them All) - Edit (Lyrics)",
+            "video_id": "qo8xE5KbYS4"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "sol_selected_video_id": "KtGFByAJRQQ",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [
+        "Sk2Y4jmvNU4"
+      ],
+      "stable_track_id": "s5b1b_049"
+    }
+  ],
+  "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+  "schema_version": "stage5b1b-sol-resolver-comparison-v1",
+  "sol_evaluations_sha256": "cd895d762569dbaf1697c973f04de3a89273d9c1daf50edfdfede15326a45b57",
+  "sol_uncertain_cases": [
+    {
+      "comparison_class": "SOL_UNCERTAIN_ON_RESOLVER_SELECTION",
+      "resolver": {
+        "alternative_video_ids": [
+          "N000qglmmY0",
+          "WHuBW3qKm9g",
+          "TUVcZfQe-Kw"
+        ],
+        "eligible_candidate_count": 4,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 34.93600000000001,
+            "rank": 4,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "Dua Lipa - ‘Levitating’ at the AMAs 2020",
+            "video_id": "57bNHupO3MU"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.06399999999999295,
+          "ordering_key": [
+            false,
+            0.06399999999999295,
+            -3,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            5,
+            5
+          ],
+          "rank": 5,
+          "source_type": "LYRIC_VIDEO",
+          "title": "Dua Lipa - Levitating (Lyrics)"
+        },
+        "selected_video_id": "ovG2QwiObhk",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "UNCERTAIN",
+      "sol_selected_video_id": "TUVcZfQe-Kw",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [
+        "ovG2QwiObhk"
+      ],
+      "stable_track_id": "s5b1b_012"
+    },
+    {
+      "comparison_class": "RESOLVER_UNCERTAIN",
+      "resolver": {
+        "eligible_candidate_count": 0,
+        "production_auto_match_enabled": false,
+        "reason": "no candidate has exact title + explicit performer + resolved version evidence",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 62.90699999999998,
+            "rank": 1,
+            "reasons": [
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Adele performing Someone Like You | BRIT Awards 2011",
+            "video_id": "qemWRToNYJY"
+          },
+          {
+            "duration_delta_seconds": 198.90699999999998,
+            "rank": 2,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Adele - Someone Like You",
+            "video_id": "LLoD6NOchXs"
+          },
+          {
+            "duration_delta_seconds": 527.9069999999999,
+            "rank": 3,
+            "reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap",
+              "normalized core title is not exact",
+              "primary performer is not explicitly matched",
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Sexy Vibrato! How To Get It! How To Use It To Your Advantage! Ken Tamplin Vocal Academy 4K",
+            "video_id": "5IoNZbJzB6I"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "sol_selected_video_id": "qemWRToNYJY",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [
+        "LLoD6NOchXs"
+      ],
+      "stable_track_id": "s5b1b_015"
+    },
+    {
+      "comparison_class": "RESOLVER_UNCERTAIN",
+      "resolver": {
+        "eligible_candidate_count": 0,
+        "production_auto_match_enabled": false,
+        "reason": "no candidate has exact title + explicit performer + resolved version evidence",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 10.733000000000004,
+            "rank": 1,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "A-ha - Take on Me (MTV Unplugged - Summer Solstice) [Tradução]",
+            "video_id": "hyPudrPNSuQ"
+          },
+          {
+            "duration_delta_seconds": 8.266999999999996,
+            "rank": 2,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Take On Me (MTV Unplugged)",
+            "video_id": "92SGEe8l2Ng"
+          },
+          {
+            "duration_delta_seconds": 22.733000000000004,
+            "rank": 3,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Take On Me (MTV Unplugged / Edit)",
+            "video_id": "jg5mXCCbd0U"
+          },
+          {
+            "duration_delta_seconds": 31.733000000000004,
+            "rank": 4,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "a-ha ➡️  Take On Me  (Unplugged)ᴴᴰ",
+            "video_id": "Z1b-ITPXmdY"
+          },
+          {
+            "duration_delta_seconds": 215.733,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact",
+              "primary performer is not explicitly matched"
+            ],
+            "source_type": "OTHER",
+            "title": "'Take On Me' (MTV Unplugged)",
+            "video_id": "m7VvOziBbT8"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "sol_selected_video_id": "92SGEe8l2Ng",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [
+        "Z1b-ITPXmdY"
+      ],
+      "stable_track_id": "s5b1b_016"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "ShjjS8Kev4U"
+        ],
+        "eligible_candidate_count": 2,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 2.8530000000000086,
+            "rank": 3,
+            "reasons": [
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "New Order - Blue Monday 88 (Official Video), Full HD (Digitally Remastered and Upscaled)",
+            "video_id": "YOSl6FT5OkY"
+          },
+          {
+            "duration_delta_seconds": 27.85300000000001,
+            "rank": 4,
+            "reasons": [
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "New Order  -  Blue Monday '88 (HQ) (HD) mp3",
+            "video_id": "OsTahpjMQDM"
+          },
+          {
+            "duration_delta_seconds": 179.147,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "Blue Monday ('88) (12\" Version)",
+            "video_id": "DPQI0H-CZDE"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 3.1469999999999914,
+          "ordering_key": [
+            false,
+            3.1469999999999914,
+            -5,
+            0,
+            0,
+            -1.0,
+            -0.21621621621621623,
+            false,
+            1,
+            1
+          ],
+          "rank": 1,
+          "source_type": "ART_TRACK_TOPIC",
+          "title": "Blue Monday '88 (2015 Remaster)"
+        },
+        "selected_video_id": "46ZIiCYxccA",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "IDEAL",
+      "sol_selected_video_id": "46ZIiCYxccA",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [
+        "YOSl6FT5OkY"
+      ],
+      "stable_track_id": "s5b1b_019"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [],
+        "eligible_candidate_count": 1,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 24.079999999999984,
+            "rank": 2,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "NIRVANA - \"SMELLS LIKE TEEN SPIRIT\" - REMASTERED HQ AUDIO* / 4K VIDEO",
+            "video_id": "_FtTXM63wN0"
+          },
+          {
+            "duration_delta_seconds": 0.07999999999998408,
+            "rank": 3,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Nirvana - Smells Like Teen Spirit (Remastered)",
+            "video_id": "ehoM8CQrkao"
+          },
+          {
+            "duration_delta_seconds": 22.920000000000016,
+            "rank": 4,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Nirvana - Smells Like Teen Spirit (AI UPSCALED 4K 60FPS)",
+            "video_id": "0zECaCDpgJE"
+          },
+          {
+            "duration_delta_seconds": 0.07999999999998408,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Nirvana - Smells Like Teen Spirit. Hi Res Audio played in 4k. Highest audio quality possible on YT",
+            "video_id": "ERDELSJ7xAs"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.9200000000000159,
+          "ordering_key": [
+            false,
+            0.9200000000000159,
+            -1,
+            1,
+            0,
+            -1.0,
+            -1.0,
+            false,
+            1,
+            1
+          ],
+          "rank": 1,
+          "source_type": "OTHER",
+          "title": "NIRVANA - Smells Like Teen Spirit (Remastered 2021) (HQ)"
+        },
+        "selected_video_id": "haJXClyz6II",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "haJXClyz6II",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [
+        "ERDELSJ7xAs",
+        "_FtTXM63wN0"
+      ],
+      "stable_track_id": "s5b1b_020"
+    },
+    {
+      "comparison_class": "SOL_UNCERTAIN_ON_RESOLVER_SELECTION",
+      "resolver": {
+        "alternative_video_ids": [
+          "Gi005IFLlq8"
+        ],
+        "eligible_candidate_count": 2,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 67.714,
+            "rank": 3,
+            "reasons": [
+              "explicit version conflict: remix: target=none, candidate=Razihel Extended",
+              "normalized core title is not exact",
+              "target version evidence is absent",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Öwnboss, Sevek - Move Your Body (Razihel Extended Remix) FREE DOWNLOAD]",
+            "video_id": "YjhicY3Co84"
+          },
+          {
+            "duration_delta_seconds": 49.714,
+            "rank": 4,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OTHER",
+            "title": "ÖWNBOSS, Sevek – Move Your Body (Extended Mix)",
+            "video_id": "57bgL8rgeo0"
+          },
+          {
+            "duration_delta_seconds": 112.714,
+            "rank": 5,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Öwnboss, Sevek - Move Your Body (Tiësto Edit) [Official Visualizer]",
+            "video_id": "_I6j9d3Q8Zs"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 51.714,
+          "ordering_key": [
+            false,
+            51.714,
+            -5,
+            0,
+            0,
+            -1.0,
+            -0.17647058823529413,
+            false,
+            1,
+            1
+          ],
+          "rank": 1,
+          "source_type": "ART_TRACK_TOPIC",
+          "title": "Move Your Body (Extended Mix)"
+        },
+        "selected_video_id": "R0PWjDLTcgc",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "UNCERTAIN",
+      "sol_selected_video_id": null,
+      "sol_selection_status": "UNCERTAIN",
+      "sol_uncertain_candidate_ids": [
+        "57bgL8rgeo0",
+        "Gi005IFLlq8",
+        "R0PWjDLTcgc"
+      ],
+      "stable_track_id": "s5b1b_026"
+    },
+    {
+      "comparison_class": "SAFE_EXACT_SOURCE_AGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [
+          "jLkgSla-gPs",
+          "IvCcN4URNmQ"
+        ],
+        "eligible_candidate_count": 3,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 4.507000000000005,
+            "rank": 1,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=Video",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Luke Combs - Fast Car (Official Live Video)",
+            "video_id": "Fr7oYjnt3bM"
+          },
+          {
+            "duration_delta_seconds": 0.507000000000005,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: remaster: target=none, candidate=2023",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Luke Combs - Fast Car (2023 Remastered)",
+            "video_id": "MBgLXvY0Nrk"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 0.507000000000005,
+          "ordering_key": [
+            false,
+            0.507000000000005,
+            -3,
+            1,
+            1,
+            -1.0,
+            -1.0,
+            false,
+            1,
+            2
+          ],
+          "rank": 2,
+          "source_type": "LYRIC_VIDEO",
+          "title": "Luke Combs - Fast Car (Lyrics)"
+        },
+        "selected_video_id": "b4Zp75xe6tE",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "b4Zp75xe6tE",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [
+        "IvCcN4URNmQ"
+      ],
+      "stable_track_id": "s5b1b_040"
+    },
+    {
+      "comparison_class": "SAFE_SOURCE_PREFERENCE_DISAGREEMENT",
+      "resolver": {
+        "alternative_video_ids": [],
+        "eligible_candidate_count": 1,
+        "production_auto_match_enabled": false,
+        "reason": "strong identity/version gate passed; lexicographic hierarchy used duration, source tier, release evidence, then weak views/rank",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 8.909999999999997,
+            "rank": 1,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "BAD BUNNY x JHAY CORTEZ - DÁKITI | EL ÚLTIMO TOUR DEL MUNDO (Official Video)",
+            "video_id": "TmKh7lAwnBI"
+          },
+          {
+            "duration_delta_seconds": 709.91,
+            "rank": 3,
+            "reasons": [
+              "normalized core title is not exact"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Bad Bunny -DÁKITI (Letra/Lyrics)",
+            "video_id": "z0gcip-ecTM"
+          },
+          {
+            "duration_delta_seconds": 107.09,
+            "rank": 4,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=Bad Bunny in Japan 】 @spotify",
+              "normalized core title is not exact",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Bad Bunny / DÁKITI【 Spotify's Billions Club Live Bad Bunny in Japan 】 @spotify",
+            "video_id": "1HElnRYNd8A"
+          },
+          {
+            "duration_delta_seconds": 30.090000000000003,
+            "rank": 5,
+            "reasons": [
+              "explicit version conflict: live: target=none, candidate=Stream Experience 2021; remix: target=none, candidate=David Guetta",
+              "target-relative version conflict"
+            ],
+            "source_type": "OTHER",
+            "title": "Bad Bunny & Jhay Cortez - Dákiti (David Guetta Remix) [Live @ Fun Radio Live Stream Experience 2021]",
+            "video_id": "x4at2O0dWvI"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_evidence": {
+          "duration_delta_seconds": 5.909999999999997,
+          "ordering_key": [
+            false,
+            5.909999999999997,
+            -1,
+            1,
+            1,
+            -1.0,
+            -0.6,
+            false,
+            3,
+            2
+          ],
+          "rank": 2,
+          "source_type": "OTHER",
+          "title": "Bad Bunny, Jhay Cortez - DÁKITI (Audio)"
+        },
+        "selected_video_id": "rSPnrtPpnbk",
+        "status": "PROVISIONAL_SELECTED"
+      },
+      "sol_label_for_resolver_selection": "ACCEPTABLE",
+      "sol_selected_video_id": "TmKh7lAwnBI",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [
+        "z0gcip-ecTM"
+      ],
+      "stable_track_id": "s5b1b_048"
+    },
+    {
+      "comparison_class": "RESOLVER_UNCERTAIN",
+      "resolver": {
+        "eligible_candidate_count": 0,
+        "production_auto_match_enabled": false,
+        "reason": "no candidate has exact title + explicit performer + resolved version evidence",
+        "rejected_candidates": [
+          {
+            "duration_delta_seconds": 0.37299999999999045,
+            "rank": 1,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OFFICIAL_MUSIC_VIDEO",
+            "title": "Eliza Rose & Interplanetary Criminal - B.O.T.A. (Baddest Of Them All) [Official Video]",
+            "video_id": "KtGFByAJRQQ"
+          },
+          {
+            "duration_delta_seconds": 0.37299999999999045,
+            "rank": 2,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Eliza Rose - B.O.T.A. (Baddest Of Them All) (Lyrics)",
+            "video_id": "uiG3psqZYh0"
+          },
+          {
+            "duration_delta_seconds": 132.373,
+            "rank": 3,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "ART_TRACK_TOPIC",
+            "title": "B.O.T.A. (Baddest Of Them All)",
+            "video_id": "YvlhbCh-pnA"
+          },
+          {
+            "duration_delta_seconds": 3.3729999999999905,
+            "rank": 4,
+            "reasons": [
+              "target version evidence is absent"
+            ],
+            "source_type": "OTHER",
+            "title": "Eliza Rose - B.O.T.A (Baddest Of Them All) (Chore Edit)",
+            "video_id": "Sk2Y4jmvNU4"
+          },
+          {
+            "duration_delta_seconds": 0.37299999999999045,
+            "rank": 5,
+            "reasons": [
+              "normalized core title is not exact",
+              "target version evidence is absent"
+            ],
+            "source_type": "LYRIC_VIDEO",
+            "title": "Eliza Rose - B.O.T.A. (Baddest Of Them All) - Edit (Lyrics)",
+            "video_id": "qo8xE5KbYS4"
+          }
+        ],
+        "resolver_version": "stage5b1b-uncalibrated-hierarchical-proposal-v1",
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "sol_selected_video_id": "KtGFByAJRQQ",
+      "sol_selection_status": "SELECTED",
+      "sol_uncertain_candidate_ids": [
+        "Sk2Y4jmvNU4"
+      ],
+      "stable_track_id": "s5b1b_049"
+    }
+  ],
+  "status": "SOL_ASSISTED_AUDIT_READY",
+  "summary": {
+    "disagreement_case_count": 17,
+    "exact_source_agreement_count": 26,
+    "exact_source_agreement_rate": 0.6341463414634146,
+    "exact_source_evaluable_count": 41,
+    "manual_audit_candidate_count": 80,
+    "manual_audit_track_count": 37,
+    "random_audit_track_count": 10,
+    "resolver_selected_count": 45,
+    "resolver_uncertain_count": 5,
+    "safe_selection_agreement_count": 41,
+    "safe_selection_agreement_rate": 0.9534883720930233,
+    "safe_selection_evaluable_count": 43,
+    "sol_uncertain_track_count": 9,
+    "track_count": 50,
+    "unsafe_selection_disagreement_count": 2
+  }
+}

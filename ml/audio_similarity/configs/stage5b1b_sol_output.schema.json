@@ -5,6 +5,7 @@
   "required": ["schema_version", "tracks"],
   "properties": {
     "schema_version": {
+      "type": "string",
       "const": "stage5b1b-sol-batch-response-v1"
     },
     "tracks": {

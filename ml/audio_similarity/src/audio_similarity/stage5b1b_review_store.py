@@ -27,6 +27,7 @@ class Stage5B1BReviewStore:
         review_path: str | Path,
         *,
         case_filter: tuple[str, ...] | None = None,
+        candidate_filter: dict[str, tuple[str, ...]] | None = None,
     ) -> None:
         self.manifest = manifest
         self.review_path = Path(review_path)
@@ -38,8 +39,24 @@ class Stage5B1BReviewStore:
             unknown = set(case_filter) - set(self._manifest_by_id)
             if unknown or not case_filter or len(case_filter) != len(set(case_filter)):
                 raise Stage5B1AValidationError("invalid manual audit case filter")
+        if candidate_filter is not None and (
+            case_filter is None or tuple(candidate_filter) != case_filter
+        ):
+            raise Stage5B1AValidationError("candidate filter must match case filter order")
         self.case_filter = case_filter
-        self._read_rows()
+        self.candidate_filter = candidate_filter
+        rows = self._read_rows()
+        if self.candidate_filter is not None:
+            known = {
+                (row["stable_track_id"], row["candidate_video_id"]) for row in rows
+            }
+            requested = {
+                (stable_id, video_id)
+                for stable_id, video_ids in self.candidate_filter.items()
+                for video_id in video_ids
+            }
+            if not requested or not requested <= known:
+                raise Stage5B1AValidationError("candidate filter contains unknown candidates")
 
     def _read_rows(self) -> list[dict[str, str]]:
         if not self.review_path.exists():
@@ -125,6 +142,13 @@ class Stage5B1BReviewStore:
             for stable_id in displayed_ids:
                 item = self._manifest_by_id[stable_id]
                 candidate_rows = grouped[stable_id]
+                if self.candidate_filter is not None:
+                    included = set(self.candidate_filter[stable_id])
+                    candidate_rows = [
+                        row
+                        for row in candidate_rows
+                        if row["candidate_video_id"] in included
+                    ]
                 track = item.track
                 cases.append(
                     {

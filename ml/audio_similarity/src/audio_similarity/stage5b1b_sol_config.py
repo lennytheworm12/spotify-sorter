@@ -45,6 +45,7 @@ class SolEvaluatorSettings:
     reasoning_effort: str
     prompt_version: str
     output_schema_path: Path
+    output_schema_sha256: str
     batch_track_count: int
     max_attempts: int
     timeout_seconds: int
@@ -131,14 +132,22 @@ def load_sol_audit_config(path: str | Path) -> SolAuditConfig:
     if production is not False:
         raise Stage5B1AValidationError("Sol audit must not enable production AUTO_MATCH")
 
+    schema_path = _path(
+        root, evaluator.get("output_schema_path"), "evaluator.output_schema_path"
+    )
+    schema_sha = _text(
+        evaluator.get("output_schema_expected_sha256"),
+        "evaluator.output_schema_expected_sha256",
+    )
+    if not schema_path.is_file() or file_sha256(schema_path) != schema_sha:
+        raise Stage5B1AValidationError("frozen Sol output schema hash changed")
     settings = SolEvaluatorSettings(
         provider="codex_cli",
         model=model,
         reasoning_effort=_text(evaluator.get("reasoning_effort"), "evaluator.reasoning_effort"),
         prompt_version=_text(evaluator.get("prompt_version"), "evaluator.prompt_version"),
-        output_schema_path=_path(
-            root, evaluator.get("output_schema_path"), "evaluator.output_schema_path"
-        ),
+        output_schema_path=schema_path,
+        output_schema_sha256=schema_sha,
         batch_track_count=_integer(
             evaluator.get("batch_track_count"), "evaluator.batch_track_count"
         ),
@@ -155,8 +164,6 @@ def load_sol_audit_config(path: str | Path) -> SolAuditConfig:
         ignore_user_config=True,
         ignore_rules=True,
     )
-    if not settings.output_schema_path.is_file():
-        raise Stage5B1AValidationError("Sol output schema does not exist")
     return SolAuditConfig(
         path=config_path,
         sha256=file_sha256(config_path),

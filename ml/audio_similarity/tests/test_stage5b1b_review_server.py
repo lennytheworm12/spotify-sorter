@@ -97,12 +97,33 @@ def test_targeted_case_filter_limits_session_but_keeps_authoritative_store(tmp_p
     review = tmp_path / "review.csv"
     shutil.copyfile(config.artifacts["heldout_review"], review)
     selected = manifest.stable_track_ids[:2]
-    store = Stage5B1BReviewStore(manifest, review, case_filter=selected)
+    with review.open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    first_candidates = tuple(
+        row["candidate_video_id"]
+        for row in rows
+        if row["stable_track_id"] == selected[0]
+    )[:2]
+    second_candidates = tuple(
+        row["candidate_video_id"]
+        for row in rows
+        if row["stable_track_id"] == selected[1]
+    )[:1]
+    candidate_filter = {
+        selected[0]: first_candidates,
+        selected[1]: second_candidates,
+    }
+    store = Stage5B1BReviewStore(
+        manifest,
+        review,
+        case_filter=selected,
+        candidate_filter=candidate_filter,
+    )
     session = store.session()
     assert session["mode"] == "stage5b1b_targeted_sol_audit"
     assert [case["stable_track_id"] for case in session["cases"]] == list(selected)
     assert session["progress"]["total_tracks"] == 2
-    assert session["progress"]["total_candidates"] == 10
+    assert session["progress"]["total_candidates"] == 3
 
     with pytest.raises(Stage5B1AValidationError, match="case filter"):
         Stage5B1BReviewStore(manifest, review, case_filter=("missing",))

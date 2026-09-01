@@ -34,10 +34,14 @@ def verify(path: str | Path) -> dict:
     }
 
 
-def run(path: str | Path, *, overwrite: bool = False) -> dict:
+def run(
+    path: str | Path, *, overwrite: bool = False, max_batches: int | None = None
+) -> dict:
     config = load_sol_audit_config(path)
     backend = CodexCliSolBackend(config)
-    result = run_sol_evaluation(config, backend, overwrite=overwrite)
+    result = run_sol_evaluation(
+        config, backend, overwrite=overwrite, max_batches=max_batches
+    )
     summary = {
         "status": result["status"],
         "model": backend.model,
@@ -72,8 +76,17 @@ def parser() -> argparse.ArgumentParser:
         "run", help="run/resume blinded Sol evaluation and emit targeted-audit artifacts"
     )
     run_parser.add_argument("--overwrite", action="store_true")
+    run_parser.add_argument(
+        "--max-batches",
+        type=int,
+        help="optional bounded smoke/resume limit; each frozen batch contains five tracks",
+    )
     run_parser.set_defaults(
-        function=lambda args: run(args.config, overwrite=args.overwrite)
+        function=lambda args: run(
+            args.config,
+            overwrite=args.overwrite,
+            max_batches=args.max_batches,
+        )
     )
     compare_parser = subcommands.add_parser(
         "compare", help="regenerate comparison/audit artifacts from frozen Sol output"

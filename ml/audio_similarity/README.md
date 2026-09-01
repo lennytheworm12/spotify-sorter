@@ -113,6 +113,23 @@ the CSV after a restart. The UI intentionally hides automatic resolver features
 so they cannot bias the held-out human labels. Use **Export CSV** for a portable
 copy. No media is embedded or downloaded.
 
+For the blinded Sol-assisted triage pass and the smaller targeted human audit:
+
+```bash
+.venv/bin/python -m audio_similarity.cli.stage5b1b_sol verify
+.venv/bin/python -m audio_similarity.cli.stage5b1b_sol run
+.venv/bin/python -m audio_similarity.cli.stage5b1b_review_server \
+  --queue reports/stage5b1b/sol_manual_audit_queue.json
+```
+
+The Sol harness runs in an isolated temporary working directory and receives
+only the frozen Spotify-style target, generated query, and raw yt-dlp candidate
+metadata. It receives neither resolver features nor human labels, and any model
+tool/web event fails the batch. The targeted reviewer still autosaves human
+labels to `reports/stage5b1b/heldout_review.csv`, but displays only the specific
+disputed, uncertain, and deterministic random-audit candidates. Sol labels are
+triage evidence, not human ground truth or a production `AUTO_MATCH` threshold.
+
 ## Stage 2B balanced holistic fusion benchmark
 
 Stage 2B is a stage-gated corrective benchmark over the frozen 40-query

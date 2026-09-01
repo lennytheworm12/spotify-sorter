@@ -113,7 +113,15 @@ def test_config_and_blind_inputs_are_frozen_and_feature_free() -> None:
     assert '"title_similarity"' not in prompt
     assert '"source_type"' not in prompt
     assert '"candidate_review_label"' not in prompt
+    assert '"case_tags"' not in prompt
+    assert '"case_rationale"' not in prompt
     assert "Do not browse the web, call tools" in prompt
+
+    schema = json.loads(config.evaluator.output_schema_path.read_text(encoding="utf-8"))
+    assert schema["properties"]["schema_version"] == {
+        "type": "string",
+        "const": "stage5b1b-sol-batch-response-v1",
+    }
 
 
 def test_response_validation_rejects_missing_candidate() -> None:
@@ -138,6 +146,11 @@ def test_resumable_fake_sol_evaluation_and_comparison(tmp_path: Path) -> None:
     config = _temp_config(tmp_path)
     _, rows = load_blind_inputs(config)
     backend = FakeBackend({row["stable_track_id"]: row for row in rows})
+    partial = run_sol_evaluation(config, backend, max_batches=1)
+    assert partial["status"] == "PARTIAL"
+    assert partial["completed_track_count"] == 5
+    assert len(backend.calls) == 1
+
     result = run_sol_evaluation(config, backend)
     assert result["status"] == "COMPLETE"
     assert result["completed_track_count"] == 50
@@ -157,6 +170,7 @@ def test_resumable_fake_sol_evaluation_and_comparison(tmp_path: Path) -> None:
     )
     assert len(queue) == summary["manual_audit_track_count"]
     assert len(queue) == len(set(queue))
+    assert sum(map(len, queue.values())) == summary["manual_audit_candidate_count"]
 
 
 def test_tool_event_detection_is_fail_closed() -> None:

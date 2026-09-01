@@ -1,6 +1,6 @@
 # Stage 5B.1B Part A — hierarchical candidate-resolution features
 
-Status: **`STAGE5B1B_HELDOUT_READY_FOR_HUMAN_REVIEW`**
+Status: **`STAGE5B1B_SOL_AUDIT_READY_FOR_TARGETED_HUMAN_REVIEW`**
 
 No final AUTO_MATCH threshold has been selected. Held-out labels are required before calibration.
 
@@ -149,3 +149,108 @@ All normal tests mock the yt-dlp boundary and require no network access.
 **NO FINAL AUTO_MATCH THRESHOLD HAS BEEN SELECTED.**
 
 **HELD-OUT LABELS ARE REQUIRED BEFORE CALIBRATION.**
+
+## Blinded Sol-assisted evaluator and targeted audit
+
+The exhaustive 248-row manual workflow was superseded by a blinded semantic
+triage protocol. This does not alter the frozen 50-track manifest, yt-dlp
+candidate set, hierarchical resolver features, or future calibration target.
+It changes only which held-out rows are prioritized for human judgment.
+
+### Blind evaluator contract
+
+- Config: `configs/stage5b1b_sol.json`
+- Model: `gpt-5.6-sol`
+- Codex CLI: `0.151.0`
+- Reasoning effort: `high`
+- Prompt: `stage5b1b-sol-blinded-candidate-review-v2`
+- Structured output schema SHA-256:
+  `1480ac0ff8ee672f6412760f12e4657c89f7b4bbaca906452a07759af333621c`
+- Frozen manifest SHA-256:
+  `39557ede8f07bde129ad23d2bc64a0faf0fff755356cd87f2054e14f91d81e5a`
+- Frozen discovery SHA-256:
+  `2c318ac0853ffe3395c6a934265585afcb0a39a2f9ce73e5a00ba35276d056e4`
+
+Sol received only the Spotify-style target metadata, generated search query,
+and raw yt-dlp candidate fields. Resolver features, resolver decisions, human
+labels, case tags, and curator case rationales were excluded. Every batch ran
+ephemerally from an isolated temporary directory with user config/rules
+disabled and a read-only sandbox. The harness rejects a batch if the Codex JSONL
+event stream contains command, file, MCP, or web-search activity.
+
+An earlier preflight exposed that the v1 prompt still included curator case
+tags/rationales. That output was rejected and overwritten before comparison.
+The accepted v2 run used the stricter raw-evidence-only contract above.
+
+The evaluator processed 50 tracks and 248 candidates in ten resumable
+five-track batches. All ten batches completed, the summed model wall time was
+740.065 seconds, request failures were zero, and forbidden tool/web events were
+zero. Candidate labels were 33 `IDEAL`, 110 `ACCEPTABLE`, 93 `WRONG`, and 12
+`UNCERTAIN`. Sol made a track-level selection for 49 tracks and abstained on one.
+
+### Resolver comparison semantics
+
+There still is no calibrated production resolver. For audit construction, the
+code evaluates an explicitly uncalibrated hierarchical proposal
+`stage5b1b-uncalibrated-hierarchical-proposal-v1`. It requires exact normalized
+core title, explicit primary-performer evidence, no hard identity conflict, and
+resolved target-version evidence before proposing a source. It then applies the
+already documented evidence hierarchy lexicographically. It never enables
+`AUTO_MATCH`.
+
+The primary agreement metric asks whether Sol independently labeled the
+proposal's selected source `IDEAL` or `ACCEPTABLE`. `WRONG` is a safety
+disagreement. Sol uncertainty and resolver abstention are reported separately
+and excluded from that denominator:
+
+- safe-selection agreement: 41/43 = 95.35%;
+- unsafe-selection disagreement: 2/43 = 4.65%;
+- resolver-selected tracks: 45;
+- resolver-uncertain tracks: 5;
+- tracks containing Sol uncertainty: 9;
+- exact preferred-source agreement: 26/41 = 63.41%;
+- safe source-preference disagreements: 15.
+
+The two safety disagreements are preserved as `s5b1b_004` and `s5b1b_047`.
+These results are triage evidence, not precision estimates against human ground
+truth. The lower exact-source agreement is also not a correctness failure: it
+often means both choices were considered safe while Sol preferred a different
+clean source.
+
+### Targeted human audit
+
+The audit union includes every safety/source disagreement, every Sol-uncertain
+case, every resolver abstention, and a deterministic ten-track random sample of
+clean exact agreements. Candidate filtering narrows the work from all 248 rows
+to 80 relevant candidate judgments across 37 tracks. Resolver-abstention tracks
+retain all candidates; disagreements retain the two compared selections;
+uncertainty retains the uncertain candidate and selection context; random audit
+tracks retain the proposed/selected candidate.
+
+Run:
+
+```bash
+.venv/bin/python -m audio_similarity.cli.stage5b1b_review_server \
+  --queue reports/stage5b1b/sol_manual_audit_queue.json
+```
+
+The UI hides Sol and resolver annotations and continues to autosave human labels
+to the authoritative `heldout_review.csv`. This preserves blinded human audit
+judgment while avoiding exhaustive labeling.
+
+Artifacts:
+
+- `reports/stage5b1b/sol_evaluations.json`
+  (`cd895d762569dbaf1697c973f04de3a89273d9c1daf50edfdfede15326a45b57`)
+- `reports/stage5b1b/sol_resolver_comparison.json`
+  (`4fd4901e499cd53eca8e44ee26b44c2d8c39cec38132b08080305c875c0f14a9`)
+- `reports/stage5b1b/sol_manual_audit.json`
+  (`61e6716b6e5747119ba31d101be005619658dd2277e30ba5d0009238f158779b`)
+- `reports/stage5b1b/sol_manual_audit_queue.json`
+  (`3f3868c613099e50a976d83ef5dea343fda0cf06d1bb51662ef0772b3d3193a5`)
+
+**SOL JUDGMENTS ARE NOT HUMAN GROUND TRUTH.**
+
+**NO FINAL AUTO_MATCH THRESHOLD HAS BEEN SELECTED.**
+
+**TARGETED HUMAN AUDIT IS REQUIRED BEFORE CALIBRATION.**

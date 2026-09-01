@@ -212,6 +212,24 @@ def compare_sol_and_resolver(config: SolAuditConfig) -> tuple[dict[str, Any], di
     for stable_id in random_ids:
         reason_by_id.setdefault(stable_id, set()).add("RANDOM_AGREEMENT_AUDIT")
     audit_ids = [stable_id for stable_id in manifest.stable_track_ids if stable_id in reason_by_id]
+    audit_candidate_ids: dict[str, list[str]] = {}
+    blind_by_id = {row["stable_track_id"]: row for row in blind_rows}
+    case_by_id = {row["stable_track_id"]: row for row in cases}
+    for stable_id in audit_ids:
+        case = case_by_id[stable_id]
+        ordered_ids = [
+            candidate["video_id"] for candidate in blind_by_id[stable_id]["candidates"]
+        ]
+        requested: set[str] = set(case["sol_uncertain_candidate_ids"])
+        if case["resolver"]["selected_video_id"]:
+            requested.add(case["resolver"]["selected_video_id"])
+        if case["sol_selected_video_id"]:
+            requested.add(case["sol_selected_video_id"])
+        if "RESOLVER_UNCERTAIN" in reason_by_id[stable_id]:
+            requested.update(ordered_ids)
+        audit_candidate_ids[stable_id] = [
+            video_id for video_id in ordered_ids if video_id in requested
+        ]
 
     comparison = {
         "schema_version": COMPARISON_SCHEMA_VERSION,
@@ -241,6 +259,9 @@ def compare_sol_and_resolver(config: SolAuditConfig) -> tuple[dict[str, Any], di
             "disagreement_case_count": len(disagreements),
             "random_audit_track_count": len(random_ids),
             "manual_audit_track_count": len(audit_ids),
+            "manual_audit_candidate_count": sum(
+                len(video_ids) for video_ids in audit_candidate_ids.values()
+            ),
         },
         "disagreement_cases": disagreements,
         "sol_uncertain_cases": sol_uncertain,
@@ -254,8 +275,6 @@ def compare_sol_and_resolver(config: SolAuditConfig) -> tuple[dict[str, Any], di
         ],
     }
 
-    blind_by_id = {row["stable_track_id"]: row for row in blind_rows}
-    case_by_id = {row["stable_track_id"]: row for row in cases}
     audit = {
         "schema_version": AUDIT_SCHEMA_VERSION,
         "status": "AWAITING_TARGETED_HUMAN_AUDIT",
@@ -264,10 +283,19 @@ def compare_sol_and_resolver(config: SolAuditConfig) -> tuple[dict[str, Any], di
             stable_id: sorted(reason_by_id[stable_id]) for stable_id in audit_ids
         },
         "track_count": len(audit_ids),
-        "candidate_count": sum(len(blind_by_id[stable_id]["candidates"]) for stable_id in audit_ids),
+        "candidate_count": sum(
+            len(video_ids) for video_ids in audit_candidate_ids.values()
+        ),
         "tracks": [
             {
-                "blind_input": blind_by_id[stable_id],
+                "blind_input": {
+                    **blind_by_id[stable_id],
+                    "candidates": [
+                        candidate
+                        for candidate in blind_by_id[stable_id]["candidates"]
+                        if candidate["video_id"] in audit_candidate_ids[stable_id]
+                    ],
+                },
                 "comparison": case_by_id[stable_id],
                 "sol": sol_by_id[stable_id],
                 "audit_reasons": sorted(reason_by_id[stable_id]),
@@ -281,6 +309,14 @@ def compare_sol_and_resolver(config: SolAuditConfig) -> tuple[dict[str, Any], di
         "manifest_sha256": manifest.sha256,
         "source_comparison_sha256": None,
         "track_ids": audit_ids,
+        "cases": [
+            {
+                "stable_track_id": stable_id,
+                "candidate_video_ids": audit_candidate_ids[stable_id],
+                "reasons": sorted(reason_by_id[stable_id]),
+            }
+            for stable_id in audit_ids
+        ],
         "selection_reasons": {
             stable_id: sorted(reason_by_id[stable_id]) for stable_id in audit_ids
         },
@@ -303,7 +339,9 @@ def write_comparison_artifacts(config: SolAuditConfig) -> dict[str, Any]:
     }
 
 
-def load_audit_queue(path: str | Path, manifest_sha256: str) -> tuple[str, ...]:
+def load_audit_queue(
+    path: str | Path, manifest_sha256: str
+) -> dict[str, tuple[str, ...]]:
     value = _load_json(path)
     if value.get("schema_version") != QUEUE_SCHEMA_VERSION:
         raise Stage5B1AValidationError("unexpected manual audit queue schema")
@@ -316,4 +354,17 @@ def load_audit_queue(path: str | Path, manifest_sha256: str) -> tuple[str, ...]:
         raise Stage5B1AValidationError("manual audit queue track_ids are invalid")
     if len(track_ids) != len(set(track_ids)):
         raise Stage5B1AValidationError("manual audit queue contains duplicate tracks")
-    return tuple(track_ids)
+    cases = value.get("cases")
+    if not isinstance(cases, list) or len(cases) != len(track_ids):
+        raise Stage5B1AValidationError("manual audit queue cases are invalid")
+    result: dict[str, tuple[str, ...]] = {}
+    for expected_id, case in zip(track_ids, cases):
+        if not isinstance(case, dict) or case.get("stable_track_id") != expected_id:
+            raise Stage5B1AValidationError("manual audit queue case order is invalid")
+        video_ids = case.get("candidate_video_ids")
+        if not isinstance(video_ids, list) or not video_ids or any(
+            not isinstance(video_id, str) or not video_id for video_id in video_ids
+        ) or len(video_ids) != len(set(video_ids)):
+            raise Stage5B1AValidationError("manual audit candidate identities are invalid")
+        result[expected_id] = tuple(video_ids)
+    return result

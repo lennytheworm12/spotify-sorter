@@ -80,6 +80,11 @@ def load_blind_inputs(config: SolAuditConfig) -> tuple[HeldoutManifest, list[dic
         track = row["track"]
         stable_id = track["stable_track_id"]
         item = manifest_by_id[stable_id]
+        frozen_track = item.track.to_dict()
+        if track != frozen_track:
+            raise Stage5B1AValidationError(
+                f"discovery target metadata diverges from frozen manifest for {stable_id}"
+            )
         candidates = row.get("candidates")
         if not isinstance(candidates, list) or not candidates:
             raise Stage5B1AValidationError(f"no candidates for blinded track {stable_id}")
@@ -113,13 +118,13 @@ def load_blind_inputs(config: SolAuditConfig) -> tuple[HeldoutManifest, list[dic
             {
                 "stable_track_id": stable_id,
                 "target": {
-                    "spotify_track_id": track.get("spotify_track_id"),
-                    "title": track.get("title"),
-                    "artists": list(track.get("artists") or []),
-                    "album": track.get("album"),
-                    "duration_ms": track.get("duration_ms"),
-                    "release_year": track.get("release_year"),
-                    "isrc": track.get("isrc"),
+                    "spotify_track_id": frozen_track.get("spotify_track_id"),
+                    "title": frozen_track.get("title"),
+                    "artists": list(frozen_track.get("artists") or []),
+                    "album": frozen_track.get("album"),
+                    "duration_ms": frozen_track.get("duration_ms"),
+                    "release_year": frozen_track.get("release_year"),
+                    "isrc": frozen_track.get("isrc"),
                 },
                 "case_tags": list(item.case_tags),
                 "case_rationale": item.case_rationale,
@@ -131,7 +136,15 @@ def load_blind_inputs(config: SolAuditConfig) -> tuple[HeldoutManifest, list[dic
 
 
 def _prompt_payload(rows: Sequence[dict[str, Any]], description_limit: int) -> list[dict[str, Any]]:
-    payload = json.loads(json.dumps(list(rows), ensure_ascii=False))
+    payload = [
+        {
+            "stable_track_id": row["stable_track_id"],
+            "target": row["target"],
+            "query": row["query"],
+            "candidates": row["candidates"],
+        }
+        for row in json.loads(json.dumps(list(rows), ensure_ascii=False))
+    ]
     for row in payload:
         for candidate in row["candidates"]:
             description = candidate.get("description")
@@ -346,6 +359,7 @@ def _empty_evaluation(config: SolAuditConfig, backend: SolBackend) -> dict[str, 
         "manifest_sha256": config.manifest_sha256,
         "discovery_sha256": config.discovery_sha256,
         "prompt_version": config.evaluator.prompt_version,
+        "output_schema_sha256": config.evaluator.output_schema_sha256,
         "evaluator": {
             "provider": config.evaluator.provider,
             "model": backend.model,
@@ -378,6 +392,7 @@ def _validate_resume(value: dict[str, Any], config: SolAuditConfig) -> None:
         "manifest_sha256": config.manifest_sha256,
         "discovery_sha256": config.discovery_sha256,
         "prompt_version": config.evaluator.prompt_version,
+        "output_schema_sha256": config.evaluator.output_schema_sha256,
     }
     for key, expected_value in expected.items():
         if value.get(key) != expected_value:
@@ -389,6 +404,7 @@ def run_sol_evaluation(
     backend: SolBackend,
     *,
     overwrite: bool = False,
+    max_batches: int | None = None,
     sleeper: Callable[[float], None] = time.sleep,
 ) -> dict[str, Any]:
     manifest, blind_rows = load_blind_inputs(config)
@@ -410,9 +426,14 @@ def run_sol_evaluation(
     size = config.evaluator.batch_track_count
     errors: list[dict[str, Any]] = list(state.get("errors") or [])
 
-    for offset in range(0, len(remaining), size):
-        batch = remaining[offset : offset + size]
-        batch_id = f"batch-{offset // size + 1:03d}-" + "-".join(
+    if max_batches is not None and max_batches < 1:
+        raise Stage5B1AValidationError("max_batches must be at least 1")
+    pending_batches = [remaining[offset : offset + size] for offset in range(0, len(remaining), size)]
+    if max_batches is not None:
+        pending_batches = pending_batches[:max_batches]
+
+    for batch_number, batch in enumerate(pending_batches, start=1):
+        batch_id = f"batch-{batch_number:03d}-" + "-".join(
             row["stable_track_id"] for row in batch
         )
         prompt, blind_input_sha = build_blinded_prompt(

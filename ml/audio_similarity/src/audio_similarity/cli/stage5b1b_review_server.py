@@ -162,14 +162,16 @@ def main() -> None:
             config.heldout_manifest_path,
             expected_sha256=config.heldout_manifest_sha256,
         )
+        audit_cases = (
+            load_audit_queue(Path(args.queue).resolve(), manifest.sha256)
+            if args.queue else None
+        )
         store = Stage5B1BReviewStore(
             manifest,
             Path(args.review).resolve()
             if args.review else config.artifacts["heldout_review"],
-            case_filter=(
-                load_audit_queue(Path(args.queue).resolve(), manifest.sha256)
-                if args.queue else None
-            ),
+            case_filter=tuple(audit_cases) if audit_cases is not None else None,
+            candidate_filter=audit_cases,
         )
     except (FileNotFoundError, Stage5B1AValidationError) as exc:
         raise SystemExit(str(exc)) from exc
