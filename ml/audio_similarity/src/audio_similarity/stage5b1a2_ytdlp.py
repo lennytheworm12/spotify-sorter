@@ -32,6 +32,13 @@ def _duration(value: Any) -> float | None:
     return result if math.isfinite(result) and result >= 0 else None
 
 
+def _count(value: Any) -> int | None:
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        return None
+    result = float(value)
+    return int(result) if math.isfinite(result) and result >= 0 else None
+
+
 def _video_id(entry: dict[str, Any]) -> str | None:
     direct = entry.get("id")
     direct_id = direct if isinstance(direct, str) and YOUTUBE_VIDEO_ID.fullmatch(direct) else None
@@ -65,6 +72,9 @@ def _raw_entry(entry: dict[str, Any]) -> dict[str, Any]:
     duration = _duration(entry.get("duration"))
     if duration is not None:
         raw["duration"] = duration
+    view_count = _count(entry.get("view_count"))
+    if view_count is not None:
+        raw["view_count"] = view_count
     return raw
 
 
@@ -180,6 +190,7 @@ class NormalizedYtDlpResult:
     uploader: str | None
     channel: str | None
     duration_seconds: float | None
+    view_count: int | None
     description: str | None
     availability: str | None
     live_status: str | None
@@ -199,6 +210,7 @@ class YtDlpCandidate:
     uploader: str | None
     channel: str | None
     duration_seconds: float | None
+    view_count: int | None
     description: str | None
     availability: str | None
     live_status: str | None
@@ -263,6 +275,7 @@ def normalize_ytdlp_entries(entries: Any) -> tuple[NormalizedYtDlpResult, ...]:
                 uploader=_text(entry.get("uploader"), 1000),
                 channel=_text(entry.get("channel"), 1000),
                 duration_seconds=_duration(entry.get("duration")),
+                view_count=_count(entry.get("view_count")),
                 description=_text(entry.get("description")),
                 availability=_text(entry.get("availability"), 200),
                 live_status=_text(entry.get("live_status"), 200),
@@ -308,6 +321,7 @@ def deduplicate_ytdlp_candidates(
                 uploader=result.uploader,
                 channel=result.channel,
                 duration_seconds=result.duration_seconds,
+                view_count=result.view_count,
                 description=result.description,
                 availability=result.availability,
                 live_status=result.live_status,
