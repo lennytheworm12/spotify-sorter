@@ -9,6 +9,7 @@ conversion required by GLAP.
 from __future__ import annotations
 
 import hashlib
+import os
 import time
 from pathlib import Path
 from typing import Callable, Sequence
@@ -49,6 +50,12 @@ class GlapAudioEncoder:
         verify_model_hash: bool = True,
         model_loader: Callable[..., object] | None = None,
     ) -> None:
+        workspace = os.environ.get("CUBLAS_WORKSPACE_CONFIG")
+        if workspace not in (None, ":4096:8"):
+            raise EncoderContractError(
+                "GLAP deterministic CUDA requires CUBLAS_WORKSPACE_CONFIG=:4096:8"
+            )
+        os.environ["CUBLAS_WORKSPACE_CONFIG"] = ":4096:8"
         import torch
 
         self.model_dir = Path(model_dir).resolve()

@@ -123,6 +123,7 @@
     "gradients": false,
     "evaluation_mode": true,
     "deterministic": true,
+    "cuda_determinism": "CUBLAS_WORKSPACE_CONFIG=:4096:8 and torch.use_deterministic_algorithms(True)",
     "compute_dtype": "float32",
     "autocast": false,
     "resampling_implementation": "torchaudio.functional.resample 2.6.0",
