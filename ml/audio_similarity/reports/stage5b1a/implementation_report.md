@@ -1,8 +1,8 @@
 # Stage 5B.1A — Firecrawl YouTube discovery feasibility
 
-Status: **`IMPLEMENTED_BUT_REAL_DISCOVERY_NOT_RUN`**
+Status: **`DISCOVERY_COMPLETE_AWAITING_HUMAN_REVIEW`**
 
-No Firecrawl credential was available in the execution environment. No live Firecrawl requests were made, no candidate results or human labels were fabricated, and no feasibility verdict is claimed.
+The frozen 25-track experiment ran through Firecrawl's keyless REST mode with `FIRECRAWL_API_KEY` explicitly absent. Candidate discovery is complete, no human labels were fabricated, and the feasibility verdict remains pending human review.
 
 ## Purpose and boundary
 
@@ -51,9 +51,10 @@ isrc (optional)
 - Concurrency: sequential
 - Timeout: 30 seconds
 - Retry attempts: at most 3 with bounded exponential backoff
-- Credential: environment variable `FIRECRAWL_API_KEY`; never persisted
+- Authentication: `FIRECRAWL_API_KEY` when present; otherwise Firecrawl's official rate-limited keyless REST mode
+- Secrets: never persisted
 
-The request shape and default no-scrape `url`, `title`, and `description` result behavior were checked against the current official [Firecrawl Search API reference](https://docs.firecrawl.dev/api-reference/endpoint/search). The adapter uses the Python standard library and adds no SDK dependency.
+The request shape and default no-scrape `url`, `title`, and `description` result behavior were checked against the current official [Firecrawl Search API reference](https://docs.firecrawl.dev/api-reference/endpoint/search). Firecrawl documents keyless Search as free, per-IP/day rate-limited access in its [rate-limit reference](https://docs.firecrawl.dev/rate-limits#keyless-no-api-key). The adapter uses the Python standard library and adds no SDK or CLI dependency. The frozen configuration bytes and hash did not change; authentication selection is transport behavior and does not alter the query or request payload.
 
 ## Query strategy
 
@@ -111,7 +112,7 @@ uv run python -m audio_similarity.cli.stage5b1a review
 uv run python -m audio_similarity.cli.stage5b1a metrics
 ```
 
-The `run` command fails clearly when `FIRECRAWL_API_KEY` is absent. The network-free `review` command can regenerate the candidate review CSV from an existing result artifact without repeating Firecrawl requests.
+The `run` command prefers `FIRECRAWL_API_KEY` when present and otherwise omits the authorization header to use keyless Firecrawl. Each result row records `api_key` or `keyless` as secret-free provenance. The network-free `review` command can regenerate the candidate review CSV from an existing result artifact without repeating Firecrawl requests.
 
 ## Metrics and predeclared gate
 
@@ -134,23 +135,30 @@ This is a small-project engineering gate, not a scientific population claim. Any
 ## Real-run status and artifacts
 
 - Run status: `reports/stage5b1a/run_status.json`
-- Status: `IMPLEMENTED_BUT_REAL_DISCOVERY_NOT_RUN`
-- Firecrawl requests: 0
-- Request failures: not applicable because no request was attempted
-- Discovery results: pending credential
-- Human candidate review: pending discovery
-- Recall@1/@3/@5: pending discovery and human review
-- Feasibility verdict: `PENDING_REAL_DISCOVERY_AND_HUMAN_REVIEW`
+- Status: `DISCOVERY_COMPLETE_AWAITING_HUMAN_REVIEW`
+- Authentication mode: Firecrawl keyless REST; `FIRECRAWL_API_KEY` absent
+- Run interval: `2026-09-01T06:31:22+00:00` to `2026-09-01T06:32:10+00:00`
+- Firecrawl requests: 25 sequential requests; all succeeded on the first attempt
+- Request failures: 0
+- Normalized provider results: 165
+- Deduplicated YouTube candidates: 76
+- Tracks with at least one candidate: 21
+- Tracks with zero candidates: 4 (`s5b1a_003`, `s5b1a_012`, `s5b1a_014`, `s5b1a_016`)
+- Discovery results: `reports/stage5b1a/firecrawl_discovery_results.json` (SHA-256 `047f2ee493a1823cbd4355db8cbf4363b47c225e3a00b68b9cc86490bfee118a`)
+- Human candidate review: `reports/stage5b1a/firecrawl_review.csv` (SHA-256 `98b9881877a3df7c4d6fb14b45e71ad2b40ed85d7df33a0213af2089dfe5a12c`)
+- Review labels completed: 0 of 25
+- Recall@1/@3/@5: pending human review
+- Feasibility verdict: `PENDING_HUMAN_REVIEW`
 
 ## Tests and known limitations
 
-Focused Stage 5B.1A tests cover track validation, hash locking, case coverage, query construction, YouTube ID parsing, normalization, deduplication, ordering, empty results, provider errors, bounded retries, secret handling, sequential failure isolation, atomic persistence, review generation/labels, Recall@1/@3/@5, `UNCERTAIN` denominator behavior, gate boundaries, CLI credential handling, and artifact identity binding.
+Focused Stage 5B.1A tests cover track validation, hash locking, case coverage, query construction, YouTube ID parsing, normalization, deduplication, ordering, empty results, provider errors, bounded retries, API-key/keyless selection, authorization omission, secret handling, sequential failure isolation, atomic persistence, review generation/labels, Recall@1/@3/@5, `UNCERTAIN` denominator behavior, gate boundaries, and artifact identity binding.
 
 Executed test gates:
 
-- Focused Stage 5B.1A: 48 passed, 0 failed.
+- Focused Stage 5B.1A: 50 passed, 0 failed.
 - Relevant Stage 5A regressions: 14 passed, 0 failed.
-- Full non-heavy `ml/audio_similarity` suite: 509 passed, 12 heavy tests deselected by the repository default, 0 failed.
+- Full non-heavy `ml/audio_similarity` suite: 511 passed, 12 heavy tests deselected by the repository default, 0 failed.
 
 Known limitations are intentional at this gate:
 
@@ -158,5 +166,7 @@ Known limitations are intentional at this gate:
 - Correctness requires human review; titles are not treated as truth.
 - One fixed query may underperform for some recordings; its behavior must be measured before revision.
 - Firecrawl/search results can vary by provider index, geography, and time despite frozen inputs/configuration.
+- Three zero-candidate tracks returned no web results; the fourth returned only a YouTube playlist URL, which correctly remained a non-video result.
+- Keyless access is subject to Firecrawl's per-IP daily request and credit caps. This run did not encounter either cap.
 - The feasibility set is deliberately small and cannot support population-level claims.
-- No fallback provider is used when the Firecrawl credential is absent.
+- No fallback discovery provider was used; keyless mode is the same Firecrawl Search endpoint.
