@@ -1,0 +1,68 @@
+{
+  "comparison_scope": "coverage_and_metadata_only",
+  "correctness_comparison_status": "PENDING_HUMAN_REVIEW_FOR_BOTH_PROVIDERS",
+  "manifest_sha256": "f3592bb8c8dea689959a22da222d8b7ce4911c1804392acb501cffe768700c57",
+  "providers": {
+    "firecrawl": {
+      "correctness": null,
+      "coverage": {
+        "candidate_count_histogram": {
+          "0": 4,
+          "1": 4,
+          "2": 3,
+          "3": 2,
+          "4": 0,
+          "5": 12
+        },
+        "mean_candidates_per_track": 3.04,
+        "request_failures": 0,
+        "total_deduplicated_candidates": 76,
+        "tracks": 25,
+        "tracks_with_candidates": 21,
+        "tracks_with_zero_candidates": 4
+      },
+      "metadata_richness": {
+        "candidate_count": 76,
+        "populated_candidate_fields": {
+          "channel": 0,
+          "description": 76,
+          "duration_seconds": 0,
+          "uploader": 0
+        }
+      },
+      "role": "preserved_historical_provider_experiment"
+    },
+    "yt_dlp": {
+      "correctness": null,
+      "coverage": {
+        "candidate_count_histogram": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 25
+        },
+        "mean_candidates_per_track": 5.0,
+        "request_failures": 0,
+        "total_deduplicated_candidates": 125,
+        "tracks": 25,
+        "tracks_with_candidates": 25,
+        "tracks_with_zero_candidates": 0
+      },
+      "metadata_richness": {
+        "candidate_count": 125,
+        "populated_candidate_fields": {
+          "availability": 0,
+          "channel": 125,
+          "description": 112,
+          "duration_seconds": 125,
+          "live_status": 0,
+          "uploader": 125
+        }
+      },
+      "role": "candidate_active_discovery_provider"
+    }
+  },
+  "schema_version": "stage5b1a-provider-comparison-v1"
+}
