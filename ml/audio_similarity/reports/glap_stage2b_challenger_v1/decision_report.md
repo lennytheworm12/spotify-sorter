@@ -173,6 +173,13 @@ PYTHONPATH=src uv run python -m audio_similarity.cli.glap_stage2b_challenger cac
 
 The frozen checkpoint SHA-256 must be verified before inference. Model weights, audio, and SQLite caches remain outside Git.
 
+## Verification
+
+- Focused GLAP adapter/cache/analysis tests: 13 passed.
+- Relevant GLAP, holistic-encoder, and Stage 2B regression tests: 67 passed.
+- Full non-heavy `ml/audio_similarity` suite from a clean checkout of the committed closeout: 626 passed, 0 failed in 49.87 seconds.
+- The live working tree also produced 625 passes and one expected failure because the user-owned Stage 5B.1B held-out review CSV contains in-progress labels. That review artifact was not modified or committed by this experiment; the clean-checkout run verifies that the committed repository has no corresponding regression.
+
 ## Final boundary
 
 `GLAP_REJECTED_AS_GLOBAL_CHALLENGER`
