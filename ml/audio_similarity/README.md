@@ -98,6 +98,21 @@ optional candidate and track notes have dedicated columns. Multiple candidates
 may be IDEAL or ACCEPTABLE, and a track need not have an IDEAL candidate. Do
 not regenerate the review after labels are entered.
 
+For the local review workbench, run:
+
+```bash
+.venv/bin/python -m audio_similarity.cli.stage5b1b_review_server
+# http://127.0.0.1:8768
+```
+
+The page keeps the Spotify target above its ordered candidates, opens videos on
+YouTube, and labels every candidate independently as `IDEAL`, `ACCEPTABLE`,
+`WRONG`, or `UNCERTAIN`. Choices save immediately. Optional candidate and
+track-level notes autosave after a short pause, and saved progress resumes from
+the CSV after a restart. The UI intentionally hides automatic resolver features
+so they cannot bias the held-out human labels. Use **Export CSV** for a portable
+copy. No media is embedded or downloaded.
+
 ## Stage 2B balanced holistic fusion benchmark
 
 Stage 2B is a stage-gated corrective benchmark over the frozen 40-query

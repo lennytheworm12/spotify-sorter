@@ -117,11 +117,23 @@ Artifact hashes are recorded in `run_status.json`: discovery `2c318ac0853ffe3395
 
 The schema permits zero or multiple IDEAL candidates and multiple ACCEPTABLE candidates. No labels were fabricated, and no final precision, coverage, or AUTO_MATCH verdict is claimed.
 
+### Local review workbench
+
+Run `.venv/bin/python -m audio_similarity.cli.stage5b1b_review_server` from `ml/audio_similarity`, then open `http://127.0.0.1:8768`.
+
+The responsive workbench groups the 248 candidate rows beneath their 50 Spotify targets and exposes direct YouTube links, title, uploader/channel, duration, view count, the four independent candidate labels, optional per-candidate notes, and an optional per-track note. Every label saves immediately; notes save after a short idle delay or blur. Persistence is atomic and keyed by the frozen `(stable_track_id, video_id)` identity. Track notes remain consistent across all candidate rows for that track. Progress reports saved candidate judgments rather than merely optimistic browser state, resumes from the CSV, and can be exported at any point.
+
+Automatic title/version/source/eligibility features are deliberately absent from the browser API so the held-out labels are not biased by the resolver under evaluation. The workbench does not embed or download YouTube media.
+
 ## Tests
 
 Focused Stage 5B.1B, Stage 5B.1A/1A2 historical, and Stage 5A regression result: **145 passed, 0 failed**.
 
-Full non-heavy `ml/audio_similarity` result: **592 passed, 12 heavy tests deselected, 0 failed**. The 11 warnings are existing short-signal librosa warnings and one existing empty-frequency tuning warning.
+Focused review-workbench persistence/API result: **11 passed, 0 failed**.
+
+Full non-heavy `ml/audio_similarity` result after the review workbench: **603 passed, 12 heavy tests deselected, 0 failed**. The 11 warnings are existing short-signal librosa warnings and one existing empty-frequency tuning warning.
+
+Isolated headless Chromium verification passed for desktop and 390 px mobile layouts, all four label states, immediate label autosave, candidate-note and track-note autosave, reload/resume persistence, saved progress accounting, direct YouTube links, CSV export, horizontal overflow, and console errors/warnings. Browser verification used a disposable `/tmp` CSV; the authoritative empty review artifact remained unchanged.
 
 All normal tests mock the yt-dlp boundary and require no network access.
 
