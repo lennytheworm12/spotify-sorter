@@ -68,9 +68,12 @@
               },
               "candidate_performer_text": "Adele",
               "channel": "Adele",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Adele"
@@ -183,9 +186,12 @@
               },
               "candidate_performer_text": "Adele",
               "channel": "Rare Vibes",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Adele"
@@ -298,9 +304,12 @@
               },
               "candidate_performer_text": "Adele",
               "channel": "Adele - Topic",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Adele"
@@ -421,9 +430,12 @@
               },
               "candidate_performer_text": "Adele",
               "channel": "Adele",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Adele"
@@ -547,9 +559,12 @@
               },
               "candidate_performer_text": "Adele",
               "channel": "Adele in Munich",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Adele"
@@ -686,9 +701,12 @@
               },
               "candidate_performer_text": "Britney Spears",
               "channel": "Britney Spears",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Britney Spears"
@@ -801,9 +819,12 @@
               },
               "candidate_performer_text": "Britney Spears",
               "channel": "7clouds Rock",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Britney Spears"
@@ -912,9 +933,12 @@
               },
               "candidate_performer_text": null,
               "channel": "Britney Spears",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Britney Spears"
@@ -1035,9 +1059,12 @@
               },
               "candidate_performer_text": "Britney Spears",
               "channel": "Britney Spears",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Britney Spears"
@@ -1161,9 +1188,12 @@
               },
               "candidate_performer_text": "Britney Spears",
               "channel": "MONKEY MUSIC",
+              "core_title_token_overlap": 0.5,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Britney Spears"
@@ -1301,9 +1331,12 @@
               },
               "candidate_performer_text": "Beyoncé",
               "channel": "Beyoncé",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "Beyoncé",
@@ -1337,8 +1370,8 @@
             "schema_version": "stage5b1b-candidate-features-v1",
             "source": {
               "channel": "Beyoncé",
-              "source_preference_tier": 2,
-              "source_type": "OFFICIAL_MUSIC_VIDEO",
+              "source_preference_tier": 1,
+              "source_type": "OTHER",
               "uploader": "Beyoncé"
             },
             "track_id": "s5b1a_003",
@@ -1419,9 +1452,12 @@
               },
               "candidate_performer_text": "Crazy In Love",
               "channel": "Pillow",
+              "core_title_token_overlap": 0.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": true,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "Beyoncé",
@@ -1450,8 +1486,10 @@
               "uploader": "Pillow",
               "uploader_used_as_performer_evidence": false
             },
-            "ineligible_auto_match_reasons": [],
-            "recording_eligible": true,
+            "ineligible_auto_match_reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap"
+            ],
+            "recording_eligible": false,
             "schema_version": "stage5b1b-candidate-features-v1",
             "source": {
               "channel": "Pillow",
@@ -1537,9 +1575,12 @@
               },
               "candidate_performer_text": "Beyoncé",
               "channel": "BBC Music",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 0.5,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 0.0,
               "matched_artists": [
                 "Beyoncé"
@@ -1654,9 +1695,12 @@
               },
               "candidate_performer_text": "Beyoncé",
               "channel": "Beyoncé LIVE",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 0.5,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 0.0,
               "matched_artists": [
                 "Beyoncé"
@@ -1775,9 +1819,12 @@
               },
               "candidate_performer_text": null,
               "channel": "Beyoncé",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 0.5,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 0.0,
               "matched_artists": [
                 "Beyoncé"
@@ -1929,9 +1976,12 @@
               },
               "candidate_performer_text": "Flo Rida",
               "channel": "Flo Rida",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "Flo Rida",
@@ -2047,9 +2097,12 @@
               },
               "candidate_performer_text": "Flo Rida",
               "channel": "Flo Rida",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "Flo Rida",
@@ -2165,9 +2218,12 @@
               },
               "candidate_performer_text": "Flo Rida feat. T-Pain",
               "channel": "Dark City Sounds",
+              "core_title_token_overlap": 0.5,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "Flo Rida",
@@ -2283,9 +2339,12 @@
               },
               "candidate_performer_text": "Flo Rida",
               "channel": "Kang Music",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 0.5,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 0.0,
               "matched_artists": [
                 "Flo Rida"
@@ -2400,9 +2459,12 @@
               },
               "candidate_performer_text": "Flo Rida",
               "channel": "Dark City Sounds",
+              "core_title_token_overlap": 0.5,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "Flo Rida",
@@ -2544,9 +2606,12 @@
               },
               "candidate_performer_text": "M.I.A.",
               "channel": "M.I.A.",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "M.I.A."
@@ -2655,9 +2720,12 @@
               },
               "candidate_performer_text": null,
               "channel": "Latin City",
+              "core_title_token_overlap": 0.4,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "M.I.A."
@@ -2766,9 +2834,12 @@
               },
               "candidate_performer_text": null,
               "channel": "jaywaynemiati",
+              "core_title_token_overlap": 0.25,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "M.I.A."
@@ -2889,9 +2960,12 @@
               },
               "candidate_performer_text": "M.I.A.",
               "channel": "TV Series & Movie Soundtrack",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "M.I.A."
@@ -3015,9 +3089,12 @@
               },
               "candidate_performer_text": "M.I.A.",
               "channel": "Zdenko Ťažký",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "M.I.A."
@@ -3171,9 +3248,12 @@
               },
               "candidate_performer_text": null,
               "channel": "Taylor Swift",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Taylor Swift"
@@ -3347,9 +3427,12 @@
               },
               "candidate_performer_text": null,
               "channel": "Taylor Swift",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Taylor Swift"
@@ -3523,9 +3606,12 @@
               },
               "candidate_performer_text": null,
               "channel": "Taylor Swift",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Taylor Swift"
@@ -3683,9 +3769,12 @@
               },
               "candidate_performer_text": "Taylor Swift",
               "channel": "Taylor Swift",
+              "core_title_token_overlap": 0.5,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Taylor Swift"
@@ -3857,9 +3946,12 @@
               },
               "candidate_performer_text": "Taylor Swift",
               "channel": "Taylor Swift",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Taylor Swift"
@@ -4061,9 +4153,12 @@
               },
               "candidate_performer_text": "The Beatles",
               "channel": "The Beatles",
+              "core_title_token_overlap": 0.8,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "The Beatles"
@@ -4197,9 +4292,12 @@
               },
               "candidate_performer_text": null,
               "channel": "The Beatles",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "The Beatles"
@@ -4325,9 +4423,12 @@
               },
               "candidate_performer_text": null,
               "channel": "TheBeatlesOnDemand",
+              "core_title_token_overlap": 0.6666666666666666,
               "credited_artist_overlap": 0.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [],
               "primary_artist_match": false,
@@ -4364,8 +4465,8 @@
             "schema_version": "stage5b1b-candidate-features-v1",
             "source": {
               "channel": "TheBeatlesOnDemand",
-              "source_preference_tier": 3,
-              "source_type": "LYRIC_VIDEO",
+              "source_preference_tier": 1,
+              "source_type": "OTHER",
               "uploader": "TheBeatlesOnDemand"
             },
             "track_id": "s5b1a_007",
@@ -4463,9 +4564,12 @@
               },
               "candidate_performer_text": "The Beatles",
               "channel": "Galactocerebrósido",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "The Beatles"
@@ -4613,9 +4717,12 @@
               },
               "candidate_performer_text": "THE BEATLES",
               "channel": "Tony Smith",
+              "core_title_token_overlap": 0.6666666666666666,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "The Beatles"
@@ -4770,9 +4877,12 @@
               },
               "candidate_performer_text": "CeeLo Green",
               "channel": "CeeLo Green",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "CeeLo Green"
@@ -4885,9 +4995,12 @@
               },
               "candidate_performer_text": "Cee Lo Green",
               "channel": "CeeLo Green",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 0.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
-              "explicit_performer_conflict": false,
+              "explicit_performer_conflict": true,
+              "explicit_title_performer_conflict": true,
               "featured_artist_overlap": null,
               "matched_artists": [],
               "primary_artist_match": false,
@@ -4911,13 +5024,15 @@
               "uploader": "CeeLo Green",
               "uploader_used_as_performer_evidence": false
             },
-            "ineligible_auto_match_reasons": [],
-            "recording_eligible": true,
+            "ineligible_auto_match_reasons": [
+              "explicit cover/different-performer evidence"
+            ],
+            "recording_eligible": false,
             "schema_version": "stage5b1b-candidate-features-v1",
             "source": {
               "channel": "CeeLo Green",
-              "source_preference_tier": 2,
-              "source_type": "OFFICIAL_MUSIC_VIDEO",
+              "source_preference_tier": 1,
+              "source_type": "OTHER",
               "uploader": "CeeLo Green"
             },
             "track_id": "s5b1a_008",
@@ -4994,9 +5109,12 @@
               },
               "candidate_performer_text": null,
               "channel": "CeeLo Green",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "CeeLo Green"
@@ -5109,9 +5227,12 @@
               },
               "candidate_performer_text": "CeeLo Green",
               "channel": "BBC Music",
+              "core_title_token_overlap": 0.3333333333333333,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "CeeLo Green"
@@ -5232,9 +5353,12 @@
               },
               "candidate_performer_text": "Daryl Hall & CeeLo Green",
               "channel": "Daryl Hall",
+              "core_title_token_overlap": 0.25,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "CeeLo Green"
@@ -5383,9 +5507,12 @@
               },
               "candidate_performer_text": "Rihanna",
               "channel": "Rihanna",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "Rihanna",
@@ -5501,9 +5628,12 @@
               },
               "candidate_performer_text": "Rihanna",
               "channel": "Unique Sound",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "Rihanna",
@@ -5627,9 +5757,12 @@
               },
               "candidate_performer_text": "Rihanna",
               "channel": "Rihanna",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "Rihanna",
@@ -5752,9 +5885,12 @@
               },
               "candidate_performer_text": null,
               "channel": "ElektroRemixDJs",
+              "core_title_token_overlap": 0.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": true,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "Rihanna",
@@ -5783,8 +5919,10 @@
               "uploader": "ElektroRemixDJs",
               "uploader_used_as_performer_evidence": false
             },
-            "ineligible_auto_match_reasons": [],
-            "recording_eligible": true,
+            "ineligible_auto_match_reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap"
+            ],
+            "recording_eligible": false,
             "schema_version": "stage5b1b-candidate-features-v1",
             "source": {
               "channel": "ElektroRemixDJs",
@@ -5878,9 +6016,12 @@
               },
               "candidate_performer_text": "Rihanna",
               "channel": "Diana Martins",
+              "core_title_token_overlap": 0.125,
               "credited_artist_overlap": 0.5,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 0.0,
               "matched_artists": [
                 "Rihanna"
@@ -6032,9 +6173,12 @@
               },
               "candidate_performer_text": "Daft Punk",
               "channel": "Daft Punk",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Daft Punk"
@@ -6147,9 +6291,12 @@
               },
               "candidate_performer_text": "Daft Punk",
               "channel": "Daft Punk",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Daft Punk"
@@ -6258,9 +6405,12 @@
               },
               "candidate_performer_text": null,
               "channel": "Daft Punk",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Daft Punk"
@@ -6377,9 +6527,12 @@
               },
               "candidate_performer_text": null,
               "channel": "Matt Page",
+              "core_title_token_overlap": 0.375,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Daft Punk"
@@ -6503,9 +6656,12 @@
               },
               "candidate_performer_text": "Daft Punk",
               "channel": "PitchPerfect Channel",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Daft Punk"
@@ -6643,9 +6799,12 @@
               },
               "candidate_performer_text": "Eminem",
               "channel": "EminemMusic",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Eminem"
@@ -6766,9 +6925,12 @@
               },
               "candidate_performer_text": "Eminem",
               "channel": "EminemExplicit",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Eminem"
@@ -6892,9 +7054,12 @@
               },
               "candidate_performer_text": "Eminem",
               "channel": "7clouds",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Eminem"
@@ -7007,9 +7172,12 @@
               },
               "candidate_performer_text": "Eminem",
               "channel": "msvogue23",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Eminem"
@@ -7118,9 +7286,12 @@
               },
               "candidate_performer_text": null,
               "channel": "EminemMusic",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Eminem"
@@ -7258,9 +7429,12 @@
               },
               "candidate_performer_text": "The Killers",
               "channel": "TheKillersMusic",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "The Killers"
@@ -7373,9 +7547,12 @@
               },
               "candidate_performer_text": "The Killers",
               "channel": "Lost Panda",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "The Killers"
@@ -7488,9 +7665,12 @@
               },
               "candidate_performer_text": "The Killers",
               "channel": "Rock Preservation Society",
+              "core_title_token_overlap": 0.5,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "The Killers"
@@ -7599,9 +7779,12 @@
               },
               "candidate_performer_text": null,
               "channel": "Dank Music Channel",
+              "core_title_token_overlap": 0.6666666666666666,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "The Killers"
@@ -7722,9 +7905,12 @@
               },
               "candidate_performer_text": "The Killers",
               "channel": "Walter Tan",
+              "core_title_token_overlap": 0.2222222222222222,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "The Killers"
@@ -7869,9 +8055,12 @@
               },
               "candidate_performer_text": null,
               "channel": "Blonded",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Frank Ocean"
@@ -7988,9 +8177,12 @@
               },
               "candidate_performer_text": null,
               "channel": "I am bald so what?",
+              "core_title_token_overlap": 0.3,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Frank Ocean"
@@ -8114,9 +8306,12 @@
               },
               "candidate_performer_text": "Frank Ocean",
               "channel": "Luuuldoc Lyrics",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Frank Ocean"
@@ -8229,9 +8424,12 @@
               },
               "candidate_performer_text": "Frank Ocean",
               "channel": "fearofgod2",
+              "core_title_token_overlap": 0.2,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Frank Ocean"
@@ -8348,9 +8546,12 @@
               },
               "candidate_performer_text": null,
               "channel": "STREETWIZE MUSIC GROUP",
+              "core_title_token_overlap": 0.3333333333333333,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Frank Ocean"
@@ -8498,9 +8699,12 @@
               },
               "candidate_performer_text": "Bad Bunny",
               "channel": "Bad Bunny",
+              "core_title_token_overlap": 0.42857142857142855,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Bad Bunny"
@@ -8613,9 +8817,12 @@
               },
               "candidate_performer_text": "Bad Bunny",
               "channel": "BagOnly",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Bad Bunny"
@@ -8724,9 +8931,12 @@
               },
               "candidate_performer_text": null,
               "channel": "omar villalobos sanchez",
+              "core_title_token_overlap": 0.5,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Bad Bunny"
@@ -8839,9 +9049,12 @@
               },
               "candidate_performer_text": "Titi Me Pregunto",
               "channel": "JRMUSIC",
+              "core_title_token_overlap": 0.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": true,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Bad Bunny"
@@ -8867,8 +9080,10 @@
               "uploader": "JRMUSIC",
               "uploader_used_as_performer_evidence": false
             },
-            "ineligible_auto_match_reasons": [],
-            "recording_eligible": true,
+            "ineligible_auto_match_reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap"
+            ],
+            "recording_eligible": false,
             "schema_version": "stage5b1b-candidate-features-v1",
             "source": {
               "channel": "JRMUSIC",
@@ -8954,9 +9169,12 @@
               },
               "candidate_performer_text": "🎵 Bad Bunny",
               "channel": "Taj Muhmmad",
+              "core_title_token_overlap": 0.42857142857142855,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Bad Bunny"
@@ -9094,9 +9312,12 @@
               },
               "candidate_performer_text": "Chris Stapleton",
               "channel": "Chris Stapleton",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Chris Stapleton"
@@ -9209,9 +9430,12 @@
               },
               "candidate_performer_text": "Chris Stapleton",
               "channel": "Chris Stapleton",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Chris Stapleton"
@@ -9320,9 +9544,12 @@
               },
               "candidate_performer_text": null,
               "channel": "Dennis Mellon",
+              "core_title_token_overlap": 0.16666666666666666,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Chris Stapleton"
@@ -9435,9 +9662,12 @@
               },
               "candidate_performer_text": "Chris Stapleton, Justin Timberlake",
               "channel": "Chris Stapleton and 2 more",
+              "core_title_token_overlap": 0.25,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Chris Stapleton"
@@ -9550,9 +9780,12 @@
               },
               "candidate_performer_text": "Chris Stapleton",
               "channel": "CountryHype",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Chris Stapleton"
@@ -9686,9 +9919,12 @@
               },
               "candidate_performer_text": null,
               "channel": "HYBE LABELS",
+              "core_title_token_overlap": 0.25,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "BTS"
@@ -9801,9 +10037,12 @@
               },
               "candidate_performer_text": "BTS",
               "channel": "7clouds K-pop",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "BTS"
@@ -9912,9 +10151,12 @@
               },
               "candidate_performer_text": null,
               "channel": "HYBE LABELS",
+              "core_title_token_overlap": 0.25,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "BTS"
@@ -10031,9 +10273,12 @@
               },
               "candidate_performer_text": null,
               "channel": "HYBE LABELS",
+              "core_title_token_overlap": 0.25,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "BTS"
@@ -10153,9 +10398,12 @@
               },
               "candidate_performer_text": null,
               "channel": "BANGTANTV",
+              "core_title_token_overlap": 0.14285714285714285,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "BTS"
@@ -10293,9 +10541,12 @@
               },
               "candidate_performer_text": "Childish Gambino",
               "channel": "Donald Glover",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Childish Gambino"
@@ -10408,9 +10659,12 @@
               },
               "candidate_performer_text": "Childish Gambino",
               "channel": "FutureHype",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Childish Gambino"
@@ -10519,9 +10773,12 @@
               },
               "candidate_performer_text": null,
               "channel": "Donald Glover",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Childish Gambino"
@@ -10634,9 +10891,12 @@
               },
               "candidate_performer_text": "Guava Island",
               "channel": "Josué Santos",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 0.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
-              "explicit_performer_conflict": false,
+              "explicit_performer_conflict": true,
+              "explicit_title_performer_conflict": true,
               "featured_artist_overlap": null,
               "matched_artists": [],
               "primary_artist_match": false,
@@ -10660,8 +10920,10 @@
               "uploader": "Josué Santos",
               "uploader_used_as_performer_evidence": false
             },
-            "ineligible_auto_match_reasons": [],
-            "recording_eligible": true,
+            "ineligible_auto_match_reasons": [
+              "explicit cover/different-performer evidence"
+            ],
+            "recording_eligible": false,
             "schema_version": "stage5b1b-candidate-features-v1",
             "source": {
               "channel": "Josué Santos",
@@ -10743,9 +11005,12 @@
               },
               "candidate_performer_text": null,
               "channel": "Insider",
+              "core_title_token_overlap": 0.2727272727272727,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Childish Gambino"
@@ -10883,9 +11148,12 @@
               },
               "candidate_performer_text": "Gotye",
               "channel": "Gotye",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "Gotye",
@@ -11005,9 +11273,12 @@
               },
               "candidate_performer_text": null,
               "channel": "KCRW",
+              "core_title_token_overlap": 0.5454545454545454,
               "credited_artist_overlap": 0.5,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 0.0,
               "matched_artists": [
                 "Gotye"
@@ -11133,9 +11404,12 @@
               },
               "candidate_performer_text": "Gotye, Kimbra",
               "channel": "LyricHype",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "Gotye",
@@ -11247,9 +11521,12 @@
               },
               "candidate_performer_text": null,
               "channel": "The Basics",
+              "core_title_token_overlap": 0.8571428571428571,
               "credited_artist_overlap": 0.5,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 0.0,
               "matched_artists": [
                 "Gotye"
@@ -11372,9 +11649,12 @@
               },
               "candidate_performer_text": "Gotye",
               "channel": "Failed Astral Projection",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 0.5,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 0.0,
               "matched_artists": [
                 "Gotye"
@@ -11534,9 +11814,12 @@
               },
               "candidate_performer_text": "SAINt JHN",
               "channel": "SAINt JHN",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "SAINt JHN",
@@ -11578,8 +11861,8 @@
             "schema_version": "stage5b1b-candidate-features-v1",
             "source": {
               "channel": "SAINt JHN",
-              "source_preference_tier": 3,
-              "source_type": "LYRIC_VIDEO",
+              "source_preference_tier": 2,
+              "source_type": "OFFICIAL_MUSIC_VIDEO",
               "uploader": "SAINt JHN"
             },
             "track_id": "s5b1a_019",
@@ -11677,9 +11960,12 @@
               },
               "candidate_performer_text": "SAINt JHN",
               "channel": "SAINt JHN",
+              "core_title_token_overlap": 0.2,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "SAINt JHN",
@@ -11820,9 +12106,12 @@
               },
               "candidate_performer_text": "SAINt JHN",
               "channel": "Marvellous",
+              "core_title_token_overlap": 0.16666666666666666,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "SAINt JHN",
@@ -11963,9 +12252,12 @@
               },
               "candidate_performer_text": "SAINt JHN",
               "channel": "The Vibe Guide",
+              "core_title_token_overlap": 0.25,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "SAINt JHN",
@@ -12106,9 +12398,12 @@
               },
               "candidate_performer_text": "SAINt JHN",
               "channel": "SAINt JHN",
+              "core_title_token_overlap": 0.5,
               "credited_artist_overlap": 0.5,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 0.0,
               "matched_artists": [
                 "SAINt JHN"
@@ -12272,9 +12567,12 @@
               },
               "candidate_performer_text": null,
               "channel": "Coldplay",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Coldplay"
@@ -12412,9 +12710,12 @@
               },
               "candidate_performer_text": "COLDPLAY",
               "channel": "Diego Calizaya",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Coldplay"
@@ -12552,9 +12853,12 @@
               },
               "candidate_performer_text": "Fix You",
               "channel": "Karen Culzoni",
+              "core_title_token_overlap": 0.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": true,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Coldplay"
@@ -12588,8 +12892,10 @@
               "uploader": "Karen Culzoni",
               "uploader_used_as_performer_evidence": false
             },
-            "ineligible_auto_match_reasons": [],
-            "recording_eligible": true,
+            "ineligible_auto_match_reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap"
+            ],
+            "recording_eligible": false,
             "schema_version": "stage5b1b-candidate-features-v1",
             "source": {
               "channel": "Karen Culzoni",
@@ -12688,9 +12994,12 @@
               },
               "candidate_performer_text": null,
               "channel": "Coldplay",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Coldplay"
@@ -12741,14 +13050,14 @@
                   "candidate_qualifier": null,
                   "candidate_raw": "Live",
                   "family": "live",
-                  "relationship": "MATCH",
+                  "relationship": "ABSENT",
                   "target_qualifier": "Buenos Aires",
                   "target_raw": "Live in Buenos Aires"
                 }
               ],
-              "version_absent_count": 0,
+              "version_absent_count": 1,
               "version_conflict_count": 0,
-              "version_match_count": 1
+              "version_match_count": 0
             },
             "weak_evidence": {
               "candidate_view_count": null,
@@ -12828,9 +13137,12 @@
               },
               "candidate_performer_text": "Coldplay",
               "channel": "Agustín Miranda",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Coldplay"
@@ -12985,9 +13297,12 @@
               },
               "candidate_performer_text": "PSY",
               "channel": "officialpsy",
+              "core_title_token_overlap": 0.5,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "PSY"
@@ -13096,9 +13411,12 @@
               },
               "candidate_performer_text": null,
               "channel": "oppa gangnam style",
+              "core_title_token_overlap": 0.6666666666666666,
               "credited_artist_overlap": 0.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [],
               "primary_artist_match": false,
@@ -13205,9 +13523,12 @@
               },
               "candidate_performer_text": null,
               "channel": "officialpsy",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "PSY"
@@ -13320,9 +13641,12 @@
               },
               "candidate_performer_text": "PSY",
               "channel": "officialpsy",
+              "core_title_token_overlap": 0.3333333333333333,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "PSY"
@@ -13443,9 +13767,12 @@
               },
               "candidate_performer_text": "PSY",
               "channel": "officialpsy",
+              "core_title_token_overlap": 0.2857142857142857,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "PSY"
@@ -13594,9 +13921,12 @@
               },
               "candidate_performer_text": "Fall Out Boy",
               "channel": "Fall Out Boy",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Fall Out Boy"
@@ -13709,9 +14039,12 @@
               },
               "candidate_performer_text": "Fall Out Boy",
               "channel": "7clouds Rock",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Fall Out Boy"
@@ -13824,9 +14157,12 @@
               },
               "candidate_performer_text": "Fall Out Boy",
               "channel": "FallOutBoyLibrary",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Fall Out Boy"
@@ -13947,9 +14283,12 @@
               },
               "candidate_performer_text": "Fall Out Boy",
               "channel": "Fall Out Boy",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Fall Out Boy"
@@ -14073,9 +14412,12 @@
               },
               "candidate_performer_text": "Fall Out Boy",
               "channel": "songopedia",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Fall Out Boy"
@@ -14212,9 +14554,12 @@
               },
               "candidate_performer_text": "Lady Gaga",
               "channel": "Lady Gaga",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "Lady Gaga",
@@ -14330,9 +14675,12 @@
               },
               "candidate_performer_text": "Lady Gaga",
               "channel": "GagaTube GagaTube",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "Lady Gaga",
@@ -14448,9 +14796,12 @@
               },
               "candidate_performer_text": "Lady Gaga",
               "channel": "Watermelon Music and bemu",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "Lady Gaga",
@@ -14566,9 +14917,12 @@
               },
               "candidate_performer_text": "Lady GaGa",
               "channel": "LadyGaGaTheFame3",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "Lady Gaga",
@@ -14684,9 +15038,12 @@
               },
               "candidate_performer_text": "Lady Gaga",
               "channel": "musiclover11",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": 1.0,
               "matched_artists": [
                 "Lady Gaga",
@@ -14828,9 +15185,12 @@
               },
               "candidate_performer_text": "Kendrick Lamar",
               "channel": "Kendrick Lamar",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Kendrick Lamar"
@@ -14939,9 +15299,12 @@
               },
               "candidate_performer_text": null,
               "channel": "Kendrick Lamar",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Kendrick Lamar"
@@ -15054,9 +15417,12 @@
               },
               "candidate_performer_text": "Kendrick Lamar",
               "channel": "7clouds",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Kendrick Lamar"
@@ -15169,9 +15535,12 @@
               },
               "candidate_performer_text": "HUMBLE",
               "channel": "Kendrick Lamar Spotlight",
+              "core_title_token_overlap": 0.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": true,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Kendrick Lamar"
@@ -15197,8 +15566,10 @@
               "uploader": "Kendrick Lamar Spotlight",
               "uploader_used_as_performer_evidence": false
             },
-            "ineligible_auto_match_reasons": [],
-            "recording_eligible": true,
+            "ineligible_auto_match_reasons": [
+              "explicit core-title contradiction: no normalized title-token overlap"
+            ],
+            "recording_eligible": false,
             "schema_version": "stage5b1b-candidate-features-v1",
             "source": {
               "channel": "Kendrick Lamar Spotlight",
@@ -15284,9 +15655,12 @@
               },
               "candidate_performer_text": "Kendrick Lamar",
               "channel": "HipopMedia",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Kendrick Lamar"
@@ -15317,8 +15691,8 @@
             "schema_version": "stage5b1b-candidate-features-v1",
             "source": {
               "channel": "HipopMedia",
-              "source_preference_tier": 3,
-              "source_type": "LYRIC_VIDEO",
+              "source_preference_tier": 2,
+              "source_type": "OFFICIAL_MUSIC_VIDEO",
               "uploader": "HipopMedia"
             },
             "track_id": "s5b1a_024",
@@ -15424,9 +15798,12 @@
               },
               "candidate_performer_text": "Sabrina Carpenter",
               "channel": "Sabrina Carpenter",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Sabrina Carpenter"
@@ -15457,8 +15834,8 @@
             "schema_version": "stage5b1b-candidate-features-v1",
             "source": {
               "channel": "Sabrina Carpenter",
-              "source_preference_tier": 2,
-              "source_type": "OFFICIAL_MUSIC_VIDEO",
+              "source_preference_tier": 1,
+              "source_type": "OTHER",
               "uploader": "Sabrina Carpenter"
             },
             "track_id": "s5b1a_025",
@@ -15539,9 +15916,12 @@
               },
               "candidate_performer_text": "Sabrina Carpenter",
               "channel": "Sabrina Carpenter",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Sabrina Carpenter"
@@ -15654,9 +16034,12 @@
               },
               "candidate_performer_text": "Sabrina Carpenter",
               "channel": "LatinHype",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Sabrina Carpenter"
@@ -15769,9 +16152,12 @@
               },
               "candidate_performer_text": "Sabrina Carpenter",
               "channel": "BeatStream",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Sabrina Carpenter"
@@ -15880,9 +16266,12 @@
               },
               "candidate_performer_text": null,
               "channel": "Sabrina Carpenter",
+              "core_title_token_overlap": 1.0,
               "credited_artist_overlap": 1.0,
+              "explicit_core_title_conflict": false,
               "explicit_cover_signal": false,
               "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
               "featured_artist_overlap": null,
               "matched_artists": [
                 "Sabrina Carpenter"

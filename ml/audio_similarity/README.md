@@ -79,6 +79,25 @@ rank/`NOT_IN_TOP_5`/`UNCERTAIN` judgments plus optional notes directly to
 it. Saves are atomic and resume from the existing CSV; use **Export CSV** for a
 portable copy. No audio or video is downloaded by the review server.
 
+## Stage 5B.1B held-out candidate review
+
+Stage 5B.1B exposes hierarchical recording-identity and source-quality evidence
+without selecting a final AUTO_MATCH threshold. Verify or reproduce the
+metadata-only artifacts from `ml/audio_similarity`:
+
+```bash
+.venv/bin/python -m audio_similarity.cli.stage5b1b verify
+.venv/bin/python -m audio_similarity.cli.stage5b1b dev
+.venv/bin/python -m audio_similarity.cli.stage5b1b artifacts --overwrite
+```
+
+The frozen held-out discovery is already complete. Review each candidate in
+`reports/stage5b1b/heldout_review.csv` by filling
+`candidate_review_label` with `IDEAL`, `ACCEPTABLE`, `WRONG`, or `UNCERTAIN`;
+optional candidate and track notes have dedicated columns. Multiple candidates
+may be IDEAL or ACCEPTABLE, and a track need not have an IDEAL candidate. Do
+not regenerate the review after labels are entered.
+
 ## Stage 2B balanced holistic fusion benchmark
 
 Stage 2B is a stage-gated corrective benchmark over the frozen 40-query

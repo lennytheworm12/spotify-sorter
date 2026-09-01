@@ -70,6 +70,29 @@ def generate_heldout_artifacts(path: str | Path, *, overwrite: bool = False) -> 
             raise Stage5B1AValidationError("refusing to overwrite held-out human labels")
     atomic_json(config.artifacts["heldout_features"], dataset)
     write_heldout_review(review_path, dataset, overwrite=overwrite)
+    version = results.get("configuration", {}).get("provider", {}).get("version")
+    status = {
+        "schema_version": "stage5b1b-run-status-v1",
+        "status": READY_FOR_REVIEW,
+        "stage5b1a2_evidence_checkpoint": config.checkpoint_commit,
+        "config_sha256": config.sha256,
+        "heldout_manifest_sha256": manifest.sha256,
+        "yt_dlp_version": version,
+        "summary": results["summary"],
+        "elapsed_wall_seconds": results["elapsed_wall_seconds"],
+        "media_activity": results["media_activity"],
+        "artifacts": {
+            key: {
+                "path": str(config.artifacts[key].relative_to(config.project_root)),
+                "sha256": file_sha256(config.artifacts[key]),
+            }
+            for key in ("heldout_discovery", "heldout_features", "heldout_review")
+        },
+        "review_labels_completed": 0,
+        "final_auto_match_threshold": None,
+        "heldout_labels_required_before_calibration": True,
+    }
+    atomic_json(config.artifacts["run_status"], status)
     return {
         "status": READY_FOR_REVIEW,
         "track_count": dataset["track_count"],
@@ -87,28 +110,6 @@ def run_real_heldout(path: str | Path, *, overwrite: bool = False) -> dict:
     results = run_heldout_discovery(manifest, config, adapter)
     write_heldout_results(config.artifacts["heldout_discovery"], results, overwrite=overwrite)
     artifacts = generate_heldout_artifacts(path, overwrite=overwrite)
-    status = {
-        "schema_version": "stage5b1b-run-status-v1",
-        "status": READY_FOR_REVIEW,
-        "stage5b1a2_evidence_checkpoint": config.checkpoint_commit,
-        "config_sha256": config.sha256,
-        "heldout_manifest_sha256": manifest.sha256,
-        "yt_dlp_version": backend.version,
-        "summary": results["summary"],
-        "elapsed_wall_seconds": results["elapsed_wall_seconds"],
-        "media_activity": results["media_activity"],
-        "artifacts": {
-            key: {
-                "path": str(config.artifacts[key].relative_to(config.project_root)),
-                "sha256": file_sha256(config.artifacts[key]),
-            }
-            for key in ("heldout_discovery", "heldout_features", "heldout_review")
-        },
-        "review_labels_completed": 0,
-        "final_auto_match_threshold": None,
-        "heldout_labels_required_before_calibration": True,
-    }
-    atomic_json(config.artifacts["run_status"], status)
     return {**artifacts, "yt_dlp_version": backend.version, "summary": results["summary"], "elapsed_wall_seconds": results["elapsed_wall_seconds"]}
 
 

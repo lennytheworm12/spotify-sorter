@@ -58,6 +58,10 @@ def test_named_remix_qualifier_can_appear_after_core_title():
     )["remix"] == MATCH
 
 
+def test_missing_named_remix_qualifier_is_absent_not_a_match_or_conflict():
+    assert relations("Roses - Imanbek Remix", "Roses (Remix)")["remix"] == ABSENT
+
+
 @pytest.mark.parametrize(
     ("target_title", "candidate_title", "family", "expected"),
     [
@@ -125,6 +129,58 @@ def test_explicit_cover_performer_conflict_is_ineligible():
     )
     assert result["recording_eligible"] is False
     assert result["identity"]["explicit_performer_conflict"] is True
+
+
+def test_explicit_different_title_performer_is_ineligible_but_label_uploader_is_not():
+    result = extract_candidate_features(
+        track("Hello", ("Adele",), 295_000),
+        {
+            "rank": 1,
+            "youtube_video_id": "abcdefghijk",
+            "title": "John Smith - Hello",
+            "uploader": "XL Recordings",
+            "duration_seconds": 295,
+        },
+    )
+    assert result["recording_eligible"] is False
+    assert result["identity"]["explicit_title_performer_conflict"] is True
+
+
+def test_zero_overlap_core_title_conflict_is_ineligible_without_similarity_cutoff():
+    result = extract_candidate_features(
+        track("Hello", ("Adele",), 295_000),
+        {
+            "rank": 1,
+            "youtube_video_id": "abcdefghijk",
+            "title": "Adele - Rolling in the Deep (Official Audio)",
+            "uploader": "Adele",
+            "duration_seconds": 228,
+            "view_count": 1_000_000_000,
+        },
+    )
+    assert result["identity"]["core_title_token_overlap"] == 0.0
+    assert result["identity"]["explicit_core_title_conflict"] is True
+    assert result["recording_eligible"] is False
+    assert result["source"]["source_type"] == "OFFICIAL_AUDIO"
+
+
+@pytest.mark.parametrize(
+    ("title", "family"),
+    [
+        ("Song (Acoustic)", "acoustic"),
+        ("Song (Instrumental)", "instrumental"),
+        ("Song (Karaoke)", "karaoke"),
+        ("Song (Slowed + Reverb)", "slowed"),
+        ("Song (Slowed + Reverb)", "reverb"),
+        ("Song (Sped Up)", "sped_up"),
+        ("Song (Nightcore)", "nightcore"),
+        ("Song (Extended Mix)", "extended"),
+        ("Song (Clean Version)", "content_rating"),
+        ("Song (Explicit Version)", "content_rating"),
+    ],
+)
+def test_additional_version_families(title, family):
+    assert family in {item.family for item in parse_versions(title)}
 
 
 @pytest.mark.parametrize(

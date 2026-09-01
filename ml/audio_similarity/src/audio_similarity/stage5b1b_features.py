@@ -45,17 +45,18 @@ def classify_source(candidate: dict[str, Any]) -> SourceType:
     channel = str(candidate.get("channel") or "")
     description = str(candidate.get("description") or "")
     combined = " ".join((title, description)).casefold()
+    title_only = title.casefold()
     if (
         uploader.casefold().endswith(" - topic")
         or channel.casefold().endswith(" - topic")
         or "provided to youtube by" in combined
     ):
         return SourceType.ART_TRACK_TOPIC
-    if re.search(r"\bofficial\s+audio\b", combined):
+    if re.search(r"\bofficial\s+audio\b", title_only):
         return SourceType.OFFICIAL_AUDIO
-    if re.search(r"\b(?:lyrics?|lyric video)\b", combined):
+    if re.search(r"\b(?:lyrics?|lyric video)\b", title_only):
         return SourceType.LYRIC_VIDEO
-    if re.search(r"\b(?:official\s+(?:music\s+)?video|music video|m/?v)\b", combined):
+    if re.search(r"\b(?:official\s+(?:music\s+)?video|music video|m/?v)\b", title_only):
         return SourceType.OFFICIAL_MUSIC_VIDEO
     return SourceType.OTHER
 
@@ -73,8 +74,11 @@ def _performer_evidence(track: SpotifyTrack, candidate: dict[str, Any]) -> dict[
     matches = [artist for artist in track.artists if _contains_normalized(evidence_text, artist)]
     cover_match = re.search(r"\bcover(?:ed)?\s+by\s+([^|()\[\]-]+)", title, re.I)
     cover_signal = bool(re.search(r"\bcover\b", evidence_text, re.I))
-    explicit_conflict = bool(cover_signal and (cover_match or not matches))
     primary_candidate = parse_candidate_identity(candidate).primary_artist
+    title_performer_conflict = bool(primary_candidate and not matches and " - " in title)
+    explicit_conflict = bool(
+        (cover_signal and (cover_match or not matches)) or title_performer_conflict
+    )
     return {
         "primary_artist_match": bool(matches and matches[0] == track.artists[0]),
         "artist_similarity": max(
@@ -88,6 +92,7 @@ def _performer_evidence(track: SpotifyTrack, candidate: dict[str, Any]) -> dict[
         "matched_artists": matches,
         "candidate_performer_text": primary_candidate,
         "explicit_cover_signal": cover_signal,
+        "explicit_title_performer_conflict": title_performer_conflict,
         "explicit_performer_conflict": explicit_conflict,
         "uploader": candidate.get("uploader"),
         "channel": candidate.get("channel"),
@@ -104,6 +109,14 @@ def extract_candidate_features(track: SpotifyTrack, candidate: dict[str, Any]) -
         for relationship in (MATCH, ABSENT, CONFLICT)
     }
     artist = _performer_evidence(track, candidate)
+    target_title_tokens = set(target.normalized_title.split())
+    candidate_title_tokens = set(observed.normalized_title.split())
+    title_token_overlap = (
+        len(target_title_tokens & candidate_title_tokens)
+        / len(target_title_tokens | candidate_title_tokens)
+        if target_title_tokens and candidate_title_tokens else None
+    )
+    explicit_title_conflict = title_token_overlap == 0.0
     target_duration = target.duration_seconds
     candidate_duration = observed.duration_seconds
     absolute_delta = (
@@ -128,6 +141,8 @@ def extract_candidate_features(track: SpotifyTrack, candidate: dict[str, Any]) -
         reasons.append("explicit version conflict: " + "; ".join(conflicts))
     if artist["explicit_performer_conflict"]:
         reasons.append("explicit cover/different-performer evidence")
+    if explicit_title_conflict:
+        reasons.append("explicit core-title contradiction: no normalized title-token overlap")
     eligible = not reasons
     return {
         "schema_version": FEATURE_SCHEMA_VERSION,
@@ -140,6 +155,8 @@ def extract_candidate_features(track: SpotifyTrack, candidate: dict[str, Any]) -
             "candidate": observed.to_dict(),
             "title_exact_normalized_match": target.normalized_title == observed.normalized_title,
             "title_similarity": text_similarity(target.core_title, observed.core_title),
+            "core_title_token_overlap": title_token_overlap,
+            "explicit_core_title_conflict": explicit_title_conflict,
             **artist,
         },
         "versions": {

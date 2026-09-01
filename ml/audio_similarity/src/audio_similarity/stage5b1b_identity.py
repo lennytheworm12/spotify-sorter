@@ -202,14 +202,16 @@ def compare_versions(
         else:
             assert expected is not None and observed is not None
             left, right = normalize_text(expected.qualifier), normalize_text(observed.qualifier)
-            qualifiers_compatible = (
-                not left
-                or not right
-                or left == right
-                or f" {left} " in f" {right} "
-                or f" {right} " in f" {left} "
-            )
-            relationship = MATCH if qualifiers_compatible else CONFLICT
+            if left and not right:
+                relationship = ABSENT
+            else:
+                qualifiers_compatible = (
+                    not left
+                    or left == right
+                    or f" {left} " in f" {right} "
+                    or f" {right} " in f" {left} "
+                )
+                relationship = MATCH if qualifiers_compatible else CONFLICT
         rows.append(
             {
                 "family": family,
