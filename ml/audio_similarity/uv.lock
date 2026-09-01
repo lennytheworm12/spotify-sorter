@@ -61,6 +61,7 @@ dependencies = [
     { name = "torch" },
     { name = "torchaudio" },
     { name = "transformers" },
+    { name = "yt-dlp" },
 ]
 
 [package.dev-dependencies]
@@ -82,6 +83,7 @@ requires-dist = [
     { name = "torch", specifier = ">=2.4,<3", index = "https://download.pytorch.org/whl/cu124" },
     { name = "torchaudio", specifier = ">=2.4,<3", index = "https://download.pytorch.org/whl/cu124" },
     { name = "transformers", specifier = ">=4.45" },
+    { name = "yt-dlp", specifier = "==2026.8.19" },
 ]
 
 [package.metadata.requires-dev]
@@ -1959,4 +1961,13 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/f3/d7/f056e8e114b85df6f30f7c22fd75fb273182306ea95b36c6f2089c8ff52a/x-clip-0.14.4.tar.gz", hash = "sha256:e2539953f1c81a2ab892843c2bc02c218f4ac410cf10ce37495830f6a0e259c6", size = 1355000, upload-time = "2023-10-16T15:04:08.619Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c6/41/44c4b2336824263ebcbfa16e8fd7fd4ca010183aa7587779a405ee5ab2b5/x_clip-0.14.4-py3-none-any.whl", hash = "sha256:2e9842330bc4539916e54a22c1d4352b60b838507e0736e98e4fb74fd9972f7a", size = 1374025, upload-time = "2023-10-16T15:04:06.814Z" },
+]
+
+[[package]]
+name = "yt-dlp"
+version = "2026.8.19"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/1e/e0/832fa4ca334b766a06933a196066edc3dba37cdb6f14cd98d59bcc69a4b4/yt_dlp-2026.8.19.tar.gz", hash = "sha256:9e213e48cea35c66b378e4447903f118f6392a5fa380a2b6d7070ec86f4e0af1", size = 3052025, upload-time = "2026-08-19T23:48:59.291Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/69/b2/8cd1613f56eed7ceb64fbd4df3f1c01246bfb098e6f398228bafda22b80b/yt_dlp-2026.8.19-py3-none-any.whl", hash = "sha256:1d57897e94c6665a0a6f9bc54b34e584284e32c034ffab3a7df25d8f7b24eedf", size = 3185533, upload-time = "2026-08-19T23:48:56.925Z" },
 ]

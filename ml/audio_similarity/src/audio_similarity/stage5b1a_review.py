@@ -5,7 +5,7 @@ import csv
 import os
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any
+from typing import Any, Sequence
 
 from .stage5b1a_config import GateConfig
 from .stage5b1a_models import FrozenTrackManifest, Stage5B1AValidationError
@@ -130,10 +130,11 @@ def load_review_labels(
     path: str | Path,
     *,
     candidate_counts: dict[str, int] | None = None,
+    expected_columns: Sequence[str] | None = None,
 ) -> tuple[ReviewLabel, ...]:
     with Path(path).open(encoding="utf-8", newline="") as handle:
         reader = csv.DictReader(handle)
-        if reader.fieldnames != REVIEW_COLUMNS:
+        if reader.fieldnames != list(expected_columns or REVIEW_COLUMNS):
             raise Stage5B1AValidationError("unexpected human-review CSV columns")
         labels = []
         seen = set()
@@ -180,6 +181,9 @@ def compute_metrics(
     results: dict,
     labels: tuple[ReviewLabel, ...],
     gate: GateConfig,
+    *,
+    metrics_schema_version: str = METRICS_SCHEMA_VERSION,
+    request_failure_key: str = "firecrawl_request_failure_count",
 ) -> dict:
     result_rows = results.get("tracks")
     if not isinstance(result_rows, list):
@@ -219,7 +223,7 @@ def compute_metrics(
     else:
         verdict = classify_gate(recall_at_5, gate)
     return {
-        "schema_version": METRICS_SCHEMA_VERSION,
+        "schema_version": metrics_schema_version,
         "experiment_id": results.get("experiment_id"),
         "review": {
             "total_tracks": len(labels),
@@ -233,7 +237,7 @@ def compute_metrics(
         "recall_at_1": recalls["recall_at_1"],
         "recall_at_3": recalls["recall_at_3"],
         "recall_at_5": recalls["recall_at_5"],
-        "firecrawl_request_failure_count": sum(row.get("error") is not None for row in result_rows),
+        request_failure_key: sum(row.get("error") is not None for row in result_rows),
         "tracks_with_zero_youtube_candidates": sum(not row.get("candidates") for row in result_rows),
         "feasibility_verdict": verdict,
         "gate": {
