@@ -127,11 +127,11 @@ Automatic title/version/source/eligibility features are deliberately absent from
 
 ## Tests
 
-Focused Stage 5B.1B, Stage 5B.1A/1A2 historical, and Stage 5A regression result: **145 passed, 0 failed**.
+Focused Stage 5B.1B, Stage 5B.1A/1A2 historical, and Stage 5A regression result after the Sol harness: **164 passed, 0 failed**.
 
-Focused review-workbench persistence/API result: **11 passed, 0 failed**.
+Focused Sol evaluator, targeted review-workbench persistence/API, and committed-artifact result: **22 passed, 0 failed**.
 
-Full non-heavy `ml/audio_similarity` result after the review workbench: **603 passed, 12 heavy tests deselected, 0 failed**. The 11 warnings are existing short-signal librosa warnings and one existing empty-frequency tuning warning.
+Full non-heavy `ml/audio_similarity` result after the pushed Sol audit checkpoint: **611 passed, 12 heavy tests deselected, 0 failed**. The 11 warnings are existing short-signal librosa warnings and one existing empty-frequency tuning warning.
 
 Isolated headless Chromium verification passed for desktop and 390 px mobile layouts, all four label states, immediate label autosave, candidate-note and track-note autosave, reload/resume persistence, saved progress accounting, direct YouTube links, CSV export, horizontal overflow, and console errors/warnings. Browser verification used a disposable `/tmp` CSV; the authoritative empty review artifact remained unchanged.
 
