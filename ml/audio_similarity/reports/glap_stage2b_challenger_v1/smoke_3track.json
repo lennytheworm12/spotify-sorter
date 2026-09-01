@@ -1,0 +1,21 @@
+{
+  "cache_invalidated": 0,
+  "experiment_id": "glap_stage2b_challenger_v1",
+  "failed_this_run": 0,
+  "failure_count": 0,
+  "full_historical_run": false,
+  "inference_attempted": 3,
+  "model_load_seconds": 5.732935972017003,
+  "p50_inference_ms": 19.72058499814011,
+  "p95_inference_ms": 731.588530607405,
+  "path": "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/artifacts/glap_stage2b_challenger_v1/embeddings.sqlite",
+  "peak_vram_bytes": 3464466944,
+  "row_count": 3,
+  "schema_version": "glap-stage2b-cache-sqlite-v1",
+  "selected_track_count": 3,
+  "skipped_valid_success": 0,
+  "succeeded_this_run": 3,
+  "success_count": 3,
+  "track_count": 3,
+  "wall_seconds": 9.094996878004167
+}

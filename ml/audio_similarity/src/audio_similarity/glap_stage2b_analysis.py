@@ -10,7 +10,12 @@ import numpy as np
 import pandas as pd
 from scipy.stats import spearmanr
 
-from .glap_stage2b import GlapEmbeddingCache, load_evidence_tracks, load_glap_contract
+from .glap_stage2b import (
+    GlapEmbeddingCache,
+    analysis_identity,
+    load_evidence_tracks,
+    load_glap_contract,
+)
 from .stage2b_contract import ContractError, sha256_file
 from .stage2b_metrics import accuracy_contributions, query_macro_accuracy
 from .stage2b_test import paired_query_bootstrap
@@ -21,10 +26,10 @@ def _prediction(margin: float) -> str:
     return "A" if margin > 0 else "B" if margin < 0 else "TIE"
 
 
-def _metric_block(frame: pd.DataFrame) -> dict[str, Any]:
+def _metric_block(frame: pd.DataFrame, margin_column: str = "glap_margin") -> dict[str, Any]:
     if frame.empty:
         raise ContractError("challenger metric block has no binary rows")
-    margins = frame["glap_margin"].to_numpy(dtype=np.float64)
+    margins = frame[margin_column].to_numpy(dtype=np.float64)
     labels = frame["binary_label_a_wins"].to_numpy(dtype=np.int64)
     queries = frame["query_id"].to_numpy(dtype=np.int64)
     query = query_macro_accuracy(margins, labels, queries)
@@ -99,8 +104,16 @@ def analyze_glap_challenger(
     contract = load_glap_contract(contract_path, root)
     evidence_tracks = load_evidence_tracks(contract, root)
     expected_ids = {track.track_id for track in evidence_tracks}
+    expected_keys = {
+        track.track_id: analysis_identity(
+            contract,
+            source_sha256=track.source_sha256,
+            center5_pcm_sha256=track.center5_pcm_sha256,
+        )
+        for track in evidence_tracks
+    }
     cache = GlapEmbeddingCache(cache_path)
-    glap = cache.all_success_embeddings()
+    glap = cache.embeddings_for_keys(expected_keys)
     cache_summary = cache.summary()
     cache.close()
     if set(glap) != expected_ids:
@@ -115,6 +128,17 @@ def analyze_glap_challenger(
         clap_spec["analysis_key"],
         int(clap_spec["dimensions"]),
     )
+    import yaml
+
+    stage2b_config_path = root / historical["stage2b_config"]["path"]
+    stage2b_config = yaml.safe_load(stage2b_config_path.read_text(encoding="utf-8"))
+    muq_spec = stage2b_config["inputs"]["embeddings"]["muq_mulan_large"]
+    muq = load_validated_embeddings(
+        root / muq_spec["path"],
+        muq_spec["sha256"],
+        muq_spec["analysis_key"],
+        int(muq_spec["dimensions"]),
+    )
     trials = json.loads((root / historical["trial_manifest"]["path"]).read_text(encoding="utf-8"))["trials"]
     labels = pd.read_csv(root / historical["canonical_labels"]["path"], dtype=str).fillna("").set_index("trial_id")
     rows = []
@@ -127,6 +151,8 @@ def analyze_glap_challenger(
         glap_b = float(np.dot(glap[query], glap[candidate_b]))
         clap_a = float(np.dot(clap[query], clap[candidate_a]))
         clap_b = float(np.dot(clap[query], clap[candidate_b]))
+        muq_a = float(np.dot(muq[query], muq[candidate_a]))
+        muq_b = float(np.dot(muq[query], muq[candidate_b]))
         choice = str(labels.at[trial_id, "choice"])
         included = choice in {"A", "B"}
         rows.append(
@@ -148,6 +174,9 @@ def analyze_glap_challenger(
                 "clap_cosine_b": clap_b,
                 "clap_margin": clap_a - clap_b,
                 "clap_prediction": _prediction(clap_a - clap_b),
+                "muq_cosine_a": muq_a,
+                "muq_cosine_b": muq_b,
+                "muq_margin": muq_a - muq_b,
             }
         )
     predictions = pd.DataFrame(rows)
@@ -162,8 +191,10 @@ def analyze_glap_challenger(
     )
 
     metrics = {"ALL": _metric_block(binary)}
+    clap_metrics = {"ALL": _metric_block(binary, "clap_margin")}
     for split in ("TRAIN", "VALIDATION", "TEST"):
         metrics[split] = _metric_block(binary[binary["split"] == split])
+        clap_metrics[split] = _metric_block(binary[binary["split"] == split], "clap_margin")
     frozen_test = historical["frozen_test_metrics"]["laion_clap_test_query_macro_accuracy"]
     clap_test_query = query_macro_accuracy(
         binary.loc[binary["split"] == "TEST", "clap_margin"].to_numpy(),
@@ -215,6 +246,10 @@ def analyze_glap_challenger(
         "test_glap_created_errors": paired_table["laion_clap_only_correct"],
         "margin_correlation_all_binary": _correlation(binary["glap_margin"], binary["clap_margin"]),
         "margin_correlation_test": _correlation(test["glap_margin"], test["clap_margin"]),
+        "margin_correlation_glap_vs_muq_all_binary": _correlation(
+            binary["glap_margin"], binary["muq_margin"]
+        ),
+        "margin_correlation_glap_vs_muq_test": _correlation(test["glap_margin"], test["muq_margin"]),
         "similarity_correlation_all_trials": _correlation(
             np.concatenate([predictions["glap_cosine_a"], predictions["glap_cosine_b"]]),
             np.concatenate([predictions["clap_cosine_a"], predictions["clap_cosine_b"]]),
@@ -233,10 +268,6 @@ def analyze_glap_challenger(
         ).head(5)[["query_id", "glap_minus_laion_clap"]].to_dict("records"),
     }
 
-    import yaml
-
-    stage2b_config_path = root / historical["stage2b_config"]["path"]
-    stage2b_config = yaml.safe_load(stage2b_config_path.read_text(encoding="utf-8"))
     language = _language_audit(root, stage2b_config)
     if bootstrap["ci_95"][1] < 0:
         verdict = "GLAP_REJECTED_AS_GLOBAL_CHALLENGER"
@@ -269,10 +300,11 @@ def analyze_glap_challenger(
             "exact_match": True,
         },
         "glap_metrics": metrics,
+        "laion_clap_metrics": clap_metrics,
         "glap_minus_laion_clap_test_query_macro": bootstrap,
         "diagnostics": diagnostics,
         "language_audit": language,
-        "provisional_statistical_verdict": verdict,
+        "final_verdict": verdict,
         "production_contract_changed": False,
         "artifact_hashes": {
             "predictions.csv": sha256_file(predictions_path),

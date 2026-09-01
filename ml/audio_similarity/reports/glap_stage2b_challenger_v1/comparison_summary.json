@@ -1,0 +1,404 @@
+{
+  "artifact_hashes": {
+    "per_query_metrics.csv": "85296b2357ea1e32e7db1ca0935cdc03681f6c440318ba56cbc5098f6e002ad2",
+    "predictions.csv": "9d40fe0f9fdb0a0bf7a86a634e749f1c8b22c76f4ed778c003fa0f5aaaeaf427"
+  },
+  "baseline_reproduction": {
+    "exact_match": true,
+    "expected_test_query_macro_accuracy": 0.771875,
+    "reproduced_test_query_macro_accuracy": 0.771875
+  },
+  "cache_summary": {
+    "embedding_bytes_per_track": 4096,
+    "failure_count": 0,
+    "inference_clips_per_hour": 131876.99667776984,
+    "p50_inference_ms": 19.781711991527118,
+    "p95_inference_ms": 22.034827001334634,
+    "path": "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/artifacts/glap_stage2b_challenger_v1/embeddings.sqlite",
+    "row_count": 246,
+    "schema_version": "glap-stage2b-cache-sqlite-v1",
+    "sqlite_bytes": 1187840,
+    "success_count": 246,
+    "total_inference_seconds": 6.715348561992869,
+    "track_count": 246
+  },
+  "contract_sha256": "1895ac7bc91d7ef718f58fc0000112cc096ec07aabe6ad145c6232e545b3b708",
+  "diagnostics": {
+    "absolute_margin_distributions": {
+      "GLAP_ALL_BINARY": {
+        "max": 0.30015045404434204,
+        "mean": 0.06606015923676217,
+        "min": 8.624792098999023e-05,
+        "p05": 0.0026548624038696287,
+        "p25": 0.02461063861846924,
+        "p50": 0.047845304012298584,
+        "p75": 0.09577548503875732,
+        "p95": 0.19267426729202264
+      },
+      "GLAP_TEST": {
+        "max": 0.2074129581451416,
+        "mean": 0.05515281325679714,
+        "min": 8.624792098999023e-05,
+        "p05": 0.0026446104049682615,
+        "p25": 0.01422765851020813,
+        "p50": 0.04175323247909546,
+        "p75": 0.08153334259986877,
+        "p95": 0.15885474085807783
+      },
+      "LAION_CLAP_ALL_BINARY": {
+        "max": 0.5503838658332825,
+        "mean": 0.15888117813760308,
+        "min": 0.00039386749267578125,
+        "p05": 0.01222135424613953,
+        "p25": 0.06526201963424683,
+        "p50": 0.1328325867652893,
+        "p75": 0.24843746423721313,
+        "p95": 0.3949658393859862
+      },
+      "LAION_CLAP_TEST": {
+        "max": 0.40611183643341064,
+        "mean": 0.156915783377017,
+        "min": 0.00039386749267578125,
+        "p05": 0.0038063526153564466,
+        "p25": 0.07520955801010132,
+        "p50": 0.1363164782524109,
+        "p75": 0.24876195192337036,
+        "p95": 0.34250909388065326
+      }
+    },
+    "margin_correlation_all_binary": {
+      "count": 157,
+      "pearson": 0.47938546594344733,
+      "spearman": 0.3790987292156364
+    },
+    "margin_correlation_glap_vs_muq_all_binary": {
+      "count": 157,
+      "pearson": 0.07991202820734357,
+      "spearman": 0.12848008236220765
+    },
+    "margin_correlation_glap_vs_muq_test": {
+      "count": 59,
+      "pearson": -0.2508984576559382,
+      "spearman": -0.14763296317942723
+    },
+    "margin_correlation_test": {
+      "count": 59,
+      "pearson": 0.30711729877668975,
+      "spearman": 0.27218001168907074
+    },
+    "queries_glap_strongest": [
+      {
+        "glap_minus_laion_clap": 0.5,
+        "query_id": 106277
+      },
+      {
+        "glap_minus_laion_clap": 0.3333333333333333,
+        "query_id": 113284
+      },
+      {
+        "glap_minus_laion_clap": 0.0,
+        "query_id": 64567
+      },
+      {
+        "glap_minus_laion_clap": 0.0,
+        "query_id": 68840
+      },
+      {
+        "glap_minus_laion_clap": -0.2,
+        "query_id": 120770
+      }
+    ],
+    "queries_laion_clap_strongest": [
+      {
+        "glap_minus_laion_clap": -0.75,
+        "query_id": 20364
+      },
+      {
+        "glap_minus_laion_clap": -0.75,
+        "query_id": 48442
+      },
+      {
+        "glap_minus_laion_clap": -0.5,
+        "query_id": 32340
+      },
+      {
+        "glap_minus_laion_clap": -0.39999999999999997,
+        "query_id": 131410
+      },
+      {
+        "glap_minus_laion_clap": -0.33333333333333337,
+        "query_id": 124913
+      }
+    ],
+    "similarity_correlation_all_trials": {
+      "count": 480,
+      "pearson": 0.4384940669903624,
+      "spearman": 0.40825358732909733
+    },
+    "test_glap_created_errors": 19,
+    "test_glap_rescues": 3,
+    "test_paired_outcomes": {
+      "both_correct": 26,
+      "both_wrong": 11,
+      "glap_only_correct": 3,
+      "laion_clap_only_correct": 19,
+      "rows_with_exact_tie_credit": 0
+    }
+  },
+  "experiment_id": "glap_stage2b_challenger_v1",
+  "final_verdict": "GLAP_REJECTED_AS_GLOBAL_CHALLENGER",
+  "glap_metrics": {
+    "ALL": {
+      "binary_trial_count": 157,
+      "pairwise_accuracy": 0.6496815286624203,
+      "per_query_accuracy": {
+        "10435": 0.5,
+        "105408": 1.0,
+        "106277": 1.0,
+        "107027": 0.3333333333333333,
+        "107249": 0.6,
+        "110262": 0.5,
+        "113167": 0.6,
+        "113284": 0.6666666666666666,
+        "114223": 0.6666666666666666,
+        "115700": 0.8,
+        "11790": 0.6666666666666666,
+        "120770": 0.2,
+        "124913": 0.6666666666666666,
+        "125193": 0.75,
+        "125814": 1.0,
+        "127359": 0.3333333333333333,
+        "131410": 0.2,
+        "134823": 1.0,
+        "143098": 1.0,
+        "149712": 0.6,
+        "20364": 0.25,
+        "32340": 0.5,
+        "38896": 0.3333333333333333,
+        "3921": 0.5,
+        "41605": 0.8,
+        "42844": 0.8,
+        "48442": 0.25,
+        "52393": 0.6,
+        "62450": 1.0,
+        "64567": 1.0,
+        "68840": 1.0,
+        "68844": 0.5,
+        "75317": 0.75,
+        "84095": 0.6,
+        "86441": 1.0,
+        "87190": 0.75,
+        "92885": 1.0,
+        "94465": 1.0
+      },
+      "query_count": 38,
+      "query_macro_accuracy": 0.6767543859649122,
+      "tie_count": 0,
+      "tie_rate": 0.0
+    },
+    "TEST": {
+      "binary_trial_count": 59,
+      "pairwise_accuracy": 0.4915254237288136,
+      "per_query_accuracy": {
+        "10435": 0.5,
+        "106277": 1.0,
+        "107027": 0.3333333333333333,
+        "107249": 0.6,
+        "110262": 0.5,
+        "113284": 0.6666666666666666,
+        "120770": 0.2,
+        "124913": 0.6666666666666666,
+        "131410": 0.2,
+        "20364": 0.25,
+        "32340": 0.5,
+        "48442": 0.25,
+        "52393": 0.6,
+        "64567": 1.0,
+        "68840": 1.0,
+        "68844": 0.5
+      },
+      "query_count": 16,
+      "query_macro_accuracy": 0.5479166666666666,
+      "tie_count": 0,
+      "tie_rate": 0.0
+    },
+    "TRAIN": {
+      "binary_trial_count": 67,
+      "pairwise_accuracy": 0.7313432835820896,
+      "per_query_accuracy": {
+        "113167": 0.6,
+        "114223": 0.6666666666666666,
+        "115700": 0.8,
+        "11790": 0.6666666666666666,
+        "125814": 1.0,
+        "127359": 0.3333333333333333,
+        "134823": 1.0,
+        "3921": 0.5,
+        "41605": 0.8,
+        "42844": 0.8,
+        "75317": 0.75,
+        "84095": 0.6,
+        "86441": 1.0,
+        "87190": 0.75,
+        "92885": 1.0
+      },
+      "query_count": 15,
+      "query_macro_accuracy": 0.7511111111111112,
+      "tie_count": 0,
+      "tie_rate": 0.0
+    },
+    "VALIDATION": {
+      "binary_trial_count": 31,
+      "pairwise_accuracy": 0.7741935483870968,
+      "per_query_accuracy": {
+        "105408": 1.0,
+        "125193": 0.75,
+        "143098": 1.0,
+        "149712": 0.6,
+        "38896": 0.3333333333333333,
+        "62450": 1.0,
+        "94465": 1.0
+      },
+      "query_count": 7,
+      "query_macro_accuracy": 0.8119047619047618,
+      "tie_count": 0,
+      "tie_rate": 0.0
+    }
+  },
+  "glap_minus_laion_clap_test_query_macro": {
+    "ci_95": [
+      -0.3760416666666667,
+      -0.06458333333333334
+    ],
+    "draws": 50000,
+    "estimate": -0.22395833333333331,
+    "seed": 20260901
+  },
+  "laion_clap_metrics": {
+    "ALL": {
+      "binary_trial_count": 157,
+      "pairwise_accuracy": 0.732484076433121,
+      "per_query_accuracy": {
+        "10435": 0.75,
+        "105408": 0.6666666666666666,
+        "106277": 0.5,
+        "107027": 0.6666666666666666,
+        "107249": 0.8,
+        "110262": 0.75,
+        "113167": 1.0,
+        "113284": 0.3333333333333333,
+        "114223": 0.5,
+        "115700": 1.0,
+        "11790": 0.6666666666666666,
+        "120770": 0.4,
+        "124913": 1.0,
+        "125193": 0.75,
+        "125814": 1.0,
+        "127359": 1.0,
+        "131410": 0.6,
+        "134823": 0.0,
+        "143098": 0.6666666666666666,
+        "149712": 0.6,
+        "20364": 1.0,
+        "32340": 1.0,
+        "38896": 0.3333333333333333,
+        "3921": 0.3333333333333333,
+        "41605": 0.8,
+        "42844": 0.6,
+        "48442": 1.0,
+        "52393": 0.8,
+        "62450": 1.0,
+        "64567": 1.0,
+        "68840": 1.0,
+        "68844": 0.75,
+        "75317": 0.75,
+        "84095": 0.6,
+        "86441": 0.6666666666666666,
+        "87190": 1.0,
+        "92885": 0.6666666666666666,
+        "94465": 1.0
+      },
+      "query_count": 38,
+      "query_macro_accuracy": 0.7355263157894738,
+      "tie_count": 0,
+      "tie_rate": 0.0
+    },
+    "TEST": {
+      "binary_trial_count": 59,
+      "pairwise_accuracy": 0.7627118644067796,
+      "per_query_accuracy": {
+        "10435": 0.75,
+        "106277": 0.5,
+        "107027": 0.6666666666666666,
+        "107249": 0.8,
+        "110262": 0.75,
+        "113284": 0.3333333333333333,
+        "120770": 0.4,
+        "124913": 1.0,
+        "131410": 0.6,
+        "20364": 1.0,
+        "32340": 1.0,
+        "48442": 1.0,
+        "52393": 0.8,
+        "64567": 1.0,
+        "68840": 1.0,
+        "68844": 0.75
+      },
+      "query_count": 16,
+      "query_macro_accuracy": 0.771875,
+      "tie_count": 0,
+      "tie_rate": 0.0
+    },
+    "TRAIN": {
+      "binary_trial_count": 67,
+      "pairwise_accuracy": 0.7164179104477612,
+      "per_query_accuracy": {
+        "113167": 1.0,
+        "114223": 0.5,
+        "115700": 1.0,
+        "11790": 0.6666666666666666,
+        "125814": 1.0,
+        "127359": 1.0,
+        "134823": 0.0,
+        "3921": 0.3333333333333333,
+        "41605": 0.8,
+        "42844": 0.6,
+        "75317": 0.75,
+        "84095": 0.6,
+        "86441": 0.6666666666666666,
+        "87190": 1.0,
+        "92885": 0.6666666666666666
+      },
+      "query_count": 15,
+      "query_macro_accuracy": 0.7055555555555555,
+      "tie_count": 0,
+      "tie_rate": 0.0
+    },
+    "VALIDATION": {
+      "binary_trial_count": 31,
+      "pairwise_accuracy": 0.7096774193548387,
+      "per_query_accuracy": {
+        "105408": 0.6666666666666666,
+        "125193": 0.75,
+        "143098": 0.6666666666666666,
+        "149712": 0.6,
+        "38896": 0.3333333333333333,
+        "62450": 1.0,
+        "94465": 1.0
+      },
+      "query_count": 7,
+      "query_macro_accuracy": 0.7166666666666666,
+      "tie_count": 0,
+      "tie_rate": 0.0
+    }
+  },
+  "language_audit": {
+    "candidate_columns": [],
+    "conclusion": "Historical Stage 2B does not support a reliable multilingual subgroup analysis.",
+    "interpretation": "EXPLORATORY",
+    "reliable_metadata_found": false,
+    "subgroup_analysis_performed": false
+  },
+  "production_contract_changed": false,
+  "schema_version": 1
+}

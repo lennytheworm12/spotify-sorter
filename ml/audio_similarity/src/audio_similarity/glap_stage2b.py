@@ -216,15 +216,12 @@ class GlapEmbeddingCache:
         )
         self.db.commit()
 
-    def all_success_embeddings(self) -> dict[int, np.ndarray]:
+    def embeddings_for_keys(self, expected_keys: dict[int, str]) -> dict[int, np.ndarray]:
         output: dict[int, np.ndarray] = {}
-        for track_id, key in self.db.execute(
-            "SELECT track_id, analysis_key FROM embeddings WHERE status=? ORDER BY track_id",
-            (STATUS_SUCCESS,),
-        ):
-            vector = self.valid_embedding(int(track_id), str(key))
+        for track_id in sorted(expected_keys):
+            vector = self.valid_embedding(track_id, expected_keys[track_id])
             if vector is not None:
-                output[int(track_id)] = vector
+                output[track_id] = vector
         return output
 
     def summary(self) -> dict[str, Any]:
@@ -234,6 +231,7 @@ class GlapEmbeddingCache:
         timings = [float(row[0]) for row in self.db.execute(
             "SELECT encode_ms FROM embeddings WHERE status='SUCCESS' ORDER BY encode_ms"
         )]
+        inference_seconds = sum(timings) / 1000
         return {
             "schema_version": CACHE_SCHEMA_VERSION,
             "path": str(self.path),
@@ -243,7 +241,29 @@ class GlapEmbeddingCache:
             "track_count": int(tracks or 0),
             "p50_inference_ms": float(np.percentile(timings, 50)) if timings else None,
             "p95_inference_ms": float(np.percentile(timings, 95)) if timings else None,
+            "total_inference_seconds": inference_seconds if timings else None,
+            "inference_clips_per_hour": len(timings) / inference_seconds * 3600 if inference_seconds else None,
+            "embedding_bytes_per_track": GLAP_DIMENSION * 4,
+            "sqlite_bytes": self.path.stat().st_size if self.path.exists() else 0,
         }
+
+    def manifest_rows(self) -> list[dict[str, Any]]:
+        names = [
+            "track_id",
+            "analysis_key",
+            "source_sha256",
+            "center5_pcm_sha256",
+            "embedding_sha256",
+            "status",
+            "failure_code",
+            "encode_ms",
+        ]
+        return [
+            dict(zip(names, row))
+            for row in self.db.execute(
+                f"SELECT {','.join(names)} FROM embeddings ORDER BY track_id, analysis_key"
+            )
+        ]
 
 
 @dataclass(frozen=True)
@@ -325,6 +345,7 @@ def encode_historical_evidence(
 ) -> dict[str, Any]:
     """Encode exact Stage 2B evidence, reusing only identity-valid successes."""
 
+    overall_started = time.perf_counter()
     root = Path(root)
     if batch_size < 1:
         raise ValueError("batch_size must be positive")
@@ -375,12 +396,15 @@ def encode_historical_evidence(
     encoder = None
     succeeded = 0
     inference_attempted = 0
-    wall_started = time.perf_counter()
+    inference_started = time.perf_counter()
     if prepared:
         encoder = encoder_factory(
             model_dir,
             model_revision=challenger["model_revision"],
             model_sha256=challenger["model_file_sha256"],
+            model_code_sha256=challenger["remote_model_code_sha256"],
+            model_config_sha256=challenger["remote_config_sha256"],
+            tokenizer_sha256=challenger["tokenizer_file_sha256"],
             device=device,
         )
         for offset in range(0, len(prepared), batch_size):
@@ -446,10 +470,99 @@ def encode_historical_evidence(
         "inference_attempted": inference_attempted,
         "succeeded_this_run": succeeded,
         "failed_this_run": failed,
-        "wall_seconds": time.perf_counter() - wall_started,
+        "inference_phase_wall_seconds": time.perf_counter() - inference_started,
+        "wall_seconds": time.perf_counter() - overall_started,
         "model_load_seconds": getattr(encoder, "load_seconds", None),
         "peak_vram_bytes": encoder.peak_vram_bytes() if encoder is not None else None,
         "full_historical_run": len(tracks) == 246,
     }
     cache.close()
     return summary
+
+
+def export_cache_manifest(
+    *,
+    contract_path: str | Path,
+    root: str | Path,
+    cache_path: str | Path,
+    output_path: str | Path,
+) -> dict[str, Any]:
+    root, cache_path, output_path = Path(root), Path(cache_path), Path(output_path)
+    contract = load_glap_contract(contract_path, root)
+    cache = GlapEmbeddingCache(cache_path)
+    rows, summary = cache.manifest_rows(), cache.summary()
+    cache.close()
+    stable_lines = [
+        f"{row['track_id']}|{row['analysis_key']}|{row['embedding_sha256']}|{row['status']}"
+        for row in rows
+    ]
+    manifest = {
+        "schema_version": 1,
+        "experiment_id": contract["experiment_id"],
+        "representation_namespace": contract["challenger"]["representation_namespace"],
+        "contract_sha256": sha256_file(contract_path),
+        "cache_schema_version": CACHE_SCHEMA_VERSION,
+        "cache_path": str(cache_path),
+        "cache_sqlite_sha256": sha256_file(cache_path),
+        "stable_embedding_set_sha256": hashlib.sha256("\n".join(stable_lines).encode()).hexdigest(),
+        "summary": summary,
+        "rows": rows,
+    }
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    return manifest
+
+
+def validate_real_model(
+    *,
+    contract_path: str | Path,
+    root: str | Path,
+    model_dir: str | Path,
+    device: str,
+    track_id: int,
+    output_path: str | Path,
+) -> dict[str, Any]:
+    root, output_path = Path(root), Path(output_path)
+    contract = load_glap_contract(contract_path, root)
+    tracks = {track.track_id: track for track in load_evidence_tracks(contract, root)}
+    if int(track_id) not in tracks:
+        raise ContractError(f"track {track_id} is not frozen Stage 2B evidence")
+    challenger = contract["challenger"]
+    excerpt = _prepare_excerpt(tracks[int(track_id)], root / "data/fma/fma_small")
+    encoder = GlapAudioEncoder(
+        model_dir,
+        model_revision=challenger["model_revision"],
+        model_sha256=challenger["model_file_sha256"],
+        model_code_sha256=challenger["remote_model_code_sha256"],
+        model_config_sha256=challenger["remote_config_sha256"],
+        tokenizer_sha256=challenger["tokenizer_file_sha256"],
+        device=device,
+    )
+    timings, vectors = [], []
+    for _ in range(2):
+        started = time.perf_counter()
+        vectors.append(encoder.encode_segment(excerpt, 24000).embedding)
+        timings.append((time.perf_counter() - started) * 1000)
+    difference = np.abs(vectors[0].astype(np.float64) - vectors[1].astype(np.float64))
+    result = {
+        "schema_version": 1,
+        "experiment_id": contract["experiment_id"],
+        "track_id": int(track_id),
+        "source_sha256": tracks[int(track_id)].source_sha256,
+        "center5_pcm_sha256": tracks[int(track_id)].center5_pcm_sha256,
+        "model_revision": challenger["model_revision"],
+        "model_sha256": challenger["model_file_sha256"],
+        "device": device,
+        "shape": list(vectors[0].shape),
+        "finite": bool(np.isfinite(vectors[0]).all() and np.isfinite(vectors[1]).all()),
+        "norms": [float(np.linalg.norm(vector.astype(np.float64))) for vector in vectors],
+        "max_absolute_repeat_difference": float(difference.max()),
+        "repeat_within_tolerance_1e_6": bool(difference.max() <= 1e-6),
+        "embedding_sha256": [hashlib.sha256(vector.astype("<f4").tobytes()).hexdigest() for vector in vectors],
+        "model_load_seconds": encoder.load_seconds,
+        "inference_ms": timings,
+        "peak_vram_bytes": encoder.peak_vram_bytes(),
+    }
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    return result

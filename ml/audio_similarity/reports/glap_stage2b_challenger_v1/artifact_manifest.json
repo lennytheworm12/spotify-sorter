@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "experiment_id": "glap_stage2b_challenger_v1",
+  "starting_commit": "80074a6271f5f487ec39d3465e26e787578b0bb5",
+  "pre_outcome_contract_commits": [
+    "9eb051e",
+    "2fa6b48",
+    "4103f31"
+  ],
+  "implementation_checkpoint": "c47f1a1",
+  "final_verdict": "GLAP_REJECTED_AS_GLOBAL_CHALLENGER",
+  "artifacts": {
+    "bootstrap.json": "eae3591de7b7b4a2e8a1c746ad5d2f064c06ab8307a269a9e007ef742880424d",
+    "comparison_summary.json": "78c54313c53b553b13961d433536209e060cfd46f7458561d06f1dacd3ff9879",
+    "decision_report.md": "4bac31424c615660a8d70292c058cbe499f06693a230666c6a0e43108db8f3db",
+    "diagnostics.json": "2edbbed0ebf926fb99bcc2b044d8787bd1d0da0fd666461652db84c050f60439",
+    "embedding_cache_manifest.json": "975f15180028f3ed3955a3fe7418f3926933743b3aa76cfd58bffdfbf9099348",
+    "encoding_full.json": "68b6ee8c52a66fe57697defe3af26752805090bd7a6bbe5a932953f5eacb61a3",
+    "encoding_full_rerun.json": "3e8c76eac238ccb2976e7946e43afd8e579bf0c8fc5c98c496af838bb7bfbc5d",
+    "experiment_contract.json": "1895ac7bc91d7ef718f58fc0000112cc096ec07aabe6ad145c6232e545b3b708",
+    "language_audit.json": "c55b6bac45bf44a0023a4bd6cd0498f0fcfb0f78a58776956039dd2a6e34398a",
+    "per_query_metrics.csv": "85296b2357ea1e32e7db1ca0935cdc03681f6c440318ba56cbc5098f6e002ad2",
+    "performance_full.json": "9e51d51db8eb9b2143202af4aa7557eab38a641a4a730f3959420a2d6b15f5eb",
+    "phase0_audit.json": "757e4b9430dc36777b0382e273ee60a43f2d25516f957ada2b2801e46411c1b1",
+    "predictions.csv": "9d40fe0f9fdb0a0bf7a86a634e749f1c8b22c76f4ed778c003fa0f5aaaeaf427",
+    "real_model_validation.json": "5d04126c18a385aa3d6c7e00cdc58df508d63663d67d878b3a6ce76e63e3ef84",
+    "smoke_12track.json": "8f640655d1d31550504b01d32f2a20bafb29321c8c9e84a3d5d52aabbf126c6c",
+    "smoke_3track.json": "d8c8eba22082e3babef22cfe5d45ed0632843510e367fd6770679dd4c96036e4",
+    "smoke_3track_rerun.json": "a0b1901fd09be2617c0cfee9c962a4c73adfc38fb04491298c2a33cc5d87a750",
+    "smoke_initial_failure.json": "1b94610f8807423bc1e954728ff7dd223e5cb72f55527f9cf8732bc738dec8c5"
+  },
+  "implementation_sha256": {
+    "src/audio_similarity/cli/glap_stage2b_challenger.py": "363644e6542894b09ab109119d355ab0083ad1f47928b384a8710944f4da9792",
+    "src/audio_similarity/glap_encoder.py": "e2adc78cafeb904f8c276170e092e162ba5b900690e046558972c9b5017a8bb7",
+    "src/audio_similarity/glap_stage2b.py": "1b1c9ec56b9151d268ae3026c4067c8e9a2b174dda2b7ee1a3af04b1bb76b611",
+    "src/audio_similarity/glap_stage2b_analysis.py": "d8f2c6792ff4253d50c24b1327f2f0fff43e9d9e62f3e250f6c3ff1c3921cda0"
+  },
+  "retained_large_artifacts": {
+    "model_weights": "gitignored models/glap_stage2b_challenger_v1/hf",
+    "embedding_cache": "gitignored artifacts/glap_stage2b_challenger_v1/embeddings.sqlite",
+    "performance_cache": "gitignored artifacts/glap_stage2b_challenger_v1/performance.sqlite",
+    "audio": "existing gitignored FMA Small source corpus"
+  }
+}

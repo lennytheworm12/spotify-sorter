@@ -24,6 +24,7 @@ GLAP_ENCODER_ID = "glap_stage2b_challenger_v1"
 GLAP_DIMENSION = 1024
 GLAP_SAMPLE_RATE = 16000
 HISTORICAL_SAMPLE_RATE = 24000
+GLAP_CONFIGURATION_CODE_SHA256 = "9fb623f5be62e70967ecb8f8c8a49981313b28156b0a0fb4cdf51f4f07d88cb9"
 
 
 def sha256_file(path: str | Path) -> str:
@@ -46,7 +47,11 @@ class GlapAudioEncoder:
         *,
         model_revision: str,
         model_sha256: str,
+        model_code_sha256: str,
+        model_config_sha256: str,
+        tokenizer_sha256: str,
         device: str,
+        configuration_code_sha256: str = GLAP_CONFIGURATION_CODE_SHA256,
         verify_model_hash: bool = True,
         model_loader: Callable[..., object] | None = None,
     ) -> None:
@@ -61,16 +66,28 @@ class GlapAudioEncoder:
         self.model_dir = Path(model_dir).resolve()
         self.model_revision = str(model_revision)
         self.model_sha256 = str(model_sha256)
+        self.model_code_sha256 = str(model_code_sha256)
+        self.model_config_sha256 = str(model_config_sha256)
+        self.configuration_code_sha256 = str(configuration_code_sha256)
+        self.tokenizer_sha256 = str(tokenizer_sha256)
         self.device = str(device)
         if self.device.startswith("cuda") and not torch.cuda.is_available():
             raise EncoderContractError(f"GLAP device {self.device!r} requested but CUDA is unavailable")
-        model_path = self.model_dir / "model.safetensors"
-        if not model_path.is_file():
-            raise EncoderContractError(f"missing frozen GLAP model file: {model_path}")
+        frozen_files = {
+            "model.safetensors": str(model_sha256),
+            "modeling_glap.py": str(model_code_sha256),
+            "config.json": str(model_config_sha256),
+            "configuration_glap.py": str(configuration_code_sha256),
+            "sentencepiece.source.256000.model": str(tokenizer_sha256),
+        }
+        missing = [name for name in frozen_files if not (self.model_dir / name).is_file()]
+        if missing:
+            raise EncoderContractError(f"missing frozen GLAP files: {missing}")
         if verify_model_hash:
-            actual = sha256_file(model_path)
-            if actual != self.model_sha256:
-                raise EncoderContractError(f"GLAP model SHA-256 mismatch: {actual}")
+            for filename, expected in frozen_files.items():
+                actual = sha256_file(self.model_dir / filename)
+                if actual != expected:
+                    raise EncoderContractError(f"GLAP {filename} SHA-256 mismatch: {actual}")
 
         torch.manual_seed(0)
         if torch.cuda.is_available():
@@ -148,6 +165,10 @@ class GlapAudioEncoder:
                         "model_identifier": "mispeech/GLAP",
                         "model_revision": self.model_revision,
                         "model_sha256": self.model_sha256,
+                        "model_code_sha256": self.model_code_sha256,
+                        "model_config_sha256": self.model_config_sha256,
+                        "configuration_code_sha256": self.configuration_code_sha256,
+                        "tokenizer_sha256": self.tokenizer_sha256,
                         "device": self.device,
                         "input_sample_rate": sample_rate,
                         "model_sample_rate": GLAP_SAMPLE_RATE,

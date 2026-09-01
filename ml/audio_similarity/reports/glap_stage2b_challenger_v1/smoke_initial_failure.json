@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "experiment_id": "glap_stage2b_challenger_v1",
+  "status": "FAILED_EXPLICITLY_RETRIED_AFTER_RUNTIME_FIX",
+  "selected_track_count": 3,
+  "track_ids": [714, 3921, 4022],
+  "success_count": 0,
+  "failure_count": 3,
+  "inference_attempted": 3,
+  "model_load_seconds": 20.81496302600135,
+  "wall_seconds": 31.038616210978944,
+  "peak_vram_bytes": 3429689856,
+  "failure_code": "RuntimeError",
+  "failure_summary": "PyTorch deterministic CUDA execution required CUBLAS_WORKSPACE_CONFIG=:4096:8 before the first cuBLAS operation.",
+  "embedding_storage_on_failure": null,
+  "zero_vector_substitution": false,
+  "resolution": "Pinned CUBLAS_WORKSPACE_CONFIG=:4096:8 in the pre-success contract/runtime, retained torch.use_deterministic_algorithms(True), and retried the same three tracks successfully.",
+  "source": "captured from the initial real-model CLI smoke output and explicit SQLite failure rows before retry"
+}

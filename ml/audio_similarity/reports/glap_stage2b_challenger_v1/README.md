@@ -15,3 +15,18 @@ LAION-CLAP  ->  GLAP is the only changed component
 ```
 
 No GLAP outcome was calculated before this contract was frozen.
+
+The experiment is now closed. The final verdict is `GLAP_REJECTED_AS_GLOBAL_CHALLENGER`; see `decision_report.md` and `comparison_summary.json`. Audio Representation v1 was not changed.
+
+Machine-readable outputs:
+
+- `experiment_contract.json`: frozen pre-outcome protocol and provenance
+- `phase0_audit.json`: historical evidence and baseline reproduction gate
+- `embedding_cache_manifest.json`: resumable cache/embedding identities
+- `predictions.csv`: all 240 frozen trials with GLAP, LAION-CLAP, and MuQ diagnostics
+- `per_query_metrics.csv`: paired query-level metrics
+- `bootstrap.json`: 50,000-draw paired TEST query bootstrap
+- `diagnostics.json`: paired errors, correlations, and margin distributions
+- `language_audit.json`: multilingual-analysis support limitation
+- `performance_full.json`: independent empty-cache engineering measurement
+- `real_model_validation.json`: real-model shape/norm/repeat determinism

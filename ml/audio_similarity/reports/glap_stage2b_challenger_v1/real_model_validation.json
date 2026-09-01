@@ -1,0 +1,30 @@
+{
+  "center5_pcm_sha256": "58804dd891bd6983e0d1c5431ded77fe8fbd11334294d0a01b0e1e7d1f0172a8",
+  "device": "cuda",
+  "embedding_sha256": [
+    "39663d638f97d0b71139a2a538b42c9b8401b7e8a02a3a7fc7b1378d1e8f0a29",
+    "39663d638f97d0b71139a2a538b42c9b8401b7e8a02a3a7fc7b1378d1e8f0a29"
+  ],
+  "experiment_id": "glap_stage2b_challenger_v1",
+  "finite": true,
+  "inference_ms": [
+    1827.1693169954233,
+    20.25752401095815
+  ],
+  "max_absolute_repeat_difference": 0.0,
+  "model_load_seconds": 6.602041015983559,
+  "model_revision": "79b13014511e2d5628cb57c4712a90edd19cebbd",
+  "model_sha256": "ee8fd92bba30d03b4c31c624739b1599a222506f0e045cde7cb51c34e3223864",
+  "norms": [
+    1.0000000179090418,
+    1.0000000179090418
+  ],
+  "peak_vram_bytes": 3464466944,
+  "repeat_within_tolerance_1e_6": true,
+  "schema_version": 1,
+  "shape": [
+    1024
+  ],
+  "source_sha256": "21456d5d5e96d09a90406777c205cedd376bd02e3d9f8ed5aee37b8d60e1df8d",
+  "track_id": 714
+}

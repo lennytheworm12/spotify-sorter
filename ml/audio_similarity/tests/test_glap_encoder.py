@@ -32,12 +32,21 @@ def _files(tmp_path: Path):
     model_dir = tmp_path / "model"
     model_dir.mkdir()
     payload = b"fake frozen weights"
-    (model_dir / "model.safetensors").write_bytes(payload)
-    return model_dir, hashlib.sha256(payload).hexdigest()
+    hashes = {}
+    for filename, contents in {
+        "model.safetensors": payload,
+        "modeling_glap.py": b"model code",
+        "config.json": b"{}",
+        "configuration_glap.py": b"configuration code",
+        "sentencepiece.source.256000.model": b"tokenizer",
+    }.items():
+        (model_dir / filename).write_bytes(contents)
+        hashes[filename] = hashlib.sha256(contents).hexdigest()
+    return model_dir, hashes
 
 
 def _encoder(tmp_path: Path, model: FakeGlapModel | None = None):
-    model_dir, digest = _files(tmp_path)
+    model_dir, hashes = _files(tmp_path)
     calls = []
 
     def loader(*args, **kwargs):
@@ -47,7 +56,11 @@ def _encoder(tmp_path: Path, model: FakeGlapModel | None = None):
     encoder = GlapAudioEncoder(
         model_dir,
         model_revision="frozen-test-revision",
-        model_sha256=digest,
+        model_sha256=hashes["model.safetensors"],
+        model_code_sha256=hashes["modeling_glap.py"],
+        model_config_sha256=hashes["config.json"],
+        configuration_code_sha256=hashes["configuration_glap.py"],
+        tokenizer_sha256=hashes["sentencepiece.source.256000.model"],
         device="cpu",
         model_loader=loader,
     )
@@ -98,12 +111,16 @@ def test_invalid_output_and_wrong_input_are_rejected(tmp_path):
 
 
 def test_checkpoint_hash_mismatch_fails_before_model_load(tmp_path):
-    model_dir, _ = _files(tmp_path)
+    model_dir, hashes = _files(tmp_path)
     with pytest.raises(EncoderContractError, match="SHA-256 mismatch"):
         GlapAudioEncoder(
             model_dir,
             model_revision="r",
             model_sha256="0" * 64,
+            model_code_sha256=hashes["modeling_glap.py"],
+            model_config_sha256=hashes["config.json"],
+            configuration_code_sha256=hashes["configuration_glap.py"],
+            tokenizer_sha256=hashes["sentencepiece.source.256000.model"],
             device="cpu",
             model_loader=lambda *args, **kwargs: FakeGlapModel(),
         )

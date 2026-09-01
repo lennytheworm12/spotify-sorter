@@ -35,6 +35,9 @@ def _contract():
             "model_identifier": "mispeech/GLAP",
             "model_revision": "frozen-revision",
             "model_file_sha256": "a" * 64,
+            "remote_model_code_sha256": "b" * 64,
+            "remote_config_sha256": "c" * 64,
+            "tokenizer_file_sha256": "d" * 64,
             "stored_dtype": "float32",
             "embedding_dimensions": 1024,
         },
@@ -98,6 +101,26 @@ def test_cache_success_failure_and_corruption_are_explicit(tmp_path):
     cache.db.commit()
     with pytest.raises(GlapCacheError, match="corrupt"):
         cache.valid_embedding(1, key)
+    cache.close()
+
+
+def test_cache_lookup_uses_only_the_expected_analysis_key(tmp_path):
+    cache = GlapEmbeddingCache(tmp_path / "cache.sqlite")
+    contract = _contract()
+    current = analysis_identity(contract, source_sha256="s", center5_pcm_sha256="current")
+    stale = analysis_identity(contract, source_sha256="s", center5_pcm_sha256="stale")
+    for key, pcm, index in ((current, "current", 1), (stale, "stale", 2)):
+        cache.put_success(
+            track_id=7,
+            analysis_key=key,
+            source_sha256="s",
+            center5_pcm_sha256=pcm,
+            contract=contract,
+            vector=_unit_vector(index),
+            encode_ms=1.0,
+        )
+    selected = cache.embeddings_for_keys({7: current})
+    np.testing.assert_array_equal(selected[7], _unit_vector(1))
     cache.close()
 
 
