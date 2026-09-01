@@ -125,6 +125,7 @@
     "deterministic": true,
     "compute_dtype": "float32",
     "autocast": false,
+    "resampling_implementation": "torchaudio.functional.resample 2.6.0",
     "device": "explicit CLI argument; frozen full run uses cuda",
     "batch_support": true,
     "embedding_validation": [
