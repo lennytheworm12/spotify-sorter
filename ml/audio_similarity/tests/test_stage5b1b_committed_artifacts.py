@@ -52,7 +52,7 @@ def test_committed_heldout_discovery_is_complete_metadata_only_and_hash_bound():
     assert results["configuration"]["provider"]["metadata_only_options"]["skip_download"] is True
 
 
-def test_committed_heldout_features_and_review_are_unlabeled_without_threshold():
+def test_committed_heldout_features_and_targeted_audit_are_complete_without_threshold():
     config, _ = inputs()
     features = json.loads(config.artifacts["heldout_features"].read_text(encoding="utf-8"))
     rows = load_heldout_review(config.artifacts["heldout_review"])
@@ -60,11 +60,35 @@ def test_committed_heldout_features_and_review_are_unlabeled_without_threshold()
     assert features["dataset_role"] == "HELD_OUT_UNLABELED"
     assert (features["track_count"], features["candidate_pair_count"]) == (50, 248)
     assert len(rows) == 248
-    assert all(not row["candidate_review_label"] for row in rows)
-    assert status["status"] == READY_FOR_REVIEW
-    assert status["review_labels_completed"] == 0
+    labels = Counter(row["candidate_review_label"] for row in rows)
+    assert labels == {
+        "": 168,
+        "IDEAL": 32,
+        "ACCEPTABLE": 28,
+        "WRONG": 5,
+        "UNCERTAIN": 15,
+    }
+    queue = json.loads(
+        (config.project_root / "reports/stage5b1b/sol_manual_audit_queue.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    required = {
+        (case["stable_track_id"], video_id)
+        for case in queue["cases"]
+        for video_id in case["candidate_video_ids"]
+    }
+    labeled = {
+        (row["stable_track_id"], row["candidate_video_id"])
+        for row in rows
+        if row["candidate_review_label"]
+    }
+    assert labeled == required
+    assert status["status"] == "STAGE5B1B_TARGETED_HUMAN_AUDIT_COMPLETE_AWAITING_CALIBRATION"
+    assert status["review_labels_completed"] == 80
+    assert status["targeted_human_audit"]["remaining_queue_candidates"] == 0
     assert status["final_auto_match_threshold"] is None
-    assert status["heldout_labels_required_before_calibration"] is True
+    assert status["heldout_labels_required_before_calibration"] is False
     serialized = json.dumps(features)
     assert "auto_match_score" not in serialized
     assert "confidence_threshold" not in serialized

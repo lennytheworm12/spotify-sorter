@@ -10,13 +10,13 @@
     },
     "heldout_review": {
       "path": "reports/stage5b1b/heldout_review.csv",
-      "sha256": "35f5370c2017e7b5e8d6a66623fc7e83a027eb9d650e36a0202adb425fc9f75d"
+      "sha256": "8e5282310ff44c9441e81a1cb538613f004b92361ec8b8c21172b4d40b69e97e"
     }
   },
   "config_sha256": "47a5bc69d6e135094fede751325d2e894702e0a5b1f353a64a7ddcaddd44298e",
   "elapsed_wall_seconds": 90.87956780398963,
   "final_auto_match_threshold": null,
-  "heldout_labels_required_before_calibration": true,
+  "heldout_labels_required_before_calibration": false,
   "heldout_manifest_sha256": "39557ede8f07bde129ad23d2bc64a0faf0fff755356cd87f2054e14f91d81e5a",
   "media_activity": {
     "audio_downloads": 0,
@@ -25,10 +25,10 @@
     "stage5a_materializations": 0,
     "video_downloads": 0
   },
-  "review_labels_completed": 0,
+  "review_labels_completed": 80,
   "schema_version": "stage5b1b-run-status-v1",
   "stage5b1a2_evidence_checkpoint": "09f8347",
-  "status": "STAGE5B1B_HELDOUT_READY_FOR_HUMAN_REVIEW",
+  "status": "STAGE5B1B_TARGETED_HUMAN_AUDIT_COMPLETE_AWAITING_CALIBRATION",
   "summary": {
     "deduplicated_candidate_video_ids": 248,
     "tracks": 50,
@@ -36,6 +36,22 @@
     "tracks_with_zero_youtube_candidates": 0,
     "warning_count": 0,
     "ytdlp_search_failures": 0
+  },
+  "targeted_human_audit": {
+    "candidate_label_counts": {
+      "ACCEPTABLE": 28,
+      "IDEAL": 32,
+      "UNCERTAIN": 15,
+      "WRONG": 5
+    },
+    "candidate_notes_completed": 14,
+    "labeled_candidates": 80,
+    "labeled_outside_frozen_queue": 0,
+    "queue_candidates": 80,
+    "queue_sha256": "3f3868c613099e50a976d83ef5dea343fda0cf06d1bb51662ef0772b3d3193a5",
+    "queue_tracks": 37,
+    "remaining_queue_candidates": 0,
+    "track_notes_completed": 3
   },
   "yt_dlp_version": "2026.08.19"
 }

@@ -253,4 +253,19 @@ Artifacts:
 
 **NO FINAL AUTO_MATCH THRESHOLD HAS BEEN SELECTED.**
 
-**TARGETED HUMAN AUDIT IS REQUIRED BEFORE CALIBRATION.**
+### Targeted human-audit completion
+
+The blinded targeted audit was completed across all 80 queue-required
+candidate judgments on 37 tracks. The completed label distribution is 32
+`IDEAL`, 28 `ACCEPTABLE`, 5 `WRONG`, and 15 `UNCERTAIN`. Fourteen candidate
+notes and three track notes were preserved. No candidate outside the frozen
+audit queue was labeled, and all 168 intentionally omitted candidate rows
+remain blank.
+
+The completed `heldout_review.csv` SHA-256 is
+`8e5282310ff44c9441e81a1cb538613f004b92361ec8b8c21172b4d40b69e97e`.
+It is byte-identical to the exported reviewer download supplied after the
+session. This checkpoint records human evidence only; it does not calibrate,
+select, or activate an `AUTO_MATCH` policy.
+
+**TARGETED HUMAN AUDIT IS COMPLETE. CALIBRATION REMAINS A SEPARATE GOAL.**
