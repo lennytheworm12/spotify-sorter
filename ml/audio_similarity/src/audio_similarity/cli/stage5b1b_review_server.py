@@ -146,8 +146,19 @@ def serve(
     port: int,
     *,
     open_browser: bool = True,
+    static: Path = STATIC,
+    mode: str = "stage5b1b_heldout_candidate_review",
+    export_filename: str = "stage5b1b-heldout-review.csv",
 ) -> None:
-    server = ThreadingHTTPServer((host, port), make_review_handler(store))
+    server = ThreadingHTTPServer(
+        (host, port),
+        make_review_handler(
+            store,
+            static=static,
+            mode=mode,
+            export_filename=export_filename,
+        ),
+    )
     display_host = "127.0.0.1" if host == "0.0.0.0" else host
     url = f"http://{display_host}:{port}"
     print(f"Stage 5B.1B reviewer running at {url}", flush=True)

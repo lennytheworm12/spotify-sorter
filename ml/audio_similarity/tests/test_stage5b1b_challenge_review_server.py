@@ -3,6 +3,7 @@ from __future__ import annotations
 import csv
 import json
 import shutil
+import sys
 import threading
 import urllib.error
 import urllib.request
@@ -17,6 +18,7 @@ from audio_similarity.cli.stage5b1b_challenge_review_server import (
     MODE,
     handler_for,
 )
+from audio_similarity.cli import stage5b1b_challenge_review_server
 from audio_similarity.stage5b1a_models import Stage5B1AValidationError
 from audio_similarity.stage5b1b_challenge import (
     load_challenge_config,
@@ -257,3 +259,31 @@ def test_ui_flushes_note_saves_before_export_and_updates_visual_state(review_ser
     assert "button.classList.toggle(\"selected\", selected);" in html
     assert "candidate._savedLabel = snapshot.label;\n    updateTrackCount(item);" in html
     assert "session.export_filename" in html
+
+
+def test_main_wires_fresh_mode_and_export_name_into_shared_server(monkeypatch):
+    captured = {}
+
+    def fake_serve(store, host, port, **options):
+        captured.update(
+            store=store,
+            host=host,
+            port=port,
+            options=options,
+        )
+
+    monkeypatch.setattr(stage5b1b_challenge_review_server, "serve", fake_serve)
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        ["stage5b1b_challenge_review_server", "--no-browser"],
+    )
+    stage5b1b_challenge_review_server.main()
+    assert captured["host"] == "127.0.0.1"
+    assert captured["port"] == 8769
+    assert captured["options"] == {
+        "open_browser": False,
+        "mode": MODE,
+        "export_filename": EXPORT_FILENAME,
+    }
+    assert captured["store"].session()["mode"] == MODE

@@ -60,6 +60,8 @@ def main() -> None:
         args.host,
         args.port,
         open_browser=not args.no_browser,
+        mode=MODE,
+        export_filename=EXPORT_FILENAME,
     )
 
 
