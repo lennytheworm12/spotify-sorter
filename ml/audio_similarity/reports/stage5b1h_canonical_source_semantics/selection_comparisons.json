@@ -1,0 +1,305 @@
+{
+  "comparisons": [],
+  "diagnostic_cases": [
+    {
+      "absolute_duration_delta_seconds": 2.0529999999999973,
+      "candidate_title": "BLACKPINK - 'How You Like That' M/V",
+      "candidate_video_id": "ioNng23DkIM",
+      "canonicality": {
+        "artist_channel_or_uploader_signal": true,
+        "bare_presentation_claim_requires_corroboration": true,
+        "explicit_official_source_phrase_signal": false,
+        "level": "CANONICAL_STRONG",
+        "reason": "recording-compatible metadata plus artist-matching channel/uploader provenance",
+        "release_or_distributor_signal": false,
+        "unknown_provenance_is_negative": false
+      },
+      "human_label": "IDEAL",
+      "negation_evidence": [],
+      "normalized_source_type": "OFFICIAL_MUSIC_VIDEO",
+      "padding_risk": {
+        "level": "VIDEO_PADDING_LOW",
+        "reason": "canonical video presentation within five seconds of target duration"
+      },
+      "recording_identity": {
+        "complete_compatible_version_evidence": true,
+        "hard_conflicts": [],
+        "state": "RECORDING_COMPATIBLE",
+        "strong_core_title_identity": true,
+        "strong_primary_performer_identity": true
+      },
+      "selected": true,
+      "sol_label": "IDEAL",
+      "source_phrase_evidence": [
+        {
+          "explicit_official": false,
+          "matched_text": "M/V",
+          "rule_id": "MV_PRESENTATION",
+          "semantic": "MUSIC_VIDEO"
+        }
+      ],
+      "stable_track_id": "s5b1c_013"
+    },
+    {
+      "absolute_duration_delta_seconds": 5.747000000000014,
+      "candidate_title": "FIFTY FIFTY (피프티피프티) - 'Cupid' (TwinVer.) Official Lyric Video",
+      "candidate_video_id": "6uvUTu716rU",
+      "canonicality": {
+        "artist_channel_or_uploader_signal": true,
+        "bare_presentation_claim_requires_corroboration": false,
+        "explicit_official_source_phrase_signal": true,
+        "level": "CANONICAL_STRONG",
+        "reason": "recording-compatible metadata plus artist-matching channel/uploader provenance",
+        "release_or_distributor_signal": false,
+        "unknown_provenance_is_negative": false
+      },
+      "human_label": "IDEAL",
+      "negation_evidence": [],
+      "normalized_source_type": "OFFICIAL_LYRIC_VIDEO",
+      "padding_risk": {
+        "level": "VIDEO_PADDING_POSSIBLE",
+        "reason": "canonical video presentation has five-to-twelve seconds of excess runtime"
+      },
+      "recording_identity": {
+        "complete_compatible_version_evidence": true,
+        "hard_conflicts": [],
+        "state": "RECORDING_COMPATIBLE",
+        "strong_core_title_identity": true,
+        "strong_primary_performer_identity": true
+      },
+      "selected": true,
+      "sol_label": "IDEAL",
+      "source_phrase_evidence": [
+        {
+          "explicit_official": true,
+          "matched_text": "Official Lyric Video",
+          "rule_id": "OFFICIAL_LYRIC_VIDEO",
+          "semantic": "OFFICIAL_LYRIC_VIDEO"
+        },
+        {
+          "explicit_official": false,
+          "matched_text": "Lyric Video",
+          "rule_id": "LYRIC_VIDEO",
+          "semantic": "LYRIC_VIDEO"
+        },
+        {
+          "explicit_official": false,
+          "matched_text": "Lyric",
+          "rule_id": "LYRICS_PRESENTATION",
+          "semantic": "LYRIC_VIDEO"
+        }
+      ],
+      "stable_track_id": "s5b1c_017"
+    },
+    {
+      "absolute_duration_delta_seconds": 3.0,
+      "candidate_title": "The Chainsmokers & Coldplay - Something Just Like This (Alesso Remix Audio)",
+      "candidate_video_id": "5MenFU9qCzs",
+      "canonicality": {
+        "artist_channel_or_uploader_signal": true,
+        "bare_presentation_claim_requires_corroboration": true,
+        "explicit_official_source_phrase_signal": false,
+        "level": "CANONICAL_STRONG",
+        "reason": "recording-compatible metadata plus artist-matching channel/uploader provenance",
+        "release_or_distributor_signal": false,
+        "unknown_provenance_is_negative": false
+      },
+      "human_label": "IDEAL",
+      "negation_evidence": [],
+      "normalized_source_type": "OFFICIAL_AUDIO",
+      "padding_risk": {
+        "level": "CLEAN_AUDIO_LIKELY",
+        "reason": "canonical audio presentation within five seconds of target duration"
+      },
+      "recording_identity": {
+        "complete_compatible_version_evidence": true,
+        "hard_conflicts": [],
+        "state": "RECORDING_COMPATIBLE",
+        "strong_core_title_identity": true,
+        "strong_primary_performer_identity": true
+      },
+      "selected": true,
+      "sol_label": "IDEAL",
+      "source_phrase_evidence": [
+        {
+          "explicit_official": false,
+          "matched_text": "Audio",
+          "rule_id": "AUDIO_PRESENTATION",
+          "semantic": "AUDIO_PRESENTATION"
+        }
+      ],
+      "stable_track_id": "s5b1c_025"
+    },
+    {
+      "absolute_duration_delta_seconds": 16.80000000000001,
+      "candidate_title": "KAROL G - Provenza (Official Video)",
+      "candidate_video_id": "ca48oMV59LU",
+      "canonicality": {
+        "artist_channel_or_uploader_signal": true,
+        "bare_presentation_claim_requires_corroboration": false,
+        "explicit_official_source_phrase_signal": true,
+        "level": "CANONICAL_STRONG",
+        "reason": "recording-compatible metadata plus artist-matching channel/uploader provenance",
+        "release_or_distributor_signal": false,
+        "unknown_provenance_is_negative": false
+      },
+      "human_label": "IDEAL",
+      "negation_evidence": [],
+      "normalized_source_type": "OFFICIAL_MUSIC_VIDEO",
+      "padding_risk": {
+        "level": "VIDEO_PADDING_HIGH_OR_UNKNOWN",
+        "reason": "video presentation has twelve-to-twenty seconds of padding or weak canonicality"
+      },
+      "recording_identity": {
+        "complete_compatible_version_evidence": true,
+        "hard_conflicts": [],
+        "state": "RECORDING_COMPATIBLE",
+        "strong_core_title_identity": true,
+        "strong_primary_performer_identity": true
+      },
+      "selected": true,
+      "sol_label": "ACCEPTABLE",
+      "source_phrase_evidence": [
+        {
+          "explicit_official": true,
+          "matched_text": "Official Video",
+          "rule_id": "OFFICIAL_MUSIC_VIDEO",
+          "semantic": "OFFICIAL_MUSIC_VIDEO"
+        }
+      ],
+      "stable_track_id": "s5b1c_048"
+    },
+    {
+      "absolute_duration_delta_seconds": 6.4269999999999925,
+      "candidate_title": "Fujii Kaze - Shinunoga E-Wa (Not a MV)",
+      "candidate_video_id": "dawrQnvwMTY",
+      "canonicality": {
+        "artist_channel_or_uploader_signal": true,
+        "bare_presentation_claim_requires_corroboration": false,
+        "explicit_official_source_phrase_signal": false,
+        "level": "CANONICAL_STRONG",
+        "reason": "recording-compatible metadata plus artist-matching channel/uploader provenance",
+        "release_or_distributor_signal": false,
+        "unknown_provenance_is_negative": false
+      },
+      "human_label": "IDEAL",
+      "negation_evidence": [
+        {
+          "explicit_official": false,
+          "matched_text": "Not a MV",
+          "rule_id": "NEGATED_NOT_MV",
+          "semantic": "NEGATED_VIDEO_PRESENTATION"
+        }
+      ],
+      "normalized_source_type": "NEGATED_VIDEO_PRESENTATION",
+      "padding_risk": {
+        "level": "VIDEO_PADDING_HIGH_OR_UNKNOWN",
+        "reason": "metadata does not establish a clean canonical audio presentation"
+      },
+      "recording_identity": {
+        "complete_compatible_version_evidence": true,
+        "hard_conflicts": [],
+        "state": "RECORDING_COMPATIBLE",
+        "strong_core_title_identity": true,
+        "strong_primary_performer_identity": true
+      },
+      "selected": true,
+      "sol_label": "IDEAL",
+      "source_phrase_evidence": [],
+      "stable_track_id": "s5b1c_049"
+    },
+    {
+      "absolute_duration_delta_seconds": 5.772999999999996,
+      "candidate_title": "VIDEOCLUB - Amour plastique (clip officiel)",
+      "candidate_video_id": "5NjJLFI_oYs",
+      "canonicality": {
+        "artist_channel_or_uploader_signal": true,
+        "bare_presentation_claim_requires_corroboration": false,
+        "explicit_official_source_phrase_signal": true,
+        "level": "CANONICAL_STRONG",
+        "reason": "recording-compatible metadata plus artist-matching channel/uploader provenance",
+        "release_or_distributor_signal": false,
+        "unknown_provenance_is_negative": false
+      },
+      "human_label": "IDEAL",
+      "negation_evidence": [],
+      "normalized_source_type": "OFFICIAL_MUSIC_VIDEO",
+      "padding_risk": {
+        "level": "VIDEO_PADDING_POSSIBLE",
+        "reason": "canonical video presentation has five-to-twelve seconds of excess runtime"
+      },
+      "recording_identity": {
+        "complete_compatible_version_evidence": true,
+        "hard_conflicts": [],
+        "state": "RECORDING_COMPATIBLE",
+        "strong_core_title_identity": true,
+        "strong_primary_performer_identity": true
+      },
+      "selected": true,
+      "sol_label": "ACCEPTABLE",
+      "source_phrase_evidence": [
+        {
+          "explicit_official": true,
+          "matched_text": "clip officiel",
+          "rule_id": "FRENCH_OFFICIAL_VIDEO",
+          "semantic": "OFFICIAL_MUSIC_VIDEO"
+        }
+      ],
+      "stable_track_id": "s5b1c_050"
+    }
+  ],
+  "legacy_source_classification_changes": [
+    {
+      "candidate_title": "Harry Styles - As It Was (Audio)",
+      "candidate_video_id": "V1Z586zoeeE",
+      "legacy_effective_source_type": "OTHER",
+      "normalized_source_type": "OFFICIAL_AUDIO",
+      "stable_track_id": "s5b1c_002"
+    },
+    {
+      "candidate_title": "Rema, Selena Gomez - Calm Down (Official Video + Lyrics)",
+      "candidate_video_id": "SWU_2W7YbTI",
+      "legacy_effective_source_type": "LYRIC_VIDEO",
+      "normalized_source_type": "OFFICIAL_MUSIC_VIDEO",
+      "stable_track_id": "s5b1c_010"
+    },
+    {
+      "candidate_title": "Dj snake feat selena gomez  Ozuna & CARDI B  - TAKi TAKI ( LETRA VIDEO OFICIAL",
+      "candidate_video_id": "kxZYxojih3E",
+      "legacy_effective_source_type": "OTHER",
+      "normalized_source_type": "OFFICIAL_MUSIC_VIDEO",
+      "stable_track_id": "s5b1c_012"
+    },
+    {
+      "candidate_title": "The Chainsmokers & Coldplay - Something Just Like This (Alesso Remix Audio)",
+      "candidate_video_id": "5MenFU9qCzs",
+      "legacy_effective_source_type": "OTHER",
+      "normalized_source_type": "OFFICIAL_AUDIO",
+      "stable_track_id": "s5b1c_025"
+    },
+    {
+      "candidate_title": "Taylor Swift - Enchanted (Taylor's Version) (Official Audio)",
+      "candidate_video_id": "q5YJ9JREVRk",
+      "legacy_effective_source_type": "OTHER",
+      "normalized_source_type": "OFFICIAL_AUDIO",
+      "stable_track_id": "s5b1c_035"
+    },
+    {
+      "candidate_title": "Ruth B - Dandelions (Slowed + Reverb) Letra / Sub Español",
+      "candidate_video_id": "0h_l1vCf8B8",
+      "legacy_effective_source_type": "OTHER",
+      "normalized_source_type": "LYRIC_VIDEO",
+      "stable_track_id": "s5b1c_041"
+    },
+    {
+      "candidate_title": "VIDEOCLUB - Amour plastique (clip officiel)",
+      "candidate_video_id": "5NjJLFI_oYs",
+      "legacy_effective_source_type": "OTHER",
+      "normalized_source_type": "OFFICIAL_MUSIC_VIDEO",
+      "stable_track_id": "s5b1c_050"
+    }
+  ],
+  "schema_version": "stage5b1h-selection-comparisons-v1",
+  "selection_change_count": 0,
+  "status": "STAGE5B1H_CANONICAL_SOURCE_SEMANTICS_COMPLETE"
+}

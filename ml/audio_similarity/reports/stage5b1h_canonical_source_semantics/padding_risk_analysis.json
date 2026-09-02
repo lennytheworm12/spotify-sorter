@@ -1,0 +1,54 @@
+{
+  "canonical_mv_duration_semantics": {
+    "over_five_to_twelve_seconds": "VIDEO_PADDING_POSSIBLE",
+    "over_twelve_to_twenty_seconds": "VIDEO_PADDING_HIGH_OR_UNKNOWN",
+    "over_twenty_seconds": "OUTSIDE_EXPERIMENTAL_DURATION_LIMIT",
+    "zero_to_five_seconds": "VIDEO_PADDING_LOW"
+  },
+  "rows": [
+    {
+      "candidate_count": 11,
+      "padding_risk": "CLEAN_AUDIO_LIKELY",
+      "selected_count": 6,
+      "selected_human_label_counts": {
+        "IDEAL": 5,
+        "UNREVIEWED": 1
+      }
+    },
+    {
+      "candidate_count": 24,
+      "padding_risk": "VIDEO_PADDING_LOW",
+      "selected_count": 12,
+      "selected_human_label_counts": {
+        "IDEAL": 12
+      }
+    },
+    {
+      "candidate_count": 2,
+      "padding_risk": "VIDEO_PADDING_POSSIBLE",
+      "selected_count": 2,
+      "selected_human_label_counts": {
+        "IDEAL": 2
+      }
+    },
+    {
+      "candidate_count": 126,
+      "padding_risk": "VIDEO_PADDING_HIGH_OR_UNKNOWN",
+      "selected_count": 22,
+      "selected_human_label_counts": {
+        "ACCEPTABLE": 9,
+        "IDEAL": 11,
+        "UNCERTAIN": 1,
+        "UNREVIEWED": 1
+      }
+    },
+    {
+      "candidate_count": 72,
+      "padding_risk": "OUTSIDE_EXPERIMENTAL_DURATION_LIMIT",
+      "selected_count": 0,
+      "selected_human_label_counts": {}
+    }
+  ],
+  "schema_version": "stage5b1h-padding-risk-analysis-v1",
+  "status": "STAGE5B1H_CANONICAL_SOURCE_SEMANTICS_COMPLETE"
+}
