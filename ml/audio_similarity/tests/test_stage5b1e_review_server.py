@@ -24,6 +24,16 @@ def store(tmp_path: Path) -> Stage5B1EReviewStore:
     review = tmp_path / "review.csv"
     shutil.copyfile(REPORT / "human_audit_queue.json", queue)
     shutil.copyfile(REPORT / "human_review.csv", review)
+    with review.open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    for row in rows:
+        row["candidate_review_label"] = ""
+        row["candidate_note"] = ""
+        row["track_note"] = ""
+    with review.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=rows[0].keys(), lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(rows)
     return Stage5B1EReviewStore(manifest, queue, review)
 
 

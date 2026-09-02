@@ -217,7 +217,9 @@ def run_discovery(
     return document
 
 
-def _human_evidence(config: Stage5B1EConfig) -> dict[tuple[str, str], str]:
+def _human_evidence(
+    config: Stage5B1EConfig, *, include_experiment_review: bool = True
+) -> dict[tuple[str, str], str]:
     evidence: dict[tuple[str, str], str] = {}
 
     def add(stable_id: str, video_id: str, label: str) -> None:
@@ -237,7 +239,7 @@ def _human_evidence(config: Stage5B1EConfig) -> dict[tuple[str, str], str]:
         payload = _json(config.project_root / config.frozen_inputs[input_name]["path"])
         for row in payload.get("judgments", []):
             add(row["stable_track_id"], row["candidate_video_id"], row["human_label"])
-    if config.artifacts["human_review"].exists():
+    if include_experiment_review and config.artifacts["human_review"].exists():
         with config.artifacts["human_review"].open(encoding="utf-8-sig", newline="") as handle:
             for row in csv.DictReader(handle):
                 add(row["stable_track_id"], row["candidate_video_id"], row["candidate_review_label"])
@@ -490,7 +492,10 @@ def _review_rows(
     challenge, manifest = _challenge(config)
     del challenge
     tracks = {row.track.stable_track_id: row.track for row in manifest.tracks}
-    human = _human_evidence(config)
+    # Queue membership is frozen from evidence that predated this experiment.
+    # Completed Stage 5B.1E labels affect evaluation metrics, but must not make
+    # their own review rows disappear on a deterministic closeout replay.
+    human = _human_evidence(config, include_experiment_review=False)
     replay_by_key = {
         (row["stable_track_id"], row["strategy_id"]): row for row in replays["replays"]
     }
@@ -664,6 +669,19 @@ def write_evaluation(config: Stage5B1EConfig, discovery: dict[str, Any]) -> tupl
 def write_report(config: Stage5B1EConfig, comparison: dict[str, Any], queue: dict[str, Any]) -> None:
     discovery = _json(config.artifacts["discovery"])
     discovery_summary = discovery["summary"]
+    decision_explanation = (
+        "A final KEEP/ADOPT decision is deferred until materially changed selections "
+        "have human evidence."
+        if queue["remaining_judgments"]
+        else (
+            "The completed targeted review does not support replacing the control: "
+            "Q0 retains the highest human-safe Recall@5 and resolver coverage. This "
+            "freezes the experimental recommendation only; production remains unchanged."
+            if comparison["selection_status"] == "KEEP_CURRENT_QUERY"
+            else "The completed targeted review supports the selected experimental query; "
+            "production remains unchanged pending a separate activation decision."
+        )
+    )
     lines = [
         "# Stage 5B.1E Natural YouTube Discovery Query Evaluation", "",
         "## Status", "",
@@ -710,6 +728,30 @@ def write_report(config: Stage5B1EConfig, comparison: dict[str, Any], queue: dic
             ], "",
             f"Resolver: `{row['status']}`; selected `{row['selected_video_id']}`; source `{row['selected_source_type']}`.", "",
         ]
+    john_mayer = next(
+        row for row in comparison["tracks"] if row["stable_track_id"] == "s5b1c_026"
+    )
+    john_natural = john_mayer["strategies"]["Q1_NATURAL_SPOTIFY_TITLE"]
+    john_official = next(
+        candidate
+        for candidate in john_natural["candidates"]
+        if candidate["youtube_video_id"] == "20Ov0cDPZy8"
+    )
+    lines += [
+        "## John Mayer review clarification", "",
+        "The targeted review UI showed resolver-selected candidates, not every top-five "
+        "search result. The official John Mayer upload `20Ov0cDPZy8` was rank 1 for Q1, "
+        "Q2, and Q3.", "",
+        f"Its frozen duration was {john_official['duration_seconds']:.0f} seconds versus "
+        "264.267 seconds for the Spotify target. The unchanged resolver rejected that "
+        "21.267-second delta, then selected the 264-second, 33-view upload "
+        f"`{john_natural['selected_video_id']}`, which the human reviewer labeled "
+        "`UNCERTAIN`.", "",
+        "This is evidence that natural discovery retrieved a materially stronger-looking "
+        "candidate while the frozen resolver—not discovery—prevented its selection. The "
+        "official upload remains unreviewed under the formal SAFE/WRONG rubric and is not "
+        "silently counted as human-safe.", "",
+    ]
     lines += [
         "## Evidence limitations", "",
         "Human-safe recall only recognizes previously human-confirmed video IDs. A new candidate may be correct but remains unvalidated until reviewed.", "",
@@ -717,10 +759,11 @@ def write_report(config: Stage5B1EConfig, comparison: dict[str, Any], queue: dic
         "## Human review", "",
         f"Targeted judgments required: {queue['required_judgments']}", "",
         f"Completed: {queue['completed_judgments']}; remaining: {queue['remaining_judgments']}", "",
+        f"Labels: `{json.dumps(queue['label_counts'], sort_keys=True)}`", "",
         "Review artifact: `human_review.csv`.", "",
         "## Decision", "",
         f"`{comparison['selection_status']}`", "",
-        "A final KEEP/ADOPT decision is deferred until materially changed selections have human evidence.", "",
+        decision_explanation, "",
         "## Scope guards", "",
         "- audio/video downloads: 0", "- Stage 5A calls: 0", "- CLAP/MuQ calls: 0",
         "- Sol reruns: 0", "- resolver changes: 0", "- production activation: false", "",

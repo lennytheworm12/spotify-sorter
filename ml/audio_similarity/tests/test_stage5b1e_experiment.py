@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import csv
 import json
+import shutil
 from dataclasses import replace
 from pathlib import Path
 
@@ -22,6 +24,7 @@ from audio_similarity.stage5b1e_queries import STRATEGY_IDS, load_stage5b1e_conf
 ROOT = Path(__file__).parents[1]
 CONFIG = ROOT / "configs/stage5b1e_natural_query_evaluation.json"
 FROZEN_DISCOVERY = ROOT / "reports/stage5b1b_fresh_challenge/challenge_ytdlp_discovery.json"
+STAGE5B1E_DISCOVERY = ROOT / "reports/stage5b1e_natural_query_evaluation/query_discovery_results.json"
 
 
 class FakeBackend:
@@ -171,6 +174,31 @@ def test_audit_queue_is_deterministic_and_provider_separated(tmp_path):
     assert first[2]["remaining_judgments"] == 0
     assert first[1]["production_query_activated"] is False
     assert first[1]["selection_status"] == "ADOPT_NATURAL_TITLE"
+
+
+def test_completed_experiment_review_does_not_remove_its_frozen_queue_rows(tmp_path):
+    config = load_stage5b1e_config(CONFIG)
+    outputs = {name: tmp_path / path.name for name, path in config.artifacts.items()}
+    shutil.copyfile(STAGE5B1E_DISCOVERY, outputs["discovery"])
+    config = replace(config, artifacts=outputs)
+    discovery = json.loads(outputs["discovery"].read_text())
+
+    first = write_evaluation(config, discovery)
+    assert first[2]["required_judgments"] == 10
+    with outputs["human_review"].open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    for row in rows:
+        row["candidate_review_label"] = "ACCEPTABLE"
+    with outputs["human_review"].open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=rows[0].keys(), lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(rows)
+
+    second = write_evaluation(config, discovery)
+    assert second[2]["cases"] == first[2]["cases"]
+    assert second[2]["required_judgments"] == 10
+    assert second[2]["completed_judgments"] == 10
+    assert second[2]["remaining_judgments"] == 0
 
 
 def test_frozen_manifest_still_has_exactly_50_tracks():

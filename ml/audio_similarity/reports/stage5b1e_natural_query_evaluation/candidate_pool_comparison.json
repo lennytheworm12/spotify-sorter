@@ -8,12 +8,12 @@
   "production_query_activated": false,
   "resolver_replays_sha256": "22e586e0dd56880225e1958c651de72a73f8b4dea593e04eb14e08d38de10da3",
   "schema_version": "stage5b1e-candidate-pool-comparison-v1",
-  "selection_status": "NO_CLEAR_WINNER_PENDING_TARGETED_HUMAN_REVIEW",
+  "selection_status": "KEEP_CURRENT_QUERY",
   "strategies": {
     "Q0_CURRENT_CONTROL": {
       "candidate_overlap_with_control_total": 235,
-      "candidate_set_failure_count": 2,
-      "candidate_set_failure_rate_among_human_evaluable_tracks": 0.05,
+      "candidate_set_failure_count": 1,
+      "candidate_set_failure_rate_among_human_evaluable_tracks": 0.024390243902439025,
       "canonical_strong_source_present_count": 20,
       "diagnostic_sol_safe_candidate_absent_count": 1,
       "diagnostic_sol_safe_recall": {
@@ -22,12 +22,12 @@
         "recall_at_3": 0.9761904761904762,
         "recall_at_5": 0.9761904761904762
       },
-      "known_human_safe_candidate_absent_count": 2,
+      "known_human_safe_candidate_absent_count": 1,
       "known_human_safe_recall": {
-        "evaluable_tracks": 40,
-        "recall_at_1": 0.375,
-        "recall_at_3": 0.825,
-        "recall_at_5": 0.95
+        "evaluable_tracks": 41,
+        "recall_at_1": 0.36585365853658536,
+        "recall_at_3": 0.8780487804878049,
+        "recall_at_5": 0.975609756097561
       },
       "mean_candidate_overlap_with_control": 4.7,
       "new_candidate_occurrences_vs_control": 0,
@@ -36,10 +36,10 @@
       "resolver_coverage": 0.84,
       "resolver_match_uncertain_count": 8,
       "selected_human_label_counts": {
-        "ACCEPTABLE": 15,
-        "IDEAL": 20,
+        "ACCEPTABLE": 17,
+        "IDEAL": 21,
         "UNCERTAIN": 2,
-        "UNREVIEWED": 5
+        "UNREVIEWED": 2
       },
       "selected_sol_label_counts": {
         "ACCEPTABLE": 17,
@@ -62,8 +62,8 @@
     },
     "Q1_NATURAL_SPOTIFY_TITLE": {
       "candidate_overlap_with_control_total": 126,
-      "candidate_set_failure_count": 7,
-      "candidate_set_failure_rate_among_human_evaluable_tracks": 0.175,
+      "candidate_set_failure_count": 3,
+      "candidate_set_failure_rate_among_human_evaluable_tracks": 0.07317073170731707,
       "canonical_strong_source_present_count": 15,
       "diagnostic_sol_safe_candidate_absent_count": 2,
       "diagnostic_sol_safe_recall": {
@@ -72,12 +72,12 @@
         "recall_at_3": 0.9047619047619048,
         "recall_at_5": 0.9523809523809523
       },
-      "known_human_safe_candidate_absent_count": 7,
+      "known_human_safe_candidate_absent_count": 3,
       "known_human_safe_recall": {
-        "evaluable_tracks": 40,
-        "recall_at_1": 0.4,
-        "recall_at_3": 0.675,
-        "recall_at_5": 0.825
+        "evaluable_tracks": 41,
+        "recall_at_1": 0.43902439024390244,
+        "recall_at_3": 0.7804878048780488,
+        "recall_at_5": 0.926829268292683
       },
       "mean_candidate_overlap_with_control": 2.52,
       "new_candidate_occurrences_vs_control": 124,
@@ -86,9 +86,10 @@
       "resolver_coverage": 0.8,
       "resolver_match_uncertain_count": 10,
       "selected_human_label_counts": {
-        "ACCEPTABLE": 14,
-        "IDEAL": 18,
-        "UNREVIEWED": 8
+        "ACCEPTABLE": 19,
+        "IDEAL": 19,
+        "UNCERTAIN": 1,
+        "UNREVIEWED": 1
       },
       "selected_sol_label_counts": {
         "ACCEPTABLE": 15,
@@ -111,8 +112,8 @@
     },
     "Q2_NATURAL_TITLE_PLUS_ARTIST": {
       "candidate_overlap_with_control_total": 146,
-      "candidate_set_failure_count": 3,
-      "candidate_set_failure_rate_among_human_evaluable_tracks": 0.075,
+      "candidate_set_failure_count": 2,
+      "candidate_set_failure_rate_among_human_evaluable_tracks": 0.04878048780487805,
       "canonical_strong_source_present_count": 16,
       "diagnostic_sol_safe_candidate_absent_count": 1,
       "diagnostic_sol_safe_recall": {
@@ -121,12 +122,12 @@
         "recall_at_3": 0.9285714285714286,
         "recall_at_5": 0.9761904761904762
       },
-      "known_human_safe_candidate_absent_count": 3,
+      "known_human_safe_candidate_absent_count": 2,
       "known_human_safe_recall": {
-        "evaluable_tracks": 40,
-        "recall_at_1": 0.35,
-        "recall_at_3": 0.775,
-        "recall_at_5": 0.925
+        "evaluable_tracks": 41,
+        "recall_at_1": 0.36585365853658536,
+        "recall_at_3": 0.8780487804878049,
+        "recall_at_5": 0.9512195121951219
       },
       "mean_candidate_overlap_with_control": 2.92,
       "new_candidate_occurrences_vs_control": 104,
@@ -135,9 +136,10 @@
       "resolver_coverage": 0.8,
       "resolver_match_uncertain_count": 10,
       "selected_human_label_counts": {
-        "ACCEPTABLE": 15,
-        "IDEAL": 18,
-        "UNREVIEWED": 7
+        "ACCEPTABLE": 18,
+        "IDEAL": 19,
+        "UNCERTAIN": 1,
+        "UNREVIEWED": 2
       },
       "selected_sol_label_counts": {
         "ACCEPTABLE": 15,
@@ -159,8 +161,8 @@
     },
     "Q3_CORE_TITLE_ARTIST_VERSION": {
       "candidate_overlap_with_control_total": 156,
-      "candidate_set_failure_count": 6,
-      "candidate_set_failure_rate_among_human_evaluable_tracks": 0.15,
+      "candidate_set_failure_count": 4,
+      "candidate_set_failure_rate_among_human_evaluable_tracks": 0.0975609756097561,
       "canonical_strong_source_present_count": 15,
       "diagnostic_sol_safe_candidate_absent_count": 2,
       "diagnostic_sol_safe_recall": {
@@ -169,12 +171,12 @@
         "recall_at_3": 0.9285714285714286,
         "recall_at_5": 0.9523809523809523
       },
-      "known_human_safe_candidate_absent_count": 6,
+      "known_human_safe_candidate_absent_count": 4,
       "known_human_safe_recall": {
-        "evaluable_tracks": 40,
-        "recall_at_1": 0.325,
-        "recall_at_3": 0.725,
-        "recall_at_5": 0.85
+        "evaluable_tracks": 41,
+        "recall_at_1": 0.34146341463414637,
+        "recall_at_3": 0.8048780487804879,
+        "recall_at_5": 0.9024390243902439
       },
       "mean_candidate_overlap_with_control": 3.12,
       "new_candidate_occurrences_vs_control": 94,
@@ -183,10 +185,10 @@
       "resolver_coverage": 0.8,
       "resolver_match_uncertain_count": 10,
       "selected_human_label_counts": {
-        "ACCEPTABLE": 15,
-        "IDEAL": 17,
-        "UNCERTAIN": 1,
-        "UNREVIEWED": 7
+        "ACCEPTABLE": 18,
+        "IDEAL": 18,
+        "UNCERTAIN": 2,
+        "UNREVIEWED": 2
       },
       "selected_sol_label_counts": {
         "ACCEPTABLE": 16,
