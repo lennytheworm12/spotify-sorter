@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 import os
 import threading
@@ -168,6 +169,15 @@ class Stage5B1BChallengeReviewStore:
             for stable_id, _ in self._queue_cases:
                 target = self._manifest_by_id[stable_id]
                 candidate_rows = grouped[stable_id]
+                display_rows = sorted(
+                    candidate_rows,
+                    key=lambda row: hashlib.sha256(
+                        (
+                            f"{self.manifest.sha256}|fresh-human-review-v1|"
+                            f"{stable_id}|{row['candidate_video_id']}"
+                        ).encode()
+                    ).hexdigest(),
+                )
                 cases.append(
                     {
                         "stable_track_id": stable_id,
@@ -199,7 +209,7 @@ class Stage5B1BChallengeReviewStore:
                                     "note": row["candidate_note"],
                                 },
                             }
-                            for index, row in enumerate(candidate_rows, start=1)
+                            for index, row in enumerate(display_rows, start=1)
                         ],
                     }
                 )

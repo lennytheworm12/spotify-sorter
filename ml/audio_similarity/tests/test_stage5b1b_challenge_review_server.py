@@ -113,6 +113,20 @@ def test_session_is_blinded_and_matches_targeted_audit_accounting(review_store):
     ):
         assert forbidden not in serialized
 
+    queue = json.loads(review_store.queue_path.read_text(encoding="utf-8"))
+    queue_order = {
+        row["stable_track_id"]: row["candidate_video_ids"]
+        for row in queue["cases"]
+        if len(row["candidate_video_ids"]) > 1
+    }
+    displayed = {
+        case["stable_track_id"]: [row["video_id"] for row in case["candidates"]]
+        for case in session["cases"]
+        if len(case["candidates"]) > 1
+    }
+    assert any(displayed[stable_id] != video_ids for stable_id, video_ids in queue_order.items())
+    assert review_store.session()["cases"] == session["cases"]
+
 
 def test_submit_atomically_persists_label_and_verbatim_notes(review_store):
     first_case = review_store.session()["cases"][0]
