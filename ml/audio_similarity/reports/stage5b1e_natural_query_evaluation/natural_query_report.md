@@ -101,6 +101,16 @@ Completed: 0; remaining: 10
 
 Review artifact: `human_review.csv`.
 
+Local autosaving review UI:
+
+```bash
+uv run python -m audio_similarity.cli.stage5b1e_review_server --no-browser --port 8773
+```
+
+Open `http://127.0.0.1:8773`. The reviewer receives raw target/candidate
+metadata only; strategy IDs and audit reasons are hidden. Labels and notes save
+atomically to `human_review.csv`, and the page can export the same artifact.
+
 ## Decision
 
 `NO_CLEAR_WINNER_PENDING_TARGETED_HUMAN_REVIEW`
@@ -111,7 +121,8 @@ A final KEEP/ADOPT decision is deferred until materially changed selections have
 
 - Focused Stage 5B.1E tests: `17 passed`
 - Frozen resolver regressions within focused suite: passed
-- Full non-heavy `ml/audio_similarity` suite: `755 passed, 12 deselected`
+- Browser-review focused regressions: `26 passed`
+- Full non-heavy `ml/audio_similarity` suite: `757 passed, 12 deselected`
 - Existing librosa short-fixture warnings: 11; no test failures
 - Completed-run resume check: zero repeated searches and zero pacing sleeps
 
