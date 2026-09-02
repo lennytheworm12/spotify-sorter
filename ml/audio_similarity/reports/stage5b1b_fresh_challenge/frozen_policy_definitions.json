@@ -1,0 +1,69 @@
+{
+  "schema_version": "stage5b1b-fresh-challenge-policy-bundle-v1",
+  "frozen_before_challenge_manifest": true,
+  "source_branch": "ml/stage5b1b-policy-calibration",
+  "source_commit": "88b71b4724e43ab37e3d6417a99deccfd1b802a7",
+  "source_artifacts": {
+    "resolver_implementation": {
+      "path": "src/audio_similarity/stage5b1b_resolver.py",
+      "sha256": "65ee9ce45e2a50eda344eabc805fd40cf411582e70d602559e21bb6add0879be"
+    },
+    "selected_policy": {
+      "path": "reports/stage5b1b_calibration/resolver_policy_candidate_v1.json",
+      "sha256": "80ef018df79eefea10a3e336968027bc64bdd89c334548a500453a7947f1cbea"
+    },
+    "calibration_variants": {
+      "path": "reports/stage5b1b_calibration/resolver_policy_variants.json",
+      "sha256": "681cb4b770b7d70efd5db2b6baec2b56f0b4f48a378024e4eb54fc85fde211f5"
+    }
+  },
+  "duration_boundaries": {
+    "very_close_seconds": 2.0,
+    "close_seconds": 7.0,
+    "moderate_seconds": 48.0,
+    "derivation": "ceil(q50/q75/q90 of eligible human SAFE absolute deltas)"
+  },
+  "policies": {
+    "POLICY_CONSERVATIVE_V1": {
+      "policy_id": "POLICY_CONSERVATIVE_V1",
+      "require_exact_identity": true,
+      "minimum_title_similarity": 1.0,
+      "require_primary_artist": true,
+      "require_complete_version_evidence": true,
+      "maximum_duration_band": "DURATION_VERY_CLOSE",
+      "canonical_or_official_only": true,
+      "allow_lyric_fallback": false,
+      "lyric_min_relative_view_strength": null,
+      "official_video_maximum_duration_band": null,
+      "allow_other_source": false
+    },
+    "POLICY_BALANCED_V1": {
+      "policy_id": "POLICY_BALANCED_V1",
+      "require_exact_identity": true,
+      "minimum_title_similarity": 1.0,
+      "require_primary_artist": true,
+      "require_complete_version_evidence": true,
+      "maximum_duration_band": "DURATION_CLOSE",
+      "canonical_or_official_only": false,
+      "allow_lyric_fallback": true,
+      "lyric_min_relative_view_strength": 0.001,
+      "official_video_maximum_duration_band": "DURATION_VERY_CLOSE",
+      "allow_other_source": false
+    }
+  },
+  "hierarchy": [
+    "recording_identity",
+    "version_compatibility",
+    "title_and_performer_evidence",
+    "duration_compatibility",
+    "source_provenance_and_quality",
+    "description_and_release_evidence",
+    "relative_views_then_search_rank"
+  ],
+  "immutability": {
+    "challenge_data_must_not_change_policy": true,
+    "version_conflict_can_be_rescued": false,
+    "uploader_mismatch_is_artist_conflict": false,
+    "production_auto_match_activated": false
+  }
+}
