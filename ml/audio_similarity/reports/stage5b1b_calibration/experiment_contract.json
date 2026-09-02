@@ -1,0 +1,83 @@
+{
+  "schema_version": "stage5b1b-calibration-contract-v1",
+  "experiment_id": "stage5b1b_partb_policy_calibration",
+  "starting_branch": "ml/stage5b1b-human-audit-complete",
+  "starting_commit": "553c2b476a9bd4b707afeea6f5a69ffb4039f2a6",
+  "purpose": "Offline calibration of an interpretable candidate AUTO_MATCH policy for later fresh challenge-set validation",
+  "frozen_inputs": {
+    "heldout_manifest_sha256": "39557ede8f07bde129ad23d2bc64a0faf0fff755356cd87f2054e14f91d81e5a",
+    "heldout_discovery_sha256": "2c318ac0853ffe3395c6a934265585afcb0a39a2f9ce73e5a00ba35276d056e4",
+    "heldout_feature_v1_sha256": "f4260fe01b95770ceb4c47f8298033a0b865e597780a488bca1dfaac22a604a6",
+    "heldout_review_sha256": "8e5282310ff44c9441e81a1cb538613f004b92361ec8b8c21172b4d40b69e97e",
+    "targeted_audit_queue_sha256": "3f3868c613099e50a976d83ef5dea343fda0cf06d1bb51662ef0772b3d3193a5",
+    "calibration_feature_v2_sha256": "33efc17b110329627979c7db6e2bdc7576034ced205e0db28762101d951c82e5",
+    "track_count": 50,
+    "candidate_count": 248,
+    "human_audited_candidate_count": 80
+  },
+  "feature_contract": {
+    "schema_version": "stage5b1b-candidate-features-v2",
+    "identity_before_source_quality": true,
+    "explicit_conflict_can_be_rescued": false,
+    "duration_raw_values_retained": true,
+    "duration_band_derivation": "ceil q50/q75/q90 of absolute duration deltas among recording-eligible human IDEAL/ACCEPTABLE rows",
+    "relative_views_are_weak_late_evidence": true,
+    "search_rank_is_final_tiebreak_only": true
+  },
+  "policy_variants": [
+    {
+      "policy_id": "POLICY_CONSERVATIVE_V1",
+      "identity": "exact normalized title plus explicit primary performer",
+      "version": "no conflict and no absent target-version evidence",
+      "duration": "empirical DURATION_VERY_CLOSE",
+      "source": "canonical provenance or Official Audio; no lyric/video/other fallback"
+    },
+    {
+      "policy_id": "POLICY_BALANCED_V1",
+      "identity": "exact normalized title plus explicit primary performer",
+      "version": "no conflict and no absent target-version evidence",
+      "duration": "empirical DURATION_CLOSE",
+      "source": "canonical/Official Audio, calibrated lyric fallback, or very-close Official Music Video"
+    },
+    {
+      "policy_id": "POLICY_PERMISSIVE_V1",
+      "identity": "exact or strong title similarity plus explicit primary performer",
+      "version": "no explicit conflict; absent evidence allowed",
+      "duration": "empirical DURATION_MODERATE",
+      "source": "all source classes remain eligible"
+    }
+  ],
+  "policy_selection_priority": [
+    "zero known human-audited WRONG automatic selections if achievable",
+    "minimize human-audited UNCERTAIN automatic selections",
+    "require strong blinded Sol safety agreement",
+    "maximize automatic track coverage subject to preceding safety constraints",
+    "preserve MATCH_UNCERTAIN for the remaining tail"
+  ],
+  "sol_evaluator": {
+    "config_sha256": "674eb69d8d6cf00c6cad27a900087b66b329ffa6e1f9feab87f1a7b521c02d70",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "high",
+    "blinded_payload_sha256": "dc7c90f24d26b1f50cdb8868f22e7b3c041f0f49ceab16a439162b4916bb063c",
+    "private_mapping_sha256": "f3760b9f5eb029bc608a3697e7b75088a4fff0be764442c3e06fbd4a9752ff84",
+    "candidate_order_shuffled": true,
+    "search_rank_supplied": false,
+    "human_labels_supplied": false,
+    "resolver_features_supplied": false,
+    "tools_or_web_allowed": false,
+    "isolated_ephemeral_context": true
+  },
+  "scope_boundaries": {
+    "media_downloads": 0,
+    "stage5a_calls": 0,
+    "clap_calls": 0,
+    "muq_calls": 0,
+    "new_youtube_searches": 0,
+    "production_auto_match_activated": false,
+    "fresh_challenge_set_run": false
+  },
+  "possible_completion_states": [
+    "STAGE5B1B_POLICY_READY_FOR_FRESH_CHALLENGE_VALIDATION",
+    "STAGE5B1B_CALIBRATION_INSUFFICIENT"
+  ]
+}
