@@ -1,0 +1,259 @@
+{
+  "schema_version": "stage5b1b-fresh-challenge-track-manifest-v1",
+  "experiment_id": "stage5b1b_fresh_challenge_validation_v1",
+  "frozen_before_discovery": true,
+  "frozen_before_policy_execution": true,
+  "purpose": "Untouched difficult 50-track engineering challenge for validating the already-frozen Conservative and Balanced metadata-resolution policies. It is not a population sample.",
+  "tracks": [
+    {
+      "track": {"stable_track_id": "s5b1c_001", "spotify_track_id": null, "title": "Flowers", "artists": ["Miley Cyrus"], "album": "Endless Summer Vacation", "duration_ms": 200600, "release_year": 2023, "isrc": null},
+      "case_tags": ["straightforward_studio", "major_hit", "official_video_duration_risk"],
+      "case_rationale": "Recent studio baseline with both clean audio sources and a narrative official video."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_002", "spotify_track_id": null, "title": "As It Was", "artists": ["Harry Styles"], "album": "Harry's House", "duration_ms": 167303, "release_year": 2022, "isrc": null},
+      "case_tags": ["straightforward_studio", "short_duration", "many_lyric_uploads"],
+      "case_rationale": "Short major hit with dense official, lyric, and third-party search results."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_003", "spotify_track_id": null, "title": "Heat Waves", "artists": ["Glass Animals"], "album": "Dreamland", "duration_ms": 238805, "release_year": 2020, "isrc": null},
+      "case_tags": ["straightforward_studio", "many_live_uploads", "lyric_uploads"],
+      "case_rationale": "Studio recording commonly surrounded by live, stripped, and lyric variants."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_004", "spotify_track_id": null, "title": "Kill Bill", "artists": ["SZA"], "album": "SOS", "duration_ms": 153947, "release_year": 2022, "isrc": null},
+      "case_tags": ["straightforward_studio", "explicit_clean_ambiguity", "theatrical_video"],
+      "case_rationale": "Very short album recording whose official video contains substantial theatrical material."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_005", "spotify_track_id": null, "title": "Stick Season", "artists": ["Noah Kahan"], "album": "Stick Season", "duration_ms": 182347, "release_year": 2022, "isrc": null},
+      "case_tags": ["straightforward_studio", "acoustic_and_live_results", "label_hosted"],
+      "case_rationale": "Folk-pop studio target with numerous acoustic and concert renditions."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_006", "spotify_track_id": null, "title": "Good Luck, Babe!", "artists": ["Chappell Roan"], "album": "Good Luck, Babe!", "duration_ms": 218424, "release_year": 2024, "isrc": null},
+      "case_tags": ["punctuation", "recent_release", "live_results"],
+      "case_rationale": "Punctuation-bearing recent single with popular live and lyric uploads."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_007", "spotify_track_id": null, "title": "Beautiful Things", "artists": ["Benson Boone"], "album": "Fireworks & Rollerblades", "duration_ms": 180304, "release_year": 2024, "isrc": null},
+      "case_tags": ["straightforward_studio", "common_title", "many_covers"],
+      "case_rationale": "Major hit with a generic title and extensive cover ecosystem."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_008", "spotify_track_id": null, "title": "Empire State Of Mind", "artists": ["JAY-Z", "Alicia Keys"], "album": "The Blueprint 3", "duration_ms": 276920, "release_year": 2009, "isrc": null},
+      "case_tags": ["multiple_artists", "punctuation_artist", "live_results"],
+      "case_rationale": "Two-performer recording with artist punctuation and many solo/live renditions."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_009", "spotify_track_id": null, "title": "INDUSTRY BABY (feat. Jack Harlow)", "artists": ["Lil Nas X", "Jack Harlow"], "album": "MONTERO", "duration_ms": 212353, "release_year": 2021, "isrc": null},
+      "case_tags": ["featured_artist", "parentheses", "explicit_clean_ambiguity"],
+      "case_rationale": "Featured-artist title noise coexists with explicit and clean uploads."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_010", "spotify_track_id": null, "title": "Calm Down (with Selena Gomez)", "artists": ["Rema", "Selena Gomez"], "album": "Rave & Roses Ultra", "duration_ms": 239318, "release_year": 2022, "isrc": null},
+      "case_tags": ["multiple_artists", "alternate_version", "international"],
+      "case_rationale": "Duet version must remain distinct from Rema's original solo recording."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_011", "spotify_track_id": null, "title": "Nothing Breaks Like a Heart (feat. Miley Cyrus)", "artists": ["Mark Ronson", "Miley Cyrus"], "album": "Late Night Feelings", "duration_ms": 217467, "release_year": 2018, "isrc": null},
+      "case_tags": ["featured_artist", "label_hosted", "official_video"],
+      "case_rationale": "Producer-led credit and label provenance should not be mistaken for performer conflict."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_012", "spotify_track_id": null, "title": "Taki Taki (with Selena Gomez, Ozuna & Cardi B)", "artists": ["DJ Snake", "Selena Gomez", "Ozuna", "Cardi B"], "album": "Carte Blanche", "duration_ms": 212500, "release_year": 2018, "isrc": null},
+      "case_tags": ["multiple_artists", "featured_artists", "international"],
+      "case_rationale": "Four-artist credit stresses performer parsing without uploader assumptions."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_013", "spotify_track_id": null, "title": "How You Like That", "artists": ["BLACKPINK"], "album": "THE ALBUM", "duration_ms": 181947, "release_year": 2020, "isrc": null},
+      "case_tags": ["kpop", "label_channel", "theatrical_video"],
+      "case_rationale": "K-pop group recording hosted through label/company channels with a high-production video."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_014", "spotify_track_id": null, "title": "Boy With Luv (feat. Halsey)", "artists": ["BTS", "Halsey"], "album": "MAP OF THE SOUL : PERSONA", "duration_ms": 229773, "release_year": 2019, "isrc": null},
+      "case_tags": ["kpop", "featured_artist", "label_channel"],
+      "case_rationale": "Cross-market collaboration where the uploader may be the Korean label rather than either performer."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_015", "spotify_track_id": null, "title": "ANTIFRAGILE", "artists": ["LE SSERAFIM"], "album": "ANTIFRAGILE", "duration_ms": 184444, "release_year": 2022, "isrc": null},
+      "case_tags": ["kpop", "label_channel", "punctuation_artist"],
+      "case_rationale": "Label-hosted K-pop source with stylized group spelling and abundant dance uploads."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_016", "spotify_track_id": null, "title": "Supernova", "artists": ["aespa"], "album": "Armageddon", "duration_ms": 178880, "release_year": 2024, "isrc": null},
+      "case_tags": ["kpop", "common_title", "label_channel"],
+      "case_rationale": "Common title and corporate-channel provenance create both identity and provenance ambiguity."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_017", "spotify_track_id": null, "title": "Cupid - Twin Ver.", "artists": ["FIFTY FIFTY"], "album": "The Beginning: Cupid", "duration_ms": 174253, "release_year": 2023, "isrc": null},
+      "case_tags": ["kpop", "alternate_version", "sped_up_competition"],
+      "case_rationale": "English Twin Version must not collapse to the Korean or sped-up recording."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_018", "spotify_track_id": null, "title": "APT.", "artists": ["ROSÉ", "Bruno Mars"], "album": "rosie", "duration_ms": 169917, "release_year": 2024, "isrc": null},
+      "case_tags": ["kpop_global_crossover", "diacritic", "multiple_artists"],
+      "case_rationale": "Very short global crossover with punctuation and a diacritic-bearing performer name."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_019", "spotify_track_id": null, "title": "Waves - Robin Schulz Radio Edit", "artists": ["Mr. Probz", "Robin Schulz"], "album": "Waves (Robin Schulz Radio Edit)", "duration_ms": 208133, "release_year": 2014, "isrc": null},
+      "case_tags": ["named_remix", "radio_edit", "multiple_versions"],
+      "case_rationale": "Named radio edit competes with the original, full remix, and many unofficial edits."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_020", "spotify_track_id": null, "title": "You & Me - Flume Remix", "artists": ["Disclosure", "Eliza Doolittle", "Flume"], "album": "Settle (The Remixes)", "duration_ms": 282013, "release_year": 2013, "isrc": null},
+      "case_tags": ["named_remix", "multiple_artists", "punctuation"],
+      "case_rationale": "Long named remix must be distinguished from the original and shortened edits."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_021", "spotify_track_id": null, "title": "Bad Habits - FISHER Remix", "artists": ["Ed Sheeran", "FISHER"], "album": "Bad Habits (FISHER Remix)", "duration_ms": 223200, "release_year": 2021, "isrc": null},
+      "case_tags": ["named_remix", "multiple_remixes", "modified_recording"],
+      "case_rationale": "Specific dance remix competes with the dominant studio hit and other remixes."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_022", "spotify_track_id": null, "title": "I Follow Rivers - The Magician Remix", "artists": ["Lykke Li", "The Magician"], "album": "I Follow Rivers (The Magician Remix)", "duration_ms": 280000, "release_year": 2011, "isrc": null},
+      "case_tags": ["named_remix", "original_competition", "lyric_uploads"],
+      "case_rationale": "Commercial remix has more search prominence than some original-recording sources."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_023", "spotify_track_id": null, "title": "The Business - Vintage Culture & Dubdogz Remix", "artists": ["Tiësto", "Vintage Culture", "Dubdogz"], "album": "The Business (Vintage Culture & Dubdogz Remix)", "duration_ms": 175236, "release_year": 2021, "isrc": null},
+      "case_tags": ["named_remix", "multiple_remixers", "diacritic"],
+      "case_rationale": "Two named remixers and the original artist must all survive identity parsing."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_024", "spotify_track_id": null, "title": "Makeba - Ian Asher Remix", "artists": ["Jain", "Ian Asher"], "album": "Makeba (Ian Asher Remix)", "duration_ms": 127500, "release_year": 2023, "isrc": null},
+      "case_tags": ["named_remix", "short_duration", "original_competition"],
+      "case_rationale": "Very short remix of a much longer original stresses both qualifier and duration evidence."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_025", "spotify_track_id": null, "title": "Something Just Like This - Alesso Remix", "artists": ["The Chainsmokers", "Coldplay", "Alesso"], "album": "Something Just Like This (Remix Pack)", "duration_ms": 252000, "release_year": 2017, "isrc": null},
+      "case_tags": ["named_remix", "multiple_artists", "many_remixes"],
+      "case_rationale": "Three credited acts and a dense remix ecosystem make the named version essential."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_026", "spotify_track_id": null, "title": "Free Fallin' - Live at the Nokia Theatre, Los Angeles, CA - December 2007", "artists": ["John Mayer"], "album": "Where the Light Is: John Mayer Live in Los Angeles", "duration_ms": 264267, "release_year": 2008, "isrc": null},
+      "case_tags": ["live", "named_venue", "cover_recording"],
+      "case_rationale": "Specific live cover competes with the Tom Petty original and many other performances."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_027", "spotify_track_id": null, "title": "Slow Dancing in a Burning Room - Live at the Nokia Theatre, Los Angeles, CA - December 2007", "artists": ["John Mayer"], "album": "Where the Light Is: John Mayer Live in Los Angeles", "duration_ms": 319147, "release_year": 2008, "isrc": null},
+      "case_tags": ["live", "named_venue", "studio_competition"],
+      "case_rationale": "Exact concert recording must remain separate from the studio track and fan-shot performances."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_028", "spotify_track_id": null, "title": "Hotel California - Live on MTV, 1994", "artists": ["Eagles"], "album": "Hell Freezes Over", "duration_ms": 432000, "release_year": 1994, "isrc": null},
+      "case_tags": ["live", "named_event", "many_covers"],
+      "case_rationale": "Long specific live arrangement competes with the canonical studio recording and many covers."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_029", "spotify_track_id": null, "title": "The Night We Met - Live at the Ryman", "artists": ["Lord Huron"], "album": "Live at the Ryman", "duration_ms": 258000, "release_year": 2023, "isrc": null},
+      "case_tags": ["live", "named_venue", "smaller_artist"],
+      "case_rationale": "Specific official live-album performance with weaker canonical search provenance."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_030", "spotify_track_id": null, "title": "Pompeii - Acoustic Version", "artists": ["Bastille"], "album": "Pompeii", "duration_ms": 255000, "release_year": 2013, "isrc": null},
+      "case_tags": ["acoustic", "studio_competition", "many_covers"],
+      "case_rationale": "Acoustic target must not collapse to the dominant studio hit or unrelated covers."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_031", "spotify_track_id": null, "title": "The Chain - 2004 Remaster", "artists": ["Fleetwood Mac"], "album": "Rumours", "duration_ms": 270213, "release_year": 2004, "isrc": null},
+      "case_tags": ["remaster", "older_recording", "many_live_uploads"],
+      "case_rationale": "Named remaster must be distinguished from original-master and concert sources."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_032", "spotify_track_id": null, "title": "Landslide - 2015 Remaster", "artists": ["Fleetwood Mac"], "album": "Fleetwood Mac", "duration_ms": 199493, "release_year": 2015, "isrc": null},
+      "case_tags": ["remaster", "many_covers", "live_results"],
+      "case_rationale": "Remastered studio source competes with famous live versions and extensive covers."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_033", "spotify_track_id": null, "title": "Sweet Child O' Mine - 2022 Remaster", "artists": ["Guns N' Roses"], "album": "Appetite For Destruction (Super Deluxe Edition)", "duration_ms": 356067, "release_year": 2022, "isrc": null},
+      "case_tags": ["remaster", "punctuation", "many_covers"],
+      "case_rationale": "Explicitly dated remaster with abundant original, live, cover, and remastered uploads."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_034", "spotify_track_id": null, "title": "I Wanna Dance with Somebody (Who Loves Me) - 2000 Remaster", "artists": ["Whitney Houston"], "album": "Whitney: The Greatest Hits", "duration_ms": 292400, "release_year": 2000, "isrc": null},
+      "case_tags": ["remaster", "parentheses", "music_video"],
+      "case_rationale": "Named remaster competes with a canonical music video whose metadata may omit the master identity."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_035", "spotify_track_id": null, "title": "Enchanted (Taylor's Version)", "artists": ["Taylor Swift"], "album": "Speak Now (Taylor's Version)", "duration_ms": 353253, "release_year": 2023, "isrc": null},
+      "case_tags": ["taylors_version", "rerecording", "original_competition"],
+      "case_rationale": "Re-recording identity must outrank popularity of the original master and lyric uploads."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_036", "spotify_track_id": null, "title": "I Knew You Were Trouble (Taylor's Version)", "artists": ["Taylor Swift"], "album": "Red (Taylor's Version)", "duration_ms": 219760, "release_year": 2021, "isrc": null},
+      "case_tags": ["taylors_version", "rerecording", "punctuation"],
+      "case_rationale": "Second re-recording case checks that Taylor's Version evidence generalizes across albums."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_037", "spotify_track_id": null, "title": "WAP (feat. Megan Thee Stallion)", "artists": ["Cardi B", "Megan Thee Stallion"], "album": "WAP", "duration_ms": 187541, "release_year": 2020, "isrc": null},
+      "case_tags": ["explicit_clean_ambiguity", "featured_artist", "theatrical_video"],
+      "case_rationale": "Explicit target has a widely circulated censored video/audio version with similar identity metadata."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_038", "spotify_track_id": null, "title": "N95", "artists": ["Kendrick Lamar"], "album": "Mr. Morale & The Big Steppers", "duration_ms": 195950, "release_year": 2022, "isrc": null},
+      "case_tags": ["explicit_clean_ambiguity", "official_video", "common_token"],
+      "case_rationale": "Short stylized title and explicit lyrics make exact recording/source evidence important."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_039", "spotify_track_id": null, "title": "Bloody Mary - Sped Up", "artists": ["Lady Gaga"], "album": "Bloody Mary", "duration_ms": 185250, "release_year": 2022, "isrc": null},
+      "case_tags": ["sped_up", "modified_audio", "original_competition"],
+      "case_rationale": "Officially released sped-up target must not resolve to the dominant original-speed recording."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_040", "spotify_track_id": null, "title": "Another Love - Slowed Down", "artists": ["Tom Odell"], "album": "Another Love (Slowed Down)", "duration_ms": 299000, "release_year": 2022, "isrc": null},
+      "case_tags": ["slowed", "modified_audio", "original_competition"],
+      "case_rationale": "Slowed target tests target-relative modified-audio semantics against the original hit."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_041", "spotify_track_id": null, "title": "Dandelions - slowed + reverb", "artists": ["Ruth B."], "album": "Dandelions (slowed + reverb)", "duration_ms": 255000, "release_year": 2022, "isrc": null},
+      "case_tags": ["slowed", "reverb", "modified_audio", "lyric_uploads"],
+      "case_rationale": "Two explicit modification descriptors compete with the original and many fan-made variants."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_042", "spotify_track_id": null, "title": "Beggin'", "artists": ["Måneskin"], "album": "Chosen", "duration_ms": 211560, "release_year": 2017, "isrc": null},
+      "case_tags": ["cover_recording", "diacritic", "many_covers"],
+      "case_rationale": "Specific modern cover shares its title with several famous recording families."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_043", "spotify_track_id": null, "title": "Iris", "artists": ["The Goo Goo Dolls"], "album": "Dizzy Up the Girl", "duration_ms": 289533, "release_year": 1998, "isrc": null},
+      "case_tags": ["common_title", "many_covers", "official_video"],
+      "case_rationale": "Common one-word title with extensive covers, live performances, and lyric uploads."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_044", "spotify_track_id": null, "title": "Home", "artists": ["Edward Sharpe & The Magnetic Zeros"], "album": "Up from Below", "duration_ms": 303200, "release_year": 2009, "isrc": null},
+      "case_tags": ["common_title", "punctuation_artist", "many_covers"],
+      "case_rationale": "Extremely ambiguous title requires strong performer evidence."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_045", "spotify_track_id": null, "title": "Gravity", "artists": ["John Mayer"], "album": "Continuum", "duration_ms": 245827, "release_year": 2006, "isrc": null},
+      "case_tags": ["common_title", "many_live_uploads", "many_covers"],
+      "case_rationale": "Studio target competes with the artist's own prominent live recordings and unrelated songs."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_046", "spotify_track_id": null, "title": "Valerie (feat. Amy Winehouse)", "artists": ["Mark Ronson", "Amy Winehouse"], "album": "Version", "duration_ms": 219253, "release_year": 2007, "isrc": null},
+      "case_tags": ["cover_recording", "featured_artist", "many_live_uploads"],
+      "case_rationale": "Producer-led cover recording competes with the Zutons original and Amy Winehouse live takes."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_047", "spotify_track_id": null, "title": "DESPECHÁ", "artists": ["ROSALÍA"], "album": "MOTOMAMI +", "duration_ms": 157018, "release_year": 2022, "isrc": null},
+      "case_tags": ["spanish", "diacritics", "short_duration"],
+      "case_rationale": "Spanish-language title and artist diacritics test Unicode-safe identity handling."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_048", "spotify_track_id": null, "title": "PROVENZA", "artists": ["KAROL G"], "album": "MAÑANA SERÁ BONITO", "duration_ms": 210200, "release_year": 2022, "isrc": null},
+      "case_tags": ["spanish", "international", "diacritics_album"],
+      "case_rationale": "Spanish-language global hit with label, lyric, and third-party uploads."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_049", "spotify_track_id": null, "title": "Shinunoga E-Wa", "artists": ["Fujii Kaze"], "album": "HELP EVER HURT NEVER", "duration_ms": 185573, "release_year": 2020, "isrc": null},
+      "case_tags": ["japanese", "romanized_title", "international", "lyric_uploads"],
+      "case_rationale": "Romanized Japanese title has multilingual lyric uploads and non-artist channels."
+    },
+    {
+      "track": {"stable_track_id": "s5b1c_050", "spotify_track_id": null, "title": "Amour Plastique", "artists": ["Videoclub", "Adèle Castillon", "Mattyeux"], "album": "Euphories", "duration_ms": 227227, "release_year": 2018, "isrc": null},
+      "case_tags": ["french", "small_artist", "multiple_artists", "diacritics"],
+      "case_rationale": "French-language smaller-artist case where canonical provenance may be weak and credits vary."
+    }
+  ]
+}
