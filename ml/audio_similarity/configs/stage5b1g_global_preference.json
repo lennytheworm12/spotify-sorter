@@ -1,0 +1,51 @@
+{
+  "schema_version": "stage5b1g-global-preference-config-v1",
+  "experiment_id": "stage5b1g_global_candidate_preference_v1",
+  "policy_id": "GLOBAL_CANDIDATE_PREFERENCE_V1",
+  "source_query_strategy": "Q0_CURRENT_CONTROL",
+  "stage5b1f_config": "configs/stage5b1f_resolver_false_rejection.json",
+  "duration_bands_seconds": {
+    "very_close_max": 2.0,
+    "close_max": 7.0,
+    "extended_1_max": 12.0,
+    "extended_2_max": 16.0,
+    "extended_3_max": 20.0
+  },
+  "frozen_inputs": {
+    "stage5b1f_config": {
+      "path": "configs/stage5b1f_resolver_false_rejection.json",
+      "sha256": "df453ba9f7e4546215cb7bf9affb243b2a070b2b21bcc99c026e6792465c32e9"
+    },
+    "stage5b1f_false_rejections": {
+      "path": "reports/stage5b1f_resolver_false_rejection/false_rejection_cases.json",
+      "sha256": "2f945136db21e011994ccc75c5e333cea5a518a355801f5db9cbc0f0f7452645"
+    },
+    "stage5b1f_candidate_pairs": {
+      "path": "reports/stage5b1f_resolver_false_rejection/candidate_pair_comparisons.json",
+      "sha256": "4fc09f9c2b03dc980a32d3e361ea5fbbe4530f7fbaebc445d9987201a3df3c5e"
+    },
+    "stage5b1f_remaining_tail": {
+      "path": "reports/stage5b1f_resolver_false_rejection/remaining_tail_reclassification.json",
+      "sha256": "f0025d010c4bbd61a01b4da7a2d033721c9add960b91ddd185505cb9d6bc3b11"
+    },
+    "stage5b1f_report": {
+      "path": "reports/stage5b1f_resolver_false_rejection/resolver_false_rejection_report.md",
+      "sha256": "4fce34f87152131c8092849e76d2391976f516462947293bde65b2ae730f13a5"
+    },
+    "stage5b1f_artifact_manifest": {
+      "path": "reports/stage5b1f_resolver_false_rejection/artifact_manifest.json",
+      "sha256": "b14c02af5059b3539e827ea692f66d6f50601a30187d58bfce97f2b8979a7361"
+    }
+  },
+  "artifacts": {
+    "candidate_features": "reports/stage5b1g_global_preference/global_preference_candidate_features.json",
+    "decisions": "reports/stage5b1g_global_preference/global_preference_decisions.json",
+    "changed_selections": "reports/stage5b1g_global_preference/changed_selection_comparisons.json",
+    "duration_analysis": "reports/stage5b1g_global_preference/duration_band_analysis.json",
+    "remaining_tail": "reports/stage5b1g_global_preference/remaining_tail_analysis.json",
+    "human_audit_queue": "reports/stage5b1g_global_preference/human_audit_queue.json",
+    "human_review_csv": "reports/stage5b1g_global_preference/human_review.csv",
+    "report": "reports/stage5b1g_global_preference/global_preference_report.md",
+    "manifest": "reports/stage5b1g_global_preference/artifact_manifest.json"
+  }
+}
