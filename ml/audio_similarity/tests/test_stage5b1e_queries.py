@@ -58,6 +58,14 @@ def test_natural_queries_have_no_quotes_or_forced_official_token():
         assert " official" not in query.lower()
 
 
+def test_frozen_q3_preserves_current_parser_treatment_of_with_credit():
+    # This was frozen before live discovery. The parser retains parenthetical
+    # `with` credits in core_title; changing it now would create a new strategy.
+    assert build_natural_query(track(), "Q3_CORE_TITLE_ARTIST_VERSION") == (
+        "DJ Snake Taki Taki with Selena Gomez, Ozuna & Cardi B"
+    )
+
+
 @pytest.mark.parametrize(
     ("title", "expected"),
     [

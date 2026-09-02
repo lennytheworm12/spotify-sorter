@@ -1,0 +1,128 @@
+{
+  "cases": [
+    {
+      "audit_reasons": [
+        "MATERIAL_STRATEGY_SELECTION_DISAGREEMENT",
+        "NATURAL_QUERY_NEW_SELECTION_WITHOUT_HUMAN_SAFE_EVIDENCE"
+      ],
+      "candidate_video_id": "qKOMEWKrvb4",
+      "stable_track_id": "s5b1c_007",
+      "strategy_ids": [
+        "Q1_NATURAL_SPOTIFY_TITLE",
+        "Q3_CORE_TITLE_ARTIST_VERSION"
+      ]
+    },
+    {
+      "audit_reasons": [
+        "MATERIAL_STRATEGY_SELECTION_DISAGREEMENT",
+        "NATURAL_QUERY_NEW_SELECTION_WITHOUT_HUMAN_SAFE_EVIDENCE"
+      ],
+      "candidate_video_id": "WcIcVapfqXw",
+      "stable_track_id": "s5b1c_010",
+      "strategy_ids": [
+        "Q1_NATURAL_SPOTIFY_TITLE"
+      ]
+    },
+    {
+      "audit_reasons": [
+        "MATERIAL_STRATEGY_SELECTION_DISAGREEMENT",
+        "NATURAL_QUERY_NEW_SELECTION_WITHOUT_HUMAN_SAFE_EVIDENCE"
+      ],
+      "candidate_video_id": "tHzbQfgU6eE",
+      "stable_track_id": "s5b1c_012",
+      "strategy_ids": [
+        "Q1_NATURAL_SPOTIFY_TITLE",
+        "Q2_NATURAL_TITLE_PLUS_ARTIST",
+        "Q3_CORE_TITLE_ARTIST_VERSION"
+      ]
+    },
+    {
+      "audit_reasons": [
+        "MATERIAL_STRATEGY_SELECTION_DISAGREEMENT",
+        "NATURAL_QUERY_NEW_SELECTION_WITHOUT_HUMAN_SAFE_EVIDENCE"
+      ],
+      "candidate_video_id": "i_SsnRdgitA",
+      "stable_track_id": "s5b1c_018",
+      "strategy_ids": [
+        "Q1_NATURAL_SPOTIFY_TITLE",
+        "Q2_NATURAL_TITLE_PLUS_ARTIST",
+        "Q3_CORE_TITLE_ARTIST_VERSION"
+      ]
+    },
+    {
+      "audit_reasons": [
+        "MATERIAL_STRATEGY_SELECTION_DISAGREEMENT",
+        "NATURAL_QUERY_NEW_SELECTION_WITHOUT_HUMAN_SAFE_EVIDENCE"
+      ],
+      "candidate_video_id": "sVjv1UAmLRc",
+      "stable_track_id": "s5b1c_026",
+      "strategy_ids": [
+        "Q1_NATURAL_SPOTIFY_TITLE",
+        "Q2_NATURAL_TITLE_PLUS_ARTIST",
+        "Q3_CORE_TITLE_ARTIST_VERSION"
+      ]
+    },
+    {
+      "audit_reasons": [
+        "MATERIAL_STRATEGY_SELECTION_DISAGREEMENT",
+        "NATURAL_QUERY_NEW_SELECTION_WITHOUT_HUMAN_SAFE_EVIDENCE"
+      ],
+      "candidate_video_id": "rGAS66E9rMQ",
+      "stable_track_id": "s5b1c_035",
+      "strategy_ids": [
+        "Q1_NATURAL_SPOTIFY_TITLE",
+        "Q2_NATURAL_TITLE_PLUS_ARTIST"
+      ]
+    },
+    {
+      "audit_reasons": [
+        "MATERIAL_STRATEGY_SELECTION_DISAGREEMENT"
+      ],
+      "candidate_video_id": "CUbJQGqFoi0",
+      "stable_track_id": "s5b1c_043",
+      "strategy_ids": [
+        "Q0_CURRENT_CONTROL",
+        "Q2_NATURAL_TITLE_PLUS_ARTIST",
+        "Q3_CORE_TITLE_ARTIST_VERSION"
+      ]
+    },
+    {
+      "audit_reasons": [
+        "MATERIAL_STRATEGY_SELECTION_DISAGREEMENT",
+        "NATURAL_QUERY_NEW_SELECTION_WITHOUT_HUMAN_SAFE_EVIDENCE"
+      ],
+      "candidate_video_id": "nYrEL9ecAWA",
+      "stable_track_id": "s5b1c_043",
+      "strategy_ids": [
+        "Q1_NATURAL_SPOTIFY_TITLE"
+      ]
+    },
+    {
+      "audit_reasons": [
+        "MATERIAL_STRATEGY_SELECTION_DISAGREEMENT"
+      ],
+      "candidate_video_id": "yJDJ9eWx3ac",
+      "stable_track_id": "s5b1c_048",
+      "strategy_ids": [
+        "Q0_CURRENT_CONTROL"
+      ]
+    },
+    {
+      "audit_reasons": [
+        "MATERIAL_STRATEGY_SELECTION_DISAGREEMENT"
+      ],
+      "candidate_video_id": "Rbg6BBkmGfU",
+      "stable_track_id": "s5b1c_050",
+      "strategy_ids": [
+        "Q0_CURRENT_CONTROL"
+      ]
+    }
+  ],
+  "comparison_sha256": "650248ab2fbb1b35fea9e61121d9324f4541d531563dbeddb25f77abf32b8b08",
+  "completed_judgments": 0,
+  "label_counts": {},
+  "remaining_judgments": 10,
+  "required_judgments": 10,
+  "schema_version": "stage5b1e-human-audit-queue-v1",
+  "status": "AWAITING_HUMAN_REVIEW"
+}

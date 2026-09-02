@@ -9,9 +9,11 @@ from audio_similarity.stage5b1a_config import QueryConfig
 from audio_similarity.stage5b1b_challenge import load_challenge_config, load_challenge_manifest
 from audio_similarity.stage5b1e_experiment import (
     DISCOVERY_SCHEMA_VERSION,
+    _replay_candidate_pool,
     evaluate,
     expected_strategy_artifact,
     run_discovery,
+    select_query_strategy,
     write_evaluation,
 )
 from audio_similarity.stage5b1e_queries import STRATEGY_IDS, load_stage5b1e_config
@@ -75,6 +77,27 @@ def test_discovery_runner_is_sequential_metadata_only_and_checkpointed(tmp_path)
     assert all(expression.startswith("ytsearch5:") for expression in backend.expressions)
     assert result["media_activity"]["audio_downloads"] == 0
     assert result["media_activity"]["video_downloads"] == 0
+
+    config.artifacts["discovery"].write_text(json.dumps(result))
+    resumed_backend = FakeBackend()
+    resumed_adapter = YtDlpDiscoveryAdapter(
+        config.provider,
+        QueryConfig("unused", "{normalized_title}", False),
+        resumed_backend,
+        sleep=lambda _: None,
+    )
+    resumed_sleeps: list[float] = []
+    resumed = run_discovery(
+        config,
+        strategies,
+        resumed_adapter,
+        sleep=resumed_sleeps.append,
+        now=lambda: "2026-09-02T00:00:01+00:00",
+        checkpoint=lambda _value: None,
+    )
+    assert resumed["status"] == "DISCOVERY_COMPLETE"
+    assert resumed_backend.expressions == []
+    assert resumed_sleeps == []
 
 
 def _control_repeated_discovery(config, tmp_path):
@@ -147,7 +170,7 @@ def test_audit_queue_is_deterministic_and_provider_separated(tmp_path):
     assert first[2] == second[2]
     assert first[2]["remaining_judgments"] == 0
     assert first[1]["production_query_activated"] is False
-    assert first[1]["selection_status"] == "NO_CLEAR_WINNER_PENDING_TARGETED_HUMAN_REVIEW"
+    assert first[1]["selection_status"] == "ADOPT_NATURAL_TITLE"
 
 
 def test_frozen_manifest_still_has_exactly_50_tracks():
@@ -157,3 +180,39 @@ def test_frozen_manifest_still_has_exactly_50_tracks():
         challenge.manifest_path, expected_sha256=challenge.manifest_sha256
     )
     assert len(manifest.tracks) == 50
+
+
+def test_empty_candidate_pool_becomes_uncertain_without_entering_frozen_fallbacks():
+    track = load_challenge_manifest(
+        load_challenge_config(load_stage5b1e_config(CONFIG).challenge_config_path).manifest_path,
+        expected_sha256=load_challenge_config(
+            load_stage5b1e_config(CONFIG).challenge_config_path
+        ).manifest_sha256,
+    ).tracks[0].track
+    decision = _replay_candidate_pool(track, [], policy=None, boundaries=None)
+    assert decision["selected_stage"] == "MATCH_UNCERTAIN"
+    assert decision["final_decision"]["uncertainty_reason"] == "NO_CANDIDATES"
+
+
+def test_query_selection_waits_for_audit_then_uses_predeclared_metric_priority():
+    strategies = {}
+    for index, strategy_id in enumerate(STRATEGY_IDS):
+        strategies[strategy_id] = {
+            "known_human_safe_recall": {"recall_at_5": 0.8 + index * 0.01},
+            "resolver_coverage": 0.8,
+            "selected_human_label_counts": {},
+            "candidate_set_failure_count": 3,
+        }
+    comparison = {"strategies": strategies}
+    assert select_query_strategy(
+        comparison, human_audit_complete=False
+    ) == "NO_CLEAR_WINNER_PENDING_TARGETED_HUMAN_REVIEW"
+    assert select_query_strategy(
+        comparison, human_audit_complete=True
+    ) == "ADOPT_CORE_TITLE_ARTIST_VERSION"
+    strategies["Q3_CORE_TITLE_ARTIST_VERSION"]["selected_human_label_counts"] = {
+        "WRONG": 1
+    }
+    assert select_query_strategy(
+        comparison, human_audit_complete=True
+    ) == "ADOPT_NATURAL_TITLE_PLUS_ARTIST"

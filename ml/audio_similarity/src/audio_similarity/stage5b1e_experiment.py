@@ -44,6 +44,12 @@ REVIEW_COLUMNS = [
     "candidate_description", "strategy_ids", "audit_reasons", "candidate_review_label",
     "candidate_note", "track_note",
 ]
+DECISION_BY_STRATEGY = {
+    "Q0_CURRENT_CONTROL": "KEEP_CURRENT_QUERY",
+    "Q1_NATURAL_SPOTIFY_TITLE": "ADOPT_NATURAL_TITLE",
+    "Q2_NATURAL_TITLE_PLUS_ARTIST": "ADOPT_NATURAL_TITLE_PLUS_ARTIST",
+    "Q3_CORE_TITLE_ARTIST_VERSION": "ADOPT_CORE_TITLE_ARTIST_VERSION",
+}
 
 
 def _utc_now() -> str:
@@ -90,6 +96,10 @@ def _discovery_summary(tracks: list[dict[str, Any]]) -> dict[str, Any]:
             for outcome in outcomes for candidate in outcome.get("candidates", [])
         }),
         "warning_count": sum(len(outcome.get("warnings") or []) for outcome in outcomes),
+        "yt_dlp_versions": sorted({
+            str(outcome.get("provider", {}).get("version"))
+            for outcome in outcomes if outcome.get("provider", {}).get("version")
+        }),
     }
 
 
@@ -157,12 +167,14 @@ def run_discovery(
         track = SpotifyTrack.from_dict(row["target"])
         output = {"track": track.to_dict(), "strategies": []}
         output_by_id[track.stable_track_id] = output
+        ran_query = False
         for query_index, query_row in enumerate(row["queries"]):
             key = (track.stable_track_id, query_row["strategy_id"])
             if key in completed:
                 output["strategies"].append(completed[key])
                 continue
             requested_at = now()
+            ran_query = True
             try:
                 result = adapter.discover_query(track, query_row["query"], limit=5).to_dict()
                 outcome = {
@@ -195,7 +207,7 @@ def run_discovery(
             (checkpoint or (lambda value: atomic_json(config.artifacts["discovery"], value)))(document)
             if query_index + 1 < len(row["queries"]):
                 sleep(config.sleep_between_queries_seconds)
-        if track_index + 1 < len(strategy_artifact["tracks"]):
+        if ran_query and track_index + 1 < len(strategy_artifact["tracks"]):
             sleep(config.provider.sleep_between_tracks_seconds)
     document = _discovery_document(
         config, strategy_artifact, list(output_by_id.values()),
@@ -251,6 +263,50 @@ def _selected_source(replay: dict[str, Any]) -> str | None:
     raise Stage5B1AValidationError("resolver selected candidate missing from feature layer")
 
 
+def _canonical_strong_source_present(replay: dict[str, Any]) -> bool:
+    return any(
+        row["features"]["recording_eligible"]
+        and row["features"]["source"]["source_type"]
+        in {"ART_TRACK_TOPIC", "OFFICIAL_AUDIO"}
+        for row in replay["feature_layers"]["stage5b1b"]["candidates"]
+    )
+
+
+def _candidate_source_types(replay: dict[str, Any]) -> dict[str, str]:
+    return {
+        row["candidate"]["youtube_video_id"]: row["features"]["source"]["source_type"]
+        for row in replay["feature_layers"]["stage5b1b"]["candidates"]
+    }
+
+
+def _replay_candidate_pool(
+    track: SpotifyTrack,
+    candidates: list[dict[str, Any]],
+    *,
+    policy: Any,
+    boundaries: Any,
+) -> dict[str, Any]:
+    """Treat a provider-empty pool as uncertainty before entering frozen layers."""
+
+    if candidates:
+        return evaluate_resolver_cascade(
+            track, candidates, policy=policy, boundaries=boundaries
+        )
+    return {
+        "selected_stage": "MATCH_UNCERTAIN",
+        "final_decision": {
+            "status": "MATCH_UNCERTAIN",
+            "selected_video_id": None,
+            "selected_candidate_rank": None,
+            "uncertainty_reason": "NO_CANDIDATES",
+            "ranked_plausible_candidates": [],
+            "evidence_summary": {"candidate_count": 0},
+        },
+        "layer_decisions": {},
+        "feature_layers": {"stage5b1b": {"candidates": []}},
+    }
+
+
 def evaluate(config: Stage5B1EConfig, discovery: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any]]:
     verify_frozen_inputs(config)
     frozen_regression = verify_frozen_resolver_stack(
@@ -278,7 +334,7 @@ def evaluate(config: Stage5B1EConfig, discovery: dict[str, Any]) -> tuple[dict[s
         if observed != STRATEGY_IDS:
             raise Stage5B1AValidationError(f"query strategy order changed for {stable_id}")
         for outcome in row["strategies"]:
-            replay = evaluate_resolver_cascade(
+            replay = _replay_candidate_pool(
                 track_by_id[stable_id], outcome["candidates"],
                 policy=policies["POLICY_BALANCED_V1"], boundaries=boundaries,
             )
@@ -293,6 +349,8 @@ def evaluate(config: Stage5B1EConfig, discovery: dict[str, Any]) -> tuple[dict[s
                 "selected_stage": replay["selected_stage"],
                 "final_decision": replay["final_decision"],
                 "selected_source_type": _selected_source(replay),
+                "canonical_strong_source_present": _canonical_strong_source_present(replay),
+                "candidate_source_types": _candidate_source_types(replay),
                 "candidates": outcome["candidates"],
             }
             replays.append(compact)
@@ -339,6 +397,7 @@ def evaluate(config: Stage5B1EConfig, discovery: dict[str, Any]) -> tuple[dict[s
             "track_count": len(rows),
             "successful_query_count": sum(row["request_error"] is None for row in rows),
             "request_failure_count": sum(row["request_error"] is not None for row in rows),
+            "zero_candidate_query_count": sum(not row["candidate_video_ids"] for row in rows),
             "unique_candidate_count": len({candidate for row in rows for candidate in row["candidate_video_ids"]}),
             "candidate_overlap_with_control_total": sum(overlap_values),
             "mean_candidate_overlap_with_control": sum(overlap_values) / len(overlap_values),
@@ -352,7 +411,15 @@ def evaluate(config: Stage5B1EConfig, discovery: dict[str, Any]) -> tuple[dict[s
                 for k in (1, 3, 5)
             } | {"evaluable_tracks": sol_denominator},
             "known_human_safe_candidate_absent_count": human_denominator - human_hits[5],
+            "candidate_set_failure_count": human_denominator - human_hits[5],
+            "candidate_set_failure_rate_among_human_evaluable_tracks": (
+                (human_denominator - human_hits[5]) / human_denominator
+                if human_denominator else None
+            ),
             "diagnostic_sol_safe_candidate_absent_count": sol_denominator - sol_hits[5],
+            "canonical_strong_source_present_count": sum(
+                row["canonical_strong_source_present"] for row in rows
+            ),
             "resolver_auto_match_count": auto_count,
             "resolver_coverage": auto_count / len(rows),
             "resolver_match_uncertain_count": len(rows) - auto_count,
@@ -373,6 +440,21 @@ def evaluate(config: Stage5B1EConfig, discovery: dict[str, Any]) -> tuple[dict[s
                     "selected_video_id": row["final_decision"].get("selected_video_id"),
                     "status": row["final_decision"]["status"],
                     "selected_source_type": row["selected_source_type"],
+                    "canonical_strong_source_present": row["canonical_strong_source_present"],
+                    "candidates": [
+                        {
+                            "rank": candidate["rank"],
+                            "youtube_video_id": candidate["youtube_video_id"],
+                            "title": candidate.get("title"),
+                            "channel": candidate.get("channel") or candidate.get("uploader"),
+                            "duration_seconds": candidate.get("duration_seconds"),
+                            "view_count": candidate.get("view_count"),
+                            "source_type": row["candidate_source_types"].get(
+                                candidate["youtube_video_id"]
+                            ),
+                        }
+                        for candidate in row["candidates"]
+                    ],
                 }
                 for strategy, row in rows.items()
             },
@@ -423,6 +505,11 @@ def _review_rows(
         material = len(set(selections.values())) > 1
         for strategy_id, video_id in selections.items():
             label = human.get((stable_id, video_id))
+            if label is not None:
+                # Previously completed human evidence remains authoritative;
+                # disagreement context is retained in comparison.json without
+                # asking the reviewer to label the same video again.
+                continue
             reasons = []
             if material:
                 reasons.append("MATERIAL_STRATEGY_SELECTION_DISAGREEMENT")
@@ -501,11 +588,48 @@ def _write_review(path: Path, rows: list[dict[str, str]]) -> None:
     temporary.replace(path)
 
 
+def select_query_strategy(
+    comparison: dict[str, Any], *, human_audit_complete: bool
+) -> str:
+    """Apply the predeclared evidence priority only after targeted review."""
+
+    if not human_audit_complete:
+        return "NO_CLEAR_WINNER_PENDING_TARGETED_HUMAN_REVIEW"
+    eligible = [
+        strategy_id for strategy_id in STRATEGY_IDS
+        if comparison["strategies"][strategy_id]["selected_human_label_counts"].get(
+            "WRONG", 0
+        ) == 0
+    ]
+    if not eligible:
+        return "NO_CLEAR_WINNER"
+    # Human-safe Recall@5 and resolver coverage are the governing metrics.
+    # Human uncertainty and known candidate-set failures break later ties;
+    # the last component prefers the simpler natural forms only when all
+    # stronger evidence is identical.
+    simplicity = {
+        "Q1_NATURAL_SPOTIFY_TITLE": 4,
+        "Q2_NATURAL_TITLE_PLUS_ARTIST": 3,
+        "Q0_CURRENT_CONTROL": 2,
+        "Q3_CORE_TITLE_ARTIST_VERSION": 1,
+    }
+
+    def key(strategy_id: str) -> tuple[float, float, int, int, int]:
+        row = comparison["strategies"][strategy_id]
+        return (
+            row["known_human_safe_recall"]["recall_at_5"] or 0.0,
+            row["resolver_coverage"],
+            -row["selected_human_label_counts"].get("UNCERTAIN", 0),
+            -row["candidate_set_failure_count"],
+            simplicity[strategy_id],
+        )
+
+    winner = max(eligible, key=key)
+    return DECISION_BY_STRATEGY[winner]
+
+
 def write_evaluation(config: Stage5B1EConfig, discovery: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
     replays, comparison = evaluate(config, discovery)
-    atomic_json(config.artifacts["replays"], replays)
-    comparison["resolver_replays_sha256"] = file_sha256(config.artifacts["replays"])
-    atomic_json(config.artifacts["comparison"], comparison)
     rows, cases = _review_rows(config, replays, comparison)
     _write_review(config.artifacts["human_review"], rows)
     completed = 0
@@ -518,9 +642,16 @@ def write_evaluation(config: Stage5B1EConfig, discovery: dict[str, Any]) -> tupl
             if label:
                 completed += 1
                 labels[label] += 1
+    audit_complete = completed == len(cases)
+    comparison["selection_status"] = select_query_strategy(
+        comparison, human_audit_complete=audit_complete
+    )
+    atomic_json(config.artifacts["replays"], replays)
+    comparison["resolver_replays_sha256"] = file_sha256(config.artifacts["replays"])
+    atomic_json(config.artifacts["comparison"], comparison)
     queue = {
         "schema_version": AUDIT_SCHEMA_VERSION,
-        "status": "COMPLETE" if completed == len(cases) else "AWAITING_HUMAN_REVIEW",
+        "status": "COMPLETE" if audit_complete else "AWAITING_HUMAN_REVIEW",
         "comparison_sha256": file_sha256(config.artifacts["comparison"]),
         "required_judgments": len(cases), "completed_judgments": completed,
         "remaining_judgments": len(cases) - completed,
@@ -531,6 +662,8 @@ def write_evaluation(config: Stage5B1EConfig, discovery: dict[str, Any]) -> tupl
 
 
 def write_report(config: Stage5B1EConfig, comparison: dict[str, Any], queue: dict[str, Any]) -> None:
+    discovery = _json(config.artifacts["discovery"])
+    discovery_summary = discovery["summary"]
     lines = [
         "# Stage 5B.1E Natural YouTube Discovery Query Evaluation", "",
         "## Status", "",
@@ -538,9 +671,17 @@ def write_report(config: Stage5B1EConfig, comparison: dict[str, Any], queue: dic
         "", "No production query was activated. All resolver policies remained unchanged.", "",
         "## Frozen resolver regression", "",
         "The original candidate pools replay exactly at 42/50 AUTO_MATCH and 8/50 MATCH_UNCERTAIN.", "",
+        "## Discovery execution", "",
+        f"- yt-dlp version(s): `{', '.join(discovery_summary['yt_dlp_versions'])}`",
+        f"- successful queries: {discovery_summary['successful_queries']}/200",
+        f"- request failures: {discovery_summary['failed_queries']}",
+        f"- zero-candidate query outcomes: {discovery_summary['zero_candidate_queries']}",
+        f"- provider warnings: {discovery_summary['warning_count']}",
+        f"- unique candidate video IDs: {discovery_summary['unique_candidate_video_ids']}",
+        "- media downloads: 0", "",
         "## Strategy comparison", "",
-        "| Strategy | Human-safe R@1 | R@3 | R@5 | Resolver AUTO_MATCH | Coverage | Known-safe absent |",
-        "|---|---:|---:|---:|---:|---:|---:|",
+        "| Strategy | Human-safe R@1 | R@3 | R@5 | Resolver AUTO_MATCH | Coverage | Candidate-set failures* | Canonical/strong source |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for strategy_id in STRATEGY_IDS:
         row = comparison["strategies"][strategy_id]
@@ -550,15 +691,23 @@ def write_report(config: Stage5B1EConfig, comparison: dict[str, Any], queue: dic
         lines.append(
             f"| {strategy_id} | {rendered[0]} | {rendered[1]} | {rendered[2]} | "
             f"{row['resolver_auto_match_count']}/50 | {row['resolver_coverage']:.1%} | "
-            f"{row['known_human_safe_candidate_absent_count']} |"
+            f"{row['candidate_set_failure_count']} | "
+            f"{row['canonical_strong_source_present_count']}/50 |"
         )
+    lines += [
+        "", "*Candidate-set failure here means no previously human-confirmed SAFE video ID appeared in the top five for a human-evaluable track. New unlabeled candidates can reduce this count only after review.",
+    ]
     taki = comparison["taki_taki"]
     lines += ["", "## Taki Taki diagnostic", ""]
     for strategy_id in STRATEGY_IDS:
         row = taki["strategies"][strategy_id]
         lines += [
             f"### {strategy_id}", "", f"Query: `{row['query']}`", "",
-            f"Candidate IDs: `{', '.join(row['candidate_video_ids'])}`", "",
+            *[
+                f"{candidate['rank']}. `{candidate['youtube_video_id']}` — {candidate['title']} "
+                f"(`{candidate['source_type']}`)"
+                for candidate in row["candidates"]
+            ], "",
             f"Resolver: `{row['status']}`; selected `{row['selected_video_id']}`; source `{row['selected_source_type']}`.", "",
         ]
     lines += [
