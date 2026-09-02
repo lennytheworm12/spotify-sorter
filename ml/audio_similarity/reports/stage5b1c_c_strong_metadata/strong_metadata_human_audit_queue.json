@@ -1,0 +1,31 @@
+{
+  "audit_contract_version": "stage5b1c-strong-metadata-human-review-v1",
+  "candidate_count": 2,
+  "cases": [
+    {
+      "candidate_video_ids": [
+        "kxZYxojih3E"
+      ],
+      "selection_reasons": [
+        "STRONG_PRESENTATION_EQUIVALENCE_V1"
+      ],
+      "stable_track_id": "s5b1c_012"
+    },
+    {
+      "candidate_video_ids": [
+        "1UESu4eyalA"
+      ],
+      "selection_reasons": [
+        "STRONG_OFFICIAL_AUDIO_VERSION_DURATION_V1"
+      ],
+      "stable_track_id": "s5b1c_023"
+    }
+  ],
+  "discovery_sha256": "95bb1ca905a05fcc4167da10e3dfd6cf267600a4dfb1898b491d28ba855e6fb4",
+  "manifest_sha256": "e2e9a1ab43f568dd9de853c2964f341ee0d0e2631ca87f732d0d4326ab990f79",
+  "policy_id": "POLICY_TIER2_STRONG_METADATA_V1",
+  "schema_version": "stage5b1b-fresh-challenge-human-audit-queue-v1",
+  "status": "AWAITING_STRONG_METADATA_HUMAN_REVIEW",
+  "strong_metadata_decisions_sha256": "740b085b2061935b1d66586534ed4bc418c4ed2562f0cd96efeb4b596748793c",
+  "track_count": 2
+}
