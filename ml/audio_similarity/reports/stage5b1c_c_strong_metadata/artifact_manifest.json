@@ -1,0 +1,56 @@
+{
+  "schema_version": "stage5b1c-c-strong-metadata-artifact-manifest-v1",
+  "experiment": "Stage 5B.1C-C strong metadata recovery",
+  "starting_commit": "471fa43025f8bd2b1c9590fe5482d724692ffa0a",
+  "implementation_checkpoint_commit": "716792df2aad2cbdd10050b7ea3acf175807b0bf",
+  "frozen_inputs": {
+    "stage5b1c_b/source_neutral_candidate_features.json": "f319e4d5288405ba6abdd3c2bde65d56ab429410d2f2a41d185c4d0457a97596",
+    "stage5b1c_b/source_neutral_decisions.json": "67caf7cd35574bb75271e7950f4b5a105c22425804692073f0c630caf68c5eb3",
+    "stage5b1c_b/tier2_human_review.csv": "2d98a42513d30fb3ce49f89e481698913fb4ff09b047a6341cbf952cdd7cf2f0",
+    "stage5b1c_b/tier2_human_audit_results.json": "26fbfc59fc7617fd54377fde099cabf9170f2c55946bd3046839ea4e7e8edcb5",
+    "stage5b1c_c_diagnostic/remaining_tail_diagnostic.json": "9968f84d5dbd4825f88dd0fdc329971d93db87e0b2cd9f2b89364f2cbf145ebf"
+  },
+  "outputs": {
+    "strong_metadata_candidate_features.json": "523c044b90d63fc9df12b32802927f0ac4f6ecb3c20b5618b463eaec7b12d73d",
+    "strong_metadata_decisions.json": "740b085b2061935b1d66586534ed4bc418c4ed2562f0cd96efeb4b596748793c",
+    "strong_metadata_human_audit_queue.json": "7c7e130b58707f499eb9408e79683567f4f15c50b139bd5f500a9c415bb5fc1d",
+    "strong_metadata_human_review.csv": "ba3cf7549f2070495d287e6cbe0a1eae7ab7ae89681b3dcb91d096ca7a835e20",
+    "strong_metadata_report.md": "6ef9db645bef1abc9eef5a1b13c14fedaf86ab724d1f67e038db4482bf94fb74"
+  },
+  "implementation": {
+    "src/audio_similarity/stage5b1c_strong_metadata.py": "177d2d5a942c7f0046ac6d67073acb89481c1e6d7173d8770be89c0e58c4af84",
+    "src/audio_similarity/cli/stage5b1c_strong_metadata.py": "fcd3517abdec3be1cdb199839056c5058d9913367706af07465df1ad2b3571cd",
+    "tests/test_stage5b1c_strong_metadata.py": "28b719cfe601d3349f8e53a4a76500c05f5753677f550dad60684f43c0ee2b4f"
+  },
+  "measured_result": {
+    "attempted_tracks": 10,
+    "incremental_auto_match_count": 2,
+    "remaining_match_uncertain_count": 8,
+    "combined_auto_match_count": 42,
+    "combined_coverage": 0.84,
+    "absolute_percentage_point_gain": 4.0,
+    "selected_video_ids": {
+      "s5b1c_012": "kxZYxojih3E",
+      "s5b1c_023": "1UESu4eyalA"
+    },
+    "human_review_status": "AWAITING_STRONG_METADATA_HUMAN_REVIEW"
+  },
+  "tests": {
+    "focused_stage5b1c_c": "13 passed",
+    "stage5b_resolver_regressions": "187 passed",
+    "full_non_heavy": "724 passed, 12 deselected"
+  },
+  "scope": {
+    "production_auto_match_activated": false,
+    "global_duration_gate_changed": false,
+    "fuzzy_title_matching": false,
+    "network_calls": 0,
+    "sol_runs": 0,
+    "human_label_changes": 0,
+    "audio_downloads": 0,
+    "video_downloads": 0,
+    "stage5a_calls": 0,
+    "clap_calls": 0,
+    "muq_calls": 0
+  }
+}
