@@ -19,7 +19,7 @@ from .stage5b1b_identity import (
 )
 
 
-FEATURE_SCHEMA_VERSION = "stage5b1b-candidate-features-v1"
+FEATURE_SCHEMA_VERSION = "stage5b1b-candidate-features-v2"
 
 
 class SourceType(str, Enum):
@@ -39,18 +39,55 @@ SOURCE_PREFERENCE = {
 }
 
 
+_PROVIDED_TO_YOUTUBE = re.compile(r"\bprovided\s+to\s+youtube\s+by\b", re.I)
+_AUTO_GENERATED = re.compile(r"\bauto[ -]?generated\s+by\s+youtube\b", re.I)
+_STRUCTURED_RELEASE = re.compile(
+    r"(?:^|\b)(?:released\s+on|album|release\s+date)\s*:|"
+    r"^[℗©]\s*\d{4}\b|"
+    r"^(?:composer(?:\s+lyricist)?|producer|engineer|mixing\s+engineer|"
+    r"mastering\s+engineer|vocalist|recording\s+engineer)\s*:",
+    re.I,
+)
+
+
+def _matching_lines(text: str, pattern: re.Pattern[str]) -> list[str]:
+    return [line.strip() for line in text.splitlines() if pattern.search(line.strip())]
+
+
+def art_track_provenance(candidate: dict[str, Any]) -> dict[str, Any]:
+    """Expose independent, raw-backed canonical-release provenance signals."""
+    uploader = str(candidate.get("uploader") or "").strip()
+    channel = str(candidate.get("channel") or "").strip()
+    description = str(candidate.get("description") or "")
+    topic_values = [
+        f"{field}: {value}"
+        for field, value in (("uploader", uploader), ("channel", channel))
+        if value.casefold().endswith(" - topic")
+    ]
+    provided_lines = _matching_lines(description, _PROVIDED_TO_YOUTUBE)
+    generated_lines = _matching_lines(description, _AUTO_GENERATED)
+    structured_lines = _matching_lines(description, _STRUCTURED_RELEASE)
+    return {
+        "topic_channel_signal": bool(topic_values),
+        "provided_to_youtube_by_signal": bool(provided_lines),
+        "auto_generated_by_youtube_signal": bool(generated_lines),
+        "structured_release_metadata_signal": bool(structured_lines),
+        "raw_evidence": {
+            "topic_channel": topic_values,
+            "provided_to_youtube_by": provided_lines,
+            "auto_generated_by_youtube": generated_lines,
+            "structured_release_metadata": structured_lines,
+        },
+    }
+
+
 def classify_source(candidate: dict[str, Any]) -> SourceType:
     title = str(candidate.get("title") or "")
-    uploader = str(candidate.get("uploader") or "")
-    channel = str(candidate.get("channel") or "")
     description = str(candidate.get("description") or "")
     combined = " ".join((title, description)).casefold()
     title_only = title.casefold()
-    if (
-        uploader.casefold().endswith(" - topic")
-        or channel.casefold().endswith(" - topic")
-        or "provided to youtube by" in combined
-    ):
+    provenance = art_track_provenance(candidate)
+    if provenance["topic_channel_signal"] or provenance["provided_to_youtube_by_signal"]:
         return SourceType.ART_TRACK_TOPIC
     if re.search(r"\bofficial\s+audio\b", title_only):
         return SourceType.OFFICIAL_AUDIO
@@ -65,6 +102,18 @@ def _contains_normalized(haystack: str, needle: str) -> bool:
     normalized_haystack = f" {normalize_text(haystack)} "
     normalized_needle = normalize_text(needle)
     return bool(normalized_needle) and f" {normalized_needle} " in normalized_haystack
+
+
+def _uploader_artist_match(track: SpotifyTrack, candidate: dict[str, Any]) -> bool:
+    provenance = " ".join(
+        str(candidate.get(field) or "") for field in ("uploader", "channel")
+    )
+    compact = normalize_text(provenance).replace(" ", "")
+    return any(
+        normalize_text(artist).replace(" ", "") in compact
+        for artist in track.artists
+        if normalize_text(artist)
+    )
 
 
 def _performer_evidence(track: SpotifyTrack, candidate: dict[str, Any]) -> dict[str, Any]:
@@ -130,6 +179,14 @@ def extract_candidate_features(track: SpotifyTrack, candidate: dict[str, Any]) -
         else None
     )
     source_type = classify_source(candidate)
+    provenance = art_track_provenance(candidate)
+    description = str(candidate.get("description") or "")
+    album_match = (
+        _contains_normalized(description, track.album) if track.album else None
+    )
+    release_year_match = (
+        str(track.release_year) in description if track.release_year else None
+    )
     reasons = []
     if counts[CONFLICT]:
         conflicts = [
@@ -177,16 +234,14 @@ def extract_candidate_features(track: SpotifyTrack, candidate: dict[str, Any]) -
             "source_preference_tier": SOURCE_PREFERENCE[source_type],
             "uploader": candidate.get("uploader"),
             "channel": candidate.get("channel"),
+            "uploader_or_channel_artist_match": _uploader_artist_match(track, candidate),
+            "provenance": provenance,
         },
         "description_evidence": {
-            "album_evidence_match": (
-                _contains_normalized(str(candidate.get("description") or ""), track.album)
-                if track.album else None
-            ),
-            "release_year_evidence_match": (
-                str(track.release_year) in str(candidate.get("description") or "")
-                if track.release_year else None
-            ),
+            "album_evidence_match": album_match,
+            "release_year_evidence_match": release_year_match,
+            "description_album_match": album_match,
+            "description_release_year_match": release_year_match,
         },
         "weak_evidence": {
             "candidate_view_count": candidate.get("view_count"),
