@@ -21,7 +21,6 @@ from .stage5b1b_challenge import (
     load_discovery,
 )
 from .stage5b1b_challenge_sol import ChallengeSolRuntime, mapped_sol_judgments
-from .stage5b1b_resolver import human_label_state
 
 
 COMPARISON_SCHEMA_VERSION = "stage5b1b-fresh-challenge-policy-sol-comparison-v1"
@@ -79,10 +78,6 @@ def build_comparison_and_queue(
     features = _feature_index(config)
     sol = mapped_sol_judgments(runtime)
     sol_by_id = {row["stable_track_id"]: row for row in sol["tracks"]}
-    candidate_by_id = {
-        (row["track"]["stable_track_id"], candidate["youtube_video_id"]): candidate
-        for row in discovery["tracks"] for candidate in row["candidates"]
-    }
     track_rows: list[dict[str, Any]] = []
     reasons_by_id: dict[str, set[str]] = {}
     candidate_ids_by_id: dict[str, set[str]] = {}
@@ -192,6 +187,19 @@ def build_comparison_and_queue(
             selected = decision["selected_video_id"]
             if selected:
                 source_counts[policy_id][features[(stable_id, selected)]["source"]["source_type"]] += 1
+
+    def selected_sol_label(stable_id: str, video_id: str) -> str:
+        labels = {
+            candidate["youtube_video_id"]: candidate["label"]
+            for candidate in sol_by_id[stable_id]["candidates"]
+        }
+        try:
+            return labels[video_id]
+        except KeyError as exc:
+            raise Stage5B1AValidationError(
+                f"policy-selected candidate is absent from Sol evidence: {stable_id}"
+            ) from exc
+
     comparison = {
         "schema_version": COMPARISON_SCHEMA_VERSION,
         "status": "TARGETED_HUMAN_AUDIT_READY",
@@ -207,8 +215,9 @@ def build_comparison_and_queue(
                 "match_uncertain_count": sum(row["status"] != AUTO_MATCH for row in decisions[policy_id].values()),
                 "source_type_counts": dict(sorted(source_counts[policy_id].items())),
                 "sol_selected_label_counts": dict(sorted(Counter(
-                    sol_by_id[stable_id]["candidates"][[candidate["youtube_video_id"] for candidate in sol_by_id[stable_id]["candidates"]].index(decision["selected_video_id"])]["label"]
-                    for stable_id, decision in decisions[policy_id].items() if decision["selected_video_id"]
+                    selected_sol_label(stable_id, decision["selected_video_id"])
+                    for stable_id, decision in decisions[policy_id].items()
+                    if decision["selected_video_id"]
                 ).items())),
             }
             for policy_id in POLICY_IDS

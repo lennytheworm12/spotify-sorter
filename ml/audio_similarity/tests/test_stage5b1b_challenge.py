@@ -25,7 +25,13 @@ from audio_similarity.stage5b1b_challenge_audit import (
     evaluate_review,
     write_review,
 )
-from audio_similarity.stage5b1b_challenge_sol import build_blinded_payload
+from audio_similarity.stage5b1b_challenge_sol import (
+    build_blinded_payload,
+    load_sol_runtime,
+    mapped_sol_judgments,
+    prepare_sol_contract,
+    run_challenge_sol,
+)
 
 
 ROOT = Path(__file__).parents[1]
@@ -147,6 +153,52 @@ def test_blinded_sol_payload_is_shuffled_opaque_and_feature_free(tmp_path):
     assert "original_search_rank" in json.dumps(mapping)
 
 
+def test_sol_contract_rejects_post_freeze_feature_change(tmp_path):
+    config, manifest = temp_config(tmp_path)
+    materialize_and_resolve(config, manifest)
+    prepare_sol_contract(config, manifest)
+    assert load_sol_runtime(config).expected_candidate_count == 50
+    config.artifacts["features"].write_bytes(config.artifacts["features"].read_bytes() + b"\n")
+    with pytest.raises(Stage5B1AValidationError, match="feature evidence changed"):
+        load_sol_runtime(config)
+
+
+def test_saved_sol_track_coverage_fails_closed(tmp_path):
+    config, manifest = temp_config(tmp_path)
+    materialize_and_resolve(config, manifest)
+    prepare_sol_contract(config, manifest)
+    runtime = load_sol_runtime(config)
+
+    class Backend:
+        model = "gpt-5.6-sol"
+        version = "test"
+
+        def evaluate(self, prompt, batch_id):
+            rows = json.loads(prompt.split("BLINDED_INPUT_JSON:\n", 1)[1])
+            return {
+                "schema_version": "stage5b1b-calibration-sol-batch-response-v1",
+                "tracks": [{
+                    "stable_track_id": row["stable_track_id"],
+                    "selection_status": "SELECTED",
+                    "selected_candidate_key": row["candidates"][0]["candidate_key"],
+                    "selection_rationale": "raw metadata supports the source",
+                    "candidates": [{
+                        "candidate_key": candidate["candidate_key"], "label": "IDEAL",
+                        "recording_identity_reason": "matching raw title",
+                        "source_quality_reason": "official raw provenance",
+                        "uncertainty_reason": None,
+                    } for candidate in row["candidates"]],
+                } for row in rows],
+            }, {"batch_id": batch_id, "forbidden_tool_event_count": 0}
+
+    state = run_challenge_sol(runtime, Backend())
+    assert state["status"] == "COMPLETE"
+    state["tracks"][1] = state["tracks"][0]
+    atomic_json(runtime.evaluations_path, state)
+    with pytest.raises(Stage5B1AValidationError, match="coverage/order"):
+        mapped_sol_judgments(runtime)
+
+
 def test_audit_queue_is_deterministic_and_review_is_blinded(tmp_path, monkeypatch):
     config, manifest = temp_config(tmp_path)
     materialize_and_resolve(config, manifest)
@@ -234,3 +286,46 @@ def test_final_state_waits_for_labels_then_applies_safety_priority(tmp_path, mon
         writer = csv.DictWriter(handle, fieldnames=REVIEW_COLUMNS, lineterminator="\n")
         writer.writeheader(); writer.writerows(rows)
     assert evaluate_review(config)["status"] == "STAGE5B1B_CONSERVATIVE_POLICY_VALIDATED"
+
+
+def test_committed_fresh_challenge_is_complete_blinded_and_awaiting_human_audit():
+    config, manifest = inputs()
+    discovery = json.loads(config.artifacts["discovery"].read_text())
+    decisions = json.loads(config.artifacts["policy_decisions"].read_text())
+    sol = json.loads(config.artifacts["sol_evaluations"].read_text())
+    queue = json.loads(config.artifacts["audit_queue"].read_text())
+    payload = json.loads(config.artifacts["blinded_sol_input"].read_text())
+    mapping = json.loads(config.artifacts["blinded_sol_private_mapping"].read_text())
+    assert discovery["summary"] == {
+        "tracks": 50,
+        "tracks_with_candidates": 50,
+        "zero_candidate_tracks": 0,
+        "search_failures": 0,
+        "candidate_count": 250,
+        "tracks_with_warnings": 0,
+        "warning_count": 0,
+    }
+    assert all(value == 0 for value in discovery["media_activity"].values())
+    assert decisions["comparison"]["conservative_auto_match_count"] == 8
+    assert decisions["comparison"]["balanced_auto_match_count"] == 29
+    assert decisions["comparison"]["balanced_incremental_auto_match_count"] == 21
+    assert sol["status"] == "COMPLETE"
+    assert (sol["completed_track_count"], sol["completed_candidate_count"]) == (50, 250)
+    assert sol["errors"] == []
+    assert all(row["operational"]["forbidden_tool_event_count"] == 0 for row in sol["tracks"])
+    assert payload["search_rank_supplied"] is False
+    assert any(
+        [candidate["original_search_rank"] for candidate in row["candidates"]] != [1, 2, 3, 4, 5]
+        for row in mapping["tracks"]
+    )
+    assert (queue["track_count"], queue["candidate_count"]) == (28, 41)
+    assert queue["manifest_sha256"] == manifest.sha256
+    with config.artifacts["human_review"].open(encoding="utf-8", newline="") as handle:
+        review_rows = list(csv.DictReader(handle))
+    assert len(review_rows) == 41
+    assert not any(row["candidate_review_label"] for row in review_rows)
+    assert evaluate_review(config) == {
+        "status": "STAGE5B1B_FRESH_CHALLENGE_AWAITING_HUMAN_AUDIT",
+        "required": 41,
+        "completed": 0,
+    }

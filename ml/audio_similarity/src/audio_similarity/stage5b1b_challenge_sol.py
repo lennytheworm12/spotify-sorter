@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import math
 import subprocess
 import time
 from dataclasses import dataclass
@@ -41,6 +40,11 @@ def _json_object(path: Path) -> dict[str, Any]:
 
 def _shuffle_key(seed: str, stable_id: str, video_id: str) -> str:
     return hashlib.sha256(f"{seed}|{stable_id}|{video_id}".encode()).hexdigest()
+
+
+def _contract_path(path: Path, root: Path) -> str:
+    """Keep production contracts portable while allowing injected test artifacts."""
+    return str(path.relative_to(root)) if path.is_relative_to(root) else str(path)
 
 
 def build_blinded_payload(
@@ -135,14 +139,14 @@ def prepare_sol_contract(config: ChallengeConfig, manifest: ChallengeManifest) -
         "features_sha256": file_sha256(config.artifacts["features"]),
         "policy_decisions_sha256": file_sha256(config.artifacts["policy_decisions"]),
         "payload": {
-            "path": str(config.artifacts["blinded_sol_input"].relative_to(config.root)),
+            "path": _contract_path(config.artifacts["blinded_sol_input"], config.root),
             "sha256": file_sha256(config.artifacts["blinded_sol_input"]),
             "canonical_sha256": value_sha256(payload),
             "track_count": len(payload["tracks"]),
             "candidate_count": sum(len(row["candidates"]) for row in payload["tracks"]),
         },
         "private_mapping": {
-            "path": str(config.artifacts["blinded_sol_private_mapping"].relative_to(config.root)),
+            "path": _contract_path(config.artifacts["blinded_sol_private_mapping"], config.root),
             "sha256": file_sha256(config.artifacts["blinded_sol_private_mapping"]),
         },
         "evaluator": {
@@ -201,6 +205,10 @@ def load_sol_runtime(config: ChallengeConfig) -> ChallengeSolRuntime:
         raise Stage5B1AValidationError("fresh Sol contract input identity changed")
     if raw.get("discovery_sha256") != file_sha256(config.artifacts["discovery"]):
         raise Stage5B1AValidationError("fresh Sol discovery changed after contract freeze")
+    if raw.get("features_sha256") != file_sha256(config.artifacts["features"]):
+        raise Stage5B1AValidationError("fresh feature evidence changed after Sol contract freeze")
+    if raw.get("policy_decisions_sha256") != file_sha256(config.artifacts["policy_decisions"]):
+        raise Stage5B1AValidationError("fresh policy decisions changed after Sol contract freeze")
     payload_meta = raw["payload"]
     mapping_meta = raw["private_mapping"]
     payload_path = config.root / payload_meta["path"]
@@ -392,6 +400,11 @@ def mapped_sol_judgments(runtime: ChallengeSolRuntime) -> dict[str, Any]:
     payload = _json_object(runtime.payload_path)
     payload_by_id = {row["stable_track_id"]: row for row in payload["tracks"]}
     mapping = _json_object(runtime.mapping_path)
+    payload_ids = [row["stable_track_id"] for row in payload["tracks"]]
+    state_ids = [row.get("stable_track_id") for row in state.get("tracks", [])]
+    mapping_ids = [row.get("stable_track_id") for row in mapping.get("tracks", [])]
+    if state_ids != payload_ids or mapping_ids != payload_ids:
+        raise Stage5B1AValidationError("saved fresh Sol track coverage/order changed")
     mappings = {
         row["stable_track_id"]: {candidate["candidate_key"]: candidate for candidate in row["candidates"]}
         for row in mapping["tracks"]
@@ -405,6 +418,9 @@ def mapped_sol_judgments(runtime: ChallengeSolRuntime) -> dict[str, Any]:
         if result.get("operational", {}).get("forbidden_tool_event_count") != 0:
             raise Stage5B1AValidationError("saved fresh Sol result contains tool use")
         by_key = mappings[result["stable_track_id"]]
+        expected_keys = [candidate["candidate_key"] for candidate in expected["candidates"]]
+        if list(by_key) != expected_keys:
+            raise Stage5B1AValidationError("fresh Sol private mapping candidate coverage changed")
         tracks.append({
             "stable_track_id": result["stable_track_id"],
             "selection_status": result["selection_status"],

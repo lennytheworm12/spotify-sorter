@@ -1,0 +1,42 @@
+{
+  "schema_version": "stage5b1b-fresh-challenge-artifact-manifest-v1",
+  "experiment_id": "stage5b1b_fresh_challenge_validation_v1",
+  "starting_commit": "88b71b4724e43ab37e3d6417a99deccfd1b802a7",
+  "status": "STAGE5B1B_FRESH_CHALLENGE_AWAITING_HUMAN_AUDIT",
+  "production_auto_match_activated": false,
+  "policy_identity_sha256": {
+    "POLICY_CONSERVATIVE_V1": "f73d936432dae977cc8cff70706e5c41427411d2ebb1db15e55a2dc710eab65c",
+    "POLICY_BALANCED_V1": "90be177c35160ef5cf6d59f69c0fffd3ec2f228d7e1a3630105f4bb5b723035b",
+    "frozen_bundle": "bbc527aa9a734b0aebbfafcb2775b479541a5e0248503627c14b8f429f708d5a"
+  },
+  "artifact_sha256": {
+    "blinded_sol_input.json": "046cb67116484f718446fb843991a52ba2b3a22e3a51583cc8430a80bf0e3827",
+    "blinded_sol_private_mapping.json": "6f7991fba8f4c190f20b0214f03488c3e6bc523b9507704c278a4858d3e622bc",
+    "challenge_candidate_features.json": "451e72e27c0b52c3b6109f57ea0f5c7a3421271f3283b1f1232082160c37a08c",
+    "challenge_policy_decisions.json": "58181c40bd54a8d4fabbc8d627ddaee6ccf7b5812a17331fe9c8d6600357fe87",
+    "challenge_tracks.json": "e2e9a1ab43f568dd9de853c2964f341ee0d0e2631ca87f732d0d4326ab990f79",
+    "challenge_ytdlp_discovery.json": "95bb1ca905a05fcc4167da10e3dfd6cf267600a4dfb1898b491d28ba855e6fb4",
+    "fresh_challenge_report.md": "7f8a7de987227574e1a6d9f37bb6ea283dabb8d180450dc415ea5ed672e55201",
+    "frozen_policy_definitions.json": "bbc527aa9a734b0aebbfafcb2775b479541a5e0248503627c14b8f429f708d5a",
+    "human_audit_queue.json": "50fa774766f913786cc5d706d28f42d61a1f64afa76e2a806efcad9525f517d4",
+    "human_review.csv": "3014995a90570f7b61e9dce50d1a25b65fb25225b677acb107bd0ae2795cbe61",
+    "policy_sol_comparison.json": "302b568bb9e0a06e2666d49f68f3fe3fb12b58542215cf613cf5b95ea783859a",
+    "run_status.json": "ff1149475dbddb0aced870db070068bd6e3559e4c619ad3cb874a3bc3265a7ad",
+    "sol_evaluation_contract.json": "79b6d0fe2bc1a141a9bd563d975a92944e814ddfc82c9508bbe9cb7678e57833",
+    "sol_evaluations.json": "b00ecb7c9ffb668b581e571065235676d62832c868fe6bed26812fbbd30f50ea"
+  },
+  "implementation_sha256": {
+    "configs/stage5b1b_fresh_challenge.json": "283901e8e6804757a5246025e14c43e07311830ca3708ce05db00c394b1aaedd",
+    "src/audio_similarity/stage5b1b_challenge.py": "515244f47b2c7b84022e4bb787cf39f84878e56a0fda30919ef849f939dcc39d",
+    "src/audio_similarity/stage5b1b_challenge_sol.py": "cc7036f942ede5aecc27fb84d8e4c7a113acaa5ca494e4220a96ddbee09940f1",
+    "src/audio_similarity/stage5b1b_challenge_audit.py": "3e79bbcdf5e78f99a38c07a155bbc16f29ce5c5515fa0739c73945ca8e7a3615",
+    "src/audio_similarity/cli/stage5b1b_challenge.py": "a2377dea302ee5663d9807bdc655e9beba1c0f7bb4064e42df8e755f834532f3",
+    "tests/test_stage5b1b_challenge.py": "f6611ef8603f92b32cf684f9855e4687eb7882bd7cd9f38420799c1293c69af0"
+  },
+  "verification": {
+    "focused_fresh_challenge": "10 passed",
+    "all_stage5b1b": "113 passed",
+    "relevant_stage5a_stage5b": "203 passed",
+    "full_non_heavy": "650 passed, 12 deselected, 0 failures, 0 errors"
+  }
+}
