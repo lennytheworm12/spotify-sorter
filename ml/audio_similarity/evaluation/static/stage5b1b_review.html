@@ -514,7 +514,9 @@ function render() {
   const item = session.cases[index];
   const target = node("section", "target");
   const freshChallenge = session.mode === "stage5b1b_fresh_challenge_human_audit";
-  if (freshChallenge) target.classList.add("blinded");
+  const tier2Audit = session.mode === "stage5b1c_tier2_human_audit";
+  const blindedAudit = freshChallenge || tier2Audit;
+  if (blindedAudit) target.classList.add("blinded");
   const identity = node("div");
   identity.append(node("div", "eyebrow", `Spotify target · track ${index + 1} of ${session.cases.length}`), node("h2", "", item.track.title), node("div", "artists", item.track.artists.join(" · ")));
   identity.append(node("div", "release", [item.track.album, item.track.release_year, formatDuration(item.track.duration_seconds)].filter(Boolean).join(" · ")));
@@ -524,11 +526,11 @@ function render() {
     identity.append(tags);
   }
   const context = node("div", "target-copy");
-  if (freshChallenge) {
+  if (blindedAudit) {
     context.append(
-      node("div", "eyebrow", "Blinded source audit"),
+      node("div", "eyebrow", tier2Audit ? "Blinded Tier-2 safety audit" : "Blinded source audit"),
       node("p", "", "Judge whether each candidate is the intended Spotify recording, then whether its audio source is clean enough for similarity analysis."),
-      node("p", "", "Resolver decisions, Sol judgments, search rank, and audit reasons remain hidden."),
+      node("p", "", tier2Audit ? "Tier-2 recovery rules, Sol judgments, and selection reasons remain hidden." : "Resolver decisions, Sol judgments, search rank, and audit reasons remain hidden."),
     );
   } else {
     context.append(node("div", "eyebrow", "Why this case exists"), node("p", "", item.case_rationale));
@@ -566,8 +568,8 @@ function render() {
   const head = node("div", "work-head");
   const heading = node("div");
   heading.append(
-    node("div", "eyebrow", freshChallenge ? "Blinded audit candidates" : "Ordered yt-dlp candidates"),
-    node("h2", "", "Label every candidate"),
+    node("div", "eyebrow", blindedAudit ? "Blinded audit candidates" : "Ordered yt-dlp candidates"),
+    node("h2", "", tier2Audit ? "Review the recovered source" : "Label every candidate"),
     node("p", "", "Open YouTube when needed. Each choice saves immediately; notes autosave after a short pause. Automatic resolver and evaluator evidence are hidden during review."),
   );
   const trackCount = node("div", "track-count", `${item.candidates.filter(candidate => Boolean(savedLabel(candidate))).length} / ${item.candidates.length} labeled on this track`);
@@ -593,6 +595,10 @@ async function load() {
       document.title = "Fresh challenge review · Stage 5B.1B";
       pageEyebrow.textContent = "Stage 5B.1B · fresh challenge audit";
       pageTitle.textContent = "Source safety desk";
+    } else if (session.mode === "stage5b1c_tier2_human_audit") {
+      document.title = "Tier-2 recovery review · Stage 5B.1C";
+      pageEyebrow.textContent = "Stage 5B.1C · Tier-2 safety audit";
+      pageTitle.textContent = "Recovered source review";
     }
     session.cases.forEach(item => item.candidates.forEach(candidate => { candidate._savedLabel = candidate.review.label; }));
     const first = session.cases.findIndex(item => !isComplete(item));

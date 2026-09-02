@@ -149,6 +149,7 @@ def serve(
     static: Path = STATIC,
     mode: str = "stage5b1b_heldout_candidate_review",
     export_filename: str = "stage5b1b-heldout-review.csv",
+    server_name: str = "Stage 5B.1B reviewer",
 ) -> None:
     server = ThreadingHTTPServer(
         (host, port),
@@ -161,7 +162,7 @@ def serve(
     )
     display_host = "127.0.0.1" if host == "0.0.0.0" else host
     url = f"http://{display_host}:{port}"
-    print(f"Stage 5B.1B reviewer running at {url}", flush=True)
+    print(f"{server_name} running at {url}", flush=True)
     print(f"Autosaving labels to {store.review_path}", flush=True)
     if open_browser:
         webbrowser.open(url)

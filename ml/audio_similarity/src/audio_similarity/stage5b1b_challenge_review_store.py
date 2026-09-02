@@ -33,10 +33,17 @@ class Stage5B1BChallengeReviewStore:
         manifest: ChallengeManifest,
         queue_path: str | Path,
         review_path: str | Path,
+        *,
+        session_mode: str = "stage5b1b_fresh_challenge_human_audit",
+        export_filename: str = "stage5b1b-fresh-challenge-human-review.csv",
+        shuffle_salt: str = "fresh-human-review-v1",
     ) -> None:
         self.manifest = manifest
         self.queue_path = Path(queue_path)
         self.review_path = Path(review_path)
+        self.session_mode = session_mode
+        self.export_filename = export_filename
+        self.shuffle_salt = shuffle_salt
         self._lock = threading.RLock()
         self._manifest_by_id = {
             item.track.stable_track_id: item.track for item in manifest.tracks
@@ -173,7 +180,7 @@ class Stage5B1BChallengeReviewStore:
                     candidate_rows,
                     key=lambda row: hashlib.sha256(
                         (
-                            f"{self.manifest.sha256}|fresh-human-review-v1|"
+                            f"{self.manifest.sha256}|{self.shuffle_salt}|"
                             f"{stable_id}|{row['candidate_video_id']}"
                         ).encode()
                     ).hexdigest(),
@@ -225,10 +232,10 @@ class Stage5B1BChallengeReviewStore:
             total = sum(len(case["candidates"]) for case in cases)
             return {
                 "schema_version": "stage5b1b-fresh-challenge-review-session-v1",
-                "mode": "stage5b1b_fresh_challenge_human_audit",
+                "mode": self.session_mode,
                 "manifest_sha256": self.manifest.sha256,
                 "labels": list(UI_LABELS),
-                "export_filename": "stage5b1b-fresh-challenge-human-review.csv",
+                "export_filename": self.export_filename,
                 "progress": {
                     "reviewed_candidates": reviewed,
                     "remaining_candidates": total - reviewed,
