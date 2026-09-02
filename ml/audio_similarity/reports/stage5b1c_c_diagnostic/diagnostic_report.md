@@ -259,3 +259,12 @@ uv run pytest tests/test_stage5b1c_diagnostic.py -q
 
 The complete 50-candidate evidence, raw gates, frozen Sol/human joins, and
 aggregate calculations are in `remaining_tail_diagnostic.json`.
+
+## Validation
+
+- Focused diagnostic tests: `7 passed`
+- Stage 5B.1B/1C resolver regressions: `174 passed`
+- Focused diagnostic + 1C-A/1C-B regression set: `30 passed`
+- Full non-heavy `ml/audio_similarity` suite: `711 passed, 12 deselected`
+- Five-axis code review: no unresolved correctness, security, maintainability,
+  performance, or test-quality findings
