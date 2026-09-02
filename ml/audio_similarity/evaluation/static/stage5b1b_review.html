@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Held-out recording review · Stage 5B.1B</title>
+<link rel="icon" href="data:,">
+<title>Recording review · Stage 5B.1B</title>
 <style>
 :root {
   color-scheme: light;
@@ -55,7 +56,7 @@ h1 { margin: 5px 0 0; font: 780 clamp(21px, 2.4vw, 31px)/1.05 ui-rounded, "Arial
 .progress-fill { width: 0; height: 100%; background: linear-gradient(90deg, #7d98ff, #7ce0cf); transition: width 260ms ease; }
 .track-rail {
   width: min(1480px, 100%); margin: 0 auto; padding: 8px clamp(16px, 3vw, 44px) 10px;
-  display: grid; grid-template-columns: repeat(50, minmax(4px, 1fr)); gap: 3px;
+  display: grid; grid-template-columns: repeat(var(--track-count, 50), minmax(4px, 1fr)); gap: 3px;
 }
 .track-cell { border: 0; height: 5px; padding: 0; background: #43506a; cursor: pointer; border-radius: 8px; }
 .track-cell.started { background: #7688b5; }
@@ -68,6 +69,7 @@ h1 { margin: 5px 0 0; font: 780 clamp(21px, 2.4vw, 31px)/1.05 ui-rounded, "Arial
   gap: clamp(20px, 3vw, 48px); padding: clamp(22px, 3vw, 36px); align-items: start;
 }
 .target h2 { margin: 9px 0 8px; font: 790 clamp(28px, 4vw, 48px)/.98 ui-rounded, "Arial Rounded MT Bold", sans-serif; letter-spacing: -.052em; }
+.target.blinded { grid-template-columns: minmax(260px, 1.25fr) minmax(240px, .85fr) minmax(220px, .8fr); }
 .artists { color: var(--cobalt); font-size: 19px; font-weight: 760; }
 .release { color: var(--slate); margin-top: 8px; line-height: 1.5; }
 .target-copy { border-left: 3px solid var(--cobalt); padding-left: 16px; color: #46536a; line-height: 1.55; }
@@ -159,17 +161,19 @@ textarea {
 .fatal { color: var(--wrong); }
 @media (max-width: 920px) {
   .masthead-inner { grid-template-columns: 1fr; gap: 13px; }
-  .target { grid-template-columns: 1fr 1fr; }
+  .target, .target.blinded { grid-template-columns: 1fr 1fr; }
   .track-note { grid-column: 1 / -1; }
   .decision-row { grid-template-columns: 1fr 1fr; }
   .clear { grid-column: 1 / -1; }
 }
 @media (max-width: 640px) {
   .shell { padding-top: 18px; padding-bottom: 30px; }
-  .target { grid-template-columns: 1fr; padding: 20px; }
+  .target, .target.blinded { grid-template-columns: 1fr; padding: 20px; }
   .target h2 { font-size: 33px; }
   .track-note { grid-column: auto; }
   .definitions { grid-template-columns: 1fr 1fr; }
+  .work-head { display: block; }
+  .track-count { margin-top: 12px; }
   .candidate { grid-template-columns: 42px minmax(0, 1fr); }
   .candidate-body { padding: 15px 13px; }
   .candidate-top { grid-template-columns: 1fr; gap: 11px; }
@@ -190,15 +194,15 @@ textarea {
 <body>
 <header class="masthead">
   <div class="masthead-inner">
-    <div><div class="eyebrow">Stage 5B.1B · held-out human review</div><h1>Recording cue sheet</h1></div>
+    <div><div id="page-eyebrow" class="eyebrow">Stage 5B.1B · human review</div><h1 id="page-title">Recording cue sheet</h1></div>
     <div>
-      <div class="progress-copy"><strong id="progress-number">— / 248</strong><span id="progress-label">Loading candidate judgments</span></div>
+      <div class="progress-copy"><strong id="progress-number">—</strong><span id="progress-label">Loading candidate judgments</span></div>
       <div class="progress-track" aria-hidden="true"><div id="progress-fill" class="progress-fill"></div></div>
     </div>
   </div>
   <nav id="track-rail" class="track-rail" aria-label="Held-out tracks"></nav>
 </header>
-<div id="app" class="loading" role="status">Loading the frozen held-out review…</div>
+<div id="app" class="loading" role="status">Loading the frozen review…</div>
 <footer class="utility">
   <div class="utility-inner">
     <div class="utility-left">
@@ -219,6 +223,8 @@ const progressLabel = document.querySelector("#progress-label");
 const progressFill = document.querySelector("#progress-fill");
 const pendingCopy = document.querySelector("#pending");
 const exportLink = document.querySelector("#export");
+const pageEyebrow = document.querySelector("#page-eyebrow");
+const pageTitle = document.querySelector("#page-title");
 const LABELS = ["IDEAL", "ACCEPTABLE", "WRONG", "UNCERTAIN"];
 const LETTERS = ["A", "B", "C", "D", "E"];
 let session = null;
@@ -274,6 +280,7 @@ function updateTrackCount(item) {
 }
 function renderRail() {
   rail.replaceChildren();
+  rail.style.setProperty("--track-count", String(session.cases.length));
   session.cases.forEach((item, position) => {
     const button = node("button", "track-cell");
     button.type = "button";
@@ -392,7 +399,7 @@ async function exportReview(event) {
   } else {
     const download = document.createElement("a");
     download.href = `/api/export?saved=${Date.now()}`;
-    download.download = "stage5b1b-heldout-review.csv";
+    download.download = session.export_filename || "stage5b1b-heldout-review.csv";
     document.body.append(download);
     download.click();
     download.remove();
@@ -423,7 +430,8 @@ function candidateCard(item, candidate) {
   const card = node("article", "candidate");
   if (candidate.review.label) card.classList.add("reviewed");
   card.dataset.videoId = candidate.video_id;
-  const letter = node("div", "candidate-letter", LETTERS[candidate.rank - 1] || candidate.rank);
+  const displayIndex = candidate.display_index || candidate.rank;
+  const letter = node("div", "candidate-letter", LETTERS[displayIndex - 1] || displayIndex);
   letter.setAttribute("aria-hidden", "true");
   const body = node("div", "candidate-body");
   const top = node("div", "candidate-top");
@@ -438,6 +446,14 @@ function candidateCard(item, candidate) {
   youtube.rel = "noopener noreferrer";
   top.append(copy, youtube);
   body.append(top);
+  if (candidate.description) {
+    const descriptionDetails = node("details");
+    descriptionDetails.append(
+      node("summary", "", "Show YouTube description"),
+      node("p", "description", candidate.description),
+    );
+    body.append(descriptionDetails);
+  }
   const decisions = node("div", "decision-row");
   LABELS.forEach(label => {
     const button = node("button", `decision ${label.toLowerCase()}`, label);
@@ -456,7 +472,7 @@ function candidateCard(item, candidate) {
   const bottom = node("div", "candidate-bottom");
   const noteWrap = node("div", "candidate-note");
   const noteLabel = node("label", "", "Optional candidate note");
-  const noteId = `note-${item.stable_track_id}-${candidate.rank}`;
+  const noteId = `note-${item.stable_track_id}-${displayIndex}`;
   noteLabel.htmlFor = noteId;
   const note = node("textarea");
   note.id = noteId;
@@ -497,17 +513,29 @@ function render() {
   }
   const item = session.cases[index];
   const target = node("section", "target");
+  const freshChallenge = session.mode === "stage5b1b_fresh_challenge_human_audit";
+  if (freshChallenge) target.classList.add("blinded");
   const identity = node("div");
   identity.append(node("div", "eyebrow", `Spotify target · track ${index + 1} of ${session.cases.length}`), node("h2", "", item.track.title), node("div", "artists", item.track.artists.join(" · ")));
   identity.append(node("div", "release", [item.track.album, item.track.release_year, formatDuration(item.track.duration_seconds)].filter(Boolean).join(" · ")));
-  const tags = node("div", "tags");
-  item.case_tags.forEach(tag => tags.append(node("span", "tag", tag.replaceAll("_", " "))));
-  identity.append(tags);
+  if (Array.isArray(item.case_tags) && item.case_tags.length) {
+    const tags = node("div", "tags");
+    item.case_tags.forEach(tag => tags.append(node("span", "tag", tag.replaceAll("_", " "))));
+    identity.append(tags);
+  }
   const context = node("div", "target-copy");
-  context.append(node("div", "eyebrow", "Why this case exists"), node("p", "", item.case_rationale));
-  const queryDetails = node("details");
-  queryDetails.append(node("summary", "", "Show frozen search query"), node("p", "description", item.query));
-  context.append(queryDetails);
+  if (freshChallenge) {
+    context.append(
+      node("div", "eyebrow", "Blinded source audit"),
+      node("p", "", "Judge whether each candidate is the intended Spotify recording, then whether its audio source is clean enough for similarity analysis."),
+      node("p", "", "Resolver decisions, Sol judgments, search rank, and audit reasons remain hidden."),
+    );
+  } else {
+    context.append(node("div", "eyebrow", "Why this case exists"), node("p", "", item.case_rationale));
+    const queryDetails = node("details");
+    queryDetails.append(node("summary", "", "Show frozen search query"), node("p", "description", item.query));
+    context.append(queryDetails);
+  }
   const trackNote = node("div", "track-note");
   const trackLabel = node("label", "", "Optional note for this track");
   trackLabel.htmlFor = "track-note";
@@ -537,7 +565,11 @@ function render() {
   app.append(definitions);
   const head = node("div", "work-head");
   const heading = node("div");
-  heading.append(node("div", "eyebrow", "Ordered yt-dlp candidates"), node("h2", "", "Label every candidate"), node("p", "", "Open YouTube when needed. Each choice saves immediately; notes autosave after a short pause. Automatic resolver features are hidden during held-out review."));
+  heading.append(
+    node("div", "eyebrow", freshChallenge ? "Blinded audit candidates" : "Ordered yt-dlp candidates"),
+    node("h2", "", "Label every candidate"),
+    node("p", "", "Open YouTube when needed. Each choice saves immediately; notes autosave after a short pause. Automatic resolver and evaluator evidence are hidden during review."),
+  );
   const trackCount = node("div", "track-count", `${item.candidates.filter(candidate => Boolean(savedLabel(candidate))).length} / ${item.candidates.length} labeled on this track`);
   trackCount.id = "track-count";
   head.append(heading, trackCount);
@@ -557,6 +589,11 @@ async function load() {
     const data = await response.json();
     if (!response.ok) throw new Error(data.error || "Could not load review state");
     session = data;
+    if (session.mode === "stage5b1b_fresh_challenge_human_audit") {
+      document.title = "Fresh challenge review · Stage 5B.1B";
+      pageEyebrow.textContent = "Stage 5B.1B · fresh challenge audit";
+      pageTitle.textContent = "Source safety desk";
+    }
     session.cases.forEach(item => item.candidates.forEach(candidate => { candidate._savedLabel = candidate.review.label; }));
     const first = session.cases.findIndex(item => !isComplete(item));
     index = first < 0 ? 0 : first;

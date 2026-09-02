@@ -6,7 +6,7 @@ import json
 import webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from typing import Any
+from typing import Any, Protocol
 from urllib.parse import urlparse
 
 from audio_similarity.stage5b1a_models import Stage5B1AValidationError
@@ -20,7 +20,30 @@ STATIC = Path(__file__).resolve().parents[3] / "evaluation" / "static" / "stage5
 MAX_REQUEST_BYTES = 16_384
 
 
-def make_review_handler(store: Stage5B1BReviewStore) -> type[BaseHTTPRequestHandler]:
+class ReviewStore(Protocol):
+    """Minimal persistence boundary shared by the two local review modes."""
+
+    review_path: Path
+
+    def session(self) -> dict[str, Any]: ...
+
+    def submit(
+        self,
+        stable_track_id: str,
+        video_id: str,
+        label: str,
+        candidate_note: str = "",
+        track_note: str = "",
+    ) -> dict[str, Any]: ...
+
+
+def make_review_handler(
+    store: ReviewStore,
+    *,
+    static: Path = STATIC,
+    mode: str = "stage5b1b_heldout_candidate_review",
+    export_filename: str = "stage5b1b-heldout-review.csv",
+) -> type[BaseHTTPRequestHandler]:
     class Handler(BaseHTTPRequestHandler):
         protocol_version = "HTTP/1.1"
 
@@ -69,11 +92,9 @@ def make_review_handler(store: Stage5B1BReviewStore) -> type[BaseHTTPRequestHand
         def do_GET(self) -> None:  # noqa: N802
             path = urlparse(self.path).path
             if path in {"/", "/index.html"}:
-                return self._bytes(STATIC.read_bytes(), "text/html; charset=utf-8")
+                return self._bytes(static.read_bytes(), "text/html; charset=utf-8")
             if path == "/api/ping":
-                return self._json(
-                    {"ok": True, "mode": "stage5b1b_heldout_candidate_review"}
-                )
+                return self._json({"ok": True, "mode": mode})
             if path == "/api/session":
                 try:
                     return self._json(store.session())
@@ -83,7 +104,7 @@ def make_review_handler(store: Stage5B1BReviewStore) -> type[BaseHTTPRequestHand
                 return self._bytes(
                     store.review_path.read_bytes(),
                     "text/csv; charset=utf-8",
-                    download="stage5b1b-heldout-review.csv",
+                    download=export_filename,
                 )
             return self._json({"error": "not found"}, 404)
 
@@ -120,7 +141,7 @@ def make_review_handler(store: Stage5B1BReviewStore) -> type[BaseHTTPRequestHand
 
 
 def serve(
-    store: Stage5B1BReviewStore,
+    store: ReviewStore,
     host: str,
     port: int,
     *,

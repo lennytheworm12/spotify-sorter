@@ -130,6 +130,23 @@ labels to `reports/stage5b1b/heldout_review.csv`, but displays only the specific
 disputed, uncertain, and deterministic random-audit candidates. Sol labels are
 triage evidence, not human ground truth or a production `AUTO_MATCH` threshold.
 
+## Stage 5B.1B fresh-challenge human audit
+
+Review the frozen Part C targeted audit in the blinded local workbench:
+
+```bash
+.venv/bin/python -m audio_similarity.cli.stage5b1b_challenge_review_server
+# http://127.0.0.1:8769
+```
+
+The workbench shows the Spotify target and only the 41 required candidates
+across 28 audit tracks. It hides search rank, challenge case rationale, Sol
+judgments, resolver features, policy decisions, and audit-selection reasons.
+Each label writes atomically to
+`reports/stage5b1b_fresh_challenge/human_review.csv`; optional candidate and
+track notes autosave after a short pause. **Export CSV** first flushes pending
+notes and downloads a portable copy. The server embeds and downloads no media.
+
 ## Stage 2B balanced holistic fusion benchmark
 
 Stage 2B is a stage-gated corrective benchmark over the frozen 40-query
