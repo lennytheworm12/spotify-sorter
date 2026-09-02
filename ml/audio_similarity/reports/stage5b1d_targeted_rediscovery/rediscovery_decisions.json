@@ -1,0 +1,2049 @@
+{
+  "frozen_regression": {
+    "balanced_v1_auto_match_count": 29,
+    "challenge_config_sha256": "283901e8e6804757a5246025e14c43e07311830ca3708ce05db00c394b1aaedd",
+    "combined_auto_match_count": 42,
+    "combined_coverage": 0.84,
+    "combined_match_uncertain_count": 8,
+    "exact_replay": true,
+    "stage5b1c_a_incremental_count": 6,
+    "stage5b1c_b_incremental_count": 5,
+    "stage5b1c_c_incremental_count": 2,
+    "strong_metadata_selected_video_ids": {
+      "s5b1c_012": "kxZYxojih3E",
+      "s5b1c_023": "1UESu4eyalA"
+    }
+  },
+  "new_selections": [],
+  "production_fallback_activated": false,
+  "rediscovery_features_sha256": "f27ebe2d1ea837f7f2e5d23d79d5f8b291c68f584e1f9455c2711e5d8e820590",
+  "resolver_layers_unchanged": true,
+  "schema_version": "stage5b1d-rediscovery-decisions-v1",
+  "scope_guards": {
+    "audio_downloads": 0,
+    "clap_calls": 0,
+    "muq_calls": 0,
+    "new_searches_outside_candidate_set_failures": 0,
+    "resolver_changed": false,
+    "sol_runs": 0,
+    "stage5a_calls": 0,
+    "video_downloads": 0
+  },
+  "summary": {
+    "classification_counts": {
+      "METADATA_INSUFFICIENT_AFTER_REDISCOVERY": 1,
+      "STILL_CANDIDATE_SET_FAILURE": 3
+    },
+    "combined_auto_match_count": 42,
+    "combined_coverage": 0.84,
+    "combined_match_uncertain_count": 8,
+    "diagnostic_90_percent_target_reached": false,
+    "materially_better_candidate_pools": 1,
+    "rediscovery_auto_match_count": 0,
+    "remaining_candidate_set_failures": 3,
+    "tracks_attempted": 4,
+    "tracks_with_new_candidates": 4
+  },
+  "tracks": [
+    {
+      "classification": "STILL_CANDIDATE_SET_FAILURE",
+      "combined_decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Ed Sheeran - Bad Habits (Marc Benjamin & Chemical Neon Remix)",
+            "video_id": "rqVg1PpPSj8"
+          },
+          {
+            "candidate_rank": 2,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Ed Sheeran - Bad Habits (DiPap Remix)",
+            "video_id": "oqoqeD48BD0"
+          },
+          {
+            "candidate_rank": 3,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Bad Habits x Insomnia - CDJ 3000 Mashup",
+            "video_id": "ARQJzEs2NIs"
+          },
+          {
+            "candidate_rank": 4,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Ed Sheeran - Bad Habits (Marc Benjamin & Chemical Neon Remix)",
+            "video_id": "j8WZN_lLcQ4"
+          },
+          {
+            "candidate_rank": 5,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Ed Sheeran x Gonzi & Kova x Fisher - Bad Habits VS Drop It VS Losing It ( Dj Marky Mashup Remix )",
+            "video_id": "N1jTbeBoowc"
+          },
+          {
+            "candidate_rank": 6,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "explicit target-relative version conflict",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Tan T. - Tech House Mix #1 | MEDUZA, James Hype, FISHER, Acraze",
+            "video_id": "d9xsmIXUHyE"
+          },
+          {
+            "candidate_rank": 7,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "FISHER - Just Feels Tight (Mashup)",
+            "video_id": "EGC4iNW-NYg"
+          },
+          {
+            "candidate_rank": 8,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Ed Sheeran - Drunk (AgentTabak Remix) ~720p HD~",
+            "video_id": "A8MnGCgXkf4"
+          },
+          {
+            "candidate_rank": 9,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "explicit target-relative version conflict",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Techhouse Mix 2021#fisher #jameshype #squidgame #topic #daftpunk #skrillex #roddyricch #zedd",
+            "video_id": "2dHPAjGNEuc"
+          },
+          {
+            "candidate_rank": 10,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Fisher, Meduza - Tropical House MixTape",
+            "video_id": "pS_jimu4rAw"
+          },
+          {
+            "candidate_rank": 11,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "explicit target-relative version conflict",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Tech House Live Mix [Ft. Anti Up, Fisher, John Summit] (On XDJ-RX2)",
+            "video_id": "qLv-m7DAY-8"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_STRONG_METADATA_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate passes strong presentation or corroborated Official Audio duration fallback without remaining identity conflicts"
+      },
+      "combined_pool": [
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=rqVg1PpPSj8",
+          "channel": "MrRevillz",
+          "description": "Spotify Playlist http://spoti.fi/1Vr9N0E Follow Me http://linktr.ee/MrRevillz Turn on notifications to stay updated with new ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 205.0,
+          "introduced_by_rediscovery": false,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 1,
+          "query": "\"Ed Sheeran\" \"Bad Habits - FISHER Remix\" official",
+          "rank": 1,
+          "rediscovery_occurrences": [
+            {
+              "origin": "original_top5",
+              "provider_rank": 1,
+              "query": "\"Ed Sheeran\" \"Bad Habits - FISHER Remix\" official"
+            }
+          ],
+          "stable_track_id": "s5b1c_021",
+          "title": "Ed Sheeran - Bad Habits (Marc Benjamin & Chemical Neon Remix)",
+          "uploader": "MrRevillz",
+          "url": "https://www.youtube.com/watch?v=rqVg1PpPSj8",
+          "view_count": 463843,
+          "youtube_video_id": "rqVg1PpPSj8"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=oqoqeD48BD0",
+          "channel": "DiPap Official",
+          "description": "BUY/SUPPOPORT : https://dipapofficial.bandcamp.com/album/ed-sheeran-bad-habits-remixes Follow DiPap: ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 238.0,
+          "introduced_by_rediscovery": false,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 2,
+          "query": "\"Ed Sheeran\" \"Bad Habits - FISHER Remix\" official",
+          "rank": 2,
+          "rediscovery_occurrences": [
+            {
+              "origin": "original_top5",
+              "provider_rank": 2,
+              "query": "\"Ed Sheeran\" \"Bad Habits - FISHER Remix\" official"
+            }
+          ],
+          "stable_track_id": "s5b1c_021",
+          "title": "Ed Sheeran - Bad Habits (DiPap Remix)",
+          "uploader": "DiPap Official",
+          "url": "https://www.youtube.com/watch?v=oqoqeD48BD0",
+          "view_count": 895,
+          "youtube_video_id": "oqoqeD48BD0"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=ARQJzEs2NIs",
+          "channel": "James Hype",
+          "description": "Tracklist: Andrew Mellor - Insomnia Ed Sheeran - Bad Habits - Acapella Faithless - Insomnia - Mike Candys Remix MOGUAI ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 286.0,
+          "introduced_by_rediscovery": false,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 3,
+          "query": "\"Ed Sheeran\" \"Bad Habits - FISHER Remix\" official",
+          "rank": 3,
+          "rediscovery_occurrences": [
+            {
+              "origin": "original_top5",
+              "provider_rank": 3,
+              "query": "\"Ed Sheeran\" \"Bad Habits - FISHER Remix\" official"
+            }
+          ],
+          "stable_track_id": "s5b1c_021",
+          "title": "Bad Habits x Insomnia - CDJ 3000 Mashup",
+          "uploader": "James Hype",
+          "url": "https://www.youtube.com/watch?v=ARQJzEs2NIs",
+          "view_count": 1340476,
+          "youtube_video_id": "ARQJzEs2NIs"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=j8WZN_lLcQ4",
+          "channel": "Chill Nation",
+          "description": "Ed Sheeran - Bad Habits (Marc Benjamin & Chemical Neon Remix) STREAM NOW: https://trapnation.komi.io Ed Sheeran ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 205.0,
+          "introduced_by_rediscovery": false,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 4,
+          "query": "\"Ed Sheeran\" \"Bad Habits - FISHER Remix\" official",
+          "rank": 4,
+          "rediscovery_occurrences": [
+            {
+              "origin": "original_top5",
+              "provider_rank": 4,
+              "query": "\"Ed Sheeran\" \"Bad Habits - FISHER Remix\" official"
+            }
+          ],
+          "stable_track_id": "s5b1c_021",
+          "title": "Ed Sheeran - Bad Habits (Marc Benjamin & Chemical Neon Remix)",
+          "uploader": "Chill Nation",
+          "url": "https://www.youtube.com/watch?v=j8WZN_lLcQ4",
+          "view_count": 518033,
+          "youtube_video_id": "j8WZN_lLcQ4"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=N1jTbeBoowc",
+          "channel": "Dj Marky",
+          "description": null,
+          "duplicate_occurrences": [],
+          "duration_seconds": 286.0,
+          "introduced_by_rediscovery": false,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 5,
+          "query": "\"Ed Sheeran\" \"Bad Habits - FISHER Remix\" official",
+          "rank": 5,
+          "rediscovery_occurrences": [
+            {
+              "origin": "original_top5",
+              "provider_rank": 5,
+              "query": "\"Ed Sheeran\" \"Bad Habits - FISHER Remix\" official"
+            }
+          ],
+          "stable_track_id": "s5b1c_021",
+          "title": "Ed Sheeran x Gonzi & Kova x Fisher - Bad Habits VS Drop It VS Losing It ( Dj Marky Mashup Remix )",
+          "uploader": "Dj Marky",
+          "url": "https://www.youtube.com/watch?v=N1jTbeBoowc",
+          "view_count": 279,
+          "youtube_video_id": "N1jTbeBoowc"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=d9xsmIXUHyE",
+          "channel": "Tan Tuzunalp",
+          "description": "Playlist: 1) Ferrari - James Hype & Miggy Dela Rosa 2) Way It Is - Mr Belt & Wezol & RSCL 3) Sex, Drugs, Alcohol - Black V Neck ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 1021.0,
+          "introduced_by_rediscovery": true,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 1,
+          "query": "\"Ed Sheeran\" \"Bad Habits\" \"FISHER Remix\"",
+          "rank": 6,
+          "rediscovery_occurrences": [
+            {
+              "origin": "artist-core-exact-version-v1",
+              "provider_rank": 1,
+              "query": "\"Ed Sheeran\" \"Bad Habits\" \"FISHER Remix\""
+            },
+            {
+              "origin": "core-version-credited-artists-v1",
+              "provider_rank": 1,
+              "query": "\"Bad Habits\" \"FISHER Remix\" \"Ed Sheeran\" \"FISHER\""
+            }
+          ],
+          "stable_track_id": "s5b1c_021",
+          "title": "Tan T. - Tech House Mix #1 | MEDUZA, James Hype, FISHER, Acraze",
+          "uploader": "Tan Tuzunalp",
+          "url": "https://www.youtube.com/watch?v=d9xsmIXUHyE",
+          "view_count": 3910,
+          "youtube_video_id": "d9xsmIXUHyE"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=EGC4iNW-NYg",
+          "channel": "Justin Pherox Djs",
+          "description": "Mashup by Dj Justin & Pherox Original Songs: FISHER - Just Feels Tight Dom Dolla - Pump The Brakes Support the DJs: ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 319.0,
+          "introduced_by_rediscovery": true,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 2,
+          "query": "\"Ed Sheeran\" \"Bad Habits\" \"FISHER Remix\"",
+          "rank": 7,
+          "rediscovery_occurrences": [
+            {
+              "origin": "artist-core-exact-version-v1",
+              "provider_rank": 2,
+              "query": "\"Ed Sheeran\" \"Bad Habits\" \"FISHER Remix\""
+            },
+            {
+              "origin": "core-version-credited-artists-v1",
+              "provider_rank": 4,
+              "query": "\"Bad Habits\" \"FISHER Remix\" \"Ed Sheeran\" \"FISHER\""
+            }
+          ],
+          "stable_track_id": "s5b1c_021",
+          "title": "FISHER - Just Feels Tight (Mashup)",
+          "uploader": "Justin Pherox Djs",
+          "url": "https://www.youtube.com/watch?v=EGC4iNW-NYg",
+          "view_count": 3340,
+          "youtube_video_id": "EGC4iNW-NYg"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=A8MnGCgXkf4",
+          "channel": "AT-Dubstep-Production",
+          "description": "This is my first Remix! This not the best but I try to make a better one :)",
+          "duplicate_occurrences": [],
+          "duration_seconds": 342.0,
+          "introduced_by_rediscovery": true,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 3,
+          "query": "\"Ed Sheeran\" \"Bad Habits\" \"FISHER Remix\"",
+          "rank": 8,
+          "rediscovery_occurrences": [
+            {
+              "origin": "artist-core-exact-version-v1",
+              "provider_rank": 3,
+              "query": "\"Ed Sheeran\" \"Bad Habits\" \"FISHER Remix\""
+            }
+          ],
+          "stable_track_id": "s5b1c_021",
+          "title": "Ed Sheeran - Drunk (AgentTabak Remix) ~720p HD~",
+          "uploader": "AT-Dubstep-Production",
+          "url": "https://www.youtube.com/watch?v=A8MnGCgXkf4",
+          "view_count": 49,
+          "youtube_video_id": "A8MnGCgXkf4"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=2dHPAjGNEuc",
+          "channel": "DJ Planet Official",
+          "description": "Enjoy my brandnew Techhouse Mix 2021 mixxed by DJ Planet Best of 2021 with #fisher #jameshype #squidgame #topic ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 2057.0,
+          "introduced_by_rediscovery": true,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 4,
+          "query": "\"Ed Sheeran\" \"Bad Habits\" \"FISHER Remix\"",
+          "rank": 9,
+          "rediscovery_occurrences": [
+            {
+              "origin": "artist-core-exact-version-v1",
+              "provider_rank": 4,
+              "query": "\"Ed Sheeran\" \"Bad Habits\" \"FISHER Remix\""
+            },
+            {
+              "origin": "core-version-credited-artists-v1",
+              "provider_rank": 2,
+              "query": "\"Bad Habits\" \"FISHER Remix\" \"Ed Sheeran\" \"FISHER\""
+            }
+          ],
+          "stable_track_id": "s5b1c_021",
+          "title": "Techhouse Mix 2021#fisher #jameshype #squidgame #topic #daftpunk #skrillex #roddyricch #zedd",
+          "uploader": "DJ Planet Official",
+          "url": "https://www.youtube.com/watch?v=2dHPAjGNEuc",
+          "view_count": 118,
+          "youtube_video_id": "2dHPAjGNEuc"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=pS_jimu4rAw",
+          "channel": "Runaldo Vegas",
+          "description": "Runaldo Vegas - Music is part of life Do you like it? Subscribe for more!",
+          "duplicate_occurrences": [],
+          "duration_seconds": 449.0,
+          "introduced_by_rediscovery": true,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 5,
+          "query": "\"Ed Sheeran\" \"Bad Habits\" \"FISHER Remix\"",
+          "rank": 10,
+          "rediscovery_occurrences": [
+            {
+              "origin": "artist-core-exact-version-v1",
+              "provider_rank": 5,
+              "query": "\"Ed Sheeran\" \"Bad Habits\" \"FISHER Remix\""
+            },
+            {
+              "origin": "core-version-credited-artists-v1",
+              "provider_rank": 3,
+              "query": "\"Bad Habits\" \"FISHER Remix\" \"Ed Sheeran\" \"FISHER\""
+            }
+          ],
+          "stable_track_id": "s5b1c_021",
+          "title": "Fisher, Meduza - Tropical House MixTape",
+          "uploader": "Runaldo Vegas",
+          "url": "https://www.youtube.com/watch?v=pS_jimu4rAw",
+          "view_count": 970,
+          "youtube_video_id": "pS_jimu4rAw"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=qLv-m7DAY-8",
+          "channel": "Stickey Music | Tekcit",
+          "description": "1 Anti Up Something's about to go down Something's about to go down 2 Sampson. Pull Up (Original Mix) 3 CID, Volkoder Honey ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 3614.0,
+          "introduced_by_rediscovery": true,
+          "live_status": "was_live",
+          "provider": "yt_dlp",
+          "provider_rank": 5,
+          "query": "\"Bad Habits\" \"FISHER Remix\" \"Ed Sheeran\" \"FISHER\"",
+          "rank": 11,
+          "rediscovery_occurrences": [
+            {
+              "origin": "core-version-credited-artists-v1",
+              "provider_rank": 5,
+              "query": "\"Bad Habits\" \"FISHER Remix\" \"Ed Sheeran\" \"FISHER\""
+            }
+          ],
+          "stable_track_id": "s5b1c_021",
+          "title": "Tech House Live Mix [Ft. Anti Up, Fisher, John Summit] (On XDJ-RX2)",
+          "uploader": "Stickey Music | Tekcit",
+          "url": "https://www.youtube.com/watch?v=qLv-m7DAY-8",
+          "view_count": 311,
+          "youtube_video_id": "qLv-m7DAY-8"
+        }
+      ],
+      "combined_selected_stage": "MATCH_UNCERTAIN",
+      "new_candidate_ids": [
+        "2dHPAjGNEuc",
+        "A8MnGCgXkf4",
+        "EGC4iNW-NYg",
+        "d9xsmIXUHyE",
+        "pS_jimu4rAw",
+        "qLv-m7DAY-8"
+      ],
+      "new_only_decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "explicit target-relative version conflict",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Tan T. - Tech House Mix #1 | MEDUZA, James Hype, FISHER, Acraze",
+            "video_id": "d9xsmIXUHyE"
+          },
+          {
+            "candidate_rank": 2,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "FISHER - Just Feels Tight (Mashup)",
+            "video_id": "EGC4iNW-NYg"
+          },
+          {
+            "candidate_rank": 3,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Ed Sheeran - Drunk (AgentTabak Remix) ~720p HD~",
+            "video_id": "A8MnGCgXkf4"
+          },
+          {
+            "candidate_rank": 4,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "explicit target-relative version conflict",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Techhouse Mix 2021#fisher #jameshype #squidgame #topic #daftpunk #skrillex #roddyricch #zedd",
+            "video_id": "2dHPAjGNEuc"
+          },
+          {
+            "candidate_rank": 5,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Fisher, Meduza - Tropical House MixTape",
+            "video_id": "pS_jimu4rAw"
+          },
+          {
+            "candidate_rank": 6,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "explicit target-relative version conflict",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Tech House Live Mix [Ft. Anti Up, Fisher, John Summit] (On XDJ-RX2)",
+            "video_id": "qLv-m7DAY-8"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_STRONG_METADATA_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate passes strong presentation or corroborated Official Audio duration fallback without remaining identity conflicts"
+      },
+      "new_only_selected_stage": "MATCH_UNCERTAIN",
+      "original_failure_explanation": "Every result is a different named remix or a mashup. No candidate identifies the requested FISHER remix, so relaxing resolution would select a known wrong recording.",
+      "stable_track_id": "s5b1c_021"
+    },
+    {
+      "classification": "STILL_CANDIDATE_SET_FAILURE",
+      "combined_decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "The Night We Met by Lord Huron @ Ryman Auditorium",
+            "video_id": "N2K1LUWlF-4"
+          },
+          {
+            "candidate_rank": 2,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Lord Huron “The  Night We Met”",
+            "video_id": "7QADmsRUGgg"
+          },
+          {
+            "candidate_rank": 3,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Lord Huron - The Night We Met, Bonner MT, 5/25/2025 live",
+            "video_id": "z4JfPakDYiU"
+          },
+          {
+            "candidate_rank": 4,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Lord Huron - The Night We Met",
+            "video_id": "lx0T48q_eg8"
+          },
+          {
+            "candidate_rank": 5,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Lord Huron - The Night We Met - (Toronto, June 26, 2023)",
+            "video_id": "5q2KTSVV7PY"
+          },
+          {
+            "candidate_rank": 6,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Ray Lamontagne: Empty (live at the Ryman",
+            "video_id": "OuvTSH4Hhd4"
+          },
+          {
+            "candidate_rank": 7,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Come Unto Me (Live), The Mavericks at The Ryman",
+            "video_id": "QO8eR7ISOHI"
+          },
+          {
+            "candidate_rank": 8,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Death Cab For Cutie-I Will Follow  You  Into the Dark,Ryman Auditorium,4 of.May 2009,Nashville,TN",
+            "video_id": "Cssmw9A_FqA"
+          },
+          {
+            "candidate_rank": 9,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "explicit cover/different-performer evidence",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Lord Huron - Harvest Moon (Neil Young Cover) - (Toronto, June 26, 2023)",
+            "video_id": "Q3vag2j_ucs"
+          },
+          {
+            "candidate_rank": 10,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Jason Isbell & The 400 Unit We've Met (Live @ The Handlebar)",
+            "video_id": "R2_TWgvfaPs"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_STRONG_METADATA_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate passes strong presentation or corroborated Official Audio duration fallback without remaining identity conflicts"
+      },
+      "combined_pool": [
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=N2K1LUWlF-4",
+          "channel": "Byron Caldwell",
+          "description": null,
+          "duplicate_occurrences": [],
+          "duration_seconds": 192.0,
+          "introduced_by_rediscovery": false,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 1,
+          "query": "\"Lord Huron\" \"The Night We Met - Live at the Ryman\" official",
+          "rank": 1,
+          "rediscovery_occurrences": [
+            {
+              "origin": "original_top5",
+              "provider_rank": 1,
+              "query": "\"Lord Huron\" \"The Night We Met - Live at the Ryman\" official"
+            },
+            {
+              "origin": "artist-core-exact-version-v1",
+              "provider_rank": 1,
+              "query": "\"Lord Huron\" \"The Night We Met\" \"Live at the Ryman\""
+            },
+            {
+              "origin": "core-version-credited-artists-v1",
+              "provider_rank": 1,
+              "query": "\"The Night We Met\" \"Live at the Ryman\" \"Lord Huron\""
+            }
+          ],
+          "stable_track_id": "s5b1c_029",
+          "title": "The Night We Met by Lord Huron @ Ryman Auditorium",
+          "uploader": "Byron Caldwell",
+          "url": "https://www.youtube.com/watch?v=N2K1LUWlF-4",
+          "view_count": 609,
+          "youtube_video_id": "N2K1LUWlF-4"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=7QADmsRUGgg",
+          "channel": "Tim Mack",
+          "description": "Cosmic Selector Vol 1 Tour.",
+          "duplicate_occurrences": [],
+          "duration_seconds": 230.0,
+          "introduced_by_rediscovery": false,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 2,
+          "query": "\"Lord Huron\" \"The Night We Met - Live at the Ryman\" official",
+          "rank": 2,
+          "rediscovery_occurrences": [
+            {
+              "origin": "original_top5",
+              "provider_rank": 2,
+              "query": "\"Lord Huron\" \"The Night We Met - Live at the Ryman\" official"
+            }
+          ],
+          "stable_track_id": "s5b1c_029",
+          "title": "Lord Huron “The  Night We Met”",
+          "uploader": "Tim Mack",
+          "url": "https://www.youtube.com/watch?v=7QADmsRUGgg",
+          "view_count": 253,
+          "youtube_video_id": "7QADmsRUGgg"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=z4JfPakDYiU",
+          "channel": "Mitch Wight",
+          "description": null,
+          "duplicate_occurrences": [],
+          "duration_seconds": 202.0,
+          "introduced_by_rediscovery": false,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 3,
+          "query": "\"Lord Huron\" \"The Night We Met - Live at the Ryman\" official",
+          "rank": 3,
+          "rediscovery_occurrences": [
+            {
+              "origin": "original_top5",
+              "provider_rank": 3,
+              "query": "\"Lord Huron\" \"The Night We Met - Live at the Ryman\" official"
+            }
+          ],
+          "stable_track_id": "s5b1c_029",
+          "title": "Lord Huron - The Night We Met, Bonner MT, 5/25/2025 live",
+          "uploader": "Mitch Wight",
+          "url": "https://www.youtube.com/watch?v=z4JfPakDYiU",
+          "view_count": 5849,
+          "youtube_video_id": "z4JfPakDYiU"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=lx0T48q_eg8",
+          "channel": "SuperJimmyFlip",
+          "description": "April 4, 2014 9:30 Club Washington, DC.",
+          "duplicate_occurrences": [],
+          "duration_seconds": 196.0,
+          "introduced_by_rediscovery": false,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 4,
+          "query": "\"Lord Huron\" \"The Night We Met - Live at the Ryman\" official",
+          "rank": 4,
+          "rediscovery_occurrences": [
+            {
+              "origin": "original_top5",
+              "provider_rank": 4,
+              "query": "\"Lord Huron\" \"The Night We Met - Live at the Ryman\" official"
+            }
+          ],
+          "stable_track_id": "s5b1c_029",
+          "title": "Lord Huron - The Night We Met",
+          "uploader": "SuperJimmyFlip",
+          "url": "https://www.youtube.com/watch?v=lx0T48q_eg8",
+          "view_count": 273,
+          "youtube_video_id": "lx0T48q_eg8"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=5q2KTSVV7PY",
+          "channel": "drbrooker",
+          "description": null,
+          "duplicate_occurrences": [],
+          "duration_seconds": 204.0,
+          "introduced_by_rediscovery": false,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 5,
+          "query": "\"Lord Huron\" \"The Night We Met - Live at the Ryman\" official",
+          "rank": 5,
+          "rediscovery_occurrences": [
+            {
+              "origin": "original_top5",
+              "provider_rank": 5,
+              "query": "\"Lord Huron\" \"The Night We Met - Live at the Ryman\" official"
+            }
+          ],
+          "stable_track_id": "s5b1c_029",
+          "title": "Lord Huron - The Night We Met - (Toronto, June 26, 2023)",
+          "uploader": "drbrooker",
+          "url": "https://www.youtube.com/watch?v=5q2KTSVV7PY",
+          "view_count": 34019,
+          "youtube_video_id": "5q2KTSVV7PY"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=OuvTSH4Hhd4",
+          "channel": "Jonathan Pridgen",
+          "description": "Nashville TN dec 5.",
+          "duplicate_occurrences": [],
+          "duration_seconds": 328.0,
+          "introduced_by_rediscovery": true,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 2,
+          "query": "\"Lord Huron\" \"The Night We Met\" \"Live at the Ryman\"",
+          "rank": 6,
+          "rediscovery_occurrences": [
+            {
+              "origin": "artist-core-exact-version-v1",
+              "provider_rank": 2,
+              "query": "\"Lord Huron\" \"The Night We Met\" \"Live at the Ryman\""
+            },
+            {
+              "origin": "core-version-credited-artists-v1",
+              "provider_rank": 4,
+              "query": "\"The Night We Met\" \"Live at the Ryman\" \"Lord Huron\""
+            }
+          ],
+          "stable_track_id": "s5b1c_029",
+          "title": "Ray Lamontagne: Empty (live at the Ryman",
+          "uploader": "Jonathan Pridgen",
+          "url": "https://www.youtube.com/watch?v=OuvTSH4Hhd4",
+          "view_count": 250,
+          "youtube_video_id": "OuvTSH4Hhd4"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=QO8eR7ISOHI",
+          "channel": "DianeSparkles",
+          "description": "April 7, 2017 - Brand New Day release concert at the Ryman Auditorium.",
+          "duplicate_occurrences": [],
+          "duration_seconds": 471.0,
+          "introduced_by_rediscovery": true,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 3,
+          "query": "\"Lord Huron\" \"The Night We Met\" \"Live at the Ryman\"",
+          "rank": 7,
+          "rediscovery_occurrences": [
+            {
+              "origin": "artist-core-exact-version-v1",
+              "provider_rank": 3,
+              "query": "\"Lord Huron\" \"The Night We Met\" \"Live at the Ryman\""
+            },
+            {
+              "origin": "core-version-credited-artists-v1",
+              "provider_rank": 2,
+              "query": "\"The Night We Met\" \"Live at the Ryman\" \"Lord Huron\""
+            }
+          ],
+          "stable_track_id": "s5b1c_029",
+          "title": "Come Unto Me (Live), The Mavericks at The Ryman",
+          "uploader": "DianeSparkles",
+          "url": "https://www.youtube.com/watch?v=QO8eR7ISOHI",
+          "view_count": 598,
+          "youtube_video_id": "QO8eR7ISOHI"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=Cssmw9A_FqA",
+          "channel": "Zoran101",
+          "description": "Death cab for cutie at Ryman,4. of May 2009,Nashville,TN.",
+          "duplicate_occurrences": [],
+          "duration_seconds": 143.0,
+          "introduced_by_rediscovery": true,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 4,
+          "query": "\"Lord Huron\" \"The Night We Met\" \"Live at the Ryman\"",
+          "rank": 8,
+          "rediscovery_occurrences": [
+            {
+              "origin": "artist-core-exact-version-v1",
+              "provider_rank": 4,
+              "query": "\"Lord Huron\" \"The Night We Met\" \"Live at the Ryman\""
+            }
+          ],
+          "stable_track_id": "s5b1c_029",
+          "title": "Death Cab For Cutie-I Will Follow  You  Into the Dark,Ryman Auditorium,4 of.May 2009,Nashville,TN",
+          "uploader": "Zoran101",
+          "url": "https://www.youtube.com/watch?v=Cssmw9A_FqA",
+          "view_count": 312,
+          "youtube_video_id": "Cssmw9A_FqA"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=Q3vag2j_ucs",
+          "channel": "drbrooker",
+          "description": null,
+          "duplicate_occurrences": [],
+          "duration_seconds": 293.0,
+          "introduced_by_rediscovery": true,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 5,
+          "query": "\"Lord Huron\" \"The Night We Met\" \"Live at the Ryman\"",
+          "rank": 9,
+          "rediscovery_occurrences": [
+            {
+              "origin": "artist-core-exact-version-v1",
+              "provider_rank": 5,
+              "query": "\"Lord Huron\" \"The Night We Met\" \"Live at the Ryman\""
+            },
+            {
+              "origin": "core-version-credited-artists-v1",
+              "provider_rank": 3,
+              "query": "\"The Night We Met\" \"Live at the Ryman\" \"Lord Huron\""
+            }
+          ],
+          "stable_track_id": "s5b1c_029",
+          "title": "Lord Huron - Harvest Moon (Neil Young Cover) - (Toronto, June 26, 2023)",
+          "uploader": "drbrooker",
+          "url": "https://www.youtube.com/watch?v=Q3vag2j_ucs",
+          "view_count": 6193,
+          "youtube_video_id": "Q3vag2j_ucs"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=R2_TWgvfaPs",
+          "channel": "Tosoye Irajiren",
+          "description": "Jason Isbell & The 400 Unit - We've Met (Live @ The Handlebar) -uploaded in HD at . Jason Isbell & The 400 Unit - Heart on a ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 366.0,
+          "introduced_by_rediscovery": true,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 5,
+          "query": "\"The Night We Met\" \"Live at the Ryman\" \"Lord Huron\"",
+          "rank": 10,
+          "rediscovery_occurrences": [
+            {
+              "origin": "core-version-credited-artists-v1",
+              "provider_rank": 5,
+              "query": "\"The Night We Met\" \"Live at the Ryman\" \"Lord Huron\""
+            }
+          ],
+          "stable_track_id": "s5b1c_029",
+          "title": "Jason Isbell & The 400 Unit We've Met (Live @ The Handlebar)",
+          "uploader": "Tosoye Irajiren",
+          "url": "https://www.youtube.com/watch?v=R2_TWgvfaPs",
+          "view_count": 64,
+          "youtube_video_id": "R2_TWgvfaPs"
+        }
+      ],
+      "combined_selected_stage": "MATCH_UNCERTAIN",
+      "new_candidate_ids": [
+        "Cssmw9A_FqA",
+        "OuvTSH4Hhd4",
+        "Q3vag2j_ucs",
+        "QO8eR7ISOHI",
+        "R2_TWgvfaPs"
+      ],
+      "new_only_decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Ray Lamontagne: Empty (live at the Ryman",
+            "video_id": "OuvTSH4Hhd4"
+          },
+          {
+            "candidate_rank": 2,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Come Unto Me (Live), The Mavericks at The Ryman",
+            "video_id": "QO8eR7ISOHI"
+          },
+          {
+            "candidate_rank": 3,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Death Cab For Cutie-I Will Follow  You  Into the Dark,Ryman Auditorium,4 of.May 2009,Nashville,TN",
+            "video_id": "Cssmw9A_FqA"
+          },
+          {
+            "candidate_rank": 4,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "explicit cover/different-performer evidence",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Lord Huron - Harvest Moon (Neil Young Cover) - (Toronto, June 26, 2023)",
+            "video_id": "Q3vag2j_ucs"
+          },
+          {
+            "candidate_rank": 5,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Jason Isbell & The 400 Unit We've Met (Live @ The Handlebar)",
+            "video_id": "R2_TWgvfaPs"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_STRONG_METADATA_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate passes strong presentation or corroborated Official Audio duration fallback without remaining identity conflicts"
+      },
+      "new_only_selected_stage": "MATCH_UNCERTAIN",
+      "original_failure_explanation": "Only rank 1 names the Ryman, but it is 66 seconds shorter and supplies no date or release identity. The remaining results identify other venues/dates or a generic live performance. None safely establishes the 2023 Live at the Ryman album recording.",
+      "stable_track_id": "s5b1c_029"
+    },
+    {
+      "classification": "STILL_CANDIDATE_SET_FAILURE",
+      "combined_decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent"
+            ],
+            "title": "Landslide",
+            "video_id": "k4M53xndqiU"
+          },
+          {
+            "candidate_rank": 2,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Stevie Nicks and Lindsey Buckingham Perform \"Landslide\" | Letterman",
+            "video_id": "1_370ETkqJU"
+          },
+          {
+            "candidate_rank": 3,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Fleetwood Mac - Landslide (Live 1975)",
+            "video_id": "2Ogcdw4UORQ"
+          },
+          {
+            "candidate_rank": 4,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Landslide (Live 1977)",
+            "video_id": "dshVEZwWLvc"
+          },
+          {
+            "candidate_rank": 5,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Stevie Nicks (Fleetwood Mac) - Landslide",
+            "video_id": "zZi6LJ6bY_c"
+          },
+          {
+            "candidate_rank": 6,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent"
+            ],
+            "title": "Landslide (Early Version)",
+            "video_id": "ZEUXBIgzUAc"
+          },
+          {
+            "candidate_rank": 7,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent"
+            ],
+            "title": "Fleetwood Mac- landslide",
+            "video_id": "kMdkRhH0A2g"
+          },
+          {
+            "candidate_rank": 8,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Storms (2015 Remaster)",
+            "video_id": "oQKIzG405Ho"
+          },
+          {
+            "candidate_rank": 9,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Landslide (Live on PBS in Boston 2004)",
+            "video_id": "D-gzDIEVJqo"
+          },
+          {
+            "candidate_rank": 10,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Landslide (Live at Omaha, 8/21/80)",
+            "video_id": "BO65BlrAV2g"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_STRONG_METADATA_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate passes strong presentation or corroborated Official Audio duration fallback without remaining identity conflicts"
+      },
+      "combined_pool": [
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=k4M53xndqiU",
+          "channel": "Fleetwood Mac",
+          "description": "Provided to YouTube by Warner Records Landslide · Fleetwood Mac Fleetwood Mac ℗ 1975 Warner Records Inc. Keyboards, ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 200.0,
+          "introduced_by_rediscovery": false,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 1,
+          "query": "\"Fleetwood Mac\" \"Landslide - 2015 Remaster\" official",
+          "rank": 1,
+          "rediscovery_occurrences": [
+            {
+              "origin": "original_top5",
+              "provider_rank": 1,
+              "query": "\"Fleetwood Mac\" \"Landslide - 2015 Remaster\" official"
+            }
+          ],
+          "stable_track_id": "s5b1c_032",
+          "title": "Landslide",
+          "uploader": "Fleetwood Mac",
+          "url": "https://www.youtube.com/watch?v=k4M53xndqiU",
+          "view_count": 73602968,
+          "youtube_video_id": "k4M53xndqiU"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=1_370ETkqJU",
+          "channel": "Letterman",
+          "description": "A special performance of the Fleetwood Mac classic by Stevie and Lindsey. (From \"Late Show,\" air date: 11/12/98) #fleetwoodmac ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 309.0,
+          "introduced_by_rediscovery": false,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 2,
+          "query": "\"Fleetwood Mac\" \"Landslide - 2015 Remaster\" official",
+          "rank": 2,
+          "rediscovery_occurrences": [
+            {
+              "origin": "original_top5",
+              "provider_rank": 2,
+              "query": "\"Fleetwood Mac\" \"Landslide - 2015 Remaster\" official"
+            }
+          ],
+          "stable_track_id": "s5b1c_032",
+          "title": "Stevie Nicks and Lindsey Buckingham Perform \"Landslide\" | Letterman",
+          "uploader": "Letterman",
+          "url": "https://www.youtube.com/watch?v=1_370ETkqJU",
+          "view_count": 4722165,
+          "youtube_video_id": "1_370ETkqJU"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=2Ogcdw4UORQ",
+          "channel": "Wildheart",
+          "description": "Recorded Live: 10/17/1975 - Capitol Theatre (Passaic, NJ)",
+          "duplicate_occurrences": [],
+          "duration_seconds": 215.0,
+          "introduced_by_rediscovery": false,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 3,
+          "query": "\"Fleetwood Mac\" \"Landslide - 2015 Remaster\" official",
+          "rank": 3,
+          "rediscovery_occurrences": [
+            {
+              "origin": "original_top5",
+              "provider_rank": 3,
+              "query": "\"Fleetwood Mac\" \"Landslide - 2015 Remaster\" official"
+            }
+          ],
+          "stable_track_id": "s5b1c_032",
+          "title": "Fleetwood Mac - Landslide (Live 1975)",
+          "uploader": "Wildheart",
+          "url": "https://www.youtube.com/watch?v=2Ogcdw4UORQ",
+          "view_count": 558912,
+          "youtube_video_id": "2Ogcdw4UORQ"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=dshVEZwWLvc",
+          "channel": "Fleetwood Mac",
+          "description": "Provided to YouTube by Warner Records Landslide (Live 1977) · Fleetwood Mac Landslide ℗ 1997 Warner Records Inc.",
+          "duplicate_occurrences": [],
+          "duration_seconds": 238.0,
+          "introduced_by_rediscovery": false,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 4,
+          "query": "\"Fleetwood Mac\" \"Landslide - 2015 Remaster\" official",
+          "rank": 4,
+          "rediscovery_occurrences": [
+            {
+              "origin": "original_top5",
+              "provider_rank": 4,
+              "query": "\"Fleetwood Mac\" \"Landslide - 2015 Remaster\" official"
+            },
+            {
+              "origin": "artist-core-exact-version-v1",
+              "provider_rank": 1,
+              "query": "\"Fleetwood Mac\" \"Landslide\" \"2015 Remaster\""
+            },
+            {
+              "origin": "core-version-credited-artists-v1",
+              "provider_rank": 1,
+              "query": "\"Landslide\" \"2015 Remaster\" \"Fleetwood Mac\""
+            }
+          ],
+          "stable_track_id": "s5b1c_032",
+          "title": "Landslide (Live 1977)",
+          "uploader": "Fleetwood Mac",
+          "url": "https://www.youtube.com/watch?v=dshVEZwWLvc",
+          "view_count": 13924686,
+          "youtube_video_id": "dshVEZwWLvc"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=zZi6LJ6bY_c",
+          "channel": "SidsCardShop",
+          "description": "From a 2004 concert.",
+          "duplicate_occurrences": [],
+          "duration_seconds": 294.0,
+          "introduced_by_rediscovery": false,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 5,
+          "query": "\"Fleetwood Mac\" \"Landslide - 2015 Remaster\" official",
+          "rank": 5,
+          "rediscovery_occurrences": [
+            {
+              "origin": "original_top5",
+              "provider_rank": 5,
+              "query": "\"Fleetwood Mac\" \"Landslide - 2015 Remaster\" official"
+            }
+          ],
+          "stable_track_id": "s5b1c_032",
+          "title": "Stevie Nicks (Fleetwood Mac) - Landslide",
+          "uploader": "SidsCardShop",
+          "url": "https://www.youtube.com/watch?v=zZi6LJ6bY_c",
+          "view_count": 2657461,
+          "youtube_video_id": "zZi6LJ6bY_c"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=ZEUXBIgzUAc",
+          "channel": "Fleetwood Mac",
+          "description": "Provided to YouTube by Rhino/Warner Records Landslide (Early Version) · Fleetwood Mac Landslide ℗ 2018 Warner Records ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 199.0,
+          "introduced_by_rediscovery": true,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 2,
+          "query": "\"Fleetwood Mac\" \"Landslide\" \"2015 Remaster\"",
+          "rank": 6,
+          "rediscovery_occurrences": [
+            {
+              "origin": "artist-core-exact-version-v1",
+              "provider_rank": 2,
+              "query": "\"Fleetwood Mac\" \"Landslide\" \"2015 Remaster\""
+            },
+            {
+              "origin": "core-version-credited-artists-v1",
+              "provider_rank": 3,
+              "query": "\"Landslide\" \"2015 Remaster\" \"Fleetwood Mac\""
+            }
+          ],
+          "stable_track_id": "s5b1c_032",
+          "title": "Landslide (Early Version)",
+          "uploader": "Fleetwood Mac",
+          "url": "https://www.youtube.com/watch?v=ZEUXBIgzUAc",
+          "view_count": 118796,
+          "youtube_video_id": "ZEUXBIgzUAc"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=kMdkRhH0A2g",
+          "channel": "Mr Miscellaneous",
+          "description": "Artist- Fleetwood Mac Song- Landslide Writter- Stevie Nick Genre- Rock.",
+          "duplicate_occurrences": [],
+          "duration_seconds": 203.0,
+          "introduced_by_rediscovery": true,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 3,
+          "query": "\"Fleetwood Mac\" \"Landslide\" \"2015 Remaster\"",
+          "rank": 7,
+          "rediscovery_occurrences": [
+            {
+              "origin": "artist-core-exact-version-v1",
+              "provider_rank": 3,
+              "query": "\"Fleetwood Mac\" \"Landslide\" \"2015 Remaster\""
+            },
+            {
+              "origin": "core-version-credited-artists-v1",
+              "provider_rank": 2,
+              "query": "\"Landslide\" \"2015 Remaster\" \"Fleetwood Mac\""
+            }
+          ],
+          "stable_track_id": "s5b1c_032",
+          "title": "Fleetwood Mac- landslide",
+          "uploader": "Mr Miscellaneous",
+          "url": "https://www.youtube.com/watch?v=kMdkRhH0A2g",
+          "view_count": 30,
+          "youtube_video_id": "kMdkRhH0A2g"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=oQKIzG405Ho",
+          "channel": "Fleetwood Mac",
+          "description": "Provided to YouTube by Rhino/Warner Records Storms (2015 Remaster) · Fleetwood Mac Tusk ℗ 1979 Warner Records Inc.",
+          "duplicate_occurrences": [],
+          "duration_seconds": 331.0,
+          "introduced_by_rediscovery": true,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 4,
+          "query": "\"Fleetwood Mac\" \"Landslide\" \"2015 Remaster\"",
+          "rank": 8,
+          "rediscovery_occurrences": [
+            {
+              "origin": "artist-core-exact-version-v1",
+              "provider_rank": 4,
+              "query": "\"Fleetwood Mac\" \"Landslide\" \"2015 Remaster\""
+            },
+            {
+              "origin": "core-version-credited-artists-v1",
+              "provider_rank": 5,
+              "query": "\"Landslide\" \"2015 Remaster\" \"Fleetwood Mac\""
+            }
+          ],
+          "stable_track_id": "s5b1c_032",
+          "title": "Storms (2015 Remaster)",
+          "uploader": "Fleetwood Mac",
+          "url": "https://www.youtube.com/watch?v=oQKIzG405Ho",
+          "view_count": 225679,
+          "youtube_video_id": "oQKIzG405Ho"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=D-gzDIEVJqo",
+          "channel": "Fleetwood Mac",
+          "description": "Provided to YouTube by Warner Records Landslide (Live on PBS in Boston 2004) · Fleetwood Mac Live in Boston ℗ 2004 Warner ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 254.0,
+          "introduced_by_rediscovery": true,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 5,
+          "query": "\"Fleetwood Mac\" \"Landslide\" \"2015 Remaster\"",
+          "rank": 9,
+          "rediscovery_occurrences": [
+            {
+              "origin": "artist-core-exact-version-v1",
+              "provider_rank": 5,
+              "query": "\"Fleetwood Mac\" \"Landslide\" \"2015 Remaster\""
+            }
+          ],
+          "stable_track_id": "s5b1c_032",
+          "title": "Landslide (Live on PBS in Boston 2004)",
+          "uploader": "Fleetwood Mac",
+          "url": "https://www.youtube.com/watch?v=D-gzDIEVJqo",
+          "view_count": 121713,
+          "youtube_video_id": "D-gzDIEVJqo"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=BO65BlrAV2g",
+          "channel": "Fleetwood Mac",
+          "description": "Provided to YouTube by Rhino/Warner Records Landslide (Live at Omaha, 8/21/80) · Fleetwood Mac Tusk ℗ 2015 Warner ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 282.0,
+          "introduced_by_rediscovery": true,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 4,
+          "query": "\"Landslide\" \"2015 Remaster\" \"Fleetwood Mac\"",
+          "rank": 10,
+          "rediscovery_occurrences": [
+            {
+              "origin": "core-version-credited-artists-v1",
+              "provider_rank": 4,
+              "query": "\"Landslide\" \"2015 Remaster\" \"Fleetwood Mac\""
+            }
+          ],
+          "stable_track_id": "s5b1c_032",
+          "title": "Landslide (Live at Omaha, 8/21/80)",
+          "uploader": "Fleetwood Mac",
+          "url": "https://www.youtube.com/watch?v=BO65BlrAV2g",
+          "view_count": 9889,
+          "youtube_video_id": "BO65BlrAV2g"
+        }
+      ],
+      "combined_selected_stage": "MATCH_UNCERTAIN",
+      "new_candidate_ids": [
+        "BO65BlrAV2g",
+        "D-gzDIEVJqo",
+        "ZEUXBIgzUAc",
+        "kMdkRhH0A2g",
+        "oQKIzG405Ho"
+      ],
+      "new_only_decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent"
+            ],
+            "title": "Landslide (Early Version)",
+            "video_id": "ZEUXBIgzUAc"
+          },
+          {
+            "candidate_rank": 2,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent"
+            ],
+            "title": "Fleetwood Mac- landslide",
+            "video_id": "kMdkRhH0A2g"
+          },
+          {
+            "candidate_rank": 3,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Storms (2015 Remaster)",
+            "video_id": "oQKIzG405Ho"
+          },
+          {
+            "candidate_rank": 4,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Landslide (Live on PBS in Boston 2004)",
+            "video_id": "D-gzDIEVJqo"
+          },
+          {
+            "candidate_rank": 5,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Landslide (Live at Omaha, 8/21/80)",
+            "video_id": "BO65BlrAV2g"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_STRONG_METADATA_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate passes strong presentation or corroborated Official Audio duration fallback without remaining identity conflicts"
+      },
+      "new_only_selected_stage": "MATCH_UNCERTAIN",
+      "original_failure_explanation": "The closest Art Track explicitly describes the 1975 album release, not the requested 2015 remaster. Every other result is a live/performance recording or otherwise wrong. The requested version is not established anywhere in top 5.",
+      "stable_track_id": "s5b1c_032"
+    },
+    {
+      "classification": "METADATA_INSUFFICIENT_AFTER_REDISCOVERY",
+      "combined_decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "remaining_gate_reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Tom Odell - Another Love (Slowed) (Lyrics)",
+            "video_id": "_HVI_2XKJx0"
+          },
+          {
+            "candidate_rank": 2,
+            "remaining_gate_reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "tom odell - another love (slowed down)",
+            "video_id": "G-1IQJvNQLk"
+          },
+          {
+            "candidate_rank": 3,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Tom Odell - Another Love ( Slowed + Reverb )",
+            "video_id": "ziB7VFfq_xQ"
+          },
+          {
+            "candidate_rank": 4,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Tom odell- Another Love (slowed +clean )",
+            "video_id": "if7MRkODtKY"
+          },
+          {
+            "candidate_rank": 5,
+            "remaining_gate_reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Tom Odell - Another Love (Slowed) (Lyrics)",
+            "video_id": "ILy2HYcstRQ"
+          },
+          {
+            "candidate_rank": 6,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Another Love - Tom Odell (Extremely Slowed + Extremely Reverbed)",
+            "video_id": "Wtn50o2Hr2k"
+          },
+          {
+            "candidate_rank": 7,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "another love - tom odell (slowed + reverb)",
+            "video_id": "lOLBqeFngX8"
+          },
+          {
+            "candidate_rank": 8,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Another Love - Tom Odell (1 Hour Version) (Slowed Down and Reverb)",
+            "video_id": "jwhq3DI7APE"
+          },
+          {
+            "candidate_rank": 9,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Another Love (Tom Odell) (slowed down)",
+            "video_id": "mY2afN-EXG8"
+          },
+          {
+            "candidate_rank": 10,
+            "remaining_gate_reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Another Love (slowed down original sound)",
+            "video_id": "HGW9g9APZvw"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_STRONG_METADATA_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate passes strong presentation or corroborated Official Audio duration fallback without remaining identity conflicts"
+      },
+      "combined_pool": [
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=_HVI_2XKJx0",
+          "channel": "7clouds",
+          "description": "Follow the official 7clouds playlist on Spotify : http://spoti.fi/2SJsUcZ ​   Tom Odell - Another Love (Slowed) (Lyrics) ⏬ Download ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 280.0,
+          "introduced_by_rediscovery": false,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 1,
+          "query": "\"Tom Odell\" \"Another Love - Slowed Down\" official",
+          "rank": 1,
+          "rediscovery_occurrences": [
+            {
+              "origin": "original_top5",
+              "provider_rank": 1,
+              "query": "\"Tom Odell\" \"Another Love - Slowed Down\" official"
+            },
+            {
+              "origin": "artist-core-exact-version-v1",
+              "provider_rank": 1,
+              "query": "\"Tom Odell\" \"Another Love\" \"Slowed Down\""
+            },
+            {
+              "origin": "core-version-credited-artists-v1",
+              "provider_rank": 1,
+              "query": "\"Another Love\" \"Slowed Down\" \"Tom Odell\""
+            },
+            {
+              "origin": "artist-combined-version-official-audio-v1",
+              "provider_rank": 1,
+              "query": "\"Tom Odell\" \"Another Love - Slowed Down\" official audio"
+            }
+          ],
+          "stable_track_id": "s5b1c_040",
+          "title": "Tom Odell - Another Love (Slowed) (Lyrics)",
+          "uploader": "7clouds",
+          "url": "https://www.youtube.com/watch?v=_HVI_2XKJx0",
+          "view_count": 3585074,
+          "youtube_video_id": "_HVI_2XKJx0"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=G-1IQJvNQLk",
+          "channel": "slow poke",
+          "description": "https://youtu.be/MwpMEbgC7DA tom odell ♡ http://www.tomodell.com/ ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 285.0,
+          "introduced_by_rediscovery": false,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 2,
+          "query": "\"Tom Odell\" \"Another Love - Slowed Down\" official",
+          "rank": 2,
+          "rediscovery_occurrences": [
+            {
+              "origin": "original_top5",
+              "provider_rank": 2,
+              "query": "\"Tom Odell\" \"Another Love - Slowed Down\" official"
+            },
+            {
+              "origin": "artist-core-exact-version-v1",
+              "provider_rank": 3,
+              "query": "\"Tom Odell\" \"Another Love\" \"Slowed Down\""
+            },
+            {
+              "origin": "core-version-credited-artists-v1",
+              "provider_rank": 3,
+              "query": "\"Another Love\" \"Slowed Down\" \"Tom Odell\""
+            }
+          ],
+          "stable_track_id": "s5b1c_040",
+          "title": "tom odell - another love (slowed down)",
+          "uploader": "slow poke",
+          "url": "https://www.youtube.com/watch?v=G-1IQJvNQLk",
+          "view_count": 23439165,
+          "youtube_video_id": "G-1IQJvNQLk"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=ziB7VFfq_xQ",
+          "channel": "God Of Slowed And Reverb",
+          "description": "𝙷𝚎𝚊𝚍𝚙𝚑𝚘𝚗𝚎𝚜 𝙼𝚞𝚜𝚝. Lyrics: [Verse 1] I wanna take you somewhere so you know I care But it's so cold and I don't know ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 302.0,
+          "introduced_by_rediscovery": false,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 3,
+          "query": "\"Tom Odell\" \"Another Love - Slowed Down\" official",
+          "rank": 3,
+          "rediscovery_occurrences": [
+            {
+              "origin": "original_top5",
+              "provider_rank": 3,
+              "query": "\"Tom Odell\" \"Another Love - Slowed Down\" official"
+            },
+            {
+              "origin": "artist-core-exact-version-v1",
+              "provider_rank": 2,
+              "query": "\"Tom Odell\" \"Another Love\" \"Slowed Down\""
+            },
+            {
+              "origin": "core-version-credited-artists-v1",
+              "provider_rank": 2,
+              "query": "\"Another Love\" \"Slowed Down\" \"Tom Odell\""
+            },
+            {
+              "origin": "artist-combined-version-official-audio-v1",
+              "provider_rank": 3,
+              "query": "\"Tom Odell\" \"Another Love - Slowed Down\" official audio"
+            }
+          ],
+          "stable_track_id": "s5b1c_040",
+          "title": "Tom Odell - Another Love ( Slowed + Reverb )",
+          "uploader": "God Of Slowed And Reverb",
+          "url": "https://www.youtube.com/watch?v=ziB7VFfq_xQ",
+          "view_count": 11852918,
+          "youtube_video_id": "ziB7VFfq_xQ"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=if7MRkODtKY",
+          "channel": "鈴木石川",
+          "description": null,
+          "duplicate_occurrences": [],
+          "duration_seconds": 282.0,
+          "introduced_by_rediscovery": false,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 4,
+          "query": "\"Tom Odell\" \"Another Love - Slowed Down\" official",
+          "rank": 4,
+          "rediscovery_occurrences": [
+            {
+              "origin": "original_top5",
+              "provider_rank": 4,
+              "query": "\"Tom Odell\" \"Another Love - Slowed Down\" official"
+            }
+          ],
+          "stable_track_id": "s5b1c_040",
+          "title": "Tom odell- Another Love (slowed +clean )",
+          "uploader": "鈴木石川",
+          "url": "https://www.youtube.com/watch?v=if7MRkODtKY",
+          "view_count": 1363,
+          "youtube_video_id": "if7MRkODtKY"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=ILy2HYcstRQ",
+          "channel": "7clouds Lofi",
+          "description": "Follow the official 7clouds playlist on Spotify : http://spoti.fi/2SJsUcZ ​   Tom Odell - Another Love (Slowed) (Lyrics) ⏬ Download ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 285.0,
+          "introduced_by_rediscovery": false,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 5,
+          "query": "\"Tom Odell\" \"Another Love - Slowed Down\" official",
+          "rank": 5,
+          "rediscovery_occurrences": [
+            {
+              "origin": "original_top5",
+              "provider_rank": 5,
+              "query": "\"Tom Odell\" \"Another Love - Slowed Down\" official"
+            },
+            {
+              "origin": "artist-core-exact-version-v1",
+              "provider_rank": 5,
+              "query": "\"Tom Odell\" \"Another Love\" \"Slowed Down\""
+            }
+          ],
+          "stable_track_id": "s5b1c_040",
+          "title": "Tom Odell - Another Love (Slowed) (Lyrics)",
+          "uploader": "7clouds Lofi",
+          "url": "https://www.youtube.com/watch?v=ILy2HYcstRQ",
+          "view_count": 2602317,
+          "youtube_video_id": "ILy2HYcstRQ"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=Wtn50o2Hr2k",
+          "channel": "AudioKrystal",
+          "description": "Copyright Disclaimer under section 107 of the Copyright Act 1976, allowance is made for “fair use” for purposes such as criticism, ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 402.0,
+          "introduced_by_rediscovery": true,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 4,
+          "query": "\"Tom Odell\" \"Another Love\" \"Slowed Down\"",
+          "rank": 6,
+          "rediscovery_occurrences": [
+            {
+              "origin": "artist-core-exact-version-v1",
+              "provider_rank": 4,
+              "query": "\"Tom Odell\" \"Another Love\" \"Slowed Down\""
+            },
+            {
+              "origin": "core-version-credited-artists-v1",
+              "provider_rank": 4,
+              "query": "\"Another Love\" \"Slowed Down\" \"Tom Odell\""
+            }
+          ],
+          "stable_track_id": "s5b1c_040",
+          "title": "Another Love - Tom Odell (Extremely Slowed + Extremely Reverbed)",
+          "uploader": "AudioKrystal",
+          "url": "https://www.youtube.com/watch?v=Wtn50o2Hr2k",
+          "view_count": 1274200,
+          "youtube_video_id": "Wtn50o2Hr2k"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=lOLBqeFngX8",
+          "channel": "SiegDeity",
+          "description": "Another love - Tom Odell ft. Julia Michaels In this slow and sentimental love song, Tom Odell croons about falling in love for the ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 261.0,
+          "introduced_by_rediscovery": true,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 5,
+          "query": "\"Another Love\" \"Slowed Down\" \"Tom Odell\"",
+          "rank": 7,
+          "rediscovery_occurrences": [
+            {
+              "origin": "core-version-credited-artists-v1",
+              "provider_rank": 5,
+              "query": "\"Another Love\" \"Slowed Down\" \"Tom Odell\""
+            }
+          ],
+          "stable_track_id": "s5b1c_040",
+          "title": "another love - tom odell (slowed + reverb)",
+          "uploader": "SiegDeity",
+          "url": "https://www.youtube.com/watch?v=lOLBqeFngX8",
+          "view_count": 6376490,
+          "youtube_video_id": "lOLBqeFngX8"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=jwhq3DI7APE",
+          "channel": "The 80s Freak",
+          "description": "All my tears have been used up... My new song Eternal City is now available https://www.youtube.com/watch?v=DfR0bZKaPCw ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 3682.0,
+          "introduced_by_rediscovery": true,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 2,
+          "query": "\"Tom Odell\" \"Another Love - Slowed Down\" official audio",
+          "rank": 8,
+          "rediscovery_occurrences": [
+            {
+              "origin": "artist-combined-version-official-audio-v1",
+              "provider_rank": 2,
+              "query": "\"Tom Odell\" \"Another Love - Slowed Down\" official audio"
+            }
+          ],
+          "stable_track_id": "s5b1c_040",
+          "title": "Another Love - Tom Odell (1 Hour Version) (Slowed Down and Reverb)",
+          "uploader": "The 80s Freak",
+          "url": "https://www.youtube.com/watch?v=jwhq3DI7APE",
+          "view_count": 1186731,
+          "youtube_video_id": "jwhq3DI7APE"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=mY2afN-EXG8",
+          "channel": "sped up + slowed - Topic",
+          "description": "Provided to YouTube by Sony Music CG Another Love (Tom Odell) (slowed down) · sped up + slowed another love / heal - slowed ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 285.0,
+          "introduced_by_rediscovery": true,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 4,
+          "query": "\"Tom Odell\" \"Another Love - Slowed Down\" official audio",
+          "rank": 9,
+          "rediscovery_occurrences": [
+            {
+              "origin": "artist-combined-version-official-audio-v1",
+              "provider_rank": 4,
+              "query": "\"Tom Odell\" \"Another Love - Slowed Down\" official audio"
+            }
+          ],
+          "stable_track_id": "s5b1c_040",
+          "title": "Another Love (Tom Odell) (slowed down)",
+          "uploader": "sped up + slowed - Topic",
+          "url": "https://www.youtube.com/watch?v=mY2afN-EXG8",
+          "view_count": 11481183,
+          "youtube_video_id": "mY2afN-EXG8"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=HGW9g9APZvw",
+          "channel": "Tom Odell",
+          "description": "Provided to YouTube by Sony Music CG Another Love (slowed down original sound) · Tom Odell Another Love ℗ 2013 Sony ...",
+          "duplicate_occurrences": [],
+          "duration_seconds": 25.0,
+          "introduced_by_rediscovery": true,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 5,
+          "query": "\"Tom Odell\" \"Another Love - Slowed Down\" official audio",
+          "rank": 10,
+          "rediscovery_occurrences": [
+            {
+              "origin": "artist-combined-version-official-audio-v1",
+              "provider_rank": 5,
+              "query": "\"Tom Odell\" \"Another Love - Slowed Down\" official audio"
+            }
+          ],
+          "stable_track_id": "s5b1c_040",
+          "title": "Another Love (slowed down original sound)",
+          "uploader": "Tom Odell",
+          "url": "https://www.youtube.com/watch?v=HGW9g9APZvw",
+          "view_count": 186947,
+          "youtube_video_id": "HGW9g9APZvw"
+        }
+      ],
+      "combined_selected_stage": "MATCH_UNCERTAIN",
+      "new_candidate_ids": [
+        "HGW9g9APZvw",
+        "Wtn50o2Hr2k",
+        "jwhq3DI7APE",
+        "lOLBqeFngX8",
+        "mY2afN-EXG8"
+      ],
+      "new_only_decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Another Love - Tom Odell (Extremely Slowed + Extremely Reverbed)",
+            "video_id": "Wtn50o2Hr2k"
+          },
+          {
+            "candidate_rank": 2,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "another love - tom odell (slowed + reverb)",
+            "video_id": "lOLBqeFngX8"
+          },
+          {
+            "candidate_rank": 3,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Another Love - Tom Odell (1 Hour Version) (Slowed Down and Reverb)",
+            "video_id": "jwhq3DI7APE"
+          },
+          {
+            "candidate_rank": 4,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Another Love (Tom Odell) (slowed down)",
+            "video_id": "mY2afN-EXG8"
+          },
+          {
+            "candidate_rank": 5,
+            "remaining_gate_reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Another Love (slowed down original sound)",
+            "video_id": "HGW9g9APZvw"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_STRONG_METADATA_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate passes strong presentation or corroborated Official Audio duration fallback without remaining identity conflicts"
+      },
+      "new_only_selected_stage": "MATCH_UNCERTAIN",
+      "original_failure_explanation": "All five results are third-party slowed edits. The nominally matching uploads are 14-19 seconds shorter than the specific 2022 release; the close-duration alternatives add reverb or clean edits. No result establishes the released Slowed Down recording.",
+      "stable_track_id": "s5b1c_040"
+    }
+  ]
+}

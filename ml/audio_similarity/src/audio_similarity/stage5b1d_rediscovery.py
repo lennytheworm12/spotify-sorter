@@ -226,6 +226,13 @@ def write_targeted_queries(config: Stage5B1DConfig) -> dict[str, Any]:
     return artifact
 
 
+def verify_targeted_query_artifact(
+    config: Stage5B1DConfig, artifact: dict[str, Any]
+) -> None:
+    if artifact != build_targeted_query_artifact(config):
+        raise Stage5B1AValidationError("frozen targeted query artifact changed")
+
+
 def run_targeted_discovery(
     config: Stage5B1DConfig,
     query_artifact: dict[str, Any],
@@ -236,8 +243,7 @@ def run_targeted_discovery(
 ) -> dict[str, Any]:
     """Execute the frozen query list sequentially; one failure never aborts later work."""
 
-    if query_artifact.get("schema_version") != QUERY_SCHEMA_VERSION:
-        raise Stage5B1AValidationError("unexpected targeted query artifact schema")
+    verify_targeted_query_artifact(config, query_artifact)
     started = now()
     started_clock = time.monotonic()
     tracks: list[dict[str, Any]] = []
@@ -377,6 +383,13 @@ def _feature_row(track: SpotifyTrack, candidates: list[dict[str, Any]]) -> dict[
     }
 
 
+def _rerank(candidates: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
+    rows = copy.deepcopy(list(candidates))
+    for rank, row in enumerate(rows, start=1):
+        row["rank"] = rank
+    return rows
+
+
 def evaluate_resolver_cascade(
     track: SpotifyTrack,
     candidates: list[dict[str, Any]],
@@ -410,9 +423,10 @@ def evaluate_resolver_cascade(
         "layer_decisions": {stage: decision for stage, decision in ordered},
         "feature_layers": {
             "stage5b1b": base,
-            "stage5b1c_a": tier2_features,
-            "stage5b1c_b": source_features,
-            "stage5b1c_c": strong_features,
+            # The composed 1C-C rows already retain their nested 1C-A and 1C-B
+            # evidence, so persisting those layers again would duplicate a
+            # large amount of raw candidate metadata.
+            "stage5b1c_c_composed": strong_features,
         },
     }
 
@@ -423,6 +437,27 @@ def evaluate_rediscovery(
     regression = verify_frozen_resolver_stack(config)
     if discovery.get("schema_version") != DISCOVERY_SCHEMA_VERSION:
         raise Stage5B1AValidationError("unexpected targeted discovery schema")
+    if discovery.get("queries_sha256") != file_sha256(config.artifacts["queries"]):
+        raise Stage5B1AValidationError("targeted discovery query identity changed")
+    expected_ids = tuple(
+        row["stable_track_id"] for row in _candidate_set_failures(config)
+    )
+    observed_ids = tuple(
+        row.get("track", {}).get("stable_track_id")
+        for row in discovery.get("tracks", [])
+        if isinstance(row, dict)
+    )
+    if observed_ids != expected_ids:
+        raise Stage5B1AValidationError("targeted discovery scope or order changed")
+    expected_media = {
+        "audio_downloads": 0,
+        "video_downloads": 0,
+        "stage5a_calls": 0,
+        "clap_calls": 0,
+        "muq_calls": 0,
+    }
+    if discovery.get("media_activity") != expected_media:
+        raise Stage5B1AValidationError("targeted rediscovery media guard changed")
     challenge = load_challenge_config(config.challenge_config_path)
     manifest = load_challenge_manifest(
         challenge.manifest_path, expected_sha256=challenge.manifest_sha256
@@ -444,7 +479,9 @@ def evaluate_rediscovery(
             raise Stage5B1AValidationError(f"rediscovery scope changed: {stable_id}")
         original = original_by_id[stable_id]["candidates"]
         combined, new_ids = _deduplicate_pool(original, rediscovery["queries"])
-        new_only = [row for row in combined if row["youtube_video_id"] in new_ids]
+        new_only = _rerank(
+            row for row in combined if row["youtube_video_id"] in new_ids
+        )
         combined_eval = evaluate_resolver_cascade(
             track_by_id[stable_id].track,
             combined,
@@ -460,11 +497,33 @@ def evaluate_rediscovery(
         final = combined_eval["final_decision"]
         selected_id = final.get("selected_video_id")
         recovered = final["status"] == AUTO_MATCH and selected_id in new_ids
+        base_by_id = {
+            item["candidate"]["youtube_video_id"]: item["features"]
+            for item in combined_eval["feature_layers"]["stage5b1b"]["candidates"]
+        }
+        composed_candidates = combined_eval["feature_layers"][
+            "stage5b1c_c_composed"
+        ]["candidates"]
+        identity_plausible_new = any(
+            item["candidate"]["youtube_video_id"] in new_ids
+            and (
+                item["tier2a_features"]["title"]["structural_core_title_match"]
+                or base_by_id[item["candidate"]["youtube_video_id"]]["identity"][
+                    "core_title_token_overlap"
+                ] == 1.0
+            )
+            and item["tier2a_features"]["performers"]["primary_performer_match"]
+            and not item["tier2a_features"]["performers"]["explicit_cover_signal"]
+            and not item["tier2a_features"]["performers"]["explicit_performer_conflict"]
+            and item["tier2a_features"]["versions"]["absent_count"] == 0
+            and item["tier2a_features"]["versions"]["conflict_count"] == 0
+            for item in composed_candidates
+        )
         if recovered:
             classification = REDISCOVERY_RECOVERED
         elif new_eval and new_eval["final_decision"]["status"] == AUTO_MATCH:
             classification = BETTER_CANDIDATE_FOUND_BUT_RESOLVER_UNCERTAIN
-        elif new_ids:
+        elif identity_plausible_new:
             classification = METADATA_INSUFFICIENT_AFTER_REDISCOVERY
         else:
             classification = STILL_CANDIDATE_SET_FAILURE
@@ -513,6 +572,15 @@ def evaluate_rediscovery(
             "rediscovery_auto_match_count": len(recovered),
             "remaining_candidate_set_failures": sum(
                 row["classification"] == STILL_CANDIDATE_SET_FAILURE for row in decision_tracks
+            ),
+            "materially_better_candidate_pools": sum(
+                row["classification"]
+                in {
+                    REDISCOVERY_RECOVERED,
+                    BETTER_CANDIDATE_FOUND_BUT_RESOLVER_UNCERTAIN,
+                    METADATA_INSUFFICIENT_AFTER_REDISCOVERY,
+                }
+                for row in decision_tracks
             ),
             "combined_auto_match_count": 42 + len(recovered),
             "combined_match_uncertain_count": 8 - len(recovered),
