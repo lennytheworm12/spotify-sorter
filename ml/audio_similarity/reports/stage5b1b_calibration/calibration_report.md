@@ -201,6 +201,19 @@ The required next goal is a separately frozen fresh challenge set on which the
 already-frozen candidate policy is run without tuning, followed by blinded Sol
 review and targeted human audit.
 
+## Verification
+
+- Focused Stage 5B.1B calibration tests: 69 passed.
+- Relevant Stage 5A/5B regression tests: 193 passed.
+- Full non-heavy `ml/audio_similarity` suite: 640 passed, 12 deselected,
+  0 failures, 0 errors, with 11 pre-existing warnings in 48.48 seconds.
+- Final code-quality review covered correctness, readability, architecture,
+  security, and performance. Its required findings were resolved: numeric
+  feature distributions are explicit, saved Sol artifacts fail closed under
+  revalidation, and generated summaries no longer contain machine-local paths.
+- No new runtime dependency, secret, media artifact, or production activation
+  was introduced.
+
 ## Final boundary
 
 `STAGE5B1B_POLICY_READY_FOR_FRESH_CHALLENGE_VALIDATION`

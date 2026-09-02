@@ -1,0 +1,49 @@
+{
+  "schema_version": "stage5b1b_calibration_artifact_manifest_v1",
+  "experiment_id": "stage5b1b_part_b_policy_calibration_v1",
+  "starting_branch": "ml/stage5b1b-human-audit-complete",
+  "starting_commit": "553c2b476a9bd4b707afeea6f5a69ffb4039f2a6",
+  "pre_outcome_contract_commit": "e7675d4",
+  "calibration_checkpoint_commit": "2171cdd",
+  "status": "STAGE5B1B_POLICY_READY_FOR_FRESH_CHALLENGE_VALIDATION",
+  "selected_policy": "POLICY_CONSERVATIVE_V1",
+  "production_activated": false,
+  "source_artifact_sha256": {
+    "heldout_manifest": "39557ede8f07bde129ad23d2bc64a0faf0fff755356cd87f2054e14f91d81e5a",
+    "heldout_discovery": "2c318ac0853ffe3395c6a934265585afcb0a39a2f9ce73e5a00ba35276d056e4",
+    "candidate_features_v1": "f4260fe01b95770ceb4c47f8298033a0b865e597780a488bca1dfaac22a604a6",
+    "human_review": "8e5282310ff44c9441e81a1cb538613f004b92361ec8b8c21172b4d40b69e97e",
+    "targeted_audit_queue": "3f3868c613099e50a976d83ef5dea343fda0cf06d1bb51662ef0772b3d3193a5"
+  },
+  "calibration_artifact_sha256": {
+    "blinded_sol_input.json": "dc7c90f24d26b1f50cdb8868f22e7b3c041f0f49ceab16a439162b4916bb063c",
+    "blinded_sol_private_mapping.json": "f3760b9f5eb029bc608a3697e7b75088a4fff0be764442c3e06fbd4a9752ff84",
+    "calibration_report.md": "d693e06e6dad210e5b2eea8d02d2c961c4fb7f1e540370f14c0d7bcc723f2663",
+    "calibration_summary.json": "4552717513550aa7bab49ea3339e45ad64883484a8e0b4302bb5444db9b110ee",
+    "candidate_features_v2.json": "33efc17b110329627979c7db6e2bdc7576034ced205e0db28762101d951c82e5",
+    "experiment_contract.json": "9598449cba84c31d97c503a53db24feb4ad05802bfda3c7acc3bd272c1732439",
+    "feature_label_analysis.json": "dcfe17c555abe9131b14f1c6b5353436666fd309c607e701b84e07ce98ea2fd0",
+    "resolver_policy_candidate_v1.json": "80ef018df79eefea10a3e336968027bc64bdd89c334548a500453a7947f1cbea",
+    "resolver_policy_variants.json": "681cb4b770b7d70efd5db2b6baec2b56f0b4f48a378024e4eb54fc85fde211f5",
+    "sol_evaluations.json": "a24e11ba7fd73262a458b1a2f0cb067a82e23438e73f0f43f2cfc615e513e377",
+    "sol_human_agreement.json": "78ef9a040d83b9b1f927707cbb3092284f7f6e35a048de69bf674e4a2923f353",
+    "three_way_comparison.json": "a92c26d5eabe7d5cdef259e5b731fda745b1ebf17bb1b0f33bbe8a2815716f66"
+  },
+  "implementation_sha256": {
+    "stage5b1b_features.py": "51547a179834d494a3b458752645718a11f5d4a6ddb4392aaaf46319577a3870",
+    "stage5b1b_resolver.py": "65ee9ce45e2a50eda344eabc805fd40cf411582e70d602559e21bb6add0879be",
+    "stage5b1b_calibration_sol.py": "c20b085f28dfb2531991a92089b540401de6abe5ab9b9e985662dca948baaac1",
+    "stage5b1b_calibration.py": "43a420ec62f07b3650a3e1d32eee733e05c683d91941f5123a88293494da3697",
+    "cli/stage5b1b_calibration.py": "6dda3a1a07a8fe36aba7e3a685df89ac7e675b318b7695d1fc515ec42eb90cbb"
+  },
+  "sol_protocol_sha256": {
+    "stage5b1b_calibration_sol.json": "674eb69d8d6cf00c6cad27a900087b66b329ffa6e1f9feab87f1a7b521c02d70",
+    "stage5b1b_calibration_sol_prompt.txt": "e99ddc6ad63322c5404866bdcd407c351503e782bf11ba727f013fe41e0b4160",
+    "stage5b1b_calibration_sol_output.schema.json": "d258dcf464b4be97e26ea8c799086e97f2ebc54aecfc270109e41747d199b178"
+  },
+  "verification": {
+    "focused": "69 passed",
+    "relevant_stage5a_stage5b": "193 passed",
+    "full_non_heavy": "640 passed, 12 deselected, 0 failures, 0 errors"
+  }
+}
