@@ -1,0 +1,62 @@
+{
+  "schema_version": "stage5b1d-targeted-rediscovery-config-v1",
+  "experiment_id": "stage5b1d_targeted_rediscovery_diagnostic_v1",
+  "starting_commit": "83ab23118f2d258fdc849df3e3653e1d70f1b497",
+  "frozen_inputs": {
+    "challenge_config": {
+      "path": "configs/stage5b1b_fresh_challenge.json",
+      "sha256": "283901e8e6804757a5246025e14c43e07311830ca3708ce05db00c394b1aaedd"
+    },
+    "challenge_discovery": {
+      "path": "reports/stage5b1b_fresh_challenge/challenge_ytdlp_discovery.json",
+      "sha256": "95bb1ca905a05fcc4167da10e3dfd6cf267600a4dfb1898b491d28ba855e6fb4"
+    },
+    "strong_metadata_decisions": {
+      "path": "reports/stage5b1c_c_strong_metadata/strong_metadata_decisions.json",
+      "sha256": "740b085b2061935b1d66586534ed4bc418c4ed2562f0cd96efeb4b596748793c"
+    },
+    "remaining_tail_diagnostic": {
+      "path": "reports/stage5b1c_c_diagnostic/remaining_tail_diagnostic.json",
+      "sha256": "9968f84d5dbd4825f88dd0fdc329971d93db87e0b2cd9f2b89364f2cbf145ebf"
+    }
+  },
+  "provider": {
+    "candidate_limit": 5,
+    "search_prefix": "ytsearch5:",
+    "extract_flat": "in_playlist",
+    "skip_download": true,
+    "simulate": true,
+    "ignore_user_config": true,
+    "cache_enabled": false,
+    "sequential_requests": true,
+    "socket_timeout_seconds": 30,
+    "max_attempts": 2,
+    "retry_backoff_seconds": 2.0,
+    "sleep_between_queries_seconds": 2.0,
+    "sleep_between_tracks_seconds": 3.0
+  },
+  "query_variants": [
+    {
+      "variant_id": "artist-core-exact-version-v1",
+      "template": "\"{primary_artist}\" \"{core_title}\" \"{exact_version}\""
+    },
+    {
+      "variant_id": "core-version-credited-artists-v1",
+      "template": "\"{core_title}\" \"{exact_version}\" {credited_artists}"
+    },
+    {
+      "variant_id": "artist-combined-version-official-audio-v1",
+      "template": "\"{primary_artist}\" \"{core_title} - {exact_version}\" official audio"
+    }
+  ],
+  "artifacts": {
+    "queries": "reports/stage5b1d_targeted_rediscovery/targeted_queries.json",
+    "discovery": "reports/stage5b1d_targeted_rediscovery/targeted_discovery.json",
+    "features": "reports/stage5b1d_targeted_rediscovery/rediscovery_candidate_features.json",
+    "decisions": "reports/stage5b1d_targeted_rediscovery/rediscovery_decisions.json",
+    "audit_queue": "reports/stage5b1d_targeted_rediscovery/rediscovery_human_audit_queue.json",
+    "human_review": "reports/stage5b1d_targeted_rediscovery/rediscovery_human_review.csv",
+    "report": "reports/stage5b1d_targeted_rediscovery/targeted_rediscovery_report.md",
+    "manifest": "reports/stage5b1d_targeted_rediscovery/artifact_manifest.json"
+  }
+}

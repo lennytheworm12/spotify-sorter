@@ -1,0 +1,263 @@
+{
+  "config_sha256": "f0999443507e14b5472ea2772d5051dfe04e2fc2bc03a774235426063f5acdac",
+  "experiment_id": "stage5b1d_targeted_rediscovery",
+  "frozen_regression": {
+    "balanced_v1_auto_match_count": 29,
+    "challenge_config_sha256": "283901e8e6804757a5246025e14c43e07311830ca3708ce05db00c394b1aaedd",
+    "combined_auto_match_count": 42,
+    "combined_coverage": 0.84,
+    "combined_match_uncertain_count": 8,
+    "exact_replay": true,
+    "stage5b1c_a_incremental_count": 6,
+    "stage5b1c_b_incremental_count": 5,
+    "stage5b1c_c_incremental_count": 2,
+    "strong_metadata_selected_video_ids": {
+      "s5b1c_012": "kxZYxojih3E",
+      "s5b1c_023": "1UESu4eyalA"
+    }
+  },
+  "manifest_sha256": "e2e9a1ab43f568dd9de853c2964f341ee0d0e2631ca87f732d0d4326ab990f79",
+  "max_query_variants_per_track": 3,
+  "query_count": 12,
+  "schema_version": "stage5b1d-targeted-queries-v1",
+  "scope_guards": {
+    "all_50_tracks_researched": false,
+    "audio_downloads": 0,
+    "resolver_changed": false,
+    "video_downloads": 0
+  },
+  "scope_source": "frozen Stage 5B.1C-C diagnostic CANDIDATE_SET_FAILURE rows",
+  "track_count": 4,
+  "tracks": [
+    {
+      "case_rationale": "Specific dance remix competes with the dominant studio hit and other remixes.",
+      "case_tags": [
+        "named_remix",
+        "multiple_remixes",
+        "modified_recording"
+      ],
+      "frozen_diagnostic": {
+        "explanation": "Every result is a different named remix or a mashup. No candidate identifies the requested FISHER remix, so relaxing resolution would select a known wrong recording.",
+        "primary_blocker": "bad search candidates",
+        "recommended_route": "targeted_second_search",
+        "recoverability": "CANDIDATE_SET_FAILURE"
+      },
+      "queries": [
+        {
+          "query": "\"Ed Sheeran\" \"Bad Habits\" \"FISHER Remix\"",
+          "variant_id": "artist-core-exact-version-v1"
+        },
+        {
+          "query": "\"Bad Habits\" \"FISHER Remix\" \"Ed Sheeran\" \"FISHER\"",
+          "variant_id": "core-version-credited-artists-v1"
+        },
+        {
+          "query": "\"Ed Sheeran\" \"Bad Habits - FISHER Remix\" official audio",
+          "variant_id": "artist-combined-version-official-audio-v1"
+        }
+      ],
+      "stable_track_id": "s5b1c_021",
+      "structured_identity": {
+        "core_title": "Bad Habits",
+        "credited_artists": [
+          "Ed Sheeran",
+          "FISHER"
+        ],
+        "exact_version_phrase": "FISHER Remix",
+        "normalized_core_title": "bad habits",
+        "primary_artist": "Ed Sheeran",
+        "version_descriptors": [
+          {
+            "family": "remix",
+            "qualifier": "FISHER",
+            "raw": "FISHER Remix"
+          }
+        ]
+      },
+      "target": {
+        "album": "Bad Habits (FISHER Remix)",
+        "artists": [
+          "Ed Sheeran",
+          "FISHER"
+        ],
+        "duration_ms": 223200,
+        "isrc": null,
+        "release_year": 2021,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_021",
+        "title": "Bad Habits - FISHER Remix"
+      }
+    },
+    {
+      "case_rationale": "Specific official live-album performance with weaker canonical search provenance.",
+      "case_tags": [
+        "live",
+        "named_venue",
+        "smaller_artist"
+      ],
+      "frozen_diagnostic": {
+        "explanation": "Only rank 1 names the Ryman, but it is 66 seconds shorter and supplies no date or release identity. The remaining results identify other venues/dates or a generic live performance. None safely establishes the 2023 Live at the Ryman album recording.",
+        "primary_blocker": "bad search candidates",
+        "recommended_route": "targeted_second_search",
+        "recoverability": "CANDIDATE_SET_FAILURE"
+      },
+      "queries": [
+        {
+          "query": "\"Lord Huron\" \"The Night We Met\" \"Live at the Ryman\"",
+          "variant_id": "artist-core-exact-version-v1"
+        },
+        {
+          "query": "\"The Night We Met\" \"Live at the Ryman\" \"Lord Huron\"",
+          "variant_id": "core-version-credited-artists-v1"
+        },
+        {
+          "query": "\"Lord Huron\" \"The Night We Met - Live at the Ryman\" official audio",
+          "variant_id": "artist-combined-version-official-audio-v1"
+        }
+      ],
+      "stable_track_id": "s5b1c_029",
+      "structured_identity": {
+        "core_title": "The Night We Met",
+        "credited_artists": [
+          "Lord Huron"
+        ],
+        "exact_version_phrase": "Live at the Ryman",
+        "normalized_core_title": "the night we met",
+        "primary_artist": "Lord Huron",
+        "version_descriptors": [
+          {
+            "family": "live",
+            "qualifier": "the Ryman",
+            "raw": "Live at the Ryman"
+          }
+        ]
+      },
+      "target": {
+        "album": "Live at the Ryman",
+        "artists": [
+          "Lord Huron"
+        ],
+        "duration_ms": 258000,
+        "isrc": null,
+        "release_year": 2023,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_029",
+        "title": "The Night We Met - Live at the Ryman"
+      }
+    },
+    {
+      "case_rationale": "Remastered studio source competes with famous live versions and extensive covers.",
+      "case_tags": [
+        "remaster",
+        "many_covers",
+        "live_results"
+      ],
+      "frozen_diagnostic": {
+        "explanation": "The closest Art Track explicitly describes the 1975 album release, not the requested 2015 remaster. Every other result is a live/performance recording or otherwise wrong. The requested version is not established anywhere in top 5.",
+        "primary_blocker": "bad search candidates",
+        "recommended_route": "targeted_second_search",
+        "recoverability": "CANDIDATE_SET_FAILURE"
+      },
+      "queries": [
+        {
+          "query": "\"Fleetwood Mac\" \"Landslide\" \"2015 Remaster\"",
+          "variant_id": "artist-core-exact-version-v1"
+        },
+        {
+          "query": "\"Landslide\" \"2015 Remaster\" \"Fleetwood Mac\"",
+          "variant_id": "core-version-credited-artists-v1"
+        },
+        {
+          "query": "\"Fleetwood Mac\" \"Landslide - 2015 Remaster\" official audio",
+          "variant_id": "artist-combined-version-official-audio-v1"
+        }
+      ],
+      "stable_track_id": "s5b1c_032",
+      "structured_identity": {
+        "core_title": "Landslide",
+        "credited_artists": [
+          "Fleetwood Mac"
+        ],
+        "exact_version_phrase": "2015 Remaster",
+        "normalized_core_title": "landslide",
+        "primary_artist": "Fleetwood Mac",
+        "version_descriptors": [
+          {
+            "family": "remaster",
+            "qualifier": "2015",
+            "raw": "2015 Remaster"
+          }
+        ]
+      },
+      "target": {
+        "album": "Fleetwood Mac",
+        "artists": [
+          "Fleetwood Mac"
+        ],
+        "duration_ms": 199493,
+        "isrc": null,
+        "release_year": 2015,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_032",
+        "title": "Landslide - 2015 Remaster"
+      }
+    },
+    {
+      "case_rationale": "Slowed target tests target-relative modified-audio semantics against the original hit.",
+      "case_tags": [
+        "slowed",
+        "modified_audio",
+        "original_competition"
+      ],
+      "frozen_diagnostic": {
+        "explanation": "All five results are third-party slowed edits. The nominally matching uploads are 14-19 seconds shorter than the specific 2022 release; the close-duration alternatives add reverb or clean edits. No result establishes the released Slowed Down recording.",
+        "primary_blocker": "bad search candidates",
+        "recommended_route": "targeted_second_search",
+        "recoverability": "CANDIDATE_SET_FAILURE"
+      },
+      "queries": [
+        {
+          "query": "\"Tom Odell\" \"Another Love\" \"Slowed Down\"",
+          "variant_id": "artist-core-exact-version-v1"
+        },
+        {
+          "query": "\"Another Love\" \"Slowed Down\" \"Tom Odell\"",
+          "variant_id": "core-version-credited-artists-v1"
+        },
+        {
+          "query": "\"Tom Odell\" \"Another Love - Slowed Down\" official audio",
+          "variant_id": "artist-combined-version-official-audio-v1"
+        }
+      ],
+      "stable_track_id": "s5b1c_040",
+      "structured_identity": {
+        "core_title": "Another Love",
+        "credited_artists": [
+          "Tom Odell"
+        ],
+        "exact_version_phrase": "Slowed Down",
+        "normalized_core_title": "another love",
+        "primary_artist": "Tom Odell",
+        "version_descriptors": [
+          {
+            "family": "slowed",
+            "qualifier": null,
+            "raw": "Slowed Down"
+          }
+        ]
+      },
+      "target": {
+        "album": "Another Love (Slowed Down)",
+        "artists": [
+          "Tom Odell"
+        ],
+        "duration_ms": 299000,
+        "isrc": null,
+        "release_year": 2022,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_040",
+        "title": "Another Love - Slowed Down"
+      }
+    }
+  ]
+}

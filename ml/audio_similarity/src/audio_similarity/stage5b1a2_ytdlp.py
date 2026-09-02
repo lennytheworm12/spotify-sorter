@@ -349,10 +349,20 @@ class YtDlpDiscoveryAdapter:
         self._sleep = sleep
 
     def discover(self, track: SpotifyTrack, limit: int | None = None) -> YtDlpDiscoveryOutcome:
+        query = build_search_query(track, self.query_config)
+        return self.discover_query(track, query, limit=limit)
+
+    def discover_query(
+        self, track: SpotifyTrack, query: str, *, limit: int | None = None
+    ) -> YtDlpDiscoveryOutcome:
+        """Run the same metadata-only search path with an explicit frozen query."""
+
+        query = query.strip()
+        if not query:
+            raise Stage5B1AValidationError("search query must be non-empty")
         candidate_limit = self.provider.candidate_limit if limit is None else limit
         if not 1 <= candidate_limit <= self.provider.candidate_limit:
             raise Stage5B1AValidationError("candidate limit must be between 1 and 5")
-        query = build_search_query(track, self.query_config)
         expression = self.provider.search_expression(query)
         accumulated_warnings: list[str] = []
         response = None
