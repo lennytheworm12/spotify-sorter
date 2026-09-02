@@ -25,10 +25,51 @@
   ],
   "discovery_sha256": "95bb1ca905a05fcc4167da10e3dfd6cf267600a4dfb1898b491d28ba855e6fb4",
   "features_sha256": "451e72e27c0b52c3b6109f57ea0f5c7a3421271f3283b1f1232082160c37a08c",
+  "human_evaluation": {
+    "balanced_incremental_audited_selection_labels": {
+      "ACCEPTABLE": 11,
+      "IDEAL": 10,
+      "UNCERTAIN": 0,
+      "WRONG": 0
+    },
+    "completed_candidate_judgments": 41,
+    "human_candidate_label_counts": {
+      "ACCEPTABLE": 18,
+      "IDEAL": 22,
+      "UNCERTAIN": 1,
+      "WRONG": 0
+    },
+    "human_review_sha256": "0342c46d4506994c61cf0b3e422f34f6d466bf6297a6b8973fd75f711884b842",
+    "policy_audited_selection_labels": {
+      "POLICY_BALANCED_V1": {
+        "ACCEPTABLE": 11,
+        "IDEAL": 16,
+        "UNCERTAIN": 1,
+        "WRONG": 0
+      },
+      "POLICY_CONSERVATIVE_V1": {
+        "ACCEPTABLE": 1,
+        "IDEAL": 5,
+        "UNCERTAIN": 1,
+        "WRONG": 0
+      }
+    },
+    "policy_unaudited_selection_counts": {
+      "POLICY_BALANCED_V1": 1,
+      "POLICY_CONSERVATIVE_V1": 1
+    },
+    "shared_uncertain_selection": {
+      "candidate_video_id": "q5YJ9JREVRk",
+      "human_note_verbatim": "probably dont pick this candidate due to views ",
+      "stable_track_id": "s5b1c_035"
+    },
+    "status": "STAGE5B1B_CONSERVATIVE_POLICY_VALIDATED"
+  },
   "limitations": [
     "Sol is independent metadata-only evidence, not human ground truth.",
     "The challenge is an intentionally difficult engineering set, not a population sample.",
-    "No final validation verdict is emitted until every targeted human row is labeled."
+    "The targeted audit is not exhaustive: one AUTO_MATCH selection shared by both policies was not human-audited.",
+    "The sole human UNCERTAIN AUTO_MATCH was selected by both policies; the frozen pre-label evaluator still maps any Balanced UNCERTAIN to the Conservative verdict."
   ],
   "manifest_sha256": "e2e9a1ab43f568dd9de853c2964f341ee0d0e2631ca87f732d0d4326ab990f79",
   "policies": {
@@ -64,7 +105,7 @@
   "production_auto_match_activated": false,
   "schema_version": "stage5b1b-fresh-challenge-policy-sol-comparison-v1",
   "sol_evaluations_sha256": "b00ecb7c9ffb668b581e571065235676d62832c868fe6bed26812fbbd30f50ea",
-  "status": "TARGETED_HUMAN_AUDIT_READY",
+  "status": "STAGE5B1B_CONSERVATIVE_POLICY_VALIDATED",
   "targeted_audit": {
     "candidate_count": 41,
     "mandatory_or_suspicious_track_count": 23,

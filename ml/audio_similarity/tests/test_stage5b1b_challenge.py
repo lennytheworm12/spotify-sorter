@@ -288,7 +288,7 @@ def test_final_state_waits_for_labels_then_applies_safety_priority(tmp_path, mon
     assert evaluate_review(config)["status"] == "STAGE5B1B_CONSERVATIVE_POLICY_VALIDATED"
 
 
-def test_committed_fresh_challenge_is_complete_blinded_and_awaiting_human_audit():
+def test_committed_fresh_challenge_is_complete_blinded_and_human_validated():
     config, manifest = inputs()
     discovery = json.loads(config.artifacts["discovery"].read_text())
     decisions = json.loads(config.artifacts["policy_decisions"].read_text())
@@ -323,9 +323,31 @@ def test_committed_fresh_challenge_is_complete_blinded_and_awaiting_human_audit(
     with config.artifacts["human_review"].open(encoding="utf-8", newline="") as handle:
         review_rows = list(csv.DictReader(handle))
     assert len(review_rows) == 41
-    assert not any(row["candidate_review_label"] for row in review_rows)
+    assert sum(row["candidate_review_label"] == "IDEAL" for row in review_rows) == 22
+    assert sum(row["candidate_review_label"] == "ACCEPTABLE" for row in review_rows) == 18
+    assert sum(row["candidate_review_label"] == "UNCERTAIN" for row in review_rows) == 1
+    assert not any(row["candidate_review_label"] == "WRONG" for row in review_rows)
     assert evaluate_review(config) == {
-        "status": "STAGE5B1B_FRESH_CHALLENGE_AWAITING_HUMAN_AUDIT",
+        "status": "STAGE5B1B_CONSERVATIVE_POLICY_VALIDATED",
+        "human_review_sha256": (
+            "0342c46d4506994c61cf0b3e422f34f6d466bf6297a6b8973fd75f711884b842"
+        ),
+        "policy_audited_selection_labels": {
+            "POLICY_BALANCED_V1": {
+                "ACCEPTABLE": 11,
+                "IDEAL": 16,
+                "UNCERTAIN": 1,
+            },
+            "POLICY_CONSERVATIVE_V1": {
+                "ACCEPTABLE": 1,
+                "IDEAL": 5,
+                "UNCERTAIN": 1,
+            },
+        },
+        "policy_unaudited_selection_counts": {
+            "POLICY_BALANCED_V1": 1,
+            "POLICY_CONSERVATIVE_V1": 1,
+        },
         "required": 41,
-        "completed": 0,
+        "completed": 41,
     }

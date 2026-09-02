@@ -51,6 +51,16 @@ def review_store(tmp_path):
     )
     review = tmp_path / "review.csv"
     shutil.copyfile(config.artifacts["human_review"], review)
+    with review.open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    for row in rows:
+        row["candidate_review_label"] = ""
+        row["candidate_note"] = ""
+        row["track_note"] = ""
+    with review.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=REVIEW_COLUMNS, lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(rows)
     return Stage5B1BChallengeReviewStore(
         manifest,
         config.artifacts["audit_queue"],

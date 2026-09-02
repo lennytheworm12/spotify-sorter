@@ -2,12 +2,12 @@
 
 ## Status
 
-`STAGE5B1B_FRESH_CHALLENGE_AWAITING_HUMAN_AUDIT`
+`STAGE5B1B_CONSERVATIVE_POLICY_VALIDATED`
 
 The implementation, frozen discovery, unchanged feature extraction, dual-policy
-execution, blinded Sol review, and targeted-audit selection are complete. No
-policy verdict is emitted until the 41 required candidate judgments are human
-labeled.
+execution, blinded Sol review, and all 41 targeted human judgments are complete.
+The frozen pre-label evaluator selects `POLICY_CONSERVATIVE_V1` as the candidate
+policy for a later acquisition smoke. Production AUTO_MATCH remains inactive.
 
 ## Starting point and freeze boundary
 
@@ -128,9 +128,11 @@ are twelve Balanced/Sol preferred-source disagreements.
   `50fa774766f913786cc5d706d28f42d61a1f64afa76e2a806efcad9525f517d4`
 - Tracks represented: 28
 - Candidate judgments required: 41
-- Completed: 0
+- Completed: 41
 - Review path: `reports/stage5b1b_fresh_challenge/human_review.csv`
-- Initial review SHA-256:
+- Completed review SHA-256:
+  `0342c46d4506994c61cf0b3e422f34f6d466bf6297a6b8973fd75f711884b842`
+- Initial empty-review SHA-256, preserved as historical provenance:
   `3014995a90570f7b61e9dce50d1a25b65fb25225b677acb107bd0ae2795cbe61`
 
 Selection includes the Balanced/Sol-WRONG candidate, all twelve meaningful
@@ -146,23 +148,51 @@ eligibility, Sol labels/reasons, audit reasons, and case rationale.
 
 ## Human evaluation and decision
 
-Pending. `IDEAL` and `ACCEPTABLE` will count as SAFE, `WRONG` as UNSAFE, and
-`UNCERTAIN` as UNRESOLVED. An AUTO_MATCH to human WRONG is the primary failure;
-human UNCERTAIN is reported separately and is not validated-safe evidence.
+`IDEAL` and `ACCEPTABLE` count as SAFE, `WRONG` as UNSAFE, and `UNCERTAIN` as
+UNRESOLVED. The 41 candidate judgments contain 22 IDEAL, 18 ACCEPTABLE, zero
+WRONG, and one UNCERTAIN. Four candidate notes are preserved verbatim in the
+review CSV.
 
-No Balanced or Conservative policy has been validated by this report yet.
-The report must not be converted to a PASS verdict until every targeted row is
-complete and the frozen decision procedure is run.
+Human-audited selected-candidate outcomes were:
+
+| Policy | IDEAL | ACCEPTABLE | WRONG | UNCERTAIN | Selected but unaudited |
+|---|---:|---:|---:|---:|---:|
+| Conservative | 5 | 1 | 0 | 1 | 1 |
+| Balanced | 16 | 11 | 0 | 1 | 1 |
+
+The 21 Balanced-only AUTO_MATCH tracks were all audited: 10 were IDEAL and 11
+were ACCEPTABLE, with zero WRONG and zero UNCERTAIN. Thus the incremental
+Balanced expansion itself produced no known unsafe or unresolved selection in
+this targeted audit.
+
+The sole human UNCERTAIN AUTO_MATCH is `s5b1c_035`, candidate `q5YJ9JREVRk`.
+Both Conservative and Balanced select that same candidate. One additional
+selection shared by both policies (`s5b1c_019`, candidate `kAt6H_JkVxQ`) was not
+in the targeted human queue and remains explicitly unaudited.
+
+The decision function was frozen in commit `d868ce6`, before challenge labels
+were available. It emits the Conservative verdict whenever a Balanced-selected
+candidate is human UNCERTAIN, while Conservative only fails on a human WRONG.
+Applying that unchanged rule yields:
+
+`STAGE5B1B_CONSERVATIVE_POLICY_VALIDATED`
+
+This result is intentionally not post-reveal reinterpreted as Balanced
+validation, even though the only uncertainty is shared and all Balanced-only
+selections were human SAFE. Those facts remain important limitations for the
+next acquisition-smoke design.
 
 ## Boundaries and limitations
 
-- Candidate correctness remains metadata-only until the targeted audit is
-  complete.
+- Candidate correctness remains metadata-only; no audio-equivalence validation
+  was performed.
 - Approximate Spotify-style target durations were frozen before discovery;
   any human-observed metadata issue is validation evidence and must not cause
   an in-place policy or manifest change.
 - The audit is targeted plus deterministic random safety samples, not an
   exhaustive human review or population-precision estimate.
+- One AUTO_MATCH shared by both policies was not included in the targeted human
+  queue; one other shared AUTO_MATCH was human UNCERTAIN.
 - Sol and deterministic policies may share metadata-only failure modes.
 - No challenge-driven rule, threshold, duration band, parser, or source-order
   change is permitted in this validation iteration.
@@ -172,13 +202,15 @@ MuQ calls = 0. Production AUTO_MATCH activation = false.
 
 ## Verification
 
-- Focused fresh-challenge tests: 10 passed.
-- All Stage 5B.1B regressions: 113 passed.
-- Relevant Stage 5A, Stage 5B.1A, Stage 5B.1A2, and Stage 5B.1B tests:
-  203 passed.
-- Full non-heavy `ml/audio_similarity` suite: 650 passed, 12 deselected,
+- Focused fresh-challenge and review-workbench tests: 17 passed.
+- All Stage 5B.1B regressions: 120 passed.
+- Full non-heavy `ml/audio_similarity` suite: 657 passed, 12 deselected,
   0 failures, 0 errors, and 11 pre-existing numerical-library warnings in
-  45.51 seconds.
+  58.23 seconds.
+- Isolated Chromium verification covered desktop and 390-pixel mobile layouts,
+  immediate label autosave, debounced note autosave, reload/resume persistence,
+  progress accounting, deterministic candidate-order blinding, direct YouTube
+  links, export behavior, horizontal overflow, and console errors/warnings.
 - Five-axis review covered correctness, readability, architecture, security,
   and bounded performance. Required findings were resolved by binding the Sol
   runtime to its frozen feature/decision hashes and validating saved Sol and
