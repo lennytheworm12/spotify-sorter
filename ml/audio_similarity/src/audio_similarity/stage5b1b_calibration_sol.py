@@ -81,6 +81,12 @@ def load_calibration_sol_config(path: str | Path) -> CalibrationSolConfig:
     raw = _json_object(config_path)
     if raw.get("schema_version") != CONFIG_SCHEMA_VERSION:
         raise Stage5B1AValidationError("unexpected calibration Sol config schema")
+    if raw.get("experiment_id") != "stage5b1b_partb_policy_calibration":
+        raise Stage5B1AValidationError("unexpected calibration Sol experiment identity")
+    if raw.get("production_auto_match_activated") is not False:
+        raise Stage5B1AValidationError(
+            "calibration config must not activate production AUTO_MATCH"
+        )
     root = config_path.parent.parent.resolve()
     inputs = raw.get("inputs")
     evaluator = raw.get("evaluator")
@@ -106,9 +112,25 @@ def load_calibration_sol_config(path: str | Path) -> CalibrationSolConfig:
     schema, schema_sha = artifact(evaluator, "output_schema")
     payload, payload_sha = artifact(artifacts, "blinded_payload")
     mapping, mapping_sha = artifact(artifacts, "private_mapping")
+    payload_value = _json_object(payload)
+    mapping_value = _json_object(mapping)
+    if mapping_value.get("payload_file_sha256") != payload_sha:
+        raise Stage5B1AValidationError(
+            "private mapping is not bound to blinded payload file"
+        )
+    if mapping_value.get("payload_sha256") != value_sha256(payload_value):
+        raise Stage5B1AValidationError(
+            "private mapping canonical payload identity changed"
+        )
     evaluations = _inside(root, str(artifacts.get("evaluations")), "evaluations")
     if evaluator.get("model") != "gpt-5.6-sol":
         raise Stage5B1AValidationError("calibration evaluator must remain gpt-5.6-sol")
+    if evaluator.get("reasoning_effort") != "high":
+        raise Stage5B1AValidationError(
+            "calibration evaluator reasoning effort changed"
+        )
+    if evaluator.get("prompt_version") != "stage5b1b-calibration-sol-blind-v1":
+        raise Stage5B1AValidationError("calibration evaluator prompt version changed")
     required_true = ("isolated_working_directory", "ignore_user_config", "ignore_rules")
     if any(evaluator.get(name) is not True for name in required_true):
         raise Stage5B1AValidationError("calibration Sol isolation settings changed")
@@ -185,6 +207,17 @@ def build_blinded_payload(
         candidates = row.get("candidates")
         if not isinstance(candidates, list) or not candidates:
             raise Stage5B1AValidationError(f"missing candidates for {stable_id}")
+        video_ids = [str(candidate.get("youtube_video_id") or "") for candidate in candidates]
+        ranks = [candidate.get("rank") for candidate in candidates]
+        if (
+            any(not video_id for video_id in video_ids)
+            or len(video_ids) != len(set(video_ids))
+            or ranks != list(range(1, len(candidates) + 1))
+            or len(candidates) > 5
+        ):
+            raise Stage5B1AValidationError(
+                f"invalid frozen candidate identities for {stable_id}"
+            )
         ordered = sorted(
             candidates,
             key=lambda candidate: _shuffle_key(
@@ -519,6 +552,23 @@ def mapped_sol_judgments(config: CalibrationSolConfig) -> dict[str, Any]:
     _validate_resume(state, config)
     if state.get("status") != "COMPLETE":
         raise Stage5B1AValidationError("calibration Sol evaluation is incomplete")
+    payload = _json_object(config.payload_path)
+    payload_by_id = {row["stable_track_id"]: row for row in payload["tracks"]}
+    if [row.get("stable_track_id") for row in state.get("tracks", [])] != list(
+        payload_by_id
+    ):
+        raise Stage5B1AValidationError(
+            "saved calibration Sol track coverage/order changed"
+        )
+    for result in state["tracks"]:
+        validate_sol_response(
+            {"schema_version": RESPONSE_SCHEMA_VERSION, "tracks": [result]},
+            [payload_by_id[result["stable_track_id"]]],
+        )
+        if result.get("operational", {}).get("forbidden_tool_event_count") != 0:
+            raise Stage5B1AValidationError(
+                "saved calibration Sol output contains tool use"
+            )
     mapping = _json_object(config.mapping_path)
     mappings = {
         row["stable_track_id"]: {
@@ -527,6 +577,8 @@ def mapped_sol_judgments(config: CalibrationSolConfig) -> dict[str, Any]:
         }
         for row in mapping["tracks"]
     }
+    if set(mappings) != set(payload_by_id):
+        raise Stage5B1AValidationError("private mapping track coverage changed")
     tracks = []
     for row in state["tracks"]:
         by_key = mappings[row["stable_track_id"]]

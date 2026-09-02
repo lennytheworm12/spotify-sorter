@@ -28,7 +28,7 @@
   "review_labels_completed": 80,
   "schema_version": "stage5b1b-run-status-v1",
   "stage5b1a2_evidence_checkpoint": "09f8347",
-  "status": "STAGE5B1B_TARGETED_HUMAN_AUDIT_COMPLETE_AWAITING_CALIBRATION",
+  "status": "STAGE5B1B_POLICY_READY_FOR_FRESH_CHALLENGE_VALIDATION",
   "summary": {
     "deduplicated_candidate_video_ids": 248,
     "tracks": 50,
@@ -51,7 +51,18 @@
     "queue_sha256": "3f3868c613099e50a976d83ef5dea343fda0cf06d1bb51662ef0772b3d3193a5",
     "queue_tracks": 37,
     "remaining_queue_candidates": 0,
-    "track_notes_completed": 3
+    "track_notes_completed": 1
+  },
+  "resolver_policy_candidate": {
+    "automatic_track_coverage": 0.28,
+    "known_human_uncertain_auto_match_count": 0,
+    "known_human_wrong_auto_match_count": 0,
+    "match_uncertain_rate": 0.72,
+    "path": "reports/stage5b1b_calibration/resolver_policy_candidate_v1.json",
+    "policy_id": "POLICY_CONSERVATIVE_V1",
+    "production_status": "NOT_PRODUCTION_ACTIVATED",
+    "sha256": "80ef018df79eefea10a3e336968027bc64bdd89c334548a500453a7947f1cbea",
+    "status": "CANDIDATE_POLICY_ONLY"
   },
   "yt_dlp_version": "2026.08.19"
 }

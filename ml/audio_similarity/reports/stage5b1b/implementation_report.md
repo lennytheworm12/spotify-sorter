@@ -258,7 +258,7 @@ Artifacts:
 The blinded targeted audit was completed across all 80 queue-required
 candidate judgments on 37 tracks. The completed label distribution is 32
 `IDEAL`, 28 `ACCEPTABLE`, 5 `WRONG`, and 15 `UNCERTAIN`. Fourteen candidate
-notes and three track notes were preserved. No candidate outside the frozen
+notes and one track-level note were preserved. No candidate outside the frozen
 audit queue was labeled, and all 168 intentionally omitted candidate rows
 remain blank.
 

@@ -84,11 +84,22 @@ def test_committed_heldout_features_and_targeted_audit_are_complete_without_thre
         if row["candidate_review_label"]
     }
     assert labeled == required
-    assert status["status"] == "STAGE5B1B_TARGETED_HUMAN_AUDIT_COMPLETE_AWAITING_CALIBRATION"
+    assert status["status"] == "STAGE5B1B_POLICY_READY_FOR_FRESH_CHALLENGE_VALIDATION"
     assert status["review_labels_completed"] == 80
     assert status["targeted_human_audit"]["remaining_queue_candidates"] == 0
     assert status["final_auto_match_threshold"] is None
     assert status["heldout_labels_required_before_calibration"] is False
+    assert status["resolver_policy_candidate"] == {
+        "automatic_track_coverage": 0.28,
+        "known_human_uncertain_auto_match_count": 0,
+        "known_human_wrong_auto_match_count": 0,
+        "match_uncertain_rate": 0.72,
+        "path": "reports/stage5b1b_calibration/resolver_policy_candidate_v1.json",
+        "policy_id": "POLICY_CONSERVATIVE_V1",
+        "production_status": "NOT_PRODUCTION_ACTIVATED",
+        "sha256": "80ef018df79eefea10a3e336968027bc64bdd89c334548a500453a7947f1cbea",
+        "status": "CANDIDATE_POLICY_ONLY",
+    }
     serialized = json.dumps(features)
     assert "auto_match_score" not in serialized
     assert "confidence_threshold" not in serialized
