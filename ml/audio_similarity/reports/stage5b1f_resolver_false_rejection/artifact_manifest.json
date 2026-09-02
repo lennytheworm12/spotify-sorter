@@ -1,0 +1,102 @@
+{
+  "artifacts": {
+    "candidate_pairs": {
+      "path": "reports/stage5b1f_resolver_false_rejection/candidate_pair_comparisons.json",
+      "sha256": "4fc09f9c2b03dc980a32d3e361ea5fbbe4530f7fbaebc445d9987201a3df3c5e",
+      "size_bytes": 80326
+    },
+    "false_rejections": {
+      "path": "reports/stage5b1f_resolver_false_rejection/false_rejection_cases.json",
+      "sha256": "2f945136db21e011994ccc75c5e333cea5a518a355801f5db9cbc0f0f7452645",
+      "size_bytes": 6481
+    },
+    "remaining_tail": {
+      "path": "reports/stage5b1f_resolver_false_rejection/remaining_tail_reclassification.json",
+      "sha256": "f0025d010c4bbd61a01b4da7a2d033721c9add960b91ddd185505cb9d6bc3b11",
+      "size_bytes": 279928
+    },
+    "report": {
+      "path": "reports/stage5b1f_resolver_false_rejection/resolver_false_rejection_report.md",
+      "sha256": "4fce34f87152131c8092849e76d2391976f516462947293bde65b2ae730f13a5",
+      "size_bytes": 7604
+    }
+  },
+  "config": {
+    "path": "configs/stage5b1f_resolver_false_rejection.json",
+    "sha256": "df453ba9f7e4546215cb7bf9affb243b2a070b2b21bcc99c026e6792465c32e9"
+  },
+  "frozen_inputs": {
+    "candidate_pool_comparison": {
+      "path": "reports/stage5b1e_natural_query_evaluation/candidate_pool_comparison.json",
+      "sha256": "8fde8dc0f193545a892aad11a23bae19d19074f5273ddb3d509a8aec67cc9a7e",
+      "size_bytes": 470941
+    },
+    "challenge_human_review": {
+      "path": "reports/stage5b1b_fresh_challenge/human_review.csv",
+      "sha256": "0342c46d4506994c61cf0b3e422f34f6d466bf6297a6b8973fd75f711884b842",
+      "size_bytes": 16528
+    },
+    "challenge_manifest": {
+      "path": "reports/stage5b1b_fresh_challenge/challenge_tracks.json",
+      "sha256": "e2e9a1ab43f568dd9de853c2964f341ee0d0e2631ca87f732d0d4326ab990f79",
+      "size_bytes": 22137
+    },
+    "challenge_sol_evaluations": {
+      "path": "reports/stage5b1b_fresh_challenge/sol_evaluations.json",
+      "sha256": "b00ecb7c9ffb668b581e571065235676d62832c868fe6bed26812fbbd30f50ea",
+      "size_bytes": 158168
+    },
+    "challenge_sol_private_mapping": {
+      "path": "reports/stage5b1b_fresh_challenge/blinded_sol_private_mapping.json",
+      "sha256": "6f7991fba8f4c190f20b0214f03488c3e6bc523b9507704c278a4858d3e622bc",
+      "size_bytes": 40524
+    },
+    "frozen_policy_definitions": {
+      "path": "reports/stage5b1b_fresh_challenge/frozen_policy_definitions.json",
+      "sha256": "bbc527aa9a734b0aebbfafcb2775b479541a5e0248503627c14b8f429f708d5a",
+      "size_bytes": 2561
+    },
+    "query_discovery": {
+      "path": "reports/stage5b1e_natural_query_evaluation/query_discovery_results.json",
+      "sha256": "2fe058a4305daa95059741b7876b88af3eaf7d0f24f2852299a4b58dffea2a2f",
+      "size_bytes": 1183095
+    },
+    "query_strategies": {
+      "path": "reports/stage5b1e_natural_query_evaluation/query_strategies.json",
+      "sha256": "0e473b03bbde5cd3295f04601183b3497442ee4d35b2a1bdd3e5de777ba8859f",
+      "size_bytes": 48075
+    },
+    "resolver_replays": {
+      "path": "reports/stage5b1e_natural_query_evaluation/resolver_replays.json",
+      "sha256": "22e586e0dd56880225e1958c651de72a73f8b4dea593e04eb14e08d38de10da3",
+      "size_bytes": 2118940
+    },
+    "stage5b1e_human_review": {
+      "path": "reports/stage5b1e_natural_query_evaluation/human_review.csv",
+      "sha256": "0f28d59983ccbb92c6f3882fe063e4285e065a9acc68becd5261286760a551aa",
+      "size_bytes": 5734
+    },
+    "strong_metadata_human_audit": {
+      "path": "reports/stage5b1c_c_strong_metadata/strong_metadata_human_audit_results.json",
+      "sha256": "6f3adbf231039a5609de501292aef0f8c62c88ecba81ca38df638aef2e7f1ed4",
+      "size_bytes": 2091
+    },
+    "tier2_human_audit": {
+      "path": "reports/stage5b1c_b/tier2_human_audit_results.json",
+      "sha256": "26fbfc59fc7617fd54377fde099cabf9170f2c55946bd3046839ea4e7e8edcb5",
+      "size_bytes": 4139
+    }
+  },
+  "schema_version": "stage5b1f-artifact-manifest-v1",
+  "scope_guards": {
+    "audio_downloads": 0,
+    "diagnostic_only": true,
+    "discovery_changed": false,
+    "human_labels_changed": false,
+    "resolver_changed": false,
+    "sol_runs": 0,
+    "video_downloads": 0,
+    "yt_dlp_searches": 0
+  },
+  "status": "STAGE5B1F_RESOLVER_FALSE_REJECTION_DIAGNOSTIC_COMPLETE"
+}
