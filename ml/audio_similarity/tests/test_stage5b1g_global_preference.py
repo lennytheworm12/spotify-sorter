@@ -202,6 +202,32 @@ def test_explicit_recording_conflict_cannot_be_rescued(changes: dict) -> None:
     assert not feature["eligibility"]["eligible"]
 
 
+@pytest.mark.parametrize("family", ["remix", "remaster"])
+def test_wrong_remix_or_remaster_remains_rejected(family: str) -> None:
+    snapshot = _snapshot(delta=1, versioned=True, version_conflict=True, channel_match=True)
+    snapshot["version_evidence"]["relationships"][0]["family"] = family
+    feature = build_global_candidate_evidence(snapshot)
+    assert "EXPLICIT_VERSION_CONFLICT" in feature["hard_conflicts"]
+    assert not feature["eligibility"]["eligible"]
+
+
+@pytest.mark.parametrize(
+    "family",
+    ["cover", "live", "acoustic", "slowed", "reverb", "sped_up", "nightcore", "bass_boosted", "mashup"],
+)
+def test_unrequested_recording_modifications_remain_rejected(family: str) -> None:
+    snapshot = _snapshot(delta=1, channel_match=True)
+    snapshot["modification_evidence"] = {
+        "target_families": [],
+        "candidate_families": [family],
+        "unrequested_candidate_families": [family],
+        "explicit_conflict": True,
+    }
+    feature = build_global_candidate_evidence(snapshot)
+    assert "EXPLICIT_UNREQUESTED_MODIFICATION_CONFLICT" in feature["hard_conflicts"]
+    assert not feature["eligibility"]["eligible"]
+
+
 def test_unrequested_featured_performer_is_a_hard_conflict() -> None:
     feature = build_global_candidate_evidence(
         _snapshot(title="Artist - Song (feat. Different Performer)", channel_match=True)

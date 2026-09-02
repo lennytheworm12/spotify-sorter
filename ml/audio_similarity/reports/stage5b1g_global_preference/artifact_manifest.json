@@ -1,0 +1,98 @@
+{
+  "artifacts": {
+    "candidate_features": {
+      "path": "reports/stage5b1g_global_preference/global_preference_candidate_features.json",
+      "sha256": "4626ad512ee6d75a66433bbd32b0ec02dc2fdc2532355022dc2b1d5f4e3c0393",
+      "size_bytes": 3537306
+    },
+    "changed_selections": {
+      "path": "reports/stage5b1g_global_preference/changed_selection_comparisons.json",
+      "sha256": "3f5a988c5c2f54ec546c6023a22d1d9dca709ae9e36f9e6457ea6e56997de488",
+      "size_bytes": 285180
+    },
+    "decisions": {
+      "path": "reports/stage5b1g_global_preference/global_preference_decisions.json",
+      "sha256": "c5777ccb7462e2594e0d04df818a26c73fead0e0797f93faf406fd60150ee242",
+      "size_bytes": 523758
+    },
+    "duration_analysis": {
+      "path": "reports/stage5b1g_global_preference/duration_band_analysis.json",
+      "sha256": "23bc0a94347fb67aaaa4ae1fc77d5e182d0b0ea7e1c731bcdfe0c97a49aaec7d",
+      "size_bytes": 2695
+    },
+    "human_audit_queue": {
+      "path": "reports/stage5b1g_global_preference/human_audit_queue.json",
+      "sha256": "afb5e35778b7f813021d6151403199a50990cc5e54c22b873b03854cca85d4b7",
+      "size_bytes": 3101
+    },
+    "human_review_csv": {
+      "path": "reports/stage5b1g_global_preference/human_review.csv",
+      "sha256": "e66e8821881c4a62d55debeb8d984adc95ab1bb2e60415fefffdefa55f5b3bd1",
+      "size_bytes": 4338
+    },
+    "remaining_tail": {
+      "path": "reports/stage5b1g_global_preference/remaining_tail_analysis.json",
+      "sha256": "48cd4d66deec13cb77c7dff0f630cd63e01bb9fc9a09434587a3f4e68a958be2",
+      "size_bytes": 407093
+    },
+    "report": {
+      "path": "reports/stage5b1g_global_preference/global_preference_report.md",
+      "sha256": "74155ccb1e3daea25797d98a347d5753968219d355c73aa0a81a48589ea9fda7",
+      "size_bytes": 7771
+    }
+  },
+  "config": {
+    "path": "configs/stage5b1g_global_preference.json",
+    "sha256": "f9df70579e6bc60caf27bb2e419209e8771f0a6c22d17c09086db09b930c2c24"
+  },
+  "frozen_inputs": {
+    "stage5b1f_artifact_manifest": {
+      "path": "reports/stage5b1f_resolver_false_rejection/artifact_manifest.json",
+      "sha256": "b14c02af5059b3539e827ea692f66d6f50601a30187d58bfce97f2b8979a7361",
+      "size_bytes": 4258
+    },
+    "stage5b1f_candidate_pairs": {
+      "path": "reports/stage5b1f_resolver_false_rejection/candidate_pair_comparisons.json",
+      "sha256": "4fc09f9c2b03dc980a32d3e361ea5fbbe4530f7fbaebc445d9987201a3df3c5e",
+      "size_bytes": 80326
+    },
+    "stage5b1f_config": {
+      "path": "configs/stage5b1f_resolver_false_rejection.json",
+      "sha256": "df453ba9f7e4546215cb7bf9affb243b2a070b2b21bcc99c026e6792465c32e9",
+      "size_bytes": 3201
+    },
+    "stage5b1f_false_rejections": {
+      "path": "reports/stage5b1f_resolver_false_rejection/false_rejection_cases.json",
+      "sha256": "2f945136db21e011994ccc75c5e333cea5a518a355801f5db9cbc0f0f7452645",
+      "size_bytes": 6481
+    },
+    "stage5b1f_remaining_tail": {
+      "path": "reports/stage5b1f_resolver_false_rejection/remaining_tail_reclassification.json",
+      "sha256": "f0025d010c4bbd61a01b4da7a2d033721c9add960b91ddd185505cb9d6bc3b11",
+      "size_bytes": 279928
+    },
+    "stage5b1f_report": {
+      "path": "reports/stage5b1f_resolver_false_rejection/resolver_false_rejection_report.md",
+      "sha256": "4fce34f87152131c8092849e76d2391976f516462947293bde65b2ae730f13a5",
+      "size_bytes": 7604
+    }
+  },
+  "schema_version": "stage5b1g-artifact-manifest-v1",
+  "scope_guards": {
+    "audio_downloads": 0,
+    "clap_calls": 0,
+    "duration_max_seconds": 20.0,
+    "explicit_recording_conflicts_are_hard_rejections": true,
+    "historical_resolver_changed": false,
+    "human_labels_changed": false,
+    "muq_calls": 0,
+    "new_youtube_searches": 0,
+    "production_activated": false,
+    "q0_query_changed": false,
+    "sol_runs": 0,
+    "stage5a_calls": 0,
+    "tier_is_preference_signal": false,
+    "video_downloads": 0
+  },
+  "status": "STAGE5B1G_AWAITING_HUMAN_REVIEW"
+}

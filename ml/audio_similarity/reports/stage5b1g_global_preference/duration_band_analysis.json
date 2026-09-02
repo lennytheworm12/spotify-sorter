@@ -1,0 +1,96 @@
+{
+  "duration_bands_seconds": {
+    "close_max": 7.0,
+    "extended_1_max": 12.0,
+    "extended_2_max": 16.0,
+    "extended_3_max": 20.0,
+    "very_close_max": 2.0
+  },
+  "rows": [
+    {
+      "bucket": "DURATION_VERY_CLOSE",
+      "candidates_considered": 82,
+      "candidates_eligible": 64,
+      "candidates_selected": 28,
+      "selected_human_label_counts": {
+        "ACCEPTABLE": 6,
+        "IDEAL": 19,
+        "UNCERTAIN": 1,
+        "UNREVIEWED": 2
+      },
+      "selected_human_safe_count": 25,
+      "selected_human_uncertain_count": 1,
+      "selected_human_wrong_count": 0
+    },
+    {
+      "bucket": "DURATION_CLOSE",
+      "candidates_considered": 50,
+      "candidates_eligible": 38,
+      "candidates_selected": 12,
+      "selected_human_label_counts": {
+        "ACCEPTABLE": 3,
+        "IDEAL": 5,
+        "UNREVIEWED": 4
+      },
+      "selected_human_safe_count": 8,
+      "selected_human_uncertain_count": 0,
+      "selected_human_wrong_count": 0
+    },
+    {
+      "bucket": "DURATION_EXTENDED_1",
+      "candidates_considered": 11,
+      "candidates_eligible": 1,
+      "candidates_selected": 0,
+      "selected_human_label_counts": {},
+      "selected_human_safe_count": 0,
+      "selected_human_uncertain_count": 0,
+      "selected_human_wrong_count": 0
+    },
+    {
+      "bucket": "DURATION_EXTENDED_2",
+      "candidates_considered": 14,
+      "candidates_eligible": 3,
+      "candidates_selected": 1,
+      "selected_human_label_counts": {
+        "IDEAL": 1
+      },
+      "selected_human_safe_count": 1,
+      "selected_human_uncertain_count": 0,
+      "selected_human_wrong_count": 0
+    },
+    {
+      "bucket": "DURATION_EXTENDED_3",
+      "candidates_considered": 6,
+      "candidates_eligible": 1,
+      "candidates_selected": 1,
+      "selected_human_label_counts": {
+        "UNREVIEWED": 1
+      },
+      "selected_human_safe_count": 0,
+      "selected_human_uncertain_count": 0,
+      "selected_human_wrong_count": 0
+    },
+    {
+      "bucket": "DURATION_TOO_FAR",
+      "candidates_considered": 72,
+      "candidates_eligible": 0,
+      "candidates_selected": 0,
+      "selected_human_label_counts": {},
+      "selected_human_safe_count": 0,
+      "selected_human_uncertain_count": 0,
+      "selected_human_wrong_count": 0
+    },
+    {
+      "bucket": "DURATION_UNKNOWN",
+      "candidates_considered": 0,
+      "candidates_eligible": 0,
+      "candidates_selected": 0,
+      "selected_human_label_counts": {},
+      "selected_human_safe_count": 0,
+      "selected_human_uncertain_count": 0,
+      "selected_human_wrong_count": 0
+    }
+  ],
+  "schema_version": "stage5b1g-duration-band-analysis-v1",
+  "status": "STAGE5B1G_AWAITING_HUMAN_REVIEW"
+}
