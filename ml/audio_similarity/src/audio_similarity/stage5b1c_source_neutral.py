@@ -14,6 +14,7 @@ from typing import Any
 
 from .stage5b1a_models import Stage5B1AValidationError, file_sha256
 from .stage5b1b_artifacts import atomic_json
+from .stage5b1b_challenge import load_challenge_config
 from .stage5b1b_resolver import AUTO_MATCH, MATCH_UNCERTAIN
 from .stage5b1c_tier2 import (
     FROZEN_BALANCED_AUTO_MATCH_COUNT,
@@ -200,7 +201,9 @@ def extract_source_neutral_track(track_row: dict[str, Any]) -> dict[str, Any]:
 def _source_neutral_ordering_key(item: dict[str, Any]) -> tuple[Any, ...]:
     # Preserve the frozen 1C-A ordering so this experiment changes eligibility,
     # not the downstream ranking hierarchy.
-    return _ordering_key({"candidate": item["candidate"], "features": item["tier2a_features"]})
+    return _ordering_key(
+        {"candidate": item["candidate"], "features": item["tier2a_features"]}
+    )
 
 
 def resolve_source_neutral_track(track_row: dict[str, Any]) -> dict[str, Any]:
@@ -303,7 +306,7 @@ def evaluate_source_neutral_challenge(
         }
         for row in attempted
     ]
-    report_dir = config_path.parent.parent / "reports" / "stage5b1b_fresh_challenge"
+    report_dir = load_challenge_config(config_path).artifacts["features"].parent
     sol = _mapped_sol(report_dir)
     human = _human_labels(report_dir)
     selected = []

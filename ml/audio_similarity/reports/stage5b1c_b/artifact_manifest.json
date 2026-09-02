@@ -1,0 +1,34 @@
+{
+  "schema_version": "stage5b1c-source-neutral-artifact-manifest-v1",
+  "experiment": "Stage 5B.1C-B source-neutral candidate resolution",
+  "starting_commit": "e223b9734a7f4d009f7b301283e94e53dde04918",
+  "implementation_checkpoint_commit": "ba50f749a1a8b6c52a690f5c6009315abc400f4a",
+  "frozen_inputs": {
+    "stage5b1c_a/artifact_manifest.json": "c0b87d9a32d87dca1a6bc3bedbb32187c7cd962545433314f4dd08db330f6bb4",
+    "stage5b1c_a/tier2_candidate_features.json": "258accdc9a2db9b9c8a5c5f3dd3808539983f6aa6c2a03cee028315687b5cf68",
+    "stage5b1c_a/tier2_decisions.json": "6b7a987c38294717296f05086186047af6085c2a75a206d0b4595b6100c2304d"
+  },
+  "outputs": {
+    "source_neutral_candidate_features.json": "f319e4d5288405ba6abdd3c2bde65d56ab429410d2f2a41d185c4d0457a97596",
+    "source_neutral_decisions.json": "67caf7cd35574bb75271e7950f4b5a105c22425804692073f0c630caf68c5eb3",
+    "source_neutral_report.md": "ba4dd6f04ad05e988fb543b034507b15a8d773aaf7591065adc6ab2b9f30a673"
+  },
+  "implementation": {
+    "src/audio_similarity/stage5b1c_source_neutral.py": "fdc924d064a35984ad8f55921d279bf14ef052b570ae5acd10a4dee5ce42a176",
+    "src/audio_similarity/cli/stage5b1c_source_neutral.py": "7b1be66e0bdf160b84c1fe09484b874e5f06eb24d378838673093061ac2808b0",
+    "tests/test_stage5b1c_source_neutral.py": "efc35f47a8d23f2d3a115abda0f2cac2cd980fff87c37db4b7cb512d3e25c4f8"
+  },
+  "tests": {
+    "focused": "16 passed",
+    "stage5a_stage5b_regressions": "246 passed",
+    "full_non_heavy": "693 passed, 12 deselected"
+  },
+  "scope": {
+    "network_calls": 0,
+    "audio_downloads": 0,
+    "video_downloads": 0,
+    "stage5a_calls": 0,
+    "clap_calls": 0,
+    "muq_calls": 0
+  }
+}

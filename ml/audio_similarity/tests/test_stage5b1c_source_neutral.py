@@ -100,6 +100,7 @@ def test_weak_identity_other_candidate_does_not_pass():
         ("Hello", "Adele - Hello (Slowed + Reverb)", "version conflict"),
         ("Hello", "Adele - Hello (Nightcore)", "version conflict"),
         ("Hello", "Adele - Hello (Live)", "version conflict"),
+        ("Hello", "Adele - Hello x Hotline Bling (Mashup)", "title"),
     ],
 )
 def test_recording_conflicts_remain_hard_rejections(
