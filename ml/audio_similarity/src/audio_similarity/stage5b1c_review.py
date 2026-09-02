@@ -4,6 +4,7 @@ from __future__ import annotations
 import csv
 import json
 import os
+from collections import Counter
 from pathlib import Path
 from typing import Any
 
@@ -19,12 +20,17 @@ from .stage5b1b_challenge import (
 from .stage5b1b_challenge_audit import (
     QUEUE_SCHEMA_VERSION,
     REVIEW_COLUMNS,
+    REVIEW_LABELS,
     REVIEW_SCHEMA_VERSION,
 )
+from .stage5b1b_challenge_review_store import MAX_NOTE_LENGTH
 
 
 TIER2_REVIEW_QUEUE_STATUS = "AWAITING_TIER2_HUMAN_AUDIT"
 TIER2_REVIEW_SCHEMA_VERSION = "stage5b1c-tier2-human-audit-contract-v1"
+TIER2_REVIEW_RESULTS_SCHEMA_VERSION = "stage5b1c-tier2-human-audit-results-v1"
+FROZEN_CHALLENGE_TRACK_COUNT = 50
+FROZEN_BALANCED_AUTO_MATCH_COUNT = 29
 FROZEN_TIER2A_DECISIONS_SHA256 = (
     "6b7a987c38294717296f05086186047af6085c2a75a206d0b4595b6100c2304d"
 )
@@ -217,3 +223,144 @@ def write_tier2_review_artifacts(
         _atomic_review_csv(review_path, rows)
     atomic_json(queue_path, queue)
     return queue, rows
+
+
+def evaluate_tier2_review(
+    *,
+    config_path: Path,
+    tier2a_decisions_path: Path,
+    source_neutral_decisions_path: Path,
+    queue_path: Path,
+    review_path: Path,
+) -> dict[str, Any]:
+    """Validate reviewer-owned fields and summarize Tier-2 selection safety."""
+
+    config = load_challenge_config(config_path)
+    manifest = load_challenge_manifest(
+        config.manifest_path, expected_sha256=config.manifest_sha256
+    )
+    expected_queue = build_tier2_review_queue(
+        config,
+        manifest,
+        tier2a_decisions_path=tier2a_decisions_path,
+        source_neutral_decisions_path=source_neutral_decisions_path,
+    )
+    queue = _json_object(queue_path)
+    if queue != expected_queue:
+        raise Stage5B1AValidationError("Tier-2 human-audit queue changed")
+    expected_rows = tier2_review_rows(config, manifest, queue)
+    with review_path.open(encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        if reader.fieldnames != REVIEW_COLUMNS:
+            raise Stage5B1AValidationError("unexpected Tier-2 human-review CSV columns")
+        rows = list(reader)
+    if len(rows) != len(expected_rows):
+        raise Stage5B1AValidationError("Tier-2 human-review row count changed")
+
+    reviewer_fields = {"candidate_review_label", "candidate_note", "track_note"}
+    stage_by_id = {
+        case["stable_track_id"]: (
+            "STAGE5B1C_A_NORMALIZATION"
+            if case["selection_reasons"] == ["TIER2A_NORMALIZATION_RECOVERY"]
+            else "STAGE5B1C_B_SOURCE_NEUTRAL"
+        )
+        for case in queue["cases"]
+    }
+    judgments: list[dict[str, Any]] = []
+    for row, expected in zip(rows, expected_rows):
+        for name in REVIEW_COLUMNS:
+            if name not in reviewer_fields and row[name] != str(expected[name]):
+                raise Stage5B1AValidationError(
+                    f"Tier-2 review metadata changed for {row.get('stable_track_id')}:{name}"
+                )
+        label = row["candidate_review_label"].strip().upper()
+        if label not in REVIEW_LABELS:
+            raise Stage5B1AValidationError(f"invalid Tier-2 human-review label: {label}")
+        if (
+            len(row["candidate_note"]) > MAX_NOTE_LENGTH
+            or len(row["track_note"]) > MAX_NOTE_LENGTH
+        ):
+            raise Stage5B1AValidationError("Tier-2 human-review note exceeds maximum length")
+        judgments.append(
+            {
+                "stable_track_id": row["stable_track_id"],
+                "candidate_video_id": row["candidate_video_id"],
+                "tier2_stage": stage_by_id[row["stable_track_id"]],
+                "human_label": label,
+                "safety_class": (
+                    "SAFE"
+                    if label in {"IDEAL", "ACCEPTABLE"}
+                    else "UNSAFE"
+                    if label == "WRONG"
+                    else "UNRESOLVED"
+                ),
+                "candidate_note_verbatim": row["candidate_note"],
+                "track_note_verbatim": row["track_note"],
+            }
+        )
+
+    label_counts = Counter(row["human_label"] or "BLANK" for row in judgments)
+    reviewed = sum(row["human_label"] != "" for row in judgments)
+    safe = sum(row["safety_class"] == "SAFE" for row in judgments)
+    wrong = label_counts["WRONG"]
+    uncertain = label_counts["UNCERTAIN"]
+    complete = reviewed == len(judgments)
+    if not complete:
+        status = "STAGE5B1C_TIER2_HUMAN_AUDIT_INCOMPLETE"
+        recommendation = "COMPLETE_REMAINING_HUMAN_REVIEW"
+    elif wrong or uncertain:
+        status = "STAGE5B1C_TIER2_HUMAN_AUDIT_REQUIRES_RESOLVER_REVIEW"
+        recommendation = "DO_NOT_ADVANCE_UNREVIEWED_TIER2_POLICY"
+    else:
+        status = "STAGE5B1C_TIER2_HUMAN_AUDIT_SAFETY_HOLDS"
+        recommendation = "PROCEED_TO_STAGE5B1C_C_DIAGNOSTIC"
+
+    stage_counts: dict[str, Counter[str]] = {}
+    for stage in ("STAGE5B1C_A_NORMALIZATION", "STAGE5B1C_B_SOURCE_NEUTRAL"):
+        stage_counts[stage] = Counter(
+            row["human_label"] or "BLANK"
+            for row in judgments
+            if row["tier2_stage"] == stage
+        )
+    combined_auto_match_count = FROZEN_BALANCED_AUTO_MATCH_COUNT + len(judgments)
+    return {
+        "schema_version": TIER2_REVIEW_RESULTS_SCHEMA_VERSION,
+        "status": status,
+        "recommendation": recommendation,
+        "review_sha256": file_sha256(review_path),
+        "queue_sha256": file_sha256(queue_path),
+        "summary": {
+            "required_judgments": len(judgments),
+            "reviewed_judgments": reviewed,
+            "remaining_judgments": len(judgments) - reviewed,
+            "ideal_count": label_counts["IDEAL"],
+            "acceptable_count": label_counts["ACCEPTABLE"],
+            "wrong_count": wrong,
+            "uncertain_count": uncertain,
+            "safe_count": safe,
+            "safe_rate_among_reviewed": safe / reviewed if reviewed else None,
+            "tier1_plus_tier2_auto_match_count": combined_auto_match_count,
+            "tier1_plus_tier2_coverage": (
+                combined_auto_match_count / FROZEN_CHALLENGE_TRACK_COUNT
+            ),
+        },
+        "stage_label_counts": {
+            stage: dict(sorted(counts.items())) for stage, counts in stage_counts.items()
+        },
+        "judgments": judgments,
+        "scope": {
+            "human_validates_only_the_11_incremental_tier2_selections": True,
+            "does_not_establish_population_precision": True,
+            "production_auto_match_activated": False,
+        },
+    }
+
+
+def write_tier2_review_results(
+    *,
+    output_path: Path,
+    **evaluation_paths: Path,
+) -> dict[str, Any]:
+    results = evaluate_tier2_review(**evaluation_paths)
+    atomic_json(output_path, results)
+    return results
