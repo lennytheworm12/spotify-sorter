@@ -80,6 +80,12 @@ def test_featured_performer_markers_preserve_explicit_credits(marker):
     assert parsed.normalized_core_title == "taki taki"
 
 
+def test_featured_credit_in_track_title_is_not_recording_identity():
+    target = parse_tier2_title("Song (feat. Guest)", candidate=False)
+    candidate = parse_tier2_title("Artist - Song", expected_artists=("Artist",), candidate=True)
+    assert target.normalized_core_title == candidate.normalized_core_title == "song"
+
+
 def test_live_venue_year_formatting_is_preserved_and_equivalent():
     target = "Free Fallin' - Live at the Nokia Theatre, Los Angeles, CA - December 2007"
     candidate = "Free Fallin' (Live at the Nokia Theatre, Los Angeles, CA - December 2007)"

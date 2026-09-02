@@ -137,12 +137,10 @@ def _performer_evidence(
     conflicting_prefix = bool(
         prefix
         and suffix_matches
-        and not any(normalize_performer(artist) in performer_credit_aliases(prefix) for artist in track.artists)
+        and not any(_contains_performer(prefix, artist) for artist in track.artists)
     )
     cover_signal = bool(_COVER.search(title))
-    explicit_conflict = conflicting_prefix or (
-        cover_signal and not any(_contains_performer(title, artist) for artist in track.artists)
-    )
+    explicit_conflict = conflicting_prefix or cover_signal
     primary = track.artists[0]
     primary_match = any(item["performer"] == primary for item in matches)
     return {
@@ -346,6 +344,15 @@ def resolve_tier2_track(track_row: dict[str, Any]) -> dict[str, Any]:
         }
         (excluded if reasons else accepted).append(evidence)
     accepted.sort(key=_ordering_key)
+    public_excluded = [
+        {
+            "video_id": item["video_id"],
+            "candidate_rank": item["candidate_rank"],
+            "title": item["title"],
+            "reasons": item["reasons"],
+        }
+        for item in excluded
+    ]
     if not accepted:
         return {
             "status": MATCH_UNCERTAIN,
@@ -354,7 +361,7 @@ def resolve_tier2_track(track_row: dict[str, Any]) -> dict[str, Any]:
             "selected_candidate_rank": None,
             "ranked_plausible_candidates": [],
             "uncertainty_reason": "no candidate satisfies Tier-2 normalization/evidence-fusion safety gates",
-            "excluded_candidates": excluded,
+            "excluded_candidates": public_excluded,
         }
     selected = accepted[0]
     before = selected["features"]["tier1_before"]
@@ -375,9 +382,17 @@ def resolve_tier2_track(track_row: dict[str, Any]) -> dict[str, Any]:
             "normalization/fusion; frozen Balanced source and duration gates also pass"
         ),
         "recovery_evidence": recovered,
-        "evidence_summary": selected["features"],
+        "evidence_summary": {
+            "title": selected["features"]["title"],
+            "performers": selected["features"]["performers"],
+            "versions": selected["features"]["versions"],
+            "duration": selected["features"]["duration"],
+            "source": selected["features"]["source"],
+            "weak_evidence": selected["features"]["weak_evidence"],
+            "tier1_before": selected["features"]["tier1_before"],
+        },
         "ranked_plausible_candidates": [item["video_id"] for item in accepted],
-        "excluded_candidates": excluded,
+        "excluded_candidates": public_excluded,
     }
 
 

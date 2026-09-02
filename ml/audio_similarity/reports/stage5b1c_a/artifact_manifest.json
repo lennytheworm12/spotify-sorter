@@ -1,0 +1,64 @@
+{
+  "schema_version": "stage5b1c-a-artifact-manifest-v1",
+  "experiment_id": "stage5b1c_a_tier2_metadata_normalization_v1",
+  "status": "STAGE5B1C_A_NORMALIZATION_PROCEED",
+  "implementation_checkpoint": "e3c9504",
+  "branch": "ml/stage5b1c-a-tier2-normalization",
+  "production_auto_match_activated": false,
+  "frozen_balanced_regression": {
+    "exact_decision_replay": true,
+    "auto_match_count": 29,
+    "match_uncertain_count": 21
+  },
+  "tier2_result": {
+    "attempted_track_count": 21,
+    "auto_match_count": 6,
+    "match_uncertain_count": 15,
+    "tier1_plus_tier2_auto_match_count": 35,
+    "tier1_plus_tier2_coverage": 0.7,
+    "sol_label_counts": {
+      "ACCEPTABLE": 3,
+      "IDEAL": 3
+    },
+    "human_validated_selection_count": 0
+  },
+  "frozen_input_sha256": {
+    "blinded_sol_private_mapping.json": "6f7991fba8f4c190f20b0214f03488c3e6bc523b9507704c278a4858d3e622bc",
+    "challenge_candidate_features.json": "451e72e27c0b52c3b6109f57ea0f5c7a3421271f3283b1f1232082160c37a08c",
+    "challenge_policy_decisions.json": "58181c40bd54a8d4fabbc8d627ddaee6ccf7b5812a17331fe9c8d6600357fe87",
+    "challenge_tracks.json": "e2e9a1ab43f568dd9de853c2964f341ee0d0e2631ca87f732d0d4326ab990f79",
+    "challenge_ytdlp_discovery.json": "95bb1ca905a05fcc4167da10e3dfd6cf267600a4dfb1898b491d28ba855e6fb4",
+    "frozen_policy_definitions.json": "bbc527aa9a734b0aebbfafcb2775b479541a5e0248503627c14b8f429f708d5a",
+    "human_review.csv": "0342c46d4506994c61cf0b3e422f34f6d466bf6297a6b8973fd75f711884b842",
+    "sol_evaluations.json": "b00ecb7c9ffb668b581e571065235676d62832c868fe6bed26812fbbd30f50ea"
+  },
+  "output_sha256": {
+    "tier2_candidate_features.json": "258accdc9a2db9b9c8a5c5f3dd3808539983f6aa6c2a03cee028315687b5cf68",
+    "tier2_decisions.json": "6b7a987c38294717296f05086186047af6085c2a75a206d0b4595b6100c2304d",
+    "tier2_report.md": "b2675888ba9565ff8b0bb3d7be4623fe8c5eff124cfdc805fcf1e6e6104d5b27"
+  },
+  "implementation_sha256": {
+    "src/audio_similarity/stage5b1c_normalization.py": "db16de1691cc3471dea7ce4d55ad9b9eef44d15ab72189706cfbfdc2087d53ac",
+    "src/audio_similarity/stage5b1c_tier2.py": "611cb33d43d4e335a308f40c875b9cfcf347257019ff01379d9a97222e9eb0eb",
+    "src/audio_similarity/cli/stage5b1c_tier2.py": "eaf800d6bcc62c9003b5651e82de443962b2674008290c99d6f2c4d28914dad8",
+    "tests/test_stage5b1c_normalization.py": "576de76326dbc0d1572f12c7d66fd18100e30db70c7443a0c35690890e122f1f",
+    "tests/test_stage5b1c_tier2.py": "ac288237e3439992ca1aefcb2385bf5ca26941977c8ea1482238ffef03da716a"
+  },
+  "verification": {
+    "focused_tier2": "20 passed",
+    "stage5b1b_and_stage5b1c": "140 passed",
+    "full_non_heavy": "677 passed, 12 deselected, 11 warnings, 0 failures, 0 errors"
+  },
+  "scope_guards": {
+    "yt_dlp_discovery_rerun": false,
+    "sol_rerun": false,
+    "human_review_rerun": false,
+    "other_source_fallback": false,
+    "duration_relaxation": false,
+    "audio_downloads": 0,
+    "video_downloads": 0,
+    "stage5a_calls": 0,
+    "clap_calls": 0,
+    "muq_calls": 0
+  }
+}

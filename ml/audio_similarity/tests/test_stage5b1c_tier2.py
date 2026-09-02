@@ -88,6 +88,21 @@ def test_explicit_wrong_performer_and_wrong_version_remain_ineligible():
     assert evidence["versions"]["conflict_count"] == 1
 
 
+def test_explicit_cover_signal_remains_ineligible_even_when_target_artist_is_named():
+    target = track()
+    value = candidate(
+        title="Hello - Adele Cover by John Smith",
+        uploader="John Smith",
+        channel="John Smith",
+    )
+    evidence = extract_tier2_candidate_evidence(
+        target, value, extract_candidate_features(target, value)
+    )
+    assert evidence["identity_eligible"] is False
+    assert evidence["performers"]["explicit_cover_signal"] is True
+    assert evidence["performers"]["explicit_performer_conflict"] is True
+
+
 def test_other_and_duration_gates_are_not_relaxed():
     target = track()
     other = candidate(title="Adele - Hello", uploader="Fan", channel="Fan")
@@ -122,6 +137,9 @@ def test_corrected_eligibility_recomputes_relative_lyric_views():
 
 def test_frozen_challenge_replay_and_tier2_recoveries_are_deterministic():
     features, decisions = evaluate_frozen_challenge(CONFIG)
+    repeated_features, repeated_decisions = evaluate_frozen_challenge(CONFIG)
+    assert repeated_features == features
+    assert repeated_decisions == decisions
     assert features["track_count"] == 21
     assert features["candidate_pair_count"] == 105
     assert decisions["frozen_balanced_regression"] == {

@@ -29,6 +29,9 @@ _LIVE_VERSION = re.compile(
 _NON_LATIN = re.compile(r"[^\x00-\x7f]")
 _BRACKETED = re.compile(r"([\[(])([^\])]+)([\])])")
 _FEATURE_CREDIT = re.compile(r"\b(?:feat(?:uring)?|ft)\.?\s+", re.I)
+_FEATURED_TITLE = re.compile(
+    r"\b(?:feat(?:uring)?|ft)\.?\s+[^()\[\]-]+", re.I
+)
 
 
 @dataclass(frozen=True)
@@ -247,6 +250,7 @@ def parse_tier2_title(
     value = recording_text
     for descriptor in versions:
         value = value.replace(descriptor.raw, " ")
+    value = _FEATURED_TITLE.sub(" ", value)
     value = _SOURCE_PHRASES.sub(" ", value)
 
     def bracket_replacement(match: re.Match[str]) -> str:
