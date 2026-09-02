@@ -14,8 +14,9 @@
     "strong_metadata_candidate_features.json": "523c044b90d63fc9df12b32802927f0ac4f6ecb3c20b5618b463eaec7b12d73d",
     "strong_metadata_decisions.json": "740b085b2061935b1d66586534ed4bc418c4ed2562f0cd96efeb4b596748793c",
     "strong_metadata_human_audit_queue.json": "7c7e130b58707f499eb9408e79683567f4f15c50b139bd5f500a9c415bb5fc1d",
-    "strong_metadata_human_review.csv": "ba3cf7549f2070495d287e6cbe0a1eae7ab7ae89681b3dcb91d096ca7a835e20",
-    "strong_metadata_report.md": "6ef9db645bef1abc9eef5a1b13c14fedaf86ab724d1f67e038db4482bf94fb74"
+    "strong_metadata_human_review.csv": "ec4a352f27dd9c4ac7b144daa91cfd22f018e43adf9c3e5b5d41728094d7d03a",
+    "strong_metadata_human_audit_results.json": "6f3adbf231039a5609de501292aef0f8c62c88ecba81ca38df638aef2e7f1ed4",
+    "strong_metadata_report.md": "4c1090db98f97a5e256cae512c0fc9d46bf12faa0690e58cee87525a35cbe6f6"
   },
   "implementation": {
     "src/audio_similarity/stage5b1c_strong_metadata.py": "177d2d5a942c7f0046ac6d67073acb89481c1e6d7173d8770be89c0e58c4af84",
@@ -33,7 +34,15 @@
       "s5b1c_012": "kxZYxojih3E",
       "s5b1c_023": "1UESu4eyalA"
     },
-    "human_review_status": "AWAITING_STRONG_METADATA_HUMAN_REVIEW"
+    "human_review_status": "COMPLETE_WITH_ONE_UNCERTAIN",
+    "human_reviewed_count": 2,
+    "human_safe_count": 1,
+    "human_wrong_count": 0,
+    "human_uncertain_count": 1,
+    "combined_incremental_tier2_safe_count": 12,
+    "combined_incremental_tier2_wrong_count": 0,
+    "combined_incremental_tier2_uncertain_count": 1,
+    "human_safe_84_percent_milestone_established": false
   },
   "tests": {
     "focused_stage5b1c_c": "13 passed",
@@ -46,7 +55,7 @@
     "fuzzy_title_matching": false,
     "network_calls": 0,
     "sol_runs": 0,
-    "human_label_changes": 0,
+    "human_label_changes": 2,
     "audio_downloads": 0,
     "video_downloads": 0,
     "stage5a_calls": 0,

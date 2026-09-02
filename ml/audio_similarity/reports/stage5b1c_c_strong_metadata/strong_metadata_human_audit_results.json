@@ -1,0 +1,54 @@
+{
+  "schema_version": "stage5b1c-c-strong-metadata-human-audit-results-v1",
+  "status": "STAGE5B1C_C_HUMAN_AUDIT_REQUIRES_REDISCOVERY_REVIEW",
+  "recommendation": "PRESERVE_1C_C_AND_ROUTE_TAKI_TAKI_TO_TARGETED_REDISCOVERY",
+  "review_sha256": "ec4a352f27dd9c4ac7b144daa91cfd22f018e43adf9c3e5b5d41728094d7d03a",
+  "summary": {
+    "required_judgments": 2,
+    "reviewed_judgments": 2,
+    "remaining_judgments": 0,
+    "ideal_count": 1,
+    "acceptable_count": 0,
+    "wrong_count": 0,
+    "uncertain_count": 1,
+    "safe_count": 1,
+    "combined_incremental_tier2_reviewed_count": 13,
+    "combined_incremental_tier2_safe_count": 12,
+    "combined_incremental_tier2_wrong_count": 0,
+    "combined_incremental_tier2_uncertain_count": 1,
+    "measured_auto_match_count": 42,
+    "measured_auto_match_coverage": 0.84,
+    "human_safe_84_percent_milestone_established": false
+  },
+  "judgments": [
+    {
+      "stable_track_id": "s5b1c_012",
+      "candidate_video_id": "kxZYxojih3E",
+      "human_label": "UNCERTAIN",
+      "safety_class": "UNRESOLVED",
+      "candidate_note_verbatim": "",
+      "track_note_verbatim": ""
+    },
+    {
+      "stable_track_id": "s5b1c_023",
+      "candidate_video_id": "1UESu4eyalA",
+      "human_label": "IDEAL",
+      "safety_class": "SAFE",
+      "candidate_note_verbatim": "",
+      "track_note_verbatim": ""
+    }
+  ],
+  "reviewer_follow_up": {
+    "stable_track_id": "s5b1c_012",
+    "observation": "A manual YouTube search surfaced materially preferable candidates that were absent from the frozen ytsearch5 pool, including the official music video, an established lyric upload, and a Provided-to-YouTube-by Art Track.",
+    "interpretation": "The frozen selected candidate remains UNCERTAIN. The observation is discovery evidence and does not relabel or validate that candidate.",
+    "frozen_top_five_unchanged": true
+  },
+  "scope": {
+    "human_label_entries_recorded": 2,
+    "reviewer_labels_reinterpreted": false,
+    "frozen_candidate_pool_changed": false,
+    "resolver_policy_changed": false,
+    "production_auto_match_activated": false
+  }
+}

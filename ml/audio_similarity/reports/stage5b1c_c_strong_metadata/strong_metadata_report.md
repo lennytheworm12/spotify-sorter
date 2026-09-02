@@ -156,15 +156,31 @@ targeted rediscovery, audio comparison, or broader duration behavior was added.
 
 ## Human review
 
-The review queue contains exactly two blank judgments:
+The two-row review is complete:
 
-- `s5b1c_012` / `kxZYxojih3E`
-- `s5b1c_023` / `1UESu4eyalA`
+- `s5b1c_012` / `kxZYxojih3E`: `UNCERTAIN`
+- `s5b1c_023` / `1UESu4eyalA`: `IDEAL`
 
 Review artifact: `strong_metadata_human_review.csv`.
 
-The measured coverage gain is real resolver behavior, but its safety is not yet
-human-validated. Sol is diagnostic evidence only.
+Across all 13 incremental Tier-2 selections, the completed human evidence is:
+
+- 6 `IDEAL`
+- 6 `ACCEPTABLE`
+- 0 `WRONG`
+- 1 `UNCERTAIN`
+
+Thus 12/13 are human `SAFE`, with no known wrong selection, but the proposed
+13/13-safe milestone is not established. The resolver still mechanically
+selects 42/50 tracks (84%); that coverage must not be described as fully
+human-safety-validated.
+
+For Taki Taki, the frozen first-pass top five consisted of a Roblox edit, a 2x
+speed edit, the selected low-view lyric upload, a bass-boosted edit, and another
+low-view lyric upload. A reviewer follow-up search found materially preferable
+official, established lyric, and Provided-to-YouTube-by Art Track results that
+were absent from the frozen pool. This is evidence of a first-pass discovery
+failure; it does not retroactively validate or relabel the selected candidate.
 
 ## Validation
 
@@ -178,10 +194,11 @@ No network, yt-dlp, Sol, media download, Stage 5A, CLAP, or MuQ operation ran.
 
 ## Recommendation
 
-Complete the two-row human audit before treating the additional 4 percentage
-points as safety-validated. If both are `IDEAL` or `ACCEPTABLE`, preserve this
-layer unchanged and design any targeted-rediscovery work as a separate stage.
-Do not expand this policy toward `034` or `041` from the present evidence.
+Preserve the 1C-C policy and its measured 42/50 behavior unchanged, but do not
+claim 13/13 human-safe incremental selections. Route Taki Taki to targeted
+rediscovery or another fallback that can consider the preferable candidates
+missing from the frozen first-pass pool. Do not weaken the resolver or expand
+this policy toward `034` or `041` from the present evidence.
 
 ## Reproduction
 
