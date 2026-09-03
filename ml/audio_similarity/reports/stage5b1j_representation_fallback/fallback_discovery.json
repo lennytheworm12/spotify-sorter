@@ -1,0 +1,1390 @@
+{
+  "completed_at_utc": "2026-09-03T02:10:30.417533+00:00",
+  "elapsed_wall_seconds": 12.465930082951672,
+  "media_activity": {
+    "audio_downloads": 0,
+    "clap_calls": 0,
+    "muq_calls": 0,
+    "stage5a_calls": 0,
+    "video_downloads": 0
+  },
+  "provider": {
+    "configuration": {
+      "candidate_limit": 5,
+      "metadata_only_options": {
+        "cachedir": false,
+        "extract_flat": "in_playlist",
+        "ignoreconfig": true,
+        "ignoreerrors": false,
+        "lazy_playlist": false,
+        "noprogress": true,
+        "playlistend": 5,
+        "quiet": true,
+        "retries": 0,
+        "simulate": true,
+        "skip_download": true,
+        "socket_timeout": 30
+      },
+      "search_prefix": "ytsearch5:",
+      "sequential": true,
+      "sleep_between_tracks_seconds": 3.0
+    },
+    "name": "yt_dlp",
+    "versions": [
+      "2026.08.19"
+    ]
+  },
+  "queries_sha256": "baa7f83c21d9f5b4117cde79eebba98043af46168136b6393555a6ed1199e1e4",
+  "schema_version": "stage5b1j-fallback-discovery-v1",
+  "started_at_utc": "2026-09-03T02:10:17.951584+00:00",
+  "status": "STAGE5B1J_FALLBACK_DISCOVERY_COMPLETE",
+  "summary": {
+    "search_failures": 0,
+    "total_deduplicated_candidates": 20,
+    "tracks_attempted": 4,
+    "tracks_with_candidates": 4,
+    "warning_count": 0,
+    "zero_candidate_tracks": 0
+  },
+  "tracks": [
+    {
+      "base_representation_target": {
+        "album": null,
+        "artists": [
+          "Lord Huron"
+        ],
+        "duration_ms": null,
+        "isrc": null,
+        "release_year": null,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_029",
+        "title": "The Night We Met"
+      },
+      "fallback_classification": {
+        "base_title": "The Night We Met",
+        "eligible": true,
+        "fallback_family": "LIVE_TO_STUDIO",
+        "live_classification": "ORDINARY_LIVE",
+        "match_mode": "REPRESENTATION_EQUIVALENT_STUDIO_FALLBACK",
+        "reason": "live is the target's only material version family",
+        "stable_track_id": "s5b1c_029",
+        "version_descriptors": [
+          {
+            "family": "live",
+            "qualifier": "the Ryman",
+            "raw": "Live at the Ryman"
+          }
+        ],
+        "version_families": [
+          "live"
+        ]
+      },
+      "fallback_query": "\"Lord Huron\" \"The Night We Met\" official",
+      "original_q0_candidate_video_ids": [
+        "N2K1LUWlF-4",
+        "7QADmsRUGgg",
+        "z4JfPakDYiU",
+        "lx0T48q_eg8",
+        "5q2KTSVV7PY"
+      ],
+      "original_q0_selected_video_id": null,
+      "outcome": {
+        "candidate_video_ids": [
+          "wGF7PswOENQ",
+          "KtlgYxa6BMU",
+          "td_CYmQujd0",
+          "AKnC-W-JPJk",
+          "BPIpYXIV4kM"
+        ],
+        "candidates": [
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=wGF7PswOENQ",
+            "channel": "Lord Huron",
+            "description": "Order Strange Trails featuring \"The Night We Met\" now: http://smarturl.it/iLHStrangeTrails Directed by: Arms Race ...",
+            "duplicate_occurrences": [],
+            "duration_seconds": 209.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 1,
+            "query": "\"Lord Huron\" \"The Night We Met\" official",
+            "rank": 1,
+            "stable_track_id": "s5b1c_029",
+            "title": "Lord Huron - The Night We Met (Official Lyric Video)",
+            "uploader": "Lord Huron",
+            "url": "https://www.youtube.com/watch?v=wGF7PswOENQ",
+            "view_count": 431931216,
+            "youtube_video_id": "wGF7PswOENQ"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=KtlgYxa6BMU",
+            "channel": "Lord Huron",
+            "description": "Order Strange Trails featuring \"The Night We Met\" now: http://smarturl.it/iLHStrangeTrails http://www.lordhuron.com ...",
+            "duplicate_occurrences": [],
+            "duration_seconds": 209.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 2,
+            "query": "\"Lord Huron\" \"The Night We Met\" official",
+            "rank": 2,
+            "stable_track_id": "s5b1c_029",
+            "title": "Lord Huron - The Night We Met (Official Audio)",
+            "uploader": "Lord Huron",
+            "url": "https://www.youtube.com/watch?v=KtlgYxa6BMU",
+            "view_count": 500635389,
+            "youtube_video_id": "KtlgYxa6BMU"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=td_CYmQujd0",
+            "channel": "KEXP",
+            "description": "http://KEXP.ORG presents Lord Huron performing \"The Night We Met\" live in the KEXP studio. Recorded April 18, 2015.",
+            "duplicate_occurrences": [],
+            "duration_seconds": 209.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 3,
+            "query": "\"Lord Huron\" \"The Night We Met\" official",
+            "rank": 3,
+            "stable_track_id": "s5b1c_029",
+            "title": "Lord Huron - The Night We Met (Live on KEXP)",
+            "uploader": "KEXP",
+            "url": "https://www.youtube.com/watch?v=td_CYmQujd0",
+            "view_count": 14888729,
+            "youtube_video_id": "td_CYmQujd0"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=AKnC-W-JPJk",
+            "channel": "Vibe Music",
+            "description": "Lord Huron - The Night We Met Stream/Download: (Lyrics): [Intro] (Ooh, ooh, ooh) (Ooh, ooh, ooh) (Ooh, ooh, ooh) (Ooh, ooh, ...",
+            "duplicate_occurrences": [],
+            "duration_seconds": 209.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 4,
+            "query": "\"Lord Huron\" \"The Night We Met\" official",
+            "rank": 4,
+            "stable_track_id": "s5b1c_029",
+            "title": "Lord Huron - The Night We Met (Lyrics)",
+            "uploader": "Vibe Music",
+            "url": "https://www.youtube.com/watch?v=AKnC-W-JPJk",
+            "view_count": 51745588,
+            "youtube_video_id": "AKnC-W-JPJk"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=BPIpYXIV4kM",
+            "channel": "INNERNET WAVE ENTERTAINMENT",
+            "description": null,
+            "duplicate_occurrences": [],
+            "duration_seconds": 209.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 5,
+            "query": "\"Lord Huron\" \"The Night We Met\" official",
+            "rank": 5,
+            "stable_track_id": "s5b1c_029",
+            "title": "Lord Huron   The Night We Met Music Video",
+            "uploader": "INNERNET WAVE ENTERTAINMENT",
+            "url": "https://www.youtube.com/watch?v=BPIpYXIV4kM",
+            "view_count": 7229,
+            "youtube_video_id": "BPIpYXIV4kM"
+          }
+        ],
+        "completed_at_utc": "2026-09-03T02:10:18.963342+00:00",
+        "error": null,
+        "normalized_results": [
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=wGF7PswOENQ",
+            "channel": "Lord Huron",
+            "description": "Order Strange Trails featuring \"The Night We Met\" now: http://smarturl.it/iLHStrangeTrails Directed by: Arms Race ...",
+            "duration_seconds": 209.0,
+            "live_status": null,
+            "raw_source": {
+              "_type": "url",
+              "channel": "Lord Huron",
+              "channel_id": "UC48UiYdP4S_QuKZXSBcwawg",
+              "description": "Order Strange Trails featuring \"The Night We Met\" now: http://smarturl.it/iLHStrangeTrails Directed by: Arms Race ...",
+              "duration": 209.0,
+              "id": "wGF7PswOENQ",
+              "ie_key": "Youtube",
+              "title": "Lord Huron - The Night We Met (Official Lyric Video)",
+              "uploader": "Lord Huron",
+              "url": "https://www.youtube.com/watch?v=wGF7PswOENQ",
+              "view_count": 431931216
+            },
+            "source_rank": 1,
+            "title": "Lord Huron - The Night We Met (Official Lyric Video)",
+            "uploader": "Lord Huron",
+            "view_count": 431931216,
+            "youtube_video_id": "wGF7PswOENQ"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=KtlgYxa6BMU",
+            "channel": "Lord Huron",
+            "description": "Order Strange Trails featuring \"The Night We Met\" now: http://smarturl.it/iLHStrangeTrails http://www.lordhuron.com ...",
+            "duration_seconds": 209.0,
+            "live_status": null,
+            "raw_source": {
+              "_type": "url",
+              "channel": "Lord Huron",
+              "channel_id": "UC48UiYdP4S_QuKZXSBcwawg",
+              "description": "Order Strange Trails featuring \"The Night We Met\" now: http://smarturl.it/iLHStrangeTrails http://www.lordhuron.com ...",
+              "duration": 209.0,
+              "id": "KtlgYxa6BMU",
+              "ie_key": "Youtube",
+              "title": "Lord Huron - The Night We Met (Official Audio)",
+              "uploader": "Lord Huron",
+              "url": "https://www.youtube.com/watch?v=KtlgYxa6BMU",
+              "view_count": 500635389
+            },
+            "source_rank": 2,
+            "title": "Lord Huron - The Night We Met (Official Audio)",
+            "uploader": "Lord Huron",
+            "view_count": 500635389,
+            "youtube_video_id": "KtlgYxa6BMU"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=td_CYmQujd0",
+            "channel": "KEXP",
+            "description": "http://KEXP.ORG presents Lord Huron performing \"The Night We Met\" live in the KEXP studio. Recorded April 18, 2015.",
+            "duration_seconds": 209.0,
+            "live_status": null,
+            "raw_source": {
+              "_type": "url",
+              "channel": "KEXP",
+              "channel_id": "UC3I2GFN_F8WudD_2jUZbojA",
+              "description": "http://KEXP.ORG presents Lord Huron performing \"The Night We Met\" live in the KEXP studio. Recorded April 18, 2015.",
+              "duration": 209.0,
+              "id": "td_CYmQujd0",
+              "ie_key": "Youtube",
+              "title": "Lord Huron - The Night We Met (Live on KEXP)",
+              "uploader": "KEXP",
+              "uploader_id": "@kexp",
+              "url": "https://www.youtube.com/watch?v=td_CYmQujd0",
+              "view_count": 14888729
+            },
+            "source_rank": 3,
+            "title": "Lord Huron - The Night We Met (Live on KEXP)",
+            "uploader": "KEXP",
+            "view_count": 14888729,
+            "youtube_video_id": "td_CYmQujd0"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=AKnC-W-JPJk",
+            "channel": "Vibe Music",
+            "description": "Lord Huron - The Night We Met Stream/Download: (Lyrics): [Intro] (Ooh, ooh, ooh) (Ooh, ooh, ooh) (Ooh, ooh, ooh) (Ooh, ooh, ...",
+            "duration_seconds": 209.0,
+            "live_status": null,
+            "raw_source": {
+              "_type": "url",
+              "channel": "Vibe Music",
+              "channel_id": "UChO8h2G8UjOVc081rgYU8XQ",
+              "description": "Lord Huron - The Night We Met Stream/Download: (Lyrics): [Intro] (Ooh, ooh, ooh) (Ooh, ooh, ooh) (Ooh, ooh, ooh) (Ooh, ooh, ...",
+              "duration": 209.0,
+              "id": "AKnC-W-JPJk",
+              "ie_key": "Youtube",
+              "title": "Lord Huron - The Night We Met (Lyrics)",
+              "uploader": "Vibe Music",
+              "uploader_id": "@vibemusic.",
+              "url": "https://www.youtube.com/watch?v=AKnC-W-JPJk",
+              "view_count": 51745588
+            },
+            "source_rank": 4,
+            "title": "Lord Huron - The Night We Met (Lyrics)",
+            "uploader": "Vibe Music",
+            "view_count": 51745588,
+            "youtube_video_id": "AKnC-W-JPJk"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=BPIpYXIV4kM",
+            "channel": "INNERNET WAVE ENTERTAINMENT",
+            "description": null,
+            "duration_seconds": 209.0,
+            "live_status": null,
+            "raw_source": {
+              "_type": "url",
+              "channel": "INNERNET WAVE ENTERTAINMENT",
+              "channel_id": "UCexohoYqkJTC2I7rvjN0aBg",
+              "duration": 209.0,
+              "id": "BPIpYXIV4kM",
+              "ie_key": "Youtube",
+              "title": "Lord Huron   The Night We Met Music Video",
+              "uploader": "INNERNET WAVE ENTERTAINMENT",
+              "uploader_id": "@INNERNETWAVEENTERTAINMENT",
+              "url": "https://www.youtube.com/watch?v=BPIpYXIV4kM",
+              "view_count": 7229
+            },
+            "source_rank": 5,
+            "title": "Lord Huron   The Night We Met Music Video",
+            "uploader": "INNERNET WAVE ENTERTAINMENT",
+            "view_count": 7229,
+            "youtube_video_id": "BPIpYXIV4kM"
+          }
+        ],
+        "provider": {
+          "attempts": 1,
+          "name": "yt_dlp",
+          "version": "2026.08.19"
+        },
+        "query": "\"Lord Huron\" \"The Night We Met\" official",
+        "request": {
+          "download": false,
+          "options": {
+            "cachedir": false,
+            "extract_flat": "in_playlist",
+            "ignoreconfig": true,
+            "ignoreerrors": false,
+            "lazy_playlist": false,
+            "noprogress": true,
+            "playlistend": 5,
+            "quiet": true,
+            "retries": 0,
+            "simulate": true,
+            "skip_download": true,
+            "socket_timeout": 30
+          },
+          "search_expression": "ytsearch5:\"Lord Huron\" \"The Night We Met\" official"
+        },
+        "requested_at_utc": "2026-09-03T02:10:17.951619+00:00",
+        "track": {
+          "album": null,
+          "artists": [
+            "Lord Huron"
+          ],
+          "duration_ms": null,
+          "isrc": null,
+          "release_year": null,
+          "spotify_track_id": null,
+          "stable_track_id": "s5b1c_029",
+          "title": "The Night We Met"
+        },
+        "warnings": []
+      },
+      "spotify_target": {
+        "album": "Live at the Ryman",
+        "artists": [
+          "Lord Huron"
+        ],
+        "duration_ms": 258000,
+        "isrc": null,
+        "release_year": 2023,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_029",
+        "title": "The Night We Met - Live at the Ryman"
+      },
+      "stable_track_id": "s5b1c_029"
+    },
+    {
+      "base_representation_target": {
+        "album": "Fleetwood Mac",
+        "artists": [
+          "Fleetwood Mac"
+        ],
+        "duration_ms": 199493,
+        "isrc": null,
+        "release_year": null,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_032",
+        "title": "Landslide"
+      },
+      "fallback_classification": {
+        "base_title": "Landslide",
+        "eligible": true,
+        "fallback_family": "REMASTER_TO_MASTER",
+        "live_classification": null,
+        "match_mode": "REPRESENTATION_EQUIVALENT_MASTER_FALLBACK",
+        "reason": "remaster is the target's only material version family",
+        "stable_track_id": "s5b1c_032",
+        "version_descriptors": [
+          {
+            "family": "remaster",
+            "qualifier": "2015",
+            "raw": "2015 Remaster"
+          }
+        ],
+        "version_families": [
+          "remaster"
+        ]
+      },
+      "fallback_query": "\"Fleetwood Mac\" \"Landslide\" official",
+      "original_q0_candidate_video_ids": [
+        "k4M53xndqiU",
+        "1_370ETkqJU",
+        "2Ogcdw4UORQ",
+        "dshVEZwWLvc",
+        "zZi6LJ6bY_c"
+      ],
+      "original_q0_selected_video_id": null,
+      "outcome": {
+        "candidate_video_ids": [
+          "WM7-PYtXtJM",
+          "mXonGAEPQp8",
+          "RAkOm7XLoQQ",
+          "ONzuVds6hPE",
+          "2Ogcdw4UORQ"
+        ],
+        "candidates": [
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=WM7-PYtXtJM",
+            "channel": "Fleetwood Mac",
+            "description": "Fleetwood Mac perform Stevie Nicks' \"Landslide\" at Warner Bros. Studios in Burbank, CA in May 1997 - remastered in HD.",
+            "duplicate_occurrences": [],
+            "duration_seconds": 237.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 1,
+            "query": "\"Fleetwood Mac\" \"Landslide\" official",
+            "rank": 1,
+            "stable_track_id": "s5b1c_032",
+            "title": "Fleetwood Mac - Landslide (Live) (Official Video) [HD]",
+            "uploader": "Fleetwood Mac",
+            "url": "https://www.youtube.com/watch?v=WM7-PYtXtJM",
+            "view_count": 123639388,
+            "youtube_video_id": "WM7-PYtXtJM"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=mXonGAEPQp8",
+            "channel": "Fleetwood Mac",
+            "description": "Provided to YouTube by Rhino/Warner Records Landslide (2004 Remaster) · Fleetwood Mac The Very Best Of Fleetwood Mac ...",
+            "duplicate_occurrences": [],
+            "duration_seconds": 198.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 2,
+            "query": "\"Fleetwood Mac\" \"Landslide\" official",
+            "rank": 2,
+            "stable_track_id": "s5b1c_032",
+            "title": "Landslide (2004 Remaster)",
+            "uploader": "Fleetwood Mac",
+            "url": "https://www.youtube.com/watch?v=mXonGAEPQp8",
+            "view_count": 3633610,
+            "youtube_video_id": "mXonGAEPQp8"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=RAkOm7XLoQQ",
+            "channel": "Fleetwood Mac",
+            "description": "Provided to YouTube by Rhino/Warner Records Landslide (2018 Remaster) · Fleetwood Mac 50 Years - Don't Stop ℗ 1975 ...",
+            "duplicate_occurrences": [],
+            "duration_seconds": 201.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 3,
+            "query": "\"Fleetwood Mac\" \"Landslide\" official",
+            "rank": 3,
+            "stable_track_id": "s5b1c_032",
+            "title": "Landslide (2018 Remaster)",
+            "uploader": "Fleetwood Mac",
+            "url": "https://www.youtube.com/watch?v=RAkOm7XLoQQ",
+            "view_count": 2673138,
+            "youtube_video_id": "RAkOm7XLoQQ"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=ONzuVds6hPE",
+            "channel": "Shayan Shokri",
+            "description": "Check Out Our Playlist If You are Interested in Songs Like This ...",
+            "duplicate_occurrences": [],
+            "duration_seconds": 198.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 4,
+            "query": "\"Fleetwood Mac\" \"Landslide\" official",
+            "rank": 4,
+            "stable_track_id": "s5b1c_032",
+            "title": "Fleetwood Mac - Landslide [Lyrics]",
+            "uploader": "Shayan Shokri",
+            "url": "https://www.youtube.com/watch?v=ONzuVds6hPE",
+            "view_count": 6243210,
+            "youtube_video_id": "ONzuVds6hPE"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=2Ogcdw4UORQ",
+            "channel": "Wildheart",
+            "description": "Recorded Live: 10/17/1975 - Capitol Theatre (Passaic, NJ)",
+            "duplicate_occurrences": [],
+            "duration_seconds": 215.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 5,
+            "query": "\"Fleetwood Mac\" \"Landslide\" official",
+            "rank": 5,
+            "stable_track_id": "s5b1c_032",
+            "title": "Fleetwood Mac - Landslide (Live 1975)",
+            "uploader": "Wildheart",
+            "url": "https://www.youtube.com/watch?v=2Ogcdw4UORQ",
+            "view_count": 559652,
+            "youtube_video_id": "2Ogcdw4UORQ"
+          }
+        ],
+        "completed_at_utc": "2026-09-03T02:10:22.769050+00:00",
+        "error": null,
+        "normalized_results": [
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=WM7-PYtXtJM",
+            "channel": "Fleetwood Mac",
+            "description": "Fleetwood Mac perform Stevie Nicks' \"Landslide\" at Warner Bros. Studios in Burbank, CA in May 1997 - remastered in HD.",
+            "duration_seconds": 237.0,
+            "live_status": null,
+            "raw_source": {
+              "_type": "url",
+              "channel": "Fleetwood Mac",
+              "channel_id": "UCAb60rVrvVQVfSgrX1UWb0g",
+              "description": "Fleetwood Mac perform Stevie Nicks' \"Landslide\" at Warner Bros. Studios in Burbank, CA in May 1997 - remastered in HD.",
+              "duration": 237.0,
+              "id": "WM7-PYtXtJM",
+              "ie_key": "Youtube",
+              "title": "Fleetwood Mac - Landslide (Live) (Official Video) [HD]",
+              "uploader": "Fleetwood Mac",
+              "url": "https://www.youtube.com/watch?v=WM7-PYtXtJM",
+              "view_count": 123639388
+            },
+            "source_rank": 1,
+            "title": "Fleetwood Mac - Landslide (Live) (Official Video) [HD]",
+            "uploader": "Fleetwood Mac",
+            "view_count": 123639388,
+            "youtube_video_id": "WM7-PYtXtJM"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=mXonGAEPQp8",
+            "channel": "Fleetwood Mac",
+            "description": "Provided to YouTube by Rhino/Warner Records Landslide (2004 Remaster) · Fleetwood Mac The Very Best Of Fleetwood Mac ...",
+            "duration_seconds": 198.0,
+            "live_status": null,
+            "raw_source": {
+              "_type": "url",
+              "channel": "Fleetwood Mac",
+              "channel_id": "UCAb60rVrvVQVfSgrX1UWb0g",
+              "description": "Provided to YouTube by Rhino/Warner Records Landslide (2004 Remaster) · Fleetwood Mac The Very Best Of Fleetwood Mac ...",
+              "duration": 198.0,
+              "id": "mXonGAEPQp8",
+              "ie_key": "Youtube",
+              "title": "Landslide (2004 Remaster)",
+              "uploader": "Fleetwood Mac",
+              "url": "https://www.youtube.com/watch?v=mXonGAEPQp8",
+              "view_count": 3633610
+            },
+            "source_rank": 2,
+            "title": "Landslide (2004 Remaster)",
+            "uploader": "Fleetwood Mac",
+            "view_count": 3633610,
+            "youtube_video_id": "mXonGAEPQp8"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=RAkOm7XLoQQ",
+            "channel": "Fleetwood Mac",
+            "description": "Provided to YouTube by Rhino/Warner Records Landslide (2018 Remaster) · Fleetwood Mac 50 Years - Don't Stop ℗ 1975 ...",
+            "duration_seconds": 201.0,
+            "live_status": null,
+            "raw_source": {
+              "_type": "url",
+              "channel": "Fleetwood Mac",
+              "channel_id": "UCAb60rVrvVQVfSgrX1UWb0g",
+              "description": "Provided to YouTube by Rhino/Warner Records Landslide (2018 Remaster) · Fleetwood Mac 50 Years - Don't Stop ℗ 1975 ...",
+              "duration": 201.0,
+              "id": "RAkOm7XLoQQ",
+              "ie_key": "Youtube",
+              "title": "Landslide (2018 Remaster)",
+              "uploader": "Fleetwood Mac",
+              "url": "https://www.youtube.com/watch?v=RAkOm7XLoQQ",
+              "view_count": 2673138
+            },
+            "source_rank": 3,
+            "title": "Landslide (2018 Remaster)",
+            "uploader": "Fleetwood Mac",
+            "view_count": 2673138,
+            "youtube_video_id": "RAkOm7XLoQQ"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=ONzuVds6hPE",
+            "channel": "Shayan Shokri",
+            "description": "Check Out Our Playlist If You are Interested in Songs Like This ...",
+            "duration_seconds": 198.0,
+            "live_status": null,
+            "raw_source": {
+              "_type": "url",
+              "channel": "Shayan Shokri",
+              "channel_id": "UCQHZWShLsgptYv03XgjPzNg",
+              "description": "Check Out Our Playlist If You are Interested in Songs Like This ...",
+              "duration": 198.0,
+              "id": "ONzuVds6hPE",
+              "ie_key": "Youtube",
+              "title": "Fleetwood Mac - Landslide [Lyrics]",
+              "uploader": "Shayan Shokri",
+              "uploader_id": "@withshayan",
+              "url": "https://www.youtube.com/watch?v=ONzuVds6hPE",
+              "view_count": 6243210
+            },
+            "source_rank": 4,
+            "title": "Fleetwood Mac - Landslide [Lyrics]",
+            "uploader": "Shayan Shokri",
+            "view_count": 6243210,
+            "youtube_video_id": "ONzuVds6hPE"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=2Ogcdw4UORQ",
+            "channel": "Wildheart",
+            "description": "Recorded Live: 10/17/1975 - Capitol Theatre (Passaic, NJ)",
+            "duration_seconds": 215.0,
+            "live_status": null,
+            "raw_source": {
+              "_type": "url",
+              "channel": "Wildheart",
+              "channel_id": "UC7J6Jru7ahs7dD7CuudUkow",
+              "description": "Recorded Live: 10/17/1975 - Capitol Theatre (Passaic, NJ)",
+              "duration": 215.0,
+              "id": "2Ogcdw4UORQ",
+              "ie_key": "Youtube",
+              "title": "Fleetwood Mac - Landslide (Live 1975)",
+              "uploader": "Wildheart",
+              "uploader_id": "@Wildheart-bk5xh",
+              "url": "https://www.youtube.com/watch?v=2Ogcdw4UORQ",
+              "view_count": 559652
+            },
+            "source_rank": 5,
+            "title": "Fleetwood Mac - Landslide (Live 1975)",
+            "uploader": "Wildheart",
+            "view_count": 559652,
+            "youtube_video_id": "2Ogcdw4UORQ"
+          }
+        ],
+        "provider": {
+          "attempts": 1,
+          "name": "yt_dlp",
+          "version": "2026.08.19"
+        },
+        "query": "\"Fleetwood Mac\" \"Landslide\" official",
+        "request": {
+          "download": false,
+          "options": {
+            "cachedir": false,
+            "extract_flat": "in_playlist",
+            "ignoreconfig": true,
+            "ignoreerrors": false,
+            "lazy_playlist": false,
+            "noprogress": true,
+            "playlistend": 5,
+            "quiet": true,
+            "retries": 0,
+            "simulate": true,
+            "skip_download": true,
+            "socket_timeout": 30
+          },
+          "search_expression": "ytsearch5:\"Fleetwood Mac\" \"Landslide\" official"
+        },
+        "requested_at_utc": "2026-09-03T02:10:21.963552+00:00",
+        "track": {
+          "album": "Fleetwood Mac",
+          "artists": [
+            "Fleetwood Mac"
+          ],
+          "duration_ms": 199493,
+          "isrc": null,
+          "release_year": null,
+          "spotify_track_id": null,
+          "stable_track_id": "s5b1c_032",
+          "title": "Landslide"
+        },
+        "warnings": []
+      },
+      "spotify_target": {
+        "album": "Fleetwood Mac",
+        "artists": [
+          "Fleetwood Mac"
+        ],
+        "duration_ms": 199493,
+        "isrc": null,
+        "release_year": 2015,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_032",
+        "title": "Landslide - 2015 Remaster"
+      },
+      "stable_track_id": "s5b1c_032"
+    },
+    {
+      "base_representation_target": {
+        "album": "Appetite For Destruction (Super Deluxe Edition)",
+        "artists": [
+          "Guns N' Roses"
+        ],
+        "duration_ms": 356067,
+        "isrc": null,
+        "release_year": null,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_033",
+        "title": "Sweet Child O' Mine"
+      },
+      "fallback_classification": {
+        "base_title": "Sweet Child O' Mine",
+        "eligible": true,
+        "fallback_family": "REMASTER_TO_MASTER",
+        "live_classification": null,
+        "match_mode": "REPRESENTATION_EQUIVALENT_MASTER_FALLBACK",
+        "reason": "remaster is the target's only material version family",
+        "stable_track_id": "s5b1c_033",
+        "version_descriptors": [
+          {
+            "family": "remaster",
+            "qualifier": "2022",
+            "raw": "2022 Remaster"
+          }
+        ],
+        "version_families": [
+          "remaster"
+        ]
+      },
+      "fallback_query": "\"Guns N' Roses\" \"Sweet Child O' Mine\" official",
+      "original_q0_candidate_video_ids": [
+        "HlEuo9aR7Qo",
+        "1w7OgIMMRc4",
+        "23LT0E89m1s",
+        "D2gWc5Sw75w",
+        "aEMool3DlIU"
+      ],
+      "original_q0_selected_video_id": null,
+      "outcome": {
+        "candidate_video_ids": [
+          "1w7OgIMMRc4",
+          "qoflJn7zkFM",
+          "HlEuo9aR7Qo",
+          "D2gWc5Sw75w",
+          "ZebS5O5teYw"
+        ],
+        "candidates": [
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=1w7OgIMMRc4",
+            "channel": "Guns N' Roses",
+            "description": "Official Music Video for \"Sweet Child O' Mine\" by Guns N' Roses as featured in Thor: Love and Thunder. REMASTERED IN HD!",
+            "duplicate_occurrences": [],
+            "duration_seconds": 303.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 1,
+            "query": "\"Guns N' Roses\" \"Sweet Child O' Mine\" official",
+            "rank": 1,
+            "stable_track_id": "s5b1c_033",
+            "title": "Guns N' Roses - Sweet Child O' Mine (Official Music Video)",
+            "uploader": "Guns N' Roses",
+            "url": "https://www.youtube.com/watch?v=1w7OgIMMRc4",
+            "view_count": 1994207683,
+            "youtube_video_id": "1w7OgIMMRc4"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=qoflJn7zkFM",
+            "channel": "7clouds Rock",
+            "description": "Follow the official 7clouds playlist on Spotify : http://spoti.fi/2SJsUcZ ​   Guns N' Roses - Sweet Child O' Mine (Lyrics) ...",
+            "duplicate_occurrences": [],
+            "duration_seconds": 357.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 2,
+            "query": "\"Guns N' Roses\" \"Sweet Child O' Mine\" official",
+            "rank": 2,
+            "stable_track_id": "s5b1c_033",
+            "title": "Guns N' Roses - Sweet Child O' Mine (Lyrics)",
+            "uploader": "7clouds Rock",
+            "url": "https://www.youtube.com/watch?v=qoflJn7zkFM",
+            "view_count": 21103422,
+            "youtube_video_id": "qoflJn7zkFM"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=HlEuo9aR7Qo",
+            "channel": "Guns N' Roses",
+            "description": "AppetiteForDestruction: The Debut Album, Remastered and Expanded. Available now as Box Set, Super Deluxe, Double LP, and ...",
+            "duplicate_occurrences": [],
+            "duration_seconds": 312.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 3,
+            "query": "\"Guns N' Roses\" \"Sweet Child O' Mine\" official",
+            "rank": 3,
+            "stable_track_id": "s5b1c_033",
+            "title": "Guns N' Roses - Sweet Child O' Mine (Alternate Version)",
+            "uploader": "Guns N' Roses",
+            "url": "https://www.youtube.com/watch?v=HlEuo9aR7Qo",
+            "view_count": 314736474,
+            "youtube_video_id": "HlEuo9aR7Qo"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=D2gWc5Sw75w",
+            "channel": "Rock And Metal Tv",
+            "description": null,
+            "duplicate_occurrences": [],
+            "duration_seconds": 355.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 4,
+            "query": "\"Guns N' Roses\" \"Sweet Child O' Mine\" official",
+            "rank": 4,
+            "stable_track_id": "s5b1c_033",
+            "title": "Guns N' Roses - Sweet Child O' Mine",
+            "uploader": "Rock And Metal Tv",
+            "url": "https://www.youtube.com/watch?v=D2gWc5Sw75w",
+            "view_count": 4152991,
+            "youtube_video_id": "D2gWc5Sw75w"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=ZebS5O5teYw",
+            "channel": "GnR Brazil!",
+            "description": null,
+            "duplicate_occurrences": [],
+            "duration_seconds": 350.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 5,
+            "query": "\"Guns N' Roses\" \"Sweet Child O' Mine\" official",
+            "rank": 5,
+            "stable_track_id": "s5b1c_033",
+            "title": "Guns N' Roses - Sweet Child O'Mine Live The Ritz (1988-02-02) (1080p 60FPS)",
+            "uploader": "GnR Brazil!",
+            "url": "https://www.youtube.com/watch?v=ZebS5O5teYw",
+            "view_count": 368419,
+            "youtube_video_id": "ZebS5O5teYw"
+          }
+        ],
+        "completed_at_utc": "2026-09-03T02:10:26.633772+00:00",
+        "error": null,
+        "normalized_results": [
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=1w7OgIMMRc4",
+            "channel": "Guns N' Roses",
+            "description": "Official Music Video for \"Sweet Child O' Mine\" by Guns N' Roses as featured in Thor: Love and Thunder. REMASTERED IN HD!",
+            "duration_seconds": 303.0,
+            "live_status": null,
+            "raw_source": {
+              "_type": "url",
+              "channel": "Guns N' Roses",
+              "channel_id": "UCIak6JLVOjqhStxrL1Lcytw",
+              "description": "Official Music Video for \"Sweet Child O' Mine\" by Guns N' Roses as featured in Thor: Love and Thunder. REMASTERED IN HD!",
+              "duration": 303.0,
+              "id": "1w7OgIMMRc4",
+              "ie_key": "Youtube",
+              "title": "Guns N' Roses - Sweet Child O' Mine (Official Music Video)",
+              "uploader": "Guns N' Roses",
+              "url": "https://www.youtube.com/watch?v=1w7OgIMMRc4",
+              "view_count": 1994207683
+            },
+            "source_rank": 1,
+            "title": "Guns N' Roses - Sweet Child O' Mine (Official Music Video)",
+            "uploader": "Guns N' Roses",
+            "view_count": 1994207683,
+            "youtube_video_id": "1w7OgIMMRc4"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=qoflJn7zkFM",
+            "channel": "7clouds Rock",
+            "description": "Follow the official 7clouds playlist on Spotify : http://spoti.fi/2SJsUcZ ​   Guns N' Roses - Sweet Child O' Mine (Lyrics) ...",
+            "duration_seconds": 357.0,
+            "live_status": null,
+            "raw_source": {
+              "_type": "url",
+              "channel": "7clouds Rock",
+              "channel_id": "UCQqEC0LPfvgFCP8ixrCqADA",
+              "description": "Follow the official 7clouds playlist on Spotify : http://spoti.fi/2SJsUcZ ​   Guns N' Roses - Sweet Child O' Mine (Lyrics) ...",
+              "duration": 357.0,
+              "id": "qoflJn7zkFM",
+              "ie_key": "Youtube",
+              "title": "Guns N' Roses - Sweet Child O' Mine (Lyrics)",
+              "uploader": "7clouds Rock",
+              "uploader_id": "@7cloudsRock",
+              "url": "https://www.youtube.com/watch?v=qoflJn7zkFM",
+              "view_count": 21103422
+            },
+            "source_rank": 2,
+            "title": "Guns N' Roses - Sweet Child O' Mine (Lyrics)",
+            "uploader": "7clouds Rock",
+            "view_count": 21103422,
+            "youtube_video_id": "qoflJn7zkFM"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=HlEuo9aR7Qo",
+            "channel": "Guns N' Roses",
+            "description": "AppetiteForDestruction: The Debut Album, Remastered and Expanded. Available now as Box Set, Super Deluxe, Double LP, and ...",
+            "duration_seconds": 312.0,
+            "live_status": null,
+            "raw_source": {
+              "_type": "url",
+              "channel": "Guns N' Roses",
+              "channel_id": "UCIak6JLVOjqhStxrL1Lcytw",
+              "description": "AppetiteForDestruction: The Debut Album, Remastered and Expanded. Available now as Box Set, Super Deluxe, Double LP, and ...",
+              "duration": 312.0,
+              "id": "HlEuo9aR7Qo",
+              "ie_key": "Youtube",
+              "title": "Guns N' Roses - Sweet Child O' Mine (Alternate Version)",
+              "uploader": "Guns N' Roses",
+              "url": "https://www.youtube.com/watch?v=HlEuo9aR7Qo",
+              "view_count": 314736474
+            },
+            "source_rank": 3,
+            "title": "Guns N' Roses - Sweet Child O' Mine (Alternate Version)",
+            "uploader": "Guns N' Roses",
+            "view_count": 314736474,
+            "youtube_video_id": "HlEuo9aR7Qo"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=D2gWc5Sw75w",
+            "channel": "Rock And Metal Tv",
+            "description": null,
+            "duration_seconds": 355.0,
+            "live_status": null,
+            "raw_source": {
+              "_type": "url",
+              "channel": "Rock And Metal Tv",
+              "channel_id": "UCPNAtkIbLerzhBWDV9ZuuEw",
+              "duration": 355.0,
+              "id": "D2gWc5Sw75w",
+              "ie_key": "Youtube",
+              "title": "Guns N' Roses - Sweet Child O' Mine",
+              "uploader": "Rock And Metal Tv",
+              "uploader_id": "@rockandmetalTv8705",
+              "url": "https://www.youtube.com/watch?v=D2gWc5Sw75w",
+              "view_count": 4152991
+            },
+            "source_rank": 4,
+            "title": "Guns N' Roses - Sweet Child O' Mine",
+            "uploader": "Rock And Metal Tv",
+            "view_count": 4152991,
+            "youtube_video_id": "D2gWc5Sw75w"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=ZebS5O5teYw",
+            "channel": "GnR Brazil!",
+            "description": null,
+            "duration_seconds": 350.0,
+            "live_status": null,
+            "raw_source": {
+              "_type": "url",
+              "channel": "GnR Brazil!",
+              "channel_id": "UCx0-TkNh9tpq_5OZObqKLwA",
+              "duration": 350.0,
+              "id": "ZebS5O5teYw",
+              "ie_key": "Youtube",
+              "title": "Guns N' Roses - Sweet Child O'Mine Live The Ritz (1988-02-02) (1080p 60FPS)",
+              "uploader": "GnR Brazil!",
+              "uploader_id": "@gnrbrasil",
+              "url": "https://www.youtube.com/watch?v=ZebS5O5teYw",
+              "view_count": 368419
+            },
+            "source_rank": 5,
+            "title": "Guns N' Roses - Sweet Child O'Mine Live The Ritz (1988-02-02) (1080p 60FPS)",
+            "uploader": "GnR Brazil!",
+            "view_count": 368419,
+            "youtube_video_id": "ZebS5O5teYw"
+          }
+        ],
+        "provider": {
+          "attempts": 1,
+          "name": "yt_dlp",
+          "version": "2026.08.19"
+        },
+        "query": "\"Guns N' Roses\" \"Sweet Child O' Mine\" official",
+        "request": {
+          "download": false,
+          "options": {
+            "cachedir": false,
+            "extract_flat": "in_playlist",
+            "ignoreconfig": true,
+            "ignoreerrors": false,
+            "lazy_playlist": false,
+            "noprogress": true,
+            "playlistend": 5,
+            "quiet": true,
+            "retries": 0,
+            "simulate": true,
+            "skip_download": true,
+            "socket_timeout": 30
+          },
+          "search_expression": "ytsearch5:\"Guns N' Roses\" \"Sweet Child O' Mine\" official"
+        },
+        "requested_at_utc": "2026-09-03T02:10:25.769260+00:00",
+        "track": {
+          "album": "Appetite For Destruction (Super Deluxe Edition)",
+          "artists": [
+            "Guns N' Roses"
+          ],
+          "duration_ms": 356067,
+          "isrc": null,
+          "release_year": null,
+          "spotify_track_id": null,
+          "stable_track_id": "s5b1c_033",
+          "title": "Sweet Child O' Mine"
+        },
+        "warnings": []
+      },
+      "spotify_target": {
+        "album": "Appetite For Destruction (Super Deluxe Edition)",
+        "artists": [
+          "Guns N' Roses"
+        ],
+        "duration_ms": 356067,
+        "isrc": null,
+        "release_year": 2022,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_033",
+        "title": "Sweet Child O' Mine - 2022 Remaster"
+      },
+      "stable_track_id": "s5b1c_033"
+    },
+    {
+      "base_representation_target": {
+        "album": "Whitney: The Greatest Hits",
+        "artists": [
+          "Whitney Houston"
+        ],
+        "duration_ms": 292400,
+        "isrc": null,
+        "release_year": null,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_034",
+        "title": "I Wanna Dance with Somebody Who Loves Me"
+      },
+      "fallback_classification": {
+        "base_title": "I Wanna Dance with Somebody Who Loves Me",
+        "eligible": true,
+        "fallback_family": "REMASTER_TO_MASTER",
+        "live_classification": null,
+        "match_mode": "REPRESENTATION_EQUIVALENT_MASTER_FALLBACK",
+        "reason": "remaster is the target's only material version family",
+        "stable_track_id": "s5b1c_034",
+        "version_descriptors": [
+          {
+            "family": "remaster",
+            "qualifier": "2000",
+            "raw": "2000 Remaster"
+          }
+        ],
+        "version_families": [
+          "remaster"
+        ]
+      },
+      "fallback_query": "\"Whitney Houston\" \"I Wanna Dance with Somebody Who Loves Me\" official",
+      "original_q0_candidate_video_ids": [
+        "eH3giaIzONA",
+        "id2-K3daNRQ",
+        "2dzf4T3RbEc",
+        "ZFGHRAttmEM",
+        "QzZ-mtE1EHc"
+      ],
+      "original_q0_selected_video_id": null,
+      "outcome": {
+        "candidate_video_ids": [
+          "eH3giaIzONA",
+          "oKWPYxXkAS0",
+          "id2-K3daNRQ",
+          "XSzmOKg1WIY",
+          "V9NA-CWL_8g"
+        ],
+        "candidates": [
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=eH3giaIzONA",
+            "channel": "Whitney Houston",
+            "description": "Official Video for ”I Wanna Dance With Somebody” by Whitney Houston Listen to Whitney Houston: ...",
+            "duplicate_occurrences": [],
+            "duration_seconds": 315.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 1,
+            "query": "\"Whitney Houston\" \"I Wanna Dance with Somebody Who Loves Me\" official",
+            "rank": 1,
+            "stable_track_id": "s5b1c_034",
+            "title": "Whitney Houston - I Wanna Dance With Somebody (Who Loves Me) (Official 4K Video)",
+            "uploader": "Whitney Houston",
+            "url": "https://www.youtube.com/watch?v=eH3giaIzONA",
+            "view_count": 573269542,
+            "youtube_video_id": "eH3giaIzONA"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=oKWPYxXkAS0",
+            "channel": "7clouds",
+            "description": "Follow the official 7clouds playlist on Spotify : http://spoti.fi/2SJsUcZ ​   Whitney Houston - I Wanna Dance With Somebody ...",
+            "duplicate_occurrences": [],
+            "duration_seconds": 289.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 2,
+            "query": "\"Whitney Houston\" \"I Wanna Dance with Somebody Who Loves Me\" official",
+            "rank": 2,
+            "stable_track_id": "s5b1c_034",
+            "title": "Whitney Houston - I Wanna Dance With Somebody (Lyrics)",
+            "uploader": "7clouds",
+            "url": "https://www.youtube.com/watch?v=oKWPYxXkAS0",
+            "view_count": 13326621,
+            "youtube_video_id": "oKWPYxXkAS0"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=id2-K3daNRQ",
+            "channel": "Whitney Houston",
+            "description": "Provided to YouTube by Arista/Legacy I Wanna Dance with Somebody (Who Loves Me) · Whitney Houston Whitney (Dolby Atmos) ...",
+            "duplicate_occurrences": [],
+            "duration_seconds": 292.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 3,
+            "query": "\"Whitney Houston\" \"I Wanna Dance with Somebody Who Loves Me\" official",
+            "rank": 3,
+            "stable_track_id": "s5b1c_034",
+            "title": "I Wanna Dance with Somebody (Who Loves Me)",
+            "uploader": "Whitney Houston",
+            "url": "https://www.youtube.com/watch?v=id2-K3daNRQ",
+            "view_count": 1505426,
+            "youtube_video_id": "id2-K3daNRQ"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=XSzmOKg1WIY",
+            "channel": "Whitney Houston",
+            "description": "I Wanna Dance with Somebody (Live from the Arista Records 15th Anniversary Concert)” by Whitney Houston Listen to Whitney ...",
+            "duplicate_occurrences": [],
+            "duration_seconds": 338.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 4,
+            "query": "\"Whitney Houston\" \"I Wanna Dance with Somebody Who Loves Me\" official",
+            "rank": 4,
+            "stable_track_id": "s5b1c_034",
+            "title": "I Wanna Dance with Somebody (Live from the Arista Records 15th Anniversary Concert)",
+            "uploader": "Whitney Houston",
+            "url": "https://www.youtube.com/watch?v=XSzmOKg1WIY",
+            "view_count": 9872346,
+            "youtube_video_id": "XSzmOKg1WIY"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=V9NA-CWL_8g",
+            "channel": "Whitney Houston",
+            "description": "Official Visualizer for \"I Wanna Dance With Somebody (Who Loves Me)\" by Whitney Houston Listen to Whitney Houston: ...",
+            "duplicate_occurrences": [],
+            "duration_seconds": 292.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 5,
+            "query": "\"Whitney Houston\" \"I Wanna Dance with Somebody Who Loves Me\" official",
+            "rank": 5,
+            "stable_track_id": "s5b1c_034",
+            "title": "Whitney Houston - I Wanna Dance With Somebody (Who Loves Me) (WH1TNEY Visualizer)",
+            "uploader": "Whitney Houston",
+            "url": "https://www.youtube.com/watch?v=V9NA-CWL_8g",
+            "view_count": 28215,
+            "youtube_video_id": "V9NA-CWL_8g"
+          }
+        ],
+        "completed_at_utc": "2026-09-03T02:10:30.417391+00:00",
+        "error": null,
+        "normalized_results": [
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=eH3giaIzONA",
+            "channel": "Whitney Houston",
+            "description": "Official Video for ”I Wanna Dance With Somebody” by Whitney Houston Listen to Whitney Houston: ...",
+            "duration_seconds": 315.0,
+            "live_status": null,
+            "raw_source": {
+              "_type": "url",
+              "channel": "Whitney Houston",
+              "channel_id": "UC7fzrpTArAqDHuB3Hbmd_CQ",
+              "description": "Official Video for ”I Wanna Dance With Somebody” by Whitney Houston Listen to Whitney Houston: ...",
+              "duration": 315.0,
+              "id": "eH3giaIzONA",
+              "ie_key": "Youtube",
+              "title": "Whitney Houston - I Wanna Dance With Somebody (Who Loves Me) (Official 4K Video)",
+              "uploader": "Whitney Houston",
+              "url": "https://www.youtube.com/watch?v=eH3giaIzONA",
+              "view_count": 573269542
+            },
+            "source_rank": 1,
+            "title": "Whitney Houston - I Wanna Dance With Somebody (Who Loves Me) (Official 4K Video)",
+            "uploader": "Whitney Houston",
+            "view_count": 573269542,
+            "youtube_video_id": "eH3giaIzONA"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=oKWPYxXkAS0",
+            "channel": "7clouds",
+            "description": "Follow the official 7clouds playlist on Spotify : http://spoti.fi/2SJsUcZ ​   Whitney Houston - I Wanna Dance With Somebody ...",
+            "duration_seconds": 289.0,
+            "live_status": null,
+            "raw_source": {
+              "_type": "url",
+              "channel": "7clouds",
+              "channel_id": "UCNqFDjYTexJDET3rPDrmJKg",
+              "description": "Follow the official 7clouds playlist on Spotify : http://spoti.fi/2SJsUcZ ​   Whitney Houston - I Wanna Dance With Somebody ...",
+              "duration": 289.0,
+              "id": "oKWPYxXkAS0",
+              "ie_key": "Youtube",
+              "title": "Whitney Houston - I Wanna Dance With Somebody (Lyrics)",
+              "uploader": "7clouds",
+              "uploader_id": "@7clouds",
+              "url": "https://www.youtube.com/watch?v=oKWPYxXkAS0",
+              "view_count": 13326621
+            },
+            "source_rank": 2,
+            "title": "Whitney Houston - I Wanna Dance With Somebody (Lyrics)",
+            "uploader": "7clouds",
+            "view_count": 13326621,
+            "youtube_video_id": "oKWPYxXkAS0"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=id2-K3daNRQ",
+            "channel": "Whitney Houston",
+            "description": "Provided to YouTube by Arista/Legacy I Wanna Dance with Somebody (Who Loves Me) · Whitney Houston Whitney (Dolby Atmos) ...",
+            "duration_seconds": 292.0,
+            "live_status": null,
+            "raw_source": {
+              "_type": "url",
+              "channel": "Whitney Houston",
+              "channel_id": "UCsFiJuqAtiSFoe-hbOn-ozA",
+              "description": "Provided to YouTube by Arista/Legacy I Wanna Dance with Somebody (Who Loves Me) · Whitney Houston Whitney (Dolby Atmos) ...",
+              "duration": 292.0,
+              "id": "id2-K3daNRQ",
+              "ie_key": "Youtube",
+              "title": "I Wanna Dance with Somebody (Who Loves Me)",
+              "uploader": "Whitney Houston",
+              "uploader_id": "@WhitneyHouston-uc7ul",
+              "url": "https://www.youtube.com/watch?v=id2-K3daNRQ",
+              "view_count": 1505426
+            },
+            "source_rank": 3,
+            "title": "I Wanna Dance with Somebody (Who Loves Me)",
+            "uploader": "Whitney Houston",
+            "view_count": 1505426,
+            "youtube_video_id": "id2-K3daNRQ"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=XSzmOKg1WIY",
+            "channel": "Whitney Houston",
+            "description": "I Wanna Dance with Somebody (Live from the Arista Records 15th Anniversary Concert)” by Whitney Houston Listen to Whitney ...",
+            "duration_seconds": 338.0,
+            "live_status": null,
+            "raw_source": {
+              "_type": "url",
+              "channel": "Whitney Houston",
+              "channel_id": "UC7fzrpTArAqDHuB3Hbmd_CQ",
+              "description": "I Wanna Dance with Somebody (Live from the Arista Records 15th Anniversary Concert)” by Whitney Houston Listen to Whitney ...",
+              "duration": 338.0,
+              "id": "XSzmOKg1WIY",
+              "ie_key": "Youtube",
+              "title": "I Wanna Dance with Somebody (Live from the Arista Records 15th Anniversary Concert)",
+              "uploader": "Whitney Houston",
+              "url": "https://www.youtube.com/watch?v=XSzmOKg1WIY",
+              "view_count": 9872346
+            },
+            "source_rank": 4,
+            "title": "I Wanna Dance with Somebody (Live from the Arista Records 15th Anniversary Concert)",
+            "uploader": "Whitney Houston",
+            "view_count": 9872346,
+            "youtube_video_id": "XSzmOKg1WIY"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=V9NA-CWL_8g",
+            "channel": "Whitney Houston",
+            "description": "Official Visualizer for \"I Wanna Dance With Somebody (Who Loves Me)\" by Whitney Houston Listen to Whitney Houston: ...",
+            "duration_seconds": 292.0,
+            "live_status": null,
+            "raw_source": {
+              "_type": "url",
+              "channel": "Whitney Houston",
+              "channel_id": "UC7fzrpTArAqDHuB3Hbmd_CQ",
+              "description": "Official Visualizer for \"I Wanna Dance With Somebody (Who Loves Me)\" by Whitney Houston Listen to Whitney Houston: ...",
+              "duration": 292.0,
+              "id": "V9NA-CWL_8g",
+              "ie_key": "Youtube",
+              "title": "Whitney Houston - I Wanna Dance With Somebody (Who Loves Me) (WH1TNEY Visualizer)",
+              "uploader": "Whitney Houston",
+              "url": "https://www.youtube.com/watch?v=V9NA-CWL_8g",
+              "view_count": 28215
+            },
+            "source_rank": 5,
+            "title": "Whitney Houston - I Wanna Dance With Somebody (Who Loves Me) (WH1TNEY Visualizer)",
+            "uploader": "Whitney Houston",
+            "view_count": 28215,
+            "youtube_video_id": "V9NA-CWL_8g"
+          }
+        ],
+        "provider": {
+          "attempts": 1,
+          "name": "yt_dlp",
+          "version": "2026.08.19"
+        },
+        "query": "\"Whitney Houston\" \"I Wanna Dance with Somebody Who Loves Me\" official",
+        "request": {
+          "download": false,
+          "options": {
+            "cachedir": false,
+            "extract_flat": "in_playlist",
+            "ignoreconfig": true,
+            "ignoreerrors": false,
+            "lazy_playlist": false,
+            "noprogress": true,
+            "playlistend": 5,
+            "quiet": true,
+            "retries": 0,
+            "simulate": true,
+            "skip_download": true,
+            "socket_timeout": 30
+          },
+          "search_expression": "ytsearch5:\"Whitney Houston\" \"I Wanna Dance with Somebody Who Loves Me\" official"
+        },
+        "requested_at_utc": "2026-09-03T02:10:29.633979+00:00",
+        "track": {
+          "album": "Whitney: The Greatest Hits",
+          "artists": [
+            "Whitney Houston"
+          ],
+          "duration_ms": 292400,
+          "isrc": null,
+          "release_year": null,
+          "spotify_track_id": null,
+          "stable_track_id": "s5b1c_034",
+          "title": "I Wanna Dance with Somebody Who Loves Me"
+        },
+        "warnings": []
+      },
+      "spotify_target": {
+        "album": "Whitney: The Greatest Hits",
+        "artists": [
+          "Whitney Houston"
+        ],
+        "duration_ms": 292400,
+        "isrc": null,
+        "release_year": 2000,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_034",
+        "title": "I Wanna Dance with Somebody (Who Loves Me) - 2000 Remaster"
+      },
+      "stable_track_id": "s5b1c_034"
+    }
+  ]
+}

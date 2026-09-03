@@ -93,6 +93,11 @@ _UNSAFE_BASE_FAMILIES = frozenset({
     "sped_up",
 })
 _QUERY_SPACE = re.compile(r"\s+")
+_EXPLICIT_ALTERNATE_MASTER_PRESENTATION = re.compile(
+    r"\b(?:dolby\s+atmos|spatial\s+audio|surround\s+(?:sound|mix)|"
+    r"\d+(?:\.\d+)+\s+(?:surround\s+)?mix)\b",
+    re.I,
+)
 
 
 @dataclass(frozen=True)
@@ -509,6 +514,7 @@ def evaluate_candidate_pool(
         if neutralize_live_duration:
             _neutralize_live_duration(snapshot)
         record = {
+            "raw_candidate": copy.deepcopy(candidate),
             "snapshot": snapshot,
             "global_features": build_global_candidate_evidence(snapshot),
         }
@@ -528,6 +534,16 @@ def _representation_candidates(pool: dict[str, Any]) -> list[dict[str, Any]]:
         global_features = record["global_features"]
         source = record["source_semantics"]
         candidate_families = set(global_features["modifications"]["candidate_families"])
+        raw_candidate = record["raw_candidate"]
+        release_text = " ".join(
+            str(raw_candidate.get(field) or "")
+            for field in ("title", "description")
+        )
+        alternate_master_matches = sorted({
+            match.group(0) for match in _EXPLICIT_ALTERNATE_MASTER_PRESENTATION.finditer(
+                release_text
+            )
+        })
         conditions = {
             "global_candidate_eligible": global_features["eligibility"]["eligible"],
             "recording_identity_compatible": source["recording_identity"]["state"]
@@ -537,12 +553,14 @@ def _representation_candidates(pool: dict[str, Any]) -> list[dict[str, Any]]:
             "no_exact_required_version_family": not (
                 candidate_families & _UNSAFE_BASE_FAMILIES
             ),
+            "no_explicit_alternate_master_presentation": not alternate_master_matches,
         }
         enriched = copy.deepcopy(record)
         enriched["representation_equivalence_eligibility"] = {
             "eligible": all(conditions.values()),
             "conditions": conditions,
             "failed_conditions": [name for name, value in conditions.items() if not value],
+            "explicit_alternate_master_evidence": alternate_master_matches,
         }
         output.append(enriched)
     return output

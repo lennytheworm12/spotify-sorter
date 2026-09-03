@@ -1,0 +1,303 @@
+{
+  "frozen_baseline": {
+    "auto_match_count": 42,
+    "coverage": 0.84,
+    "exact_replay": true,
+    "existing_selected_candidate_ids_unchanged": true,
+    "live_target_count": 4,
+    "match_uncertain_count": 8
+  },
+  "human_validation_gate": {
+    "all_new_selections_human_safe": false,
+    "completed": 0,
+    "human_review_sha256": "e45f64737faf7ed68184284cdc75861e95506fbfe64a8207c066662b84ca3e4c",
+    "label_counts": {},
+    "part_b_authorized": false,
+    "required": 1,
+    "status": "STAGE5B1J_PART_A_AWAITING_HUMAN_REVIEW"
+  },
+  "new_selections": [
+    {
+      "human_label": "",
+      "match_mode": "REPRESENTATION_EQUIVALENT_STUDIO_FALLBACK",
+      "policy_rule_id": "REPRESENTATION_EQUIVALENT_REDISCOVERY_V1",
+      "selected_candidate_rank": 2,
+      "selected_pool": "BASE_REPRESENTATION_TARGET",
+      "selected_video_id": "KtlgYxa6BMU",
+      "selection_reason": "exact resolution remained uncertain; selected a canonical base recording as an explicit representation approximation",
+      "stable_track_id": "s5b1c_029",
+      "status": "AUTO_MATCH"
+    }
+  ],
+  "policy_id": "REPRESENTATION_EQUIVALENT_REDISCOVERY_V1",
+  "production_activated": false,
+  "schema_version": "stage5b1j-representation-equivalence-decisions-v1",
+  "scope_guards": {
+    "audio_downloads": 0,
+    "clap_calls": 0,
+    "exact_precedes_fallback": true,
+    "historical_resolver_changed": false,
+    "muq_calls": 0,
+    "new_searches_outside_fallback_eligible_unresolved_tracks": 0,
+    "original_q0_pools_mutated": false,
+    "sol_runs": 0,
+    "stage5a_calls": 0,
+    "video_downloads": 0
+  },
+  "status": "STAGE5B1J_PART_A_AWAITING_HUMAN_REVIEW",
+  "summary": {
+    "absolute_percentage_point_gain": 2.0,
+    "combined_auto_match_count": 43,
+    "combined_match_uncertain_count": 7,
+    "coverage_after": 0.86,
+    "coverage_before": 0.84,
+    "fallback_tracks_attempted": 4,
+    "new_exact_recording_count": 0,
+    "new_master_fallback_count": 0,
+    "new_selection_count": 1,
+    "new_studio_fallback_count": 1
+  },
+  "tracks": [
+    {
+      "exact_pool_decision": {
+        "policy_rule_id": "GLOBAL_CANDIDATE_PREFERENCE_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no frozen-Q0 candidate satisfies conflict-free identity, version, provenance, and graduated-duration requirements"
+      },
+      "fallback_family": "LIVE_TO_STUDIO",
+      "final_decision": {
+        "match_mode": "REPRESENTATION_EQUIVALENT_STUDIO_FALLBACK",
+        "policy_rule_id": "REPRESENTATION_EQUIVALENT_REDISCOVERY_V1",
+        "selected_candidate_rank": 2,
+        "selected_pool": "BASE_REPRESENTATION_TARGET",
+        "selected_video_id": "KtlgYxa6BMU",
+        "selection_reason": "exact resolution remained uncertain; selected a canonical base recording as an explicit representation approximation",
+        "status": "AUTO_MATCH"
+      },
+      "representation_pool_decision": {
+        "confidence_tier": "EXPERIMENTAL_GLOBAL_PREFERENCE",
+        "evidence_summary": {
+          "admitted_by_frozen_tiers": [],
+          "candidate_video_id": "KtlgYxa6BMU",
+          "description_evidence": {
+            "album_evidence_match": null,
+            "description_album_match": null,
+            "description_release_year_match": null,
+            "release_year_evidence_match": null
+          },
+          "duration": {
+            "absolute_duration_delta_seconds": 0.0,
+            "bucket": "DURATION_VERY_CLOSE",
+            "candidate_seconds": 209.0,
+            "maximum_experimental_delta_seconds": 20.0,
+            "relative_duration_delta": 0.0,
+            "target_seconds": 209.0
+          },
+          "eligibility": {
+            "basis": "GRADUATED_DURATION_EVIDENCE",
+            "conditions": {
+              "complete_compatible_version_evidence": true,
+              "known_finite_duration_within_20_seconds": true,
+              "no_explicit_recording_conflicts": true,
+              "strong_primary_performer_identity": true,
+              "strong_structural_title_identity": true
+            },
+            "eligible": true,
+            "failed_conditions": [],
+            "frozen_admission_eligible": false,
+            "graduated_duration_eligible": true
+          },
+          "hard_conflicts": [],
+          "identity": {
+            "performer_evidence": {
+              "credited_performer_matches": [
+                "Lord Huron"
+              ],
+              "evidence": [
+                {
+                  "performer": "Lord Huron",
+                  "raw": "Lord Huron",
+                  "source": "candidate_title_prefix"
+                },
+                {
+                  "performer": "Lord Huron",
+                  "raw": "Lord Huron",
+                  "source": "uploader"
+                },
+                {
+                  "performer": "Lord Huron",
+                  "raw": "Lord Huron",
+                  "source": "channel"
+                }
+              ],
+              "explicit_cover_signal": false,
+              "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
+              "normalized_target_performers": [
+                "lord huron"
+              ],
+              "primary_performer_match": true
+            },
+            "strong_primary_performer_identity": true,
+            "strong_structural_title_identity": true,
+            "title_similarity": 1.0
+          },
+          "modifications": {
+            "candidate_families": [],
+            "explicit_conflict": false,
+            "target_families": [],
+            "unrequested_candidate_families": []
+          },
+          "provenance": {
+            "art_track_internally_consistent": false,
+            "channel_or_uploader_performer_match": true,
+            "contribution": "POSITIVE",
+            "description_release_performer_match": false,
+            "rank": 1,
+            "raw_evidence": {
+              "auto_generated_by_youtube": [],
+              "provided_to_youtube_by": [],
+              "structured_release_metadata": [],
+              "topic_channel": []
+            },
+            "release_metadata_corroborated": false,
+            "signals": {
+              "auto_generated_by_youtube_signal": false,
+              "provided_to_youtube_by_signal": false,
+              "structured_release_metadata_signal": false,
+              "topic_channel_signal": false
+            },
+            "tier": "PROVENANCE_ARTIST_CHANNEL"
+          },
+          "schema_version": "stage5b1g-global-preference-candidate-features-v1",
+          "search_rank": 2,
+          "source": {
+            "classified_source_type": "OFFICIAL_AUDIO",
+            "effective_preference_source_type": "OFFICIAL_AUDIO",
+            "explicit_not_music_video_signal": false
+          },
+          "tier_is_preference_signal": false,
+          "track_id": null,
+          "unexpected_featured_performers": [],
+          "versions": {
+            "absent_count": 0,
+            "complete_and_compatible": true,
+            "conflict_count": 0,
+            "explicit_complete_match": false,
+            "match_count": 0,
+            "relationships": [],
+            "target_is_versioned": false
+          },
+          "weak_evidence": {
+            "candidate_view_count": 500635389,
+            "log_relative_view_strength": 1.0,
+            "max_view_count_among_plausible_candidates": 500635389,
+            "relative_view_strength": 1.0,
+            "search_rank": 2,
+            "view_rank_among_plausible_candidates": 1
+          }
+        },
+        "policy_rule_id": "GLOBAL_CANDIDATE_PREFERENCE_V1",
+        "ranked_plausible_candidates": [
+          "KtlgYxa6BMU",
+          "wGF7PswOENQ"
+        ],
+        "selected_candidate_rank": 2,
+        "selected_video_id": "KtlgYxa6BMU",
+        "selection_reason": "global lexicographic preference across every defensible candidate: identity and version, performer, consistent provenance, graduated duration, source quality, release corroboration, then weak views/search-rank tiebreakers",
+        "status": "AUTO_MATCH"
+      },
+      "stable_track_id": "s5b1c_029"
+    },
+    {
+      "exact_pool_decision": {
+        "policy_rule_id": "GLOBAL_CANDIDATE_PREFERENCE_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no frozen-Q0 candidate satisfies conflict-free identity, version, provenance, and graduated-duration requirements"
+      },
+      "fallback_family": "REMASTER_TO_MASTER",
+      "final_decision": {
+        "match_mode": null,
+        "policy_rule_id": "REPRESENTATION_EQUIVALENT_REDISCOVERY_V1",
+        "selected_candidate_rank": null,
+        "selected_pool": null,
+        "selected_video_id": null,
+        "selection_reason": "neither exact nor canonical representation-equivalent resolution succeeded",
+        "status": "MATCH_UNCERTAIN"
+      },
+      "representation_pool_decision": {
+        "policy_rule_id": "GLOBAL_CANDIDATE_PREFERENCE_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no frozen-Q0 candidate satisfies conflict-free identity, version, provenance, and graduated-duration requirements"
+      },
+      "stable_track_id": "s5b1c_032"
+    },
+    {
+      "exact_pool_decision": {
+        "policy_rule_id": "GLOBAL_CANDIDATE_PREFERENCE_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no frozen-Q0 candidate satisfies conflict-free identity, version, provenance, and graduated-duration requirements"
+      },
+      "fallback_family": "REMASTER_TO_MASTER",
+      "final_decision": {
+        "match_mode": null,
+        "policy_rule_id": "REPRESENTATION_EQUIVALENT_REDISCOVERY_V1",
+        "selected_candidate_rank": null,
+        "selected_pool": null,
+        "selected_video_id": null,
+        "selection_reason": "neither exact nor canonical representation-equivalent resolution succeeded",
+        "status": "MATCH_UNCERTAIN"
+      },
+      "representation_pool_decision": {
+        "policy_rule_id": "GLOBAL_CANDIDATE_PREFERENCE_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no frozen-Q0 candidate satisfies conflict-free identity, version, provenance, and graduated-duration requirements"
+      },
+      "stable_track_id": "s5b1c_033"
+    },
+    {
+      "exact_pool_decision": {
+        "policy_rule_id": "GLOBAL_CANDIDATE_PREFERENCE_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no frozen-Q0 candidate satisfies conflict-free identity, version, provenance, and graduated-duration requirements"
+      },
+      "fallback_family": "REMASTER_TO_MASTER",
+      "final_decision": {
+        "match_mode": null,
+        "policy_rule_id": "REPRESENTATION_EQUIVALENT_REDISCOVERY_V1",
+        "selected_candidate_rank": null,
+        "selected_pool": null,
+        "selected_video_id": null,
+        "selection_reason": "neither exact nor canonical representation-equivalent resolution succeeded",
+        "status": "MATCH_UNCERTAIN"
+      },
+      "representation_pool_decision": {
+        "policy_rule_id": "GLOBAL_CANDIDATE_PREFERENCE_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no frozen-Q0 candidate satisfies conflict-free identity, version, provenance, and graduated-duration requirements"
+      },
+      "stable_track_id": "s5b1c_034"
+    }
+  ]
+}

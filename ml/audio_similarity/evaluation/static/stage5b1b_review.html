@@ -73,6 +73,8 @@ h1 { margin: 5px 0 0; font: 780 clamp(21px, 2.4vw, 31px)/1.05 ui-rounded, "Arial
 .artists { color: var(--cobalt); font-size: 19px; font-weight: 760; }
 .release { color: var(--slate); margin-top: 8px; line-height: 1.5; }
 .target-copy { border-left: 3px solid var(--cobalt); padding-left: 16px; color: #46536a; line-height: 1.55; }
+.fallback-callout { margin-top: 12px; border-left: 3px solid #c58c1b; background: #fff8e8; padding: 10px 12px; border-radius: 0 8px 8px 0; color: #504626; font-size: 13px; line-height: 1.5; }
+.fallback-callout strong { display: block; color: var(--midnight); margin-bottom: 3px; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 15px; }
 .tag { background: #e9edf5; color: #43506b; padding: 5px 8px; font: 700 10px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; }
 .track-note label, .candidate-note label { display: block; color: var(--slate); font-size: 12px; font-weight: 760; margin-bottom: 7px; }
@@ -515,7 +517,8 @@ function render() {
   const target = node("section", "target");
   const freshChallenge = session.mode === "stage5b1b_fresh_challenge_human_audit";
   const tier2Audit = session.mode === "stage5b1c_tier2_human_audit";
-  const blindedAudit = freshChallenge || tier2Audit;
+  const fallbackAudit = session.mode === "stage5b1j_representation_fallback_review";
+  const blindedAudit = freshChallenge || tier2Audit || fallbackAudit;
   if (blindedAudit) target.classList.add("blinded");
   const identity = node("div");
   identity.append(node("div", "eyebrow", `Spotify target · track ${index + 1} of ${session.cases.length}`), node("h2", "", item.track.title), node("div", "artists", item.track.artists.join(" · ")));
@@ -528,10 +531,19 @@ function render() {
   const context = node("div", "target-copy");
   if (blindedAudit) {
     context.append(
-      node("div", "eyebrow", tier2Audit ? "Blinded Tier-2 safety audit" : "Blinded source audit"),
-      node("p", "", "Judge whether each candidate is the intended Spotify recording, then whether its audio source is clean enough for similarity analysis."),
+      node("div", "eyebrow", fallbackAudit ? "Representation-equivalence safety gate" : tier2Audit ? "Blinded Tier-2 safety audit" : "Blinded source audit"),
+      node("p", "", fallbackAudit ? "Judge whether this fallback is a suitable audio representation for the Spotify target's downstream similarity analysis." : "Judge whether each candidate is the intended Spotify recording, then whether its audio source is clean enough for similarity analysis."),
       node("p", "", tier2Audit ? "Tier-2 recovery rules, Sol judgments, and selection reasons remain hidden." : "Resolver decisions, Sol judgments, search rank, and audit reasons remain hidden."),
     );
+    if (fallbackAudit && item.fallback) {
+      const mode = item.fallback.match_mode === "REPRESENTATION_EQUIVALENT_STUDIO_FALLBACK" ? "Studio fallback" : item.fallback.match_mode === "REPRESENTATION_EQUIVALENT_MASTER_FALLBACK" ? "Master fallback" : "Exact recording";
+      const callout = node("div", "fallback-callout");
+      callout.append(
+        node("strong", "", `${mode} · not claimed as the exact Spotify release`),
+        document.createTextNode("Judge whether this is an acceptable audio representation for downstream CLAP/MuQ similarity—not whether it is literally the same release."),
+      );
+      context.append(callout);
+    }
   } else {
     context.append(node("div", "eyebrow", "Why this case exists"), node("p", "", item.case_rationale));
     const queryDetails = node("details");
@@ -569,7 +581,7 @@ function render() {
   const heading = node("div");
   heading.append(
     node("div", "eyebrow", blindedAudit ? "Blinded audit candidates" : "Ordered yt-dlp candidates"),
-    node("h2", "", tier2Audit ? "Review the recovered source" : "Label every candidate"),
+    node("h2", "", tier2Audit || fallbackAudit ? "Review the recovered source" : "Label every candidate"),
     node("p", "", "Open YouTube when needed. Each choice saves immediately; notes autosave after a short pause. Automatic resolver and evaluator evidence are hidden during review."),
   );
   const trackCount = node("div", "track-count", `${item.candidates.filter(candidate => Boolean(savedLabel(candidate))).length} / ${item.candidates.length} labeled on this track`);
@@ -599,6 +611,10 @@ async function load() {
       document.title = "Tier-2 recovery review · Stage 5B.1C";
       pageEyebrow.textContent = "Stage 5B.1C · Tier-2 safety audit";
       pageTitle.textContent = "Recovered source review";
+    } else if (session.mode === "stage5b1j_representation_fallback_review") {
+      document.title = "Representation fallback review · Stage 5B.1J";
+      pageEyebrow.textContent = "Stage 5B.1J · fallback safety gate";
+      pageTitle.textContent = "Representation fallback review";
     }
     session.cases.forEach(item => item.candidates.forEach(candidate => { candidate._savedLabel = candidate.review.label; }));
     const first = session.cases.findIndex(item => !isComplete(item));

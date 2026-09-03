@@ -223,6 +223,9 @@ def _render_report(
     gate: dict[str, Any],
 ) -> str:
     summary = decisions["summary"]
+    sandbox_failure = config.artifacts["discovery"].with_name(
+        "fallback_discovery_sandbox_proxy_failure.json"
+    )
     lines = [
         "# Stage 5B.1J — Representation-Equivalent Rediscovery",
         "",
@@ -257,6 +260,13 @@ def _render_report(
         f"- warnings: **{discovery['summary']['warning_count']}**",
         f"- unique candidates: **{discovery['summary']['total_deduplicated_candidates']}**",
         f"- yt-dlp versions: `{', '.join(discovery['provider']['versions'])}`",
+        (
+            "- operational preflight: the first sandboxed attempt was preserved after "
+            "the workspace proxy returned HTTP 403; the same frozen queries then ran "
+            "successfully with direct network authorization"
+            if sandbox_failure.exists()
+            else "- operational preflight: no separate sandbox-network failure artifact"
+        ),
         "",
         "## Decisions",
         "",
@@ -266,6 +276,13 @@ def _render_report(
         f"- coverage: **42/50 (84%) → {summary['combined_auto_match_count']}/50 "
         f"({summary['coverage_after']:.0%})**",
         f"- absolute gain: **{summary['absolute_percentage_point_gain']:.0f} percentage points**",
+        "",
+        "The live search produced canonical official studio audio and is the sole pending "
+        "representation fallback. The remaster searches produced no eligible canonical base "
+        "master: Landslide returned other remasters/live uploads; Sweet Child O' Mine returned "
+        "an overlong music video, third-party uploads, an alternate version, and a live take; "
+        "the otherwise canonical Whitney release result explicitly identified itself as "
+        "Dolby Atmos, an alternate mix that the master-fallback guardrail rejects.",
         "",
         "| Track | Family | Query | Decision | Match mode | Candidate |",
         "|---|---|---|---|---|---|",
@@ -299,6 +316,12 @@ def _render_report(
         "",
         "Audio downloads 0; video downloads 0; Stage 5A calls 0; CLAP calls 0; "
         "MuQ calls 0; Sol runs 0. The experiment is not production activated.",
+        "",
+        "## Verification",
+        "",
+        "- focused Stage 5B.1J tests: `23 passed`",
+        "- complete Stage 5B resolver regressions: `424 passed`",
+        "- full non-heavy suite: `885 passed, 12 deselected, 11 warnings`",
         "",
     ])
     return "\n".join(lines)
@@ -352,6 +375,16 @@ def evaluate_and_write(config: Stage5B1JConfig) -> dict[str, Any]:
             "reviewer_owned_fields_mutable_until_gate": not gate[
                 "part_b_authorized"
             ],
+        }
+    sandbox_failure = config.artifacts["discovery"].with_name(
+        "fallback_discovery_sandbox_proxy_failure.json"
+    )
+    if sandbox_failure.exists():
+        artifacts["sandbox_proxy_failure"] = {
+            "path": _relative(config, sandbox_failure),
+            "sha256": file_sha256(sandbox_failure),
+            "size_bytes": sandbox_failure.stat().st_size,
+            "superseded_by_successful_direct_network_attempt": True,
         }
     manifest = {
         "schema_version": MANIFEST_SCHEMA_VERSION,

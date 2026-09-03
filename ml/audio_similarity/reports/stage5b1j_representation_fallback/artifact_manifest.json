@@ -1,0 +1,118 @@
+{
+  "artifacts": {
+    "audit_queue": {
+      "path": "reports/stage5b1j_representation_fallback/fallback_human_audit_queue.json",
+      "sha256": "73ff469d86e83f361ea49ba9cc24556de2a75a3068d07763138722fcc280d1dc",
+      "size_bytes": 994
+    },
+    "decisions": {
+      "path": "reports/stage5b1j_representation_fallback/representation_equivalence_decisions.json",
+      "sha256": "5a10396bfb0baa2f72f1ab8bcb9f620f9038e559789899643a9f6db131dc84df",
+      "size_bytes": 12104
+    },
+    "discovery": {
+      "path": "reports/stage5b1j_representation_fallback/fallback_discovery.json",
+      "sha256": "f3f651f4b2001f73357bb8bf46ebe3daf6c39d1b2058e29c85f0f3973116c217",
+      "size_bytes": 57099
+    },
+    "features": {
+      "path": "reports/stage5b1j_representation_fallback/fallback_candidate_features.json",
+      "sha256": "0923169afbd53a16dd00e548124caec503bdef2f6f6f4a274c5f29593ed151b2",
+      "size_bytes": 810498
+    },
+    "human_review": {
+      "path": "reports/stage5b1j_representation_fallback/fallback_human_review.csv",
+      "reviewer_owned_fields_mutable_until_gate": true,
+      "sha256": "e45f64737faf7ed68184284cdc75861e95506fbfe64a8207c066662b84ca3e4c",
+      "size_bytes": 736
+    },
+    "queries": {
+      "path": "reports/stage5b1j_representation_fallback/fallback_queries.json",
+      "sha256": "baa7f83c21d9f5b4117cde79eebba98043af46168136b6393555a6ed1199e1e4",
+      "size_bytes": 7612
+    },
+    "report": {
+      "path": "reports/stage5b1j_representation_fallback/fallback_report.md",
+      "sha256": "81fc67a9e0366a2405c76331845765b6780e899ca9295523d4352e722466b959",
+      "size_bytes": 3396
+    },
+    "sandbox_proxy_failure": {
+      "path": "reports/stage5b1j_representation_fallback/fallback_discovery_sandbox_proxy_failure.json",
+      "sha256": "04cbb0a93deb41e055d401ca14fb52ff6103be516e383b06c639758db9943735",
+      "size_bytes": 34443,
+      "superseded_by_successful_direct_network_attempt": true
+    }
+  },
+  "config": {
+    "path": "configs/stage5b1j_representation_fallback.json",
+    "sha256": "f3a265093fdd8420d8fe9c3b2736ae5bf701f00857875921d400e40a5ef39f77"
+  },
+  "frozen_inputs": {
+    "challenge_config": {
+      "path": "configs/stage5b1b_fresh_challenge.json",
+      "sha256": "283901e8e6804757a5246025e14c43e07311830ca3708ce05db00c394b1aaedd",
+      "size_bytes": 3126
+    },
+    "challenge_discovery": {
+      "path": "reports/stage5b1b_fresh_challenge/challenge_ytdlp_discovery.json",
+      "sha256": "95bb1ca905a05fcc4167da10e3dfd6cf267600a4dfb1898b491d28ba855e6fb4",
+      "size_bytes": 606059
+    },
+    "challenge_manifest": {
+      "path": "reports/stage5b1b_fresh_challenge/challenge_tracks.json",
+      "sha256": "e2e9a1ab43f568dd9de853c2964f341ee0d0e2631ca87f732d0d4326ab990f79",
+      "size_bytes": 22137
+    },
+    "stage5b1i_artifact_manifest": {
+      "path": "reports/stage5b1i_live_representation_fallback/artifact_manifest.json",
+      "sha256": "82ecaed382bfb813245fd9d6a92f79761693e70370851e753aeea6b55c8d27c4",
+      "size_bytes": 3403
+    },
+    "stage5b1i_config": {
+      "path": "configs/stage5b1i_live_representation_fallback.json",
+      "sha256": "85809583bfd5eec0318bac27c462c95f18032692bcab59c241de24d9b1f3cdc3",
+      "size_bytes": 2194
+    },
+    "stage5b1i_decisions": {
+      "path": "reports/stage5b1i_live_representation_fallback/representation_equivalence_decisions.json",
+      "sha256": "99c774f774dc6b065ccd6794ec158b44ad050a02ba219f08a38e6d85cddf5406",
+      "size_bytes": 40811
+    }
+  },
+  "human_validation_gate": {
+    "all_new_selections_human_safe": false,
+    "completed": 0,
+    "human_review_sha256": "e45f64737faf7ed68184284cdc75861e95506fbfe64a8207c066662b84ca3e4c",
+    "label_counts": {},
+    "part_b_authorized": false,
+    "required": 1,
+    "status": "STAGE5B1J_PART_A_AWAITING_HUMAN_REVIEW"
+  },
+  "part_b_authorized": false,
+  "schema_version": "stage5b1j-representation-fallback-artifact-manifest-v1",
+  "scope_guards": {
+    "audio_downloads": 0,
+    "clap_calls": 0,
+    "exact_precedes_fallback": true,
+    "historical_resolver_changed": false,
+    "muq_calls": 0,
+    "new_searches_outside_fallback_eligible_unresolved_tracks": 0,
+    "original_q0_pools_mutated": false,
+    "sol_runs": 0,
+    "stage5a_calls": 0,
+    "video_downloads": 0
+  },
+  "status": "STAGE5B1J_PART_A_AWAITING_HUMAN_REVIEW",
+  "summary": {
+    "absolute_percentage_point_gain": 2.0,
+    "combined_auto_match_count": 43,
+    "combined_match_uncertain_count": 7,
+    "coverage_after": 0.86,
+    "coverage_before": 0.84,
+    "fallback_tracks_attempted": 4,
+    "new_exact_recording_count": 0,
+    "new_master_fallback_count": 0,
+    "new_selection_count": 1,
+    "new_studio_fallback_count": 1
+  }
+}

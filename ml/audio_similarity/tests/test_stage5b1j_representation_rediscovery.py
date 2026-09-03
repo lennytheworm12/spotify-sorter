@@ -18,6 +18,7 @@ from audio_similarity.stage5b1j_representation_rediscovery import (
     build_fallback_queries,
     classify_fallback_target,
     derive_base_target,
+    evaluate_fallback_discovery,
     load_stage5b1j_config,
     q0_query_config,
     run_fallback_discovery,
@@ -163,3 +164,56 @@ def test_discovery_is_sequential_bounded_and_metadata_only() -> None:
         "muq_calls": 0,
     }
     assert all(expression.startswith("ytsearch5:") for expression in backend.expressions)
+
+
+def test_frozen_fallback_discovery_evaluates_without_changing_baseline() -> None:
+    config = load_stage5b1j_config(CONFIG)
+    discovery = json.loads(config.artifacts["discovery"].read_text())
+    features, decisions = evaluate_fallback_discovery(config, discovery)
+    assert features["track_count"] == 4
+    assert decisions["frozen_baseline"]["auto_match_count"] == 42
+    assert decisions["frozen_baseline"]["match_uncertain_count"] == 8
+    assert decisions["summary"] == {
+        "fallback_tracks_attempted": 4,
+        "new_selection_count": 1,
+        "new_exact_recording_count": 0,
+        "new_studio_fallback_count": 1,
+        "new_master_fallback_count": 0,
+        "combined_auto_match_count": 43,
+        "combined_match_uncertain_count": 7,
+        "coverage_before": 0.84,
+        "coverage_after": 0.86,
+        "absolute_percentage_point_gain": 2.0,
+    }
+    selected = {
+        row["stable_track_id"]: row["final_decision"]
+        for row in decisions["tracks"]
+        if row["final_decision"]["status"] == "AUTO_MATCH"
+    }
+    assert selected["s5b1c_029"]["match_mode"] == (
+        "REPRESENTATION_EQUIVALENT_STUDIO_FALLBACK"
+    )
+    assert {
+        row["stable_track_id"] for row in decisions["tracks"]
+        if row["final_decision"]["status"] == "MATCH_UNCERTAIN"
+    } == {"s5b1c_032", "s5b1c_033", "s5b1c_034"}
+    assert decisions["scope_guards"]["original_q0_pools_mutated"] is False
+
+
+def test_explicit_spatial_mix_release_metadata_rejects_master_fallback() -> None:
+    config = load_stage5b1j_config(CONFIG)
+    discovery = json.loads(config.artifacts["discovery"].read_text())
+    features, _decisions = evaluate_fallback_discovery(config, discovery)
+    whitney = next(
+        row for row in features["tracks"] if row["stable_track_id"] == "s5b1c_034"
+    )
+    candidate = next(
+        row for row in whitney["base_target_evaluation"]["candidate_records"]
+        if row["snapshot"]["video_id"] == "id2-K3daNRQ"
+    )
+    eligibility = candidate["representation_equivalence_eligibility"]
+    assert not eligibility["eligible"]
+    assert eligibility["explicit_alternate_master_evidence"] == ["Dolby Atmos"]
+    assert "no_explicit_alternate_master_presentation" in eligibility[
+        "failed_conditions"
+    ]
