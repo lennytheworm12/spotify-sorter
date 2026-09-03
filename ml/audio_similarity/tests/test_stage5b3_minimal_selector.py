@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import csv
+import json
 from pathlib import Path
 
 import pytest
@@ -129,3 +131,21 @@ def test_frozen_stage5b2_replay_uses_no_existing_resolver(tmp_path) -> None:
     }
     assert result["summary"]["safe_rank1_vetoed_count"] == 10
     assert before == {name: file_sha256(prior / name) for name in EXPECTED_PRIOR_HASHES}
+
+
+def test_completed_stage5b3_human_evaluation_is_frozen() -> None:
+    root = Path(__file__).resolve().parents[1]
+    output = root / "reports/stage5b3_minimal_selector"
+    decisions = json.loads((output / "minimal_selector_decisions.json").read_text())
+    with (output / "human_review.csv").open(encoding="utf-8", newline="") as handle:
+        labels = [row["candidate_review_label"] for row in csv.DictReader(handle)]
+
+    assert sorted(labels) == sorted(
+        ["IDEAL"] * 2 + ["ACCEPTABLE"] * 6 + ["UNCERTAIN"]
+    )
+    assert decisions["status"] == "STAGE5B3_MINIMAL_SELECTOR_EVALUATED"
+    assert decisions["summary"]["success_gate_passed"] is True
+    assert decisions["summary"]["human_safe_count"] == 97
+    assert decisions["summary"]["human_wrong_count"] == 0
+    assert decisions["summary"]["human_uncertain_count"] == 2
+    assert decisions["summary"]["safe_precision"] == pytest.approx(97 / 99)

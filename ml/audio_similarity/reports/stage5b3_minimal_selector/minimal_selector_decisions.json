@@ -17,9 +17,9 @@
     "youtube_top3_discovery.json": "3a90301a008824a3001b464aae0e348bc56649f508ccca6f11d88c171f31b9b8"
   },
   "source_benchmark_id": "STAGE5B_YOUTUBE_PRIOR_V1",
-  "status": "STAGE5B3_MINIMAL_SELECTOR_AWAITING_HUMAN_REVIEW",
+  "status": "STAGE5B3_MINIMAL_SELECTOR_EVALUATED",
   "summary": {
-    "architecture_decision": "**AWAITING TARGETED HUMAN REVIEW.** No architecture decision is frozen yet.",
+    "architecture_decision": "**PASS.** Test this unchanged minimal selector on a fresh Representative Library V3 benchmark; do not production-activate from calibration.",
     "auto_select_count": 99,
     "coverage": 0.99,
     "critical_checks": {
@@ -27,12 +27,14 @@
       "goddess_of_the_hollow_fixed": true,
       "we_got_so_much_fixed": true
     },
-    "human_safe_count": 89,
-    "human_uncertain_count": 1,
-    "human_unreviewed_count": 9,
+    "human_acceptable_count": 13,
+    "human_ideal_count": 84,
+    "human_safe_count": 97,
+    "human_uncertain_count": 2,
+    "human_unreviewed_count": 0,
     "human_wrong_count": 0,
     "match_uncertain_count": 1,
-    "safe_precision": null,
+    "safe_precision": 0.9797979797979798,
     "safe_rank1_vetoed": [
       {
         "benchmark_id": "stage5b_youtube_prior_v1_015",
@@ -41,7 +43,7 @@
           "DURATION_ANOMALY_GT_20_SECONDS"
         ],
         "rank1_video_id": "uu3Rzl_dK_s",
-        "selected_human_label": "",
+        "selected_human_label": "ACCEPTABLE",
         "selected_rank": 2,
         "selected_video_id": "yBy0vr-nYzg",
         "selector_decision": "AUTO_SELECT",
@@ -54,7 +56,7 @@
           "DURATION_ANOMALY_GT_20_SECONDS"
         ],
         "rank1_video_id": "HM6UpQZvbhY",
-        "selected_human_label": "",
+        "selected_human_label": "ACCEPTABLE",
         "selected_rank": 3,
         "selected_video_id": "sWyZMFmTfQs",
         "selector_decision": "AUTO_SELECT",
@@ -67,7 +69,7 @@
           "DURATION_ANOMALY_GT_20_SECONDS"
         ],
         "rank1_video_id": "ZkITTCz1mhk",
-        "selected_human_label": "",
+        "selected_human_label": "ACCEPTABLE",
         "selected_rank": 2,
         "selected_video_id": "FeeVnBhQwZE",
         "selector_decision": "AUTO_SELECT",
@@ -80,7 +82,7 @@
           "DURATION_ANOMALY_GT_20_SECONDS"
         ],
         "rank1_video_id": "no6O9AnC1_g",
-        "selected_human_label": "",
+        "selected_human_label": "IDEAL",
         "selected_rank": 2,
         "selected_video_id": "MunZpl35-p4",
         "selector_decision": "AUTO_SELECT",
@@ -93,7 +95,7 @@
           "DURATION_ANOMALY_GT_20_SECONDS"
         ],
         "rank1_video_id": "1kXLsrun51s",
-        "selected_human_label": "",
+        "selected_human_label": "ACCEPTABLE",
         "selected_rank": 2,
         "selected_video_id": "Kh3C_rEsVRQ",
         "selector_decision": "AUTO_SELECT",
@@ -106,7 +108,7 @@
           "DURATION_ANOMALY_GT_20_SECONDS"
         ],
         "rank1_video_id": "RHw1a0WESuA",
-        "selected_human_label": "",
+        "selected_human_label": "ACCEPTABLE",
         "selected_rank": 3,
         "selected_video_id": "f88WxriTKW0",
         "selector_decision": "AUTO_SELECT",
@@ -119,7 +121,7 @@
           "DURATION_ANOMALY_GT_20_SECONDS"
         ],
         "rank1_video_id": "ePpPVE-GGJw",
-        "selected_human_label": "",
+        "selected_human_label": "UNCERTAIN",
         "selected_rank": 2,
         "selected_video_id": "9uypQGzzhns",
         "selector_decision": "AUTO_SELECT",
@@ -132,7 +134,7 @@
           "DURATION_ANOMALY_GT_20_SECONDS"
         ],
         "rank1_video_id": "67jSYCSrnE4",
-        "selected_human_label": "",
+        "selected_human_label": "IDEAL",
         "selected_rank": 2,
         "selected_video_id": "Mm2PW9CZHJc",
         "selector_decision": "AUTO_SELECT",
@@ -146,7 +148,7 @@
           "DURATION_ANOMALY_GT_20_SECONDS"
         ],
         "rank1_video_id": "Iwx9t3qTcV4",
-        "selected_human_label": "",
+        "selected_human_label": "ACCEPTABLE",
         "selected_rank": 2,
         "selected_video_id": "rquH4qEfRHA",
         "selector_decision": "AUTO_SELECT",
@@ -173,7 +175,13 @@
       "rank_2": 9,
       "rank_3": 2
     },
-    "success_gate_passed": false
+    "success_gate_passed": true,
+    "targeted_review": {
+      "ACCEPTABLE": 6,
+      "IDEAL": 2,
+      "UNCERTAIN": 1,
+      "WRONG": 0
+    }
   },
   "tracks": [
     {
@@ -985,8 +993,8 @@
         }
       ],
       "decision": "AUTO_SELECT",
-      "human_label": "",
-      "human_label_source": null,
+      "human_label": "ACCEPTABLE",
+      "human_label_source": "STAGE5B3_TARGETED_REVIEW",
       "selected_candidate": {
         "availability": null,
         "canonical_url": "https://www.youtube.com/watch?v=yBy0vr-nYzg",
@@ -1353,8 +1361,8 @@
         }
       ],
       "decision": "AUTO_SELECT",
-      "human_label": "",
-      "human_label_source": null,
+      "human_label": "ACCEPTABLE",
+      "human_label_source": "STAGE5B3_TARGETED_REVIEW",
       "selected_candidate": {
         "availability": null,
         "canonical_url": "https://www.youtube.com/watch?v=sWyZMFmTfQs",
@@ -1753,8 +1761,8 @@
         }
       ],
       "decision": "AUTO_SELECT",
-      "human_label": "",
-      "human_label_source": null,
+      "human_label": "ACCEPTABLE",
+      "human_label_source": "STAGE5B3_TARGETED_REVIEW",
       "selected_candidate": {
         "availability": null,
         "canonical_url": "https://www.youtube.com/watch?v=FeeVnBhQwZE",
@@ -2607,8 +2615,8 @@
         }
       ],
       "decision": "AUTO_SELECT",
-      "human_label": "",
-      "human_label_source": null,
+      "human_label": "IDEAL",
+      "human_label_source": "STAGE5B3_TARGETED_REVIEW",
       "selected_candidate": {
         "availability": null,
         "canonical_url": "https://www.youtube.com/watch?v=MunZpl35-p4",
@@ -2674,8 +2682,8 @@
         }
       ],
       "decision": "AUTO_SELECT",
-      "human_label": "",
-      "human_label_source": null,
+      "human_label": "ACCEPTABLE",
+      "human_label_source": "STAGE5B3_TARGETED_REVIEW",
       "selected_candidate": {
         "availability": null,
         "canonical_url": "https://www.youtube.com/watch?v=Kh3C_rEsVRQ",
@@ -2809,8 +2817,8 @@
         }
       ],
       "decision": "AUTO_SELECT",
-      "human_label": "",
-      "human_label_source": null,
+      "human_label": "ACCEPTABLE",
+      "human_label_source": "STAGE5B3_TARGETED_REVIEW",
       "selected_candidate": {
         "availability": null,
         "canonical_url": "https://www.youtube.com/watch?v=f88WxriTKW0",
@@ -2875,8 +2883,8 @@
         }
       ],
       "decision": "AUTO_SELECT",
-      "human_label": "",
-      "human_label_source": null,
+      "human_label": "UNCERTAIN",
+      "human_label_source": "STAGE5B3_TARGETED_REVIEW",
       "selected_candidate": {
         "availability": null,
         "canonical_url": "https://www.youtube.com/watch?v=9uypQGzzhns",
@@ -3332,8 +3340,8 @@
         }
       ],
       "decision": "AUTO_SELECT",
-      "human_label": "",
-      "human_label_source": null,
+      "human_label": "IDEAL",
+      "human_label_source": "STAGE5B3_TARGETED_REVIEW",
       "selected_candidate": {
         "availability": null,
         "canonical_url": "https://www.youtube.com/watch?v=Mm2PW9CZHJc",
@@ -4571,8 +4579,8 @@
         }
       ],
       "decision": "AUTO_SELECT",
-      "human_label": "",
-      "human_label_source": null,
+      "human_label": "ACCEPTABLE",
+      "human_label_source": "STAGE5B3_TARGETED_REVIEW",
       "selected_candidate": {
         "availability": null,
         "canonical_url": "https://www.youtube.com/watch?v=rquH4qEfRHA",

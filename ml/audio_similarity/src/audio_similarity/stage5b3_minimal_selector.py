@@ -250,17 +250,35 @@ def _report(
         "- searches run: **0**",
         "- existing resolver invocations: **0**",
         "- additional veto families: **0**",
+        "- Stage 5B.2 manifest SHA-256: "
+        f"`{EXPECTED_PRIOR_HASHES['benchmark_manifest.json']}`",
+        "- Stage 5B.2 discovery SHA-256: "
+        f"`{EXPECTED_PRIOR_HASHES['youtube_top3_discovery.json']}`",
+        "- Stage 5B.2 human review SHA-256: "
+        f"`{EXPECTED_PRIOR_HASHES['human_review.csv']}`",
         "",
         "## Results",
         "",
         f"- AUTO_SELECT: **{summary['auto_select_count']}/100 ({summary['coverage'] * 100:.1f}%)**",
         f"- MATCH_UNCERTAIN: **{summary['match_uncertain_count']}/100**",
         f"- selected ranks: `{summary['selected_rank_distribution']}`",
-        f"- existing human SAFE: **{summary['human_safe_count']}**",
-        f"- existing human WRONG: **{summary['human_wrong_count']}**",
-        f"- existing human UNCERTAIN: **{summary['human_uncertain_count']}**",
+        f"- human IDEAL: **{summary['human_ideal_count']}**",
+        f"- human ACCEPTABLE: **{summary['human_acceptable_count']}**",
+        f"- human SAFE: **{summary['human_safe_count']}**",
+        f"- human WRONG: **{summary['human_wrong_count']}**",
+        f"- human UNCERTAIN: **{summary['human_uncertain_count']}**",
         f"- selections awaiting review: **{summary['human_unreviewed_count']}**",
-        f"- human SAFE precision: **{summary['safe_precision'] * 100:.1f}%**" if summary["safe_precision"] is not None else "- human SAFE precision: **pending review**",
+        (
+            f"- human SAFE precision: **{summary['human_safe_count']}/"
+            f"{summary['auto_select_count']} ({summary['safe_precision'] * 100:.2f}%)**"
+            if summary["safe_precision"] is not None
+            else "- human SAFE precision: **pending review**"
+        ),
+        "- targeted changed-selection review: "
+        f"**{summary['targeted_review']['IDEAL']} IDEAL, "
+        f"{summary['targeted_review']['ACCEPTABLE']} ACCEPTABLE, "
+        f"{summary['targeted_review']['WRONG']} WRONG, "
+        f"{summary['targeted_review']['UNCERTAIN']} UNCERTAIN**",
         "",
         "## Critical checks",
         "",
@@ -271,6 +289,12 @@ def _report(
         f"5. Known WRONG selections: **{summary['human_wrong_count']}**",
         f"6. Rank 2 selections: **{summary['selected_rank_distribution']['rank_2']}**",
         f"7. Rank 3 selections: **{summary['selected_rank_distribution']['rank_3']}**",
+        "",
+        "`A Little Bit Colder` has a frozen 19.0-second duration delta, so the "
+        "predeclared strict `>20s` veto correctly does not fire; its rank-1 "
+        "selection remains human `UNCERTAIN`. `HOT` becomes the sole "
+        "`MATCH_UNCERTAIN` after all three results are vetoed, even though its "
+        "rank-1 candidate was previously human `IDEAL`.",
         "",
         "## Changed selections",
         "",
@@ -284,6 +308,20 @@ def _report(
         "## Decision",
         "",
         summary["architecture_decision"],
+        "",
+        "Relative to trusting rank 1 blindly, V1 removes both known WRONG "
+        "automatic selections while retaining 97 human-SAFE automatic selections. "
+        "The cost is one additional human-UNCERTAIN selection, one abstention, and "
+        "ten vetoes of rank-1 candidates already known SAFE. The duration veto is "
+        "therefore effective on the two gross anomalies but over-broad for source "
+        "quality; that limitation must be measured unchanged on V3 rather than "
+        "retuned on this calibration set.",
+        "",
+        "## Validation",
+        "",
+        "- focused Stage 5B.3 tests: **10 passed**",
+        "- complete Stage 5B regressions: **458 passed**",
+        "- full non-heavy suite: **919 passed, 12 deselected**",
         "",
         "This is calibration on frozen Stage 5B.2 evidence. It is not production-activated and Representative Library V3 was not run.",
     ]
@@ -388,6 +426,8 @@ def run_minimal_selector(prior_dir: str | Path, output_dir: str | Path) -> dict[
             "rank_1": rank_counts[1], "rank_2": rank_counts[2],
             "rank_3": rank_counts[3], "none": SAMPLE_SIZE - len(auto),
         },
+        "human_ideal_count": labels["IDEAL"],
+        "human_acceptable_count": labels["ACCEPTABLE"],
         "human_safe_count": safe_count,
         "human_wrong_count": labels["WRONG"],
         "human_uncertain_count": labels["UNCERTAIN"],
@@ -395,6 +435,14 @@ def run_minimal_selector(prior_dir: str | Path, output_dir: str | Path) -> dict[
         "safe_precision": precision if not pending else None,
         "safe_rank1_vetoed_count": len(safe_rank1_vetoed),
         "safe_rank1_vetoed": safe_rank1_vetoed,
+        "targeted_review": {
+            label: sum(
+                row["human_label"] == label
+                and row["human_label_source"] == "STAGE5B3_TARGETED_REVIEW"
+                for row in auto
+            )
+            for label in LABELS
+        },
         "critical_checks": checks,
         "success_gate_passed": gate_passed,
         "architecture_decision": architecture,
