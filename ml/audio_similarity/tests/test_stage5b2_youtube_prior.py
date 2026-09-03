@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import csv
 from dataclasses import replace
 from pathlib import Path
 from types import SimpleNamespace
@@ -17,6 +18,13 @@ from audio_similarity.stage5b2_youtube_prior import (
     load_youtube_prior_config,
     natural_title_artist_query,
     run_top3_discovery,
+)
+from audio_similarity.stage5b2_youtube_prior_review import (
+    SAFE_LABELS,
+    YoutubePriorReviewStore,
+    first_safe_rank,
+    required_rank,
+    write_human_review_artifacts,
 )
 
 
@@ -149,3 +157,69 @@ def test_top_three_order_and_blinded_sol_payload_exclude_rank(tmp_path: Path) ->
 
     with pytest.raises(Stage5B1AValidationError, match="already frozen"):
         run_top3_discovery(config, _FakeAdapter(), sleep=lambda _seconds: None)
+
+
+def test_adaptive_review_protocol_and_autosave_store(tmp_path: Path) -> None:
+    root = Path(__file__).parents[1]
+    config = load_youtube_prior_config(
+        root / "reports/stage5b_youtube_prior_v1/benchmark_config.json"
+    )
+    config = replace(config, output_dir=tmp_path)
+    run_top3_discovery(config, _FakeAdapter(), sleep=lambda _seconds: None)
+    queue, review_path = write_human_review_artifacts(config)
+
+    with review_path.open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    assert queue["protocol"] == "REVIEW_NATIVE_RANKS_UNTIL_FIRST_SAFE"
+    assert len(rows) == 300
+    assert set(queue["safe_labels"]) == SAFE_LABELS
+    assert required_rank(rows[:3]) == 1
+    assert first_safe_rank(rows[:3]) is None
+
+    store = YoutubePriorReviewStore(review_path)
+    session = store.session()
+    first = session["cases"][0]
+    assert session["mode"] == "stage5b2_youtube_prior_review"
+    assert [row["rank"] for row in first["candidates"]] == [1]
+    with pytest.raises(Stage5B1AValidationError, match="earlier YouTube ranks"):
+        store.submit(first["stable_track_id"], "vid00000002", "IDEAL")
+
+    store.submit(first["stable_track_id"], "vid00000001", "WRONG", "wrong version")
+    first = store.session()["cases"][0]
+    assert first["next_required_rank"] == 2
+    assert [row["rank"] for row in first["candidates"]] == [1, 2]
+
+    store.submit(first["stable_track_id"], "vid00000002", "ACCEPTABLE")
+    first = store.session()["cases"][0]
+    assert first["review_complete"] is True
+    assert first["next_required_rank"] is None
+    assert [row["rank"] for row in first["candidates"]] == [1, 2]
+
+
+def test_rank_three_is_requested_only_after_two_non_safe_labels(tmp_path: Path) -> None:
+    root = Path(__file__).parents[1]
+    config = load_youtube_prior_config(
+        root / "reports/stage5b_youtube_prior_v1/benchmark_config.json"
+    )
+    config = replace(config, output_dir=tmp_path)
+    run_top3_discovery(config, _FakeAdapter(), sleep=lambda _seconds: None)
+    _, review_path = write_human_review_artifacts(config)
+    store = YoutubePriorReviewStore(review_path)
+    first = store.session()["cases"][0]
+
+    store.submit(first["stable_track_id"], "vid00000001", "UNCERTAIN")
+    store.submit(first["stable_track_id"], "vid00000002", "WRONG")
+    first = store.session()["cases"][0]
+    assert first["next_required_rank"] == 3
+    assert [row["rank"] for row in first["candidates"]] == [1, 2, 3]
+
+    store.submit(first["stable_track_id"], "vid00000003", "WRONG")
+    first = store.session()["cases"][0]
+    assert first["review_complete"] is True
+    assert first_safe_rank([
+        {
+            "youtube_rank": str(candidate["rank"]),
+            "candidate_review_label": candidate["review"]["label"],
+        }
+        for candidate in first["candidates"]
+    ]) is None
