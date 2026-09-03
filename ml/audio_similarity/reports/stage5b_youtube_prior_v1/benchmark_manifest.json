@@ -1,0 +1,1720 @@
+{
+  "benchmark_id": "STAGE5B_YOUTUBE_PRIOR_V1",
+  "eligible_heldout_track_count": 1146,
+  "historical_exclusion_provenance": {
+    "identity_count": 545,
+    "sources": [
+      {
+        "new_identity_count": 50,
+        "path": "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/reports/stage5b1a/frozen_tracks.json",
+        "sha256": "f3592bb8c8dea689959a22da222d8b7ce4911c1804392acb501cffe768700c57",
+        "track_objects": 25
+      },
+      {
+        "new_identity_count": 95,
+        "path": "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/reports/stage5b1b/heldout_tracks.json",
+        "sha256": "39557ede8f07bde129ad23d2bc64a0faf0fff755356cd87f2054e14f91d81e5a",
+        "track_objects": 50
+      },
+      {
+        "new_identity_count": 100,
+        "path": "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/reports/stage5b1b_fresh_challenge/challenge_tracks.json",
+        "sha256": "e2e9a1ab43f568dd9de853c2964f341ee0d0e2631ca87f732d0d4326ab990f79",
+        "track_objects": 50
+      },
+      {
+        "new_identity_count": 300,
+        "path": "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/reports/stage5b_representative_library_v1/benchmark_manifest.json",
+        "sha256": "cec77ef960fa5da7725e8a0df244a5829fb90fdc5463dc1ce6a2ef72667f4285",
+        "track_objects": 100
+      }
+    ]
+  },
+  "historically_excluded_track_count": 110,
+  "library_unique_track_count": 1256,
+  "post_freeze_substitutions": 0,
+  "private_library_snapshot_sha256": "0a31c8828a2a586008d78a0a6026a83a737db5e943cbd99847c1ae9005a43331",
+  "requested_sample_size": 100,
+  "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+  "sampled_track_count": 100,
+  "schema_version": "stage5b2-youtube-prior-manifest-v1",
+  "tracks": [
+    {
+      "album": "都不懂",
+      "artists": [
+        "Yihuik苡慧"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_001",
+      "duration_ms": 152851,
+      "isrc": "CNZ632100905",
+      "library_source_keys": [
+        "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+      ],
+      "release_year": 2021,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "2wObShFfEpKWTdpVQCMsDg",
+      "title": "都不懂"
+    },
+    {
+      "album": "Loveless Shadows",
+      "artists": [
+        "City Girl"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_002",
+      "duration_ms": 178285,
+      "isrc": "TCADI1719540",
+      "library_source_keys": [
+        "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+      ],
+      "release_year": 2017,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "1WGs0Xd1PRnZRPpwdtDXAs",
+      "title": "On the Train Somewhere Between My Apartment and You"
+    },
+    {
+      "album": "The Weekend (Funk Wav Remix)",
+      "artists": [
+        "SZA",
+        "Calvin Harris",
+        "Funk Wav"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_003",
+      "duration_ms": 171805,
+      "isrc": "USRC11702939",
+      "library_source_keys": [
+        "LIKED"
+      ],
+      "release_year": 2017,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "0P6AWOA4LG1XOctzaVu5tt",
+      "title": "The Weekend - Funk Wav Remix"
+    },
+    {
+      "album": "Growls and Purrs",
+      "artists": [
+        "JO YURI"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_004",
+      "duration_ms": 199026,
+      "isrc": "KRA492500347",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2025,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "2ZlzUxSV0Pir7oBn28OZCg",
+      "title": "Growls and Purrs"
+    },
+    {
+      "album": "take me away",
+      "artists": [
+        "hateful"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_005",
+      "duration_ms": 168032,
+      "isrc": "QZDA41906572",
+      "library_source_keys": [
+        "PLAYLIST:0wXwmY1hqaitcKiInMwE2y"
+      ],
+      "release_year": 2019,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "7hXr2dYT2klCv6BNBkpSAe",
+      "title": "take me away"
+    },
+    {
+      "album": "echo of a star",
+      "artists": [
+        "lace"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_006",
+      "duration_ms": 350000,
+      "isrc": "USYBL2401701",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2025,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "1Z9JUXZncWO4UOIqFcx3DE",
+      "title": "Please don't stop being sweet to me"
+    },
+    {
+      "album": "POSE!",
+      "artists": [
+        "LIGHTSUM"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_007",
+      "duration_ms": 154746,
+      "isrc": "KRA392400026",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2024,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "3go5iX7Ad1IqlBXrIzYexX",
+      "title": "POSE!"
+    },
+    {
+      "album": "Internet hometown hero",
+      "artists": [
+        "MICO"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_008",
+      "duration_ms": 163877,
+      "isrc": "QM24S2404932",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2024,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "21L7bgwJcZk1E7dxq1m1FI",
+      "title": "Tears in your eyes"
+    },
+    {
+      "album": "Bye Bye My Blue",
+      "artists": [
+        "Yerin Baek"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_009",
+      "duration_ms": 203409,
+      "isrc": "US5TA1600031",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2016,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "4GUqcCrsISpXTbiAFz6FcO",
+      "title": "Bye Bye My Blue"
+    },
+    {
+      "album": "Up All Night",
+      "artists": [
+        "One Direction"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_010",
+      "duration_ms": 199986,
+      "isrc": "GBHMU1100018",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2012,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "4cluDES4hQEUhmXj6TXkSo",
+      "title": "What Makes You Beautiful"
+    },
+    {
+      "album": "Can I Love ?",
+      "artists": [
+        "Cosmic Boy",
+        "youra",
+        "Meego"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_011",
+      "duration_ms": 229750,
+      "isrc": "KRB471900313",
+      "library_source_keys": [
+        "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+      ],
+      "release_year": 2019,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "4T2cOfemKB0owJS2JOu7dF",
+      "title": "Can I Love ? (feat. youra & Meego)"
+    },
+    {
+      "album": "Somnolent Nova",
+      "artists": [
+        "City Girl",
+        "santpoort"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_012",
+      "duration_ms": 186595,
+      "isrc": "QZES91896309",
+      "library_source_keys": [
+        "PLAYLIST:0wXwmY1hqaitcKiInMwE2y",
+        "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+      ],
+      "release_year": 2019,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "1EebxBw5N5UC529NjVintP",
+      "title": "Phosphorus Kiss"
+    },
+    {
+      "album": "Asleep in Soft Ether",
+      "artists": [
+        "City Girl"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_013",
+      "duration_ms": 238295,
+      "isrc": "QZZ772418261",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+      ],
+      "release_year": 2024,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "3t563yjPK2gTe2cm8Rzf5M",
+      "title": "I'm Still Holding On"
+    },
+    {
+      "album": "R U Next? Theme Song",
+      "artists": [
+        "Suzy"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_014",
+      "duration_ms": 194775,
+      "isrc": "KRA492300552",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2023,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "6ZRkGwxywPUmjPLglrfqlq",
+      "title": "R.U.N"
+    },
+    {
+      "album": "MEiNE",
+      "artists": [
+        "HA:TFELT",
+        "punchnello"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_015",
+      "duration_ms": 243326,
+      "isrc": "KRB141700002",
+      "library_source_keys": [
+        "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+      ],
+      "release_year": 2017,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "31inMSh6ThzDT0hZJboU6X",
+      "title": "Read Me"
+    },
+    {
+      "album": "call you back",
+      "artists": [
+        "Ivoris",
+        "Snoozegod",
+        "keeplove."
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_016",
+      "duration_ms": 161201,
+      "isrc": "US3DF2222401",
+      "library_source_keys": [
+        "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+      ],
+      "release_year": 2022,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "0SYB5z2LTlUyebRnUQadtN",
+      "title": "call you back"
+    },
+    {
+      "album": "EASY",
+      "artists": [
+        "LE SSERAFIM"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_017",
+      "duration_ms": 165748,
+      "isrc": "USA2P2340254",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2024,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+      "title": "We got so much"
+    },
+    {
+      "album": "Live Today",
+      "artists": [
+        "Nana Ou-Yang"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_018",
+      "duration_ms": 265048,
+      "isrc": "CNZ512200317",
+      "library_source_keys": [
+        "LIKED"
+      ],
+      "release_year": 2022,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "0irGItjpiw28u0O0vDRURt",
+      "title": "Bedtime Story"
+    },
+    {
+      "album": "Innocence",
+      "artists": [
+        "Sem0r"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_019",
+      "duration_ms": 111081,
+      "isrc": "QZDA41805190",
+      "library_source_keys": [
+        "PLAYLIST:3U7bNSGqI01Kc7eYpltZyN"
+      ],
+      "release_year": 2018,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "519u9IFzH2ze0ZdG1zyG4U",
+      "title": "Innocence"
+    },
+    {
+      "album": "wanna take this downtown?",
+      "artists": [
+        "NIKI"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_020",
+      "duration_ms": 183271,
+      "isrc": "ZZOPM1901005",
+      "library_source_keys": [
+        "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+      ],
+      "release_year": 2019,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "6PUtUVzOu0Wj6RvoJKini9",
+      "title": "odds"
+    },
+    {
+      "album": "9 WAY TICKET",
+      "artists": [
+        "fromis_9"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_021",
+      "duration_ms": 175946,
+      "isrc": "KRA872100002",
+      "library_source_keys": [
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2021,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "7oQqeRSV38YqkRv2UGvmbS",
+      "title": "WE GO"
+    },
+    {
+      "album": "just friends",
+      "artists": [
+        "potsu"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_022",
+      "duration_ms": 135862,
+      "isrc": "QM42K1802032",
+      "library_source_keys": [
+        "PLAYLIST:0wXwmY1hqaitcKiInMwE2y"
+      ],
+      "release_year": 2018,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "2PUCyydqpoJWjRBDRT5XSg",
+      "title": "food court"
+    },
+    {
+      "album": "I've Changed for You",
+      "artists": [
+        "Kina",
+        "Madson Project."
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_023",
+      "duration_ms": 196414,
+      "isrc": "QZDA61858554",
+      "library_source_keys": [
+        "PLAYLIST:3U7bNSGqI01Kc7eYpltZyN"
+      ],
+      "release_year": 2018,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "6rzXElsp81yWcDmWf9lBTd",
+      "title": "I've Changed for You"
+    },
+    {
+      "album": "over u",
+      "artists": [
+        "keshi"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_024",
+      "duration_ms": 179777,
+      "isrc": "SEYOK1765633",
+      "library_source_keys": [
+        "PLAYLIST:3U7bNSGqI01Kc7eYpltZyN"
+      ],
+      "release_year": 2017,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "6dMnsLoJPFfXIxcsDqjGiZ",
+      "title": "over u"
+    },
+    {
+      "album": "Stream_error",
+      "artists": [
+        "stream_error"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_025",
+      "duration_ms": 112000,
+      "isrc": "TCADO1821184",
+      "library_source_keys": [
+        "PLAYLIST:3U7bNSGqI01Kc7eYpltZyN"
+      ],
+      "release_year": 2018,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "6eAXXP4dIbWPLS3BzscuW7",
+      "title": "A Little Bit Colder"
+    },
+    {
+      "album": "Descendants Of The Sun Pt.3 (Original Television Soundtrack)",
+      "artists": [
+        "DAVICHI"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_026",
+      "duration_ms": 225171,
+      "isrc": "KRA341610132",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2016,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "1mh5s6XJ3RLJBRPErACsHW",
+      "title": "This Love"
+    },
+    {
+      "album": "Lowlife Princess: Noir",
+      "artists": [
+        "BIBI",
+        "SAM KIM"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_027",
+      "duration_ms": 168155,
+      "isrc": "KRE432200007",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2022,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "2FmByq9VHuQ0N7A8KMmQCg",
+      "title": "Loveholic's hangover (feat. Sam Kim)"
+    },
+    {
+      "album": "Tough",
+      "artists": [
+        "Quavo",
+        "Lana Del Rey"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_028",
+      "duration_ms": 188828,
+      "isrc": "USUG12400072",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2024,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "22DH8NChecsgPxDjA4pqer",
+      "title": "Tough"
+    },
+    {
+      "album": "'PUREFLOW', Pt. 1",
+      "artists": [
+        "LE SSERAFIM"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_029",
+      "duration_ms": 144000,
+      "isrc": "USA2P2622182",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2026,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "49CeyCugXaZV05J82ejVQh",
+      "title": "Irony"
+    },
+    {
+      "album": "twicetagram",
+      "artists": [
+        "TWICE"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_030",
+      "duration_ms": 207824,
+      "isrc": "US5TA1700096",
+      "library_source_keys": [
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2017,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "4g7hiqTP5eXt75XU5WSMMA",
+      "title": "LIKEY"
+    },
+    {
+      "album": "Drama - The 4th Mini Album",
+      "artists": [
+        "aespa"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_031",
+      "duration_ms": 203306,
+      "isrc": "KRA302300355",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2023,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "52qof5uEYA0TV0EpR7jNxs",
+      "title": "You"
+    },
+    {
+      "album": "Goddess of the Hollow",
+      "artists": [
+        "City Girl"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_032",
+      "duration_ms": 248450,
+      "isrc": "QZFZ72059393",
+      "library_source_keys": [
+        "PLAYLIST:0wXwmY1hqaitcKiInMwE2y",
+        "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+      ],
+      "release_year": 2020,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "2zehvIUiHhHyZuIIqkizR0",
+      "title": "Goddess of the Hollow"
+    },
+    {
+      "album": "Requiem",
+      "artists": [
+        "keshi"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_033",
+      "duration_ms": 180106,
+      "isrc": "USUM72406559",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2024,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "3pf5M9sxSecmhjT9gMPwe9",
+      "title": "Like That"
+    },
+    {
+      "album": "AM",
+      "artists": [
+        "Arctic Monkeys"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_034",
+      "duration_ms": 243131,
+      "isrc": "GBCEL1300367",
+      "library_source_keys": [
+        "LIKED"
+      ],
+      "release_year": 2013,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "5TTGoX70AFrTvuEtqHK37S",
+      "title": "No. 1 Party Anthem"
+    },
+    {
+      "album": "Love Me Back (From \"Operation: True Love\")",
+      "artists": [
+        "fromis_9"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_035",
+      "duration_ms": 186293,
+      "isrc": "KRNAR2351255",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2023,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "2IMPPA9UZpqTnnVIy9lDHU",
+      "title": "Love Me Back"
+    },
+    {
+      "album": "Siren of the Formless",
+      "artists": [
+        "City Girl"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_036",
+      "duration_ms": 230687,
+      "isrc": "QZFZ62092659",
+      "library_source_keys": [
+        "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+      ],
+      "release_year": 2020,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "2p7g1S9zMDO7L0zjNihm1t",
+      "title": "Silver Ribbons in Lavender Hair"
+    },
+    {
+      "album": "Dear Moon",
+      "artists": [
+        "moon tang"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_037",
+      "duration_ms": 195774,
+      "isrc": "QMFME2044837",
+      "library_source_keys": [
+        "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+      ],
+      "release_year": 2020,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "53lpR0g5IQFNjrPZs2pFE3",
+      "title": "Dear Moon"
+    },
+    {
+      "album": "Over 85",
+      "artists": [
+        "Hojean"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_038",
+      "duration_ms": 204014,
+      "isrc": "QZ93L2006878",
+      "library_source_keys": [
+        "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+      ],
+      "release_year": 2020,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "6KhT7CK6FL0BnI3nVPqv4F",
+      "title": "Over 85"
+    },
+    {
+      "album": "FEARLESS",
+      "artists": [
+        "LE SSERAFIM"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_039",
+      "duration_ms": 201894,
+      "isrc": "USA2P2219220",
+      "library_source_keys": [
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2022,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "37YoRLUu1qId0ewavgvnkG",
+      "title": "Blue Flame"
+    },
+    {
+      "album": "Someone You Used To Know",
+      "artists": [
+        "KYUL"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_040",
+      "duration_ms": 187301,
+      "isrc": "KRMIM2026110",
+      "library_source_keys": [
+        "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+      ],
+      "release_year": 2020,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "1rWLHiocvgyR0SSjuI07du",
+      "title": "Someone You Used To Know"
+    },
+    {
+      "album": "NieR Edits (lofi edit)",
+      "artists": [
+        "TSII"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_041",
+      "duration_ms": 159041,
+      "isrc": "QZK6H2182763",
+      "library_source_keys": [
+        "PLAYLIST:3U7bNSGqI01Kc7eYpltZyN"
+      ],
+      "release_year": 2021,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "7AwQsmaHkfgnSf1i0yuU58",
+      "title": "Repose - lofi edit"
+    },
+    {
+      "album": "Belief",
+      "artists": [
+        "chicken97"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_042",
+      "duration_ms": 256546,
+      "isrc": "KRB462101186",
+      "library_source_keys": [
+        "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+      ],
+      "release_year": 2021,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "4wl8GmLX9DMyvmkPXCRfHH",
+      "title": "100%"
+    },
+    {
+      "album": "Anybody",
+      "artists": [
+        "shae",
+        "WIMY"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_043",
+      "duration_ms": 197595,
+      "isrc": "SE6SA2316811",
+      "library_source_keys": [
+        "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+      ],
+      "release_year": 2023,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "6D7ub5xZYc7oLq6JDFIm8c",
+      "title": "Anybody"
+    },
+    {
+      "album": "DRIP",
+      "artists": [
+        "BABYMONSTER"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_044",
+      "duration_ms": 192186,
+      "isrc": "KRA402400060",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2024,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "7uGZIgNGAM4y7cyLj9SPlw",
+      "title": "Love In My Heart"
+    },
+    {
+      "album": "WHAT HAVE WE DONE",
+      "artists": [
+        "pH-1",
+        "HAEWON"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_045",
+      "duration_ms": 185000,
+      "isrc": "KRA492500634",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2025,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "1XQyhh06QLaEDCyPUax2sz",
+      "title": "54321 (Feat. HAEWON of NMIXX)"
+    },
+    {
+      "album": "Killing Me",
+      "artists": [
+        "CHUNG HA"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_046",
+      "duration_ms": 164053,
+      "isrc": "KRMIM2143516",
+      "library_source_keys": [
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2021,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "3QD0Y1tTngihByjdWC99lG",
+      "title": "Killing Me"
+    },
+    {
+      "album": "Twicecoaster: Lane 1",
+      "artists": [
+        "TWICE"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_047",
+      "duration_ms": 212986,
+      "isrc": "US5TA1600082",
+      "library_source_keys": [
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2016,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "60jFaQV7Z4boGC4ob5B5c6",
+      "title": "TT"
+    },
+    {
+      "album": "Love Wounds",
+      "artists": [
+        "prxz",
+        "Shiloh Dynasty"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_048",
+      "duration_ms": 133276,
+      "isrc": "TCADN1823442",
+      "library_source_keys": [
+        "PLAYLIST:3U7bNSGqI01Kc7eYpltZyN"
+      ],
+      "release_year": 2017,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "7A0T4eb6jPhhQp3KQis6ww",
+      "title": "Love Is More Depressing Than Depression"
+    },
+    {
+      "album": "Dear OHMYGIRL",
+      "artists": [
+        "OH MY GIRL"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_049",
+      "duration_ms": 155333,
+      "isrc": "KRB462100520",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2021,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "2BhHpVlqUoUOmo0Ph0G18X",
+      "title": "Swan"
+    },
+    {
+      "album": "ZZZ",
+      "artists": [
+        "Zion.T",
+        "SEULGI"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_050",
+      "duration_ms": 202342,
+      "isrc": "KRA401800132",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2018,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "36UcoqH2P24RtSGbLKLK3w",
+      "title": "멋지게 인사하는 법 (Hello Tutorial) (Feat. 슬기 (SEULGI) of Red Velvet)"
+    },
+    {
+      "album": "2014 Forest Hills Drive",
+      "artists": [
+        "J. Cole"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_051",
+      "duration_ms": 292799,
+      "isrc": "USQX91402598",
+      "library_source_keys": [
+        "PLAYLIST:15x6b7uIukSK2C84FdWzn2"
+      ],
+      "release_year": 2014,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "68Dni7IE4VyPkTOH9mRWHr",
+      "title": "No Role Modelz"
+    },
+    {
+      "album": "j's lullaby (darlin' i'd wait for you)",
+      "artists": [
+        "Delaney Bailey"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_052",
+      "duration_ms": 290132,
+      "isrc": "QZTAS2189795",
+      "library_source_keys": [
+        "PLAYLIST:0wXwmY1hqaitcKiInMwE2y"
+      ],
+      "release_year": 2022,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "7LNm1oWd6PniO9wRYpNY5o",
+      "title": "j's lullaby (darlin' i'd wait for you)"
+    },
+    {
+      "album": "我期待的不是雪",
+      "artists": [
+        "张妙格"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_053",
+      "duration_ms": 166010,
+      "isrc": "HKG731670098",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2023,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "2deIA64Gfsm50VTsKwrxnQ",
+      "title": "我期待的不是雪"
+    },
+    {
+      "album": "Wallsocket (Director's Cut)",
+      "artists": [
+        "underscores"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_054",
+      "duration_ms": 184626,
+      "isrc": "USQE92400115",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2024,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "73ZxuaUd2twB5r8ZRUzgUY",
+      "title": "Stupid (Can’t run from the urge)"
+    },
+    {
+      "album": "NEON",
+      "artists": [
+        "YUKIKA"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_055",
+      "duration_ms": 220795,
+      "isrc": "KRA381900504",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2019,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "5dF22XUGeNAR3GBhMgshgp",
+      "title": "NEON"
+    },
+    {
+      "album": "Fireflies",
+      "artists": [
+        "khai dreams"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_056",
+      "duration_ms": 155000,
+      "isrc": "QZCE61890784",
+      "library_source_keys": [
+        "PLAYLIST:3U7bNSGqI01Kc7eYpltZyN"
+      ],
+      "release_year": 2018,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "45Bis17A0SeOc6PAB7SpX7",
+      "title": "Fireflies"
+    },
+    {
+      "album": "SQUARE UP",
+      "artists": [
+        "BLACKPINK"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_057",
+      "duration_ms": 211350,
+      "isrc": "KRA401800096",
+      "library_source_keys": [
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2018,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "4lQsB3ERTWSNaAN1IkuNRl",
+      "title": "DDU-DU DDU-DU"
+    },
+    {
+      "album": "SEOULITE",
+      "artists": [
+        "LEEHI"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_058",
+      "duration_ms": 288915,
+      "isrc": "KRA401600024",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2016,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "6G4z9WbxyEeWdEQTfShACT",
+      "title": "BREATHE"
+    },
+    {
+      "album": "I don't know why I feel ok right now, but it's nice",
+      "artists": [
+        "City Girl"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_059",
+      "duration_ms": 166500,
+      "isrc": "QZZ7X2557442",
+      "library_source_keys": [
+        "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+      ],
+      "release_year": 2025,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "0L9QUa6jBKZEw1lprz4QY3",
+      "title": "My cat fell asleep on the piano again"
+    },
+    {
+      "album": "FEARLESS",
+      "artists": [
+        "LE SSERAFIM"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_060",
+      "duration_ms": 196540,
+      "isrc": "USA2P2219221",
+      "library_source_keys": [
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2022,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+      "title": "Sour Grapes"
+    },
+    {
+      "album": "kiss me thru the phone",
+      "artists": [
+        "CLUB BOYBND"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_061",
+      "duration_ms": 117480,
+      "isrc": "US7VG2314876",
+      "library_source_keys": [
+        "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+      ],
+      "release_year": 2023,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "4KvxaOvVMSNlTO3ZowMm9E",
+      "title": "kiss me thru the phone"
+    },
+    {
+      "album": "THE REAPER",
+      "artists": [
+        "keshi"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_062",
+      "duration_ms": 182678,
+      "isrc": "SEYOK1857642",
+      "library_source_keys": [
+        "PLAYLIST:3U7bNSGqI01Kc7eYpltZyN",
+        "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+      ],
+      "release_year": 2018,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "7ivYWXqrPLs66YwakDuSim",
+      "title": "like i need u"
+    },
+    {
+      "album": "blessing in disguise",
+      "artists": [
+        "HUH YUNJIN"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_063",
+      "duration_ms": 226632,
+      "isrc": "USA2P2339837",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2023,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "3d9qrCD7YR4dFTY0xIP8yq",
+      "title": "blessing in disguise"
+    },
+    {
+      "album": "beerbongs & bentleys",
+      "artists": [
+        "Post Malone"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_064",
+      "duration_ms": 231266,
+      "isrc": "USUM71805170",
+      "library_source_keys": [
+        "PLAYLIST:15x6b7uIukSK2C84FdWzn2"
+      ],
+      "release_year": 2018,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "7dt6x5M1jzdTEt8oCbisTK",
+      "title": "Better Now"
+    },
+    {
+      "album": "Loveless Shadows",
+      "artists": [
+        "City Girl"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_065",
+      "duration_ms": 187959,
+      "isrc": "TCADI1719555",
+      "library_source_keys": [
+        "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+      ],
+      "release_year": 2017,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "7vG5LBhmwEg80PnJLhdgV2",
+      "title": "Neon Days and Cerulean Nights"
+    },
+    {
+      "album": "Op.22 Y-Waltz : in Minor",
+      "artists": [
+        "JO YURI"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_066",
+      "duration_ms": 176253,
+      "isrc": "KRA492201026",
+      "library_source_keys": [
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2022,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "087TC6IfJ8z7fBItvglRRs",
+      "title": "Loveable"
+    },
+    {
+      "album": "skeletons",
+      "artists": [
+        "keshi"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_067",
+      "duration_ms": 152480,
+      "isrc": "USUM71911311",
+      "library_source_keys": [
+        "PLAYLIST:3U7bNSGqI01Kc7eYpltZyN",
+        "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+      ],
+      "release_year": 2019,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "2BuJrxYKhYky20dQqTlobO",
+      "title": "skeletons"
+    },
+    {
+      "album": "Head In The Clouds Forever",
+      "artists": [
+        "88rising",
+        "BIBI"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_068",
+      "duration_ms": 152910,
+      "isrc": "USWB12201362",
+      "library_source_keys": [
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy",
+        "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+      ],
+      "release_year": 2022,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "0iWFz0Q5Qha9bx325ocFWq",
+      "title": "Best Lover"
+    },
+    {
+      "album": "seen 11:23 pm",
+      "artists": [
+        "mj apanay",
+        "aren park"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_069",
+      "duration_ms": 225933,
+      "isrc": "GBSMU6594279",
+      "library_source_keys": [
+        "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+      ],
+      "release_year": 2019,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "2ch4KLYvi9ZGq2pNyEsMom",
+      "title": "time machine"
+    },
+    {
+      "album": "Mine with KozyPop",
+      "artists": [
+        "BUMKEY",
+        "SURAN",
+        "dress"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_070",
+      "duration_ms": 225506,
+      "isrc": "KRMIM2101350",
+      "library_source_keys": [
+        "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+      ],
+      "release_year": 2021,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "4fHwUkO83RzsOnnIv2vRvD",
+      "title": "Mine"
+    },
+    {
+      "album": "SUMMER COLOURS",
+      "artists": [
+        "JIDA",
+        "Kate Kim"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_071",
+      "duration_ms": 231480,
+      "isrc": "KSA002101360",
+      "library_source_keys": [
+        "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+      ],
+      "release_year": 2022,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "0Ti3ZkpjyEQnHFEpvz0cKq",
+      "title": "Could I"
+    },
+    {
+      "album": "如果爱忘了 (Live)",
+      "artists": [
+        "Silence Wang",
+        "單依純"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_072",
+      "duration_ms": 245394,
+      "isrc": "HKG732432142",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2024,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "4JBZuPALOvU2PC8E7t02vY",
+      "title": "如果爱忘了 - Live"
+    },
+    {
+      "album": "Autumn Breeze",
+      "artists": [
+        "JIDA",
+        "Rachel Lim"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_073",
+      "duration_ms": 223183,
+      "isrc": "KRB471601442",
+      "library_source_keys": [
+        "PLAYLIST:0wXwmY1hqaitcKiInMwE2y"
+      ],
+      "release_year": 2016,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "11lcftRIEVOPDBHDrH1mm1",
+      "title": "Autumn Breeze (feat. Rachel Lim)"
+    },
+    {
+      "album": "Supernatural",
+      "artists": [
+        "NewJeans"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_074",
+      "duration_ms": 160413,
+      "isrc": "USA2P2417519",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2024,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "58Q3FZFs1YXPpliWQB5kXB",
+      "title": "Right Now"
+    },
+    {
+      "album": "<Dall>",
+      "artists": [
+        "ARTMS"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_075",
+      "duration_ms": 173640,
+      "isrc": "KRA382401742",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2024,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "1iGNZerzZHm2GLu7k1OS3J",
+      "title": "Virtual Angel"
+    },
+    {
+      "album": "The 2nd Mini Album 'Summer Vibe'",
+      "artists": [
+        "VIVIZ"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_076",
+      "duration_ms": 203880,
+      "isrc": "KRA382206021",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2022,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "5i9fCna4O2QwlLno7qfZ9V",
+      "title": "Love Love Love"
+    },
+    {
+      "album": "ˣ‿ˣ (SMiLEY)",
+      "artists": [
+        "YENA"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_077",
+      "duration_ms": 182853,
+      "isrc": "KRMIM2201804",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2022,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "5U7emXCoCl8EOEJUVNbguC",
+      "title": "Lxxk 2 U"
+    },
+    {
+      "album": "HOT",
+      "artists": [
+        "LE SSERAFIM"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_078",
+      "duration_ms": 143797,
+      "isrc": "USA2P2506404",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2025,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "406IpEtZPvbxApWTGM3twY",
+      "title": "HOT"
+    },
+    {
+      "album": "Asleep in Soft Ether",
+      "artists": [
+        "City Girl"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_079",
+      "duration_ms": 62986,
+      "isrc": "QZZ772418254",
+      "library_source_keys": [
+        "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+      ],
+      "release_year": 2024,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "1rWLunChIlaWpAhQ1FGHXS",
+      "title": "Devour Me"
+    },
+    {
+      "album": "Maggie Valley",
+      "artists": [
+        "Weston Estate"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_080",
+      "duration_ms": 133440,
+      "isrc": "USAR12100196",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2022,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "5tgLkUlAmTR9FhOzVVfIJS",
+      "title": "Silence"
+    },
+    {
+      "album": "How to draw hand",
+      "artists": [
+        "Mingeon Jang",
+        "Milkoi"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_081",
+      "duration_ms": 181057,
+      "isrc": "QM42K1943683",
+      "library_source_keys": [
+        "PLAYLIST:0wXwmY1hqaitcKiInMwE2y"
+      ],
+      "release_year": 2020,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "24RdwPy8BYtfd8og6XRhDj",
+      "title": "How to draw hand"
+    },
+    {
+      "album": "Maplestory Piano Collections, Vol. 2, (Ossyria)",
+      "artists": [
+        "Paintamelody"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_082",
+      "duration_ms": 141270,
+      "isrc": "QZNWZ2193583",
+      "library_source_keys": [
+        "PLAYLIST:0wXwmY1hqaitcKiInMwE2y"
+      ],
+      "release_year": 2021,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "7ysBbGavMbUWMhizwQAVDg",
+      "title": "Temple of Time: Remembrance"
+    },
+    {
+      "album": "things with wings",
+      "artists": [
+        "ericdoa"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_083",
+      "duration_ms": 128571,
+      "isrc": "USUM72201787",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2022,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "3j7ttprPTsaqGMcpUfZuOA",
+      "title": "fool4love"
+    },
+    {
+      "album": "do i need to love....?",
+      "artists": [
+        "Mingeon Jang",
+        "Milkoi"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_084",
+      "duration_ms": 208988,
+      "isrc": "QZS662131419",
+      "library_source_keys": [
+        "PLAYLIST:0wXwmY1hqaitcKiInMwE2y"
+      ],
+      "release_year": 2021,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "7wtY0rxyB3jXmTJ9LiTz1h",
+      "title": "do i need to love....?"
+    },
+    {
+      "album": "idk",
+      "artists": [
+        "Highvyn",
+        "Taylor Shin"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_085",
+      "duration_ms": 233482,
+      "isrc": "QZDA82083499",
+      "library_source_keys": [
+        "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+      ],
+      "release_year": 2020,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "0ZPnoWsopDUOeneBMMR0cJ",
+      "title": "idk"
+    },
+    {
+      "album": "IVE EMPATHY",
+      "artists": [
+        "IVE"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_086",
+      "duration_ms": 194733,
+      "isrc": "QMFMF2434281",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2025,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "49oOgXKqm6xTavBtekzVHg",
+      "title": "ATTITUDE"
+    },
+    {
+      "album": "SHOOTING STAR",
+      "artists": [
+        "XG"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_087",
+      "duration_ms": 208065,
+      "isrc": "JPB602300033",
+      "library_source_keys": [
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2023,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "3v5o91PrUtf0nmO6j8J7dZ",
+      "title": "LEFT RIGHT"
+    },
+    {
+      "album": "panorama",
+      "artists": [
+        "Dvwn"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_088",
+      "duration_ms": 230174,
+      "isrc": "KRA251801991",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2018,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "1FGXujttO5H6XB25NlG3Yd",
+      "title": "fairy"
+    },
+    {
+      "album": "I don't know why I feel ok right now, but it's nice",
+      "artists": [
+        "City Girl"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_089",
+      "duration_ms": 160000,
+      "isrc": "QZZ7X2557445",
+      "library_source_keys": [
+        "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+      ],
+      "release_year": 2025,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "3V4kSQvH7rHI9tWTKFnV8m",
+      "title": "In the museum garden your voice was soft and warm"
+    },
+    {
+      "album": "I Saw Something",
+      "artists": [
+        "Weston Estate"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_090",
+      "duration_ms": 200000,
+      "isrc": "USAR12400310",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2024,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "7xv9OFeNDXxhRt0pgg4ECV",
+      "title": "I Saw Something"
+    },
+    {
+      "album": "Halfway There",
+      "artists": [
+        "Jolianne"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_091",
+      "duration_ms": 155000,
+      "isrc": "FRX202096611",
+      "library_source_keys": [
+        "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+      ],
+      "release_year": 2020,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "78CpG0pJFe6KC3JjuMeEQu",
+      "title": "Halfway There"
+    },
+    {
+      "album": "Between Sat & Sun",
+      "artists": [
+        "TOIL",
+        "Leellamarz",
+        "BE'O"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_092",
+      "duration_ms": 235893,
+      "isrc": "KRMIM2203657",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2022,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "2odm919sRfQIhH2na8YSKK",
+      "title": "Black Heart (feat. Leellamarz, BE'O)"
+    },
+    {
+      "album": "25",
+      "artists": [
+        "moon tang"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_093",
+      "duration_ms": 146544,
+      "isrc": "HKI492517205",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2025,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "36ERTzARTob6CG68IcKpNW",
+      "title": "all I need is just someone to love"
+    },
+    {
+      "album": "You Don't Want Me Anymore",
+      "artists": [
+        "Snøw",
+        "Teqkoi"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_094",
+      "duration_ms": 165000,
+      "isrc": "SE6A91908704",
+      "library_source_keys": [
+        "PLAYLIST:3U7bNSGqI01Kc7eYpltZyN"
+      ],
+      "release_year": 2019,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "0K4gxQ2u3545b0GAu85ObO",
+      "title": "You Don't Want Me Anymore"
+    },
+    {
+      "album": "Weekends With You",
+      "artists": [
+        "Rook1e",
+        "Alys",
+        "Snoozegod"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_095",
+      "duration_ms": 121445,
+      "isrc": "QZFZ22091278",
+      "library_source_keys": [
+        "PLAYLIST:0wXwmY1hqaitcKiInMwE2y"
+      ],
+      "release_year": 2020,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "2JiDPqdtWRYlmdiaB2KhC6",
+      "title": "Weekends With You"
+    },
+    {
+      "album": "Blonde",
+      "artists": [
+        "Frank Ocean"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_096",
+      "duration_ms": 249191,
+      "isrc": "QZ5C81600002",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2016,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "2ZWlPOoWh0626oTaHrnl2a",
+      "title": "Ivy"
+    },
+    {
+      "album": "C-GIRL",
+      "artists": [
+        "City Girl",
+        "ry"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_097",
+      "duration_ms": 231272,
+      "isrc": "QZES62185388",
+      "library_source_keys": [
+        "PLAYLIST:0wXwmY1hqaitcKiInMwE2y",
+        "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+      ],
+      "release_year": 2021,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "69EAMK7p73EcCOwyjwi2Wk",
+      "title": "LET GO"
+    },
+    {
+      "album": "good kid, m.A.A.d city (Deluxe)",
+      "artists": [
+        "Kendrick Lamar"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_098",
+      "duration_ms": 214120,
+      "isrc": "USUM71211006",
+      "library_source_keys": [
+        "PLAYLIST:15x6b7uIukSK2C84FdWzn2"
+      ],
+      "release_year": 2012,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "5vuJuBqwzHJgCA1ysRfwxZ",
+      "title": "good kid"
+    },
+    {
+      "album": "Escape Everything",
+      "artists": [
+        "Lovewave"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_099",
+      "duration_ms": 316511,
+      "isrc": "QZDA71967690",
+      "library_source_keys": [
+        "PLAYLIST:0wXwmY1hqaitcKiInMwE2y"
+      ],
+      "release_year": 2020,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "2H3xzzEnqplPFBEj3WfKWI",
+      "title": "The Night"
+    },
+    {
+      "album": "DIFFERENT",
+      "artists": [
+        "LE SSERAFIM"
+      ],
+      "benchmark_id": "stage5b_youtube_prior_v1_100",
+      "duration_ms": 141733,
+      "isrc": "JPZ672500023",
+      "library_source_keys": [
+        "LIKED",
+        "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+      ],
+      "release_year": 2025,
+      "sample_seed": "stage5b-youtube-prior-v1-seed-2026-09-02",
+      "spotify_track_id": "2WBL9IOMvkG1D2auywV5Og",
+      "title": "DIFFERENT"
+    }
+  ]
+}
