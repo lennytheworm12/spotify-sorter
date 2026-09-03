@@ -115,17 +115,26 @@ def _read_review_rows(path: Path) -> list[dict[str, str]]:
     return rows
 
 
-def _group_review_rows(path: Path) -> dict[str, list[dict[str, str]]]:
+def _group_review_rows(
+    path: Path, expected_ids: list[str] | None = None
+) -> dict[str, list[dict[str, str]]]:
     grouped: dict[str, list[dict[str, str]]] = {}
     for row in _read_review_rows(path):
         grouped.setdefault(row["benchmark_id"], []).append(row)
-    if len(grouped) != SAMPLE_SIZE or any(len(rows) != 3 for rows in grouped.values()):
-        raise Stage5B1AValidationError("Stage 5B.4 review must contain 100 × 3 rows")
+    if expected_ids is not None:
+        if set(grouped) - set(expected_ids):
+            raise Stage5B1AValidationError("Stage 5B.4 review has unknown track identities")
+        grouped = {benchmark_id: grouped.get(benchmark_id, []) for benchmark_id in expected_ids}
+    if len(grouped) != SAMPLE_SIZE or any(len(rows) > 3 for rows in grouped.values()):
+        raise Stage5B1AValidationError("Stage 5B.4 review track/candidate count changed")
     output = {
         benchmark_id: sorted(rows, key=lambda row: int(row["youtube_rank"]))
         for benchmark_id, rows in grouped.items()
     }
-    if any([int(row["youtube_rank"]) for row in rows] != [1, 2, 3] for rows in output.values()):
+    if any(
+        [int(row["youtube_rank"]) for row in rows] != list(range(1, len(rows) + 1))
+        for rows in output.values()
+    ):
         raise Stage5B1AValidationError("Stage 5B.4 candidate ranks changed")
     return output
 
@@ -152,12 +161,19 @@ def write_human_review_artifacts(config: Stage5B4Config) -> tuple[dict[str, Any]
         benchmark_id = track_row["benchmark_id"]
         target = targets[benchmark_id]
         candidates = track_row["outcome"].get("candidates", [])
-        if len(candidates) != 3 or [row["rank"] for row in candidates] != [1, 2, 3]:
+        if len(candidates) > 3 or [row["rank"] for row in candidates] != list(
+            range(1, len(candidates) + 1)
+        ):
             raise Stage5B1AValidationError(
-                "V3 human oracle requires exactly three native-ranked candidates"
+                "V3 human oracle candidate ranks changed"
             )
         cases.append({
             "benchmark_id": benchmark_id,
+            "spotify_target": target,
+            "query": track_row["query"],
+            "candidate_count": len(candidates),
+            "unavailable": not candidates,
+            "discovery_error": track_row["outcome"].get("error"),
             "candidate_video_ids_by_native_rank": [
                 candidate["youtube_video_id"] for candidate in candidates
             ],
@@ -235,11 +251,17 @@ class Stage5B4ReviewStore:
         self.review_path = Path(review_path).resolve()
         self.decisions_path = Path(decisions_path).resolve()
         self._selected_ranks = _decision_ranks(self.decisions_path)
+        queue = _json(self.review_path.parent / "human_review_queue.json")
+        self._queue_cases = {
+            row["benchmark_id"]: row for row in queue.get("cases", [])
+        }
+        if set(self._queue_cases) != set(self._selected_ranks):
+            raise Stage5B1AValidationError("V3 review queue/selector identities differ")
         self._lock = threading.RLock()
         self._read_grouped()
 
     def _read_grouped(self) -> dict[str, list[dict[str, str]]]:
-        grouped = _group_review_rows(self.review_path)
+        grouped = _group_review_rows(self.review_path, list(self._selected_ranks))
         if set(grouped) != set(self._selected_ranks):
             raise Stage5B1AValidationError("V3 review/selector track identities differ")
         return grouped
@@ -255,6 +277,7 @@ class Stage5B4ReviewStore:
             completed = 0
             reviewed = 0
             for benchmark_id, rows in grouped.items():
+                queue_case = self._queue_cases[benchmark_id]
                 selected_rank = self._selected_ranks[benchmark_id]
                 requirement = next_review_requirement(rows, selected_rank)
                 reviewed += sum(bool(row["candidate_review_label"]) for row in rows)
@@ -273,18 +296,20 @@ class Stage5B4ReviewStore:
                         if row["candidate_review_label"]
                         or int(row["youtube_rank"]) == next_rank
                     ]
-                first = rows[0]
+                target = queue_case["spotify_target"]
                 cases.append({
                     "stable_track_id": benchmark_id,
                     "track": {
-                        "title": first["expected_title"],
-                        "artists": first["expected_artists"].split(" | "),
-                        "album": first["expected_album"] or None,
-                        "duration_seconds": self._number(first["expected_duration_seconds"], float),
-                        "release_year": self._number(first["expected_release_year"], int),
+                        "title": target["title"],
+                        "artists": target["artists"],
+                        "album": target.get("album"),
+                        "duration_seconds": target["duration_ms"] / 1000,
+                        "release_year": target.get("release_year"),
                     },
-                    "query": first["search_query"],
-                    "track_note": first["track_note"],
+                    "query": queue_case["query"],
+                    "track_note": rows[0]["track_note"] if rows else "",
+                    "candidate_unavailable": not rows,
+                    "discovery_error": queue_case.get("discovery_error"),
                     "review_complete": requirement is None,
                     "review_phase": phase,
                     "next_required_rank": next_rank,
@@ -315,7 +340,7 @@ class Stage5B4ReviewStore:
                 "progress": {
                     "reviewed_candidates": reviewed,
                     "remaining_tracks": SAMPLE_SIZE - completed,
-                    "total_candidates": SAMPLE_SIZE * 3,
+                    "total_candidates": sum(len(rows) for rows in grouped.values()),
                     "completed_tracks": completed,
                     "total_tracks": SAMPLE_SIZE,
                 },
@@ -389,8 +414,8 @@ class Stage5B4ReviewStore:
 def validate_complete_review(
     review_path: Path, decisions_path: Path
 ) -> dict[str, list[dict[str, str]]]:
-    grouped = _group_review_rows(review_path)
     ranks = _decision_ranks(decisions_path)
+    grouped = _group_review_rows(review_path, list(ranks))
     incomplete = [
         benchmark_id
         for benchmark_id, rows in grouped.items()
@@ -403,6 +428,7 @@ def validate_complete_review(
     missing_reasons = [
         benchmark_id
         for benchmark_id, rows in grouped.items()
+        if rows
         if rows[0]["candidate_review_label"] in {"WRONG", "UNCERTAIN"}
         and not rows[0]["candidate_note"].strip()
     ]
@@ -444,7 +470,10 @@ def compute_v3_metrics(
     decisions: dict[str, Any],
 ) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any], dict[str, Any]]:
     tracks = {row["benchmark_id"]: row for row in decisions["tracks"]}
-    top1_counts = _label_counts([rows[0]["candidate_review_label"] for rows in grouped.values()])
+    top1_counts = _label_counts([
+        rows[0]["candidate_review_label"] for rows in grouped.values() if rows
+    ])
+    top1_unavailable = sum(not rows for rows in grouped.values())
     first_safe = {
         benchmark_id: first_safe_rank(rows) for benchmark_id, rows in grouped.items()
     }
@@ -459,6 +488,7 @@ def compute_v3_metrics(
         "benchmark_id": BENCHMARK_ID,
         "denominator_tracks": SAMPLE_SIZE,
         "top1_label_counts": top1_counts,
+        "top1_unavailable_count": top1_unavailable,
         "top1_safe_count": top1_safe,
         "top1_safe_rate": top1_safe / SAMPLE_SIZE,
         "top2_safe_count": top2_safe,
@@ -517,6 +547,8 @@ def compute_v3_metrics(
     }
     veto_cases = []
     for benchmark_id, track in tracks.items():
+        if not track["candidate_evaluations"]:
+            continue
         first = track["candidate_evaluations"][0]
         if not first["vetoed"]:
             continue
@@ -573,6 +605,20 @@ def compute_v3_metrics(
     }
     top1_failures = []
     for benchmark_id, rows in grouped.items():
+        if not rows:
+            top1_failures.append({
+                "benchmark_id": benchmark_id,
+                "target_title": tracks[benchmark_id]["spotify_target"]["title"],
+                "rank1": {
+                    "video_id": None,
+                    "title": None,
+                    "human_label": "UNAVAILABLE",
+                    "human_reason": "No candidate metadata was returned for the frozen query.",
+                    "category": "CANDIDATE_POOL_UNAVAILABLE",
+                },
+                "first_safe_rank": None,
+            })
+            continue
         if rows[0]["candidate_review_label"] in SAFE_LABELS:
             continue
         top1_failures.append({
@@ -595,9 +641,9 @@ def compute_v3_metrics(
         top3_misses.append({
             "benchmark_id": benchmark_id,
             "target": {
-                "title": rows[0]["expected_title"],
-                "artists": rows[0]["expected_artists"].split(" | "),
-                "album": rows[0]["expected_album"] or None,
+                "title": tracks[benchmark_id]["spotify_target"]["title"],
+                "artists": tracks[benchmark_id]["spotify_target"]["artists"],
+                "album": tracks[benchmark_id]["spotify_target"].get("album"),
             },
             "candidates": [{
                 "rank": int(row["youtube_rank"]),
@@ -607,7 +653,7 @@ def compute_v3_metrics(
                 "human_note": row["candidate_note"],
                 "category": _failure_category(row),
             } for row in rows],
-            "track_note": rows[0]["track_note"],
+            "track_note": rows[0]["track_note"] if rows else "",
         })
     selected_wrong_categories = Counter(
         _failure_category(row) for _, row in selected_rows
@@ -688,6 +734,7 @@ def write_closeout_artifacts(config: Stage5B4Config) -> dict[str, Any]:
         "",
         f"- Top-1 SAFE: **{topk['top1_safe_count']}/{SAMPLE_SIZE} ({_pct(topk['top1_safe_rate'])})**",
         f"- Top-1 IDEAL / ACCEPTABLE / WRONG / UNCERTAIN: **{rank1['IDEAL']} / {rank1['ACCEPTABLE']} / {rank1['WRONG']} / {rank1['UNCERTAIN']}**",
+        f"- Top-1 unavailable: **{topk['top1_unavailable_count']}**",
         f"- Top-2 SAFE Recall: **{topk['top2_safe_count']}/{SAMPLE_SIZE} ({_pct(topk['top2_safe_recall'])})**",
         f"- Top-3 SAFE Recall: **{topk['top3_safe_count']}/{SAMPLE_SIZE} ({_pct(topk['top3_safe_recall'])})**",
         f"- first SAFE rank: `{topk['first_safe_rank_distribution']}`",

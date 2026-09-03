@@ -616,7 +616,12 @@ function render() {
   head.append(heading, trackCount);
   app.append(head);
   const list = node("section", "candidate-list");
-  item.candidates.forEach(candidate => list.append(candidateCard(item, candidate)));
+  if (item.candidate_unavailable) {
+    const unavailable = node("div", "empty", "No candidate metadata was returned for this frozen query. This track remains in the benchmark denominator as a Top-3 miss and MATCH_UNCERTAIN.");
+    list.append(unavailable);
+  } else {
+    item.candidates.forEach(candidate => list.append(candidateCard(item, candidate)));
+  }
   app.append(list);
 }
 function definition(label, text) {

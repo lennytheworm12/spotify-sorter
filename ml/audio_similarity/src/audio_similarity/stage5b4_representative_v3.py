@@ -539,19 +539,35 @@ def run_v3_discovery(
     started_clock = time.monotonic()
     for index, manifest_row in enumerate(manifest["tracks"][len(rows):], start=len(rows)):
         track = _manifest_track(manifest_row)
-        query = natural_title_artist_query(track)
         requested = _now()
         try:
-            outcome = adapter.discover_query(track, query, limit=3).to_dict()
-        except YtDlpSearchError as exc:
+            query = natural_title_artist_query(track)
+        except Stage5B1AValidationError as exc:
+            query = " ".join(f"{track.title} {track.artists[0]}".split())
             outcome = {
                 "track": track.to_dict(),
                 "query": query,
                 "candidates": [],
                 "candidate_video_ids": [],
-                "warnings": list(exc.warnings),
-                "error": exc.to_dict(),
+                "warnings": [],
+                "error": {
+                    "error_type": "QUERY_CONTRACT_VALIDATION_FAILURE",
+                    "message": str(exc),
+                    "retryable": False,
+                },
             }
+        else:
+            try:
+                outcome = adapter.discover_query(track, query, limit=3).to_dict()
+            except YtDlpSearchError as exc:
+                outcome = {
+                    "track": track.to_dict(),
+                    "query": query,
+                    "candidates": [],
+                    "candidate_video_ids": [],
+                    "warnings": list(exc.warnings),
+                    "error": exc.to_dict(),
+                }
         candidates = outcome.get("candidates", [])
         if [candidate.get("rank") for candidate in candidates] != list(
             range(1, len(candidates) + 1)

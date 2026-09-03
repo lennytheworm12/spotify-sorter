@@ -144,6 +144,15 @@ class _FakeAdapter:
         })
 
 
+class _UnavailableAdapter(_FakeAdapter):
+    def discover_query(self, track, query, *, limit):
+        outcome = super().discover_query(track, query, limit=limit).to_dict()
+        if track.stable_track_id.endswith("_001"):
+            outcome["candidates"] = []
+            outcome["candidate_video_ids"] = []
+        return SimpleNamespace(to_dict=lambda: outcome)
+
+
 def test_manifest_is_fresh_deterministic_immutable_and_pins_selector(tmp_path) -> None:
     project, snapshot = _project(tmp_path)
     output = project / "reports/stage5b4_representative_v3"
@@ -288,6 +297,28 @@ def test_rank1_failure_requires_reason_at_closeout(tmp_path) -> None:
         writer.writerows(rows)
     with pytest.raises(Stage5B1AValidationError, match="failure reason missing"):
         validate_complete_review(review_path, output / "automated_selector_decisions.json")
+
+
+def test_unavailable_candidate_pool_remains_in_denominator(tmp_path) -> None:
+    project, snapshot = _project(tmp_path)
+    output = project / "reports/stage5b4_representative_v3"
+    freeze_v3_manifest(project, snapshot, output)
+    config = load_v3_config(output / "benchmark_config.json")
+    discovery = run_v3_discovery(config, _UnavailableAdapter(), sleep=lambda _seconds: None)
+    decisions, metrics = run_frozen_selector(config)
+    queue, review_path = write_human_review_artifacts(config)
+    store = Stage5B4ReviewStore(review_path, output / "automated_selector_decisions.json")
+
+    assert discovery["summary"]["zero_candidate_tracks"] == 1
+    assert metrics["match_uncertain_count"] == 2
+    assert queue["track_count"] == SAMPLE_SIZE
+    assert queue["candidate_count"] == 297
+    unavailable = next(
+        row for row in store.session()["cases"] if row["stable_track_id"].endswith("_001")
+    )
+    assert unavailable["candidate_unavailable"] is True
+    assert unavailable["review_complete"] is True
+    assert unavailable["candidates"] == []
 
 
 def _metric_row(rank: int, label: str) -> dict[str, str]:

@@ -1,0 +1,2911 @@
+{
+  "automated_decisions_sha256": "1a10ed69549b83d36223120db4162a937c6b0d2f59df7224b6afe1b99767827e",
+  "automated_decisions_visible_to_reviewer": false,
+  "benchmark_id": "STAGE5B4_REPRESENTATIVE_V3",
+  "benchmark_manifest_sha256": "e5d54e06e410d74a1b588f8d853c5ca9a25e97ba09dd26692c5978a15245097e",
+  "candidate_count": 294,
+  "cases": [
+    {
+      "benchmark_id": "stage5b4_representative_v3_001",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "agRhbblDcw8",
+        "VNlhs87CsWA",
+        "5sxrrCf--IM"
+      ],
+      "discovery_error": null,
+      "query": "walk but in a garden (with mxmtoon) LLusion",
+      "spotify_target": {
+        "album": "walk but in a garden",
+        "artists": [
+          "LLusion",
+          "mxmtoon"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_001",
+        "duration_ms": 112500,
+        "isrc": "USUM72012042",
+        "library_source_keys": [
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2020,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "4Kpt4pk9xgOlIgu9qvUrxC",
+        "title": "walk but in a garden (with mxmtoon)"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_002",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "ODPOXBihrYE",
+        "RoFqTJbX2uw",
+        "3CZO7LUzoy8"
+      ],
+      "discovery_error": null,
+      "query": "Love, Maybe SECRET NUMBER",
+      "spotify_target": {
+        "album": "Love, Maybe (A Business Proposal OST Part.5)",
+        "artists": [
+          "SECRET NUMBER"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_002",
+        "duration_ms": 185000,
+        "isrc": "KRA382203898",
+        "library_source_keys": [
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2022,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "5btJjUxmhPK1cwdw0mnhRD",
+        "title": "Love, Maybe"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_003",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "LFpQn44dVJk",
+        "cG3Ca39UNV8",
+        "0s4v_cs6rcI"
+      ],
+      "discovery_error": null,
+      "query": "Falling SRA",
+      "spotify_target": {
+        "album": "Falling",
+        "artists": [
+          "SRA",
+          "IFCHAN"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_003",
+        "duration_ms": 185170,
+        "isrc": "SE5Q52501188",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2025,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "1BJPASQDHGsZNmIYSyPGsF",
+        "title": "Falling"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_004",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "GgVcgbtHY9k",
+        "1kc-armnLqE",
+        "Fak8t93U7oE"
+      ],
+      "discovery_error": null,
+      "query": "Sorry, I Like You Burbank",
+      "spotify_target": {
+        "album": "Sorry, I Like You",
+        "artists": [
+          "Burbank"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_004",
+        "duration_ms": 122790,
+        "isrc": "QZ8LD1729683",
+        "library_source_keys": [
+          "PLAYLIST:3U7bNSGqI01Kc7eYpltZyN"
+        ],
+        "release_year": 2017,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "34MqDD3411uJQvXsqpZv3D",
+        "title": "Sorry, I Like You"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_005",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "ADeSxzrTLbk",
+        "nTj6wlAWFgw",
+        "SKOltRWPv3o"
+      ],
+      "discovery_error": null,
+      "query": "thinkin' about u fcj",
+      "spotify_target": {
+        "album": "thinkin' about u",
+        "artists": [
+          "fcj",
+          "Sarah Hemi"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_005",
+        "duration_ms": 124641,
+        "isrc": "QZHNC2059656",
+        "library_source_keys": [
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2020,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "34ppDRbjfCYRKNQiIWpfCw",
+        "title": "thinkin' about u"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_006",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "HZfLrZKJyHk",
+        "sUMgXdtcQu4",
+        "oTlSzRoOmh0"
+      ],
+      "discovery_error": null,
+      "query": "Empyrean City Girl",
+      "spotify_target": {
+        "album": "Time Falls Like Moonlight",
+        "artists": [
+          "City Girl"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_006",
+        "duration_ms": 208320,
+        "isrc": null,
+        "library_source_keys": [
+          "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+        ],
+        "release_year": 2018,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "557y7PDrfoG7ZiXE82XPxp",
+        "title": "Empyrean"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_007",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "XTDH7gSqwiQ",
+        "KNAU8Ozm1wU",
+        "pYWBMZuIHcQ"
+      ],
+      "discovery_error": null,
+      "query": "Nervous The Neighbourhood",
+      "spotify_target": {
+        "album": "Hard To Imagine The Neighbourhood Ever Changing",
+        "artists": [
+          "The Neighbourhood"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_007",
+        "duration_ms": 245000,
+        "isrc": "USSM11800521",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2018,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "113xf7t4qNM7038YJvauik",
+        "title": "Nervous"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_008",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "45aZMdSEbeQ",
+        "1Xq7ETjBsIM",
+        "61HNs5Sh_gg"
+      ],
+      "discovery_error": null,
+      "query": "Ellipsis City Girl",
+      "spotify_target": {
+        "album": "Chroma Velocity",
+        "artists": [
+          "City Girl",
+          "tiffi"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_008",
+        "duration_ms": 240000,
+        "isrc": "QZES91967434",
+        "library_source_keys": [
+          "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+        ],
+        "release_year": 2019,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "66m2a9UzbcQonTW9vgga2D",
+        "title": "Ellipsis"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_009",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "FKijnRja8is",
+        "g0PITtwIPiY",
+        "Vg6VJDEx5tk"
+      ],
+      "discovery_error": null,
+      "query": "Anything You Want Reality Club",
+      "spotify_target": {
+        "album": "Anything You Want",
+        "artists": [
+          "Reality Club"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_009",
+        "duration_ms": 236493,
+        "isrc": "IDUM72200108",
+        "library_source_keys": [
+          "LIKED"
+        ],
+        "release_year": 2022,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "2QB8FwOszur18Ai7t2XnNi",
+        "title": "Anything You Want"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_010",
+      "candidate_count": 0,
+      "candidate_video_ids_by_native_rank": [],
+      "discovery_error": null,
+      "query": "Girl, Interrupted 2xxx",
+      "spotify_target": {
+        "album": "Life",
+        "artists": [
+          "2xxx",
+          "Miso"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_010",
+        "duration_ms": 180972,
+        "isrc": "KRNAR1709751",
+        "library_source_keys": [
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2017,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "1cBNzkPsAdI7XJaKIsjKUk",
+        "title": "Girl, Interrupted"
+      },
+      "unavailable": true
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_011",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "HLHsH5f8M3A",
+        "4B1Qa7_LqVU",
+        "pP2TgU_Hm1c"
+      ],
+      "discovery_error": null,
+      "query": "AhChoo! bobae",
+      "spotify_target": {
+        "album": "AhChoo!",
+        "artists": [
+          "bobae"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_011",
+        "duration_ms": 175718,
+        "isrc": "KRD112200016",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2022,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "6wIZ0Yct9aMra5kHMDk5mG",
+        "title": "AhChoo!"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_012",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "alYCYZvB3yo",
+        "3FPEYy9Kc9o",
+        "6CuOXaP9L9k"
+      ],
+      "discovery_error": null,
+      "query": "Good Graces Sabrina Carpenter",
+      "spotify_target": {
+        "album": "Short n' Sweet",
+        "artists": [
+          "Sabrina Carpenter"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_012",
+        "duration_ms": 185265,
+        "isrc": "USUM72404102",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2024,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "102YUQbYmwdBXS7jwamI90",
+        "title": "Good Graces"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_013",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "ZKxUXsroCbg",
+        "oXajml_Y42Y",
+        "x6cml1K5B3M"
+      ],
+      "discovery_error": null,
+      "query": "everywhere and nowhere albie",
+      "spotify_target": {
+        "album": "everywhere and nowhere",
+        "artists": [
+          "albie"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_013",
+        "duration_ms": 196776,
+        "isrc": "QZNWU2236765",
+        "library_source_keys": [
+          "PLAYLIST:0wXwmY1hqaitcKiInMwE2y"
+        ],
+        "release_year": 2022,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "1iIA7sgGFDMh0yuSJIdHS6",
+        "title": "everywhere and nowhere"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_014",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "RnjNRC2Jdvo",
+        "2Twi3aq3u_U",
+        "CGbRjhx-jgc"
+      ],
+      "discovery_error": null,
+      "query": "WII DATE City Girl",
+      "spotify_target": {
+        "album": "C-GIRL",
+        "artists": [
+          "City Girl",
+          "tiffi",
+          "Highvyn",
+          "siopaolo"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_014",
+        "duration_ms": 178064,
+        "isrc": "QZES62187257",
+        "library_source_keys": [
+          "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+        ],
+        "release_year": 2021,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "5zKSgGvk39cXAEIx490fUH",
+        "title": "WII DATE"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_015",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "HxVGcy79-Uc",
+        "4AYUwgNcfSo",
+        "iEQsUJBuwlI"
+      ],
+      "discovery_error": null,
+      "query": "Hold Me Mishaal Tamer",
+      "spotify_target": {
+        "album": "Hold Me",
+        "artists": [
+          "Mishaal Tamer"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_015",
+        "duration_ms": 103924,
+        "isrc": "QM4DW1825344",
+        "library_source_keys": [
+          "PLAYLIST:3U7bNSGqI01Kc7eYpltZyN"
+        ],
+        "release_year": 2018,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "7o9Cx0cQf2eDCrgzzbQNfv",
+        "title": "Hold Me"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_016",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "RNL3BXM8Nn4",
+        "hcv5E1JSerQ",
+        "y8nfIXJJsZA"
+      ],
+      "discovery_error": null,
+      "query": "Start To Shine (feat. Gaeko) Gyubin",
+      "spotify_target": {
+        "album": "Start To Shine (feat. Gaeko)",
+        "artists": [
+          "Gyubin",
+          "Gaeko"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_016",
+        "duration_ms": 192013,
+        "isrc": "KRNAR2353390",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2023,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "1KD8juWhiZFJv0gcSpZVSQ",
+        "title": "Start To Shine (feat. Gaeko)"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_017",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "r1QapH1SIAI",
+        "4pXfGL4tiTE",
+        "yKubx4arhM4"
+      ],
+      "discovery_error": null,
+      "query": "LIKE YOU BETTER fromis_9",
+      "spotify_target": {
+        "album": "From Our 20's",
+        "artists": [
+          "fromis_9"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_017",
+        "duration_ms": 185026,
+        "isrc": "ZZA0P2517704",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2025,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "7t4Z19BqZ23ExgdiOP0nf6",
+        "title": "LIKE YOU BETTER"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_018",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "dGZdKxNzH-g",
+        "NBoKEleEhhA",
+        "Ya71XE3jx8Y"
+      ],
+      "discovery_error": null,
+      "query": "Oasis Mr. Hong",
+      "spotify_target": {
+        "album": "Vacation (Vocals)",
+        "artists": [
+          "Mr. Hong",
+          "Rosy",
+          "Alberto Droguett"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_018",
+        "duration_ms": 177692,
+        "isrc": "QZHNC1983188",
+        "library_source_keys": [
+          "PLAYLIST:0wXwmY1hqaitcKiInMwE2y"
+        ],
+        "release_year": 2019,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "0W9zXX7ufvXZ8XsfKAhmIw",
+        "title": "Oasis"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_019",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "sFcnjX2yVqQ",
+        "z5CW8rDBz-0",
+        "oEzjlt1_rQc"
+      ],
+      "discovery_error": null,
+      "query": "Gossamer Dress City Girl",
+      "spotify_target": {
+        "album": "Somnolent Nova",
+        "artists": [
+          "City Girl",
+          "Ibrahim"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_019",
+        "duration_ms": 213698,
+        "isrc": "QZES91896304",
+        "library_source_keys": [
+          "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+        ],
+        "release_year": 2019,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "5qzjaUWNihLEG3dOhRlJ3N",
+        "title": "Gossamer Dress"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_020",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "r1mvO6CwuSI",
+        "mcS_aiIejZo",
+        "BzJwN1PAQ2U"
+      ],
+      "discovery_error": null,
+      "query": "Endless Steps Through the Concrete Woods and into Your Heart City Girl",
+      "spotify_target": {
+        "album": "Snow Rose",
+        "artists": [
+          "City Girl"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_020",
+        "duration_ms": 183187,
+        "isrc": "TCADJ1733756",
+        "library_source_keys": [
+          "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+        ],
+        "release_year": 2017,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "6RyoC29FTgZAr2RV8Dp3Jn",
+        "title": "Endless Steps Through the Concrete Woods and into Your Heart"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_021",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "TVNxamzCotA",
+        "v88OYmv4EpY",
+        "uI05wlkoskQ"
+      ],
+      "discovery_error": null,
+      "query": "Dulcet Slumber City Girl",
+      "spotify_target": {
+        "album": "Goddess of the Hollow",
+        "artists": [
+          "City Girl",
+          "tiffi"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_021",
+        "duration_ms": 244398,
+        "isrc": "QZFZ72059395",
+        "library_source_keys": [
+          "PLAYLIST:0wXwmY1hqaitcKiInMwE2y",
+          "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+        ],
+        "release_year": 2020,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "4Z7GDA2zUrmz0EawisL1QG",
+        "title": "Dulcet Slumber"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_022",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "se4Xsgb0qGk",
+        "xUiMRfn-YPE",
+        "60bTG8hvD_4"
+      ],
+      "discovery_error": null,
+      "query": "Restless BIBI",
+      "spotify_target": {
+        "album": "LISTEN 035 Restless",
+        "artists": [
+          "BIBI"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_022",
+        "duration_ms": 267080,
+        "isrc": "KRA382000185",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy",
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2020,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "4AHNi316rl3KI3hKIsdxZe",
+        "title": "Restless"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_023",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "gjf8y_LG_8E",
+        "EQLJ1I3CFfg",
+        "SMgff2QIwsE"
+      ],
+      "discovery_error": null,
+      "query": "L's Theme Lofi Fruits Music",
+      "spotify_target": {
+        "album": "Pai Sho",
+        "artists": [
+          "Lofi Fruits Music",
+          "Tempura"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_023",
+        "duration_ms": 135041,
+        "isrc": "GBSMU9528144",
+        "library_source_keys": [
+          "PLAYLIST:0wXwmY1hqaitcKiInMwE2y"
+        ],
+        "release_year": 2021,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "1kNS8oeX42WP0HWHO9affg",
+        "title": "L's Theme"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_024",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "sa_yvkixVJY",
+        "ZVkuVOH0MhQ",
+        "7kLQN-YuQgU"
+      ],
+      "discovery_error": null,
+      "query": "it was like that FION",
+      "spotify_target": {
+        "album": "it was like that",
+        "artists": [
+          "FION"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_024",
+        "duration_ms": 247122,
+        "isrc": "QZNWX2360576",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2023,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "4A9j01WZ16YMCaovAcHy61",
+        "title": "it was like that"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_025",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "AJ75-7IIjRs",
+        "f6jbo0Qudrs",
+        "ZT_uB68BUI4"
+      ],
+      "discovery_error": null,
+      "query": "i swear i'll never leave again keshi",
+      "spotify_target": {
+        "album": "THE REAPER",
+        "artists": [
+          "keshi"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_025",
+        "duration_ms": 173716,
+        "isrc": "SEYOK1857643",
+        "library_source_keys": [
+          "PLAYLIST:3U7bNSGqI01Kc7eYpltZyN"
+        ],
+        "release_year": 2018,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "5byXSKd7QOHtVMOiptklBD",
+        "title": "i swear i'll never leave again"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_026",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "fLVI_rnOcDQ",
+        "-TCrJnZlV5U",
+        "5ObPqdq0HKY"
+      ],
+      "discovery_error": null,
+      "query": "Never Go Wrong Nicky Youre",
+      "spotify_target": {
+        "album": "Never Go Wrong",
+        "artists": [
+          "Nicky Youre",
+          "david hugo"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_026",
+        "duration_ms": 155962,
+        "isrc": "USQX92202133",
+        "library_source_keys": [
+          "PLAYLIST:15x6b7uIukSK2C84FdWzn2"
+        ],
+        "release_year": 2022,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "7cLvLpnhpnQtea3ETMYgV5",
+        "title": "Never Go Wrong"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_027",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "kOCkne-Bku4",
+        "JZELmUooBlY",
+        "a36VS8m9of4"
+      ],
+      "discovery_error": null,
+      "query": "Paris in the Rain LAUV",
+      "spotify_target": {
+        "album": "I met you when I was 18. (the playlist)",
+        "artists": [
+          "LAUV"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_027",
+        "duration_ms": 204712,
+        "isrc": "GBWWP1703276",
+        "library_source_keys": [
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2018,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "41CgzGD7xlgnJe14R4cqkL",
+        "title": "Paris in the Rain"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_028",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "O8IXen6ylyE",
+        "ykTI8Rzf4T4",
+        "BM-1j33dR9A"
+      ],
+      "discovery_error": null,
+      "query": "SEA City Girl",
+      "spotify_target": {
+        "album": "C-GIRL",
+        "artists": [
+          "City Girl",
+          "tiffi"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_028",
+        "duration_ms": 194120,
+        "isrc": "QZES62185390",
+        "library_source_keys": [
+          "PLAYLIST:0wXwmY1hqaitcKiInMwE2y",
+          "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+        ],
+        "release_year": 2021,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "5LPtJAFD8H5nMJrTk6qTWn",
+        "title": "SEA"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_029",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "FSw_l-RlUi0",
+        "qEhlbbQobe0",
+        "odIAdjMlx74"
+      ],
+      "discovery_error": null,
+      "query": "i know Alys",
+      "spotify_target": {
+        "album": "i know",
+        "artists": [
+          "Alys",
+          "fcj"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_029",
+        "duration_ms": 165333,
+        "isrc": "QZK6Q1966493",
+        "library_source_keys": [
+          "PLAYLIST:0wXwmY1hqaitcKiInMwE2y"
+        ],
+        "release_year": 2019,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "7iu08M7YBorwtM1ZfeKP1U",
+        "title": "i know"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_030",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "V9G32deO0bk",
+        "cdFtluvOc_Q",
+        "MMn1gvTTVTU"
+      ],
+      "discovery_error": null,
+      "query": "Alone (Feat. LeeHi) Coogie",
+      "spotify_target": {
+        "album": "ALONE",
+        "artists": [
+          "Coogie",
+          "LEEHI"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_030",
+        "duration_ms": 179000,
+        "isrc": "KRC712200022",
+        "library_source_keys": [
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2022,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "2SSbQoEqPHu6qAgi3pFobY",
+        "title": "Alone (Feat. LeeHi)"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_031",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "rVJaVb0u6Co",
+        "4KZi9d4ws3o",
+        "TPy0pWILDkw"
+      ],
+      "discovery_error": null,
+      "query": "You Broke My Heart Again Teqkoi",
+      "spotify_target": {
+        "album": "You Broke My Heart Again",
+        "artists": [
+          "Teqkoi",
+          "Aiko"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_031",
+        "duration_ms": 103400,
+        "isrc": "QZES51826398",
+        "library_source_keys": [
+          "PLAYLIST:3U7bNSGqI01Kc7eYpltZyN"
+        ],
+        "release_year": 2018,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "3jZDWsoxRHzzp3DYV8qeXE",
+        "title": "You Broke My Heart Again"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_032",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "DHVwKv58rrE",
+        "3BtnPlgbuS0",
+        "vIJeUegwMSQ"
+      ],
+      "discovery_error": null,
+      "query": "你别怕 张妙格",
+      "spotify_target": {
+        "album": "你别怕",
+        "artists": [
+          "张妙格"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_032",
+        "duration_ms": 207352,
+        "isrc": "HKC992325949",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2024,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "2PStV5Xyg5iiH1cniZORMa",
+        "title": "你别怕"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_033",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "w3c1K9IqFx4",
+        "xwn-XuUpfNE",
+        "b0HBW6QKhnw"
+      ],
+      "discovery_error": null,
+      "query": "짝사랑 KozyPop",
+      "spotify_target": {
+        "album": "Seoul Vibes Pt. 10",
+        "artists": [
+          "KozyPop",
+          "Dizzy Blue",
+          "Flaboi"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_033",
+        "duration_ms": 262077,
+        "isrc": "USHM81933054",
+        "library_source_keys": [
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2019,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "5f4njgyIwbtswRgyR9dkpz",
+        "title": "짝사랑"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_034",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "1BCqCgamowo",
+        "RR3xmYI_T78",
+        "I-yOr19aDcA"
+      ],
+      "discovery_error": null,
+      "query": "Heavy The Marías",
+      "spotify_target": {
+        "album": "CINEMA",
+        "artists": [
+          "The Marías"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_034",
+        "duration_ms": 253213,
+        "isrc": "USAT22100694",
+        "library_source_keys": [
+          "LIKED"
+        ],
+        "release_year": 2021,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "1ShRHPAiiIrh0arZbSFmx1",
+        "title": "Heavy"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_035",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "fB3kTcfjybg",
+        "ZFdHh-MWB6Q",
+        "b58-KBBo_Tc"
+      ],
+      "discovery_error": null,
+      "query": "For You LEEHI",
+      "spotify_target": {
+        "album": "For You",
+        "artists": [
+          "LEEHI",
+          "Crush"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_035",
+        "duration_ms": 205120,
+        "isrc": "KRC712000067",
+        "library_source_keys": [
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2020,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "0JL7DoEqAUcOntWmBuOSdh",
+        "title": "For You"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_036",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "59Z6bDaIQtY",
+        "ECuo_lWeo1c",
+        "n_2Pw_gnOUc"
+      ],
+      "discovery_error": null,
+      "query": "Basics TWICE",
+      "spotify_target": {
+        "album": "BETWEEN 1&2",
+        "artists": [
+          "TWICE"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_036",
+        "duration_ms": 176973,
+        "isrc": "US5TA2200075",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2022,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "63mL1DdcSFfxVJ9XGnSRQz",
+        "title": "Basics"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_037",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "b4XXyrKkBT8",
+        "T938_cqPlLA",
+        "N_FuwAyog5c"
+      ],
+      "discovery_error": null,
+      "query": "At this moment amin",
+      "spotify_target": {
+        "album": "Spring",
+        "artists": [
+          "amin",
+          "Dept",
+          "NASON"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_037",
+        "duration_ms": 159999,
+        "isrc": "KRMIM2107352",
+        "library_source_keys": [
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2021,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "0NXjNea8bK1Wm5A5isd4te",
+        "title": "At this moment"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_038",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "cRdvzzWIfkA",
+        "jeqdYqsrsA0",
+        "GQt03lkFQE4"
+      ],
+      "discovery_error": null,
+      "query": "Good day IU",
+      "spotify_target": {
+        "album": "REAL",
+        "artists": [
+          "IU"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_038",
+        "duration_ms": 233586,
+        "isrc": "KRA381001057",
+        "library_source_keys": [
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2010,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "1SwZVVH9BnXtLRLi2cbFhw",
+        "title": "Good day"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_039",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "VZhLn1f18kc",
+        "NULM5vjPzAI",
+        "mMZ3A7W0aqM"
+      ],
+      "discovery_error": null,
+      "query": "Being in Love with U Tomppabeats",
+      "spotify_target": {
+        "album": "Harbor",
+        "artists": [
+          "Tomppabeats"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_039",
+        "duration_ms": 49548,
+        "isrc": "DEQ121639514",
+        "library_source_keys": [
+          "PLAYLIST:3U7bNSGqI01Kc7eYpltZyN"
+        ],
+        "release_year": 2016,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "77Uo6nqkmG5eFLgTuQcZIV",
+        "title": "Being in Love with U"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_040",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "P2LyJp8dbS0",
+        "UDQ91yowALE",
+        "U9a-eDRofxo"
+      ],
+      "discovery_error": null,
+      "query": "Matryoshka can't be blue",
+      "spotify_target": {
+        "album": "Blue Vinyl",
+        "artists": [
+          "can't be blue"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_040",
+        "duration_ms": 187000,
+        "isrc": "KRF632406165",
+        "library_source_keys": [
+          "LIKED"
+        ],
+        "release_year": 2024,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "09yxk5cVVFVdc8WTZ1dWsk",
+        "title": "Matryoshka"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_041",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "zWt83IjT4-8",
+        "WoBLi5eE-wY",
+        "scmvAg_S97k"
+      ],
+      "discovery_error": null,
+      "query": "nov Michelle",
+      "spotify_target": {
+        "album": "nov",
+        "artists": [
+          "Michelle"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_041",
+        "duration_ms": 110161,
+        "isrc": "WZHPJ1976106",
+        "library_source_keys": [
+          "PLAYLIST:0wXwmY1hqaitcKiInMwE2y"
+        ],
+        "release_year": 2019,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "3wrVGLrwgBQOgGWFUu6D1e",
+        "title": "nov"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_042",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "Z3aduh5fxCo",
+        "1NqIvsmUR2I",
+        "329iFlRszxs"
+      ],
+      "discovery_error": null,
+      "query": "Show Me Love WizTheMc",
+      "spotify_target": {
+        "album": "Show Me Love",
+        "artists": [
+          "WizTheMc",
+          "bees & honey"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_042",
+        "duration_ms": 176965,
+        "isrc": "DE1FB2500005",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2025,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "5ITV0zqzjOYfFWpW0xBmRa",
+        "title": "Show Me Love"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_043",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "n7oL_DVN2E8",
+        "0YL3vQLt9hQ",
+        "3EgkXH9hWes"
+      ],
+      "discovery_error": null,
+      "query": "floor plan moon tang",
+      "spotify_target": {
+        "album": "WATER COMES OUT OF MY EYES",
+        "artists": [
+          "moon tang"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_043",
+        "duration_ms": 153659,
+        "isrc": "HKI492317201",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2023,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "0ODJwDKYb16XOUKvOwCb7E",
+        "title": "floor plan"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_044",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "1Xq7ETjBsIM",
+        "-vK4W6uqcJ0",
+        "8Gn4PqTmurA"
+      ],
+      "discovery_error": null,
+      "query": "Easy City Girl",
+      "spotify_target": {
+        "album": "Easy",
+        "artists": [
+          "City Girl",
+          "ry"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_044",
+        "duration_ms": 168500,
+        "isrc": "QZK6K2021983",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:0wXwmY1hqaitcKiInMwE2y",
+          "PLAYLIST:16o4BN45v7gakEumNfmrpn",
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2020,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "35yldEsDkKvcxb9NJ034AI",
+        "title": "Easy"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_045",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "TdrL3QxjyVw",
+        "zQO7J483Dng",
+        "qSNxylmTI1A"
+      ],
+      "discovery_error": null,
+      "query": "Summertime Sadness Lana Del Rey",
+      "spotify_target": {
+        "album": "Born To Die - The Paradise Edition",
+        "artists": [
+          "Lana Del Rey"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_045",
+        "duration_ms": 265427,
+        "isrc": "GBUM71111565",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2012,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "2dBwB667LHQkLhdYlwLUZK",
+        "title": "Summertime Sadness"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_046",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "-Wz7MdrR0HA",
+        "XEosrEfh7ng",
+        "TXuViw-ep1U"
+      ],
+      "discovery_error": null,
+      "query": "All Night Kelsey Kuan",
+      "spotify_target": {
+        "album": "All Night",
+        "artists": [
+          "Kelsey Kuan"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_046",
+        "duration_ms": 185388,
+        "isrc": "GBKPL2291336",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy",
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2022,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "7h6EmYOzXzMjCgMGcxPl5s",
+        "title": "All Night"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_047",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "bCUq8vF1CvA",
+        "0MZjHEXDO1M",
+        "JFCBZkxrwpc"
+      ],
+      "discovery_error": null,
+      "query": "falling asleep together while it rains Rook1e",
+      "spotify_target": {
+        "album": "Portrait in Love",
+        "artists": [
+          "Rook1e",
+          "softy"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_047",
+        "duration_ms": 159000,
+        "isrc": "USANG2131823",
+        "library_source_keys": [
+          "PLAYLIST:0wXwmY1hqaitcKiInMwE2y"
+        ],
+        "release_year": 2020,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "0bnGZYKLDf6WRME8G3wb2x",
+        "title": "falling asleep together while it rains"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_048",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "1oEf4fYwFzU",
+        "FshnCHfoAZI",
+        "fCVGvUiXmaY"
+      ],
+      "discovery_error": null,
+      "query": "Azure Glow City Girl",
+      "spotify_target": {
+        "album": "Celestial Angel",
+        "artists": [
+          "City Girl"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_048",
+        "duration_ms": 200000,
+        "isrc": "QM2PV1815219",
+        "library_source_keys": [
+          "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+        ],
+        "release_year": 2018,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "0KsbvVzqiG9OmdCmolwcjB",
+        "title": "Azure Glow"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_049",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "AeUeLzBO0go",
+        "HbIsGtD-Nrc",
+        "vDPxVVyZzAY"
+      ],
+      "discovery_error": null,
+      "query": "prom dress mxmtoon",
+      "spotify_target": {
+        "album": "the masquerade",
+        "artists": [
+          "mxmtoon"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_049",
+        "duration_ms": 197933,
+        "isrc": "QM6MZ1961770",
+        "library_source_keys": [
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2019,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "2xCGBWfzTe8l2kvHpgvB6M",
+        "title": "prom dress"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_050",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "IT1TMuRW6Jc",
+        "yDMS7MVJLzA",
+        "oTlSzRoOmh0"
+      ],
+      "discovery_error": null,
+      "query": "Just Dreams in the Static Night City Girl",
+      "spotify_target": {
+        "album": "Time Falls Like Moonlight",
+        "artists": [
+          "City Girl"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_050",
+        "duration_ms": 187189,
+        "isrc": null,
+        "library_source_keys": [
+          "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+        ],
+        "release_year": 2018,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "5pTGBSQIWsArijrq0tCCNz",
+        "title": "Just Dreams in the Static Night"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_051",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "p-tPf7-jlUw",
+        "ppWUdAxJwm8",
+        "96C54TMhhyU"
+      ],
+      "discovery_error": null,
+      "query": "Beam Payday",
+      "spotify_target": {
+        "album": "It's Just Music",
+        "artists": [
+          "Payday"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_051",
+        "duration_ms": 103846,
+        "isrc": "GBKPL2036276",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2020,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "1IIw5oVR1xE4bzdl4JgGsc",
+        "title": "Beam"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_052",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "0ldJaGupC1o",
+        "13waMB9vDJQ",
+        "8H1D7XUPNFI"
+      ],
+      "discovery_error": null,
+      "query": "Can't Love You Anymore (With OHHYUK) IU",
+      "spotify_target": {
+        "album": "Palette",
+        "artists": [
+          "IU",
+          "OHHYUK"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_052",
+        "duration_ms": 195230,
+        "isrc": "KRA381700864",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2017,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "5MvxeZPiiLAuB5gI8k3ynk",
+        "title": "Can't Love You Anymore (With OHHYUK)"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_053",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "Owr4U55WpDs",
+        "h7nhAF6s3gA",
+        "8ex7NFDXQoo"
+      ],
+      "discovery_error": null,
+      "query": "I'm In Here Sia",
+      "spotify_target": {
+        "album": "We Are Born",
+        "artists": [
+          "Sia"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_053",
+        "duration_ms": 221320,
+        "isrc": "GBPNH1000010",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2010,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "07OLYWQfwfJKJIwO1heCME",
+        "title": "I'm In Here"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_054",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "MVt3k7YDgjA",
+        "7y35qRnNhG8",
+        "ovKYWCUf9Aw"
+      ],
+      "discovery_error": null,
+      "query": "Lush Meadows of Stone City Girl",
+      "spotify_target": {
+        "album": "Time Falls Like Moonlight",
+        "artists": [
+          "City Girl"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_054",
+        "duration_ms": 183287,
+        "isrc": null,
+        "library_source_keys": [
+          "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+        ],
+        "release_year": 2018,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "3jcfP7lHckkE3a8cX2bnpZ",
+        "title": "Lush Meadows of Stone"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_055",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "5QU0eiBRD_o",
+        "yEbqcsJZjY8",
+        "mityUWevMVE"
+      ],
+      "discovery_error": null,
+      "query": "Wish U Well underscores",
+      "spotify_target": {
+        "album": "U",
+        "artists": [
+          "underscores"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_055",
+        "duration_ms": 261263,
+        "isrc": "USQE92600030",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2026,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "0ny6sr26ROicSIpAatlVAP",
+        "title": "Wish U Well"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_056",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "XLUTTA27oFE",
+        "NcYZUEPWw9g",
+        "plUCOKGmcDM"
+      ],
+      "discovery_error": null,
+      "query": "Honeymoon Fades Sabrina Carpenter",
+      "spotify_target": {
+        "album": "Honeymoon Fades",
+        "artists": [
+          "Sabrina Carpenter"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_056",
+        "duration_ms": 195161,
+        "isrc": "USHR12039661",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2020,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "2o2R6ghiVJfAqEXnlmOihz",
+        "title": "Honeymoon Fades"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_057",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "4gXmClk8rKI",
+        "1TyYpFW8X9U",
+        "4Qr0Pae4EN8"
+      ],
+      "discovery_error": null,
+      "query": "DM fromis_9",
+      "spotify_target": {
+        "album": "Midnight Guest",
+        "artists": [
+          "fromis_9"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_057",
+        "duration_ms": 204293,
+        "isrc": "USA2P2146741",
+        "library_source_keys": [
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2022,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "7B9W7Qsy5M2kyUNjQYIEG8",
+        "title": "DM"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_058",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "TDpIQlOzhjw",
+        "ODz9AUeY6cE",
+        "vFhJqTpzk_s"
+      ],
+      "discovery_error": null,
+      "query": "Don't go KozyPop",
+      "spotify_target": {
+        "album": "Seoul Vibes Pt. 10",
+        "artists": [
+          "KozyPop",
+          "Dizzy Blue"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_058",
+        "duration_ms": 222206,
+        "isrc": "USHM81933051",
+        "library_source_keys": [
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2019,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "79Hh4k3QRJCOpFcyxKzPtR",
+        "title": "Don't go"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_059",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "eJCHKjt0MPw",
+        "tDt7X6coxvs",
+        "jR6P_8-xp8U"
+      ],
+      "discovery_error": null,
+      "query": "FOREVER BABYMONSTER",
+      "spotify_target": {
+        "album": "FOREVER",
+        "artists": [
+          "BABYMONSTER"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_059",
+        "duration_ms": 212734,
+        "isrc": "KRA402400038",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2024,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "0Md02V4hwKO5Vu5B7GD8tQ",
+        "title": "FOREVER"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_060",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "riCP9x31Kuk",
+        "1EF0VOd3WGA",
+        "acX184y418E"
+      ],
+      "discovery_error": null,
+      "query": "Anxiety Doechii",
+      "spotify_target": {
+        "album": "Anxiety",
+        "artists": [
+          "Doechii"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_060",
+        "duration_ms": 249302,
+        "isrc": "USUG12500650",
+        "library_source_keys": [
+          "PLAYLIST:6T1XF2wa4NJmUaHvJupDah"
+        ],
+        "release_year": 2025,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "1musbempyJAw5gfSKZHXP9",
+        "title": "Anxiety"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_061",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "bGVQW1n8kj4",
+        "61HNs5Sh_gg",
+        "ikVlUM07hqw"
+      ],
+      "discovery_error": null,
+      "query": "Won't You Wait? City Girl",
+      "spotify_target": {
+        "album": "Chroma Velocity",
+        "artists": [
+          "City Girl",
+          "Rui Ying"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_061",
+        "duration_ms": 224000,
+        "isrc": "QZES91967440",
+        "library_source_keys": [
+          "PLAYLIST:0wXwmY1hqaitcKiInMwE2y",
+          "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+        ],
+        "release_year": 2019,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "2GfbK4daEIsNVG9eHeibhb",
+        "title": "Won't You Wait?"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_062",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "D8qNQIsGfR4",
+        "jsB1b1EjHvw",
+        "z6P1dJCuJh4"
+      ],
+      "discovery_error": null,
+      "query": "dreamy Linearwave",
+      "spotify_target": {
+        "album": "dreamy",
+        "artists": [
+          "Linearwave"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_062",
+        "duration_ms": 117913,
+        "isrc": "BXCMR2000002",
+        "library_source_keys": [
+          "PLAYLIST:0wXwmY1hqaitcKiInMwE2y"
+        ],
+        "release_year": 2020,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "6pwoQ7ABIGDvTQrPT0AueQ",
+        "title": "dreamy"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_063",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "k-KTIQfAUWg",
+        "bbLA5kAVu0E",
+        "2Kg_oDxdFxQ"
+      ],
+      "discovery_error": null,
+      "query": "Not on This Christmas Kiri T",
+      "spotify_target": {
+        "album": "not so xmas xmas",
+        "artists": [
+          "Kiri T"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_063",
+        "duration_ms": 185585,
+        "isrc": "HKI492363207",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2023,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "5cFEPGQ9D8NsSJ9AGxqMGu",
+        "title": "Not on This Christmas"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_064",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "FcGRuAyxu8E",
+        "8ZC9h84Ne60",
+        "vPH-Z6Psjdg"
+      ],
+      "discovery_error": null,
+      "query": "Palliative City Girl",
+      "spotify_target": {
+        "album": "Somnolent Nova",
+        "artists": [
+          "City Girl",
+          "tiffi"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_064",
+        "duration_ms": 188000,
+        "isrc": "QZES91896313",
+        "library_source_keys": [
+          "PLAYLIST:0wXwmY1hqaitcKiInMwE2y",
+          "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+        ],
+        "release_year": 2019,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "3awKiKNIChUkmFcmaY2MNH",
+        "title": "Palliative"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_065",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "x7pFy6MU0gE",
+        "QqgMiP5bZmA",
+        "k07CFD2nY60"
+      ],
+      "discovery_error": null,
+      "query": "high school boy Regina Song",
+      "spotify_target": {
+        "album": "fangirl",
+        "artists": [
+          "Regina Song"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_065",
+        "duration_ms": 174462,
+        "isrc": "FR59R2329326",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2024,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "6Aj3Ff2lIXBZF3KxfQkUH2",
+        "title": "high school boy"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_066",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "iOjv6c-PMxg",
+        "Kfjal7yVs2U",
+        "NnUMHN_fTQ0"
+      ],
+      "discovery_error": null,
+      "query": "Carpool Red Velvet",
+      "spotify_target": {
+        "album": "‘The ReVe Festival’ Finale",
+        "artists": [
+          "Red Velvet"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_066",
+        "duration_ms": 206757,
+        "isrc": "KRA301900604",
+        "library_source_keys": [
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2019,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "2KqYLFNTX2HXzYH4bucBKa",
+        "title": "Carpool"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_067",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "LR8vnA4rNp4",
+        "Ec5eWPAdE5Q",
+        "WnS10bgD0-4"
+      ],
+      "discovery_error": null,
+      "query": "这不堪的我 石玺彤",
+      "spotify_target": {
+        "album": "這不堪的我",
+        "artists": [
+          "石玺彤"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_067",
+        "duration_ms": 160941,
+        "isrc": "SE5BU2569358",
+        "library_source_keys": [
+          "LIKED"
+        ],
+        "release_year": 2025,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "4xSUHeZOliDd6rQJ41ytLb",
+        "title": "这不堪的我"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_068",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "Q5gd_FRfD_c",
+        "oHhimx0FiPI",
+        "77CK_a03cw0"
+      ],
+      "discovery_error": null,
+      "query": "latte eymii",
+      "spotify_target": {
+        "album": "latte",
+        "artists": [
+          "eymii"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_068",
+        "duration_ms": 290124,
+        "isrc": "QZMEP2125695",
+        "library_source_keys": [
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2021,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "5NCjlQf4kuP3HLvFKNiVmp",
+        "title": "latte"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_069",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "4o_tPCquTZM",
+        "stVk9Cz06Js",
+        "oiLLzDl44Co"
+      ],
+      "discovery_error": null,
+      "query": "喂 單依純",
+      "spotify_target": {
+        "album": "喂",
+        "artists": [
+          "單依純"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_069",
+        "duration_ms": 272571,
+        "isrc": "TWU712102934",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2021,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "5gHMAeiTkGGdotCsaiJeY3",
+        "title": "喂"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_070",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "KD7Px69GCVY",
+        "-6kmU2b3EQY",
+        "wMb_TirTWj0"
+      ],
+      "discovery_error": null,
+      "query": "butterflies (feat. TAEHYUN of TOMORROW X TOGETHER & Kim Chaewon of LE SSERAFIM) JVKE",
+      "spotify_target": {
+        "album": "butterflies (feat. TAEHYUN of TOMORROW X TOGETHER & Kim Chaewon of LE SSERAFIM)",
+        "artists": [
+          "JVKE",
+          "TOMORROW X TOGETHER",
+          "LE SSERAFIM",
+          "TAEHYUN",
+          "KIM CHAEWON"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_070",
+        "duration_ms": 164466,
+        "isrc": "US38Y2550482",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2025,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "0VdikQbDdOqxdWQyYsLmne",
+        "title": "butterflies (feat. TAEHYUN of TOMORROW X TOGETHER & Kim Chaewon of LE SSERAFIM)"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_071",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "I3uzROnFGnA",
+        "bZVvQnu630M",
+        "hAopzWKVdX4"
+      ],
+      "discovery_error": null,
+      "query": "나비 BIBI",
+      "spotify_target": {
+        "album": "사랑하는 사람들을 위한 지침서",
+        "artists": [
+          "BIBI"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_071",
+        "duration_ms": 193429,
+        "isrc": "KRA381903295",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy",
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2019,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "51bAYkcnw2WvMo4tps2txV",
+        "title": "나비"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_072",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "KA4hOdzGd2Y",
+        "dqpmj0cPwtA",
+        "tO0U4cFPF-8"
+      ],
+      "discovery_error": null,
+      "query": "black coffee Elijah Who",
+      "spotify_target": {
+        "album": "Gentle Boy",
+        "artists": [
+          "Elijah Who"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_072",
+        "duration_ms": 73966,
+        "isrc": "DEQ121750847",
+        "library_source_keys": [
+          "PLAYLIST:3U7bNSGqI01Kc7eYpltZyN"
+        ],
+        "release_year": 2017,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "5Fcvs2SN18DwMhGaumJ78I",
+        "title": "black coffee"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_073",
+      "candidate_count": 0,
+      "candidate_video_ids_by_native_rank": [],
+      "discovery_error": {
+        "error_type": "QUERY_CONTRACT_VALIDATION_FAILURE",
+        "message": "natural query must not contain quotation syntax",
+        "retryable": false
+      },
+      "query": "All The Stars (with SZA) - From \"Black Panther: The Album\" Kendrick Lamar",
+      "spotify_target": {
+        "album": "Black Panther The Album Music From And Inspired By",
+        "artists": [
+          "Kendrick Lamar",
+          "SZA"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_073",
+        "duration_ms": 232186,
+        "isrc": "USUM71713947",
+        "library_source_keys": [
+          "PLAYLIST:15x6b7uIukSK2C84FdWzn2"
+        ],
+        "release_year": 2018,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "3GCdLUSnKSMJhs4Tj6CV3s",
+        "title": "All The Stars (with SZA) - From \"Black Panther: The Album\""
+      },
+      "unavailable": true
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_074",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "ssNQKALSH00",
+        "uUaQKg9NquA",
+        "sI8aYTpwckk"
+      ],
+      "discovery_error": null,
+      "query": "feel the same The Millennial Club",
+      "spotify_target": {
+        "album": "feel the same (sped up)",
+        "artists": [
+          "The Millennial Club"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_074",
+        "duration_ms": 131866,
+        "isrc": "QM42K1990178",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2023,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "1lvK8Y6Zt4od4CWj82rLhE",
+        "title": "feel the same"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_075",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "Amq-qlqbjYA",
+        "xccLKPh69PI",
+        "hKUJmA9O6iA"
+      ],
+      "discovery_error": null,
+      "query": "As If It's Your Last BLACKPINK",
+      "spotify_target": {
+        "album": "As If It's Your Last",
+        "artists": [
+          "BLACKPINK"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_075",
+        "duration_ms": 213264,
+        "isrc": "KRA401700174",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2017,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "1Zyd6zQnC6XIIzmg3hP7Ot",
+        "title": "As If It's Your Last"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_076",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "80g6157skko",
+        "D7zsveDHBuw",
+        "PGjMC7omv4A"
+      ],
+      "discovery_error": null,
+      "query": "The Light of an Egress City Girl",
+      "spotify_target": {
+        "album": "Neon Impasse",
+        "artists": [
+          "City Girl"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_076",
+        "duration_ms": 119500,
+        "isrc": "QZDA41863111",
+        "library_source_keys": [
+          "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+        ],
+        "release_year": 2018,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "4Y4Wtw2oKyypYncIbXPXzt",
+        "title": "The Light of an Egress"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_077",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "ygLJSGxYwL8",
+        "mh7ZjhaObC8",
+        "XnOgsta3XLw"
+      ],
+      "discovery_error": null,
+      "query": "stay (with Lydia Ganada) yuni",
+      "spotify_target": {
+        "album": "stay (with Lydia Ganada)",
+        "artists": [
+          "yuni",
+          "Lydia Ganada"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_077",
+        "duration_ms": 159692,
+        "isrc": "QZVEM2338960",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2023,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "2wIaCbkQtEFszbalEsqpNN",
+        "title": "stay (with Lydia Ganada)"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_078",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "wf2C3bYWWrI",
+        "79C-z_JIGPc",
+        "XwcqRzGyBG0"
+      ],
+      "discovery_error": null,
+      "query": "Warm Thoughts omarr",
+      "spotify_target": {
+        "album": "Desire",
+        "artists": [
+          "omarr",
+          "Slipfunc"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_078",
+        "duration_ms": 171362,
+        "isrc": "QZF8N1808713",
+        "library_source_keys": [
+          "PLAYLIST:0wXwmY1hqaitcKiInMwE2y"
+        ],
+        "release_year": 2019,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "5YiDYURYgkBU51ohzTwHFS",
+        "title": "Warm Thoughts"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_079",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "8DeV-Qax6as",
+        "VPi34zopc-Y",
+        "9U8uA702xrE"
+      ],
+      "discovery_error": null,
+      "query": "Galaxy BOL4",
+      "spotify_target": {
+        "album": "Full Album RED PLANET",
+        "artists": [
+          "BOL4"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_079",
+        "duration_ms": 213853,
+        "isrc": "KRA921600019",
+        "library_source_keys": [
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2016,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "15c7KZTrsCUxCQcOdUVELc",
+        "title": "Galaxy"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_080",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "fMd5yadqznk",
+        "7pzCcMhhIjg",
+        "IRVJqS6Z45M"
+      ],
+      "discovery_error": null,
+      "query": "Hotel Claire Rosinkranz",
+      "spotify_target": {
+        "album": "6 Of A Billion",
+        "artists": [
+          "Claire Rosinkranz"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_080",
+        "duration_ms": 134781,
+        "isrc": "USUG12102943",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2021,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "3xyr2xfbSZiZWWGsjLyMFh",
+        "title": "Hotel"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_081",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "kOHB85vDuow",
+        "mIXR-7u2Kas",
+        "iRw4kL1CMI8"
+      ],
+      "discovery_error": null,
+      "query": "FANCY TWICE",
+      "spotify_target": {
+        "album": "FANCY YOU",
+        "artists": [
+          "TWICE"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_081",
+        "duration_ms": 213880,
+        "isrc": "US5TA1900042",
+        "library_source_keys": [
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2019,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "2qQpFbqqkLOGySgNK8wBXt",
+        "title": "FANCY"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_082",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "kEGRCrfPIpY",
+        "dGBknHxX-N0",
+        "3fr-8cYJanw"
+      ],
+      "discovery_error": null,
+      "query": "idc Laica",
+      "spotify_target": {
+        "album": "idc",
+        "artists": [
+          "Laica"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_082",
+        "duration_ms": 167352,
+        "isrc": "QZPEW2477214",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2024,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "4NsmtNge6iuqUTAkzfWk62",
+        "title": "idc"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_083",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "6hv6D5un040",
+        "h0jzi2_9Vd8",
+        "K7KPgHMXreE"
+      ],
+      "discovery_error": null,
+      "query": "Hypnotized Weston Estate",
+      "spotify_target": {
+        "album": "Hypnotized",
+        "artists": [
+          "Weston Estate"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_083",
+        "duration_ms": 209250,
+        "isrc": "TCAEI1992755",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2019,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "2G3l5uYzMqVAgEjcF8XtRj",
+        "title": "Hypnotized"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_084",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "jXwR4_58uy0",
+        "WSvrp1BZDwY",
+        "stajsFpeWWs"
+      ],
+      "discovery_error": null,
+      "query": "Winter blossom Dept",
+      "spotify_target": {
+        "album": "Spring in Winter",
+        "artists": [
+          "Dept",
+          "Ashley Alisha",
+          "nobody likes you pat"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_084",
+        "duration_ms": 168870,
+        "isrc": "KRMIM2104123",
+        "library_source_keys": [
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2021,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "1ynuDDHKN7P7fmJEljdCLd",
+        "title": "Winter blossom"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_085",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "jv543Nk5s18",
+        "RTv9TUoi2Zc",
+        "BKxrYqIAJOY"
+      ],
+      "discovery_error": null,
+      "query": "Karma Dareharu",
+      "spotify_target": {
+        "album": "Karma",
+        "artists": [
+          "Dareharu"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_085",
+        "duration_ms": 271136,
+        "isrc": "KRF452000007",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2020,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "6ram0T20BHTnZjFsZkazUp",
+        "title": "Karma"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_086",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "jAEp7cwv0sY",
+        "MopOuB2bXWo",
+        "45Y2lOdrlLI"
+      ],
+      "discovery_error": null,
+      "query": "See you amin",
+      "spotify_target": {
+        "album": "See you",
+        "artists": [
+          "amin",
+          "Dept"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_086",
+        "duration_ms": 186666,
+        "isrc": "KRMIM2026696",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy",
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2020,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "2uzK4GdJ63xhirHwt91FMq",
+        "title": "See you"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_087",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "e2qG5uwDCW4",
+        "eYDI8b5Nn5s",
+        "s8q_qUE5eCg"
+      ],
+      "discovery_error": null,
+      "query": "Buttercup Jack Stauber",
+      "spotify_target": {
+        "album": "Pop Food",
+        "artists": [
+          "Jack Stauber"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_087",
+        "duration_ms": 208026,
+        "isrc": "QMPKX1703669",
+        "library_source_keys": [
+          "PLAYLIST:3U7bNSGqI01Kc7eYpltZyN"
+        ],
+        "release_year": 2017,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "2mlGPkAx4kwF8Df0GlScsC",
+        "title": "Buttercup"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_088",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "_MP9hvE9oGA",
+        "bxw6sfGHMfI",
+        "TU0XrNcYfLk"
+      ],
+      "discovery_error": null,
+      "query": "Runaway Sarcastic Sounds",
+      "spotify_target": {
+        "album": "Runaway",
+        "artists": [
+          "Sarcastic Sounds",
+          "Beowülf",
+          "Mishaal Tamer"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_088",
+        "duration_ms": 122217,
+        "isrc": "GBKQU1823877",
+        "library_source_keys": [
+          "PLAYLIST:3U7bNSGqI01Kc7eYpltZyN"
+        ],
+        "release_year": 2018,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "6CyXEKlsJlGjl5SiCUjuFc",
+        "title": "Runaway"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_089",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "n6K5l4ifWqQ",
+        "CaZTkcKBMf8",
+        "s1g_gwRkZ0U"
+      ],
+      "discovery_error": null,
+      "query": "For You imzoo",
+      "spotify_target": {
+        "album": "For You",
+        "artists": [
+          "imzoo",
+          "Kim Do Young"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_089",
+        "duration_ms": 196360,
+        "isrc": "KRMIM2425319",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2024,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "63Sgah7EuTJI5FhFW2C0UF",
+        "title": "For You"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_090",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "PGLx4V680J8",
+        "QFNOMOk6cZQ",
+        "hgw0lcqofwU"
+      ],
+      "discovery_error": null,
+      "query": "Accendio IVE",
+      "spotify_target": {
+        "album": "IVE SWITCH",
+        "artists": [
+          "IVE"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_090",
+        "duration_ms": 192013,
+        "isrc": "QM4TX2478221",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2024,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "1BAtAtx0VgWgAMROWK9WYf",
+        "title": "Accendio"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_091",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "oBjwrhvyPCg",
+        "Ubr6U-pfsaE",
+        "Ok-WCFxGGHs"
+      ],
+      "discovery_error": null,
+      "query": "Honeysea Ivoris",
+      "spotify_target": {
+        "album": "Honeysea",
+        "artists": [
+          "Ivoris"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_091",
+        "duration_ms": 145515,
+        "isrc": "SE5751848601",
+        "library_source_keys": [
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2018,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "16wzmKIdkLdJSxkro7oEUl",
+        "title": "Honeysea"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_092",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "L8eRzOYhLuw",
+        "2Ek3WMM7I-0",
+        "X57vg66ETyM"
+      ],
+      "discovery_error": null,
+      "query": "Break Free Ariana Grande",
+      "spotify_target": {
+        "album": "My Everything",
+        "artists": [
+          "Ariana Grande",
+          "Zedd"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_092",
+        "duration_ms": 214840,
+        "isrc": "USUM71409719",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2014,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "3emCzvUm5FsQnofdNQL73a",
+        "title": "Break Free"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_093",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "kVKCQZcCi0M",
+        "mSBc3n4OOe8",
+        "sNWQOxRVFAQ"
+      ],
+      "discovery_error": null,
+      "query": "Perhaps Love (사랑인가요) (Prod.By 박근태) 에릭남 (Eric Nam), CHEEZE (치즈)",
+      "spotify_target": {
+        "album": "Your BGM Vol.1",
+        "artists": [
+          "에릭남 (Eric Nam), CHEEZE (치즈)"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_093",
+        "duration_ms": 239099,
+        "isrc": "KRB921932712",
+        "library_source_keys": [
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2017,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "5bN1ltT5BhVMnszmgsqGD5",
+        "title": "Perhaps Love (사랑인가요) (Prod.By 박근태)"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_094",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "kPlSyYtE63M",
+        "XequT12zmfg",
+        "GxldQ9eX2wo"
+      ],
+      "discovery_error": null,
+      "query": "Until I Found You (with Em Beihold) - Em Beihold Version Stephen Sanchez",
+      "spotify_target": {
+        "album": "Until I Found You (Em Beihold Version)",
+        "artists": [
+          "Stephen Sanchez",
+          "Em Beihold"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_094",
+        "duration_ms": 176440,
+        "isrc": "USUG12202266",
+        "library_source_keys": [
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2022,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "1Y3LN4zO1Edc2EluIoSPJN",
+        "title": "Until I Found You (with Em Beihold) - Em Beihold Version"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_095",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "ts6Yte8EVQ0",
+        "EPaQWg1yUMw",
+        "mVG8OroxQzw"
+      ],
+      "discovery_error": null,
+      "query": "Today, Rainy Luxid",
+      "spotify_target": {
+        "album": "Today, Rainy",
+        "artists": [
+          "Luxid"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_095",
+        "duration_ms": 226625,
+        "isrc": "QZDA41931814",
+        "library_source_keys": [
+          "PLAYLIST:0wXwmY1hqaitcKiInMwE2y"
+        ],
+        "release_year": 2019,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "1UV8WOGHUM3efanAXMiLCN",
+        "title": "Today, Rainy"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_096",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "0kqFCCsdLQk",
+        "ESYqL2hzmMU",
+        "RPoNXvSFHE4"
+      ],
+      "discovery_error": null,
+      "query": "10,000ft. Kiri T",
+      "spotify_target": {
+        "album": "CHILI T",
+        "artists": [
+          "Kiri T"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_096",
+        "duration_ms": 221210,
+        "isrc": "HKF822100006",
+        "library_source_keys": [
+          "LIKED",
+          "PLAYLIST:1bZaufwhglSUO3aaJa9iVy"
+        ],
+        "release_year": 2021,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "50cdjSLp5gH2l4y1EpenKf",
+        "title": "10,000ft."
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_097",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "vZzj4hRxw5w",
+        "3F67Ub-IJ64",
+        "NtjzYU84J1o"
+      ],
+      "discovery_error": null,
+      "query": "Tell Me You Do Too Nana Ou-Yang",
+      "spotify_target": {
+        "album": "NANA I",
+        "artists": [
+          "Nana Ou-Yang"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_097",
+        "duration_ms": 189282,
+        "isrc": "CNZ632000035",
+        "library_source_keys": [
+          "LIKED"
+        ],
+        "release_year": 2020,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "0AHMsDGvM7OFlMfkdDYRfe",
+        "title": "Tell Me You Do Too"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_098",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "ZOn8RbDQMuA",
+        "ikK51Muy-jo",
+        "A2-wLBv8iVQ"
+      ],
+      "discovery_error": null,
+      "query": "Echo of a Rose City Girl",
+      "spotify_target": {
+        "album": "Celestial Angel",
+        "artists": [
+          "City Girl"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_098",
+        "duration_ms": 170400,
+        "isrc": "QM2PV1815226",
+        "library_source_keys": [
+          "PLAYLIST:16o4BN45v7gakEumNfmrpn"
+        ],
+        "release_year": 2018,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "3CrN5TVD5MDRBKI542Ftbs",
+        "title": "Echo of a Rose"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_099",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "XE167BqaAiw",
+        "2_EHUsa9J6E",
+        "ZxHTaPUpFK0"
+      ],
+      "discovery_error": null,
+      "query": "crush on you Elijah Who",
+      "spotify_target": {
+        "album": "Gentle Boy",
+        "artists": [
+          "Elijah Who"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_099",
+        "duration_ms": 84023,
+        "isrc": "DEQ121750840",
+        "library_source_keys": [
+          "PLAYLIST:3U7bNSGqI01Kc7eYpltZyN"
+        ],
+        "release_year": 2017,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "1vlzSY7AttAiAvSEe1JbVs",
+        "title": "crush on you"
+      },
+      "unavailable": false
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_100",
+      "candidate_count": 3,
+      "candidate_video_ids_by_native_rank": [
+        "vCUHOaVW5Ek",
+        "1unJDnh5R9w",
+        "IMKBgBlN_kg"
+      ],
+      "discovery_error": null,
+      "query": "Eleven (feat. BIBI) twlv",
+      "spotify_target": {
+        "album": "Blueline",
+        "artists": [
+          "twlv",
+          "BIBI"
+        ],
+        "benchmark_id": "stage5b4_representative_v3_100",
+        "duration_ms": 196520,
+        "isrc": "KRA381900728",
+        "library_source_keys": [
+          "PLAYLIST:5flLu9B6VUX8QFhsHFWcHU"
+        ],
+        "release_year": 2019,
+        "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+        "spotify_track_id": "1UaHqU3pJSczM0SijabTtn",
+        "title": "Eleven (feat. BIBI)"
+      },
+      "unavailable": false
+    }
+  ],
+  "discovery_sha256": "4cbd5741c7af0030474ba4073991c28d316eea73f243dc1f0a350b48e7db3f94",
+  "protocol": "SEQUENTIAL_NATIVE_RANKS_UNTIL_FIRST_SAFE_THEN_SELECTOR_SUPPLEMENT",
+  "rank1_non_safe_reason_required": true,
+  "safe_labels": [
+    "ACCEPTABLE",
+    "IDEAL"
+  ],
+  "schema_version": "stage5b4-representative-v3-human-review-queue-v1",
+  "selector_supplement_candidate_count": 9,
+  "status": "STAGE5B4_HUMAN_REVIEW_READY",
+  "track_count": 100
+}
