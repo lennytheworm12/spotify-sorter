@@ -15,6 +15,7 @@ from typing import Any, Iterable
 
 from .stage5b1a_models import SpotifyTrack, Stage5B1AValidationError, file_sha256
 from .stage5b1b_identity import normalize_text
+from .stage5b1c_normalization import parse_tier2_title
 
 
 SNAPSHOT_SCHEMA_VERSION = "stage5b-owner-library-snapshot-v1"
@@ -96,8 +97,16 @@ def _semantic_identity(track: SpotifyTrack) -> str:
     return f"semantic:{normalize_text(track.title)}::{artists}"
 
 
+def _core_identity(track: SpotifyTrack) -> str:
+    artists = "|".join(sorted(normalize_text(artist) for artist in track.artists))
+    core = parse_tier2_title(track.title, candidate=False).core_title
+    return f"core:{normalize_text(core)}::{artists}"
+
+
 def track_identities(track: SpotifyTrack) -> frozenset[str]:
-    return frozenset(filter(None, (_spotify_identity(track), _semantic_identity(track))))
+    return frozenset(filter(None, (
+        _spotify_identity(track), _semantic_identity(track), _core_identity(track)
+    )))
 
 
 def load_library_snapshot(path: str | Path) -> list[LibraryTrack]:

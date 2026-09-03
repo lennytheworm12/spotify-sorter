@@ -70,7 +70,7 @@ def test_historical_exclusion_uses_spotify_and_semantic_identity(tmp_path: Path)
     historical.write_text(json.dumps({"tracks": [{
         "stable_track_id": "old",
         "spotify_track_id": _spotify_id(1),
-        "title": "Same Song",
+        "title": "Same Song - 2020 Remaster",
         "artists": ["The Artist"],
         "album": "Album",
         "duration_ms": 200_000,
@@ -79,7 +79,8 @@ def test_historical_exclusion_uses_spotify_and_semantic_identity(tmp_path: Path)
     }]}))
     identities, provenance = historical_exclusion_identities([historical])
     assert f"spotify:{_spotify_id(1)}" in identities
-    assert "semantic:same song::the artist" in identities
+    assert "semantic:same song 2020 remaster::the artist" in identities
+    assert "core:same song::the artist" in identities
     assert provenance["sources"][0]["sha256"] == file_sha256(historical)
 
 
