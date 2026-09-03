@@ -252,7 +252,7 @@ function formatViews(value) {
   return `${new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 }).format(Number(value))} views`;
 }
 function savedLabel(candidate) { return candidate._savedLabel === undefined ? candidate.review.label : candidate._savedLabel; }
-function isYoutubePriorReview() { return session && session.mode === "stage5b2_youtube_prior_review"; }
+function isYoutubePriorReview() { return session && ["stage5b2_youtube_prior_review", "stage5b4_representative_v3_review"].includes(session.mode); }
 function isComplete(item) { return isYoutubePriorReview() ? Boolean(item.review_complete) : item.candidates.every(candidate => Boolean(savedLabel(candidate))); }
 function isStarted(item) { return item.candidates.some(candidate => Boolean(savedLabel(candidate))); }
 function visibleIndices() {
@@ -286,7 +286,7 @@ function updateTrackCount(item) {
   const value = document.querySelector("#track-count");
   if (!value || session.cases[index] !== item) return;
   if (isYoutubePriorReview()) {
-    value.textContent = item.review_complete ? "Track complete" : `Review rank #${item.next_required_rank}`;
+    value.textContent = item.review_complete ? "Track complete" : item.review_phase === "SELECTOR_VALIDATION" ? "Additional selector-validation judgment" : `Review rank #${item.next_required_rank}`;
     return;
   }
   const reviewed = item.candidates.filter(candidate => Boolean(savedLabel(candidate))).length;
@@ -497,13 +497,13 @@ function candidateCard(item, candidate) {
   body.append(decisions);
   const bottom = node("div", "candidate-bottom");
   const noteWrap = node("div", "candidate-note");
-  const noteLabel = node("label", "", "Optional candidate note");
+  const noteLabel = node("label", "", candidate.reason_required_for_non_safe ? "Reason required if rank #1 is WRONG or UNCERTAIN" : "Optional candidate note");
   const noteId = `note-${item.stable_track_id}-${displayIndex}`;
   noteLabel.htmlFor = noteId;
   const note = node("textarea");
   note.id = noteId;
   note.maxLength = 2000;
-  note.placeholder = "Why is this source ideal, merely safe, wrong, or uncertain?";
+  note.placeholder = candidate.reason_required_for_non_safe ? "If WRONG or UNCERTAIN, briefly explain why." : "Why is this source ideal, merely safe, wrong, or uncertain?";
   note.value = candidate.review.note;
   note.oninput = () => { candidate.review.note = note.value; debounceSave(item, candidate); };
   note.onblur = () => {
@@ -543,7 +543,8 @@ function render() {
   const tier2Audit = session.mode === "stage5b1c_tier2_human_audit";
   const fallbackAudit = session.mode === "stage5b1j_representation_fallback_review";
   const representativeAudit = session.mode === "stage5b_representative_library_review";
-  const youtubePriorAudit = session.mode === "stage5b2_youtube_prior_review";
+  const youtubePriorAudit = ["stage5b2_youtube_prior_review", "stage5b4_representative_v3_review"].includes(session.mode);
+  const representativeV3Audit = session.mode === "stage5b4_representative_v3_review";
   const blindedAudit = freshChallenge || tier2Audit || fallbackAudit || representativeAudit || youtubePriorAudit;
   if (blindedAudit) target.classList.add("blinded");
   const identity = node("div");
@@ -557,9 +558,9 @@ function render() {
   const context = node("div", "target-copy");
   if (blindedAudit) {
     context.append(
-      node("div", "eyebrow", youtubePriorAudit ? "Raw YouTube ranking audit" : fallbackAudit ? "Representation-equivalence safety gate" : representativeAudit ? "Held-out representative benchmark" : tier2Audit ? "Blinded Tier-2 safety audit" : "Blinded source audit"),
+      node("div", "eyebrow", representativeV3Audit ? "Fresh Representative V3 audit" : youtubePriorAudit ? "Raw YouTube ranking audit" : fallbackAudit ? "Representation-equivalence safety gate" : representativeAudit ? "Held-out representative benchmark" : tier2Audit ? "Blinded Tier-2 safety audit" : "Blinded source audit"),
       node("p", "", youtubePriorAudit ? "Judge whether the current YouTube result is a suitable audio representation for downstream similarity and playlist organization." : fallbackAudit ? "Judge whether this fallback is a suitable audio representation for the Spotify target's downstream similarity analysis." : representativeAudit ? "Judge whether the frozen selection safely represents this Spotify target. The benchmark result cannot change resolver rules." : "Judge whether each candidate is the intended Spotify recording, then whether its audio source is clean enough for similarity analysis."),
-      node("p", "", youtubePriorAudit ? "If this rank is safe, the track is complete. If it is WRONG or UNCERTAIN, the next native YouTube rank will appear. Sol judgments remain hidden." : tier2Audit ? "Tier-2 recovery rules, Sol judgments, and selection reasons remain hidden." : "Resolver decisions, Sol judgments, search rank, and audit reasons remain hidden."),
+      node("p", "", representativeV3Audit ? "Review native ranks sequentially until the first SAFE result. After the oracle judgment is complete, an additional independently selected candidate may appear for validation. Automated decisions remain hidden." : youtubePriorAudit ? "If this rank is safe, the track is complete. If it is WRONG or UNCERTAIN, the next native YouTube rank will appear. Sol judgments remain hidden." : tier2Audit ? "Tier-2 recovery rules, Sol judgments, and selection reasons remain hidden." : "Resolver decisions, Sol judgments, search rank, and audit reasons remain hidden."),
     );
     if ((fallbackAudit || representativeAudit) && item.fallback) {
       const mode = item.fallback.match_mode === "REPRESENTATION_EQUIVALENT_STUDIO_FALLBACK" ? "Studio fallback" : item.fallback.match_mode === "REPRESENTATION_EQUIVALENT_MASTER_FALLBACK" ? "Master fallback" : "Exact recording";
@@ -607,10 +608,10 @@ function render() {
   const heading = node("div");
   heading.append(
     node("div", "eyebrow", blindedAudit ? "Blinded audit candidates" : "Ordered yt-dlp candidates"),
-    node("h2", "", youtubePriorAudit ? "Review ranks until the first safe result" : representativeAudit ? "Review the frozen selection" : tier2Audit || fallbackAudit ? "Review the recovered source" : "Label every candidate"),
+    node("h2", "", representativeV3Audit && item.review_phase === "SELECTOR_VALIDATION" ? "Additional independent selector judgment" : youtubePriorAudit ? "Review ranks until the first safe result" : representativeAudit ? "Review the frozen selection" : tier2Audit || fallbackAudit ? "Review the recovered source" : "Label every candidate"),
     node("p", "", "Open YouTube when needed. Each choice saves immediately; notes autosave after a short pause. Automatic resolver and evaluator evidence are hidden during review."),
   );
-  const trackCount = node("div", "track-count", youtubePriorAudit ? item.review_complete ? "Track complete" : `Review rank #${item.next_required_rank}` : `${item.candidates.filter(candidate => Boolean(savedLabel(candidate))).length} / ${item.candidates.length} labeled on this track`);
+  const trackCount = node("div", "track-count", youtubePriorAudit ? item.review_complete ? "Track complete" : item.review_phase === "SELECTOR_VALIDATION" ? "Additional selector-validation judgment" : `Review rank #${item.next_required_rank}` : `${item.candidates.filter(candidate => Boolean(savedLabel(candidate))).length} / ${item.candidates.length} labeled on this track`);
   trackCount.id = "track-count";
   head.append(heading, trackCount);
   app.append(head);
@@ -649,6 +650,10 @@ async function load() {
       document.title = "Raw YouTube ranking review · Stage 5B.2";
       pageEyebrow.textContent = "Stage 5B.2 · raw YouTube ranking benchmark";
       pageTitle.textContent = "Native rank review";
+    } else if (session.mode === "stage5b4_representative_v3_review") {
+      document.title = "Representative V3 review · Stage 5B.4";
+      pageEyebrow.textContent = "Stage 5B.4 · fresh Representative V3";
+      pageTitle.textContent = "Native rank validation";
     }
     session.cases.forEach(item => item.candidates.forEach(candidate => { candidate._savedLabel = candidate.review.label; }));
     const first = session.cases.findIndex(item => !isComplete(item));
