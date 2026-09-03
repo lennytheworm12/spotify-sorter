@@ -339,6 +339,13 @@ def _candidate_from_outcome(outcome: dict[str, Any] | None, video_id: str | None
     ), None)
 
 
+def source_type_from_semantics(semantics: dict[str, Any] | None) -> str | None:
+    if not semantics:
+        return None
+    value = semantics.get("source_presentation", {}).get("normalized_source_type")
+    return value if isinstance(value, str) and value else None
+
+
 def _failure_reason(
     exact_outcome: dict[str, Any],
     exact_pool: dict[str, Any],
@@ -456,8 +463,7 @@ def evaluate_benchmark(
                 } else None
             ),
             "source_type": (
-                selected_semantics.get("normalized_source_type")
-                if selected_semantics else None
+                source_type_from_semantics(selected_semantics)
             ),
             "canonicality": (
                 selected_semantics.get("canonicality", {}).get("level")
@@ -674,6 +680,21 @@ def _render_report(
         "",
         "The separately reported adversarial challenge is **43/50 (86%)** after the human-safe "
         "representation fallback. Its metric is not merged with this representative sample.",
+        "",
+        "## Limitations",
+        "",
+        "- human SAFE precision is not available until the 81 selected sources are reviewed",
+        "- this deterministic random sample happened to contain no title parsed as a version family; "
+        "the adversarial challenge remains the relevant stress evidence for live/remaster fallbacks",
+        "- metadata-only resolution cannot directly verify audio cleanliness or equivalence",
+        "- the 81% coverage miss is benchmark evidence; this frozen benchmark must not become tuning data",
+        "",
+        "## Verification",
+        "",
+        "- focused representative benchmark tests: **6 passed**",
+        "- complete Stage 5B resolver regressions: **437 passed**",
+        "- full non-heavy `ml/audio_similarity` suite: **898 passed, 12 deselected**",
+        "- known warnings: **11 existing librosa warnings**",
         "",
         "## Scope guards",
         "",

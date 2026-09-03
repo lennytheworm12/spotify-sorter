@@ -518,7 +518,8 @@ function render() {
   const freshChallenge = session.mode === "stage5b1b_fresh_challenge_human_audit";
   const tier2Audit = session.mode === "stage5b1c_tier2_human_audit";
   const fallbackAudit = session.mode === "stage5b1j_representation_fallback_review";
-  const blindedAudit = freshChallenge || tier2Audit || fallbackAudit;
+  const representativeAudit = session.mode === "stage5b_representative_library_review";
+  const blindedAudit = freshChallenge || tier2Audit || fallbackAudit || representativeAudit;
   if (blindedAudit) target.classList.add("blinded");
   const identity = node("div");
   identity.append(node("div", "eyebrow", `Spotify target · track ${index + 1} of ${session.cases.length}`), node("h2", "", item.track.title), node("div", "artists", item.track.artists.join(" · ")));
@@ -531,16 +532,16 @@ function render() {
   const context = node("div", "target-copy");
   if (blindedAudit) {
     context.append(
-      node("div", "eyebrow", fallbackAudit ? "Representation-equivalence safety gate" : tier2Audit ? "Blinded Tier-2 safety audit" : "Blinded source audit"),
-      node("p", "", fallbackAudit ? "Judge whether this fallback is a suitable audio representation for the Spotify target's downstream similarity analysis." : "Judge whether each candidate is the intended Spotify recording, then whether its audio source is clean enough for similarity analysis."),
+      node("div", "eyebrow", fallbackAudit ? "Representation-equivalence safety gate" : representativeAudit ? "Held-out representative benchmark" : tier2Audit ? "Blinded Tier-2 safety audit" : "Blinded source audit"),
+      node("p", "", fallbackAudit ? "Judge whether this fallback is a suitable audio representation for the Spotify target's downstream similarity analysis." : representativeAudit ? "Judge whether the frozen selection safely represents this Spotify target. The benchmark result cannot change resolver rules." : "Judge whether each candidate is the intended Spotify recording, then whether its audio source is clean enough for similarity analysis."),
       node("p", "", tier2Audit ? "Tier-2 recovery rules, Sol judgments, and selection reasons remain hidden." : "Resolver decisions, Sol judgments, search rank, and audit reasons remain hidden."),
     );
-    if (fallbackAudit && item.fallback) {
+    if ((fallbackAudit || representativeAudit) && item.fallback) {
       const mode = item.fallback.match_mode === "REPRESENTATION_EQUIVALENT_STUDIO_FALLBACK" ? "Studio fallback" : item.fallback.match_mode === "REPRESENTATION_EQUIVALENT_MASTER_FALLBACK" ? "Master fallback" : "Exact recording";
       const callout = node("div", "fallback-callout");
       callout.append(
-        node("strong", "", `${mode} · not claimed as the exact Spotify release`),
-        document.createTextNode("Judge whether this is an acceptable audio representation for downstream CLAP/MuQ similarity—not whether it is literally the same release."),
+        node("strong", "", mode === "Exact recording" ? mode : `${mode} · not claimed as the exact Spotify release`),
+        document.createTextNode(mode === "Exact recording" ? "Judge the selected recording and source quality independently." : "Judge whether this is an acceptable audio representation for downstream CLAP/MuQ similarity—not whether it is literally the same release."),
       );
       context.append(callout);
     }
@@ -581,7 +582,7 @@ function render() {
   const heading = node("div");
   heading.append(
     node("div", "eyebrow", blindedAudit ? "Blinded audit candidates" : "Ordered yt-dlp candidates"),
-    node("h2", "", tier2Audit || fallbackAudit ? "Review the recovered source" : "Label every candidate"),
+    node("h2", "", representativeAudit ? "Review the frozen selection" : tier2Audit || fallbackAudit ? "Review the recovered source" : "Label every candidate"),
     node("p", "", "Open YouTube when needed. Each choice saves immediately; notes autosave after a short pause. Automatic resolver and evaluator evidence are hidden during review."),
   );
   const trackCount = node("div", "track-count", `${item.candidates.filter(candidate => Boolean(savedLabel(candidate))).length} / ${item.candidates.length} labeled on this track`);
@@ -615,6 +616,10 @@ async function load() {
       document.title = "Representation fallback review · Stage 5B.1J";
       pageEyebrow.textContent = "Stage 5B.1J · fallback safety gate";
       pageTitle.textContent = "Representation fallback review";
+    } else if (session.mode === "stage5b_representative_library_review") {
+      document.title = "Representative library review · Stage 5B";
+      pageEyebrow.textContent = "Stage 5B · held-out owner-library benchmark";
+      pageTitle.textContent = "Representative selection review";
     }
     session.cases.forEach(item => item.candidates.forEach(candidate => { candidate._savedLabel = candidate.review.label; }));
     const first = session.cases.findIndex(item => !isComplete(item));

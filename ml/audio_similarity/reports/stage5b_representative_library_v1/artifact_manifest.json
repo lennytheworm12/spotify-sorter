@@ -1,0 +1,93 @@
+{
+  "benchmark_id": "STAGE5B_REPRESENTATIVE_LIBRARY_V1",
+  "config_sha256": "cae3874c99bfec0baa2c5b79b6b3ef2a67e58e27b11098d64b101fc3452f73c2",
+  "human_review": {
+    "complete": false,
+    "completed": 0,
+    "label_counts": {},
+    "required": 81,
+    "safe_precision": null,
+    "uncertain_rate": null,
+    "wrong_rate": null
+  },
+  "input_artifacts": {
+    "benchmark_manifest": {
+      "path": "reports/stage5b_representative_library_v1/benchmark_manifest.json",
+      "sha256": "cec77ef960fa5da7725e8a0df244a5829fb90fdc5463dc1ce6a2ef72667f4285"
+    },
+    "resolver_stack": {
+      "path": "reports/stage5b1j_representation_fallback/resolver_stack_candidate_v1.json",
+      "sha256": "3e2d9ffbb712118d67d84ab0b7ef8cf47313d929ab846850eeb47ba5c531e540"
+    },
+    "stage5b1j_config": {
+      "path": "configs/stage5b1j_representation_fallback.json",
+      "sha256": "f3a265093fdd8420d8fe9c3b2736ae5bf701f00857875921d400e40a5ef39f77"
+    }
+  },
+  "output_artifacts": {
+    "coverage": {
+      "path": "reports/stage5b_representative_library_v1/coverage_report.json",
+      "sha256": "0ddfb47ccf7756c2c0f4cb8e2d8a7189f01602439992dfb113d8d07c527ac06c",
+      "size_bytes": 1201
+    },
+    "decisions": {
+      "path": "reports/stage5b_representative_library_v1/resolver_decisions.json",
+      "sha256": "129a4ab1c4f0430e22a8f1c9f258506699fcf1000d6039bb4d0903acfd47e5cf",
+      "size_bytes": 166797
+    },
+    "discovery": {
+      "path": "reports/stage5b_representative_library_v1/discovery_results.json",
+      "sha256": "95a42c3f4136b62e4b30a6e450c1b94388abb46560e2be833002a23b4c7938ec",
+      "size_bytes": 1327949
+    },
+    "features": {
+      "path": "reports/stage5b_representative_library_v1/candidate_features.json",
+      "sha256": "63fca911b1153411efa9d3fb511f4b5e4a4364070b893c707c918764904d3a82",
+      "size_bytes": 9188177
+    },
+    "human_review": {
+      "path": "reports/stage5b_representative_library_v1/human_review.csv",
+      "sha256": "48c5e36a49384199091c47b3fbb10aa8bb6bf13ff137e39bee341eb71741cf62",
+      "size_bytes": 33788
+    },
+    "report": {
+      "path": "reports/stage5b_representative_library_v1/benchmark_report.md",
+      "sha256": "e625eccfbe437d243a457465312f239ecc65d69eb29d00f5bd7a025cb6010af2",
+      "size_bytes": 2747
+    }
+  },
+  "production_activated": false,
+  "resolver_stack_id": "STAGE5B_RESOLVER_CANDIDATE_V1",
+  "schema_version": "stage5b-representative-library-artifacts-v1",
+  "status": "STAGE5B_REPRESENTATIVE_LIBRARY_AWAITING_HUMAN_REVIEW",
+  "summary": {
+    "auto_match_count": 81,
+    "auto_match_coverage": 0.81,
+    "benchmark_track_count": 100,
+    "exact_recording_count": 81,
+    "failure_reasons": {
+      "EXPLICIT_CONFLICT": 3,
+      "METADATA_INSUFFICIENT": 16
+    },
+    "master_fallback_count": 0,
+    "match_uncertain_count": 19,
+    "product_coverage_gate_met": false,
+    "product_coverage_target": 0.9,
+    "source_composition": {
+      "ART_TRACK_TOPIC": 20,
+      "AUDIO_PRESENTATION": 2,
+      "LYRIC_VIDEO": 13,
+      "OFFICIAL_AUDIO": 8,
+      "OFFICIAL_LYRIC_VIDEO": 4,
+      "OFFICIAL_MUSIC_VIDEO": 3,
+      "OTHER": 31
+    },
+    "studio_fallback_count": 0,
+    "version_family_behavior": {
+      "ordinary_studio": {
+        "AUTO_MATCH": 81,
+        "MATCH_UNCERTAIN": 19
+      }
+    }
+  }
+}

@@ -10,8 +10,12 @@ from audio_similarity.stage5b1a_models import Stage5B1AValidationError
 from audio_similarity.stage5b_representative_benchmark import (
     REVIEW_SCHEMA_VERSION,
     load_benchmark_config,
+    source_type_from_semantics,
     verify_benchmark_inputs,
     write_review_csv,
+)
+from audio_similarity.stage5b_representative_review_store import (
+    RepresentativeBenchmarkReviewStore,
 )
 
 
@@ -79,3 +83,37 @@ def test_review_identity_cannot_change_after_queue_is_created(tmp_path: Path) ->
 
     with pytest.raises(Stage5B1AValidationError, match="selections changed"):
         write_review_csv(config, _decision("zyxwvutsrqp"))
+
+
+def test_source_type_is_read_from_explicit_source_presentation() -> None:
+    # The 1H semantics intentionally separate canonicality, cleanliness, and
+    # presentation; callers must not expect source type at the root.
+    semantics = {
+        "canonicality": {"level": "CANONICAL_STRONG"},
+        "source_presentation": {"normalized_source_type": "OFFICIAL_AUDIO"},
+    }
+
+    assert source_type_from_semantics(semantics) == "OFFICIAL_AUDIO"
+    assert source_type_from_semantics(None) is None
+
+
+def test_representative_review_store_autosaves_labels_and_notes(tmp_path: Path) -> None:
+    config = load_benchmark_config(CONFIG)
+    config = replace(config, artifacts=config.artifacts | {"human_review": tmp_path / "review.csv"})
+    write_review_csv(config, _decision())
+    store = RepresentativeBenchmarkReviewStore(config.artifacts["human_review"])
+
+    before = store.session()
+    assert before["progress"]["reviewed_candidates"] == 0
+    assert before["cases"][0]["fallback"]["match_mode"] == (
+        "REPRESENTATION_EQUIVALENT_STUDIO_FALLBACK"
+    )
+    store.submit(
+        "stage5b_library_v1_001", "abcdefghijk", "acceptable",
+        "safe representation", "ordinary live target",
+    )
+    after = store.session()
+    assert after["progress"]["reviewed_candidates"] == 1
+    assert after["cases"][0]["candidates"][0]["review"] == {
+        "label": "ACCEPTABLE", "note": "safe representation",
+    }
