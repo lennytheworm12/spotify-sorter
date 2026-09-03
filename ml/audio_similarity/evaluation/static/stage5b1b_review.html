@@ -113,6 +113,17 @@ textarea {
 .candidate details { margin-top: 11px; color: #556177; font-size: 12px; }
 .candidate summary { cursor: pointer; font-weight: 720; }
 .description { margin: 8px 0 0; line-height: 1.45; white-space: pre-wrap; }
+.resolver-evidence {
+  margin-top: 12px; border-left: 3px solid #9aa8c0; padding: 9px 12px;
+  background: #f5f7fb; color: #46536a;
+}
+.resolver-evidence[hidden] { display: none; }
+.evidence-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px 16px; margin-top: 9px; }
+.evidence-grid div { overflow-wrap: anywhere; }
+.no-candidates {
+  padding: 36px; border: 1px dashed #aeb9ca; background: #f8f9fc; color: var(--slate);
+  line-height: 1.55; text-align: center;
+}
 .decision-row { display: grid; grid-template-columns: repeat(4, minmax(105px, 1fr)) auto; gap: 8px; margin-top: 17px; }
 .decision {
   min-height: 43px; border: 1px solid #b9c3d3; border-radius: 6px; background: white;
@@ -263,10 +274,12 @@ function visibleIndices() {
 function updateProgress() {
   const candidates = session.cases.flatMap(item => item.candidates);
   const reviewed = candidates.filter(candidate => Boolean(savedLabel(candidate))).length;
-  const complete = session.cases.filter(isComplete).length;
+  const reviewable = session.cases.filter(item => item.candidates.length);
+  const complete = reviewable.filter(isComplete).length;
+  const unavailable = session.cases.length - reviewable.length;
   const failed = candidates.filter(candidate => candidate._saveError).length;
   progressNumber.textContent = `${reviewed} / ${candidates.length}`;
-  progressLabel.textContent = `${candidates.length - reviewed} remaining · ${complete} / ${session.cases.length} tracks complete`;
+  progressLabel.textContent = `${candidates.length - reviewed} remaining · ${complete} / ${reviewable.length} reviewable tracks complete${unavailable ? ` · ${unavailable} no-result tracks documented` : ""}`;
   progressFill.style.width = `${candidates.length ? reviewed / candidates.length * 100 : 0}%`;
   pendingCopy.textContent = failed ? `${failed} autosave${failed === 1 ? "" : "s"} failed` : pendingSaves ? `${pendingSaves} autosave${pendingSaves === 1 ? "" : "s"} in progress` : "All changes saved";
   pendingCopy.classList.toggle("busy", pendingSaves > 0 && failed === 0);
@@ -418,6 +431,8 @@ function updateCandidateVisual(card, candidate) {
   const chip = card.querySelector(".label-chip");
   chip.className = `label-chip ${candidate.review.label || "blank"}`;
   chip.textContent = candidate.review.label || "NOT LABELED";
+  const evidence = card.querySelector(".resolver-evidence");
+  if (evidence) evidence.hidden = !candidate.review.label;
 }
 function chooseLabel(item, candidate, card, label) {
   candidate.review.label = label;
@@ -453,6 +468,37 @@ function candidateCard(item, candidate) {
       node("p", "description", candidate.description),
     );
     body.append(descriptionDetails);
+  }
+  if (candidate.resolver_evidence) {
+    const evidence = candidate.resolver_evidence;
+    const semantics = evidence.source_semantics || {};
+    const presentation = semantics.source_presentation || {};
+    const canonicality = semantics.canonicality || {};
+    const cleanliness = semantics.audio_cleanliness || {};
+    const identity = evidence.identity || {};
+    const versions = evidence.version || {};
+    const duration = evidence.duration || {};
+    const eligibility = evidence.eligibility || {};
+    const details = node("details", "resolver-evidence");
+    details.hidden = !candidate.review.label;
+    details.append(node("summary", "", "Reveal frozen resolver evidence (label saved)"));
+    const grid = node("div", "evidence-grid");
+    [
+      ["Source", presentation.normalized_source_type || evidence.source?.effective_preference_source_type || "unknown"],
+      ["Canonicality", canonicality.level || "unknown"],
+      ["Padding / cleanliness", cleanliness.level || "unknown"],
+      ["Duration", `${duration.bucket || "unknown"}${Number.isFinite(Number(duration.absolute_duration_delta_seconds)) ? ` · Δ ${Number(duration.absolute_duration_delta_seconds).toFixed(2)}s` : ""}`],
+      ["Core title", identity.strong_structural_title_identity ? "strong" : "not established"],
+      ["Performer", identity.strong_primary_performer_identity ? "strong" : "not established"],
+      ["Version", versions.explicit_complete_match ? "explicit match" : versions.conflict_count ? "conflict" : versions.target_is_versioned ? "incomplete" : "not versioned"],
+      ["Eligibility", eligibility.eligible ? "eligible" : `blocked · ${(eligibility.failed_conditions || []).join(", ") || "unspecified"}`],
+    ].forEach(([label, value]) => {
+      const cell = node("div");
+      cell.append(node("strong", "", `${label}: `), document.createTextNode(String(value)));
+      grid.append(cell);
+    });
+    details.append(grid);
+    body.append(details);
   }
   const decisions = node("div", "decision-row");
   LABELS.forEach(label => {
@@ -515,11 +561,17 @@ function render() {
   const target = node("section", "target");
   const freshChallenge = session.mode === "stage5b1b_fresh_challenge_human_audit";
   const tier2Audit = session.mode === "stage5b1c_tier2_human_audit";
-  const blindedAudit = freshChallenge || tier2Audit;
+  const oracleAudit = session.mode === "stage5b1i_human_oracle_tail";
+  const blindedAudit = freshChallenge || tier2Audit || oracleAudit;
   if (blindedAudit) target.classList.add("blinded");
   const identity = node("div");
   identity.append(node("div", "eyebrow", `Spotify target · track ${index + 1} of ${session.cases.length}`), node("h2", "", item.track.title), node("div", "artists", item.track.artists.join(" · ")));
   identity.append(node("div", "release", [item.track.album, item.track.release_year, formatDuration(item.track.duration_seconds)].filter(Boolean).join(" · ")));
+  if (Array.isArray(item.track.version_descriptors) && item.track.version_descriptors.length) {
+    const versions = node("div", "tags");
+    item.track.version_descriptors.forEach(value => versions.append(node("span", "tag", `${value.family}${value.qualifier ? ` · ${value.qualifier}` : ""}`)));
+    identity.append(versions);
+  }
   if (Array.isArray(item.case_tags) && item.case_tags.length) {
     const tags = node("div", "tags");
     item.case_tags.forEach(tag => tags.append(node("span", "tag", tag.replaceAll("_", " "))));
@@ -528,9 +580,9 @@ function render() {
   const context = node("div", "target-copy");
   if (blindedAudit) {
     context.append(
-      node("div", "eyebrow", tier2Audit ? "Blinded Tier-2 safety audit" : "Blinded source audit"),
+      node("div", "eyebrow", oracleAudit ? "Independent human oracle" : tier2Audit ? "Blinded Tier-2 safety audit" : "Blinded source audit"),
       node("p", "", "Judge whether each candidate is the intended Spotify recording, then whether its audio source is clean enough for similarity analysis."),
-      node("p", "", tier2Audit ? "Tier-2 recovery rules, Sol judgments, and selection reasons remain hidden." : "Resolver decisions, Sol judgments, search rank, and audit reasons remain hidden."),
+      node("p", "", oracleAudit ? "Label independently first. The frozen resolver evidence can be revealed only after the candidate has a saved label; decisions and Sol judgments remain hidden." : tier2Audit ? "Tier-2 recovery rules, Sol judgments, and selection reasons remain hidden." : "Resolver decisions, Sol judgments, search rank, and audit reasons remain hidden."),
     );
   } else {
     context.append(node("div", "eyebrow", "Why this case exists"), node("p", "", item.case_rationale));
@@ -538,23 +590,30 @@ function render() {
     queryDetails.append(node("summary", "", "Show frozen search query"), node("p", "description", item.query));
     context.append(queryDetails);
   }
-  const trackNote = node("div", "track-note");
-  const trackLabel = node("label", "", "Optional note for this track");
-  trackLabel.htmlFor = "track-note";
-  const trackArea = node("textarea");
-  trackArea.id = "track-note";
-  trackArea.maxLength = 2000;
-  trackArea.placeholder = "Anything that applies to the full candidate set?";
-  trackArea.value = item.track_note;
   const firstCandidate = item.candidates[0];
-  trackArea.oninput = () => { item.track_note = trackArea.value; debounceSave(item, firstCandidate); };
-  trackArea.onblur = () => {
-    const key = `${item.stable_track_id}:${firstCandidate.video_id}`;
-    const pending = noteTimers.get(key);
-    if (pending) { clearTimeout(pending.timer); noteTimers.delete(key); saveCandidate(item, firstCandidate); }
-  };
-  const trackSave = node("div", "save-state", "Autosaves after you stop typing");
-  trackNote.append(trackLabel, trackArea, trackSave);
+  const trackNote = node("div", "track-note");
+  if (firstCandidate) {
+    const trackLabel = node("label", "", "Optional note for this track");
+    trackLabel.htmlFor = "track-note";
+    const trackArea = node("textarea");
+    trackArea.id = "track-note";
+    trackArea.maxLength = 2000;
+    trackArea.placeholder = "Anything that applies to the full candidate set?";
+    trackArea.value = item.track_note;
+    trackArea.oninput = () => { item.track_note = trackArea.value; debounceSave(item, firstCandidate); };
+    trackArea.onblur = () => {
+      const key = `${item.stable_track_id}:${firstCandidate.video_id}`;
+      const pending = noteTimers.get(key);
+      if (pending) { clearTimeout(pending.timer); noteTimers.delete(key); saveCandidate(item, firstCandidate); }
+    };
+    const trackSave = node("div", "save-state", "Autosaves after you stop typing");
+    trackNote.append(trackLabel, trackArea, trackSave);
+  } else {
+    trackNote.append(
+      node("div", "eyebrow", "Frozen candidate availability"),
+      node("p", "", item.availability_note || "No frozen candidates are available."),
+    );
+  }
   target.append(identity, context, trackNote);
   app.append(target);
   const definitions = node("section", "definitions");
@@ -569,7 +628,7 @@ function render() {
   const heading = node("div");
   heading.append(
     node("div", "eyebrow", blindedAudit ? "Blinded audit candidates" : "Ordered yt-dlp candidates"),
-    node("h2", "", tier2Audit ? "Review the recovered source" : "Label every candidate"),
+    node("h2", "", oracleAudit ? "Audit the complete Q0 pool" : tier2Audit ? "Review the recovered source" : "Label every candidate"),
     node("p", "", "Open YouTube when needed. Each choice saves immediately; notes autosave after a short pause. Automatic resolver and evaluator evidence are hidden during review."),
   );
   const trackCount = node("div", "track-count", `${item.candidates.filter(candidate => Boolean(savedLabel(candidate))).length} / ${item.candidates.length} labeled on this track`);
@@ -577,7 +636,8 @@ function render() {
   head.append(heading, trackCount);
   app.append(head);
   const list = node("section", "candidate-list");
-  item.candidates.forEach(candidate => list.append(candidateCard(item, candidate)));
+  if (item.candidates.length) item.candidates.forEach(candidate => list.append(candidateCard(item, candidate)));
+  else list.append(node("div", "no-candidates", item.availability_note));
   app.append(list);
 }
 function definition(label, text) {
@@ -599,6 +659,10 @@ async function load() {
       document.title = "Tier-2 recovery review · Stage 5B.1C";
       pageEyebrow.textContent = "Stage 5B.1C · Tier-2 safety audit";
       pageTitle.textContent = "Recovered source review";
+    } else if (session.mode === "stage5b1i_human_oracle_tail") {
+      document.title = "Human oracle tail · Stage 5B.1I";
+      pageEyebrow.textContent = "Stage 5B.1I · frozen Q0 tail";
+      pageTitle.textContent = "Human oracle desk";
     }
     session.cases.forEach(item => item.candidates.forEach(candidate => { candidate._savedLabel = candidate.review.label; }));
     const first = session.cases.findIndex(item => !isComplete(item));
