@@ -93,6 +93,24 @@ def load_youtube_prior_config(path: str | Path) -> YoutubePriorConfig:
         or retrieval.get("preserve_native_rank") is not True
     ):
         raise Stage5B1AValidationError("Stage 5B.2 raw top-three contract changed")
+    if value.get("query") != {
+        "query_id": "NATURAL_SPOTIFY_TITLE_PRIMARY_ARTIST_V1",
+        "template": "{spotify_title} {primary_artist}",
+        "quotes": False,
+        "forced_official_token": False,
+        "alternate_queries": 0,
+        "resolver_title_rewriting": False,
+    }:
+        raise Stage5B1AValidationError("Stage 5B.2 natural-query contract changed")
+    scope = value.get("scope_guards", {})
+    if (
+        scope.get("existing_resolver_invocations") != 0
+        or scope.get("candidate_reranking") is not False
+        or scope.get("audio_downloads") != 0
+        or scope.get("video_downloads") != 0
+        or scope.get("benchmark_tuning_permitted") is not False
+    ):
+        raise Stage5B1AValidationError("Stage 5B.2 scope guards changed")
     manifest_path = project_root / manifest["path"]
     actual = file_sha256(manifest_path)
     if actual != manifest.get("sha256"):

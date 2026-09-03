@@ -271,7 +271,7 @@ function updateProgress() {
   if (isYoutubePriorReview()) {
     const state = session.progress;
     progressNumber.textContent = `${state.completed_tracks} / ${state.total_tracks}`;
-    progressLabel.textContent = `${state.remaining_candidates} tracks remaining · ${state.reviewed_candidates} candidate judgments saved`;
+    progressLabel.textContent = `${state.remaining_tracks} tracks remaining · ${state.reviewed_candidates} candidate judgments saved`;
     progressFill.style.width = `${state.total_tracks ? state.completed_tracks / state.total_tracks * 100 : 0}%`;
   } else {
     progressNumber.textContent = `${reviewed} / ${candidates.length}`;

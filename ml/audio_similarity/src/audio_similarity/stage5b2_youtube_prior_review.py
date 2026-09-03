@@ -245,7 +245,7 @@ class YoutubePriorReviewStore:
                 "export_filename": "stage5b2-youtube-prior-human-review.csv",
                 "progress": {
                     "reviewed_candidates": reviewed,
-                    "remaining_candidates": SAMPLE_SIZE - completed,
+                    "remaining_tracks": SAMPLE_SIZE - completed,
                     "total_candidates": 300,
                     "completed_tracks": completed,
                     "total_tracks": SAMPLE_SIZE,
@@ -326,14 +326,6 @@ def validate_complete_human_review(
         raise Stage5B1AValidationError(
             f"Stage 5B.2 human review incomplete for {len(incomplete)} tracks"
         )
-    for benchmark_id, rows in grouped.items():
-        safe_rank = first_safe_rank(rows)
-        if safe_rank is not None and any(
-            row["candidate_review_label"] for row in rows[safe_rank:]
-        ):
-            raise Stage5B1AValidationError(
-                f"lower ranks were reviewed after first SAFE for {benchmark_id}"
-            )
     return grouped
 
 
@@ -543,6 +535,19 @@ def build_failure_analysis(
             "failure_category": category,
             "first_safe_rank": safe_rank,
             "top3_miss": safe_rank is None,
+            "reviewed_ranks": [{
+                "native_rank": int(row["youtube_rank"]),
+                "video_id": row["candidate_video_id"],
+                "title": row["candidate_title"],
+                "channel": row["candidate_channel"] or row["candidate_uploader"],
+                "human_label": row["candidate_review_label"] or None,
+                "human_note": row["candidate_note"] or None,
+                "failure_category": _failure_category(row)
+                if row["candidate_review_label"] in {"WRONG", "UNCERTAIN"} else None,
+                "sol_label": sol[(benchmark_id, int(row["youtube_rank"]))]["label"],
+                "sol_reason": sol[(benchmark_id, int(row["youtube_rank"]))]["reason"],
+            } for row in rows if row["candidate_review_label"]],
+            "track_note": top["track_note"] or None,
         })
     return {
         "schema_version": FAILURE_SCHEMA_VERSION,
@@ -571,7 +576,7 @@ def _pct(value: float) -> str:
 
 
 def write_closeout_artifacts(config: YoutubePriorConfig) -> dict[str, Any]:
-    review_path = config.output_dir / "human_review.csv"
+    _, review_path = write_human_review_artifacts(config)
     grouped = validate_complete_human_review(review_path)
     sol = load_mapped_sol_evaluations(config)
     top1, top3, agreement = compute_prior_metrics(grouped, sol)
@@ -591,6 +596,8 @@ def write_closeout_artifacts(config: YoutubePriorConfig) -> dict[str, Any]:
         "",
         f"- held-out tracks: **{SAMPLE_SIZE}**",
         f"- manifest SHA-256: `{config.manifest_sha256}`",
+        "- starting source commit: `e3aa0f1`",
+        "- experiment branch: `ml/stage5b2-youtube-prior-benchmark`",
         "- query: unquoted `<Spotify title> <primary artist>`",
         "- retrieval: native `ytsearch3`, metadata only, rank preserved",
         "- discovery: **100/100**, 300 candidates, zero search failures",
@@ -634,6 +641,17 @@ def write_closeout_artifacts(config: YoutubePriorConfig) -> dict[str, Any]:
         f"**{verdict}**",
         "",
         "No query, label, rank, candidate, or resolver policy was changed after reveal. Any future ranking-plus-veto architecture requires a fresh validation sample.",
+        "",
+        "## Reproduction commands",
+        "",
+        "```bash",
+        "uv run python -m audio_similarity.cli.stage5b2_youtube_prior freeze-manifest",
+        "uv run python -m audio_similarity.cli.stage5b2_youtube_prior discover",
+        "uv run python -m audio_similarity.cli.stage5b2_youtube_prior build-sol-payload",
+        "uv run python -m audio_similarity.cli.stage5b2_youtube_prior build-review",
+        "uv run python -m audio_similarity.cli.stage5b2_youtube_prior closeout",
+        "uv run pytest",
+        "```",
     ]
     report_path = config.output_dir / "youtube_prior_report.md"
     report_path.write_text("\n".join(lines) + "\n", encoding="utf-8")

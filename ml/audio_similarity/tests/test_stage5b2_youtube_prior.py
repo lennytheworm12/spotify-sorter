@@ -99,6 +99,34 @@ def test_manifest_is_exact_fresh_deterministic_100_and_immutable(tmp_path: Path)
         freeze_youtube_prior_manifest(project, snapshot, output)
 
 
+def test_config_rejects_query_or_resolver_scope_mutation(tmp_path: Path) -> None:
+    root = Path(__file__).parents[1]
+    source = json.loads(
+        (root / "reports/stage5b_youtube_prior_v1/benchmark_config.json").read_text()
+    )
+    manifest = root / source["benchmark_manifest"]["path"]
+    output = tmp_path / "reports/stage5b_youtube_prior_v1"
+    output.mkdir(parents=True)
+    copied_manifest = output / "benchmark_manifest.json"
+    copied_manifest.write_bytes(manifest.read_bytes())
+    source["benchmark_manifest"] = {
+        "path": "reports/stage5b_youtube_prior_v1/benchmark_manifest.json",
+        "sha256": source["benchmark_manifest"]["sha256"],
+    }
+    config_path = output / "benchmark_config.json"
+
+    source["query"]["forced_official_token"] = True
+    config_path.write_text(json.dumps(source))
+    with pytest.raises(Stage5B1AValidationError, match="natural-query contract"):
+        load_youtube_prior_config(config_path)
+
+    source["query"]["forced_official_token"] = False
+    source["scope_guards"]["existing_resolver_invocations"] = 1
+    config_path.write_text(json.dumps(source))
+    with pytest.raises(Stage5B1AValidationError, match="scope guards"):
+        load_youtube_prior_config(config_path)
+
+
 def test_all_prior_benchmark_sources_are_explicit() -> None:
     root = Path("/project")
     assert [path.name for path in historical_manifest_paths(root)] == [
