@@ -690,6 +690,19 @@ def write_closeout_artifacts(config: Stage5B4Config) -> dict[str, Any]:
     decisions_path = config.output_dir / "automated_selector_decisions.json"
     review_path = config.output_dir / "human_review.csv"
     decisions = _json(decisions_path)
+    manifest = load_v3_manifest(config)
+    discovery = _json(config.output_dir / "youtube_top3_discovery.json")
+    discovery_summary = discovery["summary"]
+    unavailable = [
+        {
+            "benchmark_id": row["benchmark_id"],
+            "title": row["outcome"]["track"]["title"],
+            "query": row["query"],
+            "error": row["outcome"].get("error"),
+        }
+        for row in discovery["tracks"]
+        if not row["outcome"].get("candidates")
+    ]
     grouped = validate_complete_review(review_path, decisions_path)
     topk, automated, veto, failure = compute_v3_metrics(grouped, decisions)
     metrics_path = config.output_dir / "automated_selector_metrics.json"
@@ -727,8 +740,30 @@ def write_closeout_artifacts(config: Stage5B4Config) -> dict[str, Any]:
         f"- manifest SHA-256: `{config.manifest_sha256}`",
         f"- discovery SHA-256: `{file_sha256(config.output_dir / 'youtube_top3_discovery.json')}`",
         f"- Stage 5B.3 implementation SHA-256: `{config.selector_source_sha256}`",
+        f"- sample seed: `{manifest['sample_seed']}`",
+        f"- owner-library tracks / historically excluded / eligible: **{manifest['library_unique_track_count']} / {manifest['historically_excluded_track_count']} / {manifest['eligible_heldout_track_count']}**",
+        f"- selected tracks / prior-universe overlap / post-freeze substitutions: **{manifest['sampled_track_count']} / 0 / {manifest['post_freeze_substitutions']}**",
         "- production activation: **false**",
         "- audio/video downloads: **0 / 0**",
+        "",
+        "## Frozen discovery",
+        "",
+        f"- completed searches: **{discovery_summary['tracks_completed']}/{discovery_summary['tracks_total']}**",
+        f"- tracks with candidates / unavailable pools: **{discovery_summary['tracks_with_candidates']} / {discovery_summary['zero_candidate_tracks']}**",
+        f"- candidates preserved in native rank order: **{discovery_summary['candidate_count']}**",
+        f"- provider failures / warnings: **{discovery_summary['search_failures']} / {discovery_summary['warning_count']}**",
+        f"- yt-dlp version(s): `{discovery['provider']['versions']}`",
+        "",
+        "Unavailable pools remained in the 100-track denominator and were not replaced or searched differently:",
+        "",
+        *[
+            f"- `{row['benchmark_id']}` — {_markdown_cell(row['title'])}: "
+            + (
+                f"`{row['error']['error_type']}` — {_markdown_cell(row['error']['message'])}"
+                if row["error"] else "the frozen query returned zero candidates"
+            )
+            for row in unavailable
+        ],
         "",
         "## Raw YouTube and human Top-3 oracle",
         "",
@@ -748,6 +783,7 @@ def write_closeout_artifacts(config: Stage5B4Config) -> dict[str, Any]:
         f"- selected ranks: `{automated['selected_rank_distribution']}`",
         f"- selected human IDEAL / ACCEPTABLE / WRONG / UNCERTAIN: **{automated['human_label_counts']['IDEAL']} / {automated['human_label_counts']['ACCEPTABLE']} / {automated['human_label_counts']['WRONG']} / {automated['human_label_counts']['UNCERTAIN']}**",
         f"- SAFE precision: **{automated['human_safe_count']}/{automated['auto_select_count']} ({_pct(automated['human_safe_precision'])})**",
+        f"- WRONG / UNCERTAIN rates: **{_pct(automated['human_wrong_rate'])} / {_pct(automated['human_uncertain_rate'])}**",
         "",
         "## Veto audit",
         "",
@@ -780,6 +816,19 @@ def write_closeout_artifacts(config: Stage5B4Config) -> dict[str, Any]:
         f"| Fresh Representative V3 | {_pct(topk['top1_safe_rate'])} | {_pct(topk['top3_safe_recall'])} | {_pct(automated['auto_select_coverage'])} | {_pct(automated['human_safe_precision'])} |",
         "",
         "These datasets remain separate. Raw Top-1 quality, the human Top-3 oracle, and automated selector behavior answer different questions.",
+        "",
+        "## Critical validation answers",
+        "",
+        f"1. Raw Top-1 exceeded 90% SAFE: **{'yes' if topk['top1_safe_rate'] >= RAW_TOP1_GATE else 'no'}** ({_pct(topk['top1_safe_rate'])}).",
+        f"2. Human Top-3 replicated the 99–100% target: **{'yes' if topk['top3_safe_recall'] >= TOP3_REPLICATION_GATE else 'no'}** ({_pct(topk['top3_safe_recall'])}).",
+        f"3. Frozen-selector coverage exceeded 90%: **{'yes' if automated['gates']['coverage']['passed'] else 'no'}** ({_pct(automated['auto_select_coverage'])}).",
+        f"4. Frozen-selector SAFE precision remained at least 95%: **{'yes' if automated['gates']['safe_precision']['passed'] else 'no'}** ({_pct(automated['human_safe_precision'])}).",
+        f"5. The >20-second veto rejected **{veto['duration_veto']['rank1_safe_false_positive_count']}** human-SAFE rank-1 candidates.",
+        f"6. The >20-second veto correctly rejected **{veto['duration_veto']['rank1_wrong_true_positive_count']}** human-WRONG rank-1 candidates; **{veto['duration_veto']['rank1_uncertain_count']}** were human-UNCERTAIN.",
+        f"7. The live veto correctly rejected **{veto['live_veto']['rank1_wrong_true_positive_count']}** human-WRONG rank-1 candidates and rejected **{veto['live_veto']['rank1_safe_false_positive_count']}** human-SAFE rank-1 candidates.",
+        f"8. Rank 3 supplied the first SAFE candidate for **{topk['first_safe_rank_distribution']['rank_3']}** tracks and was selected automatically for **{automated['selected_rank_distribution']['rank_3']}** tracks.",
+        f"9. Concerning repeated automated-WRONG families absent from calibration: `{systematic}`.",
+        f"10. Relative to the separate Representative V1 proof-heavy result, V3 changed coverage by **{(automated['auto_select_coverage'] - 0.81) * 100:+.2f} percentage points** and SAFE precision by **{(automated['human_safe_precision'] - 0.9753) * 100:+.2f} percentage points**; this is a descriptive cross-benchmark comparison, not a paired test.",
         "",
         "## Architecture decision",
         "",

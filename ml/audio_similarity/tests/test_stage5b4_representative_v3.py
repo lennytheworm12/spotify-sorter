@@ -29,6 +29,7 @@ from audio_similarity.stage5b4_review import (
     next_review_requirement,
     oracle_next_rank,
     validate_complete_review,
+    write_closeout_artifacts,
     write_human_review_artifacts,
 )
 
@@ -319,6 +320,34 @@ def test_unavailable_candidate_pool_remains_in_denominator(tmp_path) -> None:
     assert unavailable["candidate_unavailable"] is True
     assert unavailable["review_complete"] is True
     assert unavailable["candidates"] == []
+
+
+def test_closeout_report_separates_metrics_and_answers_validation_questions(tmp_path) -> None:
+    project, snapshot = _project(tmp_path)
+    output = project / "reports/stage5b4_representative_v3"
+    freeze_v3_manifest(project, snapshot, output)
+    config = load_v3_config(output / "benchmark_config.json")
+    run_v3_discovery(config, _FakeAdapter(), sleep=lambda _seconds: None)
+    run_frozen_selector(config)
+    _, review_path = write_human_review_artifacts(config)
+    with review_path.open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    for row in rows:
+        row["candidate_review_label"] = "IDEAL"
+    with review_path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=REVIEW_COLUMNS, lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(rows)
+
+    result = write_closeout_artifacts(config)
+    report = (output / "representative_v3_report.md").read_text()
+
+    assert result["automated_coverage"] == 0.99
+    assert "## Frozen discovery" in report
+    assert "## Critical validation answers" in report
+    assert "Raw YouTube and human Top-3 oracle" in report
+    assert "Frozen automated selector" in report
+    assert "production activation: **false**" in report
 
 
 def _metric_row(rank: int, label: str) -> dict[str, str]:
