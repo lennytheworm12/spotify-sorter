@@ -612,6 +612,20 @@ def _human_summary(path: Path) -> dict[str, Any]:
     labels = Counter(row["candidate_review_label"] for row in rows if row["candidate_review_label"])
     reviewed = sum(labels.values())
     safe = labels["IDEAL"] + labels["ACCEPTABLE"]
+    modes: dict[str, Counter[str]] = {}
+    for row in rows:
+        mode = row["match_mode"]
+        modes.setdefault(mode, Counter())[row["candidate_review_label"] or "UNREVIEWED"] += 1
+    mode_summary = {}
+    for mode, counts in sorted(modes.items()):
+        mode_reviewed = sum(value for label, value in counts.items() if label != "UNREVIEWED")
+        mode_safe = counts["IDEAL"] + counts["ACCEPTABLE"]
+        mode_summary[mode] = {
+            "required": sum(counts.values()),
+            "completed": mode_reviewed,
+            "label_counts": dict(sorted(counts.items())),
+            "safe_precision": mode_safe / mode_reviewed if mode_reviewed else None,
+        }
     return {
         "required": len(rows),
         "completed": reviewed,
@@ -620,6 +634,18 @@ def _human_summary(path: Path) -> dict[str, Any]:
         "wrong_rate": labels["WRONG"] / reviewed if reviewed else None,
         "uncertain_rate": labels["UNCERTAIN"] / reviewed if reviewed else None,
         "complete": reviewed == len(rows),
+        "candidate_note_count": sum(bool(row["candidate_note"].strip()) for row in rows),
+        "track_note_count": sum(bool(row["track_note"].strip()) for row in rows),
+        "match_mode_breakdown": mode_summary,
+        "wrong_selections": [
+            {
+                "benchmark_id": row["benchmark_id"],
+                "candidate_video_id": row["candidate_video_id"],
+                "expected_title": row["expected_title"],
+                "candidate_title": row["candidate_title"],
+            }
+            for row in rows if row["candidate_review_label"] == "WRONG"
+        ],
     }
 
 
@@ -671,10 +697,21 @@ def _render_report(
         f"- completed: **{human['completed']}**",
         f"- labels: `{json.dumps(human['label_counts'], sort_keys=True)}`",
         f"- SAFE precision: **{human['safe_precision']:.1%}**" if human["safe_precision"] is not None else "- SAFE precision: **pending**",
+        f"- WRONG rate: **{human['wrong_rate']:.1%}**" if human["wrong_rate"] is not None else "- WRONG rate: **pending**",
+        f"- UNCERTAIN rate: **{human['uncertain_rate']:.1%}**" if human["uncertain_rate"] is not None else "- UNCERTAIN rate: **pending**",
         "- product safety target: **≥95% SAFE**",
         "",
-        "Human precision remains pending until every automatically selected candidate is reviewed. "
-        "The benchmark is frozen evaluation evidence and must not be used to tune this stack.",
+        (
+            "Human review is complete. Both wrong selections are exact-mode false positives: "
+            "one unrequested male version and one instrumental version. No representation-equivalent "
+            "fallback was exercised in this sample. Reviewer notes are preserved verbatim in the CSV; "
+            "15 safe-but-ACCEPTABLE selections identify cleaner/canonical alternatives that appeared "
+            "findable through ordinary YouTube searches, and one notes a translated Spotify-title mismatch."
+            if human["complete"]
+            else "Human precision remains pending until every automatically selected candidate is reviewed."
+        ),
+        "",
+        "These findings are frozen benchmark evidence and must not be used to tune this benchmark.",
         "",
         "## Adversarial comparison",
         "",

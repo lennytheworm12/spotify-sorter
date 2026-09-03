@@ -14,13 +14,45 @@
     "METADATA_INSUFFICIENT": 16
   },
   "human_review": {
-    "complete": false,
-    "completed": 0,
-    "label_counts": {},
+    "candidate_note_count": 1,
+    "complete": true,
+    "completed": 81,
+    "label_counts": {
+      "ACCEPTABLE": 20,
+      "IDEAL": 59,
+      "WRONG": 2
+    },
+    "match_mode_breakdown": {
+      "EXACT_RECORDING": {
+        "completed": 81,
+        "label_counts": {
+          "ACCEPTABLE": 20,
+          "IDEAL": 59,
+          "WRONG": 2
+        },
+        "required": 81,
+        "safe_precision": 0.9753086419753086
+      }
+    },
     "required": 81,
-    "safe_precision": null,
-    "uncertain_rate": null,
-    "wrong_rate": null
+    "safe_precision": 0.9753086419753086,
+    "track_note_count": 17,
+    "uncertain_rate": 0.0,
+    "wrong_rate": 0.024691358024691357,
+    "wrong_selections": [
+      {
+        "benchmark_id": "stage5b_library_v1_051",
+        "candidate_title": "[MALE VERSION] SUZY - Pretend",
+        "candidate_video_id": "cbwxqBqwxBk",
+        "expected_title": "Pretend"
+      },
+      {
+        "benchmark_id": "stage5b_library_v1_070",
+        "candidate_title": "The knight who can't die and the silk cradle (Inst.)",
+        "candidate_video_id": "aQZfy-2kwhw",
+        "expected_title": "The knight who can't die and the silk cradle"
+      }
+    ]
   },
   "master_fallback_count": 0,
   "match_uncertain_count": 19,

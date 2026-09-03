@@ -1,6 +1,6 @@
 # Stage 5B — Representative Owner-Library Benchmark v1
 
-Status: `STAGE5B_REPRESENTATIVE_LIBRARY_AWAITING_HUMAN_REVIEW`
+Status: `STAGE5B_REPRESENTATIVE_LIBRARY_HUMAN_REVIEW_COMPLETE`
 
 ## Frozen evaluation contract
 
@@ -34,12 +34,16 @@ Status: `STAGE5B_REPRESENTATIVE_LIBRARY_AWAITING_HUMAN_REVIEW`
 ## Human precision gate
 
 - selected candidates requiring review: **81**
-- completed: **0**
-- labels: `{}`
-- SAFE precision: **pending**
+- completed: **81**
+- labels: `{"ACCEPTABLE": 20, "IDEAL": 59, "WRONG": 2}`
+- SAFE precision: **97.5%**
+- WRONG rate: **2.5%**
+- UNCERTAIN rate: **0.0%**
 - product safety target: **≥95% SAFE**
 
-Human precision remains pending until every automatically selected candidate is reviewed. The benchmark is frozen evaluation evidence and must not be used to tune this stack.
+Human review is complete. Both wrong selections are exact-mode false positives: one unrequested male version and one instrumental version. No representation-equivalent fallback was exercised in this sample. Reviewer notes are preserved verbatim in the CSV; 15 safe-but-ACCEPTABLE selections identify cleaner/canonical alternatives that appeared findable through ordinary YouTube searches, and one notes a translated Spotify-title mismatch.
+
+These findings are frozen benchmark evidence and must not be used to tune this benchmark.
 
 ## Adversarial comparison
 

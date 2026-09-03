@@ -13,6 +13,7 @@ from audio_similarity.stage5b_representative_benchmark import (
     source_type_from_semantics,
     verify_benchmark_inputs,
     write_review_csv,
+    _human_summary,
 )
 from audio_similarity.stage5b_representative_review_store import (
     RepresentativeBenchmarkReviewStore,
@@ -117,3 +118,10 @@ def test_representative_review_store_autosaves_labels_and_notes(tmp_path: Path) 
     assert after["cases"][0]["candidates"][0]["review"] == {
         "label": "ACCEPTABLE", "note": "safe representation",
     }
+    summary = _human_summary(config.artifacts["human_review"])
+    assert summary["safe_precision"] == 1.0
+    assert summary["track_note_count"] == 1
+    assert summary["candidate_note_count"] == 1
+    assert summary["match_mode_breakdown"][
+        "REPRESENTATION_EQUIVALENT_STUDIO_FALLBACK"
+    ]["label_counts"] == {"ACCEPTABLE": 1}
