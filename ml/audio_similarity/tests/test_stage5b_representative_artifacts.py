@@ -2,9 +2,6 @@ from __future__ import annotations
 
 from pathlib import Path
 
-import pytest
-
-from audio_similarity.stage5b1a_models import Stage5B1AValidationError
 from audio_similarity.stage5b_representative_artifacts import (
     default_historical_paths,
     freeze_resolver_stack,
@@ -16,10 +13,15 @@ ROOT = Path(__file__).parents[1]
 CONFIG = ROOT / "configs/stage5b1j_representation_fallback.json"
 
 
-def test_stack_freeze_is_hard_gated_by_completed_human_review() -> None:
+def test_stack_freeze_requires_and_records_completed_human_review() -> None:
     config = load_stage5b1j_config(CONFIG)
-    with pytest.raises(Stage5B1AValidationError, match="human-safe gate"):
-        freeze_resolver_stack(config)
+    frozen = freeze_resolver_stack(config)
+
+    assert frozen["stack_id"] == "STAGE5B_RESOLVER_CANDIDATE_V1"
+    assert frozen["status"] == "FROZEN_CANDIDATE_STACK_NOT_PRODUCTION_ACTIVATED"
+    assert frozen["human_review"]["completed"] == 1
+    assert frozen["human_review"]["label_counts"] == {"IDEAL": 1}
+    assert frozen["human_review"]["all_safe"] is True
 
 
 def test_historical_exclusion_sources_are_explicit_and_present() -> None:

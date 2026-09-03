@@ -7,8 +7,8 @@
     },
     "decisions": {
       "path": "reports/stage5b1j_representation_fallback/representation_equivalence_decisions.json",
-      "sha256": "5a10396bfb0baa2f72f1ab8bcb9f620f9038e559789899643a9f6db131dc84df",
-      "size_bytes": 12104
+      "sha256": "f4ab8b8a2088270bbb72597da18256fca8654e8e0bdd624c844bc873bc89a5aa",
+      "size_bytes": 12099
     },
     "discovery": {
       "path": "reports/stage5b1j_representation_fallback/fallback_discovery.json",
@@ -22,9 +22,9 @@
     },
     "human_review": {
       "path": "reports/stage5b1j_representation_fallback/fallback_human_review.csv",
-      "reviewer_owned_fields_mutable_until_gate": true,
-      "sha256": "e45f64737faf7ed68184284cdc75861e95506fbfe64a8207c066662b84ca3e4c",
-      "size_bytes": 736
+      "reviewer_owned_fields_mutable_until_gate": false,
+      "sha256": "0975309040edb26fa2186164e49f14af3ea36ff56fa149603b44fd9044a0688c",
+      "size_bytes": 741
     },
     "queries": {
       "path": "reports/stage5b1j_representation_fallback/fallback_queries.json",
@@ -33,8 +33,8 @@
     },
     "report": {
       "path": "reports/stage5b1j_representation_fallback/fallback_report.md",
-      "sha256": "81fc67a9e0366a2405c76331845765b6780e899ca9295523d4352e722466b959",
-      "size_bytes": 3396
+      "sha256": "c644609101a335035d425c618c588e1901f0f33b46c6f76f69cb5bad707a2cd3",
+      "size_bytes": 3390
     },
     "sandbox_proxy_failure": {
       "path": "reports/stage5b1j_representation_fallback/fallback_discovery_sandbox_proxy_failure.json",
@@ -80,15 +80,17 @@
     }
   },
   "human_validation_gate": {
-    "all_new_selections_human_safe": false,
-    "completed": 0,
-    "human_review_sha256": "e45f64737faf7ed68184284cdc75861e95506fbfe64a8207c066662b84ca3e4c",
-    "label_counts": {},
-    "part_b_authorized": false,
+    "all_new_selections_human_safe": true,
+    "completed": 1,
+    "human_review_sha256": "0975309040edb26fa2186164e49f14af3ea36ff56fa149603b44fd9044a0688c",
+    "label_counts": {
+      "IDEAL": 1
+    },
+    "part_b_authorized": true,
     "required": 1,
-    "status": "STAGE5B1J_PART_A_AWAITING_HUMAN_REVIEW"
+    "status": "STAGE5B1J_PART_A_PASSED"
   },
-  "part_b_authorized": false,
+  "part_b_authorized": true,
   "schema_version": "stage5b1j-representation-fallback-artifact-manifest-v1",
   "scope_guards": {
     "audio_downloads": 0,
@@ -102,7 +104,7 @@
     "stage5a_calls": 0,
     "video_downloads": 0
   },
-  "status": "STAGE5B1J_PART_A_AWAITING_HUMAN_REVIEW",
+  "status": "STAGE5B1J_PART_A_PASSED",
   "summary": {
     "absolute_percentage_point_gain": 2.0,
     "combined_auto_match_count": 43,

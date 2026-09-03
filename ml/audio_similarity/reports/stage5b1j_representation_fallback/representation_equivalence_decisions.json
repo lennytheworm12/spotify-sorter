@@ -8,17 +8,19 @@
     "match_uncertain_count": 8
   },
   "human_validation_gate": {
-    "all_new_selections_human_safe": false,
-    "completed": 0,
-    "human_review_sha256": "e45f64737faf7ed68184284cdc75861e95506fbfe64a8207c066662b84ca3e4c",
-    "label_counts": {},
-    "part_b_authorized": false,
+    "all_new_selections_human_safe": true,
+    "completed": 1,
+    "human_review_sha256": "0975309040edb26fa2186164e49f14af3ea36ff56fa149603b44fd9044a0688c",
+    "label_counts": {
+      "IDEAL": 1
+    },
+    "part_b_authorized": true,
     "required": 1,
-    "status": "STAGE5B1J_PART_A_AWAITING_HUMAN_REVIEW"
+    "status": "STAGE5B1J_PART_A_PASSED"
   },
   "new_selections": [
     {
-      "human_label": "",
+      "human_label": "IDEAL",
       "match_mode": "REPRESENTATION_EQUIVALENT_STUDIO_FALLBACK",
       "policy_rule_id": "REPRESENTATION_EQUIVALENT_REDISCOVERY_V1",
       "selected_candidate_rank": 2,
@@ -44,7 +46,7 @@
     "stage5a_calls": 0,
     "video_downloads": 0
   },
-  "status": "STAGE5B1J_PART_A_AWAITING_HUMAN_REVIEW",
+  "status": "STAGE5B1J_PART_A_PASSED",
   "summary": {
     "absolute_percentage_point_gain": 2.0,
     "combined_auto_match_count": 43,

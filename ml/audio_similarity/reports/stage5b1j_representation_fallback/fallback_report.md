@@ -1,6 +1,6 @@
 # Stage 5B.1J — Representation-Equivalent Rediscovery
 
-Status: `STAGE5B1J_PART_A_AWAITING_HUMAN_REVIEW`
+Status: `STAGE5B1J_PART_A_PASSED`
 
 ## Frozen control
 
@@ -45,9 +45,9 @@ The live search produced canonical official studio audio and is the sole pending
 ## Human validation gate
 
 - selections requiring review: **1**
-- completed: **0**
-- labels: `{}`
-- Part B authorized: **false**
+- completed: **1**
+- labels: `{"IDEAL": 1}`
+- Part B authorized: **true**
 
 Part B may run only after every new selection is human `IDEAL` or `ACCEPTABLE`. Any `WRONG` or `UNCERTAIN` result stops the phase. Zero selections do not authorize automatic continuation.
 
