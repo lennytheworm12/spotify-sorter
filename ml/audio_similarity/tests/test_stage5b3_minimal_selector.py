@@ -47,6 +47,11 @@ def test_unrequested_live_or_stage_is_vetoed_but_requested_live_is_not() -> None
         _target(title="Song — Live at the Ryman"),
         _candidate(1, title="Song live in concert"),
     ) == []
+    album_only = _target()
+    album_only["album"] = "Live Today"
+    assert veto_reasons(album_only, _candidate(1, title="Song live")) == [
+        "UNREQUESTED_LIVE_OR_PERFORMANCE"
+    ]
 
 
 def test_duration_exactly_twenty_survives_and_greater_than_twenty_is_vetoed() -> None:

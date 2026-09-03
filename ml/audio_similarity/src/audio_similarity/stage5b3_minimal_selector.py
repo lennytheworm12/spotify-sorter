@@ -61,8 +61,7 @@ def _json(path: Path) -> dict[str, Any]:
 def target_requests_live(target: dict[str, Any]) -> bool:
     """Return whether Spotify explicitly presents the target as live."""
 
-    text = " ".join(str(value or "") for value in (target.get("title"), target.get("album")))
-    return bool(_LIVE_PRESENTATION.search(text))
+    return bool(_LIVE_PRESENTATION.search(str(target.get("title") or "")))
 
 
 def duration_delta_seconds(
