@@ -22,7 +22,9 @@ from audio_similarity.stage5b2_youtube_prior import (
 from audio_similarity.stage5b2_youtube_prior_review import (
     SAFE_LABELS,
     YoutubePriorReviewStore,
+    compute_prior_metrics,
     first_safe_rank,
+    load_mapped_sol_evaluations,
     required_rank,
     write_human_review_artifacts,
 )
@@ -223,3 +225,49 @@ def test_rank_three_is_requested_only_after_two_non_safe_labels(tmp_path: Path) 
         }
         for candidate in first["candidates"]
     ]) is None
+
+
+def test_blinded_sol_output_maps_back_to_exact_native_ranks() -> None:
+    root = Path(__file__).parents[1]
+    config = load_youtube_prior_config(
+        root / "reports/stage5b_youtube_prior_v1/benchmark_config.json"
+    )
+    mapped = load_mapped_sol_evaluations(config)
+    assert len(mapped) == 300
+    assert set(rank for _, rank in mapped) == {1, 2, 3}
+    assert all(row["label"] in {"IDEAL", "ACCEPTABLE", "WRONG", "UNCERTAIN"} for row in mapped.values())
+
+
+def test_top1_top2_top3_metrics_and_first_safe_distribution() -> None:
+    grouped = {}
+    sol = {}
+    for index in range(1, 101):
+        benchmark_id = f"track_{index:03d}"
+        if index <= 90:
+            labels = ("IDEAL", "", "")
+        elif index <= 99:
+            labels = ("WRONG", "ACCEPTABLE", "")
+        else:
+            labels = ("WRONG", "UNCERTAIN", "ACCEPTABLE")
+        grouped[benchmark_id] = []
+        for rank, label in enumerate(labels, start=1):
+            grouped[benchmark_id].append({
+                "youtube_rank": str(rank),
+                "candidate_video_id": f"video{index:03d}{rank}",
+                "candidate_review_label": label,
+            })
+            sol[(benchmark_id, rank)] = {
+                "label": label or "UNCERTAIN",
+                "reason": "test judgment",
+                "video_id": f"video{index:03d}{rank}",
+            }
+
+    top1, top3, agreement = compute_prior_metrics(grouped, sol)
+    assert top1["safe_rate"] == 0.90
+    assert top1["hypothesis"]["passed"] is True
+    assert top3["top2_safe_recall"] == 0.99
+    assert top3["top3_safe_recall"] == 1.0
+    assert top3["first_safe_rank_distribution"] == {
+        "rank_1": 90, "rank_2": 9, "rank_3": 1, "none": 0
+    }
+    assert agreement["reviewed_candidate_denominator"] == 111

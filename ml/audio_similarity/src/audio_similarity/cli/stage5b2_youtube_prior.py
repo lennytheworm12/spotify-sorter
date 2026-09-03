@@ -11,7 +11,10 @@ from audio_similarity.stage5b2_youtube_prior import (
     load_youtube_prior_config,
     run_top3_discovery,
 )
-from audio_similarity.stage5b2_youtube_prior_review import write_human_review_artifacts
+from audio_similarity.stage5b2_youtube_prior_review import (
+    write_closeout_artifacts,
+    write_human_review_artifacts,
+)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -19,7 +22,9 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "action",
-        choices=("freeze-manifest", "discover", "build-sol-payload", "build-review"),
+        choices=(
+            "freeze-manifest", "discover", "build-sol-payload", "build-review", "closeout"
+        ),
     )
     parser.add_argument(
         "--snapshot",
@@ -51,7 +56,7 @@ def main(argv: list[str] | None = None) -> int:
                 "track_count": result["track_count"],
                 "candidate_count": result["candidate_count"],
             }
-        else:
+        elif args.action == "build-review":
             queue, review_path = write_human_review_artifacts(config)
             output = {
                 "status": "STAGE5B2_HUMAN_REVIEW_READY",
@@ -59,6 +64,8 @@ def main(argv: list[str] | None = None) -> int:
                 "candidate_count": queue["candidate_count"],
                 "review_path": str(review_path),
             }
+        else:
+            output = write_closeout_artifacts(config)
     print(json.dumps(output, sort_keys=True))
     return 0
 
