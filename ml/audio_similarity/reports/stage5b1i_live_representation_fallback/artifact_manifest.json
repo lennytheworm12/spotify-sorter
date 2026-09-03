@@ -1,0 +1,81 @@
+{
+  "artifacts": {
+    "fallback_candidate_features": {
+      "path": "reports/stage5b1i_live_representation_fallback/fallback_candidate_features.json",
+      "sha256": "988e9e3d3101a81c72ff3ee78f34e87b3a45faf7c6d1435f9c1778402a3655d5",
+      "size_bytes": 25644
+    },
+    "human_audit_queue": {
+      "path": "reports/stage5b1i_live_representation_fallback/human_audit_queue.json",
+      "sha256": "590f63d79b29a2a9a2f58058c8ee9498cd5b23164a7784e321d71bbb803033bf",
+      "size_bytes": 225
+    },
+    "live_target_classification": {
+      "path": "reports/stage5b1i_live_representation_fallback/live_target_classification.json",
+      "sha256": "8171918444a1f95da97ef46efeda76afae3753d58c9ba122bfd0f2b39d3537a8",
+      "size_bytes": 7671
+    },
+    "report": {
+      "path": "reports/stage5b1i_live_representation_fallback/live_fallback_report.md",
+      "sha256": "3d4a25af8bc206ecb58e9cc707bb2f7df7e797fda18920baf2b3618373393594",
+      "size_bytes": 6343
+    },
+    "representation_equivalence_decisions": {
+      "path": "reports/stage5b1i_live_representation_fallback/representation_equivalence_decisions.json",
+      "sha256": "99c774f774dc6b065ccd6794ec158b44ad050a02ba219f08a38e6d85cddf5406",
+      "size_bytes": 40811
+    }
+  },
+  "config": {
+    "path": "configs/stage5b1i_live_representation_fallback.json",
+    "sha256": "85809583bfd5eec0318bac27c462c95f18032692bcab59c241de24d9b1f3cdc3"
+  },
+  "frozen_inputs": {
+    "stage5b1g_decisions": {
+      "path": "reports/stage5b1g_global_preference/global_preference_decisions.json",
+      "sha256": "c5777ccb7462e2594e0d04df818a26c73fead0e0797f93faf406fd60150ee242",
+      "size_bytes": 523758
+    },
+    "stage5b1g_features": {
+      "path": "reports/stage5b1g_global_preference/global_preference_candidate_features.json",
+      "sha256": "4626ad512ee6d75a66433bbd32b0ec02dc2fdc2532355022dc2b1d5f4e3c0393",
+      "size_bytes": 3537306
+    },
+    "stage5b1h_artifact_manifest": {
+      "path": "reports/stage5b1h_canonical_source_semantics/artifact_manifest.json",
+      "sha256": "adc3880dd4bfb5c2a1992de836012e9405fe3022cbdba892c769cc3b32a2788f",
+      "size_bytes": 4024
+    },
+    "stage5b1h_config": {
+      "path": "configs/stage5b1h_canonical_source_semantics.json",
+      "sha256": "f9f1fd4e5daf265ffe198982e7d0f74716089ece998ad379da366cbf53cf31f0",
+      "size_bytes": 2789
+    },
+    "stage5b1h_selection_comparisons": {
+      "path": "reports/stage5b1h_canonical_source_semantics/selection_comparisons.json",
+      "sha256": "30deffdf43cf7f3bdebeb6a50d80459cda4ca17c3ff803cef8a0fc8b8a57b8ba",
+      "size_bytes": 11512
+    },
+    "stage5b1h_source_semantics": {
+      "path": "reports/stage5b1h_canonical_source_semantics/source_semantics.json",
+      "sha256": "1954d066ea034794bfaca32da8b5f53af8aa3b236454957aa8025b49df4c1e24",
+      "size_bytes": 837807
+    }
+  },
+  "schema_version": "stage5b1i-live-fallback-artifact-manifest-v1",
+  "scope_guards": {
+    "clap_calls": 0,
+    "historical_resolver_policies_changed": false,
+    "human_labels_changed": false,
+    "live_to_studio_duration_used_for_eligibility": false,
+    "media_downloads": 0,
+    "muq_calls": 0,
+    "non_live_version_semantics_changed": false,
+    "q0_discovery_changed": false,
+    "remaster_semantics_changed": false,
+    "sol_runs": 0,
+    "stage5a_calls": 0,
+    "youtube_searches": 0
+  },
+  "status": "STAGE5B1I_LIVE_REPRESENTATION_FALLBACK_EVALUATED"
+}

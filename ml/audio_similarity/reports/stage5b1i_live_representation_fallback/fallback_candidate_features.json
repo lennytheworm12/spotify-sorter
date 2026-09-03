@@ -1,0 +1,640 @@
+{
+  "attempted_track_count": 1,
+  "candidate_count": 5,
+  "policy_id": "REPRESENTATION_EQUIVALENT_LIVE_FALLBACK_V1",
+  "schema_version": "stage5b1i-live-fallback-candidate-features-v1",
+  "scope": "ordinary-live targets unresolved by frozen Stage 5B.1H",
+  "status": "STAGE5B1I_LIVE_REPRESENTATION_FALLBACK_EVALUATED",
+  "tracks": [
+    {
+      "candidates": [
+        {
+          "candidate": {
+            "channel": "Byron Caldwell",
+            "duration_seconds": 192.0,
+            "search_rank": 1,
+            "title": "The Night We Met by Lord Huron @ Ryman Auditorium",
+            "uploader": "Byron Caldwell",
+            "url": "https://www.youtube.com/watch?v=N2K1LUWlF-4",
+            "video_id": "N2K1LUWlF-4",
+            "view_count": 609
+          },
+          "candidate_video_id": "N2K1LUWlF-4",
+          "canonicality": {
+            "artist_channel_or_uploader_signal": false,
+            "explicit_official_source_phrase_signal": false,
+            "level": "CANONICAL_UNKNOWN",
+            "reason": "no artist, label/distributor, or release-backed provenance",
+            "release_or_distributor_signal": false
+          },
+          "duration": {
+            "candidate_studio_seconds": 192.0,
+            "live_to_studio_delta_seconds": 66.0,
+            "reason": "live and studio performances need not have similar durations",
+            "target_live_seconds": 258.0,
+            "used_for_fallback_eligibility": false
+          },
+          "eligibility": {
+            "basis": "INELIGIBLE",
+            "conditions": {
+              "candidate_has_no_production_changing_version": true,
+              "candidate_is_not_another_live_performance": false,
+              "canonical_studio_provenance": false,
+              "no_explicit_performer_or_cover_conflict": true,
+              "no_explicit_recording_conflicts": true,
+              "no_non_live_version_conflict": true,
+              "ordinary_live_target": true,
+              "strong_core_title_identity": false,
+              "strong_primary_performer_identity": true
+            },
+            "eligible": false,
+            "failed_conditions": [
+              "strong_core_title_identity",
+              "candidate_is_not_another_live_performance",
+              "canonical_studio_provenance"
+            ]
+          },
+          "explicit_live_presentation_evidence": true,
+          "hard_conflicts": [],
+          "human_evidence": null,
+          "identity": {
+            "performer_evidence": {
+              "credited_performer_matches": [
+                "Lord Huron"
+              ],
+              "evidence": [
+                {
+                  "performer": "Lord Huron",
+                  "raw": "The Night We Met by Lord Huron @ Ryman Auditorium",
+                  "source": "candidate_title"
+                }
+              ],
+              "explicit_cover_signal": false,
+              "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
+              "normalized_target_performers": [
+                "lord huron"
+              ],
+              "primary_performer_match": true
+            },
+            "strong_core_title_identity": false,
+            "strong_primary_performer_identity": true
+          },
+          "schema_version": "stage5b1i-live-fallback-candidate-features-v1",
+          "sol_evidence": {
+            "label": "UNCERTAIN",
+            "recording_identity_reason": "The title identifies a Ryman Auditorium performance, but the 192-second runtime substantially conflicts with the 258-second target and no date is supplied.",
+            "source_quality_reason": "Third-party audience-style provenance does not establish a clean album source.",
+            "uncertainty_reason": "Venue alignment alone cannot confirm the exact album performance given the large duration conflict."
+          },
+          "source": {
+            "description_inspected_for_source_phrases": false,
+            "explicit_official_source_signal": false,
+            "fallback_normalized_source_type": "OTHER",
+            "legacy_classification_changed": false,
+            "legacy_effective_source_type": "OTHER",
+            "legacy_equivalent_source_type": "OTHER",
+            "negation_evidence": [],
+            "normalized_presentation_signal": "OTHER",
+            "normalized_source_type": "OTHER",
+            "positive_phrase_evidence": [],
+            "title": "The Night We Met by Lord Huron @ Ryman Auditorium"
+          },
+          "stable_track_id": "s5b1c_029",
+          "versions": {
+            "candidate_families": [],
+            "live_absence_is_expected_for_studio_fallback": true,
+            "non_live_conflicts": [],
+            "relationships": [
+              {
+                "candidate_evidence_source": null,
+                "candidate_qualifier": null,
+                "candidate_raw": null,
+                "family": "live",
+                "relationship": "ABSENT",
+                "target_qualifier": "the Ryman",
+                "target_raw": "Live at the Ryman"
+              }
+            ],
+            "target_families": [
+              "live"
+            ]
+          }
+        },
+        {
+          "candidate": {
+            "channel": "Tim Mack",
+            "duration_seconds": 230.0,
+            "search_rank": 2,
+            "title": "Lord Huron “The  Night We Met”",
+            "uploader": "Tim Mack",
+            "url": "https://www.youtube.com/watch?v=7QADmsRUGgg",
+            "video_id": "7QADmsRUGgg",
+            "view_count": 253
+          },
+          "candidate_video_id": "7QADmsRUGgg",
+          "canonicality": {
+            "artist_channel_or_uploader_signal": false,
+            "explicit_official_source_phrase_signal": false,
+            "level": "CANONICAL_UNKNOWN",
+            "reason": "no artist, label/distributor, or release-backed provenance",
+            "release_or_distributor_signal": false
+          },
+          "duration": {
+            "candidate_studio_seconds": 230.0,
+            "live_to_studio_delta_seconds": 28.0,
+            "reason": "live and studio performances need not have similar durations",
+            "target_live_seconds": 258.0,
+            "used_for_fallback_eligibility": false
+          },
+          "eligibility": {
+            "basis": "INELIGIBLE",
+            "conditions": {
+              "candidate_has_no_production_changing_version": true,
+              "candidate_is_not_another_live_performance": false,
+              "canonical_studio_provenance": false,
+              "no_explicit_performer_or_cover_conflict": true,
+              "no_explicit_recording_conflicts": true,
+              "no_non_live_version_conflict": true,
+              "ordinary_live_target": true,
+              "strong_core_title_identity": true,
+              "strong_primary_performer_identity": true
+            },
+            "eligible": false,
+            "failed_conditions": [
+              "candidate_is_not_another_live_performance",
+              "canonical_studio_provenance"
+            ]
+          },
+          "explicit_live_presentation_evidence": true,
+          "hard_conflicts": [],
+          "human_evidence": null,
+          "identity": {
+            "performer_evidence": {
+              "credited_performer_matches": [
+                "Lord Huron"
+              ],
+              "evidence": [
+                {
+                  "performer": "Lord Huron",
+                  "raw": "Lord Huron",
+                  "source": "candidate_title_prefix"
+                }
+              ],
+              "explicit_cover_signal": false,
+              "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
+              "normalized_target_performers": [
+                "lord huron"
+              ],
+              "primary_performer_match": true
+            },
+            "strong_core_title_identity": true,
+            "strong_primary_performer_identity": true
+          },
+          "schema_version": "stage5b1i-live-fallback-candidate-features-v1",
+          "sol_evidence": {
+            "label": "UNCERTAIN",
+            "recording_identity_reason": "It is a Lord Huron live performance, but no venue or date ties it to the requested Ryman recording and the duration differs.",
+            "source_quality_reason": "Third-party concert upload offers no clean-source assurance.",
+            "uncertainty_reason": "The generic tour description is insufficient to identify the exact performance."
+          },
+          "source": {
+            "description_inspected_for_source_phrases": false,
+            "explicit_official_source_signal": false,
+            "fallback_normalized_source_type": "OTHER",
+            "legacy_classification_changed": false,
+            "legacy_effective_source_type": "OTHER",
+            "legacy_equivalent_source_type": "OTHER",
+            "negation_evidence": [],
+            "normalized_presentation_signal": "OTHER",
+            "normalized_source_type": "OTHER",
+            "positive_phrase_evidence": [],
+            "title": "Lord Huron “The  Night We Met”"
+          },
+          "stable_track_id": "s5b1c_029",
+          "versions": {
+            "candidate_families": [],
+            "live_absence_is_expected_for_studio_fallback": true,
+            "non_live_conflicts": [],
+            "relationships": [
+              {
+                "candidate_evidence_source": null,
+                "candidate_qualifier": null,
+                "candidate_raw": null,
+                "family": "live",
+                "relationship": "ABSENT",
+                "target_qualifier": "the Ryman",
+                "target_raw": "Live at the Ryman"
+              }
+            ],
+            "target_families": [
+              "live"
+            ]
+          }
+        },
+        {
+          "candidate": {
+            "channel": "SuperJimmyFlip",
+            "duration_seconds": 196.0,
+            "search_rank": 3,
+            "title": "Lord Huron - The Night We Met",
+            "uploader": "SuperJimmyFlip",
+            "url": "https://www.youtube.com/watch?v=lx0T48q_eg8",
+            "video_id": "lx0T48q_eg8",
+            "view_count": 273
+          },
+          "candidate_video_id": "lx0T48q_eg8",
+          "canonicality": {
+            "artist_channel_or_uploader_signal": false,
+            "explicit_official_source_phrase_signal": false,
+            "level": "CANONICAL_UNKNOWN",
+            "reason": "no artist, label/distributor, or release-backed provenance",
+            "release_or_distributor_signal": false
+          },
+          "duration": {
+            "candidate_studio_seconds": 196.0,
+            "live_to_studio_delta_seconds": 62.0,
+            "reason": "live and studio performances need not have similar durations",
+            "target_live_seconds": 258.0,
+            "used_for_fallback_eligibility": false
+          },
+          "eligibility": {
+            "basis": "INELIGIBLE",
+            "conditions": {
+              "candidate_has_no_production_changing_version": true,
+              "candidate_is_not_another_live_performance": true,
+              "canonical_studio_provenance": false,
+              "no_explicit_performer_or_cover_conflict": true,
+              "no_explicit_recording_conflicts": true,
+              "no_non_live_version_conflict": true,
+              "ordinary_live_target": true,
+              "strong_core_title_identity": true,
+              "strong_primary_performer_identity": true
+            },
+            "eligible": false,
+            "failed_conditions": [
+              "canonical_studio_provenance"
+            ]
+          },
+          "explicit_live_presentation_evidence": false,
+          "hard_conflicts": [],
+          "human_evidence": null,
+          "identity": {
+            "performer_evidence": {
+              "credited_performer_matches": [
+                "Lord Huron"
+              ],
+              "evidence": [
+                {
+                  "performer": "Lord Huron",
+                  "raw": "Lord Huron",
+                  "source": "candidate_title_prefix"
+                }
+              ],
+              "explicit_cover_signal": false,
+              "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
+              "normalized_target_performers": [
+                "lord huron"
+              ],
+              "primary_performer_match": true
+            },
+            "strong_core_title_identity": true,
+            "strong_primary_performer_identity": true
+          },
+          "schema_version": "stage5b1i-live-fallback-candidate-features-v1",
+          "sol_evidence": {
+            "label": "WRONG",
+            "recording_identity_reason": "Explicitly identifies an April 2014 Washington, DC performance, not the Ryman recording.",
+            "source_quality_reason": "Audience-upload provenance is also noncanonical.",
+            "uncertainty_reason": null
+          },
+          "source": {
+            "description_inspected_for_source_phrases": false,
+            "explicit_official_source_signal": false,
+            "fallback_normalized_source_type": "OTHER",
+            "legacy_classification_changed": false,
+            "legacy_effective_source_type": "OTHER",
+            "legacy_equivalent_source_type": "OTHER",
+            "negation_evidence": [],
+            "normalized_presentation_signal": "OTHER",
+            "normalized_source_type": "OTHER",
+            "positive_phrase_evidence": [],
+            "title": "Lord Huron - The Night We Met"
+          },
+          "stable_track_id": "s5b1c_029",
+          "versions": {
+            "candidate_families": [],
+            "live_absence_is_expected_for_studio_fallback": true,
+            "non_live_conflicts": [],
+            "relationships": [
+              {
+                "candidate_evidence_source": null,
+                "candidate_qualifier": null,
+                "candidate_raw": null,
+                "family": "live",
+                "relationship": "ABSENT",
+                "target_qualifier": "the Ryman",
+                "target_raw": "Live at the Ryman"
+              }
+            ],
+            "target_families": [
+              "live"
+            ]
+          }
+        },
+        {
+          "candidate": {
+            "channel": "Mitch Wight",
+            "duration_seconds": 202.0,
+            "search_rank": 4,
+            "title": "Lord Huron - The Night We Met, Bonner MT, 5/25/2025 live",
+            "uploader": "Mitch Wight",
+            "url": "https://www.youtube.com/watch?v=z4JfPakDYiU",
+            "video_id": "z4JfPakDYiU",
+            "view_count": 5853
+          },
+          "candidate_video_id": "z4JfPakDYiU",
+          "canonicality": {
+            "artist_channel_or_uploader_signal": false,
+            "explicit_official_source_phrase_signal": false,
+            "level": "CANONICAL_UNKNOWN",
+            "reason": "no artist, label/distributor, or release-backed provenance",
+            "release_or_distributor_signal": false
+          },
+          "duration": {
+            "candidate_studio_seconds": 202.0,
+            "live_to_studio_delta_seconds": 56.0,
+            "reason": "live and studio performances need not have similar durations",
+            "target_live_seconds": 258.0,
+            "used_for_fallback_eligibility": false
+          },
+          "eligibility": {
+            "basis": "INELIGIBLE",
+            "conditions": {
+              "candidate_has_no_production_changing_version": false,
+              "candidate_is_not_another_live_performance": false,
+              "canonical_studio_provenance": false,
+              "no_explicit_performer_or_cover_conflict": true,
+              "no_explicit_recording_conflicts": true,
+              "no_non_live_version_conflict": true,
+              "ordinary_live_target": true,
+              "strong_core_title_identity": false,
+              "strong_primary_performer_identity": true
+            },
+            "eligible": false,
+            "failed_conditions": [
+              "strong_core_title_identity",
+              "candidate_has_no_production_changing_version",
+              "candidate_is_not_another_live_performance",
+              "canonical_studio_provenance"
+            ]
+          },
+          "explicit_live_presentation_evidence": true,
+          "hard_conflicts": [],
+          "human_evidence": null,
+          "identity": {
+            "performer_evidence": {
+              "credited_performer_matches": [
+                "Lord Huron"
+              ],
+              "evidence": [
+                {
+                  "performer": "Lord Huron",
+                  "raw": "Lord Huron",
+                  "source": "candidate_title_prefix"
+                }
+              ],
+              "explicit_cover_signal": false,
+              "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
+              "normalized_target_performers": [
+                "lord huron"
+              ],
+              "primary_performer_match": true
+            },
+            "strong_core_title_identity": false,
+            "strong_primary_performer_identity": true
+          },
+          "schema_version": "stage5b1i-live-fallback-candidate-features-v1",
+          "sol_evidence": {
+            "label": "WRONG",
+            "recording_identity_reason": "Explicitly identifies a May 2025 Bonner, Montana performance, not the Ryman recording.",
+            "source_quality_reason": "Audience-upload provenance is noncanonical.",
+            "uncertainty_reason": null
+          },
+          "source": {
+            "description_inspected_for_source_phrases": false,
+            "explicit_official_source_signal": false,
+            "fallback_normalized_source_type": "OTHER",
+            "legacy_classification_changed": false,
+            "legacy_effective_source_type": "OTHER",
+            "legacy_equivalent_source_type": "OTHER",
+            "negation_evidence": [],
+            "normalized_presentation_signal": "OTHER",
+            "normalized_source_type": "OTHER",
+            "positive_phrase_evidence": [],
+            "title": "Lord Huron - The Night We Met, Bonner MT, 5/25/2025 live"
+          },
+          "stable_track_id": "s5b1c_029",
+          "versions": {
+            "candidate_families": [
+              "live"
+            ],
+            "live_absence_is_expected_for_studio_fallback": true,
+            "non_live_conflicts": [],
+            "relationships": [
+              {
+                "candidate_evidence_source": "candidate_title",
+                "candidate_qualifier": null,
+                "candidate_raw": "The Night We Met, Bonner MT, 5/25/2025 live",
+                "family": "live",
+                "relationship": "ABSENT",
+                "target_qualifier": "the Ryman",
+                "target_raw": "Live at the Ryman"
+              }
+            ],
+            "target_families": [
+              "live"
+            ]
+          }
+        },
+        {
+          "candidate": {
+            "channel": "drbrooker",
+            "duration_seconds": 204.0,
+            "search_rank": 5,
+            "title": "Lord Huron - The Night We Met - (Toronto, June 26, 2023)",
+            "uploader": "drbrooker",
+            "url": "https://www.youtube.com/watch?v=5q2KTSVV7PY",
+            "video_id": "5q2KTSVV7PY",
+            "view_count": 34021
+          },
+          "candidate_video_id": "5q2KTSVV7PY",
+          "canonicality": {
+            "artist_channel_or_uploader_signal": false,
+            "explicit_official_source_phrase_signal": false,
+            "level": "CANONICAL_UNKNOWN",
+            "reason": "no artist, label/distributor, or release-backed provenance",
+            "release_or_distributor_signal": false
+          },
+          "duration": {
+            "candidate_studio_seconds": 204.0,
+            "live_to_studio_delta_seconds": 54.0,
+            "reason": "live and studio performances need not have similar durations",
+            "target_live_seconds": 258.0,
+            "used_for_fallback_eligibility": false
+          },
+          "eligibility": {
+            "basis": "INELIGIBLE",
+            "conditions": {
+              "candidate_has_no_production_changing_version": true,
+              "candidate_is_not_another_live_performance": true,
+              "canonical_studio_provenance": false,
+              "no_explicit_performer_or_cover_conflict": true,
+              "no_explicit_recording_conflicts": true,
+              "no_non_live_version_conflict": true,
+              "ordinary_live_target": true,
+              "strong_core_title_identity": true,
+              "strong_primary_performer_identity": true
+            },
+            "eligible": false,
+            "failed_conditions": [
+              "canonical_studio_provenance"
+            ]
+          },
+          "explicit_live_presentation_evidence": false,
+          "hard_conflicts": [],
+          "human_evidence": null,
+          "identity": {
+            "performer_evidence": {
+              "credited_performer_matches": [
+                "Lord Huron"
+              ],
+              "evidence": [
+                {
+                  "performer": "Lord Huron",
+                  "raw": "Lord Huron",
+                  "source": "candidate_title_prefix"
+                }
+              ],
+              "explicit_cover_signal": false,
+              "explicit_performer_conflict": false,
+              "explicit_title_performer_conflict": false,
+              "normalized_target_performers": [
+                "lord huron"
+              ],
+              "primary_performer_match": true
+            },
+            "strong_core_title_identity": true,
+            "strong_primary_performer_identity": true
+          },
+          "schema_version": "stage5b1i-live-fallback-candidate-features-v1",
+          "sol_evidence": {
+            "label": "WRONG",
+            "recording_identity_reason": "Explicitly identifies a June 2023 Toronto performance rather than the Ryman performance.",
+            "source_quality_reason": "Audience-upload provenance is noncanonical.",
+            "uncertainty_reason": null
+          },
+          "source": {
+            "description_inspected_for_source_phrases": false,
+            "explicit_official_source_signal": false,
+            "fallback_normalized_source_type": "OTHER",
+            "legacy_classification_changed": false,
+            "legacy_effective_source_type": "OTHER",
+            "legacy_equivalent_source_type": "OTHER",
+            "negation_evidence": [],
+            "normalized_presentation_signal": "OTHER",
+            "normalized_source_type": "OTHER",
+            "positive_phrase_evidence": [],
+            "title": "Lord Huron - The Night We Met - (Toronto, June 26, 2023)"
+          },
+          "stable_track_id": "s5b1c_029",
+          "versions": {
+            "candidate_families": [],
+            "live_absence_is_expected_for_studio_fallback": true,
+            "non_live_conflicts": [],
+            "relationships": [
+              {
+                "candidate_evidence_source": null,
+                "candidate_qualifier": null,
+                "candidate_raw": null,
+                "family": "live",
+                "relationship": "ABSENT",
+                "target_qualifier": "the Ryman",
+                "target_raw": "Live at the Ryman"
+              }
+            ],
+            "target_families": [
+              "live"
+            ]
+          }
+        }
+      ],
+      "target_classification": {
+        "classification": "ORDINARY_LIVE",
+        "exact_live_candidate_available": false,
+        "exact_live_candidate_ids": [],
+        "extra_arrangement_markers": [],
+        "material_arrangement_families": [],
+        "reason": "live is the target's only material version family; a canonical studio recording may represent the song if exact-live resolution fails",
+        "representation_risk": "ELEVATED",
+        "stable_track_id": "s5b1c_029",
+        "stage5b1h_exact_outcome": "MATCH_UNCERTAIN",
+        "stage5b1h_selected_video_id": null,
+        "stage5b1i_match_mode": null,
+        "stage5b1i_selected_video_id": null,
+        "studio_fallback_allowed": true,
+        "studio_fallback_candidate_ids": [],
+        "target": {
+          "album": "Live at the Ryman",
+          "artists": [
+            "Lord Huron"
+          ],
+          "duration_ms": 258000,
+          "isrc": null,
+          "release_year": 2023,
+          "spotify_track_id": null,
+          "stable_track_id": "s5b1c_029",
+          "title": "The Night We Met - Live at the Ryman"
+        },
+        "target_identity": {
+          "core_title": "The Night We Met",
+          "credited_artists": [
+            "Lord Huron"
+          ],
+          "duration_seconds": 258.0,
+          "normalized_artists": [
+            "lord huron"
+          ],
+          "normalized_title": "the night we met",
+          "primary_artist": "Lord Huron",
+          "raw_title": "The Night We Met - Live at the Ryman",
+          "version_descriptors": [
+            {
+              "family": "live",
+              "qualifier": "the Ryman",
+              "raw": "Live at the Ryman"
+            }
+          ],
+          "version_families": [
+            "live"
+          ]
+        }
+      },
+      "track": {
+        "album": "Live at the Ryman",
+        "artists": [
+          "Lord Huron"
+        ],
+        "duration_ms": 258000,
+        "isrc": null,
+        "release_year": 2023,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_029",
+        "title": "The Night We Met - Live at the Ryman"
+      }
+    }
+  ]
+}
