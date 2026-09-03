@@ -1,0 +1,57 @@
+{
+  "schema_version": "stage5b1j-representation-rediscovery-config-v1",
+  "experiment_id": "stage5b1j_representation_equivalent_rediscovery_v1",
+  "policy_id": "REPRESENTATION_EQUIVALENT_REDISCOVERY_V1",
+  "stage5b1i_config": "configs/stage5b1i_live_representation_fallback.json",
+  "challenge_config": "configs/stage5b1b_fresh_challenge.json",
+  "frozen_inputs": {
+    "stage5b1i_config": {
+      "path": "configs/stage5b1i_live_representation_fallback.json",
+      "sha256": "85809583bfd5eec0318bac27c462c95f18032692bcab59c241de24d9b1f3cdc3"
+    },
+    "stage5b1i_decisions": {
+      "path": "reports/stage5b1i_live_representation_fallback/representation_equivalence_decisions.json",
+      "sha256": "99c774f774dc6b065ccd6794ec158b44ad050a02ba219f08a38e6d85cddf5406"
+    },
+    "stage5b1i_artifact_manifest": {
+      "path": "reports/stage5b1i_live_representation_fallback/artifact_manifest.json",
+      "sha256": "82ecaed382bfb813245fd9d6a92f79761693e70370851e753aeea6b55c8d27c4"
+    },
+    "challenge_config": {
+      "path": "configs/stage5b1b_fresh_challenge.json",
+      "sha256": "283901e8e6804757a5246025e14c43e07311830ca3708ce05db00c394b1aaedd"
+    },
+    "challenge_manifest": {
+      "path": "reports/stage5b1b_fresh_challenge/challenge_tracks.json",
+      "sha256": "e2e9a1ab43f568dd9de853c2964f341ee0d0e2631ca87f732d0d4326ab990f79"
+    },
+    "challenge_discovery": {
+      "path": "reports/stage5b1b_fresh_challenge/challenge_ytdlp_discovery.json",
+      "sha256": "95bb1ca905a05fcc4167da10e3dfd6cf267600a4dfb1898b491d28ba855e6fb4"
+    }
+  },
+  "provider": {
+    "candidate_limit": 5,
+    "search_prefix": "ytsearch5:",
+    "extract_flat": "in_playlist",
+    "skip_download": true,
+    "simulate": true,
+    "ignore_user_config": true,
+    "cache_enabled": false,
+    "sequential_requests": true,
+    "socket_timeout_seconds": 30,
+    "max_attempts": 2,
+    "retry_backoff_seconds": 2.0,
+    "sleep_between_tracks_seconds": 3.0
+  },
+  "artifacts": {
+    "queries": "reports/stage5b1j_representation_fallback/fallback_queries.json",
+    "discovery": "reports/stage5b1j_representation_fallback/fallback_discovery.json",
+    "features": "reports/stage5b1j_representation_fallback/fallback_candidate_features.json",
+    "decisions": "reports/stage5b1j_representation_fallback/representation_equivalence_decisions.json",
+    "human_review": "reports/stage5b1j_representation_fallback/fallback_human_review.csv",
+    "audit_queue": "reports/stage5b1j_representation_fallback/fallback_human_audit_queue.json",
+    "report": "reports/stage5b1j_representation_fallback/fallback_report.md",
+    "manifest": "reports/stage5b1j_representation_fallback/artifact_manifest.json"
+  }
+}
