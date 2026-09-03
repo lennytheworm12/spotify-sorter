@@ -1,0 +1,42 @@
+{
+  "schema_version": "stage5b-representative-library-execution-config-v1",
+  "benchmark_id": "STAGE5B_REPRESENTATIVE_LIBRARY_V1",
+  "resolver_stack_id": "STAGE5B_RESOLVER_CANDIDATE_V1",
+  "frozen_inputs": {
+    "benchmark_manifest": {
+      "path": "reports/stage5b_representative_library_v1/benchmark_manifest.json",
+      "sha256": "cec77ef960fa5da7725e8a0df244a5829fb90fdc5463dc1ce6a2ef72667f4285"
+    },
+    "resolver_stack": {
+      "path": "reports/stage5b1j_representation_fallback/resolver_stack_candidate_v1.json",
+      "sha256": "3e2d9ffbb712118d67d84ab0b7ef8cf47313d929ab846850eeb47ba5c531e540"
+    },
+    "stage5b1j_config": {
+      "path": "configs/stage5b1j_representation_fallback.json",
+      "sha256": "f3a265093fdd8420d8fe9c3b2736ae5bf701f00857875921d400e40a5ef39f77"
+    }
+  },
+  "provider": {
+    "candidate_limit": 5,
+    "search_prefix": "ytsearch5:",
+    "extract_flat": "in_playlist",
+    "skip_download": true,
+    "simulate": true,
+    "ignore_user_config": true,
+    "cache_enabled": false,
+    "sequential_requests": true,
+    "socket_timeout_seconds": 30,
+    "max_attempts": 2,
+    "retry_backoff_seconds": 2.0,
+    "sleep_between_tracks_seconds": 3.0
+  },
+  "artifacts": {
+    "discovery": "reports/stage5b_representative_library_v1/discovery_results.json",
+    "features": "reports/stage5b_representative_library_v1/candidate_features.json",
+    "decisions": "reports/stage5b_representative_library_v1/resolver_decisions.json",
+    "coverage": "reports/stage5b_representative_library_v1/coverage_report.json",
+    "human_review": "reports/stage5b_representative_library_v1/human_review.csv",
+    "report": "reports/stage5b_representative_library_v1/benchmark_report.md",
+    "manifest": "reports/stage5b_representative_library_v1/artifact_manifest.json"
+  }
+}
