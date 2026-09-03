@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
@@ -22,6 +23,7 @@ SNAPSHOT_SCHEMA_VERSION = "stage5b-owner-library-snapshot-v1"
 MANIFEST_SCHEMA_VERSION = "stage5b-representative-library-manifest-v1"
 DEFAULT_SAMPLE_SIZE = 100
 DEFAULT_SAMPLE_SEED = "stage5b-representative-library-v1-seed-2026-09-02"
+_ISRC_PATTERN = re.compile(r"^[A-Z]{2}[A-Z0-9]{3}[0-9]{7}$", re.IGNORECASE)
 
 
 @dataclass(frozen=True)
@@ -43,6 +45,13 @@ def _release_year(album: dict[str, Any]) -> int | None:
         return None
     year = int(raw[:4])
     return year if 1800 <= year <= 2200 else None
+
+
+def _valid_isrc(value: Any) -> str | None:
+    """Retain only standard 12-character ISRCs from external metadata."""
+
+    raw = _text(value)
+    return raw.upper() if raw and _ISRC_PATTERN.fullmatch(raw) else None
 
 
 def spotify_track_from_library_item(value: dict[str, Any], stable_id: str) -> SpotifyTrack:
@@ -72,9 +81,9 @@ def spotify_track_from_library_item(value: dict[str, Any], stable_id: str) -> Sp
     )
     external_ids = raw.get("external_ids")
     isrc = (
-        _text(external_ids.get("isrc"))
+        _valid_isrc(external_ids.get("isrc"))
         if isinstance(external_ids, dict)
-        else _text(raw.get("isrc"))
+        else _valid_isrc(raw.get("isrc"))
     )
     return SpotifyTrack.from_dict({
         "stable_track_id": stable_id,

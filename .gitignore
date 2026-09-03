@@ -32,5 +32,10 @@ ml/**/data/
 ml/**/artifacts/
 ml/**/models/
 
+# Private owner-library export used to freeze the Stage 5B representative
+# benchmark. The sanitized 100-track manifest is committed; the full library
+# snapshot is intentionally local-only.
+ml/audio_similarity/reports/stage5b_representative_library_v1/library_snapshot.private.json
+
 # Fly.io deploy bundle (contains audio subset)
 ml/**/deploy_bundle/

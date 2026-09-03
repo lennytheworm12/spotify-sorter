@@ -65,6 +65,14 @@ def test_local_tracks_are_excluded_and_spotify_ids_required(tmp_path: Path) -> N
         load_library_snapshot(_snapshot(tmp_path / "bad.json", [missing]))
 
 
+def test_nonstandard_isrc_is_treated_as_missing_metadata(tmp_path: Path) -> None:
+    invalid = _raw_track(1)
+    invalid["external_ids"]["isrc"] = "INVALID12345678"
+    library = load_library_snapshot(_snapshot(tmp_path / "snapshot.json", [invalid]))
+
+    assert library[0].track.isrc is None
+
+
 def test_historical_exclusion_uses_spotify_and_semantic_identity(tmp_path: Path) -> None:
     historical = tmp_path / "historical.json"
     historical.write_text(json.dumps({"tracks": [{

@@ -1,0 +1,19 @@
+{
+  "benchmark_id": "STAGE5B_REPRESENTATIVE_LIBRARY_V1",
+  "benchmark_manifest": {
+    "path": "reports/stage5b_representative_library_v1/benchmark_manifest.json",
+    "sha256": "cec77ef960fa5da7725e8a0df244a5829fb90fdc5463dc1ce6a2ef72667f4285"
+  },
+  "post_freeze_substitution_permitted": false,
+  "private_snapshot_sha256": "0a31c8828a2a586008d78a0a6026a83a737db5e943cbd99847c1ae9005a43331",
+  "query_strategy": "Q0_FROZEN",
+  "requested_sample_size": 100,
+  "resolver_mutation_permitted": false,
+  "resolver_stack": {
+    "path": "reports/stage5b1j_representation_fallback/resolver_stack_candidate_v1.json",
+    "sha256": "3e2d9ffbb712118d67d84ab0b7ef8cf47313d929ab846850eeb47ba5c531e540",
+    "stack_id": "STAGE5B_RESOLVER_CANDIDATE_V1"
+  },
+  "sample_seed": "stage5b-representative-library-v1-seed-2026-09-02",
+  "schema_version": "stage5b-representative-library-config-v1"
+}
