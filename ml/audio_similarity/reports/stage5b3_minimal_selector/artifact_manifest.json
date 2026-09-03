@@ -1,0 +1,37 @@
+{
+  "artifacts": {
+    "changed_selections.json": {
+      "sha256": "bf977a5ea79ed78cbd74c35b48d35fe276ea46052147bf90d103d0b44c373568",
+      "size_bytes": 3735
+    },
+    "human_review.csv": {
+      "sha256": "9e2a408bf298b1acf7cec8d1fbf4faf8046d29205794c13af509ac17cd0457e9",
+      "size_bytes": 4449
+    },
+    "minimal_selector_decisions.json": {
+      "sha256": "27cc616f5e4fd3b2d63b9099bb52c474f9d04291256397b153726cfa419c2dce",
+      "size_bytes": 214164
+    },
+    "minimal_selector_report.md": {
+      "sha256": "17479975ba37beff0f6f0958cecb8dae9d9aa86191b433121ad32d007f6402ae",
+      "size_bytes": 2929
+    }
+  },
+  "experiment_id": "STAGE5B3_MINIMAL_YOUTUBE_SELECTOR_V1",
+  "schema_version": "stage5b3-minimal-selector-artifact-manifest-v1",
+  "scope_guards": {
+    "audio_downloads": 0,
+    "existing_resolver_invocations": 0,
+    "production_activation": false,
+    "representative_library_v3_runs": 0,
+    "sol_runs": 0,
+    "video_downloads": 0,
+    "youtube_searches": 0
+  },
+  "source_artifact_hashes": {
+    "benchmark_manifest.json": "3a967360ece50d3792f48c3bf857f5270965d09610d2601b517bd2a0e1c23396",
+    "human_review.csv": "e0a39ed88fe840982b4e3ece77102e667baaed83cebff49f7fee0f3f0ecdcef7",
+    "youtube_top3_discovery.json": "3a90301a008824a3001b464aae0e348bc56649f508ccca6f11d88c171f31b9b8"
+  },
+  "status": "STAGE5B3_MINIMAL_SELECTOR_AWAITING_HUMAN_REVIEW"
+}
