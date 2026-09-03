@@ -8,7 +8,11 @@ from types import SimpleNamespace
 
 import pytest
 
-from audio_similarity.stage5b1a_models import SpotifyTrack, Stage5B1AValidationError
+from audio_similarity.stage5b1a_models import (
+    SpotifyTrack,
+    Stage5B1AValidationError,
+    file_sha256,
+)
 from audio_similarity.stage5b2_youtube_prior import (
     BENCHMARK_ID,
     SAMPLE_SIZE,
@@ -22,10 +26,12 @@ from audio_similarity.stage5b2_youtube_prior import (
 from audio_similarity.stage5b2_youtube_prior_review import (
     SAFE_LABELS,
     YoutubePriorReviewStore,
+    _failure_category,
     compute_prior_metrics,
     first_safe_rank,
     load_mapped_sol_evaluations,
     required_rank,
+    validate_complete_human_review,
     write_human_review_artifacts,
 )
 
@@ -299,3 +305,41 @@ def test_top1_top2_top3_metrics_and_first_safe_distribution() -> None:
         "rank_1": 90, "rank_2": 9, "rank_3": 1, "none": 0
     }
     assert agreement["reviewed_candidate_denominator"] == 111
+
+
+def test_top1_failure_taxonomy_distinguishes_live_full_album_and_uncertain() -> None:
+    base = {
+        "candidate_title": "",
+        "candidate_description": "",
+        "candidate_note": "",
+        "candidate_review_label": "WRONG",
+    }
+    assert _failure_category(base | {"candidate_title": "Song | Original Stage"}) == "LIVE_VS_STUDIO"
+    assert _failure_category(base | {"candidate_title": "Artist | Record [full album]"}) == "MULTI_TRACK_OR_NOT_ISOLATED"
+    assert _failure_category(base | {"candidate_review_label": "UNCERTAIN"}) == "METADATA_INSUFFICIENT"
+
+
+def test_committed_human_review_metrics_and_artifact_hashes_are_frozen() -> None:
+    root = Path(__file__).parents[1]
+    output = root / "reports/stage5b_youtube_prior_v1"
+    config = load_youtube_prior_config(output / "benchmark_config.json")
+    grouped = validate_complete_human_review(output / "human_review.csv")
+    sol = load_mapped_sol_evaluations(config)
+    top1, top3, agreement = compute_prior_metrics(grouped, sol)
+
+    assert file_sha256(output / "human_review.csv") == "e0a39ed88fe840982b4e3ece77102e667baaed83cebff49f7fee0f3f0ecdcef7"
+    assert top1["safe_count"] == 97
+    assert top1["label_counts"] == {
+        "IDEAL": 90, "ACCEPTABLE": 7, "WRONG": 2, "UNCERTAIN": 1
+    }
+    assert top3["top2_safe_count"] == 100
+    assert top3["top3_safe_count"] == 100
+    assert top3["first_safe_rank_distribution"] == {
+        "rank_1": 97, "rank_2": 3, "rank_3": 0, "none": 0
+    }
+    assert agreement["reviewed_candidate_denominator"] == 103
+
+    artifact_manifest = json.loads((output / "artifact_manifest.json").read_text())
+    assert artifact_manifest["status"] == "YOUTUBE_TOP1_PRIOR_VALIDATED"
+    for name, identity in artifact_manifest["artifacts"].items():
+        assert file_sha256(output / name) == identity["sha256"]

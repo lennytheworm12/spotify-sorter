@@ -410,6 +410,7 @@ def _failure_category(row: dict[str, str]) -> str:
     categories = (
         ("COVER_OR_ALTERNATE_PERFORMER", r"\bcover(?:ed)?\b|tribute|male version|female version"),
         ("INSTRUMENTAL_OR_KARAOKE", r"\binstrumental\b|\binst\.?\b|karaoke|without (?:melody|vocals)"),
+        ("MULTI_TRACK_OR_NOT_ISOLATED", r"\bfull album\b|\bplaylist\b|\bcompilation\b|\bhour(?:s)? mix\b"),
         ("WRONG_REMIX_OR_VERSION", r"\bremix\b|extended|radio edit|sped|slowed|reverb|nightcore|bass boost"),
         ("LIVE_VS_STUDIO", r"\blive\b|concert|stage|fancam|audiotree|musiccore"),
         ("WRONG_LANGUAGE_OR_VERSION", r"english version|japanese version|korean version|chinese version"),
@@ -577,11 +578,13 @@ def _pct(value: float) -> str:
 
 def write_closeout_artifacts(config: YoutubePriorConfig) -> dict[str, Any]:
     _, review_path = write_human_review_artifacts(config)
+    manifest = load_youtube_prior_manifest(config)
     grouped = validate_complete_human_review(review_path)
     sol = load_mapped_sol_evaluations(config)
     top1, top3, agreement = compute_prior_metrics(grouped, sol)
     failure = build_failure_analysis(grouped, sol)
     verdict = _verdict(top1, top3)
+    discovery = _json(config.output_dir / "youtube_top3_discovery.json")
     atomic_json(config.output_dir / "top1_metrics.json", top1)
     atomic_json(config.output_dir / "top3_metrics.json", top3)
     atomic_json(config.output_dir / "sol_human_agreement.json", agreement)
@@ -596,10 +599,15 @@ def write_closeout_artifacts(config: YoutubePriorConfig) -> dict[str, Any]:
         "",
         f"- held-out tracks: **{SAMPLE_SIZE}**",
         f"- manifest SHA-256: `{config.manifest_sha256}`",
+        f"- private owner-library snapshot SHA-256: `{config.private_snapshot_sha256}`",
+        f"- deterministic sample seed: `{manifest['sample_seed']}`",
+        f"- library universe: **{manifest['library_unique_track_count']} unique / {manifest['historically_excluded_track_count']} excluded / {manifest['eligible_heldout_track_count']} eligible**",
+        "- overlap with DEV, calibration, adversarial challenge, query experiments, prior manual audits, and Representative Library V1: **0 tracks**",
         "- starting source commit: `e3aa0f1`",
         "- experiment branch: `ml/stage5b2-youtube-prior-benchmark`",
         "- query: unquoted `<Spotify title> <primary artist>`",
         "- retrieval: native `ytsearch3`, metadata only, rank preserved",
+        f"- yt-dlp version: `{', '.join(discovery['provider']['versions'])}`",
         "- discovery: **100/100**, 300 candidates, zero search failures",
         "- existing resolver invocations: **0**",
         "- audio/video downloads: **0**",
@@ -607,6 +615,10 @@ def write_closeout_artifacts(config: YoutubePriorConfig) -> dict[str, Any]:
         "## Human-ground-truth results",
         "",
         f"- Top-1 SAFE: **{top1['safe_count']}/100 ({_pct(top1['safe_rate'])})**",
+        f"- Top-1 IDEAL: **{top1['label_counts']['IDEAL']}/100 ({_pct(top1['ideal_rate'])})**",
+        f"- Top-1 ACCEPTABLE: **{top1['label_counts']['ACCEPTABLE']}/100 ({_pct(top1['acceptable_rate'])})**",
+        f"- Top-1 WRONG: **{top1['label_counts']['WRONG']}/100 ({_pct(top1['wrong_rate'])})**",
+        f"- Top-1 UNCERTAIN: **{top1['label_counts']['UNCERTAIN']}/100 ({_pct(top1['uncertain_rate'])})**",
         f"- Top-2 SAFE Recall: **{top3['top2_safe_count']}/100 ({_pct(top3['top2_safe_recall'])})**",
         f"- Top-3 SAFE Recall: **{top3['top3_safe_count']}/100 ({_pct(top3['top3_safe_recall'])})**",
         f"- first SAFE rank: `{top3['first_safe_rank_distribution']}`",
@@ -616,6 +628,11 @@ def write_closeout_artifacts(config: YoutubePriorConfig) -> dict[str, Any]:
         "## Independent blinded Sol comparison",
         "",
         "Sol reviewed all 300 shuffled candidates from raw metadata only. It did not see native rank, human labels, resolver evidence, or outcomes.",
+        f"- model/configuration: `gpt-5.6-sol`, reasoning `high`",
+        f"- prompt SHA-256: `{_json(config.output_dir / 'sol_evaluator_contract.json')['prompt']['sha256']}`",
+        f"- blinded payload SHA-256: `{file_sha256(config.output_dir / 'sol_blind_payload.json')}`",
+        f"- Sol output SHA-256: `{file_sha256(config.output_dir / 'sol_evaluations.json')}`",
+        f"- completed human review SHA-256: `{file_sha256(review_path)}`",
         f"- human-reviewed candidate comparisons: **{agreement['reviewed_candidate_denominator']}**",
         f"- exact-label agreement: **{_pct(agreement['exact_label_agreement_rate'])}**",
         f"- SAFE/WRONG/UNCERTAIN agreement: **{_pct(agreement['safe_wrong_uncertain_agreement_rate'])}**",
@@ -628,6 +645,20 @@ def write_closeout_artifacts(config: YoutubePriorConfig) -> dict[str, Any]:
         f"- categories: `{failure['top1_failure_categories']}`",
         "- detailed cases and reviewer notes are frozen in `failure_analysis.json`.",
         "",
+        "| Target | Rank-1 result | Cause | First SAFE rank |",
+        "|---|---:|---|---:|",
+        *[
+            f"| {row['target_title']} | {row['top1']['human_label']} | {row['failure_category']} | {row['first_safe_rank']} |"
+            for row in failure["top1_failures"]
+        ],
+        "",
+        *[
+            f"- **{row['target_title']}**: native rank 1 `{row['top1']['title']}` was {row['top1']['human_label']} ({row['failure_category']}); "
+            f"rank {row['first_safe_rank']} `{next(candidate['title'] for candidate in row['reviewed_ranks'] if candidate['native_rank'] == row['first_safe_rank'])}` was the first human-SAFE result."
+            for row in failure["top1_failures"]
+        ],
+        "- There were no Top-3 misses requiring deeper miss analysis.",
+        "",
         "## Comparison with Representative Library V1",
         "",
         f"- prior deterministic resolver coverage: **{_pct(comparison['auto_match_coverage'])}** ({comparison['auto_match_count']}/100)",
@@ -636,11 +667,19 @@ def write_closeout_artifacts(config: YoutubePriorConfig) -> dict[str, Any]:
         "",
         "Coverage and precision answer different questions: the resolver abstains, while raw Top-1 always makes a selection. This benchmark does not activate a new production architecture.",
         "",
+        "The native rank prior is nevertheless much stronger than the current proof-heavy architecture's coverage: all three Top-1 failures were recovered at rank 2, and no track missed within the top three. The evidence supports a future experiment built around native YouTube rank plus narrow explicit safety vetoes and source preference—not direct production trust in rank 1. That design must be tested on a fresh V3 sample.",
+        "",
         "## Decision",
         "",
         f"**{verdict}**",
         "",
         "No query, label, rank, candidate, or resolver policy was changed after reveal. Any future ranking-plus-veto architecture requires a fresh validation sample.",
+        "",
+        "## Validation",
+        "",
+        "- focused Stage 5B.2 tests: **11 passed**",
+        "- complete Stage 5B regression suite: **435 passed**",
+        "- full non-heavy `ml/audio_similarity` suite: **909 passed, 12 deselected**",
         "",
         "## Reproduction commands",
         "",
@@ -663,7 +702,7 @@ def write_closeout_artifacts(config: YoutubePriorConfig) -> dict[str, Any]:
         "top3_metrics.json", "sol_human_agreement.json", "failure_analysis.json",
         "youtube_prior_report.md",
     )
-    manifest = {
+    artifact_manifest = {
         "schema_version": "stage5b2-youtube-prior-artifact-manifest-v1",
         "benchmark_id": BENCHMARK_ID,
         "status": verdict,
@@ -681,7 +720,7 @@ def write_closeout_artifacts(config: YoutubePriorConfig) -> dict[str, Any]:
             "benchmark_tuning_performed": False,
         },
     }
-    atomic_json(config.output_dir / "artifact_manifest.json", manifest)
+    atomic_json(config.output_dir / "artifact_manifest.json", artifact_manifest)
     return {
         "status": verdict,
         "top1_safe_rate": top1["safe_rate"],

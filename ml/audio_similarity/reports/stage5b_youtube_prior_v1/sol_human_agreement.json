@@ -1,0 +1,1042 @@
+{
+  "comparisons": [
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_001",
+      "human_label": "ACCEPTABLE",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "ACCEPTABLE",
+      "sol_reason": "Exact artist, title, and duration in a third-party lyric upload.",
+      "sol_state": "SAFE",
+      "video_id": "ETSwvFjPJFY"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_002",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Artist-channel upload exactly matches the target title and duration.",
+      "sol_state": "SAFE",
+      "video_id": "pr_oSsUtfiw"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_003",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official SZA audio names the requested Calvin Harris Funk Wav remix.",
+      "sol_state": "SAFE",
+      "video_id": "ByucbuSe958"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_004",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist VHS Diary uses the exact song and matching duration.",
+      "sol_state": "SAFE",
+      "video_id": "EIL1MXBv8Pk"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_005",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Artist-channel upload exactly matches the target song and duration.",
+      "sol_state": "SAFE",
+      "video_id": "e9KRzsDOKDk"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_006",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Canonical supplied release matches artist, title, and duration exactly.",
+      "sol_state": "SAFE",
+      "video_id": "W3Go9AidGyc"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_007",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist music video for the exact requested single.",
+      "sol_state": "SAFE",
+      "video_id": "TKGovwXRDfU"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_008",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist lyric video exactly matches the album track and duration.",
+      "sol_state": "SAFE",
+      "video_id": "UbRYpFobcYg"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_009",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official label music video for the exact Yerin Baek single.",
+      "sol_state": "SAFE",
+      "video_id": "WbhK3wMXluE"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_010",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist music video for the exact requested recording.",
+      "sol_state": "SAFE",
+      "video_id": "QJO3ROT-A4E"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_011",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release exactly matches song, features, year, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "ujCdcX6o3e0"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_012",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release matches title, artists, album, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "KFGZwgL06-M"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_013",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release matches exact title, artist, album, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "EnQ4nszqz4o"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_014",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official brand film names Suzy and the exact theme song with close duration.",
+      "sol_state": "SAFE",
+      "video_id": "GQbojNHkovk"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_015",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official label music video names the exact song and featured performer.",
+      "sol_state": "SAFE",
+      "video_id": "uu3Rzl_dK_s"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_016",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release matches title, all performers, year, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "qrGSReQXIms"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_017",
+      "human_label": "WRONG",
+      "human_state": "WRONG",
+      "native_rank": 1,
+      "sol_label": "WRONG",
+      "sol_reason": "Explicit Original Stage video is far longer than the studio target.",
+      "sol_state": "WRONG",
+      "video_id": "nvGnwC2T6Ek"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_017",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 2,
+      "sol_label": "ACCEPTABLE",
+      "sol_reason": "Exact artist, album, title, year, and duration in a lyric upload.",
+      "sol_state": "SAFE",
+      "video_id": "Kw2faPNf00s"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_018",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist music video for the exact requested song.",
+      "sol_state": "SAFE",
+      "video_id": "R_JSEf4geTw"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_019",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "ACCEPTABLE",
+      "sol_reason": "Exact artist, title, and duration from a music-curation channel.",
+      "sol_state": "SAFE",
+      "video_id": "79hzjmKAoQM"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_020",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release matches title, artist, album, year, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "IrBv8eQt1sY"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_021",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist music video for the exact requested single.",
+      "sol_state": "SAFE",
+      "video_id": "HM6UpQZvbhY"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_022",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "ACCEPTABLE",
+      "sol_reason": "Exact song and artist with close duration from a credited curator.",
+      "sol_state": "SAFE",
+      "video_id": "QuPkWL_YZtY"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_023",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Artist-channel upload exactly matches song, feature, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "PrFrS5HmPB0"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_024",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release matches artist, title, and duration exactly.",
+      "sol_state": "SAFE",
+      "video_id": "4i0cOpcM1xU"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_025",
+      "human_label": "UNCERTAIN",
+      "human_state": "UNCERTAIN",
+      "native_rank": 1,
+      "sol_label": "WRONG",
+      "sol_reason": "The upload is nineteen seconds shorter than the target recording.",
+      "sol_state": "WRONG",
+      "video_id": "H47BENm_j5o"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_025",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 2,
+      "sol_label": "ACCEPTABLE",
+      "sol_reason": "Exact artist and title with matching duration in a lyric upload.",
+      "sol_state": "SAFE",
+      "video_id": "AfuHfWNAigA"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_026",
+      "human_label": "ACCEPTABLE",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "ACCEPTABLE",
+      "sol_reason": "Exact artist, title, and duration in a third-party lyric upload.",
+      "sol_state": "SAFE",
+      "video_id": "5C4eagr-pSE"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_027",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official 88rising upload matches song, feature, album, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "TAszq3BjTng"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_028",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist music video for the exact requested single.",
+      "sol_state": "SAFE",
+      "video_id": "ZkITTCz1mhk"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_029",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release exactly matches artist, title, album, year, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "YZFGv-LPDBU"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_030",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official label music video for the exact TWICE single.",
+      "sol_state": "SAFE",
+      "video_id": "V2hlQkVJZhE"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_031",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "ACCEPTABLE",
+      "sol_reason": "Exact artist, title, and duration in a third-party lyric upload.",
+      "sol_state": "SAFE",
+      "video_id": "sYwQdtW5x3U"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_032",
+      "human_label": "WRONG",
+      "human_state": "WRONG",
+      "native_rank": 1,
+      "sol_label": "WRONG",
+      "sol_reason": "Full-album upload is not an isolated candidate recording.",
+      "sol_state": "WRONG",
+      "video_id": "6K5vlOSh_uU"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_032",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 2,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release exactly matches artist, title, album, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "b5mhUs326BQ"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_033",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist visualizer exactly matches the Requiem track.",
+      "sol_state": "SAFE",
+      "video_id": "zIrtq7VlJtg"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_034",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official Arctic Monkeys release exactly matches title, album, year, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "mGUjVbsYG6E"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_035",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release exactly matches title, artist, year, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "EE8655GDT9k"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_036",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release exactly matches title, artist, album, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "tKMDwlsFQ9Y"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_037",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Artist-channel upload exactly matches title and target duration.",
+      "sol_state": "SAFE",
+      "video_id": "ATRADyvW8To"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_038",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Artist-channel upload exactly matches the requested song and duration.",
+      "sol_state": "SAFE",
+      "video_id": "Yga5pgWubXs"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_039",
+      "human_label": "ACCEPTABLE",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "WRONG",
+      "sol_reason": "Explicit debut-showcase performance is a distinct live rendition.",
+      "sol_state": "WRONG",
+      "video_id": "Hqvdr91LoSI"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_040",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Artist-channel lyric upload exactly matches title and duration.",
+      "sol_state": "SAFE",
+      "video_id": "ali6HQtxIbg"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_041",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Artist upload names the exact NieR lo-fi edit and matches duration.",
+      "sol_state": "SAFE",
+      "video_id": "K_AICY5BXBU"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_042",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist lyric video exactly matches title, album, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "63eu-jWZV7k"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_043",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official label music video for the exact requested collaboration.",
+      "sol_state": "SAFE",
+      "video_id": "no6O9AnC1_g"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_044",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist music video for the exact requested track.",
+      "sol_state": "SAFE",
+      "video_id": "1kXLsrun51s"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_045",
+      "human_label": "ACCEPTABLE",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "ACCEPTABLE",
+      "sol_reason": "Exact artist, feature, title, and duration in a lyric upload.",
+      "sol_state": "SAFE",
+      "video_id": "JIWiTWJm_ps"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_046",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist music video for the exact special single.",
+      "sol_state": "SAFE",
+      "video_id": "RHw1a0WESuA"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_047",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official label music video for the exact TWICE single.",
+      "sol_state": "SAFE",
+      "video_id": "ePpPVE-GGJw"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_048",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release matches title, both artists, album, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "PGCOyCt4yuc"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_049",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release matches exact artist, title, album, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "VtYNS30fJv0"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_050",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official label music video exactly names the song and feature.",
+      "sol_state": "SAFE",
+      "video_id": "nqMYG2Riq54"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_051",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release exactly matches artist, title, album, year, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "0EnRK5YvBwU"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_052",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release exactly matches artist, title, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "2DlMqF1OWJo"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_053",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "ACCEPTABLE",
+      "sol_reason": "Exact artist, title, and duration in a popular lyric upload.",
+      "sol_state": "SAFE",
+      "video_id": "TyJspgRfwJw"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_054",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist lyric video exactly matches title, album edition, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "peZwDIPyDEA"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_055",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official distributor music video for the exact YUKIKA single.",
+      "sol_state": "SAFE",
+      "video_id": "67jSYCSrnE4"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_056",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release exactly matches artist, title, year, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "JbVR9nuBBek"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_057",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist music video for the exact requested single.",
+      "sol_state": "SAFE",
+      "video_id": "IHNzOHi8sJs"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_058",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist music video for the exact SEOULITE track.",
+      "sol_state": "SAFE",
+      "video_id": "5iSlfF8TQ9k"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_059",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release exactly matches title, artist, album, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "N0XIMT6NcIg"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_060",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release exactly matches artist, title, album, year, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "V9Wsm0hlLUI"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_061",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist music video for the exact requested single.",
+      "sol_state": "SAFE",
+      "video_id": "Kh-5mDO9EvY"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_062",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release matches exact artist, title, album, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "40QXPac2sQM"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_063",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official LE SSERAFIM upload for Yunjin's exact single.",
+      "sol_state": "SAFE",
+      "video_id": "8ujllTK6w3k"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_064",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist music video for the exact beerbongs & bentleys track.",
+      "sol_state": "SAFE",
+      "video_id": "UYwF-jdcVjY"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_065",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release exactly matches title, artist, album, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "iDT2zbB6R8E"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_066",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist music video for the exact requested track.",
+      "sol_state": "SAFE",
+      "video_id": "4zmWVaAZU-s"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_067",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist lyric video for the exact EP track.",
+      "sol_state": "SAFE",
+      "video_id": "w_6fWYY6pRw"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_068",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official 88rising music video for the exact collaboration.",
+      "sol_state": "SAFE",
+      "video_id": "Dyg_ZX2jp3o"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_069",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Collaborating artist's lyric video exactly matches title, feature, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "SJXcYilt2a4"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_070",
+      "human_label": "ACCEPTABLE",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "ACCEPTABLE",
+      "sol_reason": "Exact three artists, title, KozyPop context, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "0obVLAmK6Mg"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_071",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "UNCERTAIN",
+      "sol_reason": "Exact title and duration, but the named collaborator conflicts with target metadata.",
+      "sol_state": "UNCERTAIN",
+      "video_id": "o4xhdmp4LIA"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_072",
+      "human_label": "ACCEPTABLE",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official broadcaster upload matches both performers, live title, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "fqBbnUZbQjc"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_073",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official Topic release exactly matches title, feature, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "1H_Aj8qRjb8"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_074",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official label music video for the exact NewJeans single.",
+      "sol_state": "SAFE",
+      "video_id": "m6pTbEz4w3o"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_075",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist music video for the exact requested track.",
+      "sol_state": "SAFE",
+      "video_id": "EqUP26j4XWU"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_076",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release exactly matches title, artist, album, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "G6M-qNC5B0E"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_077",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist performance video suitably represents the exact album track.",
+      "sol_state": "SAFE",
+      "video_id": "Iwx9t3qTcV4"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_078",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist and label music video for the exact single.",
+      "sol_state": "SAFE",
+      "video_id": "r9AEGPB6qIU"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_079",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release exactly matches title, artist, album, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "LSEfCN4bbF4"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_080",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist audio exactly matches title, album, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "H_pJu3Q-LAE"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_081",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official Topic release exactly matches title, both artists, year, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "okpPbivZJ2k"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_082",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official Topic release exactly matches title, artist, album, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "xG0lq2ABqSo"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_083",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist music video for the exact requested track.",
+      "sol_state": "SAFE",
+      "video_id": "y-IS3daaWPU"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_084",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official Topic release exactly matches title, both artists, year, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "ILp2r6WfRGk"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_085",
+      "human_label": "ACCEPTABLE",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "ACCEPTABLE",
+      "sol_reason": "Exact title, both artists, and duration from a music curator.",
+      "sol_state": "SAFE",
+      "video_id": "2las6DbSOvI"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_086",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist and label music video for the exact track.",
+      "sol_state": "SAFE",
+      "video_id": "38xYeot-ciM"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_087",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist music video for the exact single.",
+      "sol_state": "SAFE",
+      "video_id": "T6YVgEpRU6Q"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_088",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official Topic release exactly matches title, artist, album, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "WAmr4m4fpXo"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_089",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release exactly matches title, artist, album, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "JjgbscXwovc"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_090",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Artist-channel upload exactly matches the single and duration.",
+      "sol_state": "SAFE",
+      "video_id": "me7X8HGstuM"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_091",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist lyric video for the exact song and release.",
+      "sol_state": "SAFE",
+      "video_id": "1e1pNthUrto"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_092",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release exactly matches title, all artists, album, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "wZgsxnYqHps"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_093",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release exactly matches artist, title, album, year, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "EHQ7OA0EWKc"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_094",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "ACCEPTABLE",
+      "sol_reason": "Exact artists, title, and duration in a popular lyric upload.",
+      "sol_state": "SAFE",
+      "video_id": "lHMYQQa0iFM"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_095",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "ACCEPTABLE",
+      "sol_reason": "Exact artists, title, Spotify reference, and duration in a lyric upload.",
+      "sol_state": "SAFE",
+      "video_id": "TEUXrXXNRSI"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_096",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Canonical artist upload matches exact title, year, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "AE005nZeF-A"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_097",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release exactly matches title, both artists, album, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "bQmyFbctGco"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_098",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official supplied release exactly matches title, artist, album, year, and duration.",
+      "sol_state": "SAFE",
+      "video_id": "ABdJX_LxWvQ"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_099",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "ACCEPTABLE",
+      "sol_reason": "Exact artist, bilingual title, and duration in a third-party upload.",
+      "sol_state": "SAFE",
+      "video_id": "zprCVgMKXT0"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_100",
+      "human_label": "IDEAL",
+      "human_state": "SAFE",
+      "native_rank": 1,
+      "sol_label": "IDEAL",
+      "sol_reason": "Official artist and label music video for the exact single.",
+      "sol_state": "SAFE",
+      "video_id": "HFZUAXhdnHk"
+    }
+  ],
+  "exact_label_agreement_count": 90,
+  "exact_label_agreement_rate": 0.8737864077669902,
+  "human_ground_truth": true,
+  "reviewed_candidate_denominator": 103,
+  "safe_wrong_uncertain_agreement_count": 100,
+  "safe_wrong_uncertain_agreement_rate": 0.970873786407767,
+  "schema_version": "stage5b2-youtube-prior-sol-human-agreement-v1",
+  "sol_secondary_only": true
+}

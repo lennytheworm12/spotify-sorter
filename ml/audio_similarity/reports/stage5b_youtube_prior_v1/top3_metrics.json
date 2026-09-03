@@ -1,0 +1,20 @@
+{
+  "benchmark_id": "STAGE5B_YOUTUBE_PRIOR_V1",
+  "denominator_tracks": 100,
+  "first_safe_rank_distribution": {
+    "none": 0,
+    "rank_1": 97,
+    "rank_2": 3,
+    "rank_3": 0
+  },
+  "hypothesis": {
+    "id": "H2_TOP3_SAFE_RECALL",
+    "minimum": 0.99,
+    "passed": true
+  },
+  "schema_version": "stage5b2-youtube-prior-top3-metrics-v1",
+  "top2_safe_count": 100,
+  "top2_safe_recall": 1.0,
+  "top3_safe_count": 100,
+  "top3_safe_recall": 1.0
+}
