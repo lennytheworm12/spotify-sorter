@@ -43,6 +43,7 @@ def make_review_handler(
     static: Path = STATIC,
     mode: str = "stage5b1b_heldout_candidate_review",
     export_filename: str = "stage5b1b-heldout-review.csv",
+    frame_sources: tuple[str, ...] = (),
 ) -> type[BaseHTTPRequestHandler]:
     class Handler(BaseHTTPRequestHandler):
         protocol_version = "HTTP/1.1"
@@ -58,11 +59,14 @@ def make_review_handler(
             self.send_header("Cache-Control", "no-store")
             self.send_header("X-Content-Type-Options", "nosniff")
             self.send_header("Referrer-Policy", "strict-origin-when-cross-origin")
+            frame_policy = (
+                f" frame-src {' '.join(frame_sources)};" if frame_sources else ""
+            )
             self.send_header(
                 "Content-Security-Policy",
                 "default-src 'self'; style-src 'self' 'unsafe-inline'; "
                 "script-src 'self' 'unsafe-inline'; connect-src 'self'; "
-                "img-src 'self' data:",
+                f"img-src 'self' data:;{frame_policy}",
             )
             if download:
                 self.send_header(
@@ -150,6 +154,7 @@ def serve(
     mode: str = "stage5b1b_heldout_candidate_review",
     export_filename: str = "stage5b1b-heldout-review.csv",
     server_name: str = "Stage 5B.1B reviewer",
+    frame_sources: tuple[str, ...] = (),
 ) -> None:
     server = ThreadingHTTPServer(
         (host, port),
@@ -158,6 +163,7 @@ def serve(
             static=static,
             mode=mode,
             export_filename=export_filename,
+            frame_sources=frame_sources,
         ),
     )
     display_host = "127.0.0.1" if host == "0.0.0.0" else host

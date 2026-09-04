@@ -72,7 +72,23 @@ def _write_review_fixture(tmp_path: Path) -> Stage5C2ReviewStore:
                     "review_timestamp": "",
                 }
             )
-    return Stage5C2ReviewStore(queue_path, review_path)
+    sources_path = tmp_path / "selected_sources.json"
+    sources_path.write_text(
+        json.dumps(
+            {
+                "schema_version": "stage5c2-selected-sources-v1",
+                "tracks": [
+                    {
+                        "spotify_track_id": row["spotify_track_id"],
+                        "selected_youtube_video_id": f"video{index:06d}",
+                    }
+                    for index, row in enumerate(tracks, start=1)
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+    return Stage5C2ReviewStore(queue_path, review_path, sources_path)
 
 
 def _request(base: str, path: str, *, payload=None):
@@ -97,7 +113,11 @@ def test_review_store_resumes_and_reuses_reciprocal_pair_label(tmp_path: Path) -
     assert before["status"] == "HUMAN_REVIEW_PENDING"
     saved = store.submit("A", "B", "2", "shared sonic relationship")
     assert saved["reciprocal_rows_updated"] == 2
-    resumed = Stage5C2ReviewStore(store.queue_path, store.review_path).session()
+    resumed = Stage5C2ReviewStore(
+        store.queue_path,
+        store.review_path,
+        tmp_path / "selected_sources.json",
+    ).session()
     a_to_b = resumed["cases"][0]["neighbors"][0]
     b_to_a = resumed["cases"][1]["neighbors"][0]
     assert a_to_b["review"]["label"] == "2"
@@ -113,6 +133,25 @@ def test_review_store_rejects_invalid_labels_and_unknown_pairs(tmp_path: Path) -
         store.submit("A", "missing", "3")
 
 
+def test_review_session_uses_frozen_sources_for_full_and_segment_playback(
+    tmp_path: Path,
+) -> None:
+    session = _write_review_fixture(tmp_path).session()
+    query = session["cases"][0]
+    neighbor = query["neighbors"][0]
+    assert query["playback"] == {
+        "provider": "YOUTUBE_FROZEN_SELECTED_SOURCE",
+        "youtube_video_id": "video000001",
+        "watch_url": "https://www.youtube.com/watch?v=video000001",
+        "segment_windows": [
+            {"index": 1, "start_seconds": 2.5, "end_seconds": 7.5},
+            {"index": 2, "start_seconds": 12.5, "end_seconds": 17.5},
+            {"index": 3, "start_seconds": 22.5, "end_seconds": 27.5},
+        ],
+    }
+    assert neighbor["playback"]["youtube_video_id"] == "video000002"
+
+
 def test_reused_http_workspace_serves_complete_queue_and_autosaves(tmp_path: Path) -> None:
     store = _write_review_fixture(tmp_path)
     handler = make_review_handler(
@@ -120,16 +159,23 @@ def test_reused_http_workspace_serves_complete_queue_and_autosaves(tmp_path: Pat
         static=STATIC,
         mode="stage5c2_similarity_review",
         export_filename="stage5c2-human-similarity-review.csv",
+        frame_sources=("https://www.youtube-nocookie.com",),
     )
     server = ThreadingHTTPServer(("127.0.0.1", 0), handler)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
     base = f"http://127.0.0.1:{server.server_address[1]}"
     try:
-        html = _request(base, "/").read().decode()
+        html_response = _request(base, "/")
+        html = html_response.read().decode()
         assert "Unified Similarity Review" in html
+        assert "Full song" in html and "segment_windows" in html
         assert 'id="previous"' in html and 'id="next"' in html
         assert 'id="jump"' in html and 'id="filter"' in html
+        assert (
+            "frame-src https://www.youtube-nocookie.com"
+            in html_response.headers["Content-Security-Policy"]
+        )
         session = json.loads(_request(base, "/api/session").read())
         assert len(session["cases"]) == 3
         saved = json.loads(

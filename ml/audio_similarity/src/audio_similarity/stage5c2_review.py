@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import csv
 import os
+import re
 import threading
 from datetime import datetime, timezone
 from pathlib import Path
@@ -15,19 +16,60 @@ from .stage5c2_discovery import _json
 
 LABELS = ("3", "2", "1", "0", "UNSURE")
 MAX_NOTE_LENGTH = 2_000
+YOUTUBE_VIDEO_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
+FROZEN_SEGMENT_WINDOWS = (
+    {"index": 1, "start_seconds": 2.5, "end_seconds": 7.5},
+    {"index": 2, "start_seconds": 12.5, "end_seconds": 17.5},
+    {"index": 3, "start_seconds": 22.5, "end_seconds": 27.5},
+)
 
 
 class Stage5C2ReviewStore:
     """Persist one unordered sonic-similarity label across reciprocal ranks."""
 
-    def __init__(self, queue_path: str | Path, review_path: str | Path) -> None:
+    def __init__(
+        self,
+        queue_path: str | Path,
+        review_path: str | Path,
+        selected_sources_path: str | Path | None = None,
+    ) -> None:
         self.queue_path = Path(queue_path).resolve()
         self.review_path = Path(review_path).resolve()
         self._queue = _json(self.queue_path)
         if self._queue.get("schema_version") != "stage5c2-similarity-review-queue-v1":
             raise Stage5B1AValidationError("invalid Stage 5C.2 review queue")
+        self._playback_by_spotify_id = self._load_playback(selected_sources_path)
         self._lock = threading.RLock()
         self._read_rows()
+
+    def _load_playback(
+        self, selected_sources_path: str | Path | None
+    ) -> dict[str, dict[str, Any]]:
+        if selected_sources_path is None:
+            return {}
+        payload = _json(Path(selected_sources_path).resolve())
+        if payload.get("schema_version") != "stage5c2-selected-sources-v1":
+            raise Stage5B1AValidationError("invalid Stage 5C.2 selected sources")
+        playback: dict[str, dict[str, Any]] = {}
+        for source in payload.get("tracks", []):
+            spotify_id = str(source.get("spotify_track_id", ""))
+            video_id = str(source.get("selected_youtube_video_id", ""))
+            if not spotify_id or not YOUTUBE_VIDEO_ID.fullmatch(video_id):
+                raise Stage5B1AValidationError("invalid frozen playback identity")
+            if spotify_id in playback:
+                raise Stage5B1AValidationError("duplicate frozen playback identity")
+            playback[spotify_id] = {
+                "provider": "YOUTUBE_FROZEN_SELECTED_SOURCE",
+                "youtube_video_id": video_id,
+                "watch_url": f"https://www.youtube.com/watch?v={video_id}",
+                "segment_windows": [dict(window) for window in FROZEN_SEGMENT_WINDOWS],
+            }
+        queue_ids = {str(case["spotify_track_id"]) for case in self._queue["cases"]}
+        if queue_ids != playback.keys():
+            raise Stage5B1AValidationError(
+                "frozen playback sources do not match the review queue"
+            )
+        return playback
 
     def _read_rows(self) -> list[dict[str, str]]:
         with self.review_path.open(encoding="utf-8", newline="") as handle:
@@ -75,6 +117,9 @@ class Stage5C2ReviewStore:
                     neighbors.append(
                         neighbor
                         | {
+                            "playback": self._playback_by_spotify_id.get(
+                                neighbor["spotify_track_id"]
+                            ),
                             "review": {
                                 "label": row["human_label"],
                                 "note": row["human_note"],
@@ -85,6 +130,7 @@ class Stage5C2ReviewStore:
                 cases.append(
                     case
                     | {
+                        "playback": self._playback_by_spotify_id.get(query_id),
                         "neighbors": neighbors,
                         "review_complete": all(
                             neighbor["review"]["label"] for neighbor in neighbors
