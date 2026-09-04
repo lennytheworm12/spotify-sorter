@@ -18,6 +18,7 @@ dependencies = [
     "laion-clap>=1.1.7",
     "scikit-learn==1.7.2",
     "yt-dlp==2026.8.19",
+    "playwright==1.60.0",
 ]
 
 [dependency-groups]

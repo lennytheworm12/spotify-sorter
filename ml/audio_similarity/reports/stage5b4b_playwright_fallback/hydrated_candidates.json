@@ -1,0 +1,22 @@
+{
+  "candidates": [],
+  "error": {
+    "category": "PLAYWRIGHT_CHALLENGE_BLOCKED",
+    "message": "YouTube challenge or sign-in wall blocked results",
+    "retryable": false
+  },
+  "experiment_id": "STAGE5B4B_PLAYWRIGHT_FALLBACK_V1",
+  "outcome": null,
+  "provider_path": "PLAYWRIGHT_FALLBACK",
+  "query": "Girl, Interrupted 2xxx Miso",
+  "schema_version": "stage5b4b-hydrated-candidates-v1",
+  "scope_guards": {
+    "audio_downloads": 0,
+    "candidate_reranking": false,
+    "provider_source_used_as_quality_evidence": false,
+    "selector_invocations_before_human_review": 0,
+    "video_downloads": 0
+  },
+  "trigger_reason": "PRIMARY_ZERO_RESULTS",
+  "triggered": false
+}

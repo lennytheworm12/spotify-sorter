@@ -1,0 +1,61 @@
+{
+  "counts": {
+    "browser_navigations": 3,
+    "browser_video_results": 0,
+    "hydrated_candidates": 0,
+    "hydration_failures": 0,
+    "primary_candidates": 0
+  },
+  "criteria": {
+    "browser_found_candidate": false,
+    "exact_url_hydration_succeeded": false,
+    "historical_artifacts_immutable": true,
+    "human_safe_top3": false,
+    "playwright_only_after_zero": true,
+    "same_query_used": true,
+    "selector_and_query_untuned": true,
+    "tests_passed": false,
+    "yt_dlp_remained_primary": true
+  },
+  "experiment_id": "STAGE5B4B_PLAYWRIGHT_FALLBACK_V1",
+  "human_review": {
+    "candidate_unavailable": true,
+    "first_safe_rank": null,
+    "labels": [],
+    "safe_in_top3": false
+  },
+  "latency_seconds": {
+    "exact_url_hydration": null,
+    "playwright_fallback": 13.978548760991544,
+    "primary_ytdlp_search": 0.8232976919971406
+  },
+  "schema_version": "stage5b4b-fallback-metrics-v1",
+  "scope_guards": {
+    "audio_downloads": 0,
+    "clap_calls": 0,
+    "muq_calls": 0,
+    "production_activation": false,
+    "proof_heavy_resolver_invocations": 0,
+    "query_modified": false,
+    "selector_modified": false,
+    "sol_runs": 0,
+    "video_downloads": 0
+  },
+  "selector_evaluation_after_human_review": null,
+  "verdict": "PLAYWRIGHT_FALLBACK_FAILED",
+  "verification": {
+    "focused": {
+      "count": 17,
+      "passed": true
+    },
+    "full_non_heavy": {
+      "count": null,
+      "deselected": null,
+      "passed": false
+    },
+    "stage5b_regressions": {
+      "count": 502,
+      "passed": true
+    }
+  }
+}

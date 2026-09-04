@@ -1,0 +1,60 @@
+{
+  "elapsed_seconds": 0.8232976919971406,
+  "error": null,
+  "experiment_id": "STAGE5B4B_PLAYWRIGHT_FALLBACK_V1",
+  "outcome": {
+    "candidate_video_ids": [],
+    "candidates": [],
+    "error": null,
+    "normalized_results": [],
+    "provider": {
+      "attempts": 1,
+      "name": "yt_dlp",
+      "version": "2026.08.19"
+    },
+    "query": "Girl, Interrupted 2xxx Miso",
+    "request": {
+      "download": false,
+      "options": {
+        "cachedir": false,
+        "extract_flat": "in_playlist",
+        "ignoreconfig": true,
+        "ignoreerrors": false,
+        "lazy_playlist": false,
+        "noprogress": true,
+        "playlistend": 3,
+        "quiet": true,
+        "retries": 0,
+        "simulate": true,
+        "skip_download": true,
+        "socket_timeout": 30
+      },
+      "search_expression": "ytsearch3:Girl, Interrupted 2xxx Miso"
+    },
+    "track": {
+      "album": "Life",
+      "artists": [
+        "2xxx",
+        "Miso"
+      ],
+      "duration_ms": 180972,
+      "isrc": "KRNAR1709751",
+      "release_year": 2017,
+      "spotify_track_id": "1cBNzkPsAdI7XJaKIsjKUk",
+      "stable_track_id": "stage5b4_representative_v3_010",
+      "title": "Girl, Interrupted"
+    },
+    "warnings": []
+  },
+  "provider_path": "YTDLP_SEARCH",
+  "query": "Girl, Interrupted 2xxx Miso",
+  "result_count": 0,
+  "schema_version": "stage5b4b-primary-discovery-v1",
+  "scope_guards": {
+    "audio_downloads": 0,
+    "metadata_only": true,
+    "search_mode": "ytsearch3",
+    "video_downloads": 0
+  },
+  "warnings": []
+}
