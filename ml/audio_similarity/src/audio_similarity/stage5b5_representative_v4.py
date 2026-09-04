@@ -192,6 +192,19 @@ def _identity(path: Path, project_root: Path) -> dict[str, Any]:
     }
 
 
+def _verify_identity_tree(value: Any, project_root: Path, label: str) -> None:
+    """Recursively verify hash records embedded by a prior artifact manifest."""
+
+    if isinstance(value, dict) and {"path", "sha256"} <= value.keys():
+        path = project_root / str(value["path"])
+        if not path.is_file() or file_sha256(path) != value["sha256"]:
+            raise Stage5B1AValidationError(f"frozen historical identity changed: {label}")
+        return
+    if isinstance(value, dict):
+        for name, child in value.items():
+            _verify_identity_tree(child, project_root, f"{label}.{name}")
+
+
 def _frozen_contracts(project_root: Path) -> dict[str, Any]:
     history = verify_artist_decomposition_history(project_root)
     query_source = project_root / "src/audio_similarity/stage5b4a_query_contract_repair.py"
@@ -209,6 +222,19 @@ def _frozen_contracts(project_root: Path) -> dict[str, Any]:
         or metrics.get("scope_guards", {}).get("production_activation") is not False
     ):
         raise Stage5B1AValidationError("Stage 5B.4C discovery contract is not frozen")
+    decomposition_manifest_path = (
+        project_root
+        / "reports/stage5b4c_artist_query_decomposition/artifact_manifest.json"
+    )
+    decomposition_manifest = _json(decomposition_manifest_path)
+    if decomposition_manifest.get("verdict") != (
+        "ARTIST_DECOMPOSITION_FALLBACK_VALIDATED"
+    ):
+        raise Stage5B1AValidationError("unexpected Stage 5B.4C artifact verdict")
+    for group in ("artifacts", "implementation", "frozen_inputs"):
+        _verify_identity_tree(
+            decomposition_manifest.get(group, {}), project_root, f"stage5b4c.{group}"
+        )
     if file_sha256(selector_source) != history["selector"]["sha256"]:
         raise Stage5B1AValidationError("Stage 5B.3 selector implementation changed")
     return {
@@ -238,8 +264,7 @@ def _frozen_contracts(project_root: Path) -> dict[str, Any]:
         },
         "prior_supplement_manifest": history["official_data_api_manifest"],
         "decomposition_artifact_manifest": _identity(
-            project_root
-            / "reports/stage5b4c_artist_query_decomposition/artifact_manifest.json",
+            decomposition_manifest_path,
             project_root,
         ),
     }
@@ -365,6 +390,8 @@ def load_v4_config(path: str | Path) -> Stage5B5Config:
     project_root = path.parents[2]
     manifest_info = value.get("benchmark_manifest", {})
     contracts = value.get("contracts", {})
+    if contracts != _frozen_contracts(project_root):
+        raise Stage5B1AValidationError("frozen V4 contract identities changed")
     discovery = contracts.get("discovery", {})
     selection = contracts.get("selection", {})
     query_info = discovery.get("query_source", {})

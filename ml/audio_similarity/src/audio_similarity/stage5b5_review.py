@@ -512,6 +512,10 @@ def compute_final_metrics(
     first_safe = {
         benchmark_id: first_safe_rank(rows) for benchmark_id, rows in grouped.items()
     }
+    first_safe_counts = Counter(
+        f"rank_{rank}" if rank is not None else "none"
+        for rank in first_safe.values()
+    )
     top1_safe = sum(rank == 1 for rank in first_safe.values())
     top2_safe = sum(rank is not None and rank <= 2 for rank in first_safe.values())
     top3_safe = sum(rank is not None for rank in first_safe.values())
@@ -608,12 +612,10 @@ def compute_final_metrics(
             "top2_safe_rate": top2_safe / SAMPLE_SIZE,
             "top3_safe_count": top3_safe,
             "top3_safe_rate": top3_safe / SAMPLE_SIZE,
-            "first_safe_rank_distribution": dict(
-                Counter(
-                    f"rank_{rank}" if rank is not None else "none"
-                    for rank in first_safe.values()
-                )
-            ),
+            "first_safe_rank_distribution": {
+                key: first_safe_counts[key]
+                for key in ("rank_1", "rank_2", "rank_3", "none")
+            },
             "reviewed_candidate_count": sum(
                 bool(row["candidate_review_label"])
                 for rows in grouped.values()
@@ -639,16 +641,22 @@ def compute_final_metrics(
             "wrong_selection_rate_all_tracks": selected_labels["WRONG"] / SAMPLE_SIZE,
             "uncertain_selection_count": selected_labels["UNCERTAIN"],
             "unresolved_or_manual_tail_count": SAMPLE_SIZE - automated_safe,
-            "unresolved_or_manual_tail_rate": 1.0 - safe_yield,
+            "unresolved_or_manual_tail_rate": (
+                SAMPLE_SIZE - automated_safe
+            )
+            / SAMPLE_SIZE,
         },
         "scope_guards": {
             "query_tuning": False,
             "selector_tuning": False,
             "human_labels_used_in_decisions": False,
             "post_freeze_substitutions": 0,
+            "alternate_provider_fallbacks": 0,
             "production_activation": False,
             "audio_downloads": 0,
             "video_downloads": 0,
+            "clap_calls": 0,
+            "muq_calls": 0,
         },
     }
     failures = []
