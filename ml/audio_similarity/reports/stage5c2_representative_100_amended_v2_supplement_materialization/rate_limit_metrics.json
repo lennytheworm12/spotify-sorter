@@ -1,0 +1,18 @@
+{
+  "all_observed_start_spacings_compliant": true,
+  "concurrent_downloads": 0,
+  "experiment_id": "STAGE5C2_REPRESENTATIVE_100_SELECTOR_AWARE_AMENDMENT_V2",
+  "final_failures_after_retry_exhaustion": 0,
+  "http_429_count": 0,
+  "http_5xx_count": 0,
+  "maximum_start_to_start_spacing_seconds": 20.000334788986947,
+  "median_start_to_start_spacing_seconds": 20.000334788986947,
+  "minimum_start_to_start_spacing_seconds": 20.000334788986947,
+  "passed": true,
+  "required_minimum_spacing_seconds": 20.0,
+  "retry_after_events": 0,
+  "retry_attempts": 0,
+  "schema_version": "stage5c2-rate-limit-metrics-v1",
+  "timeout_or_network_retry_count": 0,
+  "total_live_download_attempts": 2
+}

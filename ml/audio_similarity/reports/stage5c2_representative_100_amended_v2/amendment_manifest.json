@@ -1,0 +1,43 @@
+{
+  "amended_selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "amended_track_count": 100,
+  "base_selected_sources_sha256": "dc9c868d603f456782867eee76aea6a8a9784b3b43ace3777636b77b97bf12b9",
+  "base_track_count": 98,
+  "created_at_utc": "2026-09-04T19:01:26.562461+00:00",
+  "experiment_id": "STAGE5C2_REPRESENTATIVE_100_SELECTOR_AWARE_AMENDMENT_V2",
+  "immutability": {
+    "base_report_modified": false,
+    "versioned_amendment": true
+  },
+  "original_frozen_artifacts": {
+    "automated_selector_decisions.json": "a6b6dd1992911be0e64c48172072152e65728d25a497977f468c0243865e8b87",
+    "cache_rerun_results.json": "8a113cb33d9321d256d949530691350e6577d44231b10f5b27cc4c8e70b2c5c6",
+    "discovery_results.json": "81ec851fa233da6a951023a50a4f74f1a0e9bcfb25ac2784632c4da8003d5050",
+    "materialization_results.json": "c66d948f34405696c128eb5f08319bb01280b0476d5632cbebd989df57433e77",
+    "representative_manifest.json": "cdbc64aac94bffb34481b898370b56e1b9566ae925ebfbeb21621bbe6cb0667b",
+    "selected_sources.json": "dc9c868d603f456782867eee76aea6a8a9784b3b43ace3777636b77b97bf12b9",
+    "stage5c2_metrics.json": "ae4bfc4778597c86650a6b90424357f0cb04e85af23c5c21c3b442a5687efe47"
+  },
+  "recovered_track_count": 2,
+  "recovered_tracks": [
+    {
+      "selected_rank": 3,
+      "selected_youtube_video_id": "v224EdAkZr8",
+      "spotify_track_id": "5quFr5s5PXYfUX5jV2EBZ1",
+      "stage5c2_track_id": "stage5c2_008",
+      "successful_query": "GANADARA (Feat. IU) Jay Park",
+      "title": "GANADARA (Feat. IU)"
+    },
+    {
+      "selected_rank": 2,
+      "selected_youtube_video_id": "i4YFngxyJ0k",
+      "spotify_track_id": "5l45vVLs4JKkhzN0tvkWJv",
+      "stage5c2_track_id": "stage5c2_019",
+      "successful_query": "Love Always Leaves Me",
+      "title": "Love Always Leaves Me"
+    }
+  ],
+  "representative_manifest_sha256": "cdbc64aac94bffb34481b898370b56e1b9566ae925ebfbeb21621bbe6cb0667b",
+  "schema_version": "stage5c2-amended-100-manifest-v1",
+  "supplement_selected_sources_sha256": "78cca89355311d834ef830d7f1ebc7727eaabeb34c291f026ea759a818f3d1e8"
+}

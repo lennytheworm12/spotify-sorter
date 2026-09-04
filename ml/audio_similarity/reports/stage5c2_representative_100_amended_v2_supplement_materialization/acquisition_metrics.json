@@ -1,0 +1,20 @@
+{
+  "acquisition_duration_seconds": {
+    "maximum": 2.67032948799897,
+    "median": 2.4379581144894473,
+    "total": 4.875916228978895
+  },
+  "acquisition_failures": 0,
+  "acquisition_successes": 2,
+  "cache_hits_before_acquisition": 0,
+  "discovery_requests_during_acquisition": 0,
+  "exact_id_only": true,
+  "experiment_id": "STAGE5C2_REPRESENTATIVE_100_SELECTOR_AWARE_AMENDMENT_V2",
+  "failure_categories": {},
+  "provider_error_count": 0,
+  "provider_warning_count": 2,
+  "rate_limit_metrics_path": "reports/stage5c2_representative_100_amended_v2_supplement_materialization/rate_limit_metrics.json",
+  "schema_version": "stage5c2-acquisition-metrics-v1",
+  "selected_tracks": 2,
+  "tracks_with_live_acquisition_attempts": 2
+}

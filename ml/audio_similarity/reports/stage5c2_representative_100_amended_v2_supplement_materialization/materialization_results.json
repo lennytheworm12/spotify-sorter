@@ -1,0 +1,425 @@
+{
+  "acquisitions": [
+    {
+      "acquisition_attempts": [
+        {
+          "acquisition_duration_seconds": 2.205586740979925,
+          "actual_delay_before_attempt_seconds": 1.9097933545708656e-07,
+          "attempt_number": 1,
+          "calculated_backoff_seconds": 0.0,
+          "final_outcome": "SUCCESS",
+          "minimum_spacing_compliant": true,
+          "minimum_spacing_seconds": 20.0,
+          "previous_request_start_delta_seconds": null,
+          "provider_error": null,
+          "provider_warnings": [
+            "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+          ],
+          "request_start_timestamp": "2026-09-04T19:15:50.455227+00:00",
+          "required_delay_before_attempt_seconds": 0.0,
+          "retry_after_seconds": null,
+          "retry_reason": null,
+          "track_id": "5quFr5s5PXYfUX5jV2EBZ1",
+          "video_id": "v224EdAkZr8"
+        }
+      ],
+      "acquisition_ended_at": "2026-09-04T19:15:52.660309+00:00",
+      "acquisition_started_at": "2026-09-04T19:15:50.455285+00:00",
+      "cache_hit": false,
+      "elapsed_seconds": 2.205047196999658,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=v224EdAkZr8",
+      "file_size_bytes": 5292110,
+      "network_attempt_count": 1,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 204,
+      "provider_result": "SUCCESS",
+      "provider_title": "박재범 (Jay Park) - ‘GANADARA (Feat. 아이유 IU)’ Official Audio",
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "dcca4e767e1efb750c02415f68e1685d3f46a6b6dbc41d27378a7b9c67ecb57c",
+      "spotify_track_id": "5quFr5s5PXYfUX5jV2EBZ1",
+      "stage5c2_track_id": "stage5c2_008",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c2-wtkf99ev/stage5c2_008-v224EdAkZr8.wav",
+      "video_id": "v224EdAkZr8",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_attempts": [
+        {
+          "acquisition_duration_seconds": 2.67032948799897,
+          "actual_delay_before_attempt_seconds": 17.725211698038038,
+          "attempt_number": 1,
+          "calculated_backoff_seconds": 0.0,
+          "final_outcome": "SUCCESS",
+          "minimum_spacing_compliant": true,
+          "minimum_spacing_seconds": 20.0,
+          "previous_request_start_delta_seconds": 20.000334788986947,
+          "provider_error": null,
+          "provider_warnings": [
+            "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+          ],
+          "request_start_timestamp": "2026-09-04T19:16:10.455585+00:00",
+          "required_delay_before_attempt_seconds": 17.7249081999762,
+          "retry_after_seconds": null,
+          "retry_reason": null,
+          "track_id": "5l45vVLs4JKkhzN0tvkWJv",
+          "video_id": "i4YFngxyJ0k"
+        }
+      ],
+      "acquisition_ended_at": "2026-09-04T19:16:13.125865+00:00",
+      "acquisition_started_at": "2026-09-04T19:16:10.455759+00:00",
+      "cache_hit": false,
+      "elapsed_seconds": 2.67011857702164,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=i4YFngxyJ0k",
+      "file_size_bytes": 5296206,
+      "network_attempt_count": 1,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 202,
+      "provider_result": "SUCCESS",
+      "provider_title": "Love Always Leaves Me",
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "5a8235ba9a4ed0c5d4be1b49295822897d209c89e851b969798934a5f68a0cb8",
+      "spotify_track_id": "5l45vVLs4JKkhzN0tvkWJv",
+      "stage5c2_track_id": "stage5c2_019",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c2-wtkf99ev/stage5c2_019-i4YFngxyJ0k.wav",
+      "video_id": "i4YFngxyJ0k",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    }
+  ],
+  "automated_selected_tracks": 2,
+  "cache_manifest": {
+    "failure_categories": {},
+    "path": "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/artifacts/stage5c2_representative_100_amended_v2/supplement/representations.sqlite",
+    "schema_version": "stage5a-work-cache-sqlite-v1",
+    "sqlite_sha256": "9affc9bab07e9d0b74bb99d0538f50df69619d37154d4182f0f0bacebabecbc4",
+    "tables": {
+      "pooled": {
+        "rows": 4,
+        "success": 4
+      },
+      "segments": {
+        "rows": 12,
+        "success": 12
+      },
+      "tracks": {
+        "rows": 2,
+        "success": 2
+      }
+    }
+  },
+  "corpus": "spotify_library",
+  "corpus_version": "stage5c2-representative-100-78cca89355311d83",
+  "decode_validation": {
+    "5l45vVLs4JKkhzN0tvkWJv": {
+      "canonical_channel_count": 1,
+      "canonical_pcm_sha256": "d169e6729d630fa28d8105de354659143c13c09f734408b13d0b4c3cfdcc30df",
+      "canonical_sample_count": 720562,
+      "canonical_sample_rate_hz": 24000,
+      "container_duration_seconds": 30.023401360544216,
+      "decoded_duration_seconds": 30.023416666666666,
+      "required_segment_centers_seconds": [
+        5,
+        15,
+        25
+      ],
+      "required_windows_available": true,
+      "segment_windows": [
+        {
+          "center_second": 5,
+          "end_sample": 180000,
+          "start_sample": 60000
+        },
+        {
+          "center_second": 15,
+          "end_sample": 420000,
+          "start_sample": 300000
+        },
+        {
+          "center_second": 25,
+          "end_sample": 660000,
+          "start_sample": 540000
+        }
+      ],
+      "source_channel_count": 2,
+      "source_sample_rate_hz": 44100,
+      "status": "SUCCESS"
+    },
+    "5quFr5s5PXYfUX5jV2EBZ1": {
+      "canonical_channel_count": 1,
+      "canonical_pcm_sha256": "9e61db283e5639d3d0ada1af8804ae02c0ca025bc3e1a23dc7ef53f984327a7d",
+      "canonical_sample_count": 720005,
+      "canonical_sample_rate_hz": 24000,
+      "container_duration_seconds": 30.00018140589569,
+      "decoded_duration_seconds": 30.000208333333333,
+      "required_segment_centers_seconds": [
+        5,
+        15,
+        25
+      ],
+      "required_windows_available": true,
+      "segment_windows": [
+        {
+          "center_second": 5,
+          "end_sample": 180000,
+          "start_sample": 60000
+        },
+        {
+          "center_second": 15,
+          "end_sample": 420000,
+          "start_sample": 300000
+        },
+        {
+          "center_second": 25,
+          "end_sample": 660000,
+          "start_sample": 540000
+        }
+      ],
+      "source_channel_count": 2,
+      "source_sample_rate_hz": 44100,
+      "status": "SUCCESS"
+    }
+  },
+  "elapsed_seconds": 92.41564947902225,
+  "ended_at": "2026-09-04T19:17:22.816615+00:00",
+  "experiment_id": "stage5c2_representative_100",
+  "frozen_contract": {
+    "artifact_sha256": "ea6fb8f71c9de262460233802ad655298c3dd61e8f0ef53c93ed87aed5a77533",
+    "centers_seconds": [
+      5,
+      15,
+      25
+    ],
+    "clap_weight": 0.7172981519,
+    "muq_weight": 0.2827018481,
+    "vector_contract_sha256": "c85855d7a737bdecc91dd4629fa4e9baa48427135ae2764c9aabe3c74b89a623"
+  },
+  "frozen_inputs_unchanged": true,
+  "full_materialization_failures": 0,
+  "full_materialization_successes": 2,
+  "manifest_tracks": 100,
+  "materialization_elapsed_seconds": 3.147908483981155,
+  "model_files": {
+    "clap": {
+      "path": "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/models/music_audioset_epoch_15_esc_90.14.pt",
+      "sha256": "fae3e9c087f2909c28a09dc31c8dfcdacbc42ba44c70e972b58c1bd1caf6dedd"
+    },
+    "muq": {
+      "config.json": {
+        "path": "/home/bphan944/.cache/huggingface/hub/models--OpenMuQ--MuQ-MuLan-large/snapshots/2e01c796b71dca71b45251384c04cd7b237c9020/config.json",
+        "sha256": "8fefc545ef87ecd9bcde7417dd03464370c48c321f36dcff20266a752079e468"
+      },
+      "pytorch_model.bin": {
+        "path": "/home/bphan944/.cache/huggingface/hub/models--OpenMuQ--MuQ-MuLan-large/snapshots/2e01c796b71dca71b45251384c04cd7b237c9020/pytorch_model.bin",
+        "sha256": "d42ae3f7cb9b66759ee0089ddc70e2f28b130c2d8ba621457358272d32dd0444"
+      }
+    }
+  },
+  "representative_manifest_sha256": "cdbc64aac94bffb34481b898370b56e1b9566ae925ebfbeb21621bbe6cb0667b",
+  "run_kind": "first",
+  "schema_version": "stage5c2-materialization-results-v1",
+  "selected_sources_sha256": "78cca89355311d834ef830d7f1ebc7727eaabeb34c291f026ea759a818f3d1e8",
+  "stage5a_stats": {
+    "clap": {
+      "inference_seconds": 2.1351019160356373,
+      "inferred_segments": 6,
+      "inferred_segments_per_second": 2.8101703037860295,
+      "reused_pooled": 0,
+      "reused_segments": 0
+    },
+    "dataset_manifest": {
+      "clap_dimension": 512,
+      "dataset_manifest_sha256": "9b8cd89e7485ff303a8db7fa5d892d7db5f3b6c59bb57911ce4a77eb030188d4",
+      "muq_dimension": 512,
+      "record_count": 2,
+      "rows_per_shard": 10000,
+      "schema_version": "audio-representation-dataset-v1",
+      "shard_policy": "sort by corpus/corpus_version/stable_track_id/representation_identity; fixed rows per shard",
+      "shards": [
+        {
+          "first_track_id": "5l45vVLs4JKkhzN0tvkWJv",
+          "last_track_id": "5quFr5s5PXYfUX5jV2EBZ1",
+          "path": "part-00000.parquet",
+          "rows": 2,
+          "sha256": "a4afd5aadd70f6a1073437ab2354b1eb97b4a76866281ef38d13eb14f46aa808"
+        }
+      ]
+    },
+    "elapsed_seconds": 3.147682502050884,
+    "failed_tracks": 0,
+    "failure_categories": {},
+    "input_tracks": 2,
+    "muq": {
+      "inference_seconds": 0.5726246749982238,
+      "inferred_segments": 6,
+      "inferred_segments_per_second": 10.478067505593627,
+      "reused_pooled": 0,
+      "reused_segments": 0
+    },
+    "reused_complete_tracks": 0,
+    "successful_tracks": 2,
+    "successful_tracks_per_second": 0.6353880986080689
+  },
+  "started_at": "2026-09-04T19:15:50.400961+00:00",
+  "tracks": [
+    {
+      "cache_hit": false,
+      "canonical_pcm_sha256": "9e61db283e5639d3d0ada1af8804ae02c0ca025bc3e1a23dc7ef53f984327a7d",
+      "failure_category": "",
+      "failure_detail": "",
+      "representation_identity": "0857d3a6ddf8dfe02bcaec43c547a131751b18c4477c1ea8d51cc1e0f3476bf5",
+      "segments": [
+        {
+          "attempt_count": 1,
+          "center_sec": 5,
+          "embedding_sha256": "80b279d1020f835b257634c2e2c16d6d0297cfa0a43d39ad194871ecf75c4970",
+          "encode_ms": 60.693698993418366,
+          "encoder_id": "laion_clap",
+          "end_sample": 180000,
+          "start_sample": 60000,
+          "status": "SUCCESS"
+        },
+        {
+          "attempt_count": 1,
+          "center_sec": 15,
+          "embedding_sha256": "7dd088956bf3ec7c3e743e5f3270a7c4d9202ecaeadedee7a2065dbfd2ad006d",
+          "encode_ms": 56.91156699322164,
+          "encoder_id": "laion_clap",
+          "end_sample": 420000,
+          "start_sample": 300000,
+          "status": "SUCCESS"
+        },
+        {
+          "attempt_count": 1,
+          "center_sec": 25,
+          "embedding_sha256": "2abfbc41652b11996c21a3b358d61f3248fee87841d29d7f431fbe3fa9f32b20",
+          "encode_ms": 70.8446089993231,
+          "encoder_id": "laion_clap",
+          "end_sample": 660000,
+          "start_sample": 540000,
+          "status": "SUCCESS"
+        },
+        {
+          "attempt_count": 1,
+          "center_sec": 5,
+          "embedding_sha256": "ee58d788c37cd157e70f8802025ab32103accc9bb3081b725c5785aa8e850a47",
+          "encode_ms": 63.62178397830576,
+          "encoder_id": "muq_mulan_large",
+          "end_sample": 180000,
+          "start_sample": 60000,
+          "status": "SUCCESS"
+        },
+        {
+          "attempt_count": 1,
+          "center_sec": 15,
+          "embedding_sha256": "00e25c46565e603f38693d81affc71a78f6c41f9ba693934f2ffe5b8e525a40b",
+          "encode_ms": 62.637462047860026,
+          "encoder_id": "muq_mulan_large",
+          "end_sample": 420000,
+          "start_sample": 300000,
+          "status": "SUCCESS"
+        },
+        {
+          "attempt_count": 1,
+          "center_sec": 25,
+          "embedding_sha256": "6befcd1b60339259e6ea3d649824dffbf46840da775f384ea9f520d67cc4ea91",
+          "encode_ms": 61.77048402605578,
+          "encoder_id": "muq_mulan_large",
+          "end_sample": 660000,
+          "start_sample": 540000,
+          "status": "SUCCESS"
+        }
+      ],
+      "source_audio_sha256": "dcca4e767e1efb750c02415f68e1685d3f46a6b6dbc41d27378a7b9c67ecb57c",
+      "spotify_track_id": "5quFr5s5PXYfUX5jV2EBZ1",
+      "stage5c2_track_id": "stage5c2_008",
+      "status": "SUCCESS"
+    },
+    {
+      "cache_hit": false,
+      "canonical_pcm_sha256": "d169e6729d630fa28d8105de354659143c13c09f734408b13d0b4c3cfdcc30df",
+      "failure_category": "",
+      "failure_detail": "",
+      "representation_identity": "12a67fc298f6c5a02653f1e2c6e65bfc2e5d9207964d4a428b7e1158f7f8dcb7",
+      "segments": [
+        {
+          "attempt_count": 1,
+          "center_sec": 5,
+          "embedding_sha256": "084833261e947ed50f649ca7f25789f6b22c50064c0384acc04d0ab323aa114f",
+          "encode_ms": 1864.9371720384806,
+          "encoder_id": "laion_clap",
+          "end_sample": 180000,
+          "start_sample": 60000,
+          "status": "SUCCESS"
+        },
+        {
+          "attempt_count": 1,
+          "center_sec": 15,
+          "embedding_sha256": "6f2205d1c674830d4eb737cdab6417d1432404e035c40b5806ad7271fad22618",
+          "encode_ms": 42.7388219977729,
+          "encoder_id": "laion_clap",
+          "end_sample": 420000,
+          "start_sample": 300000,
+          "status": "SUCCESS"
+        },
+        {
+          "attempt_count": 1,
+          "center_sec": 25,
+          "embedding_sha256": "026848bfa9d130dc37a00305b37dfd9185317e2da001e24e68a952b70380615d",
+          "encode_ms": 38.97604701342061,
+          "encoder_id": "laion_clap",
+          "end_sample": 660000,
+          "start_sample": 540000,
+          "status": "SUCCESS"
+        },
+        {
+          "attempt_count": 1,
+          "center_sec": 5,
+          "embedding_sha256": "c48497f3314269decce4f8d0f5ce71cdaf9f514a755ecb95669e1600b7919c9f",
+          "encode_ms": 245.23460498312488,
+          "encoder_id": "muq_mulan_large",
+          "end_sample": 180000,
+          "start_sample": 60000,
+          "status": "SUCCESS"
+        },
+        {
+          "attempt_count": 1,
+          "center_sec": 15,
+          "embedding_sha256": "200f8c5018f87d97751ac734c26ce068f2b45ff1bb9481b20549141927d9ce80",
+          "encode_ms": 87.69186900462955,
+          "encoder_id": "muq_mulan_large",
+          "end_sample": 420000,
+          "start_sample": 300000,
+          "status": "SUCCESS"
+        },
+        {
+          "attempt_count": 1,
+          "center_sec": 25,
+          "embedding_sha256": "2dd979915f36828b6a9d145cd12e850601d001b603d1abc8415458c3cf689a5d",
+          "encode_ms": 51.66847095824778,
+          "encoder_id": "muq_mulan_large",
+          "end_sample": 660000,
+          "start_sample": 540000,
+          "status": "SUCCESS"
+        }
+      ],
+      "source_audio_sha256": "5a8235ba9a4ed0c5d4be1b49295822897d209c89e851b969798934a5f68a0cb8",
+      "spotify_track_id": "5l45vVLs4JKkhzN0tvkWJv",
+      "stage5c2_track_id": "stage5c2_019",
+      "status": "SUCCESS"
+    }
+  ],
+  "tracks_attempted": 2
+}
