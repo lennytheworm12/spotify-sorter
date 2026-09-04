@@ -11,6 +11,7 @@ import pytest
 
 from audio_similarity.cli.stage5b1b_review_server import make_review_handler
 from audio_similarity.stage5b1a_models import Stage5B1AValidationError
+from audio_similarity.stage5b1a_models import file_sha256
 from audio_similarity.stage5c2_analysis import REVIEW_COLUMNS, canonical_pair_id
 from audio_similarity.stage5c2_review import Stage5C2ReviewStore
 
@@ -170,6 +171,8 @@ def test_reused_http_workspace_serves_complete_queue_and_autosaves(tmp_path: Pat
         html = html_response.read().decode()
         assert "Unified Similarity Review" in html
         assert "Full song" in html and "segment_windows" in html
+        assert 'id="local-player"' in html
+        assert "LOCAL_RESEARCH_AUDIO" in html
         assert 'id="previous"' in html and 'id="next"' in html
         assert 'id="jump"' in html and 'id="filter"' in html
         assert (
@@ -192,6 +195,79 @@ def test_reused_http_workspace_serves_complete_queue_and_autosaves(tmp_path: Pat
         )
         assert saved["ok"] is True
         assert saved["reciprocal_rows_updated"] == 2
+    finally:
+        server.shutdown()
+        thread.join()
+        server.server_close()
+
+
+def test_local_audio_index_drives_range_playback_and_seek(tmp_path: Path) -> None:
+    base_store = _write_review_fixture(tmp_path)
+    selected_path = tmp_path / "selected_sources.json"
+    tracks = {}
+    for spotify_id, video_id in (
+        ("A", "video000001"),
+        ("B", "video000002"),
+        ("C", "video000003"),
+    ):
+        directory = tmp_path / "media" / spotify_id
+        directory.mkdir(parents=True)
+        source = directory / "source.webm"
+        source.write_bytes((spotify_id.encode() * 4000)[:8192])
+        tracks[spotify_id] = {
+            "spotify_track_id": spotify_id,
+            "youtube_video_id": video_id,
+            "retained_relative_path": f"{spotify_id}/source.webm",
+            "file_size_bytes": source.stat().st_size,
+            "source_sha256": file_sha256(source),
+            "content_type": "audio/webm",
+        }
+    index_path = tmp_path / "media" / "index.json"
+    index_path.write_text(
+        json.dumps(
+            {
+                "schema_version": "stage5c2a-local-research-audio-index-v1",
+                "selected_sources_sha256": file_sha256(selected_path),
+                "tracks": tracks,
+            }
+        ),
+        encoding="utf-8",
+    )
+    store = Stage5C2ReviewStore(
+        base_store.queue_path,
+        base_store.review_path,
+        selected_path,
+        index_path,
+    )
+    session = store.session()
+    assert session["cases"][0]["playback"]["provider"] == "LOCAL_RESEARCH_AUDIO"
+    assert session["cases"][0]["playback"]["audio_url"] == "/audio/track/A"
+    handler = make_review_handler(store, static=STATIC)
+    server = ThreadingHTTPServer(("127.0.0.1", 0), handler)
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+    base = f"http://127.0.0.1:{server.server_address[1]}"
+    try:
+        full = _request(base, "/audio/track/A")
+        assert full.status == 200
+        assert full.headers["Accept-Ranges"] == "bytes"
+        request = urllib.request.Request(base + "/audio/track/A")
+        request.add_header("Range", "bytes=100-199")
+        partial = urllib.request.build_opener(
+            urllib.request.ProxyHandler({})
+        ).open(request)
+        assert partial.status == 206
+        assert partial.headers["Content-Range"].startswith("bytes 100-199/")
+        assert len(partial.read()) == 100
+        near_end = urllib.request.Request(base + "/audio/track/A")
+        near_end.add_header("Range", "bytes=-64")
+        response = urllib.request.build_opener(
+            urllib.request.ProxyHandler({})
+        ).open(near_end)
+        assert response.status == 206
+        assert len(response.read()) == 64
+        distinct = _request(base, "/audio/track/B").read()
+        assert distinct != _request(base, "/audio/track/A").read()
     finally:
         server.shutdown()
         thread.join()

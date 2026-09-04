@@ -1,0 +1,3844 @@
+{
+  "expected_track_count": 100,
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "representative_manifest_path": "reports/stage5c2_representative_100_amended_v2/representative_manifest.json",
+  "representative_manifest_sha256": "cdbc64aac94bffb34481b898370b56e1b9566ae925ebfbeb21621bbe6cb0667b",
+  "schema_version": "stage5c2a-amended-source-reference-v1",
+  "selected_sources_path": "reports/stage5c2_representative_100_amended_v2/selected_sources.json",
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "source_experiment_id": "STAGE5C2_REPRESENTATIVE_100_SELECTOR_AWARE_AMENDMENT_V2",
+  "tracks": [
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 1,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "152e1aaaab27ea59fd286e922f534d3cddf5011e5ff79f7850a85c851afdb736",
+          "representation_identity": "0d5928971dd4b213cfc4161a728598ae821f23a81cc7e35377c4a7c8fa15ef82",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "1f73061a097391e4fd459e77adb87ee7a1f15956edf0261862f4094f0b6d8f07",
+              "25": "39cb74aca07d47d233f0ace4fbf0803dc4a444e310745c83eb8933e68cf10974",
+              "5": "36db7f5d5b75aa052b3cbe564ad4cb49b984737c5a35130204af43e980062498"
+            },
+            "muq_mulan_large": {
+              "15": "1f4a2b71c813cee4a0a058712ddca1ece1b2acac5f13915adb63ea6877f97864",
+              "25": "e905e0e2daee602e59c35c1c426d2c7b4ce55ca8b0a7e1eb68820763270b42fc",
+              "5": "e5899803cee96532ec9c070b43f78cc3608f40fe9b088e69cd5995906a1c2047"
+            }
+          },
+          "source_audio_sha256": "57d6a59a2478780dd9fed1e43d931099017f7f81ed0fd51b0615d1421b56c958"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "rTKCBcDqyMg"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "rTKCBcDqyMg",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=rTKCBcDqyMg",
+      "spotify_artists": [
+        "SOOVI",
+        "pH-1"
+      ],
+      "spotify_title": "Make the Move (feat. pH-1)",
+      "spotify_track_id": "3JxRNkoNmAcPgnA5HSnKiz",
+      "stage5c2_track_id": "stage5c2_001",
+      "successful_query": "Make the Move (feat. pH-1) SOOVI pH-1",
+      "youtube_video_id": "rTKCBcDqyMg"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 2,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "51b5efc3d428d8518eb1dee609f67308f7521b26c8b568fc090abd700d04e949",
+          "representation_identity": "f01f95d1b4b1023a60def72a40809ffea8cbde96e0c83d5b614d1c357aa270f4",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "c1514fd3cc2bc2ed952a24629977711721865f35ccb037b398ecb6b00f94c5ff",
+              "25": "c370b9e54a9522128d4c13847785fede13eacef0d6f353f963c7e887960f073d",
+              "5": "852c2e3b478dec351af46e012f026db8bcd54f05d4bf3875ed49e7e04cc8698d"
+            },
+            "muq_mulan_large": {
+              "15": "a1f746b1d79cc54644df1b4a83af0aa95788a26728d5d4dfc48c5cc14c2746b7",
+              "25": "3262b7534c75530092143d341c42f6d6b32e4316019fed52799c061e72de94cf",
+              "5": "e43f9e9154936adfb2aca71be60a6ec305fddff29220b25d7e62af075468a8eb"
+            }
+          },
+          "source_audio_sha256": "07fe3702429855d74107d75d1cbad43c7d54d62880d6eb6a3b5e9dd788ada3b5"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "LK4SwchA_jM"
+      },
+      "selected_rank": 2,
+      "selected_youtube_video_id": "LK4SwchA_jM",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=LK4SwchA_jM",
+      "spotify_artists": [
+        "W/N",
+        "267"
+      ],
+      "spotify_title": "id T41104 (feat. 267)",
+      "spotify_track_id": "07tiPBhMqiKqHowwqDBtfK",
+      "stage5c2_track_id": "stage5c2_002",
+      "successful_query": "id T41104 (feat. 267) W/N 267",
+      "youtube_video_id": "LK4SwchA_jM"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 3,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "ca667ff42f5fc334d13e42c74e440ce4d250b5a8b134c49722da50eebfd620ff",
+          "representation_identity": "dc4bdce5928f86225c2b44c48e7bd5cbbbb77533c228c676d567dc8bc6840376",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "d3fffdef08ab561ab0de57f677806f66f7499bfc2688764cff49f67ab8fba0b2",
+              "25": "86ad15b01ca28c9792b4c4263d70736e565397436dcdfaa607a8998f2fd479c0",
+              "5": "4d19ac32f97b18d472fd2b6601f6ac5c2a208971288a95395fdb44ce762642be"
+            },
+            "muq_mulan_large": {
+              "15": "a2d1a65fed91fde272bd9b3ff2809a861d7f05e6e0477f496b41284cfbcfdc5b",
+              "25": "3c2bb12e94b9cf138e2a7ad6cfd0a17f27f6b8c49eb8bf6a8f71b14b6a14f164",
+              "5": "bf7e735c1c3557da959dd3efd9686bfad102ed0a2b423c9604ddf3634f33b193"
+            }
+          },
+          "source_audio_sha256": "7e4966aec7893bcbe3346dbb281c7c7894f071abe3dd8fc519bb18b8669811e8"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "rrqWbMhtzEM"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "rrqWbMhtzEM",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=rrqWbMhtzEM",
+      "spotify_artists": [
+        "g0nny",
+        "SHIRT"
+      ],
+      "spotify_title": "You Might (Feat. SHIRT)",
+      "spotify_track_id": "340yvMO5adu3bo1x5Zrw14",
+      "stage5c2_track_id": "stage5c2_003",
+      "successful_query": "You Might (Feat. SHIRT) g0nny SHIRT",
+      "youtube_video_id": "rrqWbMhtzEM"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 4,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "45873b11c83424680d7bfc1c79059d92988e16f333e04e11d8911a96ccc6b628",
+          "representation_identity": "50398dabdffedd880212a77548f0d628a7ecd21234ac6b1e10ff3a772d5acc5e",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "ba8077a3d6013aea85d750a1e7d4ff240d04eee00cf0d38317573ab886434aaf",
+              "25": "8b87b05936a32c0e63d441be5288431a7258b6a53c89ce89d9e79b4ce78103f0",
+              "5": "4aa1f93f64d24ce45577107c03e8edd4720623802adcf2172793e01634ff7f55"
+            },
+            "muq_mulan_large": {
+              "15": "e922b6507dc7d9715227debe0967a6fb505439629da73e220149ce5373cdaef7",
+              "25": "3a6081423468eae8a092c1665af8ebfa4d5e6d14d5c04310a8f697cbc2fd5491",
+              "5": "ddff0fce5330856d3f5167a41242844605128a4247a53540266635238c90ed0e"
+            }
+          },
+          "source_audio_sha256": "a682ca6c72a10f52504367ccd2dedec526931607f700c5be1d3fe0b80e6c13eb"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "DXdmEAWhnfk"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "DXdmEAWhnfk",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=DXdmEAWhnfk",
+      "spotify_artists": [
+        "Chevy",
+        "City Girl"
+      ],
+      "spotify_title": "Daydreaming",
+      "spotify_track_id": "2aiVdNIqY5BDCM10fKlKpS",
+      "stage5c2_track_id": "stage5c2_004",
+      "successful_query": "Daydreaming Chevy City Girl",
+      "youtube_video_id": "DXdmEAWhnfk"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 5,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "745a6e64717b61ead1c8bc85e2d442642bba0c85fd8d0134a5a8ab645ab27bc1",
+          "representation_identity": "d5c63a526ceb3dfb6cd5d8bba7aa87eb15866b554f7279c1aa2470c14ad75447",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "24892ee44fc9de90671f094a93d6c58577383aba1e2c800357f869624382e906",
+              "25": "8539a813512fbf0ca2abb37481ff092cea845dec9ecd2998df8a808e7e6c21ad",
+              "5": "cb24bff54b2dd211226b316816123d22d33f9ca7c24b05cf79a5d7c2302c1e5c"
+            },
+            "muq_mulan_large": {
+              "15": "089f6bc0d29d2228a65b7e03c4f6d3ea9c71e430ca6ebacd9c25cd4d06cb4701",
+              "25": "1d10a3ef7dbb3a433ec0c81b8b129dcdc72f467a5e5e5bd8a764e4c77b80582c",
+              "5": "0603d655a19b32f397e37d5b1abe32563d3f366d1994eb40b12542b8de994555"
+            }
+          },
+          "source_audio_sha256": "2de569abab8c08fb1c3ab3b9ccfa9de8734514002a4f18f1347a74fc34c72690"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "TO60HcVAdbQ"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "TO60HcVAdbQ",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=TO60HcVAdbQ",
+      "spotify_artists": [
+        "City Girl"
+      ],
+      "spotify_title": "She loves the color green and I love her",
+      "spotify_track_id": "7hFW5IN7mQ99PuO86r38Sf",
+      "stage5c2_track_id": "stage5c2_005",
+      "successful_query": "She loves the color green and I love her City Girl",
+      "youtube_video_id": "TO60HcVAdbQ"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 6,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "4e758021623dd1c855de505e3cb589ec6d8eb5fb3885cb1419fba26c2b3fdd52",
+          "representation_identity": "ecd9a605deb9307ff39e0f8be0b36362477d7277807e6afa7d68a7f3be7ef816",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "df0da997657aac4a751ea2d084e701fb0b7217c69991989109941f21bd087774",
+              "25": "c4d990f06c90c620ee5b4b5340bcc9ddb60a0c8449a37459a60cc4c449aeb98b",
+              "5": "f377c30d93349268cd6dc5153ea8cd7f92a2a9595a4ded594f2ce32f57b0a793"
+            },
+            "muq_mulan_large": {
+              "15": "80b458c9bc0a904c6c9bc637fc168d0b4a07a3fff0c841456919cb1892da6170",
+              "25": "d401f5fefc4b21ca2bc3a257aaecdd210fc4e786b1d4466b2fc884ed68d4c700",
+              "5": "0ebe4210b00edbe39d45477670abf670a522a0bb5cf3940da9a4acb751f9ac77"
+            }
+          },
+          "source_audio_sha256": "cf0cd596e73edbfdcc3303c65dc4ec3f8efbc3e2eead92c80329a76e9746ee9b"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "DZrYIpwH-u8"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "DZrYIpwH-u8",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=DZrYIpwH-u8",
+      "spotify_artists": [
+        "Maasho",
+        "Weston Estate"
+      ],
+      "spotify_title": "Fresh Air",
+      "spotify_track_id": "30NAF18yQGvwKrbn1IEMKn",
+      "stage5c2_track_id": "stage5c2_006",
+      "successful_query": "Fresh Air Maasho Weston Estate",
+      "youtube_video_id": "DZrYIpwH-u8"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 7,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "8deac0d0da0fba1f83ba05457e83b03c3d2ba06b3cbcc46ef464162d2ada9303",
+          "representation_identity": "429ad15b2d61a5c7880d17ecd62c2bddcad6dc4008da5e63da13129f9eb155e9",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "a6efc04e41c81e4142fe1791de228e61d3d4a2dd7898d988cd30ef1e8f93e8d1",
+              "25": "500bfbf59b04904adbdfa8d10f5c46c26bbc2df062bbf683b9647659345c6013",
+              "5": "8bfe2ea8931e5c85d54d74646d79f9bd16aec5b7bd4ff9abb89f2851a9a6847c"
+            },
+            "muq_mulan_large": {
+              "15": "d819985145bd2f0d301fe575835bdc959e43a674de5e83f50e906e3a7bce565e",
+              "25": "7b846630be0cd5943b0c05015e9e9be1b4a22e8e027778ebb15ad3a6c180dc82",
+              "5": "f81c3ba7224f80c1c1c47ed14586cd9d69354568490c60252d971e452f4c9968"
+            }
+          },
+          "source_audio_sha256": "06ea8078fcb90758a1e951e68cb36548d5e08bf39e09e03ab46c8fcca250a851"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "m_0otXbkze8"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "m_0otXbkze8",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=m_0otXbkze8",
+      "spotify_artists": [
+        "raph",
+        "EJEAN"
+      ],
+      "spotify_title": "summer",
+      "spotify_track_id": "4osRLDg7abL4hLdfZ1c39g",
+      "stage5c2_track_id": "stage5c2_007",
+      "successful_query": "summer raph EJEAN",
+      "youtube_video_id": "m_0otXbkze8"
+    },
+    {
+      "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+      "manifest_index": 8,
+      "query_variant_index": 1,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "9e61db283e5639d3d0ada1af8804ae02c0ca025bc3e1a23dc7ef53f984327a7d",
+          "representation_identity": "0857d3a6ddf8dfe02bcaec43c547a131751b18c4477c1ea8d51cc1e0f3476bf5",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "7dd088956bf3ec7c3e743e5f3270a7c4d9202ecaeadedee7a2065dbfd2ad006d",
+              "25": "2abfbc41652b11996c21a3b358d61f3248fee87841d29d7f431fbe3fa9f32b20",
+              "5": "80b279d1020f835b257634c2e2c16d6d0297cfa0a43d39ad194871ecf75c4970"
+            },
+            "muq_mulan_large": {
+              "15": "00e25c46565e603f38693d81affc71a78f6c41f9ba693934f2ffe5b8e525a40b",
+              "25": "6befcd1b60339259e6ea3d649824dffbf46840da775f384ea9f520d67cc4ea91",
+              "5": "ee58d788c37cd157e70f8802025ab32103accc9bb3081b725c5785aa8e850a47"
+            }
+          },
+          "source_audio_sha256": "dcca4e767e1efb750c02415f68e1685d3f46a6b6dbc41d27378a7b9c67ecb57c"
+        },
+        "materialization_report": "reports/stage5c2_representative_100_amended_v2_supplement_materialization/materialization_results.json",
+        "youtube_video_id": "v224EdAkZr8"
+      },
+      "selected_rank": 3,
+      "selected_youtube_video_id": "v224EdAkZr8",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=v224EdAkZr8",
+      "spotify_artists": [
+        "Jay Park",
+        "IU"
+      ],
+      "spotify_title": "GANADARA (Feat. IU)",
+      "spotify_track_id": "5quFr5s5PXYfUX5jV2EBZ1",
+      "stage5c2_track_id": "stage5c2_008",
+      "successful_query": "GANADARA (Feat. IU) Jay Park",
+      "youtube_video_id": "v224EdAkZr8"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 9,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "8acac7b5a9eff644183ba79dc1887dbccf80a2bda065fe1e21ac7bc21b9af046",
+          "representation_identity": "891019af5069e0c64ed0509b829ec145b084659958887a19242f0f6fb569ec9f",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "6bf2a65e4f66aa51e3cb23b7080060e5214edf368162a95e7adc73d6c2cee93a",
+              "25": "1c12e33565dd899ddc95a0e265911035122699b640ff6bb3ddceae072e7f1240",
+              "5": "da70c7d614ae3d8a3c524d1d6807e79cbc55d584c667aa6d462df9d4716930f0"
+            },
+            "muq_mulan_large": {
+              "15": "4b4abab29cd64ff3f45cc7724bde19986e7ecbad526eb31f34968b6269d0cb5b",
+              "25": "cadf3fbb59251c8cc01e667543199d306c8133f1e3ddb7e94f79cae6ed119758",
+              "5": "331e1f5bb6f3900ac76f7da8514dd4b0a4baf2ed5f06b7b755bad3704d0f406f"
+            }
+          },
+          "source_audio_sha256": "97f472b3b9a401983a9c3b0d9c2c5bdf4d9497a3f9730d736593f847f36a7acc"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "QKv2ocGhCpY"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "QKv2ocGhCpY",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=QKv2ocGhCpY",
+      "spotify_artists": [
+        "GroovyRoom",
+        "Heize",
+        "Jay Park"
+      ],
+      "spotify_title": "Sunday (feat. HEIZE, Jay Park)",
+      "spotify_track_id": "0JJeoiCAa1hwcBsPxBN2w4",
+      "stage5c2_track_id": "stage5c2_009",
+      "successful_query": "Sunday (feat. HEIZE, Jay Park) GroovyRoom Heize Jay Park",
+      "youtube_video_id": "QKv2ocGhCpY"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 10,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "5f0eafa9fd0e421fe842da67c4ca871e1dee91f75356cae3d6641aeb15c72827",
+          "representation_identity": "750e8c7541f0da316ed5339a04314355e02a8488e4bab4c1558f87024c4282fd",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "d1ef2d91beaf77c1f1d53ae08c1a33241d8a3cdfac55a1c82cf52e37e08a6855",
+              "25": "018b0a7001ad5b08df7f10dd0c327cf94461aa927eda3b07d00692bcec0dfd27",
+              "5": "ba5f9858c280f4f608ae89b85297a175062e613df56068da5fc51cf1c43cc326"
+            },
+            "muq_mulan_large": {
+              "15": "26cec06ab36cd52fd11dd640cbc4801f662d50e0526ce69a56541869b6be5608",
+              "25": "b7275f6e54896f485896e29ef4efbd840d3820189f29f45d0585adfbdf6809bd",
+              "5": "f578b0663652547a72005831c28ecb5d33fd13a52d9ded3f829d71240167ff0b"
+            }
+          },
+          "source_audio_sha256": "23248c4fc8bc2b37d9db9924bf26f19864dc4f15643ba79a039909bffd743654"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "IIsP4CMFcQc"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "IIsP4CMFcQc",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=IIsP4CMFcQc",
+      "spotify_artists": [
+        "lace"
+      ],
+      "spotify_title": "risk",
+      "spotify_track_id": "2js0td9w2MzNUVPlMKYOEs",
+      "stage5c2_track_id": "stage5c2_010",
+      "successful_query": "risk lace",
+      "youtube_video_id": "IIsP4CMFcQc"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 11,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "d71e3d30dcc57e86832b4de192680a43bdb812e36ffc12e3b4f45f83d9f44af2",
+          "representation_identity": "c676789a5dcd715c1f1cb557d9510594ebdd2e9006800b86dd5042e86459314b",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "8eaa80f0c1cedb405a7eb482a59b709fa318797fe510f6eb8470fc6323343b02",
+              "25": "f32f9e501862c212a1ce14d76cfd51c456a9d3f7909a51d3eed7b700fea058d9",
+              "5": "0e4a4f8b99ca392812e899b12411ca4a8ecff5bf5e73355f72f84f32a8bfa32a"
+            },
+            "muq_mulan_large": {
+              "15": "f7de7e2d66678df72f75872f47e6fa23a5e9323534d981ea1e84ef46aba09cfd",
+              "25": "757cbbe325c1563257403b72a4452fc2bd98c403be1213fefab815d93c78eab1",
+              "5": "24c050effbe3ba5519c99fde07728ae4ef5bf6d5f3a6adff5812c003e1f768f7"
+            }
+          },
+          "source_audio_sha256": "857f23b0f9479ac789c1d39808594ef5f70b0879f72b568383618f781b439cc4"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "5OLgj5s21Ps"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "5OLgj5s21Ps",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=5OLgj5s21Ps",
+      "spotify_artists": [
+        "keshi"
+      ],
+      "spotify_title": "GET IT",
+      "spotify_track_id": "4LaZ8RpIP6DIgN73bXQVlO",
+      "stage5c2_track_id": "stage5c2_011",
+      "successful_query": "GET IT keshi",
+      "youtube_video_id": "5OLgj5s21Ps"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 12,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "8e63bc0378261896262df897547bfb270c2f9fbdde7529222ec9923882fb89fc",
+          "representation_identity": "4b14ee77ee409f05d3968888553df7f6d57fd9b14395a20938ececf9c7388e19",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "881712d409cf0a7e53d8ecf91e4f29fa3a70610022d5845e128c4fe59b55a1c7",
+              "25": "27b95dd9082bcfd82f2b66c69a46fc8d48e36c381435ecc70ba5ba0df02ae922",
+              "5": "5998581e7976640f3990c81ca9318b1f87dc3cc2083fe6d2c3be701645dac12d"
+            },
+            "muq_mulan_large": {
+              "15": "e6623561ab2d5b391f732dac2265400f62951ea102d8c57707164762d95ac22e",
+              "25": "ca034b4d1ccbd47de6cade9a8237790477473415fd9ad46f8a5e175e66fd5c40",
+              "5": "76ad294c9e6e455fa5719ab49b8ec1e1e6a792bb24dbd9c75b5e1c354cd09195"
+            }
+          },
+          "source_audio_sha256": "960317f316da5bf04d0ce6b78d17b56d0f7dd22a2c3c6ef495658696ccea069e"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "dMJqYdK8QAw"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "dMJqYdK8QAw",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=dMJqYdK8QAw",
+      "spotify_artists": [
+        "Nohidea"
+      ],
+      "spotify_title": "falling down",
+      "spotify_track_id": "0ASYuzPsTBA6ZmIsuvNZby",
+      "stage5c2_track_id": "stage5c2_012",
+      "successful_query": "falling down Nohidea",
+      "youtube_video_id": "dMJqYdK8QAw"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 13,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "8a8ad3a75d66f791c55f135a8f3a1fcdf0236de92d04c60a06547f918ba23e25",
+          "representation_identity": "f9248906c10adec67b45da4b7d3fc4e334cfa9c7dfc78db1ea722f08ab518a99",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "8b76013a21aead5c9b8b4f623e3015fbf28c55f60ba7c2987cba5156a0dd0923",
+              "25": "f3d3e6bdfa14d3871ee5ed16bb6946acf44f8f87411a850221381bce4ab4a4d4",
+              "5": "6be9e06d8739619df803f0056c82d997ddd8ebd5d9b7c779a39654470d0ceb8c"
+            },
+            "muq_mulan_large": {
+              "15": "7e3b2c3c6de16b4dd381677892f023394138f589ab4ae16d56d468c43820b5d5",
+              "25": "20d968bfebde4edbbeab9f7aa3607df5316f50c7fac7e90972d95031ccbd0794",
+              "5": "c632dad9dc1dc711cb3958c90dad3cd65e329c3235b0787b49457b017b17a708"
+            }
+          },
+          "source_audio_sha256": "3ed2b958bf40816c3477ed7d9a4360abdbddb50c3ab9f400c582fc4424bc0b09"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "wzKn7uGBxpI"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "wzKn7uGBxpI",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=wzKn7uGBxpI",
+      "spotify_artists": [
+        "hateful"
+      ],
+      "spotify_title": "too afraid",
+      "spotify_track_id": "1ZhrRS2xY1ZoD2QJ9aZQxX",
+      "stage5c2_track_id": "stage5c2_013",
+      "successful_query": "too afraid hateful",
+      "youtube_video_id": "wzKn7uGBxpI"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 14,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "ea430c3f40f016c5c2f8339d6117e8749c1b6e8d8cbab3823d21e69d6f0ec309",
+          "representation_identity": "3a1d88761ffcaea4a3401ac20763f9215b8a812655447ba410eb384eb7eb9305",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "1401613bc1a21092186888d08ae9a62147b73b31d06e9e9204ae7bb5384f4990",
+              "25": "81e8e0e935da92982fe7cf79dbdd5cc45e26d323f239a7239f321c752be3a262",
+              "5": "ceaffd06e6acaa81d13afedb61c4808c52c7fa8d9866da0969c6fb0d70870e7c"
+            },
+            "muq_mulan_large": {
+              "15": "3925ba0cd9806ff979ca3a1e7bdee6d2018e12b6de54ff3ff33ba9c0d9fa7261",
+              "25": "fec5e4741d50776aa730d7e6b838037a5b967928d3fb1969d1ec6cf2c7fcf6f8",
+              "5": "f591613a13069f98ca4fc0d9f7bf29baf84710d8959fbcb8e6e3a05a042d5fd3"
+            }
+          },
+          "source_audio_sha256": "8e01762a91bcee638fe546a742a05117a3e62bfa27a4dbff5eb1779c0612528a"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "oclnUlduLkY"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "oclnUlduLkY",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=oclnUlduLkY",
+      "spotify_artists": [
+        "Katherine Li"
+      ],
+      "spotify_title": "If I Weren't Me",
+      "spotify_track_id": "5VGDusp81Ed3T9xACRw5Os",
+      "stage5c2_track_id": "stage5c2_014",
+      "successful_query": "If I Weren't Me Katherine Li",
+      "youtube_video_id": "oclnUlduLkY"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 15,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "adcd79e9f8dc2dc66053cb4d4575c4fbcb70e9fe2e24460d6cd12e5a22864219",
+          "representation_identity": "7b14312e7193f42b1d6fd369f7adf2e88e927c626a7de323af9eb4f8914b904d",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "05593920c68ee47bc7b4c98f69282e7ca5f763671bc81bae24e492d82ac48459",
+              "25": "ad37c2577e8bfbe5a99c4c0b4c821b95f2e31576b43105d438fa1733ce4c844c",
+              "5": "bfdfa4f67146848ca7d1b7943c2d1e25393e545d19367b0a614a88766038d7ba"
+            },
+            "muq_mulan_large": {
+              "15": "7eb431af582221e8814514c2dbce43a670e91b4d4841ca2de4a2d33fef243e0a",
+              "25": "101e48b7b047d1562356750ebbca3f4800b5223e246342096b5e440493240c61",
+              "5": "a9dff1592f18b5d3fa445f966e987eb5e7023f9b0b608824dbcd2671af310be0"
+            }
+          },
+          "source_audio_sha256": "68b5d6028cb6864d1f90cc6f1df32800106bf5c83bbe04b4d8fc182b0cec4d7d"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "_sV0S8qWSy0"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "_sV0S8qWSy0",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=_sV0S8qWSy0",
+      "spotify_artists": [
+        "Ariana Grande",
+        "Mac Miller"
+      ],
+      "spotify_title": "The Way",
+      "spotify_track_id": "06EL94D0TA27Ik0Ke5usbj",
+      "stage5c2_track_id": "stage5c2_015",
+      "successful_query": "The Way Ariana Grande Mac Miller",
+      "youtube_video_id": "_sV0S8qWSy0"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 16,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "aac7d6745710b78b957c54a606c616388129725698f93cd0cdd6fe6864e38823",
+          "representation_identity": "55e4f9ac8acf4efb61294afc1a544a8a577c363fac05a3bdebc6417cf18ab9fd",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "0650a576cc8993a176a216df5847c303ed75ac124fed7e5c1f369df9cac6c329",
+              "25": "d683acc17d10e3a411e551000917f0fafc182ce5687f736dcb2f4575836a9cad",
+              "5": "d46fca319c56d96e72d8cf4b7b308d9374cd2b3154600a66a942f8559308fae3"
+            },
+            "muq_mulan_large": {
+              "15": "6a185c2e0c49dc565dc5d2bc1ff5778b698914e57b78fa7e4f8fb771f087a765",
+              "25": "a3537507f5c442e0c8b51f44a33e6ead81d6dad61100eb9b74f0dbf48a531983",
+              "5": "97196a73f63c3bcf77613a0e90e558b7544c86f39a887811d3d8aaa97c4e4308"
+            }
+          },
+          "source_audio_sha256": "6db7cdf49f863031452e5b52f37d17c21998a229b5f110f734a990b032d03cf8"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "Gf-fCJ6TkRU"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "Gf-fCJ6TkRU",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=Gf-fCJ6TkRU",
+      "spotify_artists": [
+        "underscores"
+      ],
+      "spotify_title": "The Peace",
+      "spotify_track_id": "6wm3t4VpTxSFfOUgTMlHZM",
+      "stage5c2_track_id": "stage5c2_016",
+      "successful_query": "The Peace underscores",
+      "youtube_video_id": "Gf-fCJ6TkRU"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 17,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "5ef25f5c5cb5c253f6b8e30ba887e6c1873538f653d4105746cdb3d786457488",
+          "representation_identity": "a75e647349b984a8ca08696ef5cb264c2a21037c1196527681853f48bdf240ec",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "51344ff099b2365d39c8f1f9786be3aeb435c773dc3c886d61d9c02bbce41a08",
+              "25": "d3667573b5cb3df391b07f26e94071b72a78e611e42eec9c0bfa0dbb3100a1e3",
+              "5": "f7d6bbe09770b67e07381e1adf714ea84f881968132bfb8d4f38f9fc3d22b3e6"
+            },
+            "muq_mulan_large": {
+              "15": "57fa0833f16cc247c45ecba4be7e9f90057b2abad6a1b73a88d84257fc737b10",
+              "25": "db20a2bee67d9b50ecaadb2f362acfaa83721df8bcad99ce1674439560abba99",
+              "5": "990899560a4d23c0dd949b19eae0bdee7e8bccd450ffc0a992a21b7f9a866677"
+            }
+          },
+          "source_audio_sha256": "4c7886dd097adc816161262840945f3a95179c4ceb4b35a3b78b2ac96a9b762a"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "2DDPiGHA14w"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "2DDPiGHA14w",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=2DDPiGHA14w",
+      "spotify_artists": [
+        "City Girl"
+      ],
+      "spotify_title": "Soft Static Sky on Early Mornings",
+      "spotify_track_id": "2Ah7oAy4esXD8pEEhY0hyR",
+      "stage5c2_track_id": "stage5c2_017",
+      "successful_query": "Soft Static Sky on Early Mornings City Girl",
+      "youtube_video_id": "2DDPiGHA14w"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 18,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "297576324a88a1d87983611ac4e3da07616da89b4279557fc14aa5f600ce40d2",
+          "representation_identity": "766ce1b383f3284337fe06b1935f19a8d941f315c3df9e5ed2f02e678773560a",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "275e3e1563e55589066d4505fd65ae6907f662615eb7773fb541a7ea4edaae9b",
+              "25": "719018ba87d3e88ec1806aea15f33a47a54bc72e818560053bdb62b309cbe56c",
+              "5": "1798cdec6ca5243f0d1f204f3b12ac818e871d92d7add96c5e4a03b49fdc80a5"
+            },
+            "muq_mulan_large": {
+              "15": "6b1ffb3ada2ebad1ed7a8cfef8b689fde97b528ca6ad8bf81e3bc78ace124c3f",
+              "25": "55ef06bccef0221074ec75e49c6406f37b9927d910436a122aa65d479d3cb486",
+              "5": "1403db704ac18c16a31d7394531f9849d92b10eb68946f75fdfd7a0477f923be"
+            }
+          },
+          "source_audio_sha256": "54ad6186ad8f8614c0f452c00bcba81c848a8bebbadf9fc90f45dd8d53069788"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "usJeKVzoDeI"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "usJeKVzoDeI",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=usJeKVzoDeI",
+      "spotify_artists": [
+        "Kiri T"
+      ],
+      "spotify_title": "Temporary",
+      "spotify_track_id": "1AHtqWqufKsgBmdNEi1WVO",
+      "stage5c2_track_id": "stage5c2_018",
+      "successful_query": "Temporary Kiri T",
+      "youtube_video_id": "usJeKVzoDeI"
+    },
+    {
+      "discovery_mode": "TITLE_ONLY_UNSELECTABLE_FALLBACK",
+      "manifest_index": 19,
+      "query_variant_index": 4,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "d169e6729d630fa28d8105de354659143c13c09f734408b13d0b4c3cfdcc30df",
+          "representation_identity": "12a67fc298f6c5a02653f1e2c6e65bfc2e5d9207964d4a428b7e1158f7f8dcb7",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "6f2205d1c674830d4eb737cdab6417d1432404e035c40b5806ad7271fad22618",
+              "25": "026848bfa9d130dc37a00305b37dfd9185317e2da001e24e68a952b70380615d",
+              "5": "084833261e947ed50f649ca7f25789f6b22c50064c0384acc04d0ab323aa114f"
+            },
+            "muq_mulan_large": {
+              "15": "200f8c5018f87d97751ac734c26ce068f2b45ff1bb9481b20549141927d9ce80",
+              "25": "2dd979915f36828b6a9d145cd12e850601d001b603d1abc8415458c3cf689a5d",
+              "5": "c48497f3314269decce4f8d0f5ce71cdaf9f514a755ecb95669e1600b7919c9f"
+            }
+          },
+          "source_audio_sha256": "5a8235ba9a4ed0c5d4be1b49295822897d209c89e851b969798934a5f68a0cb8"
+        },
+        "materialization_report": "reports/stage5c2_representative_100_amended_v2_supplement_materialization/materialization_results.json",
+        "youtube_video_id": "i4YFngxyJ0k"
+      },
+      "selected_rank": 2,
+      "selected_youtube_video_id": "i4YFngxyJ0k",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=i4YFngxyJ0k",
+      "spotify_artists": [
+        "오안과 편견",
+        "Lee Yerin"
+      ],
+      "spotify_title": "Love Always Leaves Me",
+      "spotify_track_id": "5l45vVLs4JKkhzN0tvkWJv",
+      "stage5c2_track_id": "stage5c2_019",
+      "successful_query": "Love Always Leaves Me",
+      "youtube_video_id": "i4YFngxyJ0k"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 20,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "71d9c10e4ba20bc6b8a461da61d8a4977a51a20119719345a7f4c6e1647e0d30",
+          "representation_identity": "438c34861ba305b81e07eef258275e6991f9e7e97fd2a9c684ad23c5bbb059f2",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "b4192a13289fc1bde91746e1c5d9d5a6d3ca8e4bc7502aa6317a3e011953d116",
+              "25": "6aab81cf99da8506367af89318169fd364d155219f7ce821af64cf5340a944b9",
+              "5": "74543291e748a634482181e954ba342c6ab05204ba943a2a85e2770b765b04e0"
+            },
+            "muq_mulan_large": {
+              "15": "b0e98360f4e2686f328923346e23c1377f6c9b9bb257e4c97c19fb9b668c837f",
+              "25": "9afc850824a44104d40706ff7327b2de813bff91c1bb7d8a227639093a991ccf",
+              "5": "f16e82acbdcc3d3ed0935854d4bd7fb57401ed66c0b70c2b314c97d6f17de7bf"
+            }
+          },
+          "source_audio_sha256": "58718cb396a09b34f9f270a9f2261be0410fff00ac0b3d2bea44da34f3828235"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "RWabpd7ah5E"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "RWabpd7ah5E",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=RWabpd7ah5E",
+      "spotify_artists": [
+        "Yayyoung"
+      ],
+      "spotify_title": "Look At Me Now",
+      "spotify_track_id": "5zfpJXfqGGh94YcStRlI2s",
+      "stage5c2_track_id": "stage5c2_020",
+      "successful_query": "Look At Me Now Yayyoung",
+      "youtube_video_id": "RWabpd7ah5E"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 21,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "2f32ba4e834000b4a3bad8138398b418731f1a661531d9263d4a80ffedd5dbdc",
+          "representation_identity": "f073c2290f58443985f3960c659f257d8986603f792d97f7c2f6c7e13e781cb4",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "87018b42a2344d76dd30efe2f11d3a01dc481695895221282414d5d4f8ebeed3",
+              "25": "79bfaa79a33e4adcbc5b285f195e2019c3d38e85426ed0df13dcef53fb49f63b",
+              "5": "4b2dc3fd0ef76d98b5fc698e845b281639dad6c50f56852e8c837e65cc4dd7df"
+            },
+            "muq_mulan_large": {
+              "15": "0e6cd5227d4dbe794bbd0e443a0dc18269d7a3a4f88828a2f673268279451bc3",
+              "25": "b92f70f7f5ccbe5c0f8c93f74f485492d3627218d223f73fbb1a5b04584f8668",
+              "5": "534d676b517d57e4f005f279232035145b1c73a5691dd2b3e1f7e7ca7641c106"
+            }
+          },
+          "source_audio_sha256": "129c701a40f8e89fcfb693e85539739c22404bd938ce5efe05fdf3d87e091fa0"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "eCGV26aj-mM"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "eCGV26aj-mM",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=eCGV26aj-mM",
+      "spotify_artists": [
+        "J. Cole"
+      ],
+      "spotify_title": "Wet Dreamz",
+      "spotify_track_id": "4tqcoej1zPvwePZCzuAjJd",
+      "stage5c2_track_id": "stage5c2_021",
+      "successful_query": "Wet Dreamz J. Cole",
+      "youtube_video_id": "eCGV26aj-mM"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 22,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "905a7f2206dde7d4ef4cff88baf96d816445bf11009e0144c90a3a2bda9c04ed",
+          "representation_identity": "61da9a850f6713d1dfd1cf1b9bf413d595dee463cca0828c652d9140e60b9591",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "65c18bcc345ac825fcabcf8b68dd09991a530ad7a4c7be9954077cd7713208cb",
+              "25": "808847eb2b88c23b840058ba946d1a60ed896e1fedb3b24314dd961d2c304c1e",
+              "5": "f83a0635a9b9c0f7432a0a676df3d86cfab072fca38e285caaff9d7e37825426"
+            },
+            "muq_mulan_large": {
+              "15": "0e9d290886183b04d6400f8decf09b1c9186a581370f6ba211eebcd09fe20748",
+              "25": "211897103d4e83eaa7a99ae48b67247d473abc895d6da1982cba687723e1c82e",
+              "5": "f9d0bbfd931a5dc42303182dae32572c6cb82db1c1eca6a0b4b4278cd9f6e1f2"
+            }
+          },
+          "source_audio_sha256": "468bd3e6dc639a79fe658336719aa0079b217a3bba775f5c7aa506dd12508509"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "K-VoheJSUd8"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "K-VoheJSUd8",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=K-VoheJSUd8",
+      "spotify_artists": [
+        "potsu"
+      ],
+      "spotify_title": "for what",
+      "spotify_track_id": "4B8L0sByBRJRUV1Uot2Ebd",
+      "stage5c2_track_id": "stage5c2_022",
+      "successful_query": "for what potsu",
+      "youtube_video_id": "K-VoheJSUd8"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 23,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "b06fecd6953ce257a142cc1c9347e0fc9156cd41c439ae5632f87001dff487f1",
+          "representation_identity": "06d31d68b1e53a75bb9b094b5889e4bc291662980395e81ceb8bdc3df7f4a92e",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "752f7950d701db67f84a4523cc6761d9b769112d49dab6cb12f13b50770bc4c0",
+              "25": "cf10c63637a38469e61e32b8be045e4fb63dd93cb18a2d793f12e396b3b3190d",
+              "5": "861ac65b9ff45acf2a2387588e293c305f3c2fdfeae04b155d6a55275e2739d2"
+            },
+            "muq_mulan_large": {
+              "15": "c760e6736a15989d66256d98e78b138f4fbbffd8e7d48605702fc140b33c2e83",
+              "25": "eb1879af310292c3c7a747bf27d2887db394fee8badda3bfaf0aa71baa8d4922",
+              "5": "7924321bb8a3c4664619adec18288ce30c588ff16e2527f4c8647cd455ef8f07"
+            }
+          },
+          "source_audio_sha256": "72361d0a4d4538dd089280445452d42e514bec556c488f3282f6a30423bf3545"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "qB1kJUjPrVA"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "qB1kJUjPrVA",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=qB1kJUjPrVA",
+      "spotify_artists": [
+        "sagun"
+      ],
+      "spotify_title": "I'm Drunk And Confused",
+      "spotify_track_id": "6ZGqVXaJmhbYAK2DF8mWRR",
+      "stage5c2_track_id": "stage5c2_023",
+      "successful_query": "I'm Drunk And Confused sagun",
+      "youtube_video_id": "qB1kJUjPrVA"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 24,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "34032e772df8e2415469716b6ea29083978453178bb8d1ba09ca17970a2a8756",
+          "representation_identity": "c701a6e5f7027e1cc1c321f68351abca2d8f08d4799be2425775ae6ade530bf4",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "0f4fed21067a0e128db855bea4823fca925bd361a52343a5179a635e7a9c235c",
+              "25": "5a961489785e3ad0846bdeb4d59105c4976510cc6c6065ef87cfb9eb6ee3d834",
+              "5": "faf92282d308aacb1ed89d51b9658700306c975730d473c45c8717878f43415e"
+            },
+            "muq_mulan_large": {
+              "15": "c6177a685f4998223d37bfe0036b7c8fce0220a54581b43c6382e99ebb9c05bf",
+              "25": "1df873e6462c5bd231ed4b63d1a45f50c229a2a7b1ce0841300a9abe0eec5dfb",
+              "5": "b6402d46785ca2eb69d613c0694273adb2a578ed5381bf67435d044c11cce224"
+            }
+          },
+          "source_audio_sha256": "954ff8dbf9a493bd0f0c493f1f32db359e785b73d5286ac5a29d161ce415a9c7"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "h7rGEtJeaHQ"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "h7rGEtJeaHQ",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=h7rGEtJeaHQ",
+      "spotify_artists": [
+        "Dontcry"
+      ],
+      "spotify_title": "Jocelyn Flores",
+      "spotify_track_id": "0WJxkgYXRoOxFb4Vq3Ddmg",
+      "stage5c2_track_id": "stage5c2_024",
+      "successful_query": "Jocelyn Flores Dontcry",
+      "youtube_video_id": "h7rGEtJeaHQ"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 25,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "e8abf083df792fb3dd9a2b43cf5629fa6e1be1e131e050928fd24d30b9750f6c",
+          "representation_identity": "975462a2dea02e9f60111745405e51cd7491e13eee8ffc9ba15bd2623301ec2f",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "85d6fd9c6dac69c6be35893ded31f627c01e8f4314d52a4e839921f2d389bdd2",
+              "25": "cf0953859db1c2a38583cbbc38e8fe024d065b087030ada87c5570eed44b5256",
+              "5": "8c9bc4b696b22dc36fcbc1708b055579a5892310f630d9e07ba3a16ec1284465"
+            },
+            "muq_mulan_large": {
+              "15": "499abe1473c530394bd95e114935f83c1a0b8cbd580bcaebf10f25bd7f2484ff",
+              "25": "fa78f926fbe1339e1cd0347f7d682385ffde87e9dc9ca946eaf4215944565918",
+              "5": "8e24d4b0de1bf5d96e2452fff07c601b37f20820583ebda5744df41531068ec9"
+            }
+          },
+          "source_audio_sha256": "f7bd403c79468d35b41d55385e39515d894e4898dbda9a7054ec10bf941754a1"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "bEEX-Ya7scc"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "bEEX-Ya7scc",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=bEEX-Ya7scc",
+      "spotify_artists": [
+        "Yoandri"
+      ],
+      "spotify_title": "It'll Be Ok",
+      "spotify_track_id": "2YO6ZDPdQFkrOa6YYceEN4",
+      "stage5c2_track_id": "stage5c2_025",
+      "successful_query": "It'll Be Ok Yoandri",
+      "youtube_video_id": "bEEX-Ya7scc"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 26,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "31db4fd2bbb50a7c4d626fb1bdc211aa5e22d797b2f7c4b5ee43eade9e7790e8",
+          "representation_identity": "8ce8d43925d355b805fb90f4d82d671ebac65f111a403755af3925ed5fc80509",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "f1c45a1eece3191cf67b8405dc9fad108e5ca85c73026c9c9b3b1cd779806bac",
+              "25": "16a0f9e0c908f3e9aac01fec7e8e40c60f537fc42c560478c9e3b128b6310267",
+              "5": "b35e58f0dd2ea3a34aef2fe6133b1a35d8594034e153af50ed36709045ad9b8f"
+            },
+            "muq_mulan_large": {
+              "15": "de52126bd50dbaffb5cd2c806693cb02d16ba6f624d17806b2a4b7321f16d8e8",
+              "25": "10e801eef83ae2799fd6a99cbe7f351466a2431b5491a0962b46aa982e2fb558",
+              "5": "290f1bd529092af3e7ce3b54cc68866fb3d1f3088e36938214b9e9412f1f8f46"
+            }
+          },
+          "source_audio_sha256": "d713bfd5c175e39724087ef89cb5080f33a163258b8ec46f09e031a5d31081fa"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "ijLNC2OuyuM"
+      },
+      "selected_rank": 2,
+      "selected_youtube_video_id": "ijLNC2OuyuM",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=ijLNC2OuyuM",
+      "spotify_artists": [
+        "Yayyoung",
+        "Sojou Kim"
+      ],
+      "spotify_title": "me2urs2ours",
+      "spotify_track_id": "6B9HXnRzmokTTxZNdV5T48",
+      "stage5c2_track_id": "stage5c2_026",
+      "successful_query": "me2urs2ours Yayyoung Sojou Kim",
+      "youtube_video_id": "ijLNC2OuyuM"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 27,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "62f6c6c388ed06aecba19232e39eaad723009ea9bc95a373fdf08f98126183cc",
+          "representation_identity": "225e3beb417bd53e1982a9b9fdebbc338631ec659b52e69c68374dc0191e8492",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "d5564d1ddf4935a66cdc8aa4334ee5dd23bd5a67ec8c865eba91781c42a2e660",
+              "25": "2656db45f1600b3734303169e9686eb026a9c0db8c7bfd9955fff9f302739890",
+              "5": "dd75e21d92897d05cb464deae14cde984d949d1bf3135c31d4eeba8d8dc3245c"
+            },
+            "muq_mulan_large": {
+              "15": "fb7d24253c845807b7262014a39f27cfd274f8932f1ec7e114ad4ebe73dba6da",
+              "25": "ad1868da31241d7cf784c9dafc18f4fc935fc2a5d892b985fd0d918c228b20e4",
+              "5": "b2b8e91b2f4214e2e40d0eec491220228ba5e33d883cb017fe0581eda968fab8"
+            }
+          },
+          "source_audio_sha256": "e616e01221518ec8f67576ac3327f95cffa1a292c2a6ba1bbf6ca2822b6d18f3"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "k_5LIwYVmfg"
+      },
+      "selected_rank": 2,
+      "selected_youtube_video_id": "k_5LIwYVmfg",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=k_5LIwYVmfg",
+      "spotify_artists": [
+        "GFRIEND"
+      ],
+      "spotify_title": "Season of Memories",
+      "spotify_track_id": "7LFwi4RolcCPnVEXXXVfQP",
+      "stage5c2_track_id": "stage5c2_027",
+      "successful_query": "Season of Memories GFRIEND",
+      "youtube_video_id": "k_5LIwYVmfg"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 28,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "52a8f8f96016dcf8e58858aeef79bea1d3a56dc5fbd98cdfa9f2dceab322cb5a",
+          "representation_identity": "55ba26da7c53b173047604c0a3f2e3f782fc63d073c151525c741428a928066b",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "107cd271cd68408ba3df916ee1be77108698b6c94ec98d63ca3c5f76ef0ea513",
+              "25": "fe9dbae0aaf7701d2b328e5236f814234d95eda570145e2a93495f6cd37c8cdc",
+              "5": "c64894209898a3d1e301a23010f03a2da470cc33cf1a8516d271023ec5e09120"
+            },
+            "muq_mulan_large": {
+              "15": "446e1655d8b0dd4d4bee2f746f29e57ef858bd0be22398c284194976837793a1",
+              "25": "521e9e8d45ef17c1bca92eab2110d831823f53540340ff07de1c3f5433bc9b33",
+              "5": "5f5237d967ad2c41cbdc0bbe4545c2b0d75a2fe5646e44aeefa5e19678a7e262"
+            }
+          },
+          "source_audio_sha256": "e3dde6247ae61603a2fcc015cbcea2e7eaef8d1fca9aec045b9f8fffd7d641ff"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "hc32lb0po9U"
+      },
+      "selected_rank": 2,
+      "selected_youtube_video_id": "hc32lb0po9U",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=hc32lb0po9U",
+      "spotify_artists": [
+        "NewJeans"
+      ],
+      "spotify_title": "OMG",
+      "spotify_track_id": "65FftemJ1DbbZ45DUfHJXE",
+      "stage5c2_track_id": "stage5c2_028",
+      "successful_query": "OMG NewJeans",
+      "youtube_video_id": "hc32lb0po9U"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 29,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "835c447752fc5965a20270cf04e1b4a4149424fe92d16c2d6015b1a696452325",
+          "representation_identity": "b280228f6ef3c89145749ccf0cbf6d24d3d0f4301c12a3988be3a424bfa84920",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "148b6e82026c220785ceaa348b513376fd9b2177253c03e8ab2a7de87d4fa565",
+              "25": "81c67a2d34668d2d234ee1b32d1a18b9e6b4dcf7dbbb9df4446bd64f22d83f8f",
+              "5": "46cdb331de9df176110baff6942f99cab0869c151289c7f8f5eff8ff3a34aeff"
+            },
+            "muq_mulan_large": {
+              "15": "5ac0f757a59b16ab4cc98833ab393dcc56fbc12b9876b0d2a363a6342df78c5d",
+              "25": "0c6304e18e2339d63ca2002846325fc7397f445e8bca209aeede43e78480631a",
+              "5": "709d747b2ac5fb3770f4dd515a495a873f586ac7794348e388e44481d85bd577"
+            }
+          },
+          "source_audio_sha256": "895847b5503cfdf4f10732cf59829848b30b27b93b2108a77f629f200da53336"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "AnijqH5nRmA"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "AnijqH5nRmA",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=AnijqH5nRmA",
+      "spotify_artists": [
+        "jrd."
+      ],
+      "spotify_title": "Stay With Me",
+      "spotify_track_id": "02CCi0N3pMK4Rjxq5e6UmE",
+      "stage5c2_track_id": "stage5c2_029",
+      "successful_query": "Stay With Me jrd.",
+      "youtube_video_id": "AnijqH5nRmA"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 30,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "ed38e2e6f2f8f91dbb5a72d6df2a3f2447bb3b2881fced9cb751cf36427c854a",
+          "representation_identity": "82eea2658c23793139e9092dfcf1273a8c7b2fa167449babb4b79f6acb8da413",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "125ff18c32ff8a4cdbdd8f725e0c1d3e839291e9e5b15040f0602de7569360df",
+              "25": "28f159ff83628b965bdfde1cab2057691162592403c9680061833cc57817b450",
+              "5": "141c336b9b6b4f05a0c57d68abc2c9092f2c96f552b5849fe1810389fc8a7cd6"
+            },
+            "muq_mulan_large": {
+              "15": "6b2a63b48cadd9856ee82694f083d2b233bb26ea3761dc48cdaafac51105244b",
+              "25": "2594cc186b59b69b193fe7cdc8345bef3f09d428b8fe69fc1d3118a2de3d5c70",
+              "5": "5a717ded5824b95387738094283fa8073defcff2cde38d7896f05c0956ceb63c"
+            }
+          },
+          "source_audio_sha256": "014cc8cf79eb83e7f5c367694b97efbb5f05b9a8d2c7781a3d0e89a4ede9cdfb"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "DzP5CcMnaKU"
+      },
+      "selected_rank": 2,
+      "selected_youtube_video_id": "DzP5CcMnaKU",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=DzP5CcMnaKU",
+      "spotify_artists": [
+        "Weston Estate"
+      ],
+      "spotify_title": "Stoked",
+      "spotify_track_id": "6nef0wHkelfKqNVHAtzJbR",
+      "stage5c2_track_id": "stage5c2_030",
+      "successful_query": "Stoked Weston Estate",
+      "youtube_video_id": "DzP5CcMnaKU"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 31,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "9df5bb9a5ff55d0c744ec5579a06db117ec3551984bea4b0691596a88baa4128",
+          "representation_identity": "9db5ed73683e267c4c77b1332d7ce1fcbbc556ec48e3abd64c3feb6507dd8bb3",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "0a6a49e53cb6a2863950237b0bec8cb5c1c56e10e6e20daf22771380415abd9f",
+              "25": "2652aa3a69e26586e4793c19c68184c85a407b3d598ce916c2e9125e00347d6c",
+              "5": "4955fc1e8e1a8d8f39251b1674d82a6fc42c9be724ae59691455bb3f7448cd6d"
+            },
+            "muq_mulan_large": {
+              "15": "00690d02e0f5652223e8f4b9d60a02885691cc7695b054e2da53688ec1852348",
+              "25": "bda86891762a7e5533a5c2862e95fdb6b1ed38e31e9fefa92ce23405a1f92856",
+              "5": "15f1c4b63ca739210fabbecf2fa513ab5a3e376cc6de33ce3c36f4877fe359b6"
+            }
+          },
+          "source_audio_sha256": "f5bab4cb6cd1ab5b480e9dd048f6ecfcca40c5197830eaf6c5c324289ce18d3c"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "-EN63cmt6Gw"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "-EN63cmt6Gw",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=-EN63cmt6Gw",
+      "spotify_artists": [
+        "CHAEYOUNG",
+        "Gliiico"
+      ],
+      "spotify_title": "DOWNPOUR (feat. Gliiico)",
+      "spotify_track_id": "1IIcy1TpuiAT6S206OjYvC",
+      "stage5c2_track_id": "stage5c2_031",
+      "successful_query": "DOWNPOUR (feat. Gliiico) CHAEYOUNG Gliiico",
+      "youtube_video_id": "-EN63cmt6Gw"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 32,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "96af1db6bb4198e152a272c5bbc9298c24e707b6cbe64279d7c2f29b2f3785bd",
+          "representation_identity": "ce51727042b2dc69d83f45ac9928744d60238631599ad1032da1ba481eb8163a",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "a4f0107cf699c993367896b339e1b09b63927ff3adb70761c68513b7b9cc2524",
+              "25": "5177fb87450c3bd6a6f517391be3f3986a685643eb6d11e2e5201538c8703c2a",
+              "5": "bef025ae9c1f6c4f0df16cd4a1dc8b7e02192c42acf9d633759ec307fc54907d"
+            },
+            "muq_mulan_large": {
+              "15": "3a73c8601e03449c31882b58c55610a1a2400485620b2b1c2908296af1cfbd4e",
+              "25": "c0e9b65684572d2cfd1310ecb24c7f393689468ca5da1526e33cfdcf18f21354",
+              "5": "98e826531553951bb77ad6f4d990de8cd079bc47523e639c0ac0d0420bd71e82"
+            }
+          },
+          "source_audio_sha256": "6e6e5aa2037d949275580e4bff9e9237185074240aaef781dadfe864109a3420"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "jFCTQ68gxoY"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "jFCTQ68gxoY",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=jFCTQ68gxoY",
+      "spotify_artists": [
+        "Gracie Abrams"
+      ],
+      "spotify_title": "Hit the Wall",
+      "spotify_track_id": "1U90UBmMrQTx9GNweUA4LZ",
+      "stage5c2_track_id": "stage5c2_032",
+      "successful_query": "Hit the Wall Gracie Abrams",
+      "youtube_video_id": "jFCTQ68gxoY"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 33,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "c9b7e795ea5629b973a350a566321fa0e83c8f7d465f023ddbc8abf0e76396ba",
+          "representation_identity": "cffee22704eeafbd44ab83d32d892bb839de3b4613340e34a969f877ae709d20",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "b3611a0d81e493de49e5ce33f05a2a7bbb29bbfd5bec6c8d7f73ee49bb63be92",
+              "25": "d59155095b7158b77fd96a1ead0024d5fa5b543b73a710797e9935152239b436",
+              "5": "53c6c3f1e9bded1ea633ed4e3c9eabaee4f9f708b367da33565333a7b2cb7dcc"
+            },
+            "muq_mulan_large": {
+              "15": "6475bde869da45a32898f7fbadc0772f70ef4467183900e676c555e4aa2dabef",
+              "25": "e5150740b2489bbe5d6c900e8f6a86514229e71fd7d78f12a2966263a3934443",
+              "5": "5a92b9a168c18b365025ef6ba2caf5e95bd45934b050d93dcbbcb9264fff44c9"
+            }
+          },
+          "source_audio_sha256": "0a88d1c2e298c944b99584e4e7fd6911a8bdc7d1d372a16a10e8092e10bc9286"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "NN90EGrioFU"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "NN90EGrioFU",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=NN90EGrioFU",
+      "spotify_artists": [
+        "Nana Ou-Yang"
+      ],
+      "spotify_title": "1-4-3",
+      "spotify_track_id": "3aFh82SrVntBmW9Lx0Gb7W",
+      "stage5c2_track_id": "stage5c2_033",
+      "successful_query": "1-4-3 Nana Ou-Yang",
+      "youtube_video_id": "NN90EGrioFU"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 34,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "94813575485304f63be4bf29659d88f69b0b44a5ed84214c7bc7016311299578",
+          "representation_identity": "acc497d8e48b51a005e6c6160b45b845566afd5ea82873404f819170627fbf37",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "d56ed0a32eba777edd0edaeba24093160e136b2ae88a7a1a1620ae82a65b0804",
+              "25": "af362b1d10686328f16bb0bf33aaa018c0a3c27f56c8380f0f35add1fbb27e48",
+              "5": "c40e5067f1b09ba9e51f07a42bf8bc655262d00fdc3324746bae07905ef0db8e"
+            },
+            "muq_mulan_large": {
+              "15": "2e944b66284f5a3eb200c0de07e29f0beadf7159ce6d5fdf9d1cd07189c30ddd",
+              "25": "0beeb7c41ec257effb42c590495fa1621a3860a2a83797e926486bb2d1365048",
+              "5": "266bdcc7cbc3d7ededbc41ab44037a6ad4139c6249493965a56960ca3e701a91"
+            }
+          },
+          "source_audio_sha256": "e58f84a7493f7ca2cc5a3fef59ffd7a31f9d964d94bac7b55c27d7aa426edc71"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "acLkEhCBt1k"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "acLkEhCBt1k",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=acLkEhCBt1k",
+      "spotify_artists": [
+        "hyejin"
+      ],
+      "spotify_title": "Tell Me",
+      "spotify_track_id": "40TJl2hLf6Sr7K1a2SkkVA",
+      "stage5c2_track_id": "stage5c2_034",
+      "successful_query": "Tell Me hyejin",
+      "youtube_video_id": "acLkEhCBt1k"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 35,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "52b0f53ce3798c6d8315fe84a9496f3d5836562a66953dc86b1c771202e4d8c7",
+          "representation_identity": "b5b3cc845b7ef6f1ab583b06d6427b5995d2cbeeb7ec4fd16598b22a3ccd5621",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "043ef4a023517f08baa82bee416966cbcfdc14f82305ee31231f8b76ec27a058",
+              "25": "89530304077ef57426a1ff0da07ac4ed05c64fca9126b67ca1df850932fdaaff",
+              "5": "fe17e257b4d92550253a16261ade5d931ed8a0a73187178dc14911c6cc058215"
+            },
+            "muq_mulan_large": {
+              "15": "0a15b0d3e02b46812d856e4e1adb67037bfa96604d052d1e0d82fc11568287ef",
+              "25": "3e180023e5bcdcfd87e86360256abe69da814a0e226fb1c70be596d9b38ed0e7",
+              "5": "626765789526cfd82be0ad9a4ee8fc4c19d14e5930cedf13187c7b2bc17ce954"
+            }
+          },
+          "source_audio_sha256": "2804e4f6a4915305dfc796a5a7c76b837798790d6c824086a1c1475929500b10"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "CcgppPtVwPs"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "CcgppPtVwPs",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=CcgppPtVwPs",
+      "spotify_artists": [
+        "City Girl",
+        "tiffi"
+      ],
+      "spotify_title": "Sit Around",
+      "spotify_track_id": "6pWqlKm9ugucgKNldCLigX",
+      "stage5c2_track_id": "stage5c2_035",
+      "successful_query": "Sit Around City Girl tiffi",
+      "youtube_video_id": "CcgppPtVwPs"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 36,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "3e79b39b3846dde1dfe669a89116a9d1086bdeec8d6135f3ba8728078da5cff3",
+          "representation_identity": "18d9655f4a1ebe83c683c72d2e4ab3a44978a44d01704668820383fe0a41e7fe",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "0fba9a6af0e4c90b1d6530ed9abdc62e7167b5fae61f60cd63fe9fa9d7c73b18",
+              "25": "9e341776d792a6aeb76ab3c2432f5c0012490d82e6945b80f5839bfe4e94af31",
+              "5": "2e4db74d3cfade619a77922de2597a455cd4d5c6689fc9aaca46c0a7a44451f9"
+            },
+            "muq_mulan_large": {
+              "15": "e440ece2bcbb1fa6331530ded85eb5cc58e121f0b21f4e19f4a60a5ea02614f6",
+              "25": "b44513f642cc154efb82872849776f974f16038b1f45c5e35f2f2beda090fd4c",
+              "5": "f8de1a4a815640198589883f8a01c19c3a14b213f8b636f53001eb34474b4013"
+            }
+          },
+          "source_audio_sha256": "bbbf4ad69e0089977176cb0b29747e5ae0c54a107ddeba9bf3737dc81a89d9aa"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "tz8QB1ZH5sE"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "tz8QB1ZH5sE",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=tz8QB1ZH5sE",
+      "spotify_artists": [
+        "HYEJIN"
+      ],
+      "spotify_title": "Cloudy Thoughts",
+      "spotify_track_id": "70YbAV2UKPee15B00RbPcT",
+      "stage5c2_track_id": "stage5c2_036",
+      "successful_query": "Cloudy Thoughts HYEJIN",
+      "youtube_video_id": "tz8QB1ZH5sE"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 37,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "bc046574ac77c0f5a3326bd8d31dd44fca2887a3dd6755fc619797ee58855690",
+          "representation_identity": "bc3683e899ee2cbad4aeb72897156887d23a0c2d7a4363f4547f26ae5b44fa6e",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "37663f9a59c690c58225d8a78bd86c5fa14e5e6d42ae50edf444b6c4bb31a23f",
+              "25": "2a7826e37fe222bfd331f52fda880517a089ce96486859edfbfbf538bf204367",
+              "5": "6f71cfce7bc4e8fcbc76f1d64b6d0cc7b8cf373708de4e008029b000be370f3f"
+            },
+            "muq_mulan_large": {
+              "15": "3262e2658fcb4497e6183e76c08a322f17363c26de29492d86ff26506b619c83",
+              "25": "4239f5253669b67556e6af12bab8f2ca0272e016d2cd2aa1ce9e2401b3cf2f8b",
+              "5": "913d83ca092870d05dd22a230d29059666699df16596f9fe9522b8ef341af2c6"
+            }
+          },
+          "source_audio_sha256": "37c4ce5e97333b263ecd83e913b0fabdc92d7037aeecf6c6d104b9258df1381b"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "vwNr2woNsG0"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "vwNr2woNsG0",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=vwNr2woNsG0",
+      "spotify_artists": [
+        "Disvstxr"
+      ],
+      "spotify_title": "Tea Time",
+      "spotify_track_id": "5sEeuhYWHNczuPKek1zJeG",
+      "stage5c2_track_id": "stage5c2_037",
+      "successful_query": "Tea Time Disvstxr",
+      "youtube_video_id": "vwNr2woNsG0"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 38,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "aa80798a3b78267b05fb69cbdc0e7484cd004f627f4377a81351436d7810a453",
+          "representation_identity": "eca0b618a5302d676b0e274f09f47035fcd7e43ecc4e6a9b4858f5a1afb67a5f",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "7431ddee8a8dc7d41e6de2e0cefc852085bd521540ff83278215b9f68201b428",
+              "25": "d8c3915614bf99ab7d44c680b2586b088bb0b972f4ab6d928d4a8ac9076cf555",
+              "5": "1d8cfa567909c821ea37d14f525fe201977ca03156269a616305ccc26296e1e0"
+            },
+            "muq_mulan_large": {
+              "15": "881c9927d6cc8ab133cd0bdcc6c899fa0f38d495567f08ca4658859efab1a507",
+              "25": "045562e3b809d72642a5da2a60ed1c3d35fd6ad3e60bec24cbed7f8940512468",
+              "5": "c3c745ac4267b5b838b185a2baf287d00f7a2a8b30521debb3a65d03d48bf2fc"
+            }
+          },
+          "source_audio_sha256": "e0fff6c3b8630cd818a1f7061b25031b130f56b0592631b85adba9a3917b37d9"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "q-X67J8I8Ik"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "q-X67J8I8Ik",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=q-X67J8I8Ik",
+      "spotify_artists": [
+        "jeebanoff",
+        "sogumm"
+      ],
+      "spotify_title": "We (OUI) (Feat. sogumm)",
+      "spotify_track_id": "043ryKJlgSnAUzpXnfxU6b",
+      "stage5c2_track_id": "stage5c2_038",
+      "successful_query": "We (OUI) (Feat. sogumm) jeebanoff sogumm",
+      "youtube_video_id": "q-X67J8I8Ik"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 39,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "e4b9888ec2b4a972cc8f7c3011ac8bdbc73f71f93e9c9fc40720fb63beccd98c",
+          "representation_identity": "dc63f9ad062b5b0ee51b9b842a2dbf4ec9c5320f078fc22ad3983f867aa45642",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "64c8253875b5b86ef122c909e3a658b368bc07eb1fecd8257a69c683cd98140e",
+              "25": "33056a600ff9990fa195724f505a0f946ffde84f1cc4e94aa9d0d9a53519e8cb",
+              "5": "402d30329053492d507f44feb0d1b8cb80d699cd37a530032b9b4b869c30eed9"
+            },
+            "muq_mulan_large": {
+              "15": "960290e94e7ebdd1465d6e94ac9381a71f596a2c75b67f0162508f926174a0a0",
+              "25": "d85390e1d670fddd93225fc178509388bbbe3b830641ca0d63b4f9deaeff72c7",
+              "5": "b34aca5c623c7a21710c5a1b3581b4095e355e510b57fd98d50a287cb9b5df88"
+            }
+          },
+          "source_audio_sha256": "c6ce86565e1683d6b73d48c21b4f7451c5670d3a10b3d58570eb09703840252e"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "Lm54QUV4Dt4"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "Lm54QUV4Dt4",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=Lm54QUV4Dt4",
+      "spotify_artists": [
+        "Teqkoi",
+        "Snøw"
+      ],
+      "spotify_title": "I'm Not Enough and I'm Sorry",
+      "spotify_track_id": "4P1L6AniTDJzANaubzWGYs",
+      "stage5c2_track_id": "stage5c2_039",
+      "successful_query": "I'm Not Enough and I'm Sorry Teqkoi Snøw",
+      "youtube_video_id": "Lm54QUV4Dt4"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 40,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "6470eef166df54e84e0eb90addcc1f945509e77938ee6074ec5d1a2dc52053bc",
+          "representation_identity": "2c41feae105e3f76c3e662015afe97905f5af93510ebd28dad158c022364a69e",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "e64803251985cffdaea4b0d906c46c486fa6c89aabc037d5e21d25a2a0a3a144",
+              "25": "c747d2ef0f4adf8c3559a3af9ecddc9a3be9a3d13ea37881aec8829342f9c112",
+              "5": "52499ac1f8ce973267b0854429c03e17a48b4a0af3bac78b1e22b72f1885dbca"
+            },
+            "muq_mulan_large": {
+              "15": "20e42807e69736439dadf57b31935dd1e4a881401786d5de7b77eb3636ae8ddf",
+              "25": "85ca10de3c91f9cafcf74ade36bae6d53c74c91165f6b12c081fbf82e0f41761",
+              "5": "ef5e3ea373464e8acde32163260bf7f214d78615f4bab0b649007761f27d27cc"
+            }
+          },
+          "source_audio_sha256": "eaf0a3bba14efd7323914d44bb59e087bce7b04225a280c6552e1661b4f6e0b4"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "jfDu6KZ9O4w"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "jfDu6KZ9O4w",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=jfDu6KZ9O4w",
+      "spotify_artists": [
+        "Luke Chiang"
+      ],
+      "spotify_title": "Shouldn't Be",
+      "spotify_track_id": "7F6PtLP6fJPVtA1FWVkl8K",
+      "stage5c2_track_id": "stage5c2_040",
+      "successful_query": "Shouldn't Be Luke Chiang",
+      "youtube_video_id": "jfDu6KZ9O4w"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 41,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "4f4e81be9002bf6ea936ff3d00f66f5ed397768da9c17804098c40f8a6f21244",
+          "representation_identity": "62c02181e65a0be6371b319fa3f38f2e88db8462ac49896445d08d4f4eb73e3d",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "23301edb11b8c89440d40d9768c055876d118e0bb2b3f919f6ed01b81aa5fa64",
+              "25": "83a291c3fb2254b3307221c9baffb6ddc460afabcb481650d15458028c289f02",
+              "5": "f062dc4937468c5ef63c8a910c81a8e6861728a9912b7061ce4c802c3ee246b1"
+            },
+            "muq_mulan_large": {
+              "15": "ca3e16e90d37ba019d87f2b79fe9aef1fea7e1726af8a1db206ab5dc5907827f",
+              "25": "7631049cd1200f591cbc094d9f1b70c3dc3812d8c33748d11e693b4da8fa6a27",
+              "5": "7485168891ce67a76ee6eef506fd57706fe2d4dd41417316ffa34af83b8da2b2"
+            }
+          },
+          "source_audio_sha256": "cb0a9bdde70cc4968f23efd004f29a611dfb735d31010ab1aceec9b18a4ba7db"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "21Jz5U8iOAw"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "21Jz5U8iOAw",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=21Jz5U8iOAw",
+      "spotify_artists": [
+        "Mingginyu"
+      ],
+      "spotify_title": "Dear My All",
+      "spotify_track_id": "2X71ww8wImSYbw4s0Mr2ur",
+      "stage5c2_track_id": "stage5c2_041",
+      "successful_query": "Dear My All Mingginyu",
+      "youtube_video_id": "21Jz5U8iOAw"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 42,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "2e4d218199313d417605069a78927bc103c6b85019b3d31069b740908dcab7c3",
+          "representation_identity": "5beed63248f4684ba017358e014a7172920aa26affe7a898736c89e4d7d28349",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "c2eacaf0ab7c082d0e2a46a6a46c179fe787025d0d1874a24a2808508d7937c6",
+              "25": "20842cc5b0d5e93e1b927630bbafed0086ede87895f7f6fc8c277c095b121355",
+              "5": "14fa3477fc5c4bae8b4963e0bf2f6bc2c3bb0e62300b91036c88f73d1dfe3e89"
+            },
+            "muq_mulan_large": {
+              "15": "7667b634c34e46f74f7aa59003d7c0e06be3e9781de7355cbee772a84d2db6ce",
+              "25": "d39f80993f531c9f126933f185e4e4ff9ee15b4c07b76be34d4a8cb060832023",
+              "5": "83fd2b0c5ec385f01f374b4d4d2b078f32c3ea014c844e281dda11c0a2871c0c"
+            }
+          },
+          "source_audio_sha256": "063a3041b57fe3a0504e3aabddcba2dd518f5382e609801ba609675125f85e9c"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "BNWLAkFWy0w"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "BNWLAkFWy0w",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=BNWLAkFWy0w",
+      "spotify_artists": [
+        "Tiffany Day"
+      ],
+      "spotify_title": "CLOUT CHASER",
+      "spotify_track_id": "5aawFqyuCB3K2P8KQvhFVs",
+      "stage5c2_track_id": "stage5c2_042",
+      "successful_query": "CLOUT CHASER Tiffany Day",
+      "youtube_video_id": "BNWLAkFWy0w"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 43,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "6cfa6ad77a8cd78f9c724ed8f41d9412315967d5fee155175ad7221ba5f08717",
+          "representation_identity": "572927579885d212d788e910ff63b67ce43a95fe749e7e0d45bc6e77d7077d17",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "12089eea62ab6c3eda9d1f5337ca20b78abb3f4a2bd765cf190c6285bb8329bf",
+              "25": "bbb63d49cfca69eb36673f99c4dec79785f4ab366401992867e6ce2a3b62d756",
+              "5": "360cc79f12fdd1ec020d0c6b078a274c24bb283b3bb0320528bbed78975fa962"
+            },
+            "muq_mulan_large": {
+              "15": "fb33864a9c924919d995a4d22c4662ad0ac02a0dfdc2efc635ff801ccb4bdb17",
+              "25": "f43009475778ac0d326bf7265a4b333513325f60799ee1492d0d74075863f538",
+              "5": "b317fb70a23938a699bb73c6c5f840db0f76b1d164159ce7620806f1b070d00b"
+            }
+          },
+          "source_audio_sha256": "81d273bfd714b37b7c7e4396b91c3597aa8acb0d28cd730928450bca287844cd"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "e3XBVbHn9qM"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "e3XBVbHn9qM",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=e3XBVbHn9qM",
+      "spotify_artists": [
+        ".Uzu"
+      ],
+      "spotify_title": "My Gamecube Broke.",
+      "spotify_track_id": "2Vu2hkPW7LxMHPqoMjSIEJ",
+      "stage5c2_track_id": "stage5c2_043",
+      "successful_query": "My Gamecube Broke. .Uzu",
+      "youtube_video_id": "e3XBVbHn9qM"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 44,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "9be049b79f335811f1a53df242dd5fd38827933cc4c788c4bae4015a7ae83cf1",
+          "representation_identity": "0133cce1b278a947ba3eac79a6caa616a43bae8c937042f68e23b4b59d11549d",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "7fb63e4b3c79bd7c5c49afc6be7bbc614f71962e901aa8d80eb0fdfe3322ebea",
+              "25": "5e25d06dae73fe0fe30c447b336a4f12ba200b1a21b89e3ac9f3c3f432903db7",
+              "5": "ba2dbc392436d68ffa280fa3a296230f58d4d6874feb739c1e462a44c824e316"
+            },
+            "muq_mulan_large": {
+              "15": "6d6e09500d83c41ba21613e127b8ec12f835225e415a7a52f3f82b09b04eb439",
+              "25": "b8b16fdae5bd564e6bbdb0d648abe12cb1c91e73c0aa001e3af77754a8f395f0",
+              "5": "8dc05636a3da1601aca284eb52a88963b12550bbfcb97fe4c3d4e0ccac75077b"
+            }
+          },
+          "source_audio_sha256": "f3507030603aa46b6400f3fa2306fbbb319bdcec20ffa4a9b910e53ebd378260"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "-DeJ5Bb3wxg"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "-DeJ5Bb3wxg",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=-DeJ5Bb3wxg",
+      "spotify_artists": [
+        "Colette Lush"
+      ],
+      "spotify_title": "Don't",
+      "spotify_track_id": "5ngJKkOmjkN460b2ApBnLk",
+      "stage5c2_track_id": "stage5c2_044",
+      "successful_query": "Don't Colette Lush",
+      "youtube_video_id": "-DeJ5Bb3wxg"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 45,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "9e6f421ab6da63e5971d1a26ec9e267d4ec8dc46590c09da2aade89478be0dc8",
+          "representation_identity": "2ef2499386f05f3c0bfdacad8735b4d2a62c764f1d693cbffbb1b117919ac33d",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "443ce30cc02dceb5d8f478d29dcf7ed8647590db6ab3aa834958d20c633f4893",
+              "25": "031c7379138f51c27bc3c60a0ccc34d27d4b73fa4bef392ca7f18a8b899ad98f",
+              "5": "3b27772ab830d8e946aa2c53e6088120993a591055a44b33afc755ab961442a6"
+            },
+            "muq_mulan_large": {
+              "15": "8e6a988b6ac66a68ca56e1b891ee49fd72326a330c537de57437d449105c64c8",
+              "25": "3e2d93e471ad065e963248068eeac2c1d3f33e0b59c87f2034daadd971ae2554",
+              "5": "1851ad79d349d745353b0a9685bba24345cd8bec162d2a0e2cb5ce27ac7c164c"
+            }
+          },
+          "source_audio_sha256": "022f88305fbecaac584ab241788d1a9c245b1398230f0f507d372c366fe7e5d6"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "ENLFl2b6raI"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "ENLFl2b6raI",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=ENLFl2b6raI",
+      "spotify_artists": [
+        "Elijah Who"
+      ],
+      "spotify_title": "we used to talk every night",
+      "spotify_track_id": "6kAMaQt8UveeTctekIpUjF",
+      "stage5c2_track_id": "stage5c2_045",
+      "successful_query": "we used to talk every night Elijah Who",
+      "youtube_video_id": "ENLFl2b6raI"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 46,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "b13c074cc71903821c83b279af0a469bc9c5e2347b5d200f9a48f9f9f8d0f315",
+          "representation_identity": "df58b84afea31b0a83cf618b1c5418b2e4ad0b5bf9f2e2559c2100ea68682adf",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "62d7e108242086b5fd294b474ccdc0bef9111929b3fb7ff0621dab1ab47f3115",
+              "25": "080cc2f40d679ec6218d242705560a39df835e23e4b2c14dd2d1d71516f0c8cd",
+              "5": "864e1ce7545e3d6b45d5b89022103f355df2da7c69a2fcb392b5defefe5b3399"
+            },
+            "muq_mulan_large": {
+              "15": "5fff4b26bb97194cf73c630be510f218d651eed8a2dd4b918346290ed27e8dc3",
+              "25": "21c4897ed5c7a3e3de2409c8cf91e12314f636ad3188714251f721f16a3b4b0b",
+              "5": "e1f0bf8fa1ddad9f45dfb4526780693d352c691a159abfe967c35976cb7f8aa9"
+            }
+          },
+          "source_audio_sha256": "24c0b85335f7c7c8ec72ccaa8cd1a5032d47e00c109340ceb1b68a78bbcfc9fe"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "2NG0Ivmv0g0"
+      },
+      "selected_rank": 2,
+      "selected_youtube_video_id": "2NG0Ivmv0g0",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=2NG0Ivmv0g0",
+      "spotify_artists": [
+        "Galdive"
+      ],
+      "spotify_title": "Shoulder",
+      "spotify_track_id": "1VAtYkKvDenA1KypImlZIY",
+      "stage5c2_track_id": "stage5c2_046",
+      "successful_query": "Shoulder Galdive",
+      "youtube_video_id": "2NG0Ivmv0g0"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 47,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "144c46f0a174139c88da6e19a5ac2fe7f7e1049cd822c4f26a41897fa069a6cd",
+          "representation_identity": "e4920ce8a2b0e56a1372e90dd6deccb475be6f5e311f32a44abe8553cb1ed7a3",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "70ff769dc92c684d49247faea3df4a84628f1ca087d0cfc945210959625ae0e3",
+              "25": "efb714bf242e0b37f9885d9994df91184dd9651a123c936a24074c17cc43a312",
+              "5": "21b79b2b6149f155faeb12db2931dbedd44a075cc324529ae29bb7e9b2e2ccb1"
+            },
+            "muq_mulan_large": {
+              "15": "d16be590e72fd3554c5ce1cf5e78901171f4f7de2246cfccf5ac786b99aa86fd",
+              "25": "3f0cd1bab127ee05643baec23206bfc3d02e745217c6dc64c175fab99b756ecb",
+              "5": "0bf37b3edde6fd3043fb517e09f21065cd83f3a4f40132246002196db91874de"
+            }
+          },
+          "source_audio_sha256": "1529aebdc14890be141e4ef87dbeed6408a212f033f70ac75a67f1abc5775aa1"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "4O3lW4OSpTA"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "4O3lW4OSpTA",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=4O3lW4OSpTA",
+      "spotify_artists": [
+        ".Uzu",
+        "Clavita"
+      ],
+      "spotify_title": "You Are Enough",
+      "spotify_track_id": "2BFAfMIblG0RZeAvlmLC81",
+      "stage5c2_track_id": "stage5c2_047",
+      "successful_query": "You Are Enough .Uzu Clavita",
+      "youtube_video_id": "4O3lW4OSpTA"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 48,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "e31ba645fd1523df6f13843425c7c992a4fea7fe748e448e922401b3b56bc490",
+          "representation_identity": "9dfaebf3421a9ebbf4fce962c2408b5eb0a0a979bb2017ea58bf8245095e9828",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "10c7fe2876e7e99f6d40b4a1b95735175b8b376025baaff0b58acb2467f52676",
+              "25": "f50b52d9ea4d34ed37cb54036cc3a4c53fb5d47ed492c7de64bbf218d52d23b5",
+              "5": "60901784b5c7e66bb45682a5473820ef7c2155ce8f6cba3f46047eeeb9a589b0"
+            },
+            "muq_mulan_large": {
+              "15": "c71689138c233bbbc4f07ab7e776d9b1c81185ccac5cbfea6a2534524dedd9fd",
+              "25": "118c3f98182abb4e48a748fdbfbfe29c5f162ee6b270a64fc5bf3e5a63a46890",
+              "5": "bfb5548d669f647ce911dc779888e3e6f6e3594661082400e1b3e354f166ef7e"
+            }
+          },
+          "source_audio_sha256": "c3e86b818adb0f5f6377a40aff3862fa8034878e49cde2d1398aa50d6abc2f32"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "31S6_XYUT0Y"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "31S6_XYUT0Y",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=31S6_XYUT0Y",
+      "spotify_artists": [
+        "chicken97"
+      ],
+      "spotify_title": "2080",
+      "spotify_track_id": "3F5HhdyBfvCbzuPJbGBHkc",
+      "stage5c2_track_id": "stage5c2_048",
+      "successful_query": "2080 chicken97",
+      "youtube_video_id": "31S6_XYUT0Y"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 49,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "5d6ea5f78317fc8b67e86780005e5b7328c81be0ab442e54a7a2c5db71bd4076",
+          "representation_identity": "8e8ab3c602b1b2b5359f9c027616885c41ad653c5109ba0f793b523ab8a0ad3c",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "8160a6c53758564d71484429c6fcb375c17c8151284363159bf7c7b6fe9d7486",
+              "25": "52191394f5131c14e8dd07f0066f7258f79aeebf5827465a6e2e583bdf683705",
+              "5": "4d3d948125325a1e9fa7b71d88c43402ed3f3025e4ccb23157123f42f0c91896"
+            },
+            "muq_mulan_large": {
+              "15": "f9cc7ec4df4c7b3c6346df261247de5a7a55c0035bdf890e60e1f951cef7896a",
+              "25": "2dd41bed66a3545d1060618a7d25209ac42cda0a5b980b81ee75a11bd03f6190",
+              "5": "1bf363eb4c3f462429fff57aec5c87569ce24a789c72b7a2b971f9172fa25386"
+            }
+          },
+          "source_audio_sha256": "d8e5f35b786b772aff9f89b6b73a290f7b2b1f6be8f9f52093699ec6962a573b"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "Abfsm4CAZiw"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "Abfsm4CAZiw",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=Abfsm4CAZiw",
+      "spotify_artists": [
+        "Jordy Chandra"
+      ],
+      "spotify_title": "Do We Start to Like Each Other ?",
+      "spotify_track_id": "5UUnRflW65AsvluD8d5N2U",
+      "stage5c2_track_id": "stage5c2_049",
+      "successful_query": "Do We Start to Like Each Other ? Jordy Chandra",
+      "youtube_video_id": "Abfsm4CAZiw"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 50,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "3a115e89cd9ae4ab345941186d47583427d0c4df6f4b3fe4c4e6a50c4226e523",
+          "representation_identity": "ba411e917e31cc2f7837ae9d194a9cb19c208efe8a0eca482dcc7306d1cb5e2f",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "a710a920f4d45ee7818e038091a28d971f847c30008cec1a5db3c11616ab9233",
+              "25": "cb9762c40a6fe0ee1133249f6d596de05ab82666cfc8dda2721fcc79dc955c54",
+              "5": "5f5770be7c407faff1ebf18c4862b47502e826dce2d6815925fb8d9db5e6d5b9"
+            },
+            "muq_mulan_large": {
+              "15": "e6c6d1e3cf57420848c1ad8d4ad2010c2cd1c4dc45725cfae2ba070b75d056ec",
+              "25": "3a7241df1d046781d1cc5a9f2c6435fa3773ca3025c943169975c66f4caf4e7f",
+              "5": "777323b94c97bac3e4959b412885576420ad1024d5c2d6f7ba51922660d5f504"
+            }
+          },
+          "source_audio_sha256": "1e3c765c09ffc8fdc3fdd500dafba49d3f24648253ccc4c92542073808f95ad7"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "zBCK8Z4a0Js"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "zBCK8Z4a0Js",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=zBCK8Z4a0Js",
+      "spotify_artists": [
+        "Weeekly"
+      ],
+      "spotify_title": "Top Secret",
+      "spotify_track_id": "1CwmoUvvRyhiwqhMfvbB4K",
+      "stage5c2_track_id": "stage5c2_050",
+      "successful_query": "Top Secret Weeekly",
+      "youtube_video_id": "zBCK8Z4a0Js"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 51,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "e981bf2fe75639fb5db60d1c66cfdc083d6822b2bf3772d159767e482669535f",
+          "representation_identity": "c7d19854b52d35e69b907908e377b9224077ad8bd870226da2439a77487e669e",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "fcddd7612db10639e02e74efe9d16b92de72d9f521265328c50b144e8eef3f66",
+              "25": "a3b2520445318c7a934c3109516db54b2d102e79fbac237c7537e3b8ca937491",
+              "5": "c0f03e94d8e909411f35c167422d1d70dd75b348871717e04cab288a16206a41"
+            },
+            "muq_mulan_large": {
+              "15": "040d923b28a142d7d00870a7803a62adf095d94264b7b4343a8e61690b4baaf1",
+              "25": "0db744f780f4eaae46059a26a212bafa92bcf086877af3d8726974a1fac5f716",
+              "5": "20e80b2fe912efe5ead8d77687108909f5a570e2501a87c8b84cf407888ba3c0"
+            }
+          },
+          "source_audio_sha256": "0cc7ab3d608ff97848af6fe9719da4446e6e50c515548eb930b47c953f04b664"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "u5wMLWs6LSs"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "u5wMLWs6LSs",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=u5wMLWs6LSs",
+      "spotify_artists": [
+        "KiiiKiii"
+      ],
+      "spotify_title": "DANCING ALONE",
+      "spotify_track_id": "3vC63Nh3rSREo7qDHgnx8I",
+      "stage5c2_track_id": "stage5c2_051",
+      "successful_query": "DANCING ALONE KiiiKiii",
+      "youtube_video_id": "u5wMLWs6LSs"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 52,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "e2be7519773e71352dae66d73823d455e05ad7878683eada51eeeb9685b33e62",
+          "representation_identity": "552ab06168a52887faa3eee8b97652bc7cbf8b840111d9ad3afd001762669867",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "688b3122d00525c61b25e455f386e2487e31f6c283177c8f828050ec699c054a",
+              "25": "dc1d45e55f847e4a450f9fa01162635b7f6987fe74ea48a656e9983cff84bdd9",
+              "5": "7e6c883f9ed19cc3aa75ea5c4c6fa77e8595f981afc479f307cbab64ee0c7cb0"
+            },
+            "muq_mulan_large": {
+              "15": "f74ebc38ff1933cf188f367858dd0934ded61f1e55c2c290a983cd440b3b9440",
+              "25": "ba8bf48c0c9068f6e695ac3a944d472cafbd4abb223169ac6d0c223fb492d84a",
+              "5": "cce92510291bb63c3dbb245c39b0e56003c2933c0f0072e22fe95f809328c3e3"
+            }
+          },
+          "source_audio_sha256": "faae689c23fd58d71a7fc16f50784a92a94af18e7d1169c8b878f6b0fc9b129d"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "4Kk_iaaHd_Y"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "4Kk_iaaHd_Y",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=4Kk_iaaHd_Y",
+      "spotify_artists": [
+        "BLACKPINK"
+      ],
+      "spotify_title": "You Never Know",
+      "spotify_track_id": "39kzWAiVPpycdMpr745oPj",
+      "stage5c2_track_id": "stage5c2_052",
+      "successful_query": "You Never Know BLACKPINK",
+      "youtube_video_id": "4Kk_iaaHd_Y"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 53,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "950b45f321202a8b5feb2a1d30f07e28cc3732987451642b8c35f180a6110969",
+          "representation_identity": "f13c3e503cc9d1d740475d2762d846770528bf8713c49e822b3097d21fb6aa68",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "97fd84162ad8b0a18bef8364c3d133a50d80beb9d65b02142af36e72bb2d548f",
+              "25": "a542904e77e3ef4ed96f9a9a1a4b57ba99daffd1e3026b9acf4974a86a98c769",
+              "5": "5716b14c2ba9dbe9f5477cba3fef2012a94fb6fbb02ae9abd9a74cfec75b6379"
+            },
+            "muq_mulan_large": {
+              "15": "15d9605c601ee25eef548108dbad90bc873ff803dd78ad1e4b1e904f8dfc679d",
+              "25": "f7b56797b6a2d618690e31154d14e84b26cd5b90a2a115c6ba182c26edc540af",
+              "5": "c629a6d198c9db2a80205a371e3e5105517e3ec8e2f5511c15406885fc1c7476"
+            }
+          },
+          "source_audio_sha256": "11f6942fed7c46bfbf4df86846240dd370a404ec629b76757531101543b51d82"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "G6uhnkDPca8"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "G6uhnkDPca8",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=G6uhnkDPca8",
+      "spotify_artists": [
+        "KiiiKiii"
+      ],
+      "spotify_title": "Ever2Late!",
+      "spotify_track_id": "37BvHZhn4399Zhh6EDa4km",
+      "stage5c2_track_id": "stage5c2_053",
+      "successful_query": "Ever2Late! KiiiKiii",
+      "youtube_video_id": "G6uhnkDPca8"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 54,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "c6b2fb3072812d8b7a33bd3586adb13235ab3dc376828e86664f53bf099701b9",
+          "representation_identity": "88c5a7d399fa957b5752e4388f15256c762d121bc02a8ce3d2b61e60d0ee8011",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "92ad13a44e5962ed0d61f2e13262b6ac6feefa2c568dc5d5053d4f52ada296d1",
+              "25": "e654327422d96a6112404974c789dd10881587bff7e174b58b87cdf4b63c3886",
+              "5": "0f0b249b4ec2ca49e99b1057988c8c20bd07d85f48c75d01e602976435283427"
+            },
+            "muq_mulan_large": {
+              "15": "5d016f3905de4acd87ddfd0d800d80970af9e110d4477687a9ca308b32a8c0dc",
+              "25": "cf03278620c4e7009fd37f472828200de0512d323bcb22a8302edff8e06befab",
+              "5": "ef30f2eeed0faf71e5b234c32eea48f2b26d27d32a73245d088655c9ad84ed53"
+            }
+          },
+          "source_audio_sha256": "977b9017d4057e5ab09446cf26191774cc5e496fc3f22fa4fecd4759e3da079a"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "sqgxcCjD04s"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "sqgxcCjD04s",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=sqgxcCjD04s",
+      "spotify_artists": [
+        "IU"
+      ],
+      "spotify_title": "strawberry moon",
+      "spotify_track_id": "2g0LdZQce9xlcHb1mBJyuz",
+      "stage5c2_track_id": "stage5c2_054",
+      "successful_query": "strawberry moon IU",
+      "youtube_video_id": "sqgxcCjD04s"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 55,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "9f393bb45ac81d93830a0ea208cca1d329018298ae7019c1d715e8c33c98af14",
+          "representation_identity": "eac3e26461bdc312a1949c92be87eed89143eb644193737c1278dc94dfe0a96f",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "857586b4801ebfc82b1362046446c301085702c870c2ac179613dd766fdbe765",
+              "25": "a4b5446698eb514e6ca9f8807b0e8edbc39b7f392353343c76fa1600af24a259",
+              "5": "7f16e7ebdc756e5adf9d290aa30a4fc15457d0dd0d02a26933cf12cdb0f28aa3"
+            },
+            "muq_mulan_large": {
+              "15": "aef9c08ebaa0e2edd7b5048c9630cea79989ba5d75f4c77a5567ebb9c3e061de",
+              "25": "e20a76b80f3c743a12785d6417cc449d9e0a901ff35205c0107cbbfded3fe2b0",
+              "5": "81f1a7eab937e6145d644b4a1611002bb05c1fec77ac3c88544df0a20f0b30c1"
+            }
+          },
+          "source_audio_sha256": "d671839e206d3784acab812481f1fe92f9be23360249cd554706650cc4dd8745"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "yzTuBuRdAyA"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "yzTuBuRdAyA",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=yzTuBuRdAyA",
+      "spotify_artists": [
+        "The Weeknd"
+      ],
+      "spotify_title": "The Hills",
+      "spotify_track_id": "7fBv7CLKzipRk6EC6TWHOB",
+      "stage5c2_track_id": "stage5c2_055",
+      "successful_query": "The Hills The Weeknd",
+      "youtube_video_id": "yzTuBuRdAyA"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 56,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "29965ff7e30f4f93061fd503368848aeeb4bd9ef2f77459163014ddf81332751",
+          "representation_identity": "c5277069e950651915f4b7ab5409a3b94b1c7dfac8e861396634162aa2a075b1",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "fa1a278756a3181acc438516042e279b58bc6f70d85310b3cb77468344d5924d",
+              "25": "6a78861dda8eee7f7610742b92a2dccea6af28af782fd66ae3b9457c74b75bd4",
+              "5": "e281d5dc91ebf03f438ed42c57ae65f3dd6828f3583f5d37e10fc780aa264a96"
+            },
+            "muq_mulan_large": {
+              "15": "e07d3feda710d88c2282cb385b5c682753a6c062d233799053579cd0e6c3b91a",
+              "25": "411c5779fa1eebd5bf167b245397b7ebb25c23a20ce5035247cc009629811262",
+              "5": "81030ec9cc56c91b3cb8c92e561acca507ec6e3e0223dfac366c352c3a44a754"
+            }
+          },
+          "source_audio_sha256": "6e9a03a7e0bff4bc4cf2b2a6c4ed282dfb118f221819c723ad4f880970f28b05"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "OYtjo3CTAOM"
+      },
+      "selected_rank": 2,
+      "selected_youtube_video_id": "OYtjo3CTAOM",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=OYtjo3CTAOM",
+      "spotify_artists": [
+        "i-dle"
+      ],
+      "spotify_title": "MOON",
+      "spotify_track_id": "3uOeutrLztSX6lU0b0et3B",
+      "stage5c2_track_id": "stage5c2_056",
+      "successful_query": "MOON i-dle",
+      "youtube_video_id": "OYtjo3CTAOM"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 57,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "255880be65ccb56b5d0f261481b7c23bd945945816ef61585a62d9a7058f255e",
+          "representation_identity": "a69b87782cc0d81422a6359f6562f90e011a68de8ddf7ec0828bd437466b73cf",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "0788f5a56eacc8707bdb4926de79c525bea204564951f86fac2a283a953b37df",
+              "25": "b6002e1d1db6f9826aee1479a39342fdd5c58be715ebd3f1acd3ffb2d0a3b8c6",
+              "5": "7e45a30f59ffdccfc2957d56152b9e6e27a1778effa95033db67c284b4b47e83"
+            },
+            "muq_mulan_large": {
+              "15": "e36b32ee4e89ae004888380171210dbff8f8a0658311d0025d202a3e067413d8",
+              "25": "6d847be5519655647a16f02435f15a550144e94c5a1f126cd95a59593ae2e8e7",
+              "5": "7c9db6c1893c49b1d987ae16ee8bc3fc20ddd6b7f5574ba6d87a1fa6454e320c"
+            }
+          },
+          "source_audio_sha256": "a8daf99d0d11ce0493269d49a97df64ca91b0b5ed5841ea31c5952d86f54064d"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "EigB-NjfvRs"
+      },
+      "selected_rank": 2,
+      "selected_youtube_video_id": "EigB-NjfvRs",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=EigB-NjfvRs",
+      "spotify_artists": [
+        "City Girl"
+      ],
+      "spotify_title": "Celestial Angel",
+      "spotify_track_id": "7rAOIiVhiD3vklTrCUpfYo",
+      "stage5c2_track_id": "stage5c2_057",
+      "successful_query": "Celestial Angel City Girl",
+      "youtube_video_id": "EigB-NjfvRs"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 58,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "8c1cd75bbbe93ecb0fcc5dfae2d4f941ba2c88aaf4cf6c0de38efa68f31fec51",
+          "representation_identity": "abaa3eb229b337c3518b567e7fa8909b7c935dbc4f8f9ba28f2b1ee1248678e4",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "388f5f1ffce6ec31242d791b583883590508c5a3df16374b833b70ede55178d6",
+              "25": "977a23d83b7e1b7610437a6f45a4a09e2bc1f5110b5242fbff53449e19f7c42e",
+              "5": "b68436365ef0ac487fdd800a36521d187c26dedaad81d29ad3336fcaf46ff69e"
+            },
+            "muq_mulan_large": {
+              "15": "84618f1ea80e5d91a9f11733bc12839f5847b3125b6fb418837619355bbc3b1d",
+              "25": "eca6ad9fb77219d84f959b5b52d0530fb23ab164dc82c4e88fd119aab5aa7645",
+              "5": "5e1bc5bac164178e2be2d234c98f914cc897c5f8774a2f5f528b7dc6dc6f9a97"
+            }
+          },
+          "source_audio_sha256": "accc2250f38fe8601c646e2701d1457e0ebdeab402c34258b0c4fb5d8f58ec19"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "8_Hg0ounjcs"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "8_Hg0ounjcs",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=8_Hg0ounjcs",
+      "spotify_artists": [
+        "JIDA",
+        "Rachel Lim"
+      ],
+      "spotify_title": "Fade (Feat. Rachel Lim)",
+      "spotify_track_id": "49iccsmr8Su1SXXwNfFO70",
+      "stage5c2_track_id": "stage5c2_058",
+      "successful_query": "Fade (Feat. Rachel Lim) JIDA Rachel Lim",
+      "youtube_video_id": "8_Hg0ounjcs"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 59,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "7a96ffc7bbe6fe6f9a14546b13626458712f216487576c6ff1b27ed06c1df8f6",
+          "representation_identity": "baceff7b3128f18abf4027736d10c45ec217a13f9cffe7c7c1284092db95e9ef",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "be4de9497da19e7c308d74181269a1d3147ad2248381d880c12b8500754dc0d6",
+              "25": "fb3c27a8442301380fcf5f73492eb65ece1f20acdda4ac3f3f96605927653e79",
+              "5": "881d0ea7f512e8f5575f5a66216a5930a43baf6ec713cf9b04c2446fca47c854"
+            },
+            "muq_mulan_large": {
+              "15": "2c7c356d8a2f8cd1cf2437149ad97daae7c2260fb4d342e9926c1c8d02765fc5",
+              "25": "6af61ce9fbd5e1a924fd7c689dde65d9919c232189226213be98ac5458c6ba05",
+              "5": "a504939d72c6b1a7d58ed0e98b375bf79ec465fa0b7de71d07fbc10c847f93f1"
+            }
+          },
+          "source_audio_sha256": "34cab5c23f0c67f6bff0ff20de16c5ab7164f569181b352ad766b9ef4ea99cb6"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "PFHDkQgGfFI"
+      },
+      "selected_rank": 2,
+      "selected_youtube_video_id": "PFHDkQgGfFI",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=PFHDkQgGfFI",
+      "spotify_artists": [
+        "ILLIT"
+      ],
+      "spotify_title": "Magnetic",
+      "spotify_track_id": "1aKvZDoLGkNMxoRYgkckZG",
+      "stage5c2_track_id": "stage5c2_059",
+      "successful_query": "Magnetic ILLIT",
+      "youtube_video_id": "PFHDkQgGfFI"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 60,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "7fa00bdee52af74f96acaad5c71332a1b8ec8e7103d5b841b3ea7703829d362d",
+          "representation_identity": "46e7eef31f1f7479a67765a78db07bb1b59fed5c20bfd0199e717cca3365576c",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "5709d179bbbb9b3816e338322a593a67f6cd579a9a9f0b12cbf44806613e95d2",
+              "25": "4fd0953fbd2523921fdf14352b1d372bfec817db58ccd5e261b62af3028c3332",
+              "5": "753b69e766a696bc89e109205e2d4dc744a62ad970647079bf662b46e3dfb5b6"
+            },
+            "muq_mulan_large": {
+              "15": "b20781fad4fd9ff359ace94afc2811ea03dc6072c24d1732fd0ac6481ee2aac7",
+              "25": "954ac8c4f2a0e1d5e00563de13d527733f170e8c9084de03017ea4fbddc36d58",
+              "5": "bc36cc810892ba16158253c44c697ed2e68966894195137217948a64837a7d3c"
+            }
+          },
+          "source_audio_sha256": "3276c56ead7e07054c1ca02e06b6fbeade30fe5b23de49fab7f2622f929da2f4"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "Fqey8LxQxFU"
+      },
+      "selected_rank": 2,
+      "selected_youtube_video_id": "Fqey8LxQxFU",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=Fqey8LxQxFU",
+      "spotify_artists": [
+        "Olivia Rodrigo"
+      ],
+      "spotify_title": "vampire",
+      "spotify_track_id": "1kuGVB7EU95pJObxwvfwKS",
+      "stage5c2_track_id": "stage5c2_060",
+      "successful_query": "vampire Olivia Rodrigo",
+      "youtube_video_id": "Fqey8LxQxFU"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 61,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "8189a93e052888bee0c0a4bc040a6051d1a6883433dcef3306504f575eb7c0f6",
+          "representation_identity": "7441e2e5b09e5c7cbe8a09f02b226fff8d86db1eec267be428f1fc4724464fa7",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "9754dad42bcadc6642e2e47a80461e8a8dc999f2cb584deea86d1b0b69d34a44",
+              "25": "24b8dce92eecff94d569f39b4e23b184858c88ff40258522cc5b411b9943e2d6",
+              "5": "4209365efa47e9d82aa001f30919ba820ea4f937de15e666ce6959f7db83f421"
+            },
+            "muq_mulan_large": {
+              "15": "ef5940aa1bcd476ad92b060a3c1af9e7db6ed150cdec2d624a7d5fbfe0f6afc8",
+              "25": "b1dcb0780f6642d1fba35f74812e05a740bf4ede9b994faf15328458a065cd15",
+              "5": "ec0b7d5a095549e3f944bf6cad83767d4cc1934c5f81a497fdc57094a24e4e90"
+            }
+          },
+          "source_audio_sha256": "1271f81d3b0c4f576b7f0748d06a819a4ca4f1dedbfe6088300a4834e0f59c04"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "h4enMIDwQvs"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "h4enMIDwQvs",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=h4enMIDwQvs",
+      "spotify_artists": [
+        "INTRN"
+      ],
+      "spotify_title": "Not Afraid",
+      "spotify_track_id": "4yNhVidUIAtKPT72PrZuLP",
+      "stage5c2_track_id": "stage5c2_061",
+      "successful_query": "Not Afraid INTRN",
+      "youtube_video_id": "h4enMIDwQvs"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 62,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "f7913d1c1576db22b6d0d4d025e83469cb56d3d9bfcca452ff8d66de3c4ac5bd",
+          "representation_identity": "49001ce546ef64ad1f769ad07ff6cf39c06b1653b7e9896c20c8c76b1f190665",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "e876b8cdf991503b91c49016ef6d5c88e11851ba85953577c21d944354fde924",
+              "25": "dd7d12142bea15eb24d632a1a3055bdb395865eb9466067a1e2d0417cf21ada0",
+              "5": "ef4fbb513a6aaa8dc52045dc47bd92fcc970088052a4a1eaae973a2a4098cc66"
+            },
+            "muq_mulan_large": {
+              "15": "3a9a7b55c77bf5774b0fbcbbb44c595cf7166138786ec2fa246f761b1699f1d7",
+              "25": "4e1248ba6c21d8e3709953d0ef90ccc848bae3c4493ce9bf301b76a2c54c8ac0",
+              "5": "af6da9466bca7a9d5c9612060e8be2dfb0aab3e75830a254711434b1c05d2cfb"
+            }
+          },
+          "source_audio_sha256": "0316fcf0eb7caedcf62a5e773ffbd7aebad01aee26cac9011a81f53c72d9da48"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "-wTtTTAwMz8"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "-wTtTTAwMz8",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=-wTtTTAwMz8",
+      "spotify_artists": [
+        "Teqkoi",
+        "Mouse"
+      ],
+      "spotify_title": "Stay With Me",
+      "spotify_track_id": "5ri8u5RA8e4vGMyMAGXy0p",
+      "stage5c2_track_id": "stage5c2_062",
+      "successful_query": "Stay With Me Teqkoi Mouse",
+      "youtube_video_id": "-wTtTTAwMz8"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 63,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "20a82f9cd6ca8dff66514d9e0691f10e7bb46ea0c718bf09609a5164fde6daa3",
+          "representation_identity": "58cc90e7e3de688cb215c4625a282fca438b03959321aeaefcac20cf3227eeda",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "f079cc4c5233d500e0debfcbfcdd92b45b8109941e337edb00ac51d363646b91",
+              "25": "109f81d36b1d3fd3997509c8143993853e5254d78a2837367b0edb63536731cb",
+              "5": "a81ed82e58eb90fb4ae9310d72f2456656fab8bc9a442ceaa008463fb4f57456"
+            },
+            "muq_mulan_large": {
+              "15": "2a8cb3dd678a0903b651fd45e778a641e35ed4049296d16657ec667da381014f",
+              "25": "a93c260130f2da8e1475518377822b14b892e7996190a38249b29c411fd6db53",
+              "5": "0b89bdc78e43095b1f5834ed7c8717c5ec46796feb1bf32b536a706bde30f5ad"
+            }
+          },
+          "source_audio_sha256": "8d3be77a1cfb567390321287bf5f298d9410888d94bb7c50333bf6c0352de5e3"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "NybKgXkEse8"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "NybKgXkEse8",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=NybKgXkEse8",
+      "spotify_artists": [
+        "Pokke"
+      ],
+      "spotify_title": "Shiawase no Monosashi",
+      "spotify_track_id": "0xlx3pH8TxNah8hdiINqeA",
+      "stage5c2_track_id": "stage5c2_063",
+      "successful_query": "Shiawase no Monosashi Pokke",
+      "youtube_video_id": "NybKgXkEse8"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 64,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "3ec1036c98dec8b51e520b38cc774097f699d0e2b782bfce4e4e6a1ecc268bf7",
+          "representation_identity": "5178e1ec0779850115bb113fc664577b879a49dddd31688d9a556d361315f161",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "074ba6c8a6fd12300289fcd4dc42accddc76d1b8c345fdd736887b49a1bb0e4d",
+              "25": "5d0ba14f242438f0cf001bf227e0cae9228ad3e67fa66edac6cd1afde9113487",
+              "5": "602b40791f97e6bb5135a62ace123946253bd201a2bb44dcf43bacb1447c1e14"
+            },
+            "muq_mulan_large": {
+              "15": "9131c52b38c8f3a92d8eec2af2251c775b43902af8a3d0001d8d0c64834a5240",
+              "25": "85b0d6a3149b5daffc25b8405c53162d74c1783ba72c4c2288c3893784ae50bd",
+              "5": "d44f89787207f0e1c6fb1c3eb1efb076c8e47711505b2c66dba6ae1e376104e2"
+            }
+          },
+          "source_audio_sha256": "a080a4850fce792a5ccba48b1cfcb89256f4deb11970e94f37fc0f0e64b25db5"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "eeYd5Ma4zhg"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "eeYd5Ma4zhg",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=eeYd5Ma4zhg",
+      "spotify_artists": [
+        "Chill Select",
+        "kretzschクレツ",
+        "Milkz"
+      ],
+      "spotify_title": "Uncertainty",
+      "spotify_track_id": "1DaXVM8npVKa2AQBrYz4xS",
+      "stage5c2_track_id": "stage5c2_064",
+      "successful_query": "Uncertainty Chill Select kretzschクレツ Milkz",
+      "youtube_video_id": "eeYd5Ma4zhg"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 65,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "164ea2ee7abb44a0df7bc454e243a0acb4736e8dc39528302c02c0a5cfcc4cf0",
+          "representation_identity": "9b2140e3a8e059181542aa16835888d344bbbf56e6bc198245bdbf75cda30f32",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "e1b58556c49b4dea91dc1a63bc52c8e29e2fdd54a64b76cf4beef445f22d123c",
+              "25": "ce91ef89d859f66fc04a7d017754108892dc9df0a777f14aaec0fcf437191b77",
+              "5": "1d23eaa10e79d4ea7c527a82d151c6b29fef72927cefdd182d7d479bbe6bec70"
+            },
+            "muq_mulan_large": {
+              "15": "04d617afbf08f2ef73ea41f5ba6b0519c7e3151e332fe4fcd27f99e6605b5e17",
+              "25": "e684415544cf923860db2f6dbaaaa40ea0e5be96dec9480757dabcd037229bba",
+              "5": "00782f8d5d0748a0145bdb77c6b96ca1be70e31f89479abfd11415ce39246871"
+            }
+          },
+          "source_audio_sha256": "d3de54022f0b0542a956e6b6456a40fbb9d47bac91e0ac7a8afd5fcc49e5cdba"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "WNp_XLCOTBw"
+      },
+      "selected_rank": 2,
+      "selected_youtube_video_id": "WNp_XLCOTBw",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=WNp_XLCOTBw",
+      "spotify_artists": [
+        "AKMU"
+      ],
+      "spotify_title": "DINOSAUR",
+      "spotify_track_id": "49KDK2ccYnOCYPeXfDO3YT",
+      "stage5c2_track_id": "stage5c2_065",
+      "successful_query": "DINOSAUR AKMU",
+      "youtube_video_id": "WNp_XLCOTBw"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 66,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "62c374c070543353af3fb0f197eb2d1037ab25eceb6979cda3aafd4fa5b475ab",
+          "representation_identity": "8ca78de486ed50f0255ca4b389bdbad0283482ecaf54a6b84221bb84e572dbd7",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "c0cc0ae0332280df6cdd4acf6bb92a50c33339664c7bfcee8c5a13798a5c25a7",
+              "25": "8ff293d2fd4ca79e76fab04a9ea96d0f98ec23709497869ec0f84c6bc2ed8ba1",
+              "5": "c558d0a14eeec8dc684590a298fca1cdbf03c88e45675e5f49b337ff6959dc6f"
+            },
+            "muq_mulan_large": {
+              "15": "f56f4d1f718e5c00e0848d876915e51b26b07ecd3111d6e52dbb8f7dc742b89d",
+              "25": "979e64b89549e86aaf396c29eba07020c2685c18cff1afc5e09875ea1b196d83",
+              "5": "60b06a011600f24de376f910e35cf0c5d23511b3dd20503aac3faec00fd34efc"
+            }
+          },
+          "source_audio_sha256": "034f44b24880e68ec5955a99d0ac51504f1dc4ee760dcf298b5dcc2fc1344148"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "07fhkAoCnig"
+      },
+      "selected_rank": 2,
+      "selected_youtube_video_id": "07fhkAoCnig",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=07fhkAoCnig",
+      "spotify_artists": [
+        "Tory Lanez"
+      ],
+      "spotify_title": "The Color Violet",
+      "spotify_track_id": "3azJifCSqg9fRij2yKIbWz",
+      "stage5c2_track_id": "stage5c2_066",
+      "successful_query": "The Color Violet Tory Lanez",
+      "youtube_video_id": "07fhkAoCnig"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 67,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "12e442a26ff00648e60d0c36d0a5713c1cd9d84ed7a8731e0fa817fa04b70693",
+          "representation_identity": "8633f651ab5646e6df238019e796e6ef74470e4430649d0a3565a3667272a464",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "c703c0f97dc2fe7d434b0183809c212e8e5a0a9f5e5bfaa9ee201ac090595378",
+              "25": "901bbed06ebd10cffd734fddce9e45966ed7e70e18d0cb941baeaeb0890e17b6",
+              "5": "284ad98b5f5a73cae0c35aff0eb9e34543193ab31822a8094311d6f9be3af3f3"
+            },
+            "muq_mulan_large": {
+              "15": "f874f741971f0e0ea1f7652a2c2b17fc627544a3a09d665aa394e5da0384e416",
+              "25": "fddb8285e90b81fc8ae7737280f22c31992162e5ecb7e10bec727272c9cfd671",
+              "5": "5850694fdc3376c8fbcd5e18f65726b724f599a28e75e7e339f4caf25bce02d9"
+            }
+          },
+          "source_audio_sha256": "47e191ae607dd7f0bb8da95cf37fa59127df361aab31854810cd53cbb96cb487"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "Nbl_gj7TMsw"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "Nbl_gj7TMsw",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=Nbl_gj7TMsw",
+      "spotify_artists": [
+        "Ren Ran"
+      ],
+      "spotify_title": "慢冷",
+      "spotify_track_id": "3fzeNQfannmBQWGecQZ93s",
+      "stage5c2_track_id": "stage5c2_067",
+      "successful_query": "慢冷 Ren Ran",
+      "youtube_video_id": "Nbl_gj7TMsw"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 68,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "c059e758dda44974d2e9e2b945345525922c998b1832c38124fd4422622f41fb",
+          "representation_identity": "bc99e870a50aba03e6bbe4b998d0e5b62503eeda464896932d10ccdf713e1ee1",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "18323bd1ebe73149768dc3911f7cb77d739e6bc25215f61a887bcf3b00a85da8",
+              "25": "15982f5d4699352b3764a226655f21b2dff1cf717d2a39fd389d987492aa8919",
+              "5": "5544079734cde5c1502652c5e593a983662466662575bf25fb46df91746f3bef"
+            },
+            "muq_mulan_large": {
+              "15": "b8c3bf38f7f7d1f4efeea0f702468834f62dc9a38802531f4d04d384a90f7347",
+              "25": "02a5cc48b69caf42594b446ac801acaf0b5046007e45bfb46e40d5373087db8f",
+              "5": "017f6fc1ec7cf90593250595e0b396a1dfc0f1dc704f4ee842551860a2ed8ba0"
+            }
+          },
+          "source_audio_sha256": "89c302636edad8d05231d15fa76b76a69848f1dabf8f7112dbded2a8b2b9a9ac"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "vupyhSd6ssM"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "vupyhSd6ssM",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=vupyhSd6ssM",
+      "spotify_artists": [
+        "Park Bird"
+      ],
+      "spotify_title": "Morning Walk",
+      "spotify_track_id": "53eKx8ec2jDjt1m3VBUCEM",
+      "stage5c2_track_id": "stage5c2_068",
+      "successful_query": "Morning Walk Park Bird",
+      "youtube_video_id": "vupyhSd6ssM"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 69,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "3d109de4f48038c4316184c2e095976aab0cb250a44fca932558891419d3d4d2",
+          "representation_identity": "3778c6e6fe980f3d64c1db22373417adae7dab92e70c224f3dd357a07155b052",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "75e50f779dfda185b1af7a1e75c31bd3ba2a8e7d026cb3d7b0ebecbd36202909",
+              "25": "c8d6636f94ce408554f3b0b54b4e409a091f26f7ad31e22921362bca953bf038",
+              "5": "c41e2b3dde151d45558e6b489460788a3d31d0d8432e59f735168fda13aaac17"
+            },
+            "muq_mulan_large": {
+              "15": "8f32b2463de3c6b589277b12de4af4f0b2f5fe6ab9d835296423c1830028b12b",
+              "25": "93302767a156466a261cb57e8f49f2ff67bd7aca53ef80edf5f0213aac9f0f85",
+              "5": "8c40120019859d0d7e4819452060c553737b12daa93610a944d3fab9a8574739"
+            }
+          },
+          "source_audio_sha256": "8c68778e96d92cab8ebe6e0368f6f2bde78f36591d17a3fe2750656fa73d670d"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "PqWq6dORitQ"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "PqWq6dORitQ",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=PqWq6dORitQ",
+      "spotify_artists": [
+        "JUNNY"
+      ],
+      "spotify_title": "By My Side",
+      "spotify_track_id": "6nzCvAtyADh0wwZEVMoujK",
+      "stage5c2_track_id": "stage5c2_069",
+      "successful_query": "By My Side JUNNY",
+      "youtube_video_id": "PqWq6dORitQ"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 70,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "7d6d30ca27ebe174e2d410f57c1c3009381ecfe3e084c5c0b54c3c72cbae77a4",
+          "representation_identity": "2180b81818d7c75abb42230e4252b83cbab09442b03a63ae2401c0b97b7ca226",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "2f04b9cb7d4d2726d2d4ffc943c3c40320c6bdd5337610d81f163c7505541e1e",
+              "25": "bfe4ccda0cfa01a0edec3fbf28b5113bdaf7b94755127ddb183ae0eb65b251d6",
+              "5": "18ae362f697089eecef87b91b6e8d01d3455518e5f5b50a18fe0a5a672b0b89d"
+            },
+            "muq_mulan_large": {
+              "15": "409afec56e00a4c1da8f22989a676c9aea4411f854ea07f916a2e1d1c193e30f",
+              "25": "ed9b610dfc519774fe670a66b40217dc71aac43ab1ee013f212f12864a4dd4d8",
+              "5": "48653aa0b1f4a880b98394f0ae01878ca7c573132dbb324ec8b50a2c058b10b4"
+            }
+          },
+          "source_audio_sha256": "66e53b193e10877f953f0d388d05dda60f13257bb5bafce7590f8f303b5e8bab"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "X8L2CV9PyHw"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "X8L2CV9PyHw",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=X8L2CV9PyHw",
+      "spotify_artists": [
+        "LE SSERAFIM"
+      ],
+      "spotify_title": "Flash Forward",
+      "spotify_track_id": "74cpuIw43kA8xPgbQEPdss",
+      "stage5c2_track_id": "stage5c2_070",
+      "successful_query": "Flash Forward LE SSERAFIM",
+      "youtube_video_id": "X8L2CV9PyHw"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 71,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "774374c044541042df7ef51903dc30d2120dea99aaac400b48da064527cfa0a3",
+          "representation_identity": "20254a9e07ac468b9b3d29513b591d391c62d8723773f0229d5dd05c04b3deac",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "0d2db6e4b60cead1c2b406f7a6969d1b482b82d94514e7e3e3cce4d302bc23a6",
+              "25": "8b080951348f4e4cbf66115ab7f15c4ffbba5d97d6c04bab99806ee709bbbbfb",
+              "5": "86b7f80a7fc5a9e1d4a41b9aab878373b8cb01ff449f92885c2d64196c9388eb"
+            },
+            "muq_mulan_large": {
+              "15": "c342c350782db8cf79f0975716f05356eb11a346c82bf2f3beb1db6d4aba17d8",
+              "25": "1c6afc0ab65df97184b36d407d9a6cdb76838b885afef8b2674678613eb03590",
+              "5": "53f505bace2e09d57471bb54fc95ac0d2309dafc0f22b4bb18ec28e11dc6ef3d"
+            }
+          },
+          "source_audio_sha256": "c8c15886cd2efe44d661157daf896109708d9defb3ce3c8f766c81dc4dee9dbc"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "FshZLv0_2w4"
+      },
+      "selected_rank": 3,
+      "selected_youtube_video_id": "FshZLv0_2w4",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=FshZLv0_2w4",
+      "spotify_artists": [
+        "LE SSERAFIM"
+      ],
+      "spotify_title": "Smart",
+      "spotify_track_id": "4lR8sYGMGZPvthF2yUfo7T",
+      "stage5c2_track_id": "stage5c2_071",
+      "successful_query": "Smart LE SSERAFIM",
+      "youtube_video_id": "FshZLv0_2w4"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 72,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "0624143d711ec5e72599430d9640549e2799585a7c60cb1cad71214df3e7be79",
+          "representation_identity": "34834e3930c37fa78f59dfc1ec4f662c23ede9812a6e303da8d578fc90fa3bdd",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "f2f9dd0c45670cc1dbf8fa6c9fd3d1c297c04a9e4005eb83670ab4a45884cff3",
+              "25": "1f93b2d04ad6209f874e1303fb89ec6e12f55bb7bddd0699b67ad43c0861bead",
+              "5": "18c524fb3f6d70326e5dc7b03d4a2cf0d9080b985364ecc4c805687a012f7922"
+            },
+            "muq_mulan_large": {
+              "15": "0c7c0e37fc00df0eaf85debe160ba6f0e32b11532b61a1ab86cf969e985c2df9",
+              "25": "cb09efa2d71480cdde6897ad8a6a3c51f4f1589bf8bf19020e9ac278fe3c92fc",
+              "5": "55d363be7c28e07435475df70efb361c7ffe1f3fdd5424c666ad7aecda6d75f7"
+            }
+          },
+          "source_audio_sha256": "803848572aa19c640e130f2a8369a6c18da7597750154f2ce79ce7eb8067aea7"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "gCcnTTK868o"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "gCcnTTK868o",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=gCcnTTK868o",
+      "spotify_artists": [
+        "City Girl",
+        "tiffi"
+      ],
+      "spotify_title": "Pray",
+      "spotify_track_id": "2yQY2IzeQtUKanVo78Fg23",
+      "stage5c2_track_id": "stage5c2_072",
+      "successful_query": "Pray City Girl tiffi",
+      "youtube_video_id": "gCcnTTK868o"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 73,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "15928065545897bf9fb212f71ddf6a878fff362fcc3256087dde52d474492aab",
+          "representation_identity": "8647a8300e64ace2cccabb295f81cc87743da29c8ef1b7bb13e135fcfa2e15ac",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "12f880192903b7d44bfda6c0dd3a679424691d3f9df34daabf96c23b57d0f91e",
+              "25": "ea177eaddce3e93ff4aa59d0afad494672a96146d3bb2b5f82cd6f4bfdc2aedb",
+              "5": "2ea43ec3cc882facb6d6f8cdba72157b5ac02c19f90531f4913a3485f61ab0fd"
+            },
+            "muq_mulan_large": {
+              "15": "46287306d0b463b4584bb62c76748dda72ec82a807ecb2339b145a999042341e",
+              "25": "0365a91d237824fbd077745fc7a024becbb3f39220f205afb8f3355ba8342827",
+              "5": "593c6f6a598c2bf208e07d61c617dcc3d89eee936987a2aaa8de3126190ffa5e"
+            }
+          },
+          "source_audio_sha256": "58b59b47784cde809a4d6568d7ae3d79893c12451cd0968c8845d399a02dc1c0"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "2THlfaAo2dg"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "2THlfaAo2dg",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=2THlfaAo2dg",
+      "spotify_artists": [
+        "Ibrahim",
+        "Luvbird"
+      ],
+      "spotify_title": "Bullet Train Fantasy",
+      "spotify_track_id": "6JjD8b5nYnwJ3zxYZ16rKg",
+      "stage5c2_track_id": "stage5c2_073",
+      "successful_query": "Bullet Train Fantasy Ibrahim Luvbird",
+      "youtube_video_id": "2THlfaAo2dg"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 74,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "37e3fbed821b07650a7958e0a286ceef692ffb5fcfca402ca12e04c566f19ba1",
+          "representation_identity": "adb159e4b8465475e73c19bf7c4ccb40022f5232ef4c289661e1103c78c49218",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "d245a036e5af306d14a4fff0713e3d3bb674ad8ed94dc95c21f7c4acd2e7cab6",
+              "25": "e49c80e02290a058faefb69ebe71fc1cb21c2fca7afb16901168307a33db8e95",
+              "5": "418b551d1920035655c92ffb1f9ef0a316acc5e675ec7fa85075431820f60720"
+            },
+            "muq_mulan_large": {
+              "15": "08d7c0df94e5d1d6e7703f4705a9443bae8c08bf862651eae5aeb17a8901e246",
+              "25": "28467014dff1edea2a7219ae9d6a32d56debe5f6a84e6c569c55948546e732ab",
+              "5": "7f0ae284495bda69e921140227b021933fef81ccf2d62841d5b11943d3264467"
+            }
+          },
+          "source_audio_sha256": "868fc19c5b9070d3c157e2681bed6d68682b48f7e39430b3491f2d4f259e95a0"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "sydCbmjrsJE"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "sydCbmjrsJE",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=sydCbmjrsJE",
+      "spotify_artists": [
+        "JIDA",
+        "Kate Kim"
+      ],
+      "spotify_title": "Lucid (feat. LILAC)",
+      "spotify_track_id": "7iov2YtUJgLmHXwpYXLcoo",
+      "stage5c2_track_id": "stage5c2_074",
+      "successful_query": "Lucid (feat. LILAC) JIDA Kate Kim",
+      "youtube_video_id": "sydCbmjrsJE"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 75,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "67141084fe4acdc6dbcf42108038eba37204903a71a267252b5d9dcba37baa9b",
+          "representation_identity": "cb0803c4dc7b0e42443d89d0e3d3b51e56af6f85466d2be79fab417981367344",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "45333b94514dc11f561d737830610461818c9fb10393462988423bd54da014d9",
+              "25": "22d64ea1eb3e86b17c5807d86c06fea518bdd9e817c0a223dddc7964a20e2bee",
+              "5": "517474a10a444599021676b994b98a6dfd4a63cf4759ab761f056b0f8937596d"
+            },
+            "muq_mulan_large": {
+              "15": "ff35465e96a2e612b6b4925b1821ae8d280952e8438d2a48997b51413d205f8a",
+              "25": "d9c39a4d41360f8c1288845da526bf5792021ac9637aae63589cc27823407c91",
+              "5": "b7cd657ee2ca1d7366787526bf79b641fa40368cf815d0434c2ae33097ff677b"
+            }
+          },
+          "source_audio_sha256": "078bd7797ebf31c9e5eeb4ae4785be324b6b7232e43cb766d4e45464f4b793ca"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "BtvJaNeELic"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "BtvJaNeELic",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=BtvJaNeELic",
+      "spotify_artists": [
+        "Lorde"
+      ],
+      "spotify_title": "Liability",
+      "spotify_track_id": "6Kkt27YmFyIFrcX3QXFi2o",
+      "stage5c2_track_id": "stage5c2_075",
+      "successful_query": "Liability Lorde",
+      "youtube_video_id": "BtvJaNeELic"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 76,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "9619c46119363325458a5059d4ec6e5846d2694ac4bf354504c28d1fdbec2f7d",
+          "representation_identity": "54b0cf6ea70401670917639acc438c2852efb8842eb6d8de17585707d49fce6e",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "6c72c2ef15ad8d51a0676ed8e4c8fd58976319c615349b5d4bb65f2fb8444843",
+              "25": "0e14cc662a101ccdaa3fb61b0a98beef4e413e58b7b5bb8c446a86a8e0b9b2d4",
+              "5": "a82b18a8366c7bf3c63df37fd90d8813dad13ec7c2655b2cf91d92a544bd525b"
+            },
+            "muq_mulan_large": {
+              "15": "3eb1196490b0e9fd00f7538a32841120dc0111b9b802d35e4618bc5531fce424",
+              "25": "98776427303fc49ac2832f30c977e324b4a3241892a6f6100951a8472921fd69",
+              "5": "af58d433e093d82fc89cbece648c92bf51473c1d31f507dbfa65d286682a9afb"
+            }
+          },
+          "source_audio_sha256": "255819602a5fda767642447160c461dc0c70b51a6b67685fb83d298bfe1891bd"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "oKBwWQI-IoI"
+      },
+      "selected_rank": 2,
+      "selected_youtube_video_id": "oKBwWQI-IoI",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=oKBwWQI-IoI",
+      "spotify_artists": [
+        "LE SSERAFIM"
+      ],
+      "spotify_title": "Perfect Night",
+      "spotify_track_id": "74X2u8JMVooG2QbjRxXwR8",
+      "stage5c2_track_id": "stage5c2_076",
+      "successful_query": "Perfect Night LE SSERAFIM",
+      "youtube_video_id": "oKBwWQI-IoI"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 77,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "7cbff3c8e2076466d1211d47f8a2cd10125a1e909bef8e12cb675d7699521f8d",
+          "representation_identity": "71dc3cfdcf4d4f9f90fcaf0549fd5cdd6a815cefe2ff6c5703f85686cf63b454",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "48b1652862e15afc02573342a9159a536e5398dc1f72246357bb5a63e46bdf8c",
+              "25": "feca09ee07141b23e942442b717b8df82e174ff01e4b1c4296af57ec9a6fb6a4",
+              "5": "b5fea32ef5a3764fa4003705f9e0f671fdbd407c9073a541783a251c27ad47d4"
+            },
+            "muq_mulan_large": {
+              "15": "72928be7d43ecab81878d91f85ba36561176d526b341828184245050e5027781",
+              "25": "02da37727c84069cb13d21225b42045fed76cd4370e3f255a81103c04a30a511",
+              "5": "1c5a36a6423fcb0efbbf2fbcb50814c6911cea8484424def90431ccf5142fa6d"
+            }
+          },
+          "source_audio_sha256": "66757ec2cb0fdcb07e83fb497b1636f4914f049879da5f4b77c08bd7fce7e077"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "-tn2S3kJlyU"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "-tn2S3kJlyU",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=-tn2S3kJlyU",
+      "spotify_artists": [
+        "Billie Eilish"
+      ],
+      "spotify_title": "idontwannabeyouanymore",
+      "spotify_track_id": "41zXlQxzTi6cGAjpOXyLYH",
+      "stage5c2_track_id": "stage5c2_077",
+      "successful_query": "idontwannabeyouanymore Billie Eilish",
+      "youtube_video_id": "-tn2S3kJlyU"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 78,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "04553fb1a12213c4b3f3d3d8e4a827778599d0c31aed2e771dd303ef75597c4f",
+          "representation_identity": "f058e9766124210458fc03749013edbbddff492c8588378c0dc925707956c54a",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "720759ac9ff3327685c27e14be9f3c0925ccdbab4ca81b8e22e55439d6402f19",
+              "25": "5ed10022c605cc4999c36cc37caba2cbaf50e365d00a93175c74c50b8e3e740d",
+              "5": "d97d9eeb8f0bb666df4b4e4c21a8c1f616bffe29ba083dc54510ec587d3daaeb"
+            },
+            "muq_mulan_large": {
+              "15": "c1e93293827d1fabb13fab0ec2c0d7637dc7070e3fcb74fefd5fa07ec31c611b",
+              "25": "5228858f2161fafe61f06461457a14520781c2b3f62e53869475da7bc61e893b",
+              "5": "2ed9b0e6e611e4ba07888709512cde80c8fb298d9253ebf9a2c8cd078f9953c5"
+            }
+          },
+          "source_audio_sha256": "d200a4184036195b3818ed41fb6af4d6ab68e245b88f83ecf1972769637f3289"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "UnpPoqXTkjQ"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "UnpPoqXTkjQ",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=UnpPoqXTkjQ",
+      "spotify_artists": [
+        "Friday Night Plans"
+      ],
+      "spotify_title": "Fall in love with you in every 4AM.",
+      "spotify_track_id": "2sXQnT404FrXeSEZkJXfKM",
+      "stage5c2_track_id": "stage5c2_078",
+      "successful_query": "Fall in love with you in every 4AM. Friday Night Plans",
+      "youtube_video_id": "UnpPoqXTkjQ"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 79,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "18872431c851a48ad6fa98798535e11c645582cd77f9182f6cac63b28ab35726",
+          "representation_identity": "882515551ddcdb5360e7e3e4aada6ad8072af42ed597069063114753d1be4c9d",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "e9af35f720d10abd85b1175d9f27d225b3114817191b45cf7459b002c83e05f4",
+              "25": "c2d3d00c7ccdcac4d758aabc6633b949ce24133f6c7a7278420b8171e75bece2",
+              "5": "455f348033064acfc6f586fce4343d74cb722421f0bd967d475fb2e4567ea3c3"
+            },
+            "muq_mulan_large": {
+              "15": "d2343b84250afb92199843521e635537bd9d6094154d9de503b243a2a8e97333",
+              "25": "23c47a93cb9f1b83b0cd721eafc1ec04dccb84d2cca1b4583b6050c3a8d1da9b",
+              "5": "9aae73635e2560a2db372bf8a36846bcd23a59c2e38749f02b9adb16b99f8c7b"
+            }
+          },
+          "source_audio_sha256": "c66b27f70a8a5aae2bd5364e159a39e4789cb1f9a6d0e3c9b09a39beee5a467f"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "ldSJmUkNaGY"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "ldSJmUkNaGY",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=ldSJmUkNaGY",
+      "spotify_artists": [
+        "City Girl",
+        "tiffi"
+      ],
+      "spotify_title": "Saturation in Delay, Love in Anger",
+      "spotify_track_id": "00njeQb198Lm7Jge2Rsrlg",
+      "stage5c2_track_id": "stage5c2_079",
+      "successful_query": "Saturation in Delay, Love in Anger City Girl tiffi",
+      "youtube_video_id": "ldSJmUkNaGY"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 80,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "2a6655fb42778a505906ce187f7c89717c217f50e097b66da542f033b17449c1",
+          "representation_identity": "6ceec653baf869cb908a34a5436671426716441253dd055f076586a48f5c655c",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "1f64a5df081a976300dc3f590f04eec869991a78727c62af58de5cf21eeef44b",
+              "25": "2b482939f525922d43e9c28c7105b680dc682754e95c6dcef311bc47dc8e5313",
+              "5": "8b018e6bcca0b32472cb0f718cb1960a8f89c8176f2744d2d2b39ed1ff33974c"
+            },
+            "muq_mulan_large": {
+              "15": "b3855b70cb059df4b96900f7f320d0cb00beaaaf82f4a411f7552f7a5fa9cbe0",
+              "25": "d968e1be5f97469edcc4c0a21ff6b73414b20a6eef251b4dbd1451fb4b8afb54",
+              "5": "634d9d4bdfc4e720f217e9f50d0989511c38d6a77877411a3042f10ddbb3b90c"
+            }
+          },
+          "source_audio_sha256": "2b786ee43da34ffa31bfb9a674ae47fd0393815b139baf4fee2b84f1a785a3cd"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "JnYataeP71M"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "JnYataeP71M",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=JnYataeP71M",
+      "spotify_artists": [
+        "City Girl",
+        "Kelsey Kuan"
+      ],
+      "spotify_title": "SATELLITE",
+      "spotify_track_id": "3X45Wd5yRNoe2twmyc5CvO",
+      "stage5c2_track_id": "stage5c2_080",
+      "successful_query": "SATELLITE City Girl Kelsey Kuan",
+      "youtube_video_id": "JnYataeP71M"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 81,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "66f29fbb3b7c4f3c3a46a420a6a13044c8fcd4ba0684cd30602a667d90924f00",
+          "representation_identity": "4ff15edb2797186b4697cc8af1b2c3945f06cafb77e6686ebda693b271928f4f",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "19fe162d5be7c93d5ca78e111a0295a64c817e406d9044ad296516b0bd27090c",
+              "25": "8433114788ad26fbbd296e50da2be39e4ed2b9901a8f39bb1fe810fc9c580813",
+              "5": "a05843fe1623a570210708c47ed9cb0070144c08e9e81d9b46af6d69193a5db9"
+            },
+            "muq_mulan_large": {
+              "15": "7551392157916c53bb8fa9399d043542621bb953769dfbb5dee3dd335ba2dfcd",
+              "25": "9bd4fdfdeab4a0d8f465b689cf76cf223781389f2948967cb04e3d5d7ea394b4",
+              "5": "85eade465110ce196af41098fc47e06ab67ca7bd40f40828d2087a74dadd3524"
+            }
+          },
+          "source_audio_sha256": "1e2ec7cae8bec44a36791ec911042e8f62bb163e0e112e1034484dd887028b26"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "H_qnZB9uxLI"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "H_qnZB9uxLI",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=H_qnZB9uxLI",
+      "spotify_artists": [
+        "Han Jihyo",
+        "Park Soeun"
+      ],
+      "spotify_title": "Fall in love",
+      "spotify_track_id": "5h6c3ArwadWdEny5yXUPOt",
+      "stage5c2_track_id": "stage5c2_081",
+      "successful_query": "Fall in love Han Jihyo Park Soeun",
+      "youtube_video_id": "H_qnZB9uxLI"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 82,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "5c784d6f72329bb14eaaf0e990ab68bfe88323de153d89fba439c9ee4ade696f",
+          "representation_identity": "2babf246c6af19243efa14351d7148d1637c2ca9e071c25e45edb854f4b24232",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "8bf4baa901e65cb3cb94864f24812ae97d3779919591c933a2cdb8e8025a4ca7",
+              "25": "bf0b445498a3271f87b22129848cfbc03751f18256ca53439e57a57e7eb9acc0",
+              "5": "2f621bf58dfbbf2263c6aa4d7d3da87801b171a777d0ef0bfd9097fd97c91098"
+            },
+            "muq_mulan_large": {
+              "15": "f6d9f33bae11c224a96b5fe39a3b866ae5ee333d54a148317b4f25b53d9782b9",
+              "25": "c63faae9459919438714a73aa310918e1290e8913a52c9aefc24069ae8b9375d",
+              "5": "5410da6f310af7a0fc6604036806a1d9d833271c767d97dc20e40f566bfa3e8c"
+            }
+          },
+          "source_audio_sha256": "8621d0b1d38d8cf7bc595f8ebfa5338c6eeef43c9b4d3cd7290a4ff82cfd193b"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "3jTMJRKqR_I"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "3jTMJRKqR_I",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=3jTMJRKqR_I",
+      "spotify_artists": [
+        "sysmint"
+      ],
+      "spotify_title": "boys dont cry",
+      "spotify_track_id": "1ON9XudZFxwu43tQXBszIX",
+      "stage5c2_track_id": "stage5c2_082",
+      "successful_query": "boys dont cry sysmint",
+      "youtube_video_id": "3jTMJRKqR_I"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 83,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "2a26d77a8134018c4b37451625e09607adad89575e2dbba3eef6d0fe83f955b0",
+          "representation_identity": "9f84dd2ce6a9274faa7e678d0d12c72b1f51b3eb41d860dc799a3989056d930a",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "5350580fb9ba99370dbf32a444e6951b8978d858cd9e50eebc6b349006a0d241",
+              "25": "5c0d33330cb04d69381250fa3318f3eb1b3f14a9c95a8d131dc8daf79c40054c",
+              "5": "6d331dbcdf9453bf0a5e5c2c955ce57ea80db58cc94ab091968f9049a1207f45"
+            },
+            "muq_mulan_large": {
+              "15": "bb0fd4dffce592677f96acdaf79c17c8e02167fdab2429285c57becfeb7005de",
+              "25": "49b7495c31f3bec003c62be708696906c941035472135df7c9bab38f426d1ad5",
+              "5": "31713deb344f82fff4ecc459f30df95bd7a6ffce8da6d25ee8b4df913b340ca4"
+            }
+          },
+          "source_audio_sha256": "2f4687b49e156d5a97bbd13c131598f38a11c13098e4c6cd0bc9a16b12c915ea"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "K19M4o6vRL8"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "K19M4o6vRL8",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=K19M4o6vRL8",
+      "spotify_artists": [
+        "88rising",
+        "BIBI"
+      ],
+      "spotify_title": "The Weekend",
+      "spotify_track_id": "5q3LwAHTqo9d3rET2EA9Nq",
+      "stage5c2_track_id": "stage5c2_083",
+      "successful_query": "The Weekend 88rising BIBI",
+      "youtube_video_id": "K19M4o6vRL8"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 84,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "7d20dfdcd38ac70c2395b4378a13ffdc37c8d62fc03cc6b95d994cf18dc1faeb",
+          "representation_identity": "4d6c2fd1d3391e7a6fbb330e5531511dbb46c15cc7221fda8d9352abca64a6b5",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "4b439fbfc181dd1059969fb123b8e2e5a4800035b92c6333bcf653c4c8c74b99",
+              "25": "23aabc124c89e20f754ceefece8dd190d0969973028ce209c0537b7a5159561d",
+              "5": "846a09bdc679c1f960b8757d00733eec93dc4780bed7dc009a0e1edf165342b2"
+            },
+            "muq_mulan_large": {
+              "15": "e5fb07caa99bf32d500c6ad05e15ad9212b1681bf367531ee96517c73b3c7084",
+              "25": "4628f41ef0c4e45a29b43d558fce9393596e032cb1bac84b106c17fadbd8ccee",
+              "5": "2f8f6db8aa9ab4be01866ddb67789ee6d79dd09aee0f8f325fed3a8fff2a9fdb"
+            }
+          },
+          "source_audio_sha256": "30cd440534cf7ebc3b7f23fba734fb94df5ab1fd0cb784179f57bbfaf494e543"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "1FSfqhnmeeE"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "1FSfqhnmeeE",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=1FSfqhnmeeE",
+      "spotify_artists": [
+        "City Girl"
+      ],
+      "spotify_title": "Phantom Embrace",
+      "spotify_track_id": "6rj9qDXWANe0U69asDzxMp",
+      "stage5c2_track_id": "stage5c2_084",
+      "successful_query": "Phantom Embrace City Girl",
+      "youtube_video_id": "1FSfqhnmeeE"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 85,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "7c12a00f00bbf4280f0f648055e50164d1dcc3c8e455b87e260cef0dc7d7f01f",
+          "representation_identity": "1cfcaddcb64f7a03e2dc0b3c7756f2e1cdb947afb8565bd4d5c49cc4c41e8b07",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "9a73d13980c776941b4b6f5d80abfb038df9e33c42c8c49d90fa3ddc159fefe4",
+              "25": "e1d37e17718a812b6fdca8748932da62ba959adce05f5278da5dd48aec7220df",
+              "5": "4f1485fbe9337a042369368647d06b515cf2020bc75739c0357da70c3433f4a8"
+            },
+            "muq_mulan_large": {
+              "15": "ee4d06356df446dfab2f86606bd048411d601a0fa25150f7a63ab50c25b47df8",
+              "25": "9081fe6762e227ce4e282bece5793766f257b6b43504cdd5fc99eb873bbe5c2f",
+              "5": "1190e5e687954aca1348bf7df77dcbfb91711679a55ec2efc0bf4bb2924cd838"
+            }
+          },
+          "source_audio_sha256": "795f573187fda95613d1f7eeef6d9cbae9d87d2be8050c412f02f56dc5ae6cfa"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "jDf07wV5gMU"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "jDf07wV5gMU",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=jDf07wV5gMU",
+      "spotify_artists": [
+        "yung kai",
+        "MINNIE"
+      ],
+      "spotify_title": "blue (with MINNIE)",
+      "spotify_track_id": "6HIngEWX8ycnLjuUfSZyah",
+      "stage5c2_track_id": "stage5c2_085",
+      "successful_query": "blue (with MINNIE) yung kai MINNIE",
+      "youtube_video_id": "jDf07wV5gMU"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 86,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "90afd162c1f1e00cc39f6ad27526d4dbb3ec4172c3beca98e9993702cfbdbf9d",
+          "representation_identity": "d06f151675677b101ab118784261ad3bf782b407d2f9144d4bd4d9b5f47c0808",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "fe65f289c08a8945fda897e1991a473a6f2fb297431f50d09282d83eb160c7bb",
+              "25": "d14f6ada3b3bddd37360c4817b091dcd33a3cf787f41e3574fe588f98330cb66",
+              "5": "5960a669e865dde317c51b5984cce426474a3526f76b1170795c39946f2c7cb1"
+            },
+            "muq_mulan_large": {
+              "15": "6fce243a30c6b5d8bd9728e9c383b6507632a30aa5fd7eb068f1a3a9a912a30f",
+              "25": "44e80f3a969c906a063bf6e1358c7b28eb9170b0f5374d26c3d9398a3f0d27d2",
+              "5": "cd30fbdccef178a15ba52bf112a34a5fb4b6333cc974540b615663fb6953e9a6"
+            }
+          },
+          "source_audio_sha256": "1850829fa31b50a2e7197e6a73ce765cb864fd8f758f0c183f61660f21577574"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "HzOLDbEdxAM"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "HzOLDbEdxAM",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=HzOLDbEdxAM",
+      "spotify_artists": [
+        "Unclenathannn",
+        "Shiloh Dynasty"
+      ],
+      "spotify_title": "No I Don't Want, Just Anyone",
+      "spotify_track_id": "23V5SeHanwL6PlqyJ99dH8",
+      "stage5c2_track_id": "stage5c2_086",
+      "successful_query": "No I Don't Want, Just Anyone Unclenathannn Shiloh Dynasty",
+      "youtube_video_id": "HzOLDbEdxAM"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 87,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "1c74e874d5c6de3b4370d0406d711f93d69cf93de0481a93293bf79dbe9b8965",
+          "representation_identity": "cf587e5010f0eb51c5d42db180855af4e5f103e91b7a4ea7eaf8fcdb1abcac30",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "dacb7ef1e9b4fbd14e72a1b708c0f0b1f043630939664c2f8a9ad8e1995c6a31",
+              "25": "be6a739570e8c477a78cbe037e6ced22d4c5fddefa04004afa15de0c293bc5a8",
+              "5": "713b1db1ed4e4eb8942997fda737ed75680dc1f9626668052b658e032eaef767"
+            },
+            "muq_mulan_large": {
+              "15": "005c564d27e33a96ee23328ae820fb12f3cff46b49608673d2228534f59c45c4",
+              "25": "4dda941a7f17e0ecba907f41dd092921a82a6246dc987d9f08bb564cf55f3429",
+              "5": "ae7a624c9be5c325fc8c4b37514c8612b2facd45094d18ebec46030b07b20f04"
+            }
+          },
+          "source_audio_sha256": "58b09dbf814485bf5c1647b9544c1344f8fd00b7838b4f1142a39207ef0e0fb8"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "juMQWThd5rQ"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "juMQWThd5rQ",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=juMQWThd5rQ",
+      "spotify_artists": [
+        "keshi"
+      ],
+      "spotify_title": "TOUCH",
+      "spotify_track_id": "5cgy5vMqVZbd8hYutp2txu",
+      "stage5c2_track_id": "stage5c2_087",
+      "successful_query": "TOUCH keshi",
+      "youtube_video_id": "juMQWThd5rQ"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 88,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "321fa9b7d55658706ef1f8c0f320bd94c31245326f80af0a87a631150f143a1f",
+          "representation_identity": "1b9bfe2bd5c9106ea7c4b0d2742708a70ca3e330b54c2d77ba0eda14710cf727",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "8b8fab2802c3df28c1d4b33befef45b7bacdf631209cc5217f0260979d4dc1fd",
+              "25": "4257b0c2128c274800ddc3f230ded71abe4815731a54b1678f838cd7b5d8fc18",
+              "5": "55d05f4dc89d24baf5c60b26afabe6fa74b2271605acf19c536101716d2c858c"
+            },
+            "muq_mulan_large": {
+              "15": "4d7e75f648ebfbb6597dc252cb0cc15f813168be84cb10305f0fc3bb64ff6622",
+              "25": "b0926943a7c3c8743c4cb4f93fb45eb85d989aa3092c38b8ca157b3b61a0fb12",
+              "5": "44623adf760c34eb73a430c38e018d3e229f1d448ea7334d11e38610270cd962"
+            }
+          },
+          "source_audio_sha256": "09933972cdf818015b9b7c794ab66dceefb05d029c0382d15f3f04bfa146a2e2"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "galR8hC10vs"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "galR8hC10vs",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=galR8hC10vs",
+      "spotify_artists": [
+        "JO YURI"
+      ],
+      "spotify_title": "Favorite Part",
+      "spotify_track_id": "6zKX91EvxRHr42ZiZ5C9kN",
+      "stage5c2_track_id": "stage5c2_088",
+      "successful_query": "Favorite Part JO YURI",
+      "youtube_video_id": "galR8hC10vs"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 89,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "2ebb5ffecd37780fd02331835b7b5157623f0830b780f3fc35ad2ef92fe5ec4a",
+          "representation_identity": "89271bea3e78c057d401001d44f22fae47e60347251127e29b0e148d7a713a25",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "4067956831550ab9d995a3d3b1c9797febc67eb241c6c4e7f7a54c22d33be928",
+              "25": "58caf8967413c09005875ea0971a432019a0bf93462cf80b448abf0c61e20a67",
+              "5": "ab04357bc004eb102ad3e74d53b7690975ff16dc86871167f6c2895f5f67c1a9"
+            },
+            "muq_mulan_large": {
+              "15": "53ad24ec99bff365561c74885873716304f4e4561066388b18cd311b33d353c2",
+              "25": "4f42d345a93d49e7fc5251878548654da238b44cdf1a6a401b75fd4b6f273bfc",
+              "5": "c6ccf6f22a711eca3a8b616f3cad79d9c11a1315afd4ba8f27bbcfe241aee757"
+            }
+          },
+          "source_audio_sha256": "1d252a6ee5a66e76c0dc7f76cf410080decc1ede8c4b8e960dbdc0b2678ead58"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "1zi_otY0E0k"
+      },
+      "selected_rank": 2,
+      "selected_youtube_video_id": "1zi_otY0E0k",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=1zi_otY0E0k",
+      "spotify_artists": [
+        "Gracie Abrams"
+      ],
+      "spotify_title": "The Bottom",
+      "spotify_track_id": "4Sk74gcXTe9dnE1HU5Pn1y",
+      "stage5c2_track_id": "stage5c2_089",
+      "successful_query": "The Bottom Gracie Abrams",
+      "youtube_video_id": "1zi_otY0E0k"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 90,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "12a1e5e45570604089c911e320cecb6a88e6032d22b4adc012bee08bc8680e20",
+          "representation_identity": "a264b5e5cf9a6fedab0e1df94ad13e0eacc7b420199a63c9c06634d058498ac3",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "ecf6d8d50f1d15b1a256702676e18b8b553263a2f5ad8d6660c22ddacec072a3",
+              "25": "a7219c7fa46abea1275a7f355e91b21dc0b50348e21325a02e8e819fd984a3ba",
+              "5": "30e4c18d445635809d184a9b5bdb1b515fbf835e63fe52b2a6b8d2d56392c3e3"
+            },
+            "muq_mulan_large": {
+              "15": "49c35a4b01656136026e7f0bbb9b265cdbf525c583fcb9aef7ab1090fd3e81c8",
+              "25": "f716cc3e0e373d2f90c32362d6ba57561fd5a4627253f14296bf8af0be944dfb",
+              "5": "4dd48a1b9963aefa278112034d16e1a4973a62c282b54228fad267b11d976e0b"
+            }
+          },
+          "source_audio_sha256": "ffbdeb0e6d849690ddb1ca2a06bf67aa0559499564968dea632298a55de2af06"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "foRAF6OgOs8"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "foRAF6OgOs8",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=foRAF6OgOs8",
+      "spotify_artists": [
+        "TAEYEON"
+      ],
+      "spotify_title": "11:11",
+      "spotify_track_id": "2Y4iTaIAamhYPyZcOdfL3g",
+      "stage5c2_track_id": "stage5c2_090",
+      "successful_query": "11:11 TAEYEON",
+      "youtube_video_id": "foRAF6OgOs8"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 91,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "b842e3ae8d054ace5174da78fbeb78b9c1cfa42f0b1395f5bd939bcb067339cc",
+          "representation_identity": "46147f6a9f58b78be256e7794b34c5b36e5a1f3850dd3d0189c7ede8069579a1",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "85b0a860090a904f3111dc7cd639833b64c6c4ec223f5c6412156099fd5793ea",
+              "25": "4da9ab3e972ba3636bec1ce20cfe55250bf2da6b2779b88f041341bb7e832259",
+              "5": "2a8beb0061d8593ade8b7de5df9485e431389e76781b250db929151c3045554b"
+            },
+            "muq_mulan_large": {
+              "15": "5c16266b309d704af14443d99225826a4a3120bae351658de45f9214be8fcc7c",
+              "25": "afbd2caae34d74ee76efe4276950f4d1b506221b89eb381c0ff11dcb36f0ff84",
+              "5": "a983755dea1c20d49dece248d7f34a2f2392e6d46fe4efd7d85ff72adb2ccb91"
+            }
+          },
+          "source_audio_sha256": "611eafec17039480700e2b38b1e8350f1e8ef5df1e76fd80add75284b6ff6c88"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "nlYI6G2hFyU"
+      },
+      "selected_rank": 2,
+      "selected_youtube_video_id": "nlYI6G2hFyU",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=nlYI6G2hFyU",
+      "spotify_artists": [
+        "aespa"
+      ],
+      "spotify_title": "Thirsty",
+      "spotify_track_id": "6nICBdDevG4NZysIqDFPEa",
+      "stage5c2_track_id": "stage5c2_091",
+      "successful_query": "Thirsty aespa",
+      "youtube_video_id": "nlYI6G2hFyU"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 92,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "126e6ad91f7aa83c9076e06ba674cc25106d0bb8b36bd62771435fc7eb7b40ac",
+          "representation_identity": "f5e71c09187cdbd35daaa62775f314377b1267e716db240dae7a7bda9f5adda1",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "00ec5d34dbb0efba746d3691ac93726bb26f90fc5eff5646692997a51f6faa65",
+              "25": "c24b41b8db5f6037d12928fa6d8fad981789ad84374796c5578b68ecae45642d",
+              "5": "8aa9fd8f4fc2562cf228027cd7f6e9329f2da1a085a347682c4a3a733965e95d"
+            },
+            "muq_mulan_large": {
+              "15": "00bfafe1994932e3ebbe00305965bfdbfebab7f196b6fc75144e6e2ec849da8e",
+              "25": "4eed9591daefa3cebfe83e6ec21b6325cec5afb03b693a8cf1f83037ffc8327c",
+              "5": "5ce8c8f53ad4cd0f09fa3f638c6b91e163afecbb46b6d4c7215906417d36082a"
+            }
+          },
+          "source_audio_sha256": "8a3232b6630a17f33e786ad5bfebd774a07046a71ea25f5e7167bb184753c361"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "sLZ_koI3qi8"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "sLZ_koI3qi8",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=sLZ_koI3qi8",
+      "spotify_artists": [
+        "BOL4"
+      ],
+      "spotify_title": "To My Youth",
+      "spotify_track_id": "4gMPlHHAjOQnUrhsuqHivn",
+      "stage5c2_track_id": "stage5c2_092",
+      "successful_query": "To My Youth BOL4",
+      "youtube_video_id": "sLZ_koI3qi8"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 93,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "4b1d4f6812a6ae46b7839e534156820e88d51d561a8a1d305d567ecd1c2b71d3",
+          "representation_identity": "d6fdf0dbb59f14214ba066087b9916fd028dad120535d314b2442bcbf9d9cf1b",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "4c799ba3ce490e6dbfef2113717e6a188a171e706beb82f9fe972ae3cb875fd8",
+              "25": "8e14db47af593da812662a5e6244ffc0c4955e7a4c412352176decb6b5e928b9",
+              "5": "3a906214492f48997f98c4435e41f5918b19781e1b49f76ea5930496e55b537f"
+            },
+            "muq_mulan_large": {
+              "15": "eb442498e0b9bc7b0a2cb1a1650573bb39c5dd71ac47229fd824b14a0951ae06",
+              "25": "0e52d73a8fc15bed29344d554221fa7ebe1294a3fe39ca6faead65541227445a",
+              "5": "2171f2471e87a0acfce7633d21bd56460084cf7bb962d98f8edcb801ac5908a7"
+            }
+          },
+          "source_audio_sha256": "f30238dbfbfa0879155f6a0cfa2ef07420f90ff69ef53fefbee48db8356c6827"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "sVPST7mU6ec"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "sVPST7mU6ec",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=sVPST7mU6ec",
+      "spotify_artists": [
+        "david hugo"
+      ],
+      "spotify_title": "Die Right Here",
+      "spotify_track_id": "7fXYFuCTmNrYRGwEUUf5iz",
+      "stage5c2_track_id": "stage5c2_093",
+      "successful_query": "Die Right Here david hugo",
+      "youtube_video_id": "sVPST7mU6ec"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 94,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "4c5e2b8c3c12bb9182ebac1f69d5cc4af27e34362cf8ae9fcf6c252593b2bdc9",
+          "representation_identity": "5959b555ec6f49f153e25f74b2ce7b3b6bdafeffc774d0895d5408a495dd1a09",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "ab05b80a47be91decfbc800c59ff54ff32f8fbcfaa7a6405b75b9a9d68aa6469",
+              "25": "2eb2628d59782ad8fe203d495e0ddb5132b81b5a707d537212ff1406befe640e",
+              "5": "20e0f784c41a3de7120eb6addb38b1c75c30cb751133943e7e4c6915cfe0343f"
+            },
+            "muq_mulan_large": {
+              "15": "29bdbc39bf0d30c0669d58c570541b62fd44779b7c97581bd6786158c8c3a940",
+              "25": "fc176a614fa15e3f9ac371be69fd121e400f5159e22b0a2c25c37fc3f283fed3",
+              "5": "fde0bfa0f0ee82750a86d7763211c0528355dd446c1eb64125b64e1ba168a766"
+            }
+          },
+          "source_audio_sha256": "78c2db5b969620f612dc2730cc2044937e87a6b35f52f70d55bb065a38605d88"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "j3EwWAMWM6Q"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "j3EwWAMWM6Q",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=j3EwWAMWM6Q",
+      "spotify_artists": [
+        "Playboi Carti",
+        "Lil Uzi Vert"
+      ],
+      "spotify_title": "Shoota (feat. Lil Uzi Vert)",
+      "spotify_track_id": "2BJSMvOGABRxokHKB0OI8i",
+      "stage5c2_track_id": "stage5c2_094",
+      "successful_query": "Shoota (feat. Lil Uzi Vert) Playboi Carti Lil Uzi Vert",
+      "youtube_video_id": "j3EwWAMWM6Q"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 95,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "0a42c21fc9250bb269fd25cccd76d242162b828f5328175ccdde23972f041e7a",
+          "representation_identity": "3876efa31e35cd706da696d6df71c49e8132642c4676fcc4e8b76b69d2c913e1",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "c1cfdc8a3d01645ecb3e25882197784fa1be27bf3bc5bb233b40a71be0aae454",
+              "25": "d76893ff4022d62b08944f439e33a20cb1d420514376df10fe718e8079694e2f",
+              "5": "14eea7da57e82e8e4f13f0259225eb984e7bf1dc8e3403df2a132d19801fd33d"
+            },
+            "muq_mulan_large": {
+              "15": "962e9ab3554daed95594bb4e7aea96bdb36e107996920f73b908f49d9d03cd36",
+              "25": "c0f063e3a6308bd7c03a6c040c35d03045b51799699c764cf3af3971d7540478",
+              "5": "c06de900c57f51fec29435a5c20f3f98a6bc4c76b54ce268efe05695f5fe8a34"
+            }
+          },
+          "source_audio_sha256": "9dde401b1e599210d09d95d97e8d879e73a767284bf71a3f651ca441d83b240b"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "WL-G8mNyKrw"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "WL-G8mNyKrw",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=WL-G8mNyKrw",
+      "spotify_artists": [
+        "Stupinuts",
+        "Jade"
+      ],
+      "spotify_title": "m o v i e (Feat. Jade)",
+      "spotify_track_id": "7nD9LjsenfCRv4uxy93xhZ",
+      "stage5c2_track_id": "stage5c2_095",
+      "successful_query": "m o v i e (Feat. Jade) Stupinuts Jade",
+      "youtube_video_id": "WL-G8mNyKrw"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 96,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "1cf4b552d7e4c34fa91d5f23458b324b3efade88c37b8914c63281c7d5b430cf",
+          "representation_identity": "71974c11f1b44175b710e2945b82a5143f596e5e60a722e5521e8006670ec4b3",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "0b45ccb0b799b086eb7fedc674c543851220f3dc75c2b62270da5066e781d76a",
+              "25": "b2d6c179ca3122a2cccf3a5aca45f462704d97898bf93b3dcab8d6d1502da498",
+              "5": "32a15ad5667d57d601c112f386522951e60da5c50f707378768fb5a7f5a4bb68"
+            },
+            "muq_mulan_large": {
+              "15": "0e65b05dec7b0db1a8a231ed1514eea22da47ecf5414adc81704a3d2d7fc7bec",
+              "25": "161a877b89c4a9ad69daf6ba8b8fdf1d6199c34ebf0d3547cfbbd5ddf6270563",
+              "5": "cb8a2330df4fb8d9a67ac00c63c8840a36067764c4463f0cefaea405ccc5fb7f"
+            }
+          },
+          "source_audio_sha256": "528c4e66038eb8d8dde215a544b1b369dafa7f83317348113ce58a3d83513000"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "Z2Oc2DjzL2A"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "Z2Oc2DjzL2A",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=Z2Oc2DjzL2A",
+      "spotify_artists": [
+        "OuiOui"
+      ],
+      "spotify_title": "(empty)",
+      "spotify_track_id": "0ayK1CJh1cMRjUJRCDWhCd",
+      "stage5c2_track_id": "stage5c2_096",
+      "successful_query": "(empty) OuiOui",
+      "youtube_video_id": "Z2Oc2DjzL2A"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 97,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "6e1e84ea8ba784e6f1cff239e59b5633b1deb73c4e09af1f11cef67ac9515582",
+          "representation_identity": "80c2f07fb118435fc2dab1f3e3fa161ef1a2a058bafa742a47445f97e3137366",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "0e08b80f85b426b1d50a1e02b1d224854d3f046370653b402e493fb4d8301064",
+              "25": "530037d5e587e39712cfb74447d83fad0fb8f44266a024462f8f42eaaa185f63",
+              "5": "c3d65af440f586eaef3e252f5d0f6d2f7cbe2252812bbdaba27dde6d67cfd4d9"
+            },
+            "muq_mulan_large": {
+              "15": "44df2ea115629520bd7953cdffe2521427689dc97a374ccc4613bcad725bf66f",
+              "25": "fdd2d594ff5ea51090fd3c79b5ff242e0414f85b4913f87893cfc7bc762e7406",
+              "5": "668924ddb90ffdf6791b076572d88c43aff4aa1253ae875b8960f60cc25912b7"
+            }
+          },
+          "source_audio_sha256": "e3d37baf248bef72ac95ec4257372c2b36448948b78a793da9ffd39b72bd2dc0"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "b0H3TeL3g0Q"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "b0H3TeL3g0Q",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=b0H3TeL3g0Q",
+      "spotify_artists": [
+        "chicken97"
+      ],
+      "spotify_title": "Heart",
+      "spotify_track_id": "0mjbciwK9zhfQl44jXfQv6",
+      "stage5c2_track_id": "stage5c2_097",
+      "successful_query": "Heart chicken97",
+      "youtube_video_id": "b0H3TeL3g0Q"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 98,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "d9643a0e22ba9d68ede5ee7d6ad4dccf1a1d38aa50ee9f0efc99fe1be5ba08e9",
+          "representation_identity": "c4ce238f802e1900fb42f13b705384a344c753ac4061c7a4a08aee880a8d116e",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "5e78c8ec8f1d811e4289a470f3c6ceb3ad9c8a69653e2db61f61dd781313d156",
+              "25": "2d6dbf1d5e37fb16a6c248d23a711c4ac964251c8eb5b42bb6dafe3a2d339882",
+              "5": "3d93d0616233d6ba637a4a1b7f469ab35367f5b53387768700b2f4d70e3a5650"
+            },
+            "muq_mulan_large": {
+              "15": "3c4a4ae0d1df86f9f62393967610c0e23e469b2b9a20ba690361b226a2f387f2",
+              "25": "c030d59a7f317afeb7355bf66a437abd95dcd41e57303ba6ce66c8cd412154f0",
+              "5": "1c4b1d6e04794dfdac09f3c164d136484fada25acc8f92f8a9701b61470300da"
+            }
+          },
+          "source_audio_sha256": "0e91dc9089d2c06443b7420a47144e54066db97a7cd32689fb5f0bbad4dcb3e0"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "dpWP_I9BQs4"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "dpWP_I9BQs4",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=dpWP_I9BQs4",
+      "spotify_artists": [
+        "我是土豆"
+      ],
+      "spotify_title": "门没锁",
+      "spotify_track_id": "1Y6Ra2erZ6Mru0JOcJBSzK",
+      "stage5c2_track_id": "stage5c2_098",
+      "successful_query": "门没锁 我是土豆",
+      "youtube_video_id": "dpWP_I9BQs4"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 99,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "12bf9586f7eb2c90e9d58580ce93388c7568fd01d099033fb158e1d53d70ddd9",
+          "representation_identity": "4edb329bef25d7d87f7a30a1377ff6aac868eb64bfd947c1cb31c2f25f08ed5c",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "e7d1b8c4a8d3133c13ab3277b80294e8392cc663b3f21bf9b167b26bcf5fd430",
+              "25": "ea075a659995b63320e4870a7891ba496c3a1593b3cc77dbb6488be501cac14c",
+              "5": "cab833c449d66b51c056fdfce1b9ca8b1391a5445b2373b045855e62222b6566"
+            },
+            "muq_mulan_large": {
+              "15": "73137ad0337c121e968ec1ac48ed6a603b48ebbfc8c544ce8197e53a02a2bbf6",
+              "25": "148d486a4c27b8a4bfbcae3b70d52ef588a6e460d04d3fc30e59ec595f5e2318",
+              "5": "bc58b8681b536dd16be23bcd1eb7e981fb150cd20788306abc67b61c9c769626"
+            }
+          },
+          "source_audio_sha256": "8533fe1884977b079890e99cdeea390eca1ce91afcb0b33d9e846cbf6f5d4faa"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "t1wYS2aiQaI"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "t1wYS2aiQaI",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=t1wYS2aiQaI",
+      "spotify_artists": [
+        "ILLIT"
+      ],
+      "spotify_title": "bamsopoong",
+      "spotify_track_id": "3INETdToKVgt2vfp1wYBFw",
+      "stage5c2_track_id": "stage5c2_099",
+      "successful_query": "bamsopoong ILLIT",
+      "youtube_video_id": "t1wYS2aiQaI"
+    },
+    {
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "manifest_index": 100,
+      "query_variant_index": 0,
+      "representation_linkage": {
+        "centered30_v1": {
+          "canonical_pcm_sha256": "bca48b7eb89190ac9867eb4c0ea9ab41eae2d13fdaf7618eae36a3c9cdd08ba3",
+          "representation_identity": "778787e1ccede151de1661a1c38d3b1a343fe163705c0e1bddac217bedcea9e9",
+          "segment_embedding_sha256": {
+            "laion_clap": {
+              "15": "e447854f69b7f56e87b86a39cd27cf6b0a8de88c4fe7f8af8c15d21233ee0952",
+              "25": "725e89d9af2e02d05efabadf4387b2faacf3b1b37f22fbfbf289b7532698bd99",
+              "5": "9b6243e7771a225edd71cef9bf8f3ef6af8e127f428116baa3a42af58584fa8e"
+            },
+            "muq_mulan_large": {
+              "15": "8197179ada316dc250b2b262d6f693b03fe8a975379206c3da0110c046b898c9",
+              "25": "9c933f5ca0d98928714e449f1d4c1819d6d75dd158440409bfba917983272283",
+              "5": "e0f8dab44778f0093bc735a534f568b01da6d92f1edaf46970e2bc688d60e4e4"
+            }
+          },
+          "source_audio_sha256": "0b76ab8bd0406040ca3654607fdac4edb8f889ee89209957c3092e8e19b4b7ea"
+        },
+        "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+        "youtube_video_id": "G8GaQdW2wHc"
+      },
+      "selected_rank": 1,
+      "selected_youtube_video_id": "G8GaQdW2wHc",
+      "selector_decision": "AUTO_SELECT",
+      "source_url": "https://www.youtube.com/watch?v=G8GaQdW2wHc",
+      "spotify_artists": [
+        "IZ*ONE"
+      ],
+      "spotify_title": "Panorama",
+      "spotify_track_id": "0CnpSTdL9l5vQM4YnzXtyo",
+      "stage5c2_track_id": "stage5c2_100",
+      "successful_query": "Panorama IZ*ONE",
+      "youtube_video_id": "G8GaQdW2wHc"
+    }
+  ]
+}

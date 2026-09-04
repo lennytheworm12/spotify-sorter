@@ -34,6 +34,8 @@
     .player-actions { margin:10px 0; }
     .player-actions button.active { background:var(--blue); border-color:var(--blue); color:#07111d; font-weight:700; }
     .player iframe { display:block; width:100%; max-width:720px; aspect-ratio:16/9; border:0; border-radius:8px; background:#000; }
+    .player audio { display:block; width:100%; max-width:720px; }
+    .player audio[hidden], .player iframe[hidden], .player a[hidden] { display:none; }
     .player-note { margin-top:8px; color:var(--muted); font-size:12px; }
     .muted { color:var(--muted); }
     .neighbors { display:grid; gap:10px; }
@@ -86,8 +88,9 @@
         <button id="close-player" aria-label="Close playback">Close</button>
       </div>
       <div class="player-actions" id="player-actions"></div>
-      <iframe id="youtube-player" title="YouTube audio review player" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-      <div class="player-note">The three clips correspond to the frozen representation windows. YouTube playback rounds half-second boundaries and may seek to a nearby keyframe; no media is downloaded or retained by this reviewer.</div>
+      <audio id="local-player" controls preload="metadata" hidden></audio>
+      <iframe id="youtube-player" title="YouTube audio review player" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen hidden></iframe>
+      <div class="player-note" id="player-note">The three clips correspond to the frozen representation windows.</div>
     </section>
     <div id="content"><div class="empty">Loading the complete review queue…</div></div>
   </main>
@@ -106,14 +109,40 @@
       if (!playback) return
       state.activePlayback = { playback, title, segmentIndex }
       const segment = segmentIndex === null ? null : playback.segment_windows[segmentIndex]
-      const params = new URLSearchParams({ autoplay:'1', rel:'0' })
-      if (segment) {
-        params.set('start', String(Math.round(segment.start_seconds)))
-        params.set('end', String(Math.round(segment.end_seconds)))
-      }
       $('player-title').textContent = segment ? `${title} · clip ${segment.index}` : `${title} · full song`
-      $('youtube-link').href = playback.watch_url
-      $('youtube-player').src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(playback.youtube_video_id)}?${params}`
+      const local = playback.provider === 'LOCAL_RESEARCH_AUDIO'
+      const audio = $('local-player')
+      const iframe = $('youtube-player')
+      audio.pause()
+      audio.ontimeupdate = null
+      if (local) {
+        iframe.src = 'about:blank'
+        iframe.hidden = true
+        $('youtube-link').hidden = true
+        audio.hidden = false
+        audio.src = playback.audio_url
+        audio.onloadedmetadata = () => {
+          if (segment) audio.currentTime = segment.start_seconds
+          audio.play().catch(() => {})
+        }
+        if (segment) audio.ontimeupdate = () => {
+          if (audio.currentTime >= segment.end_seconds) audio.pause()
+        }
+        $('player-note').textContent = 'Range-streaming the retained full source from this machine. Clips use the frozen representation windows.'
+      } else {
+        const params = new URLSearchParams({ autoplay:'1', rel:'0' })
+        if (segment) {
+          params.set('start', String(Math.round(segment.start_seconds)))
+          params.set('end', String(Math.round(segment.end_seconds)))
+        }
+        audio.removeAttribute('src')
+        audio.hidden = true
+        $('youtube-link').hidden = false
+        $('youtube-link').href = playback.watch_url
+        iframe.hidden = false
+        iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(playback.youtube_video_id)}?${params}`
+        $('player-note').textContent = 'The three clips correspond to the frozen representation windows. YouTube playback may seek to a nearby keyframe.'
+      }
       $('player-actions').innerHTML = [
         `<button data-segment="full" class="${segmentIndex === null ? 'active' : ''}">Full song</button>`,
         ...playback.segment_windows.map((window, index) => `<button data-segment="${index}" class="${segmentIndex === index ? 'active' : ''}">Clip ${window.index} · ${window.start_seconds}–${window.end_seconds}s</button>`)
@@ -127,6 +156,8 @@
     }
 
     function closePlayer() {
+      $('local-player').pause()
+      $('local-player').removeAttribute('src')
       $('youtube-player').src = 'about:blank'
       $('player').hidden = true
       state.activePlayback = null

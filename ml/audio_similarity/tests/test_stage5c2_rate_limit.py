@@ -73,6 +73,22 @@ def test_serial_attempt_starts_are_spaced_at_least_20_seconds(tmp_path: Path) ->
     assert wrapper.attempts[1]["minimum_spacing_compliant"] is True
 
 
+def test_resumed_process_preserves_previous_start_spacing(tmp_path: Path) -> None:
+    clock = _Clock()
+    wrapper = RateLimitedAcquirer(
+        _SequenceAcquirer([{"provider_result": "SUCCESS", "warnings": []}]),
+        policy=AcquisitionRetryPolicy(jitter_max_seconds=0),
+        monotonic=clock.monotonic,
+        sleep=clock.sleep,
+        utc_now=lambda: "2026-09-04T00:00:10+00:00",
+        initial_elapsed_since_previous_start_seconds=7.0,
+    )
+    wrapper.acquire(TRACK, tmp_path)
+    assert clock.sleeps == [13.0]
+    assert wrapper.attempts[0]["previous_request_start_delta_seconds"] == 20.0
+    assert wrapper.attempts[0]["minimum_spacing_compliant"] is True
+
+
 def test_retry_is_rate_limited_and_retry_after_is_honored(tmp_path: Path) -> None:
     failure = _Failure("HTTP Error 429", http_status=429, retry_after_seconds=31)
     success = {"provider_result": "SUCCESS", "warnings": []}

@@ -157,6 +157,7 @@ class RateLimitedAcquirer:
         utc_now: Callable[[], str] = _utc_now,
         wall_now: Callable[[], datetime] = lambda: datetime.now(timezone.utc),
         rng: random.Random | None = None,
+        initial_elapsed_since_previous_start_seconds: float | None = None,
     ) -> None:
         self.acquirer = acquirer
         self.policy = policy or AcquisitionRetryPolicy()
@@ -165,7 +166,16 @@ class RateLimitedAcquirer:
         self._utc_now = utc_now
         self._wall_now = wall_now
         self._rng = rng or random.Random(self.policy.random_seed)
-        self._last_start: float | None = None
+        if (
+            initial_elapsed_since_previous_start_seconds is not None
+            and initial_elapsed_since_previous_start_seconds < 0
+        ):
+            raise ValueError("initial elapsed acquisition time cannot be negative")
+        self._last_start: float | None = (
+            None
+            if initial_elapsed_since_previous_start_seconds is None
+            else self._monotonic() - initial_elapsed_since_previous_start_seconds
+        )
         self.attempts: list[dict[str, Any]] = []
 
     def _wait_until_allowed(self, requested_backoff: float) -> tuple[float, float]:

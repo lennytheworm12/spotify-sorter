@@ -25,6 +25,12 @@ def main() -> None:
     parser.add_argument(
         "--selected-sources", default=str(default_selected)
     )
+    parser.add_argument(
+        "--playback-source", choices=("local", "youtube"), default="local"
+    )
+    parser.add_argument(
+        "--local-audio-index", default=str(root / ".research_audio/index.json")
+    )
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8782)
     parser.add_argument("--no-browser", action="store_true")
@@ -42,7 +48,12 @@ def main() -> None:
                 Path(args.review),
             )
         store = Stage5C2ReviewStore(
-            args.queue, args.review, selected_sources_path=args.selected_sources
+            args.queue,
+            args.review,
+            selected_sources_path=args.selected_sources,
+            local_audio_index_path=(
+                args.local_audio_index if args.playback_source == "local" else None
+            ),
         )
     except (FileNotFoundError, Stage5B1AValidationError) as exc:
         raise SystemExit(str(exc)) from exc
@@ -55,7 +66,11 @@ def main() -> None:
         mode="stage5c2_similarity_review",
         export_filename="stage5c2-human-similarity-review.csv",
         server_name="Stage 5C.2 unified similarity reviewer",
-        frame_sources=("https://www.youtube-nocookie.com",),
+        frame_sources=(
+            ("https://www.youtube-nocookie.com",)
+            if args.playback_source == "youtube"
+            else ()
+        ),
     )
 
 

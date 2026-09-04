@@ -7,7 +7,7 @@ import webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Any, Protocol
-from urllib.parse import urlparse
+from urllib.parse import unquote, urlparse
 
 from audio_similarity.stage5b1a_models import Stage5B1AValidationError
 from audio_similarity.stage5b1b_config import load_stage5b1b_config
@@ -35,7 +35,6 @@ class ReviewStore(Protocol):
         candidate_note: str = "",
         track_note: str = "",
     ) -> dict[str, Any]: ...
-
 
 def make_review_handler(
     store: ReviewStore,
@@ -66,7 +65,7 @@ def make_review_handler(
                 "Content-Security-Policy",
                 "default-src 'self'; style-src 'self' 'unsafe-inline'; "
                 "script-src 'self' 'unsafe-inline'; connect-src 'self'; "
-                f"img-src 'self' data:;{frame_policy}",
+                f"img-src 'self' data:; media-src 'self';{frame_policy}",
             )
             if download:
                 self.send_header(
@@ -95,6 +94,13 @@ def make_review_handler(
 
         def do_GET(self) -> None:  # noqa: N802
             path = urlparse(self.path).path
+            if path.startswith("/audio/track/"):
+                resolver = getattr(store, "local_audio_for_request", None)
+                spotify_id = unquote(path.removeprefix("/audio/track/"))
+                resolved = resolver(spotify_id) if resolver else None
+                if resolved is None:
+                    return self._json({"error": "local audio not found"}, 404)
+                return self._audio(*resolved)
             if path in {"/", "/index.html"}:
                 return self._bytes(static.read_bytes(), "text/html; charset=utf-8")
             if path == "/api/ping":
@@ -111,6 +117,58 @@ def make_review_handler(
                     download=export_filename,
                 )
             return self._json({"error": "not found"}, 404)
+
+        def _audio(self, source: Path, content_type: str) -> None:
+            size = source.stat().st_size
+            start, end = 0, size - 1
+            range_header = self.headers.get("Range")
+            status = 200
+            if range_header:
+                if not range_header.startswith("bytes=") or "," in range_header:
+                    return self._range_unsatisfied(size)
+                raw_start, separator, raw_end = range_header[6:].partition("-")
+                if not separator:
+                    return self._range_unsatisfied(size)
+                try:
+                    if not raw_start:
+                        suffix = int(raw_end)
+                        if suffix <= 0:
+                            raise ValueError
+                        start = max(0, size - suffix)
+                    else:
+                        start = int(raw_start)
+                        end = size - 1 if not raw_end else int(raw_end)
+                    if start < 0 or start >= size or end < start:
+                        raise ValueError
+                    end = min(end, size - 1)
+                except ValueError:
+                    return self._range_unsatisfied(size)
+                status = 206
+            length = end - start + 1
+            self.send_response(status)
+            self._headers(content_type, length)
+            self.send_header("Accept-Ranges", "bytes")
+            if status == 206:
+                self.send_header("Content-Range", f"bytes {start}-{end}/{size}")
+            self.end_headers()
+            with source.open("rb") as handle:
+                handle.seek(start)
+                remaining = length
+                while remaining:
+                    chunk = handle.read(min(64 * 1024, remaining))
+                    if not chunk:
+                        break
+                    self.wfile.write(chunk)
+                    remaining -= len(chunk)
+
+        def _range_unsatisfied(self, size: int) -> None:
+            body = b'{"error":"invalid byte range"}'
+            self.send_response(416)
+            self._headers("application/json; charset=utf-8", len(body))
+            self.send_header("Accept-Ranges", "bytes")
+            self.send_header("Content-Range", f"bytes */{size}")
+            self.end_headers()
+            self.wfile.write(body)
 
         def do_POST(self) -> None:  # noqa: N802
             if urlparse(self.path).path != "/api/review":

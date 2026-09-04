@@ -32,6 +32,10 @@ ml/**/data/
 ml/**/artifacts/
 ml/**/models/
 
+# Persistent local research sources and playback derivatives. These files may
+# contain copyrighted owner-library audio and must never enter Git or Git LFS.
+ml/audio_similarity/.research_audio/
+
 # Private owner-library export used to freeze the Stage 5B representative
 # benchmark. The sanitized 100-track manifest is committed; the full library
 # snapshot is intentionally local-only.

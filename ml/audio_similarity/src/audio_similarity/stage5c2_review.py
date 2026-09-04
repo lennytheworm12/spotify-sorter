@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from .stage5b1a_models import Stage5B1AValidationError
+from .stage5b1a_models import Stage5B1AValidationError, file_sha256
 from .stage5c2_analysis import REVIEW_COLUMNS, canonical_pair_id
 from .stage5c2_discovery import _json
 
@@ -32,18 +32,24 @@ class Stage5C2ReviewStore:
         queue_path: str | Path,
         review_path: str | Path,
         selected_sources_path: str | Path | None = None,
+        local_audio_index_path: str | Path | None = None,
     ) -> None:
         self.queue_path = Path(queue_path).resolve()
         self.review_path = Path(review_path).resolve()
         self._queue = _json(self.queue_path)
         if self._queue.get("schema_version") != "stage5c2-similarity-review-queue-v1":
             raise Stage5B1AValidationError("invalid Stage 5C.2 review queue")
-        self._playback_by_spotify_id = self._load_playback(selected_sources_path)
+        self._local_audio_by_spotify_id: dict[str, tuple[Path, str]] = {}
+        self._playback_by_spotify_id = self._load_playback(
+            selected_sources_path, local_audio_index_path
+        )
         self._lock = threading.RLock()
         self._read_rows()
 
     def _load_playback(
-        self, selected_sources_path: str | Path | None
+        self,
+        selected_sources_path: str | Path | None,
+        local_audio_index_path: str | Path | None,
     ) -> dict[str, dict[str, Any]]:
         if selected_sources_path is None:
             return {}
@@ -51,6 +57,7 @@ class Stage5C2ReviewStore:
         if payload.get("schema_version") != "stage5c2-selected-sources-v1":
             raise Stage5B1AValidationError("invalid Stage 5C.2 selected sources")
         playback: dict[str, dict[str, Any]] = {}
+        selected_sha = file_sha256(Path(selected_sources_path).resolve())
         for source in payload.get("tracks", []):
             spotify_id = str(source.get("spotify_track_id", ""))
             video_id = str(source.get("selected_youtube_video_id", ""))
@@ -69,7 +76,54 @@ class Stage5C2ReviewStore:
             raise Stage5B1AValidationError(
                 "frozen playback sources do not match the review queue"
             )
-        return playback
+        if local_audio_index_path is None:
+            return playback
+        index_path = Path(local_audio_index_path).resolve()
+        index = _json(index_path)
+        if (
+            index.get("schema_version")
+            != "stage5c2a-local-research-audio-index-v1"
+            or index.get("selected_sources_sha256") != selected_sha
+            or not isinstance(index.get("tracks"), dict)
+        ):
+            raise Stage5B1AValidationError("invalid Stage 5C.2A local audio index")
+        if queue_ids != index["tracks"].keys():
+            raise Stage5B1AValidationError(
+                "local audio sources do not match the amended review queue"
+            )
+        media_root = index_path.parent.resolve()
+        local_playback: dict[str, dict[str, Any]] = {}
+        selected_by_id = {
+            row["spotify_track_id"]: row for row in payload["tracks"]
+        }
+        for spotify_id, provenance in index["tracks"].items():
+            source = (media_root / provenance.get("retained_relative_path", "")).resolve()
+            if (
+                media_root not in source.parents
+                or not source.is_file()
+                or provenance.get("spotify_track_id") != spotify_id
+                or provenance.get("youtube_video_id")
+                != selected_by_id[spotify_id]["selected_youtube_video_id"]
+                or source.stat().st_size != provenance.get("file_size_bytes")
+                or file_sha256(source) != provenance.get("source_sha256")
+            ):
+                raise Stage5B1AValidationError(
+                    f"invalid local playback source: {spotify_id}"
+                )
+            content_type = str(provenance.get("content_type", "application/octet-stream"))
+            self._local_audio_by_spotify_id[spotify_id] = (source, content_type)
+            local_playback[spotify_id] = {
+                "provider": "LOCAL_RESEARCH_AUDIO",
+                "audio_url": f"/audio/track/{spotify_id}",
+                "content_type": content_type,
+                "youtube_video_id": provenance["youtube_video_id"],
+                "segment_windows": [dict(window) for window in FROZEN_SEGMENT_WINDOWS],
+            }
+        return local_playback
+
+    def local_audio_for_request(self, spotify_id: str) -> tuple[Path, str] | None:
+        """Resolve an indexed local source without exposing arbitrary filesystem paths."""
+        return self._local_audio_by_spotify_id.get(spotify_id)
 
     def _read_rows(self) -> list[dict[str, str]]:
         with self.review_path.open(encoding="utf-8", newline="") as handle:
