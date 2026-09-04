@@ -1,0 +1,34 @@
+{
+  "after_label_counts": {
+    "4": 4,
+    "5": 11,
+    "BLANK": 485
+  },
+  "after_sha256": "871ccee4020782aafa789cb52e43f18254d6d6bb13810b99691b549a2baacfc4",
+  "before_label_counts": {
+    "2": 4,
+    "3": 11,
+    "BLANK": 485
+  },
+  "before_sha256": "a8018a55785d23c5ea2f81f6783f68e9b125440485796b0cd88def450a8dd037",
+  "legacy_mapping": {
+    "0": "1",
+    "1": "2",
+    "2": "4",
+    "3": "5"
+  },
+  "migration_applied": true,
+  "migration_timestamp": "2026-09-04T21:43:54.366231+00:00",
+  "review_file": "human_similarity_review.csv",
+  "review_row_schema_version": "stage5c2-human-similarity-review-v2",
+  "reviewed_unique_pairs": 10,
+  "scale": {
+    "1": "NOT SIMILAR",
+    "2": "SOMEWHAT RELATED",
+    "3": "MODERATELY SIMILAR",
+    "4": "VERY SIMILAR",
+    "5": "EXTREMELY SIMILAR",
+    "UNSURE": "UNSURE / SKIP"
+  },
+  "schema_version": "stage5c2-human-similarity-scale-v2"
+}

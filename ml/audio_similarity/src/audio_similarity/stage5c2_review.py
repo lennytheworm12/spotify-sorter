@@ -2,9 +2,11 @@
 from __future__ import annotations
 
 import csv
+import json
 import os
 import re
 import threading
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -15,7 +17,12 @@ from .stage5c2_analysis import REVIEW_COLUMNS, canonical_pair_id
 from .stage5c2_discovery import _json
 
 
-LABELS = ("3", "2", "1", "0", "UNSURE")
+LABELS = ("5", "4", "3", "2", "1", "UNSURE")
+LEGACY_LABELS = ("3", "2", "1", "0", "UNSURE")
+LEGACY_TO_FIVE_POINT = {"3": "5", "2": "4", "1": "2", "0": "1"}
+REVIEW_ROW_SCHEMA_V1 = "stage5c2-human-similarity-review-v1"
+REVIEW_ROW_SCHEMA_V2 = "stage5c2-human-similarity-review-v2"
+REVIEW_SCALE_SCHEMA_VERSION = "stage5c2-human-similarity-scale-v2"
 MAX_NOTE_LENGTH = 2_000
 YOUTUBE_VIDEO_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
 LOCAL_AUDIO_CONTENT_TYPES = frozenset(
@@ -26,6 +33,113 @@ FROZEN_SEGMENT_WINDOWS = (
     {"index": 2, "start_seconds": 12.5, "end_seconds": 17.5},
     {"index": 3, "start_seconds": 22.5, "end_seconds": 27.5},
 )
+
+
+def review_scale_metadata_path(review_path: str | Path) -> Path:
+    """Return the durable scale marker adjacent to a mutable review CSV."""
+    path = Path(review_path)
+    return path.with_name(f"{path.stem}.scale.json")
+
+
+def _atomic_write_review_rows(path: Path, rows: list[dict[str, str]]) -> None:
+    temporary = path.with_suffix(
+        path.suffix + f".{os.getpid()}.{threading.get_ident()}.tmp"
+    )
+    with temporary.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=REVIEW_COLUMNS, lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(rows)
+    temporary.replace(path)
+
+
+def _atomic_write_json(path: Path, payload: dict[str, Any]) -> None:
+    temporary = path.with_suffix(
+        path.suffix + f".{os.getpid()}.{threading.get_ident()}.tmp"
+    )
+    temporary.write_text(
+        json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
+    temporary.replace(path)
+
+
+def ensure_five_point_review_scale(review_path: str | Path) -> dict[str, Any]:
+    """Migrate legacy 0–3 judgments once while preserving all review evidence."""
+    path = Path(review_path).resolve()
+    with path.open(encoding="utf-8", newline="") as handle:
+        reader = csv.DictReader(handle)
+        if tuple(reader.fieldnames or ()) != REVIEW_COLUMNS:
+            raise Stage5B1AValidationError("unexpected Stage 5C.2 review columns")
+        rows = list(reader)
+    schemas = {row["review_schema_version"] for row in rows}
+    if schemas not in ({REVIEW_ROW_SCHEMA_V1}, {REVIEW_ROW_SCHEMA_V2}):
+        raise Stage5B1AValidationError("mixed or unknown Stage 5C.2 review schema")
+
+    metadata_path = review_scale_metadata_path(path)
+    before_sha = file_sha256(path)
+    before_counts = Counter(row["human_label"].strip().upper() or "BLANK" for row in rows)
+    migrated = schemas == {REVIEW_ROW_SCHEMA_V1}
+    allowed = set(LEGACY_LABELS if migrated else LABELS) | {""}
+    if any(row["human_label"].strip().upper() not in allowed for row in rows):
+        raise Stage5B1AValidationError("invalid Stage 5C.2 human label during scale migration")
+
+    if migrated:
+        protected = [
+            tuple(
+                value
+                for key, value in row.items()
+                if key not in {"human_label", "review_schema_version"}
+            )
+            for row in rows
+        ]
+        for row in rows:
+            label = row["human_label"].strip().upper()
+            row["human_label"] = LEGACY_TO_FIVE_POINT.get(label, label)
+            row["review_schema_version"] = REVIEW_ROW_SCHEMA_V2
+        if protected != [
+            tuple(
+                value
+                for key, value in row.items()
+                if key not in {"human_label", "review_schema_version"}
+            )
+            for row in rows
+        ]:
+            raise Stage5B1AValidationError("review evidence changed during scale migration")
+        _atomic_write_review_rows(path, rows)
+
+    after_counts = Counter(row["human_label"].strip().upper() or "BLANK" for row in rows)
+    payload = {
+        "schema_version": REVIEW_SCALE_SCHEMA_VERSION,
+        "review_file": path.name,
+        "review_row_schema_version": REVIEW_ROW_SCHEMA_V2,
+        "scale": {
+            "5": "EXTREMELY SIMILAR",
+            "4": "VERY SIMILAR",
+            "3": "MODERATELY SIMILAR",
+            "2": "SOMEWHAT RELATED",
+            "1": "NOT SIMILAR",
+            "UNSURE": "UNSURE / SKIP",
+        },
+        "legacy_mapping": LEGACY_TO_FIVE_POINT,
+        "migration_applied": migrated,
+        "migration_timestamp": (
+            datetime.now(timezone.utc).isoformat() if migrated else None
+        ),
+        "before_sha256": before_sha,
+        "after_sha256": file_sha256(path),
+        "before_label_counts": dict(sorted(before_counts.items())),
+        "after_label_counts": dict(sorted(after_counts.items())),
+        "reviewed_unique_pairs": len(
+            {row["pair_id"] for row in rows if row["human_label"]}
+        ),
+    }
+    if migrated or not metadata_path.is_file():
+        _atomic_write_json(metadata_path, payload)
+    else:
+        existing = json.loads(metadata_path.read_text(encoding="utf-8"))
+        if existing.get("schema_version") != REVIEW_SCALE_SCHEMA_VERSION:
+            raise Stage5B1AValidationError("invalid Stage 5C.2 review scale metadata")
+        payload = existing
+    return payload
 
 
 class Stage5C2ReviewStore:
@@ -204,7 +318,7 @@ class Stage5C2ReviewStore:
                 row["pair_id"] for row in rows if row["human_label"]
             }
             return {
-                "schema_version": "stage5c2-review-session-v1",
+                "schema_version": "stage5c2-review-session-v2",
                 "mode": "stage5c2_similarity_review",
                 "status": (
                     "HUMAN_REVIEW_COMPLETE"
@@ -212,10 +326,11 @@ class Stage5C2ReviewStore:
                     else "HUMAN_REVIEW_PENDING"
                 ),
                 "labels": {
-                    "3": "VERY SIMILAR",
-                    "2": "SIMILAR",
-                    "1": "SOMEWHAT RELATED",
-                    "0": "NOT SIMILAR",
+                    "5": "EXTREMELY SIMILAR",
+                    "4": "VERY SIMILAR",
+                    "3": "MODERATELY SIMILAR",
+                    "2": "SOMEWHAT RELATED",
+                    "1": "NOT SIMILAR",
                     "UNSURE": "UNSURE / SKIP",
                 },
                 "progress": {
@@ -258,14 +373,7 @@ class Stage5C2ReviewStore:
                     row["human_label"] = label
                     row["human_note"] = note
                     row["review_timestamp"] = timestamp
-            temporary = self.review_path.with_suffix(
-                self.review_path.suffix + f".{os.getpid()}.{threading.get_ident()}.tmp"
-            )
-            with temporary.open("w", encoding="utf-8", newline="") as handle:
-                writer = csv.DictWriter(handle, fieldnames=REVIEW_COLUMNS, lineterminator="\n")
-                writer.writeheader()
-                writer.writerows(rows)
-            temporary.replace(self.review_path)
+            _atomic_write_review_rows(self.review_path, rows)
         return {
             "ok": True,
             "pair_id": pair_id,

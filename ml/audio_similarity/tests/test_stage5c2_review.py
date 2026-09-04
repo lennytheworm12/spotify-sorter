@@ -14,6 +14,7 @@ from audio_similarity.stage5b1a_models import Stage5B1AValidationError
 from audio_similarity.stage5b1a_models import file_sha256
 from audio_similarity.stage5c2_analysis import REVIEW_COLUMNS, canonical_pair_id
 from audio_similarity.stage5c2_review import Stage5C2ReviewStore
+from audio_similarity.stage5c2_review import ensure_five_point_review_scale
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -124,12 +125,63 @@ def test_review_store_resumes_and_reuses_reciprocal_pair_label(tmp_path: Path) -
     assert a_to_b["review"]["label"] == "2"
     assert b_to_a["review"]["label"] == "2"
     assert resumed["progress"]["reviewed_unique_pairs"] == 1
+    assert resumed["labels"] == {
+        "5": "EXTREMELY SIMILAR",
+        "4": "VERY SIMILAR",
+        "3": "MODERATELY SIMILAR",
+        "2": "SOMEWHAT RELATED",
+        "1": "NOT SIMILAR",
+        "UNSURE": "UNSURE / SKIP",
+    }
+
+
+def test_legacy_review_scale_migrates_once_without_losing_evidence(
+    tmp_path: Path,
+) -> None:
+    store = _write_review_fixture(tmp_path)
+    store.submit("A", "B", "3", "same production")
+    store.submit("A", "C", "2", "similar pace")
+    before_rows = list(csv.DictReader(store.review_path.open(encoding="utf-8")))
+    protected_before = {
+        (row["query_spotify_id"], row["neighbor_spotify_id"]): (
+            row["pair_id"], row["human_note"], row["review_timestamp"]
+        )
+        for row in before_rows
+    }
+
+    migration = ensure_five_point_review_scale(store.review_path)
+    migrated_sha = file_sha256(store.review_path)
+    after_rows = list(csv.DictReader(store.review_path.open(encoding="utf-8")))
+    protected_after = {
+        (row["query_spotify_id"], row["neighbor_spotify_id"]): (
+            row["pair_id"], row["human_note"], row["review_timestamp"]
+        )
+        for row in after_rows
+    }
+    labels = {
+        (row["query_spotify_id"], row["neighbor_spotify_id"]): row["human_label"]
+        for row in after_rows
+    }
+    assert migration["migration_applied"] is True
+    assert migration["reviewed_unique_pairs"] == 2
+    assert protected_after == protected_before
+    assert labels[("A", "B")] == labels[("B", "A")] == "5"
+    assert labels[("A", "C")] == labels[("C", "A")] == "4"
+    assert {row["review_schema_version"] for row in after_rows} == {
+        "stage5c2-human-similarity-review-v2"
+    }
+
+    repeated = ensure_five_point_review_scale(store.review_path)
+    assert repeated["migration_applied"] is True
+    assert file_sha256(store.review_path) == migrated_sha
 
 
 def test_review_store_rejects_invalid_labels_and_unknown_pairs(tmp_path: Path) -> None:
     store = _write_review_fixture(tmp_path)
     with pytest.raises(Stage5B1AValidationError, match="human label"):
         store.submit("A", "B", "IDEAL")
+    with pytest.raises(Stage5B1AValidationError, match="human label"):
+        store.submit("A", "B", "0")
     with pytest.raises(Stage5B1AValidationError, match="unknown"):
         store.submit("A", "missing", "3")
 
@@ -170,6 +222,8 @@ def test_reused_http_workspace_serves_complete_queue_and_autosaves(tmp_path: Pat
         html_response = _request(base, "/")
         html = html_response.read().decode()
         assert "Unified Similarity Review" in html
+        assert "Five-point similarity scale" in html
+        assert "Moderately similar" in html
         assert "Full song" in html and "segment_windows" in html
         assert 'id="local-player"' in html
         assert "LOCAL_RESEARCH_AUDIO" in html
@@ -188,7 +242,7 @@ def test_reused_http_workspace_serves_complete_queue_and_autosaves(tmp_path: Pat
                 payload={
                     "stable_track_id": "A",
                     "video_id": "B",
-                    "label": "3",
+                    "label": "5",
                     "candidate_note": "very close",
                 },
             ).read()

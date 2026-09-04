@@ -155,7 +155,18 @@ def _human_review_metrics(review_path: Path) -> dict[str, Any]:
             "total_unique_pairs": len(all_pairs),
             "quality_metrics": None,
         }
-    numeric = [row for row in rows if row["human_label"] in {"0", "1", "2", "3"}]
+    schemas = {row["review_schema_version"] for row in rows}
+    if schemas == {"stage5c2-human-similarity-review-v1"}:
+        numeric_labels = {"0", "1", "2", "3"}
+        similar_threshold = 2
+        related_threshold = 1
+    elif schemas == {"stage5c2-human-similarity-review-v2"}:
+        numeric_labels = {"1", "2", "3", "4", "5"}
+        similar_threshold = 3
+        related_threshold = 2
+    else:
+        raise Stage5B1AValidationError("mixed or unknown Stage 5C.2 review schema")
+    numeric = [row for row in rows if row["human_label"] in numeric_labels]
     ratings = np.asarray([float(row["human_label"]) for row in numeric], dtype=np.float64)
 
     def correlation(field: str) -> float | None:
@@ -178,13 +189,15 @@ def _human_review_metrics(review_path: Path) -> dict[str, Any]:
             "mean_human_rating_top1": statistics.mean(top1) if top1 else None,
             "mean_human_rating_top5": float(ratings.mean()) if ratings.size else None,
             "fraction_top1_at_least_similar": (
-                sum(value >= 2 for value in top1) / len(top1) if top1 else None
+                sum(value >= similar_threshold for value in top1) / len(top1)
+                if top1
+                else None
             ),
             "fraction_top5_at_least_similar": (
-                float(np.mean(ratings >= 2)) if ratings.size else None
+                float(np.mean(ratings >= similar_threshold)) if ratings.size else None
             ),
             "fraction_top5_at_least_somewhat_related": (
-                float(np.mean(ratings >= 1)) if ratings.size else None
+                float(np.mean(ratings >= related_threshold)) if ratings.size else None
             ),
             "mean_rating_by_neighbor_rank": {
                 str(rank): statistics.mean(values) for rank, values in sorted(by_rank.items())

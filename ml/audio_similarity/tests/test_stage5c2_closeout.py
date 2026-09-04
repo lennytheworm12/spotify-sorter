@@ -151,3 +151,32 @@ def test_human_metrics_remain_pending_and_unsure_is_never_numeric_zero(tmp_path)
     assert complete["quality_metrics"]["numeric_directional_judgment_count"] == 1
     assert complete["quality_metrics"]["unsure_directional_judgment_count"] == 1
     assert complete["quality_metrics"]["mean_human_rating_top5"] == 3.0
+
+
+def test_human_metrics_support_five_point_scale_thresholds(tmp_path) -> None:
+    path = tmp_path / "review-v2.csv"
+    rows = [
+        {
+            "review_schema_version": "stage5c2-human-similarity-review-v2",
+            "pair_id": f"pair-{index}",
+            "query_spotify_id": "a",
+            "neighbor_spotify_id": f"neighbor-{index}",
+            "neighbor_rank": str(index),
+            "clap_similarity": str(0.9 - index / 10),
+            "muq_similarity": str(0.8 - index / 10),
+            "combined_similarity": str(0.85 - index / 10),
+            "human_label": label,
+            "human_note": "",
+            "review_timestamp": "test",
+        }
+        for index, label in enumerate(("5", "4", "3", "2", "1"), start=1)
+    ]
+    with path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=REVIEW_COLUMNS, lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(rows)
+    complete = _human_review_metrics(path)
+    metrics = complete["quality_metrics"]
+    assert metrics["mean_human_rating_top5"] == 3.0
+    assert metrics["fraction_top5_at_least_similar"] == 0.6
+    assert metrics["fraction_top5_at_least_somewhat_related"] == 0.8

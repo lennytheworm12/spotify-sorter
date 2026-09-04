@@ -23,6 +23,8 @@
     button:disabled { opacity:.45; cursor:not-allowed; }
     main { max-width:1180px; margin:auto; padding:20px 18px 70px; }
     .notice { padding:10px 13px; margin-bottom:14px; border:1px solid rgba(210,153,34,.5); background:rgba(210,153,34,.1); color:#e3b341; border-radius:8px; }
+    .scale { display:flex; gap:6px 14px; flex-wrap:wrap; margin-top:6px; color:var(--muted); font-size:12px; }
+    .scale b { color:var(--text); }
     .query { padding:17px; margin-bottom:14px; background:var(--panel); border:1px solid var(--line); border-radius:10px; }
     .query h2 { margin:0 0 5px; font-size:22px; }
     .track-line { display:flex; align-items:center; justify-content:space-between; gap:12px; }
@@ -80,7 +82,10 @@
     </div>
   </header>
   <main>
-    <div class="notice">The frozen pipeline run is complete. Rate each unordered pair for sonic similarity only; reciprocal A↔B rows automatically share one saved label. UNSURE is excluded from numeric metrics.</div>
+    <div class="notice">
+      The frozen pipeline run is complete. Rate each unordered pair for sonic similarity only; reciprocal A↔B rows automatically share one saved label. UNSURE is excluded from numeric metrics.
+      <div class="scale" aria-label="Five-point similarity scale"><span><b>1</b> Not similar</span><span><b>2</b> Somewhat related</span><span><b>3</b> Moderately similar</span><span><b>4</b> Very similar</span><span><b>5</b> Extremely similar</span></div>
+    </div>
     <section class="player" id="player" hidden>
       <div class="player-head">
         <strong id="player-title">Playback</strong>

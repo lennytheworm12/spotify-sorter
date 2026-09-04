@@ -7,7 +7,11 @@ from pathlib import Path
 from audio_similarity.cli.stage5b1b_review_server import serve
 from audio_similarity.stage5b1a_models import Stage5B1AValidationError
 from audio_similarity.stage5c2_amended_100 import migrate_review_labels
-from audio_similarity.stage5c2_review import Stage5C2ReviewStore
+from audio_similarity.stage5c2_review import (
+    Stage5C2ReviewStore,
+    ensure_five_point_review_scale,
+    review_scale_metadata_path,
+)
 
 
 DEFAULT_REPORT_DIRECTORY = "reports/stage5c2_representative_100_amended_v2"
@@ -42,11 +46,15 @@ def main() -> None:
             and Path(args.review).resolve() == default_review.resolve()
             and Path(args.selected_sources).resolve() == default_selected.resolve()
         )
-        if using_amended_defaults:
+        if (
+            using_amended_defaults
+            and not review_scale_metadata_path(args.review).is_file()
+        ):
             migrate_review_labels(
                 root / "reports/stage5c2_representative_100/human_similarity_review.csv",
                 Path(args.review),
             )
+        ensure_five_point_review_scale(args.review)
         store = Stage5C2ReviewStore(
             args.queue,
             args.review,
