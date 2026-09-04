@@ -196,4 +196,9 @@ def verify_frozen_manifest(path: str | Path) -> tuple[dict[str, Any], str]:
         raise Stage5B1AValidationError("Stage 5C.2 representative manifest changed")
     value = json.loads(manifest_path.read_text(encoding="utf-8"))
     validate_manifest(value)
+    project_root = manifest_path.parents[2]
+    for source in value.get("source_artifacts", []):
+        source_path = project_root / str(source.get("path", ""))
+        if not source_path.is_file() or file_sha256(source_path) != source.get("sha256"):
+            raise Stage5B1AValidationError("Stage 5C.2 historical input changed")
     return value, actual

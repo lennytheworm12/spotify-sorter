@@ -17,6 +17,7 @@ from .stage5c2_analysis import REVIEW_COLUMNS
 from .stage5c2_discovery import verify_selected_sources
 from .stage5c2_manifest import EXPERIMENT_ID, REPORT_DIRECTORY, verify_frozen_manifest
 from .stage5c2_pipeline import ARTIFACT_DIRECTORY
+from .stage5c2_pipeline import SOURCE_MEDIA_SUFFIXES
 
 
 VERDICT_PASS = "REPRESENTATIVE_100_PIPELINE_PASSED_REVIEW_READY"
@@ -192,6 +193,20 @@ def write_closeout(project_root: str | Path) -> dict[str, Any]:
     attempts = _json(report / "acquisition_attempts.json")
     diagnostics = _json(report / "representation_diagnostics.json")
     queue = _json(report / "review_queue.json")
+    retained_media = sorted(
+        str(path)
+        for directory in (report, artifacts)
+        for path in directory.rglob("*")
+        if path.is_file() and path.suffix.casefold() in SOURCE_MEDIA_SUFFIXES
+    )
+    cleanup.update(
+        {
+            "directory_audit_roots": [str(report), str(artifacts)],
+            "unintended_retained_source_audio_paths": retained_media,
+            "unintended_retained_source_audio_files": len(retained_media),
+        }
+    )
+    atomic_json(report / "cleanup_audit.json", cleanup)
     acquisition, rate = acquisition_and_rate_metrics(attempts, materialization)
     cache_audit = audit_stage5a_cache(artifacts / "representations.sqlite")
     atomic_json(report / "acquisition_metrics.json", acquisition)

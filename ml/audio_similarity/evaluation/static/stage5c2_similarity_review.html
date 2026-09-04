@@ -15,8 +15,9 @@
     .progress { color:var(--muted); }
     .bar { width:230px; height:8px; background:var(--panel2); border-radius:10px; overflow:hidden; }
     .bar > div { height:100%; background:var(--green); width:0; transition:width .2s; }
-    button, select, textarea { font:inherit; color:var(--text); background:var(--panel2); border:1px solid var(--line); border-radius:7px; }
-    button, select { min-height:36px; padding:7px 11px; }
+    button, select, textarea, .buttonlink { font:inherit; color:var(--text); background:var(--panel2); border:1px solid var(--line); border-radius:7px; }
+    button, select, .buttonlink { min-height:36px; padding:7px 11px; }
+    .buttonlink { display:inline-flex; align-items:center; text-decoration:none; }
     button { cursor:pointer; }
     button:hover, button:focus-visible, select:focus-visible, textarea:focus-visible { border-color:var(--blue); outline:none; }
     button:disabled { opacity:.45; cursor:not-allowed; }
@@ -62,7 +63,7 @@
         <option value="reviewed">Reviewed</option>
       </select>
       <button id="next-unreviewed">Next unreviewed</button>
-      <a href="/api/export"><button type="button">Export CSV</button></a>
+      <a class="buttonlink" href="/api/export">Export CSV</a>
       <span class="saved" id="saved" aria-live="polite"></span>
     </div>
   </header>
