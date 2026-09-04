@@ -9,6 +9,7 @@ from audio_similarity.stage5c2_manifest import (
     MANIFEST_SCHEMA_VERSION,
     SAMPLE_SEED,
     SAMPLE_SIZE,
+    freeze_representative_manifest,
     validate_manifest,
 )
 
@@ -92,6 +93,71 @@ def test_representative_manifest_contract_is_exactly_100_unique_tracks(tmp_path:
     validate_manifest(manifest)
     assert len(manifest["tracks"]) == 100
     assert len({row["spotify_track_id"] for row in manifest["tracks"]}) == 100
+
+
+def test_sampling_is_deterministic_and_excludes_historical_tracks(
+    tmp_path: Path, monkeypatch
+) -> None:
+    history = tmp_path / "history.json"
+    history.write_text(
+        json.dumps(
+            {
+                "tracks": [
+                    {
+                        "spotify_track_id": f"{1:022d}",
+                        "title": "Representative Song 1",
+                        "artists": ["Artist 1"],
+                    }
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+    snapshot = tmp_path / "library.private.json"
+    snapshot.write_text(
+        json.dumps(
+            {
+                "schema_version": "stage5b-owner-library-snapshot-v1",
+                "sources": [
+                    {
+                        "source_key": "LIKED",
+                        "tracks": [
+                            {
+                                "id": f"{index:022d}",
+                                "name": f"Representative Song {index}",
+                                "artists": [{"name": f"Artist {index}"}],
+                                "album": {
+                                    "name": f"Album {index}",
+                                    "release_date": "2026-01-01",
+                                },
+                                "duration_ms": 180_000,
+                                "is_local": False,
+                            }
+                            for index in range(1, 121)
+                        ],
+                    }
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(
+        "audio_similarity.stage5c2_manifest._validate_contracts",
+        lambda _root: {"selector_source": {"sha256": "frozen"}},
+    )
+    monkeypatch.setattr(
+        "audio_similarity.stage5c2_manifest.stage5c2_exclusion_paths",
+        lambda _root: (history,),
+    )
+    first, first_sha = freeze_representative_manifest(
+        tmp_path, snapshot_path=snapshot, report_dir=tmp_path / "report"
+    )
+    second, second_sha = freeze_representative_manifest(
+        tmp_path, snapshot_path=snapshot, report_dir=tmp_path / "report"
+    )
+    assert first == second
+    assert first_sha == second_sha
+    assert f"{1:022d}" not in {row["spotify_track_id"] for row in first["tracks"]}
 
 
 def test_discovery_uses_frozen_decomposition_then_freezes_exact_selected_ids(

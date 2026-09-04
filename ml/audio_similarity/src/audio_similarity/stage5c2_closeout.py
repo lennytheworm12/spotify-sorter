@@ -17,12 +17,14 @@ from .stage5c2_analysis import REVIEW_COLUMNS
 from .stage5c2_discovery import verify_selected_sources
 from .stage5c2_manifest import EXPERIMENT_ID, REPORT_DIRECTORY, verify_frozen_manifest
 from .stage5c2_pipeline import ARTIFACT_DIRECTORY
-from .stage5c2_pipeline import SOURCE_MEDIA_SUFFIXES
 
 
 VERDICT_PASS = "REPRESENTATIVE_100_PIPELINE_PASSED_REVIEW_READY"
 VERDICT_PARTIAL = "REPRESENTATIVE_100_PIPELINE_PARTIAL_REVIEW_READY"
 VERDICT_FAILED = "REPRESENTATIVE_100_PIPELINE_FAILED"
+SOURCE_MEDIA_SUFFIXES = frozenset(
+    {".aac", ".flac", ".m4a", ".mp3", ".mp4", ".ogg", ".opus", ".part", ".wav", ".webm"}
+)
 
 
 def _json(path: Path) -> dict[str, Any]:
@@ -342,6 +344,7 @@ def write_closeout(project_root: str | Path) -> dict[str, Any]:
         root / "src/audio_similarity/cli/stage5c2_review_server.py",
         root / "evaluation/static/stage5c2_similarity_review.html",
     )
+    test_paths = tuple(sorted((root / "tests").glob("test_stage5c2_*.py")))
     artifact_manifest = {
         "schema_version": "stage5c2-artifact-manifest-v1",
         "experiment_id": EXPERIMENT_ID,
@@ -351,6 +354,7 @@ def write_closeout(project_root: str | Path) -> dict[str, Any]:
         "implementation": {
             path.name: _source(path, root) for path in implementation_paths
         },
+        "tests": {path.name: _source(path, root) for path in test_paths},
         "cache": {
             "path": str((artifacts / "representations.sqlite").relative_to(root)),
             "included_in_report_directory": False,
