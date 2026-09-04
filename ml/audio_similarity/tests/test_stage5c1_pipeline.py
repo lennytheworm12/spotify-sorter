@@ -186,6 +186,13 @@ def test_cleanup_runs_after_handled_acquisition_failure(tmp_path):
     assert failed_cleanup["cleanup_attempted"] is True
     assert failed_cleanup["temp_files_absent_after_cleanup"] is True
     assert cleanup["temporary_root_absent_after_cleanup"] is True
+    acquisition = json.loads(
+        (root / "reports/stage5c1_curated_25_materialization/acquisition_results.json").read_text()
+    )
+    failed_acquisition = next(
+        row for row in acquisition["tracks"] if row["spotify_track_id"] == failed_id
+    )
+    assert failed_acquisition["errors"] == ["controlled exact-ID acquisition failure"]
 
 
 def test_similarity_analysis_is_symmetric_finite_and_excludes_self(successful_pipeline):

@@ -31,6 +31,12 @@ class ExactAudioAcquirer(Protocol):
     def acquire(self, track: dict[str, Any], output_dir: Path) -> dict[str, Any]: ...
 
 
+class ExactAudioAcquisitionError(RuntimeError):
+    def __init__(self, message: str, *, diagnostics: dict[str, Any]):
+        super().__init__(message)
+        self.diagnostics = diagnostics
+
+
 def _now() -> str:
     return datetime.now(timezone.utc).isoformat()
 
@@ -98,8 +104,23 @@ class YtDlpExactAudioAcquirer:
         output_template = output_dir / f"{prefix}.%(ext)s"
         started_at = _now()
         started = time.perf_counter()
-        with YoutubeDL(self._options(output_template, logger)) as ydl:
-            info = ydl.extract_info(exact_url, download=True)
+        try:
+            with YoutubeDL(self._options(output_template, logger)) as ydl:
+                info = ydl.extract_info(exact_url, download=True)
+        except Exception as exc:
+            raise ExactAudioAcquisitionError(
+                str(exc),
+                diagnostics={
+                    "provider": "yt_dlp_exact_url",
+                    "video_id": video_id,
+                    "exact_url": exact_url,
+                    "acquisition_started_at": started_at,
+                    "acquisition_ended_at": _now(),
+                    "elapsed_seconds": time.perf_counter() - started,
+                    "warnings": logger.warnings,
+                    "errors": logger.errors or [str(exc)],
+                },
+            ) from exc
         if not isinstance(info, dict) or info.get("id") != video_id:
             raise RuntimeError("yt-dlp exact-URL extraction returned a different video ID")
         matches = sorted(output_dir.glob(f"{prefix}.*"))
@@ -387,6 +408,7 @@ def run_materialization_attempt(
                     track_inputs.append(TrackInput(stable_id, path, source_hash))
                     acquisition_rows.append(acquisition)
                 except Exception as exc:
+                    diagnostics = getattr(exc, "diagnostics", {})
                     acquisition_rows.append(
                         {
                             "stage5c1_track_id": track["stage5c1_track_id"],
@@ -404,8 +426,11 @@ def run_materialization_attempt(
                             ),
                             "failure_detail": str(exc)[:2000],
                             "reacquisition": run_kind == "cache_rerun",
-                            "warnings": [],
-                            "errors": [str(exc)[:2000]],
+                            "acquisition_started_at": diagnostics.get("acquisition_started_at"),
+                            "acquisition_ended_at": diagnostics.get("acquisition_ended_at"),
+                            "elapsed_seconds": diagnostics.get("elapsed_seconds"),
+                            "warnings": list(diagnostics.get("warnings", [])),
+                            "errors": [str(value)[:2000] for value in diagnostics.get("errors", [exc])],
                         }
                     )
                     decode_rows[spotify_id] = {

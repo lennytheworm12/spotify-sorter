@@ -116,11 +116,6 @@ def build_pipeline_reliability_metrics(
         for row in materialized_rows
         if row["status"] != "SUCCESS"
     )
-    failures.update(
-        row.get("failure_category", "ACQUISITION_FAILED")
-        for row in acquisition_rows
-        if row["provider_result"] == "FAILED"
-    )
     rerun_validation = cache_rerun["cache_rerun_validation"]
     hash_equality = rerun_validation["representation_hash_equality"]
     cleanup_successes = sum(
