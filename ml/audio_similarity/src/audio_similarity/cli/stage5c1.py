@@ -6,6 +6,8 @@ import json
 from pathlib import Path
 
 from audio_similarity.stage5c1_manifest import freeze_curated_manifest
+from audio_similarity.stage5c1_pipeline import run_materialization_attempt
+from audio_similarity.stage5c1_analysis import analyze_representations
 
 
 def parser() -> argparse.ArgumentParser:
@@ -19,6 +21,15 @@ def parser() -> argparse.ArgumentParser:
         "--output",
         default="reports/stage5c1_curated_25_materialization/curated_manifest.json",
     )
+    materialize = subcommands.add_parser(
+        "materialize", help="run exact-ID acquisition and frozen Stage 5A materialization"
+    )
+    materialize.add_argument("--project-root", default=str(root))
+    materialize.add_argument("--run-kind", choices=("first", "cache_rerun"), required=True)
+    analyze = subcommands.add_parser(
+        "analyze", help="compute frozen CLAP, MuQ, and combined similarity diagnostics"
+    )
+    analyze.add_argument("--project-root", default=str(root))
     return command
 
 
@@ -31,6 +42,12 @@ def main() -> None:
             output_path=args.output,
         )
         print(json.dumps({"tracks": len(manifest["tracks"]), "sha256": digest}, indent=2))
+    elif args.command == "materialize":
+        result = run_materialization_attempt(args.project_root, run_kind=args.run_kind)
+        print(json.dumps(result, indent=2, sort_keys=True))
+    elif args.command == "analyze":
+        result = analyze_representations(args.project_root)
+        print(json.dumps(result, indent=2, sort_keys=True))
 
 
 if __name__ == "__main__":
