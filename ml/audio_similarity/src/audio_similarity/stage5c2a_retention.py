@@ -503,6 +503,8 @@ def _cache_hit(
     expected_content_type = _audio_content_type(source.suffix)
     if provenance.get("content_type") != expected_content_type:
         provenance["content_type"] = expected_content_type
+    if provenance.get("provider_result") != "SUCCESS":
+        provenance["provider_result"] = "SUCCESS"
     if not provenance.get("acquisition_ended_at") and attempts:
         successful = [
             row

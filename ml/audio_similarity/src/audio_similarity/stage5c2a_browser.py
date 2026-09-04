@@ -2,14 +2,14 @@
 from __future__ import annotations
 
 import threading
-from http.server import ThreadingHTTPServer
+import time
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
 
 from playwright.sync_api import sync_playwright
 
-from .cli.stage5b1b_review_server import make_review_handler
+from .cli.stage5b1b_review_server import ReviewHTTPServer, make_review_handler
 from .stage5b1b_artifacts import atomic_json
 from .stage5c2_review import Stage5C2ReviewStore
 from .stage5c2a_retention import (
@@ -38,7 +38,7 @@ def validate_browser_playback(project_root: str | Path) -> dict[str, Any]:
         static=static,
         mode="stage5c2_similarity_review",
     )
-    server = ThreadingHTTPServer(("127.0.0.1", 0), handler)
+    server = ReviewHTTPServer(("127.0.0.1", 0), handler)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
     url = f"http://127.0.0.1:{server.server_address[1]}"
@@ -59,7 +59,7 @@ def validate_browser_playback(project_root: str | Path) -> dict[str, Any]:
             page.on(
                 "response",
                 lambda response: audio_responses.append(
-                    {"url": response.url, "status": response.status}
+                    {"endpoint": urlparse(response.url).path, "status": response.status}
                 )
                 if "/audio/track/" in response.url
                 else None,
@@ -74,59 +74,51 @@ def validate_browser_playback(project_root: str | Path) -> dict[str, Any]:
             page.select_option("#filter", "all")
             page.locator("[data-play-track]").first.click()
             page.locator("#local-player:not([hidden])").wait_for(timeout=10_000)
-            page.wait_for_function(
-                "document.querySelector('#local-player').readyState >= 1",
-                timeout=15_000,
-            )
-            query_src = page.locator("#local-player").evaluate(
-                "element => element.currentSrc"
-            )
-            duration = page.locator("#local-player").evaluate(
-                "element => element.duration"
-            )
+            audio = page.locator("#local-player")
+
+            def wait_for_audio(
+                predicate, argument=None, *, timeout_seconds: float = 15.0
+            ) -> None:
+                deadline = time.monotonic() + timeout_seconds
+                while time.monotonic() < deadline:
+                    if audio.evaluate(predicate, argument):
+                        return
+                    page.wait_for_timeout(100)
+                raise RuntimeError("timed out waiting for browser audio state")
+
+            wait_for_audio("element => element.readyState >= 1")
+            query_src = audio.evaluate("element => element.currentSrc")
+            duration = audio.evaluate("element => element.duration")
             page.locator('[data-segment="1"]').click()
-            page.wait_for_function(
-                "document.querySelector('#local-player').currentTime >= 12",
-                timeout=10_000,
-            )
-            clip_time = page.locator("#local-player").evaluate(
-                "element => element.currentTime"
-            )
+            wait_for_audio("element => element.currentTime >= 12")
+            clip_time = audio.evaluate("element => element.currentTime")
             mid_target = max(1.0, float(duration) / 2.0)
-            page.locator("#local-player").evaluate(
+            audio.evaluate(
                 "(element, target) => { element.currentTime = target; return element.play(); }",
                 mid_target,
             )
             page.wait_for_timeout(750)
-            mid_time = page.locator("#local-player").evaluate(
-                "element => element.currentTime"
-            )
-            page.locator("#local-player").evaluate(
+            mid_time = audio.evaluate("element => element.currentTime")
+            audio.evaluate(
                 "(element, target) => { element.currentTime = target; return element.play(); }",
                 mid_target,
             )
             page.wait_for_timeout(500)
-            repeated_mid_time = page.locator("#local-player").evaluate(
-                "element => element.currentTime"
-            )
+            repeated_mid_time = audio.evaluate("element => element.currentTime")
             near_end_target = max(1.0, float(duration) - 3.0)
-            page.locator("#local-player").evaluate(
+            audio.evaluate(
                 "(element, target) => { element.currentTime = target; return element.play(); }",
                 near_end_target,
             )
             page.wait_for_timeout(500)
-            near_end_time = page.locator("#local-player").evaluate(
-                "element => element.currentTime"
-            )
+            near_end_time = audio.evaluate("element => element.currentTime")
             page.locator(".neighbor [data-play-track]").first.click()
-            page.wait_for_function(
-                "([prior]) => document.querySelector('#local-player').currentSrc !== prior",
-                [query_src],
-                timeout=15_000,
+            wait_for_audio(
+                "(element, prior) => element.currentSrc !== prior",
+                query_src,
+                timeout_seconds=15.0,
             )
-            neighbor_src = page.locator("#local-player").evaluate(
-                "element => element.currentSrc"
-            )
+            neighbor_src = audio.evaluate("element => element.currentSrc")
             browser_details = {
                 "engine": "chromium",
                 "clean_ephemeral_context": True,

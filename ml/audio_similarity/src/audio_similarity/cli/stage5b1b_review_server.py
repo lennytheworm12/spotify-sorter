@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 import webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -18,6 +19,16 @@ from audio_similarity.stage5b1b_sol_comparison import load_audit_queue
 
 STATIC = Path(__file__).resolve().parents[3] / "evaluation" / "static" / "stage5b1b_review.html"
 MAX_REQUEST_BYTES = 16_384
+
+
+class ReviewHTTPServer(ThreadingHTTPServer):
+    """Keep expected browser connection resets out of local reviewer logs."""
+
+    def handle_error(self, request, client_address) -> None:
+        error = sys.exception()
+        if isinstance(error, (BrokenPipeError, ConnectionResetError)):
+            return
+        super().handle_error(request, client_address)
 
 
 class ReviewStore(Protocol):
@@ -217,7 +228,7 @@ def serve(
     server_name: str = "Stage 5B.1B reviewer",
     frame_sources: tuple[str, ...] = (),
 ) -> None:
-    server = ThreadingHTTPServer(
+    server = ReviewHTTPServer(
         (host, port),
         make_review_handler(
             store,

@@ -3,11 +3,10 @@ from __future__ import annotations
 
 import threading
 import urllib.request
-from http.server import ThreadingHTTPServer
 from pathlib import Path
 from typing import Any
 
-from .cli.stage5b1b_review_server import make_review_handler
+from .cli.stage5b1b_review_server import ReviewHTTPServer, make_review_handler
 from .stage5b1a_models import Stage5B1AValidationError, file_sha256
 from .stage5b1b_artifacts import atomic_json
 from .stage5c2_review import Stage5C2ReviewStore
@@ -48,7 +47,7 @@ def validate_local_playback(project_root: str | Path) -> dict[str, Any]:
         )
     )
     handler = make_review_handler(store, mode="stage5c2_similarity_review")
-    server = ThreadingHTTPServer(("127.0.0.1", 0), handler)
+    server = ReviewHTTPServer(("127.0.0.1", 0), handler)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
     base = f"http://127.0.0.1:{server.server_address[1]}"
