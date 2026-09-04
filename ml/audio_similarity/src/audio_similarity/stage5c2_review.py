@@ -8,6 +8,7 @@ import threading
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote
 
 from .stage5b1a_models import Stage5B1AValidationError, file_sha256
 from .stage5c2_analysis import REVIEW_COLUMNS, canonical_pair_id
@@ -17,6 +18,9 @@ from .stage5c2_discovery import _json
 LABELS = ("3", "2", "1", "0", "UNSURE")
 MAX_NOTE_LENGTH = 2_000
 YOUTUBE_VIDEO_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
+LOCAL_AUDIO_CONTENT_TYPES = frozenset(
+    {"audio/aac", "audio/flac", "audio/mp4", "audio/mpeg", "audio/ogg", "audio/webm"}
+)
 FROZEN_SEGMENT_WINDOWS = (
     {"index": 1, "start_seconds": 2.5, "end_seconds": 7.5},
     {"index": 2, "start_seconds": 12.5, "end_seconds": 17.5},
@@ -111,10 +115,14 @@ class Stage5C2ReviewStore:
                     f"invalid local playback source: {spotify_id}"
                 )
             content_type = str(provenance.get("content_type", "application/octet-stream"))
+            if content_type not in LOCAL_AUDIO_CONTENT_TYPES or source.stat().st_size <= 0:
+                raise Stage5B1AValidationError(
+                    f"invalid local playback media metadata: {spotify_id}"
+                )
             self._local_audio_by_spotify_id[spotify_id] = (source, content_type)
             local_playback[spotify_id] = {
                 "provider": "LOCAL_RESEARCH_AUDIO",
-                "audio_url": f"/audio/track/{spotify_id}",
+                "audio_url": f"/audio/track/{quote(spotify_id, safe='')}",
                 "content_type": content_type,
                 "youtube_video_id": provenance["youtube_video_id"],
                 "segment_windows": [dict(window) for window in FROZEN_SEGMENT_WINDOWS],

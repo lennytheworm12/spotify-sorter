@@ -11,7 +11,7 @@ import threading
 import time
 import urllib.request
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from statistics import median
 from http.server import ThreadingHTTPServer
@@ -282,7 +282,15 @@ def prepare_retention(project_root: str | Path) -> dict[str, Any]:
     config_path = report / "retention_config.json"
     if config_path.exists():
         existing = _json(config_path)
-        config["frozen_at_utc"] = existing["frozen_at_utc"]
+        if (
+            existing.get("experiment_id") != EXPERIMENT_ID
+            or existing.get("source_reference_sha256")
+            != config["source_reference_sha256"]
+            or existing.get("selected_sources_sha256") != selected_sha
+            or existing.get("representative_manifest_sha256") != manifest_sha
+        ):
+            raise Stage5B1AValidationError("frozen retention config is incompatible")
+        return existing
     _write_frozen_json(config_path, config)
     return config
 
@@ -357,7 +365,12 @@ class PersistentExactAudioAcquirer:
             and path.suffix.casefold() in SUPPORTED_SOURCE_SUFFIXES
             and not path.name.endswith((".part", ".ytdl"))
         ]
-        if prepared and prepared.is_file() and prepared not in candidates:
+        if (
+            prepared
+            and prepared.is_file()
+            and output_dir.resolve() in prepared.resolve().parents
+            and prepared not in candidates
+        ):
             candidates.append(prepared)
         if len(candidates) != 1:
             raise RuntimeError(
@@ -464,6 +477,7 @@ def _cache_hit(
     media_root: Path,
     track: dict[str, Any],
     selected_sha: str,
+    attempts: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any] | None:
     provenance_path = media_root / track["spotify_track_id"] / "provenance.json"
     if not provenance_path.is_file():
@@ -474,6 +488,10 @@ def _cache_hit(
         or provenance.get("spotify_track_id") != track["spotify_track_id"]
         or provenance.get("youtube_video_id") != track["youtube_video_id"]
         or provenance.get("selected_sources_sha256") != selected_sha
+        or provenance.get("source_url") != track["source_url"]
+        or provenance.get("selected_rank") != track["selected_rank"]
+        or provenance.get("representation_linkage")
+        != track["representation_linkage"]
     ):
         return None
     source = (media_root / provenance.get("retained_relative_path", "")).resolve()
@@ -486,6 +504,24 @@ def _cache_hit(
     expected_content_type = _audio_content_type(source.suffix)
     if provenance.get("content_type") != expected_content_type:
         provenance["content_type"] = expected_content_type
+    if not provenance.get("acquisition_ended_at") and attempts:
+        successful = [
+            row
+            for row in attempts
+            if row.get("track_id") == track["spotify_track_id"]
+            and row.get("video_id") == track["youtube_video_id"]
+            and row.get("final_outcome") == "SUCCESS"
+        ]
+        if successful:
+            attempt = successful[-1]
+            started = datetime.fromisoformat(attempt["request_start_timestamp"])
+            duration = float(attempt.get("acquisition_duration_seconds", 0.0))
+            provenance["acquisition_started_at"] = started.isoformat()
+            provenance["acquisition_ended_at"] = (
+                started + timedelta(seconds=duration)
+            ).isoformat()
+            provenance["acquisition_duration_seconds"] = duration
+    if provenance != _json(provenance_path):
         atomic_json(provenance_path, provenance)
     return provenance
 
@@ -564,7 +600,7 @@ def run_retention(
     rows: list[dict[str, Any]] = []
     for track in reference["tracks"]:
         spotify_id = track["spotify_track_id"]
-        hit = _cache_hit(media_root, track, selected_sha)
+        hit = _cache_hit(media_root, track, selected_sha, prior_attempts)
         if hit is not None:
             index["tracks"][spotify_id] = hit
             rows.append(
@@ -582,9 +618,14 @@ def run_retention(
             continue
         scratch = Path(tempfile.mkdtemp(prefix=".scratch-", dir=media_root))
         result: dict[str, Any] | None = None
+        cleanup_error: OSError | None = None
         try:
             result = limited.acquire(track, scratch)
-            downloaded = Path(result["downloaded_path"])
+            downloaded = Path(result["downloaded_path"]).resolve()
+            if scratch.resolve() not in downloaded.parents:
+                raise Stage5B1AValidationError(
+                    "acquirer returned a path outside the per-track scratch directory"
+                )
             technical = probe_and_validate(downloaded)
             source_hash = file_sha256(downloaded)
             track_root = media_root / spotify_id
@@ -625,6 +666,12 @@ def run_retention(
                 "content_type": technical["content_type"],
                 "full_decode_validated": technical["full_decode_validated"],
                 "acquisition_timestamp": result["acquisition_started_at"],
+                "acquisition_started_at": result["acquisition_started_at"],
+                "acquisition_ended_at": result["acquisition_ended_at"],
+                "acquisition_duration_seconds": result[
+                    "acquisition_duration_seconds"
+                ],
+                "provider_result": "SUCCESS",
                 "representation_linkage": track["representation_linkage"],
                 "warnings": result.get("warnings", []),
             }
@@ -661,7 +708,14 @@ def run_retention(
                 }
             )
         finally:
-            shutil.rmtree(scratch, ignore_errors=False)
+            try:
+                shutil.rmtree(scratch, ignore_errors=False)
+            except OSError as exc:
+                cleanup_error = exc
+        if cleanup_error is not None:
+            rows[-1]["status"] = "FAILED"
+            rows[-1]["failure_category"] = "CLEANUP_FAILED"
+            rows[-1]["error"] = str(cleanup_error)[:2000]
         index["track_count"] = len(index["tracks"])
         index["updated_at_utc"] = _now()
         atomic_json(index_path, index)
@@ -707,6 +761,12 @@ def closeout_retention(project_root: str | Path) -> dict[str, Any]:
     index = _load_index(
         root / MEDIA_ROOT / "index.json", config["selected_sources_sha256"]
     )
+    reference = _json(root / config["source_reference_path"])
+    reference_by_id = {
+        row["spotify_track_id"]: row for row in reference["tracks"]
+    }
+    if set(index["tracks"]) != set(reference_by_id):
+        raise Stage5B1AValidationError("local media index does not cover exact amended 100")
     for name, expected in config["immutable_amended_evidence"].items():
         if file_sha256(source_report / name) != expected:
             raise Stage5B1AValidationError(f"amended evidence changed: {name}")
@@ -716,12 +776,20 @@ def closeout_retention(project_root: str | Path) -> dict[str, Any]:
             raise Stage5B1AValidationError("existing human review progress changed")
     files: list[Path] = []
     for spotify_id, provenance in index["tracks"].items():
-        source = (root / MEDIA_ROOT / provenance["retained_relative_path"]).resolve()
-        if (root / MEDIA_ROOT).resolve() not in source.parents:
-            raise Stage5B1AValidationError("retained path escaped media root")
-        if not source.is_file() or file_sha256(source) != provenance["source_sha256"]:
+        validated = _cache_hit(
+            root / MEDIA_ROOT,
+            reference_by_id[spotify_id],
+            config["selected_sources_sha256"],
+            results.get("attempts", []),
+        )
+        if validated is None:
             raise Stage5B1AValidationError(f"retained source failed audit: {spotify_id}")
+        index["tracks"][spotify_id] = validated
+        source = (root / MEDIA_ROOT / provenance["retained_relative_path"]).resolve()
         files.append(source)
+    index["track_count"] = len(index["tracks"])
+    index["updated_at_utc"] = _now()
+    atomic_json(root / MEDIA_ROOT / "index.json", index)
     scratch = sorted(
         str(path.relative_to(root / MEDIA_ROOT))
         for path in (root / MEDIA_ROOT).rglob("*")
@@ -734,6 +802,9 @@ def closeout_retention(project_root: str | Path) -> dict[str, Any]:
     statuses = Counter(row.get("http_status") for row in attempts)
     sizes = [row["file_size_bytes"] for row in provenance_rows]
     durations = [row["source_duration_seconds"] for row in provenance_rows]
+    warnings = [
+        warning for row in provenance_rows for warning in row.get("warnings", [])
+    ]
     ignored_probe = root / MEDIA_ROOT / ".gitignore-audit.media"
     ignored = subprocess.run(
         ["git", "check-ignore", "--quiet", str(ignored_probe.relative_to(root))],
@@ -751,12 +822,27 @@ def closeout_retention(project_root: str | Path) -> dict[str, Any]:
         raise Stage5B1AValidationError("persistent media root is not Git-ignored")
     if tracked:
         raise Stage5B1AValidationError("persistent media files are tracked by Git")
+    all_spacing_compliant = all(value >= 20.0 - 1e-6 for value in spacings)
+    result_rows_complete = (
+        len(results.get("tracks", [])) == 100
+        and all(row.get("status") == "SUCCESS" for row in results["tracks"])
+    )
+    ready = (
+        len(files) == 100
+        and not scratch
+        and result_rows_complete
+        and all_spacing_compliant
+        and results.get("clap_inference_calls") == 0
+        and results.get("muq_inference_calls") == 0
+        and ignored
+        and not tracked
+    )
     metrics = {
         "schema_version": "stage5c2a-retention-metrics-v1",
         "experiment_id": EXPERIMENT_ID,
         "verdict": (
             "PERSISTENT_100_RESEARCH_AUDIO_CACHE_READY"
-            if len(files) == 100 and not scratch
+            if ready
             else "PERSISTENT_100_RESEARCH_AUDIO_CACHE_PARTIAL"
         ),
         "expected_tracks": 100,
@@ -790,12 +876,14 @@ def closeout_retention(project_root: str | Path) -> dict[str, Any]:
             row.get("retry_after_seconds") is not None for row in attempts
         ),
         "provider_failures": sum(row["final_outcome"] == "FAILED" for row in attempts),
+        "provider_warning_count": len(warnings),
+        "provider_warning_distribution": dict(Counter(warnings)),
         "acquisition_start_spacing_seconds": {
             "minimum": min(spacings, default=None),
             "median": median(spacings) if spacings else None,
             "maximum": max(spacings, default=None),
             "required_minimum": 20.0,
-            "all_compliant": all(value >= 20.0 - 1e-6 for value in spacings),
+            "all_compliant": all_spacing_compliant,
         },
         "clap_reruns": results["clap_inference_calls"],
         "muq_reruns": results["muq_inference_calls"],
@@ -887,7 +975,16 @@ def validate_local_playback(project_root: str | Path) -> dict[str, Any]:
                 "source_sha256": file_sha256(source),
                 "checks": {},
             }
+            mid_body: bytes | None = None
             for label, requested in ranges.items():
+                expected_start = {
+                    "beginning": 0,
+                    "mid_song": size // 2,
+                    "near_end": size - 1024,
+                }[label]
+                with source.open("rb") as source_handle:
+                    source_handle.seek(expected_start)
+                    expected_body = source_handle.read(1024)
                 with request(spotify_id, requested) as response:
                     body = response.read()
                     content_range = response.headers.get("Content-Range")
@@ -896,6 +993,7 @@ def validate_local_playback(project_root: str | Path) -> dict[str, Any]:
                         and response.headers.get("Accept-Ranges") == "bytes"
                         and bool(content_range and content_range.startswith("bytes "))
                         and len(body) == 1024
+                        and body == expected_body
                     )
                 if not ok:
                     raise Stage5B1AValidationError(
@@ -907,9 +1005,15 @@ def validate_local_playback(project_root: str | Path) -> dict[str, Any]:
                     "content_range": content_range,
                     "bytes_received": len(body),
                 }
+                if label == "mid_song":
+                    mid_body = body
             with request(spotify_id, ranges["mid_song"]) as response:
                 repeated = response.read()
-            track_checks["repeated_seek_identical"] = len(repeated) == 1024
+            track_checks["repeated_seek_identical"] = repeated == mid_body
+            if repeated != mid_body:
+                raise Stage5B1AValidationError(
+                    f"repeated HTTP range changed bytes: {spotify_id}"
+                )
             checks.append(track_checks)
     finally:
         server.shutdown()

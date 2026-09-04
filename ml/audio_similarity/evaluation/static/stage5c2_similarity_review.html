@@ -114,6 +114,7 @@
       const audio = $('local-player')
       const iframe = $('youtube-player')
       audio.pause()
+      audio.onloadedmetadata = null
       audio.ontimeupdate = null
       if (local) {
         iframe.src = 'about:blank'
@@ -157,6 +158,8 @@
 
     function closePlayer() {
       $('local-player').pause()
+      $('local-player').onloadedmetadata = null
+      $('local-player').ontimeupdate = null
       $('local-player').removeAttribute('src')
       $('youtube-player').src = 'about:blank'
       $('player').hidden = true

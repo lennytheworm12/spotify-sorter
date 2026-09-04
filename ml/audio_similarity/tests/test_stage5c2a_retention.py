@@ -39,6 +39,8 @@ class _FakeLimited:
             "provider_title": "Frozen source",
             "provider_duration_seconds": 180,
             "acquisition_started_at": "2026-09-04T00:00:00+00:00",
+            "acquisition_ended_at": "2026-09-04T00:00:01+00:00",
+            "acquisition_duration_seconds": 1.0,
             "acquisition_attempts": [{"final_outcome": "SUCCESS"}],
             "warnings": [],
         }

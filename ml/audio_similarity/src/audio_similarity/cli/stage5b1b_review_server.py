@@ -158,7 +158,10 @@ def make_review_handler(
                     chunk = handle.read(min(64 * 1024, remaining))
                     if not chunk:
                         break
-                    self.wfile.write(chunk)
+                    try:
+                        self.wfile.write(chunk)
+                    except (BrokenPipeError, ConnectionResetError):
+                        break
                     remaining -= len(chunk)
 
         def _range_unsatisfied(self, size: int) -> None:

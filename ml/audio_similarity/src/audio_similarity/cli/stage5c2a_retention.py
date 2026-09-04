@@ -5,6 +5,7 @@ import argparse
 import json
 from pathlib import Path
 
+from audio_similarity.stage5c2a_browser import validate_browser_playback
 from audio_similarity.stage5c2a_closeout import write_stage5c2a_closeout
 from audio_similarity.stage5c2a_retention import (
     closeout_retention,
@@ -18,7 +19,8 @@ def main() -> None:
     root = Path(__file__).resolve().parents[3]
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
-        "checkpoint", choices=("prepare", "run", "audit", "playback", "closeout")
+        "checkpoint",
+        choices=("prepare", "run", "audit", "playback", "browser", "closeout"),
     )
     args = parser.parse_args()
     if args.checkpoint == "prepare":
@@ -29,6 +31,8 @@ def main() -> None:
         result = closeout_retention(root)
     elif args.checkpoint == "playback":
         result = validate_local_playback(root)
+    elif args.checkpoint == "browser":
+        result = validate_browser_playback(root)
     else:
         result = write_stage5c2a_closeout(root)
     print(json.dumps(result, indent=2, ensure_ascii=False))
