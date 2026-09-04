@@ -312,8 +312,12 @@ class _YtDlpLogger:
 class PersistentExactAudioAcquirer:
     """Download one complete compressed source from one frozen watch URL."""
 
-    def __init__(self, *, socket_timeout_seconds: float = 30.0) -> None:
+    def __init__(self, *, socket_timeout_seconds: float = 30.0,
+                 extraction_request_sleep_seconds: float = 0.0) -> None:
         self.socket_timeout_seconds = socket_timeout_seconds
+        if extraction_request_sleep_seconds < 0:
+            raise ValueError("extraction request delay must be nonnegative")
+        self.extraction_request_sleep_seconds = extraction_request_sleep_seconds
 
     def acquire(self, track: dict[str, Any], output_dir: Path) -> dict[str, Any]:
         from yt_dlp import YoutubeDL
@@ -338,6 +342,8 @@ class PersistentExactAudioAcquirer:
             "extractor_retries": 0,
             "skip_unavailable_fragments": False,
         }
+        if self.extraction_request_sleep_seconds:
+            options["sleep_interval_requests"] = self.extraction_request_sleep_seconds
         started_at = _now()
         started = time.perf_counter()
         try:
@@ -393,7 +399,7 @@ class PersistentExactAudioAcquirer:
         }
 
 
-def probe_and_validate(path: Path) -> dict[str, Any]:
+def probe_and_validate(path: Path, *, minimum_duration_seconds: float = 29.5) -> dict[str, Any]:
     probe = subprocess.run(
         [
             "ffprobe",
@@ -418,7 +424,7 @@ def probe_and_validate(path: Path) -> dict[str, Any]:
         raise Stage5B1AValidationError("retained source must contain one audio stream")
     stream = audio_streams[0]
     duration = float(payload.get("format", {}).get("duration", 0))
-    if duration < 29.5:
+    if duration <= 0 or duration < minimum_duration_seconds:
         raise Stage5B1AValidationError("retained source is too short for frozen windows")
     subprocess.run(
         [
