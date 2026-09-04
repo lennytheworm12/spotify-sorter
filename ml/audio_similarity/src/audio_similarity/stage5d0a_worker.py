@@ -127,11 +127,17 @@ def run_worker(root, *, processor_factory=None, governor_factory=ProviderGoverno
                 governor.check()
                 spotify_id = track["spotify_track_id"]
                 row = state["tracks"][spotify_id]
-                if row["state"] in TERMINAL:
+                if row["state"] in TERMINAL and row["state"] != "COMPLETE":
                     continue
                 inspected = processor.inspect(track)
                 if row.get("selected_video_id") and (inspected.get("selection") or {}).get("youtube_video_id") != row["selected_video_id"]:
                     raise ValueError("resumed source differs from durable selection checkpoint")
+                if row["state"] == "COMPLETE":
+                    if inspected["source"] is not None and inspected["representation"] is not None:
+                        continue
+                    # A completed queue marker is not a substitute for actual cache integrity.
+                    row["state"] = "RESOLVED"
+                    save()
                 cache_state = {
                     "source": inspected["source"] is not None,
                     "representation": inspected["representation"] is not None}

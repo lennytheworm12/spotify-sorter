@@ -1,6 +1,6 @@
 import json
 
-from audio_similarity.stage5d0a_catalog import allocate_catalog, same_recording
+from audio_similarity.stage5d0a_catalog import allocate_catalog, same_recording, canonical_isrc
 from audio_similarity.stage5d0a_spotify import collect_cell
 from audio_similarity.stage5d0a_manifest import build_global_manifest
 
@@ -58,3 +58,16 @@ def test_dedupe_does_not_chain_duration_tolerance():
     candidates = {str(i): {"spotify": track(i, duration=180000 + i * 3000), "alias_ranks": {"pop": i+1}} for i in range(3)}
     result = allocate_catalog([{"year": 2000, "bucket": "POP", "candidates": candidates}])
     assert result["unique_recording_candidates"] == 2
+
+
+def test_isrc_display_format_is_canonicalized_without_losing_raw_value():
+    assert canonical_isrc("US-AAA-00-00001") == "USAAA0000001"
+    assert canonical_isrc("not-an-isrc") is None
+    assert same_recording(track(1, "First display title", isrc="USAAA0000001"),
+                          track(2, "Other display title", isrc="US-AAA-00-00001"))
+    result = allocate_catalog([{"year": 2000, "bucket": "POP", "candidates": {
+        "0000000000000000000001": {"spotify": track(1, isrc="US-AAA-00-00001"), "alias_ranks": {"pop": 1}}
+    }}])
+    manifest = build_global_manifest(result, catalog_input_sha256="a" * 64)
+    assert manifest["tracks"][0]["isrc"] == "USAAA0000001"
+    assert manifest["tracks"][0]["spotify_raw_isrc"] == "US-AAA-00-00001"

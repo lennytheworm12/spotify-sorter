@@ -136,3 +136,19 @@ def test_unresolved_and_provider_errors_are_distinct_without_download(tmp_path, 
     assert result["state"] == expected
     assert counts == {"acquisition": 0, "inference": 0}
     assert not p.selection_path(TRACK["spotify_track_id"]).exists()
+
+
+def test_source_remains_indexed_when_frozen_windows_cannot_materialize(tmp_path, monkeypatch):
+    import json
+    p, _, _ = processor(tmp_path, monkeypatch)
+    p.find_representation = lambda *args: None
+    monkeypatch.setattr("audio_similarity.stage5d0a_processor.materialize", lambda *args, **kwargs:
+        SimpleNamespace(clap=SimpleNamespace(inferred_segments=0), muq=SimpleNamespace(inferred_segments=0),
+                        failure_categories={"INVALID_OR_TOO_SHORT_AUDIO": 1}))
+    outcome = p.process(TRACK, {"selection": SELECTION, "source": None, "provenance": None,
+                              "representation": None}, lambda *args, **kwargs: None)
+    assert outcome["state"] == "MATERIALIZATION_FAILED"
+    index = json.loads((p.directory / "source_index" / (TRACK["spotify_track_id"] + ".json")).read_text())
+    assert (p.media / index["retained_relative_path"]).is_file()
+    assert index["representation"] is None
+    assert not list(p.media.glob(".stage5d-scratch-*"))

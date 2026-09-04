@@ -89,6 +89,12 @@ class SeedProcessor:
         _write_immutable_json(path, {"selection": selection,
                                     "selection_sha256": document_sha256(selection)})
 
+    def write_source_index(self, spotify_id, selection, provenance, representation):
+        atomic_json(self.directory / "source_index" / f"{spotify_id}.json", {
+            "spotify_track_id": spotify_id, "youtube_video_id": selection["youtube_video_id"],
+            "source_sha256": provenance["source_sha256"], "representation": representation,
+            "retained_relative_path": provenance["retained_relative_path"]})
+
     def inspect(self, track):
         spotify_id = track["spotify_track_id"]
         frozen_selection = json_file(self.selection_path(spotify_id))
@@ -242,6 +248,7 @@ class SeedProcessor:
         result["retained_bytes"] = source.stat().st_size
         checkpoint("SOURCE_RETAINED", result=dict(result))
         representation = inspected["representation"]
+        self.write_source_index(spotify_id, selection, provenance, representation)
         if representation is None:
             checkpoint("MATERIALIZING")
             if self.encoders is None:
@@ -265,8 +272,5 @@ class SeedProcessor:
             provenance["representation_linkage"] = representation
             atomic_json(self.media / spotify_id / "provenance.json", provenance)
         # Keep prior Stage 5C provenance intact; attach new linkage in this batch's index.
-        atomic_json(self.directory / "source_index" / f"{spotify_id}.json", {
-            "spotify_track_id": spotify_id, "youtube_video_id": selection["youtube_video_id"],
-            "source_sha256": provenance["source_sha256"], "representation": representation,
-            "retained_relative_path": provenance["retained_relative_path"]})
+        self.write_source_index(spotify_id, selection, provenance, representation)
         return {"state": "COMPLETE", "result": result}

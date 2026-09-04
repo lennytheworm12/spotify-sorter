@@ -16,6 +16,11 @@ def normalize(value):
     return " ".join(unicodedata.normalize("NFKC", value or "").casefold().split())
 
 
+def canonical_isrc(value):
+    compact = re.sub(r"[-\s]", "", unicodedata.normalize("NFKC", value or "")).upper()
+    return compact if re.fullmatch(r"[A-Z]{2}[A-Z0-9]{3}[0-9]{7}", compact) else None
+
+
 def recording_title(value):
     value = normalize(value)
     while True:
@@ -37,8 +42,8 @@ def version_signature(title):
 def same_recording(left, right):
     if version_signature(left["name"]) != version_signature(right["name"]):
         return False
-    a = normalize((left.get("external_ids") or {}).get("isrc"))
-    b = normalize((right.get("external_ids") or {}).get("isrc"))
+    a = canonical_isrc((left.get("external_ids") or {}).get("isrc"))
+    b = canonical_isrc((right.get("external_ids") or {}).get("isrc"))
     if a and a == b:
         return True
     la = [normalize(artist["name"]) for artist in left["artists"]]
@@ -76,7 +81,7 @@ def allocate_catalog(cells):
     indexes = defaultdict(set)
     for spotify_id in sorted(entries):
         raw = entries[spotify_id]
-        isrc = normalize((raw.get("external_ids") or {}).get("isrc"))
+        isrc = canonical_isrc((raw.get("external_ids") or {}).get("isrc"))
         fallback = (recording_title(raw["name"]), normalize(raw["artists"][0]["name"]))
         keys = [("title", fallback)] + ([("isrc", isrc)] if isrc else [])
         possible = set().union(*(indexes[key] for key in keys))
@@ -115,7 +120,8 @@ def allocate_catalog(cells):
             "spotify_release_date": raw.get("album", {}).get("release_date"),
             "spotify_popularity": raw.get("popularity"),
             "duration_ms": raw["duration_ms"],
-            "isrc": (raw.get("external_ids") or {}).get("isrc"),
+            "isrc": canonical_isrc((raw.get("external_ids") or {}).get("isrc")),
+            "spotify_raw_isrc": (raw.get("external_ids") or {}).get("isrc"),
             "source_memberships": sorted(f"{y}:{b}" for y, b in by_cell),
             "assigned_bucket": bucket, "assigned_year": year,
             "alias_ranks": ranks, "ranking_key": list(key),
@@ -155,6 +161,7 @@ def allocate_catalog(cells):
         "catalog_design": {"design_id": CATALOG_ID, **RECIPE,
                            "credited_artist_overlap": "Jaccard >= 0.5 with equal primary artist",
                            "duration_tolerance_ms": 3000,
+                           "isrc_normalization": "NFKC uppercase; remove spaces/hyphens; invalid identifiers use recording fallback",
                            "dedupe_group_rule": "complete-link; no duration-chain merging",
                            "ownership_ties": "ranking evidence then bucket name then year",
                            "missing_popularity": "zero; does not create popularity evidence"},

@@ -25,8 +25,11 @@ class Processor:
         self.cache = cache
 
     def inspect(self, track):
-        return {"source": self.root if self.cache else None,
-                "representation": {} if self.cache else None, "network_required": not self.cache}
+        state = json.loads((self.directory / "state.json").read_text())
+        cached = self.cache or state["tracks"][track["spotify_track_id"]]["state"] == "COMPLETE"
+        return {"source": self.root if cached else None,
+                "representation": {} if cached else None, "network_required": not cached,
+                "selection": {"youtube_video_id": "abcdefghijk"}}
 
     def process(self, track, inspected, checkpoint):
         key = track["spotify_track_id"]
