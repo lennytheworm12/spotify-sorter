@@ -1,0 +1,200 @@
+{
+  "experiment_id": "stage5c1_curated_25_materialization",
+  "frozen_upstream_integrity": [
+    {
+      "current_sha256": "0b4fa92c919399d3daa8a2e4890a9e61b2631384778860d8c4a91c97076a3d2b",
+      "path": "configs/stage5c1_curated_25.json",
+      "sha256": "0b4fa92c919399d3daa8a2e4890a9e61b2631384778860d8c4a91c97076a3d2b",
+      "size_bytes": 6355,
+      "unchanged": true
+    },
+    {
+      "current_sha256": "39a417c01ce0e4cf9443a2b6fc75175e66be204b5fabb2b38ed2b65f38fa6d37",
+      "path": "reports/stage5b3_minimal_selector/minimal_selector_decisions.json",
+      "sha256": "39a417c01ce0e4cf9443a2b6fc75175e66be204b5fabb2b38ed2b65f38fa6d37",
+      "size_bytes": 214760,
+      "unchanged": true
+    },
+    {
+      "current_sha256": "4813461ee7024d187f1b7b9354f8cec5829a0ae5bb61b4e6614e79f6b5eaff02",
+      "path": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+      "sha256": "4813461ee7024d187f1b7b9354f8cec5829a0ae5bb61b4e6614e79f6b5eaff02",
+      "size_bytes": 228050,
+      "unchanged": true
+    },
+    {
+      "current_sha256": "cac56fc0c9e8f84989228254f2c75e97eed45f8d94dc7eb3fa4a27fad364b88a",
+      "path": "reports/stage5b5_representative_v4/human_review.csv",
+      "sha256": "cac56fc0c9e8f84989228254f2c75e97eed45f8d94dc7eb3fa4a27fad364b88a",
+      "size_bytes": 153160,
+      "unchanged": true
+    },
+    {
+      "current_sha256": "262ac3d0d7459170fef81336ee6f54f5523f2d8300fedee8a51798ce8439160f",
+      "path": "src/audio_similarity/stage5b3_minimal_selector.py",
+      "sha256": "262ac3d0d7459170fef81336ee6f54f5523f2d8300fedee8a51798ce8439160f",
+      "size_bytes": 23106,
+      "unchanged": true
+    },
+    {
+      "current_sha256": "50618289ff54b586ed81c5af8a712841d893859dec5de68f9309c5468aea7a6c",
+      "path": "src/audio_similarity/stage5b4c_artist_decomposition.py",
+      "sha256": "50618289ff54b586ed81c5af8a712841d893859dec5de68f9309c5468aea7a6c",
+      "size_bytes": 8754,
+      "unchanged": true
+    },
+    {
+      "current_sha256": "ea6fb8f71c9de262460233802ad655298c3dd61e8f0ef53c93ed87aed5a77533",
+      "path": "reports/holistic_stage4a_dual/audio_representation_v1.json",
+      "sha256": "ea6fb8f71c9de262460233802ad655298c3dd61e8f0ef53c93ed87aed5a77533",
+      "size_bytes": 11320,
+      "unchanged": true
+    }
+  ],
+  "generation_git_commit": "662df4249f91d22fa6af958400673751bf0d5039",
+  "ignored_cache_artifacts": [
+    {
+      "path": "artifacts/stage5c1_curated_25_materialization/media_identity.json",
+      "sha256": "771b1c2cc71dd00c1f1d50c9257e4a6bfa3ca35cb9f99e580eabd4daf80c1f24",
+      "size_bytes": 11746
+    },
+    {
+      "path": "artifacts/stage5c1_curated_25_materialization/representations/dataset_manifest.json",
+      "sha256": "b59b4cb7753e185fed72dd10f1a6c395ed52c31cffc948d9af85572b014c0137",
+      "size_bytes": 536
+    },
+    {
+      "path": "artifacts/stage5c1_curated_25_materialization/representations/part-00000.parquet",
+      "sha256": "6331ceba990b96c3a90466a33e950db0f1b8fd9aa73e7f723a0c742f5bb74a76",
+      "size_bytes": 115909
+    },
+    {
+      "path": "artifacts/stage5c1_curated_25_materialization/representations.sqlite",
+      "sha256": "af57dd26c5b592e105ea5629c473052c639663a8f6ffabd3e99e0ddb8467d71b",
+      "size_bytes": 892928
+    },
+    {
+      "path": "artifacts/stage5c1_curated_25_materialization/representations.sqlite-shm",
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "size_bytes": 32768
+    },
+    {
+      "path": "artifacts/stage5c1_curated_25_materialization/representations.sqlite-wal",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    }
+  ],
+  "manifest_sha256": "8264bc9eb65164ea6dab21ef936340eb74efa4f8c3c46c42f3b84dd5e9beed3f",
+  "report_artifacts": [
+    {
+      "path": "reports/stage5c1_curated_25_materialization/curated_manifest.json",
+      "sha256": "8264bc9eb65164ea6dab21ef936340eb74efa4f8c3c46c42f3b84dd5e9beed3f",
+      "size_bytes": 64827
+    },
+    {
+      "path": "reports/stage5c1_curated_25_materialization/curated_manifest.sha256",
+      "sha256": "bd80e01090be03d6f9a6457008f66c0c9dcb141adb1bfa3e58177ea10cc12ef0",
+      "size_bytes": 88
+    },
+    {
+      "path": "reports/stage5c1_curated_25_materialization/acquisition_results.json",
+      "sha256": "f69b0805a8245e4189847e6a3814e10215c2586bf76898755a1b890302a5ed02",
+      "size_bytes": 33971
+    },
+    {
+      "path": "reports/stage5c1_curated_25_materialization/materialization_results.json",
+      "sha256": "cf331fd04475e801255ccd014c4b1e06a28e7dfdf28108b36f0f08cde371f122",
+      "size_bytes": 95004
+    },
+    {
+      "path": "reports/stage5c1_curated_25_materialization/cache_rerun_results.json",
+      "sha256": "7eb22330fb9aa7db2d73767b1b30388f81a0a1dbec3d7fa05f30d8dae1551b20",
+      "size_bytes": 94076
+    },
+    {
+      "path": "reports/stage5c1_curated_25_materialization/cleanup_results.json",
+      "sha256": "f8b6a5d869db05fedbb3b584354020ff28cac793a0a861a86b897b5707bb8f88",
+      "size_bytes": 10261
+    },
+    {
+      "path": "reports/stage5c1_curated_25_materialization/clap_similarity.csv",
+      "sha256": "f9a75cdca5264e7566df7f4c8edd6f483522788f419ed4f8111a84a3065610f9",
+      "size_bytes": 8168
+    },
+    {
+      "path": "reports/stage5c1_curated_25_materialization/muq_similarity.csv",
+      "sha256": "9d8276bd81a8a21cbad286a7e82ae284f66714b0b669d1a765b4b935530373a6",
+      "size_bytes": 8168
+    },
+    {
+      "path": "reports/stage5c1_curated_25_materialization/combined_similarity.csv",
+      "sha256": "e9e21481012d52ad844b606b974bbf377d9bbaa804f47282872e0fd65768d0bb",
+      "size_bytes": 8168
+    },
+    {
+      "path": "reports/stage5c1_curated_25_materialization/nearest_neighbors.json",
+      "sha256": "f608f411bdcd7409ab0d26141445e9849bf7b395aabc5761e77f297c53fe4cd2",
+      "size_bytes": 136392
+    },
+    {
+      "path": "reports/stage5c1_curated_25_materialization/group_similarity_metrics.json",
+      "sha256": "5626f53c772c989efaf7304eda37d8862982684d0c303cc9f11ddca85d161158",
+      "size_bytes": 5858
+    },
+    {
+      "path": "reports/stage5c1_curated_25_materialization/encoder_disagreement_analysis.json",
+      "sha256": "e44e127a686c34335f236d627c0a08e75a2d580611366060b2a9d7c59cd7f8b5",
+      "size_bytes": 7399
+    },
+    {
+      "path": "reports/stage5c1_curated_25_materialization/human_sanity_review.csv",
+      "sha256": "ef0a938bb3048729a2976975a376aeadc4857c8181a2aaca60384084e46185dd",
+      "size_bytes": 14372
+    },
+    {
+      "path": "reports/stage5c1_curated_25_materialization/clap_similarity_heatmap.png",
+      "sha256": "0a7320ac4efcde73d8467a100dde9a0301c394617e92edf16c853f125021502d",
+      "size_bytes": 20267
+    },
+    {
+      "path": "reports/stage5c1_curated_25_materialization/muq_similarity_heatmap.png",
+      "sha256": "edb897bc94769cecc5b8e1941ba1e13034231de99a93fa50ce06a95c1eadcfc0",
+      "size_bytes": 20418
+    },
+    {
+      "path": "reports/stage5c1_curated_25_materialization/combined_similarity_heatmap.png",
+      "sha256": "e3a826601441969e81d364368bf3e0fc9f621de1a24078253e4b2c3f495bd6ff",
+      "size_bytes": 20669
+    },
+    {
+      "path": "reports/stage5c1_curated_25_materialization/representation_analysis_summary.json",
+      "sha256": "7aa26dcea7c2a9873f0b3f929cbe7c8fa18613c7523ed8612509c9384135613d",
+      "size_bytes": 3640
+    },
+    {
+      "path": "reports/stage5c1_curated_25_materialization/representation_collapse_diagnostics.json",
+      "sha256": "f386a6cb2b62c20e846cfcf945604f3e29b098f656418fa2ebb3d0a83d82e717",
+      "size_bytes": 2884
+    },
+    {
+      "path": "reports/stage5c1_curated_25_materialization/stage5c1_metrics.json",
+      "sha256": "e21116c6111f149b31e39738d62bdbfaa8f35d46273010c556f652d218375091",
+      "size_bytes": 4810
+    },
+    {
+      "path": "reports/stage5c1_curated_25_materialization/stage5c1_report.md",
+      "sha256": "4332eee2aff654c40bfe76b09d063aea160044e990be6e689a4b295c62334359",
+      "size_bytes": 4008
+    }
+  ],
+  "schema_version": "stage5c1-artifact-manifest-v1",
+  "scope_guards": {
+    "discovery_queries": 0,
+    "media_substitutions": 0,
+    "production_activation": false,
+    "representation_tuned": false,
+    "source_audio_retained": false,
+    "stage5b_selector_modified": false
+  },
+  "verdict": "PIPELINE_AND_REPRESENTATION_SANITY_PASSED"
+}

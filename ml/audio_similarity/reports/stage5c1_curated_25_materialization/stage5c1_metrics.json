@@ -1,0 +1,118 @@
+{
+  "claim_boundary": "Integration and representation sanity check; not a representative quantitative benchmark.",
+  "experiment_id": "stage5c1_curated_25_materialization",
+  "manifest_sha256": "8264bc9eb65164ea6dab21ef936340eb74efa4f8c3c46c42f3b84dd5e9beed3f",
+  "pipeline_reliability": {
+    "cache_rerun": {
+      "acquisition_requests": 0,
+      "encoder_rerun": false,
+      "encoder_segments_inferred": 0,
+      "reacquisition_prevented": 25,
+      "representation_hash_equality": {
+        "07YG6Ark70YsDK4q3swKrc": true,
+        "12xARyH7lVwQyeyBJd80Mz": true,
+        "19BDozGmxYGxF1NcUlENmm": true,
+        "1VFbHdNzYUJr0FsxoayP1N": true,
+        "1iIhGHzzrzqQfuNkFI2qAn": true,
+        "2BPXILn0MqOe5WroVXlvN1": true,
+        "2eAZfqOm4EnOF9VvN50Tyc": true,
+        "2oRNyf4qlAzGz6LljMcDJp": true,
+        "35IcAVSMsU9qzHfpPbvC8A": true,
+        "37YoRLUu1qId0ewavgvnkG": true,
+        "3JbyoXyJvsfAPx87INISmp": true,
+        "3aAnwyBJY9OLNLqSgd4fZU": true,
+        "41hXE5S8D4mRfcdqSMpmAC": true,
+        "47GDIIaeH1GaU7unvTGroF": true,
+        "4as4XEOR03oGm1STUKl6pa": true,
+        "4ecdsGz3Hg6TKPwQ0ZOdJz": true,
+        "4fgIoBKHzO7YO5eATyYbMl": true,
+        "51vRumtqbkNW9wrKfESwfu": true,
+        "5fCKBIJ7BwaCpxxwZCbS5X": true,
+        "5lYv58lizCFl1c15K3yan9": true,
+        "5o4U0weUIAXolji4sEAnjI": true,
+        "5pSflTWYmlRVthO8CZpRem": true,
+        "6wBpO4Xc4YgShnENGSFA1M": true,
+        "7FpUGKMaiBj1AmWgufABjJ": true,
+        "7tNJeoUZeWrVOCfvpAHWT1": true
+      }
+    },
+    "counts": {
+      "acquisition_failures": 0,
+      "acquisition_successes": 25,
+      "cache_rerun_successes": 25,
+      "cache_write_successes": 25,
+      "clap_successes": 25,
+      "cleanup_successes": 25,
+      "decode_successes": 25,
+      "full_materialization_successes": 25,
+      "muq_successes": 25,
+      "segment_extraction_successes": 25,
+      "tracks_attempted": 25
+    },
+    "experiment_id": "stage5c1_curated_25_materialization",
+    "failure_reasons_by_stage": {},
+    "full_materialization_success_percentage": 100.0,
+    "integrity": {
+      "cache_audit": {
+        "corrupt_cache_entries": 0,
+        "passed": true,
+        "problems": [],
+        "row_counts": {
+          "pooled": 50,
+          "segments": 150,
+          "tracks": 25
+        },
+        "sqlite_integrity": "ok"
+      },
+      "corrupt_cache_entries": 0,
+      "manifest_unchanged": true,
+      "media_substitutions": 0,
+      "temporary_root_absent_after_cleanup": true
+    },
+    "performance_seconds": {
+      "cache_rerun_total": 0.4842994000064209,
+      "clap_inference": 6.648284244700335,
+      "exact_url_acquisition_sum": 47.202325530932285,
+      "muq_inference": 3.416273841052316,
+      "stage5a_materialization": 16.11959182197461,
+      "total_first_pass": 126.24144817504566
+    },
+    "pipeline_reliability_passed": true,
+    "provider_warnings": {
+      "counts": {
+        "[youtube] Incomplete data received in embedded initial data; re-fetching using API.": 1,
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one": 25,
+        "[youtube] unable to extract yt initial data; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U": 1
+      },
+      "total": 27,
+      "unique": 3
+    },
+    "schema_version": "stage5c1-pipeline-reliability-metrics-v1",
+    "suggested_gate_at_least_24_of_25": true
+  },
+  "production_activation": false,
+  "representation_sanity": {
+    "analyst_review_counts": {
+      "EXPECTED_STRUCTURE_VISIBLE": 17,
+      "MIXED_BUT_PLAUSIBLE": 3,
+      "NEGATIVE_CONTROL_VARIED": 5
+    },
+    "assessment_basis": "Comparative group relationships, neighbor structure, encoder disagreement, and collapse diagnostics. Blank human fields remain available for owner confirmation; no playback-based human claim is made.",
+    "broad_relationship_comparisons": {
+      "A_within_exceeds_A_vs_E": true,
+      "B_muq_is_more_variable_than_A_muq": true,
+      "C_within_exceeds_C_vs_D": true,
+      "C_within_exceeds_C_vs_E": true,
+      "D_within_exceeds_C_vs_D": true,
+      "D_within_exceeds_D_vs_E": true,
+      "E_is_more_variable_than_A": true
+    },
+    "collapse_pathology_detected": false,
+    "human_review_completed_rows": 0,
+    "human_review_queue_rows": 25,
+    "pathologies_detected": [],
+    "representation_sanity_passed": true
+  },
+  "schema_version": "stage5c1-final-metrics-v1",
+  "verdict": "PIPELINE_AND_REPRESENTATION_SANITY_PASSED"
+}

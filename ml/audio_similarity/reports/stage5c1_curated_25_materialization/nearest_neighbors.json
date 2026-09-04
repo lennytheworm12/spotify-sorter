@@ -1,0 +1,4653 @@
+{
+  "experiment_id": "stage5c1_curated_25_materialization",
+  "schema_version": "stage5c1-nearest-neighbors-v1",
+  "self_matches_excluded": true,
+  "tracks": [
+    {
+      "artists": [
+        "City Girl"
+      ],
+      "group": "A",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.8476643508077651,
+            "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+            "stage5c1_track_id": "stage5c1_A02",
+            "title": "To Be Honest I Just Want to Eat Noodles with You"
+          },
+          {
+            "artists": [
+              "TOMORROW X TOGETHER"
+            ],
+            "group": "D",
+            "rank": 2,
+            "similarity": 0.8118583165909172,
+            "spotify_track_id": "3aAnwyBJY9OLNLqSgd4fZU",
+            "stage5c1_track_id": "stage5c1_D05",
+            "title": "Deja Vu"
+          },
+          {
+            "artists": [
+              "Tomppabeats"
+            ],
+            "group": "C",
+            "rank": 3,
+            "similarity": 0.8068143936398208,
+            "spotify_track_id": "41hXE5S8D4mRfcdqSMpmAC",
+            "stage5c1_track_id": "stage5c1_C02",
+            "title": "The Girl Next Door"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 4,
+            "similarity": 0.776928912094557,
+            "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+            "stage5c1_track_id": "stage5c1_A04",
+            "title": "Soundlessly in the Wind Like Lost Souls"
+          },
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 5,
+            "similarity": 0.7697415429434502,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.7994441366558714,
+            "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+            "stage5c1_track_id": "stage5c1_A02",
+            "title": "To Be Honest I Just Want to Eat Noodles with You"
+          },
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 2,
+            "similarity": 0.7797696393696977,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          },
+          {
+            "artists": [
+              "Tomppabeats"
+            ],
+            "group": "C",
+            "rank": 3,
+            "similarity": 0.7682856278860348,
+            "spotify_track_id": "41hXE5S8D4mRfcdqSMpmAC",
+            "stage5c1_track_id": "stage5c1_C02",
+            "title": "The Girl Next Door"
+          },
+          {
+            "artists": [
+              "TOMORROW X TOGETHER"
+            ],
+            "group": "D",
+            "rank": 4,
+            "similarity": 0.7613167321385059,
+            "spotify_track_id": "3aAnwyBJY9OLNLqSgd4fZU",
+            "stage5c1_track_id": "stage5c1_D05",
+            "title": "Deja Vu"
+          },
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 5,
+            "similarity": 0.7493030786066435,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 1,
+            "similarity": 0.805213884187927,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          },
+          {
+            "artists": [
+              "Bonjr",
+              "Thomas Reid",
+              "versor"
+            ],
+            "group": "C",
+            "rank": 2,
+            "similarity": 0.7702826559056799,
+            "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+            "stage5c1_track_id": "stage5c1_C01",
+            "title": "i want you to help me live"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 3,
+            "similarity": 0.7410039651886002,
+            "spotify_track_id": "5o4U0weUIAXolji4sEAnjI",
+            "stage5c1_track_id": "stage5c1_B05",
+            "title": "Ash"
+          },
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 4,
+            "similarity": 0.7143154473729008,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 5,
+            "similarity": 0.6770952000364663,
+            "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+            "stage5c1_track_id": "stage5c1_A02",
+            "title": "To Be Honest I Just Want to Eat Noodles with You"
+          }
+        ]
+      },
+      "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+      "stage5c1_track_id": "stage5c1_A01",
+      "title": "Snow White Petals and Lights"
+    },
+    {
+      "artists": [
+        "City Girl"
+      ],
+      "group": "A",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.8590763099764468,
+            "spotify_track_id": "19BDozGmxYGxF1NcUlENmm",
+            "stage5c1_track_id": "stage5c1_A03",
+            "title": "Château Fountain"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 2,
+            "similarity": 0.8476643508077651,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.7669425562717638,
+            "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+            "stage5c1_track_id": "stage5c1_A04",
+            "title": "Soundlessly in the Wind Like Lost Souls"
+          },
+          {
+            "artists": [
+              "Bonjr",
+              "Thomas Reid",
+              "versor"
+            ],
+            "group": "C",
+            "rank": 4,
+            "similarity": 0.7347757186578943,
+            "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+            "stage5c1_track_id": "stage5c1_C01",
+            "title": "i want you to help me live"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 5,
+            "similarity": 0.6903027278926918,
+            "spotify_track_id": "07YG6Ark70YsDK4q3swKrc",
+            "stage5c1_track_id": "stage5c1_A05",
+            "title": "Lost Birds in Heaven's Gaze"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.8060148978402348,
+            "spotify_track_id": "19BDozGmxYGxF1NcUlENmm",
+            "stage5c1_track_id": "stage5c1_A03",
+            "title": "Château Fountain"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 2,
+            "similarity": 0.7994441366558714,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.7414064866015669,
+            "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+            "stage5c1_track_id": "stage5c1_A04",
+            "title": "Soundlessly in the Wind Like Lost Souls"
+          },
+          {
+            "artists": [
+              "Bonjr",
+              "Thomas Reid",
+              "versor"
+            ],
+            "group": "C",
+            "rank": 4,
+            "similarity": 0.7134412607759519,
+            "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+            "stage5c1_track_id": "stage5c1_C01",
+            "title": "i want you to help me live"
+          },
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 5,
+            "similarity": 0.6735402999382152,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.6770952000364663,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 2,
+            "similarity": 0.6766139296928387,
+            "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+            "stage5c1_track_id": "stage5c1_A04",
+            "title": "Soundlessly in the Wind Like Lost Souls"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.6713824109346457,
+            "spotify_track_id": "19BDozGmxYGxF1NcUlENmm",
+            "stage5c1_track_id": "stage5c1_A03",
+            "title": "Château Fountain"
+          },
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 4,
+            "similarity": 0.6597903089599637,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          },
+          {
+            "artists": [
+              "Bonjr",
+              "Thomas Reid",
+              "versor"
+            ],
+            "group": "C",
+            "rank": 5,
+            "similarity": 0.6593094349199974,
+            "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+            "stage5c1_track_id": "stage5c1_C01",
+            "title": "i want you to help me live"
+          }
+        ]
+      },
+      "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+      "stage5c1_track_id": "stage5c1_A02",
+      "title": "To Be Honest I Just Want to Eat Noodles with You"
+    },
+    {
+      "artists": [
+        "City Girl"
+      ],
+      "group": "A",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.8590763099764468,
+            "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+            "stage5c1_track_id": "stage5c1_A02",
+            "title": "To Be Honest I Just Want to Eat Noodles with You"
+          },
+          {
+            "artists": [
+              "Bonjr",
+              "Thomas Reid",
+              "versor"
+            ],
+            "group": "C",
+            "rank": 2,
+            "similarity": 0.7726499222939739,
+            "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+            "stage5c1_track_id": "stage5c1_C01",
+            "title": "i want you to help me live"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.7507171790772688,
+            "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+            "stage5c1_track_id": "stage5c1_A04",
+            "title": "Soundlessly in the Wind Like Lost Souls"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 4,
+            "similarity": 0.7467918100207258,
+            "spotify_track_id": "07YG6Ark70YsDK4q3swKrc",
+            "stage5c1_track_id": "stage5c1_A05",
+            "title": "Lost Birds in Heaven's Gaze"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 5,
+            "similarity": 0.7432317808001901,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.8060148978402348,
+            "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+            "stage5c1_track_id": "stage5c1_A02",
+            "title": "To Be Honest I Just Want to Eat Noodles with You"
+          },
+          {
+            "artists": [
+              "Bonjr",
+              "Thomas Reid",
+              "versor"
+            ],
+            "group": "C",
+            "rank": 2,
+            "similarity": 0.7368102198949897,
+            "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+            "stage5c1_track_id": "stage5c1_C01",
+            "title": "i want you to help me live"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.7214037087578616,
+            "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+            "stage5c1_track_id": "stage5c1_A04",
+            "title": "Soundlessly in the Wind Like Lost Souls"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 4,
+            "similarity": 0.698826011435865,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 5,
+            "similarity": 0.6918338629310352,
+            "spotify_track_id": "07YG6Ark70YsDK4q3swKrc",
+            "stage5c1_track_id": "stage5c1_A05",
+            "title": "Lost Birds in Heaven's Gaze"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.6713824109346457,
+            "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+            "stage5c1_track_id": "stage5c1_A02",
+            "title": "To Be Honest I Just Want to Eat Noodles with You"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 2,
+            "similarity": 0.6470267698478319,
+            "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+            "stage5c1_track_id": "stage5c1_A04",
+            "title": "Soundlessly in the Wind Like Lost Souls"
+          },
+          {
+            "artists": [
+              "Bonjr",
+              "Thomas Reid",
+              "versor"
+            ],
+            "group": "C",
+            "rank": 3,
+            "similarity": 0.6458743011232675,
+            "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+            "stage5c1_track_id": "stage5c1_C01",
+            "title": "i want you to help me live"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 4,
+            "similarity": 0.6169369919491328,
+            "spotify_track_id": "5o4U0weUIAXolji4sEAnjI",
+            "stage5c1_track_id": "stage5c1_B05",
+            "title": "Ash"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 5,
+            "similarity": 0.586155448746579,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          }
+        ]
+      },
+      "spotify_track_id": "19BDozGmxYGxF1NcUlENmm",
+      "stage5c1_track_id": "stage5c1_A03",
+      "title": "Château Fountain"
+    },
+    {
+      "artists": [
+        "City Girl"
+      ],
+      "group": "A",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.776928912094557,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 2,
+            "similarity": 0.7669425562717638,
+            "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+            "stage5c1_track_id": "stage5c1_A02",
+            "title": "To Be Honest I Just Want to Eat Noodles with You"
+          },
+          {
+            "artists": [
+              "Paintamelody"
+            ],
+            "group": "E",
+            "rank": 3,
+            "similarity": 0.7550156768601093,
+            "spotify_track_id": "5lYv58lizCFl1c15K3yan9",
+            "stage5c1_track_id": "stage5c1_E04",
+            "title": "Temple of Time"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 4,
+            "similarity": 0.7507171790772688,
+            "spotify_track_id": "19BDozGmxYGxF1NcUlENmm",
+            "stage5c1_track_id": "stage5c1_A03",
+            "title": "Château Fountain"
+          },
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 5,
+            "similarity": 0.7162722268664419,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.7414064866015669,
+            "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+            "stage5c1_track_id": "stage5c1_A02",
+            "title": "To Be Honest I Just Want to Eat Noodles with You"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 2,
+            "similarity": 0.7324061314478858,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.7214037087578616,
+            "spotify_track_id": "19BDozGmxYGxF1NcUlENmm",
+            "stage5c1_track_id": "stage5c1_A03",
+            "title": "Château Fountain"
+          },
+          {
+            "artists": [
+              "Paintamelody"
+            ],
+            "group": "E",
+            "rank": 4,
+            "similarity": 0.7101798969955858,
+            "spotify_track_id": "5lYv58lizCFl1c15K3yan9",
+            "stage5c1_track_id": "stage5c1_E04",
+            "title": "Temple of Time"
+          },
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 5,
+            "similarity": 0.6982450662677607,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.6766139296928387,
+            "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+            "stage5c1_track_id": "stage5c1_A02",
+            "title": "To Be Honest I Just Want to Eat Noodles with You"
+          },
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 2,
+            "similarity": 0.6525048312167874,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.6470267698478319,
+            "spotify_track_id": "19BDozGmxYGxF1NcUlENmm",
+            "stage5c1_track_id": "stage5c1_A03",
+            "title": "Château Fountain"
+          },
+          {
+            "artists": [
+              "AILEE"
+            ],
+            "group": "E",
+            "rank": 4,
+            "similarity": 0.6276145573112193,
+            "spotify_track_id": "2BPXILn0MqOe5WroVXlvN1",
+            "stage5c1_track_id": "stage5c1_E05",
+            "title": "I Will Go To You Like the First Snow"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 5,
+            "similarity": 0.6194386765481585,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          }
+        ]
+      },
+      "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+      "stage5c1_track_id": "stage5c1_A04",
+      "title": "Soundlessly in the Wind Like Lost Souls"
+    },
+    {
+      "artists": [
+        "City Girl"
+      ],
+      "group": "A",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.7467918100207258,
+            "spotify_track_id": "19BDozGmxYGxF1NcUlENmm",
+            "stage5c1_track_id": "stage5c1_A03",
+            "title": "Château Fountain"
+          },
+          {
+            "artists": [
+              "Tomppabeats"
+            ],
+            "group": "C",
+            "rank": 2,
+            "similarity": 0.7014799633732056,
+            "spotify_track_id": "41hXE5S8D4mRfcdqSMpmAC",
+            "stage5c1_track_id": "stage5c1_C02",
+            "title": "The Girl Next Door"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.6903027278926918,
+            "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+            "stage5c1_track_id": "stage5c1_A02",
+            "title": "To Be Honest I Just Want to Eat Noodles with You"
+          },
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 4,
+            "similarity": 0.6879624849717418,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          },
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 5,
+            "similarity": 0.6780622331182955,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.6918338629310352,
+            "spotify_track_id": "19BDozGmxYGxF1NcUlENmm",
+            "stage5c1_track_id": "stage5c1_A03",
+            "title": "Château Fountain"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 2,
+            "similarity": 0.6430889020660197,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 3,
+            "similarity": 0.6408926939454038,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          },
+          {
+            "artists": [
+              "AILEE"
+            ],
+            "group": "E",
+            "rank": 4,
+            "similarity": 0.6249407123543395,
+            "spotify_track_id": "2BPXILn0MqOe5WroVXlvN1",
+            "stage5c1_track_id": "stage5c1_E05",
+            "title": "I Will Go To You Like the First Snow"
+          },
+          {
+            "artists": [
+              "Paintamelody"
+            ],
+            "group": "E",
+            "rank": 5,
+            "similarity": 0.620824885540413,
+            "spotify_track_id": "5lYv58lizCFl1c15K3yan9",
+            "stage5c1_track_id": "stage5c1_E04",
+            "title": "Temple of Time"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 1,
+            "similarity": 0.6145725987677899,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 2,
+            "similarity": 0.6114728204434987,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.6060137660347961,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "Bonjr",
+              "Thomas Reid",
+              "versor"
+            ],
+            "group": "C",
+            "rank": 4,
+            "similarity": 0.5889232550533807,
+            "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+            "stage5c1_track_id": "stage5c1_C01",
+            "title": "i want you to help me live"
+          },
+          {
+            "artists": [
+              "AILEE"
+            ],
+            "group": "E",
+            "rank": 5,
+            "similarity": 0.5650112584776772,
+            "spotify_track_id": "2BPXILn0MqOe5WroVXlvN1",
+            "stage5c1_track_id": "stage5c1_E05",
+            "title": "I Will Go To You Like the First Snow"
+          }
+        ]
+      },
+      "spotify_track_id": "07YG6Ark70YsDK4q3swKrc",
+      "stage5c1_track_id": "stage5c1_A05",
+      "title": "Lost Birds in Heaven's Gaze"
+    },
+    {
+      "artists": [
+        "LE SSERAFIM"
+      ],
+      "group": "B",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 1,
+            "similarity": 0.875754224956261,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 2,
+            "similarity": 0.8292378787521673,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 3,
+            "similarity": 0.8020243498627904,
+            "spotify_track_id": "37YoRLUu1qId0ewavgvnkG",
+            "stage5c1_track_id": "stage5c1_B02",
+            "title": "Blue Flame"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM",
+              "Nile Rodgers"
+            ],
+            "group": "B",
+            "rank": 4,
+            "similarity": 0.7986145159230036,
+            "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+            "stage5c1_track_id": "stage5c1_B04",
+            "title": "UNFORGIVEN (feat. Nile Rodgers)"
+          },
+          {
+            "artists": [
+              "IVE"
+            ],
+            "group": "D",
+            "rank": 5,
+            "similarity": 0.7955694898605561,
+            "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+            "stage5c1_track_id": "stage5c1_D01",
+            "title": "TKO"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 1,
+            "similarity": 0.8695629704812168,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 2,
+            "similarity": 0.8114488426415051,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "IVE"
+            ],
+            "group": "D",
+            "rank": 3,
+            "similarity": 0.7895818963239641,
+            "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+            "stage5c1_track_id": "stage5c1_D01",
+            "title": "TKO"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 4,
+            "similarity": 0.7662589845168879,
+            "spotify_track_id": "5o4U0weUIAXolji4sEAnjI",
+            "stage5c1_track_id": "stage5c1_B05",
+            "title": "Ash"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM",
+              "Nile Rodgers"
+            ],
+            "group": "B",
+            "rank": 5,
+            "similarity": 0.7615159438593027,
+            "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+            "stage5c1_track_id": "stage5c1_B04",
+            "title": "UNFORGIVEN (feat. Nile Rodgers)"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 1,
+            "similarity": 0.8538539278175804,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 2,
+            "similarity": 0.8510683197183695,
+            "spotify_track_id": "5o4U0weUIAXolji4sEAnjI",
+            "stage5c1_track_id": "stage5c1_B05",
+            "title": "Ash"
+          },
+          {
+            "artists": [
+              "IVE"
+            ],
+            "group": "D",
+            "rank": 3,
+            "similarity": 0.7743896016609075,
+            "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+            "stage5c1_track_id": "stage5c1_D01",
+            "title": "TKO"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 4,
+            "similarity": 0.7663127998033743,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "Tomppabeats"
+            ],
+            "group": "C",
+            "rank": 5,
+            "similarity": 0.7551949736100663,
+            "spotify_track_id": "41hXE5S8D4mRfcdqSMpmAC",
+            "stage5c1_track_id": "stage5c1_C02",
+            "title": "The Girl Next Door"
+          }
+        ]
+      },
+      "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+      "stage5c1_track_id": "stage5c1_B01",
+      "title": "We got so much"
+    },
+    {
+      "artists": [
+        "LE SSERAFIM"
+      ],
+      "group": "B",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 1,
+            "similarity": 0.8020243498627904,
+            "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+            "stage5c1_track_id": "stage5c1_B01",
+            "title": "We got so much"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 2,
+            "similarity": 0.7827922804328196,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "IVE"
+            ],
+            "group": "D",
+            "rank": 3,
+            "similarity": 0.745524228619024,
+            "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+            "stage5c1_track_id": "stage5c1_D01",
+            "title": "TKO"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 4,
+            "similarity": 0.7331959274095232,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM",
+              "Nile Rodgers"
+            ],
+            "group": "B",
+            "rank": 5,
+            "similarity": 0.7303506185640792,
+            "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+            "stage5c1_track_id": "stage5c1_B04",
+            "title": "UNFORGIVEN (feat. Nile Rodgers)"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 1,
+            "similarity": 0.6686590490209267,
+            "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+            "stage5c1_track_id": "stage5c1_B01",
+            "title": "We got so much"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 2,
+            "similarity": 0.6434751854139119,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "Gracie Abrams"
+            ],
+            "group": "E",
+            "rank": 3,
+            "similarity": 0.6416491115304581,
+            "spotify_track_id": "35IcAVSMsU9qzHfpPbvC8A",
+            "stage5c1_track_id": "stage5c1_E01",
+            "title": "Feels Like"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 4,
+            "similarity": 0.640486082209914,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "IVE"
+            ],
+            "group": "D",
+            "rank": 5,
+            "similarity": 0.6351962964110734,
+            "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+            "stage5c1_track_id": "stage5c1_D01",
+            "title": "TKO"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "Gracie Abrams"
+            ],
+            "group": "E",
+            "rank": 1,
+            "similarity": 0.5134492779493666,
+            "spotify_track_id": "35IcAVSMsU9qzHfpPbvC8A",
+            "stage5c1_track_id": "stage5c1_E01",
+            "title": "Feels Like"
+          },
+          {
+            "artists": [
+              "ZICO"
+            ],
+            "group": "D",
+            "rank": 2,
+            "similarity": 0.4851339506211477,
+            "spotify_track_id": "1iIhGHzzrzqQfuNkFI2qAn",
+            "stage5c1_track_id": "stage5c1_D02",
+            "title": "Any song"
+          },
+          {
+            "artists": [
+              "2hollis"
+            ],
+            "group": "E",
+            "rank": 3,
+            "similarity": 0.4710325286390362,
+            "spotify_track_id": "2oRNyf4qlAzGz6LljMcDJp",
+            "stage5c1_track_id": "stage5c1_E02",
+            "title": "cliche"
+          },
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 4,
+            "similarity": 0.4069546186687214,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 5,
+            "similarity": 0.4052538010219552,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          }
+        ]
+      },
+      "spotify_track_id": "37YoRLUu1qId0ewavgvnkG",
+      "stage5c1_track_id": "stage5c1_B02",
+      "title": "Blue Flame"
+    },
+    {
+      "artists": [
+        "LE SSERAFIM"
+      ],
+      "group": "B",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 1,
+            "similarity": 0.875754224956261,
+            "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+            "stage5c1_track_id": "stage5c1_B01",
+            "title": "We got so much"
+          },
+          {
+            "artists": [
+              "AILEE"
+            ],
+            "group": "E",
+            "rank": 2,
+            "similarity": 0.8402407304616117,
+            "spotify_track_id": "2BPXILn0MqOe5WroVXlvN1",
+            "stage5c1_track_id": "stage5c1_E05",
+            "title": "I Will Go To You Like the First Snow"
+          },
+          {
+            "artists": [
+              "IVE"
+            ],
+            "group": "D",
+            "rank": 3,
+            "similarity": 0.8323268413667356,
+            "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+            "stage5c1_track_id": "stage5c1_D01",
+            "title": "TKO"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM",
+              "Nile Rodgers"
+            ],
+            "group": "B",
+            "rank": 4,
+            "similarity": 0.8160083790250303,
+            "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+            "stage5c1_track_id": "stage5c1_B04",
+            "title": "UNFORGIVEN (feat. Nile Rodgers)"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 5,
+            "similarity": 0.8031463574407309,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 1,
+            "similarity": 0.8695629704812168,
+            "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+            "stage5c1_track_id": "stage5c1_B01",
+            "title": "We got so much"
+          },
+          {
+            "artists": [
+              "IVE"
+            ],
+            "group": "D",
+            "rank": 2,
+            "similarity": 0.8332773960660841,
+            "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+            "stage5c1_track_id": "stage5c1_D01",
+            "title": "TKO"
+          },
+          {
+            "artists": [
+              "AILEE"
+            ],
+            "group": "E",
+            "rank": 3,
+            "similarity": 0.8217302798744253,
+            "spotify_track_id": "2BPXILn0MqOe5WroVXlvN1",
+            "stage5c1_track_id": "stage5c1_E05",
+            "title": "I Will Go To You Like the First Snow"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 4,
+            "similarity": 0.8183261416395373,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM",
+              "Nile Rodgers"
+            ],
+            "group": "B",
+            "rank": 5,
+            "similarity": 0.7926934456468602,
+            "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+            "stage5c1_track_id": "stage5c1_B04",
+            "title": "UNFORGIVEN (feat. Nile Rodgers)"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 1,
+            "similarity": 0.8568417411137691,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 2,
+            "similarity": 0.8538539278175804,
+            "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+            "stage5c1_track_id": "stage5c1_B01",
+            "title": "We got so much"
+          },
+          {
+            "artists": [
+              "IVE"
+            ],
+            "group": "D",
+            "rank": 3,
+            "similarity": 0.8356892343108816,
+            "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+            "stage5c1_track_id": "stage5c1_D01",
+            "title": "TKO"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 4,
+            "similarity": 0.7948739148356595,
+            "spotify_track_id": "5o4U0weUIAXolji4sEAnjI",
+            "stage5c1_track_id": "stage5c1_B05",
+            "title": "Ash"
+          },
+          {
+            "artists": [
+              "AILEE"
+            ],
+            "group": "E",
+            "rank": 5,
+            "similarity": 0.7747637952678993,
+            "spotify_track_id": "2BPXILn0MqOe5WroVXlvN1",
+            "stage5c1_track_id": "stage5c1_E05",
+            "title": "I Will Go To You Like the First Snow"
+          }
+        ]
+      },
+      "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+      "stage5c1_track_id": "stage5c1_B03",
+      "title": "Sour Grapes"
+    },
+    {
+      "artists": [
+        "LE SSERAFIM",
+        "Nile Rodgers"
+      ],
+      "group": "B",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "IVE"
+            ],
+            "group": "D",
+            "rank": 1,
+            "similarity": 0.9112917065027109,
+            "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+            "stage5c1_track_id": "stage5c1_D01",
+            "title": "TKO"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 2,
+            "similarity": 0.8160083790250303,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 3,
+            "similarity": 0.7986145159230036,
+            "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+            "stage5c1_track_id": "stage5c1_B01",
+            "title": "We got so much"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 4,
+            "similarity": 0.7492670694501595,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 5,
+            "similarity": 0.7303506185640792,
+            "spotify_track_id": "37YoRLUu1qId0ewavgvnkG",
+            "stage5c1_track_id": "stage5c1_B02",
+            "title": "Blue Flame"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "IVE"
+            ],
+            "group": "D",
+            "rank": 1,
+            "similarity": 0.9150715649452248,
+            "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+            "stage5c1_track_id": "stage5c1_D01",
+            "title": "TKO"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 2,
+            "similarity": 0.7926934456468602,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 3,
+            "similarity": 0.7726885447286309,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 4,
+            "similarity": 0.7615159438593027,
+            "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+            "stage5c1_track_id": "stage5c1_B01",
+            "title": "We got so much"
+          },
+          {
+            "artists": [
+              "CORTIS"
+            ],
+            "group": "D",
+            "rank": 5,
+            "similarity": 0.750567810452093,
+            "spotify_track_id": "4ecdsGz3Hg6TKPwQ0ZOdJz",
+            "stage5c1_track_id": "stage5c1_D04",
+            "title": "FaSHioN"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "IVE"
+            ],
+            "group": "D",
+            "rank": 1,
+            "similarity": 0.9246621830946321,
+            "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+            "stage5c1_track_id": "stage5c1_D01",
+            "title": "TKO"
+          },
+          {
+            "artists": [
+              "CORTIS"
+            ],
+            "group": "D",
+            "rank": 2,
+            "similarity": 0.871496713578586,
+            "spotify_track_id": "4ecdsGz3Hg6TKPwQ0ZOdJz",
+            "stage5c1_track_id": "stage5c1_D04",
+            "title": "FaSHioN"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 3,
+            "similarity": 0.8321157506168512,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "Lil Uzi Vert",
+              "Oh Wonder"
+            ],
+            "group": "E",
+            "rank": 4,
+            "similarity": 0.810669712230869,
+            "spotify_track_id": "2eAZfqOm4EnOF9VvN50Tyc",
+            "stage5c1_track_id": "stage5c1_E03",
+            "title": "The Way Life Goes (feat. Oh Wonder)"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 5,
+            "similarity": 0.73353656805221,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          }
+        ]
+      },
+      "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+      "stage5c1_track_id": "stage5c1_B04",
+      "title": "UNFORGIVEN (feat. Nile Rodgers)"
+    },
+    {
+      "artists": [
+        "LE SSERAFIM"
+      ],
+      "group": "B",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "Gracie Abrams"
+            ],
+            "group": "E",
+            "rank": 1,
+            "similarity": 0.7615003426748896,
+            "spotify_track_id": "35IcAVSMsU9qzHfpPbvC8A",
+            "stage5c1_track_id": "stage5c1_E01",
+            "title": "Feels Like"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 2,
+            "similarity": 0.732833893801007,
+            "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+            "stage5c1_track_id": "stage5c1_B01",
+            "title": "We got so much"
+          },
+          {
+            "artists": [
+              "TOMORROW X TOGETHER"
+            ],
+            "group": "D",
+            "rank": 3,
+            "similarity": 0.7304335665390781,
+            "spotify_track_id": "3aAnwyBJY9OLNLqSgd4fZU",
+            "stage5c1_track_id": "stage5c1_D05",
+            "title": "Deja Vu"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 4,
+            "similarity": 0.7171996445335118,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "2hollis"
+            ],
+            "group": "E",
+            "rank": 5,
+            "similarity": 0.7147226283151012,
+            "spotify_track_id": "2oRNyf4qlAzGz6LljMcDJp",
+            "stage5c1_track_id": "stage5c1_E02",
+            "title": "cliche"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 1,
+            "similarity": 0.7662589845168879,
+            "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+            "stage5c1_track_id": "stage5c1_B01",
+            "title": "We got so much"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 2,
+            "similarity": 0.7391583042977479,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.7171118824999744,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "Tomppabeats"
+            ],
+            "group": "C",
+            "rank": 4,
+            "similarity": 0.6938549977283293,
+            "spotify_track_id": "41hXE5S8D4mRfcdqSMpmAC",
+            "stage5c1_track_id": "stage5c1_C02",
+            "title": "The Girl Next Door"
+          },
+          {
+            "artists": [
+              "Gracie Abrams"
+            ],
+            "group": "E",
+            "rank": 5,
+            "similarity": 0.6895544313560843,
+            "spotify_track_id": "35IcAVSMsU9qzHfpPbvC8A",
+            "stage5c1_track_id": "stage5c1_E01",
+            "title": "Feels Like"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 1,
+            "similarity": 0.8510683197183695,
+            "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+            "stage5c1_track_id": "stage5c1_B01",
+            "title": "We got so much"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 2,
+            "similarity": 0.7948739148356595,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "Tomppabeats"
+            ],
+            "group": "C",
+            "rank": 3,
+            "similarity": 0.7895256687452681,
+            "spotify_track_id": "41hXE5S8D4mRfcdqSMpmAC",
+            "stage5c1_track_id": "stage5c1_C02",
+            "title": "The Girl Next Door"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 4,
+            "similarity": 0.7410039651886002,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 5,
+            "similarity": 0.7304593877129589,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          }
+        ]
+      },
+      "spotify_track_id": "5o4U0weUIAXolji4sEAnjI",
+      "stage5c1_track_id": "stage5c1_B05",
+      "title": "Ash"
+    },
+    {
+      "artists": [
+        "Bonjr",
+        "Thomas Reid",
+        "versor"
+      ],
+      "group": "C",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.7726499222939739,
+            "spotify_track_id": "19BDozGmxYGxF1NcUlENmm",
+            "stage5c1_track_id": "stage5c1_A03",
+            "title": "Château Fountain"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 2,
+            "similarity": 0.7347757186578943,
+            "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+            "stage5c1_track_id": "stage5c1_A02",
+            "title": "To Be Honest I Just Want to Eat Noodles with You"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.7190095110766331,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 4,
+            "similarity": 0.7041290959445327,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 5,
+            "similarity": 0.6958273654656009,
+            "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+            "stage5c1_track_id": "stage5c1_A04",
+            "title": "Soundlessly in the Wind Like Lost Souls"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.7368102198949897,
+            "spotify_track_id": "19BDozGmxYGxF1NcUlENmm",
+            "stage5c1_track_id": "stage5c1_A03",
+            "title": "Château Fountain"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 2,
+            "similarity": 0.7335045238777036,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 3,
+            "similarity": 0.728187546315609,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 4,
+            "similarity": 0.7134412607759519,
+            "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+            "stage5c1_track_id": "stage5c1_A02",
+            "title": "To Be Honest I Just Want to Eat Noodles with You"
+          },
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 5,
+            "similarity": 0.7028640918646568,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 1,
+            "similarity": 0.8290515574364155,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 2,
+            "similarity": 0.7702826559056799,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "Gracie Abrams"
+            ],
+            "group": "E",
+            "rank": 3,
+            "similarity": 0.7608225652038372,
+            "spotify_track_id": "35IcAVSMsU9qzHfpPbvC8A",
+            "stage5c1_track_id": "stage5c1_E01",
+            "title": "Feels Like"
+          },
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 4,
+            "similarity": 0.6996544025940017,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          },
+          {
+            "artists": [
+              "AILEE"
+            ],
+            "group": "E",
+            "rank": 5,
+            "similarity": 0.6847983588957247,
+            "spotify_track_id": "2BPXILn0MqOe5WroVXlvN1",
+            "stage5c1_track_id": "stage5c1_E05",
+            "title": "I Will Go To You Like the First Snow"
+          }
+        ]
+      },
+      "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+      "stage5c1_track_id": "stage5c1_C01",
+      "title": "i want you to help me live"
+    },
+    {
+      "artists": [
+        "Tomppabeats"
+      ],
+      "group": "C",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 1,
+            "similarity": 0.8194590415511369,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          },
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 2,
+            "similarity": 0.8125376296684019,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.8068143936398208,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "TOMORROW X TOGETHER"
+            ],
+            "group": "D",
+            "rank": 4,
+            "similarity": 0.7589082652142884,
+            "spotify_track_id": "3aAnwyBJY9OLNLqSgd4fZU",
+            "stage5c1_track_id": "stage5c1_D05",
+            "title": "Deja Vu"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 5,
+            "similarity": 0.7091993936716718,
+            "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+            "stage5c1_track_id": "stage5c1_A04",
+            "title": "Soundlessly in the Wind Like Lost Souls"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 1,
+            "similarity": 0.8024458028094583,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 2,
+            "similarity": 0.7682856278860348,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 3,
+            "similarity": 0.7422031693889675,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          },
+          {
+            "artists": [
+              "TOMORROW X TOGETHER"
+            ],
+            "group": "D",
+            "rank": 4,
+            "similarity": 0.7176958082603813,
+            "spotify_track_id": "3aAnwyBJY9OLNLqSgd4fZU",
+            "stage5c1_track_id": "stage5c1_D05",
+            "title": "Deja Vu"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 5,
+            "similarity": 0.6938549977283293,
+            "spotify_track_id": "5o4U0weUIAXolji4sEAnjI",
+            "stage5c1_track_id": "stage5c1_B05",
+            "title": "Ash"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 1,
+            "similarity": 0.7895256687452681,
+            "spotify_track_id": "5o4U0weUIAXolji4sEAnjI",
+            "stage5c1_track_id": "stage5c1_B05",
+            "title": "Ash"
+          },
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 2,
+            "similarity": 0.7592781872128219,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 3,
+            "similarity": 0.7551949736100663,
+            "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+            "stage5c1_track_id": "stage5c1_B01",
+            "title": "We got so much"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 4,
+            "similarity": 0.7258047951736434,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 5,
+            "similarity": 0.6705267605283556,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          }
+        ]
+      },
+      "spotify_track_id": "41hXE5S8D4mRfcdqSMpmAC",
+      "stage5c1_track_id": "stage5c1_C02",
+      "title": "The Girl Next Door"
+    },
+    {
+      "artists": [
+        "Saib"
+      ],
+      "group": "C",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.7030197760577571,
+            "spotify_track_id": "19BDozGmxYGxF1NcUlENmm",
+            "stage5c1_track_id": "stage5c1_A03",
+            "title": "Château Fountain"
+          },
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 2,
+            "similarity": 0.6714031539143595,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.661175164368684,
+            "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+            "stage5c1_track_id": "stage5c1_A04",
+            "title": "Soundlessly in the Wind Like Lost Souls"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 4,
+            "similarity": 0.6595066586087015,
+            "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+            "stage5c1_track_id": "stage5c1_A02",
+            "title": "To Be Honest I Just Want to Eat Noodles with You"
+          },
+          {
+            "artists": [
+              "Bonjr",
+              "Thomas Reid",
+              "versor"
+            ],
+            "group": "C",
+            "rank": 5,
+            "similarity": 0.6175723913766489,
+            "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+            "stage5c1_track_id": "stage5c1_C01",
+            "title": "i want you to help me live"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.6530274816284971,
+            "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+            "stage5c1_track_id": "stage5c1_A02",
+            "title": "To Be Honest I Just Want to Eat Noodles with You"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 2,
+            "similarity": 0.651541438642864,
+            "spotify_track_id": "19BDozGmxYGxF1NcUlENmm",
+            "stage5c1_track_id": "stage5c1_A03",
+            "title": "Château Fountain"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.6324166671457165,
+            "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+            "stage5c1_track_id": "stage5c1_A04",
+            "title": "Soundlessly in the Wind Like Lost Souls"
+          },
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 4,
+            "similarity": 0.6145142963250632,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          },
+          {
+            "artists": [
+              "Bonjr",
+              "Thomas Reid",
+              "versor"
+            ],
+            "group": "C",
+            "rank": 5,
+            "similarity": 0.5813186921364243,
+            "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+            "stage5c1_track_id": "stage5c1_C01",
+            "title": "i want you to help me live"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.6365878944628354,
+            "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+            "stage5c1_track_id": "stage5c1_A02",
+            "title": "To Be Honest I Just Want to Eat Noodles with You"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 2,
+            "similarity": 0.5594478590247347,
+            "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+            "stage5c1_track_id": "stage5c1_A04",
+            "title": "Soundlessly in the Wind Like Lost Souls"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.5209256802431318,
+            "spotify_track_id": "19BDozGmxYGxF1NcUlENmm",
+            "stage5c1_track_id": "stage5c1_A03",
+            "title": "Château Fountain"
+          },
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 4,
+            "similarity": 0.490940022419332,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          },
+          {
+            "artists": [
+              "Bonjr",
+              "Thomas Reid",
+              "versor"
+            ],
+            "group": "C",
+            "rank": 5,
+            "similarity": 0.4893323410059821,
+            "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+            "stage5c1_track_id": "stage5c1_C01",
+            "title": "i want you to help me live"
+          }
+        ]
+      },
+      "spotify_track_id": "4fgIoBKHzO7YO5eATyYbMl",
+      "stage5c1_track_id": "stage5c1_C03",
+      "title": "in your arms"
+    },
+    {
+      "artists": [
+        "Rook1e"
+      ],
+      "group": "C",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "Tomppabeats"
+            ],
+            "group": "C",
+            "rank": 1,
+            "similarity": 0.8194590415511369,
+            "spotify_track_id": "41hXE5S8D4mRfcdqSMpmAC",
+            "stage5c1_track_id": "stage5c1_C02",
+            "title": "The Girl Next Door"
+          },
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 2,
+            "similarity": 0.7809399340113448,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.7630924184846575,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 4,
+            "similarity": 0.7162722268664419,
+            "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+            "stage5c1_track_id": "stage5c1_A04",
+            "title": "Soundlessly in the Wind Like Lost Souls"
+          },
+          {
+            "artists": [
+              "Bonjr",
+              "Thomas Reid",
+              "versor"
+            ],
+            "group": "C",
+            "rank": 5,
+            "similarity": 0.7041290959445327,
+            "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+            "stage5c1_track_id": "stage5c1_C01",
+            "title": "i want you to help me live"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "Tomppabeats"
+            ],
+            "group": "C",
+            "rank": 1,
+            "similarity": 0.8024458028094583,
+            "spotify_track_id": "41hXE5S8D4mRfcdqSMpmAC",
+            "stage5c1_track_id": "stage5c1_C02",
+            "title": "The Girl Next Door"
+          },
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 2,
+            "similarity": 0.7739387721409008,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.7493030786066435,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "Bonjr",
+              "Thomas Reid",
+              "versor"
+            ],
+            "group": "C",
+            "rank": 4,
+            "similarity": 0.7028640918646568,
+            "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+            "stage5c1_track_id": "stage5c1_C01",
+            "title": "i want you to help me live"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 5,
+            "similarity": 0.6982450662677607,
+            "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+            "stage5c1_track_id": "stage5c1_A04",
+            "title": "Soundlessly in the Wind Like Lost Souls"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "Tomppabeats"
+            ],
+            "group": "C",
+            "rank": 1,
+            "similarity": 0.7592781872128219,
+            "spotify_track_id": "41hXE5S8D4mRfcdqSMpmAC",
+            "stage5c1_track_id": "stage5c1_C02",
+            "title": "The Girl Next Door"
+          },
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 2,
+            "similarity": 0.7561747550162379,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 3,
+            "similarity": 0.7304593877129589,
+            "spotify_track_id": "5o4U0weUIAXolji4sEAnjI",
+            "stage5c1_track_id": "stage5c1_B05",
+            "title": "Ash"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 4,
+            "similarity": 0.7143154473729008,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 5,
+            "similarity": 0.7090148833626367,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          }
+        ]
+      },
+      "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+      "stage5c1_track_id": "stage5c1_C04",
+      "title": "Grape Soda"
+    },
+    {
+      "artists": [
+        "Mounika.",
+        "Cavetown"
+      ],
+      "group": "C",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "Tomppabeats"
+            ],
+            "group": "C",
+            "rank": 1,
+            "similarity": 0.8125376296684019,
+            "spotify_track_id": "41hXE5S8D4mRfcdqSMpmAC",
+            "stage5c1_track_id": "stage5c1_C02",
+            "title": "The Girl Next Door"
+          },
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 2,
+            "similarity": 0.7809399340113448,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.7697415429434502,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "TOMORROW X TOGETHER"
+            ],
+            "group": "D",
+            "rank": 4,
+            "similarity": 0.7442476879843772,
+            "spotify_track_id": "3aAnwyBJY9OLNLqSgd4fZU",
+            "stage5c1_track_id": "stage5c1_D05",
+            "title": "Deja Vu"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 5,
+            "similarity": 0.705239782321708,
+            "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+            "stage5c1_track_id": "stage5c1_A04",
+            "title": "Soundlessly in the Wind Like Lost Souls"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.7797696393696977,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 2,
+            "similarity": 0.7739387721409008,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          },
+          {
+            "artists": [
+              "Tomppabeats"
+            ],
+            "group": "C",
+            "rank": 3,
+            "similarity": 0.7422031693889675,
+            "spotify_track_id": "41hXE5S8D4mRfcdqSMpmAC",
+            "stage5c1_track_id": "stage5c1_C02",
+            "title": "The Girl Next Door"
+          },
+          {
+            "artists": [
+              "Bonjr",
+              "Thomas Reid",
+              "versor"
+            ],
+            "group": "C",
+            "rank": 4,
+            "similarity": 0.728187546315609,
+            "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+            "stage5c1_track_id": "stage5c1_C01",
+            "title": "i want you to help me live"
+          },
+          {
+            "artists": [
+              "TOMORROW X TOGETHER"
+            ],
+            "group": "D",
+            "rank": 5,
+            "similarity": 0.7175197754711016,
+            "spotify_track_id": "3aAnwyBJY9OLNLqSgd4fZU",
+            "stage5c1_track_id": "stage5c1_D05",
+            "title": "Deja Vu"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "Bonjr",
+              "Thomas Reid",
+              "versor"
+            ],
+            "group": "C",
+            "rank": 1,
+            "similarity": 0.8290515574364155,
+            "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+            "stage5c1_track_id": "stage5c1_C01",
+            "title": "i want you to help me live"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 2,
+            "similarity": 0.805213884187927,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 3,
+            "similarity": 0.7561747550162379,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 4,
+            "similarity": 0.746050216165393,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "ZICO"
+            ],
+            "group": "D",
+            "rank": 5,
+            "similarity": 0.7136609871173776,
+            "spotify_track_id": "1iIhGHzzrzqQfuNkFI2qAn",
+            "stage5c1_track_id": "stage5c1_D02",
+            "title": "Any song"
+          }
+        ]
+      },
+      "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+      "stage5c1_track_id": "stage5c1_C05",
+      "title": "Cut My Hair"
+    },
+    {
+      "artists": [
+        "IVE"
+      ],
+      "group": "D",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "LE SSERAFIM",
+              "Nile Rodgers"
+            ],
+            "group": "B",
+            "rank": 1,
+            "similarity": 0.9112917065027109,
+            "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+            "stage5c1_track_id": "stage5c1_B04",
+            "title": "UNFORGIVEN (feat. Nile Rodgers)"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 2,
+            "similarity": 0.8323268413667356,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 3,
+            "similarity": 0.7955694898605561,
+            "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+            "stage5c1_track_id": "stage5c1_B01",
+            "title": "We got so much"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 4,
+            "similarity": 0.7720376812765208,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 5,
+            "similarity": 0.745524228619024,
+            "spotify_track_id": "37YoRLUu1qId0ewavgvnkG",
+            "stage5c1_track_id": "stage5c1_B02",
+            "title": "Blue Flame"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "LE SSERAFIM",
+              "Nile Rodgers"
+            ],
+            "group": "B",
+            "rank": 1,
+            "similarity": 0.9150715649452248,
+            "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+            "stage5c1_track_id": "stage5c1_B04",
+            "title": "UNFORGIVEN (feat. Nile Rodgers)"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 2,
+            "similarity": 0.8332773960660841,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 3,
+            "similarity": 0.7979499272951536,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 4,
+            "similarity": 0.7895818963239641,
+            "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+            "stage5c1_track_id": "stage5c1_B01",
+            "title": "We got so much"
+          },
+          {
+            "artists": [
+              "CORTIS"
+            ],
+            "group": "D",
+            "rank": 5,
+            "similarity": 0.740197422452358,
+            "spotify_track_id": "4ecdsGz3Hg6TKPwQ0ZOdJz",
+            "stage5c1_track_id": "stage5c1_D04",
+            "title": "FaSHioN"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "LE SSERAFIM",
+              "Nile Rodgers"
+            ],
+            "group": "B",
+            "rank": 1,
+            "similarity": 0.9246621830946321,
+            "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+            "stage5c1_track_id": "stage5c1_B04",
+            "title": "UNFORGIVEN (feat. Nile Rodgers)"
+          },
+          {
+            "artists": [
+              "CORTIS"
+            ],
+            "group": "D",
+            "rank": 2,
+            "similarity": 0.8764131616337845,
+            "spotify_track_id": "4ecdsGz3Hg6TKPwQ0ZOdJz",
+            "stage5c1_track_id": "stage5c1_D04",
+            "title": "FaSHioN"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 3,
+            "similarity": 0.8636969547930731,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 4,
+            "similarity": 0.8356892343108816,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "Lil Uzi Vert",
+              "Oh Wonder"
+            ],
+            "group": "E",
+            "rank": 5,
+            "similarity": 0.8178633296882878,
+            "spotify_track_id": "2eAZfqOm4EnOF9VvN50Tyc",
+            "stage5c1_track_id": "stage5c1_E03",
+            "title": "The Way Life Goes (feat. Oh Wonder)"
+          }
+        ]
+      },
+      "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+      "stage5c1_track_id": "stage5c1_D01",
+      "title": "TKO"
+    },
+    {
+      "artists": [
+        "ZICO"
+      ],
+      "group": "D",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 1,
+            "similarity": 0.677050375522704,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          },
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 2,
+            "similarity": 0.6710570003603513,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          },
+          {
+            "artists": [
+              "Lil Uzi Vert",
+              "Oh Wonder"
+            ],
+            "group": "E",
+            "rank": 3,
+            "similarity": 0.6478960639983137,
+            "spotify_track_id": "2eAZfqOm4EnOF9VvN50Tyc",
+            "stage5c1_track_id": "stage5c1_E03",
+            "title": "The Way Life Goes (feat. Oh Wonder)"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 4,
+            "similarity": 0.6375931538316784,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "Tomppabeats"
+            ],
+            "group": "C",
+            "rank": 5,
+            "similarity": 0.6336640418670674,
+            "spotify_track_id": "41hXE5S8D4mRfcdqSMpmAC",
+            "stage5c1_track_id": "stage5c1_C02",
+            "title": "The Girl Next Door"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 1,
+            "similarity": 0.6874002630805895,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 2,
+            "similarity": 0.6759401007432029,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 3,
+            "similarity": 0.6739207411847896,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          },
+          {
+            "artists": [
+              "Lil Uzi Vert",
+              "Oh Wonder"
+            ],
+            "group": "E",
+            "rank": 4,
+            "similarity": 0.6708042501369893,
+            "spotify_track_id": "2eAZfqOm4EnOF9VvN50Tyc",
+            "stage5c1_track_id": "stage5c1_E03",
+            "title": "The Way Life Goes (feat. Oh Wonder)"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 5,
+            "similarity": 0.6190114879859787,
+            "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+            "stage5c1_track_id": "stage5c1_B01",
+            "title": "We got so much"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 1,
+            "similarity": 0.7732376399545993,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "IVE"
+            ],
+            "group": "D",
+            "rank": 2,
+            "similarity": 0.7489789513716766,
+            "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+            "stage5c1_track_id": "stage5c1_D01",
+            "title": "TKO"
+          },
+          {
+            "artists": [
+              "Lil Uzi Vert",
+              "Oh Wonder"
+            ],
+            "group": "E",
+            "rank": 3,
+            "similarity": 0.7289290897554439,
+            "spotify_track_id": "2eAZfqOm4EnOF9VvN50Tyc",
+            "stage5c1_track_id": "stage5c1_E03",
+            "title": "The Way Life Goes (feat. Oh Wonder)"
+          },
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 4,
+            "similarity": 0.7136609871173776,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM",
+              "Nile Rodgers"
+            ],
+            "group": "B",
+            "rank": 5,
+            "similarity": 0.7052273438755243,
+            "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+            "stage5c1_track_id": "stage5c1_B04",
+            "title": "UNFORGIVEN (feat. Nile Rodgers)"
+          }
+        ]
+      },
+      "spotify_track_id": "1iIhGHzzrzqQfuNkFI2qAn",
+      "stage5c1_track_id": "stage5c1_D02",
+      "title": "Any song"
+    },
+    {
+      "artists": [
+        "IU"
+      ],
+      "group": "D",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 1,
+            "similarity": 0.8292378787521673,
+            "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+            "stage5c1_track_id": "stage5c1_B01",
+            "title": "We got so much"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 2,
+            "similarity": 0.8031463574407309,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "IVE"
+            ],
+            "group": "D",
+            "rank": 3,
+            "similarity": 0.7720376812765208,
+            "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+            "stage5c1_track_id": "stage5c1_D01",
+            "title": "TKO"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM",
+              "Nile Rodgers"
+            ],
+            "group": "B",
+            "rank": 4,
+            "similarity": 0.7492670694501595,
+            "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+            "stage5c1_track_id": "stage5c1_B04",
+            "title": "UNFORGIVEN (feat. Nile Rodgers)"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 5,
+            "similarity": 0.7331959274095232,
+            "spotify_track_id": "37YoRLUu1qId0ewavgvnkG",
+            "stage5c1_track_id": "stage5c1_B02",
+            "title": "Blue Flame"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 1,
+            "similarity": 0.8183261416395373,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 2,
+            "similarity": 0.8114488426415051,
+            "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+            "stage5c1_track_id": "stage5c1_B01",
+            "title": "We got so much"
+          },
+          {
+            "artists": [
+              "IVE"
+            ],
+            "group": "D",
+            "rank": 3,
+            "similarity": 0.7979499272951536,
+            "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+            "stage5c1_track_id": "stage5c1_D01",
+            "title": "TKO"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM",
+              "Nile Rodgers"
+            ],
+            "group": "B",
+            "rank": 4,
+            "similarity": 0.7726885447286309,
+            "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+            "stage5c1_track_id": "stage5c1_B04",
+            "title": "UNFORGIVEN (feat. Nile Rodgers)"
+          },
+          {
+            "artists": [
+              "ZICO"
+            ],
+            "group": "D",
+            "rank": 5,
+            "similarity": 0.6759401007432029,
+            "spotify_track_id": "1iIhGHzzrzqQfuNkFI2qAn",
+            "stage5c1_track_id": "stage5c1_D02",
+            "title": "Any song"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "IVE"
+            ],
+            "group": "D",
+            "rank": 1,
+            "similarity": 0.8636969547930731,
+            "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+            "stage5c1_track_id": "stage5c1_D01",
+            "title": "TKO"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 2,
+            "similarity": 0.8568417411137691,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM",
+              "Nile Rodgers"
+            ],
+            "group": "B",
+            "rank": 3,
+            "similarity": 0.8321157506168512,
+            "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+            "stage5c1_track_id": "stage5c1_B04",
+            "title": "UNFORGIVEN (feat. Nile Rodgers)"
+          },
+          {
+            "artists": [
+              "Lil Uzi Vert",
+              "Oh Wonder"
+            ],
+            "group": "E",
+            "rank": 4,
+            "similarity": 0.8155552358786838,
+            "spotify_track_id": "2eAZfqOm4EnOF9VvN50Tyc",
+            "stage5c1_track_id": "stage5c1_E03",
+            "title": "The Way Life Goes (feat. Oh Wonder)"
+          },
+          {
+            "artists": [
+              "ZICO"
+            ],
+            "group": "D",
+            "rank": 5,
+            "similarity": 0.7732376399545993,
+            "spotify_track_id": "1iIhGHzzrzqQfuNkFI2qAn",
+            "stage5c1_track_id": "stage5c1_D02",
+            "title": "Any song"
+          }
+        ]
+      },
+      "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+      "stage5c1_track_id": "stage5c1_D03",
+      "title": "BBIBBI"
+    },
+    {
+      "artists": [
+        "CORTIS"
+      ],
+      "group": "D",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "Lil Uzi Vert",
+              "Oh Wonder"
+            ],
+            "group": "E",
+            "rank": 1,
+            "similarity": 0.8353136537394903,
+            "spotify_track_id": "2eAZfqOm4EnOF9VvN50Tyc",
+            "stage5c1_track_id": "stage5c1_E03",
+            "title": "The Way Life Goes (feat. Oh Wonder)"
+          },
+          {
+            "artists": [
+              "TOMORROW X TOGETHER"
+            ],
+            "group": "D",
+            "rank": 2,
+            "similarity": 0.8335556008698353,
+            "spotify_track_id": "3aAnwyBJY9OLNLqSgd4fZU",
+            "stage5c1_track_id": "stage5c1_D05",
+            "title": "Deja Vu"
+          },
+          {
+            "artists": [
+              "2hollis"
+            ],
+            "group": "E",
+            "rank": 3,
+            "similarity": 0.7090821786111403,
+            "spotify_track_id": "2oRNyf4qlAzGz6LljMcDJp",
+            "stage5c1_track_id": "stage5c1_E02",
+            "title": "cliche"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM",
+              "Nile Rodgers"
+            ],
+            "group": "B",
+            "rank": 4,
+            "similarity": 0.7029072604952717,
+            "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+            "stage5c1_track_id": "stage5c1_B04",
+            "title": "UNFORGIVEN (feat. Nile Rodgers)"
+          },
+          {
+            "artists": [
+              "IVE"
+            ],
+            "group": "D",
+            "rank": 5,
+            "similarity": 0.6865120182659753,
+            "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+            "stage5c1_track_id": "stage5c1_D01",
+            "title": "TKO"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "TOMORROW X TOGETHER"
+            ],
+            "group": "D",
+            "rank": 1,
+            "similarity": 0.825693764721909,
+            "spotify_track_id": "3aAnwyBJY9OLNLqSgd4fZU",
+            "stage5c1_track_id": "stage5c1_D05",
+            "title": "Deja Vu"
+          },
+          {
+            "artists": [
+              "Lil Uzi Vert",
+              "Oh Wonder"
+            ],
+            "group": "E",
+            "rank": 2,
+            "similarity": 0.821404473926276,
+            "spotify_track_id": "2eAZfqOm4EnOF9VvN50Tyc",
+            "stage5c1_track_id": "stage5c1_E03",
+            "title": "The Way Life Goes (feat. Oh Wonder)"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM",
+              "Nile Rodgers"
+            ],
+            "group": "B",
+            "rank": 3,
+            "similarity": 0.750567810452093,
+            "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+            "stage5c1_track_id": "stage5c1_B04",
+            "title": "UNFORGIVEN (feat. Nile Rodgers)"
+          },
+          {
+            "artists": [
+              "IVE"
+            ],
+            "group": "D",
+            "rank": 4,
+            "similarity": 0.740197422452358,
+            "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+            "stage5c1_track_id": "stage5c1_D01",
+            "title": "TKO"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 5,
+            "similarity": 0.6854396219259518,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "IVE"
+            ],
+            "group": "D",
+            "rank": 1,
+            "similarity": 0.8764131616337845,
+            "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+            "stage5c1_track_id": "stage5c1_D01",
+            "title": "TKO"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM",
+              "Nile Rodgers"
+            ],
+            "group": "B",
+            "rank": 2,
+            "similarity": 0.871496713578586,
+            "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+            "stage5c1_track_id": "stage5c1_B04",
+            "title": "UNFORGIVEN (feat. Nile Rodgers)"
+          },
+          {
+            "artists": [
+              "TOMORROW X TOGETHER"
+            ],
+            "group": "D",
+            "rank": 3,
+            "similarity": 0.8057459625502965,
+            "spotify_track_id": "3aAnwyBJY9OLNLqSgd4fZU",
+            "stage5c1_track_id": "stage5c1_D05",
+            "title": "Deja Vu"
+          },
+          {
+            "artists": [
+              "Lil Uzi Vert",
+              "Oh Wonder"
+            ],
+            "group": "E",
+            "rank": 4,
+            "similarity": 0.7861127733536848,
+            "spotify_track_id": "2eAZfqOm4EnOF9VvN50Tyc",
+            "stage5c1_track_id": "stage5c1_E03",
+            "title": "The Way Life Goes (feat. Oh Wonder)"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 5,
+            "similarity": 0.7569568798331037,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          }
+        ]
+      },
+      "spotify_track_id": "4ecdsGz3Hg6TKPwQ0ZOdJz",
+      "stage5c1_track_id": "stage5c1_D04",
+      "title": "FaSHioN"
+    },
+    {
+      "artists": [
+        "TOMORROW X TOGETHER"
+      ],
+      "group": "D",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "Lil Uzi Vert",
+              "Oh Wonder"
+            ],
+            "group": "E",
+            "rank": 1,
+            "similarity": 0.8656051269090603,
+            "spotify_track_id": "2eAZfqOm4EnOF9VvN50Tyc",
+            "stage5c1_track_id": "stage5c1_E03",
+            "title": "The Way Life Goes (feat. Oh Wonder)"
+          },
+          {
+            "artists": [
+              "CORTIS"
+            ],
+            "group": "D",
+            "rank": 2,
+            "similarity": 0.8335556008698353,
+            "spotify_track_id": "4ecdsGz3Hg6TKPwQ0ZOdJz",
+            "stage5c1_track_id": "stage5c1_D04",
+            "title": "FaSHioN"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.8118583165909172,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "Tomppabeats"
+            ],
+            "group": "C",
+            "rank": 4,
+            "similarity": 0.7589082652142884,
+            "spotify_track_id": "41hXE5S8D4mRfcdqSMpmAC",
+            "stage5c1_track_id": "stage5c1_C02",
+            "title": "The Girl Next Door"
+          },
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 5,
+            "similarity": 0.7442476879843772,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "Lil Uzi Vert",
+              "Oh Wonder"
+            ],
+            "group": "E",
+            "rank": 1,
+            "similarity": 0.8414353116293738,
+            "spotify_track_id": "2eAZfqOm4EnOF9VvN50Tyc",
+            "stage5c1_track_id": "stage5c1_E03",
+            "title": "The Way Life Goes (feat. Oh Wonder)"
+          },
+          {
+            "artists": [
+              "CORTIS"
+            ],
+            "group": "D",
+            "rank": 2,
+            "similarity": 0.825693764721909,
+            "spotify_track_id": "4ecdsGz3Hg6TKPwQ0ZOdJz",
+            "stage5c1_track_id": "stage5c1_D04",
+            "title": "FaSHioN"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.7613167321385059,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "Tomppabeats"
+            ],
+            "group": "C",
+            "rank": 4,
+            "similarity": 0.7176958082603813,
+            "spotify_track_id": "41hXE5S8D4mRfcdqSMpmAC",
+            "stage5c1_track_id": "stage5c1_C02",
+            "title": "The Girl Next Door"
+          },
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 5,
+            "similarity": 0.7175197754711016,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "CORTIS"
+            ],
+            "group": "D",
+            "rank": 1,
+            "similarity": 0.8057459625502965,
+            "spotify_track_id": "4ecdsGz3Hg6TKPwQ0ZOdJz",
+            "stage5c1_track_id": "stage5c1_D04",
+            "title": "FaSHioN"
+          },
+          {
+            "artists": [
+              "Lil Uzi Vert",
+              "Oh Wonder"
+            ],
+            "group": "E",
+            "rank": 2,
+            "similarity": 0.780109345957756,
+            "spotify_track_id": "2eAZfqOm4EnOF9VvN50Tyc",
+            "stage5c1_track_id": "stage5c1_E03",
+            "title": "The Way Life Goes (feat. Oh Wonder)"
+          },
+          {
+            "artists": [
+              "IVE"
+            ],
+            "group": "D",
+            "rank": 3,
+            "similarity": 0.7322091701585653,
+            "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+            "stage5c1_track_id": "stage5c1_D01",
+            "title": "TKO"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 4,
+            "similarity": 0.7207696401292336,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM",
+              "Nile Rodgers"
+            ],
+            "group": "B",
+            "rank": 5,
+            "similarity": 0.7009317474699961,
+            "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+            "stage5c1_track_id": "stage5c1_B04",
+            "title": "UNFORGIVEN (feat. Nile Rodgers)"
+          }
+        ]
+      },
+      "spotify_track_id": "3aAnwyBJY9OLNLqSgd4fZU",
+      "stage5c1_track_id": "stage5c1_D05",
+      "title": "Deja Vu"
+    },
+    {
+      "artists": [
+        "Gracie Abrams"
+      ],
+      "group": "E",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "AILEE"
+            ],
+            "group": "E",
+            "rank": 1,
+            "similarity": 0.8109395142598377,
+            "spotify_track_id": "2BPXILn0MqOe5WroVXlvN1",
+            "stage5c1_track_id": "stage5c1_E05",
+            "title": "I Will Go To You Like the First Snow"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 2,
+            "similarity": 0.799434358246213,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 3,
+            "similarity": 0.7615003426748896,
+            "spotify_track_id": "5o4U0weUIAXolji4sEAnjI",
+            "stage5c1_track_id": "stage5c1_B05",
+            "title": "Ash"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 4,
+            "similarity": 0.6921752836438078,
+            "spotify_track_id": "37YoRLUu1qId0ewavgvnkG",
+            "stage5c1_track_id": "stage5c1_B02",
+            "title": "Blue Flame"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 5,
+            "similarity": 0.6878600437705829,
+            "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+            "stage5c1_track_id": "stage5c1_B01",
+            "title": "We got so much"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "AILEE"
+            ],
+            "group": "E",
+            "rank": 1,
+            "similarity": 0.8192671545828016,
+            "spotify_track_id": "2BPXILn0MqOe5WroVXlvN1",
+            "stage5c1_track_id": "stage5c1_E05",
+            "title": "I Will Go To You Like the First Snow"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 2,
+            "similarity": 0.7441284230764591,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 3,
+            "similarity": 0.6895544313560843,
+            "spotify_track_id": "5o4U0weUIAXolji4sEAnjI",
+            "stage5c1_track_id": "stage5c1_B05",
+            "title": "Ash"
+          },
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 4,
+            "similarity": 0.6714073184403833,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          },
+          {
+            "artists": [
+              "Bonjr",
+              "Thomas Reid",
+              "versor"
+            ],
+            "group": "C",
+            "rank": 5,
+            "similarity": 0.6446756154337046,
+            "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+            "stage5c1_track_id": "stage5c1_C01",
+            "title": "i want you to help me live"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "AILEE"
+            ],
+            "group": "E",
+            "rank": 1,
+            "similarity": 0.8403968396326038,
+            "spotify_track_id": "2BPXILn0MqOe5WroVXlvN1",
+            "stage5c1_track_id": "stage5c1_E05",
+            "title": "I Will Go To You Like the First Snow"
+          },
+          {
+            "artists": [
+              "Bonjr",
+              "Thomas Reid",
+              "versor"
+            ],
+            "group": "C",
+            "rank": 2,
+            "similarity": 0.7608225652038372,
+            "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+            "stage5c1_track_id": "stage5c1_C01",
+            "title": "i want you to help me live"
+          },
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 3,
+            "similarity": 0.6831797589213613,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          },
+          {
+            "artists": [
+              "ZICO"
+            ],
+            "group": "D",
+            "rank": 4,
+            "similarity": 0.6636161888995068,
+            "spotify_track_id": "1iIhGHzzrzqQfuNkFI2qAn",
+            "stage5c1_track_id": "stage5c1_D02",
+            "title": "Any song"
+          },
+          {
+            "artists": [
+              "2hollis"
+            ],
+            "group": "E",
+            "rank": 5,
+            "similarity": 0.6471043797756557,
+            "spotify_track_id": "2oRNyf4qlAzGz6LljMcDJp",
+            "stage5c1_track_id": "stage5c1_E02",
+            "title": "cliche"
+          }
+        ]
+      },
+      "spotify_track_id": "35IcAVSMsU9qzHfpPbvC8A",
+      "stage5c1_track_id": "stage5c1_E01",
+      "title": "Feels Like"
+    },
+    {
+      "artists": [
+        "2hollis"
+      ],
+      "group": "E",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 1,
+            "similarity": 0.7147226283151012,
+            "spotify_track_id": "5o4U0weUIAXolji4sEAnjI",
+            "stage5c1_track_id": "stage5c1_B05",
+            "title": "Ash"
+          },
+          {
+            "artists": [
+              "Lil Uzi Vert",
+              "Oh Wonder"
+            ],
+            "group": "E",
+            "rank": 2,
+            "similarity": 0.712971548082375,
+            "spotify_track_id": "2eAZfqOm4EnOF9VvN50Tyc",
+            "stage5c1_track_id": "stage5c1_E03",
+            "title": "The Way Life Goes (feat. Oh Wonder)"
+          },
+          {
+            "artists": [
+              "CORTIS"
+            ],
+            "group": "D",
+            "rank": 3,
+            "similarity": 0.7090821786111403,
+            "spotify_track_id": "4ecdsGz3Hg6TKPwQ0ZOdJz",
+            "stage5c1_track_id": "stage5c1_D04",
+            "title": "FaSHioN"
+          },
+          {
+            "artists": [
+              "TOMORROW X TOGETHER"
+            ],
+            "group": "D",
+            "rank": 4,
+            "similarity": 0.6468191993039938,
+            "spotify_track_id": "3aAnwyBJY9OLNLqSgd4fZU",
+            "stage5c1_track_id": "stage5c1_D05",
+            "title": "Deja Vu"
+          },
+          {
+            "artists": [
+              "Gracie Abrams"
+            ],
+            "group": "E",
+            "rank": 5,
+            "similarity": 0.613563876920257,
+            "spotify_track_id": "35IcAVSMsU9qzHfpPbvC8A",
+            "stage5c1_track_id": "stage5c1_E01",
+            "title": "Feels Like"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "Lil Uzi Vert",
+              "Oh Wonder"
+            ],
+            "group": "E",
+            "rank": 1,
+            "similarity": 0.7332495020908846,
+            "spotify_track_id": "2eAZfqOm4EnOF9VvN50Tyc",
+            "stage5c1_track_id": "stage5c1_E03",
+            "title": "The Way Life Goes (feat. Oh Wonder)"
+          },
+          {
+            "artists": [
+              "CORTIS"
+            ],
+            "group": "D",
+            "rank": 2,
+            "similarity": 0.6745470402426555,
+            "spotify_track_id": "4ecdsGz3Hg6TKPwQ0ZOdJz",
+            "stage5c1_track_id": "stage5c1_D04",
+            "title": "FaSHioN"
+          },
+          {
+            "artists": [
+              "TOMORROW X TOGETHER"
+            ],
+            "group": "D",
+            "rank": 3,
+            "similarity": 0.6325289179257719,
+            "spotify_track_id": "3aAnwyBJY9OLNLqSgd4fZU",
+            "stage5c1_track_id": "stage5c1_D05",
+            "title": "Deja Vu"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 4,
+            "similarity": 0.6297344400798629,
+            "spotify_track_id": "5o4U0weUIAXolji4sEAnjI",
+            "stage5c1_track_id": "stage5c1_B05",
+            "title": "Ash"
+          },
+          {
+            "artists": [
+              "Gracie Abrams"
+            ],
+            "group": "E",
+            "rank": 5,
+            "similarity": 0.6230458390636816,
+            "spotify_track_id": "35IcAVSMsU9qzHfpPbvC8A",
+            "stage5c1_track_id": "stage5c1_E01",
+            "title": "Feels Like"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "Lil Uzi Vert",
+              "Oh Wonder"
+            ],
+            "group": "E",
+            "rank": 1,
+            "similarity": 0.7847006653300865,
+            "spotify_track_id": "2eAZfqOm4EnOF9VvN50Tyc",
+            "stage5c1_track_id": "stage5c1_E03",
+            "title": "The Way Life Goes (feat. Oh Wonder)"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM",
+              "Nile Rodgers"
+            ],
+            "group": "B",
+            "rank": 2,
+            "similarity": 0.6738318566351313,
+            "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+            "stage5c1_track_id": "stage5c1_B04",
+            "title": "UNFORGIVEN (feat. Nile Rodgers)"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 3,
+            "similarity": 0.6661369089440498,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "Gracie Abrams"
+            ],
+            "group": "E",
+            "rank": 4,
+            "similarity": 0.6471043797756557,
+            "spotify_track_id": "35IcAVSMsU9qzHfpPbvC8A",
+            "stage5c1_track_id": "stage5c1_E01",
+            "title": "Feels Like"
+          },
+          {
+            "artists": [
+              "ZICO"
+            ],
+            "group": "D",
+            "rank": 5,
+            "similarity": 0.631777864385955,
+            "spotify_track_id": "1iIhGHzzrzqQfuNkFI2qAn",
+            "stage5c1_track_id": "stage5c1_D02",
+            "title": "Any song"
+          }
+        ]
+      },
+      "spotify_track_id": "2oRNyf4qlAzGz6LljMcDJp",
+      "stage5c1_track_id": "stage5c1_E02",
+      "title": "cliche"
+    },
+    {
+      "artists": [
+        "Lil Uzi Vert",
+        "Oh Wonder"
+      ],
+      "group": "E",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "TOMORROW X TOGETHER"
+            ],
+            "group": "D",
+            "rank": 1,
+            "similarity": 0.8656051269090603,
+            "spotify_track_id": "3aAnwyBJY9OLNLqSgd4fZU",
+            "stage5c1_track_id": "stage5c1_D05",
+            "title": "Deja Vu"
+          },
+          {
+            "artists": [
+              "CORTIS"
+            ],
+            "group": "D",
+            "rank": 2,
+            "similarity": 0.8353136537394903,
+            "spotify_track_id": "4ecdsGz3Hg6TKPwQ0ZOdJz",
+            "stage5c1_track_id": "stage5c1_D04",
+            "title": "FaSHioN"
+          },
+          {
+            "artists": [
+              "2hollis"
+            ],
+            "group": "E",
+            "rank": 3,
+            "similarity": 0.712971548082375,
+            "spotify_track_id": "2oRNyf4qlAzGz6LljMcDJp",
+            "stage5c1_track_id": "stage5c1_E02",
+            "title": "cliche"
+          },
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 4,
+            "similarity": 0.6955233360689979,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 5,
+            "similarity": 0.6715699230524385,
+            "spotify_track_id": "5o4U0weUIAXolji4sEAnjI",
+            "stage5c1_track_id": "stage5c1_B05",
+            "title": "Ash"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "TOMORROW X TOGETHER"
+            ],
+            "group": "D",
+            "rank": 1,
+            "similarity": 0.8414353116293738,
+            "spotify_track_id": "3aAnwyBJY9OLNLqSgd4fZU",
+            "stage5c1_track_id": "stage5c1_D05",
+            "title": "Deja Vu"
+          },
+          {
+            "artists": [
+              "CORTIS"
+            ],
+            "group": "D",
+            "rank": 2,
+            "similarity": 0.821404473926276,
+            "spotify_track_id": "4ecdsGz3Hg6TKPwQ0ZOdJz",
+            "stage5c1_track_id": "stage5c1_D04",
+            "title": "FaSHioN"
+          },
+          {
+            "artists": [
+              "2hollis"
+            ],
+            "group": "E",
+            "rank": 3,
+            "similarity": 0.7332495020908846,
+            "spotify_track_id": "2oRNyf4qlAzGz6LljMcDJp",
+            "stage5c1_track_id": "stage5c1_E02",
+            "title": "cliche"
+          },
+          {
+            "artists": [
+              "Mounika.",
+              "Cavetown"
+            ],
+            "group": "C",
+            "rank": 4,
+            "similarity": 0.6855552180037512,
+            "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+            "stage5c1_track_id": "stage5c1_C05",
+            "title": "Cut My Hair"
+          },
+          {
+            "artists": [
+              "ZICO"
+            ],
+            "group": "D",
+            "rank": 5,
+            "similarity": 0.6708042501369893,
+            "spotify_track_id": "1iIhGHzzrzqQfuNkFI2qAn",
+            "stage5c1_track_id": "stage5c1_D02",
+            "title": "Any song"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "IVE"
+            ],
+            "group": "D",
+            "rank": 1,
+            "similarity": 0.8178633296882878,
+            "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+            "stage5c1_track_id": "stage5c1_D01",
+            "title": "TKO"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 2,
+            "similarity": 0.8155552358786838,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM",
+              "Nile Rodgers"
+            ],
+            "group": "B",
+            "rank": 3,
+            "similarity": 0.810669712230869,
+            "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+            "stage5c1_track_id": "stage5c1_B04",
+            "title": "UNFORGIVEN (feat. Nile Rodgers)"
+          },
+          {
+            "artists": [
+              "CORTIS"
+            ],
+            "group": "D",
+            "rank": 4,
+            "similarity": 0.7861127733536848,
+            "spotify_track_id": "4ecdsGz3Hg6TKPwQ0ZOdJz",
+            "stage5c1_track_id": "stage5c1_D04",
+            "title": "FaSHioN"
+          },
+          {
+            "artists": [
+              "2hollis"
+            ],
+            "group": "E",
+            "rank": 5,
+            "similarity": 0.7847006653300865,
+            "spotify_track_id": "2oRNyf4qlAzGz6LljMcDJp",
+            "stage5c1_track_id": "stage5c1_E02",
+            "title": "cliche"
+          }
+        ]
+      },
+      "spotify_track_id": "2eAZfqOm4EnOF9VvN50Tyc",
+      "stage5c1_track_id": "stage5c1_E03",
+      "title": "The Way Life Goes (feat. Oh Wonder)"
+    },
+    {
+      "artists": [
+        "Paintamelody"
+      ],
+      "group": "E",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.7550156768601093,
+            "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+            "stage5c1_track_id": "stage5c1_A04",
+            "title": "Soundlessly in the Wind Like Lost Souls"
+          },
+          {
+            "artists": [
+              "AILEE"
+            ],
+            "group": "E",
+            "rank": 2,
+            "similarity": 0.6961428235063966,
+            "spotify_track_id": "2BPXILn0MqOe5WroVXlvN1",
+            "stage5c1_track_id": "stage5c1_E05",
+            "title": "I Will Go To You Like the First Snow"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.668691864143704,
+            "spotify_track_id": "07YG6Ark70YsDK4q3swKrc",
+            "stage5c1_track_id": "stage5c1_A05",
+            "title": "Lost Birds in Heaven's Gaze"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 4,
+            "similarity": 0.6620768849088232,
+            "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+            "stage5c1_track_id": "stage5c1_A02",
+            "title": "To Be Honest I Just Want to Eat Noodles with You"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 5,
+            "similarity": 0.635941220783708,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 1,
+            "similarity": 0.7101798969955858,
+            "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+            "stage5c1_track_id": "stage5c1_A04",
+            "title": "Soundlessly in the Wind Like Lost Souls"
+          },
+          {
+            "artists": [
+              "AILEE"
+            ],
+            "group": "E",
+            "rank": 2,
+            "similarity": 0.7002601590675803,
+            "spotify_track_id": "2BPXILn0MqOe5WroVXlvN1",
+            "stage5c1_track_id": "stage5c1_E05",
+            "title": "I Will Go To You Like the First Snow"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.6375277841710933,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 4,
+            "similarity": 0.620824885540413,
+            "spotify_track_id": "07YG6Ark70YsDK4q3swKrc",
+            "stage5c1_track_id": "stage5c1_A05",
+            "title": "Lost Birds in Heaven's Gaze"
+          },
+          {
+            "artists": [
+              "Rook1e"
+            ],
+            "group": "C",
+            "rank": 5,
+            "similarity": 0.5936943628279677,
+            "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+            "stage5c1_track_id": "stage5c1_C04",
+            "title": "Grape Soda"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "AILEE"
+            ],
+            "group": "E",
+            "rank": 1,
+            "similarity": 0.7107070564212354,
+            "spotify_track_id": "2BPXILn0MqOe5WroVXlvN1",
+            "stage5c1_track_id": "stage5c1_E05",
+            "title": "I Will Go To You Like the First Snow"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 2,
+            "similarity": 0.6415533644539683,
+            "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+            "stage5c1_track_id": "stage5c1_A01",
+            "title": "Snow White Petals and Lights"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 3,
+            "similarity": 0.5964182705613581,
+            "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+            "stage5c1_track_id": "stage5c1_A04",
+            "title": "Soundlessly in the Wind Like Lost Souls"
+          },
+          {
+            "artists": [
+              "ZICO"
+            ],
+            "group": "D",
+            "rank": 4,
+            "similarity": 0.5826443891734343,
+            "spotify_track_id": "1iIhGHzzrzqQfuNkFI2qAn",
+            "stage5c1_track_id": "stage5c1_D02",
+            "title": "Any song"
+          },
+          {
+            "artists": [
+              "Gracie Abrams"
+            ],
+            "group": "E",
+            "rank": 5,
+            "similarity": 0.54824849386316,
+            "spotify_track_id": "35IcAVSMsU9qzHfpPbvC8A",
+            "stage5c1_track_id": "stage5c1_E01",
+            "title": "Feels Like"
+          }
+        ]
+      },
+      "spotify_track_id": "5lYv58lizCFl1c15K3yan9",
+      "stage5c1_track_id": "stage5c1_E04",
+      "title": "Temple of Time"
+    },
+    {
+      "artists": [
+        "AILEE"
+      ],
+      "group": "E",
+      "neighbors": {
+        "clap": [
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 1,
+            "similarity": 0.8402407304616117,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "Gracie Abrams"
+            ],
+            "group": "E",
+            "rank": 2,
+            "similarity": 0.8109395142598377,
+            "spotify_track_id": "35IcAVSMsU9qzHfpPbvC8A",
+            "stage5c1_track_id": "stage5c1_E01",
+            "title": "Feels Like"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 3,
+            "similarity": 0.7036785275190948,
+            "spotify_track_id": "5o4U0weUIAXolji4sEAnjI",
+            "stage5c1_track_id": "stage5c1_B05",
+            "title": "Ash"
+          },
+          {
+            "artists": [
+              "Paintamelody"
+            ],
+            "group": "E",
+            "rank": 4,
+            "similarity": 0.6961428235063966,
+            "spotify_track_id": "5lYv58lizCFl1c15K3yan9",
+            "stage5c1_track_id": "stage5c1_E04",
+            "title": "Temple of Time"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 5,
+            "similarity": 0.6959676936086807,
+            "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+            "stage5c1_track_id": "stage5c1_A04",
+            "title": "Soundlessly in the Wind Like Lost Souls"
+          }
+        ],
+        "combined": [
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 1,
+            "similarity": 0.8217302798744253,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "Gracie Abrams"
+            ],
+            "group": "E",
+            "rank": 2,
+            "similarity": 0.8192671545828016,
+            "spotify_track_id": "35IcAVSMsU9qzHfpPbvC8A",
+            "stage5c1_track_id": "stage5c1_E01",
+            "title": "Feels Like"
+          },
+          {
+            "artists": [
+              "Paintamelody"
+            ],
+            "group": "E",
+            "rank": 3,
+            "similarity": 0.7002601590675803,
+            "spotify_track_id": "5lYv58lizCFl1c15K3yan9",
+            "stage5c1_track_id": "stage5c1_E04",
+            "title": "Temple of Time"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 4,
+            "similarity": 0.6810829263114021,
+            "spotify_track_id": "5o4U0weUIAXolji4sEAnjI",
+            "stage5c1_track_id": "stage5c1_B05",
+            "title": "Ash"
+          },
+          {
+            "artists": [
+              "City Girl"
+            ],
+            "group": "A",
+            "rank": 5,
+            "similarity": 0.6766441356539572,
+            "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+            "stage5c1_track_id": "stage5c1_A04",
+            "title": "Soundlessly in the Wind Like Lost Souls"
+          }
+        ],
+        "muq": [
+          {
+            "artists": [
+              "Gracie Abrams"
+            ],
+            "group": "E",
+            "rank": 1,
+            "similarity": 0.8403968396326038,
+            "spotify_track_id": "35IcAVSMsU9qzHfpPbvC8A",
+            "stage5c1_track_id": "stage5c1_E01",
+            "title": "Feels Like"
+          },
+          {
+            "artists": [
+              "LE SSERAFIM"
+            ],
+            "group": "B",
+            "rank": 2,
+            "similarity": 0.7747637952678993,
+            "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+            "stage5c1_track_id": "stage5c1_B03",
+            "title": "Sour Grapes"
+          },
+          {
+            "artists": [
+              "IU"
+            ],
+            "group": "D",
+            "rank": 3,
+            "similarity": 0.7150820712737482,
+            "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+            "stage5c1_track_id": "stage5c1_D03",
+            "title": "BBIBBI"
+          },
+          {
+            "artists": [
+              "Paintamelody"
+            ],
+            "group": "E",
+            "rank": 4,
+            "similarity": 0.7107070564212354,
+            "spotify_track_id": "5lYv58lizCFl1c15K3yan9",
+            "stage5c1_track_id": "stage5c1_E04",
+            "title": "Temple of Time"
+          },
+          {
+            "artists": [
+              "ZICO"
+            ],
+            "group": "D",
+            "rank": 5,
+            "similarity": 0.7002610854331957,
+            "spotify_track_id": "1iIhGHzzrzqQfuNkFI2qAn",
+            "stage5c1_track_id": "stage5c1_D02",
+            "title": "Any song"
+          }
+        ]
+      },
+      "spotify_track_id": "2BPXILn0MqOe5WroVXlvN1",
+      "stage5c1_track_id": "stage5c1_E05",
+      "title": "I Will Go To You Like the First Snow"
+    }
+  ]
+}

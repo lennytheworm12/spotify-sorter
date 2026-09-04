@@ -1,0 +1,663 @@
+{
+  "discovery_queries_executed": 0,
+  "exact_url_only": true,
+  "experiment_id": "stage5c1_curated_25_materialization",
+  "manifest_sha256": "8264bc9eb65164ea6dab21ef936340eb74efa4f8c3c46c42f3b84dd5e9beed3f",
+  "media_substitutions": 0,
+  "run_kind": "first",
+  "schema_version": "stage5c1-acquisition-results-v1",
+  "tracks": [
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:05.321121+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:03.075060+00:00",
+      "elapsed_seconds": 2.2460580550250597,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=gntTO_iobU8",
+      "file_size_bytes": 5296206,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 187,
+      "provider_result": "SUCCESS",
+      "provider_title": "Snow White Petals and Lights",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "5591fb0970c6bdccb109c185677bd08b76a22bbb344365de7cea97ecd35afc89",
+      "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+      "stage5c1_track_id": "stage5c1_A01",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_A01-gntTO_iobU8.wav",
+      "video_id": "gntTO_iobU8",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:07.364137+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:05.549852+00:00",
+      "elapsed_seconds": 1.8142859499785118,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=DaCf0qLwFT0",
+      "file_size_bytes": 5296206,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 234,
+      "provider_result": "SUCCESS",
+      "provider_title": "To Be Honest I Just Want to Eat Noodles with You",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "7274921ed3eae33dbc98a906f67e61e067afb03bf34d31af09c7c4e7f0de4a97",
+      "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+      "stage5c1_track_id": "stage5c1_A02",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_A02-DaCf0qLwFT0.wav",
+      "video_id": "DaCf0qLwFT0",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:09.204947+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:07.415597+00:00",
+      "elapsed_seconds": 1.7893480699858628,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=p19YtFiJJzI",
+      "file_size_bytes": 5292110,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 177,
+      "provider_result": "SUCCESS",
+      "provider_title": "city girl | château fountain",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "6e4792c18abc8c0eb09fdadad6415f99e1652c2754ee5c88d29483eb110137e1",
+      "spotify_track_id": "19BDozGmxYGxF1NcUlENmm",
+      "stage5c1_track_id": "stage5c1_A03",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_A03-p19YtFiJJzI.wav",
+      "video_id": "p19YtFiJJzI",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:11.180182+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:09.264439+00:00",
+      "elapsed_seconds": 1.9157401999691501,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=paiEPFwyAVs",
+      "file_size_bytes": 5292110,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 192,
+      "provider_result": "SUCCESS",
+      "provider_title": "city girl | soundlessly in the wind like lost souls",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "245bfb5102bae47e6dd3d75ba4315af06ef0d43ffe62d1f1d3e9224ce5e32054",
+      "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+      "stage5c1_track_id": "stage5c1_A04",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_A04-paiEPFwyAVs.wav",
+      "video_id": "paiEPFwyAVs",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:12.824579+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:11.230050+00:00",
+      "elapsed_seconds": 1.5945257130078971,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=IwtP1vWNMPE",
+      "file_size_bytes": 5296206,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 120,
+      "provider_result": "SUCCESS",
+      "provider_title": "Lost Birds in Heaven's Gaze",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "7dfb79ba407bd35c1443c9f43958b7a74ac2801045b4691914ccdf652d60c7e9",
+      "spotify_track_id": "07YG6Ark70YsDK4q3swKrc",
+      "stage5c1_track_id": "stage5c1_A05",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_A05-IwtP1vWNMPE.wav",
+      "video_id": "IwtP1vWNMPE",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:14.802395+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:12.873211+00:00",
+      "elapsed_seconds": 1.9291855249903165,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=Kw2faPNf00s",
+      "file_size_bytes": 5292110,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 164,
+      "provider_result": "SUCCESS",
+      "provider_title": "LE SSERAFIM We got so much Lyrics (Color Coded Lyrics)",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "06a786ab4ebc0780ef151c14bb53eae99ade90d78cecf5435d98936f9772a37f",
+      "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+      "stage5c1_track_id": "stage5c1_B01",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_B01-Kw2faPNf00s.wav",
+      "video_id": "Kw2faPNf00s",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:16.544404+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:14.854929+00:00",
+      "elapsed_seconds": 1.6894689709879458,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=Hqvdr91LoSI",
+      "file_size_bytes": 5292110,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 207,
+      "provider_result": "SUCCESS",
+      "provider_title": "LE SSERAFIM 르세라핌 Blue Flame @ LE SSERAFIM DEBUT SHOWCASE FEARLESS",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "360dea4dcd1e5772984a3750abe143bb28a307f37aab1ba58f8bbc2e58dd25fd",
+      "spotify_track_id": "37YoRLUu1qId0ewavgvnkG",
+      "stage5c1_track_id": "stage5c1_B02",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_B02-Hqvdr91LoSI.wav",
+      "video_id": "Hqvdr91LoSI",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:19.127486+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:16.594230+00:00",
+      "elapsed_seconds": 2.533249741012696,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=V9Wsm0hlLUI",
+      "file_size_bytes": 5296206,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 197,
+      "provider_result": "SUCCESS",
+      "provider_title": "Sour Grapes",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "1750a41c80b64ad941e555a55962c0dfebcb1249d2111ebc58757be7aa115413",
+      "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+      "stage5c1_track_id": "stage5c1_B03",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_B03-V9Wsm0hlLUI.wav",
+      "video_id": "V9Wsm0hlLUI",
+      "warnings": [
+        "[youtube] unable to extract yt initial data; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U",
+        "[youtube] Incomplete data received in embedded initial data; re-fetching using API.",
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:20.824157+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:19.174860+00:00",
+      "elapsed_seconds": 1.6492961519979872,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=UnWUmg6fEIw",
+      "file_size_bytes": 5292110,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 189,
+      "provider_result": "SUCCESS",
+      "provider_title": "LE SSERAFIM (르세라핌) 'UNFORGIVEN (feat. Nile Rodgers)' OFFICIAL M/V (Choreography ver.)",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "d89ab3266ba150f61023c957d90fe5d99d672eafffb9437ba0966e508a17939c",
+      "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+      "stage5c1_track_id": "stage5c1_B04",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_B04-UnWUmg6fEIw.wav",
+      "video_id": "UnWUmg6fEIw",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:22.726734+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:20.872222+00:00",
+      "elapsed_seconds": 1.8545156419859268,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=G6CSdvvrI-k",
+      "file_size_bytes": 5292110,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 198,
+      "provider_result": "SUCCESS",
+      "provider_title": "Ash",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "1c4352a4b7a0d75eb725b399f3a7f6c776bec8c3f39dfa025e8f830759a0f3aa",
+      "spotify_track_id": "5o4U0weUIAXolji4sEAnjI",
+      "stage5c1_track_id": "stage5c1_B05",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_B05-G6CSdvvrI-k.wav",
+      "video_id": "G6CSdvvrI-k",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:24.620985+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:22.774119+00:00",
+      "elapsed_seconds": 1.8468660659855232,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=vwwj-Utk32o",
+      "file_size_bytes": 5292110,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 161,
+      "provider_result": "SUCCESS",
+      "provider_title": "i want you to help me live",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "3952010fcbfaeb95a4000b2ab29a059ba712c6e7ed9894c5e07755c1f6a7dd01",
+      "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+      "stage5c1_track_id": "stage5c1_C01",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_C01-vwwj-Utk32o.wav",
+      "video_id": "vwwj-Utk32o",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:26.554161+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:24.668985+00:00",
+      "elapsed_seconds": 1.8851709939772263,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=8008pI-ziLM",
+      "file_size_bytes": 5296206,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 51,
+      "provider_result": "SUCCESS",
+      "provider_title": "The Girl Next Door",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "bf33fb242d6ce0e8a4361de3bd774db3461127a5099b88afe6005afc0e4db393",
+      "spotify_track_id": "41hXE5S8D4mRfcdqSMpmAC",
+      "stage5c1_track_id": "stage5c1_C02",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_C02-8008pI-ziLM.wav",
+      "video_id": "8008pI-ziLM",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:28.465220+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:26.605418+00:00",
+      "elapsed_seconds": 1.8598034210153855,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=Ce6so35INYU",
+      "file_size_bytes": 5296206,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 278,
+      "provider_result": "SUCCESS",
+      "provider_title": "in your arms",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "17d70545933ec867e318ccf82ba232bfe52515227fdcae0fa2b70d224a49ed10",
+      "spotify_track_id": "4fgIoBKHzO7YO5eATyYbMl",
+      "stage5c1_track_id": "stage5c1_C03",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_C03-Ce6so35INYU.wav",
+      "video_id": "Ce6so35INYU",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:30.485508+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:28.524611+00:00",
+      "elapsed_seconds": 1.9608944589854218,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=XhTkfDmkSbk",
+      "file_size_bytes": 5292110,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 105,
+      "provider_result": "SUCCESS",
+      "provider_title": "Rook1e - grape soda",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "6e835a111f2474babe1fb987d85ae5567019701fbd7b0930efc23b3e9c097671",
+      "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+      "stage5c1_track_id": "stage5c1_C04",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_C04-XhTkfDmkSbk.wav",
+      "video_id": "XhTkfDmkSbk",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:32.268396+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:30.534510+00:00",
+      "elapsed_seconds": 1.733881541993469,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=rqfDjmAkq7U",
+      "file_size_bytes": 5292110,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 127,
+      "provider_result": "SUCCESS",
+      "provider_title": "Mounika - Cut My Hair (feat. Cavetown)",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "902d9824e16aa7defeb911d4f7f40bb81b51ab7951fc2c8f2ae91e61101fced0",
+      "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+      "stage5c1_track_id": "stage5c1_C05",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_C05-rqfDjmAkq7U.wav",
+      "video_id": "rqfDjmAkq7U",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:33.955099+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:32.314443+00:00",
+      "elapsed_seconds": 1.6406486330088228,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=AajQnW_4zOY",
+      "file_size_bytes": 5292110,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 186,
+      "provider_result": "SUCCESS",
+      "provider_title": "06. TKO",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "8ef2a897f7b8c954182fb8914d1aae2a012431b15759f56cbad0fa61556a1c67",
+      "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+      "stage5c1_track_id": "stage5c1_D01",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_D01-AajQnW_4zOY.wav",
+      "video_id": "AajQnW_4zOY",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:35.941384+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:34.002779+00:00",
+      "elapsed_seconds": 1.938603745016735,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=M0L066lsPgA",
+      "file_size_bytes": 5292110,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 246,
+      "provider_result": "SUCCESS",
+      "provider_title": "ZICO (지코) - Any song (아무노래) (Color Coded Lyrics/Eng/Rom/Han/가사)",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "5a6fccf97859086b5bdcded7897f167f24bddd9688214be806da5776fb7915b4",
+      "spotify_track_id": "1iIhGHzzrzqQfuNkFI2qAn",
+      "stage5c1_track_id": "stage5c1_D02",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_D02-M0L066lsPgA.wav",
+      "video_id": "M0L066lsPgA",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:37.722316+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:35.991698+00:00",
+      "elapsed_seconds": 1.7306126430048607,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=nM0xDI5R50E",
+      "file_size_bytes": 5292110,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 208,
+      "provider_result": "SUCCESS",
+      "provider_title": "[MV] IU(아이유) _ BBIBBI(삐삐)",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "0263c8e6b36d54f560bd1b1409dc5792936876bd09a0619b68d5dc20d222e596",
+      "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+      "stage5c1_track_id": "stage5c1_D03",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_D03-nM0xDI5R50E.wav",
+      "video_id": "nM0xDI5R50E",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:39.401198+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:37.769342+00:00",
+      "elapsed_seconds": 1.631855450978037,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=42wfEs7oIP8",
+      "file_size_bytes": 5292110,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 179,
+      "provider_result": "SUCCESS",
+      "provider_title": "CORTIS (코르티스) 'FaSHioN' Official MV",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "794f35d52d3624b1ad86ae670a06c428235094380b97b4082fcda026ca07f021",
+      "spotify_track_id": "4ecdsGz3Hg6TKPwQ0ZOdJz",
+      "stage5c1_track_id": "stage5c1_D04",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_D04-42wfEs7oIP8.wav",
+      "video_id": "42wfEs7oIP8",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:41.234697+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:39.449155+00:00",
+      "elapsed_seconds": 1.7855392060009763,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=_SyegcTF3Xg",
+      "file_size_bytes": 5292110,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 175,
+      "provider_result": "SUCCESS",
+      "provider_title": "TXT 'Deja Vu' Lyrics (투모로우바이투게더 Deja Vu 가사) [Color Coded Han_Rom_Eng] ShadowByYoongi",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "990db683c5af82f0f87c814e0b3e345b5aed45f7960f5c64b184a91c906f2b5a",
+      "spotify_track_id": "3aAnwyBJY9OLNLqSgd4fZU",
+      "stage5c1_track_id": "stage5c1_D05",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_D05-_SyegcTF3Xg.wav",
+      "video_id": "_SyegcTF3Xg",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:43.189120+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:41.283486+00:00",
+      "elapsed_seconds": 1.9056247060070746,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=ptznWGs4GKg",
+      "file_size_bytes": 5292110,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 152,
+      "provider_result": "SUCCESS",
+      "provider_title": "Gracie Abrams - Feels Like (Official Music Video)",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "14ce54efc6b07dc702aaa7a2815676963d621f803818e3c2dae2e66e8a8bd55b",
+      "spotify_track_id": "35IcAVSMsU9qzHfpPbvC8A",
+      "stage5c1_track_id": "stage5c1_E01",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_E01-ptznWGs4GKg.wav",
+      "video_id": "ptznWGs4GKg",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:44.805539+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:43.235421+00:00",
+      "elapsed_seconds": 1.5701084730098955,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=46JG3ZpRaRc",
+      "file_size_bytes": 5292110,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 179,
+      "provider_result": "SUCCESS",
+      "provider_title": "2hollis - cliche (official audio)",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "5fea309c99bacaef5240723c496d8d2441a7a21880302803da3a41c15e3f336e",
+      "spotify_track_id": "2oRNyf4qlAzGz6LljMcDJp",
+      "stage5c1_track_id": "stage5c1_E02",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_E02-46JG3ZpRaRc.wav",
+      "video_id": "46JG3ZpRaRc",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:46.715802+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:44.853941+00:00",
+      "elapsed_seconds": 1.861857493990101,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=ELSUh04-Jh4",
+      "file_size_bytes": 5296206,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 222,
+      "provider_result": "SUCCESS",
+      "provider_title": "The Way Life Goes (feat. Oh Wonder)",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "d1391c41371774a7b8d62cd096894664901a06c87d0b862d13d6e62cdfcfcb39",
+      "spotify_track_id": "2eAZfqOm4EnOF9VvN50Tyc",
+      "stage5c1_track_id": "stage5c1_E03",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_E03-ELSUh04-Jh4.wav",
+      "video_id": "ELSUh04-Jh4",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:49.530061+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:46.783793+00:00",
+      "elapsed_seconds": 2.74624304799363,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=wBt0h-Ti6vQ",
+      "file_size_bytes": 5296206,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 136,
+      "provider_result": "SUCCESS",
+      "provider_title": "Temple of Time",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "b15f4afefe8272cf80d2c252f1c5b1a1be00c7a2be2dd7fb6cc93b91a1171422",
+      "spotify_track_id": "5lYv58lizCFl1c15K3yan9",
+      "stage5c1_track_id": "stage5c1_E04",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_E04-wBt0h-Ti6vQ.wav",
+      "video_id": "wBt0h-Ti6vQ",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    },
+    {
+      "acquisition_ended_at": "2026-09-04T05:31:51.680159+00:00",
+      "acquisition_started_at": "2026-09-04T05:31:49.591215+00:00",
+      "elapsed_seconds": 2.088941631023772,
+      "errors": [],
+      "exact_url": "https://www.youtube.com/watch?v=By8Iv_TpxCI",
+      "file_size_bytes": 5292110,
+      "output_format": "wav",
+      "provider": "yt_dlp_exact_url",
+      "provider_duration_seconds": 231,
+      "provider_result": "SUCCESS",
+      "provider_title": "I Will Go To You Like The First Snow - Ailee Lyrics [Han,Rom,Eng]",
+      "reacquisition": false,
+      "requested_section_seconds": [
+        0.0,
+        30.0
+      ],
+      "source_audio_sha256": "ec5e2c5a0329e8fc349e4c97bc0301105e654d9df17ca81cb5f38deac5730466",
+      "spotify_track_id": "2BPXILn0MqOe5WroVXlvN1",
+      "stage5c1_track_id": "stage5c1_E05",
+      "temporary_file_path": "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_E05-By8Iv_TpxCI.wav",
+      "video_id": "By8Iv_TpxCI",
+      "warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "collapse_diagnostics": {
+    "clap_muq_similarity_matrices_identical": false,
+    "collapse_pathology_detected": false,
+    "experiment_id": "stage5c1_curated_25_materialization",
+    "pathologies_detected": [],
+    "schema_version": "stage5c1-representation-collapse-diagnostics-v1",
+    "similarity_checks": {
+      "clap": {
+        "count": 300,
+        "maximum": 0.9112917065027109,
+        "mean": 0.5911973875521883,
+        "minimum": 0.23220166818990767,
+        "pairs_near_one": 0,
+        "similarities_clustered_near_one": false,
+        "stddev": 0.1264301787297314,
+        "suspiciously_narrow_variance": false
+      },
+      "combined": {
+        "count": 300,
+        "maximum": 0.9150715649452248,
+        "mean": 0.5756918256248686,
+        "minimum": 0.1970173210561657,
+        "pairs_near_one": 0,
+        "similarities_clustered_near_one": false,
+        "stddev": 0.12399484514589461,
+        "suspiciously_narrow_variance": false
+      },
+      "muq": {
+        "count": 300,
+        "maximum": 0.9246621830946321,
+        "mean": 0.5363496317574158,
+        "minimum": 0.07754767921904653,
+        "pairs_near_one": 0,
+        "similarities_clustered_near_one": false,
+        "stddev": 0.16557587986134326,
+        "suspiciously_narrow_variance": false
+      }
+    },
+    "successful_track_count": 25,
+    "top1_neighbor_frequency": {
+      "clap": {
+        "stage5c1_A01": 1,
+        "stage5c1_A02": 2,
+        "stage5c1_A03": 4,
+        "stage5c1_A04": 1,
+        "stage5c1_B01": 3,
+        "stage5c1_B03": 2,
+        "stage5c1_B04": 1,
+        "stage5c1_B05": 1,
+        "stage5c1_C02": 2,
+        "stage5c1_C04": 1,
+        "stage5c1_C05": 1,
+        "stage5c1_D01": 1,
+        "stage5c1_D05": 1,
+        "stage5c1_E01": 1,
+        "stage5c1_E03": 2,
+        "stage5c1_E05": 1
+      },
+      "combined": {
+        "stage5c1_A01": 1,
+        "stage5c1_A02": 4,
+        "stage5c1_A03": 3,
+        "stage5c1_A04": 1,
+        "stage5c1_B01": 3,
+        "stage5c1_B03": 3,
+        "stage5c1_B04": 1,
+        "stage5c1_C02": 1,
+        "stage5c1_C04": 1,
+        "stage5c1_C05": 1,
+        "stage5c1_D01": 1,
+        "stage5c1_D05": 2,
+        "stage5c1_E03": 2,
+        "stage5c1_E05": 1
+      },
+      "muq": {
+        "stage5c1_A01": 1,
+        "stage5c1_A02": 3,
+        "stage5c1_B01": 1,
+        "stage5c1_B03": 1,
+        "stage5c1_B04": 1,
+        "stage5c1_B05": 1,
+        "stage5c1_C01": 1,
+        "stage5c1_C02": 1,
+        "stage5c1_C05": 2,
+        "stage5c1_D01": 4,
+        "stage5c1_D03": 3,
+        "stage5c1_D04": 1,
+        "stage5c1_E01": 2,
+        "stage5c1_E03": 1,
+        "stage5c1_E05": 2
+      }
+    },
+    "unique_representation_identities": 25,
+    "unique_source_audio_hashes": 25,
+    "vector_checks": {
+      "clap": {
+        "maximum_norm_error": 3.3441532876210545e-09,
+        "non_finite_values": 0,
+        "unique_embedding_hashes": 25,
+        "zero_vectors": 0
+      },
+      "muq": {
+        "maximum_norm_error": 4.17013212850037e-09,
+        "non_finite_values": 0,
+        "unique_embedding_hashes": 25,
+        "zero_vectors": 0
+      }
+    }
+  },
+  "experiment_id": "stage5c1_curated_25_materialization",
+  "failed_track_count": 0,
+  "manifest_sha256": "8264bc9eb65164ea6dab21ef936340eb74efa4f8c3c46c42f3b84dd5e9beed3f",
+  "matrix_diagonal_max_error": {
+    "clap": 0.0,
+    "combined": 0.0,
+    "muq": 0.0
+  },
+  "matrix_symmetry_max_error": {
+    "clap": 0.0,
+    "combined": 0.0,
+    "muq": 0.0
+  },
+  "schema_version": "stage5c1-analysis-summary-v1",
+  "successful_track_count": 25,
+  "weights": {
+    "clap": 0.7172981519,
+    "muq": 0.2827018481
+  }
+}
