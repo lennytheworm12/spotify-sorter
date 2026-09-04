@@ -1,0 +1,23 @@
+{
+  "candidates": [],
+  "error": {
+    "category": "YOUTUBE_DATA_API_SEARCH_ZERO_RESULTS",
+    "http_status": null,
+    "message": "search.list returned no usable video IDs",
+    "reason": null,
+    "retryable": false
+  },
+  "experiment_id": "STAGE5B4C_YOUTUBE_DATA_API_FALLBACK_V1",
+  "next_step": "MANUAL_YOUTUBE_URL_OVERRIDE",
+  "outcome": null,
+  "provider_path": "YOUTUBE_DATA_API_FALLBACK",
+  "query": "Girl, Interrupted 2xxx Miso",
+  "schema_version": "stage5b4c-hydrated-candidates-v1",
+  "scope_guards": {
+    "audio_downloads": 0,
+    "provider_rank_preserved": true,
+    "selector_invocations_before_human_review": 0,
+    "video_downloads": 0
+  },
+  "triggered": false
+}
