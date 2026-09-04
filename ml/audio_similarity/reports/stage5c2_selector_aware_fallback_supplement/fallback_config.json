@@ -1,0 +1,27 @@
+{
+  "candidate_limit_per_query": 3,
+  "candidate_pool_merging": false,
+  "experiment_id": "STAGE5C2_SELECTOR_AWARE_FALLBACK_SUPPLEMENT",
+  "query_contract_id": "NATURAL_TITLE_FIRST3_THEN_SINGLE_ARTIST_THEN_TITLE_ONLY_ON_UNSELECTABLE_V2",
+  "schema_version": "stage5c2-selector-aware-fallback-config-v1",
+  "selector": "STAGE5B3_MINIMAL_YOUTUBE_SELECTOR_V1_UNCHANGED",
+  "stop_condition": "FIRST_QUERY_POOL_WITH_AUTO_SELECT",
+  "targets": {
+    "stage5c2_008": {
+      "owner_url": "https://www.youtube.com/watch?v=v224EdAkZr8",
+      "owner_video_id": "v224EdAkZr8"
+    },
+    "stage5c2_019": {
+      "owner_url": "https://www.youtube.com/watch?v=i4YFngxyJ0k",
+      "owner_video_id": "i4YFngxyJ0k"
+    }
+  },
+  "trigger": "NO_SELECTABLE_CANDIDATE_FROM_FROZEN_SELECTOR",
+  "variant_order": [
+    "TITLE_FIRST3_ARTISTS",
+    "TITLE_ARTIST_1",
+    "TITLE_ARTIST_2",
+    "TITLE_ARTIST_3",
+    "TITLE_ONLY"
+  ]
+}

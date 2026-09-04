@@ -1,0 +1,21 @@
+{
+  "artifacts": {
+    "fallback_config.json": {
+      "path": "reports/stage5c2_selector_aware_fallback_supplement/fallback_config.json",
+      "sha256": "d8acc1288697c6e685c0a8e1405887870c6cda11de50dc2b74b13d6b9c10c82f",
+      "size_bytes": 909
+    },
+    "selector_aware_fallback_report.md": {
+      "path": "reports/stage5c2_selector_aware_fallback_supplement/selector_aware_fallback_report.md",
+      "sha256": "4ecea8837a8ebdfb9134d2ddfd6a97a83312e0ea02ed5116ffbcb2dbe6ba87fd",
+      "size_bytes": 1381
+    },
+    "targeted_discovery.json": {
+      "path": "reports/stage5c2_selector_aware_fallback_supplement/targeted_discovery.json",
+      "sha256": "63a6849e517013064db70e35c0c68224807d1aff6d4f0e3232fd3764c9ca5ca7",
+      "size_bytes": 52779
+    }
+  },
+  "experiment_id": "STAGE5C2_SELECTOR_AWARE_FALLBACK_SUPPLEMENT",
+  "schema_version": "stage5c2-selector-aware-artifact-manifest-v1"
+}
