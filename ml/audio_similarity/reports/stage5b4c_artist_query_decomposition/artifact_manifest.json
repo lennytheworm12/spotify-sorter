@@ -1,0 +1,150 @@
+{
+  "artifacts": {
+    "decomposition_metrics.json": {
+      "path": "reports/stage5b4c_artist_query_decomposition/decomposition_metrics.json",
+      "sha256": "acda2486ef1765089dba75408f37a599dfec83abdad0d62110c68efb45a6d1bf",
+      "size_bytes": 3002
+    },
+    "decomposition_report.md": {
+      "path": "reports/stage5b4c_artist_query_decomposition/decomposition_report.md",
+      "sha256": "a86f5cf80151767e3e2dd5c2785b9c583c335d9bb8ea3e7d0aecbde9169f5740",
+      "size_bytes": 2502
+    },
+    "human_review.csv": {
+      "path": "reports/stage5b4c_artist_query_decomposition/human_review.csv",
+      "sha256": "8a555bdc9733a35073614e7924809059886d1f12098e192a86b80dbf07f71c30",
+      "size_bytes": 1878
+    },
+    "query_decomposition_config.json": {
+      "path": "reports/stage5b4c_artist_query_decomposition/query_decomposition_config.json",
+      "sha256": "879526d06c2426393d09b5f3bf453ebc0631ab4ea43f6446f9d23c1744d69ca9",
+      "size_bytes": 5539
+    },
+    "query_plan_v3.json": {
+      "path": "reports/stage5b4c_artist_query_decomposition/query_plan_v3.json",
+      "sha256": "77bf8554dd78fe0175757cb1ead6c9f9a890f875604cdfe56283a56d63e512ee",
+      "size_bytes": 106003
+    },
+    "targeted_discovery.json": {
+      "path": "reports/stage5b4c_artist_query_decomposition/targeted_discovery.json",
+      "sha256": "c91ef5ce82f505b1c0ef8a69d5bea88afa2795977a6ef7030ce89d2617090e0a",
+      "size_bytes": 14739
+    }
+  },
+  "experiment_id": "STAGE5B4C_ARTIST_QUERY_DECOMPOSITION_V1",
+  "frozen_inputs": {
+    "official_data_api_manifest": {
+      "path": "reports/stage5b4c_youtube_data_api_fallback/artifact_manifest.json",
+      "sha256": "1dfbe8621a1d0d0aa45634ce76333970c58cef12ceb2f25419c1bf8d27fd2250",
+      "size_bytes": 3262
+    },
+    "representative_v3_artifacts": {
+      "automated_selector_decisions": {
+        "path": "reports/stage5b4_representative_v3/automated_selector_decisions.json",
+        "sha256": "1a10ed69549b83d36223120db4162a937c6b0d2f59df7224b6afe1b99767827e",
+        "size_bytes": 202751
+      },
+      "automated_selector_metrics": {
+        "path": "reports/stage5b4_representative_v3/automated_selector_metrics.json",
+        "sha256": "878024d9768ebb2de6f96f6e7aab787a3e176225ed75e3203afe9902a4d530ae",
+        "size_bytes": 522
+      },
+      "benchmark_config": {
+        "path": "reports/stage5b4_representative_v3/benchmark_config.json",
+        "sha256": "6a36489829453f2ea18e14767a752ef97d75eda5bcfc0de8d0ec3965aa975385",
+        "size_bytes": 5045
+      },
+      "benchmark_manifest": {
+        "path": "reports/stage5b4_representative_v3/benchmark_manifest.json",
+        "sha256": "e5d54e06e410d74a1b588f8d853c5ca9a25e97ba09dd26692c5978a15245097e",
+        "size_bytes": 52085
+      },
+      "human_review": {
+        "path": "reports/stage5b4_representative_v3/human_review.csv",
+        "sha256": "92cb84aafeff32604ebf559c98e8347751991e8d0d865949a1ba595d8029d062",
+        "size_bytes": 132358
+      },
+      "human_review_queue": {
+        "path": "reports/stage5b4_representative_v3/human_review_queue.json",
+        "sha256": "181252ad2d96327acc3543754ea5ea5dc62a2036764680536dc22782995cea9a",
+        "size_bytes": 87091
+      },
+      "youtube_top3_discovery": {
+        "path": "reports/stage5b4_representative_v3/youtube_top3_discovery.json",
+        "sha256": "4cbd5741c7af0030474ba4073991c28d316eea73f243dc1f0a350b48e7db3f94",
+        "size_bytes": 804468
+      }
+    },
+    "stage5b3_selector": {
+      "path": "src/audio_similarity/stage5b3_minimal_selector.py",
+      "sha256": "262ac3d0d7459170fef81336ee6f54f5523f2d8300fedee8a51798ce8439160f",
+      "size_bytes": 23106
+    },
+    "stage5b4a_artifacts": {
+      "artifact_manifest.json": {
+        "path": "reports/stage5b4a_query_contract_repair/artifact_manifest.json",
+        "sha256": "9e3e573388d584930444aa8c8b44336b312a1b052d81fb1222a81619923a18b2",
+        "size_bytes": 3283
+      },
+      "human_review.csv": {
+        "path": "reports/stage5b4a_query_contract_repair/human_review.csv",
+        "sha256": "72633877f662c77886b11f3a68b3d53e98e9f3d6194783d171277e06cc8d93b4",
+        "size_bytes": 2153
+      },
+      "query_contract_report.md": {
+        "path": "reports/stage5b4a_query_contract_repair/query_contract_report.md",
+        "sha256": "3c0f0e63c9693f3837361cb03d6a94536cf81430c7ffbf4b701cbfea6491da04",
+        "size_bytes": 2884
+      },
+      "repaired_discovery.json": {
+        "path": "reports/stage5b4a_query_contract_repair/repaired_discovery.json",
+        "sha256": "3b6cb47ba4a5db5b844006258d52837ecba7db1f37045962eee8ccf0f116720f",
+        "size_bytes": 11028
+      },
+      "repaired_query_contract.json": {
+        "path": "reports/stage5b4a_query_contract_repair/repaired_query_contract.json",
+        "sha256": "67533675f92d5904bdfc87dffecea59afa70bef45a543d2ca0fc5533363ae562",
+        "size_bytes": 2885
+      },
+      "v3_query_replay.json": {
+        "path": "reports/stage5b4a_query_contract_repair/v3_query_replay.json",
+        "sha256": "5e653f2a39ee3c7dc3b03243a2f2b66b7938ab9447adeb0794eb472ae8cdbac3",
+        "size_bytes": 49887
+      }
+    },
+    "stage5b4b_manifest": {
+      "path": "reports/stage5b4b_playwright_fallback/artifact_manifest.json",
+      "sha256": "eef72686dadee7a314e9880ac3867f1da6cf4f15acca56411566dadd413e0d50",
+      "size_bytes": 6316
+    }
+  },
+  "implementation": {
+    "cli": {
+      "path": "src/audio_similarity/cli/stage5b4c_artist_decomposition.py",
+      "sha256": "8ac154e80f106706e88dec616e8e78b77dc397b801ba5a32b11087e20f1b5d77",
+      "size_bytes": 1487
+    },
+    "experiment": {
+      "path": "src/audio_similarity/stage5b4c_artist_decomposition_experiment.py",
+      "sha256": "0ebd612d962850b85eb39f10088a025e40d7dd85eb53d06e7eb2e67046c4be2a",
+      "size_bytes": 28627
+    },
+    "experiment_tests": {
+      "path": "tests/test_stage5b4c_artist_decomposition_experiment.py",
+      "sha256": "eb38acf2704bdadb1943332cde0d05fa299a462ff257df4298d6a2de71e75ec4",
+      "size_bytes": 7503
+    },
+    "orchestrator": {
+      "path": "src/audio_similarity/stage5b4c_artist_decomposition.py",
+      "sha256": "50618289ff54b586ed81c5af8a712841d893859dec5de68f9309c5468aea7a6c",
+      "size_bytes": 8754
+    },
+    "orchestrator_tests": {
+      "path": "tests/test_stage5b4c_artist_decomposition.py",
+      "sha256": "c1f9ffc4021fc2cab324c16118feaac9bf992b39883b0a56c8908b711d7d2b66",
+      "size_bytes": 9787
+    }
+  },
+  "schema_version": "stage5b4c-artist-decomposition-manifest-v1",
+  "verdict": "ARTIST_DECOMPOSITION_FALLBACK_VALIDATED"
+}
