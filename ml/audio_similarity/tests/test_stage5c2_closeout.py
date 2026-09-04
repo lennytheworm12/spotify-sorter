@@ -23,6 +23,7 @@ def test_rate_metrics_separate_attempts_retries_and_verify_spacing() -> None:
                 "http_status": None,
                 "retry_reason": None,
                 "final_outcome": "SUCCESS",
+                "acquisition_duration_seconds": 1.0,
             },
             {
                 "attempt_number": 1,
@@ -32,6 +33,7 @@ def test_rate_metrics_separate_attempts_retries_and_verify_spacing() -> None:
                 "http_status": 429,
                 "retry_reason": "PROVIDER_RATE_LIMITED",
                 "final_outcome": "RETRY_SCHEDULED",
+                "acquisition_duration_seconds": 1.0,
             },
             {
                 "attempt_number": 2,
@@ -41,6 +43,7 @@ def test_rate_metrics_separate_attempts_retries_and_verify_spacing() -> None:
                 "http_status": None,
                 "retry_reason": None,
                 "final_outcome": "SUCCESS",
+                "acquisition_duration_seconds": 1.0,
             },
         ],
     }
@@ -76,6 +79,7 @@ def test_rate_metric_fails_when_any_attempt_breaks_20_second_floor() -> None:
                 "http_status": None,
                 "retry_reason": None,
                 "final_outcome": "SUCCESS",
+                "acquisition_duration_seconds": 1.0,
             },
             {
                 "attempt_number": 1,
@@ -85,6 +89,7 @@ def test_rate_metric_fails_when_any_attempt_breaks_20_second_floor() -> None:
                 "http_status": None,
                 "retry_reason": None,
                 "final_outcome": "SUCCESS",
+                "acquisition_duration_seconds": 1.0,
             },
         ],
     }

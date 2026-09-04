@@ -139,7 +139,8 @@ def _write_distribution(path: Path, title: str, values: np.ndarray) -> None:
             continue
         x0 = left + index * bar_width
         x1 = left + (index + 1) * bar_width - 1
-        y0 = bottom - (bottom - top) * int(count) / maximum
+        bar_height = max(1, int(round((bottom - top) * int(count) / maximum)))
+        y0 = bottom - 1 - bar_height
         draw.rectangle((x0, y0, x1, bottom - 1), fill=(77, 163, 255))
     draw.text((left, bottom + 10), f"{edges[0]:.3f}", fill="black", font=font)
     draw.text((right - 35, bottom + 10), f"{edges[-1]:.3f}", fill="black", font=font)

@@ -98,6 +98,20 @@ def acquisition_and_rate_metrics(
         "acquisition_failures": sum(
             row["provider_result"] == "FAILED" for row in acquisition_rows
         ),
+        "provider_warning_count": sum(
+            len(row.get("provider_warnings", [])) for row in rows
+        ),
+        "provider_error_count": sum(bool(row.get("provider_error")) for row in rows),
+        "acquisition_duration_seconds": {
+            "total": sum(float(row["acquisition_duration_seconds"]) for row in rows),
+            "median": statistics.median(
+                float(row["acquisition_duration_seconds"]) for row in rows
+            ) if rows else None,
+            "maximum": max(
+                (float(row["acquisition_duration_seconds"]) for row in rows),
+                default=None,
+            ),
+        },
         "failure_categories": dict(
             Counter(
                 row.get("failure_category")
@@ -279,6 +293,13 @@ def write_closeout(project_root: str | Path) -> dict[str, Any]:
             "selection_yield": selected_count / len(manifest["tracks"]),
             "media_materialization_reliability": materialized_count / selected_count,
             "end_to_end_automated_materialization_yield": materialized_count / len(manifest["tracks"]),
+            "performance_seconds": {
+                "first_run_total": materialization["elapsed_seconds"],
+                "stage5a_materialization": materialization["materialization_elapsed_seconds"],
+                "clap_inference": materialization["stage5a_stats"]["clap"]["inference_seconds"],
+                "muq_inference": materialization["stage5a_stats"]["muq"]["inference_seconds"],
+                "cache_rerun_total": rerun["elapsed_seconds"],
+            },
             "failure_categories": dict(
                 Counter(
                     row["failure_category"]
@@ -380,7 +401,7 @@ def _write_report(path: Path, metrics: dict[str, Any]) -> None:
     lines = [
         "# Stage 5C.2 — Representative 100 End-to-End Validation",
         "",
-        f"**Engineering verdict:** `{metrics['verdict']}`  ",
+        f"**Engineering verdict:** `{metrics['verdict']}`",
         f"**Human similarity verdict:** `{metrics['human_similarity_quality_verdict']}`",
         "",
         "The fresh 100-track manifest, discovery results, and 98 exact selected YouTube IDs were frozen before media acquisition. No failed or manual-tail track was substituted.",
@@ -398,6 +419,7 @@ def _write_report(path: Path, metrics: dict[str, Any]) -> None:
         f"- Live attempts: {rate['total_live_download_attempts']}; retries: {rate['retry_attempts']}; concurrent downloads: {rate['concurrent_downloads']}.",
         f"- Start spacing (min / median / max): {rate['minimum_start_to_start_spacing_seconds']:.3f} / {rate['median_start_to_start_spacing_seconds']:.3f} / {rate['maximum_start_to_start_spacing_seconds']:.3f} seconds.",
         f"- Retry-After events: {rate['retry_after_events']}; HTTP 429: {rate['http_429_count']}; HTTP 5xx: {rate['http_5xx_count']}; final exhausted failures: {rate['final_failures_after_retry_exhaustion']}.",
+        "- Every successful yt-dlp request emitted the known optional JavaScript-runtime warning; no provider error accompanied it and all exact-ID acquisitions succeeded.",
         "",
         "## Representation health",
         "",

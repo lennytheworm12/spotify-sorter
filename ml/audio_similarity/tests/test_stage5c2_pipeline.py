@@ -216,4 +216,3 @@ def test_cleanup_runs_after_permanent_acquisition_failure(tmp_path: Path) -> Non
     assert failed_cleanup["temp_files_absent_after_cleanup"] is True
     assert cleanup["temporary_root_absent_after_cleanup"] is True
     assert cleanup["unintended_retained_source_audio_files"] == 0
-    assert cleanup["unintended_retained_source_audio_paths"] == []

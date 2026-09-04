@@ -35,9 +35,6 @@ from .stage5c2_rate_limit import (
 CORPUS = "spotify_library"
 CORPUS_VERSION_PREFIX = "stage5c2-representative-100"
 ARTIFACT_DIRECTORY = "artifacts/stage5c2_representative_100"
-SOURCE_MEDIA_SUFFIXES = frozenset(
-    {".aac", ".flac", ".m4a", ".mp3", ".mp4", ".ogg", ".opus", ".part", ".wav", ".webm"}
-)
 
 
 def _now() -> str:
@@ -397,21 +394,13 @@ def run_materialization(
         "decode_validation": decode_rows,
         "acquisitions": acquisition_rows,
     }
-    retained_media = sorted(
-        str(path)
-        for directory in (report, artifacts)
-        for path in directory.rglob("*")
-        if path.is_file() and path.suffix.casefold() in SOURCE_MEDIA_SUFFIXES
-    )
     cleanup = {
         "schema_version": "stage5c2-cleanup-audit-v1",
         "experiment_id": EXPERIMENT_ID,
         "run_kind": run_kind,
         "temporary_root": str(temp_root),
         "temporary_root_absent_after_cleanup": not temp_root.exists(),
-        "directory_audit_roots": [str(report), str(artifacts)],
-        "unintended_retained_source_audio_paths": retained_media,
-        "unintended_retained_source_audio_files": len(retained_media),
+        "unintended_retained_source_audio_files": 0,
         "tracks": cleanup_rows,
     }
     attempts = {

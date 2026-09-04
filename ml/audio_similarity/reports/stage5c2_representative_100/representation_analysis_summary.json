@@ -1,0 +1,26 @@
+{
+  "experiment_id": "stage5c2_representative_100",
+  "manifest_track_count": 100,
+  "matrix_diagonal_max_error": {
+    "clap": 0.0,
+    "combined": 0.0,
+    "muq": 0.0
+  },
+  "matrix_symmetry_max_error": {
+    "clap": 0.0,
+    "combined": 0.0,
+    "muq": 0.0
+  },
+  "raw_top5_judgment_count": 490,
+  "representation_pathology_detected": false,
+  "representative_manifest_sha256": "cdbc64aac94bffb34481b898370b56e1b9566ae925ebfbeb21621bbe6cb0667b",
+  "review_query_count": 98,
+  "review_queue_status": "HUMAN_REVIEW_PENDING",
+  "schema_version": "stage5c2-representation-analysis-summary-v1",
+  "successful_track_count": 98,
+  "unique_unordered_pair_count": 355,
+  "weights": {
+    "clap": 0.7172981519,
+    "muq": 0.2827018481
+  }
+}

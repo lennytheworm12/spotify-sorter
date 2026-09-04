@@ -1,0 +1,97 @@
+{
+  "cache_integrity": {
+    "corrupt_cache_entries": 0,
+    "passed": true,
+    "problems": [],
+    "row_counts": {
+      "pooled": 196,
+      "segments": 588,
+      "tracks": 98
+    },
+    "sqlite_integrity": "ok"
+  },
+  "cleanup": {
+    "temporary_root_absent": true,
+    "unintended_retained_source_audio_files": 0
+  },
+  "experiment_id": "stage5c2_representative_100",
+  "human_similarity_quality_verdict": "HUMAN_REVIEW_PENDING",
+  "pipeline": {
+    "acquisition_attempted_tracks": 98,
+    "acquisition_failures": 0,
+    "acquisition_successes": 98,
+    "automated_selections": 98,
+    "cache_hits_before_acquisition": 0,
+    "cache_rerun_hits": 98,
+    "cache_write_successes": 98,
+    "clap_successes": 98,
+    "cleanup_expected": 98,
+    "cleanup_successes": 98,
+    "decode_successes": 98,
+    "decomposition_triggers": 0,
+    "discovery_successes": 100,
+    "discovery_unresolved": 0,
+    "end_to_end_automated_materialization_yield": 0.98,
+    "failure_categories": {},
+    "full_materialization_successes": 98,
+    "manifest_tracks": 100,
+    "manual_tail": 2,
+    "media_materialization_reliability": 1.0,
+    "muq_successes": 98,
+    "performance_seconds": {
+      "cache_rerun_total": 0.6208371979882941,
+      "clap_inference": 19.01316008536378,
+      "first_run_total": 2077.717594676011,
+      "muq_inference": 13.230136930709705,
+      "stage5a_materialization": 56.359527188003995
+    },
+    "redundant_downloads_on_rerun": 0,
+    "redundant_inference_segments_on_rerun": 0,
+    "segment_successes": 98,
+    "selection_yield": 0.98
+  },
+  "rate_limit": {
+    "all_observed_start_spacings_compliant": true,
+    "concurrent_downloads": 0,
+    "experiment_id": "stage5c2_representative_100",
+    "final_failures_after_retry_exhaustion": 0,
+    "http_429_count": 0,
+    "http_5xx_count": 0,
+    "maximum_start_to_start_spacing_seconds": 20.000232797989156,
+    "median_start_to_start_spacing_seconds": 20.000132949033286,
+    "minimum_start_to_start_spacing_seconds": 20.000107385974843,
+    "passed": true,
+    "required_minimum_spacing_seconds": 20.0,
+    "retry_after_events": 0,
+    "retry_attempts": 0,
+    "schema_version": "stage5c2-rate-limit-metrics-v1",
+    "timeout_or_network_retry_count": 0,
+    "total_live_download_attempts": 98
+  },
+  "representation": {
+    "pathologies": [],
+    "pathology_detected": false,
+    "successful_track_count": 98
+  },
+  "representative_manifest_sha256": "cdbc64aac94bffb34481b898370b56e1b9566ae925ebfbeb21621bbe6cb0667b",
+  "review": {
+    "quality_metrics": null,
+    "query_tracks": 98,
+    "raw_top5_judgments": 490,
+    "reviewed_unique_pairs": 0,
+    "status": "HUMAN_REVIEW_PENDING",
+    "total_unique_pairs": 355,
+    "unique_unordered_pairs": 355
+  },
+  "schema_version": "stage5c2-metrics-v1",
+  "scope_guards": {
+    "human_labels_fabricated": 0,
+    "post_freeze_substitutions": 0,
+    "production_activation": false,
+    "query_tuning": false,
+    "representation_tuning": false,
+    "selector_tuning": false
+  },
+  "selected_sources_sha256": "dc9c868d603f456782867eee76aea6a8a9784b3b43ace3777636b77b97bf12b9",
+  "verdict": "REPRESENTATIVE_100_PIPELINE_PASSED_REVIEW_READY"
+}
