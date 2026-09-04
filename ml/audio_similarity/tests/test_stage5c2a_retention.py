@@ -1,8 +1,11 @@
 from __future__ import annotations
 
+import fcntl
 import json
 import subprocess
 from pathlib import Path
+
+import pytest
 
 from audio_similarity.stage5b1a_models import file_sha256
 from audio_similarity import stage5c2a_retention as retention
@@ -127,6 +130,33 @@ def test_failed_partial_download_is_removed(tmp_path: Path, monkeypatch) -> None
     assert result["tracks"][0]["status"] == "FAILED"
     assert not list((tmp_path / ".research_audio").glob(".scratch-*"))
     assert not list((tmp_path / ".research_audio").rglob("*.part"))
+
+
+def test_cleanup_failure_is_structured(tmp_path: Path, monkeypatch) -> None:
+    _configure_one_track(tmp_path, monkeypatch)
+    limited = _FakeLimited()
+
+    def fail_cleanup(_path, *, ignore_errors):
+        assert ignore_errors is False
+        raise OSError("scratch directory busy")
+
+    monkeypatch.setattr(retention.shutil, "rmtree", fail_cleanup)
+    result = retention.run_retention(
+        tmp_path, rate_limited_acquirer=limited
+    )
+    assert result["tracks"][0]["status"] == "FAILED"
+    assert result["tracks"][0]["failure_category"] == "CLEANUP_FAILED"
+
+
+def test_concurrent_retention_process_is_rejected(tmp_path: Path) -> None:
+    media_root = tmp_path / ".research_audio"
+    media_root.mkdir()
+    with (media_root / ".retention.lock").open("w") as lock:
+        fcntl.flock(lock.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        with pytest.raises(
+            retention.Stage5B1AValidationError, match="another retained-media"
+        ):
+            retention.run_retention(tmp_path)
 
 
 def test_retention_implementation_has_no_discovery_or_selector_execution() -> None:

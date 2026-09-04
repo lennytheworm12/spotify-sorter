@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import csv
+import fcntl
+import functools
 import json
 import mimetypes
 import shutil
@@ -569,6 +571,33 @@ def _checkpoint(
     )
 
 
+def _exclusive_retention_run(function):
+    """Prevent concurrent download processes from bypassing the global limiter."""
+    @functools.wraps(function)
+    def wrapped(project_root, *args, **kwargs):
+        root = Path(project_root).resolve()
+        media_root = root / MEDIA_ROOT
+        media_root.mkdir(parents=True, exist_ok=True)
+        lock_path = media_root / ".retention.lock"
+        with lock_path.open("w", encoding="utf-8") as lock:
+            try:
+                fcntl.flock(lock.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+            except BlockingIOError as exc:
+                raise Stage5B1AValidationError(
+                    "another retained-media acquisition run is active"
+                ) from exc
+            try:
+                for stale in media_root.glob(".scratch-*"):
+                    if stale.is_dir():
+                        shutil.rmtree(stale, ignore_errors=False)
+                return function(root, *args, **kwargs)
+            finally:
+                fcntl.flock(lock.fileno(), fcntl.LOCK_UN)
+
+    return wrapped
+
+
+@_exclusive_retention_run
 def run_retention(
     project_root: str | Path,
     *,
@@ -800,6 +829,11 @@ def closeout_retention(project_root: str | Path) -> dict[str, Any]:
     statuses = Counter(row.get("http_status") for row in attempts)
     sizes = [row["file_size_bytes"] for row in provenance_rows]
     durations = [row["source_duration_seconds"] for row in provenance_rows]
+    largest = (
+        max(provenance_rows, key=lambda row: row["file_size_bytes"])
+        if provenance_rows
+        else None
+    )
     warnings = [
         warning for row in provenance_rows for warning in row.get("warnings", [])
     ]
@@ -855,6 +889,15 @@ def closeout_retention(project_root: str | Path) -> dict[str, Any]:
         "total_bytes": sum(sizes),
         "median_file_size_bytes": median(sizes) if sizes else None,
         "largest_file_bytes": max(sizes, default=None),
+        "largest_file": (
+            {
+                "spotify_track_id": largest["spotify_track_id"],
+                "retained_relative_path": largest["retained_relative_path"],
+                "file_size_bytes": largest["file_size_bytes"],
+            }
+            if largest
+            else None
+        ),
         "codec_distribution": dict(Counter(row["codec"] for row in provenance_rows)),
         "container_distribution": dict(
             Counter(row["container"] for row in provenance_rows)

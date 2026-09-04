@@ -62,6 +62,14 @@ Existing centered30_v1 CLAP and MuQ identities are linked in each provenance rec
 
 The unchanged amended queue contains {playback['review_query_count']} queries, {playback['review_directional_relationship_count']} directional relationships, and {playback['review_unique_pair_count']} unique unordered pairs. The reviewer resolves Spotify IDs through the local index and supports ordinary responses plus HTTP 206 beginning, middle, near-end, and repeated seeks. Browser validation status: `{playback['browser_validation']}`.
 
+From `ml/audio_similarity`, run:
+
+```bash
+.venv/bin/python -m audio_similarity.cli.stage5c2_review_server
+```
+
+The default is local retained-audio playback. `--playback-source youtube` remains an explicit compatibility mode.
+
 ## Historical integrity
 
 The original 98-track Stage 5C.2 report and amended V2 evidence are hash-guarded and were not rewritten. Existing human labels are preserved by the canonical unordered pair identifier.
