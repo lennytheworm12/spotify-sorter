@@ -743,12 +743,10 @@ def run_retention(
 
 
 def _attempt_spacings(attempts: list[dict[str, Any]]) -> list[float]:
-    timestamps = [
-        datetime.fromisoformat(row["request_start_timestamp"]) for row in attempts
-    ]
     return [
-        (current - previous).total_seconds()
-        for previous, current in zip(timestamps, timestamps[1:])
+        float(row["previous_request_start_delta_seconds"])
+        for row in attempts
+        if row.get("previous_request_start_delta_seconds") is not None
     ]
 
 

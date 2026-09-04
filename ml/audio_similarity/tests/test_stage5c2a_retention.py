@@ -158,6 +158,20 @@ def test_audio_only_webm_is_served_with_an_audio_media_type() -> None:
     assert retention._audio_content_type(".webm") == "audio/webm"
 
 
+def test_spacing_audit_uses_the_enforcing_monotonic_delta() -> None:
+    attempts = [
+        {
+            "request_start_timestamp": "2026-09-04T00:00:00+00:00",
+            "previous_request_start_delta_seconds": None,
+        },
+        {
+            "request_start_timestamp": "2026-09-04T00:00:19.999900+00:00",
+            "previous_request_start_delta_seconds": 20.0002,
+        },
+    ]
+    assert retention._attempt_spacings(attempts) == [20.0002]
+
+
 def test_amended_review_queue_and_original_98_evidence_are_untouched() -> None:
     assert file_sha256(
         ROOT / "reports/stage5c2_representative_100_amended_v2/review_queue.json"
