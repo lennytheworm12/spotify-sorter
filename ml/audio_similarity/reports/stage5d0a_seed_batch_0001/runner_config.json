@@ -1,0 +1,41 @@
+{
+  "automatic_next_batch": false,
+  "bandwidth_throttle": false,
+  "batch_number": 1,
+  "centers_sec": [
+    5,
+    15,
+    25
+  ],
+  "consecutive_exhausted_transient_tracks": 3,
+  "consecutive_http_403_tracks": 3,
+  "consecutive_unrelated_challenge_tracks": 2,
+  "explicit_anti_abuse": "OPEN_CIRCUIT",
+  "extraction_request_sleep_seconds": 1.5,
+  "first_youtube_429_minimum_cooldown_seconds": 900,
+  "maximum_attempts": 4,
+  "maximum_tracks": 500,
+  "media_wall_timeout_seconds": 900,
+  "minimum_media_attempt_spacing_seconds": 30,
+  "ordinary_start_delay_seconds": [
+    30,
+    60
+  ],
+  "personal_cookies": false,
+  "proxies": false,
+  "random_generator": "SystemRandom; actual draws persisted",
+  "representation": "centered30_v1",
+  "resolver": "NATURAL_TITLE_FIRST3_THEN_SINGLE_ARTIST_THEN_TITLE_ONLY_ON_UNSELECTABLE_V2",
+  "retry_after_honored": true,
+  "schema_version": "stage5d0a-live-runner-config-v1",
+  "search_wall_timeout_seconds": 120,
+  "second_youtube_429": "OPEN_CIRCUIT",
+  "segment_seconds": 5,
+  "selector": "frozen Stage 5B.3 minimal YouTube-prior selector",
+  "serial_network_jobs": true,
+  "source_retention": "full compressed source + provenance; local Git-ignored only",
+  "weights": {
+    "clap": 0.7172981519,
+    "muq": 0.2827018481
+  }
+}

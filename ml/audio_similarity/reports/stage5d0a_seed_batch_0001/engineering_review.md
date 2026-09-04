@@ -72,3 +72,17 @@ chart history. US market and observed alias-page ranks are explicit construction
 2026 is partial. Recording deduplication is conservative metadata inference, not audio proof.
 Valid short full recordings may be retained, but the unchanged materializer still rejects
 sources unable to support its frozen windows; no replacement segmentation is introduced.
+
+## Live launch checkpoint (not a batch verdict)
+
+Batch 0001 launched only after the frozen catalog checkpoint `b4c5c7b` was pushed
+and local/upstream/remote SHA equality was verified. The first two tracks completed
+real guest exact-ID acquisition and frozen CLAP/MuQ materialization. A separate
+read-only audit validated both retained-source hashes and cached representations,
+with zero audit network/inference calls and zero audit failures.
+
+At this checkpoint there were no retries, HTTP 429s, or HTTP 5xx responses. Both
+downloads emitted yt-dlp's missing-JavaScript-runtime warning; it is preserved in
+the provider logs and was not bypassed by changing the acquisition path. These
+two successful tracks do not establish sustained Batch 0001 health. The worker
+continues under its frozen pacing and circuit-breaker policy; Batch 0002 is disabled.
