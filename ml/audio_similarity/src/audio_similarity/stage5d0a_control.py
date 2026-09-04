@@ -3,6 +3,8 @@ from __future__ import annotations
 
 import random
 import json
+import fcntl
+import statistics
 import time
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -254,6 +256,31 @@ def run_batch_one(
     if len(tracks) > MAX_BATCH_SIZE:
         raise Stage5B1AValidationError("Stage 5D.0A cannot process over 500 tracks")
     path = Path(runtime_path)
+    lock_path = path.with_suffix(path.suffix + ".lock")
+    lock_path.parent.mkdir(parents=True, exist_ok=True)
+    with lock_path.open("w", encoding="utf-8") as lock:
+        try:
+            fcntl.flock(lock.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError as exc:
+            raise Stage5B1AValidationError(
+                "another Stage 5D Batch 0001 worker is active"
+            ) from exc
+        try:
+            return _run_batch_one_locked(
+                batch_manifest, path, processor, tracks, limiter=limiter
+            )
+        finally:
+            fcntl.flock(lock.fileno(), fcntl.LOCK_UN)
+
+
+def _run_batch_one_locked(
+    batch_manifest: dict[str, Any],
+    path: Path,
+    processor: Any,
+    tracks: list[dict[str, Any]],
+    *,
+    limiter: TrackJobLimiter | None,
+) -> dict[str, Any]:
     state = json.loads(path.read_text(encoding="utf-8"))
     if state.get("batch_manifest_sha256") != document_sha256(batch_manifest):
         raise Stage5B1AValidationError("runtime state does not match Batch 0001")
@@ -343,3 +370,70 @@ def run_batch_one(
         state["circuit_breaker"] = breaker.state
         persist_runtime_state(path, state)
     return runtime_status(state)
+
+
+def batch_metrics(state: dict[str, Any]) -> dict[str, Any]:
+    """Summarize a persisted runtime checkpoint without disturbing the worker."""
+    status = runtime_status(state)
+    starts = state.get("network_job_starts", [])
+    deltas = [
+        float(row["previous_start_delta_seconds"])
+        for row in starts
+        if row.get("previous_start_delta_seconds") is not None
+    ]
+    results = [row.get("result", {}) for row in state["tracks"].values()]
+    signals = state.get("circuit_breaker", {}).get("events", [])
+    track_counts = status["track_state_counts"]
+    if status["circuit"]["status"] == "OPEN":
+        verdict = "BATCH_500_CIRCUIT_BREAKER_STOPPED"
+    elif status["worker_status"] == "COMPLETE":
+        warning_count = sum(bool(result.get("provider_warnings")) for result in results)
+        verdict = (
+            "BATCH_500_COMPLETED_WITH_PROVIDER_WARNINGS"
+            if warning_count
+            else "BATCH_500_HEALTHY"
+        )
+    else:
+        verdict = "BATCH_500_PIPELINE_FAILED"
+    return {
+        "schema_version": "stage5d0a-batch-metrics-v1",
+        "batch_number": 1,
+        "requested_batch_size": len(state["tracks"]),
+        "complete_tracks": track_counts["COMPLETE"],
+        "manual_tail": track_counts["MANUAL_TAIL"],
+        "acquisition_failures": track_counts["ACQUISITION_FAILED"],
+        "materialization_failures": track_counts["MATERIALIZATION_FAILED"],
+        "network_track_jobs": len(starts),
+        "total_downloaded_bytes": sum(
+            int(result.get("downloaded_bytes", 0)) for result in results
+        ),
+        "cache_skips": sum(
+            row.get("cache_condition") == "SOURCE_AND_REPRESENTATION_PRESENT"
+            for row in state["tracks"].values()
+        ),
+        "source_retained_count": sum(
+            bool(result.get("source_retained")) for result in results
+        ),
+        "representation_complete_count": sum(
+            bool(result.get("representation_complete")) for result in results
+        ),
+        "minimum_track_start_spacing_seconds": min(deltas) if deltas else None,
+        "mean_track_start_spacing_seconds": statistics.mean(deltas) if deltas else None,
+        "median_track_start_spacing_seconds": (
+            statistics.median(deltas) if deltas else None
+        ),
+        "maximum_track_start_spacing_seconds": max(deltas) if deltas else None,
+        "all_track_start_spacings_at_least_30_seconds": all(
+            value >= 30 for value in deltas
+        ),
+        "http_429_count": sum(
+            event["category"] == "PROVIDER_RATE_LIMITED" for event in signals
+        ),
+        "anti_bot_challenge_count": sum(
+            event["category"] in CHALLENGE_CATEGORIES for event in signals
+        ),
+        "circuit_breaker_opened": status["circuit"]["status"] == "OPEN",
+        "circuit_breaker_reason": status["circuit"].get("opened_reason"),
+        "batch_0002_started": False,
+        "verdict": verdict,
+    }

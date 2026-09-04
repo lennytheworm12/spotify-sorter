@@ -10,6 +10,7 @@ from audio_similarity.stage5d0a_control import (
     PersistentCircuitBreaker,
     TrackJobLimiter,
     TrackJobPacingPolicy,
+    batch_metrics,
     initial_runtime_state,
     persist_runtime_state,
     request_graceful_stop,
@@ -287,3 +288,8 @@ def test_runner_persists_second_429_circuit_and_stops_new_jobs(tmp_path: Path) -
     assert clock.sleeps[-1] == 900.0
     assert status["circuit"]["http_429_count"] == 2
     assert status["track_state_counts"]["PENDING"] == 2
+    persisted = json.loads(path.read_text(encoding="utf-8"))
+    metrics = batch_metrics(persisted)
+    assert metrics["verdict"] == "BATCH_500_CIRCUIT_BREAKER_STOPPED"
+    assert metrics["http_429_count"] == 2
+    assert metrics["batch_0002_started"] is False
