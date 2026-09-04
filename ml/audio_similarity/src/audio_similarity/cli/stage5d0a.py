@@ -1,98 +1,78 @@
-"""Prepare and control the resumable Stage 5D.0A Batch 0001 worker."""
+"""Collect/freeze the Spotify recipe and explicitly run only seed Batch 0001."""
 from __future__ import annotations
 
 import argparse
 import json
+import time
 from pathlib import Path
 
-from audio_similarity.stage5b1a_models import Stage5B1AValidationError, file_sha256
+from audio_similarity.stage5b1a_models import file_sha256
 from audio_similarity.stage5b1b_artifacts import atomic_json
-from audio_similarity.stage5d0a_control import (
-    initial_runtime_state,
-    persist_runtime_state,
-    request_graceful_stop,
-    request_resume,
-    runtime_status,
-)
-from audio_similarity.stage5d0a_manifest import (
-    ORDERING_SEED,
-    REPORT_DIRECTORY,
-    freeze_catalog_and_batch_one,
-)
+from audio_similarity.stage5d0a_catalog import allocate_catalog
+from audio_similarity.stage5d0a_manifest import REPORT_DIRECTORY, freeze_catalog_and_batch_one, _write_immutable_json
+from audio_similarity.stage5d0a_spotify import RECIPE, collect_catalog
+from audio_similarity.stage5d0a_worker import read_json, run_worker, worker_status
 
 
-def _json(path: Path) -> dict:
-    value = json.loads(path.read_text(encoding="utf-8"))
-    if not isinstance(value, dict):
-        raise Stage5B1AValidationError(f"expected JSON object: {path}")
-    return value
+def freeze_spotify_catalog(root):
+    """Consume only complete checkpointed official-search metadata; no external input."""
+    runtime = root / ".research_audio/stage5d0a/spotify_catalog"
+    collected = read_json(runtime / "collected_cells.json")
+    expected = {(year, bucket) for year in RECIPE["years"] for bucket in RECIPE["aliases"]}
+    cells = collected["cells"]
+    if collected["recipe"] != RECIPE or len(cells) != 216 or {(c["year"], c["bucket"]) for c in cells} != expected:
+        raise ValueError("all 216 Spotify recipe cells must complete before freeze")
+    page_hashes = {}
+    for cell in cells:
+        folder = runtime / f"{cell['year']}_{cell['bucket']}"
+        if cell != read_json(folder / "cell.json"):
+            raise ValueError("collected cell differs from immutable checkpoint")
+        for name in cell["pages"]:
+            page = folder / name
+            if page.parent != folder or not page.is_file():
+                raise ValueError("invalid Spotify page provenance")
+            page_hashes[str(page.relative_to(runtime))] = file_sha256(page)
+    report = root / REPORT_DIRECTORY
+    catalog = allocate_catalog(cells)
+    source = report / "spotify_catalog_allocation.json"
+    _write_immutable_json(source, catalog)
+    _write_immutable_json(report / "spotify_search_page_hashes.json", page_hashes)
+    global_manifest, batch = freeze_catalog_and_batch_one(source, report)
+    _write_immutable_json(report / "global_seed_catalog_config.json", {
+        "recipe": catalog["catalog_design"], "ordering": global_manifest["ordering"],
+        "spotify_search_page_count": len(page_hashes),
+        "raw_selected_target": 5400, "actual_catalog_size": len(global_manifest["tracks"]),
+        "global_dedupe_before_youtube": True, "automatic_next_batch": False,
+        "collected_cells_sha256": file_sha256(runtime / "collected_cells.json")})
+    return {"global_tracks": len(global_manifest["tracks"]), "batch_0001_tracks": len(batch["tracks"]),
+            "batch_0002_started": False}
 
 
-def main() -> None:
-    project_root = Path(__file__).resolve().parents[3]
-    report = project_root / REPORT_DIRECTORY
-    runtime_path = project_root / ".research_audio/stage5d0a/batch_0001_state.json"
+def main():
+    root = Path(__file__).resolve().parents[3]
+    directory = root / ".research_audio/stage5d0a/batch_0001"
     parser = argparse.ArgumentParser(description=__doc__)
-    subparsers = parser.add_subparsers(dest="command", required=True)
-    prepare = subparsers.add_parser("prepare")
-    prepare.add_argument("--catalog-input", required=True)
-    subparsers.add_parser("status")
-    subparsers.add_parser("stop")
-    subparsers.add_parser("resume")
+    parser.add_argument("command", choices=["collect", "prepare", "run", "status", "stop", "resume", "report"])
     args = parser.parse_args()
-
-    try:
-        if args.command == "prepare":
-            source = Path(args.catalog_input).resolve()
-            global_manifest, batch = freeze_catalog_and_batch_one(source, report)
-            config = {
-                "schema_version": "stage5d0a-global-seed-catalog-config-v1",
-                "experiment_id": "STAGE5D0A_COMMERCIAL_SEED_BATCH_0001",
-                "catalog_input_name": source.name,
-                "catalog_input_sha256": file_sha256(source),
-                "catalog_design": global_manifest["catalog_design"],
-                "ordering_seed": ORDERING_SEED,
-                "batch_size": 500,
-                "automatic_next_batch": False,
-            }
-            config_path = report / "global_seed_catalog_config.json"
-            if config_path.is_file() and _json(config_path) != config:
-                raise Stage5B1AValidationError(
-                    "refusing to replace frozen Stage 5D catalog config"
-                )
-            if not config_path.is_file():
-                atomic_json(config_path, config)
-            if runtime_path.is_file():
-                state = _json(runtime_path)
-                if state.get("batch_manifest_sha256") != file_sha256(
-                    report / "batch_0001_manifest.json"
-                ):
-                    raise Stage5B1AValidationError(
-                        "runtime state does not match frozen Batch 0001"
-                    )
-            else:
-                state = initial_runtime_state(batch)
-                runtime_path.parent.mkdir(parents=True, exist_ok=True)
-                persist_runtime_state(runtime_path, state)
-            output = {
-                "global_track_count": global_manifest["unique_track_count"],
-                "batch_0001_track_count": len(batch["tracks"]),
-                "runtime_path": str(runtime_path),
-                "batch_0002_started": False,
-            }
-        else:
-            if not runtime_path.is_file():
-                raise Stage5B1AValidationError("Stage 5D.0A has not been prepared")
-            state = (
-                request_graceful_stop(runtime_path)
-                if args.command == "stop"
-                else request_resume(runtime_path)
-                if args.command == "resume"
-                else _json(runtime_path)
-            )
-            output = runtime_status(state)
-    except (FileNotFoundError, json.JSONDecodeError, Stage5B1AValidationError) as exc:
-        raise SystemExit(str(exc)) from exc
+    if args.command == "collect":
+        cells = collect_catalog(root)
+        output = {"completed_cells": len(cells), "youtube_started": False}
+    elif args.command == "prepare":
+        output = freeze_spotify_catalog(root)
+    elif args.command in {"run", "resume"}:
+        output = run_worker(root, resume=args.command == "resume")
+    elif args.command == "report":
+        from audio_similarity.stage5d0a_reporting import write_report
+        output = write_report(root)
+    elif args.command == "stop":
+        atomic_json(directory / "stop.requested", {"requested_at_unix": time.time()})
+        output = worker_status(directory)
+    else:
+        output = worker_status(directory)
+        catalog = root / ".research_audio/stage5d0a/spotify_catalog"
+        output["spotify_catalog_cells_completed"] = len(list(catalog.glob("*/cell.json")))
+        output["spotify_catalog_cells_expected"] = 216
+        output["catalog_frozen"] = (root / REPORT_DIRECTORY / "global_seed_catalog_manifest.sha256").exists()
     print(json.dumps(output, indent=2, sort_keys=True))
 
 

@@ -15,9 +15,10 @@ def track(index, name="Song", isrc=None, duration=180000):
 def test_duplicate_recordings_and_qualified_versions():
     assert same_recording(track(1, isrc="USAAA0000001"), track(2, isrc="USAAA0000001"))
     assert same_recording(track(1, "Song - Clean"), track(2, "Song - Explicit"))
+    assert same_recording(track(1, "Song (Clean Version)"), track(2, "Song [Explicit Version]"))
     assert same_recording(track(1), track(2, duration=183000))
     assert not same_recording(track(1), track(2, duration=183001))
-    for label in ("Live", "Acoustic", "Sped Up", "Slowed", "Remix", "Rerecorded"):
+    for label in ("Live", "Acoustic", "Sped Up", "Slowed", "Remix", "Rerecorded", "Rock Version", "Club Mix", "Radio Edit"):
         assert not same_recording(track(1, isrc="same"), track(2, f"Song - {label}", isrc="same"))
     assert not same_recording(track(1, "Song - Alpha Remix"), track(2, "Song - Beta Remix"))
 

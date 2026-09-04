@@ -68,7 +68,8 @@ def _normalized_track(raw: dict[str, Any], ordinal: int) -> dict[str, Any]:
         "source_memberships": sorted(set(source_memberships)),
     }
     for field in ("recording_id", "assigned_bucket", "assigned_year", "alias_ranks",
-                  "ranking_key", "collapsed_spotify_ids", "all_occurrences", "spotify_release_date"):
+                  "ranking_key", "collapsed_spotify_ids", "all_occurrences", "spotify_release_date",
+                  "spotify_popularity"):
         if field in raw:
             normalized[field] = raw[field]
     return normalized

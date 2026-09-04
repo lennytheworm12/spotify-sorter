@@ -8,8 +8,8 @@ from collections import defaultdict
 
 from .stage5d0a_spotify import CATALOG_ID, RECIPE
 
-_EDITION = re.compile(r"\s*(?:[-–—]\s*|[([])(?:explicit|clean|radio clean|album version|single version|deluxe(?: edition)?|bonus track(?: version)?)[)\]]?\s*$", re.I)
-_VERSION = re.compile(r"\b(?:remix|live|acoustic|sped\s*up|slowed|rerecord(?:ed|ing)?|re.record(?:ed|ing)?|taylor.s version|instrumental|remaster(?:ed)?|demo|radio edit)\b", re.I)
+_EDITION = re.compile(r"\s*(?:[-–—]\s*|[([])(?:explicit(?: version)?|clean(?: version)?|radio clean|album version|single version|deluxe(?: edition)?|bonus track(?: version)?)[)\]]?\s*$", re.I)
+_VERSION = re.compile(r"\b(?:remix|mix|rmx|live|acoustic|sped\s*up|speed\s*up|slowed|rerecord(?:ed|ing)?|re.record(?:ed|ing)?|version|instrumental|remaster(?:ed)?|demo|edit)\b", re.I)
 
 
 def normalize(value):
@@ -113,6 +113,7 @@ def allocate_catalog(cells):
             "album": raw.get("album", {}).get("name"),
             "release_year": year,
             "spotify_release_date": raw.get("album", {}).get("release_date"),
+            "spotify_popularity": raw.get("popularity"),
             "duration_ms": raw["duration_ms"],
             "isrc": (raw.get("external_ids") or {}).get("isrc"),
             "source_memberships": sorted(f"{y}:{b}" for y, b in by_cell),
