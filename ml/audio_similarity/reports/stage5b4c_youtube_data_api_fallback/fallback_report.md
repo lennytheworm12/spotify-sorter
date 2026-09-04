@@ -44,7 +44,7 @@ natural title + first 3 artists -> yt-dlp ytsearch3
 - human safe top3: **false**
 - selector and query untuned: **true**
 - historical artifacts immutable: **true**
-- tests passed: **false**
+- tests passed: **true**
 
 ## Scope
 

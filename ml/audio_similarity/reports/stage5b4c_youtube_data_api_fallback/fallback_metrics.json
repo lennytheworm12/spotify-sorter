@@ -11,7 +11,7 @@
     "human_safe_top3": false,
     "same_query_used": true,
     "selector_and_query_untuned": true,
-    "tests_passed": false,
+    "tests_passed": true,
     "videos_list_hydrated_candidate": false,
     "yt_dlp_remained_primary": true
   },
@@ -42,8 +42,8 @@
   "verdict": "YOUTUBE_DATA_API_FALLBACK_FAILED",
   "verification": {
     "focused": 19,
-    "full_deselected": null,
-    "full_non_heavy": null,
+    "full_deselected": 12,
+    "full_non_heavy": 982,
     "stage5b_regressions": 521
   }
 }
