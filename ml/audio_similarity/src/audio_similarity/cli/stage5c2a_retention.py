@@ -7,11 +7,11 @@ from pathlib import Path
 
 from audio_similarity.stage5c2a_browser import validate_browser_playback
 from audio_similarity.stage5c2a_closeout import write_stage5c2a_closeout
+from audio_similarity.stage5c2a_playback import validate_local_playback
 from audio_similarity.stage5c2a_retention import (
     closeout_retention,
     prepare_retention,
     run_retention,
-    validate_local_playback,
 )
 
 

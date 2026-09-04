@@ -11,8 +11,8 @@ from .stage5c2a_retention import (
     MEDIA_ROOT,
     REPORT_DIRECTORY,
     closeout_retention,
-    validate_local_playback,
 )
+from .stage5c2a_playback import validate_local_playback
 from .stage5c2_discovery import _json
 
 
