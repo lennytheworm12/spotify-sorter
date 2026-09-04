@@ -57,7 +57,7 @@ def _normalized_track(raw: dict[str, Any], ordinal: int) -> dict[str, Any]:
         )
     if any(not isinstance(item, str) or not item.strip() for item in source_memberships):
         raise Stage5B1AValidationError("invalid commercial catalog source membership")
-    return {
+    normalized = {
         "spotify_track_id": track.spotify_track_id,
         "title": track.title,
         "artists": list(track.artists),
@@ -67,6 +67,11 @@ def _normalized_track(raw: dict[str, Any], ordinal: int) -> dict[str, Any]:
         "isrc": track.isrc,
         "source_memberships": sorted(set(source_memberships)),
     }
+    for field in ("recording_id", "assigned_bucket", "assigned_year", "alias_ranks",
+                  "ranking_key", "collapsed_spotify_ids", "all_occurrences", "spotify_release_date"):
+        if field in raw:
+            normalized[field] = raw[field]
+    return normalized
 
 
 def build_global_manifest(
