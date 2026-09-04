@@ -1,9 +1,10 @@
 import json
 import random
+import time
 
 import pytest
 
-from audio_similarity.stage5d0a_network import ProviderGovernor, CircuitOpen, WorkerStopped
+from audio_similarity.stage5d0a_network import ProviderGovernor, CircuitOpen, WorkerStopped, request_timeout, provider_failure
 
 
 class Clock:
@@ -146,3 +147,27 @@ def test_explicit_anti_abuse_stops_without_retry(tmp_path):
     with pytest.raises(CircuitOpen, match="EXPLICIT_PROVIDER_ANTI_ABUSE"):
         g.call("a", "SEARCH", "q", fail("Provider anti-abuse response"))
     assert len(g.state["requests"]) == 1
+
+
+def test_total_request_timeout_interrupts_and_restores_handler():
+    import signal
+    previous = signal.getsignal(signal.SIGALRM)
+    with pytest.raises(TimeoutError, match="wall-clock"):
+        with request_timeout(.02):
+            time.sleep(.2)
+    assert signal.getsignal(signal.SIGALRM) == previous
+    assert signal.getitimer(signal.ITIMER_REAL) == (0., 0.)
+
+
+def test_retry_after_headers_survive_ytdlp_exception_wrapping():
+    from types import SimpleNamespace
+    from yt_dlp.utils import DownloadError, ExtractorError
+    original = RuntimeError("provider refused request")
+    original.response = SimpleNamespace(status=429, headers={"Retry-After": "1729"})
+    wrapped = ExtractorError("extraction failed", cause=original)
+    error = DownloadError("download failed", exc_info=(type(wrapped), wrapped, None))
+    message, failure = provider_failure(error)
+    assert failure["http_status"] == 429
+    assert failure["retry_after_seconds"] == 1729
+    assert failure["retry_after_headers"] == ["1729"]
+    assert "provider refused request" in message

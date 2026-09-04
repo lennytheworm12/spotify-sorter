@@ -3,11 +3,14 @@ from __future__ import annotations
 
 import json
 import random
+import signal
 import time
+from contextlib import contextmanager
+from datetime import datetime, timezone
 from pathlib import Path
 
 from .stage5b1b_artifacts import atomic_json
-from .stage5c2_rate_limit import classify_acquisition_failure
+from .stage5c2_rate_limit import classify_acquisition_failure, _retry_after
 
 
 class WorkerStopped(RuntimeError):
@@ -16,6 +19,59 @@ class WorkerStopped(RuntimeError):
 
 class CircuitOpen(WorkerStopped):
     pass
+
+
+def provider_failure(exc):
+    """Recover HTTP diagnostics through yt-dlp's exception wrappers, including headers."""
+    pending, seen, messages, retry_headers = [exc], set(), [], []
+    diagnostics = dict(getattr(exc, "diagnostics", {}) or {})
+    warnings = list(diagnostics.get("warnings", []))
+    while pending and len(seen) < 16:
+        cause = pending.pop(0)
+        if not isinstance(cause, BaseException) or id(cause) in seen:
+            continue
+        seen.add(id(cause))
+        messages.append(str(cause))
+        warnings.extend(getattr(cause, "warnings", ()) or ())
+        for item in (cause, getattr(cause, "response", None)):
+            status = getattr(item, "status", getattr(item, "code", None))
+            if isinstance(status, int) and 400 <= status <= 599:
+                diagnostics.setdefault("http_status", status)
+            headers = getattr(item, "headers", None)
+            if headers is not None and headers.get("Retry-After") is not None:
+                retry_headers.append(str(headers.get("Retry-After")))
+        pending.extend((cause.__cause__, cause.__context__, getattr(cause, "cause", None)))
+        info = getattr(cause, "exc_info", None)
+        if isinstance(info, tuple) and len(info) > 1:
+            pending.append(info[1])
+    message = " | ".join(dict.fromkeys(messages))
+    diagnostics["warnings"] = list(dict.fromkeys(warnings))
+    error = RuntimeError(message)
+    error.diagnostics = diagnostics
+    failure = classify_acquisition_failure(error)
+    delays = [failure["retry_after_seconds"] or 0]
+    for header in retry_headers:
+        parsed = _retry_after("Retry-After: " + header, {}, lambda: datetime.now(timezone.utc))
+        if parsed is not None:
+            delays.append(parsed)
+    if len(delays) > 1:
+        failure["retry_after_seconds"] = max(delays)
+    failure["retry_after_headers"] = retry_headers
+    return message, failure
+
+
+@contextmanager
+def request_timeout(seconds):
+    """Bound the whole synchronous extraction, not just individual socket reads."""
+    def expired(_signum, _frame):
+        raise TimeoutError("provider extraction wall-clock timeout")
+    previous = signal.signal(signal.SIGALRM, expired)
+    signal.setitimer(signal.ITIMER_REAL, seconds)
+    try:
+        yield
+    finally:
+        signal.setitimer(signal.ITIMER_REAL, 0)
+        signal.signal(signal.SIGALRM, previous)
 
 
 class ProviderGovernor:
@@ -100,7 +156,10 @@ class ProviderGovernor:
             self.state["next_request_deadline"] = start + self.rng.uniform(1, 2)
             self.save()
             try:
-                result = operation()
+                with request_timeout(120 if kind == "SEARCH" else 900):
+                    result = operation()
+                if kind == "MEDIA" and isinstance(result, dict):
+                    row["downloaded_bytes"] = result.get("downloaded_bytes", 0)
                 warnings = result.get("warnings", []) if isinstance(result, dict) else getattr(result, "warnings", [])
                 row["warnings"] = list(warnings)
                 serious = [warning for warning in warnings if any(token in str(warning).casefold()
@@ -110,16 +169,8 @@ class ProviderGovernor:
             except WorkerStopped:
                 raise
             except Exception as exc:
-                chain = []
-                cause = exc
-                while cause is not None and len(chain) < 5:
-                    chain.append(str(cause))
-                    cause = cause.__cause__
-                message = " | ".join(dict.fromkeys(chain))
-                diagnostic_error = RuntimeError(message)
-                diagnostic_error.diagnostics = dict(getattr(exc, "diagnostics", {}) or {})
-                diagnostic_error.diagnostics.setdefault("warnings", row.get("warnings", []))
-                failure = classify_acquisition_failure(diagnostic_error)
+                message, failure = provider_failure(exc)
+                failure["warnings"] = list(dict.fromkeys(row.get("warnings", []) + failure["warnings"]))
                 text = message.casefold()
                 challenge = any(term in text for term in (
                     "sign in to confirm", "login_required", "captcha", "not a bot",
