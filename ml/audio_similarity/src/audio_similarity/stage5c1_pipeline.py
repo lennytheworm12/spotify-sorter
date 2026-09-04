@@ -478,8 +478,10 @@ def run_materialization_attempt(
                     "stage5c1_track_id": track["stage5c1_track_id"],
                     "spotify_track_id": spotify_id,
                     "status": row["status"],
-                    "failure_category": _failure_category(row["failure_category"]),
-                    "failure_detail": row["failure_detail"],
+                    "failure_category": (
+                        "" if row["status"] == "SUCCESS" else _failure_category(row["failure_category"])
+                    ),
+                    "failure_detail": "" if row["status"] == "SUCCESS" else row["failure_detail"],
                     "source_audio_sha256": source_hash,
                     "canonical_pcm_sha256": row["canonical_pcm_sha256"],
                     "representation_identity": row["representation_identity"],

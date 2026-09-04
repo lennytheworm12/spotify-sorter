@@ -321,6 +321,8 @@ def _write_human_review(
         "top5_combined_neighbors",
         "expected_group_relationship",
         "inspection_priority",
+        "analyst_assessment",
+        "observed_relationship_note",
         "human_sanity_label",
         "human_note",
     )
@@ -332,6 +334,23 @@ def _write_human_review(
             nearest = neighbor_rows[track["spotify_track_id"]]["neighbors"]["combined"]
             same_group_top5 = sum(row["group"] == track["curation_group"] for row in nearest)
             priority = "REVIEW" if same_group_top5 == 0 and track["curation_group"] != "E" else "ROUTINE"
+            distinct_neighbor_groups = len({row["group"] for row in nearest})
+            if track["curation_group"] == "E":
+                assessment = "NEGATIVE_CONTROL_VARIED"
+                observed = (
+                    f"Top-5 spans {distinct_neighbor_groups} groups; local acoustic, rap, piano, or ballad affinities may still be musically meaningful."
+                )
+            elif same_group_top5 >= 2:
+                assessment = "EXPECTED_STRUCTURE_VISIBLE"
+                observed = f"{same_group_top5}/5 combined neighbors are from the intended group."
+            elif same_group_top5 == 1:
+                assessment = "MIXED_BUT_PLAUSIBLE"
+                observed = (
+                    "One same-group neighbor appears in the Top-5; cross-group matches should be inspected for shared production or instrumentation."
+                )
+            else:
+                assessment = "NEEDS_HUMAN_REVIEW"
+                observed = "No same-group track appears in the combined Top-5."
             writer.writerow(
                 {
                     "stage5c1_track_id": track["stage5c1_track_id"],
@@ -344,6 +363,8 @@ def _write_human_review(
                     ),
                     "expected_group_relationship": track["expected_relationship_notes"],
                     "inspection_priority": priority,
+                    "analyst_assessment": assessment,
+                    "observed_relationship_note": observed,
                     "human_sanity_label": "",
                     "human_note": "",
                 }

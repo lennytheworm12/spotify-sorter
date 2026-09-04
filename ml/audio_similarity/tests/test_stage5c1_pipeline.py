@@ -10,6 +10,10 @@ import torchaudio
 
 from audio_similarity.stage5c1_analysis import analyze_representations
 from audio_similarity.stage5c1_pipeline import run_materialization_attempt
+from audio_similarity.stage5c1_closeout import (
+    audit_stage5a_cache,
+    build_pipeline_reliability_metrics,
+)
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -116,6 +120,7 @@ def test_exact_frozen_ids_are_acquired_without_discovery_and_all_segments_materi
     ]
     assert first["tracks_attempted"] == 25
     assert first["full_materialization_successes"] == 25
+    assert all(row["failure_category"] == "" for row in first["tracks"])
     assert first_call_count == (75, 75)
     assert all(len(row["segments"]) == 6 for row in first["tracks"])
     assert all(
@@ -223,3 +228,35 @@ def test_frozen_historical_artifacts_are_not_written_by_pipeline(successful_pipe
     for source in manifest["source_artifacts"]:
         path = PROJECT_ROOT / source["path"]
         assert hashlib.sha256(path.read_bytes()).hexdigest() == source["sha256"]
+
+
+def test_pipeline_metrics_separate_reliability_counts(successful_pipeline):
+    root, _, _, _, _, _ = successful_pipeline
+    report = root / "reports/stage5c1_curated_25_materialization"
+    metrics = build_pipeline_reliability_metrics(
+        json.loads((report / "acquisition_results.json").read_text()),
+        json.loads((report / "materialization_results.json").read_text()),
+        json.loads((report / "cleanup_results.json").read_text()),
+        json.loads((report / "cache_rerun_results.json").read_text()),
+        audit_stage5a_cache(root / "artifacts/stage5c1_curated_25_materialization/representations.sqlite"),
+    )
+    assert metrics["counts"] == {
+        "tracks_attempted": 25,
+        "acquisition_successes": 25,
+        "acquisition_failures": 0,
+        "decode_successes": 25,
+        "segment_extraction_successes": 25,
+        "clap_successes": 25,
+        "muq_successes": 25,
+        "full_materialization_successes": 25,
+        "cache_write_successes": 25,
+        "cleanup_successes": 25,
+        "cache_rerun_successes": 25,
+    }
+    assert metrics["pipeline_reliability_passed"] is True
+    assert metrics["integrity"]["cache_audit"]["row_counts"] == {
+        "segments": 150,
+        "pooled": 50,
+        "tracks": 25,
+    }
+    assert metrics["integrity"]["corrupt_cache_entries"] == 0

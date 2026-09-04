@@ -8,6 +8,7 @@ from pathlib import Path
 from audio_similarity.stage5c1_manifest import freeze_curated_manifest
 from audio_similarity.stage5c1_pipeline import run_materialization_attempt
 from audio_similarity.stage5c1_analysis import analyze_representations
+from audio_similarity.stage5c1_closeout import finalize_stage5c1
 
 
 def parser() -> argparse.ArgumentParser:
@@ -30,6 +31,10 @@ def parser() -> argparse.ArgumentParser:
         "analyze", help="compute frozen CLAP, MuQ, and combined similarity diagnostics"
     )
     analyze.add_argument("--project-root", default=str(root))
+    finalize = subcommands.add_parser(
+        "finalize", help="write reliability metrics, closeout report, and artifact manifest"
+    )
+    finalize.add_argument("--project-root", default=str(root))
     return command
 
 
@@ -47,6 +52,9 @@ def main() -> None:
         print(json.dumps(result, indent=2, sort_keys=True))
     elif args.command == "analyze":
         result = analyze_representations(args.project_root)
+        print(json.dumps(result, indent=2, sort_keys=True))
+    elif args.command == "finalize":
+        result = finalize_stage5c1(args.project_root)
         print(json.dumps(result, indent=2, sort_keys=True))
 
 
