@@ -52,7 +52,7 @@ def _matrix(vectors: np.ndarray) -> np.ndarray:
 
 def _write_matrix_csv(path: Path, track_ids: list[str], matrix: np.ndarray) -> None:
     with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.writer(handle)
+        writer = csv.writer(handle, lineterminator="\n")
         writer.writerow(["stage5c1_track_id", *track_ids])
         for track_id, row in zip(track_ids, matrix, strict=True):
             writer.writerow([track_id, *(f"{float(value):.9f}" for value in row)])
@@ -328,7 +328,7 @@ def _write_human_review(
     )
     neighbor_rows = {row["spotify_track_id"]: row for row in neighbors["tracks"]}
     with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields)
+        writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         for track in tracks:
             nearest = neighbor_rows[track["spotify_track_id"]]["neighbors"]["combined"]
