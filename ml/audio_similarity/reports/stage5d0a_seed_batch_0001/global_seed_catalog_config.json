@@ -1,0 +1,113 @@
+{
+  "actual_catalog_size": 5400,
+  "automatic_next_batch": false,
+  "collected_cells_sha256": "960ee15a6c3e7468c65d774a3faecc31d00aab56b665d7a0bdbcb614e1b49c9e",
+  "global_dedupe_before_youtube": true,
+  "ordering": {
+    "manual_curation_after_ordering": false,
+    "method": "SHA256_SEED_PLUS_SPOTIFY_ID_ASCENDING",
+    "seed": "stage5d0a-commercial-seed-order-2026-09-04-v1"
+  },
+  "raw_selected_target": 5400,
+  "recipe": {
+    "aliases": {
+      "COUNTRY": [
+        "country",
+        "contemporary country",
+        "country pop"
+      ],
+      "ELECTRONIC_DANCE": [
+        "electronic",
+        "dance",
+        "edm",
+        "house",
+        "electro"
+      ],
+      "GLOBAL_CROSSOVER": [
+        "k-pop",
+        "j-pop",
+        "afrobeats",
+        "amapiano",
+        "world pop"
+      ],
+      "HIP_HOP_RAP": [
+        "hip hop",
+        "rap",
+        "trap",
+        "alternative hip hop"
+      ],
+      "LATIN": [
+        "latin",
+        "latin pop",
+        "reggaeton",
+        "urbano latino"
+      ],
+      "POP": [
+        "pop",
+        "dance pop",
+        "electropop",
+        "synthpop"
+      ],
+      "RNB_SOUL": [
+        "r&b",
+        "soul",
+        "neo soul",
+        "contemporary r&b"
+      ],
+      "ROCK_ALTERNATIVE": [
+        "rock",
+        "alternative",
+        "indie rock",
+        "pop rock"
+      ]
+    },
+    "catalog_id": "POPULAR_COMMERCIAL_2000_2026_SPOTIFY_SEARCH_V1",
+    "collection": "page rounds across all aliases; admit by native rank then alias order",
+    "credited_artist_overlap": "Jaccard >= 0.5 with equal primary artist",
+    "dedupe_group_rule": "complete-link; no duration-chain merging",
+    "design_id": "POPULAR_COMMERCIAL_2000_2026_SPOTIFY_SEARCH_V1",
+    "duration_tolerance_ms": 3000,
+    "isrc_normalization": "NFKC uppercase; remove spaces/hyphens; invalid identifiers use recording fallback",
+    "market": "US",
+    "maximum_candidates_per_cell": 75,
+    "maximum_native_rank_per_alias": 100,
+    "missing_popularity": "zero; does not create popularity evidence",
+    "nominal_slots": 5400,
+    "ownership_ties": "ranking evidence then bucket name then year",
+    "page_size": 10,
+    "query_template": "year:<year> genre:<alias>",
+    "source": "https://api.spotify.com/v1/search",
+    "spotify_audio": false,
+    "target_per_cell": 25,
+    "years": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ]
+  },
+  "spotify_search_page_count": 2380
+}
