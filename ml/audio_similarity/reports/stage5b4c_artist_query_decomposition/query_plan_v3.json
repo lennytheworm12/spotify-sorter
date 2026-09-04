@@ -1,0 +1,3436 @@
+{
+  "analysis_mode": "OFFLINE_FROZEN_METADATA_ONLY",
+  "experiment_id": "STAGE5B4C_ARTIST_QUERY_DECOMPOSITION_V1",
+  "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+  "schema_version": "stage5b4c-v3-query-plan-v1",
+  "source_benchmark_id": "STAGE5B4_REPRESENTATIVE_V3",
+  "summary": {
+    "duplicate_fallback_queries_removed": 63,
+    "live_searches_run": 0,
+    "malformed_or_empty_query_count": 0,
+    "maximum_fallback_requests_per_track": 3,
+    "maximum_possible_fallback_requests_across_v3": 81,
+    "punctuation_rejection_count": 0,
+    "tracks_total": 100,
+    "tracks_with_1_artist": 63,
+    "tracks_with_2_artists": 30,
+    "tracks_with_3_or_more_artists": 7,
+    "tracks_with_harmless_punctuation": 17
+  },
+  "tracks": [
+    {
+      "benchmark_id": "stage5b4_representative_v3_001",
+      "credited_artists": [
+        "LLusion",
+        "mxmtoon"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "walk but in a garden (with mxmtoon) LLusion",
+          "query_artist": "LLusion",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "walk but in a garden (with mxmtoon) mxmtoon",
+          "query_artist": "mxmtoon",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "LLusion",
+        "mxmtoon"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "walk but in a garden (with mxmtoon) LLusion mxmtoon",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "walk but in a garden (with mxmtoon) LLusion mxmtoon",
+        "Q1": "walk but in a garden (with mxmtoon) LLusion",
+        "Q2": "walk but in a garden (with mxmtoon) mxmtoon",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "walk but in a garden (with mxmtoon)",
+      "sanitized_spotify_title": "walk but in a garden (with mxmtoon)",
+      "spotify_track_id": "4Kpt4pk9xgOlIgu9qvUrxC"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_002",
+      "credited_artists": [
+        "SECRET NUMBER"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "SECRET NUMBER"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Love, Maybe SECRET NUMBER",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Love, Maybe SECRET NUMBER",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Love, Maybe",
+      "sanitized_spotify_title": "Love, Maybe",
+      "spotify_track_id": "5btJjUxmhPK1cwdw0mnhRD"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_003",
+      "credited_artists": [
+        "SRA",
+        "IFCHAN"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Falling SRA",
+          "query_artist": "SRA",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Falling IFCHAN",
+          "query_artist": "IFCHAN",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "SRA",
+        "IFCHAN"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Falling SRA IFCHAN",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Falling SRA IFCHAN",
+        "Q1": "Falling SRA",
+        "Q2": "Falling IFCHAN",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Falling",
+      "sanitized_spotify_title": "Falling",
+      "spotify_track_id": "1BJPASQDHGsZNmIYSyPGsF"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_004",
+      "credited_artists": [
+        "Burbank"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Burbank"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Sorry, I Like You Burbank",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Sorry, I Like You Burbank",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Sorry, I Like You",
+      "sanitized_spotify_title": "Sorry, I Like You",
+      "spotify_track_id": "34MqDD3411uJQvXsqpZv3D"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_005",
+      "credited_artists": [
+        "fcj",
+        "Sarah Hemi"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "thinkin' about u fcj",
+          "query_artist": "fcj",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "thinkin' about u Sarah Hemi",
+          "query_artist": "Sarah Hemi",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "fcj",
+        "Sarah Hemi"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "thinkin' about u fcj Sarah Hemi",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "thinkin' about u fcj Sarah Hemi",
+        "Q1": "thinkin' about u fcj",
+        "Q2": "thinkin' about u Sarah Hemi",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "thinkin' about u",
+      "sanitized_spotify_title": "thinkin' about u",
+      "spotify_track_id": "34ppDRbjfCYRKNQiIWpfCw"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_006",
+      "credited_artists": [
+        "City Girl"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "City Girl"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Empyrean City Girl",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Empyrean City Girl",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Empyrean",
+      "sanitized_spotify_title": "Empyrean",
+      "spotify_track_id": "557y7PDrfoG7ZiXE82XPxp"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_007",
+      "credited_artists": [
+        "The Neighbourhood"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "The Neighbourhood"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Nervous The Neighbourhood",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Nervous The Neighbourhood",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Nervous",
+      "sanitized_spotify_title": "Nervous",
+      "spotify_track_id": "113xf7t4qNM7038YJvauik"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_008",
+      "credited_artists": [
+        "City Girl",
+        "tiffi"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Ellipsis City Girl",
+          "query_artist": "City Girl",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Ellipsis tiffi",
+          "query_artist": "tiffi",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "City Girl",
+        "tiffi"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Ellipsis City Girl tiffi",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Ellipsis City Girl tiffi",
+        "Q1": "Ellipsis City Girl",
+        "Q2": "Ellipsis tiffi",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Ellipsis",
+      "sanitized_spotify_title": "Ellipsis",
+      "spotify_track_id": "66m2a9UzbcQonTW9vgga2D"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_009",
+      "credited_artists": [
+        "Reality Club"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Reality Club"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Anything You Want Reality Club",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Anything You Want Reality Club",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Anything You Want",
+      "sanitized_spotify_title": "Anything You Want",
+      "spotify_track_id": "2QB8FwOszur18Ai7t2XnNi"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_010",
+      "credited_artists": [
+        "2xxx",
+        "Miso"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Girl, Interrupted 2xxx",
+          "query_artist": "2xxx",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Girl, Interrupted Miso",
+          "query_artist": "Miso",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "2xxx",
+        "Miso"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Girl, Interrupted 2xxx Miso",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Girl, Interrupted 2xxx Miso",
+        "Q1": "Girl, Interrupted 2xxx",
+        "Q2": "Girl, Interrupted Miso",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Girl, Interrupted",
+      "sanitized_spotify_title": "Girl, Interrupted",
+      "spotify_track_id": "1cBNzkPsAdI7XJaKIsjKUk"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_011",
+      "credited_artists": [
+        "bobae"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "bobae"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "AhChoo! bobae",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "AhChoo! bobae",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "AhChoo!",
+      "sanitized_spotify_title": "AhChoo!",
+      "spotify_track_id": "6wIZ0Yct9aMra5kHMDk5mG"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_012",
+      "credited_artists": [
+        "Sabrina Carpenter"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Sabrina Carpenter"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Good Graces Sabrina Carpenter",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Good Graces Sabrina Carpenter",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Good Graces",
+      "sanitized_spotify_title": "Good Graces",
+      "spotify_track_id": "102YUQbYmwdBXS7jwamI90"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_013",
+      "credited_artists": [
+        "albie"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "albie"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "everywhere and nowhere albie",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "everywhere and nowhere albie",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "everywhere and nowhere",
+      "sanitized_spotify_title": "everywhere and nowhere",
+      "spotify_track_id": "1iIA7sgGFDMh0yuSJIdHS6"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_014",
+      "credited_artists": [
+        "City Girl",
+        "tiffi",
+        "Highvyn",
+        "siopaolo"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "WII DATE City Girl",
+          "query_artist": "City Girl",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "WII DATE tiffi",
+          "query_artist": "tiffi",
+          "query_variant_index": 2
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "WII DATE Highvyn",
+          "query_artist": "Highvyn",
+          "query_variant_index": 3
+        }
+      ],
+      "included_artists": [
+        "City Girl",
+        "tiffi",
+        "Highvyn"
+      ],
+      "maximum_provider_requests": 4,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "WII DATE City Girl tiffi Highvyn",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "WII DATE City Girl tiffi Highvyn",
+        "Q1": "WII DATE City Girl",
+        "Q2": "WII DATE tiffi",
+        "Q3": "WII DATE Highvyn"
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "WII DATE",
+      "sanitized_spotify_title": "WII DATE",
+      "spotify_track_id": "5zKSgGvk39cXAEIx490fUH"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_015",
+      "credited_artists": [
+        "Mishaal Tamer"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Mishaal Tamer"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Hold Me Mishaal Tamer",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Hold Me Mishaal Tamer",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Hold Me",
+      "sanitized_spotify_title": "Hold Me",
+      "spotify_track_id": "7o9Cx0cQf2eDCrgzzbQNfv"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_016",
+      "credited_artists": [
+        "Gyubin",
+        "Gaeko"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Start To Shine (feat. Gaeko) Gyubin",
+          "query_artist": "Gyubin",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Start To Shine (feat. Gaeko) Gaeko",
+          "query_artist": "Gaeko",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "Gyubin",
+        "Gaeko"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Start To Shine (feat. Gaeko) Gyubin Gaeko",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Start To Shine (feat. Gaeko) Gyubin Gaeko",
+        "Q1": "Start To Shine (feat. Gaeko) Gyubin",
+        "Q2": "Start To Shine (feat. Gaeko) Gaeko",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Start To Shine (feat. Gaeko)",
+      "sanitized_spotify_title": "Start To Shine (feat. Gaeko)",
+      "spotify_track_id": "1KD8juWhiZFJv0gcSpZVSQ"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_017",
+      "credited_artists": [
+        "fromis_9"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "fromis_9"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "LIKE YOU BETTER fromis_9",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "LIKE YOU BETTER fromis_9",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "LIKE YOU BETTER",
+      "sanitized_spotify_title": "LIKE YOU BETTER",
+      "spotify_track_id": "7t4Z19BqZ23ExgdiOP0nf6"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_018",
+      "credited_artists": [
+        "Mr. Hong",
+        "Rosy",
+        "Alberto Droguett"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Oasis Mr. Hong",
+          "query_artist": "Mr. Hong",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Oasis Rosy",
+          "query_artist": "Rosy",
+          "query_variant_index": 2
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Oasis Alberto Droguett",
+          "query_artist": "Alberto Droguett",
+          "query_variant_index": 3
+        }
+      ],
+      "included_artists": [
+        "Mr. Hong",
+        "Rosy",
+        "Alberto Droguett"
+      ],
+      "maximum_provider_requests": 4,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Oasis Mr. Hong Rosy Alberto Droguett",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Oasis Mr. Hong Rosy Alberto Droguett",
+        "Q1": "Oasis Mr. Hong",
+        "Q2": "Oasis Rosy",
+        "Q3": "Oasis Alberto Droguett"
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Oasis",
+      "sanitized_spotify_title": "Oasis",
+      "spotify_track_id": "0W9zXX7ufvXZ8XsfKAhmIw"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_019",
+      "credited_artists": [
+        "City Girl",
+        "Ibrahim"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Gossamer Dress City Girl",
+          "query_artist": "City Girl",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Gossamer Dress Ibrahim",
+          "query_artist": "Ibrahim",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "City Girl",
+        "Ibrahim"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Gossamer Dress City Girl Ibrahim",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Gossamer Dress City Girl Ibrahim",
+        "Q1": "Gossamer Dress City Girl",
+        "Q2": "Gossamer Dress Ibrahim",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Gossamer Dress",
+      "sanitized_spotify_title": "Gossamer Dress",
+      "spotify_track_id": "5qzjaUWNihLEG3dOhRlJ3N"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_020",
+      "credited_artists": [
+        "City Girl"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "City Girl"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Endless Steps Through the Concrete Woods and into Your Heart City Girl",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Endless Steps Through the Concrete Woods and into Your Heart City Girl",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Endless Steps Through the Concrete Woods and into Your Heart",
+      "sanitized_spotify_title": "Endless Steps Through the Concrete Woods and into Your Heart",
+      "spotify_track_id": "6RyoC29FTgZAr2RV8Dp3Jn"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_021",
+      "credited_artists": [
+        "City Girl",
+        "tiffi"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Dulcet Slumber City Girl",
+          "query_artist": "City Girl",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Dulcet Slumber tiffi",
+          "query_artist": "tiffi",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "City Girl",
+        "tiffi"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Dulcet Slumber City Girl tiffi",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Dulcet Slumber City Girl tiffi",
+        "Q1": "Dulcet Slumber City Girl",
+        "Q2": "Dulcet Slumber tiffi",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Dulcet Slumber",
+      "sanitized_spotify_title": "Dulcet Slumber",
+      "spotify_track_id": "4Z7GDA2zUrmz0EawisL1QG"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_022",
+      "credited_artists": [
+        "BIBI"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "BIBI"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Restless BIBI",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Restless BIBI",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Restless",
+      "sanitized_spotify_title": "Restless",
+      "spotify_track_id": "4AHNi316rl3KI3hKIsdxZe"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_023",
+      "credited_artists": [
+        "Lofi Fruits Music",
+        "Tempura"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "L's Theme Lofi Fruits Music",
+          "query_artist": "Lofi Fruits Music",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "L's Theme Tempura",
+          "query_artist": "Tempura",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "Lofi Fruits Music",
+        "Tempura"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "L's Theme Lofi Fruits Music Tempura",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "L's Theme Lofi Fruits Music Tempura",
+        "Q1": "L's Theme Lofi Fruits Music",
+        "Q2": "L's Theme Tempura",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "L's Theme",
+      "sanitized_spotify_title": "L's Theme",
+      "spotify_track_id": "1kNS8oeX42WP0HWHO9affg"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_024",
+      "credited_artists": [
+        "FION"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "FION"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "it was like that FION",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "it was like that FION",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "it was like that",
+      "sanitized_spotify_title": "it was like that",
+      "spotify_track_id": "4A9j01WZ16YMCaovAcHy61"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_025",
+      "credited_artists": [
+        "keshi"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "keshi"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "i swear i'll never leave again keshi",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "i swear i'll never leave again keshi",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "i swear i'll never leave again",
+      "sanitized_spotify_title": "i swear i'll never leave again",
+      "spotify_track_id": "5byXSKd7QOHtVMOiptklBD"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_026",
+      "credited_artists": [
+        "Nicky Youre",
+        "david hugo"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Never Go Wrong Nicky Youre",
+          "query_artist": "Nicky Youre",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Never Go Wrong david hugo",
+          "query_artist": "david hugo",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "Nicky Youre",
+        "david hugo"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Never Go Wrong Nicky Youre david hugo",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Never Go Wrong Nicky Youre david hugo",
+        "Q1": "Never Go Wrong Nicky Youre",
+        "Q2": "Never Go Wrong david hugo",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Never Go Wrong",
+      "sanitized_spotify_title": "Never Go Wrong",
+      "spotify_track_id": "7cLvLpnhpnQtea3ETMYgV5"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_027",
+      "credited_artists": [
+        "LAUV"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "LAUV"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Paris in the Rain LAUV",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Paris in the Rain LAUV",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Paris in the Rain",
+      "sanitized_spotify_title": "Paris in the Rain",
+      "spotify_track_id": "41CgzGD7xlgnJe14R4cqkL"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_028",
+      "credited_artists": [
+        "City Girl",
+        "tiffi"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "SEA City Girl",
+          "query_artist": "City Girl",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "SEA tiffi",
+          "query_artist": "tiffi",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "City Girl",
+        "tiffi"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "SEA City Girl tiffi",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "SEA City Girl tiffi",
+        "Q1": "SEA City Girl",
+        "Q2": "SEA tiffi",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "SEA",
+      "sanitized_spotify_title": "SEA",
+      "spotify_track_id": "5LPtJAFD8H5nMJrTk6qTWn"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_029",
+      "credited_artists": [
+        "Alys",
+        "fcj"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "i know Alys",
+          "query_artist": "Alys",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "i know fcj",
+          "query_artist": "fcj",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "Alys",
+        "fcj"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "i know Alys fcj",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "i know Alys fcj",
+        "Q1": "i know Alys",
+        "Q2": "i know fcj",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "i know",
+      "sanitized_spotify_title": "i know",
+      "spotify_track_id": "7iu08M7YBorwtM1ZfeKP1U"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_030",
+      "credited_artists": [
+        "Coogie",
+        "LEEHI"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Alone (Feat. LeeHi) Coogie",
+          "query_artist": "Coogie",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Alone (Feat. LeeHi) LEEHI",
+          "query_artist": "LEEHI",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "Coogie",
+        "LEEHI"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Alone (Feat. LeeHi) Coogie LEEHI",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Alone (Feat. LeeHi) Coogie LEEHI",
+        "Q1": "Alone (Feat. LeeHi) Coogie",
+        "Q2": "Alone (Feat. LeeHi) LEEHI",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Alone (Feat. LeeHi)",
+      "sanitized_spotify_title": "Alone (Feat. LeeHi)",
+      "spotify_track_id": "2SSbQoEqPHu6qAgi3pFobY"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_031",
+      "credited_artists": [
+        "Teqkoi",
+        "Aiko"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "You Broke My Heart Again Teqkoi",
+          "query_artist": "Teqkoi",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "You Broke My Heart Again Aiko",
+          "query_artist": "Aiko",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "Teqkoi",
+        "Aiko"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "You Broke My Heart Again Teqkoi Aiko",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "You Broke My Heart Again Teqkoi Aiko",
+        "Q1": "You Broke My Heart Again Teqkoi",
+        "Q2": "You Broke My Heart Again Aiko",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "You Broke My Heart Again",
+      "sanitized_spotify_title": "You Broke My Heart Again",
+      "spotify_track_id": "3jZDWsoxRHzzp3DYV8qeXE"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_032",
+      "credited_artists": [
+        "张妙格"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "张妙格"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "你别怕 张妙格",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "你别怕 张妙格",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "你别怕",
+      "sanitized_spotify_title": "你别怕",
+      "spotify_track_id": "2PStV5Xyg5iiH1cniZORMa"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_033",
+      "credited_artists": [
+        "KozyPop",
+        "Dizzy Blue",
+        "Flaboi"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "짝사랑 KozyPop",
+          "query_artist": "KozyPop",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "짝사랑 Dizzy Blue",
+          "query_artist": "Dizzy Blue",
+          "query_variant_index": 2
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "짝사랑 Flaboi",
+          "query_artist": "Flaboi",
+          "query_variant_index": 3
+        }
+      ],
+      "included_artists": [
+        "KozyPop",
+        "Dizzy Blue",
+        "Flaboi"
+      ],
+      "maximum_provider_requests": 4,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "짝사랑 KozyPop Dizzy Blue Flaboi",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "짝사랑 KozyPop Dizzy Blue Flaboi",
+        "Q1": "짝사랑 KozyPop",
+        "Q2": "짝사랑 Dizzy Blue",
+        "Q3": "짝사랑 Flaboi"
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "짝사랑",
+      "sanitized_spotify_title": "짝사랑",
+      "spotify_track_id": "5f4njgyIwbtswRgyR9dkpz"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_034",
+      "credited_artists": [
+        "The Marías"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "The Marías"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Heavy The Marías",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Heavy The Marías",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Heavy",
+      "sanitized_spotify_title": "Heavy",
+      "spotify_track_id": "1ShRHPAiiIrh0arZbSFmx1"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_035",
+      "credited_artists": [
+        "LEEHI",
+        "Crush"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "For You LEEHI",
+          "query_artist": "LEEHI",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "For You Crush",
+          "query_artist": "Crush",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "LEEHI",
+        "Crush"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "For You LEEHI Crush",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "For You LEEHI Crush",
+        "Q1": "For You LEEHI",
+        "Q2": "For You Crush",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "For You",
+      "sanitized_spotify_title": "For You",
+      "spotify_track_id": "0JL7DoEqAUcOntWmBuOSdh"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_036",
+      "credited_artists": [
+        "TWICE"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "TWICE"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Basics TWICE",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Basics TWICE",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Basics",
+      "sanitized_spotify_title": "Basics",
+      "spotify_track_id": "63mL1DdcSFfxVJ9XGnSRQz"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_037",
+      "credited_artists": [
+        "amin",
+        "Dept",
+        "NASON"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "At this moment amin",
+          "query_artist": "amin",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "At this moment Dept",
+          "query_artist": "Dept",
+          "query_variant_index": 2
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "At this moment NASON",
+          "query_artist": "NASON",
+          "query_variant_index": 3
+        }
+      ],
+      "included_artists": [
+        "amin",
+        "Dept",
+        "NASON"
+      ],
+      "maximum_provider_requests": 4,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "At this moment amin Dept NASON",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "At this moment amin Dept NASON",
+        "Q1": "At this moment amin",
+        "Q2": "At this moment Dept",
+        "Q3": "At this moment NASON"
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "At this moment",
+      "sanitized_spotify_title": "At this moment",
+      "spotify_track_id": "0NXjNea8bK1Wm5A5isd4te"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_038",
+      "credited_artists": [
+        "IU"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "IU"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Good day IU",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Good day IU",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Good day",
+      "sanitized_spotify_title": "Good day",
+      "spotify_track_id": "1SwZVVH9BnXtLRLi2cbFhw"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_039",
+      "credited_artists": [
+        "Tomppabeats"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Tomppabeats"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Being in Love with U Tomppabeats",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Being in Love with U Tomppabeats",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Being in Love with U",
+      "sanitized_spotify_title": "Being in Love with U",
+      "spotify_track_id": "77Uo6nqkmG5eFLgTuQcZIV"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_040",
+      "credited_artists": [
+        "can't be blue"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "can't be blue"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Matryoshka can't be blue",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Matryoshka can't be blue",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Matryoshka",
+      "sanitized_spotify_title": "Matryoshka",
+      "spotify_track_id": "09yxk5cVVFVdc8WTZ1dWsk"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_041",
+      "credited_artists": [
+        "Michelle"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Michelle"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "nov Michelle",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "nov Michelle",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "nov",
+      "sanitized_spotify_title": "nov",
+      "spotify_track_id": "3wrVGLrwgBQOgGWFUu6D1e"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_042",
+      "credited_artists": [
+        "WizTheMc",
+        "bees & honey"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Show Me Love WizTheMc",
+          "query_artist": "WizTheMc",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Show Me Love bees & honey",
+          "query_artist": "bees & honey",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "WizTheMc",
+        "bees & honey"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Show Me Love WizTheMc bees & honey",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Show Me Love WizTheMc bees & honey",
+        "Q1": "Show Me Love WizTheMc",
+        "Q2": "Show Me Love bees & honey",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Show Me Love",
+      "sanitized_spotify_title": "Show Me Love",
+      "spotify_track_id": "5ITV0zqzjOYfFWpW0xBmRa"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_043",
+      "credited_artists": [
+        "moon tang"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "moon tang"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "floor plan moon tang",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "floor plan moon tang",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "floor plan",
+      "sanitized_spotify_title": "floor plan",
+      "spotify_track_id": "0ODJwDKYb16XOUKvOwCb7E"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_044",
+      "credited_artists": [
+        "City Girl",
+        "ry"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Easy City Girl",
+          "query_artist": "City Girl",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Easy ry",
+          "query_artist": "ry",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "City Girl",
+        "ry"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Easy City Girl ry",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Easy City Girl ry",
+        "Q1": "Easy City Girl",
+        "Q2": "Easy ry",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Easy",
+      "sanitized_spotify_title": "Easy",
+      "spotify_track_id": "35yldEsDkKvcxb9NJ034AI"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_045",
+      "credited_artists": [
+        "Lana Del Rey"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Lana Del Rey"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Summertime Sadness Lana Del Rey",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Summertime Sadness Lana Del Rey",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Summertime Sadness",
+      "sanitized_spotify_title": "Summertime Sadness",
+      "spotify_track_id": "2dBwB667LHQkLhdYlwLUZK"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_046",
+      "credited_artists": [
+        "Kelsey Kuan"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Kelsey Kuan"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "All Night Kelsey Kuan",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "All Night Kelsey Kuan",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "All Night",
+      "sanitized_spotify_title": "All Night",
+      "spotify_track_id": "7h6EmYOzXzMjCgMGcxPl5s"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_047",
+      "credited_artists": [
+        "Rook1e",
+        "softy"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "falling asleep together while it rains Rook1e",
+          "query_artist": "Rook1e",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "falling asleep together while it rains softy",
+          "query_artist": "softy",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "Rook1e",
+        "softy"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "falling asleep together while it rains Rook1e softy",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "falling asleep together while it rains Rook1e softy",
+        "Q1": "falling asleep together while it rains Rook1e",
+        "Q2": "falling asleep together while it rains softy",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "falling asleep together while it rains",
+      "sanitized_spotify_title": "falling asleep together while it rains",
+      "spotify_track_id": "0bnGZYKLDf6WRME8G3wb2x"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_048",
+      "credited_artists": [
+        "City Girl"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "City Girl"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Azure Glow City Girl",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Azure Glow City Girl",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Azure Glow",
+      "sanitized_spotify_title": "Azure Glow",
+      "spotify_track_id": "0KsbvVzqiG9OmdCmolwcjB"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_049",
+      "credited_artists": [
+        "mxmtoon"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "mxmtoon"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "prom dress mxmtoon",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "prom dress mxmtoon",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "prom dress",
+      "sanitized_spotify_title": "prom dress",
+      "spotify_track_id": "2xCGBWfzTe8l2kvHpgvB6M"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_050",
+      "credited_artists": [
+        "City Girl"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "City Girl"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Just Dreams in the Static Night City Girl",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Just Dreams in the Static Night City Girl",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Just Dreams in the Static Night",
+      "sanitized_spotify_title": "Just Dreams in the Static Night",
+      "spotify_track_id": "5pTGBSQIWsArijrq0tCCNz"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_051",
+      "credited_artists": [
+        "Payday"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Payday"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Beam Payday",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Beam Payday",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Beam",
+      "sanitized_spotify_title": "Beam",
+      "spotify_track_id": "1IIw5oVR1xE4bzdl4JgGsc"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_052",
+      "credited_artists": [
+        "IU",
+        "OHHYUK"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Can't Love You Anymore (With OHHYUK) IU",
+          "query_artist": "IU",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Can't Love You Anymore (With OHHYUK) OHHYUK",
+          "query_artist": "OHHYUK",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "IU",
+        "OHHYUK"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Can't Love You Anymore (With OHHYUK) IU OHHYUK",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Can't Love You Anymore (With OHHYUK) IU OHHYUK",
+        "Q1": "Can't Love You Anymore (With OHHYUK) IU",
+        "Q2": "Can't Love You Anymore (With OHHYUK) OHHYUK",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Can't Love You Anymore (With OHHYUK)",
+      "sanitized_spotify_title": "Can't Love You Anymore (With OHHYUK)",
+      "spotify_track_id": "5MvxeZPiiLAuB5gI8k3ynk"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_053",
+      "credited_artists": [
+        "Sia"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Sia"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "I'm In Here Sia",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "I'm In Here Sia",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "I'm In Here",
+      "sanitized_spotify_title": "I'm In Here",
+      "spotify_track_id": "07OLYWQfwfJKJIwO1heCME"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_054",
+      "credited_artists": [
+        "City Girl"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "City Girl"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Lush Meadows of Stone City Girl",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Lush Meadows of Stone City Girl",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Lush Meadows of Stone",
+      "sanitized_spotify_title": "Lush Meadows of Stone",
+      "spotify_track_id": "3jcfP7lHckkE3a8cX2bnpZ"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_055",
+      "credited_artists": [
+        "underscores"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "underscores"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Wish U Well underscores",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Wish U Well underscores",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Wish U Well",
+      "sanitized_spotify_title": "Wish U Well",
+      "spotify_track_id": "0ny6sr26ROicSIpAatlVAP"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_056",
+      "credited_artists": [
+        "Sabrina Carpenter"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Sabrina Carpenter"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Honeymoon Fades Sabrina Carpenter",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Honeymoon Fades Sabrina Carpenter",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Honeymoon Fades",
+      "sanitized_spotify_title": "Honeymoon Fades",
+      "spotify_track_id": "2o2R6ghiVJfAqEXnlmOihz"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_057",
+      "credited_artists": [
+        "fromis_9"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "fromis_9"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "DM fromis_9",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "DM fromis_9",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "DM",
+      "sanitized_spotify_title": "DM",
+      "spotify_track_id": "7B9W7Qsy5M2kyUNjQYIEG8"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_058",
+      "credited_artists": [
+        "KozyPop",
+        "Dizzy Blue"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Don't go KozyPop",
+          "query_artist": "KozyPop",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Don't go Dizzy Blue",
+          "query_artist": "Dizzy Blue",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "KozyPop",
+        "Dizzy Blue"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Don't go KozyPop Dizzy Blue",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Don't go KozyPop Dizzy Blue",
+        "Q1": "Don't go KozyPop",
+        "Q2": "Don't go Dizzy Blue",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Don't go",
+      "sanitized_spotify_title": "Don't go",
+      "spotify_track_id": "79Hh4k3QRJCOpFcyxKzPtR"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_059",
+      "credited_artists": [
+        "BABYMONSTER"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "BABYMONSTER"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "FOREVER BABYMONSTER",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "FOREVER BABYMONSTER",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "FOREVER",
+      "sanitized_spotify_title": "FOREVER",
+      "spotify_track_id": "0Md02V4hwKO5Vu5B7GD8tQ"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_060",
+      "credited_artists": [
+        "Doechii"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Doechii"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Anxiety Doechii",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Anxiety Doechii",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Anxiety",
+      "sanitized_spotify_title": "Anxiety",
+      "spotify_track_id": "1musbempyJAw5gfSKZHXP9"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_061",
+      "credited_artists": [
+        "City Girl",
+        "Rui Ying"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Won't You Wait? City Girl",
+          "query_artist": "City Girl",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Won't You Wait? Rui Ying",
+          "query_artist": "Rui Ying",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "City Girl",
+        "Rui Ying"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Won't You Wait? City Girl Rui Ying",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Won't You Wait? City Girl Rui Ying",
+        "Q1": "Won't You Wait? City Girl",
+        "Q2": "Won't You Wait? Rui Ying",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Won't You Wait?",
+      "sanitized_spotify_title": "Won't You Wait?",
+      "spotify_track_id": "2GfbK4daEIsNVG9eHeibhb"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_062",
+      "credited_artists": [
+        "Linearwave"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Linearwave"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "dreamy Linearwave",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "dreamy Linearwave",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "dreamy",
+      "sanitized_spotify_title": "dreamy",
+      "spotify_track_id": "6pwoQ7ABIGDvTQrPT0AueQ"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_063",
+      "credited_artists": [
+        "Kiri T"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Kiri T"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Not on This Christmas Kiri T",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Not on This Christmas Kiri T",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Not on This Christmas",
+      "sanitized_spotify_title": "Not on This Christmas",
+      "spotify_track_id": "5cFEPGQ9D8NsSJ9AGxqMGu"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_064",
+      "credited_artists": [
+        "City Girl",
+        "tiffi"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Palliative City Girl",
+          "query_artist": "City Girl",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Palliative tiffi",
+          "query_artist": "tiffi",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "City Girl",
+        "tiffi"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Palliative City Girl tiffi",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Palliative City Girl tiffi",
+        "Q1": "Palliative City Girl",
+        "Q2": "Palliative tiffi",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Palliative",
+      "sanitized_spotify_title": "Palliative",
+      "spotify_track_id": "3awKiKNIChUkmFcmaY2MNH"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_065",
+      "credited_artists": [
+        "Regina Song"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Regina Song"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "high school boy Regina Song",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "high school boy Regina Song",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "high school boy",
+      "sanitized_spotify_title": "high school boy",
+      "spotify_track_id": "6Aj3Ff2lIXBZF3KxfQkUH2"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_066",
+      "credited_artists": [
+        "Red Velvet"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Red Velvet"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Carpool Red Velvet",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Carpool Red Velvet",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Carpool",
+      "sanitized_spotify_title": "Carpool",
+      "spotify_track_id": "2KqYLFNTX2HXzYH4bucBKa"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_067",
+      "credited_artists": [
+        "石玺彤"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "石玺彤"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "这不堪的我 石玺彤",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "这不堪的我 石玺彤",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "这不堪的我",
+      "sanitized_spotify_title": "这不堪的我",
+      "spotify_track_id": "4xSUHeZOliDd6rQJ41ytLb"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_068",
+      "credited_artists": [
+        "eymii"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "eymii"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "latte eymii",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "latte eymii",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "latte",
+      "sanitized_spotify_title": "latte",
+      "spotify_track_id": "5NCjlQf4kuP3HLvFKNiVmp"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_069",
+      "credited_artists": [
+        "單依純"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "單依純"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "喂 單依純",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "喂 單依純",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "喂",
+      "sanitized_spotify_title": "喂",
+      "spotify_track_id": "5gHMAeiTkGGdotCsaiJeY3"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_070",
+      "credited_artists": [
+        "JVKE",
+        "TOMORROW X TOGETHER",
+        "LE SSERAFIM",
+        "TAEHYUN",
+        "KIM CHAEWON"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "butterflies (feat. TAEHYUN of TOMORROW X TOGETHER & Kim Chaewon of LE SSERAFIM) JVKE",
+          "query_artist": "JVKE",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "butterflies (feat. TAEHYUN of TOMORROW X TOGETHER & Kim Chaewon of LE SSERAFIM) TOMORROW X TOGETHER",
+          "query_artist": "TOMORROW X TOGETHER",
+          "query_variant_index": 2
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "butterflies (feat. TAEHYUN of TOMORROW X TOGETHER & Kim Chaewon of LE SSERAFIM) LE SSERAFIM",
+          "query_artist": "LE SSERAFIM",
+          "query_variant_index": 3
+        }
+      ],
+      "included_artists": [
+        "JVKE",
+        "TOMORROW X TOGETHER",
+        "LE SSERAFIM"
+      ],
+      "maximum_provider_requests": 4,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "butterflies (feat. TAEHYUN of TOMORROW X TOGETHER & Kim Chaewon of LE SSERAFIM) JVKE TOMORROW X TOGETHER LE SSERAFIM",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "butterflies (feat. TAEHYUN of TOMORROW X TOGETHER & Kim Chaewon of LE SSERAFIM) JVKE TOMORROW X TOGETHER LE SSERAFIM",
+        "Q1": "butterflies (feat. TAEHYUN of TOMORROW X TOGETHER & Kim Chaewon of LE SSERAFIM) JVKE",
+        "Q2": "butterflies (feat. TAEHYUN of TOMORROW X TOGETHER & Kim Chaewon of LE SSERAFIM) TOMORROW X TOGETHER",
+        "Q3": "butterflies (feat. TAEHYUN of TOMORROW X TOGETHER & Kim Chaewon of LE SSERAFIM) LE SSERAFIM"
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "butterflies (feat. TAEHYUN of TOMORROW X TOGETHER & Kim Chaewon of LE SSERAFIM)",
+      "sanitized_spotify_title": "butterflies (feat. TAEHYUN of TOMORROW X TOGETHER & Kim Chaewon of LE SSERAFIM)",
+      "spotify_track_id": "0VdikQbDdOqxdWQyYsLmne"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_071",
+      "credited_artists": [
+        "BIBI"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "BIBI"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "나비 BIBI",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "나비 BIBI",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "나비",
+      "sanitized_spotify_title": "나비",
+      "spotify_track_id": "51bAYkcnw2WvMo4tps2txV"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_072",
+      "credited_artists": [
+        "Elijah Who"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Elijah Who"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "black coffee Elijah Who",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "black coffee Elijah Who",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "black coffee",
+      "sanitized_spotify_title": "black coffee",
+      "spotify_track_id": "5Fcvs2SN18DwMhGaumJ78I"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_073",
+      "credited_artists": [
+        "Kendrick Lamar",
+        "SZA"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "All The Stars (with SZA) - From Black Panther: The Album Kendrick Lamar",
+          "query_artist": "Kendrick Lamar",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "All The Stars (with SZA) - From Black Panther: The Album SZA",
+          "query_artist": "SZA",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "Kendrick Lamar",
+        "SZA"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "All The Stars (with SZA) - From Black Panther: The Album Kendrick Lamar SZA",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "All The Stars (with SZA) - From Black Panther: The Album Kendrick Lamar SZA",
+        "Q1": "All The Stars (with SZA) - From Black Panther: The Album Kendrick Lamar",
+        "Q2": "All The Stars (with SZA) - From Black Panther: The Album SZA",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "All The Stars (with SZA) - From \"Black Panther: The Album\"",
+      "sanitized_spotify_title": "All The Stars (with SZA) - From Black Panther: The Album",
+      "spotify_track_id": "3GCdLUSnKSMJhs4Tj6CV3s"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_074",
+      "credited_artists": [
+        "The Millennial Club"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "The Millennial Club"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "feel the same The Millennial Club",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "feel the same The Millennial Club",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "feel the same",
+      "sanitized_spotify_title": "feel the same",
+      "spotify_track_id": "1lvK8Y6Zt4od4CWj82rLhE"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_075",
+      "credited_artists": [
+        "BLACKPINK"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "BLACKPINK"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "As If It's Your Last BLACKPINK",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "As If It's Your Last BLACKPINK",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "As If It's Your Last",
+      "sanitized_spotify_title": "As If It's Your Last",
+      "spotify_track_id": "1Zyd6zQnC6XIIzmg3hP7Ot"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_076",
+      "credited_artists": [
+        "City Girl"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "City Girl"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "The Light of an Egress City Girl",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "The Light of an Egress City Girl",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "The Light of an Egress",
+      "sanitized_spotify_title": "The Light of an Egress",
+      "spotify_track_id": "4Y4Wtw2oKyypYncIbXPXzt"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_077",
+      "credited_artists": [
+        "yuni",
+        "Lydia Ganada"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "stay (with Lydia Ganada) yuni",
+          "query_artist": "yuni",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "stay (with Lydia Ganada) Lydia Ganada",
+          "query_artist": "Lydia Ganada",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "yuni",
+        "Lydia Ganada"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "stay (with Lydia Ganada) yuni Lydia Ganada",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "stay (with Lydia Ganada) yuni Lydia Ganada",
+        "Q1": "stay (with Lydia Ganada) yuni",
+        "Q2": "stay (with Lydia Ganada) Lydia Ganada",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "stay (with Lydia Ganada)",
+      "sanitized_spotify_title": "stay (with Lydia Ganada)",
+      "spotify_track_id": "2wIaCbkQtEFszbalEsqpNN"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_078",
+      "credited_artists": [
+        "omarr",
+        "Slipfunc"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Warm Thoughts omarr",
+          "query_artist": "omarr",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Warm Thoughts Slipfunc",
+          "query_artist": "Slipfunc",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "omarr",
+        "Slipfunc"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Warm Thoughts omarr Slipfunc",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Warm Thoughts omarr Slipfunc",
+        "Q1": "Warm Thoughts omarr",
+        "Q2": "Warm Thoughts Slipfunc",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Warm Thoughts",
+      "sanitized_spotify_title": "Warm Thoughts",
+      "spotify_track_id": "5YiDYURYgkBU51ohzTwHFS"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_079",
+      "credited_artists": [
+        "BOL4"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "BOL4"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Galaxy BOL4",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Galaxy BOL4",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Galaxy",
+      "sanitized_spotify_title": "Galaxy",
+      "spotify_track_id": "15c7KZTrsCUxCQcOdUVELc"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_080",
+      "credited_artists": [
+        "Claire Rosinkranz"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Claire Rosinkranz"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Hotel Claire Rosinkranz",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Hotel Claire Rosinkranz",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Hotel",
+      "sanitized_spotify_title": "Hotel",
+      "spotify_track_id": "3xyr2xfbSZiZWWGsjLyMFh"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_081",
+      "credited_artists": [
+        "TWICE"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "TWICE"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "FANCY TWICE",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "FANCY TWICE",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "FANCY",
+      "sanitized_spotify_title": "FANCY",
+      "spotify_track_id": "2qQpFbqqkLOGySgNK8wBXt"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_082",
+      "credited_artists": [
+        "Laica"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Laica"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "idc Laica",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "idc Laica",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "idc",
+      "sanitized_spotify_title": "idc",
+      "spotify_track_id": "4NsmtNge6iuqUTAkzfWk62"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_083",
+      "credited_artists": [
+        "Weston Estate"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Weston Estate"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Hypnotized Weston Estate",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Hypnotized Weston Estate",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Hypnotized",
+      "sanitized_spotify_title": "Hypnotized",
+      "spotify_track_id": "2G3l5uYzMqVAgEjcF8XtRj"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_084",
+      "credited_artists": [
+        "Dept",
+        "Ashley Alisha",
+        "nobody likes you pat"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Winter blossom Dept",
+          "query_artist": "Dept",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Winter blossom Ashley Alisha",
+          "query_artist": "Ashley Alisha",
+          "query_variant_index": 2
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Winter blossom nobody likes you pat",
+          "query_artist": "nobody likes you pat",
+          "query_variant_index": 3
+        }
+      ],
+      "included_artists": [
+        "Dept",
+        "Ashley Alisha",
+        "nobody likes you pat"
+      ],
+      "maximum_provider_requests": 4,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Winter blossom Dept Ashley Alisha nobody likes you pat",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Winter blossom Dept Ashley Alisha nobody likes you pat",
+        "Q1": "Winter blossom Dept",
+        "Q2": "Winter blossom Ashley Alisha",
+        "Q3": "Winter blossom nobody likes you pat"
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Winter blossom",
+      "sanitized_spotify_title": "Winter blossom",
+      "spotify_track_id": "1ynuDDHKN7P7fmJEljdCLd"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_085",
+      "credited_artists": [
+        "Dareharu"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Dareharu"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Karma Dareharu",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Karma Dareharu",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Karma",
+      "sanitized_spotify_title": "Karma",
+      "spotify_track_id": "6ram0T20BHTnZjFsZkazUp"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_086",
+      "credited_artists": [
+        "amin",
+        "Dept"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "See you amin",
+          "query_artist": "amin",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "See you Dept",
+          "query_artist": "Dept",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "amin",
+        "Dept"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "See you amin Dept",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "See you amin Dept",
+        "Q1": "See you amin",
+        "Q2": "See you Dept",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "See you",
+      "sanitized_spotify_title": "See you",
+      "spotify_track_id": "2uzK4GdJ63xhirHwt91FMq"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_087",
+      "credited_artists": [
+        "Jack Stauber"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Jack Stauber"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Buttercup Jack Stauber",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Buttercup Jack Stauber",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Buttercup",
+      "sanitized_spotify_title": "Buttercup",
+      "spotify_track_id": "2mlGPkAx4kwF8Df0GlScsC"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_088",
+      "credited_artists": [
+        "Sarcastic Sounds",
+        "Beowülf",
+        "Mishaal Tamer"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Runaway Sarcastic Sounds",
+          "query_artist": "Sarcastic Sounds",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Runaway Beowülf",
+          "query_artist": "Beowülf",
+          "query_variant_index": 2
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Runaway Mishaal Tamer",
+          "query_artist": "Mishaal Tamer",
+          "query_variant_index": 3
+        }
+      ],
+      "included_artists": [
+        "Sarcastic Sounds",
+        "Beowülf",
+        "Mishaal Tamer"
+      ],
+      "maximum_provider_requests": 4,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Runaway Sarcastic Sounds Beowülf Mishaal Tamer",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Runaway Sarcastic Sounds Beowülf Mishaal Tamer",
+        "Q1": "Runaway Sarcastic Sounds",
+        "Q2": "Runaway Beowülf",
+        "Q3": "Runaway Mishaal Tamer"
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Runaway",
+      "sanitized_spotify_title": "Runaway",
+      "spotify_track_id": "6CyXEKlsJlGjl5SiCUjuFc"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_089",
+      "credited_artists": [
+        "imzoo",
+        "Kim Do Young"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "For You imzoo",
+          "query_artist": "imzoo",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "For You Kim Do Young",
+          "query_artist": "Kim Do Young",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "imzoo",
+        "Kim Do Young"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "For You imzoo Kim Do Young",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "For You imzoo Kim Do Young",
+        "Q1": "For You imzoo",
+        "Q2": "For You Kim Do Young",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "For You",
+      "sanitized_spotify_title": "For You",
+      "spotify_track_id": "63Sgah7EuTJI5FhFW2C0UF"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_090",
+      "credited_artists": [
+        "IVE"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "IVE"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Accendio IVE",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Accendio IVE",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Accendio",
+      "sanitized_spotify_title": "Accendio",
+      "spotify_track_id": "1BAtAtx0VgWgAMROWK9WYf"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_091",
+      "credited_artists": [
+        "Ivoris"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Ivoris"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Honeysea Ivoris",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Honeysea Ivoris",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Honeysea",
+      "sanitized_spotify_title": "Honeysea",
+      "spotify_track_id": "16wzmKIdkLdJSxkro7oEUl"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_092",
+      "credited_artists": [
+        "Ariana Grande",
+        "Zedd"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Break Free Ariana Grande",
+          "query_artist": "Ariana Grande",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Break Free Zedd",
+          "query_artist": "Zedd",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "Ariana Grande",
+        "Zedd"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Break Free Ariana Grande Zedd",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Break Free Ariana Grande Zedd",
+        "Q1": "Break Free Ariana Grande",
+        "Q2": "Break Free Zedd",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Break Free",
+      "sanitized_spotify_title": "Break Free",
+      "spotify_track_id": "3emCzvUm5FsQnofdNQL73a"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_093",
+      "credited_artists": [
+        "에릭남 (Eric Nam), CHEEZE (치즈)"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "에릭남 (Eric Nam), CHEEZE (치즈)"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Perhaps Love (사랑인가요) (Prod.By 박근태) 에릭남 (Eric Nam), CHEEZE (치즈)",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Perhaps Love (사랑인가요) (Prod.By 박근태) 에릭남 (Eric Nam), CHEEZE (치즈)",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Perhaps Love (사랑인가요) (Prod.By 박근태)",
+      "sanitized_spotify_title": "Perhaps Love (사랑인가요) (Prod.By 박근태)",
+      "spotify_track_id": "5bN1ltT5BhVMnszmgsqGD5"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_094",
+      "credited_artists": [
+        "Stephen Sanchez",
+        "Em Beihold"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Until I Found You (with Em Beihold) - Em Beihold Version Stephen Sanchez",
+          "query_artist": "Stephen Sanchez",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Until I Found You (with Em Beihold) - Em Beihold Version Em Beihold",
+          "query_artist": "Em Beihold",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "Stephen Sanchez",
+        "Em Beihold"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Until I Found You (with Em Beihold) - Em Beihold Version Stephen Sanchez Em Beihold",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Until I Found You (with Em Beihold) - Em Beihold Version Stephen Sanchez Em Beihold",
+        "Q1": "Until I Found You (with Em Beihold) - Em Beihold Version Stephen Sanchez",
+        "Q2": "Until I Found You (with Em Beihold) - Em Beihold Version Em Beihold",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Until I Found You (with Em Beihold) - Em Beihold Version",
+      "sanitized_spotify_title": "Until I Found You (with Em Beihold) - Em Beihold Version",
+      "spotify_track_id": "1Y3LN4zO1Edc2EluIoSPJN"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_095",
+      "credited_artists": [
+        "Luxid"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Luxid"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Today, Rainy Luxid",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Today, Rainy Luxid",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Today, Rainy",
+      "sanitized_spotify_title": "Today, Rainy",
+      "spotify_track_id": "1UV8WOGHUM3efanAXMiLCN"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_096",
+      "credited_artists": [
+        "Kiri T"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Kiri T"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "10,000ft. Kiri T",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "10,000ft. Kiri T",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "10,000ft.",
+      "sanitized_spotify_title": "10,000ft.",
+      "spotify_track_id": "50cdjSLp5gH2l4y1EpenKf"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_097",
+      "credited_artists": [
+        "Nana Ou-Yang"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Nana Ou-Yang"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Tell Me You Do Too Nana Ou-Yang",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Tell Me You Do Too Nana Ou-Yang",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Tell Me You Do Too",
+      "sanitized_spotify_title": "Tell Me You Do Too",
+      "spotify_track_id": "0AHMsDGvM7OFlMfkdDYRfe"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_098",
+      "credited_artists": [
+        "City Girl"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "City Girl"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Echo of a Rose City Girl",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Echo of a Rose City Girl",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Echo of a Rose",
+      "sanitized_spotify_title": "Echo of a Rose",
+      "spotify_track_id": "3CrN5TVD5MDRBKI542Ftbs"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_099",
+      "credited_artists": [
+        "Elijah Who"
+      ],
+      "duplicate_fallback_queries_removed": 1,
+      "fallbacks": [],
+      "included_artists": [
+        "Elijah Who"
+      ],
+      "maximum_provider_requests": 1,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "crush on you Elijah Who",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "crush on you Elijah Who",
+        "Q1": null,
+        "Q2": null,
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "crush on you",
+      "sanitized_spotify_title": "crush on you",
+      "spotify_track_id": "1vlzSY7AttAiAvSEe1JbVs"
+    },
+    {
+      "benchmark_id": "stage5b4_representative_v3_100",
+      "credited_artists": [
+        "twlv",
+        "BIBI"
+      ],
+      "duplicate_fallback_queries_removed": 0,
+      "fallbacks": [
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Eleven (feat. BIBI) twlv",
+          "query_artist": "twlv",
+          "query_variant_index": 1
+        },
+        {
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "query": "Eleven (feat. BIBI) BIBI",
+          "query_artist": "BIBI",
+          "query_variant_index": 2
+        }
+      ],
+      "included_artists": [
+        "twlv",
+        "BIBI"
+      ],
+      "maximum_provider_requests": 3,
+      "primary": {
+        "discovery_mode": "PRIMARY_MULTI_ARTIST",
+        "query": "Eleven (feat. BIBI) twlv BIBI",
+        "query_artist": null,
+        "query_variant_index": 0
+      },
+      "queries": {
+        "Q0": "Eleven (feat. BIBI) twlv BIBI",
+        "Q1": "Eleven (feat. BIBI) twlv",
+        "Q2": "Eleven (feat. BIBI) BIBI",
+        "Q3": null
+      },
+      "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+      "raw_spotify_title": "Eleven (feat. BIBI)",
+      "sanitized_spotify_title": "Eleven (feat. BIBI)",
+      "spotify_track_id": "1UaHqU3pJSczM0SijabTtn"
+    }
+  ]
+}
