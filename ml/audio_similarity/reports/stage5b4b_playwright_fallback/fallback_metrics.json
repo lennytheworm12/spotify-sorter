@@ -14,7 +14,7 @@
     "playwright_only_after_zero": true,
     "same_query_used": true,
     "selector_and_query_untuned": true,
-    "tests_passed": false,
+    "tests_passed": true,
     "yt_dlp_remained_primary": true
   },
   "experiment_id": "STAGE5B4B_PLAYWRIGHT_FALLBACK_V1",
@@ -49,9 +49,9 @@
       "passed": true
     },
     "full_non_heavy": {
-      "count": null,
-      "deselected": null,
-      "passed": false
+      "count": 963,
+      "deselected": 12,
+      "passed": true
     },
     "stage5b_regressions": {
       "count": 502,

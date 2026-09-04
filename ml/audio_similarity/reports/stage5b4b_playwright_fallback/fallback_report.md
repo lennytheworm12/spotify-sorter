@@ -55,7 +55,7 @@ Playwright is not a normal discovery provider and is not triggered by selector v
 - human safe top3: **false**
 - selector and query untuned: **true**
 - historical artifacts immutable: **true**
-- tests passed: **false**
+- tests passed: **true**
 
 ## History and scope
 
