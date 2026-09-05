@@ -1,0 +1,51 @@
+{
+  "directional_label_counts": {
+    "1": 12,
+    "2": 56,
+    "3": 149,
+    "4": 188,
+    "5": 95
+  },
+  "directional_rows": 500,
+  "experiment_id": "STAGE5C2_REPRESENTATIVE_100_SELECTOR_AWARE_AMENDMENT_V2",
+  "quality_metrics": {
+    "clap_correlation": 0.25863308896020776,
+    "combined_correlation": 0.2763062462353288,
+    "fraction_top1_at_least_similar": 0.92,
+    "fraction_top5_at_least_similar": 0.864,
+    "fraction_top5_at_least_somewhat_related": 0.976,
+    "mean_human_rating_top1": 3.97,
+    "mean_human_rating_top5": 3.596,
+    "mean_rating_by_neighbor_rank": {
+      "1": 3.97,
+      "2": 3.64,
+      "3": 3.54,
+      "4": 3.47,
+      "5": 3.36
+    },
+    "muq_correlation": 0.15801416887029598,
+    "numeric_directional_judgment_count": 500,
+    "unsure_directional_judgment_count": 0
+  },
+  "review_file_sha256": "36bdd7ee38d744ee7e0b5b4afdf9193b04c0625bb2b258da4c1500b03da54634",
+  "review_queue_sha256": "e0b36ed25206970d5dad9b8122f3e74d176da9a3827dfb239d45f9fc848cbba0",
+  "review_scale": "1–5; 5 extremely similar, 1 not similar; UNSURE nonnumeric",
+  "schema_version": "stage5c2-human-similarity-final-metrics-v1",
+  "scope": {
+    "embeddings_changed": false,
+    "human_labels_inferred": false,
+    "production_activation": false,
+    "rankings_changed": false,
+    "weights_changed": false
+  },
+  "single_owner_review": true,
+  "status": "HUMAN_REVIEW_COMPLETE",
+  "unique_pair_label_counts": {
+    "1": 9,
+    "2": 45,
+    "3": 115,
+    "4": 133,
+    "5": 57
+  },
+  "unique_unordered_pairs": 359
+}
