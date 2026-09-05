@@ -1,0 +1,82 @@
+{
+  "schema_version": "stage5b1e-natural-query-config-v1",
+  "experiment_id": "stage5b1e_natural_query_evaluation_v1",
+  "starting_commit": "9764d97e4cdc1c48fe646b89feb66f39f755d294",
+  "frozen_inputs": {
+    "challenge_config": {
+      "path": "configs/stage5b1b_fresh_challenge.json",
+      "sha256": "283901e8e6804757a5246025e14c43e07311830ca3708ce05db00c394b1aaedd"
+    },
+    "challenge_discovery": {
+      "path": "reports/stage5b1b_fresh_challenge/challenge_ytdlp_discovery.json",
+      "sha256": "95bb1ca905a05fcc4167da10e3dfd6cf267600a4dfb1898b491d28ba855e6fb4"
+    },
+    "strong_metadata_decisions": {
+      "path": "reports/stage5b1c_c_strong_metadata/strong_metadata_decisions.json",
+      "sha256": "740b085b2061935b1d66586534ed4bc418c4ed2562f0cd96efeb4b596748793c"
+    },
+    "challenge_human_review": {
+      "path": "reports/stage5b1b_fresh_challenge/human_review.csv",
+      "sha256": "0342c46d4506994c61cf0b3e422f34f6d466bf6297a6b8973fd75f711884b842"
+    },
+    "challenge_sol_evaluations": {
+      "path": "reports/stage5b1b_fresh_challenge/sol_evaluations.json",
+      "sha256": "b00ecb7c9ffb668b581e571065235676d62832c868fe6bed26812fbbd30f50ea"
+    },
+    "challenge_sol_mapping": {
+      "path": "reports/stage5b1b_fresh_challenge/blinded_sol_private_mapping.json",
+      "sha256": "6f7991fba8f4c190f20b0214f03488c3e6bc523b9507704c278a4858d3e622bc"
+    },
+    "tier2_human_audit": {
+      "path": "reports/stage5b1c_b/tier2_human_audit_results.json",
+      "sha256": "26fbfc59fc7617fd54377fde099cabf9170f2c55946bd3046839ea4e7e8edcb5"
+    },
+    "strong_metadata_human_audit": {
+      "path": "reports/stage5b1c_c_strong_metadata/strong_metadata_human_audit_results.json",
+      "sha256": "6f3adbf231039a5609de501292aef0f8c62c88ecba81ca38df638aef2e7f1ed4"
+    }
+  },
+  "provider": {
+    "candidate_limit": 5,
+    "search_prefix": "ytsearch5:",
+    "extract_flat": "in_playlist",
+    "skip_download": true,
+    "simulate": true,
+    "ignore_user_config": true,
+    "cache_enabled": false,
+    "sequential_requests": true,
+    "socket_timeout_seconds": 30,
+    "max_attempts": 2,
+    "retry_backoff_seconds": 2.0,
+    "sleep_between_queries_seconds": 1.0,
+    "sleep_between_tracks_seconds": 1.0
+  },
+  "query_strategies": [
+    {
+      "strategy_id": "Q0_CURRENT_CONTROL",
+      "description": "Quoted primary artist and normalized Spotify title plus official token"
+    },
+    {
+      "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE",
+      "description": "Unquoted full Spotify title"
+    },
+    {
+      "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST",
+      "description": "Unquoted full Spotify title followed by primary artist"
+    },
+    {
+      "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION",
+      "description": "Unquoted primary artist, parsed core title, and identity-critical version evidence"
+    }
+  ],
+  "artifacts": {
+    "strategies": "reports/stage5b1e_natural_query_evaluation/query_strategies.json",
+    "discovery": "reports/stage5b1e_natural_query_evaluation/query_discovery_results.json",
+    "comparison": "reports/stage5b1e_natural_query_evaluation/candidate_pool_comparison.json",
+    "replays": "reports/stage5b1e_natural_query_evaluation/resolver_replays.json",
+    "audit_queue": "reports/stage5b1e_natural_query_evaluation/human_audit_queue.json",
+    "human_review": "reports/stage5b1e_natural_query_evaluation/human_review.csv",
+    "report": "reports/stage5b1e_natural_query_evaluation/natural_query_report.md",
+    "manifest": "reports/stage5b1e_natural_query_evaluation/artifact_manifest.json"
+  }
+}

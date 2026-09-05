@@ -1,0 +1,95 @@
+{
+  "artifacts": {
+    "human_audit_queue": {
+      "path": "reports/stage5b1h_canonical_source_semantics/human_audit_queue.json",
+      "sha256": "6c215b47c76c56bf220ad08a418429bf7bd6c941c1b6584be63719ee93a0eeb7",
+      "size_bytes": 198
+    },
+    "padding_risk_analysis": {
+      "path": "reports/stage5b1h_canonical_source_semantics/padding_risk_analysis.json",
+      "sha256": "0b0e82a8884dff4fb08a362a0a54d121127f039665f0d3bd91979b1a21209cab",
+      "size_bytes": 1430
+    },
+    "report": {
+      "path": "reports/stage5b1h_canonical_source_semantics/canonical_source_report.md",
+      "sha256": "e3879f0daf0fda3f0c1f1b26637f44045973d3a397e2716dafd3e23b8cf4f4f9",
+      "size_bytes": 5890
+    },
+    "selection_comparisons": {
+      "path": "reports/stage5b1h_canonical_source_semantics/selection_comparisons.json",
+      "sha256": "30deffdf43cf7f3bdebeb6a50d80459cda4ca17c3ff803cef8a0fc8b8a57b8ba",
+      "size_bytes": 11512
+    },
+    "source_phrase_normalization": {
+      "path": "reports/stage5b1h_canonical_source_semantics/source_phrase_normalization.json",
+      "sha256": "4d41465a80dc48084d559bca0f44a6d723b087fc4b3bcec448a00a6f9fd43cd9",
+      "size_bytes": 4293
+    },
+    "source_semantics": {
+      "path": "reports/stage5b1h_canonical_source_semantics/source_semantics.json",
+      "sha256": "1954d066ea034794bfaca32da8b5f53af8aa3b236454957aa8025b49df4c1e24",
+      "size_bytes": 837807
+    }
+  },
+  "config": {
+    "path": "configs/stage5b1h_canonical_source_semantics.json",
+    "sha256": "f9f1fd4e5daf265ffe198982e7d0f74716089ece998ad379da366cbf53cf31f0"
+  },
+  "frozen_inputs": {
+    "stage5b1g_artifact_manifest": {
+      "path": "reports/stage5b1g_global_preference/artifact_manifest.json",
+      "sha256": "bd9dcf6e9db682779d44a4902d4ee5eea382276c342eedbaba25b3b4e06eaa23",
+      "size_bytes": 3979
+    },
+    "stage5b1g_changed_selections": {
+      "path": "reports/stage5b1g_global_preference/changed_selection_comparisons.json",
+      "sha256": "3f5a988c5c2f54ec546c6023a22d1d9dca709ae9e36f9e6457ea6e56997de488",
+      "size_bytes": 285180
+    },
+    "stage5b1g_config": {
+      "path": "configs/stage5b1g_global_preference.json",
+      "sha256": "f9df70579e6bc60caf27bb2e419209e8771f0a6c22d17c09086db09b930c2c24",
+      "size_bytes": 2568
+    },
+    "stage5b1g_decisions": {
+      "path": "reports/stage5b1g_global_preference/global_preference_decisions.json",
+      "sha256": "c5777ccb7462e2594e0d04df818a26c73fead0e0797f93faf406fd60150ee242",
+      "size_bytes": 523758
+    },
+    "stage5b1g_duration_analysis": {
+      "path": "reports/stage5b1g_global_preference/duration_band_analysis.json",
+      "sha256": "23bc0a94347fb67aaaa4ae1fc77d5e182d0b0ea7e1c731bcdfe0c97a49aaec7d",
+      "size_bytes": 2695
+    },
+    "stage5b1g_features": {
+      "path": "reports/stage5b1g_global_preference/global_preference_candidate_features.json",
+      "sha256": "4626ad512ee6d75a66433bbd32b0ec02dc2fdc2532355022dc2b1d5f4e3c0393",
+      "size_bytes": 3537306
+    },
+    "stage5b1g_human_review": {
+      "path": "reports/stage5b1g_global_preference/human_review.csv",
+      "sha256": "6edd4956a1acecdf9a1338e9f2c776feb7929b68885604d9d9ab56ff9b2fe4ef",
+      "size_bytes": 4349
+    },
+    "stage5b1g_remaining_tail": {
+      "path": "reports/stage5b1g_global_preference/remaining_tail_analysis.json",
+      "sha256": "48cd4d66deec13cb77c7dff0f630cd63e01bb9fc9a09434587a3f4e68a958be2",
+      "size_bytes": 407093
+    },
+    "stage5b1g_report": {
+      "path": "reports/stage5b1g_global_preference/global_preference_report.md",
+      "sha256": "74155ccb1e3daea25797d98a347d5753968219d355c73aa0a81a48589ea9fda7",
+      "size_bytes": 7771
+    }
+  },
+  "schema_version": "stage5b1h-artifact-manifest-v1",
+  "scope_guards": {
+    "historical_resolver_policies_changed": false,
+    "media_downloads": 0,
+    "q0_discovery_changed": false,
+    "searches_run": 0,
+    "sol_rerun": false,
+    "stage5b1g_eligibility_and_ordering_preserved": true
+  },
+  "status": "STAGE5B1H_CANONICAL_SOURCE_SEMANTICS_COMPLETE"
+}

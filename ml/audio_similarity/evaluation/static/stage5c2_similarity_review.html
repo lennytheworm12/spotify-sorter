@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stage 5C.2 Similarity Review</title>
+  <style>
+    :root { color-scheme: dark; --bg:#0d1117; --panel:#161b22; --panel2:#21262d; --line:#30363d; --text:#e6edf3; --muted:#8b949e; --blue:#58a6ff; --green:#3fb950; --orange:#d29922; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font:14px/1.45 system-ui,-apple-system,sans-serif; }
+    header { position:sticky; top:0; z-index:3; padding:12px 18px; background:rgba(22,27,34,.97); border-bottom:1px solid var(--line); }
+    .head, .toolbar { display:flex; align-items:center; gap:10px; flex-wrap:wrap; max-width:1180px; margin:auto; }
+    .toolbar { margin-top:10px; }
+    h1 { font-size:17px; margin:0; margin-right:auto; }
+    .progress { color:var(--muted); }
+    .bar { width:230px; height:8px; background:var(--panel2); border-radius:10px; overflow:hidden; }
+    .bar > div { height:100%; background:var(--green); width:0; transition:width .2s; }
+    button, select, textarea, .buttonlink { font:inherit; color:var(--text); background:var(--panel2); border:1px solid var(--line); border-radius:7px; }
+    button, select, .buttonlink { min-height:36px; padding:7px 11px; }
+    .buttonlink { display:inline-flex; align-items:center; text-decoration:none; }
+    button { cursor:pointer; }
+    button:hover, button:focus-visible, select:focus-visible, textarea:focus-visible { border-color:var(--blue); outline:none; }
+    button:disabled { opacity:.45; cursor:not-allowed; }
+    main { max-width:1180px; margin:auto; padding:20px 18px 70px; }
+    .notice { padding:10px 13px; margin-bottom:14px; border:1px solid rgba(210,153,34,.5); background:rgba(210,153,34,.1); color:#e3b341; border-radius:8px; }
+    .scale { display:flex; gap:6px 14px; flex-wrap:wrap; margin-top:6px; color:var(--muted); font-size:12px; }
+    .scale b { color:var(--text); }
+    .query { padding:17px; margin-bottom:14px; background:var(--panel); border:1px solid var(--line); border-radius:10px; }
+    .query h2 { margin:0 0 5px; font-size:22px; }
+    .track-line { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .listen { white-space:nowrap; color:var(--blue); }
+    .player { padding:14px; margin-bottom:14px; background:var(--panel); border:1px solid var(--blue); border-radius:10px; }
+    .player[hidden] { display:none; }
+    .player-head, .player-actions { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+    .player-head strong { margin-right:auto; font-size:16px; }
+    .player-actions { margin:10px 0; }
+    .player-actions button.active { background:var(--blue); border-color:var(--blue); color:#07111d; font-weight:700; }
+    .player iframe { display:block; width:100%; max-width:720px; aspect-ratio:16/9; border:0; border-radius:8px; background:#000; }
+    .player audio { display:block; width:100%; max-width:720px; }
+    .player audio[hidden], .player iframe[hidden], .player a[hidden] { display:none; }
+    .player-note { margin-top:8px; color:var(--muted); font-size:12px; }
+    .muted { color:var(--muted); }
+    .neighbors { display:grid; gap:10px; }
+    .neighbor { display:grid; grid-template-columns:54px minmax(210px,1fr) minmax(255px,.85fr) minmax(260px,1fr); gap:13px; align-items:center; padding:13px; background:var(--panel); border:1px solid var(--line); border-radius:10px; }
+    .neighbor.reviewed { border-color:rgba(63,185,80,.5); }
+    .rank { font-size:20px; color:var(--blue); font-weight:700; text-align:center; }
+    .title { font-weight:650; font-size:16px; }
+    .scores { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; }
+    .score { padding:7px; background:var(--panel2); border-radius:6px; text-align:center; }
+    .score b { display:block; font-size:15px; }
+    .score span { display:block; color:var(--muted); font-size:11px; text-transform:uppercase; }
+    .labels { display:flex; gap:5px; flex-wrap:wrap; }
+    .label { padding:6px 9px; min-height:32px; }
+    .label.selected { background:var(--blue); border-color:var(--blue); color:#07111d; font-weight:700; }
+    textarea { width:100%; min-height:45px; margin-top:7px; padding:7px 9px; resize:vertical; }
+    .saved { color:var(--green); min-width:68px; }
+    .empty, .error { padding:50px; text-align:center; color:var(--muted); }
+    .error { color:#ff7b72; }
+    @media (max-width:900px) { .neighbor { grid-template-columns:42px 1fr; } .scores, .review { grid-column:2; } }
+    @media (max-width:560px) { header, main { padding-left:10px; padding-right:10px; } .neighbor { grid-template-columns:1fr; } .rank { text-align:left; } .scores, .review { grid-column:1; } .bar { width:150px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="head">
+      <h1>Stage 5C.2 · Unified Similarity Review</h1>
+      <div class="bar" aria-hidden="true"><div id="bar"></div></div>
+      <div class="progress" id="progress" role="status" aria-live="polite">Loading…</div>
+    </div>
+    <div class="toolbar">
+      <button id="previous" aria-label="Previous query track">← Previous</button>
+      <button id="next" aria-label="Next query track">Next →</button>
+      <select id="jump" aria-label="Jump to query track"></select>
+      <select id="filter" aria-label="Filter query tracks">
+        <option value="all">All tracks</option>
+        <option value="unreviewed" selected>Unreviewed</option>
+        <option value="reviewed">Reviewed</option>
+      </select>
+      <button id="next-unreviewed">Next unreviewed</button>
+      <a class="buttonlink" href="/api/export">Export CSV</a>
+      <span class="saved" id="saved" aria-live="polite"></span>
+    </div>
+  </header>
+  <main>
+    <div class="notice">
+      The frozen pipeline run is complete. Rate each unordered pair for sonic similarity only; reciprocal A↔B rows automatically share one saved label. UNSURE is excluded from numeric metrics.
+      <div class="scale" aria-label="Five-point similarity scale"><span><b>1</b> Not similar</span><span><b>2</b> Somewhat related</span><span><b>3</b> Moderately similar</span><span><b>4</b> Very similar</span><span><b>5</b> Extremely similar</span></div>
+    </div>
+    <section class="player" id="player" hidden>
+      <div class="player-head">
+        <strong id="player-title">Playback</strong>
+        <a class="buttonlink" id="youtube-link" target="_blank" rel="noopener noreferrer">Open on YouTube</a>
+        <button id="close-player" aria-label="Close playback">Close</button>
+      </div>
+      <div class="player-actions" id="player-actions"></div>
+      <audio id="local-player" controls preload="metadata" hidden></audio>
+      <iframe id="youtube-player" title="YouTube audio review player" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen hidden></iframe>
+      <div class="player-note" id="player-note">The three clips correspond to the frozen representation windows.</div>
+    </section>
+    <div id="content"><div class="empty">Loading the complete review queue…</div></div>
+  </main>
+  <script>
+    'use strict'
+    const state = { session:null, visible:[], index:0, filter:'unreviewed', saving:false, activePlayback:null }
+    const $ = id => document.getElementById(id)
+    const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]))
+    const fmt = value => Number(value).toFixed(4)
+
+    function findTrack(spotifyId) {
+      return state.session.cases.find(item => item.spotify_track_id === spotifyId)
+    }
+
+    function play(playback, title, segmentIndex = null) {
+      if (!playback) return
+      state.activePlayback = { playback, title, segmentIndex }
+      const segment = segmentIndex === null ? null : playback.segment_windows[segmentIndex]
+      $('player-title').textContent = segment ? `${title} · clip ${segment.index}` : `${title} · full song`
+      const local = playback.provider === 'LOCAL_RESEARCH_AUDIO'
+      const audio = $('local-player')
+      const iframe = $('youtube-player')
+      audio.pause()
+      audio.onloadedmetadata = null
+      audio.ontimeupdate = null
+      if (local) {
+        iframe.src = 'about:blank'
+        iframe.hidden = true
+        $('youtube-link').hidden = true
+        audio.hidden = false
+        audio.src = playback.audio_url
+        audio.onloadedmetadata = () => {
+          if (segment) audio.currentTime = segment.start_seconds
+          audio.play().catch(() => {})
+        }
+        if (segment) audio.ontimeupdate = () => {
+          if (audio.currentTime >= segment.end_seconds) audio.pause()
+        }
+        $('player-note').textContent = 'Range-streaming the retained full source from this machine. Clips use the frozen representation windows.'
+      } else {
+        const params = new URLSearchParams({ autoplay:'1', rel:'0' })
+        if (segment) {
+          params.set('start', String(Math.round(segment.start_seconds)))
+          params.set('end', String(Math.round(segment.end_seconds)))
+        }
+        audio.removeAttribute('src')
+        audio.hidden = true
+        $('youtube-link').hidden = false
+        $('youtube-link').href = playback.watch_url
+        iframe.hidden = false
+        iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(playback.youtube_video_id)}?${params}`
+        $('player-note').textContent = 'The three clips correspond to the frozen representation windows. YouTube playback may seek to a nearby keyframe.'
+      }
+      $('player-actions').innerHTML = [
+        `<button data-segment="full" class="${segmentIndex === null ? 'active' : ''}">Full song</button>`,
+        ...playback.segment_windows.map((window, index) => `<button data-segment="${index}" class="${segmentIndex === index ? 'active' : ''}">Clip ${window.index} · ${window.start_seconds}–${window.end_seconds}s</button>`)
+      ].join('')
+      $('player-actions').querySelectorAll('button').forEach(button => button.addEventListener('click', () => {
+        const value = button.dataset.segment
+        play(playback, title, value === 'full' ? null : Number(value))
+      }))
+      $('player').hidden = false
+      $('player').scrollIntoView({behavior:'smooth', block:'nearest'})
+    }
+
+    function closePlayer() {
+      $('local-player').pause()
+      $('local-player').onloadedmetadata = null
+      $('local-player').ontimeupdate = null
+      $('local-player').removeAttribute('src')
+      $('youtube-player').src = 'about:blank'
+      $('player').hidden = true
+      state.activePlayback = null
+    }
+
+    function rebuildVisible(preferredId) {
+      const cases = state.session.cases
+      state.visible = cases.filter(item => state.filter === 'all' || (state.filter === 'reviewed' ? item.review_complete : !item.review_complete))
+      const preferred = state.visible.findIndex(item => item.spotify_track_id === preferredId)
+      state.index = preferred >= 0 ? preferred : Math.min(state.index, Math.max(0, state.visible.length - 1))
+    }
+
+    function render() {
+      const session = state.session
+      const progress = session.progress
+      $('progress').textContent = `${progress.completed_query_tracks}/${progress.total_query_tracks} tracks · ${progress.reviewed_unique_pairs}/${progress.total_unique_pairs} unique pairs`
+      $('bar').style.width = `${progress.total_unique_pairs ? progress.reviewed_unique_pairs / progress.total_unique_pairs * 100 : 0}%`
+      const current = state.visible[state.index]
+      $('previous').disabled = state.index <= 0
+      $('next').disabled = state.index >= state.visible.length - 1
+      const jump = $('jump')
+      jump.innerHTML = session.cases.map((item, index) => `<option value="${escapeHtml(item.spotify_track_id)}" ${current && item.spotify_track_id === current.spotify_track_id ? 'selected' : ''}>${index + 1}. ${escapeHtml(item.title)} — ${escapeHtml(item.artists.join(', '))}${item.review_complete ? ' ✓' : ''}</option>`).join('')
+      if (!current) {
+        $('content').innerHTML = '<div class="empty">No tracks match this filter.</div>'
+        return
+      }
+      const neighbors = current.neighbors.map(neighbor => `
+        <article class="neighbor ${neighbor.review.label ? 'reviewed' : ''}">
+          <div class="rank">#${neighbor.rank}</div>
+          <div><div class="track-line"><div><div class="title">${escapeHtml(neighbor.title)}</div><div class="muted">${escapeHtml(neighbor.artists.join(', '))}</div></div><button class="listen" data-play-track="${escapeHtml(neighbor.spotify_track_id)}">▶ Listen</button></div></div>
+          <div class="scores">
+            <div class="score"><b>${fmt(neighbor.combined_similarity)}</b><span>Combined</span></div>
+            <div class="score"><b>${fmt(neighbor.clap_similarity)}</b><span>CLAP</span></div>
+            <div class="score"><b>${fmt(neighbor.muq_similarity)}</b><span>MuQ</span></div>
+          </div>
+          <div class="review" data-neighbor="${escapeHtml(neighbor.spotify_track_id)}">
+            <div class="labels" role="group" aria-label="Similarity label for ${escapeHtml(neighbor.title)}">
+              ${Object.entries(session.labels).map(([value, name]) => `<button class="label ${neighbor.review.label === value ? 'selected' : ''}" data-label="${value}" title="${escapeHtml(name)}">${value === 'UNSURE' ? 'Unsure' : value}</button>`).join('')}
+              ${neighbor.review.label ? '<button class="label" data-label="" title="Clear this rating">Clear</button>' : ''}
+            </div>
+            <textarea maxlength="2000" aria-label="Optional note" placeholder="Optional note">${escapeHtml(neighbor.review.note)}</textarea>
+          </div>
+        </article>`).join('')
+      $('content').innerHTML = `
+        <section class="query">
+          <div class="muted">Query ${state.index + 1} of ${state.visible.length}${state.filter === 'all' ? '' : ` ${state.filter}`}</div>
+          <div class="track-line"><h2>${escapeHtml(current.title)}</h2><button class="listen" data-play-track="${escapeHtml(current.spotify_track_id)}">▶ Listen</button></div>
+          <div>${escapeHtml(current.artists.join(', '))}${current.album ? ` · <span class="muted">${escapeHtml(current.album)}</span>` : ''}</div>
+          <div class="muted">Spotify ID ${escapeHtml(current.spotify_track_id)}</div>
+        </section>
+        <section class="neighbors">${neighbors}</section>`
+      document.querySelectorAll('.review').forEach(panel => {
+        const neighborId = panel.dataset.neighbor
+        panel.querySelectorAll('.label').forEach(button => button.addEventListener('click', () => save(current.spotify_track_id, neighborId, button.dataset.label, panel.querySelector('textarea').value)))
+        panel.querySelector('textarea').addEventListener('change', event => {
+          const item = current.neighbors.find(value => value.spotify_track_id === neighborId)
+          save(current.spotify_track_id, neighborId, item.review.label, event.target.value)
+        })
+      })
+      document.querySelectorAll('[data-play-track]').forEach(button => button.addEventListener('click', () => {
+        const track = findTrack(button.dataset.playTrack)
+        play(track?.playback, track?.title || 'Track')
+      }))
+    }
+
+    async function save(queryId, neighborId, label, note) {
+      if (state.saving) return
+      state.saving = true
+      $('saved').textContent = 'saving…'
+      try {
+        const response = await fetch('/api/review', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ stable_track_id:queryId, video_id:neighborId, label, candidate_note:note }) })
+        const payload = await response.json()
+        if (!response.ok) throw new Error(payload.error || 'Save failed')
+        const currentId = state.visible[state.index]?.spotify_track_id
+        await load(currentId)
+        $('saved').textContent = 'saved ✓'
+      } catch (error) {
+        $('saved').textContent = `error: ${error.message}`
+      } finally { state.saving = false }
+    }
+
+    async function load(preferredId) {
+      const response = await fetch('/api/session', {cache:'no-store'})
+      const payload = await response.json()
+      if (!response.ok) throw new Error(payload.error || 'Session failed')
+      state.session = payload
+      rebuildVisible(preferredId)
+      render()
+    }
+
+    $('previous').addEventListener('click', () => { if (state.index > 0) { state.index--; render() } })
+    $('next').addEventListener('click', () => { if (state.index + 1 < state.visible.length) { state.index++; render() } })
+    $('jump').addEventListener('change', event => { state.filter = 'all'; $('filter').value = 'all'; rebuildVisible(event.target.value); render() })
+    $('filter').addEventListener('change', event => { const current = state.visible[state.index]?.spotify_track_id; state.filter = event.target.value; rebuildVisible(current); render() })
+    $('next-unreviewed').addEventListener('click', () => { state.filter = 'unreviewed'; $('filter').value = 'unreviewed'; rebuildVisible(); render() })
+    $('close-player').addEventListener('click', closePlayer)
+    document.addEventListener('keydown', event => { if (event.target.matches('textarea,select')) return; if (event.key === 'ArrowLeft') $('previous').click(); if (event.key === 'ArrowRight') $('next').click() })
+    load().catch(error => { $('content').innerHTML = `<div class="error">${escapeHtml(error.message)}</div>` })
+  </script>
+</body>
+</html>

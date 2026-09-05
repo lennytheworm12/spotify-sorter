@@ -1,0 +1,120 @@
+{
+  "challenge_measurement": {
+    "absolute_percentage_point_gain": 2.0,
+    "combined_auto_match_count": 43,
+    "combined_match_uncertain_count": 7,
+    "coverage_after": 0.86,
+    "coverage_before": 0.84,
+    "fallback_tracks_attempted": 4,
+    "new_exact_recording_count": 0,
+    "new_master_fallback_count": 0,
+    "new_selection_count": 1,
+    "new_studio_fallback_count": 1
+  },
+  "discovery": {
+    "fallback_query": "\"{primary_artist}\" \"{base_title}\" official",
+    "metadata_only": true,
+    "mode": "ytsearch5",
+    "primary_query": "\"{primary_artist}\" \"{normalized_title}\" official",
+    "sequential": true
+  },
+  "exact_only_version_families": [
+    "remix",
+    "mix",
+    "rerecording",
+    "acoustic",
+    "instrumental",
+    "karaoke",
+    "slowed",
+    "sped_up",
+    "reverb",
+    "nightcore",
+    "bass_boosted",
+    "radio_edit",
+    "extended",
+    "arrangement_changing_live"
+  ],
+  "fallback_precedence": [
+    "EXACT_RECORDING",
+    "REPRESENTATION_EQUIVALENT",
+    "MATCH_UNCERTAIN"
+  ],
+  "human_review": {
+    "all_safe": true,
+    "completed": 1,
+    "label_counts": {
+      "IDEAL": 1
+    },
+    "path": "reports/stage5b1j_representation_fallback/fallback_human_review.csv",
+    "required": 1,
+    "sha256": "0975309040edb26fa2186164e49f14af3ea36ff56fa149603b44fd9044a0688c"
+  },
+  "match_modes": [
+    "EXACT_RECORDING",
+    "REPRESENTATION_EQUIVALENT_STUDIO_FALLBACK",
+    "REPRESENTATION_EQUIVALENT_MASTER_FALLBACK",
+    "MATCH_UNCERTAIN"
+  ],
+  "part_a_manifest": {
+    "path": "reports/stage5b1j_representation_fallback/artifact_manifest.json",
+    "sha256": "30cff1dffcbefe8f49d4b241134d0c6b3e36d7ccc7ad844f9b1af22f18d54c51"
+  },
+  "resolver_hierarchy": [
+    "POLICY_BALANCED_V1",
+    "STAGE5B1C_A_NORMALIZATION_EVIDENCE_FUSION_V1",
+    "STAGE5B1C_B_SOURCE_NEUTRAL_V1",
+    "STAGE5B1C_C_STRONG_METADATA_V1",
+    "GLOBAL_CANDIDATE_PREFERENCE_V1",
+    "CANONICAL_SOURCE_SEMANTICS_V1",
+    "REPRESENTATION_EQUIVALENT_REDISCOVERY_V1"
+  ],
+  "schema_version": "stage5b-resolver-candidate-stack-v1",
+  "scope_guards": {
+    "audio_downloads": 0,
+    "benchmark_tuning_permitted": false,
+    "clap_calls": 0,
+    "muq_calls": 0,
+    "production_activated": false,
+    "stage5a_calls": 0
+  },
+  "source_files": {
+    "stage5b1a2_ytdlp.py": {
+      "path": "src/audio_similarity/stage5b1a2_ytdlp.py",
+      "sha256": "ab486f30ae0f2f21d82a99de645be1834cfe65b901d19bd77c36375b9981ef1b"
+    },
+    "stage5b1c_normalization.py": {
+      "path": "src/audio_similarity/stage5b1c_normalization.py",
+      "sha256": "db16de1691cc3471dea7ce4d55ad9b9eef44d15ab72189706cfbfdc2087d53ac"
+    },
+    "stage5b1c_source_neutral.py": {
+      "path": "src/audio_similarity/stage5b1c_source_neutral.py",
+      "sha256": "fdc924d064a35984ad8f55921d279bf14ef052b570ae5acd10a4dee5ce42a176"
+    },
+    "stage5b1c_strong_metadata.py": {
+      "path": "src/audio_similarity/stage5b1c_strong_metadata.py",
+      "sha256": "177d2d5a942c7f0046ac6d67073acb89481c1e6d7173d8770be89c0e58c4af84"
+    },
+    "stage5b1c_tier2.py": {
+      "path": "src/audio_similarity/stage5b1c_tier2.py",
+      "sha256": "611cb33d43d4e335a308f40c875b9cfcf347257019ff01379d9a97222e9eb0eb"
+    },
+    "stage5b1g_global_preference.py": {
+      "path": "src/audio_similarity/stage5b1g_global_preference.py",
+      "sha256": "39fcf440781c1ab6d960bef6f0fd52f72426adbce347694fe64a057b9d30f818"
+    },
+    "stage5b1h_source_semantics.py": {
+      "path": "src/audio_similarity/stage5b1h_source_semantics.py",
+      "sha256": "5289ada1b0320c99a13c465005619298ae9c96858d2def804de1e630a1ebee03"
+    },
+    "stage5b1i_live_fallback.py": {
+      "path": "src/audio_similarity/stage5b1i_live_fallback.py",
+      "sha256": "aed36bc21ec103913d23ed94b87a5ad18ec5389ad134c484222a364f4a0b6326"
+    },
+    "stage5b1j_representation_rediscovery.py": {
+      "path": "src/audio_similarity/stage5b1j_representation_rediscovery.py",
+      "sha256": "339f56e57f051d9bec3bb4d36d7033817bb3db289ecb18f70903d0a49f063835"
+    }
+  },
+  "stack_id": "STAGE5B_RESOLVER_CANDIDATE_V1",
+  "status": "FROZEN_CANDIDATE_STACK_NOT_PRODUCTION_ACTIVATED"
+}

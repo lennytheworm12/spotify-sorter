@@ -1,0 +1,53 @@
+{
+  "schema_version": "stage5b1h-canonical-source-config-v1",
+  "experiment_id": "stage5b1h_canonical_source_semantics_v1",
+  "policy_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+  "stage5b1g_config": "configs/stage5b1g_global_preference.json",
+  "frozen_inputs": {
+    "stage5b1g_config": {
+      "path": "configs/stage5b1g_global_preference.json",
+      "sha256": "f9df70579e6bc60caf27bb2e419209e8771f0a6c22d17c09086db09b930c2c24"
+    },
+    "stage5b1g_features": {
+      "path": "reports/stage5b1g_global_preference/global_preference_candidate_features.json",
+      "sha256": "4626ad512ee6d75a66433bbd32b0ec02dc2fdc2532355022dc2b1d5f4e3c0393"
+    },
+    "stage5b1g_decisions": {
+      "path": "reports/stage5b1g_global_preference/global_preference_decisions.json",
+      "sha256": "c5777ccb7462e2594e0d04df818a26c73fead0e0797f93faf406fd60150ee242"
+    },
+    "stage5b1g_changed_selections": {
+      "path": "reports/stage5b1g_global_preference/changed_selection_comparisons.json",
+      "sha256": "3f5a988c5c2f54ec546c6023a22d1d9dca709ae9e36f9e6457ea6e56997de488"
+    },
+    "stage5b1g_duration_analysis": {
+      "path": "reports/stage5b1g_global_preference/duration_band_analysis.json",
+      "sha256": "23bc0a94347fb67aaaa4ae1fc77d5e182d0b0ea7e1c731bcdfe0c97a49aaec7d"
+    },
+    "stage5b1g_remaining_tail": {
+      "path": "reports/stage5b1g_global_preference/remaining_tail_analysis.json",
+      "sha256": "48cd4d66deec13cb77c7dff0f630cd63e01bb9fc9a09434587a3f4e68a958be2"
+    },
+    "stage5b1g_human_review": {
+      "path": "reports/stage5b1g_global_preference/human_review.csv",
+      "sha256": "6edd4956a1acecdf9a1338e9f2c776feb7929b68885604d9d9ab56ff9b2fe4ef"
+    },
+    "stage5b1g_report": {
+      "path": "reports/stage5b1g_global_preference/global_preference_report.md",
+      "sha256": "74155ccb1e3daea25797d98a347d5753968219d355c73aa0a81a48589ea9fda7"
+    },
+    "stage5b1g_artifact_manifest": {
+      "path": "reports/stage5b1g_global_preference/artifact_manifest.json",
+      "sha256": "bd9dcf6e9db682779d44a4902d4ee5eea382276c342eedbaba25b3b4e06eaa23"
+    }
+  },
+  "artifacts": {
+    "source_semantics": "reports/stage5b1h_canonical_source_semantics/source_semantics.json",
+    "source_phrase_normalization": "reports/stage5b1h_canonical_source_semantics/source_phrase_normalization.json",
+    "selection_comparisons": "reports/stage5b1h_canonical_source_semantics/selection_comparisons.json",
+    "padding_risk_analysis": "reports/stage5b1h_canonical_source_semantics/padding_risk_analysis.json",
+    "human_audit_queue": "reports/stage5b1h_canonical_source_semantics/human_audit_queue.json",
+    "report": "reports/stage5b1h_canonical_source_semantics/canonical_source_report.md",
+    "manifest": "reports/stage5b1h_canonical_source_semantics/artifact_manifest.json"
+  }
+}

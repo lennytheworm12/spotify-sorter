@@ -1,0 +1,87 @@
+{
+  "artifacts": {
+    "human_review.csv": {
+      "sha256": "72633877f662c77886b11f3a68b3d53e98e9f3d6194783d171277e06cc8d93b4",
+      "size_bytes": 2153
+    },
+    "query_contract_report.md": {
+      "sha256": "3c0f0e63c9693f3837361cb03d6a94536cf81430c7ffbf4b701cbfea6491da04",
+      "size_bytes": 2884
+    },
+    "repaired_discovery.json": {
+      "sha256": "3b6cb47ba4a5db5b844006258d52837ecba7db1f37045962eee8ccf0f116720f",
+      "size_bytes": 11028
+    },
+    "repaired_query_contract.json": {
+      "sha256": "67533675f92d5904bdfc87dffecea59afa70bef45a543d2ca0fc5533363ae562",
+      "size_bytes": 2885
+    },
+    "v3_query_replay.json": {
+      "sha256": "5e653f2a39ee3c7dc3b03243a2f2b66b7938ab9447adeb0794eb472ae8cdbac3",
+      "size_bytes": 49887
+    }
+  },
+  "frozen_v3_inputs": {
+    "automated_selector_decisions": {
+      "path": "reports/stage5b4_representative_v3/automated_selector_decisions.json",
+      "sha256": "1a10ed69549b83d36223120db4162a937c6b0d2f59df7224b6afe1b99767827e",
+      "size_bytes": 202751
+    },
+    "automated_selector_metrics": {
+      "path": "reports/stage5b4_representative_v3/automated_selector_metrics.json",
+      "sha256": "878024d9768ebb2de6f96f6e7aab787a3e176225ed75e3203afe9902a4d530ae",
+      "size_bytes": 522
+    },
+    "benchmark_config": {
+      "path": "reports/stage5b4_representative_v3/benchmark_config.json",
+      "sha256": "6a36489829453f2ea18e14767a752ef97d75eda5bcfc0de8d0ec3965aa975385",
+      "size_bytes": 5045
+    },
+    "benchmark_manifest": {
+      "path": "reports/stage5b4_representative_v3/benchmark_manifest.json",
+      "sha256": "e5d54e06e410d74a1b588f8d853c5ca9a25e97ba09dd26692c5978a15245097e",
+      "size_bytes": 52085
+    },
+    "human_review": {
+      "path": "reports/stage5b4_representative_v3/human_review.csv",
+      "sha256": "92cb84aafeff32604ebf559c98e8347751991e8d0d865949a1ba595d8029d062",
+      "size_bytes": 132358
+    },
+    "human_review_queue": {
+      "path": "reports/stage5b4_representative_v3/human_review_queue.json",
+      "sha256": "181252ad2d96327acc3543754ea5ea5dc62a2036764680536dc22782995cea9a",
+      "size_bytes": 87091
+    },
+    "youtube_top3_discovery": {
+      "path": "reports/stage5b4_representative_v3/youtube_top3_discovery.json",
+      "sha256": "4cbd5741c7af0030474ba4073991c28d316eea73f243dc1f0a350b48e7db3f94",
+      "size_bytes": 804468
+    }
+  },
+  "implementation": {
+    "path": "src/audio_similarity/stage5b4a_query_contract_repair.py",
+    "sha256": "dac11e1ca3f268356b9763d5c52cd3916de0c51eb0ac33c1b2a76d66f5eddab9"
+  },
+  "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_V1",
+  "schema_version": "stage5b4a-artifact-manifest-v1",
+  "scope_guards": {
+    "audio_downloads": 0,
+    "clap_calls": 0,
+    "full_v3_searches_rerun": false,
+    "historical_v3_artifacts_overwritten": false,
+    "live_searches": 2,
+    "muq_calls": 0,
+    "proof_heavy_resolver_invocations": 0,
+    "selector_invocations": 0,
+    "selector_modified": false,
+    "sol_runs": 0,
+    "video_downloads": 0
+  },
+  "status": "STAGE5B4A_COMPLETE",
+  "supplement_id": "QUERY_CONTRACT_REPAIR_SUPPLEMENT",
+  "tests": {
+    "path": "tests/test_stage5b4a_query_contract_repair.py",
+    "sha256": "5d82f30eba88058627100fa881f0b2ee942e66b6494cd3f17786bf15d113d0cb"
+  },
+  "verdict": "FAIL"
+}

@@ -1,0 +1,202 @@
+{
+  "confirmed_weaker_selection_track_ids": [
+    "s5b1c_004",
+    "s5b1c_024",
+    "s5b1c_035",
+    "s5b1c_049"
+  ],
+  "definitions": {
+    "SAFE": [
+      "IDEAL",
+      "ACCEPTABLE"
+    ],
+    "confirmed_weaker_selection": "AUTO_MATCH candidate has a weaker human label than another Q0 candidate",
+    "strict_false_rejection": "MATCH_UNCERTAIN while a known human-SAFE candidate exists in Q0 top five"
+  },
+  "frozen_regression": {
+    "q0_auto_match_count": 42,
+    "q0_match_uncertain_count": 8,
+    "resolver_changed": false,
+    "same_selected_candidate_ids": true
+  },
+  "input_sha256": {
+    "candidate_pool_comparison": {
+      "path": "reports/stage5b1e_natural_query_evaluation/candidate_pool_comparison.json",
+      "sha256": "8fde8dc0f193545a892aad11a23bae19d19074f5273ddb3d509a8aec67cc9a7e",
+      "size_bytes": 470941
+    },
+    "challenge_human_review": {
+      "path": "reports/stage5b1b_fresh_challenge/human_review.csv",
+      "sha256": "0342c46d4506994c61cf0b3e422f34f6d466bf6297a6b8973fd75f711884b842",
+      "size_bytes": 16528
+    },
+    "challenge_manifest": {
+      "path": "reports/stage5b1b_fresh_challenge/challenge_tracks.json",
+      "sha256": "e2e9a1ab43f568dd9de853c2964f341ee0d0e2631ca87f732d0d4326ab990f79",
+      "size_bytes": 22137
+    },
+    "challenge_sol_evaluations": {
+      "path": "reports/stage5b1b_fresh_challenge/sol_evaluations.json",
+      "sha256": "b00ecb7c9ffb668b581e571065235676d62832c868fe6bed26812fbbd30f50ea",
+      "size_bytes": 158168
+    },
+    "challenge_sol_private_mapping": {
+      "path": "reports/stage5b1b_fresh_challenge/blinded_sol_private_mapping.json",
+      "sha256": "6f7991fba8f4c190f20b0214f03488c3e6bc523b9507704c278a4858d3e622bc",
+      "size_bytes": 40524
+    },
+    "frozen_policy_definitions": {
+      "path": "reports/stage5b1b_fresh_challenge/frozen_policy_definitions.json",
+      "sha256": "bbc527aa9a734b0aebbfafcb2775b479541a5e0248503627c14b8f429f708d5a",
+      "size_bytes": 2561
+    },
+    "query_discovery": {
+      "path": "reports/stage5b1e_natural_query_evaluation/query_discovery_results.json",
+      "sha256": "2fe058a4305daa95059741b7876b88af3eaf7d0f24f2852299a4b58dffea2a2f",
+      "size_bytes": 1183095
+    },
+    "query_strategies": {
+      "path": "reports/stage5b1e_natural_query_evaluation/query_strategies.json",
+      "sha256": "0e473b03bbde5cd3295f04601183b3497442ee4d35b2a1bdd3e5de777ba8859f",
+      "size_bytes": 48075
+    },
+    "resolver_replays": {
+      "path": "reports/stage5b1e_natural_query_evaluation/resolver_replays.json",
+      "sha256": "22e586e0dd56880225e1958c651de72a73f8b4dea593e04eb14e08d38de10da3",
+      "size_bytes": 2118940
+    },
+    "stage5b1e_human_review": {
+      "path": "reports/stage5b1e_natural_query_evaluation/human_review.csv",
+      "sha256": "0f28d59983ccbb92c6f3882fe063e4285e065a9acc68becd5261286760a551aa",
+      "size_bytes": 5734
+    },
+    "strong_metadata_human_audit": {
+      "path": "reports/stage5b1c_c_strong_metadata/strong_metadata_human_audit_results.json",
+      "sha256": "6f3adbf231039a5609de501292aef0f8c62c88ecba81ca38df638aef2e7f1ed4",
+      "size_bytes": 2091
+    },
+    "tier2_human_audit": {
+      "path": "reports/stage5b1c_b/tier2_human_audit_results.json",
+      "sha256": "26fbfc59fc7617fd54377fde099cabf9170f2c55946bd3046839ea4e7e8edcb5",
+      "size_bytes": 4139
+    }
+  },
+  "safe_pool_track_ids": [
+    "s5b1c_001",
+    "s5b1c_002",
+    "s5b1c_003",
+    "s5b1c_004",
+    "s5b1c_005",
+    "s5b1c_006",
+    "s5b1c_007",
+    "s5b1c_008",
+    "s5b1c_009",
+    "s5b1c_010",
+    "s5b1c_011",
+    "s5b1c_013",
+    "s5b1c_014",
+    "s5b1c_015",
+    "s5b1c_016",
+    "s5b1c_017",
+    "s5b1c_018",
+    "s5b1c_020",
+    "s5b1c_022",
+    "s5b1c_023",
+    "s5b1c_024",
+    "s5b1c_025",
+    "s5b1c_026",
+    "s5b1c_027",
+    "s5b1c_028",
+    "s5b1c_031",
+    "s5b1c_035",
+    "s5b1c_036",
+    "s5b1c_037",
+    "s5b1c_038",
+    "s5b1c_039",
+    "s5b1c_042",
+    "s5b1c_043",
+    "s5b1c_044",
+    "s5b1c_045",
+    "s5b1c_046",
+    "s5b1c_047",
+    "s5b1c_048",
+    "s5b1c_049",
+    "s5b1c_050"
+  ],
+  "schema_version": "stage5b1f-false-rejection-cases-v1",
+  "selected_candidate_evidence_gap_track_ids": [
+    "s5b1c_044"
+  ],
+  "selected_safe_track_ids": [
+    "s5b1c_001",
+    "s5b1c_002",
+    "s5b1c_003",
+    "s5b1c_004",
+    "s5b1c_005",
+    "s5b1c_006",
+    "s5b1c_007",
+    "s5b1c_008",
+    "s5b1c_009",
+    "s5b1c_010",
+    "s5b1c_011",
+    "s5b1c_013",
+    "s5b1c_014",
+    "s5b1c_015",
+    "s5b1c_016",
+    "s5b1c_017",
+    "s5b1c_018",
+    "s5b1c_020",
+    "s5b1c_022",
+    "s5b1c_023",
+    "s5b1c_024",
+    "s5b1c_025",
+    "s5b1c_026",
+    "s5b1c_027",
+    "s5b1c_028",
+    "s5b1c_031",
+    "s5b1c_036",
+    "s5b1c_037",
+    "s5b1c_038",
+    "s5b1c_039",
+    "s5b1c_042",
+    "s5b1c_043",
+    "s5b1c_045",
+    "s5b1c_046",
+    "s5b1c_047",
+    "s5b1c_048",
+    "s5b1c_049",
+    "s5b1c_050"
+  ],
+  "status": "STAGE5B1F_RESOLVER_FALSE_REJECTION_DIAGNOSTIC_COMPLETE",
+  "strict_false_rejection_track_ids": [],
+  "summary": {
+    "blocker_counts": {
+      "DURATION_PRECEDES_PROVENANCE_AND_SOURCE_IN_ORDERING": 2,
+      "FALLBACK_ONLY_CASCADE_PREVENTS_CROSS_TIER_RERANK": 2,
+      "OFFICIAL_MUSIC_VIDEO_DURATION_RESTRICTION": 1,
+      "SOURCE_CLASSIFICATION_PRESENTATION_ERROR": 1,
+      "SOURCE_OTHER_RESTRICTION": 2,
+      "TITLE_OR_IDENTITY_REQUIREMENT": 2
+    },
+    "cause_combinations": {
+      "DURATION_PRECEDES_PROVENANCE_AND_SOURCE_IN_ORDERING": 2,
+      "FALLBACK_ONLY_CASCADE_PREVENTS_CROSS_TIER_RERANK + SOURCE_OTHER_RESTRICTION": 1,
+      "FALLBACK_ONLY_CASCADE_PREVENTS_CROSS_TIER_RERANK + SOURCE_OTHER_RESTRICTION + TITLE_OR_IDENTITY_REQUIREMENT": 1,
+      "OFFICIAL_MUSIC_VIDEO_DURATION_RESTRICTION + SOURCE_CLASSIFICATION_PRESENTATION_ERROR + TITLE_OR_IDENTITY_REQUIREMENT": 1
+    },
+    "confirmed_human_label_downgrade_count": 4,
+    "human_evaluable_track_count": 41,
+    "human_safe_recall_at_5_denominator_warning": "97.6% is 40/41 human-evaluable tracks, not 49/50 total tracks",
+    "primary_cause_counts": {
+      "DURATION_PRECEDES_PROVENANCE_AND_SOURCE_IN_ORDERING": 2,
+      "FALLBACK_ONLY_CASCADE_PREVENTS_CROSS_TIER_RERANK": 2,
+      "OFFICIAL_MUSIC_VIDEO_DURATION_RESTRICTION": 1
+    },
+    "selected_candidate_human_evidence_gap_count": 1,
+    "strict_false_rejection_count": 0,
+    "strong_provenance_or_source_lost_to_duration_count": 3,
+    "total_tracks": 50,
+    "tracks_selecting_known_human_safe_q0_candidate": 38,
+    "tracks_with_known_human_safe_q0_candidate": 40
+  }
+}

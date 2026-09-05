@@ -1,0 +1,22 @@
+{
+  "authentication_mode": "keyless",
+  "candidate_video_ids": 76,
+  "config_sha256": "e68dfd6ac2a20c6f6d6ee4c2ca6a9f506dc80ddfc9d1264997ee4b778ed57d1a",
+  "credential_available": false,
+  "credential_environment_variable": "FIRECRAWL_API_KEY",
+  "discovery_results": "reports/stage5b1a/firecrawl_discovery_results.json",
+  "discovery_results_sha256": "047f2ee493a1823cbd4355db8cbf4363b47c225e3a00b68b9cc86490bfee118a",
+  "experiment_id": "stage5b1a_firecrawl_youtube_discovery_feasibility",
+  "feasibility_verdict": "PENDING_HUMAN_REVIEW",
+  "firecrawl_request_failures": 0,
+  "firecrawl_requests_made": 25,
+  "manifest_sha256": "f3592bb8c8dea689959a22da222d8b7ce4911c1804392acb501cffe768700c57",
+  "reason": "Discovery is complete. Human labels have not been supplied, so Recall@1/@3/@5 and the feasibility gate remain pending.",
+  "review": "reports/stage5b1a/firecrawl_review.csv",
+  "review_labels_completed": 0,
+  "review_sha256": "98b9881877a3df7c4d6fb14b45e71ad2b40ed85d7df33a0213af2089dfe5a12c",
+  "schema_version": "stage5b1a-run-status-v1",
+  "status": "DISCOVERY_COMPLETE_AWAITING_HUMAN_REVIEW",
+  "track_count": 25,
+  "tracks_with_zero_youtube_candidates": 4
+}

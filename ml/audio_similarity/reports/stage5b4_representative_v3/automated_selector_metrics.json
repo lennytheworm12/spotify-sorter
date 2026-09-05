@@ -1,0 +1,21 @@
+{
+  "auto_select_count": 97,
+  "auto_select_coverage": 0.97,
+  "benchmark_id": "STAGE5B4_REPRESENTATIVE_V3",
+  "coverage_gate": {
+    "minimum": 0.9,
+    "passed": true
+  },
+  "denominator_tracks": 100,
+  "human_labels_used_in_decisions": false,
+  "human_outcomes": null,
+  "match_uncertain_count": 3,
+  "schema_version": "stage5b4-automated-selector-metrics-v1",
+  "selected_rank_distribution": {
+    "none": 3,
+    "rank_1": 88,
+    "rank_2": 8,
+    "rank_3": 1
+  },
+  "status": "STAGE5B4_AUTOMATED_SELECTOR_COMPLETE"
+}

@@ -1,0 +1,817 @@
+{
+  "duration_raw_values_retained": true,
+  "numeric_distributions_by_human_label_and_safety": {
+    "absolute_duration_delta_seconds": {
+      "ACCEPTABLE": {
+        "count": 28,
+        "maximum": 709.91,
+        "median": 1.4780000000000086,
+        "minimum": 0.03999999999999204,
+        "q25": 0.46299999999999386,
+        "q75": 10.893500000000003
+      },
+      "IDEAL": {
+        "count": 32,
+        "maximum": 132.373,
+        "median": 2.140500000000003,
+        "minimum": 0.13100000000000023,
+        "q25": 0.6469999999999985,
+        "q75": 6.072250000000004
+      },
+      "SAFE": {
+        "count": 60,
+        "maximum": 709.91,
+        "median": 1.640500000000003,
+        "minimum": 0.03999999999999204,
+        "q25": 0.5035000000000025,
+        "q75": 6.302749999999996
+      },
+      "UNCERTAIN": {
+        "count": 15,
+        "maximum": 198.90699999999998,
+        "median": 5.947000000000003,
+        "minimum": 0.37299999999999045,
+        "q25": 2.1029999999999944,
+        "q75": 10.706500000000005
+      },
+      "UNRESOLVED": {
+        "count": 15,
+        "maximum": 198.90699999999998,
+        "median": 5.947000000000003,
+        "minimum": 0.37299999999999045,
+        "q25": 2.1029999999999944,
+        "q75": 10.706500000000005
+      },
+      "UNSAFE": {
+        "count": 5,
+        "maximum": 527.9069999999999,
+        "median": 137.507,
+        "minimum": 31.733000000000004,
+        "q25": 63.087999999999994,
+        "q75": 215.733
+      },
+      "WRONG": {
+        "count": 5,
+        "maximum": 527.9069999999999,
+        "median": 137.507,
+        "minimum": 31.733000000000004,
+        "q25": 63.087999999999994,
+        "q75": 215.733
+      }
+    },
+    "artist_similarity": {
+      "ACCEPTABLE": {
+        "count": 28,
+        "maximum": 1.0,
+        "median": 1.0,
+        "minimum": 0.0,
+        "q25": 0.6557377049180327,
+        "q75": 1.0
+      },
+      "IDEAL": {
+        "count": 32,
+        "maximum": 1.0,
+        "median": 0.5053191489361701,
+        "minimum": 0.14285714285714285,
+        "q25": 0.23714285714285713,
+        "q75": 1.0
+      },
+      "SAFE": {
+        "count": 60,
+        "maximum": 1.0,
+        "median": 0.785861713106295,
+        "minimum": 0.0,
+        "q25": 0.3106060606060606,
+        "q75": 1.0
+      },
+      "UNCERTAIN": {
+        "count": 15,
+        "maximum": 1.0,
+        "median": 1.0,
+        "minimum": 0.2,
+        "q25": 0.3766025641025641,
+        "q75": 1.0
+      },
+      "UNRESOLVED": {
+        "count": 15,
+        "maximum": 1.0,
+        "median": 1.0,
+        "minimum": 0.2,
+        "q25": 0.3766025641025641,
+        "q75": 1.0
+      },
+      "UNSAFE": {
+        "count": 5,
+        "maximum": 1.0,
+        "median": 0.25,
+        "minimum": 0.06521739130434782,
+        "q25": 0.14285714285714285,
+        "q75": 1.0
+      },
+      "WRONG": {
+        "count": 5,
+        "maximum": 1.0,
+        "median": 0.25,
+        "minimum": 0.06521739130434782,
+        "q25": 0.14285714285714285,
+        "q75": 1.0
+      }
+    },
+    "log_relative_view_strength": {
+      "ACCEPTABLE": {
+        "count": 25,
+        "maximum": 1.0,
+        "median": 0.8447970357028112,
+        "minimum": 0.48567007563318454,
+        "q25": 0.6976070546182473,
+        "q75": 0.9751768257083085
+      },
+      "IDEAL": {
+        "count": 29,
+        "maximum": 1.0,
+        "median": 1.0,
+        "minimum": 0.6136706173329867,
+        "q25": 0.8804572379425676,
+        "q75": 1.0
+      },
+      "SAFE": {
+        "count": 54,
+        "maximum": 1.0,
+        "median": 0.9569981413235696,
+        "minimum": 0.48567007563318454,
+        "q25": 0.8258361863854563,
+        "q75": 1.0
+      },
+      "UNCERTAIN": {
+        "count": 14,
+        "maximum": 0.942288223120825,
+        "median": 0.577116800463538,
+        "minimum": 0.036261001870443565,
+        "q25": 0.2919585021747251,
+        "q75": 0.808001528800224
+      },
+      "UNRESOLVED": {
+        "count": 14,
+        "maximum": 0.942288223120825,
+        "median": 0.577116800463538,
+        "minimum": 0.036261001870443565,
+        "q25": 0.2919585021747251,
+        "q75": 0.808001528800224
+      },
+      "UNSAFE": {
+        "count": 4,
+        "maximum": 0.8716282858513116,
+        "median": 0.8023975760930225,
+        "minimum": 0.6861617781381251,
+        "q25": 0.7567036067954307,
+        "q75": 0.8363402733414622
+      },
+      "WRONG": {
+        "count": 4,
+        "maximum": 0.8716282858513116,
+        "median": 0.8023975760930225,
+        "minimum": 0.6861617781381251,
+        "q25": 0.7567036067954307,
+        "q75": 0.8363402733414622
+      }
+    },
+    "relative_duration_delta": {
+      "ACCEPTABLE": {
+        "count": 28,
+        "maximum": 3.461455946169974,
+        "median": 0.00792323828331955,
+        "minimum": 0.0001487209994051921,
+        "q25": 0.0016640169720698256,
+        "q75": 0.049435096412827055
+      },
+      "IDEAL": {
+        "count": 32,
+        "maximum": 0.584100747042497,
+        "median": 0.010020267141442264,
+        "minimum": 0.0005914954934296457,
+        "q25": 0.002765138800345141,
+        "q75": 0.029187024425142163
+      },
+      "SAFE": {
+        "count": 60,
+        "maximum": 3.461455946169974,
+        "median": 0.008097355714951921,
+        "minimum": 0.0001487209994051921,
+        "q25": 0.0018497571200873945,
+        "q75": 0.030425542804137302
+      },
+      "UNCERTAIN": {
+        "count": 15,
+        "maximum": 0.6904263553782979,
+        "median": 0.030027315920485943,
+        "minimum": 0.0016458762636402124,
+        "q25": 0.009238295309835524,
+        "q75": 0.04190155514673753
+      },
+      "UNRESOLVED": {
+        "count": 15,
+        "maximum": 0.6904263553782979,
+        "median": 0.030027315920485943,
+        "minimum": 0.0016458762636402124,
+        "q25": 0.009238295309835524,
+        "q75": 0.04190155514673753
+      },
+      "UNSAFE": {
+        "count": 5,
+        "maximum": 1.832418698128729,
+        "median": 0.5179307929022611,
+        "minimum": 0.12913609486719327,
+        "q25": 0.29355270994639665,
+        "q75": 0.8779162749813822
+      },
+      "WRONG": {
+        "count": 5,
+        "maximum": 1.832418698128729,
+        "median": 0.5179307929022611,
+        "minimum": 0.12913609486719327,
+        "q25": 0.29355270994639665,
+        "q75": 0.8779162749813822
+      }
+    },
+    "relative_view_strength": {
+      "ACCEPTABLE": {
+        "count": 25,
+        "maximum": 1.0,
+        "median": 0.04340817899956384,
+        "minimum": 4.984752781144815e-05,
+        "q25": 0.005476824243404285,
+        "q75": 0.6045596221695573
+      },
+      "IDEAL": {
+        "count": 29,
+        "maximum": 1.0,
+        "median": 1.0,
+        "minimum": 0.00026635000243744,
+        "q25": 0.20067862478253426,
+        "q75": 1.0
+      },
+      "SAFE": {
+        "count": 54,
+        "maximum": 1.0,
+        "median": 0.46461614731910805,
+        "minimum": 4.984752781144815e-05,
+        "q25": 0.03638171558114931,
+        "q75": 1.0
+      },
+      "UNCERTAIN": {
+        "count": 14,
+        "maximum": 0.3868307578854649,
+        "median": 0.0012857907100695771,
+        "minimum": 4.9916467287817205e-09,
+        "q25": 6.16657744504958e-05,
+        "q75": 0.045313978452302846
+      },
+      "UNRESOLVED": {
+        "count": 14,
+        "maximum": 0.3868307578854649,
+        "median": 0.0012857907100695771,
+        "minimum": 4.9916467287817205e-09,
+        "q25": 6.16657744504958e-05,
+        "q75": 0.045313978452302846
+      },
+      "UNSAFE": {
+        "count": 4,
+        "maximum": 0.11434156501863996,
+        "median": 0.037615535552898025,
+        "minimum": 0.005776429423768984,
+        "q25": 0.01580197699239925,
+        "q75": 0.07065082494755003
+      },
+      "WRONG": {
+        "count": 4,
+        "maximum": 0.11434156501863996,
+        "median": 0.037615535552898025,
+        "minimum": 0.005776429423768984,
+        "q25": 0.01580197699239925,
+        "q75": 0.07065082494755003
+      }
+    },
+    "search_rank": {
+      "ACCEPTABLE": {
+        "count": 28,
+        "maximum": 5.0,
+        "median": 2.5,
+        "minimum": 1.0,
+        "q25": 1.75,
+        "q75": 3.25
+      },
+      "IDEAL": {
+        "count": 32,
+        "maximum": 4.0,
+        "median": 2.0,
+        "minimum": 1.0,
+        "q25": 1.0,
+        "q75": 2.0
+      },
+      "SAFE": {
+        "count": 60,
+        "maximum": 5.0,
+        "median": 2.0,
+        "minimum": 1.0,
+        "q25": 1.0,
+        "q75": 3.0
+      },
+      "UNCERTAIN": {
+        "count": 15,
+        "maximum": 5.0,
+        "median": 4.0,
+        "minimum": 1.0,
+        "q25": 3.0,
+        "q75": 4.0
+      },
+      "UNRESOLVED": {
+        "count": 15,
+        "maximum": 5.0,
+        "median": 4.0,
+        "minimum": 1.0,
+        "q25": 3.0,
+        "q75": 4.0
+      },
+      "UNSAFE": {
+        "count": 5,
+        "maximum": 5.0,
+        "median": 4.0,
+        "minimum": 3.0,
+        "q25": 4.0,
+        "q75": 5.0
+      },
+      "WRONG": {
+        "count": 5,
+        "maximum": 5.0,
+        "median": 4.0,
+        "minimum": 3.0,
+        "q25": 4.0,
+        "q75": 5.0
+      }
+    },
+    "title_similarity": {
+      "ACCEPTABLE": {
+        "count": 28,
+        "maximum": 1.0,
+        "median": 1.0,
+        "minimum": 0.20689655172413793,
+        "q25": 0.9444444444444444,
+        "q75": 1.0
+      },
+      "IDEAL": {
+        "count": 32,
+        "maximum": 1.0,
+        "median": 1.0,
+        "minimum": 0.23529411764705882,
+        "q25": 1.0,
+        "q75": 1.0
+      },
+      "SAFE": {
+        "count": 60,
+        "maximum": 1.0,
+        "median": 1.0,
+        "minimum": 0.20689655172413793,
+        "q25": 1.0,
+        "q75": 1.0
+      },
+      "UNCERTAIN": {
+        "count": 15,
+        "maximum": 1.0,
+        "median": 1.0,
+        "minimum": 0.24175824175824176,
+        "q25": 0.5084033613445378,
+        "q75": 1.0
+      },
+      "UNRESOLVED": {
+        "count": 15,
+        "maximum": 1.0,
+        "median": 1.0,
+        "minimum": 0.24175824175824176,
+        "q25": 0.5084033613445378,
+        "q75": 1.0
+      },
+      "UNSAFE": {
+        "count": 5,
+        "maximum": 1.0,
+        "median": 0.5882352941176471,
+        "minimum": 0.21359223300970873,
+        "q25": 0.5714285714285714,
+        "q75": 1.0
+      },
+      "WRONG": {
+        "count": 5,
+        "maximum": 1.0,
+        "median": 0.5882352941176471,
+        "minimum": 0.21359223300970873,
+        "q25": 0.5714285714285714,
+        "q75": 1.0
+      }
+    }
+  },
+  "patterns": {
+    "auto_generated_by_youtube:False": {
+      "ACCEPTABLE": 28,
+      "IDEAL": 32,
+      "UNCERTAIN": 15,
+      "WRONG": 5,
+      "human_audited_count": 80,
+      "pattern": "auto_generated_by_youtube:False",
+      "resolved_human_count": 65,
+      "safe_rate_among_resolved_human_labels": 0.9230769230769231
+    },
+    "canonical_pattern:strong_identity+official_audio+close_duration": {
+      "ACCEPTABLE": 0,
+      "IDEAL": 3,
+      "UNCERTAIN": 0,
+      "WRONG": 0,
+      "human_audited_count": 3,
+      "pattern": "canonical_pattern:strong_identity+official_audio+close_duration",
+      "resolved_human_count": 3,
+      "safe_rate_among_resolved_human_labels": 1.0
+    },
+    "canonical_pattern:strong_identity+provided_to_youtube+close_duration": {
+      "ACCEPTABLE": 0,
+      "IDEAL": 7,
+      "UNCERTAIN": 0,
+      "WRONG": 0,
+      "human_audited_count": 7,
+      "pattern": "canonical_pattern:strong_identity+provided_to_youtube+close_duration",
+      "resolved_human_count": 7,
+      "safe_rate_among_resolved_human_labels": 1.0
+    },
+    "description_album_match:False": {
+      "ACCEPTABLE": 22,
+      "IDEAL": 14,
+      "UNCERTAIN": 13,
+      "WRONG": 5,
+      "human_audited_count": 54,
+      "pattern": "description_album_match:False",
+      "resolved_human_count": 41,
+      "safe_rate_among_resolved_human_labels": 0.8780487804878049
+    },
+    "description_album_match:True": {
+      "ACCEPTABLE": 6,
+      "IDEAL": 18,
+      "UNCERTAIN": 2,
+      "WRONG": 0,
+      "human_audited_count": 26,
+      "pattern": "description_album_match:True",
+      "resolved_human_count": 24,
+      "safe_rate_among_resolved_human_labels": 1.0
+    },
+    "description_release_year_match:False": {
+      "ACCEPTABLE": 23,
+      "IDEAL": 24,
+      "UNCERTAIN": 14,
+      "WRONG": 5,
+      "human_audited_count": 66,
+      "pattern": "description_release_year_match:False",
+      "resolved_human_count": 52,
+      "safe_rate_among_resolved_human_labels": 0.9038461538461539
+    },
+    "description_release_year_match:True": {
+      "ACCEPTABLE": 5,
+      "IDEAL": 8,
+      "UNCERTAIN": 1,
+      "WRONG": 0,
+      "human_audited_count": 14,
+      "pattern": "description_release_year_match:True",
+      "resolved_human_count": 13,
+      "safe_rate_among_resolved_human_labels": 1.0
+    },
+    "duration:DURATION_CLOSE": {
+      "ACCEPTABLE": 5,
+      "IDEAL": 9,
+      "UNCERTAIN": 4,
+      "WRONG": 0,
+      "human_audited_count": 18,
+      "pattern": "duration:DURATION_CLOSE",
+      "resolved_human_count": 14,
+      "safe_rate_among_resolved_human_labels": 1.0
+    },
+    "duration:DURATION_FAR": {
+      "ACCEPTABLE": 4,
+      "IDEAL": 3,
+      "UNCERTAIN": 2,
+      "WRONG": 4,
+      "human_audited_count": 13,
+      "pattern": "duration:DURATION_FAR",
+      "resolved_human_count": 11,
+      "safe_rate_among_resolved_human_labels": 0.6363636363636364
+    },
+    "duration:DURATION_MODERATE": {
+      "ACCEPTABLE": 3,
+      "IDEAL": 4,
+      "UNCERTAIN": 5,
+      "WRONG": 1,
+      "human_audited_count": 13,
+      "pattern": "duration:DURATION_MODERATE",
+      "resolved_human_count": 8,
+      "safe_rate_among_resolved_human_labels": 0.875
+    },
+    "duration:DURATION_VERY_CLOSE": {
+      "ACCEPTABLE": 16,
+      "IDEAL": 16,
+      "UNCERTAIN": 4,
+      "WRONG": 0,
+      "human_audited_count": 36,
+      "pattern": "duration:DURATION_VERY_CLOSE",
+      "resolved_human_count": 32,
+      "safe_rate_among_resolved_human_labels": 1.0
+    },
+    "lyric_pattern:strong_identity+close_duration+relative_views_at_least_0.001": {
+      "ACCEPTABLE": 7,
+      "IDEAL": 2,
+      "UNCERTAIN": 1,
+      "WRONG": 0,
+      "human_audited_count": 10,
+      "pattern": "lyric_pattern:strong_identity+close_duration+relative_views_at_least_0.001",
+      "resolved_human_count": 9,
+      "safe_rate_among_resolved_human_labels": 1.0
+    },
+    "lyric_pattern:strong_identity+close_duration+relative_views_below_0.001": {
+      "ACCEPTABLE": 0,
+      "IDEAL": 0,
+      "UNCERTAIN": 1,
+      "WRONG": 0,
+      "human_audited_count": 1,
+      "pattern": "lyric_pattern:strong_identity+close_duration+relative_views_below_0.001",
+      "resolved_human_count": 0,
+      "safe_rate_among_resolved_human_labels": null
+    },
+    "primary_artist_match:False": {
+      "ACCEPTABLE": 2,
+      "IDEAL": 2,
+      "UNCERTAIN": 0,
+      "WRONG": 2,
+      "human_audited_count": 6,
+      "pattern": "primary_artist_match:False",
+      "resolved_human_count": 6,
+      "safe_rate_among_resolved_human_labels": 0.6666666666666666
+    },
+    "primary_artist_match:True": {
+      "ACCEPTABLE": 26,
+      "IDEAL": 30,
+      "UNCERTAIN": 15,
+      "WRONG": 3,
+      "human_audited_count": 74,
+      "pattern": "primary_artist_match:True",
+      "resolved_human_count": 59,
+      "safe_rate_among_resolved_human_labels": 0.9491525423728814
+    },
+    "provided_to_youtube_by:False": {
+      "ACCEPTABLE": 27,
+      "IDEAL": 18,
+      "UNCERTAIN": 15,
+      "WRONG": 5,
+      "human_audited_count": 65,
+      "pattern": "provided_to_youtube_by:False",
+      "resolved_human_count": 50,
+      "safe_rate_among_resolved_human_labels": 0.9
+    },
+    "provided_to_youtube_by:True": {
+      "ACCEPTABLE": 1,
+      "IDEAL": 14,
+      "UNCERTAIN": 0,
+      "WRONG": 0,
+      "human_audited_count": 15,
+      "pattern": "provided_to_youtube_by:True",
+      "resolved_human_count": 15,
+      "safe_rate_among_resolved_human_labels": 1.0
+    },
+    "search_rank:1": {
+      "ACCEPTABLE": 7,
+      "IDEAL": 15,
+      "UNCERTAIN": 1,
+      "WRONG": 0,
+      "human_audited_count": 23,
+      "pattern": "search_rank:1",
+      "resolved_human_count": 22,
+      "safe_rate_among_resolved_human_labels": 1.0
+    },
+    "search_rank:2": {
+      "ACCEPTABLE": 7,
+      "IDEAL": 10,
+      "UNCERTAIN": 2,
+      "WRONG": 0,
+      "human_audited_count": 19,
+      "pattern": "search_rank:2",
+      "resolved_human_count": 17,
+      "safe_rate_among_resolved_human_labels": 1.0
+    },
+    "search_rank:3": {
+      "ACCEPTABLE": 7,
+      "IDEAL": 6,
+      "UNCERTAIN": 2,
+      "WRONG": 1,
+      "human_audited_count": 16,
+      "pattern": "search_rank:3",
+      "resolved_human_count": 14,
+      "safe_rate_among_resolved_human_labels": 0.9285714285714286
+    },
+    "search_rank:4": {
+      "ACCEPTABLE": 3,
+      "IDEAL": 1,
+      "UNCERTAIN": 7,
+      "WRONG": 2,
+      "human_audited_count": 13,
+      "pattern": "search_rank:4",
+      "resolved_human_count": 6,
+      "safe_rate_among_resolved_human_labels": 0.6666666666666666
+    },
+    "search_rank:5": {
+      "ACCEPTABLE": 4,
+      "IDEAL": 0,
+      "UNCERTAIN": 3,
+      "WRONG": 2,
+      "human_audited_count": 9,
+      "pattern": "search_rank:5",
+      "resolved_human_count": 6,
+      "safe_rate_among_resolved_human_labels": 0.6666666666666666
+    },
+    "source:ART_TRACK_TOPIC": {
+      "ACCEPTABLE": 1,
+      "IDEAL": 14,
+      "UNCERTAIN": 0,
+      "WRONG": 0,
+      "human_audited_count": 15,
+      "pattern": "source:ART_TRACK_TOPIC",
+      "resolved_human_count": 15,
+      "safe_rate_among_resolved_human_labels": 1.0
+    },
+    "source:LYRIC_VIDEO": {
+      "ACCEPTABLE": 9,
+      "IDEAL": 2,
+      "UNCERTAIN": 3,
+      "WRONG": 0,
+      "human_audited_count": 14,
+      "pattern": "source:LYRIC_VIDEO",
+      "resolved_human_count": 11,
+      "safe_rate_among_resolved_human_labels": 1.0
+    },
+    "source:OFFICIAL_AUDIO": {
+      "ACCEPTABLE": 0,
+      "IDEAL": 3,
+      "UNCERTAIN": 0,
+      "WRONG": 0,
+      "human_audited_count": 3,
+      "pattern": "source:OFFICIAL_AUDIO",
+      "resolved_human_count": 3,
+      "safe_rate_among_resolved_human_labels": 1.0
+    },
+    "source:OFFICIAL_MUSIC_VIDEO": {
+      "ACCEPTABLE": 6,
+      "IDEAL": 3,
+      "UNCERTAIN": 1,
+      "WRONG": 1,
+      "human_audited_count": 11,
+      "pattern": "source:OFFICIAL_MUSIC_VIDEO",
+      "resolved_human_count": 10,
+      "safe_rate_among_resolved_human_labels": 0.9
+    },
+    "source:OTHER": {
+      "ACCEPTABLE": 12,
+      "IDEAL": 10,
+      "UNCERTAIN": 11,
+      "WRONG": 4,
+      "human_audited_count": 37,
+      "pattern": "source:OTHER",
+      "resolved_human_count": 26,
+      "safe_rate_among_resolved_human_labels": 0.8461538461538461
+    },
+    "structured_release_metadata:False": {
+      "ACCEPTABLE": 27,
+      "IDEAL": 31,
+      "UNCERTAIN": 15,
+      "WRONG": 5,
+      "human_audited_count": 78,
+      "pattern": "structured_release_metadata:False",
+      "resolved_human_count": 63,
+      "safe_rate_among_resolved_human_labels": 0.9206349206349206
+    },
+    "structured_release_metadata:True": {
+      "ACCEPTABLE": 1,
+      "IDEAL": 1,
+      "UNCERTAIN": 0,
+      "WRONG": 0,
+      "human_audited_count": 2,
+      "pattern": "structured_release_metadata:True",
+      "resolved_human_count": 2,
+      "safe_rate_among_resolved_human_labels": 1.0
+    },
+    "title_exact:False": {
+      "ACCEPTABLE": 7,
+      "IDEAL": 6,
+      "UNCERTAIN": 7,
+      "WRONG": 3,
+      "human_audited_count": 23,
+      "pattern": "title_exact:False",
+      "resolved_human_count": 16,
+      "safe_rate_among_resolved_human_labels": 0.8125
+    },
+    "title_exact:True": {
+      "ACCEPTABLE": 21,
+      "IDEAL": 26,
+      "UNCERTAIN": 8,
+      "WRONG": 2,
+      "human_audited_count": 57,
+      "pattern": "title_exact:True",
+      "resolved_human_count": 49,
+      "safe_rate_among_resolved_human_labels": 0.9591836734693877
+    },
+    "topic_channel:False": {
+      "ACCEPTABLE": 28,
+      "IDEAL": 31,
+      "UNCERTAIN": 15,
+      "WRONG": 5,
+      "human_audited_count": 79,
+      "pattern": "topic_channel:False",
+      "resolved_human_count": 64,
+      "safe_rate_among_resolved_human_labels": 0.921875
+    },
+    "topic_channel:True": {
+      "ACCEPTABLE": 0,
+      "IDEAL": 1,
+      "UNCERTAIN": 0,
+      "WRONG": 0,
+      "human_audited_count": 1,
+      "pattern": "topic_channel:True",
+      "resolved_human_count": 1,
+      "safe_rate_among_resolved_human_labels": 1.0
+    },
+    "version_absent:False": {
+      "ACCEPTABLE": 22,
+      "IDEAL": 29,
+      "UNCERTAIN": 11,
+      "WRONG": 4,
+      "human_audited_count": 66,
+      "pattern": "version_absent:False",
+      "resolved_human_count": 55,
+      "safe_rate_among_resolved_human_labels": 0.9272727272727272
+    },
+    "version_absent:True": {
+      "ACCEPTABLE": 6,
+      "IDEAL": 3,
+      "UNCERTAIN": 4,
+      "WRONG": 1,
+      "human_audited_count": 14,
+      "pattern": "version_absent:True",
+      "resolved_human_count": 10,
+      "safe_rate_among_resolved_human_labels": 0.9
+    },
+    "version_conflict:False": {
+      "ACCEPTABLE": 26,
+      "IDEAL": 31,
+      "UNCERTAIN": 14,
+      "WRONG": 5,
+      "human_audited_count": 76,
+      "pattern": "version_conflict:False",
+      "resolved_human_count": 62,
+      "safe_rate_among_resolved_human_labels": 0.9193548387096774
+    },
+    "version_conflict:True": {
+      "ACCEPTABLE": 2,
+      "IDEAL": 1,
+      "UNCERTAIN": 1,
+      "WRONG": 0,
+      "human_audited_count": 4,
+      "pattern": "version_conflict:True",
+      "resolved_human_count": 3,
+      "safe_rate_among_resolved_human_labels": 1.0
+    },
+    "version_state:ABSENT": {
+      "ACCEPTABLE": 4,
+      "IDEAL": 3,
+      "UNCERTAIN": 4,
+      "WRONG": 1,
+      "human_audited_count": 12,
+      "pattern": "version_state:ABSENT",
+      "resolved_human_count": 8,
+      "safe_rate_among_resolved_human_labels": 0.875
+    },
+    "version_state:CONFLICT": {
+      "ACCEPTABLE": 2,
+      "IDEAL": 1,
+      "UNCERTAIN": 1,
+      "WRONG": 0,
+      "human_audited_count": 4,
+      "pattern": "version_state:CONFLICT",
+      "resolved_human_count": 3,
+      "safe_rate_among_resolved_human_labels": 1.0
+    },
+    "version_state:MATCH": {
+      "ACCEPTABLE": 22,
+      "IDEAL": 28,
+      "UNCERTAIN": 10,
+      "WRONG": 4,
+      "human_audited_count": 64,
+      "pattern": "version_state:MATCH",
+      "resolved_human_count": 54,
+      "safe_rate_among_resolved_human_labels": 0.9259259259259259
+    }
+  },
+  "relative_views_are_late_weak_evidence": true,
+  "schema_version": "stage5b1b-feature-label-analysis-v1",
+  "small_cell_warning": "Patterns with few audited rows are descriptive only.",
+  "targeted_human_candidate_count": 80
+}

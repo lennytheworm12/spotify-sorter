@@ -1,0 +1,412 @@
+{
+  "experiment_id": "STAGE5B4C_ARTIST_QUERY_DECOMPOSITION_V1",
+  "historical_primary_zero_result_evidence": {
+    "benchmark_id": "stage5b4_representative_v3_010",
+    "completed_at_utc": "2026-09-03T21:56:36.585076+00:00",
+    "exact_generated_query": "Girl, Interrupted 2xxx Miso",
+    "outcome": {
+      "candidate_video_ids": [],
+      "candidates": [],
+      "error": null,
+      "normalized_results": [],
+      "provider": {
+        "attempts": 1,
+        "name": "yt_dlp",
+        "version": "2026.08.19"
+      },
+      "query": "Girl, Interrupted 2xxx Miso",
+      "request": {
+        "download": false,
+        "options": {
+          "cachedir": false,
+          "extract_flat": "in_playlist",
+          "ignoreconfig": true,
+          "ignoreerrors": false,
+          "lazy_playlist": false,
+          "noprogress": true,
+          "playlistend": 3,
+          "quiet": true,
+          "retries": 0,
+          "simulate": true,
+          "skip_download": true,
+          "socket_timeout": 30
+        },
+        "search_expression": "ytsearch3:Girl, Interrupted 2xxx Miso"
+      },
+      "track": {
+        "album": "Life",
+        "artists": [
+          "2xxx",
+          "Miso"
+        ],
+        "duration_ms": 180972,
+        "isrc": "KRNAR1709751",
+        "release_year": 2017,
+        "spotify_track_id": "1cBNzkPsAdI7XJaKIsjKUk",
+        "stable_track_id": "stage5b4_representative_v3_010",
+        "title": "Girl, Interrupted"
+      },
+      "warnings": []
+    },
+    "requested_at_utc": "2026-09-03T21:56:35.870425+00:00"
+  },
+  "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+  "schema_version": "stage5b4c-targeted-discovery-v1",
+  "scope_guards": {
+    "audio_downloads": 0,
+    "candidate_pool_merges": 0,
+    "data_api_invocations": 0,
+    "first_non_empty_pool_only": true,
+    "live_track_count": 2,
+    "playwright_invocations": 0,
+    "requests_are_sequential": true,
+    "video_downloads": 0
+  },
+  "tracks": [
+    {
+      "Q0": "Girl, Interrupted 2xxx Miso",
+      "Q0_result_count": 0,
+      "attempts": [
+        {
+          "candidate_video_ids": [],
+          "discovery_mode": "PRIMARY_MULTI_ARTIST",
+          "elapsed_seconds": 0.7073523179860786,
+          "error": null,
+          "query": "Girl, Interrupted 2xxx Miso",
+          "query_artist": null,
+          "query_variant_index": 0,
+          "result_count": 0,
+          "warnings": []
+        },
+        {
+          "candidate_video_ids": [],
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "elapsed_seconds": 0.6980157850193791,
+          "error": null,
+          "query": "Girl, Interrupted 2xxx",
+          "query_artist": "2xxx",
+          "query_variant_index": 1,
+          "result_count": 0,
+          "warnings": []
+        },
+        {
+          "candidate_video_ids": [
+            "DpXA_N3jnvE",
+            "3ldYv7cwom4",
+            "Bk0gP8ZXRsA"
+          ],
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "elapsed_seconds": 0.7427435999852605,
+          "error": null,
+          "query": "Girl, Interrupted Miso",
+          "query_artist": "Miso",
+          "query_variant_index": 2,
+          "result_count": 3,
+          "warnings": []
+        }
+      ],
+      "candidate_video_ids": [
+        "DpXA_N3jnvE",
+        "3ldYv7cwom4",
+        "Bk0gP8ZXRsA"
+      ],
+      "candidates": [
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=DpXA_N3jnvE",
+          "channel": "2xxx - Topic",
+          "description": "Provided to YouTube by Universal Music Group Girl, Interrupted · 2xxx · MISO Life ℗ 2017 you.wiil.knovv Released on: ...",
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "duplicate_occurrences": [],
+          "duration_seconds": 181.0,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 1,
+          "query": "Girl, Interrupted Miso",
+          "query_artist": "Miso",
+          "query_variant_index": 2,
+          "rank": 1,
+          "stable_track_id": "stage5b4_representative_v3_010",
+          "title": "Girl, Interrupted",
+          "uploader": "2xxx - Topic",
+          "url": "https://www.youtube.com/watch?v=DpXA_N3jnvE",
+          "view_count": 152221,
+          "youtube_video_id": "DpXA_N3jnvE"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=3ldYv7cwom4",
+          "channel": "Dan N",
+          "description": "From 2xxx!'s first EP Life.",
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "duplicate_occurrences": [],
+          "duration_seconds": 183.0,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 2,
+          "query": "Girl, Interrupted Miso",
+          "query_artist": "Miso",
+          "query_variant_index": 2,
+          "rank": 2,
+          "stable_track_id": "stage5b4_representative_v3_010",
+          "title": "2xxx! - 02 Girl, Interrupted ft. Miso",
+          "uploader": "Dan N",
+          "url": "https://www.youtube.com/watch?v=3ldYv7cwom4",
+          "view_count": 101028,
+          "youtube_video_id": "3ldYv7cwom4"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=Bk0gP8ZXRsA",
+          "channel": "Club Eskimo - Vietnam Fanpage",
+          "description": "source : #2xxx! (youtube)",
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "duplicate_occurrences": [],
+          "duration_seconds": 171.0,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 3,
+          "query": "Girl, Interrupted Miso",
+          "query_artist": "Miso",
+          "query_variant_index": 2,
+          "rank": 3,
+          "stable_track_id": "stage5b4_representative_v3_010",
+          "title": "Girl, Interrupted - 2xxx! (ft. Miso)",
+          "uploader": "Club Eskimo - Vietnam Fanpage",
+          "url": "https://www.youtube.com/watch?v=Bk0gP8ZXRsA",
+          "view_count": 7898,
+          "youtube_video_id": "Bk0gP8ZXRsA"
+        }
+      ],
+      "case_purpose": "MOTIVATING_ZERO_RESULT_CASE",
+      "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+      "elapsed_seconds": 2.148130768968258,
+      "error": null,
+      "fallback_queries_attempted": [
+        {
+          "candidate_video_ids": [],
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "elapsed_seconds": 0.6980157850193791,
+          "error": null,
+          "query": "Girl, Interrupted 2xxx",
+          "query_artist": "2xxx",
+          "query_variant_index": 1,
+          "result_count": 0,
+          "warnings": []
+        },
+        {
+          "candidate_video_ids": [
+            "DpXA_N3jnvE",
+            "3ldYv7cwom4",
+            "Bk0gP8ZXRsA"
+          ],
+          "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+          "elapsed_seconds": 0.7427435999852605,
+          "error": null,
+          "query": "Girl, Interrupted Miso",
+          "query_artist": "Miso",
+          "query_variant_index": 2,
+          "result_count": 3,
+          "warnings": []
+        }
+      ],
+      "fallback_triggered": true,
+      "outcome": "FALLBACK_SUCCESS",
+      "query_artist": "Miso",
+      "query_plan": {
+        "duplicate_fallback_queries_removed": 0,
+        "fallbacks": [
+          {
+            "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+            "query": "Girl, Interrupted 2xxx",
+            "query_artist": "2xxx",
+            "query_variant_index": 1
+          },
+          {
+            "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+            "query": "Girl, Interrupted Miso",
+            "query_artist": "Miso",
+            "query_variant_index": 2
+          }
+        ],
+        "included_artists": [
+          "2xxx",
+          "Miso"
+        ],
+        "maximum_provider_requests": 3,
+        "primary": {
+          "discovery_mode": "PRIMARY_MULTI_ARTIST",
+          "query": "Girl, Interrupted 2xxx Miso",
+          "query_artist": null,
+          "query_variant_index": 0
+        },
+        "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+        "sanitized_spotify_title": "Girl, Interrupted"
+      },
+      "query_variant_index": 2,
+      "successful_query": "Girl, Interrupted Miso",
+      "total_provider_requests": 3,
+      "track": {
+        "album": "Life",
+        "artists": [
+          "2xxx",
+          "Miso"
+        ],
+        "duration_ms": 180972,
+        "isrc": "KRNAR1709751",
+        "release_year": 2017,
+        "spotify_track_id": "1cBNzkPsAdI7XJaKIsjKUk",
+        "stable_track_id": "stage5b4_representative_v3_010",
+        "title": "Girl, Interrupted"
+      }
+    },
+    {
+      "Q0": "All The Stars (with SZA) - From Black Panther: The Album Kendrick Lamar SZA",
+      "Q0_result_count": 3,
+      "attempts": [
+        {
+          "candidate_video_ids": [
+            "ju4KQT0wL0I",
+            "GfCqMv--ncA",
+            "JQbjS0_ZfJ0"
+          ],
+          "discovery_mode": "PRIMARY_MULTI_ARTIST",
+          "elapsed_seconds": 0.8272833649534732,
+          "error": null,
+          "query": "All The Stars (with SZA) - From Black Panther: The Album Kendrick Lamar SZA",
+          "query_artist": null,
+          "query_variant_index": 0,
+          "result_count": 3,
+          "warnings": []
+        }
+      ],
+      "candidate_video_ids": [
+        "ju4KQT0wL0I",
+        "GfCqMv--ncA",
+        "JQbjS0_ZfJ0"
+      ],
+      "candidates": [
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=ju4KQT0wL0I",
+          "channel": "Kendrick Lamar",
+          "description": "Provided to YouTube by Universal Music Group All The Stars · Kendrick Lamar · SZA Black Panther The Album Music From And ...",
+          "discovery_mode": "PRIMARY_MULTI_ARTIST",
+          "duplicate_occurrences": [],
+          "duration_seconds": 233.0,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 1,
+          "query": "All The Stars (with SZA) - From Black Panther: The Album Kendrick Lamar SZA",
+          "query_artist": null,
+          "query_variant_index": 0,
+          "rank": 1,
+          "stable_track_id": "stage5b4_representative_v3_073",
+          "title": "All The Stars",
+          "uploader": "Kendrick Lamar",
+          "url": "https://www.youtube.com/watch?v=ju4KQT0wL0I",
+          "view_count": 104919468,
+          "youtube_video_id": "ju4KQT0wL0I"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=GfCqMv--ncA",
+          "channel": "Kendrick Lamar",
+          "description": "Black Panther The Album out now http://smarturl.it/BlackPantherAlbum http://vevo.ly/3WpVJn.",
+          "discovery_mode": "PRIMARY_MULTI_ARTIST",
+          "duplicate_occurrences": [],
+          "duration_seconds": 237.0,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 2,
+          "query": "All The Stars (with SZA) - From Black Panther: The Album Kendrick Lamar SZA",
+          "query_artist": null,
+          "query_variant_index": 0,
+          "rank": 2,
+          "stable_track_id": "stage5b4_representative_v3_073",
+          "title": "Kendrick Lamar, SZA - All The Stars",
+          "uploader": "Kendrick Lamar",
+          "url": "https://www.youtube.com/watch?v=GfCqMv--ncA",
+          "view_count": 80854177,
+          "youtube_video_id": "GfCqMv--ncA"
+        },
+        {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=JQbjS0_ZfJ0",
+          "channel": "Kendrick Lamar",
+          "description": "Black Panther The Album Music From And Inspired By available on all digital platforms & in stores now ...",
+          "discovery_mode": "PRIMARY_MULTI_ARTIST",
+          "duplicate_occurrences": [],
+          "duration_seconds": 235.0,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 3,
+          "query": "All The Stars (with SZA) - From Black Panther: The Album Kendrick Lamar SZA",
+          "query_artist": null,
+          "query_variant_index": 0,
+          "rank": 3,
+          "stable_track_id": "stage5b4_representative_v3_073",
+          "title": "Kendrick Lamar, SZA - All The Stars",
+          "uploader": "Kendrick Lamar",
+          "url": "https://www.youtube.com/watch?v=JQbjS0_ZfJ0",
+          "view_count": 739043947,
+          "youtube_video_id": "JQbjS0_ZfJ0"
+        }
+      ],
+      "case_purpose": "PRIMARY_SUCCESS_REGRESSION",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "elapsed_seconds": 0.827283845981583,
+      "error": null,
+      "fallback_queries_attempted": [],
+      "fallback_triggered": false,
+      "outcome": "PRIMARY_SUCCESS",
+      "query_artist": null,
+      "query_plan": {
+        "duplicate_fallback_queries_removed": 0,
+        "fallbacks": [
+          {
+            "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+            "query": "All The Stars (with SZA) - From Black Panther: The Album Kendrick Lamar",
+            "query_artist": "Kendrick Lamar",
+            "query_variant_index": 1
+          },
+          {
+            "discovery_mode": "SINGLE_ARTIST_ZERO_RESULT_FALLBACK",
+            "query": "All The Stars (with SZA) - From Black Panther: The Album SZA",
+            "query_artist": "SZA",
+            "query_variant_index": 2
+          }
+        ],
+        "included_artists": [
+          "Kendrick Lamar",
+          "SZA"
+        ],
+        "maximum_provider_requests": 3,
+        "primary": {
+          "discovery_mode": "PRIMARY_MULTI_ARTIST",
+          "query": "All The Stars (with SZA) - From Black Panther: The Album Kendrick Lamar SZA",
+          "query_artist": null,
+          "query_variant_index": 0
+        },
+        "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+        "sanitized_spotify_title": "All The Stars (with SZA) - From Black Panther: The Album"
+      },
+      "query_variant_index": 0,
+      "successful_query": "All The Stars (with SZA) - From Black Panther: The Album Kendrick Lamar SZA",
+      "total_provider_requests": 1,
+      "track": {
+        "album": "Black Panther The Album Music From And Inspired By",
+        "artists": [
+          "Kendrick Lamar",
+          "SZA"
+        ],
+        "duration_ms": 232186,
+        "isrc": "USUM71713947",
+        "release_year": 2018,
+        "spotify_track_id": "3GCdLUSnKSMJhs4Tj6CV3s",
+        "stable_track_id": "stage5b4_representative_v3_073",
+        "title": "All The Stars (with SZA) - From \"Black Panther: The Album\""
+      }
+    }
+  ]
+}

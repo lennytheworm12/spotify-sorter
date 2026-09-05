@@ -1,0 +1,1533 @@
+{
+  "claim_boundary": "Integration and representation sanity check; not a representative quantitative benchmark.",
+  "curation": {
+    "failed_track_substitution_allowed": false,
+    "group_order": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "membership_frozen_before_embedding_results": true,
+    "track_count": 25,
+    "tracks_per_group": 5
+  },
+  "experiment_id": "stage5c1_curated_25_materialization",
+  "frozen_contracts": {
+    "clap_weight": 0.7172981519,
+    "discovery": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+    "muq_weight": 0.2827018481,
+    "representation": "audio-representation-v1",
+    "representation_artifact_sha256": "ea6fb8f71c9de262460233802ad655298c3dd61e8f0ef53c93ed87aed5a77533",
+    "segment_centers_seconds": [
+      5,
+      15,
+      25
+    ],
+    "segment_duration_seconds": 5,
+    "selection": "STAGE5B3_MINIMAL_YOUTUBE_PRIOR_V1",
+    "vector_contract_sha256": "c85855d7a737bdecc91dd4629fa4e9baa48427135ae2764c9aabe3c74b89a623"
+  },
+  "manifest_state": "FROZEN_BEFORE_AUDIO_ACQUISITION",
+  "post_freeze_substitutions": 0,
+  "schema_version": "stage5c1-curated-manifest-v1",
+  "selection_basis": "Deliberately interpretable real-library tracks with frozen human-SAFE Stage 5B selected candidates.",
+  "source_artifacts": [
+    {
+      "path": "configs/stage5c1_curated_25.json",
+      "sha256": "0b4fa92c919399d3daa8a2e4890a9e61b2631384778860d8c4a91c97076a3d2b",
+      "size_bytes": 6355
+    },
+    {
+      "path": "reports/stage5b3_minimal_selector/minimal_selector_decisions.json",
+      "sha256": "39a417c01ce0e4cf9443a2b6fc75175e66be204b5fabb2b38ed2b65f38fa6d37",
+      "size_bytes": 214760
+    },
+    {
+      "path": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+      "sha256": "4813461ee7024d187f1b7b9354f8cec5829a0ae5bb61b4e6614e79f6b5eaff02",
+      "size_bytes": 228050
+    },
+    {
+      "path": "reports/stage5b5_representative_v4/human_review.csv",
+      "sha256": "cac56fc0c9e8f84989228254f2c75e97eed45f8d94dc7eb3fa4a27fad364b88a",
+      "size_bytes": 153160
+    },
+    {
+      "path": "src/audio_similarity/stage5b3_minimal_selector.py",
+      "sha256": "262ac3d0d7459170fef81336ee6f54f5523f2d8300fedee8a51798ce8439160f",
+      "size_bytes": 23106
+    },
+    {
+      "path": "src/audio_similarity/stage5b4c_artist_decomposition.py",
+      "sha256": "50618289ff54b586ed81c5af8a712841d893859dec5de68f9309c5468aea7a6c",
+      "size_bytes": 8754
+    },
+    {
+      "path": "reports/holistic_stage4a_dual/audio_representation_v1.json",
+      "sha256": "ea6fb8f71c9de262460233802ad655298c3dd61e8f0ef53c93ed87aed5a77533",
+      "size_bytes": 11320
+    }
+  ],
+  "tracks": [
+    {
+      "album": "Loveless Shadows",
+      "artists": [
+        "City Girl"
+      ],
+      "curation_group": "A",
+      "curation_group_name": "same_artist_similar_style",
+      "curation_rationale": "Dreamy instrumental lo-fi from the Loveless Shadows era; a direct positive control for City Girl's soft, sample-rich sound.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "A coherent City Girl cluster: mellow lo-fi instrumentals with closely related texture, pacing, and production.",
+      "frozen_primary_query": "Snow White Petals and Lights City Girl",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_001",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "IDEAL",
+      "human_safe_note": "Exact song identity with official, artist, label, distributor, or Topic evidence.",
+      "isrc": "TCADI1719561",
+      "manifest_index": 1,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2017,
+      "selected_candidate_metadata": {
+        "channel": "City Girl",
+        "duration_seconds": 188.0,
+        "title": "Snow White Petals and Lights",
+        "uploader": "City Girl",
+        "view_count": 35783
+      },
+      "selected_candidate_rank": 1,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=gntTO_iobU8",
+      "selected_youtube_video_id": "gntTO_iobU8",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 0.5,
+            "duration_seconds": 188.0,
+            "native_rank": 1,
+            "title": "Snow White Petals and Lights",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "gntTO_iobU8"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 187500,
+      "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+      "stage5c1_track_id": "stage5c1_A01",
+      "successful_query": "Snow White Petals and Lights City Girl",
+      "title": "Snow White Petals and Lights"
+    },
+    {
+      "album": "Snow Rose",
+      "artists": [
+        "City Girl"
+      ],
+      "curation_group": "A",
+      "curation_group_name": "same_artist_similar_style",
+      "curation_rationale": "Warm, relaxed Snow Rose instrumental chosen to match the group's intimate beat-driven production.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "A coherent City Girl cluster: mellow lo-fi instrumentals with closely related texture, pacing, and production.",
+      "frozen_primary_query": "To Be Honest I Just Want to Eat Noodles with You City Girl",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_022",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "IDEAL",
+      "human_safe_note": "Exact song identity with official, artist, label, distributor, or Topic evidence.",
+      "isrc": "TCADJ1733761",
+      "manifest_index": 2,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2017,
+      "selected_candidate_metadata": {
+        "channel": "City Girl",
+        "duration_seconds": 234.0,
+        "title": "To Be Honest I Just Want to Eat Noodles with You",
+        "uploader": "City Girl",
+        "view_count": 47518
+      },
+      "selected_candidate_rank": 1,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=DaCf0qLwFT0",
+      "selected_youtube_video_id": "DaCf0qLwFT0",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 0.0,
+            "duration_seconds": 234.0,
+            "native_rank": 1,
+            "title": "To Be Honest I Just Want to Eat Noodles with You",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "DaCf0qLwFT0"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 234000,
+      "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+      "stage5c1_track_id": "stage5c1_A02",
+      "successful_query": "To Be Honest I Just Want to Eat Noodles with You City Girl",
+      "title": "To Be Honest I Just Want to Eat Noodles with You"
+    },
+    {
+      "album": "Snow Rose",
+      "artists": [
+        "City Girl"
+      ],
+      "curation_group": "A",
+      "curation_group_name": "same_artist_similar_style",
+      "curation_rationale": "Another gentle Snow Rose cut with the same understated lo-fi palette and energy.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "A coherent City Girl cluster: mellow lo-fi instrumentals with closely related texture, pacing, and production.",
+      "frozen_primary_query": "Château Fountain City Girl",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_026",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "IDEAL",
+      "human_safe_note": "Exact song identity with official, artist, label, distributor, or Topic evidence.",
+      "isrc": "TCADJ1733763",
+      "manifest_index": 3,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2017,
+      "selected_candidate_metadata": {
+        "channel": "City Girl",
+        "duration_seconds": 177.0,
+        "title": "city girl | château fountain",
+        "uploader": "City Girl",
+        "view_count": 46873
+      },
+      "selected_candidate_rank": 1,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=p19YtFiJJzI",
+      "selected_youtube_video_id": "p19YtFiJJzI",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 0.27299999999999613,
+            "duration_seconds": 177.0,
+            "native_rank": 1,
+            "title": "city girl | château fountain",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "p19YtFiJJzI"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 176727,
+      "spotify_track_id": "19BDozGmxYGxF1NcUlENmm",
+      "stage5c1_track_id": "stage5c1_A03",
+      "successful_query": "Château Fountain City Girl",
+      "title": "Château Fountain"
+    },
+    {
+      "album": "Snow Rose",
+      "artists": [
+        "City Girl"
+      ],
+      "curation_group": "A",
+      "curation_group_name": "same_artist_similar_style",
+      "curation_rationale": "Airy, reflective Snow Rose instrumental expected to remain close to the other City Girl controls.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "A coherent City Girl cluster: mellow lo-fi instrumentals with closely related texture, pacing, and production.",
+      "frozen_primary_query": "Soundlessly in the Wind Like Lost Souls City Girl",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_058",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "IDEAL",
+      "human_safe_note": "Exact song identity with official, artist, label, distributor, or Topic evidence.",
+      "isrc": "TCADJ1733751",
+      "manifest_index": 4,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2017,
+      "selected_candidate_metadata": {
+        "channel": "City Girl",
+        "duration_seconds": 193.0,
+        "title": "city girl | soundlessly in the wind like lost souls",
+        "uploader": "City Girl",
+        "view_count": 75108
+      },
+      "selected_candidate_rank": 1,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=paiEPFwyAVs",
+      "selected_youtube_video_id": "paiEPFwyAVs",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 1.0589999999999975,
+            "duration_seconds": 193.0,
+            "native_rank": 1,
+            "title": "city girl | soundlessly in the wind like lost souls",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "paiEPFwyAVs"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 191941,
+      "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+      "stage5c1_track_id": "stage5c1_A04",
+      "successful_query": "Soundlessly in the Wind Like Lost Souls City Girl",
+      "title": "Soundlessly in the Wind Like Lost Souls"
+    },
+    {
+      "album": "Asleep in Soft Ether",
+      "artists": [
+        "City Girl"
+      ],
+      "curation_group": "A",
+      "curation_group_name": "same_artist_similar_style",
+      "curation_rationale": "Short ambient-leaning City Girl piece that preserves the core lo-fi palette while adding modest textural variation.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "A coherent City Girl cluster: mellow lo-fi instrumentals with closely related texture, pacing, and production.",
+      "frozen_primary_query": "Lost Birds in Heaven's Gaze City Girl",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_062",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "IDEAL",
+      "human_safe_note": "Exact song identity with official, artist, label, distributor, or Topic evidence.",
+      "isrc": "QZZ772418257",
+      "manifest_index": 5,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2024,
+      "selected_candidate_metadata": {
+        "channel": "City Girl",
+        "duration_seconds": 120.0,
+        "title": "Lost Birds in Heaven's Gaze",
+        "uploader": "City Girl",
+        "view_count": 15082
+      },
+      "selected_candidate_rank": 1,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=IwtP1vWNMPE",
+      "selected_youtube_video_id": "IwtP1vWNMPE",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 0.0,
+            "duration_seconds": 120.0,
+            "native_rank": 1,
+            "title": "Lost Birds in Heaven's Gaze",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "IwtP1vWNMPE"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 120000,
+      "spotify_track_id": "07YG6Ark70YsDK4q3swKrc",
+      "stage5c1_track_id": "stage5c1_A05",
+      "successful_query": "Lost Birds in Heaven's Gaze City Girl",
+      "title": "Lost Birds in Heaven's Gaze"
+    },
+    {
+      "album": "EASY",
+      "artists": [
+        "LE SSERAFIM"
+      ],
+      "curation_group": "B",
+      "curation_group_name": "same_artist_stylistically_varied",
+      "curation_rationale": "Warm midtempo pop chosen as the gentler end of the artist's production range.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "Shared LE SSERAFIM voices and pop production should remain visible, but the softer R&B, disco-pop, warm midtempo, western-funk, and dark electronic cuts should not collapse into a uniformly tight cluster.",
+      "frozen_primary_query": "We got so much LE SSERAFIM",
+      "historical_evidence": {
+        "benchmark_id": "stage5b_youtube_prior_v1_017",
+        "decision_source": "reports/stage5b3_minimal_selector/minimal_selector_decisions.json",
+        "review_source": "reports/stage5b2_youtube_prior/human_review.csv",
+        "source_stage": "STAGE5B3"
+      },
+      "human_safe_label": "IDEAL",
+      "human_safe_note": "Frozen Stage 5B.2 human review carried through Stage 5B.3.",
+      "isrc": "USA2P2340254",
+      "manifest_index": 6,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2024,
+      "selected_candidate_metadata": {
+        "channel": "Chaereve",
+        "duration_seconds": 165.0,
+        "title": "LE SSERAFIM We got so much Lyrics (Color Coded Lyrics)",
+        "uploader": "Chaereve",
+        "view_count": 125245
+      },
+      "selected_candidate_rank": 2,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=Kw2faPNf00s",
+      "selected_youtube_video_id": "Kw2faPNf00s",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 264.252,
+            "duration_seconds": 430.0,
+            "native_rank": 1,
+            "title": "LE SSERAFIM (르세라핌) 'We got so much' l Original Stage",
+            "veto_reasons": [
+              "UNREQUESTED_LIVE_OR_PERFORMANCE",
+              "DURATION_ANOMALY_GT_20_SECONDS"
+            ],
+            "vetoed": true,
+            "video_id": "nvGnwC2T6Ek"
+          },
+          {
+            "absolute_duration_delta_seconds": 0.7479999999999905,
+            "duration_seconds": 165.0,
+            "native_rank": 2,
+            "title": "LE SSERAFIM We got so much Lyrics (Color Coded Lyrics)",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "Kw2faPNf00s"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 165748,
+      "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+      "stage5c1_track_id": "stage5c1_B01",
+      "successful_query": "We got so much LE SSERAFIM",
+      "title": "We got so much"
+    },
+    {
+      "album": "FEARLESS",
+      "artists": [
+        "LE SSERAFIM"
+      ],
+      "curation_group": "B",
+      "curation_group_name": "same_artist_stylistically_varied",
+      "curation_rationale": "Sleek disco-funk production provides a rhythmic contrast to the quieter selections.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "Shared LE SSERAFIM voices and pop production should remain visible, but the softer R&B, disco-pop, warm midtempo, western-funk, and dark electronic cuts should not collapse into a uniformly tight cluster.",
+      "frozen_primary_query": "Blue Flame LE SSERAFIM",
+      "historical_evidence": {
+        "benchmark_id": "stage5b_youtube_prior_v1_039",
+        "decision_source": "reports/stage5b3_minimal_selector/minimal_selector_decisions.json",
+        "review_source": "reports/stage5b2_youtube_prior/human_review.csv",
+        "source_stage": "STAGE5B3"
+      },
+      "human_safe_label": "ACCEPTABLE",
+      "human_safe_note": "Frozen Stage 5B.2 human review carried through Stage 5B.3.",
+      "isrc": "USA2P2219220",
+      "manifest_index": 7,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2022,
+      "selected_candidate_metadata": {
+        "channel": "LE SSERAFIM",
+        "duration_seconds": 207.0,
+        "title": "LE SSERAFIM 르세라핌 Blue Flame @ LE SSERAFIM DEBUT SHOWCASE FEARLESS",
+        "uploader": "LE SSERAFIM",
+        "view_count": 18105211
+      },
+      "selected_candidate_rank": 1,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=Hqvdr91LoSI",
+      "selected_youtube_video_id": "Hqvdr91LoSI",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 5.1059999999999945,
+            "duration_seconds": 207.0,
+            "native_rank": 1,
+            "title": "LE SSERAFIM 르세라핌 Blue Flame @ LE SSERAFIM DEBUT SHOWCASE FEARLESS",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "Hqvdr91LoSI"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 201894,
+      "spotify_track_id": "37YoRLUu1qId0ewavgvnkG",
+      "stage5c1_track_id": "stage5c1_B02",
+      "successful_query": "Blue Flame LE SSERAFIM",
+      "title": "Blue Flame"
+    },
+    {
+      "album": "FEARLESS",
+      "artists": [
+        "LE SSERAFIM"
+      ],
+      "curation_group": "B",
+      "curation_group_name": "same_artist_stylistically_varied",
+      "curation_rationale": "Sparse, soft R&B-influenced track tests whether sonic style outweighs shared vocal identity.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "Shared LE SSERAFIM voices and pop production should remain visible, but the softer R&B, disco-pop, warm midtempo, western-funk, and dark electronic cuts should not collapse into a uniformly tight cluster.",
+      "frozen_primary_query": "Sour Grapes LE SSERAFIM",
+      "historical_evidence": {
+        "benchmark_id": "stage5b_youtube_prior_v1_060",
+        "decision_source": "reports/stage5b3_minimal_selector/minimal_selector_decisions.json",
+        "review_source": "reports/stage5b2_youtube_prior/human_review.csv",
+        "source_stage": "STAGE5B3"
+      },
+      "human_safe_label": "IDEAL",
+      "human_safe_note": "Frozen Stage 5B.2 human review carried through Stage 5B.3.",
+      "isrc": "USA2P2219221",
+      "manifest_index": 8,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2022,
+      "selected_candidate_metadata": {
+        "channel": "LE SSERAFIM",
+        "duration_seconds": 197.0,
+        "title": "Sour Grapes",
+        "uploader": "LE SSERAFIM",
+        "view_count": 80040324
+      },
+      "selected_candidate_rank": 1,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=V9Wsm0hlLUI",
+      "selected_youtube_video_id": "V9Wsm0hlLUI",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 0.46000000000000796,
+            "duration_seconds": 197.0,
+            "native_rank": 1,
+            "title": "Sour Grapes",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "V9Wsm0hlLUI"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 196540,
+      "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+      "stage5c1_track_id": "stage5c1_B03",
+      "successful_query": "Sour Grapes LE SSERAFIM",
+      "title": "Sour Grapes"
+    },
+    {
+      "album": "UNFORGIVEN",
+      "artists": [
+        "LE SSERAFIM",
+        "Nile Rodgers"
+      ],
+      "curation_group": "B",
+      "curation_group_name": "same_artist_stylistically_varied",
+      "curation_rationale": "High-energy western-funk pop with Nile Rodgers creates an intentionally strong production contrast.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "Shared LE SSERAFIM voices and pop production should remain visible, but the softer R&B, disco-pop, warm midtempo, western-funk, and dark electronic cuts should not collapse into a uniformly tight cluster.",
+      "frozen_primary_query": "UNFORGIVEN (feat. Nile Rodgers) LE SSERAFIM Nile Rodgers",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_061",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "ACCEPTABLE",
+      "human_safe_note": "Official choreography-version video for the exact song and credited artist.",
+      "isrc": "USA2P2310663",
+      "manifest_index": 9,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2023,
+      "selected_candidate_metadata": {
+        "channel": "HYBE LABELS",
+        "duration_seconds": 190.0,
+        "title": "LE SSERAFIM (르세라핌) 'UNFORGIVEN (feat. Nile Rodgers)' OFFICIAL M/V (Choreography ver.)",
+        "uploader": "HYBE LABELS",
+        "view_count": 53673771
+      },
+      "selected_candidate_rank": 2,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=UnWUmg6fEIw",
+      "selected_youtube_video_id": "UnWUmg6fEIw",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 77.852,
+            "duration_seconds": 260.0,
+            "native_rank": 1,
+            "title": "LE SSERAFIM (르세라핌) 'UNFORGIVEN (feat. Nile Rodgers)' OFFICIAL M/V",
+            "veto_reasons": [
+              "DURATION_ANOMALY_GT_20_SECONDS"
+            ],
+            "vetoed": true,
+            "video_id": "UBURTj20HXI"
+          },
+          {
+            "absolute_duration_delta_seconds": 7.852000000000004,
+            "duration_seconds": 190.0,
+            "native_rank": 2,
+            "title": "LE SSERAFIM (르세라핌) 'UNFORGIVEN (feat. Nile Rodgers)' OFFICIAL M/V (Choreography ver.)",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "UnWUmg6fEIw"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 182148,
+      "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+      "stage5c1_track_id": "stage5c1_B04",
+      "successful_query": "UNFORGIVEN (feat. Nile Rodgers) LE SSERAFIM Nile Rodgers",
+      "title": "UNFORGIVEN (feat. Nile Rodgers)"
+    },
+    {
+      "album": "HOT",
+      "artists": [
+        "LE SSERAFIM"
+      ],
+      "curation_group": "B",
+      "curation_group_name": "same_artist_stylistically_varied",
+      "curation_rationale": "Dark, minimal electronic production represents a different recent-era texture and energy.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "Shared LE SSERAFIM voices and pop production should remain visible, but the softer R&B, disco-pop, warm midtempo, western-funk, and dark electronic cuts should not collapse into a uniformly tight cluster.",
+      "frozen_primary_query": "Ash LE SSERAFIM",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_085",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "IDEAL",
+      "human_safe_note": "Exact song identity with official, artist, label, distributor, or Topic evidence.",
+      "isrc": "USA2P2507990",
+      "manifest_index": 10,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2025,
+      "selected_candidate_metadata": {
+        "channel": "LE SSERAFIM",
+        "duration_seconds": 198.0,
+        "title": "Ash",
+        "uploader": "LE SSERAFIM",
+        "view_count": 5367766
+      },
+      "selected_candidate_rank": 1,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=G6CSdvvrI-k",
+      "selected_youtube_video_id": "G6CSdvvrI-k",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 0.14699999999999136,
+            "duration_seconds": 198.0,
+            "native_rank": 1,
+            "title": "Ash",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "G6CSdvvrI-k"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 197853,
+      "spotify_track_id": "5o4U0weUIAXolji4sEAnjI",
+      "stage5c1_track_id": "stage5c1_B05",
+      "successful_query": "Ash LE SSERAFIM",
+      "title": "Ash"
+    },
+    {
+      "album": "i want you to help me live",
+      "artists": [
+        "Bonjr",
+        "Thomas Reid",
+        "versor"
+      ],
+      "curation_group": "C",
+      "curation_group_name": "lofi_chillhop_different_artists",
+      "curation_rationale": "Mellow, atmospheric lo-fi beat selected as a central cross-artist style reference.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "Cross-artist lo-fi/chillhop tracks should cluster through soft drums, mellow samples, restrained dynamics, and hazy texture rather than artist identity.",
+      "frozen_primary_query": "i want you to help me live Bonjr Thomas Reid versor",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_028",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "IDEAL",
+      "human_safe_note": "Exact song identity with official, artist, label, distributor, or Topic evidence.",
+      "isrc": "QZANL1749040",
+      "manifest_index": 11,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2017,
+      "selected_candidate_metadata": {
+        "channel": "bonjr",
+        "duration_seconds": 161.0,
+        "title": "i want you to help me live",
+        "uploader": "bonjr",
+        "view_count": 167968
+      },
+      "selected_candidate_rank": 1,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=vwwj-Utk32o",
+      "selected_youtube_video_id": "vwwj-Utk32o",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 0.9699999999999989,
+            "duration_seconds": 161.0,
+            "native_rank": 1,
+            "title": "i want you to help me live",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "vwwj-Utk32o"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 161970,
+      "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+      "stage5c1_track_id": "stage5c1_C01",
+      "successful_query": "i want you to help me live Bonjr Thomas Reid versor",
+      "title": "i want you to help me live"
+    },
+    {
+      "album": "Harbor",
+      "artists": [
+        "Tomppabeats"
+      ],
+      "curation_group": "C",
+      "curation_group_name": "lofi_chillhop_different_artists",
+      "curation_rationale": "Compact sample-driven chillhop with a historically SAFE rank-3 recovery.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "Cross-artist lo-fi/chillhop tracks should cluster through soft drums, mellow samples, restrained dynamics, and hazy texture rather than artist identity.",
+      "frozen_primary_query": "The Girl Next Door Tomppabeats",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_048",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "IDEAL",
+      "human_safe_note": "Exact Topic upload with matching title, artist, and duration.",
+      "isrc": "DEQ121639489",
+      "manifest_index": 12,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2016,
+      "selected_candidate_metadata": {
+        "channel": "Tomppabeats - Topic",
+        "duration_seconds": 52.0,
+        "title": "The Girl Next Door",
+        "uploader": "Tomppabeats - Topic",
+        "view_count": 14491
+      },
+      "selected_candidate_rank": 3,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=8008pI-ziLM",
+      "selected_youtube_video_id": "8008pI-ziLM",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 884.813,
+            "duration_seconds": 936.0,
+            "native_rank": 1,
+            "title": "The girl next door- tomppabeats (extended version)",
+            "veto_reasons": [
+              "DURATION_ANOMALY_GT_20_SECONDS"
+            ],
+            "vetoed": true,
+            "video_id": "r9GRIdyRlYw"
+          },
+          {
+            "absolute_duration_delta_seconds": 243.813,
+            "duration_seconds": 295.0,
+            "native_rank": 2,
+            "title": "Tomppabeats - The Girl Next Door Extended",
+            "veto_reasons": [
+              "DURATION_ANOMALY_GT_20_SECONDS"
+            ],
+            "vetoed": true,
+            "video_id": "81ZKjao_POw"
+          },
+          {
+            "absolute_duration_delta_seconds": 0.8130000000000024,
+            "duration_seconds": 52.0,
+            "native_rank": 3,
+            "title": "The Girl Next Door",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "8008pI-ziLM"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 51187,
+      "spotify_track_id": "41hXE5S8D4mRfcdqSMpmAC",
+      "stage5c1_track_id": "stage5c1_C02",
+      "successful_query": "The Girl Next Door Tomppabeats",
+      "title": "The Girl Next Door"
+    },
+    {
+      "album": "in your arms",
+      "artists": [
+        "Saib"
+      ],
+      "curation_group": "C",
+      "curation_group_name": "lofi_chillhop_different_artists",
+      "curation_rationale": "Warm jazz-inflected lo-fi production should connect through groove and instrumentation.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "Cross-artist lo-fi/chillhop tracks should cluster through soft drums, mellow samples, restrained dynamics, and hazy texture rather than artist identity.",
+      "frozen_primary_query": "in your arms Saib",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_071",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "IDEAL",
+      "human_safe_note": "Exact song identity with official, artist, label, distributor, or Topic evidence.",
+      "isrc": "QM42K1853240",
+      "manifest_index": 13,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2018,
+      "selected_candidate_metadata": {
+        "channel": "Saib",
+        "duration_seconds": 278.0,
+        "title": "in your arms",
+        "uploader": "Saib",
+        "view_count": 8057652
+      },
+      "selected_candidate_rank": 1,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=Ce6so35INYU",
+      "selected_youtube_video_id": "Ce6so35INYU",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 0.16100000000000136,
+            "duration_seconds": 278.0,
+            "native_rank": 1,
+            "title": "in your arms",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "Ce6so35INYU"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 277839,
+      "spotify_track_id": "4fgIoBKHzO7YO5eATyYbMl",
+      "stage5c1_track_id": "stage5c1_C03",
+      "successful_query": "in your arms Saib",
+      "title": "in your arms"
+    },
+    {
+      "album": "Grape Soda",
+      "artists": [
+        "Rook1e"
+      ],
+      "curation_group": "C",
+      "curation_group_name": "lofi_chillhop_different_artists",
+      "curation_rationale": "Soft, nostalgic lo-fi beat broadens the cluster without changing its core sonic character.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "Cross-artist lo-fi/chillhop tracks should cluster through soft drums, mellow samples, restrained dynamics, and hazy texture rather than artist identity.",
+      "frozen_primary_query": "Grape Soda Rook1e",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_078",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "ACCEPTABLE",
+      "human_safe_note": "Correct song and credited artist(s); alternate presentation or third-party upload remains usable.",
+      "isrc": "QZARB1804428",
+      "manifest_index": 14,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2018,
+      "selected_candidate_metadata": {
+        "channel": "Vietnam Lofi Community",
+        "duration_seconds": 106.0,
+        "title": "Rook1e - grape soda",
+        "uploader": "Vietnam Lofi Community",
+        "view_count": 86844
+      },
+      "selected_candidate_rank": 1,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=XhTkfDmkSbk",
+      "selected_youtube_video_id": "XhTkfDmkSbk",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 2.4509999999999934,
+            "duration_seconds": 106.0,
+            "native_rank": 1,
+            "title": "Rook1e - grape soda",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "XhTkfDmkSbk"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 103549,
+      "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+      "stage5c1_track_id": "stage5c1_C04",
+      "successful_query": "Grape Soda Rook1e",
+      "title": "Grape Soda"
+    },
+    {
+      "album": "How Are You",
+      "artists": [
+        "Mounika.",
+        "Cavetown"
+      ],
+      "curation_group": "C",
+      "curation_group_name": "lofi_chillhop_different_artists",
+      "curation_rationale": "Dusty vocal-sample lo-fi adds modest vocal texture while retaining the same beat aesthetic.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "Cross-artist lo-fi/chillhop tracks should cluster through soft drums, mellow samples, restrained dynamics, and hazy texture rather than artist identity.",
+      "frozen_primary_query": "Cut My Hair Mounika. Cavetown",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_057",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "ACCEPTABLE",
+      "human_safe_note": "Correct song and credited artist(s); alternate presentation or third-party upload remains usable.",
+      "isrc": "CH6541722273",
+      "manifest_index": 15,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2017,
+      "selected_candidate_metadata": {
+        "channel": "MrSuicideSheep",
+        "duration_seconds": 128.0,
+        "title": "Mounika - Cut My Hair (feat. Cavetown)",
+        "uploader": "MrSuicideSheep",
+        "view_count": 21505695
+      },
+      "selected_candidate_rank": 1,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=rqfDjmAkq7U",
+      "selected_youtube_video_id": "rqfDjmAkq7U",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 0.8629999999999995,
+            "duration_seconds": 128.0,
+            "native_rank": 1,
+            "title": "Mounika - Cut My Hair (feat. Cavetown)",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "rqfDjmAkq7U"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 127137,
+      "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+      "stage5c1_track_id": "stage5c1_C05",
+      "successful_query": "Cut My Hair Mounika. Cavetown",
+      "title": "Cut My Hair"
+    },
+    {
+      "album": "IVE EMPATHY",
+      "artists": [
+        "IVE"
+      ],
+      "curation_group": "D",
+      "curation_group_name": "rhythmic_korean_pop_different_artists",
+      "curation_rationale": "Hard-edged electronic dance-pop anchors the energetic end of the cluster.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "Rhythmic, polished Korean pop and pop-rap productions should form a second cross-artist cluster that is audibly distinct from the mellow lo-fi Group C.",
+      "frozen_primary_query": "TKO IVE",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_074",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "IDEAL",
+      "human_safe_note": "Exact song identity with official, artist, label, distributor, or Topic evidence.",
+      "isrc": "QMFMF2434282",
+      "manifest_index": 16,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2025,
+      "selected_candidate_metadata": {
+        "channel": "IVE",
+        "duration_seconds": 187.0,
+        "title": "06. TKO",
+        "uploader": "IVE",
+        "view_count": 1012479
+      },
+      "selected_candidate_rank": 1,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=AajQnW_4zOY",
+      "selected_youtube_video_id": "AajQnW_4zOY",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 0.8799999999999955,
+            "duration_seconds": 187.0,
+            "native_rank": 1,
+            "title": "06. TKO",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "AajQnW_4zOY"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 186120,
+      "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+      "stage5c1_track_id": "stage5c1_D01",
+      "successful_query": "TKO IVE",
+      "title": "TKO"
+    },
+    {
+      "album": "Any song",
+      "artists": [
+        "ZICO"
+      ],
+      "curation_group": "D",
+      "curation_group_name": "rhythmic_korean_pop_different_artists",
+      "curation_rationale": "Rhythmic pop-rap with a historically SAFE rank-2 selection adds groove-led variety.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "Rhythmic, polished Korean pop and pop-rap productions should form a second cross-artist cluster that is audibly distinct from the mellow lo-fi Group C.",
+      "frozen_primary_query": "Any song ZICO",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_037",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "ACCEPTABLE",
+      "human_safe_note": "Correct ZICO song in a lyric-video presentation.",
+      "isrc": "KRA381905519",
+      "manifest_index": 17,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2020,
+      "selected_candidate_metadata": {
+        "channel": "Hangeci",
+        "duration_seconds": 247.0,
+        "title": "ZICO (지코) - Any song (아무노래) (Color Coded Lyrics/Eng/Rom/Han/가사)",
+        "uploader": "Hangeci",
+        "view_count": 2118533
+      },
+      "selected_candidate_rank": 2,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=M0L066lsPgA",
+      "selected_youtube_video_id": "M0L066lsPgA",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 20.774,
+            "duration_seconds": 248.0,
+            "native_rank": 1,
+            "title": "[MV] ZICO(지코) _ Any song(아무노래)",
+            "veto_reasons": [
+              "DURATION_ANOMALY_GT_20_SECONDS"
+            ],
+            "vetoed": true,
+            "video_id": "UuV2BmJ1p_I"
+          },
+          {
+            "absolute_duration_delta_seconds": 19.774,
+            "duration_seconds": 247.0,
+            "native_rank": 2,
+            "title": "ZICO (지코) - Any song (아무노래) (Color Coded Lyrics/Eng/Rom/Han/가사)",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "M0L066lsPgA"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 227226,
+      "spotify_track_id": "1iIhGHzzrzqQfuNkFI2qAn",
+      "stage5c1_track_id": "stage5c1_D02",
+      "successful_query": "Any song ZICO",
+      "title": "Any song"
+    },
+    {
+      "album": "BBIBBI",
+      "artists": [
+        "IU"
+      ],
+      "curation_group": "D",
+      "curation_group_name": "rhythmic_korean_pop_different_artists",
+      "curation_rationale": "Minimal electropop/R&B production tests cross-artist similarity within polished Korean pop.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "Rhythmic, polished Korean pop and pop-rap productions should form a second cross-artist cluster that is audibly distinct from the mellow lo-fi Group C.",
+      "frozen_primary_query": "BBIBBI IU",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_098",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "IDEAL",
+      "human_safe_note": "Exact song identity with official, artist, label, distributor, or Topic evidence.",
+      "isrc": "KRA381801523",
+      "manifest_index": 18,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2018,
+      "selected_candidate_metadata": {
+        "channel": "1theK (원더케이)",
+        "duration_seconds": 209.0,
+        "title": "[MV] IU(아이유) _ BBIBBI(삐삐)",
+        "uploader": "1theK (원더케이)",
+        "view_count": 286915411
+      },
+      "selected_candidate_rank": 1,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=nM0xDI5R50E",
+      "selected_youtube_video_id": "nM0xDI5R50E",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 14.574000000000012,
+            "duration_seconds": 209.0,
+            "native_rank": 1,
+            "title": "[MV] IU(아이유) _ BBIBBI(삐삐)",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "nM0xDI5R50E"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 194426,
+      "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+      "stage5c1_track_id": "stage5c1_D03",
+      "successful_query": "BBIBBI IU",
+      "title": "BBIBBI"
+    },
+    {
+      "album": "COLOR OUTSIDE THE LINES",
+      "artists": [
+        "CORTIS"
+      ],
+      "curation_group": "D",
+      "curation_group_name": "rhythmic_korean_pop_different_artists",
+      "curation_rationale": "Percussive contemporary idol pop/hip-hop reinforces the cluster's dense rhythmic production.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "Rhythmic, polished Korean pop and pop-rap productions should form a second cross-artist cluster that is audibly distinct from the mellow lo-fi Group C.",
+      "frozen_primary_query": "FaSHioN CORTIS",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_024",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "IDEAL",
+      "human_safe_note": "Exact song identity with official, artist, label, distributor, or Topic evidence.",
+      "isrc": "USA2P2536189",
+      "manifest_index": 19,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2025,
+      "selected_candidate_metadata": {
+        "channel": "HYBE LABELS and CORTIS",
+        "duration_seconds": 180.0,
+        "title": "CORTIS (코르티스) 'FaSHioN' Official MV",
+        "uploader": "HYBE LABELS and CORTIS",
+        "view_count": 99823525
+      },
+      "selected_candidate_rank": 1,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=42wfEs7oIP8",
+      "selected_youtube_video_id": "42wfEs7oIP8",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 5.347000000000008,
+            "duration_seconds": 180.0,
+            "native_rank": 1,
+            "title": "CORTIS (코르티스) 'FaSHioN' Official MV",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "42wfEs7oIP8"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 174653,
+      "spotify_track_id": "4ecdsGz3Hg6TKPwQ0ZOdJz",
+      "stage5c1_track_id": "stage5c1_D04",
+      "successful_query": "FaSHioN CORTIS",
+      "title": "FaSHioN"
+    },
+    {
+      "album": "minisode 3: TOMORROW",
+      "artists": [
+        "TOMORROW X TOGETHER"
+      ],
+      "curation_group": "D",
+      "curation_group_name": "rhythmic_korean_pop_different_artists",
+      "curation_rationale": "Dramatic synth-pop and rock texture supplies a SAFE rank-3 recovery and controlled stylistic breadth.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "Rhythmic, polished Korean pop and pop-rap productions should form a second cross-artist cluster that is audibly distinct from the mellow lo-fi Group C.",
+      "frozen_primary_query": "Deja Vu TOMORROW X TOGETHER",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_081",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "ACCEPTABLE",
+      "human_safe_note": "Correct TXT song in a lyric-video presentation with near-matching duration.",
+      "isrc": "USA2P2408081",
+      "manifest_index": 20,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2024,
+      "selected_candidate_metadata": {
+        "channel": "ShadowByYoongi",
+        "duration_seconds": 176.0,
+        "title": "TXT 'Deja Vu' Lyrics (투모로우바이투게더 Deja Vu 가사) [Color Coded Han_Rom_Eng] ShadowByYoongi",
+        "uploader": "ShadowByYoongi",
+        "view_count": 2588923
+      },
+      "selected_candidate_rank": 3,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=_SyegcTF3Xg",
+      "selected_youtube_video_id": "_SyegcTF3Xg",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 69.57300000000001,
+            "duration_seconds": 241.0,
+            "native_rank": 1,
+            "title": "TXT (투모로우바이투게더) 'Deja Vu' Official MV",
+            "veto_reasons": [
+              "DURATION_ANOMALY_GT_20_SECONDS"
+            ],
+            "vetoed": true,
+            "video_id": "DiHUEWBRQEI"
+          },
+          {
+            "absolute_duration_delta_seconds": 27.573000000000008,
+            "duration_seconds": 199.0,
+            "native_rank": 2,
+            "title": "[BE ORIGINAL] TXT(투모로우바이투게더) 'Deja Vu' (4K)",
+            "veto_reasons": [
+              "DURATION_ANOMALY_GT_20_SECONDS"
+            ],
+            "vetoed": true,
+            "video_id": "WlLBqVP1rlk"
+          },
+          {
+            "absolute_duration_delta_seconds": 4.5730000000000075,
+            "duration_seconds": 176.0,
+            "native_rank": 3,
+            "title": "TXT 'Deja Vu' Lyrics (투모로우바이투게더 Deja Vu 가사) [Color Coded Han_Rom_Eng] ShadowByYoongi",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "_SyegcTF3Xg"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 171427,
+      "spotify_track_id": "3aAnwyBJY9OLNLqSgd4fZU",
+      "stage5c1_track_id": "stage5c1_D05",
+      "successful_query": "Deja Vu TOMORROW X TOGETHER",
+      "title": "Deja Vu"
+    },
+    {
+      "album": "This Is What It Feels Like",
+      "artists": [
+        "Gracie Abrams"
+      ],
+      "curation_group": "E",
+      "curation_group_name": "heterogeneous_negative_control",
+      "curation_rationale": "Intimate acoustic singer-songwriter pop is unlike the electronic and instrumental controls.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "These acoustic pop, distorted electronic, melodic rap, solo piano, and orchestral ballad tracks should have lower and more varied mutual similarities than the positive-control clusters.",
+      "frozen_primary_query": "Feels Like Gracie Abrams",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_046",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "IDEAL",
+      "human_safe_note": "Exact song identity with official, artist, label, distributor, or Topic evidence.",
+      "isrc": "USUG12001932",
+      "manifest_index": 21,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2021,
+      "selected_candidate_metadata": {
+        "channel": "Gracie Abrams",
+        "duration_seconds": 153.0,
+        "title": "Gracie Abrams - Feels Like (Official Music Video)",
+        "uploader": "Gracie Abrams",
+        "view_count": 7092116
+      },
+      "selected_candidate_rank": 1,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=ptznWGs4GKg",
+      "selected_youtube_video_id": "ptznWGs4GKg",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 0.6829999999999927,
+            "duration_seconds": 153.0,
+            "native_rank": 1,
+            "title": "Gracie Abrams - Feels Like (Official Music Video)",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "ptznWGs4GKg"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 152317,
+      "spotify_track_id": "35IcAVSMsU9qzHfpPbvC8A",
+      "stage5c1_track_id": "stage5c1_E01",
+      "successful_query": "Feels Like Gracie Abrams",
+      "title": "Feels Like"
+    },
+    {
+      "album": "whiplash / cliche",
+      "artists": [
+        "2hollis"
+      ],
+      "curation_group": "E",
+      "curation_group_name": "heterogeneous_negative_control",
+      "curation_rationale": "Distorted, high-energy electronic production supplies a strong negative contrast.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "These acoustic pop, distorted electronic, melodic rap, solo piano, and orchestral ballad tracks should have lower and more varied mutual similarities than the positive-control clusters.",
+      "frozen_primary_query": "cliche 2hollis",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_007",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "IDEAL",
+      "human_safe_note": "Exact song identity with official, artist, label, distributor, or Topic evidence.",
+      "isrc": "USUYG1498493",
+      "manifest_index": 22,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2023,
+      "selected_candidate_metadata": {
+        "channel": "2hollis",
+        "duration_seconds": 180.0,
+        "title": "2hollis - cliche (official audio)",
+        "uploader": "2hollis",
+        "view_count": 663015
+      },
+      "selected_candidate_rank": 1,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=46JG3ZpRaRc",
+      "selected_youtube_video_id": "46JG3ZpRaRc",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 0.7849999999999966,
+            "duration_seconds": 180.0,
+            "native_rank": 1,
+            "title": "2hollis - cliche (official audio)",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "46JG3ZpRaRc"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 179215,
+      "spotify_track_id": "2oRNyf4qlAzGz6LljMcDJp",
+      "stage5c1_track_id": "stage5c1_E02",
+      "successful_query": "cliche 2hollis",
+      "title": "cliche"
+    },
+    {
+      "album": "Luv Is Rage 2",
+      "artists": [
+        "Lil Uzi Vert",
+        "Oh Wonder"
+      ],
+      "curation_group": "E",
+      "curation_group_name": "heterogeneous_negative_control",
+      "curation_rationale": "Melodic rap introduces prominent rap delivery and trap production.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "These acoustic pop, distorted electronic, melodic rap, solo piano, and orchestral ballad tracks should have lower and more varied mutual similarities than the positive-control clusters.",
+      "frozen_primary_query": "The Way Life Goes (feat. Oh Wonder) Lil Uzi Vert Oh Wonder",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_090",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "IDEAL",
+      "human_safe_note": "Exact song identity with official, artist, label, distributor, or Topic evidence.",
+      "isrc": "USAT21703429",
+      "manifest_index": 23,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2017,
+      "selected_candidate_metadata": {
+        "channel": "LIL UZI VERT",
+        "duration_seconds": 222.0,
+        "title": "The Way Life Goes (feat. Oh Wonder)",
+        "uploader": "LIL UZI VERT",
+        "view_count": 6236646
+      },
+      "selected_candidate_rank": 1,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=ELSUh04-Jh4",
+      "selected_youtube_video_id": "ELSUh04-Jh4",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 0.2539999999999907,
+            "duration_seconds": 222.0,
+            "native_rank": 1,
+            "title": "The Way Life Goes (feat. Oh Wonder)",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "ELSUh04-Jh4"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 221746,
+      "spotify_track_id": "2eAZfqOm4EnOF9VvN50Tyc",
+      "stage5c1_track_id": "stage5c1_E03",
+      "successful_query": "The Way Life Goes (feat. Oh Wonder) Lil Uzi Vert Oh Wonder",
+      "title": "The Way Life Goes (feat. Oh Wonder)"
+    },
+    {
+      "album": "Reminiscence of Maplestory Piano Collections, Vol. 1",
+      "artists": [
+        "Paintamelody"
+      ],
+      "curation_group": "E",
+      "curation_group_name": "heterogeneous_negative_control",
+      "curation_rationale": "Solo-piano video-game arrangement is intentionally sparse and instrumental.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "These acoustic pop, distorted electronic, melodic rap, solo piano, and orchestral ballad tracks should have lower and more varied mutual similarities than the positive-control clusters.",
+      "frozen_primary_query": "Temple of Time Paintamelody",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_049",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "IDEAL",
+      "human_safe_note": "Exact song identity with official, artist, label, distributor, or Topic evidence.",
+      "isrc": "QZK6Q2005157",
+      "manifest_index": 24,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2020,
+      "selected_candidate_metadata": {
+        "channel": "Paintamelody - Topic",
+        "duration_seconds": 137.0,
+        "title": "Temple of Time",
+        "uploader": "Paintamelody - Topic",
+        "view_count": 51679
+      },
+      "selected_candidate_rank": 1,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=wBt0h-Ti6vQ",
+      "selected_youtube_video_id": "wBt0h-Ti6vQ",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 0.8499999999999943,
+            "duration_seconds": 137.0,
+            "native_rank": 1,
+            "title": "Temple of Time",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "wBt0h-Ti6vQ"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 136150,
+      "spotify_track_id": "5lYv58lizCFl1c15K3yan9",
+      "stage5c1_track_id": "stage5c1_E04",
+      "successful_query": "Temple of Time Paintamelody",
+      "title": "Temple of Time"
+    },
+    {
+      "album": "Guardian (Original Television Soundtrack), Pt. 9",
+      "artists": [
+        "AILEE"
+      ],
+      "curation_group": "E",
+      "curation_group_name": "heterogeneous_negative_control",
+      "curation_rationale": "Large orchestral K-drama ballad provides the negative set's vocal and cinematic extreme.",
+      "discovery_mode": "PRIMARY_MULTI_ARTIST",
+      "expected_relationship_notes": "These acoustic pop, distorted electronic, melodic rap, solo piano, and orchestral ballad tracks should have lower and more varied mutual similarities than the positive-control clusters.",
+      "frozen_primary_query": "I Will Go To You Like the First Snow AILEE",
+      "historical_evidence": {
+        "benchmark_id": "stage5b5_representative_v4_096",
+        "decision_source": "reports/stage5b5_representative_v4/automated_selector_decisions.json",
+        "review_source": "reports/stage5b5_representative_v4/human_review.csv",
+        "source_stage": "STAGE5B5_V4"
+      },
+      "human_safe_label": "ACCEPTABLE",
+      "human_safe_note": "Correct song and credited artist(s); alternate presentation or third-party upload remains usable.",
+      "isrc": "KRA491600937",
+      "manifest_index": 25,
+      "query_artist": null,
+      "query_variant_index": 0,
+      "release_year": 2017,
+      "selected_candidate_metadata": {
+        "channel": "TamTam Lyrics",
+        "duration_seconds": 231.0,
+        "title": "I Will Go To You Like The First Snow - Ailee Lyrics [Han,Rom,Eng]",
+        "uploader": "TamTam Lyrics",
+        "view_count": 43578161
+      },
+      "selected_candidate_rank": 1,
+      "selected_youtube_url": "https://www.youtube.com/watch?v=By8Iv_TpxCI",
+      "selected_youtube_video_id": "By8Iv_TpxCI",
+      "selector_decision_metadata": {
+        "candidate_evaluations": [
+          {
+            "absolute_duration_delta_seconds": 1.3220000000000027,
+            "duration_seconds": 231.0,
+            "native_rank": 1,
+            "title": "I Will Go To You Like The First Snow - Ailee Lyrics [Han,Rom,Eng]",
+            "veto_reasons": [],
+            "vetoed": false,
+            "video_id": "By8Iv_TpxCI"
+          }
+        ],
+        "decision": "AUTO_SELECT",
+        "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+      },
+      "spotify_duration_ms": 229678,
+      "spotify_track_id": "2BPXILn0MqOe5WroVXlvN1",
+      "stage5c1_track_id": "stage5c1_E05",
+      "successful_query": "I Will Go To You Like the First Snow AILEE",
+      "title": "I Will Go To You Like the First Snow"
+    }
+  ]
+}

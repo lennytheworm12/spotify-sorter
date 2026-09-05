@@ -1,0 +1,1196 @@
+{
+  "created_at_utc": "2026-09-04T19:01:26.562461+00:00",
+  "experiment_id": "STAGE5C2_SELECTOR_AWARE_FALLBACK_SUPPLEMENT",
+  "frozen_stage5c2_input_sha256": {
+    "automated_selector_decisions.json": "a6b6dd1992911be0e64c48172072152e65728d25a497977f468c0243865e8b87",
+    "discovery_results.json": "81ec851fa233da6a951023a50a4f74f1a0e9bcfb25ac2784632c4da8003d5050",
+    "representative_manifest.json": "cdbc64aac94bffb34481b898370b56e1b9566ae925ebfbeb21621bbe6cb0667b",
+    "selected_sources.json": "dc9c868d603f456782867eee76aea6a8a9784b3b43ace3777636b77b97bf12b9",
+    "stage5c2_metrics.json": "ae4bfc4778597c86650a6b90424357f0cb04e85af23c5c21c3b442a5687efe47"
+  },
+  "query_contract_id": "NATURAL_TITLE_FIRST3_THEN_SINGLE_ARTIST_THEN_TITLE_ONLY_ON_UNSELECTABLE_V2",
+  "schema_version": "stage5c2-selector-aware-fallback-supplement-v1",
+  "scope_guards": {
+    "broad_corpus_search": false,
+    "candidate_pool_merges": 0,
+    "historical_stage5c2_rewritten": false,
+    "media_downloads": 0,
+    "production_activation": false,
+    "stage5b3_selector_modified": false
+  },
+  "tracks": [
+    {
+      "artists": [
+        "Jay Park",
+        "IU"
+      ],
+      "historical_stage5c2": {
+        "candidate_video_ids": [
+          "gFb1TftvdoM",
+          "120Oil4y9kA",
+          "JiAAtRD1c-w"
+        ],
+        "decision": "MATCH_UNCERTAIN",
+        "reason": "ALL_TOP3_CANDIDATES_VETOED",
+        "successful_query": "GANADARA (Feat. IU) Jay Park IU"
+      },
+      "owner_reference_recovered": true,
+      "owner_supplied_reference": {
+        "owner_url": "https://www.youtube.com/watch?v=v224EdAkZr8",
+        "owner_video_id": "v224EdAkZr8"
+      },
+      "selector_aware_result": {
+        "attempts": [
+          {
+            "candidate_video_ids": [
+              "gFb1TftvdoM",
+              "120Oil4y9kA",
+              "JiAAtRD1c-w"
+            ],
+            "candidates": [
+              {
+                "availability": null,
+                "canonical_url": "https://www.youtube.com/watch?v=gFb1TftvdoM",
+                "channel": "JAY PARK",
+                "description": "박재범 (Jay Park) - 'GANADARA (Feat. 아이유 IU)' Official Music Video (KO/EN/JP/CN) Listen & download 'GANADARA' out now ...",
+                "discovery_mode": "PRIMARY_MULTI_ARTIST",
+                "duplicate_occurrences": [],
+                "duration_seconds": 312.0,
+                "live_status": null,
+                "provider": "yt_dlp",
+                "provider_rank": 1,
+                "query": "GANADARA (Feat. IU) Jay Park IU",
+                "query_artist": null,
+                "query_variant_index": 0,
+                "rank": 1,
+                "stable_track_id": "stage5c2_008",
+                "title": "박재범 (Jay Park) - ‘GANADARA (Feat. 아이유 IU)’ Official Music Video",
+                "uploader": "JAY PARK",
+                "url": "https://www.youtube.com/watch?v=gFb1TftvdoM",
+                "view_count": 25718556,
+                "youtube_video_id": "gFb1TftvdoM"
+              },
+              {
+                "availability": null,
+                "canonical_url": "https://www.youtube.com/watch?v=120Oil4y9kA",
+                "channel": "Maya W",
+                "description": "IU's Palette w/ Jay Park: https://youtu.be/4vDh05pwc7U Official music video: https://youtu.be/gFb1TftvdoM #jaypark #박재범 #IU ...",
+                "discovery_mode": "PRIMARY_MULTI_ARTIST",
+                "duplicate_occurrences": [],
+                "duration_seconds": 208.0,
+                "live_status": null,
+                "provider": "yt_dlp",
+                "provider_rank": 2,
+                "query": "GANADARA (Feat. IU) Jay Park IU",
+                "query_artist": null,
+                "query_variant_index": 0,
+                "rank": 2,
+                "stable_track_id": "stage5c2_008",
+                "title": "Jay Park — ‘GANADARA’ (Feat. IU 아이유) | 1st Live performance on IU’s Palette",
+                "uploader": "Maya W",
+                "url": "https://www.youtube.com/watch?v=120Oil4y9kA",
+                "view_count": 318461,
+                "youtube_video_id": "120Oil4y9kA"
+              },
+              {
+                "availability": null,
+                "canonical_url": "https://www.youtube.com/watch?v=JiAAtRD1c-w",
+                "channel": "Zaty Farhani",
+                "description": "By - Zaty Farhani Thanks for watching! Please LIKE and SHARE this video! Don't forget to SUBSCRIBE our channel. c All Rights ...",
+                "discovery_mode": "PRIMARY_MULTI_ARTIST",
+                "duplicate_occurrences": [],
+                "duration_seconds": 251.0,
+                "live_status": null,
+                "provider": "yt_dlp",
+                "provider_rank": 3,
+                "query": "GANADARA (Feat. IU) Jay Park IU",
+                "query_artist": null,
+                "query_variant_index": 0,
+                "rank": 3,
+                "stable_track_id": "stage5c2_008",
+                "title": "Jay Park - 'GANADARA' (Feat. IU) Lyrics [Color Coded_Han_Rom_Eng]",
+                "uploader": "Zaty Farhani",
+                "url": "https://www.youtube.com/watch?v=JiAAtRD1c-w",
+                "view_count": 156248,
+                "youtube_video_id": "JiAAtRD1c-w"
+              }
+            ],
+            "discovery_mode": "PRIMARY_MULTI_ARTIST",
+            "elapsed_seconds": 1.347639193001669,
+            "error": null,
+            "query": "GANADARA (Feat. IU) Jay Park IU",
+            "query_artist": null,
+            "query_variant_index": 0,
+            "result_count": 3,
+            "selector_decision": "MATCH_UNCERTAIN",
+            "selector_evaluations": [
+              {
+                "absolute_duration_delta_seconds": 108.273,
+                "duration_seconds": 312.0,
+                "native_rank": 1,
+                "title": "박재범 (Jay Park) - ‘GANADARA (Feat. 아이유 IU)’ Official Music Video",
+                "veto_reasons": [
+                  "DURATION_ANOMALY_GT_20_SECONDS"
+                ],
+                "vetoed": true,
+                "video_id": "gFb1TftvdoM"
+              },
+              {
+                "absolute_duration_delta_seconds": 4.272999999999996,
+                "duration_seconds": 208.0,
+                "native_rank": 2,
+                "title": "Jay Park — ‘GANADARA’ (Feat. IU 아이유) | 1st Live performance on IU’s Palette",
+                "veto_reasons": [
+                  "UNREQUESTED_LIVE_OR_PERFORMANCE"
+                ],
+                "vetoed": true,
+                "video_id": "120Oil4y9kA"
+              },
+              {
+                "absolute_duration_delta_seconds": 47.272999999999996,
+                "duration_seconds": 251.0,
+                "native_rank": 3,
+                "title": "Jay Park - 'GANADARA' (Feat. IU) Lyrics [Color Coded_Han_Rom_Eng]",
+                "veto_reasons": [
+                  "DURATION_ANOMALY_GT_20_SECONDS"
+                ],
+                "vetoed": true,
+                "video_id": "JiAAtRD1c-w"
+              }
+            ],
+            "selector_reason": "ALL_TOP3_CANDIDATES_VETOED",
+            "warnings": []
+          },
+          {
+            "candidate_video_ids": [
+              "gFb1TftvdoM",
+              "120Oil4y9kA",
+              "v224EdAkZr8"
+            ],
+            "candidates": [
+              {
+                "availability": null,
+                "canonical_url": "https://www.youtube.com/watch?v=gFb1TftvdoM",
+                "channel": "JAY PARK",
+                "description": "박재범 (Jay Park) - 'GANADARA (Feat. 아이유 IU)' Official Music Video (KO/EN/JP/CN) Listen & download 'GANADARA' out now ...",
+                "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+                "duplicate_occurrences": [],
+                "duration_seconds": 312.0,
+                "live_status": null,
+                "provider": "yt_dlp",
+                "provider_rank": 1,
+                "query": "GANADARA (Feat. IU) Jay Park",
+                "query_artist": "Jay Park",
+                "query_variant_index": 1,
+                "rank": 1,
+                "stable_track_id": "stage5c2_008",
+                "title": "박재범 (Jay Park) - ‘GANADARA (Feat. 아이유 IU)’ Official Music Video",
+                "uploader": "JAY PARK",
+                "url": "https://www.youtube.com/watch?v=gFb1TftvdoM",
+                "view_count": 25718556,
+                "youtube_video_id": "gFb1TftvdoM"
+              },
+              {
+                "availability": null,
+                "canonical_url": "https://www.youtube.com/watch?v=120Oil4y9kA",
+                "channel": "Maya W",
+                "description": "IU's Palette w/ Jay Park: https://youtu.be/4vDh05pwc7U Official music video: https://youtu.be/gFb1TftvdoM #jaypark #박재범 #IU ...",
+                "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+                "duplicate_occurrences": [],
+                "duration_seconds": 208.0,
+                "live_status": null,
+                "provider": "yt_dlp",
+                "provider_rank": 2,
+                "query": "GANADARA (Feat. IU) Jay Park",
+                "query_artist": "Jay Park",
+                "query_variant_index": 1,
+                "rank": 2,
+                "stable_track_id": "stage5c2_008",
+                "title": "Jay Park — ‘GANADARA’ (Feat. IU 아이유) | 1st Live performance on IU’s Palette",
+                "uploader": "Maya W",
+                "url": "https://www.youtube.com/watch?v=120Oil4y9kA",
+                "view_count": 318461,
+                "youtube_video_id": "120Oil4y9kA"
+              },
+              {
+                "availability": null,
+                "canonical_url": "https://www.youtube.com/watch?v=v224EdAkZr8",
+                "channel": "JAY PARK",
+                "description": "박재범 (Jay Park) - 'GANADARA (Feat. 아이유 IU)' Official Audio Listen & download 'GANADARA' out now Melon: ...",
+                "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+                "duplicate_occurrences": [],
+                "duration_seconds": 204.0,
+                "live_status": null,
+                "provider": "yt_dlp",
+                "provider_rank": 3,
+                "query": "GANADARA (Feat. IU) Jay Park",
+                "query_artist": "Jay Park",
+                "query_variant_index": 1,
+                "rank": 3,
+                "stable_track_id": "stage5c2_008",
+                "title": "박재범 (Jay Park) - ‘GANADARA (Feat. 아이유 IU)’ Official Audio",
+                "uploader": "JAY PARK",
+                "url": "https://www.youtube.com/watch?v=v224EdAkZr8",
+                "view_count": 10003384,
+                "youtube_video_id": "v224EdAkZr8"
+              }
+            ],
+            "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+            "elapsed_seconds": 1.0722487780149095,
+            "error": null,
+            "query": "GANADARA (Feat. IU) Jay Park",
+            "query_artist": "Jay Park",
+            "query_variant_index": 1,
+            "result_count": 3,
+            "selector_decision": "AUTO_SELECT",
+            "selector_evaluations": [
+              {
+                "absolute_duration_delta_seconds": 108.273,
+                "duration_seconds": 312.0,
+                "native_rank": 1,
+                "title": "박재범 (Jay Park) - ‘GANADARA (Feat. 아이유 IU)’ Official Music Video",
+                "veto_reasons": [
+                  "DURATION_ANOMALY_GT_20_SECONDS"
+                ],
+                "vetoed": true,
+                "video_id": "gFb1TftvdoM"
+              },
+              {
+                "absolute_duration_delta_seconds": 4.272999999999996,
+                "duration_seconds": 208.0,
+                "native_rank": 2,
+                "title": "Jay Park — ‘GANADARA’ (Feat. IU 아이유) | 1st Live performance on IU’s Palette",
+                "veto_reasons": [
+                  "UNREQUESTED_LIVE_OR_PERFORMANCE"
+                ],
+                "vetoed": true,
+                "video_id": "120Oil4y9kA"
+              },
+              {
+                "absolute_duration_delta_seconds": 0.27299999999999613,
+                "duration_seconds": 204.0,
+                "native_rank": 3,
+                "title": "박재범 (Jay Park) - ‘GANADARA (Feat. 아이유 IU)’ Official Audio",
+                "veto_reasons": [],
+                "vetoed": false,
+                "video_id": "v224EdAkZr8"
+              }
+            ],
+            "selector_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO",
+            "warnings": []
+          }
+        ],
+        "candidates": [
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=gFb1TftvdoM",
+            "channel": "JAY PARK",
+            "description": "박재범 (Jay Park) - 'GANADARA (Feat. 아이유 IU)' Official Music Video (KO/EN/JP/CN) Listen & download 'GANADARA' out now ...",
+            "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+            "duplicate_occurrences": [],
+            "duration_seconds": 312.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 1,
+            "query": "GANADARA (Feat. IU) Jay Park",
+            "query_artist": "Jay Park",
+            "query_variant_index": 1,
+            "rank": 1,
+            "stable_track_id": "stage5c2_008",
+            "title": "박재범 (Jay Park) - ‘GANADARA (Feat. 아이유 IU)’ Official Music Video",
+            "uploader": "JAY PARK",
+            "url": "https://www.youtube.com/watch?v=gFb1TftvdoM",
+            "view_count": 25718556,
+            "youtube_video_id": "gFb1TftvdoM"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=120Oil4y9kA",
+            "channel": "Maya W",
+            "description": "IU's Palette w/ Jay Park: https://youtu.be/4vDh05pwc7U Official music video: https://youtu.be/gFb1TftvdoM #jaypark #박재범 #IU ...",
+            "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+            "duplicate_occurrences": [],
+            "duration_seconds": 208.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 2,
+            "query": "GANADARA (Feat. IU) Jay Park",
+            "query_artist": "Jay Park",
+            "query_variant_index": 1,
+            "rank": 2,
+            "stable_track_id": "stage5c2_008",
+            "title": "Jay Park — ‘GANADARA’ (Feat. IU 아이유) | 1st Live performance on IU’s Palette",
+            "uploader": "Maya W",
+            "url": "https://www.youtube.com/watch?v=120Oil4y9kA",
+            "view_count": 318461,
+            "youtube_video_id": "120Oil4y9kA"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=v224EdAkZr8",
+            "channel": "JAY PARK",
+            "description": "박재범 (Jay Park) - 'GANADARA (Feat. 아이유 IU)' Official Audio Listen & download 'GANADARA' out now Melon: ...",
+            "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+            "duplicate_occurrences": [],
+            "duration_seconds": 204.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 3,
+            "query": "GANADARA (Feat. IU) Jay Park",
+            "query_artist": "Jay Park",
+            "query_variant_index": 1,
+            "rank": 3,
+            "stable_track_id": "stage5c2_008",
+            "title": "박재범 (Jay Park) - ‘GANADARA (Feat. 아이유 IU)’ Official Audio",
+            "uploader": "JAY PARK",
+            "url": "https://www.youtube.com/watch?v=v224EdAkZr8",
+            "view_count": 10003384,
+            "youtube_video_id": "v224EdAkZr8"
+          }
+        ],
+        "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+        "elapsed_seconds": 2.4199404509854503,
+        "error": null,
+        "fallback_triggered": true,
+        "outcome": "FALLBACK_SELECTED",
+        "query_artist": "Jay Park",
+        "query_contract_id": "NATURAL_TITLE_FIRST3_THEN_SINGLE_ARTIST_THEN_TITLE_ONLY_ON_UNSELECTABLE_V2",
+        "query_plan": [
+          {
+            "discovery_mode": "PRIMARY_MULTI_ARTIST",
+            "query": "GANADARA (Feat. IU) Jay Park IU",
+            "query_artist": null,
+            "query_variant_index": 0
+          },
+          {
+            "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+            "query": "GANADARA (Feat. IU) Jay Park",
+            "query_artist": "Jay Park",
+            "query_variant_index": 1
+          },
+          {
+            "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+            "query": "GANADARA (Feat. IU) IU",
+            "query_artist": "IU",
+            "query_variant_index": 2
+          },
+          {
+            "discovery_mode": "TITLE_ONLY_UNSELECTABLE_FALLBACK",
+            "query": "GANADARA (Feat. IU)",
+            "query_artist": null,
+            "query_variant_index": 4
+          }
+        ],
+        "query_variant_index": 1,
+        "schema_version": "selector-aware-query-fallback-result-v1",
+        "scope_guards": {
+          "candidate_pool_merges": 0,
+          "candidate_reranking": false,
+          "maximum_provider_requests": 4,
+          "selector_id": "STAGE5B3_MINIMAL_YOUTUBE_SELECTOR_V1",
+          "title_only_is_last": true
+        },
+        "selected_candidate": {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=v224EdAkZr8",
+          "channel": "JAY PARK",
+          "description": "박재범 (Jay Park) - 'GANADARA (Feat. 아이유 IU)' Official Audio Listen & download 'GANADARA' out now Melon: ...",
+          "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+          "duplicate_occurrences": [],
+          "duration_seconds": 204.0,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 3,
+          "query": "GANADARA (Feat. IU) Jay Park",
+          "query_artist": "Jay Park",
+          "query_variant_index": 1,
+          "rank": 3,
+          "stable_track_id": "stage5c2_008",
+          "title": "박재범 (Jay Park) - ‘GANADARA (Feat. 아이유 IU)’ Official Audio",
+          "uploader": "JAY PARK",
+          "url": "https://www.youtube.com/watch?v=v224EdAkZr8",
+          "view_count": 10003384,
+          "youtube_video_id": "v224EdAkZr8"
+        },
+        "selected_rank": 3,
+        "selected_video_id": "v224EdAkZr8",
+        "selector_decision": {
+          "candidate_evaluations": [
+            {
+              "absolute_duration_delta_seconds": 108.273,
+              "duration_seconds": 312.0,
+              "native_rank": 1,
+              "title": "박재범 (Jay Park) - ‘GANADARA (Feat. 아이유 IU)’ Official Music Video",
+              "veto_reasons": [
+                "DURATION_ANOMALY_GT_20_SECONDS"
+              ],
+              "vetoed": true,
+              "video_id": "gFb1TftvdoM"
+            },
+            {
+              "absolute_duration_delta_seconds": 4.272999999999996,
+              "duration_seconds": 208.0,
+              "native_rank": 2,
+              "title": "Jay Park — ‘GANADARA’ (Feat. IU 아이유) | 1st Live performance on IU’s Palette",
+              "veto_reasons": [
+                "UNREQUESTED_LIVE_OR_PERFORMANCE"
+              ],
+              "vetoed": true,
+              "video_id": "120Oil4y9kA"
+            },
+            {
+              "absolute_duration_delta_seconds": 0.27299999999999613,
+              "duration_seconds": 204.0,
+              "native_rank": 3,
+              "title": "박재범 (Jay Park) - ‘GANADARA (Feat. 아이유 IU)’ Official Audio",
+              "veto_reasons": [],
+              "vetoed": false,
+              "video_id": "v224EdAkZr8"
+            }
+          ],
+          "decision": "AUTO_SELECT",
+          "selected_candidate": {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=v224EdAkZr8",
+            "channel": "JAY PARK",
+            "description": "박재범 (Jay Park) - 'GANADARA (Feat. 아이유 IU)' Official Audio Listen & download 'GANADARA' out now Melon: ...",
+            "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+            "duplicate_occurrences": [],
+            "duration_seconds": 204.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 3,
+            "query": "GANADARA (Feat. IU) Jay Park",
+            "query_artist": "Jay Park",
+            "query_variant_index": 1,
+            "rank": 3,
+            "stable_track_id": "stage5c2_008",
+            "title": "박재범 (Jay Park) - ‘GANADARA (Feat. 아이유 IU)’ Official Audio",
+            "uploader": "JAY PARK",
+            "url": "https://www.youtube.com/watch?v=v224EdAkZr8",
+            "view_count": 10003384,
+            "youtube_video_id": "v224EdAkZr8"
+          },
+          "selected_rank": 3,
+          "selected_video_id": "v224EdAkZr8",
+          "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+        },
+        "successful_query": "GANADARA (Feat. IU) Jay Park",
+        "total_provider_requests": 2,
+        "track": {
+          "album": "GANADARA",
+          "artists": [
+            "Jay Park",
+            "IU"
+          ],
+          "duration_ms": 203727,
+          "isrc": "KRMIM2207303",
+          "release_year": 2022,
+          "spotify_track_id": "5quFr5s5PXYfUX5jV2EBZ1",
+          "stable_track_id": "stage5c2_008",
+          "title": "GANADARA (Feat. IU)"
+        }
+      },
+      "spotify_duration_seconds": 203.727,
+      "spotify_track_id": "5quFr5s5PXYfUX5jV2EBZ1",
+      "stage5c2_track_id": "stage5c2_008",
+      "title": "GANADARA (Feat. IU)"
+    },
+    {
+      "artists": [
+        "오안과 편견",
+        "Lee Yerin"
+      ],
+      "historical_stage5c2": {
+        "candidate_video_ids": [
+          "ExiMLx-9wN0",
+          "3C0IShIyQ6Y",
+          "1lEaKd9-Y1Q"
+        ],
+        "decision": "MATCH_UNCERTAIN",
+        "reason": "ALL_TOP3_CANDIDATES_VETOED",
+        "successful_query": "Love Always Leaves Me 오안과 편견 Lee Yerin"
+      },
+      "owner_reference_recovered": true,
+      "owner_supplied_reference": {
+        "owner_url": "https://www.youtube.com/watch?v=i4YFngxyJ0k",
+        "owner_video_id": "i4YFngxyJ0k"
+      },
+      "selector_aware_result": {
+        "attempts": [
+          {
+            "candidate_video_ids": [
+              "ExiMLx-9wN0",
+              "3C0IShIyQ6Y",
+              "1lEaKd9-Y1Q"
+            ],
+            "candidates": [
+              {
+                "availability": null,
+                "canonical_url": "https://www.youtube.com/watch?v=ExiMLx-9wN0",
+                "channel": "VOSTOK_MUSIC / 보스토크뮤직",
+                "description": "오안 #이예린 #사랑_태연스럽게_넘어지네 #VOSTOK_MUSIC #Oh An, #LeeYerin #Love_Always_Leaves_Me #오안과_편견_#2 ...",
+                "discovery_mode": "PRIMARY_MULTI_ARTIST",
+                "duplicate_occurrences": [],
+                "duration_seconds": 275.0,
+                "live_status": null,
+                "provider": "yt_dlp",
+                "provider_rank": 1,
+                "query": "Love Always Leaves Me 오안과 편견 Lee Yerin",
+                "query_artist": null,
+                "query_variant_index": 0,
+                "rank": 1,
+                "stable_track_id": "stage5c2_019",
+                "title": "[MV] 오안, 이예린 (Oh An, LeeYerin) - 사랑 태연스럽게 넘어지네 (Love Always Leaves Me) | Official Music Video",
+                "uploader": "VOSTOK_MUSIC / 보스토크뮤직",
+                "url": "https://www.youtube.com/watch?v=ExiMLx-9wN0",
+                "view_count": 1180,
+                "youtube_video_id": "ExiMLx-9wN0"
+              },
+              {
+                "availability": null,
+                "canonical_url": "https://www.youtube.com/watch?v=3C0IShIyQ6Y",
+                "channel": "오안과 편견 - Topic",
+                "description": "Provided to YouTube by Mound Media Inc. Love Always Leaves Me (Interlude) · 오안과 편견 · Lee Yerin Ohan and Prejudice #2 ...",
+                "discovery_mode": "PRIMARY_MULTI_ARTIST",
+                "duplicate_occurrences": [],
+                "duration_seconds": 67.0,
+                "live_status": null,
+                "provider": "yt_dlp",
+                "provider_rank": 2,
+                "query": "Love Always Leaves Me 오안과 편견 Lee Yerin",
+                "query_artist": null,
+                "query_variant_index": 0,
+                "rank": 2,
+                "stable_track_id": "stage5c2_019",
+                "title": "Love Always Leaves Me (Interlude)",
+                "uploader": "오안과 편견 - Topic",
+                "url": "https://www.youtube.com/watch?v=3C0IShIyQ6Y",
+                "view_count": 146,
+                "youtube_video_id": "3C0IShIyQ6Y"
+              },
+              {
+                "availability": null,
+                "canonical_url": "https://www.youtube.com/watch?v=1lEaKd9-Y1Q",
+                "channel": "오안과 편견/Oh An",
+                "description": "이예린#오안#Interlude#indie#kpop#사람은이상하고사랑은모르겠어.",
+                "discovery_mode": "PRIMARY_MULTI_ARTIST",
+                "duplicate_occurrences": [],
+                "duration_seconds": 67.0,
+                "live_status": null,
+                "provider": "yt_dlp",
+                "provider_rank": 3,
+                "query": "Love Always Leaves Me 오안과 편견 Lee Yerin",
+                "query_artist": null,
+                "query_variant_index": 0,
+                "rank": 3,
+                "stable_track_id": "stage5c2_019",
+                "title": "[Official Audio] 오안,이예린 -  Love Always Leaves me[Interlude]",
+                "uploader": "오안과 편견/Oh An",
+                "url": "https://www.youtube.com/watch?v=1lEaKd9-Y1Q",
+                "view_count": 443,
+                "youtube_video_id": "1lEaKd9-Y1Q"
+              }
+            ],
+            "discovery_mode": "PRIMARY_MULTI_ARTIST",
+            "elapsed_seconds": 1.0309832019847818,
+            "error": null,
+            "query": "Love Always Leaves Me 오안과 편견 Lee Yerin",
+            "query_artist": null,
+            "query_variant_index": 0,
+            "result_count": 3,
+            "selector_decision": "MATCH_UNCERTAIN",
+            "selector_evaluations": [
+              {
+                "absolute_duration_delta_seconds": 73.0,
+                "duration_seconds": 275.0,
+                "native_rank": 1,
+                "title": "[MV] 오안, 이예린 (Oh An, LeeYerin) - 사랑 태연스럽게 넘어지네 (Love Always Leaves Me) | Official Music Video",
+                "veto_reasons": [
+                  "DURATION_ANOMALY_GT_20_SECONDS"
+                ],
+                "vetoed": true,
+                "video_id": "ExiMLx-9wN0"
+              },
+              {
+                "absolute_duration_delta_seconds": 135.0,
+                "duration_seconds": 67.0,
+                "native_rank": 2,
+                "title": "Love Always Leaves Me (Interlude)",
+                "veto_reasons": [
+                  "DURATION_ANOMALY_GT_20_SECONDS"
+                ],
+                "vetoed": true,
+                "video_id": "3C0IShIyQ6Y"
+              },
+              {
+                "absolute_duration_delta_seconds": 135.0,
+                "duration_seconds": 67.0,
+                "native_rank": 3,
+                "title": "[Official Audio] 오안,이예린 -  Love Always Leaves me[Interlude]",
+                "veto_reasons": [
+                  "DURATION_ANOMALY_GT_20_SECONDS"
+                ],
+                "vetoed": true,
+                "video_id": "1lEaKd9-Y1Q"
+              }
+            ],
+            "selector_reason": "ALL_TOP3_CANDIDATES_VETOED",
+            "warnings": []
+          },
+          {
+            "candidate_video_ids": [
+              "1lEaKd9-Y1Q",
+              "3C0IShIyQ6Y",
+              "ExiMLx-9wN0"
+            ],
+            "candidates": [
+              {
+                "availability": null,
+                "canonical_url": "https://www.youtube.com/watch?v=1lEaKd9-Y1Q",
+                "channel": "오안과 편견/Oh An",
+                "description": "이예린#오안#Interlude#indie#kpop#사람은이상하고사랑은모르겠어.",
+                "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+                "duplicate_occurrences": [],
+                "duration_seconds": 67.0,
+                "live_status": null,
+                "provider": "yt_dlp",
+                "provider_rank": 1,
+                "query": "Love Always Leaves Me 오안과 편견",
+                "query_artist": "오안과 편견",
+                "query_variant_index": 1,
+                "rank": 1,
+                "stable_track_id": "stage5c2_019",
+                "title": "[Official Audio] 오안,이예린 -  Love Always Leaves me[Interlude]",
+                "uploader": "오안과 편견/Oh An",
+                "url": "https://www.youtube.com/watch?v=1lEaKd9-Y1Q",
+                "view_count": 443,
+                "youtube_video_id": "1lEaKd9-Y1Q"
+              },
+              {
+                "availability": null,
+                "canonical_url": "https://www.youtube.com/watch?v=3C0IShIyQ6Y",
+                "channel": "오안과 편견 - Topic",
+                "description": "Provided to YouTube by Mound Media Inc. Love Always Leaves Me (Interlude) · 오안과 편견 · Lee Yerin Ohan and Prejudice #2 ...",
+                "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+                "duplicate_occurrences": [],
+                "duration_seconds": 67.0,
+                "live_status": null,
+                "provider": "yt_dlp",
+                "provider_rank": 2,
+                "query": "Love Always Leaves Me 오안과 편견",
+                "query_artist": "오안과 편견",
+                "query_variant_index": 1,
+                "rank": 2,
+                "stable_track_id": "stage5c2_019",
+                "title": "Love Always Leaves Me (Interlude)",
+                "uploader": "오안과 편견 - Topic",
+                "url": "https://www.youtube.com/watch?v=3C0IShIyQ6Y",
+                "view_count": 146,
+                "youtube_video_id": "3C0IShIyQ6Y"
+              },
+              {
+                "availability": null,
+                "canonical_url": "https://www.youtube.com/watch?v=ExiMLx-9wN0",
+                "channel": "VOSTOK_MUSIC / 보스토크뮤직",
+                "description": "오안 #이예린 #사랑_태연스럽게_넘어지네 #VOSTOK_MUSIC #Oh An, #LeeYerin #Love_Always_Leaves_Me #오안과_편견_#2 ...",
+                "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+                "duplicate_occurrences": [],
+                "duration_seconds": 275.0,
+                "live_status": null,
+                "provider": "yt_dlp",
+                "provider_rank": 3,
+                "query": "Love Always Leaves Me 오안과 편견",
+                "query_artist": "오안과 편견",
+                "query_variant_index": 1,
+                "rank": 3,
+                "stable_track_id": "stage5c2_019",
+                "title": "[MV] 오안, 이예린 (Oh An, LeeYerin) - 사랑 태연스럽게 넘어지네 (Love Always Leaves Me) | Official Music Video",
+                "uploader": "VOSTOK_MUSIC / 보스토크뮤직",
+                "url": "https://www.youtube.com/watch?v=ExiMLx-9wN0",
+                "view_count": 1180,
+                "youtube_video_id": "ExiMLx-9wN0"
+              }
+            ],
+            "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+            "elapsed_seconds": 1.0409345219959505,
+            "error": null,
+            "query": "Love Always Leaves Me 오안과 편견",
+            "query_artist": "오안과 편견",
+            "query_variant_index": 1,
+            "result_count": 3,
+            "selector_decision": "MATCH_UNCERTAIN",
+            "selector_evaluations": [
+              {
+                "absolute_duration_delta_seconds": 135.0,
+                "duration_seconds": 67.0,
+                "native_rank": 1,
+                "title": "[Official Audio] 오안,이예린 -  Love Always Leaves me[Interlude]",
+                "veto_reasons": [
+                  "DURATION_ANOMALY_GT_20_SECONDS"
+                ],
+                "vetoed": true,
+                "video_id": "1lEaKd9-Y1Q"
+              },
+              {
+                "absolute_duration_delta_seconds": 135.0,
+                "duration_seconds": 67.0,
+                "native_rank": 2,
+                "title": "Love Always Leaves Me (Interlude)",
+                "veto_reasons": [
+                  "DURATION_ANOMALY_GT_20_SECONDS"
+                ],
+                "vetoed": true,
+                "video_id": "3C0IShIyQ6Y"
+              },
+              {
+                "absolute_duration_delta_seconds": 73.0,
+                "duration_seconds": 275.0,
+                "native_rank": 3,
+                "title": "[MV] 오안, 이예린 (Oh An, LeeYerin) - 사랑 태연스럽게 넘어지네 (Love Always Leaves Me) | Official Music Video",
+                "veto_reasons": [
+                  "DURATION_ANOMALY_GT_20_SECONDS"
+                ],
+                "vetoed": true,
+                "video_id": "ExiMLx-9wN0"
+              }
+            ],
+            "selector_reason": "ALL_TOP3_CANDIDATES_VETOED",
+            "warnings": []
+          },
+          {
+            "candidate_video_ids": [
+              "ExiMLx-9wN0",
+              "1lEaKd9-Y1Q",
+              "3C0IShIyQ6Y"
+            ],
+            "candidates": [
+              {
+                "availability": null,
+                "canonical_url": "https://www.youtube.com/watch?v=ExiMLx-9wN0",
+                "channel": "VOSTOK_MUSIC / 보스토크뮤직",
+                "description": "오안 #이예린 #사랑_태연스럽게_넘어지네 #VOSTOK_MUSIC #Oh An, #LeeYerin #Love_Always_Leaves_Me #오안과_편견_#2 ...",
+                "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+                "duplicate_occurrences": [],
+                "duration_seconds": 275.0,
+                "live_status": null,
+                "provider": "yt_dlp",
+                "provider_rank": 1,
+                "query": "Love Always Leaves Me Lee Yerin",
+                "query_artist": "Lee Yerin",
+                "query_variant_index": 2,
+                "rank": 1,
+                "stable_track_id": "stage5c2_019",
+                "title": "[MV] 오안, 이예린 (Oh An, LeeYerin) - 사랑 태연스럽게 넘어지네 (Love Always Leaves Me) | Official Music Video",
+                "uploader": "VOSTOK_MUSIC / 보스토크뮤직",
+                "url": "https://www.youtube.com/watch?v=ExiMLx-9wN0",
+                "view_count": 1180,
+                "youtube_video_id": "ExiMLx-9wN0"
+              },
+              {
+                "availability": null,
+                "canonical_url": "https://www.youtube.com/watch?v=1lEaKd9-Y1Q",
+                "channel": "오안과 편견/Oh An",
+                "description": "이예린#오안#Interlude#indie#kpop#사람은이상하고사랑은모르겠어.",
+                "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+                "duplicate_occurrences": [],
+                "duration_seconds": 67.0,
+                "live_status": null,
+                "provider": "yt_dlp",
+                "provider_rank": 2,
+                "query": "Love Always Leaves Me Lee Yerin",
+                "query_artist": "Lee Yerin",
+                "query_variant_index": 2,
+                "rank": 2,
+                "stable_track_id": "stage5c2_019",
+                "title": "[Official Audio] 오안,이예린 -  Love Always Leaves me[Interlude]",
+                "uploader": "오안과 편견/Oh An",
+                "url": "https://www.youtube.com/watch?v=1lEaKd9-Y1Q",
+                "view_count": 443,
+                "youtube_video_id": "1lEaKd9-Y1Q"
+              },
+              {
+                "availability": null,
+                "canonical_url": "https://www.youtube.com/watch?v=3C0IShIyQ6Y",
+                "channel": "오안과 편견 - Topic",
+                "description": "Provided to YouTube by Mound Media Inc. Love Always Leaves Me (Interlude) · 오안과 편견 · Lee Yerin Ohan and Prejudice #2 ...",
+                "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+                "duplicate_occurrences": [],
+                "duration_seconds": 67.0,
+                "live_status": null,
+                "provider": "yt_dlp",
+                "provider_rank": 3,
+                "query": "Love Always Leaves Me Lee Yerin",
+                "query_artist": "Lee Yerin",
+                "query_variant_index": 2,
+                "rank": 3,
+                "stable_track_id": "stage5c2_019",
+                "title": "Love Always Leaves Me (Interlude)",
+                "uploader": "오안과 편견 - Topic",
+                "url": "https://www.youtube.com/watch?v=3C0IShIyQ6Y",
+                "view_count": 146,
+                "youtube_video_id": "3C0IShIyQ6Y"
+              }
+            ],
+            "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+            "elapsed_seconds": 1.2585853210184723,
+            "error": null,
+            "query": "Love Always Leaves Me Lee Yerin",
+            "query_artist": "Lee Yerin",
+            "query_variant_index": 2,
+            "result_count": 3,
+            "selector_decision": "MATCH_UNCERTAIN",
+            "selector_evaluations": [
+              {
+                "absolute_duration_delta_seconds": 73.0,
+                "duration_seconds": 275.0,
+                "native_rank": 1,
+                "title": "[MV] 오안, 이예린 (Oh An, LeeYerin) - 사랑 태연스럽게 넘어지네 (Love Always Leaves Me) | Official Music Video",
+                "veto_reasons": [
+                  "DURATION_ANOMALY_GT_20_SECONDS"
+                ],
+                "vetoed": true,
+                "video_id": "ExiMLx-9wN0"
+              },
+              {
+                "absolute_duration_delta_seconds": 135.0,
+                "duration_seconds": 67.0,
+                "native_rank": 2,
+                "title": "[Official Audio] 오안,이예린 -  Love Always Leaves me[Interlude]",
+                "veto_reasons": [
+                  "DURATION_ANOMALY_GT_20_SECONDS"
+                ],
+                "vetoed": true,
+                "video_id": "1lEaKd9-Y1Q"
+              },
+              {
+                "absolute_duration_delta_seconds": 135.0,
+                "duration_seconds": 67.0,
+                "native_rank": 3,
+                "title": "Love Always Leaves Me (Interlude)",
+                "veto_reasons": [
+                  "DURATION_ANOMALY_GT_20_SECONDS"
+                ],
+                "vetoed": true,
+                "video_id": "3C0IShIyQ6Y"
+              }
+            ],
+            "selector_reason": "ALL_TOP3_CANDIDATES_VETOED",
+            "warnings": []
+          },
+          {
+            "candidate_video_ids": [
+              "1lEaKd9-Y1Q",
+              "i4YFngxyJ0k",
+              "3C0IShIyQ6Y"
+            ],
+            "candidates": [
+              {
+                "availability": null,
+                "canonical_url": "https://www.youtube.com/watch?v=1lEaKd9-Y1Q",
+                "channel": "오안과 편견/Oh An",
+                "description": "이예린#오안#Interlude#indie#kpop#사람은이상하고사랑은모르겠어.",
+                "discovery_mode": "TITLE_ONLY_UNSELECTABLE_FALLBACK",
+                "duplicate_occurrences": [],
+                "duration_seconds": 67.0,
+                "live_status": null,
+                "provider": "yt_dlp",
+                "provider_rank": 1,
+                "query": "Love Always Leaves Me",
+                "query_artist": null,
+                "query_variant_index": 4,
+                "rank": 1,
+                "stable_track_id": "stage5c2_019",
+                "title": "[Official Audio] 오안,이예린 -  Love Always Leaves me[Interlude]",
+                "uploader": "오안과 편견/Oh An",
+                "url": "https://www.youtube.com/watch?v=1lEaKd9-Y1Q",
+                "view_count": 443,
+                "youtube_video_id": "1lEaKd9-Y1Q"
+              },
+              {
+                "availability": null,
+                "canonical_url": "https://www.youtube.com/watch?v=i4YFngxyJ0k",
+                "channel": "오안과 편견 - Topic",
+                "description": "Provided to YouTube by Mound Media Inc. Love Always Leaves Me · 오안과 편견 · Lee Yerin Ohan and Prejudice #2 ℗ HYPLE, ...",
+                "discovery_mode": "TITLE_ONLY_UNSELECTABLE_FALLBACK",
+                "duplicate_occurrences": [],
+                "duration_seconds": 202.0,
+                "live_status": null,
+                "provider": "yt_dlp",
+                "provider_rank": 2,
+                "query": "Love Always Leaves Me",
+                "query_artist": null,
+                "query_variant_index": 4,
+                "rank": 2,
+                "stable_track_id": "stage5c2_019",
+                "title": "Love Always Leaves Me",
+                "uploader": "오안과 편견 - Topic",
+                "url": "https://www.youtube.com/watch?v=i4YFngxyJ0k",
+                "view_count": 3194,
+                "youtube_video_id": "i4YFngxyJ0k"
+              },
+              {
+                "availability": null,
+                "canonical_url": "https://www.youtube.com/watch?v=3C0IShIyQ6Y",
+                "channel": "오안과 편견 - Topic",
+                "description": "Provided to YouTube by Mound Media Inc. Love Always Leaves Me (Interlude) · 오안과 편견 · Lee Yerin Ohan and Prejudice #2 ...",
+                "discovery_mode": "TITLE_ONLY_UNSELECTABLE_FALLBACK",
+                "duplicate_occurrences": [],
+                "duration_seconds": 67.0,
+                "live_status": null,
+                "provider": "yt_dlp",
+                "provider_rank": 3,
+                "query": "Love Always Leaves Me",
+                "query_artist": null,
+                "query_variant_index": 4,
+                "rank": 3,
+                "stable_track_id": "stage5c2_019",
+                "title": "Love Always Leaves Me (Interlude)",
+                "uploader": "오안과 편견 - Topic",
+                "url": "https://www.youtube.com/watch?v=3C0IShIyQ6Y",
+                "view_count": 146,
+                "youtube_video_id": "3C0IShIyQ6Y"
+              }
+            ],
+            "discovery_mode": "TITLE_ONLY_UNSELECTABLE_FALLBACK",
+            "elapsed_seconds": 1.237606187001802,
+            "error": null,
+            "query": "Love Always Leaves Me",
+            "query_artist": null,
+            "query_variant_index": 4,
+            "result_count": 3,
+            "selector_decision": "AUTO_SELECT",
+            "selector_evaluations": [
+              {
+                "absolute_duration_delta_seconds": 135.0,
+                "duration_seconds": 67.0,
+                "native_rank": 1,
+                "title": "[Official Audio] 오안,이예린 -  Love Always Leaves me[Interlude]",
+                "veto_reasons": [
+                  "DURATION_ANOMALY_GT_20_SECONDS"
+                ],
+                "vetoed": true,
+                "video_id": "1lEaKd9-Y1Q"
+              },
+              {
+                "absolute_duration_delta_seconds": 0.0,
+                "duration_seconds": 202.0,
+                "native_rank": 2,
+                "title": "Love Always Leaves Me",
+                "veto_reasons": [],
+                "vetoed": false,
+                "video_id": "i4YFngxyJ0k"
+              }
+            ],
+            "selector_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO",
+            "warnings": []
+          }
+        ],
+        "candidates": [
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=1lEaKd9-Y1Q",
+            "channel": "오안과 편견/Oh An",
+            "description": "이예린#오안#Interlude#indie#kpop#사람은이상하고사랑은모르겠어.",
+            "discovery_mode": "TITLE_ONLY_UNSELECTABLE_FALLBACK",
+            "duplicate_occurrences": [],
+            "duration_seconds": 67.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 1,
+            "query": "Love Always Leaves Me",
+            "query_artist": null,
+            "query_variant_index": 4,
+            "rank": 1,
+            "stable_track_id": "stage5c2_019",
+            "title": "[Official Audio] 오안,이예린 -  Love Always Leaves me[Interlude]",
+            "uploader": "오안과 편견/Oh An",
+            "url": "https://www.youtube.com/watch?v=1lEaKd9-Y1Q",
+            "view_count": 443,
+            "youtube_video_id": "1lEaKd9-Y1Q"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=i4YFngxyJ0k",
+            "channel": "오안과 편견 - Topic",
+            "description": "Provided to YouTube by Mound Media Inc. Love Always Leaves Me · 오안과 편견 · Lee Yerin Ohan and Prejudice #2 ℗ HYPLE, ...",
+            "discovery_mode": "TITLE_ONLY_UNSELECTABLE_FALLBACK",
+            "duplicate_occurrences": [],
+            "duration_seconds": 202.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 2,
+            "query": "Love Always Leaves Me",
+            "query_artist": null,
+            "query_variant_index": 4,
+            "rank": 2,
+            "stable_track_id": "stage5c2_019",
+            "title": "Love Always Leaves Me",
+            "uploader": "오안과 편견 - Topic",
+            "url": "https://www.youtube.com/watch?v=i4YFngxyJ0k",
+            "view_count": 3194,
+            "youtube_video_id": "i4YFngxyJ0k"
+          },
+          {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=3C0IShIyQ6Y",
+            "channel": "오안과 편견 - Topic",
+            "description": "Provided to YouTube by Mound Media Inc. Love Always Leaves Me (Interlude) · 오안과 편견 · Lee Yerin Ohan and Prejudice #2 ...",
+            "discovery_mode": "TITLE_ONLY_UNSELECTABLE_FALLBACK",
+            "duplicate_occurrences": [],
+            "duration_seconds": 67.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 3,
+            "query": "Love Always Leaves Me",
+            "query_artist": null,
+            "query_variant_index": 4,
+            "rank": 3,
+            "stable_track_id": "stage5c2_019",
+            "title": "Love Always Leaves Me (Interlude)",
+            "uploader": "오안과 편견 - Topic",
+            "url": "https://www.youtube.com/watch?v=3C0IShIyQ6Y",
+            "view_count": 146,
+            "youtube_video_id": "3C0IShIyQ6Y"
+          }
+        ],
+        "discovery_mode": "TITLE_ONLY_UNSELECTABLE_FALLBACK",
+        "elapsed_seconds": 4.568232905992772,
+        "error": null,
+        "fallback_triggered": true,
+        "outcome": "FALLBACK_SELECTED",
+        "query_artist": null,
+        "query_contract_id": "NATURAL_TITLE_FIRST3_THEN_SINGLE_ARTIST_THEN_TITLE_ONLY_ON_UNSELECTABLE_V2",
+        "query_plan": [
+          {
+            "discovery_mode": "PRIMARY_MULTI_ARTIST",
+            "query": "Love Always Leaves Me 오안과 편견 Lee Yerin",
+            "query_artist": null,
+            "query_variant_index": 0
+          },
+          {
+            "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+            "query": "Love Always Leaves Me 오안과 편견",
+            "query_artist": "오안과 편견",
+            "query_variant_index": 1
+          },
+          {
+            "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+            "query": "Love Always Leaves Me Lee Yerin",
+            "query_artist": "Lee Yerin",
+            "query_variant_index": 2
+          },
+          {
+            "discovery_mode": "TITLE_ONLY_UNSELECTABLE_FALLBACK",
+            "query": "Love Always Leaves Me",
+            "query_artist": null,
+            "query_variant_index": 4
+          }
+        ],
+        "query_variant_index": 4,
+        "schema_version": "selector-aware-query-fallback-result-v1",
+        "scope_guards": {
+          "candidate_pool_merges": 0,
+          "candidate_reranking": false,
+          "maximum_provider_requests": 4,
+          "selector_id": "STAGE5B3_MINIMAL_YOUTUBE_SELECTOR_V1",
+          "title_only_is_last": true
+        },
+        "selected_candidate": {
+          "availability": null,
+          "canonical_url": "https://www.youtube.com/watch?v=i4YFngxyJ0k",
+          "channel": "오안과 편견 - Topic",
+          "description": "Provided to YouTube by Mound Media Inc. Love Always Leaves Me · 오안과 편견 · Lee Yerin Ohan and Prejudice #2 ℗ HYPLE, ...",
+          "discovery_mode": "TITLE_ONLY_UNSELECTABLE_FALLBACK",
+          "duplicate_occurrences": [],
+          "duration_seconds": 202.0,
+          "live_status": null,
+          "provider": "yt_dlp",
+          "provider_rank": 2,
+          "query": "Love Always Leaves Me",
+          "query_artist": null,
+          "query_variant_index": 4,
+          "rank": 2,
+          "stable_track_id": "stage5c2_019",
+          "title": "Love Always Leaves Me",
+          "uploader": "오안과 편견 - Topic",
+          "url": "https://www.youtube.com/watch?v=i4YFngxyJ0k",
+          "view_count": 3194,
+          "youtube_video_id": "i4YFngxyJ0k"
+        },
+        "selected_rank": 2,
+        "selected_video_id": "i4YFngxyJ0k",
+        "selector_decision": {
+          "candidate_evaluations": [
+            {
+              "absolute_duration_delta_seconds": 135.0,
+              "duration_seconds": 67.0,
+              "native_rank": 1,
+              "title": "[Official Audio] 오안,이예린 -  Love Always Leaves me[Interlude]",
+              "veto_reasons": [
+                "DURATION_ANOMALY_GT_20_SECONDS"
+              ],
+              "vetoed": true,
+              "video_id": "1lEaKd9-Y1Q"
+            },
+            {
+              "absolute_duration_delta_seconds": 0.0,
+              "duration_seconds": 202.0,
+              "native_rank": 2,
+              "title": "Love Always Leaves Me",
+              "veto_reasons": [],
+              "vetoed": false,
+              "video_id": "i4YFngxyJ0k"
+            }
+          ],
+          "decision": "AUTO_SELECT",
+          "selected_candidate": {
+            "availability": null,
+            "canonical_url": "https://www.youtube.com/watch?v=i4YFngxyJ0k",
+            "channel": "오안과 편견 - Topic",
+            "description": "Provided to YouTube by Mound Media Inc. Love Always Leaves Me · 오안과 편견 · Lee Yerin Ohan and Prejudice #2 ℗ HYPLE, ...",
+            "discovery_mode": "TITLE_ONLY_UNSELECTABLE_FALLBACK",
+            "duplicate_occurrences": [],
+            "duration_seconds": 202.0,
+            "live_status": null,
+            "provider": "yt_dlp",
+            "provider_rank": 2,
+            "query": "Love Always Leaves Me",
+            "query_artist": null,
+            "query_variant_index": 4,
+            "rank": 2,
+            "stable_track_id": "stage5c2_019",
+            "title": "Love Always Leaves Me",
+            "uploader": "오안과 편견 - Topic",
+            "url": "https://www.youtube.com/watch?v=i4YFngxyJ0k",
+            "view_count": 3194,
+            "youtube_video_id": "i4YFngxyJ0k"
+          },
+          "selected_rank": 2,
+          "selected_video_id": "i4YFngxyJ0k",
+          "selection_reason": "FIRST_NATIVE_RANK_WITHOUT_V1_VETO"
+        },
+        "successful_query": "Love Always Leaves Me",
+        "total_provider_requests": 4,
+        "track": {
+          "album": "Ohan and Prejudice #2",
+          "artists": [
+            "오안과 편견",
+            "Lee Yerin"
+          ],
+          "duration_ms": 202000,
+          "isrc": "QZF452002407",
+          "release_year": 2021,
+          "spotify_track_id": "5l45vVLs4JKkhzN0tvkWJv",
+          "stable_track_id": "stage5c2_019",
+          "title": "Love Always Leaves Me"
+        }
+      },
+      "spotify_duration_seconds": 202.0,
+      "spotify_track_id": "5l45vVLs4JKkhzN0tvkWJv",
+      "stage5c2_track_id": "stage5c2_019",
+      "title": "Love Always Leaves Me"
+    }
+  ],
+  "verdict": "SELECTOR_AWARE_FALLBACK_TARGETED_VALIDATED"
+}

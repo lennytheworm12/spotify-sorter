@@ -1,0 +1,136 @@
+{
+  "judgments": [
+    {
+      "candidate_note_verbatim": "",
+      "candidate_video_id": "ZNEuWldWPD4",
+      "human_label": "ACCEPTABLE",
+      "safety_class": "SAFE",
+      "stable_track_id": "s5b1c_015",
+      "tier2_stage": "STAGE5B1C_A_NORMALIZATION",
+      "track_note_verbatim": ""
+    },
+    {
+      "candidate_note_verbatim": "",
+      "candidate_video_id": "WXx5-HGERcg",
+      "human_label": "ACCEPTABLE",
+      "safety_class": "SAFE",
+      "stable_track_id": "s5b1c_016",
+      "tier2_stage": "STAGE5B1C_A_NORMALIZATION",
+      "track_note_verbatim": ""
+    },
+    {
+      "candidate_note_verbatim": "",
+      "candidate_video_id": "62TrmUvQGjo",
+      "human_label": "ACCEPTABLE",
+      "safety_class": "SAFE",
+      "stable_track_id": "s5b1c_017",
+      "tier2_stage": "STAGE5B1C_A_NORMALIZATION",
+      "track_note_verbatim": ""
+    },
+    {
+      "candidate_note_verbatim": "",
+      "candidate_video_id": "OUkkaqSNduU",
+      "human_label": "IDEAL",
+      "safety_class": "SAFE",
+      "stable_track_id": "s5b1c_020",
+      "tier2_stage": "STAGE5B1C_B_SOURCE_NEUTRAL",
+      "track_note_verbatim": ""
+    },
+    {
+      "candidate_note_verbatim": "",
+      "candidate_video_id": "oS6wfWu0JvA",
+      "human_label": "IDEAL",
+      "safety_class": "SAFE",
+      "stable_track_id": "s5b1c_022",
+      "tier2_stage": "STAGE5B1C_B_SOURCE_NEUTRAL",
+      "track_note_verbatim": ""
+    },
+    {
+      "candidate_note_verbatim": "",
+      "candidate_video_id": "9gnyYxEWgi4",
+      "human_label": "ACCEPTABLE",
+      "safety_class": "SAFE",
+      "stable_track_id": "s5b1c_025",
+      "tier2_stage": "STAGE5B1C_B_SOURCE_NEUTRAL",
+      "track_note_verbatim": ""
+    },
+    {
+      "candidate_note_verbatim": "",
+      "candidate_video_id": "sKzoEwQaF7Y",
+      "human_label": "IDEAL",
+      "safety_class": "SAFE",
+      "stable_track_id": "s5b1c_026",
+      "tier2_stage": "STAGE5B1C_A_NORMALIZATION",
+      "track_note_verbatim": ""
+    },
+    {
+      "candidate_note_verbatim": "",
+      "candidate_video_id": "aEi646akxko",
+      "human_label": "IDEAL",
+      "safety_class": "SAFE",
+      "stable_track_id": "s5b1c_027",
+      "tier2_stage": "STAGE5B1C_A_NORMALIZATION",
+      "track_note_verbatim": ""
+    },
+    {
+      "candidate_note_verbatim": "",
+      "candidate_video_id": "k4HWjQNN1K8",
+      "human_label": "ACCEPTABLE",
+      "safety_class": "SAFE",
+      "stable_track_id": "s5b1c_028",
+      "tier2_stage": "STAGE5B1C_B_SOURCE_NEUTRAL",
+      "track_note_verbatim": ""
+    },
+    {
+      "candidate_note_verbatim": "",
+      "candidate_video_id": "zDOILKOOUCo",
+      "human_label": "IDEAL",
+      "safety_class": "SAFE",
+      "stable_track_id": "s5b1c_043",
+      "tier2_stage": "STAGE5B1C_A_NORMALIZATION",
+      "track_note_verbatim": ""
+    },
+    {
+      "candidate_note_verbatim": "",
+      "candidate_video_id": "DQJpFVzeNp8",
+      "human_label": "ACCEPTABLE",
+      "safety_class": "SAFE",
+      "stable_track_id": "s5b1c_044",
+      "tier2_stage": "STAGE5B1C_B_SOURCE_NEUTRAL",
+      "track_note_verbatim": ""
+    }
+  ],
+  "queue_sha256": "782b5a82f71ba4f4a864782c6ab5c352522e0619024d49a9d8fdc46aa72eee5a",
+  "recommendation": "PROCEED_TO_STAGE5B1C_C_DIAGNOSTIC",
+  "review_sha256": "2d98a42513d30fb3ce49f89e481698913fb4ff09b047a6341cbf952cdd7cf2f0",
+  "schema_version": "stage5b1c-tier2-human-audit-results-v1",
+  "scope": {
+    "does_not_establish_population_precision": true,
+    "human_validates_only_the_11_incremental_tier2_selections": true,
+    "production_auto_match_activated": false
+  },
+  "stage_label_counts": {
+    "STAGE5B1C_A_NORMALIZATION": {
+      "ACCEPTABLE": 3,
+      "IDEAL": 3
+    },
+    "STAGE5B1C_B_SOURCE_NEUTRAL": {
+      "ACCEPTABLE": 3,
+      "IDEAL": 2
+    }
+  },
+  "status": "STAGE5B1C_TIER2_HUMAN_AUDIT_SAFETY_HOLDS",
+  "summary": {
+    "acceptable_count": 6,
+    "ideal_count": 5,
+    "remaining_judgments": 0,
+    "required_judgments": 11,
+    "reviewed_judgments": 11,
+    "safe_count": 11,
+    "safe_rate_among_reviewed": 1.0,
+    "tier1_plus_tier2_auto_match_count": 40,
+    "tier1_plus_tier2_coverage": 0.8,
+    "uncertain_count": 0,
+    "wrong_count": 0
+  }
+}

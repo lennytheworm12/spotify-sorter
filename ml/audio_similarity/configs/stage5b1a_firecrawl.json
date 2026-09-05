@@ -1,0 +1,43 @@
+{
+  "artifacts": {
+    "discovery_results": "reports/stage5b1a/firecrawl_discovery_results.json",
+    "implementation_report": "reports/stage5b1a/implementation_report.md",
+    "metrics": "reports/stage5b1a/firecrawl_metrics.json",
+    "review": "reports/stage5b1a/firecrawl_review.csv",
+    "review_template": "reports/stage5b1a/review_template.csv",
+    "run_status": "reports/stage5b1a/run_status.json"
+  },
+  "experiment_id": "stage5b1a_firecrawl_youtube_discovery_feasibility",
+  "feasibility_gate": {
+    "conditional_min_recall_at_5": 0.8,
+    "fail_below_recall_at_5": 0.8,
+    "pass_min_recall_at_5": 0.9,
+    "primary_metric": "recall_at_5",
+    "scope_note": "Engineering decision for this frozen personal-project smoke set; not a population claim."
+  },
+  "manifest": {
+    "expected_sha256": "f3592bb8c8dea689959a22da222d8b7ce4911c1804392acb501cffe768700c57",
+    "path": "reports/stage5b1a/frozen_tracks.json"
+  },
+  "provider": {
+    "api_key_environment_variable": "FIRECRAWL_API_KEY",
+    "candidate_limit": 5,
+    "country": "US",
+    "discovery_version": "firecrawl-search-v2-youtube-v1",
+    "endpoint": "https://api.firecrawl.dev/v2/search",
+    "highlights": false,
+    "include_domains": ["youtube.com", "youtu.be"],
+    "max_attempts": 3,
+    "provider_result_limit": 10,
+    "request_timeout_ms": 30000,
+    "retry_backoff_seconds": 1.0,
+    "sequential_requests": true,
+    "sources": [{"type": "web"}]
+  },
+  "query_strategy": {
+    "featured_artist_noise_normalization": true,
+    "query_variant_id": "quoted-primary-artist-title-official-v1",
+    "template": "\"{primary_artist}\" \"{normalized_title}\" official"
+  },
+  "schema_version": "stage5b1a-firecrawl-config-v1"
+}

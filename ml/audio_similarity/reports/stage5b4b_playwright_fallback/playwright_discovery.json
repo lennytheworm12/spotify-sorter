@@ -1,0 +1,121 @@
+{
+  "bounded_diagnostics": [
+    {
+      "kind": "INITIAL_INTEGRATED_ATTEMPT",
+      "outcome": {
+        "browser": {
+          "cookies_loaded": false,
+          "engine": "chromium",
+          "headless": true,
+          "locale": "en-US",
+          "persistent_context": false,
+          "personal_profile_loaded": false,
+          "version": "148.0.7778.96",
+          "viewport": {
+            "height": 720,
+            "width": 1280
+          }
+        },
+        "consent_interactions": 0,
+        "elapsed_seconds": 14.172785166010726,
+        "error": {
+          "category": "PLAYWRIGHT_NAVIGATION_TIMEOUT",
+          "message": "YouTube video result structure did not appear before timeout",
+          "retryable": false
+        },
+        "inspected_anchor_count": 0,
+        "navigation_succeeded": true,
+        "query": "Girl, Interrupted 2xxx Miso",
+        "results": [],
+        "search_url": "https://www.youtube.com/results?search_query=Girl%2C+Interrupted+2xxx+Miso",
+        "video_ids_in_displayed_order": [],
+        "warnings": []
+      }
+    },
+    {
+      "kind": "MINIMAL_DOM_INSPECTION",
+      "navigation_succeeded": true,
+      "observed_page_state": "AGE_CONFIRMATION_SIGN_IN_WALL",
+      "page_title": "Girl, Interrupted 2xxx Miso - YouTube",
+      "personal_cookies_loaded": false,
+      "personal_profile_loaded": false,
+      "query_unchanged": true,
+      "scroll_count": 0,
+      "valid_watch_link_count": 0
+    },
+    {
+      "kind": "POST_FIX_CLASSIFICATION_RUN",
+      "outcome": {
+        "browser": {
+          "cookies_loaded": false,
+          "engine": "chromium",
+          "headless": true,
+          "locale": "en-US",
+          "persistent_context": false,
+          "personal_profile_loaded": false,
+          "version": "148.0.7778.96",
+          "viewport": {
+            "height": 720,
+            "width": 1280
+          }
+        },
+        "consent_interactions": 0,
+        "elapsed_seconds": 13.978548760991544,
+        "error": {
+          "category": "PLAYWRIGHT_CHALLENGE_BLOCKED",
+          "message": "YouTube challenge or sign-in wall blocked results",
+          "retryable": false
+        },
+        "inspected_anchor_count": 0,
+        "navigation_succeeded": true,
+        "query": "Girl, Interrupted 2xxx Miso",
+        "results": [],
+        "search_url": "https://www.youtube.com/results?search_query=Girl%2C+Interrupted+2xxx+Miso",
+        "video_ids_in_displayed_order": [],
+        "warnings": []
+      }
+    }
+  ],
+  "experiment_id": "STAGE5B4B_PLAYWRIGHT_FALLBACK_V1",
+  "live_browser_navigation_count": 3,
+  "outcome": {
+    "browser": {
+      "cookies_loaded": false,
+      "engine": "chromium",
+      "headless": true,
+      "locale": "en-US",
+      "persistent_context": false,
+      "personal_profile_loaded": false,
+      "version": "148.0.7778.96",
+      "viewport": {
+        "height": 720,
+        "width": 1280
+      }
+    },
+    "consent_interactions": 0,
+    "elapsed_seconds": 13.978548760991544,
+    "error": {
+      "category": "PLAYWRIGHT_CHALLENGE_BLOCKED",
+      "message": "YouTube challenge or sign-in wall blocked results",
+      "retryable": false
+    },
+    "inspected_anchor_count": 0,
+    "navigation_succeeded": true,
+    "query": "Girl, Interrupted 2xxx Miso",
+    "results": [],
+    "search_url": "https://www.youtube.com/results?search_query=Girl%2C+Interrupted+2xxx+Miso",
+    "video_ids_in_displayed_order": [],
+    "warnings": []
+  },
+  "query": "Girl, Interrupted 2xxx Miso",
+  "reason": "PRIMARY_ZERO_RESULTS",
+  "schema_version": "stage5b4b-playwright-discovery-v1",
+  "scope_guards": {
+    "maximum_results": 3,
+    "personal_cookies_loaded": false,
+    "personal_profile_loaded": false,
+    "same_query_as_primary": true,
+    "scroll_count": 0
+  },
+  "triggered": true
+}

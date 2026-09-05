@@ -1,0 +1,38 @@
+{
+  "experiment_id": "stage5b1a2_ytdlp_youtube_search_feasibility",
+  "feasibility_verdict": "PASS",
+  "gate": {
+    "conditional": ">= 80% and < 90%",
+    "fail": "< 80%",
+    "pass": ">= 90%",
+    "primary_metric": "recall_at_5",
+    "scope_note": "Engineering decision for this frozen personal-project smoke set; not a population claim."
+  },
+  "recall_at_1": {
+    "denominator": 25,
+    "numerator": 11,
+    "value": 0.44
+  },
+  "recall_at_3": {
+    "denominator": 25,
+    "numerator": 23,
+    "value": 0.92
+  },
+  "recall_at_5": {
+    "denominator": 25,
+    "numerator": 25,
+    "value": 1.0
+  },
+  "review": {
+    "denominator_semantics": "Confirmed ranks plus NOT_IN_TOP_5; UNCERTAIN and unreviewed tracks are excluded.",
+    "evaluable_tracks": 25,
+    "not_in_top_5_tracks": 0,
+    "reviewed_tracks": 25,
+    "total_tracks": 25,
+    "uncertain_tracks": 0,
+    "unreviewed_tracks": 0
+  },
+  "schema_version": "stage5b1a2-ytdlp-metrics-v1",
+  "tracks_with_zero_youtube_candidates": 0,
+  "ytdlp_search_failure_count": 0
+}

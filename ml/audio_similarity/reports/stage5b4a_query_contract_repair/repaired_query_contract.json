@@ -1,0 +1,73 @@
+{
+  "artist_policy": {
+    "deduplication": "Unicode NFKC + casefold + collapsed whitespace identity",
+    "inferred_artists": false,
+    "maximum": 3,
+    "order": "credited order",
+    "source": "Spotify credited artists"
+  },
+  "frozen_v3_inputs": {
+    "automated_selector_decisions": {
+      "path": "reports/stage5b4_representative_v3/automated_selector_decisions.json",
+      "sha256": "1a10ed69549b83d36223120db4162a937c6b0d2f59df7224b6afe1b99767827e",
+      "size_bytes": 202751
+    },
+    "automated_selector_metrics": {
+      "path": "reports/stage5b4_representative_v3/automated_selector_metrics.json",
+      "sha256": "878024d9768ebb2de6f96f6e7aab787a3e176225ed75e3203afe9902a4d530ae",
+      "size_bytes": 522
+    },
+    "benchmark_config": {
+      "path": "reports/stage5b4_representative_v3/benchmark_config.json",
+      "sha256": "6a36489829453f2ea18e14767a752ef97d75eda5bcfc0de8d0ec3965aa975385",
+      "size_bytes": 5045
+    },
+    "benchmark_manifest": {
+      "path": "reports/stage5b4_representative_v3/benchmark_manifest.json",
+      "sha256": "e5d54e06e410d74a1b588f8d853c5ca9a25e97ba09dd26692c5978a15245097e",
+      "size_bytes": 52085
+    },
+    "human_review": {
+      "path": "reports/stage5b4_representative_v3/human_review.csv",
+      "sha256": "92cb84aafeff32604ebf559c98e8347751991e8d0d865949a1ba595d8029d062",
+      "size_bytes": 132358
+    },
+    "human_review_queue": {
+      "path": "reports/stage5b4_representative_v3/human_review_queue.json",
+      "sha256": "181252ad2d96327acc3543754ea5ea5dc62a2036764680536dc22782995cea9a",
+      "size_bytes": 87091
+    },
+    "youtube_top3_discovery": {
+      "path": "reports/stage5b4_representative_v3/youtube_top3_discovery.json",
+      "sha256": "4cbd5741c7af0030474ba4073991c28d316eea73f243dc1f0a350b48e7db3f94",
+      "size_bytes": 804468
+    }
+  },
+  "historical_v3_artifacts_overwritten": false,
+  "offline_verification": {
+    "live_searches_run": 0,
+    "maximum_artist_count": 3,
+    "non_empty_query_count": 100,
+    "punctuation_rejection_count": 0,
+    "query_construction_failure_count": 0,
+    "tracks_total": 100,
+    "tracks_with_harmless_punctuation": 17
+  },
+  "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_V1",
+  "query_policy": {
+    "boolean_syntax": false,
+    "forced_official_token": false,
+    "query_variants_per_track": 1,
+    "quoted_fields": false,
+    "song_specific_templates": false
+  },
+  "schema_version": "stage5b4a-repaired-query-contract-v1",
+  "status": "QUERY_CONTRACT_REPAIR_OFFLINE_VERIFIED",
+  "supplement_id": "QUERY_CONTRACT_REPAIR_SUPPLEMENT",
+  "template": "{sanitized_raw_spotify_title} {artist_1} {artist_2} {artist_3}",
+  "title_policy": {
+    "normalization": "Unicode NFC; smart quote normalization; double-quote removal; control-character and whitespace normalization",
+    "semantic_rewriting": false,
+    "source": "raw Spotify display title"
+  }
+}

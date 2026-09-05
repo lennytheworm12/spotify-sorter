@@ -1,0 +1,63 @@
+{
+  "schema_version": "stage5b1f-resolver-false-rejection-config-v1",
+  "experiment_id": "stage5b1f_resolver_false_rejection_v1",
+  "source_query_strategy": "Q0_CURRENT_CONTROL",
+  "stage5b1e_config": "configs/stage5b1e_natural_query_evaluation.json",
+  "frozen_inputs": {
+    "query_strategies": {
+      "path": "reports/stage5b1e_natural_query_evaluation/query_strategies.json",
+      "sha256": "0e473b03bbde5cd3295f04601183b3497442ee4d35b2a1bdd3e5de777ba8859f"
+    },
+    "query_discovery": {
+      "path": "reports/stage5b1e_natural_query_evaluation/query_discovery_results.json",
+      "sha256": "2fe058a4305daa95059741b7876b88af3eaf7d0f24f2852299a4b58dffea2a2f"
+    },
+    "resolver_replays": {
+      "path": "reports/stage5b1e_natural_query_evaluation/resolver_replays.json",
+      "sha256": "22e586e0dd56880225e1958c651de72a73f8b4dea593e04eb14e08d38de10da3"
+    },
+    "candidate_pool_comparison": {
+      "path": "reports/stage5b1e_natural_query_evaluation/candidate_pool_comparison.json",
+      "sha256": "8fde8dc0f193545a892aad11a23bae19d19074f5273ddb3d509a8aec67cc9a7e"
+    },
+    "stage5b1e_human_review": {
+      "path": "reports/stage5b1e_natural_query_evaluation/human_review.csv",
+      "sha256": "0f28d59983ccbb92c6f3882fe063e4285e065a9acc68becd5261286760a551aa"
+    },
+    "challenge_manifest": {
+      "path": "reports/stage5b1b_fresh_challenge/challenge_tracks.json",
+      "sha256": "e2e9a1ab43f568dd9de853c2964f341ee0d0e2631ca87f732d0d4326ab990f79"
+    },
+    "frozen_policy_definitions": {
+      "path": "reports/stage5b1b_fresh_challenge/frozen_policy_definitions.json",
+      "sha256": "bbc527aa9a734b0aebbfafcb2775b479541a5e0248503627c14b8f429f708d5a"
+    },
+    "challenge_human_review": {
+      "path": "reports/stage5b1b_fresh_challenge/human_review.csv",
+      "sha256": "0342c46d4506994c61cf0b3e422f34f6d466bf6297a6b8973fd75f711884b842"
+    },
+    "challenge_sol_evaluations": {
+      "path": "reports/stage5b1b_fresh_challenge/sol_evaluations.json",
+      "sha256": "b00ecb7c9ffb668b581e571065235676d62832c868fe6bed26812fbbd30f50ea"
+    },
+    "challenge_sol_private_mapping": {
+      "path": "reports/stage5b1b_fresh_challenge/blinded_sol_private_mapping.json",
+      "sha256": "6f7991fba8f4c190f20b0214f03488c3e6bc523b9507704c278a4858d3e622bc"
+    },
+    "tier2_human_audit": {
+      "path": "reports/stage5b1c_b/tier2_human_audit_results.json",
+      "sha256": "26fbfc59fc7617fd54377fde099cabf9170f2c55946bd3046839ea4e7e8edcb5"
+    },
+    "strong_metadata_human_audit": {
+      "path": "reports/stage5b1c_c_strong_metadata/strong_metadata_human_audit_results.json",
+      "sha256": "6f3adbf231039a5609de501292aef0f8c62c88ecba81ca38df638aef2e7f1ed4"
+    }
+  },
+  "artifacts": {
+    "false_rejections": "reports/stage5b1f_resolver_false_rejection/false_rejection_cases.json",
+    "candidate_pairs": "reports/stage5b1f_resolver_false_rejection/candidate_pair_comparisons.json",
+    "remaining_tail": "reports/stage5b1f_resolver_false_rejection/remaining_tail_reclassification.json",
+    "report": "reports/stage5b1f_resolver_false_rejection/resolver_false_rejection_report.md",
+    "manifest": "reports/stage5b1f_resolver_false_rejection/artifact_manifest.json"
+  }
+}

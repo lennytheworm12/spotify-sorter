@@ -1,0 +1,91 @@
+{
+  "artifacts": {
+    "automated_selector_decisions.json": {
+      "sha256": "4813461ee7024d187f1b7b9354f8cec5829a0ae5bb61b4e6614e79f6b5eaff02",
+      "size_bytes": 228050
+    },
+    "benchmark_config.json": {
+      "sha256": "7299e10c7deac881a18ab79493fa41320c149013a1ce3637afc266bcebb788a3",
+      "size_bytes": 8385
+    },
+    "benchmark_manifest.json": {
+      "sha256": "bd01a7e34742154475f2f0bc246b4e2b3551ecb68fa35436cdf23cfde6558c2b",
+      "size_bytes": 55124
+    },
+    "benchmark_manifest.sha256": {
+      "sha256": "2e86daa60bfb4a8d1ff9e8d737088705b5dba526130fa34a24ad8fe48f7c65a2",
+      "size_bytes": 65
+    },
+    "failure_analysis.json": {
+      "sha256": "0f3c1f52d00607657c6899498f12c91f332a713aae75c19617049537fa68bef5",
+      "size_bytes": 3668
+    },
+    "final_metrics.json": {
+      "sha256": "d60f8fbf0809ca202225bc2810bb308c08d292b93c20f768a534cdf636838a85",
+      "size_bytes": 2724
+    },
+    "human_review.csv": {
+      "sha256": "cac56fc0c9e8f84989228254f2c75e97eed45f8d94dc7eb3fa4a27fad364b88a",
+      "size_bytes": 153160
+    },
+    "human_review_queue.json": {
+      "sha256": "63d56135b82cffc7ff97fcf89137fccbbfd11f6d38ac9106bdb640160d29cc2a",
+      "size_bytes": 90447
+    },
+    "preliminary_selector_metrics.json": {
+      "sha256": "7877847bf7c8530952fbc18454ee2e312ddcaf8e38707df9f12a9e65fcd93f8c",
+      "size_bytes": 463
+    },
+    "representative_v4_report.md": {
+      "sha256": "228b71bc1bed63cc0ef2d0eb9821b40bff24c8c6ebdfb9074841bb78d7649588",
+      "size_bytes": 2532
+    },
+    "youtube_top3_discovery.json": {
+      "sha256": "df82a6ab19369521da11940c72b263bb47165159847eaf2bbade647d5cd745e8",
+      "size_bytes": 544352
+    }
+  },
+  "benchmark_id": "STAGE5B5_REPRESENTATIVE_LIBRARY_V4",
+  "implementation": {
+    "benchmark": {
+      "path": "src/audio_similarity/stage5b5_representative_v4.py",
+      "sha256": "889c779c4b1d4acb984cf2d0f5904109744dc86f5d4e3310ebb174cd1a764b36",
+      "size_bytes": 28686
+    },
+    "cli": {
+      "path": "src/audio_similarity/cli/stage5b5_representative_v4.py",
+      "sha256": "387bdaedca82d29f4db4ccc95e72ee5b1e9565e9b14eb902ad0e1cff7af93d48",
+      "size_bytes": 3018
+    },
+    "review": {
+      "path": "src/audio_similarity/stage5b5_review.py",
+      "sha256": "1b7fa0bf4bb4873ca96f578003fa8564972ee45cc4a1f2c839f40d35c1028c18",
+      "size_bytes": 38288
+    },
+    "review_server": {
+      "path": "src/audio_similarity/cli/stage5b5_review_server.py",
+      "sha256": "ab02d1a549c09a7da9f97aa0b80ae80b13c27dd4971331f2cd9052db71da4b90",
+      "size_bytes": 1626
+    },
+    "tests": {
+      "path": "tests/test_stage5b5_representative_v4.py",
+      "sha256": "c75a00f5b386ffec39c37555199a4cac66bafa52e0b56aefdf7be743df7c5d45",
+      "size_bytes": 12515
+    }
+  },
+  "schema_version": "stage5b5-representative-v4-artifact-manifest-v1",
+  "scope_guards": {
+    "alternate_provider_fallbacks": 0,
+    "audio_downloads": 0,
+    "clap_calls": 0,
+    "human_labels_used_in_decisions": false,
+    "muq_calls": 0,
+    "post_freeze_substitutions": 0,
+    "production_activation": false,
+    "query_tuning": false,
+    "selector_tuning": false,
+    "video_downloads": 0
+  },
+  "status": "STAGE5B5_REPRESENTATIVE_V4_COMPLETE",
+  "verdict": "REPRESENTATIVE_V4_FINAL_VALIDATION_PASSED"
+}

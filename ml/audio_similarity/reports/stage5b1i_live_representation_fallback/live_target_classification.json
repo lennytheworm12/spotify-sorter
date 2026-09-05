@@ -1,0 +1,225 @@
+{
+  "schema_version": "stage5b1i-live-target-classification-v1",
+  "status": "STAGE5B1I_LIVE_REPRESENTATION_FALLBACK_EVALUATED",
+  "summary": {
+    "arrangement_changing_live_target_count": 0,
+    "exact_live_auto_match_count": 3,
+    "live_target_count": 4,
+    "ordinary_live_exact_failures": 1,
+    "ordinary_live_target_count": 4,
+    "studio_fallback_opportunity_count": 0
+  },
+  "tracks": [
+    {
+      "classification": "ORDINARY_LIVE",
+      "exact_live_candidate_available": true,
+      "exact_live_candidate_ids": [
+        "sKzoEwQaF7Y",
+        "sVjv1UAmLRc"
+      ],
+      "extra_arrangement_markers": [],
+      "material_arrangement_families": [],
+      "reason": "live is the target's only material version family; a canonical studio recording may represent the song if exact-live resolution fails",
+      "representation_risk": "ELEVATED",
+      "stable_track_id": "s5b1c_026",
+      "stage5b1h_exact_outcome": "AUTO_MATCH",
+      "stage5b1h_selected_video_id": "sKzoEwQaF7Y",
+      "stage5b1i_match_mode": "EXACT_RECORDING",
+      "stage5b1i_selected_video_id": "sKzoEwQaF7Y",
+      "studio_fallback_allowed": true,
+      "studio_fallback_candidate_ids": [],
+      "target": {
+        "album": "Where the Light Is: John Mayer Live in Los Angeles",
+        "artists": [
+          "John Mayer"
+        ],
+        "duration_ms": 264267,
+        "isrc": null,
+        "release_year": 2008,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_026",
+        "title": "Free Fallin' - Live at the Nokia Theatre, Los Angeles, CA - December 2007"
+      },
+      "target_identity": {
+        "core_title": "Free Fallin' - - December 2007",
+        "credited_artists": [
+          "John Mayer"
+        ],
+        "duration_seconds": 264.267,
+        "normalized_artists": [
+          "john mayer"
+        ],
+        "normalized_title": "free fallin december 2007",
+        "primary_artist": "John Mayer",
+        "raw_title": "Free Fallin' - Live at the Nokia Theatre, Los Angeles, CA - December 2007",
+        "version_descriptors": [
+          {
+            "family": "live",
+            "qualifier": "the Nokia Theatre, Los Angeles, CA",
+            "raw": "Live at the Nokia Theatre, Los Angeles, CA"
+          }
+        ],
+        "version_families": [
+          "live"
+        ]
+      }
+    },
+    {
+      "classification": "ORDINARY_LIVE",
+      "exact_live_candidate_available": true,
+      "exact_live_candidate_ids": [
+        "aEi646akxko"
+      ],
+      "extra_arrangement_markers": [],
+      "material_arrangement_families": [],
+      "reason": "live is the target's only material version family; a canonical studio recording may represent the song if exact-live resolution fails",
+      "representation_risk": "ELEVATED",
+      "stable_track_id": "s5b1c_027",
+      "stage5b1h_exact_outcome": "AUTO_MATCH",
+      "stage5b1h_selected_video_id": "aEi646akxko",
+      "stage5b1i_match_mode": "EXACT_RECORDING",
+      "stage5b1i_selected_video_id": "aEi646akxko",
+      "studio_fallback_allowed": true,
+      "studio_fallback_candidate_ids": [],
+      "target": {
+        "album": "Where the Light Is: John Mayer Live in Los Angeles",
+        "artists": [
+          "John Mayer"
+        ],
+        "duration_ms": 319147,
+        "isrc": null,
+        "release_year": 2008,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_027",
+        "title": "Slow Dancing in a Burning Room - Live at the Nokia Theatre, Los Angeles, CA - December 2007"
+      },
+      "target_identity": {
+        "core_title": "Slow Dancing in a Burning Room - - December 2007",
+        "credited_artists": [
+          "John Mayer"
+        ],
+        "duration_seconds": 319.147,
+        "normalized_artists": [
+          "john mayer"
+        ],
+        "normalized_title": "slow dancing in a burning room december 2007",
+        "primary_artist": "John Mayer",
+        "raw_title": "Slow Dancing in a Burning Room - Live at the Nokia Theatre, Los Angeles, CA - December 2007",
+        "version_descriptors": [
+          {
+            "family": "live",
+            "qualifier": "the Nokia Theatre, Los Angeles, CA",
+            "raw": "Live at the Nokia Theatre, Los Angeles, CA"
+          }
+        ],
+        "version_families": [
+          "live"
+        ]
+      }
+    },
+    {
+      "classification": "ORDINARY_LIVE",
+      "exact_live_candidate_available": true,
+      "exact_live_candidate_ids": [
+        "k4HWjQNN1K8"
+      ],
+      "extra_arrangement_markers": [],
+      "material_arrangement_families": [],
+      "reason": "live is the target's only material version family; a canonical studio recording may represent the song if exact-live resolution fails",
+      "representation_risk": "ELEVATED",
+      "stable_track_id": "s5b1c_028",
+      "stage5b1h_exact_outcome": "AUTO_MATCH",
+      "stage5b1h_selected_video_id": "k4HWjQNN1K8",
+      "stage5b1i_match_mode": "EXACT_RECORDING",
+      "stage5b1i_selected_video_id": "k4HWjQNN1K8",
+      "studio_fallback_allowed": true,
+      "studio_fallback_candidate_ids": [],
+      "target": {
+        "album": "Hell Freezes Over",
+        "artists": [
+          "Eagles"
+        ],
+        "duration_ms": 432000,
+        "isrc": null,
+        "release_year": 1994,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_028",
+        "title": "Hotel California - Live on MTV, 1994"
+      },
+      "target_identity": {
+        "core_title": "Hotel California",
+        "credited_artists": [
+          "Eagles"
+        ],
+        "duration_seconds": 432.0,
+        "normalized_artists": [
+          "eagles"
+        ],
+        "normalized_title": "hotel california",
+        "primary_artist": "Eagles",
+        "raw_title": "Hotel California - Live on MTV, 1994",
+        "version_descriptors": [
+          {
+            "family": "live",
+            "qualifier": "on MTV, 1994",
+            "raw": "Live on MTV, 1994"
+          }
+        ],
+        "version_families": [
+          "live"
+        ]
+      }
+    },
+    {
+      "classification": "ORDINARY_LIVE",
+      "exact_live_candidate_available": false,
+      "exact_live_candidate_ids": [],
+      "extra_arrangement_markers": [],
+      "material_arrangement_families": [],
+      "reason": "live is the target's only material version family; a canonical studio recording may represent the song if exact-live resolution fails",
+      "representation_risk": "ELEVATED",
+      "stable_track_id": "s5b1c_029",
+      "stage5b1h_exact_outcome": "MATCH_UNCERTAIN",
+      "stage5b1h_selected_video_id": null,
+      "stage5b1i_match_mode": null,
+      "stage5b1i_selected_video_id": null,
+      "studio_fallback_allowed": true,
+      "studio_fallback_candidate_ids": [],
+      "target": {
+        "album": "Live at the Ryman",
+        "artists": [
+          "Lord Huron"
+        ],
+        "duration_ms": 258000,
+        "isrc": null,
+        "release_year": 2023,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_029",
+        "title": "The Night We Met - Live at the Ryman"
+      },
+      "target_identity": {
+        "core_title": "The Night We Met",
+        "credited_artists": [
+          "Lord Huron"
+        ],
+        "duration_seconds": 258.0,
+        "normalized_artists": [
+          "lord huron"
+        ],
+        "normalized_title": "the night we met",
+        "primary_artist": "Lord Huron",
+        "raw_title": "The Night We Met - Live at the Ryman",
+        "version_descriptors": [
+          {
+            "family": "live",
+            "qualifier": "the Ryman",
+            "raw": "Live at the Ryman"
+          }
+        ],
+        "version_families": [
+          "live"
+        ]
+      }
+    }
+  ]
+}

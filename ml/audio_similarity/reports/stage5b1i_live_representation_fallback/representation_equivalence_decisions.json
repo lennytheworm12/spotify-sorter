@@ -1,0 +1,1035 @@
+{
+  "policy_id": "REPRESENTATION_EQUIVALENT_LIVE_FALLBACK_V1",
+  "production_activated": false,
+  "schema_version": "stage5b1i-representation-equivalence-decisions-v1",
+  "scope_guards": {
+    "clap_calls": 0,
+    "historical_resolver_policies_changed": false,
+    "human_labels_changed": false,
+    "live_to_studio_duration_used_for_eligibility": false,
+    "media_downloads": 0,
+    "muq_calls": 0,
+    "non_live_version_semantics_changed": false,
+    "q0_discovery_changed": false,
+    "remaster_semantics_changed": false,
+    "sol_runs": 0,
+    "stage5a_calls": 0,
+    "youtube_searches": 0
+  },
+  "status": "STAGE5B1I_LIVE_REPRESENTATION_FALLBACK_EVALUATED",
+  "summary": {
+    "absolute_percentage_point_gain": 0.0,
+    "coverage_after": 0.84,
+    "coverage_before": 0.84,
+    "exact_recording_count": 42,
+    "incremental_auto_match_count": 0,
+    "representation_equivalent_fallback_count": 0,
+    "stage5b1h_auto_match_count": 42,
+    "stage5b1h_match_uncertain_count": 8,
+    "stage5b1i_auto_match_count": 42,
+    "stage5b1i_match_uncertain_count": 8,
+    "total_tracks": 50
+  },
+  "tracks": [
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_001",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 5,
+        "selected_video_id": "7V3jqsIe8c0",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 5,
+        "selected_video_id": "7V3jqsIe8c0",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_002",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 1,
+        "selected_video_id": "H5v3kku4y6Q",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 1,
+        "selected_video_id": "H5v3kku4y6Q",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_003",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 3,
+        "selected_video_id": "KT7F15T9VBI",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 3,
+        "selected_video_id": "KT7F15T9VBI",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_004",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 2,
+        "selected_video_id": "SQnc1QibapQ",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 2,
+        "selected_video_id": "SQnc1QibapQ",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_005",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 2,
+        "selected_video_id": "iWG6apzIWAk",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 2,
+        "selected_video_id": "iWG6apzIWAk",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_006",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 1,
+        "selected_video_id": "1RKqOmSkGgM",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 1,
+        "selected_video_id": "1RKqOmSkGgM",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_007",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 4,
+        "selected_video_id": "HU08BcK5SUY",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 4,
+        "selected_video_id": "HU08BcK5SUY",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_008",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 2,
+        "selected_video_id": "183mZ-wj7eA",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 2,
+        "selected_video_id": "183mZ-wj7eA",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_009",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 2,
+        "selected_video_id": "HCq1OcAEAm0",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 2,
+        "selected_video_id": "HCq1OcAEAm0",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_010",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 1,
+        "selected_video_id": "LPgN4EfzUrU",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 1,
+        "selected_video_id": "LPgN4EfzUrU",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_011",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 5,
+        "selected_video_id": "JsjbNtO84JU",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 5,
+        "selected_video_id": "JsjbNtO84JU",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_012",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 3,
+        "selected_video_id": "kxZYxojih3E",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 3,
+        "selected_video_id": "kxZYxojih3E",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_013",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 1,
+        "selected_video_id": "ioNng23DkIM",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 1,
+        "selected_video_id": "ioNng23DkIM",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_014",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 2,
+        "selected_video_id": "OEnvXsyGZmU",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 2,
+        "selected_video_id": "OEnvXsyGZmU",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_015",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 2,
+        "selected_video_id": "ZNEuWldWPD4",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 2,
+        "selected_video_id": "ZNEuWldWPD4",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_016",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 5,
+        "selected_video_id": "WXx5-HGERcg",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 5,
+        "selected_video_id": "WXx5-HGERcg",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_017",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 1,
+        "selected_video_id": "6uvUTu716rU",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 1,
+        "selected_video_id": "6uvUTu716rU",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_018",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 2,
+        "selected_video_id": "8Ebqe2Dbzls",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 2,
+        "selected_video_id": "8Ebqe2Dbzls",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_019",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 1,
+        "selected_video_id": "kAt6H_JkVxQ",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 1,
+        "selected_video_id": "kAt6H_JkVxQ",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_020",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 2,
+        "selected_video_id": "OUkkaqSNduU",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 2,
+        "selected_video_id": "OUkkaqSNduU",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_021",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1I_LIVE_FALLBACK",
+        "match_mode": null,
+        "policy_rule_id": "REPRESENTATION_EQUIVALENT_LIVE_FALLBACK_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "target does not request a live performance"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_022",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 1,
+        "selected_video_id": "oS6wfWu0JvA",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 1,
+        "selected_video_id": "oS6wfWu0JvA",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_023",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 1,
+        "selected_video_id": "1UESu4eyalA",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 1,
+        "selected_video_id": "1UESu4eyalA",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_024",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 1,
+        "selected_video_id": "VI9gIPBH_dM",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 1,
+        "selected_video_id": "VI9gIPBH_dM",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_025",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 1,
+        "selected_video_id": "5MenFU9qCzs",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 1,
+        "selected_video_id": "5MenFU9qCzs",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_026",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 1,
+        "selected_video_id": "sKzoEwQaF7Y",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 1,
+        "selected_video_id": "sKzoEwQaF7Y",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_027",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 1,
+        "selected_video_id": "aEi646akxko",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 1,
+        "selected_video_id": "aEi646akxko",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_028",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 2,
+        "selected_video_id": "k4HWjQNN1K8",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 2,
+        "selected_video_id": "k4HWjQNN1K8",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_029",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1I_LIVE_FALLBACK",
+        "match_mode": null,
+        "policy_rule_id": "REPRESENTATION_EQUIVALENT_LIVE_FALLBACK_V1",
+        "representation_risk": "ELEVATED",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no canonical conflict-free studio candidate exists in frozen Q0 top five"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_030",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1I_LIVE_FALLBACK",
+        "match_mode": null,
+        "policy_rule_id": "REPRESENTATION_EQUIVALENT_LIVE_FALLBACK_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "target does not request a live performance"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_031",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 1,
+        "selected_video_id": "d1QgQI83PQo",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 1,
+        "selected_video_id": "d1QgQI83PQo",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_032",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1I_LIVE_FALLBACK",
+        "match_mode": null,
+        "policy_rule_id": "REPRESENTATION_EQUIVALENT_LIVE_FALLBACK_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "target does not request a live performance"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_033",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1I_LIVE_FALLBACK",
+        "match_mode": null,
+        "policy_rule_id": "REPRESENTATION_EQUIVALENT_LIVE_FALLBACK_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "target does not request a live performance"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_034",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1I_LIVE_FALLBACK",
+        "match_mode": null,
+        "policy_rule_id": "REPRESENTATION_EQUIVALENT_LIVE_FALLBACK_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "target does not request a live performance"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_035",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 1,
+        "selected_video_id": "igIfiqqVHtA",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 1,
+        "selected_video_id": "igIfiqqVHtA",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_036",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 1,
+        "selected_video_id": "TqAollrUJdA",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 1,
+        "selected_video_id": "TqAollrUJdA",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_037",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 2,
+        "selected_video_id": "Wc5IbN4xw70",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 2,
+        "selected_video_id": "Wc5IbN4xw70",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_038",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 2,
+        "selected_video_id": "XEV4x7xEprw",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 2,
+        "selected_video_id": "XEV4x7xEprw",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_039",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 3,
+        "selected_video_id": "CS_VM3UhbW8",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 3,
+        "selected_video_id": "CS_VM3UhbW8",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_040",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1I_LIVE_FALLBACK",
+        "match_mode": null,
+        "policy_rule_id": "REPRESENTATION_EQUIVALENT_LIVE_FALLBACK_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "target does not request a live performance"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_041",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1I_LIVE_FALLBACK",
+        "match_mode": null,
+        "policy_rule_id": "REPRESENTATION_EQUIVALENT_LIVE_FALLBACK_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "target does not request a live performance"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_042",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 3,
+        "selected_video_id": "W2MpGCL8-9o",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 3,
+        "selected_video_id": "W2MpGCL8-9o",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_043",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 4,
+        "selected_video_id": "zDOILKOOUCo",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 4,
+        "selected_video_id": "zDOILKOOUCo",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_044",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 4,
+        "selected_video_id": "-zpEMkKJd0M",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 4,
+        "selected_video_id": "-zpEMkKJd0M",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_045",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 2,
+        "selected_video_id": "53pweVfVwV8",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 2,
+        "selected_video_id": "53pweVfVwV8",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_046",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 3,
+        "selected_video_id": "lZQfDoeIMxI",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 3,
+        "selected_video_id": "lZQfDoeIMxI",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_047",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 3,
+        "selected_video_id": "Y2ESxHKuSOk",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 3,
+        "selected_video_id": "Y2ESxHKuSOk",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_048",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 1,
+        "selected_video_id": "ca48oMV59LU",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 1,
+        "selected_video_id": "ca48oMV59LU",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_049",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 1,
+        "selected_video_id": "dawrQnvwMTY",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 1,
+        "selected_video_id": "dawrQnvwMTY",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    },
+    {
+      "coverage_changed": false,
+      "stable_track_id": "s5b1c_050",
+      "stage5b1h_decision": {
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "selected_candidate_rank": 1,
+        "selected_video_id": "5NjJLFI_oYs",
+        "status": "AUTO_MATCH"
+      },
+      "stage5b1i_decision": {
+        "decision_origin": "STAGE5B1H_EXACT_RESOLVER",
+        "match_mode": "EXACT_RECORDING",
+        "policy_rule_id": "CANONICAL_SOURCE_SEMANTICS_V1",
+        "representation_risk": null,
+        "selected_candidate_rank": 1,
+        "selected_video_id": "5NjJLFI_oYs",
+        "selection_reason": "frozen Stage 5B.1G global preference preserved; Stage 5B.1H adds canonicality and padding-risk semantics without changing eligibility/order",
+        "status": "AUTO_MATCH"
+      }
+    }
+  ]
+}

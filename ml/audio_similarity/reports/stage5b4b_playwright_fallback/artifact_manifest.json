@@ -1,0 +1,162 @@
+{
+  "artifacts": {
+    "fallback_config.json": {
+      "sha256": "401401e92d44c7c7140b2a4047d466d4406c9260e0a4f0c6ffc5fca48be77ad2",
+      "size_bytes": 4105
+    },
+    "fallback_metrics.json": {
+      "sha256": "9906028def1ebe5592af44f480618caabe14fe11619e434b85acdfd075b2ef6a",
+      "size_bytes": 1545
+    },
+    "fallback_report.md": {
+      "sha256": "6aaff42cf29e484243e77c51248f6d221fc62731197f2683706d2d05aec8d5dd",
+      "size_bytes": 3104
+    },
+    "human_review.csv": {
+      "sha256": "c7b95b4a50c652193da5fbfddc0a1e5d1acd16543f78c57f2e415c2df1571710",
+      "size_bytes": 622
+    },
+    "hydrated_candidates.json": {
+      "sha256": "0d36a8499d1de3bb3994ccc68ceca28cf80fc1d54f674ff758b3a8924818f9fe",
+      "size_bytes": 676
+    },
+    "playwright_discovery.json": {
+      "sha256": "b19ee316434a072440585157852c2807c3ccf8a1fb52b5492b1341de1ca6ae41",
+      "size_bytes": 3786
+    },
+    "primary_discovery.json": {
+      "sha256": "bce9c9c8cd7171b0e4b7b5167060863d2bdc2f4dcef98712910bc97a3723ffd1",
+      "size_bytes": 1531
+    }
+  },
+  "experiment_id": "STAGE5B4B_PLAYWRIGHT_FALLBACK_V1",
+  "frozen_inputs": {
+    "representative_v3": {
+      "automated_selector_decisions": {
+        "path": "reports/stage5b4_representative_v3/automated_selector_decisions.json",
+        "sha256": "1a10ed69549b83d36223120db4162a937c6b0d2f59df7224b6afe1b99767827e",
+        "size_bytes": 202751
+      },
+      "automated_selector_metrics": {
+        "path": "reports/stage5b4_representative_v3/automated_selector_metrics.json",
+        "sha256": "878024d9768ebb2de6f96f6e7aab787a3e176225ed75e3203afe9902a4d530ae",
+        "size_bytes": 522
+      },
+      "benchmark_config": {
+        "path": "reports/stage5b4_representative_v3/benchmark_config.json",
+        "sha256": "6a36489829453f2ea18e14767a752ef97d75eda5bcfc0de8d0ec3965aa975385",
+        "size_bytes": 5045
+      },
+      "benchmark_manifest": {
+        "path": "reports/stage5b4_representative_v3/benchmark_manifest.json",
+        "sha256": "e5d54e06e410d74a1b588f8d853c5ca9a25e97ba09dd26692c5978a15245097e",
+        "size_bytes": 52085
+      },
+      "human_review": {
+        "path": "reports/stage5b4_representative_v3/human_review.csv",
+        "sha256": "92cb84aafeff32604ebf559c98e8347751991e8d0d865949a1ba595d8029d062",
+        "size_bytes": 132358
+      },
+      "human_review_queue": {
+        "path": "reports/stage5b4_representative_v3/human_review_queue.json",
+        "sha256": "181252ad2d96327acc3543754ea5ea5dc62a2036764680536dc22782995cea9a",
+        "size_bytes": 87091
+      },
+      "youtube_top3_discovery": {
+        "path": "reports/stage5b4_representative_v3/youtube_top3_discovery.json",
+        "sha256": "4cbd5741c7af0030474ba4073991c28d316eea73f243dc1f0a350b48e7db3f94",
+        "size_bytes": 804468
+      }
+    },
+    "stage5b3_selector": {
+      "path": "src/audio_similarity/stage5b3_minimal_selector.py",
+      "sha256": "262ac3d0d7459170fef81336ee6f54f5523f2d8300fedee8a51798ce8439160f",
+      "size_bytes": 23106
+    },
+    "stage5b4a": {
+      "artifact_manifest.json": {
+        "path": "reports/stage5b4a_query_contract_repair/artifact_manifest.json",
+        "sha256": "9e3e573388d584930444aa8c8b44336b312a1b052d81fb1222a81619923a18b2",
+        "size_bytes": 3283
+      },
+      "human_review.csv": {
+        "path": "reports/stage5b4a_query_contract_repair/human_review.csv",
+        "sha256": "72633877f662c77886b11f3a68b3d53e98e9f3d6194783d171277e06cc8d93b4",
+        "size_bytes": 2153
+      },
+      "query_contract_report.md": {
+        "path": "reports/stage5b4a_query_contract_repair/query_contract_report.md",
+        "sha256": "3c0f0e63c9693f3837361cb03d6a94536cf81430c7ffbf4b701cbfea6491da04",
+        "size_bytes": 2884
+      },
+      "repaired_discovery.json": {
+        "path": "reports/stage5b4a_query_contract_repair/repaired_discovery.json",
+        "sha256": "3b6cb47ba4a5db5b844006258d52837ecba7db1f37045962eee8ccf0f116720f",
+        "size_bytes": 11028
+      },
+      "repaired_query_contract.json": {
+        "path": "reports/stage5b4a_query_contract_repair/repaired_query_contract.json",
+        "sha256": "67533675f92d5904bdfc87dffecea59afa70bef45a543d2ca0fc5533363ae562",
+        "size_bytes": 2885
+      },
+      "v3_query_replay.json": {
+        "path": "reports/stage5b4a_query_contract_repair/v3_query_replay.json",
+        "sha256": "5e653f2a39ee3c7dc3b03243a2f2b66b7938ab9447adeb0794eb472ae8cdbac3",
+        "size_bytes": 49887
+      }
+    }
+  },
+  "implementation": {
+    "browser_adapter": {
+      "path": "src/audio_similarity/stage5b4b_browser.py",
+      "sha256": "20050b229fe53f8c36c0ebe1dcb2af6e74457a775def03cb7ff6f4bbe7b55cb3",
+      "size_bytes": 14000
+    },
+    "cli": {
+      "path": "src/audio_similarity/cli/stage5b4b_playwright_fallback.py",
+      "sha256": "c75e408417e23e5b74e39caeb6ed024a8b4847b57c9ac208ad3858da46e37ffa",
+      "size_bytes": 2477
+    },
+    "experiment": {
+      "path": "src/audio_similarity/stage5b4b_experiment.py",
+      "sha256": "bd5c798fa4e822bcbeebf5e5ebfaa1616016aa5280c96305e8678489f30ab3df",
+      "size_bytes": 34726
+    },
+    "fallback": {
+      "path": "src/audio_similarity/stage5b4b_playwright_fallback.py",
+      "sha256": "6cf3d03d042e4d1880c3cf35b11a7354ed33db23b74e2e555265835db3a14400",
+      "size_bytes": 11001
+    },
+    "lockfile": {
+      "path": "uv.lock",
+      "sha256": "14a2ac8c7c2404c8e1d74b754292b14b35351a2aa3bc3097a45f6d4268a818b2",
+      "size_bytes": 301841
+    },
+    "project": {
+      "path": "pyproject.toml",
+      "sha256": "9a2fb03a188a255cdff3d9f967411659cdb754f3d72dd9d4a2a1ac21264200b1",
+      "size_bytes": 1190
+    },
+    "tests": {
+      "path": "tests/test_stage5b4b_playwright_fallback.py",
+      "sha256": "8b998f77ffa071a24e545fd6ce79fa7cd4a131a4bebe2deae6fc33950d2146e8",
+      "size_bytes": 18914
+    }
+  },
+  "schema_version": "stage5b4b-artifact-manifest-v1",
+  "scope_guards": {
+    "audio_downloads": 0,
+    "clap_calls": 0,
+    "historical_artifacts_overwritten": false,
+    "motivating_cases": 1,
+    "muq_calls": 0,
+    "normal_provider_replaced": false,
+    "production_activation": false,
+    "proof_heavy_resolver_invocations": 0,
+    "query_modified": false,
+    "selector_modified": false,
+    "sol_runs": 0,
+    "video_downloads": 0
+  },
+  "verdict": "PLAYWRIGHT_FALLBACK_FAILED"
+}

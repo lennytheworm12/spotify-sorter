@@ -1,0 +1,28 @@
+{
+  "candidate_count": 1,
+  "cases": [
+    {
+      "candidate_video_ids": [
+        "KtlgYxa6BMU"
+      ],
+      "fallback": {
+        "fallback_family": "LIVE_TO_STUDIO",
+        "match_mode": "REPRESENTATION_EQUIVALENT_STUDIO_FALLBACK",
+        "not_exact_recording": true,
+        "reason": "exact resolution remained uncertain; selected a canonical base recording as an explicit representation approximation"
+      },
+      "selection_reasons": [
+        "NEW_STAGE5B1J_FALLBACK_DISCOVERY_SELECTION"
+      ],
+      "stable_track_id": "s5b1c_029"
+    }
+  ],
+  "manifest_sha256": "e2e9a1ab43f568dd9de853c2964f341ee0d0e2631ca87f732d0d4326ab990f79",
+  "policy_decisions_sha256": "2626566f73cc0cd3d8d7cb4bcb40018801406e1fd241c71478607aa968bdd0e2",
+  "random_agreement_fraction": 0.0,
+  "random_seed_sha256": null,
+  "schema_version": "stage5b1b-fresh-challenge-human-audit-queue-v1",
+  "sol_evaluations_sha256": null,
+  "status": "STAGE5B1J_FALLBACK_AWAITING_HUMAN_REVIEW",
+  "track_count": 1
+}

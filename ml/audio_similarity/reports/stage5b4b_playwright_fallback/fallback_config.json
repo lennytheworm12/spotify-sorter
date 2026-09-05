@@ -1,0 +1,110 @@
+{
+  "architecture": {
+    "fallback": "Playwright browser search then yt-dlp exact-URL hydration",
+    "fallback_trigger": "ZERO_USABLE_PRIMARY_CANDIDATES_ONLY",
+    "primary": "yt_dlp ytsearch3",
+    "same_query_required": true,
+    "selector": "STAGE5B3_MINIMAL_YOUTUBE_SELECTOR_V1_UNCHANGED"
+  },
+  "browser": {
+    "captcha_solving": false,
+    "consent_timeout_ms": 2000,
+    "headless": true,
+    "locale": "en-US",
+    "maximum_anchors_inspected": 30,
+    "maximum_page_interactions": 1,
+    "navigation_timeout_ms": 20000,
+    "persistent_profile": false,
+    "personal_cookies": false,
+    "result_timeout_ms": 10000,
+    "scroll_count": 0,
+    "stealth_plugins": false,
+    "viewport_height": 720,
+    "viewport_width": 1280
+  },
+  "experiment_id": "STAGE5B4B_PLAYWRIGHT_FALLBACK_V1",
+  "frozen_inputs": {
+    "representative_v3_artifacts": {
+      "automated_selector_decisions": {
+        "path": "reports/stage5b4_representative_v3/automated_selector_decisions.json",
+        "sha256": "1a10ed69549b83d36223120db4162a937c6b0d2f59df7224b6afe1b99767827e",
+        "size_bytes": 202751
+      },
+      "automated_selector_metrics": {
+        "path": "reports/stage5b4_representative_v3/automated_selector_metrics.json",
+        "sha256": "878024d9768ebb2de6f96f6e7aab787a3e176225ed75e3203afe9902a4d530ae",
+        "size_bytes": 522
+      },
+      "benchmark_config": {
+        "path": "reports/stage5b4_representative_v3/benchmark_config.json",
+        "sha256": "6a36489829453f2ea18e14767a752ef97d75eda5bcfc0de8d0ec3965aa975385",
+        "size_bytes": 5045
+      },
+      "benchmark_manifest": {
+        "path": "reports/stage5b4_representative_v3/benchmark_manifest.json",
+        "sha256": "e5d54e06e410d74a1b588f8d853c5ca9a25e97ba09dd26692c5978a15245097e",
+        "size_bytes": 52085
+      },
+      "human_review": {
+        "path": "reports/stage5b4_representative_v3/human_review.csv",
+        "sha256": "92cb84aafeff32604ebf559c98e8347751991e8d0d865949a1ba595d8029d062",
+        "size_bytes": 132358
+      },
+      "human_review_queue": {
+        "path": "reports/stage5b4_representative_v3/human_review_queue.json",
+        "sha256": "181252ad2d96327acc3543754ea5ea5dc62a2036764680536dc22782995cea9a",
+        "size_bytes": 87091
+      },
+      "youtube_top3_discovery": {
+        "path": "reports/stage5b4_representative_v3/youtube_top3_discovery.json",
+        "sha256": "4cbd5741c7af0030474ba4073991c28d316eea73f243dc1f0a350b48e7db3f94",
+        "size_bytes": 804468
+      }
+    },
+    "stage5b3_selector": {
+      "path": "src/audio_similarity/stage5b3_minimal_selector.py",
+      "sha256": "262ac3d0d7459170fef81336ee6f54f5523f2d8300fedee8a51798ce8439160f",
+      "size_bytes": 23106
+    },
+    "stage5b4a_artifact_manifest": {
+      "path": "reports/stage5b4a_query_contract_repair/artifact_manifest.json",
+      "sha256": "9e3e573388d584930444aa8c8b44336b312a1b052d81fb1222a81619923a18b2",
+      "size_bytes": 3283
+    },
+    "stage5b4a_discovery": {
+      "path": "reports/stage5b4a_query_contract_repair/repaired_discovery.json",
+      "sha256": "3b6cb47ba4a5db5b844006258d52837ecba7db1f37045962eee8ccf0f116720f",
+      "size_bytes": 11028
+    },
+    "stage5b4a_query_contract": {
+      "path": "reports/stage5b4a_query_contract_repair/repaired_query_contract.json",
+      "sha256": "67533675f92d5904bdfc87dffecea59afa70bef45a543d2ca0fc5533363ae562",
+      "size_bytes": 2885
+    }
+  },
+  "hydration": {
+    "maximum_urls": 3,
+    "metadata_only": true,
+    "mode": "exact_watch_url",
+    "provider": "yt_dlp",
+    "search_queries": 0,
+    "sequential": true
+  },
+  "playwright_version": "1.60.0",
+  "query": "Girl, Interrupted 2xxx Miso",
+  "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_V1",
+  "schema_version": "stage5b4b-fallback-config-v1",
+  "scope_guards": {
+    "alternate_queries": 0,
+    "audio_downloads": 0,
+    "clap_calls": 0,
+    "motivating_cases": 1,
+    "muq_calls": 0,
+    "production_activation": false,
+    "proof_heavy_resolver_invocations": 0,
+    "query_tuning": false,
+    "selector_tuning": false,
+    "sol_runs": 0,
+    "video_downloads": 0
+  }
+}

@@ -1,0 +1,309 @@
+{
+  "experiment_id": "stage5c1_curated_25_materialization",
+  "run_kind": "first",
+  "schema_version": "stage5c1-cleanup-results-v1",
+  "temporary_root": "/tmp/spotify-sorter-stage5c1-1ppa28ns",
+  "temporary_root_absent_after_cleanup": true,
+  "tracks": [
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+      "stage5c1_track_id": "stage5c1_A01",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_A01-gntTO_iobU8.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+      "stage5c1_track_id": "stage5c1_A02",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_A02-DaCf0qLwFT0.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "19BDozGmxYGxF1NcUlENmm",
+      "stage5c1_track_id": "stage5c1_A03",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_A03-p19YtFiJJzI.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+      "stage5c1_track_id": "stage5c1_A04",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_A04-paiEPFwyAVs.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "07YG6Ark70YsDK4q3swKrc",
+      "stage5c1_track_id": "stage5c1_A05",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_A05-IwtP1vWNMPE.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+      "stage5c1_track_id": "stage5c1_B01",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_B01-Kw2faPNf00s.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "37YoRLUu1qId0ewavgvnkG",
+      "stage5c1_track_id": "stage5c1_B02",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_B02-Hqvdr91LoSI.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+      "stage5c1_track_id": "stage5c1_B03",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_B03-V9Wsm0hlLUI.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+      "stage5c1_track_id": "stage5c1_B04",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_B04-UnWUmg6fEIw.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "5o4U0weUIAXolji4sEAnjI",
+      "stage5c1_track_id": "stage5c1_B05",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_B05-G6CSdvvrI-k.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+      "stage5c1_track_id": "stage5c1_C01",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_C01-vwwj-Utk32o.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "41hXE5S8D4mRfcdqSMpmAC",
+      "stage5c1_track_id": "stage5c1_C02",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_C02-8008pI-ziLM.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "4fgIoBKHzO7YO5eATyYbMl",
+      "stage5c1_track_id": "stage5c1_C03",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_C03-Ce6so35INYU.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+      "stage5c1_track_id": "stage5c1_C04",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_C04-XhTkfDmkSbk.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+      "stage5c1_track_id": "stage5c1_C05",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_C05-rqfDjmAkq7U.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+      "stage5c1_track_id": "stage5c1_D01",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_D01-AajQnW_4zOY.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "1iIhGHzzrzqQfuNkFI2qAn",
+      "stage5c1_track_id": "stage5c1_D02",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_D02-M0L066lsPgA.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+      "stage5c1_track_id": "stage5c1_D03",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_D03-nM0xDI5R50E.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "4ecdsGz3Hg6TKPwQ0ZOdJz",
+      "stage5c1_track_id": "stage5c1_D04",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_D04-42wfEs7oIP8.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "3aAnwyBJY9OLNLqSgd4fZU",
+      "stage5c1_track_id": "stage5c1_D05",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_D05-_SyegcTF3Xg.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "35IcAVSMsU9qzHfpPbvC8A",
+      "stage5c1_track_id": "stage5c1_E01",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_E01-ptznWGs4GKg.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "2oRNyf4qlAzGz6LljMcDJp",
+      "stage5c1_track_id": "stage5c1_E02",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_E02-46JG3ZpRaRc.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "2eAZfqOm4EnOF9VvN50Tyc",
+      "stage5c1_track_id": "stage5c1_E03",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_E03-ELSUh04-Jh4.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "5lYv58lizCFl1c15K3yan9",
+      "stage5c1_track_id": "stage5c1_E04",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_E04-wBt0h-Ti6vQ.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "2BPXILn0MqOe5WroVXlvN1",
+      "stage5c1_track_id": "stage5c1_E05",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c1-1ppa28ns/stage5c1_E05-By8Iv_TpxCI.wav"
+      ]
+    }
+  ]
+}

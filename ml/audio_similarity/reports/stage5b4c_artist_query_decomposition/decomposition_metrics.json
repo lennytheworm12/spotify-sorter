@@ -1,0 +1,93 @@
+{
+  "criteria": {
+    "all_the_stars_primary_without_fallback": true,
+    "fallback_tried_individual_artists_deterministically": true,
+    "girl_interrupted_miso_recovered_candidates": true,
+    "human_safe_top3": true,
+    "native_rank_preserved_without_pooling": true,
+    "primary_zero_reproduced_or_historically_pinned": true,
+    "selector_and_historical_artifacts_immutable": true,
+    "song_agnostic_bounded_contract": true,
+    "tests_passed": true
+  },
+  "experiment_id": "STAGE5B4C_ARTIST_QUERY_DECOMPOSITION_V1",
+  "frozen_candidate_contract": "NATURAL_TITLE_FIRST3_ARTISTS_THEN_SINGLE_ARTIST_V1",
+  "human_review": {
+    "first_safe_rank": 1,
+    "labels": [
+      "IDEAL",
+      "",
+      ""
+    ],
+    "safe_in_top3": true
+  },
+  "offline_v3": {
+    "duplicate_fallback_queries_removed": 63,
+    "live_searches_run": 0,
+    "malformed_or_empty_query_count": 0,
+    "maximum_fallback_requests_per_track": 3,
+    "maximum_possible_fallback_requests_across_v3": 81,
+    "punctuation_rejection_count": 0,
+    "tracks_total": 100,
+    "tracks_with_1_artist": 63,
+    "tracks_with_2_artists": 30,
+    "tracks_with_3_or_more_artists": 7,
+    "tracks_with_harmless_punctuation": 17
+  },
+  "schema_version": "stage5b4c-decomposition-metrics-v1",
+  "scope_guards": {
+    "audio_downloads": 0,
+    "candidate_pool_merges": 0,
+    "data_api_invocations": 0,
+    "historical_artifacts_overwritten": false,
+    "playwright_invocations": 0,
+    "production_activation": false,
+    "selector_modified": false,
+    "song_specific_rules": 0,
+    "title_only_queries": 0,
+    "video_downloads": 0
+  },
+  "targeted": {
+    "MOTIVATING_ZERO_RESULT_CASE": {
+      "Q0": "Girl, Interrupted 2xxx Miso",
+      "Q0_result_count": 0,
+      "benchmark_id": "stage5b4_representative_v3_010",
+      "candidate_video_ids": [
+        "DpXA_N3jnvE",
+        "3ldYv7cwom4",
+        "Bk0gP8ZXRsA"
+      ],
+      "elapsed_seconds": 2.148130768968258,
+      "fallback_query_count": 2,
+      "fallback_triggered": true,
+      "outcome": "FALLBACK_SUCCESS",
+      "successful_query": "Girl, Interrupted Miso",
+      "successful_query_index": 2,
+      "total_provider_requests": 3
+    },
+    "PRIMARY_SUCCESS_REGRESSION": {
+      "Q0": "All The Stars (with SZA) - From Black Panther: The Album Kendrick Lamar SZA",
+      "Q0_result_count": 3,
+      "benchmark_id": "stage5b4_representative_v3_073",
+      "candidate_video_ids": [
+        "ju4KQT0wL0I",
+        "GfCqMv--ncA",
+        "JQbjS0_ZfJ0"
+      ],
+      "elapsed_seconds": 0.827283845981583,
+      "fallback_query_count": 0,
+      "fallback_triggered": false,
+      "outcome": "PRIMARY_SUCCESS",
+      "successful_query": "All The Stars (with SZA) - From Black Panther: The Album Kendrick Lamar SZA",
+      "successful_query_index": 0,
+      "total_provider_requests": 1
+    }
+  },
+  "verdict": "ARTIST_DECOMPOSITION_FALLBACK_VALIDATED",
+  "verification": {
+    "focused": 22,
+    "full_deselected": 12,
+    "full_non_heavy": 1004,
+    "stage5b_regressions": 543
+  }
+}

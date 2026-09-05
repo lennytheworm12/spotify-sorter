@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "tracks"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "stage5b1b-calibration-sol-batch-response-v1"
+    },
+    "tracks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "stable_track_id",
+          "selection_status",
+          "selected_candidate_key",
+          "selection_rationale",
+          "candidates"
+        ],
+        "properties": {
+          "stable_track_id": {"type": "string"},
+          "selection_status": {
+            "enum": ["SELECTED", "NO_SAFE_CANDIDATE", "SOL_MATCH_UNCERTAIN"]
+          },
+          "selected_candidate_key": {"type": ["string", "null"]},
+          "selection_rationale": {"type": "string"},
+          "candidates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "candidate_key",
+                "label",
+                "recording_identity_reason",
+                "source_quality_reason",
+                "uncertainty_reason"
+              ],
+              "properties": {
+                "candidate_key": {"type": "string"},
+                "label": {
+                  "enum": ["IDEAL", "ACCEPTABLE", "WRONG", "UNCERTAIN"]
+                },
+                "recording_identity_reason": {"type": "string"},
+                "source_quality_reason": {"type": "string"},
+                "uncertainty_reason": {"type": ["string", "null"]}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

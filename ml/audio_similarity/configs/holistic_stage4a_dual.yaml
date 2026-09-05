@@ -1,0 +1,67 @@
+# Governing dual-encoder Stage 4A contract. No weights may be fitted from Stage 4 labels.
+experiment_id: holistic_stage4a_fma30_dual_encoder_coverage
+contract_version: 1
+rollback_commit: 4e2c4e2
+seed: 20260905
+claim_boundary: personal_perceptual_alignment_on_fma_30_second_dual_encoder_retrieval
+scientific_history:
+  stage2b_verdict: SINGLE_ENCODER_WINS
+  engineering_activation: CLAP_PLUS_MUQ_AUDIO_REPRESENTATION_V1
+  fusion_won_stage2b: false
+corpus:
+  candidate_manifest: reports/holistic_stage4a/fma_small_candidate_manifest.parquet
+  candidate_manifest_sha256: cd6daafcaf2296d8ffc839ab0ff8b78c8db3093adf4d6d3946b4b1378ccb8b99
+  candidate_count: 7994
+  query_manifest: reports/holistic_stage4a/frozen_queries.json
+  query_manifest_sha256: 7ccd54d329c5eae733e4df0df4ca71c58d0cebf9ba8af04dd0d269d2d62a2ea0
+  query_count: 80
+  audio_root: data/fma/fma_small
+canonical_audio: {sample_rate: 24000, channels: mono, preprocessing_version: fma_full_mono_24khz_no_pad_v1}
+sampling:
+  version: fma30_centers_3_5_9_15_21_25_27_v1
+  shared_source_intervals: true
+  representations:
+    CENTER5_DUAL: {K: 1, centers_sec: [15]}
+    UNIFORM3_DUAL_MEAN: {K: 3, centers_sec: [5, 15, 25]}
+    UNIFORM5_DUAL_MEAN: {K: 5, centers_sec: [3, 9, 15, 21, 27]}
+encoders:
+  clap:
+    id: laion_clap
+    checkpoint: models/music_audioset_epoch_15_esc_90.14.pt
+    checkpoint_sha256: fae3e9c087f2909c28a09dc31c8dfcdacbc42ba44c70e972b58c1bd1caf6dedd
+    revision: stage2b_reproducibly_observed
+    dimension: 512
+    center_artifact: artifacts/holistic_stage1a/laion_clap.parquet
+    center_artifact_sha256: 40dd8ca0bb1883cce1af02081b36364160ce90be20dca0167c69c18f8e26471b
+  muq:
+    id: muq_mulan_large
+    hf_repo: OpenMuQ/MuQ-MuLan-large
+    revision: 2e01c796b71dca71b45251384c04cd7b237c9020
+    weights_sha256: d42ae3f7cb9b66759ee0089ddc70e2f28b130c2d8ba621457358272d32dd0444
+    config_sha256: 8fefc545ef87ecd9bcde7417dd03464370c48c321f36dcff20266a752079e468
+    dimension: 512
+    center_artifact: artifacts/holistic_stage1a/muq_mulan_large.parquet
+    center_artifact_sha256: 12cc654e75efc373aca75d10ea73b192c579ea1ec09bbe85f007b74f9dac33ba
+ranking:
+  version: stage2b_clap_muq_raw_ratio_v1
+  stage2b_coefficients: {clap: 0.7077157719045892, muq: 0.26276431727207517}
+  stage2b_feature_scales: {clap: 0.19141755441824396, muq: 0.1803268275095138}
+  effective_raw_weights: {clap: 3.6972354707, muq: 1.4571559923}
+  normalized_weights: {clap: 0.7172981519, muq: 0.2827018481}
+  refit_from_stage4_labels: false
+retrieval: {metric_per_encoder: cosine, fusion: weighted_sum, stable_tie_break: track_id, duplicate_rules: [track_id, source_sha256, canonical_pcm_sha256]}
+trials:
+  method_pairs: [[CENTER5_DUAL, UNIFORM3_DUAL_MEAN], [UNIFORM3_DUAL_MEAN, UNIFORM5_DUAL_MEAN], [CENTER5_DUAL, UNIFORM5_DUAL_MEAN]]
+  initial_depth: 20
+  expansion_depth: 50
+  maximum_total: 240
+  question: Considering the available 30-second recordings overall, which candidate sounds more like the query?
+  choices: [A, B, Tie, Neither]
+metrics: {bootstrap_draws: 50000, bootstrap_seed: 20260905, material_improvement: 0.05}
+verdict: {allowed: [CENTER5_DUAL_SUFFICIENT, UNIFORM3_DUAL_WINS, UNIFORM5_DUAL_WINS, INSUFFICIENT_EVIDENCE_PICK_CHEAPER]}
+non_goals: {fma_large: false, stage4b: false, new_fusion_fit: false, mert_merit: false, product_integration: false}
+paths:
+  report_dir: reports/holistic_stage4a_dual
+  artifacts: artifacts/holistic_stage4a_dual
+  clap_cache: artifacts/holistic_stage4a/segments.sqlite
+  muq_cache: artifacts/holistic_stage4a_dual/muq_segments.sqlite

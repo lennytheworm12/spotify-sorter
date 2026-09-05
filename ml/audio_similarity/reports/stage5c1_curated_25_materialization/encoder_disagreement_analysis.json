@@ -1,0 +1,218 @@
+{
+  "combined_is_weighted_score_not_fused_vector": true,
+  "experiment_id": "stage5c1_curated_25_materialization",
+  "largest_clap_over_muq": [
+    {
+      "clap_minus_muq": 0.49280574554159634,
+      "clap_similarity": 0.7827922804328196,
+      "combined_similarity": 0.6434751854139119,
+      "left_title": "Blue Flame",
+      "left_track_id": "stage5c1_B02",
+      "muq_similarity": 0.2899865348912232,
+      "right_title": "Sour Grapes",
+      "right_track_id": "stage5c1_B03"
+    },
+    {
+      "clap_minus_muq": 0.4717524902585303,
+      "clap_similarity": 0.8020243498627904,
+      "combined_similarity": 0.6686590490209267,
+      "left_title": "We got so much",
+      "left_track_id": "stage5c1_B01",
+      "muq_similarity": 0.3302718596042601,
+      "right_title": "Blue Flame",
+      "right_track_id": "stage5c1_B02"
+    },
+    {
+      "clap_minus_muq": 0.45742792384161923,
+      "clap_similarity": 0.6934737628171461,
+      "combined_similarity": 0.5641580433745743,
+      "left_title": "Blue Flame",
+      "left_track_id": "stage5c1_B02",
+      "muq_similarity": 0.2360458389755269,
+      "right_title": "Ash",
+      "right_track_id": "stage5c1_B05"
+    },
+    {
+      "clap_minus_muq": 0.4337631200006649,
+      "clap_similarity": 0.5113107992197115,
+      "combined_similarity": 0.3886851635579014,
+      "left_title": "Blue Flame",
+      "left_track_id": "stage5c1_B02",
+      "muq_similarity": 0.07754767921904653,
+      "right_title": "The Girl Next Door",
+      "right_track_id": "stage5c1_C02"
+    },
+    {
+      "clap_minus_muq": 0.3902625078309509,
+      "clap_similarity": 0.745524228619024,
+      "combined_similarity": 0.6351962964110734,
+      "left_title": "Blue Flame",
+      "left_track_id": "stage5c1_B02",
+      "muq_similarity": 0.3552617207880731,
+      "right_title": "TKO",
+      "right_track_id": "stage5c1_D01"
+    },
+    {
+      "clap_minus_muq": 0.38727536395287243,
+      "clap_similarity": 0.5167777953436314,
+      "combined_similarity": 0.4072943342305543,
+      "left_title": "Blue Flame",
+      "left_track_id": "stage5c1_B02",
+      "muq_similarity": 0.129502431390759,
+      "right_title": "Deja Vu",
+      "right_track_id": "stage5c1_D05"
+    },
+    {
+      "clap_minus_muq": 0.3859060591549093,
+      "clap_similarity": 0.7303506185640792,
+      "combined_similarity": 0.6212542624479984,
+      "left_title": "Blue Flame",
+      "left_track_id": "stage5c1_B02",
+      "muq_similarity": 0.34444455940916996,
+      "right_title": "UNFORGIVEN (feat. Nile Rodgers)",
+      "right_track_id": "stage5c1_B04"
+    },
+    {
+      "clap_minus_muq": 0.32794212638756803,
+      "clap_similarity": 0.7331959274095232,
+      "combined_similarity": 0.640486082209914,
+      "left_title": "Blue Flame",
+      "left_track_id": "stage5c1_B02",
+      "muq_similarity": 0.4052538010219552,
+      "right_title": "BBIBBI",
+      "right_track_id": "stage5c1_D03"
+    },
+    {
+      "clap_minus_muq": 0.3214993014252183,
+      "clap_similarity": 0.5097280908037362,
+      "combined_similarity": 0.418839644127968,
+      "left_title": "Blue Flame",
+      "left_track_id": "stage5c1_B02",
+      "muq_similarity": 0.18822878937851786,
+      "right_title": "FaSHioN",
+      "right_track_id": "stage5c1_D04"
+    },
+    {
+      "clap_minus_muq": 0.3204121107034603,
+      "clap_similarity": 0.5453216831549976,
+      "combined_similarity": 0.4547405873055076,
+      "left_title": "in your arms",
+      "left_track_id": "stage5c1_C03",
+      "muq_similarity": 0.2249095724515373,
+      "right_title": "Temple of Time",
+      "right_track_id": "stage5c1_E04"
+    }
+  ],
+  "largest_muq_over_clap": [
+    {
+      "clap_minus_muq": -0.3002070759899651,
+      "clap_similarity": 0.5176562536983227,
+      "combined_similarity": 0.6025253488933829,
+      "left_title": "TKO",
+      "left_track_id": "stage5c1_D01",
+      "muq_similarity": 0.8178633296882878,
+      "right_title": "The Way Life Goes (feat. Oh Wonder)",
+      "right_track_id": "stage5c1_E03"
+    },
+    {
+      "clap_minus_muq": -0.2720450812864147,
+      "clap_similarity": 0.5435101545922691,
+      "combined_similarity": 0.6204178018384533,
+      "left_title": "BBIBBI",
+      "left_track_id": "stage5c1_D03",
+      "muq_similarity": 0.8155552358786838,
+      "right_title": "The Way Life Goes (feat. Oh Wonder)",
+      "right_track_id": "stage5c1_E03"
+    },
+    {
+      "clap_minus_muq": -0.2513459759719334,
+      "clap_similarity": 0.5593237362589356,
+      "combined_similarity": 0.6303797081786994,
+      "left_title": "UNFORGIVEN (feat. Nile Rodgers)",
+      "left_track_id": "stage5c1_B04",
+      "muq_similarity": 0.810669712230869,
+      "right_title": "The Way Life Goes (feat. Oh Wonder)",
+      "right_track_id": "stage5c1_E03"
+    },
+    {
+      "clap_minus_muq": -0.22948395130562882,
+      "clap_similarity": 0.4158445099286554,
+      "combined_similarity": 0.4807200470720471,
+      "left_title": "i want you to help me live",
+      "left_track_id": "stage5c1_C01",
+      "muq_similarity": 0.6453284612342842,
+      "right_title": "BBIBBI",
+      "right_track_id": "stage5c1_D03"
+    },
+    {
+      "clap_minus_muq": -0.21374084378877234,
+      "clap_similarity": 0.4552348689920991,
+      "combined_similarity": 0.5156598005456384,
+      "left_title": "Grape Soda",
+      "left_track_id": "stage5c1_C04",
+      "muq_similarity": 0.6689757127808714,
+      "right_title": "TKO",
+      "right_track_id": "stage5c1_D01"
+    },
+    {
+      "clap_minus_muq": -0.1916104048744358,
+      "clap_similarity": 0.472005784025071,
+      "combined_similarity": 0.5261743995982633,
+      "left_title": "Any song",
+      "left_track_id": "stage5c1_D02",
+      "muq_similarity": 0.6636161888995068,
+      "right_title": "Feels Like",
+      "right_track_id": "stage5c1_E01"
+    },
+    {
+      "clap_minus_muq": -0.19157310870266164,
+      "clap_similarity": 0.5574058426690149,
+      "combined_similarity": 0.6115639145455196,
+      "left_title": "TKO",
+      "left_track_id": "stage5c1_D01",
+      "muq_similarity": 0.7489789513716766,
+      "right_title": "Any song",
+      "right_track_id": "stage5c1_D02"
+    },
+    {
+      "clap_minus_muq": -0.18990114336780917,
+      "clap_similarity": 0.6865120182659753,
+      "combined_similarity": 0.740197422452358,
+      "left_title": "TKO",
+      "left_track_id": "stage5c1_D01",
+      "muq_similarity": 0.8764131616337845,
+      "right_title": "FaSHioN",
+      "right_track_id": "stage5c1_D04"
+    },
+    {
+      "clap_minus_muq": -0.1798627249879564,
+      "clap_similarity": 0.3238744418118612,
+      "combined_similarity": 0.3747219665702585,
+      "left_title": "i want you to help me live",
+      "left_track_id": "stage5c1_C01",
+      "muq_similarity": 0.5037371667998176,
+      "right_title": "TKO",
+      "right_track_id": "stage5c1_D01"
+    },
+    {
+      "clap_minus_muq": -0.17045506146552547,
+      "clap_similarity": 0.5385598218971113,
+      "combined_similarity": 0.5867477827914144,
+      "left_title": "Grape Soda",
+      "left_track_id": "stage5c1_C04",
+      "muq_similarity": 0.7090148833626367,
+      "right_title": "BBIBBI",
+      "right_track_id": "stage5c1_D03"
+    }
+  ],
+  "schema_version": "stage5c1-encoder-disagreement-v1",
+  "weighted_off_diagonal_variation": {
+    "clap": 0.09068813354722302,
+    "clap_share": 0.6595656961000702,
+    "muq": 0.04680860723758531
+  },
+  "weights": {
+    "clap": 0.7172981519,
+    "muq": 0.2827018481
+  }
+}

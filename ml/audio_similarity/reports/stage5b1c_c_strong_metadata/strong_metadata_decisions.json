@@ -1,0 +1,1026 @@
+{
+  "duration_bound_basis": {
+    "contextual_cap_seconds": 15,
+    "derivation": "ceil(diagnostic strong duration outlier to next whole second)",
+    "diagnostic_strong_outlier_delta_seconds": 14.76400000000001,
+    "frozen_human_safe_existing_max_delta_seconds": 6.800000000000011,
+    "global_duration_gate_changed": false,
+    "normal_gate_seconds": 7
+  },
+  "frozen_regressions": {
+    "balanced_v1": {
+      "auto_match_count": 29,
+      "exact_decision_replay": true,
+      "match_uncertain_count": 21,
+      "track_count": 50
+    },
+    "combined_before_stage5b1c_c": {
+      "auto_match_count": 40,
+      "coverage": 0.8,
+      "match_uncertain_count": 10
+    },
+    "stage5b1c_b": {
+      "auto_match_count": 5,
+      "exact_decision_replay": true,
+      "match_uncertain_count": 10
+    },
+    "tier2a": {
+      "auto_match_count": 6,
+      "exact_decision_replay": true,
+      "match_uncertain_count": 15,
+      "policy_id": "POLICY_TIER2_METADATA_FUSION_V1",
+      "selected_video_ids": {
+        "s5b1c_015": "ZNEuWldWPD4",
+        "s5b1c_016": "WXx5-HGERcg",
+        "s5b1c_017": "62TrmUvQGjo",
+        "s5b1c_026": "sKzoEwQaF7Y",
+        "s5b1c_027": "aEi646akxko",
+        "s5b1c_043": "zDOILKOOUCo"
+      }
+    }
+  },
+  "input_sha256": {
+    "stage5b1c_b": {
+      "source_neutral_candidate_features.json": "f319e4d5288405ba6abdd3c2bde65d56ab429410d2f2a41d185c4d0457a97596",
+      "source_neutral_decisions.json": "67caf7cd35574bb75271e7950f4b5a105c22425804692073f0c630caf68c5eb3"
+    },
+    "stage5b1c_c_diagnostic": "9968f84d5dbd4825f88dd0fdc329971d93db87e0b2cd9f2b89364f2cbf145ebf",
+    "tier2_human_audit": {
+      "tier2_human_audit_results.json": "26fbfc59fc7617fd54377fde099cabf9170f2c55946bd3046839ea4e7e8edcb5",
+      "tier2_human_review.csv": "2d98a42513d30fb3ce49f89e481698913fb4ff09b047a6341cbf952cdd7cf2f0"
+    }
+  },
+  "policy_id": "POLICY_TIER2_STRONG_METADATA_V1",
+  "production_auto_match_activated": false,
+  "remaining_unresolved_track_ids": [
+    "s5b1c_021",
+    "s5b1c_029",
+    "s5b1c_030",
+    "s5b1c_032",
+    "s5b1c_033",
+    "s5b1c_034",
+    "s5b1c_040",
+    "s5b1c_041"
+  ],
+  "schema_version": "stage5b1c-strong-metadata-decisions-v1",
+  "scope_guards": {
+    "audio_downloads": 0,
+    "balanced_v1_changed": false,
+    "clap_calls": 0,
+    "explicit_performer_conflicts_are_hard_rejections": true,
+    "explicit_version_conflicts_are_hard_rejections": true,
+    "fuzzy_title_matching": false,
+    "global_duration_gate_changed": false,
+    "global_duration_gate_seconds": 7,
+    "muq_calls": 0,
+    "sol_runs": 0,
+    "stage5a_calls": 0,
+    "stage5b1c_a_changed": false,
+    "stage5b1c_b_changed": false,
+    "video_downloads": 0,
+    "yt_dlp_searches": 0
+  },
+  "selected": [
+    {
+      "evidence_summary": {
+        "candidate_video_id": "kxZYxojih3E",
+        "contextual_duration_evidence": {
+          "absolute_duration_delta_seconds": 0.5,
+          "conditions": {
+            "duration_above_normal_gate": false,
+            "duration_within_contextual_cap": true,
+            "exact_structural_title": true,
+            "explicit_complete_version_match": false,
+            "no_performer_conflict": true,
+            "no_unrequested_modified_audio": true,
+            "no_version_conflict_or_absence": true,
+            "official_audio_source": false,
+            "positive_corroborated_provenance": false,
+            "primary_performer_match": true,
+            "version_family_allows_duration_exception": true
+          },
+          "contextual_max_delta_seconds": 15,
+          "eligible": false,
+          "normal_duration_close_seconds": 7,
+          "target_version_families": []
+        },
+        "eligible": true,
+        "modification_evidence": {
+          "candidate_families": [],
+          "explicit_conflict": false,
+          "target_families": [],
+          "unrequested_candidate_families": []
+        },
+        "new_hard_reasons": [],
+        "presentation_title_evidence": {
+          "candidate": {
+            "core_title": "TAKi TAKI",
+            "normalized_core_title": "taki taki",
+            "raw_title": "Dj snake feat selena gomez  Ozuna & CARDI B  - TAKi TAKI ( LETRA VIDEO OFICIAL",
+            "recording_text": "TAKi TAKI ( LETRA VIDEO OFICIAL",
+            "source_descriptors": [
+              "LETRA VIDEO OFICIAL"
+            ],
+            "title_performer_text": "Dj snake feat selena gomez  Ozuna & CARDI B",
+            "version_descriptors": []
+          },
+          "exact_structural_match": true,
+          "fuzzy_matching_used": false,
+          "removed_target_credit_aliases": [
+            "selena gomez",
+            "ozuna",
+            "cardi b"
+          ],
+          "target": {
+            "core_title": "Taki Taki",
+            "normalized_core_title": "taki taki",
+            "raw_title": "Taki Taki",
+            "recording_text": "Taki Taki",
+            "source_descriptors": [],
+            "title_performer_text": null,
+            "version_descriptors": []
+          },
+          "uses_credit_presentation_equivalence": true,
+          "validated_candidate_prefix_aliases": []
+        },
+        "prior_source_neutral_gate_reasons": [
+          "normalized structural core title does not match"
+        ],
+        "remaining_gate_reasons": [],
+        "schema_version": "stage5b1c-strong-metadata-candidate-features-v1",
+        "strong_metadata_waivers": [
+          {
+            "basis": "exact structural title after removing only validated credited-artist and source-presentation text",
+            "reason": "normalized structural core title does not match",
+            "rule_id": "STRONG_PRESENTATION_EQUIVALENCE_V1"
+          }
+        ],
+        "track_id": "s5b1c_012"
+      },
+      "human_label": null,
+      "human_note": null,
+      "selected_candidate_rank": 3,
+      "selected_video_id": "kxZYxojih3E",
+      "selection_rule_ids": [
+        "STRONG_PRESENTATION_EQUIVALENCE_V1"
+      ],
+      "sol_label": "ACCEPTABLE",
+      "sol_reason": "Exact song and artist lineup with a duration essentially matching the target.",
+      "stable_track_id": "s5b1c_012"
+    },
+    {
+      "evidence_summary": {
+        "candidate_video_id": "1UESu4eyalA",
+        "contextual_duration_evidence": {
+          "absolute_duration_delta_seconds": 14.76400000000001,
+          "conditions": {
+            "duration_above_normal_gate": true,
+            "duration_within_contextual_cap": true,
+            "exact_structural_title": true,
+            "explicit_complete_version_match": true,
+            "no_performer_conflict": true,
+            "no_unrequested_modified_audio": true,
+            "no_version_conflict_or_absence": true,
+            "official_audio_source": true,
+            "positive_corroborated_provenance": true,
+            "primary_performer_match": true,
+            "version_family_allows_duration_exception": true
+          },
+          "contextual_max_delta_seconds": 15,
+          "eligible": true,
+          "normal_duration_close_seconds": 7,
+          "target_version_families": [
+            "remix"
+          ]
+        },
+        "eligible": true,
+        "modification_evidence": {
+          "candidate_families": [],
+          "explicit_conflict": false,
+          "target_families": [],
+          "unrequested_candidate_families": []
+        },
+        "new_hard_reasons": [],
+        "presentation_title_evidence": {
+          "candidate": {
+            "core_title": "The Business",
+            "normalized_core_title": "the business",
+            "raw_title": "The Business (Vintage Culture & Dubdogz Remix) [Official Audio]",
+            "recording_text": "The Business (Vintage Culture & Dubdogz Remix) [Official Audio]",
+            "source_descriptors": [
+              "Official Audio"
+            ],
+            "title_performer_text": null,
+            "version_descriptors": [
+              {
+                "family": "remix",
+                "qualifier": "Vintage Culture & Dubdogz",
+                "raw": "Vintage Culture & Dubdogz Remix"
+              }
+            ]
+          },
+          "exact_structural_match": true,
+          "fuzzy_matching_used": false,
+          "removed_target_credit_aliases": [],
+          "target": {
+            "core_title": "The Business",
+            "normalized_core_title": "the business",
+            "raw_title": "The Business - Vintage Culture & Dubdogz Remix",
+            "recording_text": "The Business - Vintage Culture & Dubdogz Remix",
+            "source_descriptors": [],
+            "title_performer_text": null,
+            "version_descriptors": [
+              {
+                "family": "remix",
+                "qualifier": "Vintage Culture & Dubdogz",
+                "raw": "Vintage Culture & Dubdogz Remix"
+              }
+            ]
+          },
+          "uses_credit_presentation_equivalence": true,
+          "validated_candidate_prefix_aliases": [
+            "tiesto"
+          ]
+        },
+        "prior_source_neutral_gate_reasons": [
+          "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+        ],
+        "remaining_gate_reasons": [],
+        "schema_version": "stage5b1c-strong-metadata-candidate-features-v1",
+        "strong_metadata_waivers": [
+          {
+            "basis": "exact identity and explicit version MATCH on corroborated Official Audio within the frozen 15-second experimental cap",
+            "reason": "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+            "rule_id": "STRONG_OFFICIAL_AUDIO_VERSION_DURATION_V1"
+          }
+        ],
+        "track_id": "s5b1c_023"
+      },
+      "human_label": null,
+      "human_note": null,
+      "selected_candidate_rank": 1,
+      "selected_video_id": "1UESu4eyalA",
+      "selection_rule_ids": [
+        "STRONG_OFFICIAL_AUDIO_VERSION_DURATION_V1"
+      ],
+      "sol_label": "IDEAL",
+      "sol_reason": "Exact Vintage Culture & Dubdogz remix attribution.",
+      "stable_track_id": "s5b1c_023"
+    }
+  ],
+  "strong_metadata_features_sha256": "523c044b90d63fc9df12b32802927f0ac4f6ecb3c20b5618b463eaec7b12d73d",
+  "summary": {
+    "combined_auto_match_count": 42,
+    "combined_coverage": 0.84,
+    "combined_match_uncertain_count": 8,
+    "percentage_point_gain_over_frozen_80_percent": 4.0,
+    "selected_human_label_counts": {
+      "MISSING": 2
+    },
+    "selected_sol_label_counts": {
+      "ACCEPTABLE": 1,
+      "IDEAL": 1
+    },
+    "strong_metadata_attempted_tracks": 10,
+    "strong_metadata_auto_match_count": 2,
+    "strong_metadata_match_uncertain_count": 8
+  },
+  "tracks": [
+    {
+      "decision": {
+        "evidence_summary": {
+          "candidate_video_id": "kxZYxojih3E",
+          "contextual_duration_evidence": {
+            "absolute_duration_delta_seconds": 0.5,
+            "conditions": {
+              "duration_above_normal_gate": false,
+              "duration_within_contextual_cap": true,
+              "exact_structural_title": true,
+              "explicit_complete_version_match": false,
+              "no_performer_conflict": true,
+              "no_unrequested_modified_audio": true,
+              "no_version_conflict_or_absence": true,
+              "official_audio_source": false,
+              "positive_corroborated_provenance": false,
+              "primary_performer_match": true,
+              "version_family_allows_duration_exception": true
+            },
+            "contextual_max_delta_seconds": 15,
+            "eligible": false,
+            "normal_duration_close_seconds": 7,
+            "target_version_families": []
+          },
+          "eligible": true,
+          "modification_evidence": {
+            "candidate_families": [],
+            "explicit_conflict": false,
+            "target_families": [],
+            "unrequested_candidate_families": []
+          },
+          "new_hard_reasons": [],
+          "presentation_title_evidence": {
+            "candidate": {
+              "core_title": "TAKi TAKI",
+              "normalized_core_title": "taki taki",
+              "raw_title": "Dj snake feat selena gomez  Ozuna & CARDI B  - TAKi TAKI ( LETRA VIDEO OFICIAL",
+              "recording_text": "TAKi TAKI ( LETRA VIDEO OFICIAL",
+              "source_descriptors": [
+                "LETRA VIDEO OFICIAL"
+              ],
+              "title_performer_text": "Dj snake feat selena gomez  Ozuna & CARDI B",
+              "version_descriptors": []
+            },
+            "exact_structural_match": true,
+            "fuzzy_matching_used": false,
+            "removed_target_credit_aliases": [
+              "selena gomez",
+              "ozuna",
+              "cardi b"
+            ],
+            "target": {
+              "core_title": "Taki Taki",
+              "normalized_core_title": "taki taki",
+              "raw_title": "Taki Taki",
+              "recording_text": "Taki Taki",
+              "source_descriptors": [],
+              "title_performer_text": null,
+              "version_descriptors": []
+            },
+            "uses_credit_presentation_equivalence": true,
+            "validated_candidate_prefix_aliases": []
+          },
+          "prior_source_neutral_gate_reasons": [
+            "normalized structural core title does not match"
+          ],
+          "remaining_gate_reasons": [],
+          "schema_version": "stage5b1c-strong-metadata-candidate-features-v1",
+          "strong_metadata_waivers": [
+            {
+              "basis": "exact structural title after removing only validated credited-artist and source-presentation text",
+              "reason": "normalized structural core title does not match",
+              "rule_id": "STRONG_PRESENTATION_EQUIVALENCE_V1"
+            }
+          ],
+          "track_id": "s5b1c_012"
+        },
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "music-video duration exceeds frozen Balanced DURATION_VERY_CLOSE boundary"
+            ],
+            "title": "DJ Snake - Taki Taki ft. Selena Gomez, Ozuna, Cardi B(roblox music video)",
+            "video_id": "JiHRCg1s1_U"
+          },
+          {
+            "candidate_rank": 2,
+            "remaining_gate_reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "DJ Snake - Taki Taki ft. Selena Gomez, Ozuna, Cardi B (2x Speed)(Fast Music 4 Fun)",
+            "video_id": "1vr1UADWgY4"
+          },
+          {
+            "candidate_rank": 4,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "DJ Snake -Taki Taki ft. Selena Gomez,Ozuna,Cardi B (NCS Bass Boosted).",
+            "video_id": "NzLieaKgBII"
+          },
+          {
+            "candidate_rank": 5,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "lyric fallback lacks frozen Balanced relative-view support"
+            ],
+            "title": "DJ Snake - Taki Taki (ft. Cardi B, Selena Gomez, Ozuna) (Letra) (Lyrics) - Video",
+            "video_id": "CXeIpfUdW0w"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_STRONG_METADATA_V1",
+        "ranked_plausible_candidates": [
+          "kxZYxojih3E"
+        ],
+        "selected_candidate_rank": 3,
+        "selected_video_id": "kxZYxojih3E",
+        "selection_reason": "all frozen identity/version/source gates pass after only the recorded strong-metadata waiver; explicit modification conflicts remain ineligible",
+        "selection_rule_ids": [
+          "STRONG_PRESENTATION_EQUIVALENCE_V1"
+        ],
+        "status": "AUTO_MATCH"
+      },
+      "stable_track_id": "s5b1c_012"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Ed Sheeran - Bad Habits (Marc Benjamin & Chemical Neon Remix)",
+            "video_id": "rqVg1PpPSj8"
+          },
+          {
+            "candidate_rank": 2,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Ed Sheeran - Bad Habits (DiPap Remix)",
+            "video_id": "oqoqeD48BD0"
+          },
+          {
+            "candidate_rank": 3,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Bad Habits x Insomnia - CDJ 3000 Mashup",
+            "video_id": "ARQJzEs2NIs"
+          },
+          {
+            "candidate_rank": 4,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Ed Sheeran - Bad Habits (Marc Benjamin & Chemical Neon Remix)",
+            "video_id": "j8WZN_lLcQ4"
+          },
+          {
+            "candidate_rank": 5,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Ed Sheeran x Gonzi & Kova x Fisher - Bad Habits VS Drop It VS Losing It ( Dj Marky Mashup Remix )",
+            "video_id": "N1jTbeBoowc"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_STRONG_METADATA_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate passes strong presentation or corroborated Official Audio duration fallback without remaining identity conflicts"
+      },
+      "stable_track_id": "s5b1c_021"
+    },
+    {
+      "decision": {
+        "evidence_summary": {
+          "candidate_video_id": "1UESu4eyalA",
+          "contextual_duration_evidence": {
+            "absolute_duration_delta_seconds": 14.76400000000001,
+            "conditions": {
+              "duration_above_normal_gate": true,
+              "duration_within_contextual_cap": true,
+              "exact_structural_title": true,
+              "explicit_complete_version_match": true,
+              "no_performer_conflict": true,
+              "no_unrequested_modified_audio": true,
+              "no_version_conflict_or_absence": true,
+              "official_audio_source": true,
+              "positive_corroborated_provenance": true,
+              "primary_performer_match": true,
+              "version_family_allows_duration_exception": true
+            },
+            "contextual_max_delta_seconds": 15,
+            "eligible": true,
+            "normal_duration_close_seconds": 7,
+            "target_version_families": [
+              "remix"
+            ]
+          },
+          "eligible": true,
+          "modification_evidence": {
+            "candidate_families": [],
+            "explicit_conflict": false,
+            "target_families": [],
+            "unrequested_candidate_families": []
+          },
+          "new_hard_reasons": [],
+          "presentation_title_evidence": {
+            "candidate": {
+              "core_title": "The Business",
+              "normalized_core_title": "the business",
+              "raw_title": "The Business (Vintage Culture & Dubdogz Remix) [Official Audio]",
+              "recording_text": "The Business (Vintage Culture & Dubdogz Remix) [Official Audio]",
+              "source_descriptors": [
+                "Official Audio"
+              ],
+              "title_performer_text": null,
+              "version_descriptors": [
+                {
+                  "family": "remix",
+                  "qualifier": "Vintage Culture & Dubdogz",
+                  "raw": "Vintage Culture & Dubdogz Remix"
+                }
+              ]
+            },
+            "exact_structural_match": true,
+            "fuzzy_matching_used": false,
+            "removed_target_credit_aliases": [],
+            "target": {
+              "core_title": "The Business",
+              "normalized_core_title": "the business",
+              "raw_title": "The Business - Vintage Culture & Dubdogz Remix",
+              "recording_text": "The Business - Vintage Culture & Dubdogz Remix",
+              "source_descriptors": [],
+              "title_performer_text": null,
+              "version_descriptors": [
+                {
+                  "family": "remix",
+                  "qualifier": "Vintage Culture & Dubdogz",
+                  "raw": "Vintage Culture & Dubdogz Remix"
+                }
+              ]
+            },
+            "uses_credit_presentation_equivalence": true,
+            "validated_candidate_prefix_aliases": [
+              "tiesto"
+            ]
+          },
+          "prior_source_neutral_gate_reasons": [
+            "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+          ],
+          "remaining_gate_reasons": [],
+          "schema_version": "stage5b1c-strong-metadata-candidate-features-v1",
+          "strong_metadata_waivers": [
+            {
+              "basis": "exact identity and explicit version MATCH on corroborated Official Audio within the frozen 15-second experimental cap",
+              "reason": "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "rule_id": "STRONG_OFFICIAL_AUDIO_VERSION_DURATION_V1"
+            }
+          ],
+          "track_id": "s5b1c_023"
+        },
+        "excluded_candidates": [
+          {
+            "candidate_rank": 2,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent"
+            ],
+            "title": "Tiësto - The Business (Official Audio)",
+            "video_id": "wJS9eb6_o00"
+          },
+          {
+            "candidate_rank": 3,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Tiësto & Ty Dolla $ign - The Business, Pt. II (Official Lyric Video)",
+            "video_id": "fVuw7VCefME"
+          },
+          {
+            "candidate_rank": 4,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "lyric fallback lacks frozen Balanced relative-view support"
+            ],
+            "title": "Tiësto - The Business (Vintage Culture vs Dubdogz Remix) [Lyrics]",
+            "video_id": "QPsToIH3vfo"
+          },
+          {
+            "candidate_rank": 5,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Tiësto - The Business (Vintage Culture & Dubdogz Remix) [Perfectly clean]",
+            "video_id": "AWixPmPTSAQ"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_STRONG_METADATA_V1",
+        "ranked_plausible_candidates": [
+          "1UESu4eyalA"
+        ],
+        "selected_candidate_rank": 1,
+        "selected_video_id": "1UESu4eyalA",
+        "selection_reason": "all frozen identity/version/source gates pass after only the recorded strong-metadata waiver; explicit modification conflicts remain ineligible",
+        "selection_rule_ids": [
+          "STRONG_OFFICIAL_AUDIO_VERSION_DURATION_V1"
+        ],
+        "status": "AUTO_MATCH"
+      },
+      "stable_track_id": "s5b1c_023"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "The Night We Met by Lord Huron @ Ryman Auditorium",
+            "video_id": "N2K1LUWlF-4"
+          },
+          {
+            "candidate_rank": 2,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Lord Huron “The  Night We Met”",
+            "video_id": "7QADmsRUGgg"
+          },
+          {
+            "candidate_rank": 3,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Lord Huron - The Night We Met, Bonner MT, 5/25/2025 live",
+            "video_id": "z4JfPakDYiU"
+          },
+          {
+            "candidate_rank": 4,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Lord Huron - The Night We Met",
+            "video_id": "lx0T48q_eg8"
+          },
+          {
+            "candidate_rank": 5,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Lord Huron - The Night We Met - (Toronto, June 26, 2023)",
+            "video_id": "5q2KTSVV7PY"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_STRONG_METADATA_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate passes strong presentation or corroborated Official Audio duration fallback without remaining identity conflicts"
+      },
+      "stable_track_id": "s5b1c_029"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Bastille - Pompeii (Acoustic Live)",
+            "video_id": "GgcWcLAJJ10"
+          },
+          {
+            "candidate_rank": 2,
+            "remaining_gate_reasons": [
+              "primary performer lacks deterministic title/provenance evidence",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Pompeii (Acoustic Version)",
+            "video_id": "YX7joA8OLXA"
+          },
+          {
+            "candidate_rank": 3,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Bastille - Pompeii Acoustic Version",
+            "video_id": "5_KBkAjyCOg"
+          },
+          {
+            "candidate_rank": 4,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Bastille - Pompeii Acoustic Version (HD)",
+            "video_id": "Si-5EjOaZ4Y"
+          },
+          {
+            "candidate_rank": 5,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "bastille pompeii acoustic",
+            "video_id": "rrfxY44m5xk"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_STRONG_METADATA_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate passes strong presentation or corroborated Official Audio duration fallback without remaining identity conflicts"
+      },
+      "stable_track_id": "s5b1c_030"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent"
+            ],
+            "title": "Landslide",
+            "video_id": "k4M53xndqiU"
+          },
+          {
+            "candidate_rank": 2,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Stevie Nicks and Lindsey Buckingham Perform \"Landslide\" | Letterman",
+            "video_id": "1_370ETkqJU"
+          },
+          {
+            "candidate_rank": 3,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Fleetwood Mac - Landslide (Live 1975)",
+            "video_id": "2Ogcdw4UORQ"
+          },
+          {
+            "candidate_rank": 4,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Landslide (Live 1977)",
+            "video_id": "dshVEZwWLvc"
+          },
+          {
+            "candidate_rank": 5,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Stevie Nicks (Fleetwood Mac) - Landslide",
+            "video_id": "zZi6LJ6bY_c"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_STRONG_METADATA_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate passes strong presentation or corroborated Official Audio duration fallback without remaining identity conflicts"
+      },
+      "stable_track_id": "s5b1c_032"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Guns N' Roses - Sweet Child O' Mine (Alternate Version)",
+            "video_id": "HlEuo9aR7Qo"
+          },
+          {
+            "candidate_rank": 2,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "music-video duration exceeds frozen Balanced DURATION_VERY_CLOSE boundary"
+            ],
+            "title": "Guns N' Roses - Sweet Child O' Mine (Official Music Video)",
+            "video_id": "1w7OgIMMRc4"
+          },
+          {
+            "candidate_rank": 3,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Guns N Roses: Sweet Child O' Mine in Dublin",
+            "video_id": "23LT0E89m1s"
+          },
+          {
+            "candidate_rank": 4,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent"
+            ],
+            "title": "Guns N' Roses - Sweet Child O' Mine",
+            "video_id": "D2gWc5Sw75w"
+          },
+          {
+            "candidate_rank": 5,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent"
+            ],
+            "title": "Guns N' Roses - Sweet Child O' Mine (Official Audio HQ)",
+            "video_id": "aEMool3DlIU"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_STRONG_METADATA_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate passes strong presentation or corroborated Official Audio duration fallback without remaining identity conflicts"
+      },
+      "stable_track_id": "s5b1c_033"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Whitney Houston - I Wanna Dance With Somebody (Who Loves Me) (Official 4K Video)",
+            "video_id": "eH3giaIzONA"
+          },
+          {
+            "candidate_rank": 2,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent"
+            ],
+            "title": "I Wanna Dance with Somebody (Who Loves Me)",
+            "video_id": "id2-K3daNRQ"
+          },
+          {
+            "candidate_rank": 3,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent"
+            ],
+            "title": "I Wanna Dance With Somebody (Who Loves Me) (Single Version)",
+            "video_id": "2dzf4T3RbEc"
+          },
+          {
+            "candidate_rank": 4,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Whitney Houston - I Wanna Dance With Somebody (Who Loves Me) [ALBUM VERSION]",
+            "video_id": "ZFGHRAttmEM"
+          },
+          {
+            "candidate_rank": 5,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent"
+            ],
+            "title": "Whitney Houston - I Wanna Dance With Somebody",
+            "video_id": "QzZ-mtE1EHc"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_STRONG_METADATA_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate passes strong presentation or corroborated Official Audio duration fallback without remaining identity conflicts"
+      },
+      "stable_track_id": "s5b1c_034"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "remaining_gate_reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Tom Odell - Another Love (Slowed) (Lyrics)",
+            "video_id": "_HVI_2XKJx0"
+          },
+          {
+            "candidate_rank": 2,
+            "remaining_gate_reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "tom odell - another love (slowed down)",
+            "video_id": "G-1IQJvNQLk"
+          },
+          {
+            "candidate_rank": 3,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Tom Odell - Another Love ( Slowed + Reverb )",
+            "video_id": "ziB7VFfq_xQ"
+          },
+          {
+            "candidate_rank": 4,
+            "remaining_gate_reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "explicit unrequested modified-audio presentation"
+            ],
+            "title": "Tom odell- Another Love (slowed +clean )",
+            "video_id": "if7MRkODtKY"
+          },
+          {
+            "candidate_rank": 5,
+            "remaining_gate_reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Tom Odell - Another Love (Slowed) (Lyrics)",
+            "video_id": "ILy2HYcstRQ"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_STRONG_METADATA_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate passes strong presentation or corroborated Official Audio duration fallback without remaining identity conflicts"
+      },
+      "stable_track_id": "s5b1c_040"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "remaining_gate_reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Ruth B. - Dandelions (Lyrics) (Slowed + Reverb)",
+            "video_id": "fXbfBUNJ9mY"
+          },
+          {
+            "candidate_rank": 2,
+            "remaining_gate_reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Ruth B - Dandelions (slowed x reverb)",
+            "video_id": "-oCkkOuV4Fk"
+          },
+          {
+            "candidate_rank": 3,
+            "remaining_gate_reasons": [
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Ruth B - Dandelions (Ultra Slowed)",
+            "video_id": "YnPiRTAbJU4"
+          },
+          {
+            "candidate_rank": 4,
+            "remaining_gate_reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Ruth B - Dandelions (Slowed + Reverb) Letra / Sub Español",
+            "video_id": "0h_l1vCf8B8"
+          },
+          {
+            "candidate_rank": 5,
+            "remaining_gate_reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Ruth B - Dandelions (slowed+reverb+lyrics)",
+            "video_id": "yeWtwEq1G8U"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_STRONG_METADATA_V1",
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate passes strong presentation or corroborated Official Audio duration fallback without remaining identity conflicts"
+      },
+      "stable_track_id": "s5b1c_041"
+    }
+  ]
+}

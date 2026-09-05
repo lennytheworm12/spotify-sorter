@@ -1,0 +1,1702 @@
+{
+  "config_sha256": "8dfbe16e979f5e229d544dbe1591414b90a3672dd53375211ddfd0f24f20d518",
+  "experiment_id": "stage5b1e_natural_query_evaluation_v1",
+  "frozen_before_discovery": true,
+  "production_query_activated": false,
+  "schema_version": "stage5b1e-query-strategies-v1",
+  "strategies": [
+    {
+      "description": "Quoted primary artist and normalized Spotify title plus official token",
+      "strategy_id": "Q0_CURRENT_CONTROL"
+    },
+    {
+      "description": "Unquoted full Spotify title",
+      "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+    },
+    {
+      "description": "Unquoted full Spotify title followed by primary artist",
+      "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+    },
+    {
+      "description": "Unquoted primary artist, parsed core title, and identity-critical version evidence",
+      "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+    }
+  ],
+  "strategy_count": 4,
+  "track_count": 50,
+  "tracks": [
+    {
+      "queries": [
+        {
+          "query": "\"Miley Cyrus\" \"Flowers\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Flowers",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Flowers Miley Cyrus",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Miley Cyrus Flowers",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_001",
+      "target": {
+        "album": "Endless Summer Vacation",
+        "artists": [
+          "Miley Cyrus"
+        ],
+        "duration_ms": 200600,
+        "isrc": null,
+        "release_year": 2023,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_001",
+        "title": "Flowers"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Harry Styles\" \"As It Was\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "As It Was",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "As It Was Harry Styles",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Harry Styles As It Was",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_002",
+      "target": {
+        "album": "Harry's House",
+        "artists": [
+          "Harry Styles"
+        ],
+        "duration_ms": 167303,
+        "isrc": null,
+        "release_year": 2022,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_002",
+        "title": "As It Was"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Glass Animals\" \"Heat Waves\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Heat Waves",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Heat Waves Glass Animals",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Glass Animals Heat Waves",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_003",
+      "target": {
+        "album": "Dreamland",
+        "artists": [
+          "Glass Animals"
+        ],
+        "duration_ms": 238805,
+        "isrc": null,
+        "release_year": 2020,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_003",
+        "title": "Heat Waves"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"SZA\" \"Kill Bill\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Kill Bill",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Kill Bill SZA",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "SZA Kill Bill",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_004",
+      "target": {
+        "album": "SOS",
+        "artists": [
+          "SZA"
+        ],
+        "duration_ms": 153947,
+        "isrc": null,
+        "release_year": 2022,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_004",
+        "title": "Kill Bill"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Noah Kahan\" \"Stick Season\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Stick Season",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Stick Season Noah Kahan",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Noah Kahan Stick Season",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_005",
+      "target": {
+        "album": "Stick Season",
+        "artists": [
+          "Noah Kahan"
+        ],
+        "duration_ms": 182347,
+        "isrc": null,
+        "release_year": 2022,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_005",
+        "title": "Stick Season"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Chappell Roan\" \"Good Luck, Babe!\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Good Luck, Babe!",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Good Luck, Babe! Chappell Roan",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Chappell Roan Good Luck, Babe!",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_006",
+      "target": {
+        "album": "Good Luck, Babe!",
+        "artists": [
+          "Chappell Roan"
+        ],
+        "duration_ms": 218424,
+        "isrc": null,
+        "release_year": 2024,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_006",
+        "title": "Good Luck, Babe!"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Benson Boone\" \"Beautiful Things\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Beautiful Things",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Beautiful Things Benson Boone",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Benson Boone Beautiful Things",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_007",
+      "target": {
+        "album": "Fireworks & Rollerblades",
+        "artists": [
+          "Benson Boone"
+        ],
+        "duration_ms": 180304,
+        "isrc": null,
+        "release_year": 2024,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_007",
+        "title": "Beautiful Things"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"JAY-Z\" \"Empire State Of Mind\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Empire State Of Mind",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Empire State Of Mind JAY-Z",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "JAY-Z Empire State Of Mind",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_008",
+      "target": {
+        "album": "The Blueprint 3",
+        "artists": [
+          "JAY-Z",
+          "Alicia Keys"
+        ],
+        "duration_ms": 276920,
+        "isrc": null,
+        "release_year": 2009,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_008",
+        "title": "Empire State Of Mind"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Lil Nas X\" \"INDUSTRY BABY\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "INDUSTRY BABY (feat. Jack Harlow)",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "INDUSTRY BABY (feat. Jack Harlow) Lil Nas X",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Lil Nas X INDUSTRY BABY",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_009",
+      "target": {
+        "album": "MONTERO",
+        "artists": [
+          "Lil Nas X",
+          "Jack Harlow"
+        ],
+        "duration_ms": 212353,
+        "isrc": null,
+        "release_year": 2021,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_009",
+        "title": "INDUSTRY BABY (feat. Jack Harlow)"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Rema\" \"Calm Down (with Selena Gomez)\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Calm Down (with Selena Gomez)",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Calm Down (with Selena Gomez) Rema",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Rema Calm Down with Selena Gomez",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_010",
+      "target": {
+        "album": "Rave & Roses Ultra",
+        "artists": [
+          "Rema",
+          "Selena Gomez"
+        ],
+        "duration_ms": 239318,
+        "isrc": null,
+        "release_year": 2022,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_010",
+        "title": "Calm Down (with Selena Gomez)"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Mark Ronson\" \"Nothing Breaks Like a Heart\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Nothing Breaks Like a Heart (feat. Miley Cyrus)",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Nothing Breaks Like a Heart (feat. Miley Cyrus) Mark Ronson",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Mark Ronson Nothing Breaks Like a Heart",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_011",
+      "target": {
+        "album": "Late Night Feelings",
+        "artists": [
+          "Mark Ronson",
+          "Miley Cyrus"
+        ],
+        "duration_ms": 217467,
+        "isrc": null,
+        "release_year": 2018,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_011",
+        "title": "Nothing Breaks Like a Heart (feat. Miley Cyrus)"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"DJ Snake\" \"Taki Taki (with Selena Gomez, Ozuna & Cardi B)\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Taki Taki (with Selena Gomez, Ozuna & Cardi B)",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Taki Taki (with Selena Gomez, Ozuna & Cardi B) DJ Snake",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "DJ Snake Taki Taki with Selena Gomez, Ozuna & Cardi B",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_012",
+      "target": {
+        "album": "Carte Blanche",
+        "artists": [
+          "DJ Snake",
+          "Selena Gomez",
+          "Ozuna",
+          "Cardi B"
+        ],
+        "duration_ms": 212500,
+        "isrc": null,
+        "release_year": 2018,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_012",
+        "title": "Taki Taki (with Selena Gomez, Ozuna & Cardi B)"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"BLACKPINK\" \"How You Like That\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "How You Like That",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "How You Like That BLACKPINK",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "BLACKPINK How You Like That",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_013",
+      "target": {
+        "album": "THE ALBUM",
+        "artists": [
+          "BLACKPINK"
+        ],
+        "duration_ms": 181947,
+        "isrc": null,
+        "release_year": 2020,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_013",
+        "title": "How You Like That"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"BTS\" \"Boy With Luv\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Boy With Luv (feat. Halsey)",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Boy With Luv (feat. Halsey) BTS",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "BTS Boy With Luv",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_014",
+      "target": {
+        "album": "MAP OF THE SOUL : PERSONA",
+        "artists": [
+          "BTS",
+          "Halsey"
+        ],
+        "duration_ms": 229773,
+        "isrc": null,
+        "release_year": 2019,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_014",
+        "title": "Boy With Luv (feat. Halsey)"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"LE SSERAFIM\" \"ANTIFRAGILE\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "ANTIFRAGILE",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "ANTIFRAGILE LE SSERAFIM",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "LE SSERAFIM ANTIFRAGILE",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_015",
+      "target": {
+        "album": "ANTIFRAGILE",
+        "artists": [
+          "LE SSERAFIM"
+        ],
+        "duration_ms": 184444,
+        "isrc": null,
+        "release_year": 2022,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_015",
+        "title": "ANTIFRAGILE"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"aespa\" \"Supernova\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Supernova",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Supernova aespa",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "aespa Supernova",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_016",
+      "target": {
+        "album": "Armageddon",
+        "artists": [
+          "aespa"
+        ],
+        "duration_ms": 178880,
+        "isrc": null,
+        "release_year": 2024,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_016",
+        "title": "Supernova"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"FIFTY FIFTY\" \"Cupid - Twin Ver.\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Cupid - Twin Ver.",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Cupid - Twin Ver. FIFTY FIFTY",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "FIFTY FIFTY Cupid - . Twin Ver",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_017",
+      "target": {
+        "album": "The Beginning: Cupid",
+        "artists": [
+          "FIFTY FIFTY"
+        ],
+        "duration_ms": 174253,
+        "isrc": null,
+        "release_year": 2023,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_017",
+        "title": "Cupid - Twin Ver."
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"ROSÉ\" \"APT.\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "APT.",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "APT. ROSÉ",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "ROSÉ APT.",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_018",
+      "target": {
+        "album": "rosie",
+        "artists": [
+          "ROSÉ",
+          "Bruno Mars"
+        ],
+        "duration_ms": 169917,
+        "isrc": null,
+        "release_year": 2024,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_018",
+        "title": "APT."
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Mr. Probz\" \"Waves - Robin Schulz Radio Edit\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Waves - Robin Schulz Radio Edit",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Waves - Robin Schulz Radio Edit Mr. Probz",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Mr. Probz Waves Robin Schulz Radio Edit",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_019",
+      "target": {
+        "album": "Waves (Robin Schulz Radio Edit)",
+        "artists": [
+          "Mr. Probz",
+          "Robin Schulz"
+        ],
+        "duration_ms": 208133,
+        "isrc": null,
+        "release_year": 2014,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_019",
+        "title": "Waves - Robin Schulz Radio Edit"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Disclosure\" \"You & Me - Flume Remix\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "You & Me - Flume Remix",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "You & Me - Flume Remix Disclosure",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Disclosure You & Me Flume Remix",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_020",
+      "target": {
+        "album": "Settle (The Remixes)",
+        "artists": [
+          "Disclosure",
+          "Eliza Doolittle",
+          "Flume"
+        ],
+        "duration_ms": 282013,
+        "isrc": null,
+        "release_year": 2013,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_020",
+        "title": "You & Me - Flume Remix"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Ed Sheeran\" \"Bad Habits - FISHER Remix\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Bad Habits - FISHER Remix",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Bad Habits - FISHER Remix Ed Sheeran",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Ed Sheeran Bad Habits FISHER Remix",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_021",
+      "target": {
+        "album": "Bad Habits (FISHER Remix)",
+        "artists": [
+          "Ed Sheeran",
+          "FISHER"
+        ],
+        "duration_ms": 223200,
+        "isrc": null,
+        "release_year": 2021,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_021",
+        "title": "Bad Habits - FISHER Remix"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Lykke Li\" \"I Follow Rivers - The Magician Remix\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "I Follow Rivers - The Magician Remix",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "I Follow Rivers - The Magician Remix Lykke Li",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Lykke Li I Follow Rivers The Magician Remix",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_022",
+      "target": {
+        "album": "I Follow Rivers (The Magician Remix)",
+        "artists": [
+          "Lykke Li",
+          "The Magician"
+        ],
+        "duration_ms": 280000,
+        "isrc": null,
+        "release_year": 2011,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_022",
+        "title": "I Follow Rivers - The Magician Remix"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Tiësto\" \"The Business - Vintage Culture & Dubdogz Remix\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "The Business - Vintage Culture & Dubdogz Remix",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "The Business - Vintage Culture & Dubdogz Remix Tiësto",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Tiësto The Business Vintage Culture & Dubdogz Remix",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_023",
+      "target": {
+        "album": "The Business (Vintage Culture & Dubdogz Remix)",
+        "artists": [
+          "Tiësto",
+          "Vintage Culture",
+          "Dubdogz"
+        ],
+        "duration_ms": 175236,
+        "isrc": null,
+        "release_year": 2021,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_023",
+        "title": "The Business - Vintage Culture & Dubdogz Remix"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Jain\" \"Makeba - Ian Asher Remix\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Makeba - Ian Asher Remix",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Makeba - Ian Asher Remix Jain",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Jain Makeba Ian Asher Remix",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_024",
+      "target": {
+        "album": "Makeba (Ian Asher Remix)",
+        "artists": [
+          "Jain",
+          "Ian Asher"
+        ],
+        "duration_ms": 127500,
+        "isrc": null,
+        "release_year": 2023,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_024",
+        "title": "Makeba - Ian Asher Remix"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"The Chainsmokers\" \"Something Just Like This - Alesso Remix\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Something Just Like This - Alesso Remix",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Something Just Like This - Alesso Remix The Chainsmokers",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "The Chainsmokers Something Just Like This Alesso Remix",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_025",
+      "target": {
+        "album": "Something Just Like This (Remix Pack)",
+        "artists": [
+          "The Chainsmokers",
+          "Coldplay",
+          "Alesso"
+        ],
+        "duration_ms": 252000,
+        "isrc": null,
+        "release_year": 2017,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_025",
+        "title": "Something Just Like This - Alesso Remix"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"John Mayer\" \"Free Fallin' - Live at the Nokia Theatre, Los Angeles, CA - December 2007\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Free Fallin' - Live at the Nokia Theatre, Los Angeles, CA - December 2007",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Free Fallin' - Live at the Nokia Theatre, Los Angeles, CA - December 2007 John Mayer",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "John Mayer Free Fallin Live at the Nokia Theatre, Los Angeles, CA - December 2007",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_026",
+      "target": {
+        "album": "Where the Light Is: John Mayer Live in Los Angeles",
+        "artists": [
+          "John Mayer"
+        ],
+        "duration_ms": 264267,
+        "isrc": null,
+        "release_year": 2008,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_026",
+        "title": "Free Fallin' - Live at the Nokia Theatre, Los Angeles, CA - December 2007"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"John Mayer\" \"Slow Dancing in a Burning Room - Live at the Nokia Theatre, Los Angeles, CA - December 2007\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Slow Dancing in a Burning Room - Live at the Nokia Theatre, Los Angeles, CA - December 2007",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Slow Dancing in a Burning Room - Live at the Nokia Theatre, Los Angeles, CA - December 2007 John Mayer",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "John Mayer Slow Dancing in a Burning Room Live at the Nokia Theatre, Los Angeles, CA - December 2007",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_027",
+      "target": {
+        "album": "Where the Light Is: John Mayer Live in Los Angeles",
+        "artists": [
+          "John Mayer"
+        ],
+        "duration_ms": 319147,
+        "isrc": null,
+        "release_year": 2008,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_027",
+        "title": "Slow Dancing in a Burning Room - Live at the Nokia Theatre, Los Angeles, CA - December 2007"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Eagles\" \"Hotel California - Live on MTV, 1994\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Hotel California - Live on MTV, 1994",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Hotel California - Live on MTV, 1994 Eagles",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Eagles Hotel California Live on MTV, 1994",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_028",
+      "target": {
+        "album": "Hell Freezes Over",
+        "artists": [
+          "Eagles"
+        ],
+        "duration_ms": 432000,
+        "isrc": null,
+        "release_year": 1994,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_028",
+        "title": "Hotel California - Live on MTV, 1994"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Lord Huron\" \"The Night We Met - Live at the Ryman\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "The Night We Met - Live at the Ryman",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "The Night We Met - Live at the Ryman Lord Huron",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Lord Huron The Night We Met Live at the Ryman",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_029",
+      "target": {
+        "album": "Live at the Ryman",
+        "artists": [
+          "Lord Huron"
+        ],
+        "duration_ms": 258000,
+        "isrc": null,
+        "release_year": 2023,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_029",
+        "title": "The Night We Met - Live at the Ryman"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Bastille\" \"Pompeii - Acoustic Version\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Pompeii - Acoustic Version",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Pompeii - Acoustic Version Bastille",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Bastille Pompeii Acoustic Version",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_030",
+      "target": {
+        "album": "Pompeii",
+        "artists": [
+          "Bastille"
+        ],
+        "duration_ms": 255000,
+        "isrc": null,
+        "release_year": 2013,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_030",
+        "title": "Pompeii - Acoustic Version"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Fleetwood Mac\" \"The Chain - 2004 Remaster\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "The Chain - 2004 Remaster",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "The Chain - 2004 Remaster Fleetwood Mac",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Fleetwood Mac The Chain 2004 Remaster",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_031",
+      "target": {
+        "album": "Rumours",
+        "artists": [
+          "Fleetwood Mac"
+        ],
+        "duration_ms": 270213,
+        "isrc": null,
+        "release_year": 2004,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_031",
+        "title": "The Chain - 2004 Remaster"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Fleetwood Mac\" \"Landslide - 2015 Remaster\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Landslide - 2015 Remaster",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Landslide - 2015 Remaster Fleetwood Mac",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Fleetwood Mac Landslide 2015 Remaster",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_032",
+      "target": {
+        "album": "Fleetwood Mac",
+        "artists": [
+          "Fleetwood Mac"
+        ],
+        "duration_ms": 199493,
+        "isrc": null,
+        "release_year": 2015,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_032",
+        "title": "Landslide - 2015 Remaster"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Guns N' Roses\" \"Sweet Child O' Mine - 2022 Remaster\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Sweet Child O' Mine - 2022 Remaster",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Sweet Child O' Mine - 2022 Remaster Guns N' Roses",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Guns N' Roses Sweet Child O' Mine 2022 Remaster",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_033",
+      "target": {
+        "album": "Appetite For Destruction (Super Deluxe Edition)",
+        "artists": [
+          "Guns N' Roses"
+        ],
+        "duration_ms": 356067,
+        "isrc": null,
+        "release_year": 2022,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_033",
+        "title": "Sweet Child O' Mine - 2022 Remaster"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Whitney Houston\" \"I Wanna Dance with Somebody (Who Loves Me) - 2000 Remaster\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "I Wanna Dance with Somebody (Who Loves Me) - 2000 Remaster",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "I Wanna Dance with Somebody (Who Loves Me) - 2000 Remaster Whitney Houston",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Whitney Houston I Wanna Dance with Somebody Who Loves Me 2000 Remaster",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_034",
+      "target": {
+        "album": "Whitney: The Greatest Hits",
+        "artists": [
+          "Whitney Houston"
+        ],
+        "duration_ms": 292400,
+        "isrc": null,
+        "release_year": 2000,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_034",
+        "title": "I Wanna Dance with Somebody (Who Loves Me) - 2000 Remaster"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Taylor Swift\" \"Enchanted (Taylor's Version)\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Enchanted (Taylor's Version)",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Enchanted (Taylor's Version) Taylor Swift",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Taylor Swift Enchanted Taylor's Version",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_035",
+      "target": {
+        "album": "Speak Now (Taylor's Version)",
+        "artists": [
+          "Taylor Swift"
+        ],
+        "duration_ms": 353253,
+        "isrc": null,
+        "release_year": 2023,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_035",
+        "title": "Enchanted (Taylor's Version)"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Taylor Swift\" \"I Knew You Were Trouble (Taylor's Version)\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "I Knew You Were Trouble (Taylor's Version)",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "I Knew You Were Trouble (Taylor's Version) Taylor Swift",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Taylor Swift I Knew You Were Trouble Taylor's Version",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_036",
+      "target": {
+        "album": "Red (Taylor's Version)",
+        "artists": [
+          "Taylor Swift"
+        ],
+        "duration_ms": 219760,
+        "isrc": null,
+        "release_year": 2021,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_036",
+        "title": "I Knew You Were Trouble (Taylor's Version)"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Cardi B\" \"WAP\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "WAP (feat. Megan Thee Stallion)",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "WAP (feat. Megan Thee Stallion) Cardi B",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Cardi B WAP",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_037",
+      "target": {
+        "album": "WAP",
+        "artists": [
+          "Cardi B",
+          "Megan Thee Stallion"
+        ],
+        "duration_ms": 187541,
+        "isrc": null,
+        "release_year": 2020,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_037",
+        "title": "WAP (feat. Megan Thee Stallion)"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Kendrick Lamar\" \"N95\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "N95",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "N95 Kendrick Lamar",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Kendrick Lamar N95",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_038",
+      "target": {
+        "album": "Mr. Morale & The Big Steppers",
+        "artists": [
+          "Kendrick Lamar"
+        ],
+        "duration_ms": 195950,
+        "isrc": null,
+        "release_year": 2022,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_038",
+        "title": "N95"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Lady Gaga\" \"Bloody Mary - Sped Up\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Bloody Mary - Sped Up",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Bloody Mary - Sped Up Lady Gaga",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Lady Gaga Bloody Mary Sped Up",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_039",
+      "target": {
+        "album": "Bloody Mary",
+        "artists": [
+          "Lady Gaga"
+        ],
+        "duration_ms": 185250,
+        "isrc": null,
+        "release_year": 2022,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_039",
+        "title": "Bloody Mary - Sped Up"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Tom Odell\" \"Another Love - Slowed Down\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Another Love - Slowed Down",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Another Love - Slowed Down Tom Odell",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Tom Odell Another Love Slowed Down",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_040",
+      "target": {
+        "album": "Another Love (Slowed Down)",
+        "artists": [
+          "Tom Odell"
+        ],
+        "duration_ms": 299000,
+        "isrc": null,
+        "release_year": 2022,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_040",
+        "title": "Another Love - Slowed Down"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Ruth B.\" \"Dandelions - slowed + reverb\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Dandelions - slowed + reverb",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Dandelions - slowed + reverb Ruth B.",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Ruth B. Dandelions slowed + reverb",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_041",
+      "target": {
+        "album": "Dandelions (slowed + reverb)",
+        "artists": [
+          "Ruth B."
+        ],
+        "duration_ms": 255000,
+        "isrc": null,
+        "release_year": 2022,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_041",
+        "title": "Dandelions - slowed + reverb"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Måneskin\" \"Beggin'\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Beggin'",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Beggin' Måneskin",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Måneskin Beggin",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_042",
+      "target": {
+        "album": "Chosen",
+        "artists": [
+          "Måneskin"
+        ],
+        "duration_ms": 211560,
+        "isrc": null,
+        "release_year": 2017,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_042",
+        "title": "Beggin'"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"The Goo Goo Dolls\" \"Iris\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Iris",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Iris The Goo Goo Dolls",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "The Goo Goo Dolls Iris",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_043",
+      "target": {
+        "album": "Dizzy Up the Girl",
+        "artists": [
+          "The Goo Goo Dolls"
+        ],
+        "duration_ms": 289533,
+        "isrc": null,
+        "release_year": 1998,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_043",
+        "title": "Iris"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Edward Sharpe & The Magnetic Zeros\" \"Home\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Home",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Home Edward Sharpe & The Magnetic Zeros",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Edward Sharpe & The Magnetic Zeros Home",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_044",
+      "target": {
+        "album": "Up from Below",
+        "artists": [
+          "Edward Sharpe & The Magnetic Zeros"
+        ],
+        "duration_ms": 303200,
+        "isrc": null,
+        "release_year": 2009,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_044",
+        "title": "Home"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"John Mayer\" \"Gravity\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Gravity",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Gravity John Mayer",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "John Mayer Gravity",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_045",
+      "target": {
+        "album": "Continuum",
+        "artists": [
+          "John Mayer"
+        ],
+        "duration_ms": 245827,
+        "isrc": null,
+        "release_year": 2006,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_045",
+        "title": "Gravity"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Mark Ronson\" \"Valerie\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Valerie (feat. Amy Winehouse)",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Valerie (feat. Amy Winehouse) Mark Ronson",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Mark Ronson Valerie",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_046",
+      "target": {
+        "album": "Version",
+        "artists": [
+          "Mark Ronson",
+          "Amy Winehouse"
+        ],
+        "duration_ms": 219253,
+        "isrc": null,
+        "release_year": 2007,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_046",
+        "title": "Valerie (feat. Amy Winehouse)"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"ROSALÍA\" \"DESPECHÁ\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "DESPECHÁ",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "DESPECHÁ ROSALÍA",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "ROSALÍA DESPECHÁ",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_047",
+      "target": {
+        "album": "MOTOMAMI +",
+        "artists": [
+          "ROSALÍA"
+        ],
+        "duration_ms": 157018,
+        "isrc": null,
+        "release_year": 2022,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_047",
+        "title": "DESPECHÁ"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"KAROL G\" \"PROVENZA\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "PROVENZA",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "PROVENZA KAROL G",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "KAROL G PROVENZA",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_048",
+      "target": {
+        "album": "MAÑANA SERÁ BONITO",
+        "artists": [
+          "KAROL G"
+        ],
+        "duration_ms": 210200,
+        "isrc": null,
+        "release_year": 2022,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_048",
+        "title": "PROVENZA"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Fujii Kaze\" \"Shinunoga E-Wa\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Shinunoga E-Wa",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Shinunoga E-Wa Fujii Kaze",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Fujii Kaze Shinunoga E-Wa",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_049",
+      "target": {
+        "album": "HELP EVER HURT NEVER",
+        "artists": [
+          "Fujii Kaze"
+        ],
+        "duration_ms": 185573,
+        "isrc": null,
+        "release_year": 2020,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_049",
+        "title": "Shinunoga E-Wa"
+      }
+    },
+    {
+      "queries": [
+        {
+          "query": "\"Videoclub\" \"Amour Plastique\" official",
+          "strategy_id": "Q0_CURRENT_CONTROL"
+        },
+        {
+          "query": "Amour Plastique",
+          "strategy_id": "Q1_NATURAL_SPOTIFY_TITLE"
+        },
+        {
+          "query": "Amour Plastique Videoclub",
+          "strategy_id": "Q2_NATURAL_TITLE_PLUS_ARTIST"
+        },
+        {
+          "query": "Videoclub Amour Plastique",
+          "strategy_id": "Q3_CORE_TITLE_ARTIST_VERSION"
+        }
+      ],
+      "stable_track_id": "s5b1c_050",
+      "target": {
+        "album": "Euphories",
+        "artists": [
+          "Videoclub",
+          "Adèle Castillon",
+          "Mattyeux"
+        ],
+        "duration_ms": 227227,
+        "isrc": null,
+        "release_year": 2018,
+        "spotify_track_id": null,
+        "stable_track_id": "s5b1c_050",
+        "title": "Amour Plastique"
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "stage5b2-sol-evaluator-contract-v1",
+  "benchmark_id": "STAGE5B_YOUTUBE_PRIOR_V1",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "high",
+  "isolation": {
+    "fresh_context": true,
+    "raw_metadata_only": true,
+    "human_labels_visible": false,
+    "resolver_features_visible": false,
+    "resolver_decisions_visible": false,
+    "original_search_rank_visible": false,
+    "candidate_order_deterministically_shuffled": true
+  },
+  "prompt": {
+    "path": "reports/stage5b_youtube_prior_v1/sol_prompt.md",
+    "sha256": "7baeb8a888d6ff00a63d4e5ce93c6a52801d92a11b6a29334c8c6e358b75ede7"
+  },
+  "benchmark_manifest": {
+    "path": "reports/stage5b_youtube_prior_v1/benchmark_manifest.json",
+    "sha256": "3a967360ece50d3792f48c3bf857f5270965d09610d2601b517bd2a0e1c23396"
+  },
+  "labels": [
+    "IDEAL",
+    "ACCEPTABLE",
+    "WRONG",
+    "UNCERTAIN"
+  ],
+  "safe_labels": [
+    "IDEAL",
+    "ACCEPTABLE"
+  ],
+  "human_ground_truth": true,
+  "sol_secondary_only": true
+}

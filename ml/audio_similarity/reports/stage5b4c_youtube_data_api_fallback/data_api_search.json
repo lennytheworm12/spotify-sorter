@@ -1,0 +1,47 @@
+{
+  "bounded_diagnostic": {
+    "additional_search_list_requests": 1,
+    "alternate_queries": 0,
+    "credential_serialized": false,
+    "item_count": 0,
+    "items": [],
+    "purpose": "Distinguish an empty items array from result-parser rejection",
+    "query_unchanged": true
+  },
+  "experiment_id": "STAGE5B4C_YOUTUBE_DATA_API_FALLBACK_V1",
+  "outcome": {
+    "elapsed_seconds": 0.2890832829871215,
+    "error": {
+      "category": "YOUTUBE_DATA_API_SEARCH_ZERO_RESULTS",
+      "http_status": null,
+      "message": "search.list returned no usable video IDs",
+      "reason": null,
+      "retryable": false
+    },
+    "query": "Girl, Interrupted 2xxx Miso",
+    "request": {
+      "credential_recorded": false,
+      "credential_source": "YOUTUBE_DATA_API_KEY",
+      "endpoint": "https://www.googleapis.com/youtube/v3/search",
+      "parameters": {
+        "maxResults": "3",
+        "part": "snippet",
+        "q": "Girl, Interrupted 2xxx Miso",
+        "type": "video"
+      }
+    },
+    "results": [],
+    "video_ids_in_provider_order": []
+  },
+  "provider_path": "YOUTUBE_DATA_API_FALLBACK",
+  "query": "Girl, Interrupted 2xxx Miso",
+  "reason": "PRIMARY_ZERO_RESULTS",
+  "schema_version": "stage5b4c-data-api-search-v1",
+  "scope_guards": {
+    "credential_serialized": false,
+    "maximum_results": 3,
+    "pages_requested": 2,
+    "same_query_as_primary": true
+  },
+  "triggered": true
+}

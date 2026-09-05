@@ -1,0 +1,80 @@
+{
+  "artifacts": {
+    "benchmark_config.json": {
+      "sha256": "caf380da5f2b959527c7854c25b0916c75ece4dee7a4b59236ac2eaf47ca7c2a",
+      "size_bytes": 2355
+    },
+    "benchmark_manifest.json": {
+      "sha256": "3a967360ece50d3792f48c3bf857f5270965d09610d2601b517bd2a0e1c23396",
+      "size_bytes": 50163
+    },
+    "benchmark_manifest.sha256": {
+      "sha256": "9cf913823e49f7c20314cc7348e97eb65f2a5c600c58ed24fc2134e5c4de051d",
+      "size_bytes": 65
+    },
+    "failure_analysis.json": {
+      "sha256": "11cc707cce2469a7f55eb0b7ce6db5c42ca05d7e00600284b93058d1c0132b54",
+      "size_bytes": 5182
+    },
+    "human_review.csv": {
+      "sha256": "e0a39ed88fe840982b4e3ece77102e667baaed83cebff49f7fee0f3f0ecdcef7",
+      "size_bytes": 135250
+    },
+    "human_review_queue.json": {
+      "sha256": "4637873908ed0d83f73e4c4e172116b9349732fc616265f03239b19d654ac62b",
+      "size_bytes": 19379
+    },
+    "sol_blind_payload.json": {
+      "sha256": "728aa8b5f3d06dbf60ac870942b683453ed86e569507c8ff8e4f91d2a855d9b3",
+      "size_bytes": 190528
+    },
+    "sol_evaluations.json": {
+      "sha256": "b3f2db435171ca9709f02698c88d14f5785e807d8ce34af6eedebea9d900dece",
+      "size_bytes": 51170
+    },
+    "sol_evaluator_contract.json": {
+      "sha256": "f7b1f3fd492b87aa1f23490bdcc242a64e6bcadcfc5f7904e7af047d4a818546",
+      "size_bytes": 996
+    },
+    "sol_human_agreement.json": {
+      "sha256": "d73912a91c7f41241d836e19c360c2ee2ecc2d3af7528bb60c7c7aea393b6561",
+      "size_bytes": 34382
+    },
+    "sol_private_rank_mapping.json": {
+      "sha256": "82fa68d0e7ce5bb1a4808d670bfdf3b74514916048fea1b402faaeabe600fbd2",
+      "size_bytes": 46669
+    },
+    "sol_prompt.md": {
+      "sha256": "7baeb8a888d6ff00a63d4e5ce93c6a52801d92a11b6a29334c8c6e358b75ede7",
+      "size_bytes": 1619
+    },
+    "top1_metrics.json": {
+      "sha256": "4b406eaebc6ce3021b7e83bd324d12c4543e7acb36a54d8750b3e08d4707b9f1",
+      "size_bytes": 468
+    },
+    "top3_metrics.json": {
+      "sha256": "5b1dfaf4859e540140c92e47b8cbed910e9847a307e0e4d6f8d849980199e171",
+      "size_bytes": 449
+    },
+    "youtube_prior_report.md": {
+      "sha256": "4c0101dd338df56ed882990d320dcf75e60f53b0d82c39a759df923818c7a8a3",
+      "size_bytes": 4980
+    },
+    "youtube_top3_discovery.json": {
+      "sha256": "3a90301a008824a3001b464aae0e348bc56649f508ccca6f11d88c171f31b9b8",
+      "size_bytes": 819708
+    }
+  },
+  "benchmark_id": "STAGE5B_YOUTUBE_PRIOR_V1",
+  "schema_version": "stage5b2-youtube-prior-artifact-manifest-v1",
+  "scope_guards": {
+    "audio_downloads": 0,
+    "benchmark_tuning_performed": false,
+    "candidate_reranking": false,
+    "existing_resolver_invocations": 0,
+    "human_labels_are_ground_truth": true,
+    "sol_is_secondary_only": true,
+    "video_downloads": 0
+  },
+  "status": "YOUTUBE_TOP1_PRIOR_VALIDATED"
+}

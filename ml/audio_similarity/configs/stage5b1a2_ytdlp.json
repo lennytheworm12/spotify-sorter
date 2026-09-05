@@ -1,0 +1,47 @@
+{
+  "artifacts": {
+    "comparison": "reports/stage5b1a_ytdlp/provider_comparison.json",
+    "discovery_results": "reports/stage5b1a_ytdlp/ytdlp_discovery_results.json",
+    "implementation_report": "reports/stage5b1a_ytdlp/implementation_report.md",
+    "metrics": "reports/stage5b1a_ytdlp/ytdlp_metrics.json",
+    "review": "reports/stage5b1a_ytdlp/ytdlp_review.csv",
+    "review_template": "reports/stage5b1a_ytdlp/review_template.csv",
+    "run_status": "reports/stage5b1a_ytdlp/run_status.json"
+  },
+  "comparison_sources": {
+    "firecrawl_metrics": "reports/stage5b1a/firecrawl_metrics.json",
+    "firecrawl_results": "reports/stage5b1a/firecrawl_discovery_results.json"
+  },
+  "experiment_id": "stage5b1a2_ytdlp_youtube_search_feasibility",
+  "feasibility_gate": {
+    "conditional_min_recall_at_5": 0.8,
+    "fail_below_recall_at_5": 0.8,
+    "pass_min_recall_at_5": 0.9,
+    "primary_metric": "recall_at_5",
+    "scope_note": "Engineering decision for this frozen personal-project smoke set; not a population claim."
+  },
+  "manifest": {
+    "expected_sha256": "f3592bb8c8dea689959a22da222d8b7ce4911c1804392acb501cffe768700c57",
+    "path": "reports/stage5b1a/frozen_tracks.json"
+  },
+  "provider": {
+    "cache_enabled": false,
+    "candidate_limit": 5,
+    "extract_flat": "in_playlist",
+    "ignore_user_config": true,
+    "max_attempts": 2,
+    "retry_backoff_seconds": 2.0,
+    "search_prefix": "ytsearch5:",
+    "sequential_requests": true,
+    "simulate": true,
+    "skip_download": true,
+    "sleep_between_tracks_seconds": 1.0,
+    "socket_timeout_seconds": 30
+  },
+  "query_strategy": {
+    "featured_artist_noise_normalization": true,
+    "query_variant_id": "quoted-primary-artist-title-official-v1",
+    "template": "\"{primary_artist}\" \"{normalized_title}\" official"
+  },
+  "schema_version": "stage5b1a2-ytdlp-config-v1"
+}

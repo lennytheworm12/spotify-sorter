@@ -1,0 +1,126 @@
+{
+  "architecture": {
+    "fallback": "YouTube Data API v3 search.list then videos.list",
+    "fallback_trigger": "ZERO_USABLE_PRIMARY_CANDIDATES_ONLY",
+    "primary": "yt_dlp ytsearch3",
+    "same_query_required": true,
+    "selector": "STAGE5B3_MINIMAL_YOUTUBE_SELECTOR_V1_UNCHANGED",
+    "unresolved_next_step": "MANUAL_YOUTUBE_URL_OVERRIDE"
+  },
+  "data_api": {
+    "api_key_environment_variable": "YOUTUBE_DATA_API_KEY",
+    "credential_persisted": false,
+    "hydration_parameters": {
+      "id": "SEARCH_RESULT_IDS_IN_PROVIDER_ORDER",
+      "part": "snippet,contentDetails,statistics,status"
+    },
+    "maximum_results": 3,
+    "retries": 0,
+    "search_endpoint": "https://www.googleapis.com/youtube/v3/search",
+    "search_pages": 1,
+    "search_parameters": {
+      "maxResults": 3,
+      "part": "snippet",
+      "q": "SAME_NATURAL_QUERY",
+      "type": "video"
+    },
+    "timeout_seconds": 15.0,
+    "videos_endpoint": "https://www.googleapis.com/youtube/v3/videos"
+  },
+  "experiment_id": "STAGE5B4C_YOUTUBE_DATA_API_FALLBACK_V1",
+  "frozen_inputs": {
+    "representative_v3_artifacts": {
+      "automated_selector_decisions": {
+        "path": "reports/stage5b4_representative_v3/automated_selector_decisions.json",
+        "sha256": "1a10ed69549b83d36223120db4162a937c6b0d2f59df7224b6afe1b99767827e",
+        "size_bytes": 202751
+      },
+      "automated_selector_metrics": {
+        "path": "reports/stage5b4_representative_v3/automated_selector_metrics.json",
+        "sha256": "878024d9768ebb2de6f96f6e7aab787a3e176225ed75e3203afe9902a4d530ae",
+        "size_bytes": 522
+      },
+      "benchmark_config": {
+        "path": "reports/stage5b4_representative_v3/benchmark_config.json",
+        "sha256": "6a36489829453f2ea18e14767a752ef97d75eda5bcfc0de8d0ec3965aa975385",
+        "size_bytes": 5045
+      },
+      "benchmark_manifest": {
+        "path": "reports/stage5b4_representative_v3/benchmark_manifest.json",
+        "sha256": "e5d54e06e410d74a1b588f8d853c5ca9a25e97ba09dd26692c5978a15245097e",
+        "size_bytes": 52085
+      },
+      "human_review": {
+        "path": "reports/stage5b4_representative_v3/human_review.csv",
+        "sha256": "92cb84aafeff32604ebf559c98e8347751991e8d0d865949a1ba595d8029d062",
+        "size_bytes": 132358
+      },
+      "human_review_queue": {
+        "path": "reports/stage5b4_representative_v3/human_review_queue.json",
+        "sha256": "181252ad2d96327acc3543754ea5ea5dc62a2036764680536dc22782995cea9a",
+        "size_bytes": 87091
+      },
+      "youtube_top3_discovery": {
+        "path": "reports/stage5b4_representative_v3/youtube_top3_discovery.json",
+        "sha256": "4cbd5741c7af0030474ba4073991c28d316eea73f243dc1f0a350b48e7db3f94",
+        "size_bytes": 804468
+      }
+    },
+    "stage5b3_selector": {
+      "path": "src/audio_similarity/stage5b3_minimal_selector.py",
+      "sha256": "262ac3d0d7459170fef81336ee6f54f5523f2d8300fedee8a51798ce8439160f",
+      "size_bytes": 23106
+    },
+    "stage5b4a_artifacts": {
+      "artifact_manifest.json": {
+        "path": "reports/stage5b4a_query_contract_repair/artifact_manifest.json",
+        "sha256": "9e3e573388d584930444aa8c8b44336b312a1b052d81fb1222a81619923a18b2",
+        "size_bytes": 3283
+      },
+      "human_review.csv": {
+        "path": "reports/stage5b4a_query_contract_repair/human_review.csv",
+        "sha256": "72633877f662c77886b11f3a68b3d53e98e9f3d6194783d171277e06cc8d93b4",
+        "size_bytes": 2153
+      },
+      "query_contract_report.md": {
+        "path": "reports/stage5b4a_query_contract_repair/query_contract_report.md",
+        "sha256": "3c0f0e63c9693f3837361cb03d6a94536cf81430c7ffbf4b701cbfea6491da04",
+        "size_bytes": 2884
+      },
+      "repaired_discovery.json": {
+        "path": "reports/stage5b4a_query_contract_repair/repaired_discovery.json",
+        "sha256": "3b6cb47ba4a5db5b844006258d52837ecba7db1f37045962eee8ccf0f116720f",
+        "size_bytes": 11028
+      },
+      "repaired_query_contract.json": {
+        "path": "reports/stage5b4a_query_contract_repair/repaired_query_contract.json",
+        "sha256": "67533675f92d5904bdfc87dffecea59afa70bef45a543d2ca0fc5533363ae562",
+        "size_bytes": 2885
+      },
+      "v3_query_replay.json": {
+        "path": "reports/stage5b4a_query_contract_repair/v3_query_replay.json",
+        "sha256": "5e653f2a39ee3c7dc3b03243a2f2b66b7938ab9447adeb0794eb472ae8cdbac3",
+        "size_bytes": 49887
+      }
+    },
+    "stage5b4b_manifest": {
+      "path": "reports/stage5b4b_playwright_fallback/artifact_manifest.json",
+      "sha256": "eef72686dadee7a314e9880ac3867f1da6cf4f15acca56411566dadd413e0d50",
+      "size_bytes": 6316
+    }
+  },
+  "query": "Girl, Interrupted 2xxx Miso",
+  "query_contract_id": "NATURAL_TITLE_FIRST3_ARTISTS_V1",
+  "schema_version": "stage5b4c-fallback-config-v1",
+  "scope_guards": {
+    "alternate_queries": 0,
+    "audio_downloads": 0,
+    "motivating_cases": 1,
+    "personal_credentials_serialized": false,
+    "playwright_invocations": 0,
+    "production_activation": false,
+    "query_tuning": false,
+    "selector_tuning": false,
+    "video_downloads": 0
+  }
+}

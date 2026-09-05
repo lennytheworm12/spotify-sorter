@@ -1,0 +1,1971 @@
+{
+  "attempts": [
+    {
+      "acquisition_duration_seconds": 2.068430941028055,
+      "actual_delay_before_attempt_seconds": 2.809683792293072e-07,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": null,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:41:48.861080+00:00",
+      "required_delay_before_attempt_seconds": 0.0,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "3JxRNkoNmAcPgnA5HSnKiz",
+      "video_id": "rTKCBcDqyMg"
+    },
+    {
+      "acquisition_duration_seconds": 2.4084052460384555,
+      "actual_delay_before_attempt_seconds": 17.766256968025118,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.0001607350423,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:42:08.861250+00:00",
+      "required_delay_before_attempt_seconds": 17.76610724395141,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "07tiPBhMqiKqHowwqDBtfK",
+      "video_id": "LK4SwchA_jM"
+    },
+    {
+      "acquisition_duration_seconds": 2.2216621360275894,
+      "actual_delay_before_attempt_seconds": 17.530548227019608,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000170009967405,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:42:28.861421+00:00",
+      "required_delay_before_attempt_seconds": 17.53039034001995,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "340yvMO5adu3bo1x5Zrw14",
+      "video_id": "rrqWbMhtzEM"
+    },
+    {
+      "acquisition_duration_seconds": 1.7156305579701439,
+      "actual_delay_before_attempt_seconds": 17.723498243954964,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000171735999174,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:42:48.861658+00:00",
+      "required_delay_before_attempt_seconds": 17.723376852984075,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "2aiVdNIqY5BDCM10fKlKpS",
+      "video_id": "DXdmEAWhnfk"
+    },
+    {
+      "acquisition_duration_seconds": 1.8760661790147424,
+      "actual_delay_before_attempt_seconds": 18.217223671032116,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000152925029397,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:43:08.861745+00:00",
+      "required_delay_before_attempt_seconds": 18.217081014998257,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "7hFW5IN7mQ99PuO86r38Sf",
+      "video_id": "TO60HcVAdbQ"
+    },
+    {
+      "acquisition_duration_seconds": 1.9112476040027104,
+      "actual_delay_before_attempt_seconds": 18.05360921897227,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000134860980324,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:43:28.861880+00:00",
+      "required_delay_before_attempt_seconds": 18.05348448798759,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "30NAF18yQGvwKrbn1IEMKn",
+      "video_id": "DZrYIpwH-u8"
+    },
+    {
+      "acquisition_duration_seconds": 1.9807449459913187,
+      "actual_delay_before_attempt_seconds": 18.032794360013213,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000157959992066,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:43:48.862039+00:00",
+      "required_delay_before_attempt_seconds": 18.032647259999067,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "4osRLDg7abL4hLdfZ1c39g",
+      "video_id": "m_0otXbkze8"
+    },
+    {
+      "acquisition_duration_seconds": 1.928618178004399,
+      "actual_delay_before_attempt_seconds": 17.956462714006193,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000125383026898,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:44:08.862166+00:00",
+      "required_delay_before_attempt_seconds": 17.956344094011,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "0JJeoiCAa1hwcBsPxBN2w4",
+      "video_id": "QKv2ocGhCpY"
+    },
+    {
+      "acquisition_duration_seconds": 2.040354777011089,
+      "actual_delay_before_attempt_seconds": 18.014887667028233,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000136143004056,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:44:28.862298+00:00",
+      "required_delay_before_attempt_seconds": 18.01475762500195,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "2js0td9w2MzNUVPlMKYOEs",
+      "video_id": "IIsP4CMFcQc"
+    },
+    {
+      "acquisition_duration_seconds": 2.1760064260452054,
+      "actual_delay_before_attempt_seconds": 17.9023689829628,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00011792499572,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:44:48.862416+00:00",
+      "required_delay_before_attempt_seconds": 17.902258231013548,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "4LaZ8RpIP6DIgN73bXQVlO",
+      "video_id": "5OLgj5s21Ps"
+    },
+    {
+      "acquisition_duration_seconds": 2.6217798279831186,
+      "actual_delay_before_attempt_seconds": 17.76613617001567,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00013434997527,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:45:08.862551+00:00",
+      "required_delay_before_attempt_seconds": 17.766008111997508,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "0ASYuzPsTBA6ZmIsuvNZby",
+      "video_id": "dMJqYdK8QAw"
+    },
+    {
+      "acquisition_duration_seconds": 2.0696089730481617,
+      "actual_delay_before_attempt_seconds": 17.30731189803919,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00012839998817,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:45:28.862747+00:00",
+      "required_delay_before_attempt_seconds": 17.307189529004972,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "1ZhrRS2xY1ZoD2QJ9aZQxX",
+      "video_id": "wzKn7uGBxpI"
+    },
+    {
+      "acquisition_duration_seconds": 2.0379707789979875,
+      "actual_delay_before_attempt_seconds": 17.868565123004373,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000163532036822,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:45:48.862844+00:00",
+      "required_delay_before_attempt_seconds": 17.868408202950377,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "5VGDusp81Ed3T9xACRw5Os",
+      "video_id": "oclnUlduLkY"
+    },
+    {
+      "acquisition_duration_seconds": 1.7896745930192992,
+      "actual_delay_before_attempt_seconds": 17.90587472601328,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000157113012392,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:46:08.863000+00:00",
+      "required_delay_before_attempt_seconds": 17.905724276031833,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "06EL94D0TA27Ik0Ke5usbj",
+      "video_id": "_sV0S8qWSy0"
+    },
+    {
+      "acquisition_duration_seconds": 2.1415495480177924,
+      "actual_delay_before_attempt_seconds": 18.14727728703292,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000120507960673,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:46:28.863123+00:00",
+      "required_delay_before_attempt_seconds": 18.147162260022014,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "6wm3t4VpTxSFfOUgTMlHZM",
+      "video_id": "Gf-fCJ6TkRU"
+    },
+    {
+      "acquisition_duration_seconds": 2.036632361006923,
+      "actual_delay_before_attempt_seconds": 17.798795492970385,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000169010018,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:46:48.863289+00:00",
+      "required_delay_before_attempt_seconds": 17.798633727012202,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "2Ah7oAy4esXD8pEEhY0hyR",
+      "video_id": "2DDPiGHA14w"
+    },
+    {
+      "acquisition_duration_seconds": 1.8707475939881988,
+      "actual_delay_before_attempt_seconds": 17.90463363699382,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000127517967485,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:47:08.863417+00:00",
+      "required_delay_before_attempt_seconds": 17.904512932000216,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "1AHtqWqufKsgBmdNEi1WVO",
+      "video_id": "usJeKVzoDeI"
+    },
+    {
+      "acquisition_duration_seconds": 2.080289235978853,
+      "actual_delay_before_attempt_seconds": 18.070909232017584,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00015637202887,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:47:28.863573+00:00",
+      "required_delay_before_attempt_seconds": 18.070758549962193,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "5zfpJXfqGGh94YcStRlI2s",
+      "video_id": "RWabpd7ah5E"
+    },
+    {
+      "acquisition_duration_seconds": 1.8274495920049958,
+      "actual_delay_before_attempt_seconds": 17.852632386959158,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000147661019582,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:47:48.863721+00:00",
+      "required_delay_before_attempt_seconds": 17.8524908979889,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "4tqcoej1zPvwePZCzuAjJd",
+      "video_id": "eCGV26aj-mM"
+    },
+    {
+      "acquisition_duration_seconds": 1.747727854992263,
+      "actual_delay_before_attempt_seconds": 18.110005956026725,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00015767995501,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:48:08.863883+00:00",
+      "required_delay_before_attempt_seconds": 18.109853577043395,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "4B8L0sByBRJRUV1Uot2Ebd",
+      "video_id": "K-VoheJSUd8"
+    },
+    {
+      "acquisition_duration_seconds": 2.129943842010107,
+      "actual_delay_before_attempt_seconds": 18.191186560026836,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00013265502639,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:48:28.864012+00:00",
+      "required_delay_before_attempt_seconds": 18.191059535951354,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "6ZGqVXaJmhbYAK2DF8mWRR",
+      "video_id": "qB1kJUjPrVA"
+    },
+    {
+      "acquisition_duration_seconds": 1.7663177060312591,
+      "actual_delay_before_attempt_seconds": 17.808091412007343,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00014022301184,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:48:48.864151+00:00",
+      "required_delay_before_attempt_seconds": 17.807957020006143,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "0WJxkgYXRoOxFb4Vq3Ddmg",
+      "video_id": "h7rGEtJeaHQ"
+    },
+    {
+      "acquisition_duration_seconds": 2.099068270996213,
+      "actual_delay_before_attempt_seconds": 18.17307278496446,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00011858099606,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:49:08.864270+00:00",
+      "required_delay_before_attempt_seconds": 18.17295992502477,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "2YO6ZDPdQFkrOa6YYceEN4",
+      "video_id": "bEEX-Ya7scc"
+    },
+    {
+      "acquisition_duration_seconds": 1.9558612009859644,
+      "actual_delay_before_attempt_seconds": 17.84095173300011,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000127844978124,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:49:28.864399+00:00",
+      "required_delay_before_attempt_seconds": 17.840830160013866,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "6B9HXnRzmokTTxZNdV5T48",
+      "video_id": "ijLNC2OuyuM"
+    },
+    {
+      "acquisition_duration_seconds": 2.1475887109991163,
+      "actual_delay_before_attempt_seconds": 17.98132899403572,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00015670398716,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:49:48.864565+00:00",
+      "required_delay_before_attempt_seconds": 17.98117873200681,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "7LFwi4RolcCPnVEXXXVfQP",
+      "video_id": "k_5LIwYVmfg"
+    },
+    {
+      "acquisition_duration_seconds": 2.14123547100462,
+      "actual_delay_before_attempt_seconds": 17.799839705985505,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000125164049678,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:50:08.864681+00:00",
+      "required_delay_before_attempt_seconds": 17.79972029197961,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "65FftemJ1DbbZ45DUfHJXE",
+      "video_id": "hc32lb0po9U"
+    },
+    {
+      "acquisition_duration_seconds": 2.014612892991863,
+      "actual_delay_before_attempt_seconds": 17.797343828016892,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000142798002344,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:50:28.864824+00:00",
+      "required_delay_before_attempt_seconds": 17.79720675002318,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "02CCi0N3pMK4Rjxq5e6UmE",
+      "video_id": "AnijqH5nRmA"
+    },
+    {
+      "acquisition_duration_seconds": 2.332707619003486,
+      "actual_delay_before_attempt_seconds": 17.930338236968964,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.0001319689909,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:50:48.864954+00:00",
+      "required_delay_before_attempt_seconds": 17.930212320003193,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "6nef0wHkelfKqNVHAtzJbR",
+      "video_id": "DzP5CcMnaKU"
+    },
+    {
+      "acquisition_duration_seconds": 1.7146268170326948,
+      "actual_delay_before_attempt_seconds": 17.609026103978977,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000116267998237,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:51:08.865069+00:00",
+      "required_delay_before_attempt_seconds": 17.60891468601767,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "1IIcy1TpuiAT6S206OjYvC",
+      "video_id": "-EN63cmt6Gw"
+    },
+    {
+      "acquisition_duration_seconds": 1.6820873719989322,
+      "actual_delay_before_attempt_seconds": 18.225529855990317,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000125294958707,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:51:28.865195+00:00",
+      "required_delay_before_attempt_seconds": 18.225411302992143,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "1U90UBmMrQTx9GNweUA4LZ",
+      "video_id": "jFCTQ68gxoY"
+    },
+    {
+      "acquisition_duration_seconds": 2.3701524949865416,
+      "actual_delay_before_attempt_seconds": 18.258773050038144,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000132949033286,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:51:48.865327+00:00",
+      "required_delay_before_attempt_seconds": 18.258645941969007,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "3aFh82SrVntBmW9Lx0Gb7W",
+      "video_id": "NN90EGrioFU"
+    },
+    {
+      "acquisition_duration_seconds": 2.010802658041939,
+      "actual_delay_before_attempt_seconds": 17.573572991997935,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000154223002028,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:52:08.865484+00:00",
+      "required_delay_before_attempt_seconds": 17.573425000999123,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "40TJl2hLf6Sr7K1a2SkkVA",
+      "video_id": "acLkEhCBt1k"
+    },
+    {
+      "acquisition_duration_seconds": 1.8401762749999762,
+      "actual_delay_before_attempt_seconds": 17.925808936997782,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000123901001643,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:52:28.865639+00:00",
+      "required_delay_before_attempt_seconds": 17.925689363037236,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "6pWqlKm9ugucgKNldCLigX",
+      "video_id": "CcgppPtVwPs"
+    },
+    {
+      "acquisition_duration_seconds": 1.931119929999113,
+      "actual_delay_before_attempt_seconds": 18.09053101099562,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000111116969492,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:52:48.865754+00:00",
+      "required_delay_before_attempt_seconds": 18.090423431014642,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "70YbAV2UKPee15B00RbPcT",
+      "video_id": "tz8QB1ZH5sE"
+    },
+    {
+      "acquisition_duration_seconds": 8.984927203971893,
+      "actual_delay_before_attempt_seconds": 17.996603765001055,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000129721011035,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:53:08.865848+00:00",
+      "required_delay_before_attempt_seconds": 17.996480125002563,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "5sEeuhYWHNczuPKek1zJeG",
+      "video_id": "vwNr2woNsG0"
+    },
+    {
+      "acquisition_duration_seconds": 1.8178754770196974,
+      "actual_delay_before_attempt_seconds": 10.954267913999502,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000127513019834,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:53:28.865975+00:00",
+      "required_delay_before_attempt_seconds": 10.954146742995363,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "043ryKJlgSnAUzpXnfxU6b",
+      "video_id": "q-X67J8I8Ik"
+    },
+    {
+      "acquisition_duration_seconds": 2.238653892010916,
+      "actual_delay_before_attempt_seconds": 18.126936525048222,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00011382397497,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:53:48.866088+00:00",
+      "required_delay_before_attempt_seconds": 18.12682926299749,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "4P1L6AniTDJzANaubzWGYs",
+      "video_id": "Lm54QUV4Dt4"
+    },
+    {
+      "acquisition_duration_seconds": 1.63439343101345,
+      "actual_delay_before_attempt_seconds": 17.69784860999789,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000163745018654,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:54:08.866357+00:00",
+      "required_delay_before_attempt_seconds": 17.697691228007898,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "7F6PtLP6fJPVtA1FWVkl8K",
+      "video_id": "jfDu6KZ9O4w"
+    },
+    {
+      "acquisition_duration_seconds": 1.944129390991293,
+      "actual_delay_before_attempt_seconds": 18.310675509972498,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000125190010294,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:54:28.866377+00:00",
+      "required_delay_before_attempt_seconds": 18.31055676098913,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "2X71ww8wImSYbw4s0Mr2ur",
+      "video_id": "21Jz5U8iOAw"
+    },
+    {
+      "acquisition_duration_seconds": 2.0289842459606007,
+      "actual_delay_before_attempt_seconds": 17.996728563972283,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000132141984068,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:54:48.866509+00:00",
+      "required_delay_before_attempt_seconds": 17.996602403989527,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "5aawFqyuCB3K2P8KQvhFVs",
+      "video_id": "BNWLAkFWy0w"
+    },
+    {
+      "acquisition_duration_seconds": 1.8078872130136006,
+      "actual_delay_before_attempt_seconds": 17.902549649996217,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000168978003785,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:55:08.866721+00:00",
+      "required_delay_before_attempt_seconds": 17.9023857510183,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "2Vu2hkPW7LxMHPqoMjSIEJ",
+      "video_id": "e3XBVbHn9qM"
+    },
+    {
+      "acquisition_duration_seconds": 1.7788974700379185,
+      "actual_delay_before_attempt_seconds": 18.11705078900559,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00012425298337,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:55:28.866801+00:00",
+      "required_delay_before_attempt_seconds": 18.116931714990642,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "5ngJKkOmjkN460b2ApBnLk",
+      "video_id": "-DeJ5Bb3wxg"
+    },
+    {
+      "acquisition_duration_seconds": 1.760085514979437,
+      "actual_delay_before_attempt_seconds": 18.15927904500859,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000127020000946,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:55:48.866932+00:00",
+      "required_delay_before_attempt_seconds": 18.15915905899601,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "6kAMaQt8UveeTctekIpUjF",
+      "video_id": "ENLFl2b6raI"
+    },
+    {
+      "acquisition_duration_seconds": 2.058321238029748,
+      "actual_delay_before_attempt_seconds": 18.17491467797663,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000151462038048,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:56:08.867082+00:00",
+      "required_delay_before_attempt_seconds": 18.174769247998483,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "1VAtYkKvDenA1KypImlZIY",
+      "video_id": "2NG0Ivmv0g0"
+    },
+    {
+      "acquisition_duration_seconds": 1.868836801033467,
+      "actual_delay_before_attempt_seconds": 17.879193382977974,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000107385974843,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:56:28.867191+00:00",
+      "required_delay_before_attempt_seconds": 17.87909079605015,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "2BFAfMIblG0RZeAvlmLC81",
+      "video_id": "4O3lW4OSpTA"
+    },
+    {
+      "acquisition_duration_seconds": 1.8759073090041056,
+      "actual_delay_before_attempt_seconds": 18.072133461013436,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000138105999213,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:56:48.867330+00:00",
+      "required_delay_before_attempt_seconds": 18.072001506981906,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "3F5HhdyBfvCbzuPJbGBHkc",
+      "video_id": "31S6_XYUT0Y"
+    },
+    {
+      "acquisition_duration_seconds": 1.755429120035842,
+      "actual_delay_before_attempt_seconds": 18.053591378964484,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000126214988995,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:57:08.867454+00:00",
+      "required_delay_before_attempt_seconds": 18.053470432991162,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "5UUnRflW65AsvluD8d5N2U",
+      "video_id": "Abfsm4CAZiw"
+    },
+    {
+      "acquisition_duration_seconds": 2.078703138977289,
+      "actual_delay_before_attempt_seconds": 18.183182409964502,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000179006019607,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:57:28.867632+00:00",
+      "required_delay_before_attempt_seconds": 18.183010247012135,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "1CwmoUvvRyhiwqhMfvbB4K",
+      "video_id": "zBCK8Z4a0Js"
+    },
+    {
+      "acquisition_duration_seconds": 1.6370334349921905,
+      "actual_delay_before_attempt_seconds": 17.851048913027626,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000121994991787,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:57:48.867754+00:00",
+      "required_delay_before_attempt_seconds": 17.850933030014858,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "3vC63Nh3rSREo7qDHgnx8I",
+      "video_id": "u5wMLWs6LSs"
+    },
+    {
+      "acquisition_duration_seconds": 2.2926564090303145,
+      "actual_delay_before_attempt_seconds": 18.302686130045913,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000140842981637,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:58:08.867898+00:00",
+      "required_delay_before_attempt_seconds": 18.302551029017195,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "39kzWAiVPpycdMpr745oPj",
+      "video_id": "4Kk_iaaHd_Y"
+    },
+    {
+      "acquisition_duration_seconds": 1.7393649230361916,
+      "actual_delay_before_attempt_seconds": 17.644361384038348,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000159781018738,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:58:28.868055+00:00",
+      "required_delay_before_attempt_seconds": 17.64420820499072,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "37BvHZhn4399Zhh6EDa4km",
+      "video_id": "G6uhnkDPca8"
+    },
+    {
+      "acquisition_duration_seconds": 1.936772299988661,
+      "actual_delay_before_attempt_seconds": 18.192054166982416,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00012353400234,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:58:48.868182+00:00",
+      "required_delay_before_attempt_seconds": 18.19193675502902,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "2g0LdZQce9xlcHb1mBJyuz",
+      "video_id": "sqgxcCjD04s"
+    },
+    {
+      "acquisition_duration_seconds": 1.872743830026593,
+      "actual_delay_before_attempt_seconds": 18.00307427503867,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00012585701188,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:59:08.868305+00:00",
+      "required_delay_before_attempt_seconds": 18.002954168012366,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "7fBv7CLKzipRk6EC6TWHOB",
+      "video_id": "yzTuBuRdAyA"
+    },
+    {
+      "acquisition_duration_seconds": 2.0501049750018865,
+      "actual_delay_before_attempt_seconds": 18.06657169898972,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00012872897787,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:59:28.868434+00:00",
+      "required_delay_before_attempt_seconds": 18.06644897098886,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "3uOeutrLztSX6lU0b0et3B",
+      "video_id": "OYtjo3CTAOM"
+    },
+    {
+      "acquisition_duration_seconds": 1.8292516700457782,
+      "actual_delay_before_attempt_seconds": 17.88914892496541,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000115617993288,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T17:59:48.868546+00:00",
+      "required_delay_before_attempt_seconds": 17.88903747498989,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "7rAOIiVhiD3vklTrCUpfYo",
+      "video_id": "EigB-NjfvRs"
+    },
+    {
+      "acquisition_duration_seconds": 1.6595553290098906,
+      "actual_delay_before_attempt_seconds": 18.109974523016717,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000127183040604,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:00:08.868681+00:00",
+      "required_delay_before_attempt_seconds": 18.10985351196723,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "49iccsmr8Su1SXXwNfFO70",
+      "video_id": "8_Hg0ounjcs"
+    },
+    {
+      "acquisition_duration_seconds": 2.131291855010204,
+      "actual_delay_before_attempt_seconds": 18.276893359958194,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00012915994739,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:00:28.868805+00:00",
+      "required_delay_before_attempt_seconds": 18.27677053201478,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "1aKvZDoLGkNMxoRYgkckZG",
+      "video_id": "PFHDkQgGfFI"
+    },
+    {
+      "acquisition_duration_seconds": 1.8059142600395717,
+      "actual_delay_before_attempt_seconds": 17.815192084002774,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000135273032356,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:00:48.868941+00:00",
+      "required_delay_before_attempt_seconds": 17.815063083951827,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "1kuGVB7EU95pJObxwvfwKS",
+      "video_id": "Fqey8LxQxFU"
+    },
+    {
+      "acquisition_duration_seconds": 2.0843415780109353,
+      "actual_delay_before_attempt_seconds": 18.132886105042417,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000114889000542,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:01:08.869054+00:00",
+      "required_delay_before_attempt_seconds": 18.13277717703022,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "4yNhVidUIAtKPT72PrZuLP",
+      "video_id": "h4enMIDwQvs"
+    },
+    {
+      "acquisition_duration_seconds": 1.7422644039615989,
+      "actual_delay_before_attempt_seconds": 17.856279522995465,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00015556096332,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:01:28.869211+00:00",
+      "required_delay_before_attempt_seconds": 17.856129422027152,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "5ri8u5RA8e4vGMyMAGXy0p",
+      "video_id": "-wTtTTAwMz8"
+    },
+    {
+      "acquisition_duration_seconds": 2.3580867390264757,
+      "actual_delay_before_attempt_seconds": 18.199675630021375,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000149816041812,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:01:48.869364+00:00",
+      "required_delay_before_attempt_seconds": 18.199532155995257,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "0xlx3pH8TxNah8hdiINqeA",
+      "video_id": "NybKgXkEse8"
+    },
+    {
+      "acquisition_duration_seconds": 1.8590115700499155,
+      "actual_delay_before_attempt_seconds": 17.588698045001365,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00014687498333,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:02:08.869509+00:00",
+      "required_delay_before_attempt_seconds": 17.588557151029818,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "1DaXVM8npVKa2AQBrYz4xS",
+      "video_id": "eeYd5Ma4zhg"
+    },
+    {
+      "acquisition_duration_seconds": 2.1546354700112715,
+      "actual_delay_before_attempt_seconds": 18.08134897099808,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00014572002692,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:02:28.869654+00:00",
+      "required_delay_before_attempt_seconds": 18.08121009398019,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "49KDK2ccYnOCYPeXfDO3YT",
+      "video_id": "WNp_XLCOTBw"
+    },
+    {
+      "acquisition_duration_seconds": 2.283706896007061,
+      "actual_delay_before_attempt_seconds": 17.786433739005588,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00016620598035,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:02:48.869820+00:00",
+      "required_delay_before_attempt_seconds": 17.786273444013204,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "3azJifCSqg9fRij2yKIbWz",
+      "video_id": "07fhkAoCnig"
+    },
+    {
+      "acquisition_duration_seconds": 1.5764766299980693,
+      "actual_delay_before_attempt_seconds": 17.65085390897002,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000129937019665,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:03:08.869953+00:00",
+      "required_delay_before_attempt_seconds": 17.650729893008247,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "3fzeNQfannmBQWGecQZ93s",
+      "video_id": "Nbl_gj7TMsw"
+    },
+    {
+      "acquisition_duration_seconds": 1.9458488909876905,
+      "actual_delay_before_attempt_seconds": 18.35988990002079,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000232797989156,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:03:28.870181+00:00",
+      "required_delay_before_attempt_seconds": 18.359663675015327,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "53eKx8ec2jDjt1m3VBUCEM",
+      "video_id": "vupyhSd6ssM"
+    },
+    {
+      "acquisition_duration_seconds": 1.7350417060079053,
+      "actual_delay_before_attempt_seconds": 17.98809864599025,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000145812984556,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:03:48.870329+00:00",
+      "required_delay_before_attempt_seconds": 17.987958543992136,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "6nzCvAtyADh0wwZEVMoujK",
+      "video_id": "PqWq6dORitQ"
+    },
+    {
+      "acquisition_duration_seconds": 1.656524317979347,
+      "actual_delay_before_attempt_seconds": 18.204495653975755,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000130744010676,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:04:08.870461+00:00",
+      "required_delay_before_attempt_seconds": 18.20436997996876,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "74cpuIw43kA8xPgbQEPdss",
+      "video_id": "X8L2CV9PyHw"
+    },
+    {
+      "acquisition_duration_seconds": 1.908278639020864,
+      "actual_delay_before_attempt_seconds": 18.28354767698329,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00013581296662,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:04:28.870595+00:00",
+      "required_delay_before_attempt_seconds": 18.2834177549812,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "4lR8sYGMGZPvthF2yUfo7T",
+      "video_id": "FshZLv0_2w4"
+    },
+    {
+      "acquisition_duration_seconds": 2.054084356990643,
+      "actual_delay_before_attempt_seconds": 18.031850465980824,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00013428099919,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:04:48.870730+00:00",
+      "required_delay_before_attempt_seconds": 18.031722977990285,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "2yQY2IzeQtUKanVo78Fg23",
+      "video_id": "gCcnTTK868o"
+    },
+    {
+      "acquisition_duration_seconds": 1.7299308649962768,
+      "actual_delay_before_attempt_seconds": 17.879171831009444,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000151145039126,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:05:08.870881+00:00",
+      "required_delay_before_attempt_seconds": 17.879026315989904,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "6JjD8b5nYnwJ3zxYZ16rKg",
+      "video_id": "2THlfaAo2dg"
+    },
+    {
+      "acquisition_duration_seconds": 1.992185804003384,
+      "actual_delay_before_attempt_seconds": 18.207896488020197,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000172271975316,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:05:28.871055+00:00",
+      "required_delay_before_attempt_seconds": 18.207730036985595,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "7iov2YtUJgLmHXwpYXLcoo",
+      "video_id": "sydCbmjrsJE"
+    },
+    {
+      "acquisition_duration_seconds": 1.737202218035236,
+      "actual_delay_before_attempt_seconds": 17.945189649006352,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000145910016727,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:05:48.871202+00:00",
+      "required_delay_before_attempt_seconds": 17.945049680012744,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "6Kkt27YmFyIFrcX3QXFi2o",
+      "video_id": "BtvJaNeELic"
+    },
+    {
+      "acquisition_duration_seconds": 1.8847765999962576,
+      "actual_delay_before_attempt_seconds": 18.202344972989522,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00015659397468,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:06:08.871355+00:00",
+      "required_delay_before_attempt_seconds": 18.202195051999297,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "74X2u8JMVooG2QbjRxXwR8",
+      "video_id": "oKBwWQI-IoI"
+    },
+    {
+      "acquisition_duration_seconds": 1.8992554229917005,
+      "actual_delay_before_attempt_seconds": 18.053305907989852,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000143319019116,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:06:28.871499+00:00",
+      "required_delay_before_attempt_seconds": 18.05316860199673,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "41zXlQxzTi6cGAjpOXyLYH",
+      "video_id": "-tn2S3kJlyU"
+    },
+    {
+      "acquisition_duration_seconds": 2.035754098033067,
+      "actual_delay_before_attempt_seconds": 18.036001704982482,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000147480983287,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:06:48.871645+00:00",
+      "required_delay_before_attempt_seconds": 18.035860626026988,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "2sXQnT404FrXeSEZkJXfKM",
+      "video_id": "UnpPoqXTkjQ"
+    },
+    {
+      "acquisition_duration_seconds": 1.8476151180220768,
+      "actual_delay_before_attempt_seconds": 17.907342515012715,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000114221009426,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:07:08.871760+00:00",
+      "required_delay_before_attempt_seconds": 17.9072342760046,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "00njeQb198Lm7Jge2Rsrlg",
+      "video_id": "ldSJmUkNaGY"
+    },
+    {
+      "acquisition_duration_seconds": 1.9510568840196356,
+      "actual_delay_before_attempt_seconds": 18.087095096008852,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00012677599443,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:07:28.871887+00:00",
+      "required_delay_before_attempt_seconds": 18.086973931000102,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "3X45Wd5yRNoe2twmyc5CvO",
+      "video_id": "JnYataeP71M"
+    },
+    {
+      "acquisition_duration_seconds": 1.8272522650077008,
+      "actual_delay_before_attempt_seconds": 17.979472626990173,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000127122038975,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:07:48.872016+00:00",
+      "required_delay_before_attempt_seconds": 17.979351927991956,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "5h6c3ArwadWdEny5yXUPOt",
+      "video_id": "H_qnZB9uxLI"
+    },
+    {
+      "acquisition_duration_seconds": 1.9169340539956465,
+      "actual_delay_before_attempt_seconds": 18.110624441003893,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00014437700156,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:08:08.872161+00:00",
+      "required_delay_before_attempt_seconds": 18.110485825047363,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "1ON9XudZFxwu43tQXBszIX",
+      "video_id": "3jTMJRKqR_I"
+    },
+    {
+      "acquisition_duration_seconds": 1.6724859199603088,
+      "actual_delay_before_attempt_seconds": 18.02066142804688,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000120946962852,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:08:28.872281+00:00",
+      "required_delay_before_attempt_seconds": 18.020546062034555,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "5q3LwAHTqo9d3rET2EA9Nq",
+      "video_id": "K19M4o6vRL8"
+    },
+    {
+      "acquisition_duration_seconds": 1.6182764100376517,
+      "actual_delay_before_attempt_seconds": 18.266192634997424,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000112551031634,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:08:48.872391+00:00",
+      "required_delay_before_attempt_seconds": 18.2660858950112,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "6rj9qDXWANe0U69asDzxMp",
+      "video_id": "1FSfqhnmeeE"
+    },
+    {
+      "acquisition_duration_seconds": 2.403628073981963,
+      "actual_delay_before_attempt_seconds": 18.32387462700717,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00013273995137,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:09:08.872525+00:00",
+      "required_delay_before_attempt_seconds": 18.32374861900462,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "6HIngEWX8ycnLjuUfSZyah",
+      "video_id": "jDf07wV5gMU"
+    },
+    {
+      "acquisition_duration_seconds": 1.7891001150128432,
+      "actual_delay_before_attempt_seconds": 17.529820273979567,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000166100042406,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:09:28.872726+00:00",
+      "required_delay_before_attempt_seconds": 17.529660014959518,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "23V5SeHanwL6PlqyJ99dH8",
+      "video_id": "HzOLDbEdxAM"
+    },
+    {
+      "acquisition_duration_seconds": 1.6780739440000616,
+      "actual_delay_before_attempt_seconds": 18.142625672975555,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000131023989525,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:09:48.872821+00:00",
+      "required_delay_before_attempt_seconds": 18.142500791000202,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "5cgy5vMqVZbd8hYutp2txu",
+      "video_id": "juMQWThd5rQ"
+    },
+    {
+      "acquisition_duration_seconds": 1.8195353419869207,
+      "actual_delay_before_attempt_seconds": 18.25896346202353,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000139812997077,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:10:08.872962+00:00",
+      "required_delay_before_attempt_seconds": 18.25882977998117,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "6zKX91EvxRHr42ZiZ5C9kN",
+      "video_id": "galR8hC10vs"
+    },
+    {
+      "acquisition_duration_seconds": 2.3450777499820106,
+      "actual_delay_before_attempt_seconds": 18.11566595500335,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000136634975206,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:10:28.873101+00:00",
+      "required_delay_before_attempt_seconds": 18.115537034987938,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "4Sk74gcXTe9dnE1HU5Pn1y",
+      "video_id": "1zi_otY0E0k"
+    },
+    {
+      "acquisition_duration_seconds": 2.136521287029609,
+      "actual_delay_before_attempt_seconds": 17.590207597007975,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00011641700985,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:10:48.873214+00:00",
+      "required_delay_before_attempt_seconds": 17.590096900996286,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "2Y4iTaIAamhYPyZcOdfL3g",
+      "video_id": "foRAF6OgOs8"
+    },
+    {
+      "acquisition_duration_seconds": 1.689276263001375,
+      "actual_delay_before_attempt_seconds": 17.801389045023825,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.0001140240347,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:11:08.873329+00:00",
+      "required_delay_before_attempt_seconds": 17.80128119298024,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "6nICBdDevG4NZysIqDFPEa",
+      "video_id": "nlYI6G2hFyU"
+    },
+    {
+      "acquisition_duration_seconds": 1.7956070940126665,
+      "actual_delay_before_attempt_seconds": 18.24899535102304,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.0001296979608,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:11:28.873457+00:00",
+      "required_delay_before_attempt_seconds": 18.24887110403506,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "4gMPlHHAjOQnUrhsuqHivn",
+      "video_id": "sLZ_koI3qi8"
+    },
+    {
+      "acquisition_duration_seconds": 1.9514940390363336,
+      "actual_delay_before_attempt_seconds": 18.139879364985973,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000133721041493,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:11:48.873592+00:00",
+      "required_delay_before_attempt_seconds": 18.13975297799334,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "7fXYFuCTmNrYRGwEUUf5iz",
+      "video_id": "sVPST7mU6ec"
+    },
+    {
+      "acquisition_duration_seconds": 2.1016286149970256,
+      "actual_delay_before_attempt_seconds": 17.987008969997987,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000139566953294,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:12:08.873732+00:00",
+      "required_delay_before_attempt_seconds": 17.986875935050193,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "2BJSMvOGABRxokHKB0OI8i",
+      "video_id": "j3EwWAMWM6Q"
+    },
+    {
+      "acquisition_duration_seconds": 1.821850486972835,
+      "actual_delay_before_attempt_seconds": 17.84181452903431,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000122431025375,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:12:28.873854+00:00",
+      "required_delay_before_attempt_seconds": 17.841698520991486,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "7nD9LjsenfCRv4uxy93xhZ",
+      "video_id": "WL-G8mNyKrw"
+    },
+    {
+      "acquisition_duration_seconds": 2.007017983996775,
+      "actual_delay_before_attempt_seconds": 18.12076873105252,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000156995025463,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:12:48.874012+00:00",
+      "required_delay_before_attempt_seconds": 18.120618449000176,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "0ayK1CJh1cMRjUJRCDWhCd",
+      "video_id": "Z2Oc2DjzL2A"
+    },
+    {
+      "acquisition_duration_seconds": 1.800710647017695,
+      "actual_delay_before_attempt_seconds": 17.93832754797768,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000123642967083,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:13:08.874135+00:00",
+      "required_delay_before_attempt_seconds": 17.938210227002855,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "0mjbciwK9zhfQl44jXfQv6",
+      "video_id": "b0H3TeL3g0Q"
+    },
+    {
+      "acquisition_duration_seconds": 1.903649147017859,
+      "actual_delay_before_attempt_seconds": 18.130253095005173,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000121086020954,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:13:28.874255+00:00",
+      "required_delay_before_attempt_seconds": 18.130138179985806,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "1Y6Ra2erZ6Mru0JOcJBSzK",
+      "video_id": "dpWP_I9BQs4"
+    },
+    {
+      "acquisition_duration_seconds": 2.1250478100264445,
+      "actual_delay_before_attempt_seconds": 18.030521734966896,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000123781966977,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:13:48.874379+00:00",
+      "required_delay_before_attempt_seconds": 18.030404285003897,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "3INETdToKVgt2vfp1wYBFw",
+      "video_id": "t1wYS2aiQaI"
+    },
+    {
+      "acquisition_duration_seconds": 1.8001849920256063,
+      "actual_delay_before_attempt_seconds": 17.80984013399575,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.00010902201757,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T18:14:08.874488+00:00",
+      "required_delay_before_attempt_seconds": 17.809736861963756,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "0CnpSTdL9l5vQM4YnzXtyo",
+      "video_id": "G8GaQdW2wHc"
+    }
+  ],
+  "concurrent_downloads": 0,
+  "discovery_requests": 0,
+  "exact_id_only": true,
+  "experiment_id": "stage5c2_representative_100",
+  "run_kind": "first",
+  "schema_version": "stage5c2-acquisition-attempts-v1",
+  "selected_sources_sha256": "dc9c868d603f456782867eee76aea6a8a9784b3b43ace3777636b77b97bf12b9"
+}

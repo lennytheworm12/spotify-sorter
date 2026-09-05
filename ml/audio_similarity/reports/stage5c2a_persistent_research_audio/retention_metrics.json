@@ -1,0 +1,58 @@
+{
+  "acquisition_failures_last_run": 0,
+  "acquisition_start_spacing_seconds": {
+    "all_compliant": true,
+    "maximum": 20.000319726008456,
+    "median": 20.00015703396639,
+    "minimum": 20.00011199398432,
+    "required_minimum": 20.0
+  },
+  "clap_reruns": 0,
+  "codec_distribution": {
+    "opus": 100
+  },
+  "container_distribution": {
+    "matroska,webm": 100
+  },
+  "duration_seconds": {
+    "maximum": 390.821,
+    "median": 192.401,
+    "minimum": 92.181
+  },
+  "expected_tracks": 100,
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "http_429_events": 0,
+  "http_5xx_events": 0,
+  "human_review_baseline_preserved": true,
+  "largest_file": {
+    "file_size_bytes": 7531613,
+    "retained_relative_path": "0xlx3pH8TxNah8hdiINqeA/source.webm",
+    "spotify_track_id": "0xlx3pH8TxNah8hdiINqeA"
+  },
+  "largest_file_bytes": 7531613,
+  "media_files_git_ignored": true,
+  "media_files_tracked_by_git": 0,
+  "median_file_size_bytes": 3306821.5,
+  "muq_reruns": 0,
+  "provider_failures": 0,
+  "provider_warning_count": 104,
+  "provider_warning_distribution": {
+    "[youtube] Incomplete data received in embedded initial data; re-fetching using API.": 2,
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one": 100,
+    "[youtube] unable to extract yt initial data; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U": 2
+  },
+  "retained_successful": 100,
+  "retention_cache_hits_last_run": 100,
+  "retry_after_events": 0,
+  "retry_attempts": 0,
+  "review_directional_relationship_count": 500,
+  "review_query_count": 100,
+  "review_queue_sha256": "e0b36ed25206970d5dad9b8122f3e74d176da9a3827dfb239d45f9fc848cbba0",
+  "review_unique_pair_count": 359,
+  "schema_version": "stage5c2a-retention-metrics-v1",
+  "scratch_artifacts": [],
+  "scratch_cleanup_passed": true,
+  "total_bytes": 321231604,
+  "total_live_attempts": 100,
+  "verdict": "PERSISTENT_100_RESEARCH_AUDIO_CACHE_READY"
+}

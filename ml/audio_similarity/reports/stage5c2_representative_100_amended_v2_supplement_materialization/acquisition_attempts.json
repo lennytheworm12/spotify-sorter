@@ -1,0 +1,51 @@
+{
+  "attempts": [
+    {
+      "acquisition_duration_seconds": 2.205586740979925,
+      "actual_delay_before_attempt_seconds": 1.9097933545708656e-07,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": null,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T19:15:50.455227+00:00",
+      "required_delay_before_attempt_seconds": 0.0,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "5quFr5s5PXYfUX5jV2EBZ1",
+      "video_id": "v224EdAkZr8"
+    },
+    {
+      "acquisition_duration_seconds": 2.67032948799897,
+      "actual_delay_before_attempt_seconds": 17.725211698038038,
+      "attempt_number": 1,
+      "calculated_backoff_seconds": 0.0,
+      "final_outcome": "SUCCESS",
+      "minimum_spacing_compliant": true,
+      "minimum_spacing_seconds": 20.0,
+      "previous_request_start_delta_seconds": 20.000334788986947,
+      "provider_error": null,
+      "provider_warnings": [
+        "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+      ],
+      "request_start_timestamp": "2026-09-04T19:16:10.455585+00:00",
+      "required_delay_before_attempt_seconds": 17.7249081999762,
+      "retry_after_seconds": null,
+      "retry_reason": null,
+      "track_id": "5l45vVLs4JKkhzN0tvkWJv",
+      "video_id": "i4YFngxyJ0k"
+    }
+  ],
+  "concurrent_downloads": 0,
+  "discovery_requests": 0,
+  "exact_id_only": true,
+  "experiment_id": "stage5c2_representative_100",
+  "run_kind": "first",
+  "schema_version": "stage5c2-acquisition-attempts-v1",
+  "selected_sources_sha256": "78cca89355311d834ef830d7f1ebc7727eaabeb34c291f026ea759a818f3d1e8"
+}

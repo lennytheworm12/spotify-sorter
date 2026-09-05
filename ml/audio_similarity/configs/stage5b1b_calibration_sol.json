@@ -1,0 +1,57 @@
+{
+  "schema_version": "stage5b1b-calibration-sol-config-v1",
+  "experiment_id": "stage5b1b_partb_policy_calibration",
+  "inputs": {
+    "manifest": {
+      "path": "reports/stage5b1b/heldout_tracks.json",
+      "sha256": "39557ede8f07bde129ad23d2bc64a0faf0fff755356cd87f2054e14f91d81e5a"
+    },
+    "discovery": {
+      "path": "reports/stage5b1b/heldout_ytdlp_discovery.json",
+      "sha256": "2c318ac0853ffe3395c6a934265585afcb0a39a2f9ce73e5a00ba35276d056e4"
+    },
+    "human_review": {
+      "path": "reports/stage5b1b/heldout_review.csv",
+      "sha256": "8e5282310ff44c9441e81a1cb538613f004b92361ec8b8c21172b4d40b69e97e"
+    },
+    "feature_v1": {
+      "path": "reports/stage5b1b/heldout_candidate_features.json",
+      "sha256": "f4260fe01b95770ceb4c47f8298033a0b865e597780a488bca1dfaac22a604a6"
+    }
+  },
+  "evaluator": {
+    "provider": "codex_cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "high",
+    "prompt_version": "stage5b1b-calibration-sol-blind-v1",
+    "prompt": {
+      "path": "configs/stage5b1b_calibration_sol_prompt.txt",
+      "sha256": "e99ddc6ad63322c5404866bdcd407c351503e782bf11ba727f013fe41e0b4160"
+    },
+    "output_schema": {
+      "path": "configs/stage5b1b_calibration_sol_output.schema.json",
+      "sha256": "d258dcf464b4be97e26ea8c799086e97f2ebc54aecfc270109e41747d199b178"
+    },
+    "batch_track_count": 5,
+    "max_attempts": 2,
+    "timeout_seconds": 900,
+    "description_max_characters": 1200,
+    "tools_allowed": false,
+    "isolated_working_directory": true,
+    "ignore_user_config": true,
+    "ignore_rules": true
+  },
+  "shuffle_seed": "stage5b1b-partb-sol-shuffle-v1-frozen",
+  "artifacts": {
+    "blinded_payload": {
+      "path": "reports/stage5b1b_calibration/blinded_sol_input.json",
+      "sha256": "dc7c90f24d26b1f50cdb8868f22e7b3c041f0f49ceab16a439162b4916bb063c"
+    },
+    "private_mapping": {
+      "path": "reports/stage5b1b_calibration/blinded_sol_private_mapping.json",
+      "sha256": "f3760b9f5eb029bc608a3697e7b75088a4fff0be764442c3e06fbd4a9752ff84"
+    },
+    "evaluations": "reports/stage5b1b_calibration/sol_evaluations.json"
+  },
+  "production_auto_match_activated": false
+}

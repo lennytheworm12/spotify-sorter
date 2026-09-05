@@ -1,0 +1,42 @@
+{
+  "base_representation_count": 98,
+  "created_at_utc": "2026-09-04T19:29:43.993328+00:00",
+  "experiment_id": "STAGE5C2_REPRESENTATIVE_100_SELECTOR_AWARE_AMENDMENT_V2",
+  "matrix_diagonal_max_error": {
+    "clap": 0.0,
+    "combined": 0.0,
+    "muq": 0.0
+  },
+  "matrix_symmetry_max_error": {
+    "clap": 0.0,
+    "combined": 0.0,
+    "muq": 0.0
+  },
+  "raw_top5_judgment_count": 500,
+  "representation_pathology_detected": false,
+  "representative_manifest_sha256": "cdbc64aac94bffb34481b898370b56e1b9566ae925ebfbeb21621bbe6cb0667b",
+  "review_label_migration": {
+    "existing_amended_review_preserved": true
+  },
+  "review_query_count": 100,
+  "schema_version": "stage5c2-amended-100-analysis-v1",
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "successful_track_count": 100,
+  "supplement_reliability": {
+    "cache_audit_passed": true,
+    "cache_rerun_encoder_segments_inferred": 0,
+    "cache_rerun_network_attempts": 0,
+    "cleanup_passed": true,
+    "full_materialization_failures": 0,
+    "full_materialization_successes": 2,
+    "live_acquisition_attempts": 2,
+    "minimum_start_spacing_seconds": 20.000334788986947,
+    "rate_limit_passed": true
+  },
+  "supplement_representation_count": 2,
+  "unique_unordered_pair_count": 359,
+  "weights": {
+    "clap": 0.7172981519,
+    "muq": 0.2827018481
+  }
+}

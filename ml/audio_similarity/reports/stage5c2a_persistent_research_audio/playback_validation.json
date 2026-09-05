@@ -1,0 +1,182 @@
+{
+  "beginning_seek": "PASS",
+  "browser_details": {
+    "audio_http_responses": [
+      {
+        "endpoint": "/audio/track/3JxRNkoNmAcPgnA5HSnKiz",
+        "status": 206
+      },
+      {
+        "endpoint": "/audio/track/3JxRNkoNmAcPgnA5HSnKiz",
+        "status": 206
+      },
+      {
+        "endpoint": "/audio/track/340yvMO5adu3bo1x5Zrw14",
+        "status": 206
+      },
+      {
+        "endpoint": "/audio/track/340yvMO5adu3bo1x5Zrw14",
+        "status": 206
+      }
+    ],
+    "clean_ephemeral_context": true,
+    "console_errors": [],
+    "duration_seconds": 177.361,
+    "engine": "chromium",
+    "frozen_clip_seek_time_seconds": 12.5,
+    "mid_song_observed_seconds": 88.6805,
+    "mid_song_seek_target_seconds": 88.6805,
+    "near_end_observed_seconds": 174.361,
+    "near_end_seek_target_seconds": 174.361,
+    "neighbor_source_endpoint": "/audio/track/340yvMO5adu3bo1x5Zrw14",
+    "personal_profile_loaded": false,
+    "query_neighbor_sources_distinct": true,
+    "query_source_endpoint": "/audio/track/3JxRNkoNmAcPgnA5HSnKiz",
+    "repeated_mid_song_observed_seconds": 88.6805,
+    "youtube_iframe_hidden": true,
+    "youtube_link_hidden": true
+  },
+  "browser_validation": "PASS",
+  "content_range": "PASS",
+  "distinct_source_sha256": true,
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "http_206_range_response": "PASS",
+  "mid_song_seek": "PASS",
+  "near_end_seek": "PASS",
+  "ordinary_full_response": "PASS",
+  "query_neighbor_switching": "PASS",
+  "repeated_seek": "PASS",
+  "review_directional_relationship_count": 500,
+  "review_query_count": 100,
+  "review_queue_sha256": "e0b36ed25206970d5dad9b8122f3e74d176da9a3827dfb239d45f9fc848cbba0",
+  "review_unique_pair_count": 359,
+  "schema_version": "stage5c2a-playback-validation-v1",
+  "source_experiment_id": "STAGE5C2_REPRESENTATIVE_100_SELECTOR_AWARE_AMENDMENT_V2",
+  "tracks": [
+    {
+      "checks": {
+        "beginning": {
+          "bytes_received": 1024,
+          "content_range": "bytes 0-1023/3037020",
+          "requested_range": "bytes=0-1023",
+          "status": 206
+        },
+        "mid_song": {
+          "bytes_received": 1024,
+          "content_range": "bytes 1518510-1519533/3037020",
+          "requested_range": "bytes=1518510-1519533",
+          "status": 206
+        },
+        "near_end": {
+          "bytes_received": 1024,
+          "content_range": "bytes 3035996-3037019/3037020",
+          "requested_range": "bytes=-1024",
+          "status": 206
+        }
+      },
+      "repeated_seek_identical": true,
+      "source_sha256": "7dbe0ddf8df95887615ce290f9bce441b040c71b8abd99ae4415ebdcd617fde8",
+      "spotify_track_id": "3JxRNkoNmAcPgnA5HSnKiz"
+    },
+    {
+      "checks": {
+        "beginning": {
+          "bytes_received": 1024,
+          "content_range": "bytes 0-1023/3283526",
+          "requested_range": "bytes=0-1023",
+          "status": 206
+        },
+        "mid_song": {
+          "bytes_received": 1024,
+          "content_range": "bytes 1641763-1642786/3283526",
+          "requested_range": "bytes=1641763-1642786",
+          "status": 206
+        },
+        "near_end": {
+          "bytes_received": 1024,
+          "content_range": "bytes 3282502-3283525/3283526",
+          "requested_range": "bytes=-1024",
+          "status": 206
+        }
+      },
+      "repeated_seek_identical": true,
+      "source_sha256": "bfabf8de20eaefccf7d6139273d672485b34b526d0d3ad5d51be1cb385083779",
+      "spotify_track_id": "1CwmoUvvRyhiwqhMfvbB4K"
+    },
+    {
+      "checks": {
+        "beginning": {
+          "bytes_received": 1024,
+          "content_range": "bytes 0-1023/3770214",
+          "requested_range": "bytes=0-1023",
+          "status": 206
+        },
+        "mid_song": {
+          "bytes_received": 1024,
+          "content_range": "bytes 1885107-1886130/3770214",
+          "requested_range": "bytes=1885107-1886130",
+          "status": 206
+        },
+        "near_end": {
+          "bytes_received": 1024,
+          "content_range": "bytes 3769190-3770213/3770214",
+          "requested_range": "bytes=-1024",
+          "status": 206
+        }
+      },
+      "repeated_seek_identical": true,
+      "source_sha256": "125ac6afb2dd81166028f609bdf7bb50701257f4655635475efa329ec61b9b3c",
+      "spotify_track_id": "0CnpSTdL9l5vQM4YnzXtyo"
+    },
+    {
+      "checks": {
+        "beginning": {
+          "bytes_received": 1024,
+          "content_range": "bytes 0-1023/3426588",
+          "requested_range": "bytes=0-1023",
+          "status": 206
+        },
+        "mid_song": {
+          "bytes_received": 1024,
+          "content_range": "bytes 1713294-1714317/3426588",
+          "requested_range": "bytes=1713294-1714317",
+          "status": 206
+        },
+        "near_end": {
+          "bytes_received": 1024,
+          "content_range": "bytes 3425564-3426587/3426588",
+          "requested_range": "bytes=-1024",
+          "status": 206
+        }
+      },
+      "repeated_seek_identical": true,
+      "source_sha256": "6755e0ea1025463a9930a4e4abd77e3610e8bbafd91e1a4567c5c1f76333d4f2",
+      "spotify_track_id": "5quFr5s5PXYfUX5jV2EBZ1"
+    },
+    {
+      "checks": {
+        "beginning": {
+          "bytes_received": 1024,
+          "content_range": "bytes 0-1023/3501272",
+          "requested_range": "bytes=0-1023",
+          "status": 206
+        },
+        "mid_song": {
+          "bytes_received": 1024,
+          "content_range": "bytes 1750636-1751659/3501272",
+          "requested_range": "bytes=1750636-1751659",
+          "status": 206
+        },
+        "near_end": {
+          "bytes_received": 1024,
+          "content_range": "bytes 3500248-3501271/3501272",
+          "requested_range": "bytes=-1024",
+          "status": 206
+        }
+      },
+      "repeated_seek_identical": true,
+      "source_sha256": "4caae69ecbb222ee527a0dda2507f18841565483eefd8708a973a3711b0e3fd0",
+      "spotify_track_id": "5l45vVLs4JKkhzN0tvkWJv"
+    }
+  ]
+}

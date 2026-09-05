@@ -1,0 +1,165 @@
+{
+  "negation_rules": [
+    {
+      "examples": [
+        "Not a MV",
+        "Not an MV"
+      ],
+      "explicit_official": false,
+      "pattern": "\\bnot\\s+(?:an?\\s+)?m\\s*/?\\s*v\\b",
+      "polarity": "NEGATED",
+      "rule_id": "NEGATED_NOT_MV",
+      "semantic": "NEGATED_VIDEO_PRESENTATION"
+    },
+    {
+      "examples": [
+        "Unofficial Video"
+      ],
+      "explicit_official": false,
+      "pattern": "\\bunofficial\\s+(?:music\\s+)?video\\b",
+      "polarity": "NEGATED",
+      "rule_id": "NEGATED_UNOFFICIAL_VIDEO",
+      "semantic": "NEGATED_VIDEO_PRESENTATION"
+    },
+    {
+      "examples": [
+        "Not Official"
+      ],
+      "explicit_official": false,
+      "pattern": "\\bnot\\s+official\\b",
+      "polarity": "NEGATED",
+      "rule_id": "NEGATED_NOT_OFFICIAL",
+      "semantic": "NEGATED_VIDEO_PRESENTATION"
+    },
+    {
+      "examples": [
+        "Fan Made Official Style"
+      ],
+      "explicit_official": false,
+      "pattern": "\\bfan[ -]?made\\s+official\\s+style\\b",
+      "polarity": "NEGATED",
+      "rule_id": "NEGATED_FAN_MADE_OFFICIAL_STYLE",
+      "semantic": "NEGATED_VIDEO_PRESENTATION"
+    }
+  ],
+  "positive_rules": [
+    {
+      "examples": [
+        "Official Lyric Video"
+      ],
+      "explicit_official": true,
+      "pattern": "\\bofficial\\s+lyrics?\\s+video\\b",
+      "polarity": "POSITIVE",
+      "rule_id": "OFFICIAL_LYRIC_VIDEO",
+      "semantic": "OFFICIAL_LYRIC_VIDEO"
+    },
+    {
+      "examples": [
+        "Official Audio"
+      ],
+      "explicit_official": true,
+      "pattern": "\\bofficial\\s+audio\\b",
+      "polarity": "POSITIVE",
+      "rule_id": "OFFICIAL_AUDIO",
+      "semantic": "OFFICIAL_AUDIO"
+    },
+    {
+      "examples": [
+        "Official Music Video",
+        "Official Video",
+        "Official M/V",
+        "Official MV"
+      ],
+      "explicit_official": true,
+      "pattern": "\\bofficial\\s+(?:(?:music\\s+)?video|m\\s*/?\\s*v)\\b",
+      "polarity": "POSITIVE",
+      "rule_id": "OFFICIAL_MUSIC_VIDEO",
+      "semantic": "OFFICIAL_MUSIC_VIDEO"
+    },
+    {
+      "examples": [
+        "clip officiel",
+        "vidéo officielle"
+      ],
+      "explicit_official": true,
+      "pattern": "\\b(?:clip\\s+officiel|vid[eé]o\\s+officielle?)\\b",
+      "polarity": "POSITIVE",
+      "rule_id": "FRENCH_OFFICIAL_VIDEO",
+      "semantic": "OFFICIAL_MUSIC_VIDEO"
+    },
+    {
+      "examples": [
+        "video oficial",
+        "vídeo oficial"
+      ],
+      "explicit_official": true,
+      "pattern": "\\bv[ií]deo\\s+oficial\\b",
+      "polarity": "POSITIVE",
+      "rule_id": "SPANISH_OFFICIAL_VIDEO",
+      "semantic": "OFFICIAL_MUSIC_VIDEO"
+    },
+    {
+      "examples": [
+        "M/V",
+        "MV"
+      ],
+      "explicit_official": false,
+      "pattern": "(?<!\\w)m\\s*/?\\s*v(?!\\w)",
+      "polarity": "POSITIVE",
+      "rule_id": "MV_PRESENTATION",
+      "semantic": "MUSIC_VIDEO"
+    },
+    {
+      "examples": [
+        "Music Video"
+      ],
+      "explicit_official": false,
+      "pattern": "\\bmusic\\s+video\\b",
+      "polarity": "POSITIVE",
+      "rule_id": "MUSIC_VIDEO_PRESENTATION",
+      "semantic": "MUSIC_VIDEO"
+    },
+    {
+      "examples": [
+        "Lyric Video",
+        "Lyrics Video"
+      ],
+      "explicit_official": false,
+      "pattern": "\\blyrics?\\s+video\\b",
+      "polarity": "POSITIVE",
+      "rule_id": "LYRIC_VIDEO",
+      "semantic": "LYRIC_VIDEO"
+    },
+    {
+      "examples": [
+        "Lyric",
+        "Lyrics",
+        "Letra"
+      ],
+      "explicit_official": false,
+      "pattern": "\\b(?:lyrics?|letra)\\b",
+      "polarity": "POSITIVE",
+      "rule_id": "LYRICS_PRESENTATION",
+      "semantic": "LYRIC_VIDEO"
+    },
+    {
+      "examples": [
+        "Audio",
+        "Remix Audio"
+      ],
+      "explicit_official": false,
+      "pattern": "\\baudio\\b",
+      "polarity": "POSITIVE",
+      "rule_id": "AUDIO_PRESENTATION",
+      "semantic": "AUDIO_PRESENTATION"
+    }
+  ],
+  "principles": {
+    "bare_audio_requires_corroboration": true,
+    "bare_mv_requires_corroboration": true,
+    "negation_precedes_positive_mv_detection": true,
+    "translation_model_used": false
+  },
+  "schema_version": "stage5b1h-source-phrase-normalization-v1",
+  "scope": "small deterministic high-confidence source-presentation vocabulary"
+}

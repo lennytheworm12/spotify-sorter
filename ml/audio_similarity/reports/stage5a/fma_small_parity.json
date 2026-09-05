@@ -1,0 +1,30 @@
+{
+  "centers_sec": [
+    5,
+    15,
+    25
+  ],
+  "clap": {
+    "maximum_absolute_error": 0.0,
+    "minimum_cosine": 0.9999998807907104,
+    "passed": true,
+    "tolerance": 2e-06,
+    "tracks": 7994
+  },
+  "input_sha256": {
+    "dual_aggregates.parquet": "46baa8c506578b11786eeca2aa96fd0ff2004ebeffee5f4ec5054031a5289925",
+    "muq_segments.sqlite": "7f8a59db837b8ba5dfc213f1e751f82d91b9a9be3387e411f926d97576b8c0c6",
+    "segments.sqlite": "17e5b0a9d2a8fdabefdba1d39a382260254c47a62b4c8e05c0e6d0fd91b895c4"
+  },
+  "method": "UNIFORM3_DUAL_MEAN",
+  "muq": {
+    "maximum_absolute_error": 0.0,
+    "minimum_cosine": 0.9999998807907104,
+    "passed": true,
+    "tolerance": 2e-06,
+    "tracks": 7994
+  },
+  "passed": true,
+  "schema_version": "stage5a-fma-small-parity-v1",
+  "tracks": 7994
+}

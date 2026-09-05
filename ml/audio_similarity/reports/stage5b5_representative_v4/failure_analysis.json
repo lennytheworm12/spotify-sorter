@@ -1,0 +1,99 @@
+{
+  "automated_wrong_count": 0,
+  "benchmark_id": "STAGE5B5_REPRESENTATIVE_LIBRARY_V4",
+  "case_count": 6,
+  "cases": [
+    {
+      "benchmark_id": "stage5b5_representative_v4_004",
+      "first_safe_rank": 1,
+      "rank1": {
+        "category": "TITLE_ARTIST_AMBIGUITY_OR_SEARCH_ODDITY",
+        "human_label": "IDEAL",
+        "human_note": "Exact song identity with official, artist, label, distributor, or Topic evidence.",
+        "title": "ILLIT (아일릿) 'jellyous’ Official MV",
+        "video_id": "GkG60kISnfc"
+      },
+      "selected_human_label": "UNCERTAIN",
+      "selected_rank": 2,
+      "selector_decision": "AUTO_SELECT",
+      "target_title": "jellyous"
+    },
+    {
+      "benchmark_id": "stage5b5_representative_v4_017",
+      "first_safe_rank": 1,
+      "rank1": {
+        "category": "TITLE_ARTIST_AMBIGUITY_OR_SEARCH_ODDITY",
+        "human_label": "IDEAL",
+        "human_note": "Exact song identity with official, artist, label, distributor, or Topic evidence.",
+        "title": "JOOHONEY 주헌 'Push (Feat. 레이 (IVE))' MV",
+        "video_id": "eDSb9J1DJKc"
+      },
+      "selected_human_label": "UNCERTAIN",
+      "selected_rank": 3,
+      "selector_decision": "AUTO_SELECT",
+      "target_title": "Push (Feat. REI (IVE))"
+    },
+    {
+      "benchmark_id": "stage5b5_representative_v4_019",
+      "first_safe_rank": 1,
+      "rank1": {
+        "category": "LIVE_VS_STUDIO",
+        "human_label": "IDEAL",
+        "human_note": "Exact song identity with official, artist, label, distributor, or Topic evidence.",
+        "title": "DPR IAN - No Blueberries (ft. DPR LIVE, CL) OFFICIAL M/V",
+        "video_id": "E-8pyVBvCPQ"
+      },
+      "selected_human_label": null,
+      "selected_rank": null,
+      "selector_decision": "MATCH_UNCERTAIN",
+      "target_title": "No Blueberries"
+    },
+    {
+      "benchmark_id": "stage5b5_representative_v4_040",
+      "first_safe_rank": 2,
+      "rank1": {
+        "category": "MULTI_TRACK_OR_NOT_ISOLATED",
+        "human_label": "WRONG",
+        "human_note": "Full-album upload is not the isolated 178.75-second Spotify track.",
+        "title": "City Girl ~ I don't know why I feel ok right now, but it's nice [Full album]",
+        "video_id": "p0nMDSyOJWI"
+      },
+      "selected_human_label": "IDEAL",
+      "selected_rank": 2,
+      "selector_decision": "AUTO_SELECT",
+      "target_title": "I don't know why I feel ok right now, but it's nice"
+    },
+    {
+      "benchmark_id": "stage5b5_representative_v4_048",
+      "first_safe_rank": 3,
+      "rank1": {
+        "category": "WRONG_REMIX_OR_VERSION",
+        "human_label": "WRONG",
+        "human_note": "Extended 936-second loop is not the 51.187-second Spotify track.",
+        "title": "The girl next door- tomppabeats (extended version)",
+        "video_id": "r9GRIdyRlYw"
+      },
+      "selected_human_label": "IDEAL",
+      "selected_rank": 3,
+      "selector_decision": "AUTO_SELECT",
+      "target_title": "The Girl Next Door"
+    },
+    {
+      "benchmark_id": "stage5b5_representative_v4_067",
+      "first_safe_rank": 2,
+      "rank1": {
+        "category": "METADATA_INSUFFICIENT",
+        "human_label": "UNCERTAIN",
+        "human_note": "Official choreography presentation may not be the requested canonical recording; continue to the next native rank.",
+        "title": "TWICE 'CRY FOR ME' Choreography - 2",
+        "video_id": "bkQw-F1QTq4"
+      },
+      "selected_human_label": "UNCERTAIN",
+      "selected_rank": 1,
+      "selector_decision": "AUTO_SELECT",
+      "target_title": "CRY FOR ME"
+    }
+  ],
+  "schema_version": "stage5b5-representative-v4-failure-analysis-v1",
+  "top3_miss_count": 0
+}

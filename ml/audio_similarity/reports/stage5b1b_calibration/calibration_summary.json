@@ -1,0 +1,189 @@
+{
+  "duration_boundaries": {
+    "close_seconds": 7.0,
+    "derivation": "ceil(q50/q75/q90 of eligible human SAFE absolute deltas)",
+    "moderate_seconds": 48.0,
+    "very_close_seconds": 2.0
+  },
+  "fresh_challenge_validation_required": true,
+  "media_activity": {
+    "audio_downloads": 0,
+    "clap_calls": 0,
+    "muq_calls": 0,
+    "new_youtube_searches": 0,
+    "stage5a_calls": 0,
+    "video_downloads": 0
+  },
+  "policy_artifact": "resolver_policy_candidate_v1.json",
+  "policy_artifact_sha256": "80ef018df79eefea10a3e336968027bc64bdd89c334548a500453a7947f1cbea",
+  "policy_metrics": {
+    "auto_match_count": 14,
+    "automatic_track_coverage": 0.28,
+    "human_audited_selected_count": 6,
+    "human_selected_label_counts": {
+      "IDEAL": 6,
+      "UNAUDITED": 8
+    },
+    "human_selected_safety_counts": {
+      "SAFE": 6,
+      "UNAUDITED": 8
+    },
+    "known_human_safe_auto_match_count": 6,
+    "known_human_uncertain_auto_match_count": 0,
+    "known_human_wrong_auto_match_count": 0,
+    "match_uncertain_count": 36,
+    "match_uncertain_rate": 0.72,
+    "policy_id": "POLICY_CONSERVATIVE_V1",
+    "selected_tracks": [
+      {
+        "candidate_rank": 3,
+        "human_label": null,
+        "human_note_verbatim": null,
+        "sol_label": "IDEAL",
+        "sol_reason": "Officially supplied Seeb remix from the target album, with an exact 198-second duration match.",
+        "stable_track_id": "s5b1b_005",
+        "video_id": "Og_tTWbZP9Q"
+      },
+      {
+        "candidate_rank": 1,
+        "human_label": "IDEAL",
+        "human_note_verbatim": "probably ideal since its the only candidate and matching query exactly",
+        "sol_label": "IDEAL",
+        "sol_reason": "Explicitly the A-Trak Remix by Yeah Yeah Yeahs, with 384-second duration matching the target.",
+        "stable_track_id": "s5b1b_006",
+        "video_id": "XEA6-RlhSb4"
+      },
+      {
+        "candidate_rank": 1,
+        "human_label": "IDEAL",
+        "human_note_verbatim": "official audio and views relative to other candidates",
+        "sol_label": "IDEAL",
+        "sol_reason": "Explicit Disturbed CYRIL Remix with a 186-second duration matching the target.",
+        "stable_track_id": "s5b1b_008",
+        "video_id": "uIBJJ3M76Mg"
+      },
+      {
+        "candidate_rank": 1,
+        "human_label": null,
+        "human_note_verbatim": null,
+        "sol_label": "IDEAL",
+        "sol_reason": "Correct Beyoncé-featured Savage Remix with an exact 242-second duration match.",
+        "stable_track_id": "s5b1b_010",
+        "video_id": "lEIqjoO0-Bs"
+      },
+      {
+        "candidate_rank": 3,
+        "human_label": "IDEAL",
+        "human_note_verbatim": "",
+        "sol_label": "IDEAL",
+        "sol_reason": "Exact title, artist, album context, duration, and explicit 2004 remaster designation.",
+        "stable_track_id": "s5b1b_017",
+        "video_id": "swJOIjjW69U"
+      },
+      {
+        "candidate_rank": 1,
+        "human_label": null,
+        "human_note_verbatim": null,
+        "sol_label": "IDEAL",
+        "sol_reason": "Exact song, artist, 2018 remaster designation, album, and near-exact duration.",
+        "stable_track_id": "s5b1b_018",
+        "video_id": "HYwNM1t9ltI"
+      },
+      {
+        "candidate_rank": 2,
+        "human_label": null,
+        "human_note_verbatim": null,
+        "sol_label": "IDEAL",
+        "sol_reason": "Title exactly matches the target, and the description identifies Taylor Swift and the requested recording.",
+        "stable_track_id": "s5b1b_022",
+        "video_id": "aPnqx56V8-0"
+      },
+      {
+        "candidate_rank": 2,
+        "human_label": "IDEAL",
+        "human_note_verbatim": "",
+        "sol_label": "IDEAL",
+        "sol_reason": "Distributor description identifies Sam Smith's Latch (Acoustic), and its duration closely matches the target.",
+        "stable_track_id": "s5b1b_024",
+        "video_id": "YVZZFZCq-Cw"
+      },
+      {
+        "candidate_rank": 1,
+        "human_label": null,
+        "human_note_verbatim": null,
+        "sol_label": "IDEAL",
+        "sol_reason": "Title and distributor description exactly identify Foo Fighters' Everlong (Acoustic Version) from Greatest Hits.",
+        "stable_track_id": "s5b1b_025",
+        "video_id": "YLRlOvzs-XU"
+      },
+      {
+        "candidate_rank": 2,
+        "human_label": "IDEAL",
+        "human_note_verbatim": "",
+        "sol_label": "IDEAL",
+        "sol_reason": "Artist, exact version title, release context, and 160-second duration match the target.",
+        "stable_track_id": "s5b1b_029",
+        "video_id": "3i_MBzr7LWs"
+      },
+      {
+        "candidate_rank": 1,
+        "human_label": null,
+        "human_note_verbatim": null,
+        "sol_label": "IDEAL",
+        "sol_reason": "Exact chill-version title, artist, and 177-second duration match the target.",
+        "stable_track_id": "s5b1b_030",
+        "video_id": "lNarDaEr7EY"
+      },
+      {
+        "candidate_rank": 4,
+        "human_label": "IDEAL",
+        "human_note_verbatim": "",
+        "sol_label": "IDEAL",
+        "sol_reason": "Exact song and artist; 219-second duration closely matches the 217.7-second album track.",
+        "stable_track_id": "s5b1b_031",
+        "video_id": "xx87PIYdYZ8"
+      },
+      {
+        "candidate_rank": 2,
+        "human_label": null,
+        "human_note_verbatim": null,
+        "sol_label": "IDEAL",
+        "sol_reason": "Official audio for the correct song with a 237-second duration matching the target.",
+        "stable_track_id": "s5b1b_039",
+        "video_id": "vapT7WBkBdY"
+      },
+      {
+        "candidate_rank": 5,
+        "human_label": null,
+        "human_note_verbatim": null,
+        "sol_label": "IDEAL",
+        "sol_reason": "The supplied release metadata explicitly names Bad Wolves, Disobey, and the 2018 release, while its 255-second duration matches the target.",
+        "stable_track_id": "s5b1b_042",
+        "video_id": "ab54PrUx9kw"
+      }
+    ],
+    "selected_without_human_audit_count": 8,
+    "sol_selected_label_counts": {
+      "IDEAL": 14
+    },
+    "sol_selected_safety_counts": {
+      "SAFE": 14
+    },
+    "sol_uncertain_auto_match_count": 0,
+    "sol_wrong_auto_match_count": 0,
+    "targeted_audit_bias_warning": "Selected-candidate human counts apply only where the targeted queue happened to include that candidate; they are not full-universe precision.",
+    "track_count": 50
+  },
+  "production_auto_match_activated": false,
+  "schema_version": "stage5b1b-calibration-summary-v1",
+  "selected_policy_id": "POLICY_CONSERVATIVE_V1",
+  "sol_human_agreement": {
+    "all_state_safety_agreement_count": 58,
+    "all_state_safety_agreement_rate": 0.725,
+    "both_resolved_safety_agreement_count": 56,
+    "both_resolved_safety_agreement_rate": 0.9032258064516129,
+    "exact_label_agreement_count": 49,
+    "exact_label_agreement_rate": 0.6125
+  },
+  "status": "STAGE5B1B_POLICY_READY_FOR_FRESH_CHALLENGE_VALIDATION"
+}

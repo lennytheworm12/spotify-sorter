@@ -1,0 +1,54 @@
+{
+  "artifacts": {
+    "audit_queue": {
+      "path": "reports/stage5b1d_targeted_rediscovery/rediscovery_human_audit_queue.json",
+      "sha256": "da1b3db07458ebff22bfb9b07b728d09c25265fda455f149931da9561b56fbff",
+      "size_bytes": 340
+    },
+    "decisions": {
+      "path": "reports/stage5b1d_targeted_rediscovery/rediscovery_decisions.json",
+      "sha256": "f99153f815b9b161ba13e8cdaa27da6bc33b77f1dbb9ce35c56647445d18f081",
+      "size_bytes": 86391
+    },
+    "discovery": {
+      "path": "reports/stage5b1d_targeted_rediscovery/targeted_discovery.json",
+      "sha256": "35d95fca1a2b007c1e9aed18237da68d537e304d7cf1d1eb80755b5ca8154e76",
+      "size_bytes": 127111
+    },
+    "features": {
+      "path": "reports/stage5b1d_targeted_rediscovery/rediscovery_candidate_features.json",
+      "sha256": "f27ebe2d1ea837f7f2e5d23d79d5f8b291c68f584e1f9455c2711e5d8e820590",
+      "size_bytes": 1290107
+    },
+    "human_review": {
+      "path": "reports/stage5b1d_targeted_rediscovery/rediscovery_human_review.csv",
+      "sha256": "2767b7ea0ff9976c3083a9a06be0bb7b4f23d01dca18dd3db89af7576b87ac76",
+      "size_bytes": 428
+    },
+    "queries": {
+      "path": "reports/stage5b1d_targeted_rediscovery/targeted_queries.json",
+      "sha256": "2064db61cf6d87af346fd0e126d588b29a4a0216acad56b1bb6e9a0f51454b77",
+      "size_bytes": 9145
+    },
+    "report": {
+      "path": "reports/stage5b1d_targeted_rediscovery/targeted_rediscovery_report.md",
+      "sha256": "f3570530af0bc1328842e143c0385526a3fe9db8d105488d6291c70b5ab6a15f",
+      "size_bytes": 9851
+    }
+  },
+  "config_sha256": "f0999443507e14b5472ea2772d5051dfe04e2fc2bc03a774235426063f5acdac",
+  "frozen_input_sha256": {
+    "challenge_config": "283901e8e6804757a5246025e14c43e07311830ca3708ce05db00c394b1aaedd",
+    "challenge_discovery": "95bb1ca905a05fcc4167da10e3dfd6cf267600a4dfb1898b491d28ba855e6fb4",
+    "remaining_tail_diagnostic": "9968f84d5dbd4825f88dd0fdc329971d93db87e0b2cd9f2b89364f2cbf145ebf",
+    "strong_metadata_decisions": "740b085b2061935b1d66586534ed4bc418c4ed2562f0cd96efeb4b596748793c"
+  },
+  "media_activity": {
+    "audio_downloads": 0,
+    "clap_calls": 0,
+    "muq_calls": 0,
+    "stage5a_calls": 0,
+    "video_downloads": 0
+  },
+  "schema_version": "stage5b1d-artifact-manifest-v1"
+}

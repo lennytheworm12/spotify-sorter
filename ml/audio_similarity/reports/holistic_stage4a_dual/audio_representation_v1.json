@@ -1,0 +1,298 @@
+{
+  "audio": {
+    "channels": "mono",
+    "excerpt_seconds": 30,
+    "preprocessing_version": "fma_full_mono_24khz_no_pad_v1",
+    "sample_rate_hz": 24000
+  },
+  "audio_representation": "Audio Representation v1",
+  "claim_boundary": {
+    "active_engineering_representation": "CLAP + MuQ",
+    "engineering_basis": "Previously frozen engineering decision; Stage 4A does not change the Stage 2B scientific conclusion.",
+    "population_claim": false,
+    "stage2b_scientific_conclusion": "SINGLE_ENCODER_WINS / CLAP"
+  },
+  "encoders": {
+    "clap": {
+      "checkpoint": "models/music_audioset_epoch_15_esc_90.14.pt",
+      "checkpoint_sha256": "fae3e9c087f2909c28a09dc31c8dfcdacbc42ba44c70e972b58c1bd1caf6dedd",
+      "id": "laion_clap",
+      "provenance": "stage2b_reproducibly_observed",
+      "provenance_record": "reports/holistic_stage2b/checkpoint_provenance_erratum.md"
+    },
+    "muq": {
+      "config_sha256": "8fefc545ef87ecd9bcde7417dd03464370c48c321f36dcff20266a752079e468",
+      "id": "muq_mulan_large",
+      "repository": "OpenMuQ/MuQ-MuLan-large",
+      "revision": "2e01c796b71dca71b45251384c04cd7b237c9020",
+      "weights_sha256": "d42ae3f7cb9b66759ee0089ddc70e2f28b130c2d8ba621457358272d32dd0444"
+    }
+  },
+  "engineering_product_decision": {
+    "basis": "Observed K=3 evidence satisfied the material-improvement rule on available judgments and the post-experiment sensitivity analysis is robust except for one worst-case boundary outcome.",
+    "decision": "SELECT_K3_FOR_AUDIO_REPRESENTATION_V1",
+    "overrides_protocol_fallback_for_engineering": true,
+    "rewrites_frozen_experimental_verdict": false,
+    "segment_centers_seconds": [
+      5,
+      15,
+      25
+    ],
+    "selected_k": 3,
+    "selected_method": "UNIFORM3_DUAL_MEAN"
+  },
+  "frozen_experimental_result": {
+    "bootstrap": {
+      "confidence": 0.95,
+      "draws": 50000,
+      "seed": 20260905,
+      "unit": "query"
+    },
+    "comparisons": {
+      "UNIFORM3_vs_CENTER5": {
+        "comparison": "K=3 vs K=1",
+        "excluded_neither_judgments": 6,
+        "higher_cost_method": "UNIFORM3_DUAL_MEAN",
+        "improvement_95_ci": [
+          0.006849315068493178,
+          0.1986301369863014
+        ],
+        "improvement_over_cheaper": 0.10273972602739723,
+        "lower_cost_method": "CENTER5_DUAL",
+        "neither_rate": 0.0759493670886076,
+        "query_bootstrap_95_ci": [
+          0.5068493150684932,
+          0.6986301369863014
+        ],
+        "query_macro_preference_for_higher_cost": 0.6027397260273972,
+        "rated_trials": 79,
+        "satisfies_material_improvement_rule": true,
+        "tie_rate": 0.22784810126582278,
+        "usable_judgments": 73
+      },
+      "UNIFORM5_vs_CENTER5": {
+        "comparison": "K=5 vs K=1",
+        "excluded_neither_judgments": 8,
+        "higher_cost_method": "UNIFORM5_DUAL_MEAN",
+        "improvement_95_ci": [
+          -0.09722222222222221,
+          0.09722222222222221
+        ],
+        "improvement_over_cheaper": 0.0,
+        "lower_cost_method": "CENTER5_DUAL",
+        "neither_rate": 0.1,
+        "query_bootstrap_95_ci": [
+          0.4027777777777778,
+          0.5972222222222222
+        ],
+        "query_macro_preference_for_higher_cost": 0.5,
+        "rated_trials": 80,
+        "satisfies_material_improvement_rule": false,
+        "tie_rate": 0.225,
+        "usable_judgments": 72
+      },
+      "UNIFORM5_vs_UNIFORM3": {
+        "comparison": "K=5 vs K=3",
+        "excluded_neither_judgments": 4,
+        "higher_cost_method": "UNIFORM5_DUAL_MEAN",
+        "improvement_95_ci": [
+          -0.026666666666666672,
+          0.17333333333333334
+        ],
+        "improvement_over_cheaper": 0.07333333333333336,
+        "lower_cost_method": "UNIFORM3_DUAL_MEAN",
+        "neither_rate": 0.05063291139240506,
+        "query_bootstrap_95_ci": [
+          0.47333333333333333,
+          0.6733333333333333
+        ],
+        "query_macro_preference_for_higher_cost": 0.5733333333333334,
+        "rated_trials": 79,
+        "satisfies_material_improvement_rule": false,
+        "tie_rate": 0.17721518987341772,
+        "usable_judgments": 75
+      }
+    },
+    "frozen_metrics": {
+      "append_only_events": 275,
+      "bootstrap": {
+        "draws": 50000,
+        "seed": 20260905,
+        "unit": "query"
+      },
+      "canonical_trials": 238,
+      "designated_reviewer": "lenny",
+      "method_pairs": {
+        "UNIFORM3_vs_CENTER5": {
+          "higher_method": "UNIFORM3_DUAL_MEAN",
+          "higher_pairwise_preference": 0.6027397260273972,
+          "higher_query_macro_preference": 0.6027397260273972,
+          "improvement_95_ci": [
+            0.006849315068493178,
+            0.1986301369863014
+          ],
+          "improvement_over_0_5": 0.10273972602739723,
+          "lower_method": "CENTER5_DUAL",
+          "neither_rate": 0.0759493670886076,
+          "preference_denominator": 73,
+          "represented_queries": 73,
+          "tie_rate": 0.22784810126582278,
+          "trials": 79
+        },
+        "UNIFORM5_vs_CENTER5": {
+          "higher_method": "UNIFORM5_DUAL_MEAN",
+          "higher_pairwise_preference": 0.5,
+          "higher_query_macro_preference": 0.5,
+          "improvement_95_ci": [
+            -0.09722222222222221,
+            0.09722222222222221
+          ],
+          "improvement_over_0_5": 0.0,
+          "lower_method": "CENTER5_DUAL",
+          "neither_rate": 0.1,
+          "preference_denominator": 72,
+          "represented_queries": 72,
+          "tie_rate": 0.225,
+          "trials": 80
+        },
+        "UNIFORM5_vs_UNIFORM3": {
+          "higher_method": "UNIFORM5_DUAL_MEAN",
+          "higher_pairwise_preference": 0.5733333333333334,
+          "higher_query_macro_preference": 0.5733333333333334,
+          "improvement_95_ci": [
+            -0.026666666666666672,
+            0.17333333333333334
+          ],
+          "improvement_over_0_5": 0.07333333333333336,
+          "lower_method": "UNIFORM3_DUAL_MEAN",
+          "neither_rate": 0.05063291139240506,
+          "preference_denominator": 75,
+          "represented_queries": 75,
+          "tie_rate": 0.17721518987341772,
+          "trials": 79
+        }
+      },
+      "primary_denominator": "dual_encoder_bundle_only",
+      "protocol_failure": true,
+      "required_trials": 240,
+      "schema_version": "stage4a-dual-final-metrics-v1",
+      "stage4b_triggered": false,
+      "superseded_clap_only_ratings_included": false,
+      "verdict": "INSUFFICIENT_EVIDENCE_PICK_CHEAPER"
+    },
+    "material_improvement_threshold": 0.05,
+    "neither_handling": "Neither is excluded from preference estimates.",
+    "protocol_effect": "The frozen decision rule returns the cheaper K=1 configuration because 2 expected designated-reviewer outcomes are missing; pairwise estimates are retained as incomplete evidence.",
+    "protocol_failure": true,
+    "ratings_validation": {
+      "all_event_responses_valid": true,
+      "all_expected_trials_represented": false,
+      "append_only_events": 275,
+      "blank_event_id_rows": [],
+      "blocking_data_problems": [],
+      "designated_reviewer": "lenny",
+      "designated_reviewer_events": 275,
+      "duplicate_event_ids": [],
+      "expected_canonical_trials": 240,
+      "frozen_trial_keys": 240,
+      "ignored_non_designated_reviewer_events": 0,
+      "invalid_response_rows": [],
+      "invalid_timestamp_rows": [],
+      "latest_choice_counts": {
+        "A": 109,
+        "B": 61,
+        "Neither": 18,
+        "Tie": 50
+      },
+      "latest_designated_reviewer_outcomes": 238,
+      "missing_trial_ids": [
+        "s4d_06b09666b6f5f181e38c",
+        "s4d_5c4384de67dff3a784ac"
+      ],
+      "protocol_problems": [
+        "MISSING_DESIGNATED_REVIEWER_OUTCOMES"
+      ],
+      "public_trial_rows": 240,
+      "status": "PROTOCOL_FAILURE",
+      "supersession_violations": [],
+      "unique_event_ids": 275,
+      "unknown_trial_ids": [],
+      "valid_responses": [
+        "A",
+        "B",
+        "Neither",
+        "Tie"
+      ]
+    },
+    "tie_handling": "Tie receives 0.5 credit.",
+    "verdict": "INSUFFICIENT_EVIDENCE_PICK_CHEAPER",
+    "verdict_must_not_be_rewritten_as": "UNIFORM3_DUAL_WINS"
+  },
+  "fusion": {
+    "clap_weight": 0.7172981519,
+    "method": "weighted sum of per-encoder cosine similarities",
+    "muq_weight": 0.2827018481,
+    "stage4a_refit_weights": false,
+    "statement": "Stage 4A did not refit the frozen fusion weights."
+  },
+  "human_ratings_provenance": {
+    "evaluator_bundle_path": "reports/holistic_stage4a_dual/evaluator_bundle.json",
+    "evaluator_bundle_sha256": "3d7deae941e8c9e293030262356c79a1c31d726d866475575f9945a080af9aae",
+    "frozen_metrics_implementation_path": "src/audio_similarity/stage4a_dual_metrics.py",
+    "frozen_metrics_implementation_sha256": "e30f7aa7b6210e9758d3de0d6e700d5b85ae17c9862556f04b4ea7b8e63c95ab",
+    "public_trials_path": "reports/holistic_stage4a_dual/dual_trials.csv",
+    "public_trials_sha256": "95ceedf181b40fcc43fb274114d1bff2a3a2536ecb0a6b0f41475c9cd0aa7502",
+    "ratings_path": "reports/holistic_stage4a_dual/human_ratings.csv",
+    "ratings_sha256": "b408707540883b4526cdc541dd2a1916be90e23c80f090f5df8ce21c2c17c0cf",
+    "trial_keys_path": "reports/holistic_stage4a_dual/trial_keys.json",
+    "trial_keys_sha256": "060c425f4383ea03e464fc0d1582dfe0a30f054cdcca63ef8d15a6fc410f244d"
+  },
+  "post_experiment_sensitivity_analysis": {
+    "analysis_type": "post-experiment missing-outcome sensitivity",
+    "frozen_experimental_result_changed": false,
+    "k3_vs_k1_missing_judgment": {
+      "conclusion": "K=3 is robust to every missing outcome except the single worst-case K=1-win boundary condition.",
+      "scenarios": {
+        "K1_win": {
+          "k3_remains_material": false,
+          "lower_confidence_bound_at_decision_precision": 0.5,
+          "reason": "The lower confidence bound reaches the 0.5000 boundary and therefore fails the strict gate.",
+          "strict_gate": "> 0.50"
+        },
+        "K3_win": {
+          "k3_remains_material": true
+        },
+        "Neither": {
+          "k3_remains_material": true
+        },
+        "Tie": {
+          "k3_remains_material": true
+        }
+      },
+      "trial_id": "s4d_06b09666b6f5f181e38c"
+    },
+    "k5_vs_k3_missing_judgment": {
+      "can_make_k5_materially_superior": false,
+      "conclusion": "The missing K=5 vs K=3 judgment cannot make K=5 materially superior under the frozen rule.",
+      "most_favorable_outcome_for_k5": "K5 win",
+      "trial_id": "s4d_5c4384de67dff3a784ac"
+    },
+    "ratings_imputed": false
+  },
+  "schema_version": "audio-representation-v1-stage4a-closeout-v2",
+  "stage4b_execution": "NOT_RUN",
+  "stage4b_triggered": false,
+  "status": "CLOSED_WITH_ENGINEERING_AMENDMENT",
+  "temporal_sampling": {
+    "aggregation": "Within each encoder, L2-normalize every segment embedding, take the arithmetic mean across the selected centers, then L2-normalize the aggregate; fuse encoder cosine similarities only after independent temporal aggregation.",
+    "downstream_contract": "Stage 5 consumers must use K=3 with centers [5, 15, 25]; Stage 5 implementation has not begun.",
+    "segment_centers_seconds": [
+      5,
+      15,
+      25
+    ],
+    "segment_duration_seconds": 5,
+    "selected_k": 3,
+    "selected_method": "UNIFORM3_DUAL_MEAN"
+  }
+}

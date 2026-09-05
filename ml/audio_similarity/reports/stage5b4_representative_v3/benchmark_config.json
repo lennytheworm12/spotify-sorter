@@ -1,0 +1,141 @@
+{
+  "benchmark_id": "STAGE5B4_REPRESENTATIVE_V3",
+  "benchmark_manifest": {
+    "path": "reports/stage5b4_representative_v3/benchmark_manifest.json",
+    "sha256": "e5d54e06e410d74a1b588f8d853c5ca9a25e97ba09dd26692c5978a15245097e"
+  },
+  "gates": {
+    "automated_coverage_minimum": 0.9,
+    "automated_safe_precision_minimum": 0.95,
+    "harmful_false_veto_requires_refinement": true,
+    "raw_top1_safe_minimum": 0.9,
+    "systematic_wrong_family_minimum_count": 2,
+    "top3_safe_recall_replication_minimum": 0.99
+  },
+  "historical_exclusion_paths": [
+    {
+      "path": "reports/stage5b1a/frozen_tracks.json",
+      "sha256": "f3592bb8c8dea689959a22da222d8b7ce4911c1804392acb501cffe768700c57"
+    },
+    {
+      "path": "reports/stage5b1b/heldout_tracks.json",
+      "sha256": "39557ede8f07bde129ad23d2bc64a0faf0fff755356cd87f2054e14f91d81e5a"
+    },
+    {
+      "path": "reports/stage5b1b_fresh_challenge/challenge_tracks.json",
+      "sha256": "e2e9a1ab43f568dd9de853c2964f341ee0d0e2631ca87f732d0d4326ab990f79"
+    },
+    {
+      "path": "reports/stage5b_representative_library_v1/benchmark_manifest.json",
+      "sha256": "cec77ef960fa5da7725e8a0df244a5829fb90fdc5463dc1ce6a2ef72667f4285"
+    },
+    {
+      "path": "reports/stage5b_youtube_prior_v1/benchmark_manifest.json",
+      "sha256": "3a967360ece50d3792f48c3bf857f5270965d09610d2601b517bd2a0e1c23396"
+    }
+  ],
+  "prior_review_exclusion_audit": {
+    "review_sources": [
+      {
+        "path": "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/reports/stage5b_representative_library_v1/human_review.csv",
+        "sha256": "def47fb7c72d128e45e70c22e1f9099890d017c67f7e5d8be0f7822b8a3faa73",
+        "spotify_track_count": 81
+      },
+      {
+        "path": "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/reports/stage5b_youtube_prior_v1/human_review.csv",
+        "sha256": "e0a39ed88fe840982b4e3ece77102e667baaed83cebff49f7fee0f3f0ecdcef7",
+        "spotify_track_count": 100
+      },
+      {
+        "path": "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/reports/stage5b3_minimal_selector/human_review.csv",
+        "sha256": "df887113513a51e05329fd8535fe3c9acefbb0b227e7e21b4cb9749d7f8d8a3c",
+        "spotify_track_count": 9
+      }
+    ],
+    "uncovered_reviewed_spotify_track_count": 0,
+    "unique_reviewed_spotify_track_count": 181
+  },
+  "private_library_snapshot_sha256": "0a31c8828a2a586008d78a0a6026a83a737db5e943cbd99847c1ae9005a43331",
+  "query": {
+    "alternate_queries": 0,
+    "forced_official_token": false,
+    "implementation": {
+      "path": "src/audio_similarity/stage5b2_youtube_prior.py",
+      "sha256": "1ed216646e0f4ae89f5b32341cb56ee71e79969b423a1dee9fae4b3073a9599b"
+    },
+    "query_id": "NATURAL_SPOTIFY_TITLE_PRIMARY_ARTIST_V1",
+    "quotes": false,
+    "resolver_title_rewriting": false,
+    "template": "{spotify_title} {primary_artist}"
+  },
+  "retrieval": {
+    "candidate_limit": 3,
+    "max_attempts": 2,
+    "metadata_only": true,
+    "mode": "ytsearch3",
+    "preserve_native_rank": true,
+    "provider": "yt_dlp",
+    "retry_backoff_seconds": 2.0,
+    "sequential": true,
+    "sleep_between_tracks_seconds": 3.0,
+    "socket_timeout_seconds": 30
+  },
+  "review": {
+    "automated_decisions_hidden": true,
+    "labels": [
+      "IDEAL",
+      "ACCEPTABLE",
+      "WRONG",
+      "UNCERTAIN"
+    ],
+    "protocol": "SEQUENTIAL_NATIVE_RANKS_UNTIL_FIRST_SAFE_THEN_SELECTOR_SUPPLEMENT",
+    "rank1_non_safe_reason_required": true,
+    "safe_labels": [
+      "IDEAL",
+      "ACCEPTABLE"
+    ]
+  },
+  "sample_seed": "stage5b4-representative-v3-seed-2026-09-03",
+  "sample_size": 100,
+  "schema_version": "stage5b4-representative-v3-config-v1",
+  "scope_guards": {
+    "audio_downloads": 0,
+    "clap_calls": 0,
+    "muq_calls": 0,
+    "post_freeze_substitution_permitted": false,
+    "production_activation": false,
+    "query_tuning_permitted": false,
+    "selector_tuning_permitted": false,
+    "video_downloads": 0
+  },
+  "selector": {
+    "calibration_decisions": {
+      "path": "reports/stage5b3_minimal_selector/minimal_selector_decisions.json",
+      "sha256": "39a417c01ce0e4cf9443a2b6fc75175e66be204b5fabb2b38ed2b65f38fa6d37"
+    },
+    "calibration_reproduction": {
+      "auto_select_count": 99,
+      "human_safe_count": 97,
+      "human_uncertain_count": 2,
+      "human_wrong_count": 0,
+      "match_uncertain_count": 1
+    },
+    "contract": {
+      "duration_boundary_seconds": 20.0,
+      "duration_veto_operator": ">",
+      "native_rank_is_primary": true,
+      "positive_proof_requirements": [],
+      "vetoes": [
+        "UNREQUESTED_LIVE_OR_PERFORMANCE",
+        "DURATION_ANOMALY_GT_20_SECONDS"
+      ]
+    },
+    "implementation": {
+      "path": "src/audio_similarity/stage5b3_minimal_selector.py",
+      "sha256": "262ac3d0d7459170fef81336ee6f54f5523f2d8300fedee8a51798ce8439160f"
+    },
+    "production_activated": false,
+    "selector_id": "STAGE5B3_MINIMAL_YOUTUBE_SELECTOR_V1",
+    "source_commit": "bb2a1dff8901dfe790fe87bdc9d35f7073048155"
+  }
+}

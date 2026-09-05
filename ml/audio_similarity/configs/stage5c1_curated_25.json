@@ -1,0 +1,136 @@
+{
+  "schema_version": "stage5c1-curation-plan-v1",
+  "experiment_id": "stage5c1_curated_25_materialization",
+  "groups": {
+    "A": {
+      "name": "same_artist_similar_style",
+      "expected_relationship": "A coherent City Girl cluster: mellow lo-fi instrumentals with closely related texture, pacing, and production.",
+      "tracks": [
+        {
+          "spotify_track_id": "12xARyH7lVwQyeyBJd80Mz",
+          "rationale": "Dreamy instrumental lo-fi from the Loveless Shadows era; a direct positive control for City Girl's soft, sample-rich sound."
+        },
+        {
+          "spotify_track_id": "7FpUGKMaiBj1AmWgufABjJ",
+          "rationale": "Warm, relaxed Snow Rose instrumental chosen to match the group's intimate beat-driven production."
+        },
+        {
+          "spotify_track_id": "19BDozGmxYGxF1NcUlENmm",
+          "rationale": "Another gentle Snow Rose cut with the same understated lo-fi palette and energy."
+        },
+        {
+          "spotify_track_id": "47GDIIaeH1GaU7unvTGroF",
+          "rationale": "Airy, reflective Snow Rose instrumental expected to remain close to the other City Girl controls."
+        },
+        {
+          "spotify_track_id": "07YG6Ark70YsDK4q3swKrc",
+          "rationale": "Short ambient-leaning City Girl piece that preserves the core lo-fi palette while adding modest textural variation."
+        }
+      ]
+    },
+    "B": {
+      "name": "same_artist_stylistically_varied",
+      "expected_relationship": "Shared LE SSERAFIM voices and pop production should remain visible, but the softer R&B, disco-pop, warm midtempo, western-funk, and dark electronic cuts should not collapse into a uniformly tight cluster.",
+      "tracks": [
+        {
+          "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+          "rationale": "Warm midtempo pop chosen as the gentler end of the artist's production range."
+        },
+        {
+          "spotify_track_id": "37YoRLUu1qId0ewavgvnkG",
+          "rationale": "Sleek disco-funk production provides a rhythmic contrast to the quieter selections."
+        },
+        {
+          "spotify_track_id": "6wBpO4Xc4YgShnENGSFA1M",
+          "rationale": "Sparse, soft R&B-influenced track tests whether sonic style outweighs shared vocal identity."
+        },
+        {
+          "spotify_track_id": "51vRumtqbkNW9wrKfESwfu",
+          "rationale": "High-energy western-funk pop with Nile Rodgers creates an intentionally strong production contrast."
+        },
+        {
+          "spotify_track_id": "5o4U0weUIAXolji4sEAnjI",
+          "rationale": "Dark, minimal electronic production represents a different recent-era texture and energy."
+        }
+      ]
+    },
+    "C": {
+      "name": "lofi_chillhop_different_artists",
+      "expected_relationship": "Cross-artist lo-fi/chillhop tracks should cluster through soft drums, mellow samples, restrained dynamics, and hazy texture rather than artist identity.",
+      "tracks": [
+        {
+          "spotify_track_id": "5pSflTWYmlRVthO8CZpRem",
+          "rationale": "Mellow, atmospheric lo-fi beat selected as a central cross-artist style reference."
+        },
+        {
+          "spotify_track_id": "41hXE5S8D4mRfcdqSMpmAC",
+          "rationale": "Compact sample-driven chillhop with a historically SAFE rank-3 recovery."
+        },
+        {
+          "spotify_track_id": "4fgIoBKHzO7YO5eATyYbMl",
+          "rationale": "Warm jazz-inflected lo-fi production should connect through groove and instrumentation."
+        },
+        {
+          "spotify_track_id": "1VFbHdNzYUJr0FsxoayP1N",
+          "rationale": "Soft, nostalgic lo-fi beat broadens the cluster without changing its core sonic character."
+        },
+        {
+          "spotify_track_id": "3JbyoXyJvsfAPx87INISmp",
+          "rationale": "Dusty vocal-sample lo-fi adds modest vocal texture while retaining the same beat aesthetic."
+        }
+      ]
+    },
+    "D": {
+      "name": "rhythmic_korean_pop_different_artists",
+      "expected_relationship": "Rhythmic, polished Korean pop and pop-rap productions should form a second cross-artist cluster that is audibly distinct from the mellow lo-fi Group C.",
+      "tracks": [
+        {
+          "spotify_track_id": "7tNJeoUZeWrVOCfvpAHWT1",
+          "rationale": "Hard-edged electronic dance-pop anchors the energetic end of the cluster."
+        },
+        {
+          "spotify_track_id": "1iIhGHzzrzqQfuNkFI2qAn",
+          "rationale": "Rhythmic pop-rap with a historically SAFE rank-2 selection adds groove-led variety."
+        },
+        {
+          "spotify_track_id": "4as4XEOR03oGm1STUKl6pa",
+          "rationale": "Minimal electropop/R&B production tests cross-artist similarity within polished Korean pop."
+        },
+        {
+          "spotify_track_id": "4ecdsGz3Hg6TKPwQ0ZOdJz",
+          "rationale": "Percussive contemporary idol pop/hip-hop reinforces the cluster's dense rhythmic production."
+        },
+        {
+          "spotify_track_id": "3aAnwyBJY9OLNLqSgd4fZU",
+          "rationale": "Dramatic synth-pop and rock texture supplies a SAFE rank-3 recovery and controlled stylistic breadth."
+        }
+      ]
+    },
+    "E": {
+      "name": "heterogeneous_negative_control",
+      "expected_relationship": "These acoustic pop, distorted electronic, melodic rap, solo piano, and orchestral ballad tracks should have lower and more varied mutual similarities than the positive-control clusters.",
+      "tracks": [
+        {
+          "spotify_track_id": "35IcAVSMsU9qzHfpPbvC8A",
+          "rationale": "Intimate acoustic singer-songwriter pop is unlike the electronic and instrumental controls."
+        },
+        {
+          "spotify_track_id": "2oRNyf4qlAzGz6LljMcDJp",
+          "rationale": "Distorted, high-energy electronic production supplies a strong negative contrast."
+        },
+        {
+          "spotify_track_id": "2eAZfqOm4EnOF9VvN50Tyc",
+          "rationale": "Melodic rap introduces prominent rap delivery and trap production."
+        },
+        {
+          "spotify_track_id": "5lYv58lizCFl1c15K3yan9",
+          "rationale": "Solo-piano video-game arrangement is intentionally sparse and instrumental."
+        },
+        {
+          "spotify_track_id": "2BPXILn0MqOe5WroVXlvN1",
+          "rationale": "Large orchestral K-drama ballad provides the negative set's vocal and cinematic extreme."
+        }
+      ]
+    }
+  }
+}

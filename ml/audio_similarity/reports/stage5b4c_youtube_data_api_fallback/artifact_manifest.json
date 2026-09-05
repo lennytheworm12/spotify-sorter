@@ -1,0 +1,81 @@
+{
+  "artifacts": {
+    "data_api_search.json": {
+      "path": "reports/stage5b4c_youtube_data_api_fallback/data_api_search.json",
+      "sha256": "19eac87ddc6c81e5d0f2a86a2518e0e0a7e0deea9229ffcbe303234f46fdd225",
+      "size_bytes": 1401
+    },
+    "fallback_config.json": {
+      "path": "reports/stage5b4c_youtube_data_api_fallback/fallback_config.json",
+      "sha256": "2451984b87b2d3e068e387ab61e8b89c847a6f14c9934b5e69ec634b6c3b76cb",
+      "size_bytes": 5114
+    },
+    "fallback_metrics.json": {
+      "path": "reports/stage5b4c_youtube_data_api_fallback/fallback_metrics.json",
+      "sha256": "ebbe500f3aef73c050462f372ab00fbd8ffe4ff93aa86c8c0524729bfdda8e9f",
+      "size_bytes": 1381
+    },
+    "fallback_report.md": {
+      "path": "reports/stage5b4c_youtube_data_api_fallback/fallback_report.md",
+      "sha256": "7c7ce3ad6aafeb8977f79edb91d15f3bdb5db66ed226d9907fa5a396218120fb",
+      "size_bytes": 2545
+    },
+    "human_review.csv": {
+      "path": "reports/stage5b4c_youtube_data_api_fallback/human_review.csv",
+      "sha256": "d2a87455f40c84ccb5d36b1c461898caa113551d1324206bf917c6676829f5e7",
+      "size_bytes": 635
+    },
+    "hydrated_candidates.json": {
+      "path": "reports/stage5b4c_youtube_data_api_fallback/hydrated_candidates.json",
+      "sha256": "d85b249a3a4bdae0de95f4fb7f1be0341f97ca8b8fea60f45b1d2a7bb8c208a6",
+      "size_bytes": 682
+    },
+    "primary_discovery.json": {
+      "path": "reports/stage5b4c_youtube_data_api_fallback/primary_discovery.json",
+      "sha256": "7d330c55f240ffcf230d9a8254fb3b62db2f862490603a262a69be691b463b52",
+      "size_bytes": 1537
+    }
+  },
+  "experiment_id": "STAGE5B4C_YOUTUBE_DATA_API_FALLBACK_V1",
+  "frozen_inputs": {
+    "stage5b3_selector": {
+      "path": "src/audio_similarity/stage5b3_minimal_selector.py",
+      "sha256": "262ac3d0d7459170fef81336ee6f54f5523f2d8300fedee8a51798ce8439160f",
+      "size_bytes": 23106
+    },
+    "stage5b4b_manifest": {
+      "path": "reports/stage5b4b_playwright_fallback/artifact_manifest.json",
+      "sha256": "eef72686dadee7a314e9880ac3867f1da6cf4f15acca56411566dadd413e0d50",
+      "size_bytes": 6316
+    }
+  },
+  "implementation": {
+    "adapter": {
+      "path": "src/audio_similarity/stage5b4c_youtube_data_api.py",
+      "sha256": "20ab96fe28af53f112e6b2d1ff1f46ef35ae9d64bb32351695534eb3b709bd26",
+      "size_bytes": 23761
+    },
+    "adapter_tests": {
+      "path": "tests/test_stage5b4c_youtube_data_api.py",
+      "sha256": "834fa4fae4228c84bcfca0381b81c696b890402b19ba583f44251963336e873e",
+      "size_bytes": 12511
+    },
+    "cli": {
+      "path": "src/audio_similarity/cli/stage5b4c_youtube_data_api.py",
+      "sha256": "4022d324da6aece941da1eb4f5d7e59556ba6371582d0a9b2adb851a59f919c1",
+      "size_bytes": 1581
+    },
+    "experiment": {
+      "path": "src/audio_similarity/stage5b4c_experiment.py",
+      "sha256": "6b620a9f720286378925a5f568cf5da3344e4157bced0c457e5c251e9a4630b5",
+      "size_bytes": 24014
+    },
+    "experiment_tests": {
+      "path": "tests/test_stage5b4c_experiment.py",
+      "sha256": "b7666e924a73b104aa4ca30159de3202369b94a24e5056dd31213e25d84b8393",
+      "size_bytes": 3632
+    }
+  },
+  "schema_version": "stage5b4c-artifact-manifest-v1",
+  "verdict": "YOUTUBE_DATA_API_FALLBACK_FAILED"
+}

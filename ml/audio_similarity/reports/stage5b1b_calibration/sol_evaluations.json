@@ -1,0 +1,3070 @@
+{
+  "blinded_payload_sha256": "dc7c90f24d26b1f50cdb8868f22e7b3c041f0f49ceab16a439162b4916bb063c",
+  "blindness": {
+    "candidate_order_deterministically_shuffled": true,
+    "case_tags_or_rationale_supplied": false,
+    "human_labels_supplied": false,
+    "isolated_ephemeral_working_directory": true,
+    "resolver_features_supplied": false,
+    "search_rank_supplied": false,
+    "tools_or_web_allowed": false
+  },
+  "completed_at": "2026-09-02T01:36:44.195998+00:00",
+  "completed_candidate_count": 248,
+  "completed_track_count": 50,
+  "config_sha256": "674eb69d8d6cf00c6cad27a900087b66b329ffa6e1f9feab87f1a7b521c02d70",
+  "discovery_sha256": "2c318ac0853ffe3395c6a934265585afcb0a39a2f9ce73e5a00ba35276d056e4",
+  "errors": [],
+  "evaluator": {
+    "codex_cli_version": "codex-cli 0.151.0",
+    "model": "gpt-5.6-sol",
+    "provider": "codex_cli",
+    "reasoning_effort": "high"
+  },
+  "manifest_sha256": "39557ede8f07bde129ad23d2bc64a0faf0fff755356cd87f2054e14f91d81e5a",
+  "output_schema_sha256": "d258dcf464b4be97e26ea8c799086e97f2ebc54aecfc270109e41747d199b178",
+  "private_mapping_sha256": "f3760b9f5eb029bc608a3697e7b75088a4fff0be764442c3e06fbd4a9752ff84",
+  "prompt_template_sha256": "e99ddc6ad63322c5404866bdcd407c351503e782bf11ba727f013fe41e0b4160",
+  "schema_version": "stage5b1b-calibration-sol-evaluations-v1",
+  "started_at": "2026-09-02T01:26:52.900311+00:00",
+  "status": "COMPLETE",
+  "tracks": [
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "d50391172b2d977e82d201d37e6287e6696234a9d3f30a2b64f9dba649b03c52",
+      "batch_prompt_sha256": "ebc5266248b64b769eef1f1054a259b7c5e27572b615f28659f1c9b6b22338f7",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "IDEAL",
+          "recording_identity_reason": "Official lyric video for the correct The Weeknd studio track; duration is close to the target.",
+          "source_quality_reason": "Official artist-channel lyric upload with no stated modification.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "IDEAL",
+          "recording_identity_reason": "Explicit official audio for the correct artist and song, with a near-target duration.",
+          "source_quality_reason": "Canonical artist-channel audio and the cleanest supplied source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Artist, title, and duration closely match the intended studio recording.",
+          "source_quality_reason": "Third-party lyrics upload rather than a canonical source, but no conflicting version is stated.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly a live 2020 MTV VMA performance, not the requested studio recording.",
+          "source_quality_reason": "Official provenance cannot overcome the live-version conflict.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official video for the correct song and artist, but its 263-second runtime substantially exceeds the 200-second track.",
+          "source_quality_reason": "Canonical source, though video-specific material makes it less clean for audio representation.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:27:46.846664+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_001-s5b1b_002-s5b1b_003-s5b1b_004-s5b1b_005",
+        "elapsed_wall_seconds": 53.943904655985534,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "a1d5b4356729d4bfb9e746e1979a75c31d1af04e94972d0306487733bbb0a315",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "0c5440450db8ad46cad3c999a4432ee102cdbff2449e788f66bff077a8440849"
+      },
+      "selected_candidate_key": "candidate_02",
+      "selection_rationale": "Official artist-channel audio of the studio recording; candidate_01 is also clean, but candidate_02 is explicitly the official audio.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_001"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "d50391172b2d977e82d201d37e6287e6696234a9d3f30a2b64f9dba649b03c52",
+      "batch_prompt_sha256": "ebc5266248b64b769eef1f1054a259b7c5e27572b615f28659f1c9b6b22338f7",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicit mashup adds Dua Lipa and is not the requested two-artist remix.",
+          "source_quality_reason": "Unofficial mashup with a conflicting performer and arrangement.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official video for the correct Weeknd and Ariana Grande remix.",
+          "source_quality_reason": "Canonical upload, but its runtime exceeds the target by about 15 seconds, indicating video-specific padding.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "IDEAL",
+          "recording_identity_reason": "Explicitly the Weeknd and Ariana Grande remix, with a 192-second duration matching the 191-second target.",
+          "source_quality_reason": "Noncanonical lyrics upload, but it appears to present the clean target-length recording without a stated modification.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "WRONG",
+          "recording_identity_reason": "This is the original solo Weeknd version, not the Ariana Grande remix.",
+          "source_quality_reason": "Official source, but for the wrong target-relative version.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicit extended combination of the original and Ariana Grande remix, not the requested standard remix.",
+          "source_quality_reason": "Unofficial edited version with a substantial duration conflict.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:27:46.846859+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_001-s5b1b_002-s5b1b_003-s5b1b_004-s5b1b_005",
+        "elapsed_wall_seconds": 53.943904655985534,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "a1d5b4356729d4bfb9e746e1979a75c31d1af04e94972d0306487733bbb0a315",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "0c5440450db8ad46cad3c999a4432ee102cdbff2449e788f66bff077a8440849"
+      },
+      "selected_candidate_key": "candidate_03",
+      "selection_rationale": "The lyrics upload explicitly identifies the Weeknd/Ariana Grande remix and nearly exactly matches the target duration, making it the cleanest compatible source supplied.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_002"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "d50391172b2d977e82d201d37e6287e6696234a9d3f30a2b64f9dba649b03c52",
+      "batch_prompt_sha256": "ebc5266248b64b769eef1f1054a259b7c5e27572b615f28659f1c9b6b22338f7",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicit extended version with an 861-second runtime, not the standard 203-second remix.",
+          "source_quality_reason": "Noncanonical extended edit.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicit ten-hour loop rather than the standard recording.",
+          "source_quality_reason": "Artificially looped third-party upload.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official video explicitly identifies Elton John, Dua Lipa, and the PNAU remix.",
+          "source_quality_reason": "Canonical source, but the 255-second video runtime substantially exceeds the target and likely includes video-specific material.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "IDEAL",
+          "recording_identity_reason": "Correct artists, song, and PNAU remix designation, with a 203-second duration matching the target.",
+          "source_quality_reason": "Third-party upload, but clean target-length metadata and no stated modification.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicit live 2022 Dodger Stadium performance, not the requested studio remix recording.",
+          "source_quality_reason": "Official provenance cannot overcome the live-version conflict.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:27:46.846976+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_001-s5b1b_002-s5b1b_003-s5b1b_004-s5b1b_005",
+        "elapsed_wall_seconds": 53.943904655985534,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "a1d5b4356729d4bfb9e746e1979a75c31d1af04e94972d0306487733bbb0a315",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "0c5440450db8ad46cad3c999a4432ee102cdbff2449e788f66bff077a8440849"
+      },
+      "selected_candidate_key": "candidate_04",
+      "selection_rationale": "Candidate_04 names the requested PNAU remix and matches the target duration almost exactly; the official video contains substantially more video-specific runtime.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_003"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "d50391172b2d977e82d201d37e6287e6696234a9d3f30a2b64f9dba649b03c52",
+      "batch_prompt_sha256": "ebc5266248b64b769eef1f1054a259b7c5e27572b615f28659f1c9b6b22338f7",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "Although canonical and correctly credited, its 413-second duration indicates a much longer mix than the 215-second target version.",
+          "source_quality_reason": "Clean official source for a conflicting long-form version.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "WRONG",
+          "recording_identity_reason": "The 416-second duration indicates the long-form Cedric Gervais remix rather than the target-length version.",
+          "source_quality_reason": "Label upload, but for a conflicting version.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly bass boosted, so the audio is a modified version of the remix.",
+          "source_quality_reason": "Third-party audio modification unsuitable as a clean source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "WRONG",
+          "recording_identity_reason": "Its 282-second runtime conflicts substantially with the target, and the description says it was recorded from a radio program.",
+          "source_quality_reason": "Unofficial radio capture rather than a clean target recording.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Explicit 2013 radio edit of the Lana Del Rey/Cedric Gervais remix; its 221-second runtime is close to the 215-second target.",
+          "source_quality_reason": "Unofficial upload with slight padding, but no stated audio modification.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:27:46.847085+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_001-s5b1b_002-s5b1b_003-s5b1b_004-s5b1b_005",
+        "elapsed_wall_seconds": 53.943904655985534,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "a1d5b4356729d4bfb9e746e1979a75c31d1af04e94972d0306487733bbb0a315",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "0c5440450db8ad46cad3c999a4432ee102cdbff2449e788f66bff077a8440849"
+      },
+      "selected_candidate_key": "candidate_05",
+      "selection_rationale": "Candidate_05 explicitly identifies the radio edit and is the only unmodified candidate reasonably close to the target's 215-second duration.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_004"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "d50391172b2d977e82d201d37e6287e6696234a9d3f30a2b64f9dba649b03c52",
+      "batch_prompt_sha256": "ebc5266248b64b769eef1f1054a259b7c5e27572b615f28659f1c9b6b22338f7",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Correct Mike Posner Seeb remix with a duration close to the target.",
+          "source_quality_reason": "High-profile third-party upload rather than canonical album audio, with no stated modification.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official artist video explicitly identifies the correct Seeb remix.",
+          "source_quality_reason": "Canonical source, but its 237-second runtime suggests substantial video-specific material beyond the target audio.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "UNCERTAIN",
+          "recording_identity_reason": "The title identifies the correct remix, but its 227-second duration exceeds the target by about 29 seconds.",
+          "source_quality_reason": "Third-party lyrics source whose extra runtime is unexplained.",
+          "uncertainty_reason": "Metadata does not establish whether the difference is harmless padding or a materially different edit."
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "IDEAL",
+          "recording_identity_reason": "Officially supplied Seeb remix from the target album, with an exact 198-second duration match.",
+          "source_quality_reason": "Canonical clean audio from the artist Topic-style channel.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Officially supplied Seeb remix with the same exact duration, but sourced from a compilation rather than the target album.",
+          "source_quality_reason": "Canonical clean audio, though candidate_04 has more precise target-album provenance.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:27:46.847174+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_001-s5b1b_002-s5b1b_003-s5b1b_004-s5b1b_005",
+        "elapsed_wall_seconds": 53.943904655985534,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "a1d5b4356729d4bfb9e746e1979a75c31d1af04e94972d0306487733bbb0a315",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "0c5440450db8ad46cad3c999a4432ee102cdbff2449e788f66bff077a8440849"
+      },
+      "selected_candidate_key": "candidate_04",
+      "selection_rationale": "Officially delivered audio from the target album with an exact duration match.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_005"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "e53231e21f2802604aa00f877aa0ce663d412afd1ddfc2c4126ed1725d9d27cd",
+      "batch_prompt_sha256": "74e54f3d1fe8ce2d6a5232d367fc3de7e4271dd735cb8aeef92fd26a733d0952",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "IDEAL",
+          "recording_identity_reason": "Explicitly the A-Trak Remix by Yeah Yeah Yeahs, with 384-second duration matching the target.",
+          "source_quality_reason": "Canonical artist-channel, distributor-provided upload.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicit Radio Edit at 205 seconds, not the targeted full-length remix.",
+          "source_quality_reason": "Third-party lyrics upload; source quality cannot overcome the version conflict.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "Although titled as the remix, its 205-second duration aligns with the radio edit rather than the 384-second target.",
+          "source_quality_reason": "Unofficial upload with incomplete version labeling.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Title and 385-second duration match the full A-Trak remix.",
+          "source_quality_reason": "Unofficial movie-associated upload, but compatible and near-exact in duration.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicit Radio Edit at 204 seconds, conflicting with the full-length target.",
+          "source_quality_reason": "Canonical provenance does not override the wrong version.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:28:49.677054+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_006-s5b1b_007-s5b1b_008-s5b1b_009-s5b1b_010",
+        "elapsed_wall_seconds": 52.023436554998625,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "1e5c9fb25a498a48379ad3f06a792c50a25e250ac585af20005deb0e592be54f",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "21afec0e2881e56a631d68014f273d045fc5496412d5f6dd2a05b9f8f64d957c"
+      },
+      "selected_candidate_key": "candidate_01",
+      "selection_rationale": "Canonical full-length 2009 A-Trak remix matching the target's 384-second duration; radio edits are version conflicts.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_006"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "e53231e21f2802604aa00f877aa0ce663d412afd1ddfc2c4126ed1725d9d27cd",
+      "batch_prompt_sha256": "74e54f3d1fe8ce2d6a5232d367fc3de7e4271dd735cb8aeef92fd26a733d0952",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "IDEAL",
+          "recording_identity_reason": "Explicit Robin Schulz Radio Edit with a 190-second duration matching the target.",
+          "source_quality_reason": "Artist-channel, distributor-provided upload, though presented in a compilation context.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official Robin Schulz remix video with a duration close to the targeted radio edit.",
+          "source_quality_reason": "Official artist upload, but the title omits the explicit Radio Edit designation and the video runs slightly longer.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Explicitly identifies the Robin Schulz Radio Edit and has a compatible 193-second duration.",
+          "source_quality_reason": "Unofficial album-style upload, less preferable than canonical sources.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "IDEAL",
+          "recording_identity_reason": "Explicit Robin Schulz Radio Edit with a 190-second duration matching the target.",
+          "source_quality_reason": "Canonical artist-channel upload provided by Tonspiel and aligned with the named release.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "WRONG",
+          "recording_identity_reason": "The 323-second duration indicates the full Robin Schulz remix rather than the targeted radio edit.",
+          "source_quality_reason": "Label provenance cannot overcome the version mismatch.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:28:49.677236+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_006-s5b1b_007-s5b1b_008-s5b1b_009-s5b1b_010",
+        "elapsed_wall_seconds": 52.023436554998625,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "1e5c9fb25a498a48379ad3f06a792c50a25e250ac585af20005deb0e592be54f",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "21afec0e2881e56a631d68014f273d045fc5496412d5f6dd2a05b9f8f64d957c"
+      },
+      "selected_candidate_key": "candidate_04",
+      "selection_rationale": "Canonical distributor-provided radio edit matching the target title and approximately 189-second duration.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_007"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "e53231e21f2802604aa00f877aa0ce663d412afd1ddfc2c4126ed1725d9d27cd",
+      "batch_prompt_sha256": "74e54f3d1fe8ce2d6a5232d367fc3de7e4271dd735cb8aeef92fd26a733d0952",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "IDEAL",
+          "recording_identity_reason": "Explicit Disturbed CYRIL Remix with a 186-second duration matching the target.",
+          "source_quality_reason": "Official audio from Spinnin' Records and CYRIL.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Title identifies the correct CYRIL remix and the 183-second duration is compatible.",
+          "source_quality_reason": "Unofficial upload, less preferable than the official audio.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "The 1,544-second duration is incompatible with the approximately 186-second target and indicates extended or repeated content.",
+          "source_quality_reason": "Third-party lyrics source with a major duration conflict.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official lyric video for the correct CYRIL remix with an exact 186-second duration.",
+          "source_quality_reason": "Official artist source, but the dedicated official-audio upload is preferable.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Correctly names the CYRIL remix and has a compatible 184-second duration.",
+          "source_quality_reason": "Third-party lyrics upload, less preferable than official sources.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:28:49.677341+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_006-s5b1b_007-s5b1b_008-s5b1b_009-s5b1b_010",
+        "elapsed_wall_seconds": 52.023436554998625,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "1e5c9fb25a498a48379ad3f06a792c50a25e250ac585af20005deb0e592be54f",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "21afec0e2881e56a631d68014f273d045fc5496412d5f6dd2a05b9f8f64d957c"
+      },
+      "selected_candidate_key": "candidate_01",
+      "selection_rationale": "Official audio for the CYRIL remix with an exact duration match is the cleanest compatible source.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_008"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "e53231e21f2802604aa00f877aa0ce663d412afd1ddfc2c4126ed1725d9d27cd",
+      "batch_prompt_sha256": "74e54f3d1fe8ce2d6a5232d367fc3de7e4271dd735cb8aeef92fd26a733d0952",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicit Diplo Remix, an unrequested alternate remix.",
+          "source_quality_reason": "Official provenance does not override the remix-version conflict.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "IDEAL",
+          "recording_identity_reason": "Explicit Billy Ray Cyrus remix with a 158-second duration matching the target.",
+          "source_quality_reason": "Official Lil Nas X upload without evidence of extra narrative content.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "The 309-second Official Movie contains substantial additional material beyond the 157-second target recording.",
+          "source_quality_reason": "Official source, but not a clean representation of the target track.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "WRONG",
+          "recording_identity_reason": "Alternate remix adding Young Thug and Mason Ramsey, conflicting with the targeted Billy Ray Cyrus remix.",
+          "source_quality_reason": "Official provenance does not overcome the performer and version conflict.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official Billy Ray Cyrus remix video with a 158-second duration matching the target.",
+          "source_quality_reason": "Official artist source, but the simpler non-movie upload is preferable for audio representation.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:28:49.677435+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_006-s5b1b_007-s5b1b_008-s5b1b_009-s5b1b_010",
+        "elapsed_wall_seconds": 52.023436554998625,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "1e5c9fb25a498a48379ad3f06a792c50a25e250ac585af20005deb0e592be54f",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "21afec0e2881e56a631d68014f273d045fc5496412d5f6dd2a05b9f8f64d957c"
+      },
+      "selected_candidate_key": "candidate_02",
+      "selection_rationale": "Official 158-second upload of the Billy Ray Cyrus remix is the cleanest match to the 157-second target.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_009"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "e53231e21f2802604aa00f877aa0ce663d412afd1ddfc2c4126ed1725d9d27cd",
+      "batch_prompt_sha256": "74e54f3d1fe8ce2d6a5232d367fc3de7e4271dd735cb8aeef92fd26a733d0952",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Correct Beyoncé-featured Savage Remix with a near-matching 246-second duration.",
+          "source_quality_reason": "Official artist lyric video, but the dedicated official audio is preferable.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicit Major Lazer Remix, not the targeted Beyoncé remix.",
+          "source_quality_reason": "Official provenance does not override the alternate-remix conflict.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "BET Awards performance combining Girls in the Hood with Savage Remix, rather than the target studio track.",
+          "source_quality_reason": "Official live medley with incompatible content and duration.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicit live Grammy performance combining Body and Savage Remix, not the target studio recording.",
+          "source_quality_reason": "Official live medley, but recording and content conflict with the target.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "IDEAL",
+          "recording_identity_reason": "Correct Beyoncé-featured Savage Remix with an exact 242-second duration match.",
+          "source_quality_reason": "Dedicated official audio on Megan Thee Stallion's channel.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:28:49.677526+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_006-s5b1b_007-s5b1b_008-s5b1b_009-s5b1b_010",
+        "elapsed_wall_seconds": 52.023436554998625,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "1e5c9fb25a498a48379ad3f06a792c50a25e250ac585af20005deb0e592be54f",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "21afec0e2881e56a631d68014f273d045fc5496412d5f6dd2a05b9f8f64d957c"
+      },
+      "selected_candidate_key": "candidate_05",
+      "selection_rationale": "Official audio exactly matches the Beyoncé-featured Savage Remix and its 242-second target duration.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_010"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "a671bd8f54b50a9c3ccfdf5d971862e8caad5693432c71b428315660437be6aa",
+      "batch_prompt_sha256": "764f6f2e52a5970a45d623cf1adf256d3dd7bfeeb9dc7baab701989a01a50220",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly identified as a 1950s-style cover performed by Mario Jose, India Carney, and Dave Koz.",
+          "source_quality_reason": "Established cover channel, but it is not the requested original recording.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicit karaoke version rather than the Ed Sheeran and Beyoncé vocal recording.",
+          "source_quality_reason": "Purpose-made karaoke source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Title explicitly identifies Perfect Duet with Beyoncé, and 260 seconds closely matches the 259.55-second target.",
+          "source_quality_reason": "Unofficial lyrics upload with no description, so less preferable than a canonical release source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Title identifies Ed Sheeran featuring Beyoncé, and the 263-second duration is compatible with the target duet.",
+          "source_quality_reason": "Unofficial lyrics upload with sparse provenance and slight duration padding.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicit karaoke version without the requested artists' vocals.",
+          "source_quality_reason": "Distributor-delivered Topic upload, but canonical provenance does not overcome the karaoke-version conflict.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:29:52.243228+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_011-s5b1b_012-s5b1b_013-s5b1b_014-s5b1b_015",
+        "elapsed_wall_seconds": 62.56271121298778,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "df6d78858abadb4cdc065fc204050ccc1f4d64de86465f45b2f867b70ef7b6e9",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "c8a0fe4fcf7e3300b51815b02368d245b29366e6d266ab6f078faef0148a95fc"
+      },
+      "selected_candidate_key": "candidate_03",
+      "selection_rationale": "Candidate 03 explicitly names the Ed Sheeran and Beyoncé duet and closely matches the target duration; it is the safest available recording despite nonofficial provenance.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_011"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "a671bd8f54b50a9c3ccfdf5d971862e8caad5693432c71b428315660437be6aa",
+      "batch_prompt_sha256": "764f6f2e52a5970a45d623cf1adf256d3dd7bfeeb9dc7baab701989a01a50220",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "Official lyric video names only Dua Lipa and does not identify the requested DaBaby feature.",
+          "source_quality_reason": "Official source, but for the target-incompatible solo presentation.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "WRONG",
+          "recording_identity_reason": "Title and description identify only Dua Lipa, indicating the solo version rather than the requested DaBaby feature.",
+          "source_quality_reason": "Unofficial lyrics upload despite its close duration.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official title explicitly identifies the DaBaby-featured recording requested by the target.",
+          "source_quality_reason": "Authoritative artist upload, though the 231-second music video likely contains padding beyond the 203-second track.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "WRONG",
+          "recording_identity_reason": "Official animated video does not identify DaBaby and corresponds to the solo version.",
+          "source_quality_reason": "Official artist source, but for the wrong target-relative version.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicit AMAs 2020 live performance rather than the requested studio recording featuring DaBaby.",
+          "source_quality_reason": "Official artist upload, but it is a live variant.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:29:52.243377+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_011-s5b1b_012-s5b1b_013-s5b1b_014-s5b1b_015",
+        "elapsed_wall_seconds": 62.56271121298778,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "df6d78858abadb4cdc065fc204050ccc1f4d64de86465f45b2f867b70ef7b6e9",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "c8a0fe4fcf7e3300b51815b02368d245b29366e6d266ab6f078faef0148a95fc"
+      },
+      "selected_candidate_key": "candidate_03",
+      "selection_rationale": "Candidate 03 is the only official candidate explicitly featuring DaBaby; its longer video duration likely reflects visual intro or outro material.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_012"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "a671bd8f54b50a9c3ccfdf5d971862e8caad5693432c71b428315660437be6aa",
+      "batch_prompt_sha256": "764f6f2e52a5970a45d623cf1adf256d3dd7bfeeb9dc7baab701989a01a50220",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "Official studio recording from Being Funny in a Foreign Language, not the Madison Square Garden live version.",
+          "source_quality_reason": "Clean official source, but for the wrong recording.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly recorded at Radio 1's Big Weekend 2023 rather than Madison Square Garden.",
+          "source_quality_reason": "Authoritative broadcaster upload, but for a different performance.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Explicitly identifies the 2022 Madison Square Garden performance targeted by the live album.",
+          "source_quality_reason": "Unofficial pro-shot repost and slightly shorter than the album track.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "IDEAL",
+          "recording_identity_reason": "Exact Madison Square Garden live performance, with 323 seconds closely matching the 323.68-second target.",
+          "source_quality_reason": "Official artist/Amazon Music concert upload and the cleanest compatible source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Title explicitly identifies the requested Madison Square Garden live recording.",
+          "source_quality_reason": "Unofficial upload with no description and an approximately 11-second duration shortfall.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:29:52.243466+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_011-s5b1b_012-s5b1b_013-s5b1b_014-s5b1b_015",
+        "elapsed_wall_seconds": 62.56271121298778,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "df6d78858abadb4cdc065fc204050ccc1f4d64de86465f45b2f867b70ef7b6e9",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "c8a0fe4fcf7e3300b51815b02368d245b29366e6d266ab6f078faef0148a95fc"
+      },
+      "selected_candidate_key": "candidate_04",
+      "selection_rationale": "Candidate 04 is the official artist upload of the exact Madison Square Garden performance and nearly exactly matches the target duration.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_013"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "a671bd8f54b50a9c3ccfdf5d971862e8caad5693432c71b428315660437be6aa",
+      "batch_prompt_sha256": "764f6f2e52a5970a45d623cf1adf256d3dd7bfeeb9dc7baab701989a01a50220",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly recorded in Buenos Aires on November 8, 2022, not the performance released on the 2018 live album.",
+          "source_quality_reason": "Unofficial audience/concert upload from a different tour date.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "IDEAL",
+          "recording_identity_reason": "Description explicitly identifies Yellow from Coldplay's Live in Buenos Aires release.",
+          "source_quality_reason": "Official distributor-provided Coldplay upload; the 351-second duration discrepancy is secondary to the exact release attribution.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly dated October 29, 2022, so it is a different Buenos Aires performance.",
+          "source_quality_reason": "Short unofficial concert clip from the wrong event.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly dated November 2, 2022, not the performance on the 2018 album.",
+          "source_quality_reason": "Unofficial audience upload from a different event.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly recorded on November 5, 2022, so it is not the requested 2018-release performance.",
+          "source_quality_reason": "Unofficial concert upload from the wrong date.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:29:52.243550+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_011-s5b1b_012-s5b1b_013-s5b1b_014-s5b1b_015",
+        "elapsed_wall_seconds": 62.56271121298778,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "df6d78858abadb4cdc065fc204050ccc1f4d64de86465f45b2f867b70ef7b6e9",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "c8a0fe4fcf7e3300b51815b02368d245b29366e6d266ab6f078faef0148a95fc"
+      },
+      "selected_candidate_key": "candidate_02",
+      "selection_rationale": "Candidate 02 is the canonical distributor-provided upload explicitly tied to Coldplay's Live in Buenos Aires album; this identity evidence outweighs the supplied duration discrepancy.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_014"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "a671bd8f54b50a9c3ccfdf5d971862e8caad5693432c71b428315660437be6aa",
+      "batch_prompt_sha256": "764f6f2e52a5970a45d623cf1adf256d3dd7bfeeb9dc7baab701989a01a50220",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Title and description explicitly identify Adele's Someone Like You performance at the BRIT Awards 2011.",
+          "source_quality_reason": "Unofficial upload and 63 seconds longer than the target, suggesting surrounding ceremony material rather than a clean track-only source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "UNCERTAIN",
+          "recording_identity_reason": "Generic title does not establish the BRIT Awards performance, while the keyword-heavy description ambiguously mentions both the song and live material.",
+          "source_quality_reason": "Extremely low-view unofficial upload with a 487-second duration far beyond the target.",
+          "uncertainty_reason": "The supplied metadata cannot determine whether it contains the requested performance, another recording, or substantial unrelated material."
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "Vocal-instruction video about vibrato, not an Adele song recording.",
+          "source_quality_reason": "Unrelated instructional source.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:29:52.243630+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_011-s5b1b_012-s5b1b_013-s5b1b_014-s5b1b_015",
+        "elapsed_wall_seconds": 62.56271121298778,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "df6d78858abadb4cdc065fc204050ccc1f4d64de86465f45b2f867b70ef7b6e9",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "c8a0fe4fcf7e3300b51815b02368d245b29366e6d266ab6f078faef0148a95fc"
+      },
+      "selected_candidate_key": "candidate_01",
+      "selection_rationale": "Candidate 01 explicitly identifies the exact BRIT Awards 2011 performance; its excess duration plausibly consists of ceremony introduction, applause, or outro material.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_015"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "bbd2e15ecf64153f5fce8420edab151a868f82c13bec74cdaa2ffe2daad08b6d",
+      "batch_prompt_sha256": "bceefe48715b71c55fd446118fae926e2f8c4f1e350b1e588336a6b6978265bb",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly a 30-second preview rather than the complete requested track.",
+          "source_quality_reason": "Official provenance cannot compensate for the incomplete audio.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Title and description identify the requested 2017 Summer Solstice unplugged performance.",
+          "source_quality_reason": "Third-party subtitled performance upload with a modest duration discrepancy is less clean than the official album delivery.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly labeled the shorter MTV Unplugged edit, not the requested full album recording.",
+          "source_quality_reason": "Canonical delivery, but of the wrong target-relative version.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "IDEAL",
+          "recording_identity_reason": "Exact MTV Unplugged title, artist, album, and 2017 release context.",
+          "source_quality_reason": "Official artist-channel distributor upload is the cleanest compatible source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "WRONG",
+          "recording_identity_reason": "The 214-second duration is substantially shorter than the requested 246-second recording, indicating an edit or truncation.",
+          "source_quality_reason": "Unofficial upload with no album-level provenance.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:30:59.494610+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_016-s5b1b_017-s5b1b_018-s5b1b_019-s5b1b_020",
+        "elapsed_wall_seconds": 67.24826859799214,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "00862891b8c23054d9d8269bddca520667a7281018f4a8c8d0933860f9b0b1d8",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "fc5a1c3a13fd0139891378a21db66456c45fcf30306dd8114255283886e21a8c"
+      },
+      "selected_candidate_key": "candidate_04",
+      "selection_rationale": "Official artist-channel delivery explicitly matches the requested MTV Unplugged recording and Summer Solstice album.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_016"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "bbd2e15ecf64153f5fce8420edab151a868f82c13bec74cdaa2ffe2daad08b6d",
+      "batch_prompt_sha256": "bceefe48715b71c55fd446118fae926e2f8c4f1e350b1e588336a6b6978265bb",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "Description explicitly identifies a live 1980 Paris performance rather than the Rumours studio recording.",
+          "source_quality_reason": "Official video provenance does not resolve the live/studio conflict.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "UNCERTAIN",
+          "recording_identity_reason": "Matches the song and studio duration, but only identifies the 1977 album and does not establish the requested 2004 remaster.",
+          "source_quality_reason": "Unofficial generic HQ upload with no mastering provenance.",
+          "uncertainty_reason": "Metadata cannot distinguish the original master from the requested 2004 remaster."
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "UNCERTAIN",
+          "recording_identity_reason": "Official audio matches the song and duration, but its generic 1977 album metadata does not identify the 2004 remaster.",
+          "source_quality_reason": "Strong official provenance, though the target-relative mastering remains unspecified.",
+          "uncertainty_reason": "The supplied metadata does not safely establish which master was used."
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "IDEAL",
+          "recording_identity_reason": "Exact title, artist, album context, duration, and explicit 2004 remaster designation.",
+          "source_quality_reason": "Official artist-channel Rhino/Warner delivery.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "IDEAL",
+          "recording_identity_reason": "Exact title, artist, album context, duration, and explicit 2004 remaster designation.",
+          "source_quality_reason": "Official artist-channel Rhino/Warner delivery.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:30:59.494760+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_016-s5b1b_017-s5b1b_018-s5b1b_019-s5b1b_020",
+        "elapsed_wall_seconds": 67.24826859799214,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "00862891b8c23054d9d8269bddca520667a7281018f4a8c8d0933860f9b0b1d8",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "fc5a1c3a13fd0139891378a21db66456c45fcf30306dd8114255283886e21a8c"
+      },
+      "selected_candidate_key": "candidate_05",
+      "selection_rationale": "Candidates 04 and 05 are equivalent official distributor uploads explicitly matching the 2004 remaster; candidate 05 is selected as a clean compatible source.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_017"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "bbd2e15ecf64153f5fce8420edab151a868f82c13bec74cdaa2ffe2daad08b6d",
+      "batch_prompt_sha256": "bceefe48715b71c55fd446118fae926e2f8c4f1e350b1e588336a6b6978265bb",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "IDEAL",
+          "recording_identity_reason": "Exact song, artist, 2018 remaster designation, album, and near-exact duration.",
+          "source_quality_reason": "Official artist-channel distributor delivery is the preferred clean source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "UNCERTAIN",
+          "recording_identity_reason": "Song and duration match, but the metadata discusses the 1985 release without identifying the requested 2018 remaster.",
+          "source_quality_reason": "Unofficial audio upload with no mastering provenance.",
+          "uncertainty_reason": "The original and 2018-remastered sources cannot be distinguished safely."
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "Distributor metadata explicitly presents the unqualified 1985 album track rather than the 2018 remaster.",
+          "source_quality_reason": "Canonical source, but for the wrong target-relative master.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "WRONG",
+          "recording_identity_reason": "A custom Stranger Things music-video presentation with a shorter duration, not the specified 2018-remastered album source.",
+          "source_quality_reason": "Unofficial edited soundtrack montage is not a clean album representation.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Title explicitly identifies the requested 2018 remaster, with a plausible padding-related duration difference.",
+          "source_quality_reason": "Low-provenance third-party upload is less preferable than the official distributor source.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:30:59.494852+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_016-s5b1b_017-s5b1b_018-s5b1b_019-s5b1b_020",
+        "elapsed_wall_seconds": 67.24826859799214,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "00862891b8c23054d9d8269bddca520667a7281018f4a8c8d0933860f9b0b1d8",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "fc5a1c3a13fd0139891378a21db66456c45fcf30306dd8114255283886e21a8c"
+      },
+      "selected_candidate_key": "candidate_01",
+      "selection_rationale": "Official distributor metadata explicitly identifies the requested 2018 remaster with a matching duration.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_018"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "bbd2e15ecf64153f5fce8420edab151a868f82c13bec74cdaa2ffe2daad08b6d",
+      "batch_prompt_sha256": "bceefe48715b71c55fd446118fae926e2f8c4f1e350b1e588336a6b6978265bb",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "The 221-second duration is substantially shorter than the requested recording and no 2015-remaster identity is supplied.",
+          "source_quality_reason": "Unofficial generic HQ upload with weak provenance.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly describes a separately digitally remastered and AI-upscaled video rather than the specified 2015 master.",
+          "source_quality_reason": "Third-party processed presentation is unsuitable as a clean target representation.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly the 428-second 12-inch version, conflicting with the requested approximately 249-second recording.",
+          "source_quality_reason": "Official delivery, but of the wrong mix/version.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "IDEAL",
+          "recording_identity_reason": "Exact song, artist, 2015-remaster designation, Singles context, and closely matching duration.",
+          "source_quality_reason": "Official artist-channel Rhino/Warner delivery is the cleanest source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Explicitly identifies the 2015-remastered 7-inch version from Singles, consistent with the target's short version despite extra padding.",
+          "source_quality_reason": "Third-party upload is less preferable than the official distributor delivery.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:30:59.494935+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_016-s5b1b_017-s5b1b_018-s5b1b_019-s5b1b_020",
+        "elapsed_wall_seconds": 67.24826859799214,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "00862891b8c23054d9d8269bddca520667a7281018f4a8c8d0933860f9b0b1d8",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "fc5a1c3a13fd0139891378a21db66456c45fcf30306dd8114255283886e21a8c"
+      },
+      "selected_candidate_key": "candidate_04",
+      "selection_rationale": "Official distributor upload exactly identifies the requested 2015 remaster and closely matches its duration.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_019"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "bbd2e15ecf64153f5fce8420edab151a868f82c13bec74cdaa2ffe2daad08b6d",
+      "batch_prompt_sha256": "bceefe48715b71c55fd446118fae926e2f8c4f1e350b1e588336a6b6978265bb",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "Description explicitly calls this a 2022 remastered version, conflicting with the requested 2021 master.",
+          "source_quality_reason": "Unofficial upload with mismatched remaster provenance.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "UNCERTAIN",
+          "recording_identity_reason": "Song and duration match, but no 2021-remaster designation or album-edition evidence is supplied.",
+          "source_quality_reason": "Third-party claimed hi-resolution presentation with unclear source lineage.",
+          "uncertainty_reason": "Metadata cannot establish whether this uses the requested 2021 master."
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "Description identifies a 2022 vinyl reissue source and its 326-second duration conflicts with the requested track.",
+          "source_quality_reason": "Unofficial vinyl-derived presentation is not a clean representation of the specified 2021 master.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Explicit 2021 remaster title and 301-second duration closely match the target.",
+          "source_quality_reason": "Unofficial HQ upload is compatible but less preferable than a canonical distributor source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "WRONG",
+          "recording_identity_reason": "The 279-second music-video version is materially shorter than the requested 302-second remastered album track.",
+          "source_quality_reason": "Third-party AI-upscaled video is not a clean album-audio source.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:30:59.495017+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_016-s5b1b_017-s5b1b_018-s5b1b_019-s5b1b_020",
+        "elapsed_wall_seconds": 67.24826859799214,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "00862891b8c23054d9d8269bddca520667a7281018f4a8c8d0933860f9b0b1d8",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "fc5a1c3a13fd0139891378a21db66456c45fcf30306dd8114255283886e21a8c"
+      },
+      "selected_candidate_key": "candidate_04",
+      "selection_rationale": "Candidate 04 explicitly matches the requested 2021 remaster and duration; it is safe despite unofficial provenance.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_020"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "75f590a8463d049627c0e1e3c756ba97d4b91bdd8a8ad4848c45eb4fe50071e3",
+      "batch_prompt_sha256": "a49f3b9ca109221913bd2ab483da5a48b17cc9c9926446a314bf887dd04c9f58",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "IDEAL",
+          "recording_identity_reason": "Title and description explicitly identify Taylor Swift's 2021 Taylor's Version from Fearless (Taylor's Version).",
+          "source_quality_reason": "Official artist-channel lyric video with a duration plausibly including brief video padding.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Title and description explicitly identify the requested Taylor's Version, with a near-exact song duration.",
+          "source_quality_reason": "Third-party audio reupload rather than a canonical artist or label source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Title and description consistently identify the requested Taylor's Version.",
+          "source_quality_reason": "Third-party lyrics upload, so less preferable than the official artist source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Title explicitly identifies Taylor's Version without claiming an alternate mix or performance.",
+          "source_quality_reason": "Unofficial fan music-video upload with weaker provenance and modest duration padding.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Title explicitly identifies Taylor's Version and gives no recording-level conflict.",
+          "source_quality_reason": "Low-provenance fan lyric/music-video upload with duration padding, but no explicit audio modification.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:31:52.718857+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_021-s5b1b_022-s5b1b_023-s5b1b_024-s5b1b_025",
+        "elapsed_wall_seconds": 53.220396755001275,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "b27383323a7e4a4d671b1e536fffec22a92e996120ffafe1bb004cfd35784fec",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "61d1c29f5027f7e60fe92b487c7f2938bb695ea096f384604bc324e8b0603080"
+      },
+      "selected_candidate_key": "candidate_01",
+      "selection_rationale": "Official Taylor Swift lyric upload explicitly identifies the requested Taylor's Version and is the strongest-provenance clean source.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_021"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "75f590a8463d049627c0e1e3c756ba97d4b91bdd8a8ad4848c45eb4fe50071e3",
+      "batch_prompt_sha256": "a49f3b9ca109221913bd2ab483da5a48b17cc9c9926446a314bf887dd04c9f58",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "IDEAL",
+          "recording_identity_reason": "Official title and album description exactly identify the requested Taylor's Version and From The Vault recording.",
+          "source_quality_reason": "Official artist lyric video with the exact target duration.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "WRONG",
+          "recording_identity_reason": "This is the 896-second short film, not a clean presentation of the 613-second target track.",
+          "source_quality_reason": "Official provenance cannot overcome the explicit short-film format and substantial extra content.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "The uploader and B95 designation explicitly indicate pitch-modified audio.",
+          "source_quality_reason": "Modified third-party source is unsuitable for representing the target master.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly labeled CLEAN VERSION, which conflicts with the unspecified standard target recording.",
+          "source_quality_reason": "Unofficial altered-version upload rather than the canonical album master.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "IDEAL",
+          "recording_identity_reason": "Title exactly matches the target, and the description identifies Taylor Swift and the requested recording.",
+          "source_quality_reason": "Official artist-channel distributor upload with exact target duration and no video-specific padding.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:31:52.719033+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_021-s5b1b_022-s5b1b_023-s5b1b_024-s5b1b_025",
+        "elapsed_wall_seconds": 53.220396755001275,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "b27383323a7e4a4d671b1e536fffec22a92e996120ffafe1bb004cfd35784fec",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "61d1c29f5027f7e60fe92b487c7f2938bb695ea096f384604bc324e8b0603080"
+      },
+      "selected_candidate_key": "candidate_05",
+      "selection_rationale": "The official artist-channel, distributor-provided album upload exactly matches the requested 10-minute Taylor's Version recording and duration.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_022"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "75f590a8463d049627c0e1e3c756ba97d4b91bdd8a8ad4848c45eb4fe50071e3",
+      "batch_prompt_sha256": "a49f3b9ca109221913bd2ab483da5a48b17cc9c9926446a314bf887dd04c9f58",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "UNCERTAIN",
+          "recording_identity_reason": "The title claims Taylor's Version but also calls itself an updated official music video despite unofficial provenance.",
+          "source_quality_reason": "Noncanonical channel and 14 seconds of excess duration weaken confidence in a clean, unmodified song source.",
+          "uncertainty_reason": "Metadata does not establish what was updated or whether the longer upload preserves the target audio unchanged."
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "WRONG",
+          "recording_identity_reason": "Description explicitly states Taylor's Version vocals were combined with the original instrumental, creating a hybrid 2014 mix.",
+          "source_quality_reason": "Fan-made alternate mix rather than the requested album recording.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "IDEAL",
+          "recording_identity_reason": "Official title and description explicitly identify Style (Taylor's Version) from 1989 (Taylor's Version).",
+          "source_quality_reason": "Official artist-channel lyric video with plausible brief video padding.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicit Reworked designation identifies an altered version of the song.",
+          "source_quality_reason": "Unofficial fan edit rather than the target master.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Title and description identify the requested Taylor's Version, with a near-exact duration.",
+          "source_quality_reason": "Low-view third-party lyric upload is less preferable than the official source.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:31:52.719142+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_021-s5b1b_022-s5b1b_023-s5b1b_024-s5b1b_025",
+        "elapsed_wall_seconds": 53.220396755001275,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "b27383323a7e4a4d671b1e536fffec22a92e996120ffafe1bb004cfd35784fec",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "61d1c29f5027f7e60fe92b487c7f2938bb695ea096f384604bc324e8b0603080"
+      },
+      "selected_candidate_key": "candidate_03",
+      "selection_rationale": "The official Taylor Swift lyric video explicitly matches Style (Taylor's Version) from 1989 (Taylor's Version), with only plausible video padding.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_023"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "75f590a8463d049627c0e1e3c756ba97d4b91bdd8a8ad4848c45eb4fe50071e3",
+      "batch_prompt_sha256": "a49f3b9ca109221913bd2ab483da5a48b17cc9c9926446a314bf887dd04c9f58",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "IDEAL",
+          "recording_identity_reason": "Distributor description identifies Sam Smith's Latch (Acoustic) and a 2014 album release containing the requested recording; duration closely matches.",
+          "source_quality_reason": "Official artist-channel, distributor-provided audio upload.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly a live performance at the Apollo Theater, conflicting with the target studio acoustic recording.",
+          "source_quality_reason": "Official source, but for the wrong performance.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Title and near-exact duration support the requested Sam Smith acoustic recording.",
+          "source_quality_reason": "Third-party upload with weaker provenance than the official artist sources.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "IDEAL",
+          "recording_identity_reason": "Official artist upload explicitly identifies Sam Smith's Latch (Acoustic), with a closely matching duration and no alternate-performance claim.",
+          "source_quality_reason": "High-provenance official artist source, though less explicitly tied to the album master than the distributor upload.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "IDEAL",
+          "recording_identity_reason": "Distributor description identifies Sam Smith's Latch (Acoustic), and its duration closely matches the target.",
+          "source_quality_reason": "Official artist-channel, distributor-provided album audio with strong canonical provenance.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:31:52.719269+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_021-s5b1b_022-s5b1b_023-s5b1b_024-s5b1b_025",
+        "elapsed_wall_seconds": 53.220396755001275,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "b27383323a7e4a4d671b1e536fffec22a92e996120ffafe1bb004cfd35784fec",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "61d1c29f5027f7e60fe92b487c7f2938bb695ea096f384604bc324e8b0603080"
+      },
+      "selected_candidate_key": "candidate_05",
+      "selection_rationale": "Candidate 05 is a distributor-provided Sam Smith album upload matching the acoustic recording and target duration, with stronger canonical-source evidence than the alternatives.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_024"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "75f590a8463d049627c0e1e3c756ba97d4b91bdd8a8ad4848c45eb4fe50071e3",
+      "batch_prompt_sha256": "a49f3b9ca109221913bd2ab483da5a48b17cc9c9926446a314bf887dd04c9f58",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly a 1999 live 2 Meter Sessions performance rather than the Greatest Hits acoustic version.",
+          "source_quality_reason": "Performance footage for a different recording.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Title and description explicitly identify the solo acoustic Greatest Hits version, with an exact-duration match.",
+          "source_quality_reason": "Third-party upload with weaker provenance than the official label-provided source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly a March 2021 acoustic performance, not the 2009 Greatest Hits recording.",
+          "source_quality_reason": "Official channel but wrong performance, with substantial extra video content.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly a live Howard Stern performance rather than the requested album version.",
+          "source_quality_reason": "Unofficial upload of the wrong live recording.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "IDEAL",
+          "recording_identity_reason": "Title and distributor description exactly identify Foo Fighters' Everlong (Acoustic Version) from Greatest Hits.",
+          "source_quality_reason": "Official artist-channel RCA-provided album upload with an exact-duration match.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:31:52.719392+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_021-s5b1b_022-s5b1b_023-s5b1b_024-s5b1b_025",
+        "elapsed_wall_seconds": 53.220396755001275,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "b27383323a7e4a4d671b1e536fffec22a92e996120ffafe1bb004cfd35784fec",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "61d1c29f5027f7e60fe92b487c7f2938bb695ea096f384604bc324e8b0603080"
+      },
+      "selected_candidate_key": "candidate_05",
+      "selection_rationale": "The official RCA-provided Foo Fighters upload exactly identifies the Greatest Hits acoustic version and matches the target duration.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_025"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "869491dbef33c1c704c54f2d8fb67beb61d3dd038db9b808eff3a16651b36f16",
+      "batch_prompt_sha256": "7444c690a185db2937ab11270cc4f965d159efafaa7ad30bfcc4c29a208c96c0",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly identified as the Razihel Extended Remix, not the requested original Extended Mix.",
+          "source_quality_reason": "Unofficial download upload; source preference cannot overcome the remix conflict.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "UNCERTAIN",
+          "recording_identity_reason": "Official metadata names the requested artists and Extended Mix, but its 202-second duration conflicts materially with the 254-second target.",
+          "source_quality_reason": "Artist/label-provided upload would otherwise be the preferred source.",
+          "uncertainty_reason": "Exact official naming and a large duration mismatch provide contradictory identity evidence."
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "UNCERTAIN",
+          "recording_identity_reason": "Title matches the requested Extended Mix, but the 204-second duration is materially short of the target.",
+          "source_quality_reason": "Third-party upload with no description or authoritative provenance.",
+          "uncertainty_reason": "Insufficient metadata to explain whether the duration discrepancy is padding metadata or a different edit."
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "UNCERTAIN",
+          "recording_identity_reason": "Title matches the requested Extended Mix, but its 202-second duration materially conflicts with the target.",
+          "source_quality_reason": "Third-party promotional upload linking to the release, less preferable than an official audio source.",
+          "uncertainty_reason": "Release linkage supports identity, while the large duration discrepancy prevents a safe determination."
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly the Tiësto Edit rather than the requested Extended Mix.",
+          "source_quality_reason": "Official visualizer, but canonical provenance does not cure the version conflict.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:33:01.000596+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_026-s5b1b_027-s5b1b_028-s5b1b_029-s5b1b_030",
+        "elapsed_wall_seconds": 68.27732462799759,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "9ed0e61039d77844a7edfd19d15c2b6fd3458e6765fca822acfb9d00745cdc39",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "1656e167b3554ec43d7a122db4b101e1a00315f9a785aab6217ab16ae05fa5f6"
+      },
+      "selected_candidate_key": null,
+      "selection_rationale": "The exact-title Extended Mix candidates are all about 202–204 seconds, materially shorter than the 254-second target; despite one having official provenance, the supplied metadata cannot resolve that recording conflict safely.",
+      "selection_status": "SOL_MATCH_UNCERTAIN",
+      "stable_track_id": "s5b1b_026"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "869491dbef33c1c704c54f2d8fb67beb61d3dd038db9b808eff3a16651b36f16",
+      "batch_prompt_sha256": "7444c690a185db2937ab11270cc4f965d159efafaa7ad30bfcc4c29a208c96c0",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "IDEAL",
+          "recording_identity_reason": "Artist, title, studio version, and 544-second duration match the target.",
+          "source_quality_reason": "Official artist-channel upload and the cleanest available provenance.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly a much shorter Radio Edit, not the requested full-length recording.",
+          "source_quality_reason": "Unofficial upload; the version conflict is decisive.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly a Tomorrowland 2017 live performance rather than the studio target.",
+          "source_quality_reason": "Third-party live upload; unsuitable for representing the studio master.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Title and 544-second duration support the requested full-length recording without an explicit version conflict.",
+          "source_quality_reason": "Unofficial reupload with weaker provenance than the artist-channel source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "WRONG",
+          "recording_identity_reason": "A 109-minute continuous mix of the entire album, not the individual track.",
+          "source_quality_reason": "Album-length DJ mix cannot serve as a clean standalone source.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:33:01.000744+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_026-s5b1b_027-s5b1b_028-s5b1b_029-s5b1b_030",
+        "elapsed_wall_seconds": 68.27732462799759,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "9ed0e61039d77844a7edfd19d15c2b6fd3458e6765fca822acfb9d00745cdc39",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "1656e167b3554ec43d7a122db4b101e1a00315f9a785aab6217ab16ae05fa5f6"
+      },
+      "selected_candidate_key": "candidate_01",
+      "selection_rationale": "Candidate 01 is the artist-channel upload of the requested studio recording and matches the target duration almost exactly.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_027"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "869491dbef33c1c704c54f2d8fb67beb61d3dd038db9b808eff3a16651b36f16",
+      "batch_prompt_sha256": "7444c690a185db2937ab11270cc4f965d159efafaa7ad30bfcc4c29a208c96c0",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "IDEAL",
+          "recording_identity_reason": "Explicitly the Billie Eilish and Justin Bieber version, with a 195-second duration matching the target.",
+          "source_quality_reason": "Official artist-channel audio and the preferred clean source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Both performers, title, and near-matching duration identify the requested collaboration.",
+          "source_quality_reason": "Third-party lyric upload is less authoritative than the official audio but has no explicit audio modification.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Names Billie Eilish and Justin Bieber and has a duration close to the requested collaboration.",
+          "source_quality_reason": "Unofficial upload with weak provenance, but no explicit conflicting version is stated.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "WRONG",
+          "recording_identity_reason": "This is the solo Billie Eilish album version and does not identify Justin Bieber.",
+          "source_quality_reason": "Official upload, but of the wrong target-relative version.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Explicitly identifies the Justin Bieber-featured version and has a compatible duration.",
+          "source_quality_reason": "Fan-made music-video upload is less preferable than official audio but does not explicitly claim altered audio.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:33:01.000834+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_026-s5b1b_027-s5b1b_028-s5b1b_029-s5b1b_030",
+        "elapsed_wall_seconds": 68.27732462799759,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "9ed0e61039d77844a7edfd19d15c2b6fd3458e6765fca822acfb9d00745cdc39",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "1656e167b3554ec43d7a122db4b101e1a00315f9a785aab6217ab16ae05fa5f6"
+      },
+      "selected_candidate_key": "candidate_01",
+      "selection_rationale": "Candidate 01 is the official artist upload explicitly naming the Justin Bieber collaboration and matches the target duration.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_028"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "869491dbef33c1c704c54f2d8fb67beb61d3dd038db9b808eff3a16651b36f16",
+      "batch_prompt_sha256": "7444c690a185db2937ab11270cc4f965d159efafaa7ad30bfcc4c29a208c96c0",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official visualizer explicitly identifies the requested angrier version.",
+          "source_quality_reason": "Official source, though its six seconds of additional runtime make the label-provided audio cleaner for representation.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "IDEAL",
+          "recording_identity_reason": "Artist, exact version title, release context, and 160-second duration match the target.",
+          "source_quality_reason": "Label-provided artist-channel audio is the preferred clean source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Explicitly names the angrier version and links to its official stream, with modest likely lyric-video padding.",
+          "source_quality_reason": "Third-party lyric upload with extra runtime, less clean than the provided audio.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly a Nightcore modification of the requested song.",
+          "source_quality_reason": "Modified-speed derivative is unsuitable regardless of title similarity.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Exact angrier-version title and 161-second duration are compatible with the target.",
+          "source_quality_reason": "Third-party lyric upload is safe enough but less authoritative than the label-provided source.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:33:01.000917+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_026-s5b1b_027-s5b1b_028-s5b1b_029-s5b1b_030",
+        "elapsed_wall_seconds": 68.27732462799759,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "9ed0e61039d77844a7edfd19d15c2b6fd3458e6765fca822acfb9d00745cdc39",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "1656e167b3554ec43d7a122db4b101e1a00315f9a785aab6217ab16ae05fa5f6"
+      },
+      "selected_candidate_key": "candidate_02",
+      "selection_rationale": "Candidate 02 is the artist-channel, label-provided audio with an essentially exact duration match.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_029"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "869491dbef33c1c704c54f2d8fb67beb61d3dd038db9b808eff3a16651b36f16",
+      "batch_prompt_sha256": "7444c690a185db2937ab11270cc4f965d159efafaa7ad30bfcc4c29a208c96c0",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly marked Clean, indicating a censored edit not requested by the target.",
+          "source_quality_reason": "Unofficial upload of a target-relative alternate version.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Explicitly identifies the chill version and matches the target duration.",
+          "source_quality_reason": "Unofficial audio upload with no stated modification, but weaker provenance than the provided source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "Description explicitly identifies this as a separate car-audio playback recording rather than the released master.",
+          "source_quality_reason": "Acoustic re-recording through a car-audio system is not a clean source representation.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Exact chill-version title and 177-second duration match the target without an explicit version conflict.",
+          "source_quality_reason": "Low-provenance third-party lyric upload, safe enough but not preferred.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "IDEAL",
+          "recording_identity_reason": "Exact chill-version title, artist, and 177-second duration match the target.",
+          "source_quality_reason": "Label-provided artist-channel audio is the preferred clean source.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:33:01.001001+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_026-s5b1b_027-s5b1b_028-s5b1b_029-s5b1b_030",
+        "elapsed_wall_seconds": 68.27732462799759,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "9ed0e61039d77844a7edfd19d15c2b6fd3458e6765fca822acfb9d00745cdc39",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "1656e167b3554ec43d7a122db4b101e1a00315f9a785aab6217ab16ae05fa5f6"
+      },
+      "selected_candidate_key": "candidate_05",
+      "selection_rationale": "Candidate 05 is the artist-channel, label-provided audio for the chill version and matches the target duration.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_030"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "c8b1b03cc103fa93507568715d90f4d55cf065c64788529d277e8701ba761edb",
+      "batch_prompt_sha256": "14f152aaf3201d8dd66446f4edcfe081d779731af7833f404654819f10ec7b2d",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "IDEAL",
+          "recording_identity_reason": "Exact song and artist; 219-second duration closely matches the 217.7-second album track.",
+          "source_quality_reason": "Official artist-channel, label-delivered audio is the preferred clean source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Exact artist and title with a 218-second duration matching the target recording.",
+          "source_quality_reason": "Likely album-audio upload, but from an unofficial user channel.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "UNCERTAIN",
+          "recording_identity_reason": "Artist and title match, but the 241-second runtime is substantially longer than the target.",
+          "source_quality_reason": "Unofficial lyrics upload with no explanation for the duration difference.",
+          "uncertainty_reason": "Metadata cannot establish whether it contains the unmodified studio recording with harmless padding or altered/additional audio."
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official music video for the correct song and performer; longer runtime is consistent with video material.",
+          "source_quality_reason": "Canonical artist upload, though less clean for audio extraction than the official audio source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "WRONG",
+          "recording_identity_reason": "Title and description explicitly identify a live BBC/Jools Holland performance rather than the studio album recording.",
+          "source_quality_reason": "Live performance conflicts with the requested studio version.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:33:59.697330+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_031-s5b1b_032-s5b1b_033-s5b1b_034-s5b1b_035",
+        "elapsed_wall_seconds": 58.68949119700119,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "68fdccc8664098c8a158ddbd96da5dbc00daf955286bae99c65f0be046f56405",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "87be58decbec68fb58cf74bf3ed01cca15308035892bfad0cf3f55ac373f7616"
+      },
+      "selected_candidate_key": "candidate_01",
+      "selection_rationale": "Official artist-channel audio matches the studio track and target duration most closely, making it the cleanest source.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_031"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "c8b1b03cc103fa93507568715d90f4d55cf065c64788529d277e8701ba761edb",
+      "batch_prompt_sha256": "14f152aaf3201d8dd66446f4edcfe081d779731af7833f404654819f10ec7b2d",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Exact artist and song title with a 214-second duration matching the target.",
+          "source_quality_reason": "Unofficial upload with limited recording-specific provenance.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Exact artist and title, matching duration, and description linking the song to Greatest Hits... So Far!!!.",
+          "source_quality_reason": "Unofficial source, but its metadata most clearly supports the intended recording.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Artist, recognizable title formatting, and 212-second duration align with the target.",
+          "source_quality_reason": "Sparse metadata and unofficial provenance make it less preferable.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Exact song and artist with a 214-second runtime consistent with the studio track.",
+          "source_quality_reason": "Unofficial lyrics upload, but no explicit version conflict is present.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "WRONG",
+          "recording_identity_reason": "Description explicitly identifies a clean version, which conflicts with the requested album recording.",
+          "source_quality_reason": "User-created video and explicitly alternate censored recording.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:33:59.697501+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_031-s5b1b_032-s5b1b_033-s5b1b_034-s5b1b_035",
+        "elapsed_wall_seconds": 58.68949119700119,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "68fdccc8664098c8a158ddbd96da5dbc00daf955286bae99c65f0be046f56405",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "87be58decbec68fb58cf74bf3ed01cca15308035892bfad0cf3f55ac373f7616"
+      },
+      "selected_candidate_key": "candidate_02",
+      "selection_rationale": "Candidate 02 closely matches the target duration and provides the strongest album-specific evidence among the compatible uploads.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_032"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "c8b1b03cc103fa93507568715d90f4d55cf065c64788529d277e8701ba761edb",
+      "batch_prompt_sha256": "14f152aaf3201d8dd66446f4edcfe081d779731af7833f404654819f10ec7b2d",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official NewJeans dance-practice video for Ditto with a runtime close to the target.",
+          "source_quality_reason": "Likely uses the studio recording, but video padding makes it less clean than an audio-focused source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official performance video for Ditto with a duration close to the studio track.",
+          "source_quality_reason": "Canonical upload, though performance-video framing is less clean than the audio candidate.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official side A music video for the correct song and artist.",
+          "source_quality_reason": "Canonical source, but its 334-second narrative runtime contains substantial non-song material.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official side B music video for the correct song and artist.",
+          "source_quality_reason": "Canonical source, but its 277-second narrative runtime is substantially longer than the target audio.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "IDEAL",
+          "recording_identity_reason": "Description identifies NewJeans' Ditto as official audio, and 186 seconds matches the 185.5-second target.",
+          "source_quality_reason": "Audio-focused presentation provides the cleanest target representation despite unofficial uploader provenance.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:33:59.697687+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_031-s5b1b_032-s5b1b_033-s5b1b_034-s5b1b_035",
+        "elapsed_wall_seconds": 58.68949119700119,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "68fdccc8664098c8a158ddbd96da5dbc00daf955286bae99c65f0be046f56405",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "87be58decbec68fb58cf74bf3ed01cca15308035892bfad0cf3f55ac373f7616"
+      },
+      "selected_candidate_key": "candidate_05",
+      "selection_rationale": "Candidate 05 is explicitly presented as audio and its 186-second runtime essentially matches the target, making it the cleanest compatible representation.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_033"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "c8b1b03cc103fa93507568715d90f4d55cf065c64788529d277e8701ba761edb",
+      "batch_prompt_sha256": "14f152aaf3201d8dd66446f4edcfe081d779731af7833f404654819f10ec7b2d",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Officially presented IVE performance for LOVE DIVE, with modest video-related duration padding.",
+          "source_quality_reason": "Professional performance source, but less clean than the artist-channel audio upload.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Artist, song, album, and 177-second duration exactly align with the target.",
+          "source_quality_reason": "Unofficial color-coded lyrics upload rather than a canonical audio source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "IDEAL",
+          "recording_identity_reason": "Exact title on IVE's channel with a 178-second runtime matching the target recording.",
+          "source_quality_reason": "Artist-channel, audio-style upload is the preferred clean source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official IVE dance-practice video for the correct song with a matching runtime.",
+          "source_quality_reason": "Likely contains the studio audio, but the dance-practice format is less preferable than clean audio.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official music video for IVE's LOVE DIVE with a runtime closely matching the target.",
+          "source_quality_reason": "Canonical and compatible, though the music-video source is less clean than the audio-style upload.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:33:59.697810+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_031-s5b1b_032-s5b1b_033-s5b1b_034-s5b1b_035",
+        "elapsed_wall_seconds": 58.68949119700119,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "68fdccc8664098c8a158ddbd96da5dbc00daf955286bae99c65f0be046f56405",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "87be58decbec68fb58cf74bf3ed01cca15308035892bfad0cf3f55ac373f7616"
+      },
+      "selected_candidate_key": "candidate_03",
+      "selection_rationale": "The artist-channel upload titled simply LOVE DIVE closely matches the target duration and is the strongest clean-audio candidate.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_034"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "c8b1b03cc103fa93507568715d90f4d55cf065c64788529d277e8701ba761edb",
+      "batch_prompt_sha256": "14f152aaf3201d8dd66446f4edcfe081d779731af7833f404654819f10ec7b2d",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Exact artist and song with description identifying the original English single; 205 seconds is close to the target.",
+          "source_quality_reason": "Unofficial lyrics upload with minor likely video padding.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "WRONG",
+          "recording_identity_reason": "Title and description explicitly identify an Amazon Music Live performance rather than the studio recording.",
+          "source_quality_reason": "Canonical provenance does not overcome the live-version conflict.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official choreography video for the correct song, with a 203-second runtime close to the 198-second target.",
+          "source_quality_reason": "Canonical source likely using studio audio, though not a dedicated audio upload.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official choreography video for the correct song with only modest duration padding.",
+          "source_quality_reason": "Canonical and compatible, but slightly longer and less clean than candidate 03.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official JYP music video for the correct TWICE song.",
+          "source_quality_reason": "Canonical but substantially extended beyond the target duration, making it less suitable for clean audio representation.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:33:59.697918+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_031-s5b1b_032-s5b1b_033-s5b1b_034-s5b1b_035",
+        "elapsed_wall_seconds": 58.68949119700119,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "68fdccc8664098c8a158ddbd96da5dbc00daf955286bae99c65f0be046f56405",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "87be58decbec68fb58cf74bf3ed01cca15308035892bfad0cf3f55ac373f7616"
+      },
+      "selected_candidate_key": "candidate_03",
+      "selection_rationale": "The official TWICE choreography upload is a close-duration, canonical source likely using the studio recording and is preferable to unofficial lyrics or the extended music video.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_035"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "66b198c5576b38158a2f305b299f702b4549171f6c2958d8d022d0a54e4aa85c",
+      "batch_prompt_sha256": "a73578f19d3f25a84c4ba74e6133934224dba5db9f831984984d3a4b68e1312e",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "Title explicitly identifies a remastered version, conflicting with the unmodified target recording.",
+          "source_quality_reason": "Unofficial remaster rather than a clean canonical release source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Explicit-version title and 185-second duration support the intended song, though Latto is omitted from the sparse metadata.",
+          "source_quality_reason": "Unofficial audio upload with no description, but otherwise compatible.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "IDEAL",
+          "recording_identity_reason": "Title and distributor description explicitly match “Seven (feat. Latto) - Explicit Ver.”",
+          "source_quality_reason": "Canonical artist Topic upload with a near-exact duration.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Explicitly names Jung Kook, Latto, “SEVEN,” and the explicit version; duration is compatible.",
+          "source_quality_reason": "Unofficial color-coded lyric upload rather than a canonical audio source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "IDEAL",
+          "recording_identity_reason": "Canonical metadata explicitly identifies the same explicit Latto recording, albeit under the Weekday Version release.",
+          "source_quality_reason": "Clean artist Topic upload with matching duration.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:34:55.244940+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_036-s5b1b_037-s5b1b_038-s5b1b_039-s5b1b_040",
+        "elapsed_wall_seconds": 55.542107632005354,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "fcc6805557a81aa8074ec6c6c218d49c1ecc33ae06d9df0487e86ab79817c7a6",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "3fc2d00cee609d1698a409ab3c3c6df78940ed0fb25da2329f789c406248bce3"
+      },
+      "selected_candidate_key": "candidate_03",
+      "selection_rationale": "Canonical Topic upload explicitly identifies the target explicit Latto recording and closely matches the target duration.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_036"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "66b198c5576b38158a2f305b299f702b4549171f6c2958d8d022d0a54e4aa85c",
+      "batch_prompt_sha256": "a73578f19d3f25a84c4ba74e6133934224dba5db9f831984984d3a4b68e1312e",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly a live BRIT Awards 2012 performance rather than the target studio recording.",
+          "source_quality_reason": "Official event source, but for the wrong recording.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Names Rihanna, Calvin Harris, and the correct song, with a duration matching the target.",
+          "source_quality_reason": "Unofficial lyrics upload, safe but less preferred than official audio.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "IDEAL",
+          "recording_identity_reason": "Official audio title names Rihanna, Calvin Harris, and the correct song; duration closely matches the target.",
+          "source_quality_reason": "Clean official artist-channel audio source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official artist upload of the correct song and featured artist, with excess duration consistent with music-video material.",
+          "source_quality_reason": "Canonical music video but less clean for audio representation than the official audio.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Label-channel translated MV names the correct song, Rihanna, and Calvin Harris.",
+          "source_quality_reason": "Legitimate localized music-video source, but longer and less audio-clean than official audio.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:34:55.245112+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_036-s5b1b_037-s5b1b_038-s5b1b_039-s5b1b_040",
+        "elapsed_wall_seconds": 55.542107632005354,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "fcc6805557a81aa8074ec6c6c218d49c1ecc33ae06d9df0487e86ab79817c7a6",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "3fc2d00cee609d1698a409ab3c3c6df78940ed0fb25da2329f789c406248bce3"
+      },
+      "selected_candidate_key": "candidate_03",
+      "selection_rationale": "The official artist-channel audio closely matches the target's 215-second studio recording and is cleaner than lyric or music-video sources.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_037"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "66b198c5576b38158a2f305b299f702b4549171f6c2958d8d022d0a54e4aa85c",
+      "batch_prompt_sha256": "a73578f19d3f25a84c4ba74e6133934224dba5db9f831984984d3a4b68e1312e",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Correct song and artist with a 138-second duration essentially identical to the target.",
+          "source_quality_reason": "Unofficial lyric source, but the cleanest duration-compatible studio candidate supplied.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly an SNL performance, not the target studio recording.",
+          "source_quality_reason": "Performance upload for a target-incompatible version.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official video for the correct song; excess duration is consistent with video-specific framing around the studio track.",
+          "source_quality_reason": "Canonical source, though substantially padded relative to the target audio.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly a BBC Live Lounge performance rather than the studio recording.",
+          "source_quality_reason": "Official performance source for the wrong version.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly labeled “SATAN’S EXTENDED VERSION,” conflicting with the standard target version.",
+          "source_quality_reason": "Canonical upload, but of the wrong version.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:34:55.245224+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_036-s5b1b_037-s5b1b_038-s5b1b_039-s5b1b_040",
+        "elapsed_wall_seconds": 55.542107632005354,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "fcc6805557a81aa8074ec6c6c218d49c1ecc33ae06d9df0487e86ab79817c7a6",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "3fc2d00cee609d1698a409ab3c3c6df78940ed0fb25da2329f789c406248bce3"
+      },
+      "selected_candidate_key": "candidate_01",
+      "selection_rationale": "The lyric upload matches the target's 138-second studio-track duration; the official alternatives are a padded video, live performances, or an extended version.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_038"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "66b198c5576b38158a2f305b299f702b4549171f6c2958d8d022d0a54e4aa85c",
+      "batch_prompt_sha256": "a73578f19d3f25a84c4ba74e6133934224dba5db9f831984984d3a4b68e1312e",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official video for the correct song and album-era release; modest excess duration is compatible with video padding.",
+          "source_quality_reason": "Canonical music video, but less clean than the official audio.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "IDEAL",
+          "recording_identity_reason": "Official lyric video for the correct song with a duration matching the target.",
+          "source_quality_reason": "Canonical full-song source, though official audio is slightly preferable.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly a live Vevo Studio performance rather than the target studio recording.",
+          "source_quality_reason": "High-quality official performance source, but for the wrong recording.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "IDEAL",
+          "recording_identity_reason": "Official audio for the correct song with a 237-second duration matching the target.",
+          "source_quality_reason": "Preferred clean artist-channel audio source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Correct artist and song with a matching 237-second duration.",
+          "source_quality_reason": "Unofficial lyric upload, safe but inferior to canonical sources.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:34:55.245329+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_036-s5b1b_037-s5b1b_038-s5b1b_039-s5b1b_040",
+        "elapsed_wall_seconds": 55.542107632005354,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "fcc6805557a81aa8074ec6c6c218d49c1ecc33ae06d9df0487e86ab79817c7a6",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "3fc2d00cee609d1698a409ab3c3c6df78940ed0fb25da2329f789c406248bce3"
+      },
+      "selected_candidate_key": "candidate_04",
+      "selection_rationale": "The official artist-channel audio has the exact song identity and a duration effectively matching the target.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_039"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "66b198c5576b38158a2f305b299f702b4549171f6c2958d8d022d0a54e4aa85c",
+      "batch_prompt_sha256": "a73578f19d3f25a84c4ba74e6133934224dba5db9f831984984d3a4b68e1312e",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Correct Luke Combs song with a 266-second duration closely matching the target album track.",
+          "source_quality_reason": "Established unofficial lyric source; safe but not canonical.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Correct song and artist with the same duration as the target recording.",
+          "source_quality_reason": "Unofficial visualizer source with compatible metadata.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly an official live video rather than the target studio recording.",
+          "source_quality_reason": "Canonical artist upload, but for the wrong recording.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "WRONG",
+          "recording_identity_reason": "The 403-second runtime is grossly incompatible with the 265-second target, and the sparse metadata gives no evidence that the excess is benign.",
+          "source_quality_reason": "Unofficial upload making an unsupported “Official Music video” claim.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly labeled a 2023 remaster with altered sound quality, conflicting with the standard album recording.",
+          "source_quality_reason": "Unofficial modified-audio source.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:34:55.245431+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_036-s5b1b_037-s5b1b_038-s5b1b_039-s5b1b_040",
+        "elapsed_wall_seconds": 55.542107632005354,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "fcc6805557a81aa8074ec6c6c218d49c1ecc33ae06d9df0487e86ab79817c7a6",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "3fc2d00cee609d1698a409ab3c3c6df78940ed0fb25da2329f789c406248bce3"
+      },
+      "selected_candidate_key": "candidate_01",
+      "selection_rationale": "The exact-duration lyric upload is the clearest unmodified studio candidate; the official upload is explicitly live and another candidate is explicitly remastered.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_040"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "02555b700e89d9e1590c40779342b615399fdf976530f766884189a81a5ead72",
+      "batch_prompt_sha256": "b8b5c1ee428e06a616c360090042823a1fcccb8e63517ec036f98738ff21deda",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "Title explicitly identifies a live performance rather than the requested studio album recording.",
+          "source_quality_reason": "Artist-channel provenance cannot overcome the live-version conflict.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official artist video names the correct song and performer, with no explicit alternate-version claim.",
+          "source_quality_reason": "Canonical provenance is strong, but its 306-second runtime indicates substantial video-specific material beyond the 269-second target.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "IDEAL",
+          "recording_identity_reason": "Artist/title match and the 269-second runtime essentially equals the 268.96-second target.",
+          "source_quality_reason": "The third-party uploader is less authoritative, but the metadata supports a clean, exact-length representation.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "WRONG",
+          "recording_identity_reason": "The title explicitly associates this performance with a Christmas television special, creating a target-relative version conflict.",
+          "source_quality_reason": "Official artist provenance does not make the special performance the requested album recording.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "UNCERTAIN",
+          "recording_identity_reason": "The title says lyric video, while the description calls it an official karaoke video; the supplied metadata does not establish whether it contains the normal vocal recording.",
+          "source_quality_reason": "Potentially legitimate promotional provenance, but the format contradiction prevents safe selection.",
+          "uncertainty_reason": "Conflicting lyric-video and karaoke-video metadata leaves the underlying audio unclear."
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:35:52.116929+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_041-s5b1b_042-s5b1b_043-s5b1b_044-s5b1b_045",
+        "elapsed_wall_seconds": 56.85371296701487,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "42148807538076f16b79559ed876cbe01614b326af81a6ed898f1a752bce09e9",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "ed10d9f8a52c44329b2347a31e02e463516dd872601b2c20897672f4016ae132"
+      },
+      "selected_candidate_key": "candidate_03",
+      "selection_rationale": "The exact artist/title and 269-second duration closely match the target album track; other candidates are live/special variants or materially longer video presentations.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_041"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "02555b700e89d9e1590c40779342b615399fdf976530f766884189a81a5ead72",
+      "batch_prompt_sha256": "b8b5c1ee428e06a616c360090042823a1fcccb8e63517ec036f98738ff21deda",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "IDEAL",
+          "recording_identity_reason": "Official audio for the correct Bad Wolves recording, within one second of the target duration.",
+          "source_quality_reason": "Authoritative label upload and audio-focused presentation make it a preferred clean source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Artist/title match the requested recording, with no explicit alternate-version wording.",
+          "source_quality_reason": "Unofficial lyrics upload and a 21-second duration excess make it less clean than the official audio sources.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Description identifies Bad Wolves' recording of Zombie without claiming a remix, live take, or other alternate version.",
+          "source_quality_reason": "Unofficial lyric-video provenance and a 14-second duration excess reduce preference.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "IDEAL",
+          "recording_identity_reason": "The supplied release metadata explicitly names Bad Wolves, Disobey, and the 2018 release, while its 255-second duration matches the target.",
+          "source_quality_reason": "Distributor-provided Topic upload is a clean, canonical album-track source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official label video names the correct performer and song, with no alternate recording indicated.",
+          "source_quality_reason": "Canonical provenance is strong, but the 276-second video runtime includes substantially more material than the target audio.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:35:52.117124+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_041-s5b1b_042-s5b1b_043-s5b1b_044-s5b1b_045",
+        "elapsed_wall_seconds": 56.85371296701487,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "42148807538076f16b79559ed876cbe01614b326af81a6ed898f1a752bce09e9",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "ed10d9f8a52c44329b2347a31e02e463516dd872601b2c20897672f4016ae132"
+      },
+      "selected_candidate_key": "candidate_04",
+      "selection_rationale": "The Topic upload explicitly identifies the Disobey album release and has the exact target runtime, making it the cleanest album-track source.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_042"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "02555b700e89d9e1590c40779342b615399fdf976530f766884189a81a5ead72",
+      "batch_prompt_sha256": "b8b5c1ee428e06a616c360090042823a1fcccb8e63517ec036f98738ff21deda",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "Title explicitly identifies a live SNL performance rather than the Unapologetic studio recording.",
+          "source_quality_reason": "Official artist provenance cannot overcome the live-version conflict.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "The named performers, song, and music-video format are compatible with the requested recording.",
+          "source_quality_reason": "Unofficial low-view upload is less authoritative than the artist's canonical video.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "Title explicitly identifies a live Concert for Valor performance.",
+          "source_quality_reason": "Unofficial provenance compounds the explicit live-version mismatch.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "IDEAL",
+          "recording_identity_reason": "Official artist upload names Rihanna, Mikky Ekko, and Stay, with no alternate-version wording.",
+          "source_quality_reason": "Canonical artist provenance makes this the preferred source; the modest runtime excess is consistent with video presentation.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Artist, featured performer, and title match, with no explicit version conflict.",
+          "source_quality_reason": "Unofficial lyrics upload is slightly shorter than the target and less authoritative than the official video.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:35:52.117233+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_041-s5b1b_042-s5b1b_043-s5b1b_044-s5b1b_045",
+        "elapsed_wall_seconds": 56.85371296701487,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "42148807538076f16b79559ed876cbe01614b326af81a6ed898f1a752bce09e9",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "ed10d9f8a52c44329b2347a31e02e463516dd872601b2c20897672f4016ae132"
+      },
+      "selected_candidate_key": "candidate_04",
+      "selection_rationale": "The official Rihanna upload names both Rihanna and Mikky Ekko and is the strongest canonical source for the requested studio recording.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_043"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "02555b700e89d9e1590c40779342b615399fdf976530f766884189a81a5ead72",
+      "batch_prompt_sha256": "b8b5c1ee428e06a616c360090042823a1fcccb8e63517ec036f98738ff21deda",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "IDEAL",
+          "recording_identity_reason": "Description credits Michael Andrews featuring Gary Jules, and the 190-second duration matches the 189.5-second target.",
+          "source_quality_reason": "Official Gary Jules channel and official-video designation provide strong canonical provenance.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "WRONG",
+          "recording_identity_reason": "Both title and release metadata explicitly identify an alternate version.",
+          "source_quality_reason": "Canonical Topic provenance confirms the conflicting version rather than resolving it.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "Title explicitly identifies a 20th-anniversary live performance.",
+          "source_quality_reason": "Official provenance cannot overcome the live rerecording conflict.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Gary Jules, title, and near-exact runtime are compatible with the requested recording.",
+          "source_quality_reason": "Unofficial upload with no description is less authoritative than the official video.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Artist and title match, with no explicit alternate-version claim.",
+          "source_quality_reason": "Unofficial lyrics upload is about seven seconds shorter than the target, making it less preferable but still plausibly the same recording with trimmed boundaries.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:35:52.117326+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_041-s5b1b_042-s5b1b_043-s5b1b_044-s5b1b_045",
+        "elapsed_wall_seconds": 56.85371296701487,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "42148807538076f16b79559ed876cbe01614b326af81a6ed898f1a752bce09e9",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "ed10d9f8a52c44329b2347a31e02e463516dd872601b2c20897672f4016ae132"
+      },
+      "selected_candidate_key": "candidate_01",
+      "selection_rationale": "The official video explicitly credits Michael Andrews and Gary Jules and matches the target duration within one second.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_044"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "02555b700e89d9e1590c40779342b615399fdf976530f766884189a81a5ead72",
+      "batch_prompt_sha256": "b8b5c1ee428e06a616c360090042823a1fcccb8e63517ec036f98738ff21deda",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "IDEAL",
+          "recording_identity_reason": "Official artist upload ties the song to Birdy's 2011 debut album and its 203-second runtime closely matches the target.",
+          "source_quality_reason": "Canonical provenance and near-exact duration support a clean representation, though the one-take video is marginally less direct than the visualiser.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Artist/title match and the 199-second runtime is close to the requested recording.",
+          "source_quality_reason": "Unofficial lyrics upload is less authoritative and may have slightly trimmed boundaries.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "Title and description explicitly identify the Vanic remix rather than Birdy's requested album recording.",
+          "source_quality_reason": "The explicit remix conflict is decisive regardless of popularity.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "IDEAL",
+          "recording_identity_reason": "Official artist video explicitly links the song to Birdy's 2011 debut album, with no alternate recording claimed.",
+          "source_quality_reason": "Canonical source, though its 214-second runtime suggests more video-specific padding than the other official candidates.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "IDEAL",
+          "recording_identity_reason": "Official artist visualiser explicitly links the song to the target 2011 album and is only three seconds longer than the target.",
+          "source_quality_reason": "Canonical provenance and near-target duration make this the cleanest supplied source.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:35:52.117408+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_041-s5b1b_042-s5b1b_043-s5b1b_044-s5b1b_045",
+        "elapsed_wall_seconds": 56.85371296701487,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "42148807538076f16b79559ed876cbe01614b326af81a6ed898f1a752bce09e9",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "ed10d9f8a52c44329b2347a31e02e463516dd872601b2c20897672f4016ae132"
+      },
+      "selected_candidate_key": "candidate_05",
+      "selection_rationale": "The official visualiser is an artist-channel source only three seconds longer than the target and is the least video-extended canonical presentation.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_045"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "7396ce0a81b2c8222897c5d4ddd3de8e04eecbe3cdee0f63370f1ab653a0adbc",
+      "batch_prompt_sha256": "2652bd9867a55395b66946ab3eda16f973b32425605ba298d34f520d266cb122",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official artist upload for the correct Stromae song, but its 235-second music-video presentation substantially exceeds the 206-second target.",
+          "source_quality_reason": "Authoritative provenance, though less clean for audio extraction because of likely video-only material.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official label music video for the correct 2009 Stromae recording, with a much longer runtime than the album track.",
+          "source_quality_reason": "Strong provenance but likely includes non-song video material.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official artist videoclip for the correct song, but its 234-second duration is substantially longer than the target.",
+          "source_quality_reason": "Authoritative source, though not the cleanest audio representation.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "WRONG",
+          "recording_identity_reason": "This is a six-minute comedy/composition video involving Jamel Debbouze, not the target recording.",
+          "source_quality_reason": "Content format and duration explicitly conflict with a clean song source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "IDEAL",
+          "recording_identity_reason": "Correct artist and title with a 209-second runtime closely matching the 206-second target; no modification is stated.",
+          "source_quality_reason": "Likely a clean full-song lyrics presentation, preferable here to the substantially extended official videos.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:36:44.190663+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_046-s5b1b_047-s5b1b_048-s5b1b_049-s5b1b_050",
+        "elapsed_wall_seconds": 52.04919346200768,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "578517fcc7b2af24864f3d92f10d48c7ab02dad533c9cc4f042accac6924c5af",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "e7eb37a817453954a19ea77cd712a91b6b6f379826d1e5c8d9140984cf307f52"
+      },
+      "selected_candidate_key": "candidate_05",
+      "selection_rationale": "The close-duration lyrics upload is the cleanest supplied representation of the 206-second album recording; the official videos contain substantial extra video material.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_046"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "7396ce0a81b2c8222897c5d4ddd3de8e04eecbe3cdee0f63370f1ab653a0adbc",
+      "batch_prompt_sha256": "2652bd9867a55395b66946ab3eda16f973b32425605ba298d34f520d266cb122",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "IDEAL",
+          "recording_identity_reason": "Official Indila video for the correct Mini World song, with a duration closely matching the target.",
+          "source_quality_reason": "Canonical artist source and the cleanest authoritative candidate.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Correct artist, song, and near-exact duration with no stated alternate version.",
+          "source_quality_reason": "Safe lyrics reupload, but less authoritative than the artist's official clip.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly described as a dark gothic orchestral cover and reinterpretation.",
+          "source_quality_reason": "Cleanliness cannot overcome the recording mismatch.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicit AB 54 live performance rather than the requested studio recording.",
+          "source_quality_reason": "Additionally rebuilt and rebalanced by the uploader.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicit acoustic session, conflicting with the requested album recording.",
+          "source_quality_reason": "Alternate performance rather than a canonical studio source.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:36:44.190841+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_046-s5b1b_047-s5b1b_048-s5b1b_049-s5b1b_050",
+        "elapsed_wall_seconds": 52.04919346200768,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "578517fcc7b2af24864f3d92f10d48c7ab02dad533c9cc4f042accac6924c5af",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "e7eb37a817453954a19ea77cd712a91b6b6f379826d1e5c8d9140984cf307f52"
+      },
+      "selected_candidate_key": "candidate_01",
+      "selection_rationale": "The artist's official clip matches the intended Indila recording and target duration closely.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_047"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "7396ce0a81b2c8222897c5d4ddd3de8e04eecbe3cdee0f63370f1ab653a0adbc",
+      "batch_prompt_sha256": "2652bd9867a55395b66946ab3eda16f973b32425605ba298d34f520d266cb122",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "IDEAL",
+          "recording_identity_reason": "Official video names both performers and the correct album, with a runtime reasonably close to the target.",
+          "source_quality_reason": "Canonical artist upload with strong recording provenance.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "WRONG",
+          "recording_identity_reason": "The 915-second runtime is incompatible with the approximately 205-second target and indicates additional or repeated content.",
+          "source_quality_reason": "Unofficial lyrics upload with a severe duration conflict.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Names both intended performers and presents DÁKITI as audio; its runtime is close to the target.",
+          "source_quality_reason": "Claims extraction from an original CD but is an unofficial upload, so it is less preferred than the canonical video.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicit David Guetta remix and live-stream performance, not the requested original recording.",
+          "source_quality_reason": "Canonical remix provenance does not resolve the version conflict.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicit Spotify Billions Club live performance with a much shorter runtime.",
+          "source_quality_reason": "Fan-cam provenance and alternate live performance conflict with the target.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:36:44.190931+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_046-s5b1b_047-s5b1b_048-s5b1b_049-s5b1b_050",
+        "elapsed_wall_seconds": 52.04919346200768,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "578517fcc7b2af24864f3d92f10d48c7ab02dad533c9cc4f042accac6924c5af",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "e7eb37a817453954a19ea77cd712a91b6b6f379826d1e5c8d9140984cf307f52"
+      },
+      "selected_candidate_key": "candidate_01",
+      "selection_rationale": "The official Bad Bunny and Jhay Cortez video is the strongest canonical match for the requested DÁKITI recording.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_048"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "7396ce0a81b2c8222897c5d4ddd3de8e04eecbe3cdee0f63370f1ab653a0adbc",
+      "batch_prompt_sha256": "2652bd9867a55395b66946ab3eda16f973b32425605ba298d34f520d266cb122",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "The 359-second official audio corresponds to the substantially longer non-edit version, while the target explicitly requests the 227-second Edit.",
+          "source_quality_reason": "Authoritative source for the wrong target-relative version.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Explicitly identifies the Edit and matches the target duration closely.",
+          "source_quality_reason": "Safe lyrics source but an obscure unofficial upload.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Correct performers and 227-second duration strongly match the requested Edit despite the title omitting the suffix.",
+          "source_quality_reason": "Unofficial lyrics upload, less authoritative than the artist source.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "IDEAL",
+          "recording_identity_reason": "Official artist video credits Eliza Rose and Interplanetary Criminal, and its 227-second runtime matches the requested Edit.",
+          "source_quality_reason": "Canonical artist source and cleanest authoritative compatible candidate.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicitly labeled a Chore Edit, indicating an unrequested modified version.",
+          "source_quality_reason": "Very low-view unofficial upload with a stated version conflict.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:36:44.191014+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_046-s5b1b_047-s5b1b_048-s5b1b_049-s5b1b_050",
+        "elapsed_wall_seconds": 52.04919346200768,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "578517fcc7b2af24864f3d92f10d48c7ab02dad533c9cc4f042accac6924c5af",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "e7eb37a817453954a19ea77cd712a91b6b6f379826d1e5c8d9140984cf307f52"
+      },
+      "selected_candidate_key": "candidate_04",
+      "selection_rationale": "The official 227-second artist video matches the duration of the requested Edit and has the strongest provenance.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_049"
+    },
+    {
+      "attempt": 1,
+      "batch_payload_sha256": "7396ce0a81b2c8222897c5d4ddd3de8e04eecbe3cdee0f63370f1ab653a0adbc",
+      "batch_prompt_sha256": "2652bd9867a55395b66946ab3eda16f973b32425605ba298d34f520d266cb122",
+      "candidates": [
+        {
+          "candidate_key": "candidate_01",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicit CBC Music Festival 2016 live performance rather than the 2014 studio recording.",
+          "source_quality_reason": "Professional source, but for the wrong performance.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_02",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Official artist video for the correct song from the self-titled 2014 album, with near-target duration.",
+          "source_quality_reason": "Canonical source, though official audio is preferable for pure audio representation.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_03",
+          "label": "WRONG",
+          "recording_identity_reason": "Explicit live KEXP studio performance, not the requested album master.",
+          "source_quality_reason": "High-quality session source for an alternate performance.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_04",
+          "label": "IDEAL",
+          "recording_identity_reason": "Official label audio explicitly taken from the correct 2014 Alvvays album.",
+          "source_quality_reason": "Authoritative audio-only source and preferred clean representation.",
+          "uncertainty_reason": null
+        },
+        {
+          "candidate_key": "candidate_05",
+          "label": "ACCEPTABLE",
+          "recording_identity_reason": "Correct artist and song with a 198-second duration closely matching the target and no stated alternate version.",
+          "source_quality_reason": "Likely legitimate label source, but metadata is less explicit than the official-audio candidate.",
+          "uncertainty_reason": null
+        }
+      ],
+      "evaluated_at": "2026-09-02T01:36:44.191096+00:00",
+      "operational": {
+        "batch_id": "batch-s5b1b_046-s5b1b_047-s5b1b_048-s5b1b_049-s5b1b_050",
+        "elapsed_wall_seconds": 52.04919346200768,
+        "event_type_counts": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_event_count": 0,
+        "response_sha256": "578517fcc7b2af24864f3d92f10d48c7ab02dad533c9cc4f042accac6924c5af",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "e7eb37a817453954a19ea77cd712a91b6b6f379826d1e5c8d9140984cf307f52"
+      },
+      "selected_candidate_key": "candidate_04",
+      "selection_rationale": "The label's official album audio is the cleanest authoritative source for the requested studio recording.",
+      "selection_status": "SELECTED",
+      "stable_track_id": "s5b1b_050"
+    }
+  ],
+  "updated_at": "2026-09-02T01:36:44.196012+00:00"
+}

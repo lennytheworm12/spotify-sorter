@@ -19,3 +19,15 @@ prompts/
 # Tooling and OS noise
 .DS_Store
 *.log
+
+# Local audio research environments, source media, models and caches
+ml/**/.venv/
+ml/**/__pycache__/
+ml/**/*.pyc
+ml/**/.pytest_cache/
+ml/**/data/
+ml/**/artifacts/
+ml/**/models/
+ml/**/deploy_bundle/
+ml/audio_similarity/.research_audio/
+ml/audio_similarity/reports/stage5b_representative_library_v1/library_snapshot.private.json

@@ -1,0 +1,44 @@
+{
+  "artifacts": [
+    {
+      "contains_media": false,
+      "path": "retention_config.json",
+      "sha256": "e8e6df5729ca8a25a07e01594f7578e1bb457b44b50be83c4960975408ca3b1b",
+      "size_bytes": 2457
+    },
+    {
+      "contains_media": false,
+      "path": "amended_100_source_reference.json",
+      "sha256": "fd426cd1bc2e961fd209886d974e620ca4f1cbf369cc80b8967a683e0bb13825",
+      "size_bytes": 180504
+    },
+    {
+      "contains_media": false,
+      "path": "retention_results.json",
+      "sha256": "d3b795fa8a3f9ad33174633fcb7c32b70a897c14410ee39dc0aec362de379ca6",
+      "size_bytes": 148789
+    },
+    {
+      "contains_media": false,
+      "path": "retention_metrics.json",
+      "sha256": "b1bbbad25e855865be6cb1976ce44ddf15c0d0f78c35ed4c64b8f33c4629fcb4",
+      "size_bytes": 2319
+    },
+    {
+      "contains_media": false,
+      "path": "playback_validation.json",
+      "sha256": "17dd15bc8650fea4132be42d3b327502ce23debd0a4e8489e5f0707f3e589b5b",
+      "size_bytes": 5917
+    },
+    {
+      "contains_media": false,
+      "path": "stage5c2a_report.md",
+      "sha256": "53fd531debf5632024d97a6bae6af67960322a81bf1dc00605b3ace6709c9568",
+      "size_bytes": 1816
+    }
+  ],
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "local_media_committed": false,
+  "local_media_root": ".research_audio",
+  "schema_version": "stage5c2a-artifact-manifest-v1"
+}

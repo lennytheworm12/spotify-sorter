@@ -1,0 +1,150 @@
+{
+  "benchmark_id": "STAGE5B_YOUTUBE_PRIOR_V1",
+  "no_tuning_performed": true,
+  "schema_version": "stage5b2-youtube-prior-failure-analysis-v1",
+  "top1_failure_categories": {
+    "LIVE_VS_STUDIO": 1,
+    "METADATA_INSUFFICIENT": 1,
+    "MULTI_TRACK_OR_NOT_ISOLATED": 1
+  },
+  "top1_failure_count": 3,
+  "top1_failures": [
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_017",
+      "failure_category": "LIVE_VS_STUDIO",
+      "first_safe_rank": 2,
+      "reviewed_ranks": [
+        {
+          "channel": "LE SSERAFIM",
+          "failure_category": "LIVE_VS_STUDIO",
+          "human_label": "WRONG",
+          "human_note": "length too long",
+          "native_rank": 1,
+          "sol_label": "WRONG",
+          "sol_reason": "Explicit Original Stage video is far longer than the studio target.",
+          "title": "LE SSERAFIM (르세라핌) 'We got so much' l Original Stage",
+          "video_id": "nvGnwC2T6Ek"
+        },
+        {
+          "channel": "Chaereve",
+          "failure_category": null,
+          "human_label": "IDEAL",
+          "human_note": null,
+          "native_rank": 2,
+          "sol_label": "ACCEPTABLE",
+          "sol_reason": "Exact artist, album, title, year, and duration in a lyric upload.",
+          "title": "LE SSERAFIM We got so much Lyrics (Color Coded Lyrics)",
+          "video_id": "Kw2faPNf00s"
+        }
+      ],
+      "spotify_track_id": "5fCKBIJ7BwaCpxxwZCbS5X",
+      "target_artists": [
+        "LE SSERAFIM"
+      ],
+      "target_title": "We got so much",
+      "top1": {
+        "channel": "LE SSERAFIM",
+        "human_label": "WRONG",
+        "human_note": "length too long",
+        "sol_label": "WRONG",
+        "sol_reason": "Explicit Original Stage video is far longer than the studio target.",
+        "title": "LE SSERAFIM (르세라핌) 'We got so much' l Original Stage",
+        "video_id": "nvGnwC2T6Ek"
+      },
+      "top3_miss": false,
+      "track_note": null
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_025",
+      "failure_category": "METADATA_INSUFFICIENT",
+      "first_safe_rank": 2,
+      "reviewed_ranks": [
+        {
+          "channel": "mae mae",
+          "failure_category": "METADATA_INSUFFICIENT",
+          "human_label": "UNCERTAIN",
+          "human_note": null,
+          "native_rank": 1,
+          "sol_label": "WRONG",
+          "sol_reason": "The upload is nineteen seconds shorter than the target recording.",
+          "title": "stream_error - a little bit colder",
+          "video_id": "H47BENm_j5o"
+        },
+        {
+          "channel": "The Sad Hour Club",
+          "failure_category": null,
+          "human_label": "IDEAL",
+          "human_note": null,
+          "native_rank": 2,
+          "sol_label": "ACCEPTABLE",
+          "sol_reason": "Exact artist and title with matching duration in a lyric upload.",
+          "title": "stream_error - a little bit colder [lyrics]",
+          "video_id": "AfuHfWNAigA"
+        }
+      ],
+      "spotify_track_id": "6eAXXP4dIbWPLS3BzscuW7",
+      "target_artists": [
+        "stream_error"
+      ],
+      "target_title": "A Little Bit Colder",
+      "top1": {
+        "channel": "mae mae",
+        "human_label": "UNCERTAIN",
+        "human_note": "",
+        "sol_label": "WRONG",
+        "sol_reason": "The upload is nineteen seconds shorter than the target recording.",
+        "title": "stream_error - a little bit colder",
+        "video_id": "H47BENm_j5o"
+      },
+      "top3_miss": false,
+      "track_note": null
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_032",
+      "failure_category": "MULTI_TRACK_OR_NOT_ISOLATED",
+      "first_safe_rank": 2,
+      "reviewed_ranks": [
+        {
+          "channel": "City Girl",
+          "failure_category": "MULTI_TRACK_OR_NOT_ISOLATED",
+          "human_label": "WRONG",
+          "human_note": null,
+          "native_rank": 1,
+          "sol_label": "WRONG",
+          "sol_reason": "Full-album upload is not an isolated candidate recording.",
+          "title": "city girl | goddess of the hollow [full album]",
+          "video_id": "6K5vlOSh_uU"
+        },
+        {
+          "channel": "City Girl",
+          "failure_category": null,
+          "human_label": "IDEAL",
+          "human_note": null,
+          "native_rank": 2,
+          "sol_label": "IDEAL",
+          "sol_reason": "Official supplied release exactly matches artist, title, album, and duration.",
+          "title": "Goddess of the Hollow",
+          "video_id": "b5mhUs326BQ"
+        }
+      ],
+      "spotify_track_id": "2zehvIUiHhHyZuIIqkizR0",
+      "target_artists": [
+        "City Girl"
+      ],
+      "target_title": "Goddess of the Hollow",
+      "top1": {
+        "channel": "City Girl",
+        "human_label": "WRONG",
+        "human_note": "",
+        "sol_label": "WRONG",
+        "sol_reason": "Full-album upload is not an isolated candidate recording.",
+        "title": "city girl | goddess of the hollow [full album]",
+        "video_id": "6K5vlOSh_uU"
+      },
+      "top3_miss": false,
+      "track_note": "https://youtu.be/b5mhUs326BQ?si=w9STSb0lsT7RoTj5 the first result for me is this"
+    }
+  ],
+  "top3_miss_count": 0,
+  "top3_misses": []
+}

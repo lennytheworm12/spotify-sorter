@@ -1,0 +1,130 @@
+{
+  "changed_selection_count": 11,
+  "changed_selections": [
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_015",
+      "human_label": "ACCEPTABLE",
+      "rank1_veto_reasons": [
+        "DURATION_ANOMALY_GT_20_SECONDS"
+      ],
+      "rank1_video_id": "uu3Rzl_dK_s",
+      "selected_rank": 2,
+      "selected_video_id": "yBy0vr-nYzg",
+      "target_title": "Read Me"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_017",
+      "human_label": "IDEAL",
+      "rank1_veto_reasons": [
+        "UNREQUESTED_LIVE_OR_PERFORMANCE",
+        "DURATION_ANOMALY_GT_20_SECONDS"
+      ],
+      "rank1_video_id": "nvGnwC2T6Ek",
+      "selected_rank": 2,
+      "selected_video_id": "Kw2faPNf00s",
+      "target_title": "We got so much"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_021",
+      "human_label": "ACCEPTABLE",
+      "rank1_veto_reasons": [
+        "DURATION_ANOMALY_GT_20_SECONDS"
+      ],
+      "rank1_video_id": "HM6UpQZvbhY",
+      "selected_rank": 3,
+      "selected_video_id": "sWyZMFmTfQs",
+      "target_title": "WE GO"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_028",
+      "human_label": "ACCEPTABLE",
+      "rank1_veto_reasons": [
+        "DURATION_ANOMALY_GT_20_SECONDS"
+      ],
+      "rank1_video_id": "ZkITTCz1mhk",
+      "selected_rank": 2,
+      "selected_video_id": "FeeVnBhQwZE",
+      "target_title": "Tough"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_032",
+      "human_label": "IDEAL",
+      "rank1_veto_reasons": [
+        "DURATION_ANOMALY_GT_20_SECONDS"
+      ],
+      "rank1_video_id": "6K5vlOSh_uU",
+      "selected_rank": 2,
+      "selected_video_id": "b5mhUs326BQ",
+      "target_title": "Goddess of the Hollow"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_043",
+      "human_label": "IDEAL",
+      "rank1_veto_reasons": [
+        "DURATION_ANOMALY_GT_20_SECONDS"
+      ],
+      "rank1_video_id": "no6O9AnC1_g",
+      "selected_rank": 2,
+      "selected_video_id": "MunZpl35-p4",
+      "target_title": "Anybody"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_044",
+      "human_label": "ACCEPTABLE",
+      "rank1_veto_reasons": [
+        "DURATION_ANOMALY_GT_20_SECONDS"
+      ],
+      "rank1_video_id": "1kXLsrun51s",
+      "selected_rank": 2,
+      "selected_video_id": "Kh3C_rEsVRQ",
+      "target_title": "Love In My Heart"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_046",
+      "human_label": "ACCEPTABLE",
+      "rank1_veto_reasons": [
+        "DURATION_ANOMALY_GT_20_SECONDS"
+      ],
+      "rank1_video_id": "RHw1a0WESuA",
+      "selected_rank": 3,
+      "selected_video_id": "f88WxriTKW0",
+      "target_title": "Killing Me"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_047",
+      "human_label": "UNCERTAIN",
+      "rank1_veto_reasons": [
+        "DURATION_ANOMALY_GT_20_SECONDS"
+      ],
+      "rank1_video_id": "ePpPVE-GGJw",
+      "selected_rank": 2,
+      "selected_video_id": "9uypQGzzhns",
+      "target_title": "TT"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_055",
+      "human_label": "IDEAL",
+      "rank1_veto_reasons": [
+        "DURATION_ANOMALY_GT_20_SECONDS"
+      ],
+      "rank1_video_id": "67jSYCSrnE4",
+      "selected_rank": 2,
+      "selected_video_id": "Mm2PW9CZHJc",
+      "target_title": "NEON"
+    },
+    {
+      "benchmark_id": "stage5b_youtube_prior_v1_077",
+      "human_label": "ACCEPTABLE",
+      "rank1_veto_reasons": [
+        "UNREQUESTED_LIVE_OR_PERFORMANCE",
+        "DURATION_ANOMALY_GT_20_SECONDS"
+      ],
+      "rank1_video_id": "Iwx9t3qTcV4",
+      "selected_rank": 2,
+      "selected_video_id": "rquH4qEfRHA",
+      "target_title": "Lxxk 2 U"
+    }
+  ],
+  "experiment_id": "STAGE5B3_MINIMAL_YOUTUBE_SELECTOR_V1",
+  "schema_version": "stage5b3-minimal-selector-changed-selections-v1"
+}

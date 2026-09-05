@@ -1,0 +1,38 @@
+{
+  "schema_version": "stage5b1c-c-diagnostic-artifact-manifest-v1",
+  "experiment": "Stage 5B.1C-C remaining MATCH_UNCERTAIN diagnostic",
+  "starting_commit": "ba824f6516a35599caa93578b1d06f0686ee4fab",
+  "implementation_checkpoint_commit": "22245b3dc3fc5f90c830b26c9ad20382b7eb437f",
+  "frozen_inputs": {
+    "stage5b1c_b/source_neutral_candidate_features.json": "f319e4d5288405ba6abdd3c2bde65d56ab429410d2f2a41d185c4d0457a97596",
+    "stage5b1c_b/source_neutral_decisions.json": "67caf7cd35574bb75271e7950f4b5a105c22425804692073f0c630caf68c5eb3",
+    "stage5b1c_b/tier2_human_review.csv": "2d98a42513d30fb3ce49f89e481698913fb4ff09b047a6341cbf952cdd7cf2f0",
+    "stage5b1c_b/tier2_human_audit_results.json": "26fbfc59fc7617fd54377fde099cabf9170f2c55946bd3046839ea4e7e8edcb5"
+  },
+  "outputs": {
+    "remaining_tail_diagnostic.json": "9968f84d5dbd4825f88dd0fdc329971d93db87e0b2cd9f2b89364f2cbf145ebf",
+    "diagnostic_report.md": "fd1b5907d80ca561e2ceca6df1b1de1a05ac7912973e337d8fc77c373f2b8051"
+  },
+  "implementation": {
+    "src/audio_similarity/stage5b1c_diagnostic.py": "6f23921964b0d74aba3a9e477c69ba6c1c6d6927740d69baebce7a524d94b4d0",
+    "src/audio_similarity/cli/stage5b1c_diagnostic.py": "46f3afb0e6096d2a38ca34d26501f079d63ac8cf321785a1e57cabadea7ccf80",
+    "tests/test_stage5b1c_diagnostic.py": "f34c15d9f1eaa647a8e6254160efe555bcac6469e4a9a770c773af4861a0c023"
+  },
+  "tests": {
+    "focused_diagnostic": "7 passed",
+    "stage5b1b_stage5b1c_regressions": "174 passed",
+    "focused_tier2_regressions": "30 passed",
+    "full_non_heavy": "711 passed, 12 deselected"
+  },
+  "scope": {
+    "new_resolver_policy": false,
+    "network_calls": 0,
+    "sol_runs": 0,
+    "human_label_changes": 0,
+    "audio_downloads": 0,
+    "video_downloads": 0,
+    "stage5a_calls": 0,
+    "clap_calls": 0,
+    "muq_calls": 0
+  }
+}

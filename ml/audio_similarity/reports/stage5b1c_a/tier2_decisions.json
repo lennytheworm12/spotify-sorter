@@ -1,0 +1,2002 @@
+{
+  "frozen_balanced_regression": {
+    "auto_match_count": 29,
+    "exact_decision_replay": true,
+    "match_uncertain_count": 21,
+    "track_count": 50
+  },
+  "input_sha256": {
+    "blinded_sol_private_mapping.json": "6f7991fba8f4c190f20b0214f03488c3e6bc523b9507704c278a4858d3e622bc",
+    "challenge_candidate_features.json": "451e72e27c0b52c3b6109f57ea0f5c7a3421271f3283b1f1232082160c37a08c",
+    "challenge_policy_decisions.json": "58181c40bd54a8d4fabbc8d627ddaee6ccf7b5812a17331fe9c8d6600357fe87",
+    "challenge_tracks.json": "e2e9a1ab43f568dd9de853c2964f341ee0d0e2631ca87f732d0d4326ab990f79",
+    "challenge_ytdlp_discovery.json": "95bb1ca905a05fcc4167da10e3dfd6cf267600a4dfb1898b491d28ba855e6fb4",
+    "frozen_policy_definitions.json": "bbc527aa9a734b0aebbfafcb2775b479541a5e0248503627c14b8f429f708d5a",
+    "human_review.csv": "0342c46d4506994c61cf0b3e422f34f6d466bf6297a6b8973fd75f711884b842",
+    "sol_evaluations.json": "b00ecb7c9ffb668b581e571065235676d62832c868fe6bed26812fbbd30f50ea"
+  },
+  "policy_id": "POLICY_TIER2_METADATA_FUSION_V1",
+  "production_auto_match_activated": false,
+  "schema_version": "stage5b1c-tier2-decisions-v1",
+  "scope_guards": {
+    "audio_downloads": 0,
+    "clap_calls": 0,
+    "duration_close_seconds": 7,
+    "muq_calls": 0,
+    "official_music_video_very_close_seconds": 2,
+    "other_source_fallback": false,
+    "stage5a_calls": 0,
+    "video_downloads": 0
+  },
+  "selected": [
+    {
+      "human_label": null,
+      "human_note": null,
+      "recovery_evidence": [
+        "STRUCTURAL_TITLE_NORMALIZATION"
+      ],
+      "selected_candidate_rank": 2,
+      "selected_video_id": "ZNEuWldWPD4",
+      "sol_label": "ACCEPTABLE",
+      "sol_reason": "Exact song and album attribution with a near-exact target duration.",
+      "stable_track_id": "s5b1c_015"
+    },
+    {
+      "human_label": null,
+      "human_note": null,
+      "recovery_evidence": [
+        "STRUCTURAL_TITLE_NORMALIZATION"
+      ],
+      "selected_candidate_rank": 5,
+      "selected_video_id": "WXx5-HGERcg",
+      "sol_label": "ACCEPTABLE",
+      "sol_reason": "Artist, song, album, and 179-second duration match the intended recording.",
+      "stable_track_id": "s5b1c_016"
+    },
+    {
+      "human_label": null,
+      "human_note": null,
+      "recovery_evidence": [
+        "STRUCTURAL_TITLE_NORMALIZATION"
+      ],
+      "selected_candidate_rank": 4,
+      "selected_video_id": "62TrmUvQGjo",
+      "sol_label": "ACCEPTABLE",
+      "sol_reason": "Explicitly identifies the Twin Version and has a compatible runtime.",
+      "stable_track_id": "s5b1c_017"
+    },
+    {
+      "human_label": null,
+      "human_note": null,
+      "recovery_evidence": [
+        "STRUCTURAL_TITLE_NORMALIZATION",
+        "VERSION_NORMALIZATION_OR_PROVENANCE_FUSION"
+      ],
+      "selected_candidate_rank": 1,
+      "selected_video_id": "sKzoEwQaF7Y",
+      "sol_label": "IDEAL",
+      "sol_reason": "Title, artist, venue, date, and duration exactly match the target recording.",
+      "stable_track_id": "s5b1c_026"
+    },
+    {
+      "human_label": null,
+      "human_note": null,
+      "recovery_evidence": [
+        "STRUCTURAL_TITLE_NORMALIZATION",
+        "PERFORMER_ALIAS_OR_PROVENANCE_FUSION",
+        "VERSION_NORMALIZATION_OR_PROVENANCE_FUSION"
+      ],
+      "selected_candidate_rank": 1,
+      "selected_video_id": "aEi646akxko",
+      "sol_label": "IDEAL",
+      "sol_reason": "Artist, title, venue, date, and 320-second duration match the target.",
+      "stable_track_id": "s5b1c_027"
+    },
+    {
+      "human_label": null,
+      "human_note": null,
+      "recovery_evidence": [
+        "PERFORMER_ALIAS_OR_PROVENANCE_FUSION"
+      ],
+      "selected_candidate_rank": 4,
+      "selected_video_id": "zDOILKOOUCo",
+      "sol_label": "IDEAL",
+      "sol_reason": "Official lyric video with artist, title, and 290-second duration matching the 1998 album recording.",
+      "stable_track_id": "s5b1c_043"
+    }
+  ],
+  "summary": {
+    "tier1_plus_tier2_auto_match_count": 35,
+    "tier1_plus_tier2_coverage": 0.7,
+    "tier2_attempted_tracks": 21,
+    "tier2_auto_match_count": 6,
+    "tier2_human_validated_selection_count": 0,
+    "tier2_match_uncertain_count": 15,
+    "tier2_selected_sol_label_counts": {
+      "ACCEPTABLE": 3,
+      "IDEAL": 3
+    }
+  },
+  "tier2_features_sha256": "258accdc9a2db9b9c8a5c5f3dd3808539983f6aa6c2a03cee028315687b5cf68",
+  "tracks": [
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "music-video duration exceeds frozen Balanced DURATION_VERY_CLOSE boundary"
+            ],
+            "title": "DJ Snake - Taki Taki ft. Selena Gomez, Ozuna, Cardi B(roblox music video)",
+            "video_id": "JiHRCg1s1_U"
+          },
+          {
+            "candidate_rank": 2,
+            "reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "DJ Snake - Taki Taki ft. Selena Gomez, Ozuna, Cardi B (2x Speed)(Fast Music 4 Fun)",
+            "video_id": "1vr1UADWgY4"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "normalized structural core title does not match",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Dj snake feat selena gomez  Ozuna & CARDI B  - TAKi TAKI ( LETRA VIDEO OFICIAL",
+            "video_id": "kxZYxojih3E"
+          },
+          {
+            "candidate_rank": 4,
+            "reasons": [
+              "normalized structural core title does not match",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "DJ Snake -Taki Taki ft. Selena Gomez,Ozuna,Cardi B (NCS Bass Boosted).",
+            "video_id": "NzLieaKgBII"
+          },
+          {
+            "candidate_rank": 5,
+            "reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "lyric fallback lacks frozen Balanced relative-view support"
+            ],
+            "title": "DJ Snake - Taki Taki (ft. Cardi B, Selena Gomez, Ozuna) (Letra) (Lyrics) - Video",
+            "video_id": "CXeIpfUdW0w"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate satisfies Tier-2 normalization/evidence-fusion safety gates"
+      },
+      "stable_track_id": "s5b1c_012"
+    },
+    {
+      "decision": {
+        "evidence_summary": {
+          "duration": {
+            "absolute_duration_delta_seconds": 0.5560000000000116,
+            "candidate_seconds": 185.0,
+            "target_seconds": 184.444
+          },
+          "performers": {
+            "credited_performer_matches": [
+              "LE SSERAFIM"
+            ],
+            "evidence": [
+              {
+                "performer": "LE SSERAFIM",
+                "raw": "LE SSERAFIM",
+                "source": "candidate_title_prefix"
+              },
+              {
+                "performer": "LE SSERAFIM",
+                "raw": "Le Sserafim (르세라핌)",
+                "source": "description_release_metadata"
+              }
+            ],
+            "explicit_cover_signal": false,
+            "explicit_performer_conflict": false,
+            "explicit_title_performer_conflict": false,
+            "normalized_target_performers": [
+              "le sserafim"
+            ],
+            "primary_performer_match": true
+          },
+          "source": {
+            "provenance": {
+              "auto_generated_by_youtube_signal": false,
+              "provided_to_youtube_by_signal": false,
+              "raw_evidence": {
+                "auto_generated_by_youtube": [],
+                "provided_to_youtube_by": [],
+                "structured_release_metadata": [
+                  "All Rights Administered by Source Music • Artist: Le Sserafim (르세라핌) • Song ♫: ANTIFRAGILE • Album: ANTIFRAGILE ..."
+                ],
+                "topic_channel": []
+              },
+              "structured_release_metadata_signal": true,
+              "topic_channel_signal": false
+            },
+            "source_descriptors": [
+              "Lyrics"
+            ],
+            "source_type": "LYRIC_VIDEO"
+          },
+          "tier1_before": {
+            "ineligible_auto_match_reasons": [],
+            "primary_artist_match": true,
+            "recording_eligible": true,
+            "title_exact_normalized_match": false,
+            "version_relationships": []
+          },
+          "title": {
+            "candidate": {
+              "core_title": "ANTIFRAGILE",
+              "normalized_core_title": "antifragile",
+              "raw_title": "LE SSERAFIM 'ANTIFRAGILE' Lyrics (레세라핌 ANTIFRAGILE 가사) (Color Coded Lyrics)",
+              "recording_text": "ANTIFRAGILE' Lyrics (레세라핌 ANTIFRAGILE 가사) (Color Coded Lyrics)",
+              "source_descriptors": [
+                "Lyrics"
+              ],
+              "title_performer_text": "LE SSERAFIM",
+              "version_descriptors": []
+            },
+            "structural_core_title_match": true,
+            "target": {
+              "core_title": "ANTIFRAGILE",
+              "normalized_core_title": "antifragile",
+              "raw_title": "ANTIFRAGILE",
+              "recording_text": "ANTIFRAGILE",
+              "source_descriptors": [],
+              "title_performer_text": null,
+              "version_descriptors": []
+            }
+          },
+          "versions": {
+            "absent_count": 0,
+            "conflict_count": 0,
+            "match_count": 0,
+            "relationships": []
+          },
+          "weak_evidence": {
+            "candidate_view_count": 23719512,
+            "max_view_count_among_identity_eligible": 23719512,
+            "relative_view_strength": 1.0,
+            "search_rank": 2
+          }
+        },
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "music-video duration exceeds frozen Balanced DURATION_VERY_CLOSE boundary"
+            ],
+            "title": "LE SSERAFIM (르세라핌) 'ANTIFRAGILE' OFFICIAL M/V",
+            "video_id": "pyf8cbqyfPs"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "LE SSERAFIM (르세라핌) ‘ANTIFRAGILE’ Dance Practice (Fix ver.)",
+            "video_id": "8x43gsnkBH8"
+          },
+          {
+            "candidate_rank": 4,
+            "reasons": [
+              "normalized structural core title does not match",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "LE SSERAFIM - 'ANTIFRAGILE' Dance Practice MIRRORED",
+            "video_id": "n8EJJoWIZvA"
+          },
+          {
+            "candidate_rank": 5,
+            "reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "LE SSERAFIM (르세라핌) ‘ANTIFRAGILE’ Special Performance Video",
+            "video_id": "dzwuR99Ry98"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [
+          "ZNEuWldWPD4"
+        ],
+        "recovery_evidence": [
+          "STRUCTURAL_TITLE_NORMALIZATION"
+        ],
+        "selected_candidate_rank": 2,
+        "selected_video_id": "ZNEuWldWPD4",
+        "selection_reason": "structural title, performer, and version evidence pass after deterministic normalization/fusion; frozen Balanced source and duration gates also pass",
+        "status": "AUTO_MATCH"
+      },
+      "stable_track_id": "s5b1c_015"
+    },
+    {
+      "decision": {
+        "evidence_summary": {
+          "duration": {
+            "absolute_duration_delta_seconds": 0.12000000000000455,
+            "candidate_seconds": 179.0,
+            "target_seconds": 178.88
+          },
+          "performers": {
+            "credited_performer_matches": [
+              "aespa"
+            ],
+            "evidence": [
+              {
+                "performer": "aespa",
+                "raw": "aespa",
+                "source": "candidate_title_prefix"
+              },
+              {
+                "performer": "aespa",
+                "raw": "aespa (에스파)",
+                "source": "description_release_metadata"
+              }
+            ],
+            "explicit_cover_signal": false,
+            "explicit_performer_conflict": false,
+            "explicit_title_performer_conflict": false,
+            "normalized_target_performers": [
+              "aespa"
+            ],
+            "primary_performer_match": true
+          },
+          "source": {
+            "provenance": {
+              "auto_generated_by_youtube_signal": false,
+              "provided_to_youtube_by_signal": false,
+              "raw_evidence": {
+                "auto_generated_by_youtube": [],
+                "provided_to_youtube_by": [],
+                "structured_release_metadata": [
+                  "All Rights Administered by SM Entertainment • Artist: aespa (에스파) • Song ♫: Supernova • Album: 1st Full Album [Armageddon] ..."
+                ],
+                "topic_channel": []
+              },
+              "structured_release_metadata_signal": true,
+              "topic_channel_signal": false
+            },
+            "source_descriptors": [
+              "Lyrics"
+            ],
+            "source_type": "LYRIC_VIDEO"
+          },
+          "tier1_before": {
+            "ineligible_auto_match_reasons": [],
+            "primary_artist_match": true,
+            "recording_eligible": true,
+            "title_exact_normalized_match": false,
+            "version_relationships": []
+          },
+          "title": {
+            "candidate": {
+              "core_title": "Supernova",
+              "normalized_core_title": "supernova",
+              "raw_title": "aespa 'Supernova' Lyrics (에스파 Supernova 가사) (Color Coded Lyrics)",
+              "recording_text": "Supernova' Lyrics (에스파 Supernova 가사) (Color Coded Lyrics)",
+              "source_descriptors": [
+                "Lyrics"
+              ],
+              "title_performer_text": "aespa",
+              "version_descriptors": []
+            },
+            "structural_core_title_match": true,
+            "target": {
+              "core_title": "Supernova",
+              "normalized_core_title": "supernova",
+              "raw_title": "Supernova",
+              "recording_text": "Supernova",
+              "source_descriptors": [],
+              "title_performer_text": null,
+              "version_descriptors": []
+            }
+          },
+          "versions": {
+            "absent_count": 0,
+            "conflict_count": 0,
+            "match_count": 0,
+            "relationships": []
+          },
+          "weak_evidence": {
+            "candidate_view_count": 13370875,
+            "max_view_count_among_identity_eligible": 13370875,
+            "relative_view_strength": 1.0,
+            "search_rank": 5
+          }
+        },
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "music-video duration exceeds frozen Balanced DURATION_VERY_CLOSE boundary"
+            ],
+            "title": "aespa 에스파 'Supernova' MV",
+            "video_id": "phuiiNCxRMg"
+          },
+          {
+            "candidate_rank": 2,
+            "reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "aespa - Supernova / THE FIRST TAKE",
+            "video_id": "EsHQB9gT96k"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "music-video duration exceeds frozen Balanced DURATION_VERY_CLOSE boundary"
+            ],
+            "title": "[4K/60FPS] aespa 에스파 'Supernova' MV",
+            "video_id": "0Dtyy3tqTiA"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [
+          "WXx5-HGERcg",
+          "ePFc3Hjb3V0"
+        ],
+        "recovery_evidence": [
+          "STRUCTURAL_TITLE_NORMALIZATION"
+        ],
+        "selected_candidate_rank": 5,
+        "selected_video_id": "WXx5-HGERcg",
+        "selection_reason": "structural title, performer, and version evidence pass after deterministic normalization/fusion; frozen Balanced source and duration gates also pass",
+        "status": "AUTO_MATCH"
+      },
+      "stable_track_id": "s5b1c_016"
+    },
+    {
+      "decision": {
+        "evidence_summary": {
+          "duration": {
+            "absolute_duration_delta_seconds": 1.747000000000014,
+            "candidate_seconds": 176.0,
+            "target_seconds": 174.253
+          },
+          "performers": {
+            "credited_performer_matches": [
+              "FIFTY FIFTY"
+            ],
+            "evidence": [
+              {
+                "performer": "FIFTY FIFTY",
+                "raw": "FIFTY FIFTY",
+                "source": "candidate_title_prefix"
+              }
+            ],
+            "explicit_cover_signal": false,
+            "explicit_performer_conflict": false,
+            "explicit_title_performer_conflict": false,
+            "normalized_target_performers": [
+              "fifty fifty"
+            ],
+            "primary_performer_match": true
+          },
+          "source": {
+            "provenance": {
+              "auto_generated_by_youtube_signal": false,
+              "provided_to_youtube_by_signal": false,
+              "raw_evidence": {
+                "auto_generated_by_youtube": [],
+                "provided_to_youtube_by": [],
+                "structured_release_metadata": [],
+                "topic_channel": []
+              },
+              "structured_release_metadata_signal": false,
+              "topic_channel_signal": false
+            },
+            "source_descriptors": [
+              "Lyrics"
+            ],
+            "source_type": "LYRIC_VIDEO"
+          },
+          "tier1_before": {
+            "ineligible_auto_match_reasons": [],
+            "primary_artist_match": true,
+            "recording_eligible": true,
+            "title_exact_normalized_match": false,
+            "version_relationships": []
+          },
+          "title": {
+            "candidate": {
+              "core_title": "Cupid",
+              "normalized_core_title": "cupid",
+              "raw_title": "FIFTY FIFTY - Cupid (Twin Version) (Lyrics)",
+              "recording_text": "Cupid (Twin Version) (Lyrics)",
+              "source_descriptors": [
+                "Lyrics"
+              ],
+              "title_performer_text": "FIFTY FIFTY",
+              "version_descriptors": [
+                {
+                  "family": "twin_version",
+                  "qualifier": "twin",
+                  "raw": "Twin Version"
+                }
+              ]
+            },
+            "structural_core_title_match": true,
+            "target": {
+              "core_title": "Cupid - .",
+              "normalized_core_title": "cupid",
+              "raw_title": "Cupid - Twin Ver.",
+              "recording_text": "Cupid - Twin Ver.",
+              "source_descriptors": [],
+              "title_performer_text": null,
+              "version_descriptors": [
+                {
+                  "family": "twin_version",
+                  "qualifier": "twin",
+                  "raw": "Twin Ver"
+                }
+              ]
+            }
+          },
+          "versions": {
+            "absent_count": 0,
+            "conflict_count": 0,
+            "match_count": 1,
+            "relationships": [
+              {
+                "candidate_evidence_source": "candidate_title",
+                "candidate_qualifier": "twin",
+                "candidate_raw": "Twin Version",
+                "family": "twin_version",
+                "relationship": "MATCH",
+                "target_qualifier": "twin",
+                "target_raw": "Twin Ver"
+              }
+            ]
+          },
+          "weak_evidence": {
+            "candidate_view_count": 59943715,
+            "max_view_count_among_identity_eligible": 94141154,
+            "relative_view_strength": 0.6367429381628358,
+            "search_rank": 4
+          }
+        },
+        "excluded_candidates": [
+          {
+            "candidate_rank": 2,
+            "reasons": [
+              "normalized structural core title does not match",
+              "explicit target-relative version conflict",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Cupid (OT4/Twin Ver.)   - LIVE IN STUDIO  |  FIFTY FIFTY (피프티피프티)",
+            "video_id": "jgCVkQhlScc"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "music-video duration exceeds frozen Balanced DURATION_VERY_CLOSE boundary"
+            ],
+            "title": "FIFTY FIFTY (피프티피프티) - 'Cupid'  Official MV",
+            "video_id": "Qc7_zRjH808"
+          },
+          {
+            "candidate_rank": 5,
+            "reasons": [
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "FIFTY FIFTY (피프티피프티) - 'Cupid [Twin Ver.] (feat. Sabrina Carpenter)' Visualizer",
+            "video_id": "8Kv2CKipG-Y"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [
+          "62TrmUvQGjo",
+          "6uvUTu716rU"
+        ],
+        "recovery_evidence": [
+          "STRUCTURAL_TITLE_NORMALIZATION"
+        ],
+        "selected_candidate_rank": 4,
+        "selected_video_id": "62TrmUvQGjo",
+        "selection_reason": "structural title, performer, and version evidence pass after deterministic normalization/fusion; frozen Balanced source and duration gates also pass",
+        "status": "AUTO_MATCH"
+      },
+      "stable_track_id": "s5b1c_017"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "reasons": [
+              "music-video duration exceeds frozen Balanced DURATION_VERY_CLOSE boundary"
+            ],
+            "title": "Disclosure - You & Me (Flume Remix) [Official Video]",
+            "video_id": "8x-M7AkTvrQ"
+          },
+          {
+            "candidate_rank": 2,
+            "reasons": [
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Disclosure - You & Me (Flume Remix)",
+            "video_id": "OUkkaqSNduU"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "normalized structural core title does not match",
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "You & Me - Disclosure (Flume Remix) (slow+reverb)",
+            "video_id": "pCnl0Z88wJQ"
+          },
+          {
+            "candidate_rank": 4,
+            "reasons": [
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Disclosure - You & Me (Flume Remix)",
+            "video_id": "yU7rzlMX2s4"
+          },
+          {
+            "candidate_rank": 5,
+            "reasons": [
+              "normalized structural core title does not match",
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "lyric fallback lacks frozen Balanced relative-view support"
+            ],
+            "title": "[라이브] 👩‍❤️‍👨 Disclosure - You & Me (Flume Remix) [Live Performance/가사/해석/자막/lyrics]",
+            "video_id": "Bhs391sfdGs"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate satisfies Tier-2 normalization/evidence-fusion safety gates"
+      },
+      "stable_track_id": "s5b1c_020"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Ed Sheeran - Bad Habits (Marc Benjamin & Chemical Neon Remix)",
+            "video_id": "rqVg1PpPSj8"
+          },
+          {
+            "candidate_rank": 2,
+            "reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Ed Sheeran - Bad Habits (DiPap Remix)",
+            "video_id": "oqoqeD48BD0"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Bad Habits x Insomnia - CDJ 3000 Mashup",
+            "video_id": "ARQJzEs2NIs"
+          },
+          {
+            "candidate_rank": 4,
+            "reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Ed Sheeran - Bad Habits (Marc Benjamin & Chemical Neon Remix)",
+            "video_id": "j8WZN_lLcQ4"
+          },
+          {
+            "candidate_rank": 5,
+            "reasons": [
+              "normalized structural core title does not match",
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Ed Sheeran x Gonzi & Kova x Fisher - Bad Habits VS Drop It VS Losing It ( Dj Marky Mashup Remix )",
+            "video_id": "N1jTbeBoowc"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate satisfies Tier-2 normalization/evidence-fusion safety gates"
+      },
+      "stable_track_id": "s5b1c_021"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "reasons": [
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Lykke Li - I Follow Rivers (The Magician Remix)",
+            "video_id": "oS6wfWu0JvA"
+          },
+          {
+            "candidate_rank": 2,
+            "reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "music-video duration exceeds frozen Balanced DURATION_VERY_CLOSE boundary"
+            ],
+            "title": "Lykke Li - I Follow Rivers - Magician Remix [Music Video]",
+            "video_id": "nskaoVf8PPM"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Lykke Li - I Follow Rivers (Magician Remix) (Lyrics)",
+            "video_id": "Trxe1_ofwsE"
+          },
+          {
+            "candidate_rank": 4,
+            "reasons": [
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Lykke Li - I Follow Rivers (The Magician Remix)",
+            "video_id": "HNK_BpoVUtY"
+          },
+          {
+            "candidate_rank": 5,
+            "reasons": [
+              "normalized structural core title does not match",
+              "music-video duration exceeds frozen Balanced DURATION_VERY_CLOSE boundary"
+            ],
+            "title": "Lykke Li - I Follow Rivers (The Magician Remix) (unofficial) Music Video",
+            "video_id": "k9wpREwnZTs"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate satisfies Tier-2 normalization/evidence-fusion safety gates"
+      },
+      "stable_track_id": "s5b1c_022"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Tiësto - The Business (Vintage Culture & Dubdogz Remix) [Official Audio]",
+            "video_id": "1UESu4eyalA"
+          },
+          {
+            "candidate_rank": 2,
+            "reasons": [
+              "important target version evidence remains absent"
+            ],
+            "title": "Tiësto - The Business (Official Audio)",
+            "video_id": "wJS9eb6_o00"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Tiësto & Ty Dolla $ign - The Business, Pt. II (Official Lyric Video)",
+            "video_id": "fVuw7VCefME"
+          },
+          {
+            "candidate_rank": 4,
+            "reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "lyric fallback lacks frozen Balanced relative-view support"
+            ],
+            "title": "Tiësto - The Business (Vintage Culture vs Dubdogz Remix) [Lyrics]",
+            "video_id": "QPsToIH3vfo"
+          },
+          {
+            "candidate_rank": 5,
+            "reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Tiësto - The Business (Vintage Culture & Dubdogz Remix) [Perfectly clean]",
+            "video_id": "AWixPmPTSAQ"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate satisfies Tier-2 normalization/evidence-fusion safety gates"
+      },
+      "stable_track_id": "s5b1c_023"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "reasons": [
+              "normalized structural core title does not match",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "The Chainsmokers & Coldplay - Something Just Like This (Alesso Remix Audio)",
+            "video_id": "5MenFU9qCzs"
+          },
+          {
+            "candidate_rank": 2,
+            "reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "The Chainsmokers - Something Just Like This (Alesso Remix) [Live at Ultra Music Festival]",
+            "video_id": "Q_TjX6ywAs4"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "normalized structural core title does not match",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "The Chainsmokers & Coldplay - Something Just Like This (Alesso Remix) (Audio)",
+            "video_id": "9gnyYxEWgi4"
+          },
+          {
+            "candidate_rank": 4,
+            "reasons": [
+              "normalized structural core title does not match",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "The Chainsmokers & Coldplay - Something Just Like This (Alesso Remix)",
+            "video_id": "TWSqA1KHo6M"
+          },
+          {
+            "candidate_rank": 5,
+            "reasons": [
+              "normalized structural core title does not match",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "The Chainsmokers Coldplay Something Just Like This Alesso Remix",
+            "video_id": "1FrHfaFjmfg"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate satisfies Tier-2 normalization/evidence-fusion safety gates"
+      },
+      "stable_track_id": "s5b1c_025"
+    },
+    {
+      "decision": {
+        "evidence_summary": {
+          "duration": {
+            "absolute_duration_delta_seconds": 0.2669999999999959,
+            "candidate_seconds": 264.0,
+            "target_seconds": 264.267
+          },
+          "performers": {
+            "credited_performer_matches": [
+              "John Mayer"
+            ],
+            "evidence": [
+              {
+                "performer": "John Mayer",
+                "raw": "John Mayer",
+                "source": "uploader"
+              },
+              {
+                "performer": "John Mayer",
+                "raw": "John Mayer",
+                "source": "channel"
+              },
+              {
+                "performer": "John Mayer",
+                "raw": "John Mayer ...",
+                "source": "description_release_metadata"
+              }
+            ],
+            "explicit_cover_signal": false,
+            "explicit_performer_conflict": false,
+            "explicit_title_performer_conflict": false,
+            "normalized_target_performers": [
+              "john mayer"
+            ],
+            "primary_performer_match": true
+          },
+          "source": {
+            "provenance": {
+              "auto_generated_by_youtube_signal": false,
+              "provided_to_youtube_by_signal": true,
+              "raw_evidence": {
+                "auto_generated_by_youtube": [],
+                "provided_to_youtube_by": [
+                  "Provided to YouTube by Columbia Free Fallin' (Live at the Nokia Theatre, Los Angeles, CA - December 2007) · John Mayer ..."
+                ],
+                "structured_release_metadata": [],
+                "topic_channel": []
+              },
+              "structured_release_metadata_signal": false,
+              "topic_channel_signal": false
+            },
+            "source_descriptors": [],
+            "source_type": "ART_TRACK_TOPIC"
+          },
+          "tier1_before": {
+            "ineligible_auto_match_reasons": [],
+            "primary_artist_match": true,
+            "recording_eligible": true,
+            "title_exact_normalized_match": false,
+            "version_relationships": [
+              {
+                "candidate_qualifier": null,
+                "candidate_raw": null,
+                "family": "live",
+                "relationship": "ABSENT",
+                "target_qualifier": "the Nokia Theatre, Los Angeles, CA",
+                "target_raw": "Live at the Nokia Theatre, Los Angeles, CA"
+              }
+            ]
+          },
+          "title": {
+            "candidate": {
+              "core_title": "Free Fallin",
+              "normalized_core_title": "free fallin",
+              "raw_title": "Free Fallin' (Live at the Nokia Theatre, Los Angeles, CA - December 2007)",
+              "recording_text": "Free Fallin' (Live at the Nokia Theatre, Los Angeles, CA - December 2007)",
+              "source_descriptors": [],
+              "title_performer_text": null,
+              "version_descriptors": [
+                {
+                  "family": "live",
+                  "qualifier": "the Nokia Theatre, Los Angeles, CA - December 2007",
+                  "raw": "Live at the Nokia Theatre, Los Angeles, CA - December 2007"
+                }
+              ]
+            },
+            "structural_core_title_match": true,
+            "target": {
+              "core_title": "Free Fallin",
+              "normalized_core_title": "free fallin",
+              "raw_title": "Free Fallin' - Live at the Nokia Theatre, Los Angeles, CA - December 2007",
+              "recording_text": "Free Fallin' - Live at the Nokia Theatre, Los Angeles, CA - December 2007",
+              "source_descriptors": [],
+              "title_performer_text": null,
+              "version_descriptors": [
+                {
+                  "family": "live",
+                  "qualifier": "the Nokia Theatre, Los Angeles, CA - December 2007",
+                  "raw": "Live at the Nokia Theatre, Los Angeles, CA - December 2007"
+                }
+              ]
+            }
+          },
+          "versions": {
+            "absent_count": 0,
+            "conflict_count": 0,
+            "match_count": 1,
+            "relationships": [
+              {
+                "candidate_evidence_source": "candidate_title",
+                "candidate_qualifier": "the Nokia Theatre, Los Angeles, CA - December 2007",
+                "candidate_raw": "Live at the Nokia Theatre, Los Angeles, CA - December 2007",
+                "family": "live",
+                "relationship": "MATCH",
+                "target_qualifier": "the Nokia Theatre, Los Angeles, CA - December 2007",
+                "target_raw": "Live at the Nokia Theatre, Los Angeles, CA - December 2007"
+              }
+            ]
+          },
+          "weak_evidence": {
+            "candidate_view_count": 14224453,
+            "max_view_count_among_identity_eligible": 14224453,
+            "relative_view_strength": 1.0,
+            "search_rank": 1
+          }
+        },
+        "excluded_candidates": [
+          {
+            "candidate_rank": 2,
+            "reasons": [
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "John Mayer - Free Fallin (Live at the Nokia Theatre, Los Angeles, CA - December 2007)",
+            "video_id": "sVjv1UAmLRc"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "john mayer - free fallin' 𝘣𝘶𝘵 𝘺𝘰𝘶'𝘳𝘦 𝘪𝘯 𝘢 𝘣𝘢𝘵𝘩𝘳𝘰𝘰𝘮 𝘢𝘵 𝘢 𝘱𝘢𝘳𝘵𝘺",
+            "video_id": "-fQKVHtVW8k"
+          },
+          {
+            "candidate_rank": 4,
+            "reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Out of My Mind (Live at the Nokia Theatre, Los Angeles, CA - December 2007)",
+            "video_id": "xKHjwrArJpI"
+          },
+          {
+            "candidate_rank": 5,
+            "reasons": [
+              "primary performer lacks deterministic title/provenance evidence",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Free Fallin'(Live at the Nokia Theatre)",
+            "video_id": "_VuT2bOMUXc"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [
+          "sKzoEwQaF7Y"
+        ],
+        "recovery_evidence": [
+          "STRUCTURAL_TITLE_NORMALIZATION",
+          "VERSION_NORMALIZATION_OR_PROVENANCE_FUSION"
+        ],
+        "selected_candidate_rank": 1,
+        "selected_video_id": "sKzoEwQaF7Y",
+        "selection_reason": "structural title, performer, and version evidence pass after deterministic normalization/fusion; frozen Balanced source and duration gates also pass",
+        "status": "AUTO_MATCH"
+      },
+      "stable_track_id": "s5b1c_026"
+    },
+    {
+      "decision": {
+        "evidence_summary": {
+          "duration": {
+            "absolute_duration_delta_seconds": 0.8530000000000086,
+            "candidate_seconds": 320.0,
+            "target_seconds": 319.147
+          },
+          "performers": {
+            "credited_performer_matches": [
+              "John Mayer"
+            ],
+            "evidence": [
+              {
+                "performer": "John Mayer",
+                "raw": "John Mayer",
+                "source": "uploader"
+              },
+              {
+                "performer": "John Mayer",
+                "raw": "John Mayer",
+                "source": "channel"
+              }
+            ],
+            "explicit_cover_signal": false,
+            "explicit_performer_conflict": false,
+            "explicit_title_performer_conflict": false,
+            "normalized_target_performers": [
+              "john mayer"
+            ],
+            "primary_performer_match": true
+          },
+          "source": {
+            "provenance": {
+              "auto_generated_by_youtube_signal": false,
+              "provided_to_youtube_by_signal": true,
+              "raw_evidence": {
+                "auto_generated_by_youtube": [],
+                "provided_to_youtube_by": [
+                  "Provided to YouTube by Columbia Slow Dancing in a Burning Room (Live at the Nokia Theatre, Los Angeles, CA - December ..."
+                ],
+                "structured_release_metadata": [],
+                "topic_channel": []
+              },
+              "structured_release_metadata_signal": false,
+              "topic_channel_signal": false
+            },
+            "source_descriptors": [],
+            "source_type": "ART_TRACK_TOPIC"
+          },
+          "tier1_before": {
+            "ineligible_auto_match_reasons": [
+              "explicit cover/different-performer evidence"
+            ],
+            "primary_artist_match": false,
+            "recording_eligible": false,
+            "title_exact_normalized_match": false,
+            "version_relationships": [
+              {
+                "candidate_qualifier": null,
+                "candidate_raw": null,
+                "family": "live",
+                "relationship": "ABSENT",
+                "target_qualifier": "the Nokia Theatre, Los Angeles, CA",
+                "target_raw": "Live at the Nokia Theatre, Los Angeles, CA"
+              }
+            ]
+          },
+          "title": {
+            "candidate": {
+              "core_title": "Slow Dancing in a Burning Room",
+              "normalized_core_title": "slow dancing in a burning room",
+              "raw_title": "Slow Dancing in a Burning Room (Live at the Nokia Theatre, Los Angeles, CA - December 2007)",
+              "recording_text": "Slow Dancing in a Burning Room (Live at the Nokia Theatre, Los Angeles, CA - December 2007)",
+              "source_descriptors": [],
+              "title_performer_text": null,
+              "version_descriptors": [
+                {
+                  "family": "live",
+                  "qualifier": "the Nokia Theatre, Los Angeles, CA - December 2007",
+                  "raw": "Live at the Nokia Theatre, Los Angeles, CA - December 2007"
+                }
+              ]
+            },
+            "structural_core_title_match": true,
+            "target": {
+              "core_title": "Slow Dancing in a Burning Room",
+              "normalized_core_title": "slow dancing in a burning room",
+              "raw_title": "Slow Dancing in a Burning Room - Live at the Nokia Theatre, Los Angeles, CA - December 2007",
+              "recording_text": "Slow Dancing in a Burning Room - Live at the Nokia Theatre, Los Angeles, CA - December 2007",
+              "source_descriptors": [],
+              "title_performer_text": null,
+              "version_descriptors": [
+                {
+                  "family": "live",
+                  "qualifier": "the Nokia Theatre, Los Angeles, CA - December 2007",
+                  "raw": "Live at the Nokia Theatre, Los Angeles, CA - December 2007"
+                }
+              ]
+            }
+          },
+          "versions": {
+            "absent_count": 0,
+            "conflict_count": 0,
+            "match_count": 1,
+            "relationships": [
+              {
+                "candidate_evidence_source": "candidate_title",
+                "candidate_qualifier": "the Nokia Theatre, Los Angeles, CA - December 2007",
+                "candidate_raw": "Live at the Nokia Theatre, Los Angeles, CA - December 2007",
+                "family": "live",
+                "relationship": "MATCH",
+                "target_qualifier": "the Nokia Theatre, Los Angeles, CA - December 2007",
+                "target_raw": "Live at the Nokia Theatre, Los Angeles, CA - December 2007"
+              }
+            ]
+          },
+          "weak_evidence": {
+            "candidate_view_count": 7443090,
+            "max_view_count_among_identity_eligible": 7443090,
+            "relative_view_strength": 1.0,
+            "search_rank": 1
+          }
+        },
+        "excluded_candidates": [
+          {
+            "candidate_rank": 2,
+            "reasons": [
+              "explicit target-relative version conflict",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "John Mayer - Slow Dancing in a Burning Room (Live at the Nokia Theatre, Los Angeles - December 2007)",
+            "video_id": "q5XyQgpsyaM"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "primary performer lacks deterministic title/provenance evidence",
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Slow Dancing In A Burning Room (Live in L.A.)",
+            "video_id": "n7FwnHEwDFg"
+          },
+          {
+            "candidate_rank": 4,
+            "reasons": [
+              "primary performer lacks deterministic title/provenance evidence",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Slow Dancing In A Burning Room",
+            "video_id": "jXT5G1xZa_M"
+          },
+          {
+            "candidate_rank": 5,
+            "reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "important target version evidence remains absent",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "The Nuisance (Pika) 5/4/2023 7:37am",
+            "video_id": "RAoT2yQ60lQ"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [
+          "aEi646akxko"
+        ],
+        "recovery_evidence": [
+          "STRUCTURAL_TITLE_NORMALIZATION",
+          "PERFORMER_ALIAS_OR_PROVENANCE_FUSION",
+          "VERSION_NORMALIZATION_OR_PROVENANCE_FUSION"
+        ],
+        "selected_candidate_rank": 1,
+        "selected_video_id": "aEi646akxko",
+        "selection_reason": "structural title, performer, and version evidence pass after deterministic normalization/fusion; frozen Balanced source and duration gates also pass",
+        "status": "AUTO_MATCH"
+      },
+      "stable_track_id": "s5b1c_027"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "reasons": [
+              "normalized structural core title does not match",
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "music-video duration exceeds frozen Balanced DURATION_VERY_CLOSE boundary"
+            ],
+            "title": "Eagles - Hotel California (Live 1977) (Official Video) [HD]",
+            "video_id": "09839DpTctU"
+          },
+          {
+            "candidate_rank": 2,
+            "reasons": [
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Eagles - Hotel California (Live on MTV 1994)",
+            "video_id": "k4HWjQNN1K8"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Hotel California   The Eagles MTV Unplugged, 1994 on Vimeo",
+            "video_id": "MEpI7t22DVo"
+          },
+          {
+            "candidate_rank": 4,
+            "reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "EAGLES   Hell Freezes Over Hotel California Live On MTV, 1994 Vinyl RIP",
+            "video_id": "eUgO382qA4Q"
+          },
+          {
+            "candidate_rank": 5,
+            "reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Hotel California(Live on MTV, 1994)★Eagles",
+            "video_id": "E4PQbceAUJ4"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate satisfies Tier-2 normalization/evidence-fusion safety gates"
+      },
+      "stable_track_id": "s5b1c_028"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "The Night We Met by Lord Huron @ Ryman Auditorium",
+            "video_id": "N2K1LUWlF-4"
+          },
+          {
+            "candidate_rank": 2,
+            "reasons": [
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Lord Huron “The  Night We Met”",
+            "video_id": "7QADmsRUGgg"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Lord Huron - The Night We Met, Bonner MT, 5/25/2025 live",
+            "video_id": "z4JfPakDYiU"
+          },
+          {
+            "candidate_rank": 4,
+            "reasons": [
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Lord Huron - The Night We Met",
+            "video_id": "lx0T48q_eg8"
+          },
+          {
+            "candidate_rank": 5,
+            "reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Lord Huron - The Night We Met - (Toronto, June 26, 2023)",
+            "video_id": "5q2KTSVV7PY"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate satisfies Tier-2 normalization/evidence-fusion safety gates"
+      },
+      "stable_track_id": "s5b1c_029"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Bastille - Pompeii (Acoustic Live)",
+            "video_id": "GgcWcLAJJ10"
+          },
+          {
+            "candidate_rank": 2,
+            "reasons": [
+              "primary performer lacks deterministic title/provenance evidence",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Pompeii (Acoustic Version)",
+            "video_id": "YX7joA8OLXA"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Bastille - Pompeii Acoustic Version",
+            "video_id": "5_KBkAjyCOg"
+          },
+          {
+            "candidate_rank": 4,
+            "reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Bastille - Pompeii Acoustic Version (HD)",
+            "video_id": "Si-5EjOaZ4Y"
+          },
+          {
+            "candidate_rank": 5,
+            "reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "bastille pompeii acoustic",
+            "video_id": "rrfxY44m5xk"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate satisfies Tier-2 normalization/evidence-fusion safety gates"
+      },
+      "stable_track_id": "s5b1c_030"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "reasons": [
+              "important target version evidence remains absent"
+            ],
+            "title": "Landslide",
+            "video_id": "k4M53xndqiU"
+          },
+          {
+            "candidate_rank": 2,
+            "reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Stevie Nicks and Lindsey Buckingham Perform \"Landslide\" | Letterman",
+            "video_id": "1_370ETkqJU"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "explicit target-relative version conflict",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Fleetwood Mac - Landslide (Live 1975)",
+            "video_id": "2Ogcdw4UORQ"
+          },
+          {
+            "candidate_rank": 4,
+            "reasons": [
+              "explicit target-relative version conflict",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Landslide (Live 1977)",
+            "video_id": "dshVEZwWLvc"
+          },
+          {
+            "candidate_rank": 5,
+            "reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Stevie Nicks (Fleetwood Mac) - Landslide",
+            "video_id": "zZi6LJ6bY_c"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate satisfies Tier-2 normalization/evidence-fusion safety gates"
+      },
+      "stable_track_id": "s5b1c_032"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Guns N' Roses - Sweet Child O' Mine (Alternate Version)",
+            "video_id": "HlEuo9aR7Qo"
+          },
+          {
+            "candidate_rank": 2,
+            "reasons": [
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "music-video duration exceeds frozen Balanced DURATION_VERY_CLOSE boundary"
+            ],
+            "title": "Guns N' Roses - Sweet Child O' Mine (Official Music Video)",
+            "video_id": "1w7OgIMMRc4"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Guns N Roses: Sweet Child O' Mine in Dublin",
+            "video_id": "23LT0E89m1s"
+          },
+          {
+            "candidate_rank": 4,
+            "reasons": [
+              "important target version evidence remains absent",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Guns N' Roses - Sweet Child O' Mine",
+            "video_id": "D2gWc5Sw75w"
+          },
+          {
+            "candidate_rank": 5,
+            "reasons": [
+              "important target version evidence remains absent"
+            ],
+            "title": "Guns N' Roses - Sweet Child O' Mine (Official Audio HQ)",
+            "video_id": "aEMool3DlIU"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate satisfies Tier-2 normalization/evidence-fusion safety gates"
+      },
+      "stable_track_id": "s5b1c_033"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "reasons": [
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Whitney Houston - I Wanna Dance With Somebody (Who Loves Me) (Official 4K Video)",
+            "video_id": "eH3giaIzONA"
+          },
+          {
+            "candidate_rank": 2,
+            "reasons": [
+              "important target version evidence remains absent"
+            ],
+            "title": "I Wanna Dance with Somebody (Who Loves Me)",
+            "video_id": "id2-K3daNRQ"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent"
+            ],
+            "title": "I Wanna Dance With Somebody (Who Loves Me) (Single Version)",
+            "video_id": "2dzf4T3RbEc"
+          },
+          {
+            "candidate_rank": 4,
+            "reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Whitney Houston - I Wanna Dance With Somebody (Who Loves Me) [ALBUM VERSION]",
+            "video_id": "ZFGHRAttmEM"
+          },
+          {
+            "candidate_rank": 5,
+            "reasons": [
+              "normalized structural core title does not match",
+              "important target version evidence remains absent",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Whitney Houston - I Wanna Dance With Somebody",
+            "video_id": "QzZ-mtE1EHc"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate satisfies Tier-2 normalization/evidence-fusion safety gates"
+      },
+      "stable_track_id": "s5b1c_034"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Tom Odell - Another Love (Slowed) (Lyrics)",
+            "video_id": "_HVI_2XKJx0"
+          },
+          {
+            "candidate_rank": 2,
+            "reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "tom odell - another love (slowed down)",
+            "video_id": "G-1IQJvNQLk"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "explicit target-relative version conflict",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Tom Odell - Another Love ( Slowed + Reverb )",
+            "video_id": "ziB7VFfq_xQ"
+          },
+          {
+            "candidate_rank": 4,
+            "reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Tom odell- Another Love (slowed +clean )",
+            "video_id": "if7MRkODtKY"
+          },
+          {
+            "candidate_rank": 5,
+            "reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Tom Odell - Another Love (Slowed) (Lyrics)",
+            "video_id": "ILy2HYcstRQ"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate satisfies Tier-2 normalization/evidence-fusion safety gates"
+      },
+      "stable_track_id": "s5b1c_040"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Ruth B. - Dandelions (Lyrics) (Slowed + Reverb)",
+            "video_id": "fXbfBUNJ9mY"
+          },
+          {
+            "candidate_rank": 2,
+            "reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Ruth B - Dandelions (slowed x reverb)",
+            "video_id": "-oCkkOuV4Fk"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "important target version evidence remains absent",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Ruth B - Dandelions (Ultra Slowed)",
+            "video_id": "YnPiRTAbJU4"
+          },
+          {
+            "candidate_rank": 4,
+            "reasons": [
+              "normalized structural core title does not match",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Ruth B - Dandelions (Slowed + Reverb) Letra / Sub Español",
+            "video_id": "0h_l1vCf8B8"
+          },
+          {
+            "candidate_rank": 5,
+            "reasons": [
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary"
+            ],
+            "title": "Ruth B - Dandelions (slowed+reverb+lyrics)",
+            "video_id": "yeWtwEq1G8U"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate satisfies Tier-2 normalization/evidence-fusion safety gates"
+      },
+      "stable_track_id": "s5b1c_041"
+    },
+    {
+      "decision": {
+        "evidence_summary": {
+          "duration": {
+            "absolute_duration_delta_seconds": 0.46699999999998454,
+            "candidate_seconds": 290.0,
+            "target_seconds": 289.533
+          },
+          "performers": {
+            "credited_performer_matches": [
+              "The Goo Goo Dolls"
+            ],
+            "evidence": [
+              {
+                "performer": "The Goo Goo Dolls",
+                "raw": "Goo Goo Dolls",
+                "source": "candidate_title_prefix"
+              },
+              {
+                "performer": "The Goo Goo Dolls",
+                "raw": "Goo Goo Dolls",
+                "source": "uploader"
+              },
+              {
+                "performer": "The Goo Goo Dolls",
+                "raw": "Goo Goo Dolls",
+                "source": "channel"
+              }
+            ],
+            "explicit_cover_signal": false,
+            "explicit_performer_conflict": false,
+            "explicit_title_performer_conflict": false,
+            "normalized_target_performers": [
+              "goo goo dolls"
+            ],
+            "primary_performer_match": true
+          },
+          "source": {
+            "provenance": {
+              "auto_generated_by_youtube_signal": false,
+              "provided_to_youtube_by_signal": false,
+              "raw_evidence": {
+                "auto_generated_by_youtube": [],
+                "provided_to_youtube_by": [],
+                "structured_release_metadata": [],
+                "topic_channel": []
+              },
+              "structured_release_metadata_signal": false,
+              "topic_channel_signal": false
+            },
+            "source_descriptors": [
+              "Official Lyric Video"
+            ],
+            "source_type": "LYRIC_VIDEO"
+          },
+          "tier1_before": {
+            "ineligible_auto_match_reasons": [
+              "explicit cover/different-performer evidence"
+            ],
+            "primary_artist_match": false,
+            "recording_eligible": false,
+            "title_exact_normalized_match": true,
+            "version_relationships": []
+          },
+          "title": {
+            "candidate": {
+              "core_title": "Iris",
+              "normalized_core_title": "iris",
+              "raw_title": "Goo Goo Dolls - Iris (Official Lyric Video)",
+              "recording_text": "Iris (Official Lyric Video)",
+              "source_descriptors": [
+                "Official Lyric Video"
+              ],
+              "title_performer_text": "Goo Goo Dolls",
+              "version_descriptors": []
+            },
+            "structural_core_title_match": true,
+            "target": {
+              "core_title": "Iris",
+              "normalized_core_title": "iris",
+              "raw_title": "Iris",
+              "recording_text": "Iris",
+              "source_descriptors": [],
+              "title_performer_text": null,
+              "version_descriptors": []
+            }
+          },
+          "versions": {
+            "absent_count": 0,
+            "conflict_count": 0,
+            "match_count": 0,
+            "relationships": []
+          },
+          "weak_evidence": {
+            "candidate_view_count": 34870085,
+            "max_view_count_among_identity_eligible": 51622897,
+            "relative_view_strength": 0.6754771046653968,
+            "search_rank": 4
+          }
+        },
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "music-video duration exceeds frozen Balanced DURATION_VERY_CLOSE boundary"
+            ],
+            "title": "Goo Goo Dolls – Iris [Official Music Video] [4K Remaster]",
+            "video_id": "NdYWuo9OFAw"
+          },
+          {
+            "candidate_rank": 2,
+            "reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "music-video duration exceeds frozen Balanced DURATION_VERY_CLOSE boundary"
+            ],
+            "title": "Goo Goo Dolls - Iris (Live in Buffalo, NY, 7/4/2004) [Official Video]",
+            "video_id": "_HZM0QiuUS8"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Goo Goo Dolls - Iris",
+            "video_id": "xK4ZqrLys_k"
+          },
+          {
+            "candidate_rank": 5,
+            "reasons": [
+              "explicit target-relative version conflict",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Goo Goo Dolls - Iris - Remastered",
+            "video_id": "Tp9xgzyEcpo"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [
+          "zDOILKOOUCo"
+        ],
+        "recovery_evidence": [
+          "PERFORMER_ALIAS_OR_PROVENANCE_FUSION"
+        ],
+        "selected_candidate_rank": 4,
+        "selected_video_id": "zDOILKOOUCo",
+        "selection_reason": "structural title, performer, and version evidence pass after deterministic normalization/fusion; frozen Balanced source and duration gates also pass",
+        "status": "AUTO_MATCH"
+      },
+      "stable_track_id": "s5b1c_043"
+    },
+    {
+      "decision": {
+        "excluded_candidates": [
+          {
+            "candidate_rank": 1,
+            "reasons": [
+              "music-video duration exceeds frozen Balanced DURATION_VERY_CLOSE boundary"
+            ],
+            "title": "Edward Sharpe & The Magnetic Zeros - Home (Official Video)",
+            "video_id": "DHEOF_rcND8"
+          },
+          {
+            "candidate_rank": 2,
+            "reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Edward Sharpe & The Magnetic Zeros - Home LIVE (Road Trippin' with Ice Cream Man)",
+            "video_id": "oUknlSWNbEI"
+          },
+          {
+            "candidate_rank": 3,
+            "reasons": [
+              "explicit target-relative version conflict",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Edward Sharpe & The Magnetic Zeros - Home (live @ Bonnaroo 2013)",
+            "video_id": "7qa10--IPdI"
+          },
+          {
+            "candidate_rank": 4,
+            "reasons": [
+              "normalized structural core title does not match",
+              "primary performer lacks deterministic title/provenance evidence",
+              "duration exceeds frozen Balanced DURATION_CLOSE boundary",
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Edward Sharpe And The Magnetic Zeroes: NPR Music Tiny Desk Concert",
+            "video_id": "XWIvfE01J0k"
+          },
+          {
+            "candidate_rank": 5,
+            "reasons": [
+              "Tier 2A does not allow OTHER-source fallback"
+            ],
+            "title": "Edward Sharpe & The Magnetic Zeros – Home",
+            "video_id": "DQJpFVzeNp8"
+          }
+        ],
+        "policy_rule_id": "POLICY_TIER2_METADATA_FUSION_V1",
+        "ranked_plausible_candidates": [],
+        "selected_candidate_rank": null,
+        "selected_video_id": null,
+        "status": "MATCH_UNCERTAIN",
+        "uncertainty_reason": "no candidate satisfies Tier-2 normalization/evidence-fusion safety gates"
+      },
+      "stable_track_id": "s5b1c_044"
+    }
+  ]
+}

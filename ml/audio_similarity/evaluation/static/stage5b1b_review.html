@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Recording review · Stage 5B.1B</title>
+<style>
+:root {
+  color-scheme: light;
+  --midnight: #172033;
+  --slate: #526078;
+  --mist: #edf1f7;
+  --paper: #ffffff;
+  --line: #cfd7e5;
+  --cobalt: #3157d5;
+  --cobalt-pale: #e9edff;
+  --ideal: #087f6a;
+  --ideal-pale: #e0f4ef;
+  --acceptable: #246fae;
+  --acceptable-pale: #e3f0fa;
+  --wrong: #bc414d;
+  --wrong-pale: #fae7e9;
+  --uncertain: #95620c;
+  --uncertain-pale: #f9efd8;
+  --shadow: 0 16px 46px rgba(23, 32, 51, .10);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--mist); color: var(--midnight);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+button, input, textarea, select { font: inherit; }
+button, a, textarea, select { outline-offset: 3px; }
+button:focus-visible, a:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 3px solid #8aa2ff;
+}
+.masthead {
+  position: sticky; z-index: 20; top: 0; background: rgba(23, 32, 51, .97); color: white;
+  box-shadow: 0 1px 0 rgba(255,255,255,.12); backdrop-filter: blur(16px);
+}
+.masthead-inner {
+  width: min(1480px, 100%); margin: 0 auto; padding: 17px clamp(16px, 3vw, 44px) 13px;
+  display: grid; grid-template-columns: minmax(240px, 1fr) minmax(330px, 1.25fr); gap: 28px; align-items: center;
+}
+.eyebrow {
+  color: #9fb3ff; font: 760 10px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .14em; text-transform: uppercase;
+}
+h1 { margin: 5px 0 0; font: 780 clamp(21px, 2.4vw, 31px)/1.05 ui-rounded, "Arial Rounded MT Bold", sans-serif; letter-spacing: -.035em; }
+.progress-copy { display: flex; justify-content: space-between; gap: 14px; align-items: end; }
+.progress-copy strong { font: 790 18px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.progress-copy span { color: #bbc5d9; font-size: 12px; }
+.progress-track { height: 7px; margin-top: 9px; background: #303c54; border-radius: 99px; overflow: hidden; }
+.progress-fill { width: 0; height: 100%; background: linear-gradient(90deg, #7d98ff, #7ce0cf); transition: width 260ms ease; }
+.track-rail {
+  width: min(1480px, 100%); margin: 0 auto; padding: 8px clamp(16px, 3vw, 44px) 10px;
+  display: grid; grid-template-columns: repeat(var(--track-count, 50), minmax(4px, 1fr)); gap: 3px;
+}
+.track-cell { border: 0; height: 5px; padding: 0; background: #43506a; cursor: pointer; border-radius: 8px; }
+.track-cell.started { background: #7688b5; }
+.track-cell.complete { background: #65cdbb; }
+.track-cell.current { height: 9px; margin-top: -2px; background: #fff; }
+.shell { width: min(1400px, 100%); margin: 0 auto; padding: 30px clamp(16px, 3vw, 44px) 110px; }
+.target {
+  background: var(--paper); border: 1px solid var(--line); box-shadow: var(--shadow);
+  display: grid; grid-template-columns: minmax(260px, 1.25fr) minmax(260px, .9fr) minmax(220px, .8fr);
+  gap: clamp(20px, 3vw, 48px); padding: clamp(22px, 3vw, 36px); align-items: start;
+}
+.target h2 { margin: 9px 0 8px; font: 790 clamp(28px, 4vw, 48px)/.98 ui-rounded, "Arial Rounded MT Bold", sans-serif; letter-spacing: -.052em; }
+.target.blinded { grid-template-columns: minmax(260px, 1.25fr) minmax(240px, .85fr) minmax(220px, .8fr); }
+.artists { color: var(--cobalt); font-size: 19px; font-weight: 760; }
+.release { color: var(--slate); margin-top: 8px; line-height: 1.5; }
+.target-copy { border-left: 3px solid var(--cobalt); padding-left: 16px; color: #46536a; line-height: 1.55; }
+.fallback-callout { margin-top: 12px; border-left: 3px solid #c58c1b; background: #fff8e8; padding: 10px 12px; border-radius: 0 8px 8px 0; color: #504626; font-size: 13px; line-height: 1.5; }
+.fallback-callout strong { display: block; color: var(--midnight); margin-bottom: 3px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 15px; }
+.tag { background: #e9edf5; color: #43506b; padding: 5px 8px; font: 700 10px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; }
+.track-note label, .candidate-note label { display: block; color: var(--slate); font-size: 12px; font-weight: 760; margin-bottom: 7px; }
+textarea {
+  width: 100%; resize: vertical; min-height: 74px; border: 1px solid #bbc6d8; border-radius: 7px;
+  padding: 10px 11px; color: var(--midnight); background: #fbfcff; line-height: 1.45;
+}
+.track-note textarea { min-height: 90px; }
+.save-state { min-height: 18px; margin-top: 5px; color: var(--slate); font: 650 11px/1.3 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.save-state.saving { color: var(--cobalt); }
+.save-state.saved { color: var(--ideal); }
+.save-state.error { color: var(--wrong); }
+.work-head { margin: 36px 0 15px; display: flex; justify-content: space-between; align-items: end; gap: 18px; }
+.work-head h2 { margin: 5px 0 0; font: 780 clamp(24px, 3vw, 36px)/1 ui-rounded, "Arial Rounded MT Bold", sans-serif; letter-spacing: -.04em; }
+.work-head p { margin: 7px 0 0; color: var(--slate); max-width: 70ch; font-size: 13px; }
+.track-count { color: var(--slate); font: 700 12px/1.3 ui-monospace, SFMono-Regular, Menlo, monospace; white-space: nowrap; }
+.candidate-list { display: grid; gap: 15px; }
+.candidate {
+  background: var(--paper); border: 1px solid var(--line); box-shadow: 0 8px 25px rgba(23,32,51,.055);
+  display: grid; grid-template-columns: 54px minmax(0, 1fr); overflow: hidden;
+}
+.candidate.reviewed { border-color: #aebbd0; }
+.candidate-letter {
+  background: #e4e9f2; display: grid; place-items: center; align-self: stretch;
+  color: #465570; font: 850 20px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.candidate-body { min-width: 0; padding: 18px 20px 16px; }
+.candidate-top { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 20px; align-items: start; }
+.candidate-title { font-size: 17px; line-height: 1.3; font-weight: 790; overflow-wrap: anywhere; }
+.candidate-meta { margin-top: 7px; color: var(--slate); display: flex; flex-wrap: wrap; gap: 6px 12px; font-size: 12px; }
+.candidate-meta span { position: relative; }
+.candidate-meta span:not(:last-child)::after { content: "·"; position: absolute; right: -8px; color: #9aa7ba; }
+.youtube {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 39px; padding: 8px 12px;
+  border: 1px solid #aeb9ca; border-radius: 6px; color: var(--midnight); text-decoration: none; font-weight: 760; font-size: 12px;
+}
+.youtube:hover { background: var(--midnight); border-color: var(--midnight); color: white; }
+.candidate details { margin-top: 11px; color: #556177; font-size: 12px; }
+.candidate summary { cursor: pointer; font-weight: 720; }
+.description { margin: 8px 0 0; line-height: 1.45; white-space: pre-wrap; }
+.decision-row { display: grid; grid-template-columns: repeat(4, minmax(105px, 1fr)) auto; gap: 8px; margin-top: 17px; }
+.decision {
+  min-height: 43px; border: 1px solid #b9c3d3; border-radius: 6px; background: white;
+  color: #344158; cursor: pointer; font-size: 12px; font-weight: 800;
+}
+.decision:hover { transform: translateY(-1px); }
+.decision.ideal.selected { background: var(--ideal-pale); color: var(--ideal); border-color: var(--ideal); }
+.decision.acceptable.selected { background: var(--acceptable-pale); color: var(--acceptable); border-color: var(--acceptable); }
+.decision.wrong.selected { background: var(--wrong-pale); color: var(--wrong); border-color: var(--wrong); }
+.decision.uncertain.selected { background: var(--uncertain-pale); color: var(--uncertain); border-color: var(--uncertain); }
+.clear { min-height: 43px; padding: 0 11px; border: 0; background: transparent; color: var(--slate); cursor: pointer; font-size: 12px; }
+.clear:hover { color: var(--wrong); }
+.candidate-bottom { display: grid; grid-template-columns: minmax(0, 1fr) 150px; gap: 16px; align-items: end; margin-top: 12px; }
+.candidate-note textarea { min-height: 60px; }
+.candidate-status { text-align: right; }
+.label-chip { display: inline-block; border-radius: 99px; padding: 6px 9px; font: 760 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.label-chip.blank { color: var(--slate); background: #edf0f5; }
+.label-chip.IDEAL { color: var(--ideal); background: var(--ideal-pale); }
+.label-chip.ACCEPTABLE { color: var(--acceptable); background: var(--acceptable-pale); }
+.label-chip.WRONG { color: var(--wrong); background: var(--wrong-pale); }
+.label-chip.UNCERTAIN { color: var(--uncertain); background: var(--uncertain-pale); }
+.definitions {
+  margin-top: 18px; background: #e5eaf3; border: 1px solid #cbd4e2; padding: 14px 16px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 13px; color: #4d5a70; font-size: 11px; line-height: 1.4;
+}
+.definitions strong { display: block; color: var(--midnight); margin-bottom: 3px; }
+.utility {
+  position: fixed; z-index: 25; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,.96);
+  border-top: 1px solid var(--line); box-shadow: 0 -10px 35px rgba(23,32,51,.08); backdrop-filter: blur(13px);
+}
+.utility-inner {
+  width: min(1480px, 100%); margin: 0 auto; padding: 10px clamp(16px, 3vw, 44px);
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+}
+.utility-left, .utility-right { display: flex; gap: 8px; align-items: center; }
+.utility label { color: var(--slate); font-size: 12px; }
+.utility select, .utility button, .utility a {
+  min-height: 39px; border: 1px solid #b9c3d3; border-radius: 6px; background: white; color: var(--midnight);
+  padding: 7px 11px; text-decoration: none; font-size: 12px; font-weight: 750; cursor: pointer;
+}
+.utility button:hover, .utility a:hover { border-color: var(--cobalt); color: var(--cobalt); }
+.pending { color: var(--slate); font: 650 11px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.pending.busy { color: var(--cobalt); }
+.pending.error { color: var(--wrong); }
+.loading, .empty { min-height: 55vh; display: grid; place-items: center; color: var(--slate); text-align: center; }
+.fatal { color: var(--wrong); }
+@media (max-width: 920px) {
+  .masthead-inner { grid-template-columns: 1fr; gap: 13px; }
+  .target, .target.blinded { grid-template-columns: 1fr 1fr; }
+  .track-note { grid-column: 1 / -1; }
+  .decision-row { grid-template-columns: 1fr 1fr; }
+  .clear { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+  .shell { padding-top: 18px; padding-bottom: 30px; }
+  .target, .target.blinded { grid-template-columns: 1fr; padding: 20px; }
+  .target h2 { font-size: 33px; }
+  .track-note { grid-column: auto; }
+  .definitions { grid-template-columns: 1fr 1fr; }
+  .work-head { display: block; }
+  .track-count { margin-top: 12px; }
+  .candidate { grid-template-columns: 42px minmax(0, 1fr); }
+  .candidate-body { padding: 15px 13px; }
+  .candidate-top { grid-template-columns: 1fr; gap: 11px; }
+  .youtube { justify-self: start; }
+  .decision-row { grid-template-columns: 1fr 1fr; }
+  .candidate-bottom { grid-template-columns: 1fr; }
+  .candidate-status { text-align: left; }
+  .utility { position: static; }
+  .utility-inner { align-items: stretch; flex-wrap: wrap; }
+  .utility-right { margin-left: auto; }
+  .track-rail { gap: 1px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div><div id="page-eyebrow" class="eyebrow">Stage 5B.1B · human review</div><h1 id="page-title">Recording cue sheet</h1></div>
+    <div>
+      <div class="progress-copy"><strong id="progress-number">—</strong><span id="progress-label">Loading candidate judgments</span></div>
+      <div class="progress-track" aria-hidden="true"><div id="progress-fill" class="progress-fill"></div></div>
+    </div>
+  </div>
+  <nav id="track-rail" class="track-rail" aria-label="Held-out tracks"></nav>
+</header>
+<div id="app" class="loading" role="status">Loading the frozen review…</div>
+<footer class="utility">
+  <div class="utility-inner">
+    <div class="utility-left">
+      <label for="filter">Show</label>
+      <select id="filter"><option value="unfinished">Tracks with unlabeled candidates</option><option value="all">All tracks</option><option value="complete">Completed tracks</option></select>
+      <span id="pending" class="pending" aria-live="polite">All changes saved</span>
+    </div>
+    <div class="utility-right"><a id="export" href="/api/export">Export CSV</a><button id="previous" type="button">← Previous</button><button id="next" type="button">Next unfinished →</button></div>
+  </div>
+</footer>
+<script>
+"use strict";
+const app = document.querySelector("#app");
+const rail = document.querySelector("#track-rail");
+const filter = document.querySelector("#filter");
+const progressNumber = document.querySelector("#progress-number");
+const progressLabel = document.querySelector("#progress-label");
+const progressFill = document.querySelector("#progress-fill");
+const pendingCopy = document.querySelector("#pending");
+const exportLink = document.querySelector("#export");
+const pageEyebrow = document.querySelector("#page-eyebrow");
+const pageTitle = document.querySelector("#page-title");
+const LABELS = ["IDEAL", "ACCEPTABLE", "WRONG", "UNCERTAIN"];
+const LETTERS = ["A", "B", "C", "D", "E"];
+let session = null;
+let index = 0;
+let pendingSaves = 0;
+let exporting = false;
+const saveQueues = new Map();
+const noteTimers = new Map();
+
+function node(tag, className, text) {
+  const value = document.createElement(tag);
+  if (className) value.className = className;
+  if (text !== undefined && text !== null) value.textContent = String(text);
+  return value;
+}
+function formatDuration(seconds) {
+  if (seconds === null || seconds === undefined || !Number.isFinite(Number(seconds))) return "duration unavailable";
+  const total = Math.round(Number(seconds));
+  return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, "0")}`;
+}
+function formatViews(value) {
+  if (value === null || value === undefined || !Number.isFinite(Number(value))) return "views unavailable";
+  return `${new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 }).format(Number(value))} views`;
+}
+function savedLabel(candidate) { return candidate._savedLabel === undefined ? candidate.review.label : candidate._savedLabel; }
+function isYoutubePriorReview() { return session && ["stage5b2_youtube_prior_review", "stage5b4_representative_v3_review"].includes(session.mode); }
+function isComplete(item) { return isYoutubePriorReview() ? Boolean(item.review_complete) : item.candidates.every(candidate => Boolean(savedLabel(candidate))); }
+function isStarted(item) { return item.candidates.some(candidate => Boolean(savedLabel(candidate))); }
+function visibleIndices() {
+  if (!session) return [];
+  return session.cases.map((item, position) => ({ item, position })).filter(({ item }) => {
+    if (filter.value === "complete") return isComplete(item);
+    if (filter.value === "unfinished") return !isComplete(item);
+    return true;
+  }).map(value => value.position);
+}
+function updateProgress() {
+  const candidates = session.cases.flatMap(item => item.candidates);
+  const reviewed = candidates.filter(candidate => Boolean(savedLabel(candidate))).length;
+  const complete = session.cases.filter(isComplete).length;
+  const failed = candidates.filter(candidate => candidate._saveError).length;
+  if (isYoutubePriorReview()) {
+    const state = session.progress;
+    progressNumber.textContent = `${state.completed_tracks} / ${state.total_tracks}`;
+    progressLabel.textContent = `${state.remaining_tracks} tracks remaining · ${state.reviewed_candidates} candidate judgments saved`;
+    progressFill.style.width = `${state.total_tracks ? state.completed_tracks / state.total_tracks * 100 : 0}%`;
+  } else {
+    progressNumber.textContent = `${reviewed} / ${candidates.length}`;
+    progressLabel.textContent = `${candidates.length - reviewed} remaining · ${complete} / ${session.cases.length} tracks complete`;
+    progressFill.style.width = `${candidates.length ? reviewed / candidates.length * 100 : 0}%`;
+  }
+  pendingCopy.textContent = failed ? `${failed} autosave${failed === 1 ? "" : "s"} failed` : pendingSaves ? `${pendingSaves} autosave${pendingSaves === 1 ? "" : "s"} in progress` : "All changes saved";
+  pendingCopy.classList.toggle("busy", pendingSaves > 0 && failed === 0);
+  pendingCopy.classList.toggle("error", failed > 0);
+}
+function updateTrackCount(item) {
+  const value = document.querySelector("#track-count");
+  if (!value || session.cases[index] !== item) return;
+  if (isYoutubePriorReview()) {
+    value.textContent = item.review_complete ? "Track complete" : item.review_phase === "SELECTOR_VALIDATION" ? "Additional selector-validation judgment" : `Review rank #${item.next_required_rank}`;
+    return;
+  }
+  const reviewed = item.candidates.filter(candidate => Boolean(savedLabel(candidate))).length;
+  value.textContent = `${reviewed} / ${item.candidates.length} labeled on this track`;
+}
+function renderRail() {
+  rail.replaceChildren();
+  rail.style.setProperty("--track-count", String(session.cases.length));
+  session.cases.forEach((item, position) => {
+    const button = node("button", "track-cell");
+    button.type = "button";
+    if (isStarted(item)) button.classList.add("started");
+    if (isComplete(item)) button.classList.add("complete");
+    if (position === index) button.classList.add("current");
+    button.title = `${position + 1}. ${item.track.title} — ${item.candidates.filter(candidate => Boolean(savedLabel(candidate))).length}/${item.candidates.length} labeled`;
+    button.setAttribute("aria-label", button.title);
+    button.onclick = () => goTo(position);
+    rail.append(button);
+  });
+}
+function goTo(position) {
+  index = Math.max(0, Math.min(session.cases.length - 1, position));
+  render();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+function step(direction) {
+  const visible = visibleIndices();
+  if (!visible.length) return;
+  const current = visible.indexOf(index);
+  const at = current < 0 ? 0 : current;
+  goTo(visible[(at + direction + visible.length) % visible.length]);
+}
+function nextUnfinished() {
+  const next = session.cases.findIndex((item, position) => position > index && !isComplete(item));
+  const wrapped = session.cases.findIndex(item => !isComplete(item));
+  if (next >= 0 || wrapped >= 0) goTo(next >= 0 ? next : wrapped);
+}
+function statusElement(item, candidate) {
+  return document.querySelector(`[data-status="${CSS.escape(item.stable_track_id + ":" + candidate.video_id)}"]`);
+}
+function setStatus(item, candidate, state, text) {
+  const value = statusElement(item, candidate);
+  if (!value) return;
+  value.className = `save-state ${state || ""}`;
+  value.textContent = text;
+}
+async function refreshAdaptiveSession(stableTrackId) {
+  if (!isYoutubePriorReview()) return;
+  const response = await fetch("/api/session");
+  const data = await response.json();
+  if (!response.ok) throw new Error(data.error || "Could not refresh review state");
+  data.cases.forEach(item => item.candidates.forEach(candidate => { candidate._savedLabel = candidate.review.label; }));
+  const position = data.cases.findIndex(item => item.stable_track_id === stableTrackId);
+  session = data;
+  index = position < 0 ? index : position;
+  render();
+}
+function saveCandidate(item, candidate) {
+  const key = item.stable_track_id;
+  const snapshot = {
+    stable_track_id: item.stable_track_id,
+    video_id: candidate.video_id,
+    label: candidate.review.label,
+    candidate_note: candidate.review.note,
+    track_note: item.track_note,
+  };
+  const prior = saveQueues.get(key) || Promise.resolve();
+  const version = (candidate._saveVersion || 0) + 1;
+  candidate._saveVersion = version;
+  candidate._saveError = null;
+  candidate._pending = (candidate._pending || 0) + 1;
+  pendingSaves += 1;
+  setStatus(item, candidate, "saving", "Saving…");
+  updateProgress();
+  const next = prior.catch(() => undefined).then(async () => {
+    const response = await fetch("/api/review", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(snapshot),
+    });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error || "Autosave failed");
+    candidate._savedLabel = snapshot.label;
+    updateTrackCount(item);
+    if (candidate._saveVersion === version) {
+      candidate._saveError = null;
+      setStatus(item, candidate, "saved", "Saved");
+    }
+    await refreshAdaptiveSession(item.stable_track_id);
+  }).catch(error => {
+    if (candidate._saveVersion === version) {
+      candidate._saveError = error.message;
+      setStatus(item, candidate, "error", `${error.message} — change the field to retry`);
+    }
+  }).finally(() => {
+    candidate._pending -= 1;
+    pendingSaves -= 1;
+    updateProgress();
+    renderRail();
+  });
+  saveQueues.set(key, next);
+  return next;
+}
+function debounceSave(item, candidate, delay = 650) {
+  const key = `${item.stable_track_id}:${candidate.video_id}`;
+  const pending = noteTimers.get(key);
+  if (pending) clearTimeout(pending.timer);
+  setStatus(item, candidate, "", "Waiting to autosave…");
+  const timer = setTimeout(() => { noteTimers.delete(key); saveCandidate(item, candidate); }, delay);
+  noteTimers.set(key, { timer, item, candidate });
+}
+function flushPendingNotes() {
+  const saves = [];
+  for (const [key, pending] of [...noteTimers.entries()]) {
+    clearTimeout(pending.timer);
+    noteTimers.delete(key);
+    saves.push(saveCandidate(pending.item, pending.candidate));
+  }
+  return saves;
+}
+async function exportReview(event) {
+  event.preventDefault();
+  if (exporting) return;
+  exporting = true;
+  exportLink.setAttribute("aria-disabled", "true");
+  pendingCopy.textContent = "Saving notes before export…";
+  pendingCopy.classList.add("busy");
+  if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
+  flushPendingNotes();
+  await Promise.all([...saveQueues.values()]);
+  const failed = session.cases.flatMap(item => item.candidates).filter(candidate => candidate._saveError).length;
+  if (failed) {
+    pendingCopy.textContent = `Export blocked · ${failed} autosave${failed === 1 ? "" : "s"} failed`;
+    pendingCopy.classList.remove("busy");
+    pendingCopy.classList.add("error");
+  } else {
+    const download = document.createElement("a");
+    download.href = `/api/export?saved=${Date.now()}`;
+    download.download = session.export_filename || "stage5b1b-heldout-review.csv";
+    document.body.append(download);
+    download.click();
+    download.remove();
+    updateProgress();
+  }
+  exporting = false;
+  exportLink.removeAttribute("aria-disabled");
+}
+function updateCandidateVisual(card, candidate) {
+  card.classList.toggle("reviewed", Boolean(candidate.review.label));
+  card.querySelectorAll(".decision").forEach(button => {
+    const selected = button.dataset.label === candidate.review.label;
+    button.classList.toggle("selected", selected);
+    button.setAttribute("aria-pressed", String(selected));
+  });
+  const chip = card.querySelector(".label-chip");
+  chip.className = `label-chip ${candidate.review.label || "blank"}`;
+  chip.textContent = candidate.review.label || "NOT LABELED";
+}
+function chooseLabel(item, candidate, card, label) {
+  candidate.review.label = label;
+  updateCandidateVisual(card, candidate);
+  updateProgress();
+  renderRail();
+  saveCandidate(item, candidate);
+}
+function candidateCard(item, candidate) {
+  const card = node("article", "candidate");
+  if (candidate.review.label) card.classList.add("reviewed");
+  card.dataset.videoId = candidate.video_id;
+  const displayIndex = candidate.display_index || candidate.rank;
+  const letter = node("div", "candidate-letter", isYoutubePriorReview() ? `#${candidate.rank}` : LETTERS[displayIndex - 1] || displayIndex);
+  letter.setAttribute("aria-hidden", "true");
+  const body = node("div", "candidate-body");
+  const top = node("div", "candidate-top");
+  const copy = node("div");
+  copy.append(node("h3", "candidate-title", candidate.title || "Untitled YouTube result"));
+  const meta = node("div", "candidate-meta");
+  [candidate.channel || candidate.uploader || "channel unavailable", formatDuration(candidate.duration_seconds), formatViews(candidate.view_count), candidate.video_id].forEach(value => meta.append(node("span", "", value)));
+  copy.append(meta);
+  const youtube = node("a", "youtube", "Open YouTube ↗");
+  youtube.href = `https://www.youtube.com/watch?v=${encodeURIComponent(candidate.video_id)}`;
+  youtube.target = "_blank";
+  youtube.rel = "noopener noreferrer";
+  top.append(copy, youtube);
+  body.append(top);
+  if (candidate.description) {
+    const descriptionDetails = node("details");
+    descriptionDetails.append(
+      node("summary", "", "Show YouTube description"),
+      node("p", "description", candidate.description),
+    );
+    body.append(descriptionDetails);
+  }
+  const decisions = node("div", "decision-row");
+  LABELS.forEach(label => {
+    const button = node("button", `decision ${label.toLowerCase()}`, label);
+    button.type = "button";
+    button.dataset.label = label;
+    button.setAttribute("aria-pressed", String(candidate.review.label === label));
+    if (candidate.review.label === label) button.classList.add("selected");
+    button.onclick = () => chooseLabel(item, candidate, card, label);
+    decisions.append(button);
+  });
+  const clear = node("button", "clear", "Clear label");
+  clear.type = "button";
+  clear.onclick = () => chooseLabel(item, candidate, card, "");
+  decisions.append(clear);
+  body.append(decisions);
+  const bottom = node("div", "candidate-bottom");
+  const noteWrap = node("div", "candidate-note");
+  const noteLabel = node("label", "", candidate.reason_required_for_non_safe ? "Reason required if rank #1 is WRONG or UNCERTAIN" : "Optional candidate note");
+  const noteId = `note-${item.stable_track_id}-${displayIndex}`;
+  noteLabel.htmlFor = noteId;
+  const note = node("textarea");
+  note.id = noteId;
+  note.maxLength = 2000;
+  note.placeholder = candidate.reason_required_for_non_safe ? "If WRONG or UNCERTAIN, briefly explain why." : "Why is this source ideal, merely safe, wrong, or uncertain?";
+  note.value = candidate.review.note;
+  note.oninput = () => { candidate.review.note = note.value; debounceSave(item, candidate); };
+  note.onblur = () => {
+    const key = `${item.stable_track_id}:${candidate.video_id}`;
+    const pending = noteTimers.get(key);
+    if (pending) { clearTimeout(pending.timer); noteTimers.delete(key); saveCandidate(item, candidate); }
+  };
+  noteWrap.append(noteLabel, note);
+  const status = node("div", "candidate-status");
+  const chip = node("span", `label-chip ${candidate.review.label || "blank"}`, candidate.review.label || "NOT LABELED");
+  const initialState = candidate._saveError ? "error" : candidate._pending ? "saving" : "";
+  const initialCopy = candidate._saveError ? `${candidate._saveError} — change the field to retry` : candidate._pending ? "Saving…" : "Saved in review CSV";
+  const save = node("div", `save-state ${initialState}`, initialCopy);
+  save.dataset.status = `${item.stable_track_id}:${candidate.video_id}`;
+  save.setAttribute("aria-live", "polite");
+  status.append(chip, save);
+  bottom.append(noteWrap, status);
+  body.append(bottom);
+  card.append(letter, body);
+  return card;
+}
+function render() {
+  const visible = visibleIndices();
+  if (visible.length && !visible.includes(index)) index = visible[0];
+  app.className = "shell";
+  app.replaceChildren();
+  updateProgress();
+  renderRail();
+  if (!visible.length) {
+    app.className = "empty";
+    app.append(node("div", "", filter.value === "complete" ? "No tracks are complete yet." : "Every candidate has a label. Export the CSV when you are ready."));
+    return;
+  }
+  const item = session.cases[index];
+  const target = node("section", "target");
+  const freshChallenge = session.mode === "stage5b1b_fresh_challenge_human_audit";
+  const tier2Audit = session.mode === "stage5b1c_tier2_human_audit";
+  const fallbackAudit = session.mode === "stage5b1j_representation_fallback_review";
+  const representativeAudit = session.mode === "stage5b_representative_library_review";
+  const youtubePriorAudit = ["stage5b2_youtube_prior_review", "stage5b4_representative_v3_review"].includes(session.mode);
+  const representativeV3Audit = session.mode === "stage5b4_representative_v3_review";
+  const blindedAudit = freshChallenge || tier2Audit || fallbackAudit || representativeAudit || youtubePriorAudit;
+  if (blindedAudit) target.classList.add("blinded");
+  const identity = node("div");
+  identity.append(node("div", "eyebrow", `Spotify target · track ${index + 1} of ${session.cases.length}`), node("h2", "", item.track.title), node("div", "artists", item.track.artists.join(" · ")));
+  identity.append(node("div", "release", [item.track.album, item.track.release_year, formatDuration(item.track.duration_seconds)].filter(Boolean).join(" · ")));
+  if (Array.isArray(item.case_tags) && item.case_tags.length) {
+    const tags = node("div", "tags");
+    item.case_tags.forEach(tag => tags.append(node("span", "tag", tag.replaceAll("_", " "))));
+    identity.append(tags);
+  }
+  const context = node("div", "target-copy");
+  if (blindedAudit) {
+    context.append(
+      node("div", "eyebrow", representativeV3Audit ? "Fresh Representative V3 audit" : youtubePriorAudit ? "Raw YouTube ranking audit" : fallbackAudit ? "Representation-equivalence safety gate" : representativeAudit ? "Held-out representative benchmark" : tier2Audit ? "Blinded Tier-2 safety audit" : "Blinded source audit"),
+      node("p", "", youtubePriorAudit ? "Judge whether the current YouTube result is a suitable audio representation for downstream similarity and playlist organization." : fallbackAudit ? "Judge whether this fallback is a suitable audio representation for the Spotify target's downstream similarity analysis." : representativeAudit ? "Judge whether the frozen selection safely represents this Spotify target. The benchmark result cannot change resolver rules." : "Judge whether each candidate is the intended Spotify recording, then whether its audio source is clean enough for similarity analysis."),
+      node("p", "", representativeV3Audit ? "Review native ranks sequentially until the first SAFE result. After the oracle judgment is complete, an additional independently selected candidate may appear for validation. Automated decisions remain hidden." : youtubePriorAudit ? "If this rank is safe, the track is complete. If it is WRONG or UNCERTAIN, the next native YouTube rank will appear. Sol judgments remain hidden." : tier2Audit ? "Tier-2 recovery rules, Sol judgments, and selection reasons remain hidden." : "Resolver decisions, Sol judgments, search rank, and audit reasons remain hidden."),
+    );
+    if ((fallbackAudit || representativeAudit) && item.fallback) {
+      const mode = item.fallback.match_mode === "REPRESENTATION_EQUIVALENT_STUDIO_FALLBACK" ? "Studio fallback" : item.fallback.match_mode === "REPRESENTATION_EQUIVALENT_MASTER_FALLBACK" ? "Master fallback" : "Exact recording";
+      const callout = node("div", "fallback-callout");
+      callout.append(
+        node("strong", "", mode === "Exact recording" ? mode : `${mode} · not claimed as the exact Spotify release`),
+        document.createTextNode(mode === "Exact recording" ? "Judge the selected recording and source quality independently." : "Judge whether this is an acceptable audio representation for downstream CLAP/MuQ similarity—not whether it is literally the same release."),
+      );
+      context.append(callout);
+    }
+  } else {
+    context.append(node("div", "eyebrow", "Why this case exists"), node("p", "", item.case_rationale));
+    const queryDetails = node("details");
+    queryDetails.append(node("summary", "", "Show frozen search query"), node("p", "description", item.query));
+    context.append(queryDetails);
+  }
+  const trackNote = node("div", "track-note");
+  const trackLabel = node("label", "", "Optional note for this track");
+  trackLabel.htmlFor = "track-note";
+  const trackArea = node("textarea");
+  trackArea.id = "track-note";
+  trackArea.maxLength = 2000;
+  trackArea.placeholder = "Anything that applies to the full candidate set?";
+  trackArea.value = item.track_note;
+  const firstCandidate = item.candidates[0];
+  trackArea.oninput = () => { item.track_note = trackArea.value; debounceSave(item, firstCandidate); };
+  trackArea.onblur = () => {
+    const key = `${item.stable_track_id}:${firstCandidate.video_id}`;
+    const pending = noteTimers.get(key);
+    if (pending) { clearTimeout(pending.timer); noteTimers.delete(key); saveCandidate(item, firstCandidate); }
+  };
+  const trackSave = node("div", "save-state", "Autosaves after you stop typing");
+  trackNote.append(trackLabel, trackArea, trackSave);
+  target.append(identity, context, trackNote);
+  app.append(target);
+  const definitions = node("section", "definitions");
+  definitions.append(
+    definition("IDEAL", "Correct recording and the preferred clean source."),
+    definition("ACCEPTABLE", "Correct recording and safe enough, but not preferred."),
+    definition("WRONG", "Wrong song, performer, recording, or version."),
+    definition("UNCERTAIN", "The available evidence is not enough to decide."),
+  );
+  app.append(definitions);
+  const head = node("div", "work-head");
+  const heading = node("div");
+  heading.append(
+    node("div", "eyebrow", blindedAudit ? "Blinded audit candidates" : "Ordered yt-dlp candidates"),
+    node("h2", "", representativeV3Audit && item.review_phase === "SELECTOR_VALIDATION" ? "Additional independent selector judgment" : youtubePriorAudit ? "Review ranks until the first safe result" : representativeAudit ? "Review the frozen selection" : tier2Audit || fallbackAudit ? "Review the recovered source" : "Label every candidate"),
+    node("p", "", "Open YouTube when needed. Each choice saves immediately; notes autosave after a short pause. Automatic resolver and evaluator evidence are hidden during review."),
+  );
+  const trackCount = node("div", "track-count", youtubePriorAudit ? item.review_complete ? "Track complete" : item.review_phase === "SELECTOR_VALIDATION" ? "Additional selector-validation judgment" : `Review rank #${item.next_required_rank}` : `${item.candidates.filter(candidate => Boolean(savedLabel(candidate))).length} / ${item.candidates.length} labeled on this track`);
+  trackCount.id = "track-count";
+  head.append(heading, trackCount);
+  app.append(head);
+  const list = node("section", "candidate-list");
+  if (item.candidate_unavailable) {
+    const unavailable = node("div", "empty", "No candidate metadata was returned for this frozen query. This track remains in the benchmark denominator as a Top-3 miss and MATCH_UNCERTAIN.");
+    list.append(unavailable);
+  } else {
+    item.candidates.forEach(candidate => list.append(candidateCard(item, candidate)));
+  }
+  app.append(list);
+}
+function definition(label, text) {
+  const value = node("div");
+  value.append(node("strong", "", label), document.createTextNode(text));
+  return value;
+}
+async function load() {
+  try {
+    const response = await fetch("/api/session");
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error || "Could not load review state");
+    session = data;
+    if (session.mode === "stage5b1b_fresh_challenge_human_audit") {
+      document.title = "Fresh challenge review · Stage 5B.1B";
+      pageEyebrow.textContent = "Stage 5B.1B · fresh challenge audit";
+      pageTitle.textContent = "Source safety desk";
+    } else if (session.mode === "stage5b1c_tier2_human_audit") {
+      document.title = "Tier-2 recovery review · Stage 5B.1C";
+      pageEyebrow.textContent = "Stage 5B.1C · Tier-2 safety audit";
+      pageTitle.textContent = "Recovered source review";
+    } else if (session.mode === "stage5b1j_representation_fallback_review") {
+      document.title = "Representation fallback review · Stage 5B.1J";
+      pageEyebrow.textContent = "Stage 5B.1J · fallback safety gate";
+      pageTitle.textContent = "Representation fallback review";
+    } else if (session.mode === "stage5b_representative_library_review") {
+      document.title = "Representative library review · Stage 5B";
+      pageEyebrow.textContent = "Stage 5B · held-out owner-library benchmark";
+      pageTitle.textContent = "Representative selection review";
+    } else if (session.mode === "stage5b2_youtube_prior_review") {
+      document.title = "Raw YouTube ranking review · Stage 5B.2";
+      pageEyebrow.textContent = "Stage 5B.2 · raw YouTube ranking benchmark";
+      pageTitle.textContent = "Native rank review";
+    } else if (session.mode === "stage5b4_representative_v3_review") {
+      document.title = "Representative V3 review · Stage 5B.4";
+      pageEyebrow.textContent = "Stage 5B.4 · fresh Representative V3";
+      pageTitle.textContent = "Native rank validation";
+    }
+    session.cases.forEach(item => item.candidates.forEach(candidate => { candidate._savedLabel = candidate.review.label; }));
+    const first = session.cases.findIndex(item => !isComplete(item));
+    index = first < 0 ? 0 : first;
+    render();
+  } catch (error) {
+    app.className = "loading fatal";
+    app.textContent = error.message;
+  }
+}
+filter.onchange = render;
+document.querySelector("#previous").onclick = () => step(-1);
+document.querySelector("#next").onclick = nextUnfinished;
+window.addEventListener("beforeunload", event => {
+  if (pendingSaves || noteTimers.size) { event.preventDefault(); event.returnValue = ""; }
+});
+exportLink.onclick = exportReview;
+load();
+</script>
+</body>
+</html>

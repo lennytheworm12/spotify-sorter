@@ -1,0 +1,28 @@
+{
+  "schema_version": "stage5b1b-config-v1",
+  "experiment_id": "stage5b1b_candidate_resolution_heldout",
+  "stage5b1a2_evidence_checkpoint": "09f8347",
+  "discovery_configuration": {
+    "path": "configs/stage5b1a2_ytdlp.json",
+    "expected_sha256": "476dfa9eaa3daec9961af627215fcd08b488463675e1563b2a350136ab2a752c"
+  },
+  "dev": {
+    "manifest_path": "reports/stage5b1a/frozen_tracks.json",
+    "manifest_expected_sha256": "f3592bb8c8dea689959a22da222d8b7ce4911c1804392acb501cffe768700c57",
+    "discovery_results_path": "reports/stage5b1a_ytdlp/ytdlp_discovery_results.json",
+    "review_path": "reports/stage5b1a_ytdlp/ytdlp_review.csv"
+  },
+  "heldout": {
+    "manifest_path": "reports/stage5b1b/heldout_tracks.json",
+    "manifest_expected_sha256": "39557ede8f07bde129ad23d2bc64a0faf0fff755356cd87f2054e14f91d81e5a"
+  },
+  "artifacts": {
+    "dev_features": "reports/stage5b1b/dev_candidate_features.json",
+    "dev_diagnostics": "reports/stage5b1b/dev_feature_analysis.json",
+    "heldout_discovery": "reports/stage5b1b/heldout_ytdlp_discovery.json",
+    "heldout_features": "reports/stage5b1b/heldout_candidate_features.json",
+    "heldout_review": "reports/stage5b1b/heldout_review.csv",
+    "run_status": "reports/stage5b1b/run_status.json",
+    "implementation_report": "reports/stage5b1b/implementation_report.md"
+  }
+}

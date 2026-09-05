@@ -1,0 +1,43 @@
+{
+  "directory_level_audit": {
+    "directories": [
+      "reports/stage5c2_representative_100_amended_v2_supplement_materialization",
+      "artifacts/stage5c2_representative_100_amended_v2/supplement"
+    ],
+    "passed": true,
+    "retained_source_media_count": 0,
+    "retained_source_media_files": []
+  },
+  "experiment_id": "STAGE5C2_REPRESENTATIVE_100_SELECTOR_AWARE_AMENDMENT_V2",
+  "run_kind": "first",
+  "schema_version": "stage5c2-cleanup-audit-v1",
+  "temporary_root": "/tmp/spotify-sorter-stage5c2-wtkf99ev",
+  "temporary_root_absent_after_cleanup": true,
+  "tracks": [
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "5quFr5s5PXYfUX5jV2EBZ1",
+      "stage5c2_track_id": "stage5c2_008",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c2-wtkf99ev/stage5c2_008-v224EdAkZr8.wav"
+      ]
+    },
+    {
+      "cleanup_attempted": true,
+      "cleanup_expected": true,
+      "errors": [],
+      "spotify_track_id": "5l45vVLs4JKkhzN0tvkWJv",
+      "stage5c2_track_id": "stage5c2_019",
+      "temp_file_existed_before_cleanup": true,
+      "temp_files_absent_after_cleanup": true,
+      "temporary_paths": [
+        "/tmp/spotify-sorter-stage5c2-wtkf99ev/stage5c2_019-i4YFngxyJ0k.wav"
+      ]
+    }
+  ],
+  "unintended_retained_source_audio_files": 0
+}

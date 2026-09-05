@@ -1,0 +1,49 @@
+{
+  "acquisition": {
+    "discovery_requests": 0,
+    "exact_frozen_ids_only": true,
+    "format": "bestaudio/best",
+    "full_source": true,
+    "maximum_attempts": 4,
+    "minimum_start_spacing_seconds": 20.0,
+    "provider": "yt_dlp_exact_url",
+    "selector_calls": 0,
+    "serial": true
+  },
+  "expected_track_count": 100,
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "frozen_at_utc": "2026-09-04T19:57:49.181596+00:00",
+  "human_review_baseline": {},
+  "immutable_amended_evidence": {
+    "clap_similarity.csv": "d7f14d05bd938a4ecb7aa553e993c37a42c5a3b629d66f8e93bf8ec879a64efa",
+    "combined_similarity.csv": "c3e4ddf1f0ff462ce5cad52c9afb872086f9e8b20bf79192e0bf86e60b9ec066",
+    "muq_similarity.csv": "f12b91132a9a271f7574fa49d01661a5d00a5e905a1c7dcfbe7178de1ba135e3",
+    "nearest_neighbors.json": "47d4c619ab474085dcb49f6557f3778b979e6291ea2f4f424c0c00341177da88",
+    "representative_manifest.json": "cdbc64aac94bffb34481b898370b56e1b9566ae925ebfbeb21621bbe6cb0667b",
+    "representative_manifest.sha256": "9fc719d02f779375b98b888597ae917db86eb9db36310837cf075e65708f07a1",
+    "review_queue.json": "e0b36ed25206970d5dad9b8122f3e74d176da9a3827dfb239d45f9fc848cbba0",
+    "selected_sources.json": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+    "selected_sources.sha256": "8ea58d545dd4e4d2cff910e1c9b365826c577b2f0f75cbb9c84ff1cfde3f4c91"
+  },
+  "index_path": ".research_audio/index.json",
+  "media_root": ".research_audio",
+  "original_98_selected_sources_sha256": "dc9c868d603f456782867eee76aea6a8a9784b3b43ace3777636b77b97bf12b9",
+  "representation": {
+    "clap_inference": false,
+    "existing_linkage_only": true,
+    "muq_inference": false
+  },
+  "representative_manifest_sha256": "cdbc64aac94bffb34481b898370b56e1b9566ae925ebfbeb21621bbe6cb0667b",
+  "retention_policy": {
+    "delete_scratch_and_partial_files": true,
+    "git_ignored_local_only": true,
+    "git_lfs": false,
+    "retain_provenance": true,
+    "retain_validated_full_source": true
+  },
+  "schema_version": "stage5c2a-retention-config-v1",
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "source_experiment_id": "STAGE5C2_REPRESENTATIVE_100_SELECTOR_AWARE_AMENDMENT_V2",
+  "source_reference_path": "reports/stage5c2a_persistent_research_audio/amended_100_source_reference.json",
+  "source_reference_sha256": "fd426cd1bc2e961fd209886d974e620ca4f1cbf369cc80b8967a683e0bb13825"
+}

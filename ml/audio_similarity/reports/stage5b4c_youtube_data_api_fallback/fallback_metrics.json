@@ -1,0 +1,49 @@
+{
+  "counts": {
+    "data_api_video_results": 0,
+    "hydrated_candidates": 0,
+    "primary_candidates": 0
+  },
+  "criteria": {
+    "data_api_found_candidate": false,
+    "data_api_only_after_zero": true,
+    "historical_artifacts_immutable": true,
+    "human_safe_top3": false,
+    "same_query_used": true,
+    "selector_and_query_untuned": true,
+    "tests_passed": true,
+    "videos_list_hydrated_candidate": false,
+    "yt_dlp_remained_primary": true
+  },
+  "experiment_id": "STAGE5B4C_YOUTUBE_DATA_API_FALLBACK_V1",
+  "human_review": {
+    "first_safe_rank": null,
+    "labels": [],
+    "safe_in_top3": false
+  },
+  "latency_seconds": {
+    "data_api_search": 0.2890832829871215,
+    "primary_ytdlp_search": 1.0715196409728378,
+    "videos_list_hydration": null
+  },
+  "schema_version": "stage5b4c-fallback-metrics-v1",
+  "scope_guards": {
+    "alternate_queries": 0,
+    "audio_downloads": 0,
+    "credential_serialized": false,
+    "playwright_invocations": 0,
+    "production_activation": false,
+    "query_modified": false,
+    "selector_modified": false,
+    "video_downloads": 0
+  },
+  "selector_evaluation_after_human_review": null,
+  "unresolved_next_step": "MANUAL_YOUTUBE_URL_OVERRIDE",
+  "verdict": "YOUTUBE_DATA_API_FALLBACK_FAILED",
+  "verification": {
+    "focused": 19,
+    "full_deselected": 12,
+    "full_non_heavy": 982,
+    "stage5b_regressions": 521
+  }
+}
