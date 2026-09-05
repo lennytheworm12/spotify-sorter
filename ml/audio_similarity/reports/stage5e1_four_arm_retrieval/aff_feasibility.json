@@ -1,0 +1,62 @@
+{
+  "comparison_design": {
+    "a_and_c_architecture": "HTSAT-base music-specialized non-fusion",
+    "a_and_c_checkpoint": "models/music_audioset_epoch_15_esc_90.14.pt",
+    "a_vs_c_is_matched_checkpoint": true,
+    "b_and_d_architecture": "HTSAT-tiny general-audio native fusion",
+    "b_and_d_checkpoint": "models/630k-audioset-fusion-best.pt",
+    "b_vs_d_is_matched_checkpoint": true,
+    "cross_pair_checkpoint_confound": true
+  },
+  "current_baseline_checkpoint": {
+    "expected_sha256": "fae3e9c087f2909c28a09dc31c8dfcdacbc42ba44c70e972b58c1bd1caf6dedd",
+    "expected_size_bytes": 2352471003,
+    "fusion_key_examples": [],
+    "fusion_state_key_count": 0,
+    "has_aff_parameters": false,
+    "has_local_projection_parameters": false,
+    "path": "models/music_audioset_epoch_15_esc_90.14.pt",
+    "present": true,
+    "sha256": "fae3e9c087f2909c28a09dc31c8dfcdacbc42ba44c70e972b58c1bd1caf6dedd",
+    "size_bytes": 2352471003,
+    "state_key_count": 505,
+    "trained_aff_available": false,
+    "trusted_source_identity": true
+  },
+  "experiment_id": "STAGE5E1_FOUR_ARM_FULL_SONG_RETRIEVAL",
+  "installed_implementation": {
+    "aff_implementation_sha256": "878c98e926e0c734e469c7cf9419cf0bd98af9b0f224f66f04cabc2b3bad6a9f",
+    "feature_preprocessing_sha256": "b958fc34aa9cac44103b663374c3c49aee4580dec8740b9dd1e17054c8c6e5dc",
+    "global_view": "full-song log-mel resized to one 10-second mel extent",
+    "hook_sha256": "a9001b213768528d667589e6dd4d7f92f107943a5e1ce3149ee6de1a520f9c15",
+    "learned_fusion_layers": "HTSAT patch_embed.mel_conv2d plus patch_embed.fusion_model AFF",
+    "local_views": "one native 10-second log-mel crop from each temporal third",
+    "maximum_waveform_samples": 480000,
+    "native_fusion_type": "aff_2d",
+    "native_randomness": "NumPy selects one local start per temporal third and an otherwise unused compatibility waveform crop; Stage 5E.1 freezes the selected mel-frame starts",
+    "native_view_count": 4,
+    "sample_rate_hz": 48000
+  },
+  "installed_laion_clap_version": "1.1.7",
+  "official_fusion_checkpoint": {
+    "download_authorized": false,
+    "expected_sha256": "fb171dd9b608aebdac3d89286cd7615c5100af4cc7dc37797c7fb8d3cc15e3a5",
+    "expected_size_bytes": 1863889051,
+    "filename": "630k-audioset-fusion-best.pt",
+    "source_revision": "bc020633ac5bc0bb364febd3b97401ca42816cea",
+    "source_url": "https://huggingface.co/lukewys/laion_clap/resolve/main/630k-audioset-fusion-best.pt"
+  },
+  "required_fusion_checkpoint": {
+    "expected_sha256": "fb171dd9b608aebdac3d89286cd7615c5100af4cc7dc37797c7fb8d3cc15e3a5",
+    "expected_size_bytes": 1863889051,
+    "fusion_state_key_count": null,
+    "path": "models/630k-audioset-fusion-best.pt",
+    "present": false,
+    "sha256": null,
+    "state_key_count": null,
+    "trained_aff_available": false,
+    "trusted_source_identity": null
+  },
+  "schema_version": "stage5e1-aff-feasibility-v1",
+  "status": "AFF_CHECKPOINT_REQUIRED"
+}
