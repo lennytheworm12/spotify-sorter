@@ -1,0 +1,1326 @@
+{
+  "automatic_next_batch": false,
+  "batch_number": 2,
+  "cohort_sha256": "76d0a4812f26561e01fd7ed333d04f44d24e7df90748ecb2e2149a496d59f346",
+  "requested_track_count": 34,
+  "schema_version": "chart-download-batch-v1",
+  "tracks": [
+    {
+      "album": "The Motto",
+      "artists": [
+        "Tiësto",
+        "Ava Max"
+      ],
+      "batch_number": 2,
+      "batch_position": 1,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Tiësto & Ava Max",
+          "chart_year": 2022,
+          "entry_id": "AU_2022:53",
+          "period_type": "YEAR_END",
+          "provider": "aria",
+          "rank": 53,
+          "recording_release_year": null,
+          "source_sha256": "46f2a02dbb902c17de6cd8b96bfc0d10541192e6ebbdf40de9ae7138b6cce18a",
+          "spotify_status": "UNRESOLVED",
+          "territory": "AU",
+          "title": "The Motto",
+          "url": "https://www.aria.com.au/charts/2022/singles-chart"
+        }
+      ],
+      "duration_ms": 164818,
+      "isrc": "CYA112001070",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2021,
+      "spotify_track_id": "18asYwWugKjjsihZ0YvRxO",
+      "stage5d0a_track_id": "chart_v1_000501",
+      "title": "The Motto"
+    },
+    {
+      "album": "Ocean Eyes",
+      "artists": [
+        "Owl City"
+      ],
+      "batch_number": 2,
+      "batch_position": 2,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Owl City",
+          "chart_year": 2009,
+          "entry_id": "AU_2009:79",
+          "period_type": "YEAR_END",
+          "provider": "aria",
+          "rank": 79,
+          "recording_release_year": null,
+          "source_sha256": "8d850b962aaef3c1c30229285c6737cdef237bf07c823e2042f19d6d04b4ec72",
+          "spotify_status": "UNRESOLVED",
+          "territory": "AU",
+          "title": "FIREFLIES",
+          "url": "https://www.aria.com.au/charts/2009/singles-chart"
+        },
+        {
+          "acquisition_eligible": false,
+          "artist": "Owl City",
+          "chart_year": 2010,
+          "entry_id": "AU_2010:6",
+          "period_type": "YEAR_END",
+          "provider": "aria",
+          "rank": 6,
+          "recording_release_year": null,
+          "source_sha256": "23ecb72df74ad8f725c5ae362020134958149315b9d3c50fc0442394330c984b",
+          "spotify_status": "UNRESOLVED",
+          "territory": "AU",
+          "title": "Fireflies",
+          "url": "https://www.aria.com.au/charts/2010/singles-chart"
+        }
+      ],
+      "duration_ms": 228346,
+      "isrc": "USUM70972068",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2009,
+      "spotify_track_id": "3DamFFqW32WihKkTVlwTYQ",
+      "stage5d0a_track_id": "chart_v1_000502",
+      "title": "Fireflies"
+    },
+    {
+      "album": "HIT ME HARD AND SOFT",
+      "artists": [
+        "Billie Eilish"
+      ],
+      "batch_number": 2,
+      "batch_position": 3,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Billie Eilish",
+          "chart_year": 2024,
+          "entry_id": "AU_2024:6",
+          "period_type": "YEAR_END",
+          "provider": "aria",
+          "rank": 6,
+          "recording_release_year": null,
+          "source_sha256": "d91c477660084fdc29a55125273ff5dc93e939082d0230deef3ad3a634591dc2",
+          "spotify_status": "UNRESOLVED",
+          "territory": "AU",
+          "title": "Birds Of A Feather",
+          "url": "https://www.aria.com.au/charts/2024/singles-chart"
+        },
+        {
+          "acquisition_eligible": false,
+          "artist": "Billie Eilish",
+          "chart_year": 2024,
+          "entry_id": "US_2024:15",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 15,
+          "recording_release_year": null,
+          "source_sha256": "ddf4d898ef84adcda6f90a494834a33971518cd2116980b6c3ff11a81ba23d7e",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "BIRDS OF A FEATHER",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2024"
+        },
+        {
+          "acquisition_eligible": false,
+          "artist": "Billie Eilish",
+          "chart_year": 2025,
+          "entry_id": "AU_2025:6",
+          "period_type": "YEAR_END",
+          "provider": "aria",
+          "rank": 6,
+          "recording_release_year": null,
+          "source_sha256": "787f2288e203eabda1d1182e302d8a560bd5f7b63fa28c9bd9a905cbeb28f210",
+          "spotify_status": "UNRESOLVED",
+          "territory": "AU",
+          "title": "Birds Of A Feather",
+          "url": "https://www.aria.com.au/charts/2025/singles-chart"
+        },
+        {
+          "acquisition_eligible": false,
+          "artist": "Billie Eilish",
+          "chart_year": 2025,
+          "entry_id": "US_2025:5",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 5,
+          "recording_release_year": null,
+          "source_sha256": "d6ef94e099096789edfe4cf528bee579fcdf4188fda66e3286feffd000ee3131",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "BIRDS OF A FEATHER",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2025"
+        }
+      ],
+      "duration_ms": 210373,
+      "isrc": "USUM72401994",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2024,
+      "spotify_track_id": "6dOtVTDdiauQNBQEDOtlAB",
+      "stage5d0a_track_id": "chart_v1_000503",
+      "title": "BIRDS OF A FEATHER"
+    },
+    {
+      "album": "Red River Blue (Deluxe Edition)",
+      "artists": [
+        "Blake Shelton"
+      ],
+      "batch_number": 2,
+      "batch_position": 4,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Blake Shelton",
+          "chart_year": 2011,
+          "entry_id": "US_2011:67",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 67,
+          "recording_release_year": null,
+          "source_sha256": "82eaf9d4c91d18b0fb51ca8d2727a7ac390c4ce9b1a4806da01a3dccb331251d",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "HONEY BEE",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2011"
+        }
+      ],
+      "duration_ms": 210720,
+      "isrc": "USWB11100080",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2011,
+      "spotify_track_id": "0gY2iq0xJPRoIB1PScKSw4",
+      "stage5d0a_track_id": "chart_v1_000504",
+      "title": "Honey Bee"
+    },
+    {
+      "album": "KAT-TUN 10TH ANNIVERSARY BEST \"10Ks!\"",
+      "artists": [
+        "KAT-TUN"
+      ],
+      "batch_number": 2,
+      "batch_position": 5,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "KAT-TUN",
+          "chart_year": 2014,
+          "entry_id": "JP_2014:86",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 86,
+          "recording_release_year": null,
+          "source_sha256": "832458d691964be3ff1d31af2eb242ca1e728a85c537b4fdf9d49b514b565d0c",
+          "spotify_status": "UNRESOLVED",
+          "territory": "JP",
+          "title": "In Fact",
+          "url": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2014"
+        }
+      ],
+      "duration_ms": 258813,
+      "isrc": "JPQ401400430",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2016,
+      "spotify_track_id": "0sPd7omfrLKzE9HtxXfSLz",
+      "stage5d0a_track_id": "chart_v1_000505",
+      "title": "In Fact"
+    },
+    {
+      "album": "Yonaguni",
+      "artists": [
+        "Bad Bunny"
+      ],
+      "batch_number": 2,
+      "batch_position": 6,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Bad Bunny",
+          "chart_year": 2021,
+          "entry_id": "US_2021:83",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 83,
+          "recording_release_year": null,
+          "source_sha256": "570a861a2d27adfe94eefed15870af21d6263daa61f28b84d0c995d2c6e83d7d",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "YONAGUNI",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2021"
+        }
+      ],
+      "duration_ms": 206710,
+      "isrc": "QM6P42169803",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2021,
+      "spotify_track_id": "2JPLbjOn0wPCngEot2STUS",
+      "stage5d0a_track_id": "chart_v1_000506",
+      "title": "Yonaguni"
+    },
+    {
+      "album": "Perception",
+      "artists": [
+        "NF"
+      ],
+      "batch_number": 2,
+      "batch_position": 7,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "NF",
+          "chart_year": 2018,
+          "entry_id": "AU_2018:37",
+          "period_type": "YEAR_END",
+          "provider": "aria",
+          "rank": 37,
+          "recording_release_year": null,
+          "source_sha256": "a06832cbaf2723ea499c0ff6ee164a76f4bfe93b93b84ec1064733928cabb2b1",
+          "spotify_status": "UNRESOLVED",
+          "territory": "AU",
+          "title": "Let You Down",
+          "url": "https://www.aria.com.au/charts/2018/singles-chart"
+        },
+        {
+          "acquisition_eligible": false,
+          "artist": "NF",
+          "chart_year": 2018,
+          "entry_id": "US_2018:29",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 29,
+          "recording_release_year": null,
+          "source_sha256": "1cdf20a3f89f02c9fb342c9707c3f175c163f077de6c46f3531b605646f7be7b",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "LET YOU DOWN",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2018"
+        }
+      ],
+      "duration_ms": 212120,
+      "isrc": "USUM71708226",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2017,
+      "spotify_track_id": "52okn5MNA47tk87PeZJLEL",
+      "stage5d0a_track_id": "chart_v1_000507",
+      "title": "Let You Down"
+    },
+    {
+      "album": "Victory Lap",
+      "artists": [
+        "Fred again..",
+        "Skepta",
+        "PlaqueBoyMax"
+      ],
+      "batch_number": 2,
+      "batch_position": 8,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Fred again.., Skepta, PlaqueBoyMax",
+          "chart_year": 2025,
+          "entry_id": "AU_2025:48",
+          "period_type": "YEAR_END",
+          "provider": "aria",
+          "rank": 48,
+          "recording_release_year": null,
+          "source_sha256": "787f2288e203eabda1d1182e302d8a560bd5f7b63fa28c9bd9a905cbeb28f210",
+          "spotify_status": "UNRESOLVED",
+          "territory": "AU",
+          "title": "Victory Lap",
+          "url": "https://www.aria.com.au/charts/2025/singles-chart"
+        }
+      ],
+      "duration_ms": 165857,
+      "isrc": "GBAHS2500558",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2025,
+      "spotify_track_id": "1lbNgoJ5iMrMluCyhI4OQP",
+      "stage5d0a_track_id": "chart_v1_000508",
+      "title": "Victory Lap"
+    },
+    {
+      "album": "The Secret of Us (Deluxe)",
+      "artists": [
+        "Gracie Abrams"
+      ],
+      "batch_number": 2,
+      "batch_position": 9,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Gracie Abrams",
+          "chart_year": 2024,
+          "entry_id": "AU_2024:92",
+          "period_type": "YEAR_END",
+          "provider": "aria",
+          "rank": 92,
+          "recording_release_year": null,
+          "source_sha256": "d91c477660084fdc29a55125273ff5dc93e939082d0230deef3ad3a634591dc2",
+          "spotify_status": "UNRESOLVED",
+          "territory": "AU",
+          "title": "That's So True",
+          "url": "https://www.aria.com.au/charts/2024/singles-chart"
+        },
+        {
+          "acquisition_eligible": false,
+          "artist": "Gracie Abrams",
+          "chart_year": 2025,
+          "entry_id": "AU_2025:4",
+          "period_type": "YEAR_END",
+          "provider": "aria",
+          "rank": 4,
+          "recording_release_year": null,
+          "source_sha256": "787f2288e203eabda1d1182e302d8a560bd5f7b63fa28c9bd9a905cbeb28f210",
+          "spotify_status": "UNRESOLVED",
+          "territory": "AU",
+          "title": "That's So True",
+          "url": "https://www.aria.com.au/charts/2025/singles-chart"
+        },
+        {
+          "acquisition_eligible": false,
+          "artist": "Gracie Abrams",
+          "chart_year": 2025,
+          "entry_id": "US_2025:14",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 14,
+          "recording_release_year": null,
+          "source_sha256": "d6ef94e099096789edfe4cf528bee579fcdf4188fda66e3286feffd000ee3131",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "THAT'S SO TRUE",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2025"
+        }
+      ],
+      "duration_ms": 166300,
+      "isrc": "USUG12406903",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2024,
+      "spotify_track_id": "7ne4VBA60CxGM75vw0EYad",
+      "stage5d0a_track_id": "chart_v1_000509",
+      "title": "That’s So True"
+    },
+    {
+      "album": "In The Lonely Hour",
+      "artists": [
+        "Sam Smith"
+      ],
+      "batch_number": 2,
+      "batch_position": 10,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Sam Smith",
+          "chart_year": 2014,
+          "entry_id": "AU_2014:56",
+          "period_type": "YEAR_END",
+          "provider": "aria",
+          "rank": 56,
+          "recording_release_year": null,
+          "source_sha256": "108026ab23f58d38e81a1de733b7798dc395a70564231bbe773f1296f742e961",
+          "spotify_status": "UNRESOLVED",
+          "territory": "AU",
+          "title": "I'm Not the Only One",
+          "url": "https://www.aria.com.au/charts/2014/singles-chart"
+        },
+        {
+          "acquisition_eligible": false,
+          "artist": "Sam Smith",
+          "chart_year": 2015,
+          "entry_id": "US_2015:26",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 26,
+          "recording_release_year": null,
+          "source_sha256": "be9d3b37439826e3da94b440fb036dd6b07ba63fd27da09e87ea6af41a43e684",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "I'M NOT THE ONLY ONE",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2015"
+        }
+      ],
+      "duration_ms": 239316,
+      "isrc": "GBUM71308836",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2014,
+      "spotify_track_id": "7795WJLVKJoAyVoOtCWqXN",
+      "stage5d0a_track_id": "chart_v1_000510",
+      "title": "I'm Not The Only One"
+    },
+    {
+      "album": "Not Like Us",
+      "artists": [
+        "Kendrick Lamar"
+      ],
+      "batch_number": 2,
+      "batch_position": 11,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Kendrick Lamar",
+          "chart_year": 2024,
+          "entry_id": "AU_2024:23",
+          "period_type": "YEAR_END",
+          "provider": "aria",
+          "rank": 23,
+          "recording_release_year": null,
+          "source_sha256": "d91c477660084fdc29a55125273ff5dc93e939082d0230deef3ad3a634591dc2",
+          "spotify_status": "UNRESOLVED",
+          "territory": "AU",
+          "title": "Not Like Us",
+          "url": "https://www.aria.com.au/charts/2024/singles-chart"
+        },
+        {
+          "acquisition_eligible": false,
+          "artist": "Kendrick Lamar",
+          "chart_year": 2024,
+          "entry_id": "US_2024:6",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 6,
+          "recording_release_year": null,
+          "source_sha256": "ddf4d898ef84adcda6f90a494834a33971518cd2116980b6c3ff11a81ba23d7e",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "NOT LIKE US",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2024"
+        },
+        {
+          "acquisition_eligible": false,
+          "artist": "Kendrick Lamar",
+          "chart_year": 2025,
+          "entry_id": "AU_2025:25",
+          "period_type": "YEAR_END",
+          "provider": "aria",
+          "rank": 25,
+          "recording_release_year": null,
+          "source_sha256": "787f2288e203eabda1d1182e302d8a560bd5f7b63fa28c9bd9a905cbeb28f210",
+          "spotify_status": "UNRESOLVED",
+          "territory": "AU",
+          "title": "Not Like Us",
+          "url": "https://www.aria.com.au/charts/2025/singles-chart"
+        },
+        {
+          "acquisition_eligible": false,
+          "artist": "Kendrick Lamar",
+          "chart_year": 2025,
+          "entry_id": "US_2025:17",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 17,
+          "recording_release_year": null,
+          "source_sha256": "d6ef94e099096789edfe4cf528bee579fcdf4188fda66e3286feffd000ee3131",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "NOT LIKE US",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2025"
+        }
+      ],
+      "duration_ms": 274192,
+      "isrc": "USUG12400910",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2024,
+      "spotify_track_id": "6AI3ezQ4o3HUoP6Dhudph3",
+      "stage5d0a_track_id": "chart_v1_000511",
+      "title": "Not Like Us"
+    },
+    {
+      "album": "Take A Back Road",
+      "artists": [
+        "Rodney Atkins"
+      ],
+      "batch_number": 2,
+      "batch_position": 12,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Rodney Atkins",
+          "chart_year": 2011,
+          "entry_id": "US_2011:90",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 90,
+          "recording_release_year": null,
+          "source_sha256": "82eaf9d4c91d18b0fb51ca8d2727a7ac390c4ce9b1a4806da01a3dccb331251d",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "TAKE A BACK ROAD",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2011"
+        }
+      ],
+      "duration_ms": 208586,
+      "isrc": "USCRB1109549",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2011,
+      "spotify_track_id": "7B6m8tHAYZsOKOKMU5SR2n",
+      "stage5d0a_track_id": "chart_v1_000512",
+      "title": "Take A Back Road"
+    },
+    {
+      "album": "One Of Them Girls",
+      "artists": [
+        "Lee Brice"
+      ],
+      "batch_number": 2,
+      "batch_position": 13,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Lee Brice",
+          "chart_year": 2020,
+          "entry_id": "US_2020:68",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 68,
+          "recording_release_year": null,
+          "source_sha256": "ad18d9e8d1e19f6e4d2d402d2ce9f0925faaff8fef08e5826fff1331d0fade9b",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "ONE OF THEM GIRLS",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2020"
+        }
+      ],
+      "duration_ms": 188893,
+      "isrc": "USCRB1900135",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2020,
+      "spotify_track_id": "14GwnOeC9qYEKEA6uOZepa",
+      "stage5d0a_track_id": "chart_v1_000513",
+      "title": "One Of Them Girls"
+    },
+    {
+      "album": "Current Mood",
+      "artists": [
+        "Dustin Lynch"
+      ],
+      "batch_number": 2,
+      "batch_position": 14,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Dustin Lynch",
+          "chart_year": 2017,
+          "entry_id": "US_2017:94",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 94,
+          "recording_release_year": null,
+          "source_sha256": "808681e2124fc3825c6f990f6f635be2d769b8264ee16c4345ff1dcc9bd5ae46",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "SMALL TOWN BOY",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2017"
+        }
+      ],
+      "duration_ms": 205733,
+      "isrc": "US58E1700584",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2017,
+      "spotify_track_id": "7mS200vKsSSVgrbMxWza54",
+      "stage5d0a_track_id": "chart_v1_000514",
+      "title": "Small Town Boy"
+    },
+    {
+      "album": "The Life of a Showgirl",
+      "artists": [
+        "Taylor Swift"
+      ],
+      "batch_number": 2,
+      "batch_position": 15,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Taylor Swift",
+          "chart_year": 2025,
+          "entry_id": "AU_2025:78",
+          "period_type": "YEAR_END",
+          "provider": "aria",
+          "rank": 78,
+          "recording_release_year": null,
+          "source_sha256": "787f2288e203eabda1d1182e302d8a560bd5f7b63fa28c9bd9a905cbeb28f210",
+          "spotify_status": "UNRESOLVED",
+          "territory": "AU",
+          "title": "Opalite",
+          "url": "https://www.aria.com.au/charts/2025/singles-chart"
+        }
+      ],
+      "duration_ms": 235355,
+      "isrc": "USUG12506438",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2025,
+      "spotify_track_id": "3yWuTOYDztXjZxdE2cIRUa",
+      "stage5d0a_track_id": "chart_v1_000515",
+      "title": "Opalite"
+    },
+    {
+      "album": "Funhouse (Expanded Edition)",
+      "artists": [
+        "P!nk"
+      ],
+      "batch_number": 2,
+      "batch_position": 16,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "P!nk",
+          "chart_year": 2009,
+          "entry_id": "AU_2009:63",
+          "period_type": "YEAR_END",
+          "provider": "aria",
+          "rank": 63,
+          "recording_release_year": null,
+          "source_sha256": "8d850b962aaef3c1c30229285c6737cdef237bf07c823e2042f19d6d04b4ec72",
+          "spotify_status": "UNRESOLVED",
+          "territory": "AU",
+          "title": "PLEASE DON'T LEAVE ME",
+          "url": "https://www.aria.com.au/charts/2009/singles-chart"
+        }
+      ],
+      "duration_ms": 231560,
+      "isrc": "USLF20800182",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2008,
+      "spotify_track_id": "2gnZad0pb6QtUqMLTj2AjI",
+      "stage5d0a_track_id": "chart_v1_000516",
+      "title": "Please Don't Leave Me"
+    },
+    {
+      "album": "Un Verano Sin Ti",
+      "artists": [
+        "Bad Bunny"
+      ],
+      "batch_number": 2,
+      "batch_position": 17,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Bad Bunny",
+          "chart_year": 2022,
+          "entry_id": "US_2022:44",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 44,
+          "recording_release_year": null,
+          "source_sha256": "fcc1187da6f739bb495be89c249e72c49dec58fd1fc492d28cec1916209ee4a2",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "MOSCOW MULE",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2022"
+        }
+      ],
+      "duration_ms": 245939,
+      "isrc": "QM6MZ2214875",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2022,
+      "spotify_track_id": "6Xom58OOXk2SoU711L2IXO",
+      "stage5d0a_track_id": "chart_v1_000517",
+      "title": "Moscow Mule"
+    },
+    {
+      "album": "Dan + Shay",
+      "artists": [
+        "Dan + Shay"
+      ],
+      "batch_number": 2,
+      "batch_position": 18,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Dan + Shay",
+          "chart_year": 2019,
+          "entry_id": "US_2019:97",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 97,
+          "recording_release_year": null,
+          "source_sha256": "b637de9691537fa14e2b251187990bb9376ae7f0827bc9023dc79dafd3b23fdd",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "ALL TO MYSELF",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2019"
+        }
+      ],
+      "duration_ms": 169920,
+      "isrc": "USWB11800876",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2018,
+      "spotify_track_id": "08tq1XcHwVt5PHXUo87i0D",
+      "stage5d0a_track_id": "chart_v1_000518",
+      "title": "All To Myself"
+    },
+    {
+      "album": "THE BOOK",
+      "artists": [
+        "YOASOBI"
+      ],
+      "batch_number": 2,
+      "batch_position": 19,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "YOASOBI",
+          "chart_year": 2020,
+          "entry_id": "JP_2020:89",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 89,
+          "recording_release_year": null,
+          "source_sha256": "0872d87c77dc514339838d4615c4f29d5f52a2d2eda8d97757ec0472fd37a60c",
+          "spotify_status": "UNRESOLVED",
+          "territory": "JP",
+          "title": "たぶん",
+          "url": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2020"
+        },
+        {
+          "acquisition_eligible": false,
+          "artist": "YOASOBI",
+          "chart_year": 2021,
+          "entry_id": "JP_2021:59",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 59,
+          "recording_release_year": null,
+          "source_sha256": "cceab963a5314d36fdb9594c8e21ccbc1890562e45ac85e1043bfc17662dae41",
+          "spotify_status": "UNRESOLVED",
+          "territory": "JP",
+          "title": "たぶん",
+          "url": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2021"
+        }
+      ],
+      "duration_ms": 256773,
+      "isrc": "JPP302000323",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2021,
+      "spotify_track_id": "398dL22bDbKbAmiOnPaq7o",
+      "stage5d0a_track_id": "chart_v1_000519",
+      "title": "たぶん"
+    },
+    {
+      "album": "GNX",
+      "artists": [
+        "Kendrick Lamar"
+      ],
+      "batch_number": 2,
+      "batch_position": 20,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Kendrick Lamar",
+          "chart_year": 2025,
+          "entry_id": "US_2025:20",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 20,
+          "recording_release_year": null,
+          "source_sha256": "d6ef94e099096789edfe4cf528bee579fcdf4188fda66e3286feffd000ee3131",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "SQUABBLE UP",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2025"
+        }
+      ],
+      "duration_ms": 157992,
+      "isrc": "USUG12408494",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2024,
+      "spotify_track_id": "0nj9Bq5sHDiTxSHunhgkFb",
+      "stage5d0a_track_id": "chart_v1_000520",
+      "title": "squabble up"
+    },
+    {
+      "album": "Still Sleep?",
+      "artists": [
+        "Sleepy Hallow"
+      ],
+      "batch_number": 2,
+      "batch_position": 21,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Sleepy Hallow",
+          "chart_year": 2021,
+          "entry_id": "AU_2021:88",
+          "period_type": "YEAR_END",
+          "provider": "aria",
+          "rank": 88,
+          "recording_release_year": null,
+          "source_sha256": "961720dd7fb9e2c1a49b37cf36c990a48189215e740487c7abc48743a953d26f",
+          "spotify_status": "UNRESOLVED",
+          "territory": "AU",
+          "title": "2055",
+          "url": "https://www.aria.com.au/charts/2021/singles-chart"
+        }
+      ],
+      "duration_ms": 123986,
+      "isrc": "USRC12100442",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2021,
+      "spotify_track_id": "4XvcHTUfIlWfyJTRG0aqlo",
+      "stage5d0a_track_id": "chart_v1_000521",
+      "title": "2055"
+    },
+    {
+      "album": "Habits",
+      "artists": [
+        "Neon Trees"
+      ],
+      "batch_number": 2,
+      "batch_position": 22,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Neon Trees",
+          "chart_year": 2011,
+          "entry_id": "US_2011:97",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 97,
+          "recording_release_year": null,
+          "source_sha256": "82eaf9d4c91d18b0fb51ca8d2727a7ac390c4ce9b1a4806da01a3dccb331251d",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "ANIMAL",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2011"
+        }
+      ],
+      "duration_ms": 212293,
+      "isrc": "USUM71001801",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2010,
+      "spotify_track_id": "1fBl642IhJOE5U319Gy2Go",
+      "stage5d0a_track_id": "chart_v1_000522",
+      "title": "Animal"
+    },
+    {
+      "album": "ANTI (Deluxe)",
+      "artists": [
+        "Rihanna"
+      ],
+      "batch_number": 2,
+      "batch_position": 23,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Rihanna",
+          "chart_year": 2016,
+          "entry_id": "AU_2016:96",
+          "period_type": "YEAR_END",
+          "provider": "aria",
+          "rank": 96,
+          "recording_release_year": null,
+          "source_sha256": "ceaca84201c373ee9f774c32e7bd8fa1e7b3e8e0683b85a66484c846b0535697",
+          "spotify_status": "UNRESOLVED",
+          "territory": "AU",
+          "title": "Needed Me",
+          "url": "https://www.aria.com.au/charts/2016/singles-chart"
+        },
+        {
+          "acquisition_eligible": false,
+          "artist": "Rihanna",
+          "chart_year": 2016,
+          "entry_id": "US_2016:13",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 13,
+          "recording_release_year": null,
+          "source_sha256": "1a1559656b54223c675d46572c45da98b9bf0eec2cd4273115dd314494363d76",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "NEEDED ME",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2016"
+        }
+      ],
+      "duration_ms": 191600,
+      "isrc": "QM5FT1600118",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2016,
+      "spotify_track_id": "4pAl7FkDMNBsjykPXo91B3",
+      "stage5d0a_track_id": "chart_v1_000523",
+      "title": "Needed Me"
+    },
+    {
+      "album": "Red River Blue (Deluxe Edition)",
+      "artists": [
+        "Blake Shelton"
+      ],
+      "batch_number": 2,
+      "batch_position": 24,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Blake Shelton",
+          "chart_year": 2011,
+          "entry_id": "US_2011:94",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 94,
+          "recording_release_year": null,
+          "source_sha256": "82eaf9d4c91d18b0fb51ca8d2727a7ac390c4ce9b1a4806da01a3dccb331251d",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "GOD GAVE ME YOU",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2011"
+        }
+      ],
+      "duration_ms": 229533,
+      "isrc": "USWB11101784",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2011,
+      "spotify_track_id": "0w9LJae3sVlZlH2CnxTInF",
+      "stage5d0a_track_id": "chart_v1_000524",
+      "title": "God Gave Me You"
+    },
+    {
+      "album": "Some Nights",
+      "artists": [
+        "fun."
+      ],
+      "batch_number": 2,
+      "batch_position": 25,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "fun.",
+          "chart_year": 2013,
+          "entry_id": "US_2013:76",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 76,
+          "recording_release_year": null,
+          "source_sha256": "b7f277e972329ec509a192396521ed9cb1f3d92aebb7f79b81bc4be06f82c7fa",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "CARRY ON",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2013"
+        }
+      ],
+      "duration_ms": 278373,
+      "isrc": "USAT21104051",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2012,
+      "spotify_track_id": "4115Xsna4VsStouRxMvlmu",
+      "stage5d0a_track_id": "chart_v1_000525",
+      "title": "Carry On"
+    },
+    {
+      "album": "What You See Is What You Get",
+      "artists": [
+        "Luke Combs"
+      ],
+      "batch_number": 2,
+      "batch_position": 26,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Luke Combs",
+          "chart_year": 2021,
+          "entry_id": "US_2021:57",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 57,
+          "recording_release_year": null,
+          "source_sha256": "570a861a2d27adfe94eefed15870af21d6263daa61f28b84d0c995d2c6e83d7d",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "BETTER TOGETHER",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2021"
+        }
+      ],
+      "duration_ms": 217573,
+      "isrc": "US6XF1800183",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2019,
+      "spotify_track_id": "6gdLyYNuhWBzqwlOFSsXC7",
+      "stage5d0a_track_id": "chart_v1_000526",
+      "title": "Better Together"
+    },
+    {
+      "album": "THE SPEED OF NOW Part 1",
+      "artists": [
+        "Keith Urban",
+        "P!nk"
+      ],
+      "batch_number": 2,
+      "batch_position": 27,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Keith Urban & P!nk",
+          "chart_year": 2021,
+          "entry_id": "AU_2021:75",
+          "period_type": "YEAR_END",
+          "provider": "aria",
+          "rank": 75,
+          "recording_release_year": null,
+          "source_sha256": "961720dd7fb9e2c1a49b37cf36c990a48189215e740487c7abc48743a953d26f",
+          "spotify_status": "UNRESOLVED",
+          "territory": "AU",
+          "title": "One Too Many",
+          "url": "https://www.aria.com.au/charts/2021/singles-chart"
+        }
+      ],
+      "duration_ms": 203893,
+      "isrc": "USUG12002935",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2020,
+      "spotify_track_id": "3X7H1FAiWAW937WvsFeMhe",
+      "stage5d0a_track_id": "chart_v1_000527",
+      "title": "One Too Many"
+    },
+    {
+      "album": "Bad Bitch Party",
+      "artists": [
+        "Jeremih"
+      ],
+      "batch_number": 2,
+      "batch_position": 28,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Jeremih",
+          "chart_year": 2016,
+          "entry_id": "US_2016:55",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 55,
+          "recording_release_year": null,
+          "source_sha256": "1a1559656b54223c675d46572c45da98b9bf0eec2cd4273115dd314494363d76",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "OUI",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2016"
+        }
+      ],
+      "duration_ms": 238320,
+      "isrc": "USUM71513397",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2020,
+      "spotify_track_id": "02dUvOTCt9BdLnVg2qq6Jz",
+      "stage5d0a_track_id": "chart_v1_000528",
+      "title": "oui"
+    },
+    {
+      "album": "After All The Bars Are Closed",
+      "artists": [
+        "Thomas Rhett"
+      ],
+      "batch_number": 2,
+      "batch_position": 29,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Thomas Rhett",
+          "chart_year": 2025,
+          "entry_id": "US_2025:88",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 88,
+          "recording_release_year": null,
+          "source_sha256": "d6ef94e099096789edfe4cf528bee579fcdf4188fda66e3286feffd000ee3131",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "AFTER ALL THE BARS ARE CLOSED",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2025"
+        }
+      ],
+      "duration_ms": 191839,
+      "isrc": "QZRD92405271",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2024,
+      "spotify_track_id": "0oBbkZuDLkT8DY9DK67kfr",
+      "stage5d0a_track_id": "chart_v1_000529",
+      "title": "After All The Bars Are Closed"
+    },
+    {
+      "album": "RISER",
+      "artists": [
+        "Dierks Bentley"
+      ],
+      "batch_number": 2,
+      "batch_position": 30,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Dierks Bentley",
+          "chart_year": 2014,
+          "entry_id": "US_2014:79",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 79,
+          "recording_release_year": null,
+          "source_sha256": "c65144de2f401d587c62c971b61852e5b915d01bcdbcb273eb9d108893df0c0a",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "DRUNK ON A PLANE",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2014"
+        }
+      ],
+      "duration_ms": 254466,
+      "isrc": "USUM71319714",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2014,
+      "spotify_track_id": "1soxUgYIZb1qx1c7o1Lc7z",
+      "stage5d0a_track_id": "chart_v1_000530",
+      "title": "Drunk On A Plane"
+    },
+    {
+      "album": "Summer Party Songs Everyone Knows",
+      "artists": [
+        "Iyaz"
+      ],
+      "batch_number": 2,
+      "batch_position": 31,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Iyaz",
+          "chart_year": 2010,
+          "entry_id": "AU_2010:15",
+          "period_type": "YEAR_END",
+          "provider": "aria",
+          "rank": 15,
+          "recording_release_year": null,
+          "source_sha256": "23ecb72df74ad8f725c5ae362020134958149315b9d3c50fc0442394330c984b",
+          "spotify_status": "UNRESOLVED",
+          "territory": "AU",
+          "title": "Replay",
+          "url": "https://www.aria.com.au/charts/2010/singles-chart"
+        }
+      ],
+      "duration_ms": 182306,
+      "isrc": "USRE10901161",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2024,
+      "spotify_track_id": "0WXZiUlRNOB7lyPLBAXq2b",
+      "stage5d0a_track_id": "chart_v1_000531",
+      "title": "Replay"
+    },
+    {
+      "album": "Take Care (Deluxe)",
+      "artists": [
+        "Drake"
+      ],
+      "batch_number": 2,
+      "batch_position": 32,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Drake",
+          "chart_year": 2011,
+          "entry_id": "US_2011:85",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 85,
+          "recording_release_year": null,
+          "source_sha256": "82eaf9d4c91d18b0fb51ca8d2727a7ac390c4ce9b1a4806da01a3dccb331251d",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "HEADLINES",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2011"
+        }
+      ],
+      "duration_ms": 235986,
+      "isrc": "USCM51100290",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2011,
+      "spotify_track_id": "6LxSe8YmdPxy095Ux6znaQ",
+      "stage5d0a_track_id": "chart_v1_000532",
+      "title": "Headlines"
+    },
+    {
+      "album": "eternal sunshine",
+      "artists": [
+        "Ariana Grande"
+      ],
+      "batch_number": 2,
+      "batch_position": 33,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Ariana Grande",
+          "chart_year": 2024,
+          "entry_id": "AU_2024:26",
+          "period_type": "YEAR_END",
+          "provider": "aria",
+          "rank": 26,
+          "recording_release_year": null,
+          "source_sha256": "d91c477660084fdc29a55125273ff5dc93e939082d0230deef3ad3a634591dc2",
+          "spotify_status": "UNRESOLVED",
+          "territory": "AU",
+          "title": "We Can't Be Friends (Wait For Your Love)",
+          "url": "https://www.aria.com.au/charts/2024/singles-chart"
+        },
+        {
+          "acquisition_eligible": false,
+          "artist": "Ariana Grande",
+          "chart_year": 2024,
+          "entry_id": "US_2024:26",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 26,
+          "recording_release_year": null,
+          "source_sha256": "ddf4d898ef84adcda6f90a494834a33971518cd2116980b6c3ff11a81ba23d7e",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "WE CAN'T BE FRIENDS (WAIT FOR YOUR LOVE)",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2024"
+        },
+        {
+          "acquisition_eligible": false,
+          "artist": "Ariana Grande",
+          "chart_year": 2025,
+          "entry_id": "AU_2025:71",
+          "period_type": "YEAR_END",
+          "provider": "aria",
+          "rank": 71,
+          "recording_release_year": null,
+          "source_sha256": "787f2288e203eabda1d1182e302d8a560bd5f7b63fa28c9bd9a905cbeb28f210",
+          "spotify_status": "UNRESOLVED",
+          "territory": "AU",
+          "title": "We Can't Be Friends (Wait For Your Love)",
+          "url": "https://www.aria.com.au/charts/2025/singles-chart"
+        }
+      ],
+      "duration_ms": 228639,
+      "isrc": "USUM72317276",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2024,
+      "spotify_track_id": "51ZQ1vr10ffzbwIjDCwqm4",
+      "stage5d0a_track_id": "chart_v1_000533",
+      "title": "we can't be friends (wait for your love)"
+    },
+    {
+      "album": "Barefoot Blue Jean Night",
+      "artists": [
+        "Jake Owen"
+      ],
+      "batch_number": 2,
+      "batch_position": 34,
+      "chart_appearances": [
+        {
+          "acquisition_eligible": false,
+          "artist": "Jake Owen",
+          "chart_year": 2011,
+          "entry_id": "US_2011:79",
+          "period_type": "YEAR_END",
+          "provider": "billboard_japan",
+          "rank": 79,
+          "recording_release_year": null,
+          "source_sha256": "82eaf9d4c91d18b0fb51ca8d2727a7ac390c4ce9b1a4806da01a3dccb331251d",
+          "spotify_status": "UNRESOLVED",
+          "territory": "US",
+          "title": "BAREFOOT BLUE JEAN NIGHT",
+          "url": "https://www.billboard-japan.com/charts/detail?a=uhot100_year&year=2011"
+        }
+      ],
+      "duration_ms": 169420,
+      "isrc": "USRN11100006",
+      "metadata_match_status": "MATCHED_METADATA_NOT_YOUTUBE_VALIDATED",
+      "release_year": 2011,
+      "spotify_track_id": "3ts6xK5GzfMAAriT9AIBmP",
+      "stage5d0a_track_id": "chart_v1_000534",
+      "title": "Barefoot Blue Jean Night"
+    }
+  ]
+}

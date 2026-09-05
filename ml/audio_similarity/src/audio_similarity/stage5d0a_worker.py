@@ -52,15 +52,16 @@ def media_git_audit(root):
     return {"media_root_ignored": True, "tracked_research_files": 0}
 
 
-def worker_status(directory):
+def worker_status(directory, *, batch_number=1, network_directory=None):
+    network_directory = network_directory or directory
     path = directory / "state.json"
     if not path.exists():
-        return {"status": "NOT_STARTED", "batch": "0001"}
+        return {"status": "NOT_STARTED", "batch": f"{batch_number:04d}"}
     state = read_json(path)
-    network = read_json(directory / "network_state.json") if (directory / "network_state.json").exists() else {}
+    network = read_json(network_directory / "network_state.json") if (network_directory / "network_state.json").exists() else {}
     results = [row.get("result", {}) for row in state["tracks"].values()]
     requests = network.get("requests", [])
-    return {"batch": "0001", "status": state["status"],
+    return {"batch": f"{batch_number:04d}", "status": state["status"],
             "states": dict(Counter(row["state"] for row in state["tracks"].values())),
             "requested": len(state["tracks"]), "circuit": network.get("circuit", "CLOSED"),
             "circuit_reason": network.get("circuit_reason"),
@@ -73,27 +74,45 @@ def worker_status(directory):
             "network_jobs": len(network.get("jobs", [])),
             "last_job_start": network.get("last_job_start"),
             "next_job_earliest": max(network.get("next_job_deadline", 0), network.get("cooldown_deadline", 0)),
-            "stop_requested": (directory / "stop.requested").exists(),
+            "stop_requested": (network_directory / "stop.requested").exists(),
             "updated_at_unix": state["updated_at_unix"]}
 
 
 def run_worker(root, *, processor_factory=None, governor_factory=ProviderGovernor, resume=False):
     """Never dispatch another batch; terminal failures require a separate future experiment."""
-    from .stage5d0a_processor import SeedProcessor
     from .stage5d0a_reporting import RUNNER_CONFIG
     root = Path(root).resolve()
     batch, digest = validate_freeze(root)
-    media_git_audit(root)
     _write_immutable_json(root / REPORT_DIRECTORY / "runner_config.json", RUNNER_CONFIG)
+    return run_frozen_batch(root, batch, digest, root / ".research_audio/stage5d0a/batch_0001",
+                            processor_factory=processor_factory, governor_factory=governor_factory, resume=resume)
+
+
+def run_frozen_batch(root, batch, digest, directory, *, processor_factory=None,
+                     governor_factory=ProviderGovernor, resume=False, network_directory=None):
+    """Execute one already-validated frozen batch; never select another batch."""
+    from .stage5d0a_processor import SeedProcessor
+    root, directory = Path(root).resolve(), Path(directory).resolve()
+    if not directory.is_relative_to(root / ".research_audio"):
+        raise ValueError("worker state must remain under the local research root")
+    ids = [row["spotify_track_id"] for row in batch["tracks"]]
+    if not 1 <= len(ids) <= 500 or len(set(ids)) != len(ids):
+        raise ValueError("batch must contain 1..500 distinct Spotify tracks")
+    media_git_audit(root)
     media = root / ".research_audio"
-    directory = media / "stage5d0a/batch_0001"
     directory.mkdir(parents=True, exist_ok=True)
+    network_directory = Path(network_directory or directory).resolve()
+    if not network_directory.is_relative_to(media):
+        raise ValueError("provider state must remain under the local research root")
+    network_directory.mkdir(parents=True, exist_ok=True)
+    def status():
+        return worker_status(directory, batch_number=batch["batch_number"], network_directory=network_directory)
     with (media / ".retention.lock").open("a") as lock:
         try:
             fcntl.flock(lock.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
         except BlockingIOError as exc:
             raise RuntimeError("another retained-media worker is active") from exc
-        governor = governor_factory(directory)
+        governor = governor_factory(network_directory)
         if resume and governor.state["circuit"] != "OPEN":
             governor.stop_path.unlink(missing_ok=True)
         governor.check()
@@ -159,7 +178,7 @@ def run_worker(root, *, processor_factory=None, governor_factory=ProviderGoverno
                 row.update(outcome)
                 save()
                 governor.finish_job(success=outcome["state"] == "COMPLETE")
-                print(json.dumps(worker_status(directory), sort_keys=True), flush=True)
+                print(json.dumps(status(), sort_keys=True), flush=True)
             state["status"] = "FINISHED"
         except CircuitOpen as exc:
             state.update(status="CIRCUIT_STOPPED", stop_reason=str(exc))
@@ -173,4 +192,4 @@ def run_worker(root, *, processor_factory=None, governor_factory=ProviderGoverno
             for sig, handler in old_handlers.items():
                 signal.signal(sig, handler)
             media_git_audit(root)
-    return worker_status(directory)
+    return status()
