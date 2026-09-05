@@ -1,0 +1,36 @@
+{
+  "audio_count_before_save": 2,
+  "browser_console_errors": [],
+  "browser_engine": "Playwright Chromium 1200",
+  "contains_arm_identity": false,
+  "contains_similarity_score_label": false,
+  "http_status": 200,
+  "media": [
+    {
+      "duration_seconds": 227.501,
+      "ready_state": 4,
+      "spotify_track_id": "003vvx7Niy0yvhvHt4a68B"
+    },
+    {
+      "duration_seconds": 131.261,
+      "ready_state": 4,
+      "spotify_track_id": "009jtJ4mYxFyo3QRecItE4"
+    }
+  ],
+  "network_audio_downloads": 0,
+  "pair_count_before_save": 1,
+  "pair_visible_after_all_filter": 1,
+  "range_response": {
+    "accept_ranges": "bytes",
+    "content_length_bytes": 64,
+    "content_range": "bytes 32-95/3559249",
+    "status": 206
+  },
+  "reviewed_pairs_after_save": 1,
+  "saved_label": "3",
+  "schema_version": "stage5e1-browser-review-smoke-v1",
+  "seek_position_seconds": 20.0,
+  "status": "PASSED",
+  "temporary_review_state_only": true,
+  "title": "Stage 5E.1 Blinded Similarity Review"
+}
