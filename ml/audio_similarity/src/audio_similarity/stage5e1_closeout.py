@@ -230,6 +230,7 @@ def finalize_stage5e1(root: str | Path) -> dict[str, Any]:
     diagnostics = _load(report / "representation_diagnostics.json")
     queue = _load(report / "review_queue.json")
     cache_rerun = _load(report / "cache_rerun_results.json")
+    overlap = _load(report / "retrieval_overlap.json")
     result = {
         "schema_version": "stage5e1-closeout-v1",
         "experiment_id": EXPERIMENT_ID,
@@ -243,6 +244,24 @@ def finalize_stage5e1(root: str | Path) -> dict[str, Any]:
         "production_activation": False,
         "status": "REPRESENTATIONS_READY_HUMAN_REVIEW_PENDING" if review["status"] == "HUMAN_REVIEW_PENDING" else "HUMAN_REVIEW_COMPLETE_ANALYSIS_READY",
     }
+    performance_rows = "\n".join(
+        f"| {row['arm']} | {row['count']} | {row['views']} | {row['seconds']:.2f} |"
+        for row in performance["vector_counts_and_inference"]
+    )
+    overlap_rows = "\n".join(
+        f"| {row['comparison']} | {row['mean_top5_overlap_count']:.3f} | "
+        f"{row['mean_top5_jaccard']:.3f} |"
+        for row in overlap["comparisons"]
+        if "_VS_A_" in row["comparison"]
+    )
+    recovery = materialization.get("execution_ledger_recovery")
+    recovery_note = (
+        "- First-run ledger recovery: recorded transparently after the original "
+        "cache-rerun helper replaced only the JSON ledger; SQLite vectors were "
+        "unchanged, and the helper now hash-verifies ledger preservation."
+        if recovery
+        else "- First-run ledger recovery: not required."
+    )
     report_text = f"""# Stage 5E.1 four-arm retrieval comparison
 
 **Status:** `{result['status']}`
@@ -260,9 +279,23 @@ def finalize_stage5e1(root: str | Path) -> dict[str, Any]:
 
 - Frozen eligible tracks: {manifest['track_count']}
 - Network downloads: 0
+- First-run wall time: {materialization['elapsed_seconds']:.2f} seconds
+- Peak process RSS: {materialization['peak_process_rss_kib'] / 1024 / 1024:.2f} GiB
 - Cache rerun: `{cache_rerun['status']}`
+- First-run ledger preserved by cache rerun: `{cache_rerun.get('first_run_materialization_preserved', False)}`
 - Representation pathology detected: `{diagnostics['representation_pathology_detected']}`
 - Scratch cleanup: `{cleanup['status']}`
+{recovery_note}
+
+| Representation | Successful vectors | Views | Recorded inference seconds |
+| --- | ---: | ---: | ---: |
+{performance_rows}
+
+## Retrieval changes versus A
+
+| Comparison | Mean shared Top-5 count | Mean Top-5 Jaccard |
+| --- | ---: | ---: |
+{overlap_rows}
 
 ## Retrieval review
 

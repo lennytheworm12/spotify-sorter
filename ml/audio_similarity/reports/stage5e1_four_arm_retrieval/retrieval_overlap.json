@@ -1,0 +1,61 @@
+{
+  "comparisons": [
+    {
+      "comparison": "B_CLAP_VS_A_CLAP",
+      "mean_absolute_rank_change_for_shared_top5": 1.5408805031446542,
+      "mean_top5_jaccard": 0.051656920077972714,
+      "mean_top5_overlap_count": 0.4291497975708502
+    },
+    {
+      "comparison": "B_COMBINED_VS_A_COMBINED",
+      "mean_absolute_rank_change_for_shared_top5": 1.3380281690140845,
+      "mean_top5_jaccard": 0.1620557804768331,
+      "mean_top5_overlap_count": 1.2456140350877194
+    },
+    {
+      "comparison": "C_CLAP_VS_A_CLAP",
+      "mean_absolute_rank_change_for_shared_top5": 1.3839080459770114,
+      "mean_top5_jaccard": 0.1498618340723604,
+      "mean_top5_overlap_count": 1.174089068825911
+    },
+    {
+      "comparison": "C_COMBINED_VS_A_COMBINED",
+      "mean_absolute_rank_change_for_shared_top5": 1.2801418439716312,
+      "mean_top5_jaccard": 0.26188334083070924,
+      "mean_top5_overlap_count": 1.902834008097166
+    },
+    {
+      "comparison": "D_CLAP_VS_A_CLAP",
+      "mean_absolute_rank_change_for_shared_top5": 1.5475728155339805,
+      "mean_top5_jaccard": 0.08606987554355976,
+      "mean_top5_overlap_count": 0.6950067476383266
+    },
+    {
+      "comparison": "D_COMBINED_VS_A_COMBINED",
+      "mean_absolute_rank_change_for_shared_top5": 1.3780598368087036,
+      "mean_top5_jaccard": 0.19779684253368462,
+      "mean_top5_overlap_count": 1.4885290148448043
+    },
+    {
+      "comparison": "A_CLAP_VS_A_COMBINED",
+      "mean_top5_jaccard": 0.5174635306214254,
+      "mean_top5_overlap_count": 3.2658569500674766
+    },
+    {
+      "comparison": "B_CLAP_VS_B_COMBINED",
+      "mean_top5_jaccard": 0.28331512542038856,
+      "mean_top5_overlap_count": 2.051282051282051
+    },
+    {
+      "comparison": "C_CLAP_VS_C_COMBINED",
+      "mean_top5_jaccard": 0.5236863526337211,
+      "mean_top5_overlap_count": 3.299595141700405
+    },
+    {
+      "comparison": "D_CLAP_VS_D_COMBINED",
+      "mean_top5_jaccard": 0.38685388685388683,
+      "mean_top5_overlap_count": 2.6342780026990553
+    }
+  ],
+  "schema_version": "stage5e1-retrieval-overlap-v1"
+}

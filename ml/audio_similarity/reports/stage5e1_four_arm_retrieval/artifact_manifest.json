@@ -1,0 +1,132 @@
+{
+  "experiment_id": "STAGE5E1_FOUR_ARM_FULL_SONG_RETRIEVAL",
+  "files": [
+    {
+      "path": "aff_feasibility.json",
+      "sha256": "7e3f7b79e389f98f0f33bad67350ffd06f13d04a2395d25ecc32f032557d2aa0",
+      "size_bytes": 4668
+    },
+    {
+      "path": "aff_smoke_validation.json",
+      "sha256": "c8ccfc0498b7683b06075a79445eac6b50bfe9b7899f77d5d290fa6d5b43d0d9",
+      "size_bytes": 678
+    },
+    {
+      "path": "browser_review_live_validation.json",
+      "sha256": "dfa509bcf185126bfc3f70f58acc0b5373df3e3dcb2bcaf50ed3f32cc53c1518",
+      "size_bytes": 760
+    },
+    {
+      "path": "browser_review_smoke_validation.json",
+      "sha256": "d29d4f88a1caf3ca122f0915d18036a08c6ebe3d9e3c942d9872ebf85efe8d63",
+      "size_bytes": 987
+    },
+    {
+      "path": "cache_rerun_results.json",
+      "sha256": "1bfd332cddd8d9a9d514d2e768ee0a3727ae0dfe6e3be1c2b836ba1be1a48bf9",
+      "size_bytes": 420
+    },
+    {
+      "path": "cleanup_audit.json",
+      "sha256": "bd5f450fcd73b769f0fab239701551c5d9d81b30b129ca10140decce967dc5c6",
+      "size_bytes": 233
+    },
+    {
+      "path": "corpus_audit.json",
+      "sha256": "5a8cf75e4cda9a53d04919eca7c3ee917f42d84192f830c86b5f9b6a9f85cf80",
+      "size_bytes": 927775
+    },
+    {
+      "path": "corpus_manifest.json",
+      "sha256": "098685c6773c6814da5aecea884c65b84e9e27d3f83b79d44cc9611c2942eb7a",
+      "size_bytes": 916056
+    },
+    {
+      "path": "corpus_manifest.sha256",
+      "sha256": "65403681968d272b2e13d7dbf3ebc85ff8f87dcaeacaf5be5cba544df52171c6",
+      "size_bytes": 65
+    },
+    {
+      "path": "encoder_disagreement_analysis.json",
+      "sha256": "b5085439a5b72a5c1cddfe0ee03750bbfd06127529ff58e001b1ffa359544c97",
+      "size_bytes": 55862
+    },
+    {
+      "path": "experiment_config.json",
+      "sha256": "7f85cd3feeab0f201f952cd2eb730dd843f2d1765ee94b65f632defae101eec3",
+      "size_bytes": 4779
+    },
+    {
+      "path": "experiment_config.sha256",
+      "sha256": "ea66ca6371544f10f52619c60d1f2a186bb1d45f7d06e8f8ea71c293e5e36de4",
+      "size_bytes": 65
+    },
+    {
+      "path": "experiment_report.md",
+      "sha256": "66d9df93c0700c64b982f7fe4a04e82a819b556c380de5f4b7614ef8fc41b790",
+      "size_bytes": 2162
+    },
+    {
+      "path": "feasibility_report.md",
+      "sha256": "03cb85ff7a540bcf15177599c367e683e2b4f29691cf34d474a0c2edd70753ca",
+      "size_bytes": 941
+    },
+    {
+      "path": "historical_reuse_results.json",
+      "sha256": "c1f6b5f80c458b760934764fe0a6922e5c7800b4121d8a9ba9beea88d4c873d5",
+      "size_bytes": 346752
+    },
+    {
+      "path": "human_review_metrics.json",
+      "sha256": "583ea535407396677158453aeb7ede2dd716088eed9f4a2ec253c8f62383749e",
+      "size_bytes": 8577
+    },
+    {
+      "path": "materialization_results.json",
+      "sha256": "05c7d354e2e2ea7caebeb6c65270599e12332350c8a69aebb5bcbc52ebb26d3d",
+      "size_bytes": 5218027
+    },
+    {
+      "path": "nearest_neighbors.json",
+      "sha256": "fd7ac58f1e7f81b0d572ab4a0933637c53988783c807fc81882d30542d06b087",
+      "size_bytes": 16151256
+    },
+    {
+      "path": "performance_metrics.json",
+      "sha256": "a3cd193c289c71f6fa3607eed5f79d678dd33f466ac4a5a61912f26cb87d49c0",
+      "size_bytes": 1543
+    },
+    {
+      "path": "preparation_status.json",
+      "sha256": "1e38ec4363fa502bfba30aa57d1c149e7fb1e7f27e0705fade9c827eb855a737",
+      "size_bytes": 654
+    },
+    {
+      "path": "representation_diagnostics.json",
+      "sha256": "684d071195887547be3949821f1ff261f73d428b38d0659b19b49be02de136c8",
+      "size_bytes": 12623
+    },
+    {
+      "path": "retrieval_overlap.json",
+      "sha256": "65fa76cde015c1a8e3337e625d1eb2b739d4920b72976b7e13abe802e82ac433",
+      "size_bytes": 2068
+    },
+    {
+      "path": "review_queue.json",
+      "sha256": "8df26c80bb7ace3bffbec4f891caed108791c377536d2214c8c449a2041e95b0",
+      "size_bytes": 17574185
+    },
+    {
+      "path": "sampling_plans.json",
+      "sha256": "26744d3187611ef43b7cd2c2033df98e61532014c95a78c0d8e6342367c8b147",
+      "size_bytes": 3187116
+    },
+    {
+      "path": "similarity_matrices.npz",
+      "sha256": "9852e6e04f6a5eaec4fe918d6958ccf3eba5c0bdece20e447bb1c43af4c652d0",
+      "size_bytes": 17309126
+    }
+  ],
+  "generated_at_utc": "2026-09-05T19:01:55.900564+00:00",
+  "schema_version": "stage5e1-artifact-manifest-v1"
+}

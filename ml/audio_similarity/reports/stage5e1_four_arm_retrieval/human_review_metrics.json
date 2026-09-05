@@ -1,0 +1,327 @@
+{
+  "dependence_note": "Reciprocal pairs are deduplicated, but tracks and pairs recur across queries; rows are not independent samples.",
+  "experiment_id": "STAGE5E1_FOUR_ARM_FULL_SONG_RETRIEVAL",
+  "inherited_label_count": 219,
+  "metrics_by_arm_and_mode": [
+    {
+      "arm": "A",
+      "coverage": 0.0456140350877193,
+      "fraction_at_least_3": 0.9230769230769231,
+      "fraction_at_least_4": 0.6863905325443787,
+      "mean_top1_rating": 4.083333333333333,
+      "mean_top5_rating": 3.8520710059171597,
+      "numeric_review_count": 169,
+      "rating_by_rank": {
+        "1": {
+          "mean": 4.083333333333333,
+          "reviewed": 48
+        },
+        "2": {
+          "mean": 4.0,
+          "reviewed": 45
+        },
+        "3": {
+          "mean": 3.3666666666666667,
+          "reviewed": 30
+        },
+        "4": {
+          "mean": 3.8461538461538463,
+          "reviewed": 26
+        },
+        "5": {
+          "mean": 3.7,
+          "reviewed": 20
+        }
+      },
+      "raw_top5_relationships": 3705,
+      "score_human_pearson_correlation": 0.1650166203703956,
+      "score_mode": "CLAP",
+      "unsure_count": 0
+    },
+    {
+      "arm": "A",
+      "coverage": 0.04993252361673414,
+      "fraction_at_least_3": 0.9027027027027027,
+      "fraction_at_least_4": 0.6324324324324324,
+      "mean_top1_rating": 3.9272727272727272,
+      "mean_top5_rating": 3.772972972972973,
+      "numeric_review_count": 185,
+      "rating_by_rank": {
+        "1": {
+          "mean": 3.9272727272727272,
+          "reviewed": 55
+        },
+        "2": {
+          "mean": 3.9302325581395348,
+          "reviewed": 43
+        },
+        "3": {
+          "mean": 3.6451612903225805,
+          "reviewed": 31
+        },
+        "4": {
+          "mean": 3.6333333333333333,
+          "reviewed": 30
+        },
+        "5": {
+          "mean": 3.5,
+          "reviewed": 26
+        }
+      },
+      "raw_top5_relationships": 3705,
+      "score_human_pearson_correlation": 0.13713450485880882,
+      "score_mode": "COMBINED",
+      "unsure_count": 0
+    },
+    {
+      "arm": "B",
+      "coverage": 0.010256410256410256,
+      "fraction_at_least_3": 0.9473684210526315,
+      "fraction_at_least_4": 0.6578947368421053,
+      "mean_top1_rating": 4.111111111111111,
+      "mean_top5_rating": 3.8421052631578947,
+      "numeric_review_count": 38,
+      "rating_by_rank": {
+        "1": {
+          "mean": 4.111111111111111,
+          "reviewed": 9
+        },
+        "2": {
+          "mean": 3.5714285714285716,
+          "reviewed": 7
+        },
+        "3": {
+          "mean": 3.8,
+          "reviewed": 10
+        },
+        "4": {
+          "mean": 3.6,
+          "reviewed": 5
+        },
+        "5": {
+          "mean": 4.0,
+          "reviewed": 7
+        }
+      },
+      "raw_top5_relationships": 3705,
+      "score_human_pearson_correlation": -0.35832268457797617,
+      "score_mode": "CLAP",
+      "unsure_count": 0
+    },
+    {
+      "arm": "B",
+      "coverage": 0.028070175438596492,
+      "fraction_at_least_3": 0.9038461538461539,
+      "fraction_at_least_4": 0.6538461538461539,
+      "mean_top1_rating": 4.230769230769231,
+      "mean_top5_rating": 3.798076923076923,
+      "numeric_review_count": 104,
+      "rating_by_rank": {
+        "1": {
+          "mean": 4.230769230769231,
+          "reviewed": 26
+        },
+        "2": {
+          "mean": 3.48,
+          "reviewed": 25
+        },
+        "3": {
+          "mean": 3.7142857142857144,
+          "reviewed": 21
+        },
+        "4": {
+          "mean": 3.764705882352941,
+          "reviewed": 17
+        },
+        "5": {
+          "mean": 3.7333333333333334,
+          "reviewed": 15
+        }
+      },
+      "raw_top5_relationships": 3705,
+      "score_human_pearson_correlation": -0.02137833278307753,
+      "score_mode": "COMBINED",
+      "unsure_count": 0
+    },
+    {
+      "arm": "C",
+      "coverage": 0.029959514170040485,
+      "fraction_at_least_3": 0.9369369369369369,
+      "fraction_at_least_4": 0.6936936936936937,
+      "mean_top1_rating": 4.136363636363637,
+      "mean_top5_rating": 3.972972972972973,
+      "numeric_review_count": 111,
+      "rating_by_rank": {
+        "1": {
+          "mean": 4.136363636363637,
+          "reviewed": 22
+        },
+        "2": {
+          "mean": 4.0,
+          "reviewed": 27
+        },
+        "3": {
+          "mean": 4.0,
+          "reviewed": 24
+        },
+        "4": {
+          "mean": 3.9473684210526314,
+          "reviewed": 19
+        },
+        "5": {
+          "mean": 3.736842105263158,
+          "reviewed": 19
+        }
+      },
+      "raw_top5_relationships": 3705,
+      "score_human_pearson_correlation": -0.13967153500048324,
+      "score_mode": "CLAP",
+      "unsure_count": 0
+    },
+    {
+      "arm": "C",
+      "coverage": 0.04183535762483131,
+      "fraction_at_least_3": 0.9419354838709677,
+      "fraction_at_least_4": 0.7096774193548387,
+      "mean_top1_rating": 4.1,
+      "mean_top5_rating": 3.9612903225806453,
+      "numeric_review_count": 155,
+      "rating_by_rank": {
+        "1": {
+          "mean": 4.1,
+          "reviewed": 40
+        },
+        "2": {
+          "mean": 3.9714285714285715,
+          "reviewed": 35
+        },
+        "3": {
+          "mean": 4.074074074074074,
+          "reviewed": 27
+        },
+        "4": {
+          "mean": 3.8857142857142857,
+          "reviewed": 35
+        },
+        "5": {
+          "mean": 3.611111111111111,
+          "reviewed": 18
+        }
+      },
+      "raw_top5_relationships": 3705,
+      "score_human_pearson_correlation": -0.028780565460573847,
+      "score_mode": "COMBINED",
+      "unsure_count": 0
+    },
+    {
+      "arm": "D",
+      "coverage": 0.01835357624831309,
+      "fraction_at_least_3": 0.9117647058823529,
+      "fraction_at_least_4": 0.6617647058823529,
+      "mean_top1_rating": 4.2727272727272725,
+      "mean_top5_rating": 3.8529411764705883,
+      "numeric_review_count": 68,
+      "rating_by_rank": {
+        "1": {
+          "mean": 4.2727272727272725,
+          "reviewed": 11
+        },
+        "2": {
+          "mean": 3.5714285714285716,
+          "reviewed": 21
+        },
+        "3": {
+          "mean": 3.75,
+          "reviewed": 12
+        },
+        "4": {
+          "mean": 3.888888888888889,
+          "reviewed": 9
+        },
+        "5": {
+          "mean": 4.0,
+          "reviewed": 15
+        }
+      },
+      "raw_top5_relationships": 3705,
+      "score_human_pearson_correlation": -0.23301216043477482,
+      "score_mode": "CLAP",
+      "unsure_count": 0
+    },
+    {
+      "arm": "D",
+      "coverage": 0.026720647773279354,
+      "fraction_at_least_3": 0.8686868686868687,
+      "fraction_at_least_4": 0.7070707070707071,
+      "mean_top1_rating": 3.9310344827586206,
+      "mean_top5_rating": 3.878787878787879,
+      "numeric_review_count": 99,
+      "rating_by_rank": {
+        "1": {
+          "mean": 3.9310344827586206,
+          "reviewed": 29
+        },
+        "2": {
+          "mean": 4.035714285714286,
+          "reviewed": 28
+        },
+        "3": {
+          "mean": 3.875,
+          "reviewed": 16
+        },
+        "4": {
+          "mean": 3.6875,
+          "reviewed": 16
+        },
+        "5": {
+          "mean": 3.6,
+          "reviewed": 10
+        }
+      },
+      "raw_top5_relationships": 3705,
+      "score_human_pearson_correlation": -0.18397844233779795,
+      "score_mode": "COMBINED",
+      "unsure_count": 0
+    }
+  ],
+  "new_stage5e1_label_count": 0,
+  "numeric_pair_count": 219,
+  "paired_differences_vs_a": [
+    {
+      "comparison": "B_CLAP_VS_A_CLAP",
+      "complete_query_count": 0,
+      "mean_paired_top5_rating_difference": null
+    },
+    {
+      "comparison": "B_COMBINED_VS_A_COMBINED",
+      "complete_query_count": 0,
+      "mean_paired_top5_rating_difference": null
+    },
+    {
+      "comparison": "C_CLAP_VS_A_CLAP",
+      "complete_query_count": 0,
+      "mean_paired_top5_rating_difference": null
+    },
+    {
+      "comparison": "C_COMBINED_VS_A_COMBINED",
+      "complete_query_count": 0,
+      "mean_paired_top5_rating_difference": null
+    },
+    {
+      "comparison": "D_CLAP_VS_A_CLAP",
+      "complete_query_count": 0,
+      "mean_paired_top5_rating_difference": null
+    },
+    {
+      "comparison": "D_COMBINED_VS_A_COMBINED",
+      "complete_query_count": 0,
+      "mean_paired_top5_rating_difference": null
+    }
+  ],
+  "reviewed_pair_count": 219,
+  "schema_version": "stage5e1-human-review-metrics-v1",
+  "status": "HUMAN_REVIEW_PENDING",
+  "unique_pair_count": 11458,
+  "unsure_pair_count": 0,
+  "winner_declared": false
+}

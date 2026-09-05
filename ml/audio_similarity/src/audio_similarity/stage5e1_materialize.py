@@ -250,6 +250,7 @@ def run_materialization(
     arms: tuple[str, ...] = ARM_KEYS,
     baseline_encoders: dict[str, Any] | None = None,
     fusion_encoder: Any | None = None,
+    write_report: bool = True,
 ) -> dict[str, Any]:
     """Run requested arms from local retained audio; this function performs no network I/O."""
     project = Path(root).resolve()
@@ -433,12 +434,22 @@ def run_materialization(
         "current_run_results": result_rows,
         "results": result_rows,
     }
-    atomic_json(report / "materialization_results.json", output)
+    if write_report:
+        atomic_json(report / "materialization_results.json", output)
     return output
 
 
 def cache_rerun(root: str | Path) -> dict[str, Any]:
-    result = run_materialization(root)
+    project = Path(root).resolve()
+    materialization_path = project / REPORT_DIRECTORY / "materialization_results.json"
+    if not materialization_path.is_file():
+        raise Stage5B1AValidationError(
+            "cache rerun requires the first-run materialization result"
+        )
+    original_sha256 = file_sha256(materialization_path)
+    # A verification pass must never replace the first-run execution ledger.
+    result = run_materialization(root, write_report=False)
+    preserved_sha256 = file_sha256(materialization_path)
     unexpected = [row for row in result["results"] if row.get("inferred_views", 0)]
     payload = {
         "schema_version": "stage5e1-cache-rerun-results-v1",
@@ -447,7 +458,13 @@ def cache_rerun(root: str | Path) -> dict[str, Any]:
         "network_downloads": 0,
         "unexpected_inference_count": len(unexpected),
         "representation_identity_equality": not unexpected,
-        "status": "PASSED" if not unexpected else "FAILED",
+        "first_run_materialization_preserved": original_sha256 == preserved_sha256,
+        "first_run_materialization_sha256": original_sha256,
+        "status": (
+            "PASSED"
+            if not unexpected and original_sha256 == preserved_sha256
+            else "FAILED"
+        ),
     }
-    atomic_json(Path(root).resolve() / REPORT_DIRECTORY / "cache_rerun_results.json", payload)
+    atomic_json(project / REPORT_DIRECTORY / "cache_rerun_results.json", payload)
     return payload

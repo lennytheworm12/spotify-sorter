@@ -1,0 +1,75 @@
+{
+  "cache_size_bytes": 100814848,
+  "network_downloads": 0,
+  "schema_version": "stage5e1-performance-metrics-v1",
+  "vector_counts_and_inference": [
+    {
+      "arm": "A",
+      "count": 741,
+      "seconds": 13.22037755441852,
+      "status": "SUCCESS",
+      "views": 2223
+    },
+    {
+      "arm": "B",
+      "count": 741,
+      "seconds": 25.55559981695842,
+      "status": "SUCCESS",
+      "views": 2964
+    },
+    {
+      "arm": "C",
+      "count": 741,
+      "seconds": 693.1020434076781,
+      "status": "SUCCESS",
+      "views": 16539
+    },
+    {
+      "arm": "D",
+      "count": 741,
+      "seconds": 37.83232849754859,
+      "status": "SUCCESS",
+      "views": 2964
+    },
+    {
+      "arm": "MUQ",
+      "count": 741,
+      "seconds": 28.67924507468706,
+      "status": "SUCCESS",
+      "views": 2223
+    }
+  ],
+  "view_counts_and_inference": [
+    {
+      "count": 600,
+      "seconds": 41.89962262910558,
+      "view_kind": "CENTERED30_SEGMENT"
+    },
+    {
+      "count": 16539,
+      "seconds": 693.1020434076781,
+      "view_kind": "FULL_SONG_CHUNK"
+    },
+    {
+      "count": 741,
+      "seconds": 9.458082124387147,
+      "view_kind": "NATIVE_BACK_MEL"
+    },
+    {
+      "count": 741,
+      "seconds": 9.458082124387147,
+      "view_kind": "NATIVE_FRONT_MEL"
+    },
+    {
+      "count": 741,
+      "seconds": 9.458082124387147,
+      "view_kind": "NATIVE_GLOBAL_RESIZED_MEL"
+    },
+    {
+      "count": 741,
+      "seconds": 9.458082124387147,
+      "view_kind": "NATIVE_MIDDLE_MEL"
+    }
+  ],
+  "wal_size_bytes": 0
+}

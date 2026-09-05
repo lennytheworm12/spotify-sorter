@@ -13,7 +13,11 @@ from audio_similarity.stage5c2_analysis import canonical_pair_id
 from audio_similarity.stage5e1_analysis import REVIEW_COLUMNS, analyze_retrieval, build_review_queue
 from audio_similarity.stage5e1_cache import Stage5E1Cache
 from audio_similarity.stage5e1_config import experiment_config
-from audio_similarity.stage5e1_materialize import _identity_fields, run_materialization
+from audio_similarity.stage5e1_materialize import (
+    _identity_fields,
+    cache_rerun,
+    run_materialization,
+)
 from audio_similarity.stage5e1_review import Stage5E1ReviewStore
 from audio_similarity.stage5e1_sampling import CHUNK_SAMPLES, native_fusion_plan, sampling_plan
 
@@ -195,6 +199,31 @@ def test_local_materialization_resumes_without_reinference(tmp_path) -> None:
     assert clap.calls == 7
     assert muq.calls == 3
     assert all(row["inferred_views"] == 0 for row in second["results"])
+
+
+def test_cache_rerun_preserves_first_run_materialization_ledger(tmp_path, monkeypatch) -> None:
+    report = tmp_path / "reports/stage5e1_four_arm_retrieval"
+    report.mkdir(parents=True)
+    first_run = report / "materialization_results.json"
+    first_run.write_text('{"first_run":true}\n', encoding="utf-8")
+    original = first_run.read_bytes()
+
+    def fake_run(root, *, write_report=True):
+        assert Path(root) == tmp_path
+        assert write_report is False
+        return {
+            "corpus_track_count": 1,
+            "network_downloads": 0,
+            "results": [{"inferred_views": 0}],
+        }
+
+    monkeypatch.setattr(
+        "audio_similarity.stage5e1_materialize.run_materialization", fake_run
+    )
+    result = cache_rerun(tmp_path)
+    assert result["status"] == "PASSED"
+    assert result["first_run_materialization_preserved"] is True
+    assert first_run.read_bytes() == original
 
 
 def test_common_corpus_analysis_is_deterministic_and_excludes_self(tmp_path) -> None:
