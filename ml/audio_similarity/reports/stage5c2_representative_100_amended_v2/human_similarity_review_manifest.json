@@ -1,0 +1,17 @@
+{
+  "artifacts": {
+    "human_similarity_metrics.json": {
+      "sha256": "ec16c51a18a7fc932479fda68cb01ba9bd259ca2230c1665ad1bf750d6d703af",
+      "size_bytes": 1530
+    },
+    "human_similarity_review_report.md": {
+      "sha256": "160f95b16cd3e590d70a068311a1ef2a7ed24b647ab4f7a34c471979fe7dd6b7",
+      "size_bytes": 1115
+    }
+  },
+  "canonical_review_before_import_sha256": "36bdd7ee38d744ee7e0b5b4afdf9193b04c0625bb2b258da4c1500b03da54634",
+  "provided_export_already_matched_canonical": true,
+  "provided_export_sha256": "36bdd7ee38d744ee7e0b5b4afdf9193b04c0625bb2b258da4c1500b03da54634",
+  "schema_version": "stage5c2-human-similarity-final-manifest-v1",
+  "status": "HUMAN_REVIEW_COMPLETE"
+}
