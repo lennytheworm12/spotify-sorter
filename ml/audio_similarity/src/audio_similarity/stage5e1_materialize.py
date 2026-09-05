@@ -265,7 +265,7 @@ def run_materialization(
                 if track_index % 10 == 0 or track_index == manifest["track_count"]:
                     _record_progress(progress_path, result_rows, started)
             if baseline_encoders is not None:
-                del baseline_encoders
+                del clap, muq, baseline_encoders
                 gc.collect()
                 try:
                     import torch
@@ -294,9 +294,34 @@ def run_materialization(
                         needed[arm] = (identity, fields)
                 if not needed:
                     continue
-                waveform = decode_mono(project / track["retained_source_path"], 48_000)
-                if len(waveform) != plan["native_fusion"]["sample_count_48khz"]:
-                    raise Stage5B1AValidationError("decoded waveform differs from frozen sampling plan")
+                try:
+                    waveform = decode_mono(project / track["retained_source_path"], 48_000)
+                    if len(waveform) != plan["native_fusion"]["sample_count_48khz"]:
+                        raise Stage5B1AValidationError(
+                            "decoded waveform differs from frozen sampling plan"
+                        )
+                except Exception as exc:
+                    for arm, (identity, fields) in needed.items():
+                        cache.record_vector(
+                            identity,
+                            fields,
+                            status="FAILED",
+                            failure_category=f"{arm}_DECODE_FAILED",
+                            failure_detail=str(exc),
+                        )
+                        result_rows.append(
+                            {
+                                "spotify_track_id": spotify_id,
+                                "arm": arm,
+                                "status": "FAILED",
+                                "representation_identity": identity,
+                                "failure_category": f"{arm}_DECODE_FAILED",
+                                "failure_detail": str(exc),
+                            }
+                        )
+                    if track_index % 10 == 0 or track_index == manifest["track_count"]:
+                        _record_progress(progress_path, result_rows, started)
+                    continue
                 views = None
                 if "B" in needed:
                     identity, fields = needed["B"]
@@ -324,6 +349,7 @@ def run_materialization(
                     _record_progress(progress_path, result_rows, started)
 
         summary = cache.summary()
+        cache_records = cache.records()
     output = {
         "schema_version": "stage5e1-materialization-results-v1",
         "experiment_id": EXPERIMENT_ID,
@@ -333,6 +359,8 @@ def run_materialization(
         "elapsed_seconds": time.perf_counter() - started,
         "peak_process_rss_kib": int(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss),
         "cache_summary": summary,
+        "cache_records": cache_records,
+        "current_run_results": result_rows,
         "results": result_rows,
     }
     atomic_json(report / "materialization_results.json", output)

@@ -196,3 +196,18 @@ class Stage5E1Cache:
             "vector_status_counts": statuses,
             "view_vector_count": self.db.execute("SELECT count(*) FROM views").fetchone()[0],
         }
+
+    def records(self) -> list[dict[str, Any]]:
+        """Return the complete cache ledger without copying embedding blobs."""
+        columns = (
+            "representation_identity", "spotify_track_id", "arm", "source_sha256",
+            "config_sha256", "sampling_plan_sha256", "checkpoint_sha256", "status",
+            "embedding_sha256", "embedding_dimension", "view_count", "inference_seconds",
+            "failure_category", "failure_detail", "updated_at",
+        )
+        return [
+            {name: row[name] for name in columns}
+            for row in self.db.execute(
+                f"SELECT {','.join(columns)} FROM vectors ORDER BY spotify_track_id,arm"
+            )
+        ]
