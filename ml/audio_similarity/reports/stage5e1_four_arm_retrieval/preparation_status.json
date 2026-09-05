@@ -1,12 +1,17 @@
 {
-  "active_retention_batches": [
-    ".research_audio/chart_download_batches_v1/batch_0001/state.json"
-  ],
-  "aff_status": "AFF_READY",
+  "corpus_manifest_sha256": "098685c6773c6814da5aecea884c65b84e9e27d3f83b79d44cc9611c2942eb7a",
+  "eligible_track_count": 741,
   "experiment_id": "STAGE5E1_FOUR_ARM_FULL_SONG_RETRIEVAL",
   "network_audio_downloads": 0,
-  "prepared_at_utc": "2026-09-05T11:01:51.015864+00:00",
+  "prepared_at_utc": "2026-09-05T11:17:54.196704+00:00",
   "representation_inference_calls": 0,
+  "resources": {
+    "disk_free_bytes": 878699757568,
+    "disk_total_bytes": 1081101176832,
+    "gpu": "queried separately at execution time",
+    "logical_cpu_count": 16,
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35"
+  },
   "schema_version": "stage5e1-preparation-status-v1",
-  "status": "CORPUS_FREEZE_DEFERRED"
+  "status": "AFF_READY"
 }

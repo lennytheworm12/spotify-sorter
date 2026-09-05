@@ -86,6 +86,19 @@ def test_corpus_audit_rejects_source_integrity_change(tmp_path: Path) -> None:
         audit_corpus(root, probe=_probe)
 
 
+def test_corpus_audit_can_freeze_closed_membership_while_cache_grows(tmp_path: Path) -> None:
+    root = _project(tmp_path)
+    _source(root, "one")
+    snapshot = sorted((root / ".research_audio").glob("*/provenance.json"))
+    _source(root, "later")
+    audit, manifest = audit_corpus(root, probe=_probe, provenance_paths=snapshot)
+    assert audit["retained_track_count"] == 1
+    assert [row["spotify_track_id"] for row in manifest["tracks"]] == ["one"]
+    assert manifest["retained_source_snapshot_sha256"] == audit[
+        "retained_source_snapshot_sha256"
+    ]
+
+
 def test_checkpoint_gate_requires_both_aff_and_local_projection(tmp_path: Path, monkeypatch) -> None:
     checkpoint = tmp_path / "model.pt"
     checkpoint.write_bytes(b"placeholder")

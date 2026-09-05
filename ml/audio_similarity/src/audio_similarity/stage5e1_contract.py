@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import importlib.metadata
+import hashlib
 import json
 import math
 import os
@@ -220,13 +221,23 @@ def audit_corpus(
     root: Path,
     *,
     probe: Callable[..., dict[str, Any]] = probe_and_validate,
+    provenance_paths: list[Path] | None = None,
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     media_root = (root / MEDIA_ROOT).resolve()
     reviewed_ids = _historical_review_ids(root)
     tracks: list[dict[str, Any]] = []
     youtube_groups: dict[str, list[str]] = defaultdict(list)
     source_groups: dict[str, list[str]] = defaultdict(list)
-    for provenance_path in sorted(media_root.glob("*/provenance.json")):
+    frozen_paths = (
+        sorted(provenance_paths)
+        if provenance_paths is not None
+        else sorted(media_root.glob("*/provenance.json"))
+    )
+    snapshot_members = []
+    for provenance_path in frozen_paths:
+        provenance_path = provenance_path.resolve()
+        if media_root not in provenance_path.parents:
+            raise Stage5B1AValidationError("retained provenance escapes the media root")
         provenance = json.loads(provenance_path.read_text(encoding="utf-8"))
         spotify_id = str(provenance.get("spotify_track_id", ""))
         if not spotify_id or provenance_path.parent.name != spotify_id:
@@ -239,6 +250,13 @@ def audit_corpus(
         actual_sha = file_sha256(source)
         if source.stat().st_size != expected_size or actual_sha != expected_sha:
             raise Stage5B1AValidationError(f"retained source integrity failed: {spotify_id}")
+        snapshot_members.append(
+            {
+                "spotify_track_id": spotify_id,
+                "provenance_sha256": file_sha256(provenance_path),
+                "source_sha256": actual_sha,
+            }
+        )
         if provenance.get("full_decode_validated") is not True:
             raise Stage5B1AValidationError(f"retained source lacks decode provenance: {spotify_id}")
         technical = probe(source, minimum_duration_seconds=0.0)
@@ -293,10 +311,14 @@ def audit_corpus(
         row["shared_source_sha256_ids"] = sorted(source_groups[row["source_sha256"]])
     eligible_tracks = [row for row in tracks if row["eligible"]]
     chunk_count = sum(math.ceil(row["duration_seconds"] / 10.0) for row in eligible_tracks)
+    snapshot_sha = hashlib.sha256(
+        json.dumps(snapshot_members, sort_keys=True, separators=(",", ":")).encode()
+    ).hexdigest()
     audit = {
         "schema_version": "stage5e1-corpus-audit-v1",
         "experiment_id": EXPERIMENT_ID,
         "retained_track_count": len(tracks),
+        "retained_source_snapshot_sha256": snapshot_sha,
         "eligible_track_count": len(eligible_tracks),
         "excluded_track_count": len(tracks) - len(eligible_tracks),
         "historical_review_members": sum(row["historical_stage5c2_review_member"] for row in tracks),
@@ -321,6 +343,7 @@ def audit_corpus(
         "experiment_id": EXPERIMENT_ID,
         "identity_key": "spotify_track_id",
         "minimum_duration_seconds": MINIMUM_DURATION_SECONDS,
+        "retained_source_snapshot_sha256": snapshot_sha,
         "track_count": len(eligible_tracks),
         "tracks": eligible_tracks,
     }
@@ -370,7 +393,11 @@ def _write_feasibility_report(
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
-def prepare_stage5e1(root: str | Path) -> dict[str, Any]:
+def prepare_stage5e1(
+    root: str | Path,
+    *,
+    snapshot_active_retention: bool = False,
+) -> dict[str, Any]:
     project = Path(root).resolve()
     report = project / REPORT_DIRECTORY
     report.mkdir(parents=True, exist_ok=True)
@@ -379,7 +406,7 @@ def prepare_stage5e1(root: str | Path) -> dict[str, Any]:
     # explicitly gated model arrives; the final experiment config freezes it.
     (report / "aff_feasibility.json").write_bytes(_canonical_bytes(feasibility))
     active_batches = active_retention_batches(project)
-    if active_batches:
+    if active_batches and not snapshot_active_retention:
         preparation = {
             "schema_version": "stage5e1-preparation-status-v1",
             "experiment_id": EXPERIMENT_ID,
@@ -400,7 +427,12 @@ def prepare_stage5e1(root: str | Path) -> dict[str, Any]:
             ),
         )
         return preparation
-    audit, manifest = audit_corpus(project)
+    provenance_snapshot = sorted((project / MEDIA_ROOT).glob("*/provenance.json"))
+    audit, manifest = audit_corpus(project, provenance_paths=provenance_snapshot)
+    audit["active_retention_batches_at_snapshot"] = active_batches
+    audit["snapshot_membership_closed_before_audit"] = True
+    manifest["active_retention_batches_at_snapshot"] = active_batches
+    manifest["snapshot_membership_closed_before_audit"] = True
     _write_frozen(report / "corpus_audit.json", audit)
     _write_frozen(report / "corpus_manifest.json", manifest)
     manifest_sha = _write_sha(report / "corpus_manifest.json")

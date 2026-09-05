@@ -1,0 +1,103 @@
+{
+  "arms": {
+    "A": {
+      "architecture": "HTSAT-base",
+      "checkpoint": "models/music_audioset_epoch_15_esc_90.14.pt",
+      "checkpoint_sha256": "fae3e9c087f2909c28a09dc31c8dfcdacbc42ba44c70e972b58c1bd1caf6dedd",
+      "identity": "A_CENTERED30_CURRENT_MUSIC_CLAP_V1",
+      "pooling": "L2 each, equal arithmetic mean, L2 result",
+      "views": "three 5-second windows centered at 5, 15, 25 seconds"
+    },
+    "B": {
+      "architecture": "HTSAT-tiny",
+      "checkpoint": "models/630k-audioset-fusion-best.pt",
+      "checkpoint_revision": "bc020633ac5bc0bb364febd3b97401ca42816cea",
+      "checkpoint_sha256": "fb171dd9b608aebdac3d89286cd7615c5100af4cc7dc37797c7fb8d3cc15e3a5",
+      "identity": "B_NATIVE_AFF_GENERAL_AUDIO_CLAP_V1",
+      "pooling": "trained native aff_2d feature fusion",
+      "views": "native resized global log-mel plus deterministic front/middle/back 10-second log-mel crops"
+    },
+    "C": {
+      "architecture": "HTSAT-base",
+      "checkpoint": "models/music_audioset_epoch_15_esc_90.14.pt",
+      "checkpoint_sha256": "fae3e9c087f2909c28a09dc31c8dfcdacbc42ba44c70e972b58c1bd1caf6dedd",
+      "final_partial_chunk": "native repeatpad to 10 seconds",
+      "identity": "C_FULL_SONG_10S_CHUNK_MEAN_MUSIC_CLAP_V1",
+      "pooling": "L2 each, equal per-chunk arithmetic mean including final partial, L2 result",
+      "short_track": "one native repeatpadded chunk",
+      "views": "consecutive non-overlapping 10-second chunks covering the full source"
+    },
+    "D": {
+      "architecture": "HTSAT-tiny",
+      "checkpoint": "models/630k-audioset-fusion-best.pt",
+      "checkpoint_revision": "bc020633ac5bc0bb364febd3b97401ca42816cea",
+      "checkpoint_sha256": "fb171dd9b608aebdac3d89286cd7615c5100af4cc7dc37797c7fb8d3cc15e3a5",
+      "identity": "D_NATIVE_GLOBAL3_EQUAL_MEAN_GENERAL_AUDIO_CLAP_V1",
+      "native_difference_note": "D bypasses learned feature fusion by embedding each native mel view independently under the matched fusion checkpoint",
+      "pooling": "embed views independently, L2 each, equal arithmetic mean, L2 result",
+      "views": "exact same frozen global/front/middle/back log-mel tensors as B"
+    }
+  },
+  "checkpoint_comparison_isolation": {
+    "a_and_c_architecture": "HTSAT-base music-specialized non-fusion",
+    "a_and_c_checkpoint": "models/music_audioset_epoch_15_esc_90.14.pt",
+    "a_vs_c_is_matched_checkpoint": true,
+    "b_and_d_architecture": "HTSAT-tiny general-audio native fusion",
+    "b_and_d_checkpoint": "models/630k-audioset-fusion-best.pt",
+    "b_vs_d_is_matched_checkpoint": true,
+    "cross_pair_checkpoint_confound": true
+  },
+  "comparison_interpretation": {
+    "A_vs_C_matched_checkpoint": true,
+    "B_vs_D_matched_checkpoint_and_views": true,
+    "cross_pair_checkpoint_architecture_confound": true
+  },
+  "corpus_manifest_sha256": "098685c6773c6814da5aecea884c65b84e9e27d3f83b79d44cc9611c2942eb7a",
+  "embedding_dimension": 512,
+  "experiment_id": "STAGE5E1_FOUR_ARM_FULL_SONG_RETRIEVAL",
+  "fixed_muq": {
+    "centers_seconds": [
+      5,
+      15,
+      25
+    ],
+    "pooled_normalization": "L2",
+    "pooling": "equal arithmetic mean",
+    "representation": "centered30_v1",
+    "sample_rate_hz": 24000,
+    "segment_normalization": "L2",
+    "window_seconds": 5
+  },
+  "installed_laion_clap_version": "1.1.7",
+  "native_clap_implementation": {
+    "aff_implementation_sha256": "878c98e926e0c734e469c7cf9419cf0bd98af9b0f224f66f04cabc2b3bad6a9f",
+    "feature_preprocessing_sha256": "b958fc34aa9cac44103b663374c3c49aee4580dec8740b9dd1e17054c8c6e5dc",
+    "global_view": "full-song log-mel resized to one 10-second mel extent",
+    "hook_sha256": "a9001b213768528d667589e6dd4d7f92f107943a5e1ce3149ee6de1a520f9c15",
+    "learned_fusion_layers": "HTSAT patch_embed.mel_conv2d plus patch_embed.fusion_model AFF",
+    "local_views": "one native 10-second log-mel crop from each temporal third",
+    "maximum_waveform_samples": 480000,
+    "native_fusion_type": "aff_2d",
+    "native_randomness": "NumPy selects one local start per temporal third and an otherwise unused compatibility waveform crop; Stage 5E.1 freezes the selected mel-frame starts",
+    "native_view_count": 4,
+    "sample_rate_hz": 48000
+  },
+  "retrieval": {
+    "duplicate_filter": "exclude candidate pairs sharing source SHA-256 or YouTube video ID",
+    "primary_corpus": "intersection of successful A/B/C/D and fixed MuQ vectors",
+    "self_matches_excluded": true,
+    "tie_breaker": "Spotify track ID ascending",
+    "top_k": [
+      5,
+      10
+    ]
+  },
+  "sampling_seed": 20260905,
+  "schema_version": "stage5e1-four-arm-experiment-config-v1",
+  "similarity": {
+    "clap_weight": 0.7172981519,
+    "metric": "cosine",
+    "muq_weight": 0.2827018481,
+    "weights_tuned_in_stage5e1": false
+  }
+}

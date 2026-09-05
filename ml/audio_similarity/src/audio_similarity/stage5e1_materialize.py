@@ -174,6 +174,76 @@ def _view_cache_pool(
     return pooled, inferred, total_seconds
 
 
+def prime_historical_vectors(root: str | Path) -> dict[str, Any]:
+    """Bind exact-source Stage 5A vectors to the frozen experiment without inference."""
+    project = Path(root).resolve()
+    manifest, config, plans = _load_frozen_inputs(project)
+    report = project / REPORT_DIRECTORY
+    artifacts = project / ARTIFACT_DIRECTORY
+    artifacts.mkdir(parents=True, exist_ok=True)
+    config_sha = file_sha256(report / "experiment_config.json")
+    contract = load_contract(
+        project / "reports/holistic_stage4a_dual/audio_representation_v1.json"
+    )
+    plan_by_id = {row["spotify_track_id"]: row["plan"] for row in plans["tracks"]}
+    historical = _historical_stage5a_vectors(
+        project, manifest, contract.vector_contract_sha256
+    )
+    counts = Counter()
+    records = []
+    with Stage5E1Cache(artifacts / "representations.sqlite") as cache:
+        for track in manifest["tracks"]:
+            plan_sha = plan_by_id[track["spotify_track_id"]]["sampling_plan_sha256"]
+            for arm, encoder_id, checkpoint_sha in (
+                ("A", "laion_clap", config["arms"]["A"]["checkpoint_sha256"]),
+                (
+                    "MUQ",
+                    "muq_mulan_large",
+                    contract.encoder("muq_mulan_large").provenance_sha256,
+                ),
+            ):
+                identity, fields = _identity_fields(
+                    track, arm, config_sha, plan_sha, checkpoint_sha
+                )
+                if cache.vector(identity) is not None:
+                    counts[f"{arm}_ALREADY_PRIMED"] += 1
+                    continue
+                prior = historical.get((track["spotify_track_id"], encoder_id))
+                if prior is None:
+                    counts[f"{arm}_MISSING_EXACT_SOURCE_VECTOR"] += 1
+                    continue
+                cache.record_vector(
+                    identity,
+                    fields,
+                    status="SUCCESS",
+                    embedding=prior[0],
+                    view_count=3,
+                    inference_seconds=0,
+                )
+                counts[f"{arm}_HISTORICAL_EXACT_SOURCE_REUSE"] += 1
+                records.append(
+                    {
+                        "spotify_track_id": track["spotify_track_id"],
+                        "arm": arm,
+                        "representation_identity": identity,
+                        "historical_cache_path": prior[1],
+                    }
+                )
+        cache_summary = cache.summary()
+    payload = {
+        "schema_version": "stage5e1-historical-reuse-results-v1",
+        "experiment_id": EXPERIMENT_ID,
+        "network_downloads": 0,
+        "encoder_inference_calls": 0,
+        "corpus_track_count": manifest["track_count"],
+        "counts": dict(sorted(counts.items())),
+        "cache_summary": cache_summary,
+        "records": records,
+    }
+    atomic_json(report / "historical_reuse_results.json", payload)
+    return payload
+
+
 def run_materialization(
     root: str | Path,
     *,

@@ -8,4 +8,4 @@ The installed LAION CLAP implementation defines native `aff_2d` with a resized g
 
 A matched design uses the current checkpoint for A/C and the fusion checkpoint for B/D. B versus D then isolates learned AFF from arithmetic view averaging; A versus C isolates centered sampling from full-song chunk averaging. Comparisons across those pairs retain a checkpoint confound.
 
-The final corpus freeze is deferred while a retained-media batch is active. No network requests or encoder inference ran during preparation.
+The frozen eligible corpus contains 741 tracks. No network requests or encoder inference ran during preparation.

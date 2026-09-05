@@ -18,7 +18,6 @@ from .stage5e1_contract import (
     REPORT_DIRECTORY,
     _write_frozen,
     _write_sha,
-    active_retention_batches,
     inspect_aff_feasibility,
 )
 from .stage5e1_sampling import SAMPLING_SEED, sampling_plan
@@ -103,14 +102,14 @@ def freeze_experiment(root: str | Path) -> dict[str, Any]:
     project = Path(root).resolve()
     report = project / REPORT_DIRECTORY
     manifest_path = report / "corpus_manifest.json"
-    if active_retention_batches(project):
-        raise Stage5B1AValidationError("cannot freeze Stage 5E.1 while retained-media workers are active")
     if not manifest_path.is_file():
         raise Stage5B1AValidationError("run Stage 5E.1 prepare before freezing the experiment")
     feasibility = inspect_aff_feasibility(project)
     if feasibility["status"] != "AFF_READY":
         raise Stage5B1AValidationError("trained official CLAP fusion checkpoint is required")
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    if not manifest.get("retained_source_snapshot_sha256"):
+        raise Stage5B1AValidationError("corpus manifest lacks an immutable retained-source snapshot")
     config = experiment_config()
     config["corpus_manifest_sha256"] = file_sha256(manifest_path)
     config["native_clap_implementation"] = feasibility["installed_implementation"]
