@@ -1,0 +1,15 @@
+{
+  "corpus_sha256": "098685c6773c6814da5aecea884c65b84e9e27d3f83b79d44cc9611c2942eb7a",
+  "inference_calls": 0,
+  "ordering_seed": "stage5e2-d-missing-pairs-v1",
+  "prior_manifest_sha256": "b427dc24421793b3dcf786abeca186c1b41fd5642bad9e4fcfcfed6ebf845d9d",
+  "queue_scope": "union of D CLAP and COMBINED Top5 missing numeric labels",
+  "scale": {
+    "1": "NOT SIMILAR",
+    "2": "SOMEWHAT RELATED",
+    "3": "MODERATELY SIMILAR",
+    "4": "VERY SIMILAR",
+    "5": "EXTREMELY SIMILAR",
+    "UNSURE": "UNSURE / SKIP"
+  }
+}
