@@ -1,6 +1,6 @@
 # Stage 5E.1 CLAP AFF feasibility
 
-**Status:** `AFF_CHECKPOINT_REQUIRED`
+**Status:** `AFF_READY`
 
 The current baseline checkpoint has 505 state keys and no trained AFF or fusion-local projection parameters. Enabling native fusion with that checkpoint would leave new fusion layers untrained.
 

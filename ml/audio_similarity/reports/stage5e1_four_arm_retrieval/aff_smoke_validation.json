@@ -1,0 +1,25 @@
+{
+  "aff_inference_seconds": 1.1030782490270212,
+  "aff_reproducible_exact": true,
+  "aff_vector_norm": 1.0,
+  "aff_vs_equal_view_mean_cosine": 0.24814653396606445,
+  "checkpoint_sha256": "fb171dd9b608aebdac3d89286cd7615c5100af4cc7dc37797c7fb8d3cc15e3a5",
+  "executed_at_utc": "2026-09-05T11:01:15Z",
+  "independent_view_inference_seconds": 0.03409689699765295,
+  "independent_view_norms": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "network_audio_downloads": 0,
+  "schema_version": "stage5e1-aff-smoke-validation-v1",
+  "spotify_track_id": "003vvx7Niy0yvhvHt4a68B",
+  "status": "PASSED",
+  "view_shapes": [
+    [1001, 64],
+    [1001, 64],
+    [1001, 64],
+    [1001, 64]
+  ]
+}

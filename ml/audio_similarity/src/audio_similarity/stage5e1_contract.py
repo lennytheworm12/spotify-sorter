@@ -182,7 +182,9 @@ def inspect_aff_feasibility(root: Path) -> dict[str, Any]:
             "source_revision": FUSION_SOURCE_REVISION,
             "expected_sha256": FUSION_EXPECTED_SHA256,
             "expected_size_bytes": FUSION_EXPECTED_SIZE_BYTES,
-            "download_authorized": False,
+            "download_authorized": bool(
+                candidate.get("present") and candidate.get("trusted_source_identity")
+            ),
         },
         "comparison_design": {
             "a_and_c_checkpoint": str(BASELINE_CHECKPOINT),

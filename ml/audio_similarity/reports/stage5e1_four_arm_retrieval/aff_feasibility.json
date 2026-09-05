@@ -39,7 +39,7 @@
   },
   "installed_laion_clap_version": "1.1.7",
   "official_fusion_checkpoint": {
-    "download_authorized": false,
+    "download_authorized": true,
     "expected_sha256": "fb171dd9b608aebdac3d89286cd7615c5100af4cc7dc37797c7fb8d3cc15e3a5",
     "expected_size_bytes": 1863889051,
     "filename": "630k-audioset-fusion-best.pt",
@@ -49,14 +49,39 @@
   "required_fusion_checkpoint": {
     "expected_sha256": "fb171dd9b608aebdac3d89286cd7615c5100af4cc7dc37797c7fb8d3cc15e3a5",
     "expected_size_bytes": 1863889051,
-    "fusion_state_key_count": null,
+    "fusion_key_examples": [
+      "module.audio_branch.patch_embed.fusion_model.global_att.1.bias",
+      "module.audio_branch.patch_embed.fusion_model.global_att.1.weight",
+      "module.audio_branch.patch_embed.fusion_model.global_att.2.bias",
+      "module.audio_branch.patch_embed.fusion_model.global_att.2.num_batches_tracked",
+      "module.audio_branch.patch_embed.fusion_model.global_att.2.running_mean",
+      "module.audio_branch.patch_embed.fusion_model.global_att.2.running_var",
+      "module.audio_branch.patch_embed.fusion_model.global_att.2.weight",
+      "module.audio_branch.patch_embed.fusion_model.global_att.4.bias",
+      "module.audio_branch.patch_embed.fusion_model.global_att.4.weight",
+      "module.audio_branch.patch_embed.fusion_model.global_att.5.bias",
+      "module.audio_branch.patch_embed.fusion_model.global_att.5.num_batches_tracked",
+      "module.audio_branch.patch_embed.fusion_model.global_att.5.running_mean",
+      "module.audio_branch.patch_embed.fusion_model.global_att.5.running_var",
+      "module.audio_branch.patch_embed.fusion_model.global_att.5.weight",
+      "module.audio_branch.patch_embed.fusion_model.local_att.0.bias",
+      "module.audio_branch.patch_embed.fusion_model.local_att.0.weight",
+      "module.audio_branch.patch_embed.fusion_model.local_att.1.bias",
+      "module.audio_branch.patch_embed.fusion_model.local_att.1.num_batches_tracked",
+      "module.audio_branch.patch_embed.fusion_model.local_att.1.running_mean",
+      "module.audio_branch.patch_embed.fusion_model.local_att.1.running_var"
+    ],
+    "fusion_state_key_count": 30,
+    "has_aff_parameters": true,
+    "has_local_projection_parameters": true,
     "path": "models/630k-audioset-fusion-best.pt",
-    "present": false,
-    "sha256": null,
-    "state_key_count": null,
-    "trained_aff_available": false,
-    "trusted_source_identity": null
+    "present": true,
+    "sha256": "fb171dd9b608aebdac3d89286cd7615c5100af4cc7dc37797c7fb8d3cc15e3a5",
+    "size_bytes": 1863889051,
+    "state_key_count": 448,
+    "trained_aff_available": true,
+    "trusted_source_identity": true
   },
   "schema_version": "stage5e1-aff-feasibility-v1",
-  "status": "AFF_CHECKPOINT_REQUIRED"
+  "status": "AFF_READY"
 }
