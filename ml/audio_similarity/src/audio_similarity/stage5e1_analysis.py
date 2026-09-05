@@ -46,14 +46,6 @@ def _matrix(vectors: np.ndarray) -> np.ndarray:
     return result.astype(np.float32)
 
 
-def _write_matrix_csv(path: Path, ids: list[str], matrix: np.ndarray) -> None:
-    with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.writer(handle, lineterminator="\n")
-        writer.writerow(["spotify_track_id", *ids])
-        for spotify_id, row in zip(ids, matrix, strict=True):
-            writer.writerow([spotify_id, *(f"{float(value):.9f}" for value in row)])
-
-
 def _duplicate_pair(left: dict[str, Any], right: dict[str, Any]) -> bool:
     return (
         left["source_sha256"] == right["source_sha256"]
@@ -307,9 +299,8 @@ def analyze_retrieval(root: str | Path) -> dict[str, Any]:
         combined = float(config["similarity"]["clap_weight"]) * clap + float(config["similarity"]["muq_weight"]) * muq
         matrices[(arm, "CLAP")] = clap
         matrices[(arm, "COMBINED")] = combined.astype(np.float32)
-        _write_matrix_csv(report / f"{arm.lower()}_clap_similarity.csv", ids, clap)
-        _write_matrix_csv(report / f"{arm.lower()}_combined_similarity.csv", ids, combined)
-    _write_matrix_csv(report / "fixed_muq_similarity.csv", ids, muq)
+    # A single compressed, indexed matrix bundle avoids committing nine large,
+    # redundant text matrices for the retained corpus.
     np.savez_compressed(report / "similarity_matrices.npz", spotify_ids=np.asarray(ids), muq=muq, **{f"{arm}_{mode}".lower(): matrix for (arm, mode), matrix in matrices.items()})
     nearest = _neighbors(tracks, matrices)
     overlap = _overlap(nearest)

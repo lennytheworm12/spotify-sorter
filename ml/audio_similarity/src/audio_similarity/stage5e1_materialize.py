@@ -200,7 +200,7 @@ def run_materialization(
 
     with Stage5E1Cache(artifacts / "representations.sqlite") as cache:
         # Import exact-source A/MuQ vectors before loading any model.
-        for track in manifest["tracks"]:
+        for track_index, track in enumerate(manifest["tracks"], 1):
             plan_sha = plan_by_id[track["spotify_track_id"]]["sampling_plan_sha256"]
             for arm, encoder_id, checkpoint_sha in (
                 ("A", "laion_clap", config["arms"]["A"]["checkpoint_sha256"]),
@@ -216,7 +216,7 @@ def run_materialization(
                 if prior:
                     cache.record_vector(identity, fields, status="SUCCESS", embedding=prior[0], view_count=3, inference_seconds=0)
                     result_rows.append({"spotify_track_id": track["spotify_track_id"], "arm": arm, "status": "HISTORICAL_EXACT_SOURCE_REUSE", "representation_identity": identity, "source_cache": prior[1], "inferred_views": 0})
-            if result_rows:
+            if result_rows and (track_index % 10 == 0 or track_index == manifest["track_count"]):
                 _record_progress(progress_path, result_rows, started)
 
         baseline_needed = any(value in requested for value in ("A", "C", "MUQ"))
@@ -226,7 +226,7 @@ def run_materialization(
                 baseline_encoders = load_frozen_encoders(project, contract)
             clap = baseline_encoders["laion_clap"]
             muq = baseline_encoders["muq_mulan_large"]
-            for track in manifest["tracks"]:
+            for track_index, track in enumerate(manifest["tracks"], 1):
                 spotify_id = track["spotify_track_id"]
                 plan = plan_by_id[spotify_id]
                 plan_sha = plan["sampling_plan_sha256"]
@@ -262,6 +262,7 @@ def run_materialization(
                     except Exception as exc:
                         cache.record_vector(identity, fields, status="FAILED", failure_category=f"{arm}_INFERENCE_FAILED", failure_detail=str(exc), inference_seconds=time.perf_counter() - began)
                         result_rows.append({"spotify_track_id": spotify_id, "arm": arm, "status": "FAILED", "representation_identity": identity, "failure_category": f"{arm}_INFERENCE_FAILED", "failure_detail": str(exc)})
+                if track_index % 10 == 0 or track_index == manifest["track_count"]:
                     _record_progress(progress_path, result_rows, started)
             if baseline_encoders is not None:
                 del baseline_encoders
@@ -278,7 +279,7 @@ def run_materialization(
             if feasibility["status"] != "AFF_READY":
                 raise Stage5B1AValidationError("B/D require the verified trained native AFF checkpoint")
             fusion_encoder = fusion_encoder or NativeFusionClapEncoder(project / FUSION_CHECKPOINT)
-            for track in manifest["tracks"]:
+            for track_index, track in enumerate(manifest["tracks"], 1):
                 spotify_id = track["spotify_track_id"]
                 plan = plan_by_id[spotify_id]
                 plan_sha = plan["sampling_plan_sha256"]
@@ -319,7 +320,8 @@ def run_materialization(
                     except Exception as exc:
                         cache.record_vector(identity, fields, status="FAILED", failure_category="D_VIEW_INFERENCE_FAILED", failure_detail=str(exc), inference_seconds=time.perf_counter() - began)
                         result_rows.append({"spotify_track_id": spotify_id, "arm": "D", "status": "FAILED", "representation_identity": identity, "failure_category": "D_VIEW_INFERENCE_FAILED", "failure_detail": str(exc)})
-                _record_progress(progress_path, result_rows, started)
+                if track_index % 10 == 0 or track_index == manifest["track_count"]:
+                    _record_progress(progress_path, result_rows, started)
 
         summary = cache.summary()
     output = {

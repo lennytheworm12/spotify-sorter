@@ -96,6 +96,14 @@ def test_blinded_queue_deduplicates_union_and_hides_origins_from_session(tmp_pat
     assert '"origins"' not in encoded
     assert '"similarity"' not in encoded
     assert '"arm"' not in encoded
+    page = store.session_page(offset=2, limit=2, review_filter="unreviewed")
+    assert page["page"] == {
+        "offset": 2,
+        "limit": 2,
+        "returned": 2,
+        "filtered_total": 5,
+        "filter": "unreviewed",
+    }
 
     pair = session["pairs"][0]
     result = store.submit(pair["left"]["spotify_track_id"], pair["right"]["spotify_track_id"], "3", "moderate")
@@ -109,9 +117,11 @@ class _FakeEncoder:
     def __init__(self, encoder_id: str):
         self.encoder_id = encoder_id
         self.calls = 0
+        self.sample_counts = []
 
     def encode_segment(self, waveform, sample_rate):
         self.calls += 1
+        self.sample_counts.append(len(waveform))
         vector = np.zeros(512, dtype=np.float32)
         vector[self.calls % 512] = 1
         return vector
@@ -140,7 +150,7 @@ def test_local_materialization_resumes_without_reinference(tmp_path) -> None:
     source_directory = tmp_path / ".research_audio/local-track"
     source_directory.mkdir(parents=True)
     source = source_directory / "source.wav"
-    _write_wav(source)
+    _write_wav(source, seconds=31)
     source_sha = hashlib.sha256(source.read_bytes()).hexdigest()
     from audio_similarity.stage5e1_encoders import decode_mono
 
@@ -174,14 +184,15 @@ def test_local_materialization_resumes_without_reinference(tmp_path) -> None:
         baseline_encoders={"laion_clap": clap, "muq_mulan_large": muq},
     )
     assert first["network_downloads"] == 0
-    assert clap.calls == 6
+    assert clap.calls == 7
+    assert clap.sample_counts[-1] == 48000
     assert muq.calls == 3
     second = run_materialization(
         tmp_path,
         arms=("A", "C", "MUQ"),
         baseline_encoders={"laion_clap": clap, "muq_mulan_large": muq},
     )
-    assert clap.calls == 6
+    assert clap.calls == 7
     assert muq.calls == 3
     assert all(row["inferred_views"] == 0 for row in second["results"])
 

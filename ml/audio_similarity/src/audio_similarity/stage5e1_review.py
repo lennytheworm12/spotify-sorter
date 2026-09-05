@@ -91,12 +91,28 @@ class Stage5E1ReviewStore:
         }
 
     def session(self) -> dict[str, Any]:
+        return self.session_page(
+            offset=0,
+            limit=min(250, max(1, len(self._queue["pairs"]))),
+        )
+
+    def session_page(
+        self,
+        *,
+        offset: int = 0,
+        limit: int = 100,
+        review_filter: str = "all",
+    ) -> dict[str, Any]:
+        if review_filter not in {"all", "reviewed", "unreviewed"}:
+            raise Stage5B1AValidationError("invalid Stage 5E.1 review filter")
+        if offset < 0 or not 1 <= limit <= 250:
+            raise Stage5B1AValidationError("invalid Stage 5E.1 review page")
         with self._lock:
             by_pair = {row["pair_id"]: row for row in self._read_rows()}
-            pairs = []
+            all_pairs = []
             for pair in self._queue["pairs"]:
                 row = by_pair[pair["pair_id"]]
-                pairs.append(
+                all_pairs.append(
                     {
                         "review_index": pair["review_index"],
                         "pair_id": pair["pair_id"],
@@ -110,13 +126,26 @@ class Stage5E1ReviewStore:
                         },
                     }
                 )
-            reviewed = sum(bool(pair["review"]["label"]) for pair in pairs)
+            reviewed = sum(bool(pair["review"]["label"]) for pair in all_pairs)
+            filtered = [
+                pair for pair in all_pairs
+                if review_filter == "all"
+                or (review_filter == "reviewed") == bool(pair["review"]["label"])
+            ]
+            pairs = filtered[offset : offset + limit]
             return {
                 "schema_version": "stage5e1-blinded-review-session-v1",
                 "mode": "stage5e1_blinded_pair_review",
-                "status": "HUMAN_REVIEW_COMPLETE" if reviewed == len(pairs) else "HUMAN_REVIEW_PENDING",
+                "status": "HUMAN_REVIEW_COMPLETE" if reviewed == len(all_pairs) else "HUMAN_REVIEW_PENDING",
                 "labels": LABELS,
-                "progress": {"reviewed_pairs": reviewed, "total_pairs": len(pairs)},
+                "progress": {"reviewed_pairs": reviewed, "total_pairs": len(all_pairs)},
+                "page": {
+                    "offset": offset,
+                    "limit": limit,
+                    "returned": len(pairs),
+                    "filtered_total": len(filtered),
+                    "filter": review_filter,
+                },
                 "pairs": pairs,
             }
 

@@ -8,7 +8,7 @@ import webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Any, Protocol
-from urllib.parse import unquote, urlparse
+from urllib.parse import parse_qs, unquote, urlparse
 
 from audio_similarity.stage5b1a_models import Stage5B1AValidationError
 from audio_similarity.stage5b1b_config import load_stage5b1b_config
@@ -118,8 +118,18 @@ def make_review_handler(
                 return self._json({"ok": True, "mode": mode})
             if path == "/api/session":
                 try:
+                    pager = getattr(store, "session_page", None)
+                    if pager is not None:
+                        query = parse_qs(urlparse(self.path).query)
+                        return self._json(
+                            pager(
+                                offset=int(query.get("offset", ["0"])[0]),
+                                limit=int(query.get("limit", ["100"])[0]),
+                                review_filter=query.get("filter", ["all"])[0],
+                            )
+                        )
                     return self._json(store.session())
-                except Stage5B1AValidationError as exc:
+                except (Stage5B1AValidationError, ValueError) as exc:
                     return self._json({"error": str(exc)}, 409)
             if path == "/api/export":
                 return self._bytes(
