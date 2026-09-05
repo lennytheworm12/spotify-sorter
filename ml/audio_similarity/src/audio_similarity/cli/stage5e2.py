@@ -33,7 +33,7 @@ def main():
         for row in store._read_rows():
             if row['human_label'] in {'1','2','3','4','5'}:
                 labels[row['pair_id']] = int(row['human_label'])
-        _, metrics = evaluate(read(root/PRIOR/'nearest_neighbors.json'), labels)
+        _, metrics = evaluate(read(root/REPORT/'nearest_neighbors.json'), labels)
         metrics['verdict'] = 'HUMAN_EVIDENCE_FOR_OWNER_REVIEW_NO_AUTOMATIC_ACTIVATION'
         atomic_json(root/STATE.parent/'current_metrics.json', metrics)
         print(json.dumps(metrics, indent=2))

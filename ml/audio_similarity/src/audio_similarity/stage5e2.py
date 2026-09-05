@@ -14,9 +14,9 @@ from .stage5c2_analysis import canonical_pair_id
 from .stage5e1_analysis import REVIEW_COLUMNS
 from .stage5e1_review import LABELS
 
-REPORT = Path("reports/stage5e2_arm_d_evaluation")
+REPORT = Path("reports/stage5e2_arm_d_original100_v2")
 PRIOR = Path("reports/stage5e1_four_arm_retrieval")
-STATE = Path(".research_audio/stage5e2_review/human_similarity_review.csv")
+STATE = Path(".research_audio/stage5e2_original100_v2_review/human_similarity_review.csv")
 SEED = "stage5e2-d-missing-pairs-v1"
 
 
@@ -42,6 +42,8 @@ def resolve_labels(evidence):
 def audit_labels(root, tracks, exports=()):
     prior_queue = root / PRIOR / 'review_queue.json'
     prior_pairs = {p['pair_id']: p for p in read(prior_queue)['pairs']} if prior_queue.exists() else {}
+    retired_queue = root / 'reports/stage5e2_arm_d_evaluation/review_queue.json'
+    retired_pairs = {p['pair_id']: p for p in read(retired_queue)['pairs']} if retired_queue.exists() else {}
     paths = set()
     for directory in (root / "reports", root / ".research_audio"):
         paths.update(p for p in directory.rglob("*.csv")
@@ -81,8 +83,9 @@ def audit_labels(root, tracks, exports=()):
                 compatible = all(tracks[t]["youtube_video_id"] == sources.get(t) for t in (left, right))
                 basis = "same frozen YouTube sources; full-source bytes may differ from historical excerpts"
             else:
-                frozen_pair = prior_pairs.get(pair)
-                compatible = (path == root / ".research_audio/stage5e1_review/human_similarity_review.csv"
+                known_state = path == root / '.research_audio/stage5e2_review/human_similarity_review.csv'
+                frozen_pair = (retired_pairs if known_state else prior_pairs).get(pair)
+                compatible = ((known_state or path == root / ".research_audio/stage5e1_review/human_similarity_review.csv")
                               and frozen_pair is not None
                               and all(side['source_sha256'] == tracks[side['spotify_track_id']]['source_sha256']
                                       and side['youtube_video_id'] == tracks[side['spotify_track_id']]['youtube_video_id']
@@ -189,6 +192,11 @@ def run(root, exports=()):
     neighbors = read(prior / 'nearest_neighbors.json')
     if {r['spotify_track_id'] for r in neighbors['tracks']} != tracks.keys():
         raise ValueError('retrieval corpus mismatch')
+    import numpy as np
+    from .stage5e2_subset import subset_retrieval
+    selected_path = root / 'reports/stage5c2_representative_100_amended_v2/selected_sources.json'
+    with np.load(prior / 'similarity_matrices.npz', allow_pickle=False) as matrices:
+        tracks, neighbors = subset_retrieval(tracks, read(selected_path), matrices)
     audit, evidence = audit_labels(root, tracks, exports)
     labels, conflicts = resolve_labels(evidence)
     pairs, metrics = evaluate(neighbors, labels)
@@ -197,7 +205,7 @@ def run(root, exports=()):
     metrics.update(total_D_pairs=len(pairs), covered_D_pairs=covered, covered_percent=100 * covered / len(pairs),
                    new_judgments=len(queue['pairs']), conflicts=conflicts,
                    verdict='ARM_D_HUMAN_EVIDENCE_INSUFFICIENT', production_activation=False,
-                   limitation='Observed ratings are selected historical coverage, not an unbiased estimate of all 741 queries. UNSURE is nonnumeric. Paired results require complete Top-5 ratings for both arms. No winner is inferred from partial evidence.')
+                   limitation='Observed ratings are selected historical coverage, not an unbiased estimate of all 100 queries. UNSURE is nonnumeric. Paired results require complete Top-5 ratings for both arms. No winner is inferred from partial evidence.')
     report = root / REPORT
     if (report / 'review_queue.json').exists():
         if read(report / 'review_queue.json') != queue:
@@ -206,6 +214,10 @@ def run(root, exports=()):
     for name, data in [('input_reference.json', {'prior_manifest_sha256': file_sha256(prior/'artifact_manifest.json'),
                        'corpus_sha256': file_sha256(prior/'corpus_manifest.json'), 'ordering_seed': SEED, 'scale': LABELS,
                        'inference_calls': 0, 'queue_scope': 'union of D CLAP and COMBINED Top5 missing numeric labels'}),
+                       ('subset_reference.json', {'selected_sources_sha256':file_sha256(selected_path),
+                        'query_count':100, 'candidate_count':100, 'spotify_ids':sorted(tracks),
+                        'retired_report':'stage5e2_arm_d_evaluation', 'rank_policy':'restrict both axes before ranking'}),
+                       ('nearest_neighbors.json', neighbors),
                        ('label_search_audit.json', audit), ('label_evidence.json', evidence),
                        ('reused_labels.json', labels), ('evaluation_metrics.json', metrics), ('review_queue.json', queue)]:
         atomic_json(report / name, data)
@@ -222,7 +234,9 @@ def run(root, exports=()):
 
 Verdict: `{metrics['verdict']}`. D remains an experimental challenger; no winner or activation is justified yet.
 
-The unchanged 741-track corpus and frozen D/A Top-5 retrievals are reused with zero inference.
+Scope correction: only the original amended frozen 100 tracks are queries AND candidates.
+The 741-track Stage5E1 experiment and retired Stage5E2 queue remain preserved, but are not the active review target.
+Frozen A/D similarities are restricted on both axes before recomputing native Top-5 ranks, with zero inference.
 D CLAP + COMBINED contain {len(pairs)} unique pairs. Prior numeric ratings cover {covered} ({metrics['covered_percent']:.2f}%).
 The blinded queue contains only the remaining {metrics['new_judgments']} pairs.
 

@@ -4,6 +4,9 @@ from audio_similarity.stage5c2_analysis import canonical_pair_id
 from audio_similarity.stage5e2 import audit_labels
 import csv
 import json
+import numpy as np
+import pytest
+from audio_similarity.stage5e2_subset import subset_retrieval
 
 
 def test_labels_deduplicate_copies_and_conflicts_require_review():
@@ -60,3 +63,23 @@ def test_label_reuse_requires_current_scale_and_frozen_source(tmp_path):
     tracks['b']['youtube_video_id'] = 'different-source'
     _, evidence = audit_labels(tmp_path, tracks)
     assert evidence == []
+
+
+def test_original100_restricts_both_axes_before_ranking():
+    tracks = {str(i): {'spotify_track_id':str(i), 'youtube_video_id':str(i),
+                      'source_sha256':str(i), 'title':str(i), 'artists':['artist']} for i in range(101)}
+    selected = {'tracks':[{'spotify_track_id':str(i), 'selected_youtube_video_id':str(i)} for i in range(100)]}
+    matrix = np.full((101,101), .2)
+    np.fill_diagonal(matrix, 1)
+    matrix[100,:100] = matrix[:100,100] = .99
+    matrices = {'spotify_ids':np.array(list(tracks)), **{k:matrix for k in ('a_clap','a_combined','d_clap','d_combined')}}
+    subset, neighbors = subset_retrieval(tracks,selected,matrices)
+    assert len(subset) == len(neighbors['tracks']) == 100
+    for query in neighbors['tracks']:
+        for pool in query['retrievals'].values():
+            assert len(pool) == 10
+            assert all(r['spotify_track_id'] in subset and r['spotify_track_id'] != query['spotify_track_id'] for r in pool)
+    assert neighbors == subset_retrieval(tracks,selected,matrices)[1]
+    selected['tracks'][0]['selected_youtube_video_id'] = 'wrong'
+    with pytest.raises(ValueError, match='source identity'):
+        subset_retrieval(tracks,selected,matrices)

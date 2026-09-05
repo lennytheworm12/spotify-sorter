@@ -1,0 +1,307 @@
+[
+  {
+    "outcomes": {
+      "blank_or_invalid_label": 421,
+      "compatible_label": 219,
+      "outside_corpus": 10818
+    },
+    "path": ".research_audio/stage5e1_review/human_similarity_review.csv",
+    "rows": 11458,
+    "sha256": "32ea63e2a5957e226f82a321d7b5cbab66672906834a7725df0b6cbad2e81647"
+  },
+  {
+    "outcomes": {
+      "blank_or_invalid_label": 171,
+      "outside_corpus": 4062
+    },
+    "path": ".research_audio/stage5e2_review/human_similarity_review.csv",
+    "rows": 4233,
+    "sha256": "0e4e65e87d9fdd7f8479d91be3a874f270471fe8323334d0325e08a0c7bc85f4"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 136
+    },
+    "path": "reports/holistic_stage1a/holistic_human_ratings.csv",
+    "rows": 136,
+    "sha256": "038081b7aecb7d6c63a4670c1ba0b509837eec8575e0487b93d9371f21ea1672"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 248
+    },
+    "path": "reports/holistic_stage2b/human_ratings.csv",
+    "rows": 248,
+    "sha256": "942cac3701fb90bf6ad5edb2168705fc8837f56460650575f8baf627bf7054dd"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 100
+    },
+    "path": "reports/holistic_stage2b/human_ratings_test.csv",
+    "rows": 100,
+    "sha256": "c776b2372f315dcd5aba94536e4ef8f38adaca4452aca030358c9b62f82b417d"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 148
+    },
+    "path": "reports/holistic_stage2b/human_ratings_train_validation.csv",
+    "rows": 148,
+    "sha256": "bddd137a784df5db871aa45c33b9b6e73bb3f956fd348bec7f034c587fe3789f"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 3
+    },
+    "path": "reports/holistic_stage4a/human_ratings.csv",
+    "rows": 3,
+    "sha256": "7f5f58963c0dd601b24ccb5a35118533eb586af5cb3623d363127c370c7c2af4"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 3
+    },
+    "path": "reports/holistic_stage4a/superseded_clap_only/human_ratings.csv",
+    "rows": 3,
+    "sha256": "7f5f58963c0dd601b24ccb5a35118533eb586af5cb3623d363127c370c7c2af4"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 275
+    },
+    "path": "reports/holistic_stage4a_dual/human_ratings.csv",
+    "rows": 275,
+    "sha256": "b408707540883b4526cdc541dd2a1916be90e23c80f090f5df8ce21c2c17c0cf"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 352
+    },
+    "path": "reports/human_eval/judgments_ab.csv",
+    "rows": 352,
+    "sha256": "66d945efaf5c34e376e06651a0d1bd9f4ba045b35f2b92580627671caabf76b0"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 360
+    },
+    "path": "reports/human_eval/judgments_factor.csv",
+    "rows": 360,
+    "sha256": "230ffd685f9a1e735cb78c6677f7f0eabfebe573b94e329c42ab1850eb30c7a4"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 352
+    },
+    "path": "reports/live_sheets/judgments_ab.csv",
+    "rows": 352,
+    "sha256": "66d945efaf5c34e376e06651a0d1bd9f4ba045b35f2b92580627671caabf76b0"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 360
+    },
+    "path": "reports/live_sheets/judgments_factor.csv",
+    "rows": 360,
+    "sha256": "a27125ab91bb207a1285b6ebad1e3dac44de459cea7dbad7394b8ed74dfdbfbf"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 25
+    },
+    "path": "reports/stage5b1a/firecrawl_review.csv",
+    "rows": 25,
+    "sha256": "98b9881877a3df7c4d6fb14b45e71ad2b40ed85d7df33a0213af2089dfe5a12c"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 25
+    },
+    "path": "reports/stage5b1a/review_template.csv",
+    "rows": 25,
+    "sha256": "b23579e0468f31d97f99b190cff6b29afe1669c9497e2cc9b1d69a97bd00e292"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 25
+    },
+    "path": "reports/stage5b1a_ytdlp/review_template.csv",
+    "rows": 25,
+    "sha256": "aa6fce09728d7e79e744896330fddb8229fed509d2cc0b8a48680eb574b2a965"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 25
+    },
+    "path": "reports/stage5b1a_ytdlp/ytdlp_review.csv",
+    "rows": 25,
+    "sha256": "b6f165a3b321fecbd96403970b36eddbcc4c9b8d83d807f67f2e81597a118d9d"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 248
+    },
+    "path": "reports/stage5b1b/heldout_review.csv",
+    "rows": 248,
+    "sha256": "8e5282310ff44c9441e81a1cb538613f004b92361ec8b8c21172b4d40b69e97e"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 41
+    },
+    "path": "reports/stage5b1b_fresh_challenge/human_review.csv",
+    "rows": 41,
+    "sha256": "0342c46d4506994c61cf0b3e422f34f6d466bf6297a6b8973fd75f711884b842"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 11
+    },
+    "path": "reports/stage5b1c_b/tier2_human_review.csv",
+    "rows": 11,
+    "sha256": "2d98a42513d30fb3ce49f89e481698913fb4ff09b047a6341cbf952cdd7cf2f0"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 2
+    },
+    "path": "reports/stage5b1c_c_strong_metadata/strong_metadata_human_review.csv",
+    "rows": 2,
+    "sha256": "ec4a352f27dd9c4ac7b144daa91cfd22f018e43adf9c3e5b5d41728094d7d03a"
+  },
+  {
+    "outcomes": {},
+    "path": "reports/stage5b1d_targeted_rediscovery/rediscovery_human_review.csv",
+    "rows": 0,
+    "sha256": "2767b7ea0ff9976c3083a9a06be0bb7b4f23d01dca18dd3db89af7576b87ac76"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 10
+    },
+    "path": "reports/stage5b1e_natural_query_evaluation/human_review.csv",
+    "rows": 10,
+    "sha256": "0f28d59983ccbb92c6f3882fe063e4285e065a9acc68becd5261286760a551aa"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 10
+    },
+    "path": "reports/stage5b1g_global_preference/human_review.csv",
+    "rows": 10,
+    "sha256": "6edd4956a1acecdf9a1338e9f2c776feb7929b68885604d9d9ab56ff9b2fe4ef"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 1
+    },
+    "path": "reports/stage5b1j_representation_fallback/fallback_human_review.csv",
+    "rows": 1,
+    "sha256": "0975309040edb26fa2186164e49f14af3ea36ff56fa149603b44fd9044a0688c"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 9
+    },
+    "path": "reports/stage5b3_minimal_selector/human_review.csv",
+    "rows": 9,
+    "sha256": "df887113513a51e05329fd8535fe3c9acefbb0b227e7e21b4cb9749d7f8d8a3c"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 294
+    },
+    "path": "reports/stage5b4_representative_v3/human_review.csv",
+    "rows": 294,
+    "sha256": "92cb84aafeff32604ebf559c98e8347751991e8d0d865949a1ba595d8029d062"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 4
+    },
+    "path": "reports/stage5b4a_query_contract_repair/human_review.csv",
+    "rows": 4,
+    "sha256": "72633877f662c77886b11f3a68b3d53e98e9f3d6194783d171277e06cc8d93b4"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 1
+    },
+    "path": "reports/stage5b4b_playwright_fallback/human_review.csv",
+    "rows": 1,
+    "sha256": "c7b95b4a50c652193da5fbfddc0a1e5d1acd16543f78c57f2e415c2df1571710"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 3
+    },
+    "path": "reports/stage5b4c_artist_query_decomposition/human_review.csv",
+    "rows": 3,
+    "sha256": "8a555bdc9733a35073614e7924809059886d1f12098e192a86b80dbf07f71c30"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 1
+    },
+    "path": "reports/stage5b4c_youtube_data_api_fallback/human_review.csv",
+    "rows": 1,
+    "sha256": "d2a87455f40c84ccb5d36b1c461898caa113551d1324206bf917c6676829f5e7"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 299
+    },
+    "path": "reports/stage5b5_representative_v4/human_review.csv",
+    "rows": 299,
+    "sha256": "cac56fc0c9e8f84989228254f2c75e97eed45f8d94dc7eb3fa4a27fad364b88a"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 81
+    },
+    "path": "reports/stage5b_representative_library_v1/human_review.csv",
+    "rows": 81,
+    "sha256": "def47fb7c72d128e45e70c22e1f9099890d017c67f7e5d8be0f7822b8a3faa73"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 300
+    },
+    "path": "reports/stage5b_youtube_prior_v1/human_review.csv",
+    "rows": 300,
+    "sha256": "e0a39ed88fe840982b4e3ece77102e667baaed83cebff49f7fee0f3f0ecdcef7"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 25
+    },
+    "path": "reports/stage5c1_curated_25_materialization/human_sanity_review.csv",
+    "rows": 25,
+    "sha256": "ef0a938bb3048729a2976975a376aeadc4857c8181a2aaca60384084e46185dd"
+  },
+  {
+    "outcomes": {
+      "incompatible_rating_contract": 490
+    },
+    "path": "reports/stage5c2_representative_100/human_similarity_review.csv",
+    "rows": 490,
+    "sha256": "5ac48320696dc5e150664b05e9b79a7e8b4937146bf2df14c5c02e6a0ca31eb8"
+  },
+  {
+    "outcomes": {
+      "compatible_label": 500
+    },
+    "path": "reports/stage5c2_representative_100_amended_v2/human_similarity_review.csv",
+    "rows": 500,
+    "sha256": "36bdd7ee38d744ee7e0b5b4afdf9193b04c0625bb2b258da4c1500b03da54634"
+  },
+  {
+    "outcomes": {
+      "compatible_label": 500
+    },
+    "path": "external_export/stage5c2-human-similarity-review.csv",
+    "rows": 500,
+    "sha256": "36bdd7ee38d744ee7e0b5b4afdf9193b04c0625bb2b258da4c1500b03da54634"
+  }
+]
