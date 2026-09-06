@@ -100,6 +100,9 @@ def freeze(root, source, *, batch_size=500):
 
 def validate_batch(root, number):
     report = root / REPORT
+    if number > read_json(report / 'cohort.json')['batch_count']:
+        from .chart_batch_expansion import validate_extension
+        return validate_extension(root, number)
     hashes = read_json(report / "artifact_manifest.json")
     if not {"cohort.json", "source_reference.json", f"batch_{number:04d}.json"} <= hashes.keys():
         raise ValueError("frozen chart cohort hash inventory is incomplete")
@@ -167,7 +170,7 @@ def preflight(root, number):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=["prepare", "preflight", "run", "resume", "status", "stop"])
+    parser.add_argument("command", choices=["prepare", "expand", "preflight", "run", "resume", "status", "stop"])
     parser.add_argument("--batch", type=int, default=1)
     parser.add_argument("--batch-size", type=int, default=500, help="prepare only; immutable afterward")
     parser.add_argument("--snapshot", type=Path, default=Path(DEFAULT_SNAPSHOT))
@@ -175,9 +178,14 @@ def main():
     root = Path(__file__).resolve().parents[2]
     if args.batch < 1:
         parser.error("batch must be positive")
-    if args.command != "prepare" and (args.batch_size != 500 or args.snapshot != Path(DEFAULT_SNAPSHOT)):
+    if args.command not in {"prepare", "expand"} and (args.batch_size != 500 or args.snapshot != Path(DEFAULT_SNAPSHOT)):
         parser.error("snapshot and batch-size are prepare-only; existing batches cannot change at run time")
-    if args.command == "prepare":
+    if args.command == "expand":
+        if args.batch_size != 500:
+            parser.error('extensions use batches of at most 500')
+        from .chart_batch_expansion import expand
+        output = expand(root, root / args.snapshot)
+    elif args.command == "prepare":
         media_git_audit(root)
         output = freeze(root, root / args.snapshot, batch_size=args.batch_size)
     elif args.command in {"run", "resume"}:

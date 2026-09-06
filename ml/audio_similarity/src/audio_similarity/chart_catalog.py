@@ -212,6 +212,7 @@ def execute(args, runtime):
     atomic_json(runtime / "status.json", metrics)
     print(f"Snapshot: {report.name}/matching_{identity}.json")
     print(json.dumps(metrics, ensure_ascii=False, indent=2))
+    return report / f"matching_{identity}.json"
 
 
 if __name__ == "__main__":
