@@ -1,0 +1,11 @@
+{
+  "embedding_recomputation_required": false,
+  "original_forward_passes": 1927,
+  "phase": "parquet_replay_serialization",
+  "reason": "Column order differed after cached JSON key ordering; writer refused replacement.",
+  "replay_forward_passes": 0,
+  "replay_track_hits": 100,
+  "scientific_verdict": null,
+  "superseded_by": "../frozen100_v3",
+  "tracks_ok": 100
+}

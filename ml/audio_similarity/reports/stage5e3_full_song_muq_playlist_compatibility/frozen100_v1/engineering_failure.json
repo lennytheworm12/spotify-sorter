@@ -1,0 +1,9 @@
+{
+  "forward_passes": 0,
+  "phase": "model_loading",
+  "preserved": true,
+  "reason": "Installed hub mixin local-directory path required absent model.safetensors; pinned checkpoint exists as pytorch_model.bin.",
+  "scientific_verdict": null,
+  "status": "INFERENCE_FAILED",
+  "superseded_by": "../frozen100_v2"
+}

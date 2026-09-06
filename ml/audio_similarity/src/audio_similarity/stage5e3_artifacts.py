@@ -66,6 +66,9 @@ def freeze_parquet(path, rows, sort_keys):
     import pyarrow as pa
     import pyarrow.parquet as pq
     ordered = sorted(rows, key=lambda r: tuple(r[k] for k in sort_keys))
+    # Dict insertion order changes after JSON cache reads; freeze column order too.
+    columns = sorted({key for row in ordered for key in row})
+    ordered = [{key: row.get(key) for key in columns} for row in ordered]
     table = pa.Table.from_pylist(ordered)
     out = io.BytesIO()
     pq.write_table(table, out, version='2.6', compression='NONE', use_dictionary=False,

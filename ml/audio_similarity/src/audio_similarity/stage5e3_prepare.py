@@ -8,7 +8,7 @@ from .stage5e3_artifacts import read, freeze_json, digest, hashes, verify_hashes
 from .stage5e3_inputs import tracks_and_baselines,rating_snapshot,historical_hashes,PRIOR
 from .full_song_muq import POLICY
 
-REPORT=Path('reports/stage5e3_full_song_muq_playlist_compatibility/frozen100_v2')
+REPORT=Path('reports/stage5e3_full_song_muq_playlist_compatibility/frozen100_v3')
 MODEL_REVISION='2e01c796b71dca71b45251384c04cd7b237c9020'
 
 
@@ -84,10 +84,10 @@ def prepare(root,run):
           'shuffle':'SHA256(seed:namespace:stable_id), lexical hash then stable ID',
           'decoder':'shared load_audio; float32 channel mean before torchaudio default resample; full recording',
           'serialization':{'json':'sorted UTF8 finite indent2 final newline','npz':'sorted NPY members, stored ZIP, timestamp 1980-01-01',
-                           'parquet':'2.6 NONE compression, no dictionary, statistics, row_group_size=65536; rows sorted by documented keys'},
+                           'parquet':'2.6 NONE compression, no dictionary, statistics, row_group_size=65536; columns lexical; rows sorted by documented keys'},
           'parquet_sort_keys':{'chunk_manifest':['spotify_track_id','chunk_index'],'retrieval':['method_id','query','rank'],
                                'union':['query','candidate'],'probes':['query','pair_id']}},
-        'experiment_config.json':{'revision':2,'weights':{'CLAP':.7172981519,'MuQ':.2827018481},'seed':20260906,
+        'experiment_config.json':{'revision':2,'serialization_version':'canonical_columns_v2','weights':{'CLAP':.7172981519,'MuQ':.2827018481},'seed':20260906,
                                   'full_song_muq_config_hash':digest(config),'human_boundary':'READY_FOR_HUMAN_REVIEW'},
         'review_playback_policy.json':{'source':'full retained recording','initial_state':'paused_at_zero','seeking':True,
                                        'gain':'identical native player defaults; user volume permitted','minimum_listening_seconds':None},

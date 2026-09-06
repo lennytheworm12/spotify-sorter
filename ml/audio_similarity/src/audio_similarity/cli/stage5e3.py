@@ -14,7 +14,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('command',choices=['prepare','embed-full-muq','build-similarities','build-review','review','snapshot-labels','analyze','closeout','verify','handoff','run-all'])
     parser.add_argument('--run',type=Path,default=root/REPORT)
-    parser.add_argument('--state',type=Path,default=root/'.research_audio/stage5e3_frozen100_v2_review')
+    parser.add_argument('--state',type=Path,default=root/'.research_audio/stage5e3_frozen100_v3_review')
     parser.add_argument('--port',type=int,default=8785)
     args=parser.parse_args();run=args.run.resolve()
     commands={'prepare':lambda:prepare(root,run),'embed-full-muq':lambda:embed(root,run),

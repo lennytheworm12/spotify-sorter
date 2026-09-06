@@ -55,3 +55,11 @@ def test_serialization_create_once(tmp_path):
     with pytest.raises(ValueError):freeze_json(tmp_path/'bad',{'x':float('nan')})
     rows=[{'i':2,'v':'b'},{'i':1,'v':'a'}]
     freeze_parquet(tmp_path/'x.parquet',rows,['i']);freeze_parquet(tmp_path/'x.parquet',rows[::-1],['i'])
+
+
+def test_parquet_column_order_survives_json_cache(tmp_path):
+    import json
+    rows=[{"z":3.5,"a":"x","middle":2}]
+    freeze_parquet(tmp_path/"manifest.parquet",rows,["a"])
+    cached=json.loads(json.dumps(rows,sort_keys=True))
+    freeze_parquet(tmp_path/"manifest.parquet",cached,["a"])
