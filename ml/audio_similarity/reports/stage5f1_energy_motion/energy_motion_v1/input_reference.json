@@ -1,0 +1,15 @@
+{
+  "encoder_calls": 0,
+  "input_hashes": {
+    ".research_audio/stage5e2_original100_v2_review/human_similarity_review.csv": "8dfe313fcb3008828b71f3e58f56cb127d71de32d606912b185a5b49307b52b8",
+    "reports/stage5c2_representative_100_amended_v2/selected_sources.json": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+    "reports/stage5e1_four_arm_retrieval/corpus_manifest.json": "098685c6773c6814da5aecea884c65b84e9e27d3f83b79d44cc9611c2942eb7a",
+    "reports/stage5e1_four_arm_retrieval/experiment_config.json": "7f85cd3feeab0f201f952cd2eb730dd843f2d1765ee94b65f632defae101eec3",
+    "reports/stage5e1_four_arm_retrieval/similarity_matrices.npz": "9852e6e04f6a5eaec4fe918d6958ccf3eba5c0bdece20e447bb1c43af4c652d0",
+    "reports/stage5e2_arm_d_original100_v2/label_evidence.json": "eafe53abf01dea82822f02ae5caaa5bcc4f92e9d2af5c560e4750fed058da187",
+    "reports/stage5e2_arm_d_original100_v2/review_queue.json": "f938d7f2ff0ea6066eebc61a3b26715fa35911c5b483b3f954962bcc983d247d"
+  },
+  "network_downloads": 0,
+  "production_activation": false,
+  "schema_version": "stage5f1-input-reference-v1"
+}

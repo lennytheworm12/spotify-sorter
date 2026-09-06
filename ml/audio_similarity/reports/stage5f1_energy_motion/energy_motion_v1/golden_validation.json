@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "duration_seconds": 263.0,
+      "passed": true,
+      "profile_coverage_seconds": 263.0,
+      "source_sha256": "765a8be864679b237445f3fed4b04420b2e9136344577dcba914b30464a8755d",
+      "spotify_track_id": "00njeQb198Lm7Jge2Rsrlg",
+      "status": "SUCCESS"
+    },
+    {
+      "duration_seconds": 189.3935625,
+      "passed": true,
+      "profile_coverage_seconds": 189.39356009070295,
+      "source_sha256": "2e19745a9779266e042ec8d8709397a7e781b75ee176455d9e62c2265505a886",
+      "spotify_track_id": "02CCi0N3pMK4Rjxq5e6UmE",
+      "status": "SUCCESS"
+    },
+    {
+      "duration_seconds": 273.7493333333333,
+      "passed": true,
+      "profile_coverage_seconds": 273.74934240362813,
+      "source_sha256": "d6b96f0bdad8437495352f5b907793dd02b9b3d2c9048e91e6bb861aebcdd1f3",
+      "spotify_track_id": "043ryKJlgSnAUzpXnfxU6b",
+      "status": "SUCCESS"
+    },
+    {
+      "duration_seconds": 231.72354166666668,
+      "passed": true,
+      "profile_coverage_seconds": 231.723537414966,
+      "source_sha256": "c235ae21612a837e0a00254a2874da76e9a871635b5b87b732eabd43d2755bcb",
+      "spotify_track_id": "06EL94D0TA27Ik0Ke5usbj",
+      "status": "SUCCESS"
+    },
+    {
+      "duration_seconds": 200.167625,
+      "passed": true,
+      "profile_coverage_seconds": 200.16761904761904,
+      "source_sha256": "69438f58e4edad523bb506699ee18faf93dcbfc5b3b0434df56604fddaa7ff19",
+      "spotify_track_id": "07tiPBhMqiKqHowwqDBtfK",
+      "status": "SUCCESS"
+    },
+    {
+      "duration_seconds": 96.0,
+      "passed": true,
+      "profile_coverage_seconds": 96.0,
+      "source_sha256": "3842d8a24c0f116ab24d9c1ae25c167f9bb50bf91610fc9e23108771c5fcc63c",
+      "spotify_track_id": "0ASYuzPsTBA6ZmIsuvNZby",
+      "status": "SUCCESS"
+    },
+    {
+      "duration_seconds": 231.16627083333333,
+      "passed": true,
+      "profile_coverage_seconds": 231.16630385487528,
+      "source_sha256": "125ac6afb2dd81166028f609bdf7bb50701257f4655635475efa329ec61b9b3c",
+      "spotify_track_id": "0CnpSTdL9l5vQM4YnzXtyo",
+      "status": "SUCCESS"
+    },
+    {
+      "duration_seconds": 182.18377083333334,
+      "passed": true,
+      "profile_coverage_seconds": 182.18380952380951,
+      "source_sha256": "5d7667ad29b459b5a15e4c289a049ece9c074f6c176972aac58b99c0dfc67243",
+      "spotify_track_id": "0JJeoiCAa1hwcBsPxBN2w4",
+      "status": "SUCCESS"
+    },
+    {
+      "duration_seconds": 92.56533333333333,
+      "passed": true,
+      "profile_coverage_seconds": 92.5653514739229,
+      "source_sha256": "325e76e6777a997516dfa5bcbc6b52d2fe72b44daf62f43907f5d2a4f6c5b3ed",
+      "spotify_track_id": "0WJxkgYXRoOxFb4Vq3Ddmg",
+      "status": "SUCCESS"
+    },
+    {
+      "duration_seconds": 210.98666666666668,
+      "passed": true,
+      "profile_coverage_seconds": 210.98666666666668,
+      "source_sha256": "413a26609a857fe3cdd787560a955ec7c72c565e3b74e7b6dff360a328c51095",
+      "spotify_track_id": "0ayK1CJh1cMRjUJRCDWhCd",
+      "status": "SUCCESS"
+    },
+    {
+      "duration_seconds": 205.376,
+      "passed": true,
+      "profile_coverage_seconds": 205.37600907029477,
+      "source_sha256": "abb0a52e689922a64a5f6bc461452f4ef258e8ab15de88ced33ddbf4e68266ed",
+      "spotify_track_id": "0mjbciwK9zhfQl44jXfQv6",
+      "status": "SUCCESS"
+    },
+    {
+      "duration_seconds": 390.8034583333333,
+      "passed": true,
+      "profile_coverage_seconds": 390.8034467120181,
+      "source_sha256": "2a0cbd7f7481571d371e49b7283fd128a1cd159ad948b625c0293fbbda26b53d",
+      "spotify_track_id": "0xlx3pH8TxNah8hdiINqeA",
+      "status": "SUCCESS"
+    }
+  ],
+  "limitation": "This validates real retained decoding, source identity, family output, and full-duration profiles. It does not invent auditory BPM/arousal annotations.",
+  "perceptual_annotation_status": "NOT_PERFORMED_NO_CLAIM",
+  "schema_version": "stage5f1-objective-golden-validation-v1",
+  "selection_rule": "first 12 original100 Spotify IDs ascending, frozen before rating analysis",
+  "status": "PASSED"
+}

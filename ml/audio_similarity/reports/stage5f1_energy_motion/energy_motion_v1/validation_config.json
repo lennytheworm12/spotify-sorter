@@ -1,0 +1,17 @@
+{
+  "config_sha256": "34fa701a590c5f292bd423a3a7c170c8f346446258cfcd12cae796e9561eb8a0",
+  "evaluation": {
+    "bootstrap_replicates": 2000,
+    "high_base_quantile": 0.75,
+    "high_rating_min": 4,
+    "low_rating_max": 2,
+    "minimum_core_measurement_coverage": 0.95,
+    "minimum_primary_mismatch_difference": 0.05,
+    "minimum_pulse_valid_fraction": 0.6,
+    "minimum_slice_pairs_per_group": 20,
+    "minimum_slice_unique_artists": 10,
+    "minimum_slice_unique_tracks": 20,
+    "seed": 20260905
+  },
+  "frozen_before_historical_analysis": true
+}

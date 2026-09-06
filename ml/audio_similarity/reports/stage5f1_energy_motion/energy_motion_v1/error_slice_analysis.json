@@ -1,0 +1,32 @@
+{
+  "all_eligible_original100": 4950,
+  "artist_bootstrap_gate_passed": false,
+  "artist_group_bootstrap": {
+    "group_count": 88,
+    "interval_95": [
+      -0.18172783893713776,
+      0.09157490580652909
+    ],
+    "method": "artist-group-bootstrap",
+    "replicates_requested": 2000,
+    "replicates_valid": 2000
+  },
+  "bootstrap": {
+    "interval_95": [
+      -0.17510927029611772,
+      0.09940505864396129
+    ],
+    "method": "track-node-bootstrap",
+    "replicates_requested": 2000,
+    "replicates_valid": 2000
+  },
+  "bootstrap_gate_passed": false,
+  "effect_gate_passed": false,
+  "median_mismatch_difference": -0.056874626530895034,
+  "primary_high": 243,
+  "primary_low": 74,
+  "primary_unique_artists": 88,
+  "primary_unique_tracks": 100,
+  "rated": 740,
+  "support_gate_passed": true
+}

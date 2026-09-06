@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "name": "tempo_family_60",
+      "passed": true
+    },
+    {
+      "name": "tempo_family_75",
+      "passed": true
+    },
+    {
+      "name": "tempo_family_90",
+      "passed": true
+    },
+    {
+      "name": "tempo_family_120",
+      "passed": true
+    },
+    {
+      "name": "tempo_family_150",
+      "passed": true
+    },
+    {
+      "name": "tempo_family_180",
+      "passed": true
+    },
+    {
+      "name": "sustained_tone_abstains",
+      "passed": true
+    },
+    {
+      "name": "stationary_noise_pulse_not_valid",
+      "passed": true
+    },
+    {
+      "dense": 6.35,
+      "name": "dense_onset_rate",
+      "passed": true,
+      "sparse": 1.6
+    },
+    {
+      "name": "gain_invariant_onset_rate",
+      "passed": true
+    }
+  ],
+  "fixture_results": [
+    {
+      "fixture": "click_60",
+      "onset_rate_hz": 0.95,
+      "primary_bpm": 60.09265988372093,
+      "pulse_reliability": 1.0,
+      "status": "SUCCESS"
+    },
+    {
+      "fixture": "click_75",
+      "onset_rate_hz": 1.2,
+      "primary_bpm": 74.89809782608695,
+      "pulse_reliability": 1.0,
+      "status": "SUCCESS"
+    },
+    {
+      "fixture": "click_90",
+      "onset_rate_hz": 1.425,
+      "primary_bpm": 44.93885869565217,
+      "pulse_reliability": 1.0,
+      "status": "SUCCESS"
+    },
+    {
+      "fixture": "click_120",
+      "onset_rate_hz": 1.9,
+      "primary_bpm": 120.18531976744185,
+      "pulse_reliability": 1.0,
+      "status": "SUCCESS"
+    },
+    {
+      "fixture": "click_150",
+      "onset_rate_hz": 2.375,
+      "primary_bpm": 74.89809782608695,
+      "pulse_reliability": 1.0,
+      "status": "SUCCESS"
+    },
+    {
+      "fixture": "click_180",
+      "onset_rate_hz": 2.85,
+      "primary_bpm": 178.20581896551724,
+      "pulse_reliability": 1.0,
+      "status": "SUCCESS"
+    },
+    {
+      "fixture": "sparse_100",
+      "onset_rate_hz": 1.6,
+      "primary_bpm": 99.38401442307692,
+      "pulse_reliability": 1.0,
+      "status": "SUCCESS"
+    },
+    {
+      "fixture": "dense_100",
+      "onset_rate_hz": 6.35,
+      "primary_bpm": 198.76802884615384,
+      "pulse_reliability": 1.0,
+      "status": "SUCCESS"
+    },
+    {
+      "fixture": "sustained_tone",
+      "onset_rate_hz": 0.0,
+      "primary_bpm": null,
+      "pulse_reliability": 0.0,
+      "status": "PARTIAL"
+    },
+    {
+      "fixture": "stationary_noise",
+      "onset_rate_hz": 12.3,
+      "primary_bpm": 56.79086538461539,
+      "pulse_reliability": 0.20746802858454458,
+      "status": "SUCCESS"
+    }
+  ],
+  "schema_version": "stage5f1-synthetic-validation-v1",
+  "status": "PASSED"
+}

@@ -1,0 +1,17 @@
+{
+  "raw_loudness_used_in_primary_similarity": false,
+  "source_lufs_difference_vs_activity_similarity": {
+    "count": 4950,
+    "rho": -0.09234680678061861
+  },
+  "source_lufs_mean_vs_activity_similarity": {
+    "count": 4950,
+    "rho": 0.2651802502158642
+  },
+  "warning_exclusion_sensitivity": {
+    "gate_passed": false,
+    "high_count": 113,
+    "low_count": 34,
+    "median_mismatch_difference": -0.023867622085684936
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "activity_similarity_vs_a_clap": {
+    "count": 740,
+    "rho": 0.18033641010636947
+  },
+  "activity_similarity_vs_base_combined": {
+    "count": 740,
+    "rho": 0.19138658526166538
+  },
+  "activity_similarity_vs_human_rating": {
+    "count": 740,
+    "rho": -0.07395088473064254
+  },
+  "activity_similarity_vs_muq": {
+    "count": 740,
+    "rho": 0.15448825913892503
+  },
+  "attack_texture_similarity_vs_a_clap": {
+    "count": 690,
+    "rho": 0.10958844237456278
+  },
+  "attack_texture_similarity_vs_base_combined": {
+    "count": 690,
+    "rho": 0.10997272489088632
+  },
+  "attack_texture_similarity_vs_human_rating": {
+    "count": 690,
+    "rho": -0.05619076124719167
+  },
+  "attack_texture_similarity_vs_muq": {
+    "count": 690,
+    "rho": 0.07385776633778306
+  },
+  "dynamics_similarity_vs_a_clap": {
+    "count": 740,
+    "rho": 0.2219025038197462
+  },
+  "dynamics_similarity_vs_base_combined": {
+    "count": 740,
+    "rho": 0.23977090554969624
+  },
+  "dynamics_similarity_vs_human_rating": {
+    "count": 740,
+    "rho": 0.022473702800937526
+  },
+  "dynamics_similarity_vs_muq": {
+    "count": 740,
+    "rho": 0.18235458645685837
+  },
+  "exact_tempo_similarity_vs_a_clap": {
+    "count": 690,
+    "rho": 0.12155199576017414
+  },
+  "exact_tempo_similarity_vs_base_combined": {
+    "count": 690,
+    "rho": 0.10434394878071737
+  },
+  "exact_tempo_similarity_vs_human_rating": {
+    "count": 690,
+    "rho": -0.01533950538499816
+  },
+  "exact_tempo_similarity_vs_muq": {
+    "count": 690,
+    "rho": 0.04591395731816743
+  },
+  "felt_pace_similarity_vs_a_clap": {
+    "count": 740,
+    "rho": 0.1852004842959903
+  },
+  "felt_pace_similarity_vs_base_combined": {
+    "count": 740,
+    "rho": 0.19928762233441386
+  },
+  "felt_pace_similarity_vs_human_rating": {
+    "count": 740,
+    "rho": -0.08037844869797889
+  },
+  "felt_pace_similarity_vs_muq": {
+    "count": 740,
+    "rho": 0.16104239425940162
+  },
+  "pulse_stability_similarity_vs_a_clap": {
+    "count": 690,
+    "rho": 0.21303115893780586
+  },
+  "pulse_stability_similarity_vs_base_combined": {
+    "count": 690,
+    "rho": 0.16294953999793796
+  },
+  "pulse_stability_similarity_vs_human_rating": {
+    "count": 690,
+    "rho": 0.07586043732516418
+  },
+  "pulse_stability_similarity_vs_muq": {
+    "count": 690,
+    "rho": 0.02253132044056968
+  },
+  "subdivision_similarity_vs_a_clap": {
+    "count": 373,
+    "rho": 0.07269892303544266
+  },
+  "subdivision_similarity_vs_base_combined": {
+    "count": 373,
+    "rho": 0.09929768610092767
+  },
+  "subdivision_similarity_vs_human_rating": {
+    "count": 373,
+    "rho": 0.06549803096624286
+  },
+  "subdivision_similarity_vs_muq": {
+    "count": 373,
+    "rho": 0.10104329640782117
+  },
+  "tempo_family_similarity_vs_a_clap": {
+    "count": 690,
+    "rho": 0.06465706179623311
+  },
+  "tempo_family_similarity_vs_base_combined": {
+    "count": 690,
+    "rho": 0.08640649789073199
+  },
+  "tempo_family_similarity_vs_human_rating": {
+    "count": 690,
+    "rho": 0.012691852248391386
+  },
+  "tempo_family_similarity_vs_muq": {
+    "count": 690,
+    "rho": 0.08691454868587957
+  }
+}
