@@ -25,7 +25,7 @@ def handoff(root,run):
     freeze_json(run/'handoff.json',result)
     text='# Stage 5E.3 engineering handoff\n\nREADY_FOR_HUMAN_REVIEW. Human review and representation recommendation pending. No production activation.\n\n'
     text+='See handoff.json for counts and hashes, engineering_verification.json for actual checks, and original_execution_ledger.json plus numbered replay ledgers for execution evidence.\n\n'
-    text+='From ml/audio_similarity:\n\n```bash\n.venv/bin/python -m audio_similarity.cli.stage5e3 review --port 8785\n```\n\nAfter completing the entire queue:\n\n```bash\n.venv/bin/python -m audio_similarity.cli.stage5e3 snapshot-labels\n.venv/bin/python -m audio_similarity.cli.stage5e3 analyze\n.venv/bin/python -m audio_similarity.cli.stage5e3 closeout\n```\n\nReview resumes from .research_audio/stage5e3_frozen100_v1_review. Scientific reports are pending, not placeholders.\n'
+    text+='From ml/audio_similarity:\n\n```bash\n.venv/bin/python -m audio_similarity.cli.stage5e3 review --port 8785\n```\n\nAfter completing the entire queue:\n\n```bash\n.venv/bin/python -m audio_similarity.cli.stage5e3 snapshot-labels\n.venv/bin/python -m audio_similarity.cli.stage5e3 analyze\n.venv/bin/python -m audio_similarity.cli.stage5e3 closeout\n```\n\nReview resumes from .research_audio/stage5e3_frozen100_v2_review. Scientific reports are pending, not placeholders.\n'
     freeze(run/'experiment_report.md',text.encode())
     freeze_json(run/'artifact_manifest.json',hashes([p for p in run.rglob('*') if p.is_file() and p.name!='artifact_manifest.json'],run))
     verify_hashes(run,read(run/'artifact_manifest.json'))

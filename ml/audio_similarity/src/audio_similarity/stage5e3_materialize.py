@@ -38,10 +38,10 @@ def embed(root,run):
                 if adapter is None:
                     os.environ.update(HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1',HF_DATASETS_OFFLINE='1',CUBLAS_WORKSPACE_CONFIG=':4096:8')
                     import torch
-                    from .holistic_encoders import MuQMulanEncoder,AdapterSpec
+                    from .holistic_encoders import MuQMulanEncoder
                     torch.set_num_threads(1);torch.use_deterministic_algorithms(True)
                     torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False
-                    adapter=MuQMulanEncoder(AdapterSpec('muq_mulan_large',hf_repo=config['model_snapshot_path']),revision=config['model_revision'])
+                    adapter=MuQMulanEncoder(revision=config['model_revision'])
                 result=extract_source(track|{'retained_source_path':str(root/track['retained_source_path'])},lambda x:raw_forward(adapter,x),
                                       saved=lambda i:cache.chunk(identity,i),persist=lambda i,v,m:cache.save_chunk(identity,i,v,m))
                 if result['status']=='OK':cache.save_track(identity,result)

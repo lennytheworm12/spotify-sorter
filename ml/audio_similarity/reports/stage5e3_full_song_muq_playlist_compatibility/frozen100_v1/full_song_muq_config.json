@@ -1,0 +1,29 @@
+{
+  "chunk_samples": 240000,
+  "chunk_seconds": 10,
+  "dimension": 512,
+  "embedding_code_files": {
+    "src/audio_similarity/audio.py": "db8e2414e9aca9c0dcf828f93ceea9489e95eb36ee8b1a47bd3de31fdbf1023c",
+    "src/audio_similarity/full_song_muq.py": "ef3bf5c1ec9dc5c7fcb0814577839648338c153395f2799acacf1b54b1ec63e8",
+    "src/audio_similarity/holistic_encoders.py": "4e78ec190eb5729bf1dc369650a533b417698362d97b9f5e489c91dac8feffca",
+    "src/audio_similarity/stage5e3_cache.py": "d26312602807ba0674c829cc932c9d96d736f711a52ad0fb6bf2b227e6645f33"
+  },
+  "embedding_environment_hash": "b2d302e164ab7257f92383beb9aed8d90762ce3bc49e32ecfb2eb9d5f2a91e1e",
+  "final_partial_policy": "cyclic_final_chunk_own_samples",
+  "implementation_sha": "fcb935b902455f97af045349b16cff1c95e49641b29bb9a63934eb46a23345a2",
+  "model_config_sha256": "8fefc545ef87ecd9bcde7417dd03464370c48c321f36dcff20266a752079e468",
+  "model_file_sha256": "d42ae3f7cb9b66759ee0089ddc70e2f28b130c2d8ba621457358272d32dd0444",
+  "model_identity": "OpenMuQ/MuQ-MuLan-large",
+  "model_revision": "2e01c796b71dca71b45251384c04cd7b237c9020",
+  "model_snapshot_path": "/home/bphan944/.cache/huggingface/hub/models--OpenMuQ--MuQ-MuLan-large/snapshots/2e01c796b71dca71b45251384c04cd7b237c9020",
+  "muq_package_version": "0.1.0",
+  "norm_floor": 1e-12,
+  "pooled_normalization": "float64_L2",
+  "sample_rate_hz": 24000,
+  "segment_normalization": "float64_L2",
+  "storage_dtype": "float32",
+  "stride_samples": 240000,
+  "stride_seconds": 10,
+  "track_pooling": "all_chunks_equal_float64_mean",
+  "version": "full_song_muq_v1"
+}

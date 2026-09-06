@@ -13,3 +13,9 @@ Full-song MuQ validates the model output before the adapter's additional L2 oper
 The Chromium fixture uses synthetic WAV audio and disposable review state. Real-source playback validation must never submit judgments into the real queue. The review server exposes only its allowlisted player, session and packet-submission endpoints. Submission does not reveal metadata. The CLI separates the pre-review pipeline from gated snapshot, analysis and closeout commands.
 
 Engineering verification and real materialization are pending. No scientific verdict has been computed. The governing design is not modified by implementation.
+
+## Engineering amendment before any new inference or human outcomes
+
+The first prepared run, `frozen100_v1`, configuration `6450d2266b17adb2357ae5ff009ce8e2695fbff3a83ee14f364c20439188bc9a`, stopped with zero MuQ forward passes. Passing the local snapshot directory to the installed Hugging Face mixin selected a safetensors-only local-directory path, while the pinned checkpoint is the verified `pytorch_model.bin`. Its original ledger and frozen inputs are preserved. No scientific verdict applies to this engineering interruption.
+
+The corrected loader uses the existing `MuQMulanEncoder(revision=<pinned revision>)` repository-ID path, with `HF_HUB_OFFLINE=1` and `TRANSFORMERS_OFFLINE=1`, exactly as the historical adapter expects. No weight, estimator, audio policy, rating rule, or threshold changes. The loader source is now explicitly part of the embedding implementation hash. The corrected create-once run and CLI default are `frozen100_v2`; private live review state is `.research_audio/stage5e3_frozen100_v2_review`. This version change preserves the failed preparation rather than rewriting it.

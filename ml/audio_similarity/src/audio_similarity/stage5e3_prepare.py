@@ -8,7 +8,7 @@ from .stage5e3_artifacts import read, freeze_json, digest, hashes, verify_hashes
 from .stage5e3_inputs import tracks_and_baselines,rating_snapshot,historical_hashes,PRIOR
 from .full_song_muq import POLICY
 
-REPORT=Path('reports/stage5e3_full_song_muq_playlist_compatibility/frozen100_v1')
+REPORT=Path('reports/stage5e3_full_song_muq_playlist_compatibility/frozen100_v2')
 MODEL_REVISION='2e01c796b71dca71b45251384c04cd7b237c9020'
 
 
@@ -50,7 +50,7 @@ def model_identity(root):
     import muq
     muq_path=Path(muq.__file__).parent
     env['muq_source_hashes']=hashes(muq_path.rglob('*.py'),muq_path)
-    embedding_code=hashes([root/'src/audio_similarity'/name for name in ('full_song_muq.py','stage5e3_cache.py','holistic_encoders.py','audio.py')],root)
+    embedding_code=hashes([root/'src/audio_similarity'/name for name in ('full_song_muq.py','stage5e3_cache.py','stage5e3_materialize.py','holistic_encoders.py','audio.py')],root)
     return POLICY|{'model_identity':'OpenMuQ/MuQ-MuLan-large','model_revision':MODEL_REVISION,
                    'model_file_sha256':file_sha256(model),'model_config_sha256':file_sha256(config),
                    'model_snapshot_path':str(snapshot),'muq_package_version':packages['muq'],
