@@ -1,0 +1,14 @@
+{
+  "active_run_new_forward_passes": 0,
+  "cross_run_embedding_hashes": {
+    "full_song_muq_chunk_embeddings.npz": "d0be7ff6d4e12e83acd0a8cc1d080c994f01cc059e73fcb5a254d76ca088597f",
+    "full_song_muq_track_embeddings.npz": "53ec56c415b646ad18760bd1fee41c962719330cc14a06cc7844172f3e53ff32"
+  },
+  "embedding_rekeying": false,
+  "original_chunks": 1927,
+  "original_execution_ledger_sha256": "52e72b2e453b058ccdc8fe741a856129e65a6634087c21d10471afa5d51aeb80",
+  "original_forward_passes": 1927,
+  "parquet_content_equal_column_order_corrected": true,
+  "source_run": "../frozen100_v2",
+  "tracks": 100
+}

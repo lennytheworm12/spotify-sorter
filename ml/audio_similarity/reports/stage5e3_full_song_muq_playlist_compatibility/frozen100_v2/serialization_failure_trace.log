@@ -1,0 +1,111 @@
+1/100 OK cached=True forwards=0
+2/100 OK cached=True forwards=0
+3/100 OK cached=True forwards=0
+4/100 OK cached=True forwards=0
+5/100 OK cached=True forwards=0
+6/100 OK cached=True forwards=0
+7/100 OK cached=True forwards=0
+8/100 OK cached=True forwards=0
+9/100 OK cached=True forwards=0
+10/100 OK cached=True forwards=0
+11/100 OK cached=True forwards=0
+12/100 OK cached=True forwards=0
+13/100 OK cached=True forwards=0
+14/100 OK cached=True forwards=0
+15/100 OK cached=True forwards=0
+16/100 OK cached=True forwards=0
+17/100 OK cached=True forwards=0
+18/100 OK cached=True forwards=0
+19/100 OK cached=True forwards=0
+20/100 OK cached=True forwards=0
+21/100 OK cached=True forwards=0
+22/100 OK cached=True forwards=0
+23/100 OK cached=True forwards=0
+24/100 OK cached=True forwards=0
+25/100 OK cached=True forwards=0
+26/100 OK cached=True forwards=0
+27/100 OK cached=True forwards=0
+28/100 OK cached=True forwards=0
+29/100 OK cached=True forwards=0
+30/100 OK cached=True forwards=0
+31/100 OK cached=True forwards=0
+32/100 OK cached=True forwards=0
+33/100 OK cached=True forwards=0
+34/100 OK cached=True forwards=0
+35/100 OK cached=True forwards=0
+36/100 OK cached=True forwards=0
+37/100 OK cached=True forwards=0
+38/100 OK cached=True forwards=0
+39/100 OK cached=True forwards=0
+40/100 OK cached=True forwards=0
+41/100 OK cached=True forwards=0
+42/100 OK cached=True forwards=0
+43/100 OK cached=True forwards=0
+44/100 OK cached=True forwards=0
+45/100 OK cached=True forwards=0
+46/100 OK cached=True forwards=0
+47/100 OK cached=True forwards=0
+48/100 OK cached=True forwards=0
+49/100 OK cached=True forwards=0
+50/100 OK cached=True forwards=0
+51/100 OK cached=True forwards=0
+52/100 OK cached=True forwards=0
+53/100 OK cached=True forwards=0
+54/100 OK cached=True forwards=0
+55/100 OK cached=True forwards=0
+56/100 OK cached=True forwards=0
+57/100 OK cached=True forwards=0
+58/100 OK cached=True forwards=0
+59/100 OK cached=True forwards=0
+60/100 OK cached=True forwards=0
+61/100 OK cached=True forwards=0
+62/100 OK cached=True forwards=0
+63/100 OK cached=True forwards=0
+64/100 OK cached=True forwards=0
+65/100 OK cached=True forwards=0
+66/100 OK cached=True forwards=0
+67/100 OK cached=True forwards=0
+68/100 OK cached=True forwards=0
+69/100 OK cached=True forwards=0
+70/100 OK cached=True forwards=0
+71/100 OK cached=True forwards=0
+72/100 OK cached=True forwards=0
+73/100 OK cached=True forwards=0
+74/100 OK cached=True forwards=0
+75/100 OK cached=True forwards=0
+76/100 OK cached=True forwards=0
+77/100 OK cached=True forwards=0
+78/100 OK cached=True forwards=0
+79/100 OK cached=True forwards=0
+80/100 OK cached=True forwards=0
+81/100 OK cached=True forwards=0
+82/100 OK cached=True forwards=0
+83/100 OK cached=True forwards=0
+84/100 OK cached=True forwards=0
+85/100 OK cached=True forwards=0
+86/100 OK cached=True forwards=0
+87/100 OK cached=True forwards=0
+88/100 OK cached=True forwards=0
+89/100 OK cached=True forwards=0
+90/100 OK cached=True forwards=0
+91/100 OK cached=True forwards=0
+92/100 OK cached=True forwards=0
+93/100 OK cached=True forwards=0
+94/100 OK cached=True forwards=0
+95/100 OK cached=True forwards=0
+96/100 OK cached=True forwards=0
+97/100 OK cached=True forwards=0
+98/100 OK cached=True forwards=0
+99/100 OK cached=True forwards=0
+100/100 OK cached=True forwards=0
+Traceback (most recent call last):
+  File "/tmp/stage5e3-replay-audit.py", line 11, in <module>
+    replay=embed(root,run)
+           ^^^^^^^^^^^^^^^
+  File "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/src/audio_similarity/stage5e3_materialize.py", line 71, in embed
+    freeze_parquet(run/'full_song_muq_chunk_manifest.parquet',chunk_rows,['spotify_track_id','chunk_index'])
+  File "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/src/audio_similarity/stage5e3_artifacts.py", line 73, in freeze_parquet
+    freeze(path, out.getvalue())
+  File "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/src/audio_similarity/stage5e3_artifacts.py", line 32, in freeze
+    raise ValueError(f'frozen artifact differs: {path}; use a new versioned run')
+ValueError: frozen artifact differs: /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/reports/stage5e3_full_song_muq_playlist_compatibility/frozen100_v2/full_song_muq_chunk_manifest.parquet; use a new versioned run

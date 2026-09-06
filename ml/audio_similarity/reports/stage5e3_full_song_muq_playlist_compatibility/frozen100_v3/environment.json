@@ -1,0 +1,53 @@
+{
+  "autocast": false,
+  "cuda": "12.4",
+  "deterministic_algorithms": true,
+  "device": "NVIDIA GeForce RTX 4060 Ti",
+  "model_dependency_files": {
+    "models--OpenMuQ--MuQ-large-msd-iter": {
+      "snapshots/0562a57814f6f8bbd9fdea0a25921a2fce1a841a/config.json": "237335ee27d8fb951ce778701a12a79e06c51ae636dd786f97e45f51ce532543",
+      "snapshots/0562a57814f6f8bbd9fdea0a25921a2fce1a841a/model.safetensors": "273febab2be02872c37d2c37e48a9d6c52c1c9392f3eeeabd498efa281ccb7a6"
+    },
+    "models--xlm-roberta-base": {
+      "snapshots/e73636d4f797dec63c3081bb6ed5c7b0bb3f2089/config.json": "d66ed8cd4f2a93b358c245e50736fa389ed4f35c0bae7aad0b32abb20c62b579",
+      "snapshots/e73636d4f797dec63c3081bb6ed5c7b0bb3f2089/model.safetensors": "6fd4797bc397c3b8b55d6bb5740366b57e6a3ce91c04c77f22aafc0c128e6feb"
+    }
+  },
+  "muq_source_hashes": {
+    "__init__.py": "9992a578643a2f37a4901d8234f0311c90a40f7dc5bb3e735c63fd71226f4df3",
+    "muq/__init__.py": "e940aed947998857979e83245b5bd41f8fbc05e3261fbaafbef0321749555ddf",
+    "muq/models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "muq/models/muq_model.py": "9d0623fd1e2d7d9d212ed4ede1a04fb40a742282777b6a19fd08af6b2cc641db",
+    "muq/modules/__init__.py": "75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070",
+    "muq/modules/conv.py": "98386c207de5e70ff02d3cb76eac276902556faf4cd9902a5f8b7b2f0e27b221",
+    "muq/modules/features.py": "d4bd1b49bce611bebb8133a4bd4dbfd6252bc7554d96a0b13119be190b62945e",
+    "muq/modules/flash_conformer.py": "c0bf5df817a9c50e4706b4414b75e5399bcbdf89cec3a03de05f5ad8d0b3abfb",
+    "muq/modules/random_quantizer.py": "fbd5ff07bf0fe7116d2e5d207059137ce45b80c313ad4c7da23870bbd40b1b30",
+    "muq/modules/rvq.py": "7e427f2f1696b98fd95fe76c792f1570fc087f1265b2f1b151f800d3f4a5486b",
+    "muq/muq.py": "dbec360f5e3ef622d83f1a73085e67ddde946eb626acad768cc01c1f81374211",
+    "muq_mulan/__init__.py": "e26a0f594d2435d83094bf915f8480cad8fe1cd0c4d7d6679e1b3053fc7909b8",
+    "muq_mulan/models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "muq_mulan/models/audio.py": "05231129cffeb5132aded81b9aabc79ee29fc01513f26879ef98b1b0fbb14b9c",
+    "muq_mulan/models/mulan.py": "f91111e8b54b408f749a526f3f13a1d3c1520d2de6692331d55bb35814fbb3fe",
+    "muq_mulan/models/text.py": "0cd88116c4fc4bcc310ee87ffaa03f6d3af7f09c593a233ded494e1130c2d0a5",
+    "muq_mulan/modules/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "muq_mulan/modules/contrastive.py": "a6e4327f34fb76ea3eb01d8a7ffd292ee127400096020a5d13a6c8ea38be4ecc",
+    "muq_mulan/modules/distributed.py": "243b9842b1b04062067dac0344df5bb8308a282e6b67baa5bfa14ed1d66177a7",
+    "muq_mulan/modules/extend_distributed.py": "d9d3f1d5ed06ce0ea9e839240739ecf7a5f7d7971b0e28763c0f55ab20057bf5",
+    "muq_mulan/modules/transformer.py": "5eb75b0ce631180fa11abb99f0db35ec1dfe110053026a31092937e1fae76dad",
+    "muq_mulan/modules/utils.py": "b457791957f9fcf6c56e4dfabae2d0b1a998b14498b33504eabbe77ff9369c8a",
+    "muq_mulan/muq_mulan.py": "594843bf29efed147f97768c60946d8e247dce183af085fc5dffcd3d03a7164e"
+  },
+  "packages": {
+    "huggingface-hub": "1.28.0",
+    "muq": "0.1.0",
+    "numpy": "1.26.4",
+    "pyarrow": "25.0.1",
+    "torch": "2.6.0+cu124",
+    "torchaudio": "2.6.0+cu124",
+    "transformers": "5.15.1"
+  },
+  "python": "3.11.16",
+  "tf32": false,
+  "threads": 1
+}

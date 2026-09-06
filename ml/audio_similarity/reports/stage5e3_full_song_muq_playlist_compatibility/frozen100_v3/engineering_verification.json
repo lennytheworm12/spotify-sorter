@@ -1,0 +1,62 @@
+{
+  "analysis_fixtures": {
+    "coverage": "all verdict branches, precedence, threshold equality/nulls, complete-anchor pairing, bootstrap, original-label insufficiency, end-to-end robust-win and track-node checks",
+    "passed": true,
+    "real_data_winner_selection_run": false
+  },
+  "chromium_fixture": {
+    "passed": true,
+    "result": "isolated playback, seeking, Range, pagination, atomic submission, reload, restart/resume, global blinding; no real-state writes"
+  },
+  "deterministic_artifacts": {
+    "new_forwards": 0,
+    "output_rewrites": 0,
+    "passed": true,
+    "prepare_rewrites": 0,
+    "track_cache_hits": 100
+  },
+  "diagnostic_note": "Validation is engineering-only; the final full suite overlapped cache/artifact checks. No performance-comparison claim.",
+  "evidence_hashes": {
+    "verification/baseline_tests.txt": "d1408d68f626585a3bbb5fe208ccce26c5ab4c2fe8d2d05f9e6f6a5627c8f5b2",
+    "verification/cache_and_determinism_result.json": "3b2b436bfd7367da09f67c2f74231e34f8c914581570783274b4d2ff5f71c3a7",
+    "verification/final_full_tests.txt": "c6b91d851c1471f81737e9832c14cb41f593db1d9c52ec770f8609458b73cff1",
+    "verification/fixture_browser_screenshot.png": "2b23637fa0d7e19e3817439bbf9ea15b42923bc3c8e3255ba10d19dd5f146a6a",
+    "verification/focused_tests.txt": "98f4907d72bd05591c0cc77b7b87d587442a1739a58b65521c5a5a0f9f6ebef3",
+    "verification/real_browser_result.json": "91d980451901328b4570695f058775432b9710fc5f940d66b1284e25afa40279",
+    "verification/real_browser_screenshot.png": "e630b0b9311b6748e64ff528d7702a1a57c3ee2cda8ed4cbdc946153a9e755e2",
+    "verification/review_lock_tests.txt": "ff169fca18e355bf689775daad6f64eed45577fec260fcb671ce369f9a33d09f",
+    "verification/verify_cache_replay.py": "985bf5e64c61c15ae424a109c182792cab9400ceb10c72aa148820b626d997bd",
+    "verification/verify_real_browser.py": "b6b1a3e2f451e8f5721b3cab292e3a72eb0b70bde0df67edbf775897ab358a1f"
+  },
+  "full_nonheavy_suite": {
+    "command": ".venv/bin/python -m pytest -q",
+    "passed": true,
+    "result": "1245 passed, 12 deselected, 11 warnings in 160.59s"
+  },
+  "historical_integrity": {
+    "historical_files": 197,
+    "passed": true,
+    "prior_stage5e3_runs_preserved": true,
+    "source_hashes": 100
+  },
+  "method_slots": {
+    "M1_C_CLAP": 500,
+    "M2_FULL_MUQ": 500,
+    "M3_C_PLUS_FIXED_MUQ": 500,
+    "M4_C_PLUS_FULL_MUQ": 500
+  },
+  "real_source_playback": {
+    "console_errors_or_warnings": 0,
+    "failed_requests": 0,
+    "page_errors": 0,
+    "passed": true,
+    "real_rating_bytes": 0,
+    "tracks": 100
+  },
+  "review_state": ".research_audio/stage5e3_frozen100_v3_review",
+  "targeted_tests": {
+    "command": ".venv/bin/python -m pytest -q tests/test_full_song_muq.py tests/test_stage5e3_analysis.py tests/test_stage5e3_review.py tests/test_stage5e3_freeze.py",
+    "passed": true,
+    "result": "36 passed; subsequent serialization/prepare focused run: 22 passed; all 37 new cases included in final suite"
+  }
+}

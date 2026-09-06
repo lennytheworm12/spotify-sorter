@@ -1,0 +1,72 @@
+{
+  "decoder": "shared load_audio; float32 channel mean before torchaudio default resample; full recording",
+  "evaluation_implementation": {
+    "evaluation/static/stage5e3_review.html": "ae1b48f76f63767f1d0e46f741912a04c50edb0f055dc9c35b27da658bac6f08",
+    "src/audio_similarity/cli/stage5b1b_review_server.py": "50474f5422f1639862bcb1180dfaa5d7b94d4898145e3e5d3bd45ec395535fb0",
+    "src/audio_similarity/cli/stage5e3.py": "0c03e4e792cf4d6ac15f2bd6f8c691872586a74954d1a0d131c3bd84ed5331ac",
+    "src/audio_similarity/full_song_muq.py": "ef3bf5c1ec9dc5c7fcb0814577839648338c153395f2799acacf1b54b1ec63e8",
+    "src/audio_similarity/playlist_compatibility_eval.py": "5abba32d32ef769c5e0b95ad256ee496b8c1034606c9dcb9172cdfa64394f092",
+    "src/audio_similarity/stage5a_contract.py": "7011eef32488652d587938fd7824f4ea89af3fd707674ca271cd6d890edf392b",
+    "src/audio_similarity/stage5b1a_models.py": "c0aec91e7a2881d1623d9cc6038c09c2cb088a2d296606f3fc68301a016fac1a",
+    "src/audio_similarity/stage5b1b_artifacts.py": "6e26d2f76655af7ac07814f64464c8f13f6f8b8d8f4f23aa4d6c1ef025b0af91",
+    "src/audio_similarity/stage5c2_analysis.py": "0d6f63848a1707958d15f42a8dfa62e19f7fa33cb444a1c14beddb7e2cdea280",
+    "src/audio_similarity/stage5e1_review.py": "e994d7f63bee97d54fa3481fedf468bdd1403a3642acbb1f5300e400279aa197",
+    "src/audio_similarity/stage5e2.py": "b64c61543b336577d8c943d83ed24822f250e6ecf19ced443303467dbcce7eb6",
+    "src/audio_similarity/stage5e3_artifacts.py": "83a193985c60bb67fa36e696162d7447bf0313d14660166bd1b207ebd8afbed3",
+    "src/audio_similarity/stage5e3_cache.py": "d26312602807ba0674c829cc932c9d96d736f711a52ad0fb6bf2b227e6645f33",
+    "src/audio_similarity/stage5e3_closeout.py": "e7f1e353881366845fd754d11541e73c7416faba810b114d048a10984dbcda14",
+    "src/audio_similarity/stage5e3_handoff.py": "dfec9e4180e37c3cd3b0d482d14dcba6b16e0e177f486bb243ab42ad6c20fdd9",
+    "src/audio_similarity/stage5e3_inputs.py": "2492078360009f6e385f994476c49c1ff4c4b942260af2363552c4b9ab3fc1d2",
+    "src/audio_similarity/stage5e3_materialize.py": "27d2ae2b47f8c86eecc32ed68d371de3756a1603a9fae0b2c6d9be8c64ed20ed",
+    "src/audio_similarity/stage5e3_prepare.py": "f950f83783549267c9697dcdaee2f645de6222578cf456fe3dcac387f3787682",
+    "src/audio_similarity/stage5e3_retrieval.py": "14b8c2404488c749cb482a4a76fe3d1bd52d3265eea5494f25c595fc1e491d1e",
+    "src/audio_similarity/stage5e3_review.py": "596cc455d3efc31421cfaf6cf6a6b89c15b15022112f351f0029bdc2fe3de8c3",
+    "src/audio_similarity/stage5f1_inputs.py": "01327940d53b78f806dedbb42dfa03c8d3964ab6d0ca5b6a3152d381f3f2844e",
+    "tests/test_full_song_muq.py": "09ac66fc4d992f17fe18171bf09502abedc2418ed9e14c8b3e938c90f112cbbe",
+    "tests/test_stage5e3_analysis.py": "51f4aa0b040076d7f1a12ccded31c7e66bcc7c2dbfec3fc95027ef70a25c0d34",
+    "tests/test_stage5e3_freeze.py": "709c5bb9bdd1d4ee9789acb45549de2667a5e3fed1e1a94430cd6911b283f352",
+    "tests/test_stage5e3_review.py": "b687678b68c4212a047528981149e7921edb5ece8aece9f248973d8b4a9b12b5"
+  },
+  "governing_design_sha256": "24c4d439b2366fbdd10f02eb883dd81b269f65ad6ca5440ba9ef9424c48eaec0",
+  "parquet_sort_keys": {
+    "chunk_manifest": [
+      "spotify_track_id",
+      "chunk_index"
+    ],
+    "probes": [
+      "query",
+      "pair_id"
+    ],
+    "retrieval": [
+      "method_id",
+      "query",
+      "rank"
+    ],
+    "union": [
+      "query",
+      "candidate"
+    ]
+  },
+  "policy": {
+    "chunk_samples": 240000,
+    "chunk_seconds": 10,
+    "dimension": 512,
+    "final_partial_policy": "cyclic_final_chunk_own_samples",
+    "norm_floor": 1e-12,
+    "pooled_normalization": "float64_L2",
+    "sample_rate_hz": 24000,
+    "segment_normalization": "float64_L2",
+    "storage_dtype": "float32",
+    "stride_samples": 240000,
+    "stride_seconds": 10,
+    "track_pooling": "all_chunks_equal_float64_mean",
+    "version": "full_song_muq_v1"
+  },
+  "seed": 20260906,
+  "serialization": {
+    "json": "sorted UTF8 finite indent2 final newline",
+    "npz": "sorted NPY members, stored ZIP, timestamp 1980-01-01",
+    "parquet": "2.6 NONE compression, no dictionary, statistics, row_group_size=65536; columns lexical; rows sorted by documented keys"
+  },
+  "shuffle": "SHA256(seed:namespace:stable_id), lexical hash then stable ID"
+}

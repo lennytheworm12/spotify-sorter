@@ -1,0 +1,55 @@
+/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:  27%|██▋       | 54/199 [00:00<00:00, 539.02it/s]Loading weights:  63%|██████▎   | 126/199 [00:00<00:00, 642.15it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 869.34it/s]
+[transformers] [1mXLMRobertaModel LOAD REPORT[0m from: xlm-roberta-base
+Key                       | Status     |  | 
+--------------------------+------------+--+-
+lm_head.bias              | UNEXPECTED |  | 
+lm_head.layer_norm.weight | UNEXPECTED |  | 
+lm_head.dense.weight      | UNEXPECTED |  | 
+lm_head.dense.bias        | UNEXPECTED |  | 
+lm_head.layer_norm.bias   | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/src/audio_similarity/cli/stage5e3.py", line 34, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/src/audio_similarity/cli/stage5e3.py", line 31, in main
+    else:result=commands[args.command]()
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/src/audio_similarity/cli/stage5e3.py", line 20, in <lambda>
+    commands={'prepare':lambda:prepare(root,run),'embed-full-muq':lambda:embed(root,run),
+                                                                         ^^^^^^^^^^^^^^^
+  File "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/src/audio_similarity/stage5e3_materialize.py", line 44, in embed
+    adapter=MuQMulanEncoder(AdapterSpec('muq_mulan_large',hf_repo=config['model_snapshot_path']),revision=config['model_revision'])
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/src/audio_similarity/holistic_encoders.py", line 75, in __init__
+    self.model = MuQMuLan.from_pretrained(self.spec.hf_repo, **kwargs).to(self.device).eval()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/muq/muq_mulan/muq_mulan.py", line 91, in from_pretrained
+    return super().from_pretrained(*args, cache_dir=cache_dir, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/huggingface_hub/hub_mixin.py", line 561, in from_pretrained
+    instance = cls._from_pretrained(
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/huggingface_hub/hub_mixin.py", line 779, in _from_pretrained
+    return cls._load_as_safetensor(model, model_file, map_location, strict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/huggingface_hub/hub_mixin.py", line 824, in _load_as_safetensor
+    safetensors.torch.load_model(model, model_file, strict=strict, device=map_location)  # type: ignore [arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/safetensors/torch.py", line 228, in load_model
+    state_dict = load_file(filename, device=device, backend=backend)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/safetensors/torch.py", line 359, in load_file
+    with safe_open(filename, framework="pt", device=device, backend=backend) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: No such file or directory: /home/bphan944/.cache/huggingface/hub/models--OpenMuQ--MuQ-MuLan-large/snapshots/2e01c796b71dca71b45251384c04cd7b237c9020/model.safetensors
+Loading weights from local directory

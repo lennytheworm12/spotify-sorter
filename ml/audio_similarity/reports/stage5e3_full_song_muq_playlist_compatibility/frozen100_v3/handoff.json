@@ -1,0 +1,37 @@
+{
+  "configuration_hash": "c5f90498cb9a269d8d61e23aba5dc92a7c4c812337304ae20a0a98774e94c743",
+  "counts": {
+    "all_unique_pairs": 770,
+    "compatible_reused_natural_pairs": 385,
+    "conflicted_natural_pairs": 0,
+    "drift_repeat_pairs": 148,
+    "natural_directional_slots": 2000,
+    "natural_unique_pairs": 656,
+    "packets": 98,
+    "probe_directional_appearances": 171,
+    "reused_without_repeat": 351,
+    "review_unique_pairs": 419,
+    "unresolved_natural_pairs": 271,
+    "unresolved_nonconflicted_pairs": 271
+  },
+  "design_sha256": "24c4d439b2366fbdd10f02eb883dd81b269f65ad6ca5440ba9ef9424c48eaec0",
+  "experiment_status": "AWAITING_HUMAN_REVIEW",
+  "pending_artifacts": [
+    "post_review_rating_snapshot.json",
+    "review_reveal.json",
+    "rating_coverage.json",
+    "playlist_compatibility_metrics.json",
+    "known_good_recovery.json",
+    "known_false_positive_recurrence.json",
+    "method_overlap.json",
+    "paired_method_comparison.json",
+    "track_node_sensitivity.json",
+    "revision_sensitivity.json",
+    "missing_rating_bounds.json",
+    "verdict_predicates.json",
+    "closeout.json"
+  ],
+  "production_activation": false,
+  "status": "READY_FOR_HUMAN_REVIEW",
+  "tracks": 100
+}
