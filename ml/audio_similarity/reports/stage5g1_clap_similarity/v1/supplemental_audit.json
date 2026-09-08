@@ -1,0 +1,843 @@
+{
+  "all_historical_hashes_unchanged": true,
+  "artist_overlap": {
+    "test__train": [
+      "chicken97",
+      "city girl",
+      "hyejin",
+      "tiffi"
+    ],
+    "test__validation": [
+      "city girl",
+      "tiffi"
+    ],
+    "train__validation": [
+      "city girl",
+      "gracie abrams",
+      "illit",
+      "jay park",
+      "jida",
+      "le sserafim",
+      "tiffi",
+      "yayyoung"
+    ]
+  },
+  "cache_replay_forwards": 0,
+  "historical_hash_count": 360,
+  "known_case_diagnostics": [
+    {
+      "pair_id": "0618e282b54eae7acdf2ffe7",
+      "partition": [
+        "validation",
+        "train"
+      ],
+      "rating": 3,
+      "scores": {
+        "B0": 0.6163092255592346,
+        "B1": 0.7623959347026148,
+        "M1": 0.4983691871166229
+      },
+      "titles": [
+        "Shoota (feat. Lil Uzi Vert)",
+        "TOUCH"
+      ],
+      "tracks": [
+        "2BJSMvOGABRxokHKB0OI8i",
+        "5cgy5vMqVZbd8hYutp2txu"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "0677bdbdd9b8346b96f0e16b",
+      "partition": [
+        "train",
+        "test"
+      ],
+      "rating": 3,
+      "scores": {
+        "B0": 0.7198291420936584,
+        "B1": 0.825031591667345,
+        "M1": 0.4977347254753113
+      },
+      "titles": [
+        "boys dont cry",
+        "DANCING ALONE"
+      ],
+      "tracks": [
+        "1ON9XudZFxwu43tQXBszIX",
+        "3vC63Nh3rSREo7qDHgnx8I"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "0fbdea7b3a9f1ee748e76c0c",
+      "partition": [
+        "train",
+        "validation"
+      ],
+      "rating": 2,
+      "scores": {
+        "B0": 0.7358075976371765,
+        "B1": 0.8130634404567978,
+        "M1": 0.498096227645874
+      },
+      "titles": [
+        "boys dont cry",
+        "Magnetic"
+      ],
+      "tracks": [
+        "1ON9XudZFxwu43tQXBszIX",
+        "1aKvZDoLGkNMxoRYgkckZG"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "1e69f8149fc8838ac131b669",
+      "partition": [
+        "train",
+        "train"
+      ],
+      "rating": 3,
+      "scores": {
+        "B0": 0.7465711832046509,
+        "B1": 0.8553566313604106,
+        "M1": 0.4987855851650238
+      },
+      "titles": [
+        "GET IT",
+        "Wet Dreamz"
+      ],
+      "tracks": [
+        "4LaZ8RpIP6DIgN73bXQVlO",
+        "4tqcoej1zPvwePZCzuAjJd"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "2268733cd037dda1b3be60a2",
+      "partition": [
+        "validation",
+        "test"
+      ],
+      "rating": 1,
+      "scores": {
+        "B0": 0.7116323113441467,
+        "B1": 0.7575882001287577,
+        "M1": 0.4982568323612213
+      },
+      "titles": [
+        "Shoota (feat. Lil Uzi Vert)",
+        "It'll Be Ok"
+      ],
+      "tracks": [
+        "2BJSMvOGABRxokHKB0OI8i",
+        "2YO6ZDPdQFkrOa6YYceEN4"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "2d6ab67756296291e2b59a3a",
+      "partition": [
+        "train",
+        "train"
+      ],
+      "rating": 4,
+      "scores": {
+        "B0": 0.6778402328491211,
+        "B1": 0.7529795045197971,
+        "M1": 0.49826866388320923
+      },
+      "titles": [
+        "We (OUI) (Feat. sogumm)",
+        "Wet Dreamz"
+      ],
+      "tracks": [
+        "043ryKJlgSnAUzpXnfxU6b",
+        "4tqcoej1zPvwePZCzuAjJd"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "401c53398400271cba5ca373",
+      "partition": [
+        "validation",
+        "test"
+      ],
+      "rating": 1,
+      "scores": {
+        "B0": 0.6288365125656128,
+        "B1": 0.7196285948135086,
+        "M1": 0.4982798993587494
+      },
+      "titles": [
+        "Shoota (feat. Lil Uzi Vert)",
+        "My Gamecube Broke."
+      ],
+      "tracks": [
+        "2BJSMvOGABRxokHKB0OI8i",
+        "2Vu2hkPW7LxMHPqoMjSIEJ"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "4b43a8c6d287bc6a34b2dc4b",
+      "partition": [
+        "train",
+        "train"
+      ],
+      "rating": 2,
+      "scores": {
+        "B0": 0.6807371377944946,
+        "B1": 0.6816008830658826,
+        "M1": 0.49737757444381714
+      },
+      "titles": [
+        "The Way",
+        "Wet Dreamz"
+      ],
+      "tracks": [
+        "06EL94D0TA27Ik0Ke5usbj",
+        "4tqcoej1zPvwePZCzuAjJd"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "6957ad9b8e2fb7c785e66b54",
+      "partition": [
+        "train",
+        "train"
+      ],
+      "rating": 4,
+      "scores": {
+        "B0": 0.6916532516479492,
+        "B1": 0.85715264334228,
+        "M1": 0.49783799052238464
+      },
+      "titles": [
+        "boys dont cry",
+        "Stoked"
+      ],
+      "tracks": [
+        "1ON9XudZFxwu43tQXBszIX",
+        "6nef0wHkelfKqNVHAtzJbR"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "7212ccd94430fe791a7adf13",
+      "partition": [
+        "train",
+        "train"
+      ],
+      "rating": 5,
+      "scores": {
+        "B0": 0.7147316336631775,
+        "B1": 0.7647402846159292,
+        "M1": 0.4977966248989105
+      },
+      "titles": [
+        "boys dont cry",
+        "The Peace"
+      ],
+      "tracks": [
+        "1ON9XudZFxwu43tQXBszIX",
+        "6wm3t4VpTxSFfOUgTMlHZM"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "72f94c1315c7fb0a7595a095",
+      "partition": [
+        "validation",
+        "test"
+      ],
+      "rating": 1,
+      "scores": {
+        "B0": 0.6924832463264465,
+        "B1": 0.6969316595093482,
+        "M1": 0.4986538887023926
+      },
+      "titles": [
+        "Shoota (feat. Lil Uzi Vert)",
+        "You Never Know"
+      ],
+      "tracks": [
+        "2BJSMvOGABRxokHKB0OI8i",
+        "39kzWAiVPpycdMpr745oPj"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "78228b72fde7c5586d53ada7",
+      "partition": [
+        "train",
+        "train"
+      ],
+      "rating": 1,
+      "scores": {
+        "B0": 0.7097211480140686,
+        "B1": 0.7514446582725067,
+        "M1": 0.49782416224479675
+      },
+      "titles": [
+        "Wet Dreamz",
+        "Sit Around"
+      ],
+      "tracks": [
+        "4tqcoej1zPvwePZCzuAjJd",
+        "6pWqlKm9ugucgKNldCLigX"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "82f00bd962f0fcd721804f3b",
+      "partition": [
+        "validation",
+        "train"
+      ],
+      "rating": 1,
+      "scores": {
+        "B0": 0.716524600982666,
+        "B1": 0.7474533366971801,
+        "M1": 0.4978863298892975
+      },
+      "titles": [
+        "Shoota (feat. Lil Uzi Vert)",
+        "Stay With Me"
+      ],
+      "tracks": [
+        "2BJSMvOGABRxokHKB0OI8i",
+        "5ri8u5RA8e4vGMyMAGXy0p"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "85cc57567fd90225e756eb3c",
+      "partition": [
+        "train",
+        "train"
+      ],
+      "rating": 2,
+      "scores": {
+        "B0": 0.5521212220191956,
+        "B1": 0.6918738130586798,
+        "M1": 0.4978821873664856
+      },
+      "titles": [
+        "DOWNPOUR (feat. Gliiico)",
+        "Wet Dreamz"
+      ],
+      "tracks": [
+        "1IIcy1TpuiAT6S206OjYvC",
+        "4tqcoej1zPvwePZCzuAjJd"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "8959a418ed6b4366cf36cbec",
+      "partition": [
+        "validation",
+        "train"
+      ],
+      "rating": 2,
+      "scores": {
+        "B0": 0.6531219482421875,
+        "B1": 0.7948345484577758,
+        "M1": 0.4989396333694458
+      },
+      "titles": [
+        "Shoota (feat. Lil Uzi Vert)",
+        "Fresh Air"
+      ],
+      "tracks": [
+        "2BJSMvOGABRxokHKB0OI8i",
+        "30NAF18yQGvwKrbn1IEMKn"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "8bf63252627a9df29b0196f0",
+      "partition": [
+        "train",
+        "train"
+      ],
+      "rating": 2,
+      "scores": {
+        "B0": 0.8057678937911987,
+        "B1": 0.8425578073015814,
+        "M1": 0.49750351905822754
+      },
+      "titles": [
+        "Wet Dreamz",
+        "Stoked"
+      ],
+      "tracks": [
+        "4tqcoej1zPvwePZCzuAjJd",
+        "6nef0wHkelfKqNVHAtzJbR"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "930b027f31f0b07c14d37632",
+      "partition": [
+        "train",
+        "test"
+      ],
+      "rating": 3,
+      "scores": {
+        "B0": 0.6172668933868408,
+        "B1": 0.7948936730011003,
+        "M1": 0.49735912680625916
+      },
+      "titles": [
+        "boys dont cry",
+        "The Hills"
+      ],
+      "tracks": [
+        "1ON9XudZFxwu43tQXBszIX",
+        "7fBv7CLKzipRk6EC6TWHOB"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "989bcb7abad3e5b5daec1583",
+      "partition": [
+        "train",
+        "train"
+      ],
+      "rating": 3,
+      "scores": {
+        "B0": 0.6961237192153931,
+        "B1": 0.8268836382433172,
+        "M1": 0.497947633266449
+      },
+      "titles": [
+        "boys dont cry",
+        "Die Right Here"
+      ],
+      "tracks": [
+        "1ON9XudZFxwu43tQXBszIX",
+        "7fXYFuCTmNrYRGwEUUf5iz"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "a4a77526b210e2ddbbd4792b",
+      "partition": [
+        "validation",
+        "validation"
+      ],
+      "rating": 2,
+      "scores": {
+        "B0": 0.684645414352417,
+        "B1": 0.7166522353106802,
+        "M1": 0.4987633526325226
+      },
+      "titles": [
+        "Shoota (feat. Lil Uzi Vert)",
+        "Thirsty"
+      ],
+      "tracks": [
+        "2BJSMvOGABRxokHKB0OI8i",
+        "6nICBdDevG4NZysIqDFPEa"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "a5c1437b48b5d0fb252b63c5",
+      "partition": [
+        "validation",
+        "train"
+      ],
+      "rating": 3,
+      "scores": {
+        "B0": 0.7997162938117981,
+        "B1": 0.8910634794676382,
+        "M1": 0.49865561723709106
+      },
+      "titles": [
+        "Shoota (feat. Lil Uzi Vert)",
+        "Wet Dreamz"
+      ],
+      "tracks": [
+        "2BJSMvOGABRxokHKB0OI8i",
+        "4tqcoej1zPvwePZCzuAjJd"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "a5de82d228586f830050fb1b",
+      "partition": [
+        "train",
+        "train"
+      ],
+      "rating": 4,
+      "scores": {
+        "B0": 0.718405544757843,
+        "B1": 0.753344198720622,
+        "M1": 0.49751555919647217
+      },
+      "titles": [
+        "boys dont cry",
+        "GET IT"
+      ],
+      "tracks": [
+        "1ON9XudZFxwu43tQXBszIX",
+        "4LaZ8RpIP6DIgN73bXQVlO"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "a6eaa7e086490f7a1ff51063",
+      "partition": [
+        "validation",
+        "train"
+      ],
+      "rating": 3,
+      "scores": {
+        "B0": 0.5915731191635132,
+        "B1": 0.6829188805498231,
+        "M1": 0.49727863073349
+      },
+      "titles": [
+        "Shoota (feat. Lil Uzi Vert)",
+        "Die Right Here"
+      ],
+      "tracks": [
+        "2BJSMvOGABRxokHKB0OI8i",
+        "7fXYFuCTmNrYRGwEUUf5iz"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "adb7fd4b62ba75c4d534767f",
+      "partition": [
+        "train",
+        "train"
+      ],
+      "rating": 2,
+      "scores": {
+        "B0": 0.5008244514465332,
+        "B1": 0.49492814875079294,
+        "M1": 0.4973907172679901
+      },
+      "titles": [
+        "falling down",
+        "Wet Dreamz"
+      ],
+      "tracks": [
+        "0ASYuzPsTBA6ZmIsuvNZby",
+        "4tqcoej1zPvwePZCzuAjJd"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "beb32cc309c07c45f3a7ac77",
+      "partition": [
+        "train",
+        "train"
+      ],
+      "rating": 3,
+      "scores": {
+        "B0": 0.7188467979431152,
+        "B1": 0.847641523588158,
+        "M1": 0.49727538228034973
+      },
+      "titles": [
+        "Sunday (feat. HEIZE, Jay Park)",
+        "boys dont cry"
+      ],
+      "tracks": [
+        "0JJeoiCAa1hwcBsPxBN2w4",
+        "1ON9XudZFxwu43tQXBszIX"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "c496380302245589eb0e5e57",
+      "partition": [
+        "validation",
+        "train"
+      ],
+      "rating": 3,
+      "scores": {
+        "B0": 0.7619850635528564,
+        "B1": 0.8268524211464181,
+        "M1": 0.49814534187316895
+      },
+      "titles": [
+        "Shoota (feat. Lil Uzi Vert)",
+        "Stoked"
+      ],
+      "tracks": [
+        "2BJSMvOGABRxokHKB0OI8i",
+        "6nef0wHkelfKqNVHAtzJbR"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "c78f2fcff0b5c7208167123e",
+      "partition": [
+        "train",
+        "train"
+      ],
+      "rating": 2,
+      "scores": {
+        "B0": 0.6919790506362915,
+        "B1": 0.8339575387375486,
+        "M1": 0.49718308448791504
+      },
+      "titles": [
+        "The Way",
+        "boys dont cry"
+      ],
+      "tracks": [
+        "06EL94D0TA27Ik0Ke5usbj",
+        "1ON9XudZFxwu43tQXBszIX"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "c9b423f4b2118a95dc3df919",
+      "partition": [
+        "train",
+        "validation"
+      ],
+      "rating": 3,
+      "scores": {
+        "B0": 0.6927026510238647,
+        "B1": 0.7449502087262444,
+        "M1": 0.498114675283432
+      },
+      "titles": [
+        "The Way",
+        "Shoota (feat. Lil Uzi Vert)"
+      ],
+      "tracks": [
+        "06EL94D0TA27Ik0Ke5usbj",
+        "2BJSMvOGABRxokHKB0OI8i"
+      ],
+      "untouched_generalization_evidence": false
+    },
+    {
+      "pair_id": "e87169502eee7b83a0680b6d",
+      "partition": [
+        "validation",
+        "train"
+      ],
+      "rating": 3,
+      "scores": {
+        "B0": 0.78746098279953,
+        "B1": 0.8681716659323406,
+        "M1": 0.4992063641548157
+      },
+      "titles": [
+        "Shoota (feat. Lil Uzi Vert)",
+        "GET IT"
+      ],
+      "tracks": [
+        "2BJSMvOGABRxokHKB0OI8i",
+        "4LaZ8RpIP6DIgN73bXQVlO"
+      ],
+      "untouched_generalization_evidence": false
+    }
+  ],
+  "segments": 1927,
+  "status": "PASS",
+  "strong_and_absolute_uncertainty": {
+    "B0": {
+      "strong_test": {
+        "anchor_macro": 0.6933333333333334,
+        "anchors": 10,
+        "constraints": 25,
+        "per_anchor": {
+          "2Ah7oAy4esXD8pEEhY0hyR": 1.0,
+          "2BFAfMIblG0RZeAvlmLC81": 0.6,
+          "2YO6ZDPdQFkrOa6YYceEN4": 0.0,
+          "2aiVdNIqY5BDCM10fKlKpS": 0.3333333333333333,
+          "2yQY2IzeQtUKanVo78Fg23": 1.0,
+          "3F5HhdyBfvCbzuPJbGBHkc": 1.0,
+          "3azJifCSqg9fRij2yKIbWz": 1.0,
+          "3vC63Nh3rSREo7qDHgnx8I": 1.0,
+          "5UUnRflW65AsvluD8d5N2U": 1.0,
+          "6HIngEWX8ycnLjuUfSZyah": 0.0
+        },
+        "preference_micro": 0.68,
+        "strong_anchor_macro": 0.6933333333333334,
+        "strong_constraints": 25
+      },
+      "strong_test_macro_interval": {
+        "delta": 0.6933333333333334,
+        "eligible_ids": [
+          "2Ah7oAy4esXD8pEEhY0hyR",
+          "2BFAfMIblG0RZeAvlmLC81",
+          "2YO6ZDPdQFkrOa6YYceEN4",
+          "2aiVdNIqY5BDCM10fKlKpS",
+          "2yQY2IzeQtUKanVo78Fg23",
+          "3F5HhdyBfvCbzuPJbGBHkc",
+          "3azJifCSqg9fRij2yKIbWz",
+          "3vC63Nh3rSREo7qDHgnx8I",
+          "5UUnRflW65AsvluD8d5N2U",
+          "6HIngEWX8ycnLjuUfSZyah"
+        ],
+        "high": 0.9333333333333332,
+        "low": 0.42666666666666664,
+        "reason": null
+      },
+      "test_macro_interval": {
+        "delta": 0.6258116883116883,
+        "eligible_ids": [
+          "2Ah7oAy4esXD8pEEhY0hyR",
+          "2BFAfMIblG0RZeAvlmLC81",
+          "2YO6ZDPdQFkrOa6YYceEN4",
+          "2aiVdNIqY5BDCM10fKlKpS",
+          "2yQY2IzeQtUKanVo78Fg23",
+          "37BvHZhn4399Zhh6EDa4km",
+          "39kzWAiVPpycdMpr745oPj",
+          "3F5HhdyBfvCbzuPJbGBHkc",
+          "3azJifCSqg9fRij2yKIbWz",
+          "3vC63Nh3rSREo7qDHgnx8I",
+          "5UUnRflW65AsvluD8d5N2U",
+          "5ngJKkOmjkN460b2ApBnLk",
+          "5q3LwAHTqo9d3rET2EA9Nq",
+          "6HIngEWX8ycnLjuUfSZyah",
+          "7F6PtLP6fJPVtA1FWVkl8K",
+          "7fBv7CLKzipRk6EC6TWHOB"
+        ],
+        "high": 0.8142268668831167,
+        "low": 0.4348214285714286,
+        "reason": null
+      }
+    },
+    "B1": {
+      "strong_test": {
+        "anchor_macro": 0.61,
+        "anchors": 10,
+        "constraints": 25,
+        "per_anchor": {
+          "2Ah7oAy4esXD8pEEhY0hyR": 0.0,
+          "2BFAfMIblG0RZeAvlmLC81": 0.6,
+          "2YO6ZDPdQFkrOa6YYceEN4": 1.0,
+          "2aiVdNIqY5BDCM10fKlKpS": 0.0,
+          "2yQY2IzeQtUKanVo78Fg23": 0.6666666666666666,
+          "3F5HhdyBfvCbzuPJbGBHkc": 0.3333333333333333,
+          "3azJifCSqg9fRij2yKIbWz": 0.5,
+          "3vC63Nh3rSREo7qDHgnx8I": 1.0,
+          "5UUnRflW65AsvluD8d5N2U": 1.0,
+          "6HIngEWX8ycnLjuUfSZyah": 1.0
+        },
+        "preference_micro": 0.6,
+        "strong_anchor_macro": 0.61,
+        "strong_constraints": 25
+      },
+      "strong_test_macro_interval": {
+        "delta": 0.61,
+        "eligible_ids": [
+          "2Ah7oAy4esXD8pEEhY0hyR",
+          "2BFAfMIblG0RZeAvlmLC81",
+          "2YO6ZDPdQFkrOa6YYceEN4",
+          "2aiVdNIqY5BDCM10fKlKpS",
+          "2yQY2IzeQtUKanVo78Fg23",
+          "3F5HhdyBfvCbzuPJbGBHkc",
+          "3azJifCSqg9fRij2yKIbWz",
+          "3vC63Nh3rSREo7qDHgnx8I",
+          "5UUnRflW65AsvluD8d5N2U",
+          "6HIngEWX8ycnLjuUfSZyah"
+        ],
+        "high": 0.8266666666666665,
+        "low": 0.35,
+        "reason": null
+      },
+      "test_macro_interval": {
+        "delta": 0.5438852813852814,
+        "eligible_ids": [
+          "2Ah7oAy4esXD8pEEhY0hyR",
+          "2BFAfMIblG0RZeAvlmLC81",
+          "2YO6ZDPdQFkrOa6YYceEN4",
+          "2aiVdNIqY5BDCM10fKlKpS",
+          "2yQY2IzeQtUKanVo78Fg23",
+          "37BvHZhn4399Zhh6EDa4km",
+          "39kzWAiVPpycdMpr745oPj",
+          "3F5HhdyBfvCbzuPJbGBHkc",
+          "3azJifCSqg9fRij2yKIbWz",
+          "3vC63Nh3rSREo7qDHgnx8I",
+          "5UUnRflW65AsvluD8d5N2U",
+          "5ngJKkOmjkN460b2ApBnLk",
+          "5q3LwAHTqo9d3rET2EA9Nq",
+          "6HIngEWX8ycnLjuUfSZyah",
+          "7F6PtLP6fJPVtA1FWVkl8K",
+          "7fBv7CLKzipRk6EC6TWHOB"
+        ],
+        "high": 0.713833198051948,
+        "low": 0.36422145562770564,
+        "reason": null
+      }
+    },
+    "M1": {
+      "strong_test": {
+        "anchor_macro": 0.67,
+        "anchors": 10,
+        "constraints": 25,
+        "per_anchor": {
+          "2Ah7oAy4esXD8pEEhY0hyR": 0.0,
+          "2BFAfMIblG0RZeAvlmLC81": 0.2,
+          "2YO6ZDPdQFkrOa6YYceEN4": 1.0,
+          "2aiVdNIqY5BDCM10fKlKpS": 1.0,
+          "2yQY2IzeQtUKanVo78Fg23": 1.0,
+          "3F5HhdyBfvCbzuPJbGBHkc": 1.0,
+          "3azJifCSqg9fRij2yKIbWz": 1.0,
+          "3vC63Nh3rSREo7qDHgnx8I": 0.5,
+          "5UUnRflW65AsvluD8d5N2U": 0.0,
+          "6HIngEWX8ycnLjuUfSZyah": 1.0
+        },
+        "preference_micro": 0.68,
+        "strong_anchor_macro": 0.67,
+        "strong_constraints": 25
+      },
+      "strong_test_macro_interval": {
+        "delta": 0.67,
+        "eligible_ids": [
+          "2Ah7oAy4esXD8pEEhY0hyR",
+          "2BFAfMIblG0RZeAvlmLC81",
+          "2YO6ZDPdQFkrOa6YYceEN4",
+          "2aiVdNIqY5BDCM10fKlKpS",
+          "2yQY2IzeQtUKanVo78Fg23",
+          "3F5HhdyBfvCbzuPJbGBHkc",
+          "3azJifCSqg9fRij2yKIbWz",
+          "3vC63Nh3rSREo7qDHgnx8I",
+          "5UUnRflW65AsvluD8d5N2U",
+          "6HIngEWX8ycnLjuUfSZyah"
+        ],
+        "high": 0.9,
+        "low": 0.4,
+        "reason": null
+      },
+      "test_macro_interval": {
+        "delta": 0.5610119047619048,
+        "eligible_ids": [
+          "2Ah7oAy4esXD8pEEhY0hyR",
+          "2BFAfMIblG0RZeAvlmLC81",
+          "2YO6ZDPdQFkrOa6YYceEN4",
+          "2aiVdNIqY5BDCM10fKlKpS",
+          "2yQY2IzeQtUKanVo78Fg23",
+          "37BvHZhn4399Zhh6EDa4km",
+          "39kzWAiVPpycdMpr745oPj",
+          "3F5HhdyBfvCbzuPJbGBHkc",
+          "3azJifCSqg9fRij2yKIbWz",
+          "3vC63Nh3rSREo7qDHgnx8I",
+          "5UUnRflW65AsvluD8d5N2U",
+          "5ngJKkOmjkN460b2ApBnLk",
+          "5q3LwAHTqo9d3rET2EA9Nq",
+          "6HIngEWX8ycnLjuUfSZyah",
+          "7F6PtLP6fJPVtA1FWVkl8K",
+          "7fBv7CLKzipRk6EC6TWHOB"
+        ],
+        "high": 0.7461755952380948,
+        "low": 0.36545386904761906,
+        "reason": null
+      }
+    }
+  },
+  "test_label_selection": "No test labels used for fraction/epoch/model selection",
+  "tracks": 100
+}

@@ -1,0 +1,15 @@
+{
+  "artifact_serialization": "existing canonical sorted JSON and stable-member timestamp NPZ",
+  "diagnostic_cases": "not untouched generalization evidence",
+  "focused_tests": 11,
+  "non_heavy_suite": {
+    "deselected": 12,
+    "passed": 1261,
+    "seconds": 121.3,
+    "warnings": 11
+  },
+  "real_training_replay": "all three fractions produce identical checkpoint bytes and epoch histories",
+  "representation_replay": "zero forwards, 1927 hits; canonical artifact writers verified identical bytes",
+  "source_and_historical_hashes": "PASS",
+  "status": "PASS"
+}

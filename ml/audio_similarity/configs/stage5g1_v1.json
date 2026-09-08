@@ -1,0 +1,13 @@
+{
+  "version": "stage5g1-v1",
+  "seed": 20260908,
+  "primary_semantics": "HOLISTIC_SIMILARITY",
+  "playlist_labels": "separate descriptive inventory only; never primary training targets",
+  "split": {"fractions": [0.6, 0.2, 0.2], "ordering": "sha256(stage5g1:20260908:group-min-id), ascending; cumulative group track count", "group": "connected components of shared source SHA or video ID", "artist_sensitivity": "add connected components of every credited normalized artist; metadata for splitting only", "cross_partition_pairs": "excluded", "attempts": 1},
+  "gate": {"train": {"anchors": 30, "preferences": 200}, "validation": {"anchors": 15, "preferences": 50}, "test": {"anchors": 15, "preferences": 50}},
+  "segmentation": {"sample_rate": 48000, "samples": 480000, "stride": 480000, "tail": "cyclic repeat only final chunk samples to 480000", "decode": "stage5e1_encoders.decode_mono", "quantization": "Arm D float32-int16-float32", "mel": "Arm D get_mel; repeat same 1001x64 view four times; longer=False", "normalization": "float64 L2 with norm > 1e-12 then float32", "ordering": "track ID ascending then start sample ascending", "timestamps": "start and original end sample / 48000; padding excluded", "failure": "explicit track failure; all chunks required, no replacement"},
+  "B0": "frozen Stage5E1 d_clap cosine only",
+  "B1": "L2 normalize equal arithmetic mean of L2 segment vectors, cosine",
+  "M1": {"projection": [512,16], "activation": "tanh", "pair": "mean over all segment pairs of concatenated abs difference and product", "head": [32,1], "output": "sigmoid", "initialization": "torch default Linear Kaiming uniform under seed", "loss": "anchor-macro softplus(-(logit(A,B)-logit(A,C)))", "optimizer": "AdamW", "learning_rate": 0.001, "weight_decay": 0.001, "epochs": 200, "patience": 20, "minimum_validation_improvement": 0.000001, "batch": "full preference batch", "checkpoint": "earliest best validation loss; never test", "training_device": "CPU, one thread, deterministic algorithms", "learning_curve_fractions": [0.25,0.5,1.0], "fraction_order": "sha256(seed:anchor:preferred:other); train only"},
+  "evaluation": {"score_tie_tolerance": 0.000001, "tie_credit": 0.5, "primary": "anchor-macro preference agreement", "strong_preference_gap": 2, "bootstrap": "2000 paired anchor replicates, PCG64 seed 20260908, sorted anchors, linear 95% percentiles", "material_gain": 0.05, "credible_gain": "delta >=0.05 and lower paired 95% CI >0", "outcome_precedence": ["DATA_INSUFFICIENT if primary gate fails", "SUPPORTED if M1 vs B1 credible gain", "COVERAGE_ONLY if B1 vs B0 credible gain", "REPRESENTATION_LIMITED otherwise, explicitly limited to this small model and experiment"]}
+}

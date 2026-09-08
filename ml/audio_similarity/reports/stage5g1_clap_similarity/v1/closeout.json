@@ -1,0 +1,108 @@
+{
+  "cache_replay_forward_passes": 0,
+  "comparisons": {
+    "B1_vs_B0": {
+      "delta": -0.08192640692640694,
+      "eligible_ids": [
+        "2Ah7oAy4esXD8pEEhY0hyR",
+        "2BFAfMIblG0RZeAvlmLC81",
+        "2YO6ZDPdQFkrOa6YYceEN4",
+        "2aiVdNIqY5BDCM10fKlKpS",
+        "2yQY2IzeQtUKanVo78Fg23",
+        "37BvHZhn4399Zhh6EDa4km",
+        "39kzWAiVPpycdMpr745oPj",
+        "3F5HhdyBfvCbzuPJbGBHkc",
+        "3azJifCSqg9fRij2yKIbWz",
+        "3vC63Nh3rSREo7qDHgnx8I",
+        "5UUnRflW65AsvluD8d5N2U",
+        "5ngJKkOmjkN460b2ApBnLk",
+        "5q3LwAHTqo9d3rET2EA9Nq",
+        "6HIngEWX8ycnLjuUfSZyah",
+        "7F6PtLP6fJPVtA1FWVkl8K",
+        "7fBv7CLKzipRk6EC6TWHOB"
+      ],
+      "high": 0.08682359307359305,
+      "low": -0.26623917748917747,
+      "reason": null
+    },
+    "M1_vs_B0": {
+      "delta": -0.06479978354978355,
+      "eligible_ids": [
+        "2Ah7oAy4esXD8pEEhY0hyR",
+        "2BFAfMIblG0RZeAvlmLC81",
+        "2YO6ZDPdQFkrOa6YYceEN4",
+        "2aiVdNIqY5BDCM10fKlKpS",
+        "2yQY2IzeQtUKanVo78Fg23",
+        "37BvHZhn4399Zhh6EDa4km",
+        "39kzWAiVPpycdMpr745oPj",
+        "3F5HhdyBfvCbzuPJbGBHkc",
+        "3azJifCSqg9fRij2yKIbWz",
+        "3vC63Nh3rSREo7qDHgnx8I",
+        "5UUnRflW65AsvluD8d5N2U",
+        "5ngJKkOmjkN460b2ApBnLk",
+        "5q3LwAHTqo9d3rET2EA9Nq",
+        "6HIngEWX8ycnLjuUfSZyah",
+        "7F6PtLP6fJPVtA1FWVkl8K",
+        "7fBv7CLKzipRk6EC6TWHOB"
+      ],
+      "high": 0.22747700216450206,
+      "low": -0.37471523268398266,
+      "reason": null
+    },
+    "M1_vs_B1": {
+      "delta": 0.01712662337662338,
+      "eligible_ids": [
+        "2Ah7oAy4esXD8pEEhY0hyR",
+        "2BFAfMIblG0RZeAvlmLC81",
+        "2YO6ZDPdQFkrOa6YYceEN4",
+        "2aiVdNIqY5BDCM10fKlKpS",
+        "2yQY2IzeQtUKanVo78Fg23",
+        "37BvHZhn4399Zhh6EDa4km",
+        "39kzWAiVPpycdMpr745oPj",
+        "3F5HhdyBfvCbzuPJbGBHkc",
+        "3azJifCSqg9fRij2yKIbWz",
+        "3vC63Nh3rSREo7qDHgnx8I",
+        "5UUnRflW65AsvluD8d5N2U",
+        "5ngJKkOmjkN460b2ApBnLk",
+        "5q3LwAHTqo9d3rET2EA9Nq",
+        "6HIngEWX8ycnLjuUfSZyah",
+        "7F6PtLP6fJPVtA1FWVkl8K",
+        "7fBv7CLKzipRk6EC6TWHOB"
+      ],
+      "high": 0.26057968073593074,
+      "low": -0.2500027056277056,
+      "reason": null
+    }
+  },
+  "decision_rule": {
+    "bootstrap": "2000 paired anchor replicates, PCG64 seed 20260908, sorted anchors, linear 95% percentiles",
+    "credible_gain": "delta >=0.05 and lower paired 95% CI >0",
+    "material_gain": 0.05,
+    "outcome_precedence": [
+      "DATA_INSUFFICIENT if primary gate fails",
+      "SUPPORTED if M1 vs B1 credible gain",
+      "COVERAGE_ONLY if B1 vs B0 credible gain",
+      "REPRESENTATION_LIMITED otherwise, explicitly limited to this small model and experiment"
+    ],
+    "primary": "anchor-macro preference agreement",
+    "score_tie_tolerance": 1e-06,
+    "strong_preference_gap": 2,
+    "tie_credit": 0.5
+  },
+  "deterministic_training_replay": true,
+  "final_checkpoint_sha256": "27205f6abd7f2e8cb7d26c26213e318f594711f4e87dcbd9553cccd5370e0e76",
+  "frozen_clap_parameters": 158348809,
+  "limitations": [
+    "Only 16 test anchors / 58 correlated preferences; exploratory intervals are wide.",
+    "Artist-disjoint sensitivity fails its predeclared evidence gate.",
+    "Validation selects epoch 1 in all training fractions; the learner is not demonstrated to exploit all available CLAP information.",
+    "Representation-limited means no credible gain in this small model/aggregation experiment, not proof of information absence.",
+    "Historical similarity supervision is not the newer playlist-compatibility target."
+  ],
+  "materialized_tracks": 100,
+  "outcome": "REPRESENTATION_LIMITED",
+  "primary_gate_passes": true,
+  "production_activation": false,
+  "segments": 1927,
+  "trainable_parameters": 8241
+}
