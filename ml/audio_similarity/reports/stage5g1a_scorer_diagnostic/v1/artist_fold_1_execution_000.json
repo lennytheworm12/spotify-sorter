@@ -1,0 +1,82 @@
+{
+  "anchor_macro_agreement": 0.7338124284483684,
+  "final_preference_loss": 0.5427338889247215,
+  "gradient_max": 9.487774155127887e-08,
+  "history": [
+    {
+      "evaluation": 0,
+      "objective": 0.7303244125484682,
+      "preference_loss": 0.7303244125484682
+    },
+    {
+      "evaluation": 1,
+      "objective": 0.7104829209150344,
+      "preference_loss": 0.7100058502896948
+    },
+    {
+      "evaluation": 2,
+      "objective": 0.6288899721920287,
+      "preference_loss": 0.587213090467479
+    },
+    {
+      "evaluation": 3,
+      "objective": 0.6147049598168882,
+      "preference_loss": 0.5562498867414627
+    },
+    {
+      "evaluation": 4,
+      "objective": 0.6124617867480311,
+      "preference_loss": 0.5427499112401046
+    },
+    {
+      "evaluation": 5,
+      "objective": 0.612386770340781,
+      "preference_loss": 0.5424733651692338
+    },
+    {
+      "evaluation": 6,
+      "objective": 0.6123775280919267,
+      "preference_loss": 0.5427463247219534
+    },
+    {
+      "evaluation": 7,
+      "objective": 0.6123771959664234,
+      "preference_loss": 0.5427455878191172
+    },
+    {
+      "evaluation": 8,
+      "objective": 0.6123771434405706,
+      "preference_loss": 0.5427348146557711
+    },
+    {
+      "evaluation": 9,
+      "objective": 0.61237714221614,
+      "preference_loss": 0.542734165467079
+    },
+    {
+      "evaluation": 10,
+      "objective": 0.6123771419247009,
+      "preference_loss": 0.5427338580695353
+    },
+    {
+      "evaluation": 11,
+      "objective": 0.6123771419180661,
+      "preference_loss": 0.5427338747891282
+    },
+    {
+      "evaluation": 12,
+      "objective": 0.6123771419170255,
+      "preference_loss": 0.5427338889247215
+    },
+    {
+      "evaluation": 13,
+      "objective": 0.6123771419170255,
+      "preference_loss": 0.5427338889247215
+    }
+  ],
+  "iterations": 12,
+  "minimum_margin": -0.22821906757954571,
+  "runtime_seconds": 0.0508074649842456,
+  "trainable_parameters": 2048,
+  "weight_l2": 0.37321107430595896
+}

@@ -1,0 +1,300 @@
+{
+  "delta_interval": {
+    "high": 0.2738203463203463,
+    "low": -0.2022463474025974,
+    "point": 0.031385281385281384
+  },
+  "fresh_confirmation": false,
+  "historical_G1": {
+    "anchors": 16,
+    "macro": 0.5610119047619048,
+    "micro": 0.603448275862069,
+    "per_anchor": {
+      "2Ah7oAy4esXD8pEEhY0hyR": 0.0,
+      "2BFAfMIblG0RZeAvlmLC81": 0.2,
+      "2YO6ZDPdQFkrOa6YYceEN4": 0.6,
+      "2aiVdNIqY5BDCM10fKlKpS": 0.5714285714285714,
+      "2yQY2IzeQtUKanVo78Fg23": 1.0,
+      "37BvHZhn4399Zhh6EDa4km": 1.0,
+      "39kzWAiVPpycdMpr745oPj": 0.5,
+      "3F5HhdyBfvCbzuPJbGBHkc": 0.5714285714285714,
+      "3azJifCSqg9fRij2yKIbWz": 1.0,
+      "3vC63Nh3rSREo7qDHgnx8I": 0.3333333333333333,
+      "5UUnRflW65AsvluD8d5N2U": 0.2,
+      "5ngJKkOmjkN460b2ApBnLk": 1.0,
+      "5q3LwAHTqo9d3rET2EA9Nq": 0.0,
+      "6HIngEWX8ycnLjuUfSZyah": 1.0,
+      "7F6PtLP6fJPVtA1FWVkl8K": 0.0,
+      "7fBv7CLKzipRk6EC6TWHOB": 1.0
+    },
+    "preferences": 58
+  },
+  "new_correspondence": {
+    "anchors": 16,
+    "macro": 0.5923971861471862,
+    "micro": 0.5862068965517241,
+    "per_anchor": {
+      "2Ah7oAy4esXD8pEEhY0hyR": 0.0,
+      "2BFAfMIblG0RZeAvlmLC81": 0.6,
+      "2YO6ZDPdQFkrOa6YYceEN4": 0.6,
+      "2aiVdNIqY5BDCM10fKlKpS": 0.14285714285714285,
+      "2yQY2IzeQtUKanVo78Fg23": 0.45454545454545453,
+      "37BvHZhn4399Zhh6EDa4km": 1.0,
+      "39kzWAiVPpycdMpr745oPj": 1.0,
+      "3F5HhdyBfvCbzuPJbGBHkc": 0.7142857142857143,
+      "3azJifCSqg9fRij2yKIbWz": 1.0,
+      "3vC63Nh3rSREo7qDHgnx8I": 0.6666666666666666,
+      "5UUnRflW65AsvluD8d5N2U": 0.8,
+      "5ngJKkOmjkN460b2ApBnLk": 0.0,
+      "5q3LwAHTqo9d3rET2EA9Nq": 0.0,
+      "6HIngEWX8ycnLjuUfSZyah": 1.0,
+      "7F6PtLP6fJPVtA1FWVkl8K": 1.0,
+      "7fBv7CLKzipRk6EC6TWHOB": 0.5
+    },
+    "preferences": 58
+  },
+  "new_fit": false,
+  "population": "previously revealed Stage5G1 TEST, diagnostic only",
+  "scores": [
+    {
+      "correspondence": 0.5918594387623581,
+      "historical_G1": 0.4970138669013977,
+      "tracks": [
+        "2Ah7oAy4esXD8pEEhY0hyR",
+        "5UUnRflW65AsvluD8d5N2U"
+      ]
+    },
+    {
+      "correspondence": 0.6103235062111192,
+      "historical_G1": 0.4972260892391205,
+      "tracks": [
+        "2Ah7oAy4esXD8pEEhY0hyR",
+        "6HIngEWX8ycnLjuUfSZyah"
+      ]
+    },
+    {
+      "correspondence": 0.7082594833253231,
+      "historical_G1": 0.4975593686103821,
+      "tracks": [
+        "2BFAfMIblG0RZeAvlmLC81",
+        "2YO6ZDPdQFkrOa6YYceEN4"
+      ]
+    },
+    {
+      "correspondence": 0.6600972572755759,
+      "historical_G1": 0.49781909584999084,
+      "tracks": [
+        "2BFAfMIblG0RZeAvlmLC81",
+        "2aiVdNIqY5BDCM10fKlKpS"
+      ]
+    },
+    {
+      "correspondence": 0.6176477406041812,
+      "historical_G1": 0.49810847640037537,
+      "tracks": [
+        "2BFAfMIblG0RZeAvlmLC81",
+        "2yQY2IzeQtUKanVo78Fg23"
+      ]
+    },
+    {
+      "correspondence": 0.6895896623048445,
+      "historical_G1": 0.4978708028793335,
+      "tracks": [
+        "2BFAfMIblG0RZeAvlmLC81",
+        "3F5HhdyBfvCbzuPJbGBHkc"
+      ]
+    },
+    {
+      "correspondence": 0.49056266457931125,
+      "historical_G1": 0.49795466661453247,
+      "tracks": [
+        "2BFAfMIblG0RZeAvlmLC81",
+        "5UUnRflW65AsvluD8d5N2U"
+      ]
+    },
+    {
+      "correspondence": 0.6167583148736508,
+      "historical_G1": 0.497951477766037,
+      "tracks": [
+        "2BFAfMIblG0RZeAvlmLC81",
+        "5l45vVLs4JKkhzN0tvkWJv"
+      ]
+    },
+    {
+      "correspondence": 0.6890011228858062,
+      "historical_G1": 0.4970489740371704,
+      "tracks": [
+        "2YO6ZDPdQFkrOa6YYceEN4",
+        "2aiVdNIqY5BDCM10fKlKpS"
+      ]
+    },
+    {
+      "correspondence": 0.7779573631454892,
+      "historical_G1": 0.4980171024799347,
+      "tracks": [
+        "2YO6ZDPdQFkrOa6YYceEN4",
+        "7F6PtLP6fJPVtA1FWVkl8K"
+      ]
+    },
+    {
+      "correspondence": 0.7296987194886237,
+      "historical_G1": 0.4977521598339081,
+      "tracks": [
+        "2YO6ZDPdQFkrOa6YYceEN4",
+        "7fBv7CLKzipRk6EC6TWHOB"
+      ]
+    },
+    {
+      "correspondence": 0.6710080949337351,
+      "historical_G1": 0.4977028965950012,
+      "tracks": [
+        "2aiVdNIqY5BDCM10fKlKpS",
+        "3F5HhdyBfvCbzuPJbGBHkc"
+      ]
+    },
+    {
+      "correspondence": 0.6469410050407962,
+      "historical_G1": 0.49647802114486694,
+      "tracks": [
+        "2aiVdNIqY5BDCM10fKlKpS",
+        "40TJl2hLf6Sr7K1a2SkkVA"
+      ]
+    },
+    {
+      "correspondence": 0.674579055330047,
+      "historical_G1": 0.4976019859313965,
+      "tracks": [
+        "2aiVdNIqY5BDCM10fKlKpS",
+        "6HIngEWX8ycnLjuUfSZyah"
+      ]
+    },
+    {
+      "correspondence": 0.6319280843911198,
+      "historical_G1": 0.49723151326179504,
+      "tracks": [
+        "2yQY2IzeQtUKanVo78Fg23",
+        "39kzWAiVPpycdMpr745oPj"
+      ]
+    },
+    {
+      "correspondence": 0.6162908880351816,
+      "historical_G1": 0.4978552460670471,
+      "tracks": [
+        "2yQY2IzeQtUKanVo78Fg23",
+        "3F5HhdyBfvCbzuPJbGBHkc"
+      ]
+    },
+    {
+      "correspondence": 0.5928497919304377,
+      "historical_G1": 0.49697345495224,
+      "tracks": [
+        "2yQY2IzeQtUKanVo78Fg23",
+        "3azJifCSqg9fRij2yKIbWz"
+      ]
+    },
+    {
+      "correspondence": 0.6076471538194927,
+      "historical_G1": 0.4983319938182831,
+      "tracks": [
+        "2yQY2IzeQtUKanVo78Fg23",
+        "5l45vVLs4JKkhzN0tvkWJv"
+      ]
+    },
+    {
+      "correspondence": 0.6580933282493473,
+      "historical_G1": 0.4974113702774048,
+      "tracks": [
+        "2yQY2IzeQtUKanVo78Fg23",
+        "7fBv7CLKzipRk6EC6TWHOB"
+      ]
+    },
+    {
+      "correspondence": 0.7020330502969927,
+      "historical_G1": 0.496990829706192,
+      "tracks": [
+        "37BvHZhn4399Zhh6EDa4km",
+        "39kzWAiVPpycdMpr745oPj"
+      ]
+    },
+    {
+      "correspondence": 0.7405868483180396,
+      "historical_G1": 0.49741679430007935,
+      "tracks": [
+        "37BvHZhn4399Zhh6EDa4km",
+        "3vC63Nh3rSREo7qDHgnx8I"
+      ]
+    },
+    {
+      "correspondence": 0.7362675395177247,
+      "historical_G1": 0.49807605147361755,
+      "tracks": [
+        "39kzWAiVPpycdMpr745oPj",
+        "5ngJKkOmjkN460b2ApBnLk"
+      ]
+    },
+    {
+      "correspondence": 0.5086627919852684,
+      "historical_G1": 0.4990762174129486,
+      "tracks": [
+        "3F5HhdyBfvCbzuPJbGBHkc",
+        "5UUnRflW65AsvluD8d5N2U"
+      ]
+    },
+    {
+      "correspondence": 0.6639739734568226,
+      "historical_G1": 0.4972822070121765,
+      "tracks": [
+        "3F5HhdyBfvCbzuPJbGBHkc",
+        "7fBv7CLKzipRk6EC6TWHOB"
+      ]
+    },
+    {
+      "correspondence": 0.4592818538576037,
+      "historical_G1": 0.4974590837955475,
+      "tracks": [
+        "3JxRNkoNmAcPgnA5HSnKiz",
+        "5UUnRflW65AsvluD8d5N2U"
+      ]
+    },
+    {
+      "correspondence": 0.6875561722373794,
+      "historical_G1": 0.4976714253425598,
+      "tracks": [
+        "3azJifCSqg9fRij2yKIbWz",
+        "3vC63Nh3rSREo7qDHgnx8I"
+      ]
+    },
+    {
+      "correspondence": 0.7133164392979598,
+      "historical_G1": 0.497982919216156,
+      "tracks": [
+        "3azJifCSqg9fRij2yKIbWz",
+        "5q3LwAHTqo9d3rET2EA9Nq"
+      ]
+    },
+    {
+      "correspondence": 0.7909098525074625,
+      "historical_G1": 0.4985136091709137,
+      "tracks": [
+        "3vC63Nh3rSREo7qDHgnx8I",
+        "5q3LwAHTqo9d3rET2EA9Nq"
+      ]
+    },
+    {
+      "correspondence": 0.7103399014782916,
+      "historical_G1": 0.4993104934692383,
+      "tracks": [
+        "5ngJKkOmjkN460b2ApBnLk",
+        "7F6PtLP6fJPVtA1FWVkl8K"
+      ]
+    },
+    {
+      "correspondence": 0.6874493970248189,
+      "historical_G1": 0.49843475222587585,
+      "tracks": [
+        "6HIngEWX8ycnLjuUfSZyah",
+        "7F6PtLP6fJPVtA1FWVkl8K"
+      ]
+    }
+  ]
+}

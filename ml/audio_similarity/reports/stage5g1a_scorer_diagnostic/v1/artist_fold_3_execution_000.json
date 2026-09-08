@@ -1,0 +1,87 @@
+{
+  "anchor_macro_agreement": 0.6797742424638591,
+  "final_preference_loss": 0.5994170493298918,
+  "gradient_max": 1.1928610765994663e-07,
+  "history": [
+    {
+      "evaluation": 0,
+      "objective": 0.7555803843767686,
+      "preference_loss": 0.7555803843767686
+    },
+    {
+      "evaluation": 1,
+      "objective": 0.7401415070722185,
+      "preference_loss": 0.7396847010061915
+    },
+    {
+      "evaluation": 2,
+      "objective": 0.6743540500387594,
+      "preference_loss": 0.6302128597436498
+    },
+    {
+      "evaluation": 3,
+      "objective": 0.6642259602139813,
+      "preference_loss": 0.6017747867802575
+    },
+    {
+      "evaluation": 4,
+      "objective": 0.6635135385929922,
+      "preference_loss": 0.5998271569069692
+    },
+    {
+      "evaluation": 5,
+      "objective": 0.6634481155019043,
+      "preference_loss": 0.5995297659804819
+    },
+    {
+      "evaluation": 6,
+      "objective": 0.6634431999384687,
+      "preference_loss": 0.5994231768734601
+    },
+    {
+      "evaluation": 7,
+      "objective": 0.6634427164149307,
+      "preference_loss": 0.5994127218226993
+    },
+    {
+      "evaluation": 8,
+      "objective": 0.6634426837434352,
+      "preference_loss": 0.599417019990597
+    },
+    {
+      "evaluation": 9,
+      "objective": 0.6634426803761648,
+      "preference_loss": 0.599417212189399
+    },
+    {
+      "evaluation": 10,
+      "objective": 0.6634426798771024,
+      "preference_loss": 0.5994170413066302
+    },
+    {
+      "evaluation": 11,
+      "objective": 0.6634426798736307,
+      "preference_loss": 0.5994170330374979
+    },
+    {
+      "evaluation": 12,
+      "objective": 0.6634426798553007,
+      "preference_loss": 0.5994170369804974
+    },
+    {
+      "evaluation": 13,
+      "objective": 0.6634426798538157,
+      "preference_loss": 0.5994170493298918
+    },
+    {
+      "evaluation": 14,
+      "objective": 0.6634426798538157,
+      "preference_loss": 0.5994170493298918
+    }
+  ],
+  "iterations": 12,
+  "minimum_margin": -0.19456218300317668,
+  "runtime_seconds": 0.08473615208640695,
+  "trainable_parameters": 2048,
+  "weight_l2": 0.3578425087211521
+}

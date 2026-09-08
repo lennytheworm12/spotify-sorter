@@ -1,0 +1,162 @@
+{
+  "anchor_macro_agreement": 1.0,
+  "final_preference_loss": 1.9812749429560625e-09,
+  "gradient_max": 8.477205546072886e-10,
+  "history": [
+    {
+      "evaluation": 0,
+      "objective": 0.5061207264576724,
+      "preference_loss": 0.5061207264576724
+    },
+    {
+      "evaluation": 1,
+      "objective": 0.46320125671435164,
+      "preference_loss": 0.46320125671435164
+    },
+    {
+      "evaluation": 2,
+      "objective": 0.20867184298691366,
+      "preference_loss": 0.20867184298691366
+    },
+    {
+      "evaluation": 3,
+      "objective": 0.08398545865279225,
+      "preference_loss": 0.08398545865279225
+    },
+    {
+      "evaluation": 4,
+      "objective": 0.03884610973752756,
+      "preference_loss": 0.03884610973752756
+    },
+    {
+      "evaluation": 5,
+      "objective": 0.018083254612520732,
+      "preference_loss": 0.018083254612520732
+    },
+    {
+      "evaluation": 6,
+      "objective": 0.008626950548526417,
+      "preference_loss": 0.008626950548526417
+    },
+    {
+      "evaluation": 7,
+      "objective": 0.004283617741387054,
+      "preference_loss": 0.004283617741387054
+    },
+    {
+      "evaluation": 8,
+      "objective": 0.002110386191191832,
+      "preference_loss": 0.002110386191191832
+    },
+    {
+      "evaluation": 9,
+      "objective": 0.0010520506486851333,
+      "preference_loss": 0.0010520506486851333
+    },
+    {
+      "evaluation": 10,
+      "objective": 0.000524415061780687,
+      "preference_loss": 0.000524415061780687
+    },
+    {
+      "evaluation": 11,
+      "objective": 0.0002618613903549859,
+      "preference_loss": 0.0002618613903549859
+    },
+    {
+      "evaluation": 12,
+      "objective": 0.00013075910595926105,
+      "preference_loss": 0.00013075910595926105
+    },
+    {
+      "evaluation": 13,
+      "objective": 6.531019884648136e-05,
+      "preference_loss": 6.531019884648136e-05
+    },
+    {
+      "evaluation": 14,
+      "objective": 3.2622908708082265e-05,
+      "preference_loss": 3.2622908708082265e-05
+    },
+    {
+      "evaluation": 15,
+      "objective": 1.6298056265379765e-05,
+      "preference_loss": 1.6298056265379765e-05
+    },
+    {
+      "evaluation": 16,
+      "objective": 8.143216589492377e-06,
+      "preference_loss": 8.143216589492377e-06
+    },
+    {
+      "evaluation": 17,
+      "objective": 4.0693788705348905e-06,
+      "preference_loss": 4.0693788705348905e-06
+    },
+    {
+      "evaluation": 18,
+      "objective": 2.0337824357122664e-06,
+      "preference_loss": 2.0337824357122664e-06
+    },
+    {
+      "evaluation": 19,
+      "objective": 1.0165658505915879e-06,
+      "preference_loss": 1.0165658505915879e-06
+    },
+    {
+      "evaluation": 20,
+      "objective": 5.081575014060983e-07,
+      "preference_loss": 5.081575014060983e-07
+    },
+    {
+      "evaluation": 21,
+      "objective": 2.540356344678059e-07,
+      "preference_loss": 2.540356344678059e-07
+    },
+    {
+      "evaluation": 22,
+      "objective": 1.2700192797694256e-07,
+      "preference_loss": 1.2700192797694256e-07
+    },
+    {
+      "evaluation": 23,
+      "objective": 6.349564707981714e-08,
+      "preference_loss": 6.349564707981714e-08
+    },
+    {
+      "evaluation": 24,
+      "objective": 3.17458665333809e-08,
+      "preference_loss": 3.17458665333809e-08
+    },
+    {
+      "evaluation": 25,
+      "objective": 1.5872127097209467e-08,
+      "preference_loss": 1.5872127097209467e-08
+    },
+    {
+      "evaluation": 26,
+      "objective": 7.935443760183728e-09,
+      "preference_loss": 7.935443760183728e-09
+    },
+    {
+      "evaluation": 27,
+      "objective": 3.9667626174996466e-09,
+      "preference_loss": 3.9667626174996466e-09
+    },
+    {
+      "evaluation": 28,
+      "objective": 1.9812749429560625e-09,
+      "preference_loss": 1.9812749429560625e-09
+    },
+    {
+      "evaluation": 29,
+      "objective": 1.9812749429560625e-09,
+      "preference_loss": 1.9812749429560625e-09
+    }
+  ],
+  "iterations": 27,
+  "minimum_margin": 1.929024353176825,
+  "runtime_seconds": 0.037392972968518734,
+  "trainable_parameters": 2048,
+  "weight_l2": 5.953779108321464
+}

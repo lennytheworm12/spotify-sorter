@@ -1,0 +1,21 @@
+{
+  "cache_replay_new_clap_inference": 0,
+  "cached_views": 400,
+  "cost_scope": "precomputed interaction matrix; excludes CLAP and feature construction",
+  "environment": {
+    "device": "CPU float64",
+    "numpy": "1.26.4",
+    "python": "3.11.16",
+    "torch": "2.6.0+cu124"
+  },
+  "fresh_test_claim": false,
+  "historical_input_hashes_verified": 409,
+  "original_ledgers_preserved": true,
+  "original_total_optimizer_seconds": 0.48562235687859356,
+  "production_activation": false,
+  "replayed_fits": 9,
+  "residual_score_740_pairs_seconds": 0.0007272887602448463,
+  "source_checkpoint_sha256": "fb171dd9b608aebdac3d89286cd7615c5100af4cc7dc37797c7fb8d3cc15e3a5",
+  "tracks": 100,
+  "weights_and_scientific_results_identical": true
+}

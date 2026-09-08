@@ -1,0 +1,77 @@
+{
+  "decision": {
+    "complementary_representation": "smoke passes, all primary folds eligible, stationary optimization verified, both primary and optional upper CIs <.05 and neither material gain demonstrated",
+    "consistent_positive_folds": 4,
+    "if_smoke_fails": "MODEL_CAPACITY_OR_IMPLEMENTATION_FAILURE",
+    "material_gain": 0.05,
+    "otherwise_if_smoke_passes": "SUPERVISION_LIMITED",
+    "scorer_bottleneck": "smoke passes and (all five primary folds eligible, macro gain >=.05, primary lower CI >0 and >=4 positive folds; OR optional gain>=.05 with paired anchor lower CI>0)",
+    "stationary_gradient_max": 1e-05
+  },
+  "development": {
+    "artist_sensitivity": "same procedure with all normalized credited artists joined transitively",
+    "cross_partition_pairs": "discard",
+    "folds": 5,
+    "group": "transitive shared source SHA or video",
+    "heldout": "fold k",
+    "minimum_heldout_anchors": 10,
+    "minimum_heldout_preferences": 20,
+    "minimum_training_preferences": 100,
+    "minimum_validation_preferences": 20,
+    "order": "sha256(stage5g1a:20260908:group:min-id), assign each group to smallest bucket by track count then bucket index",
+    "training": "remaining three folds",
+    "validation": "fold (k+1) mod 5"
+  },
+  "inputs": "exact provenance-validated Arm-D global/front/middle/back independent 512-D vectors",
+  "model": {
+    "dimension": 2048,
+    "family": "Arm-D baseline plus ridge-regularized symmetric coordinate-interaction residual",
+    "feature_scale": "sqrt(512), fixed; no fitted scaler or dimensionality reduction",
+    "features": [
+      "global-global elementwise product",
+      "mean aligned front/middle/back products",
+      "mean both directions of global-local products",
+      "mean bidirectional best-local-match products, matches chosen by frozen cosine"
+    ],
+    "initialization": "all zero: exact D0 before fitting",
+    "loss": "anchor-macro softplus(-10 * preference score margin) + 0.5 * ridge * sum(weights squared)",
+    "optimizer": "float64 CPU torch LBFGS, lr=1, max_iter=300, history_size=20, tolerance_grad=1e-9, tolerance_change=1e-12, strong_wolfe",
+    "ridge": 1.0,
+    "score": "D0 + dot(weights, fixed interaction features); ranking score, not calibrated probability",
+    "selection": "one fixed model/regularizer; no validation/test hyperparameter selection or early stopping",
+    "trainable_parameters": 2048
+  },
+  "no_production_activation": true,
+  "optional": {
+    "comparison": "historical G1 on previously revealed Stage5G1 TEST preferences, developmental only",
+    "count": 1,
+    "execute": "after D-view capacity and development results; only if smoke passes",
+    "rule": "full-song normalized segment cosine matrix; average row maxima and column maxima with equal directional weight",
+    "training": "none"
+  },
+  "scope": "development diagnostic; Stage5G1 TEST already revealed, never fresh confirmation",
+  "seed": 20260908,
+  "smoke": {
+    "anchors": 4,
+    "pass_agreement": 0.95,
+    "pass_loss": 0.05,
+    "preferences_per_anchor": 4,
+    "ridge": 0.0,
+    "selection": "hash namespace smoke-anchor then smoke-preference; only anchors with at least four preferences",
+    "source": "Stage5G1 TRAIN constraints only"
+  },
+  "uncertainty": {
+    "interpolation": "linear",
+    "percentiles": [
+      2.5,
+      97.5
+    ],
+    "primary": "paired fold-macro bootstrap; five fold estimates with shared training sets, descriptive not population confidence",
+    "replicates": 2000,
+    "secondary": "stratified within-fold paired-anchor bootstrap with equal fold weighting",
+    "seed": 20260908,
+    "tie_credit": 0.5,
+    "tie_tolerance": 1e-06
+  },
+  "version": "stage5g1a-v1"
+}

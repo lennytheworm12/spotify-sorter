@@ -1,0 +1,77 @@
+{
+  "anchor_macro_agreement": 0.6966219375190478,
+  "final_preference_loss": 0.5668933263912049,
+  "gradient_max": 1.3089507747490736e-07,
+  "history": [
+    {
+      "evaluation": 0,
+      "objective": 0.7416249600511537,
+      "preference_loss": 0.7416249600511537
+    },
+    {
+      "evaluation": 1,
+      "objective": 0.724134633387223,
+      "preference_loss": 0.7236678277835569
+    },
+    {
+      "evaluation": 2,
+      "objective": 0.6456089291830397,
+      "preference_loss": 0.598928368816428
+    },
+    {
+      "evaluation": 3,
+      "objective": 0.6361128375954469,
+      "preference_loss": 0.5707005862777731
+    },
+    {
+      "evaluation": 4,
+      "objective": 0.6353694106936681,
+      "preference_loss": 0.566924864705009
+    },
+    {
+      "evaluation": 5,
+      "objective": 0.635331110192125,
+      "preference_loss": 0.5668333867675917
+    },
+    {
+      "evaluation": 6,
+      "objective": 0.6353290778856672,
+      "preference_loss": 0.5668961791785286
+    },
+    {
+      "evaluation": 7,
+      "objective": 0.6353288696061326,
+      "preference_loss": 0.566897177887562
+    },
+    {
+      "evaluation": 8,
+      "objective": 0.6353288556783492,
+      "preference_loss": 0.5668942155211002
+    },
+    {
+      "evaluation": 9,
+      "objective": 0.6353288538406008,
+      "preference_loss": 0.5668933465303674
+    },
+    {
+      "evaluation": 10,
+      "objective": 0.6353288538323454,
+      "preference_loss": 0.5668932944304659
+    },
+    {
+      "evaluation": 11,
+      "objective": 0.635328853801624,
+      "preference_loss": 0.5668933263912049
+    },
+    {
+      "evaluation": 12,
+      "objective": 0.635328853801624,
+      "preference_loss": 0.5668933263912049
+    }
+  ],
+  "iterations": 11,
+  "minimum_margin": -0.2128977483898587,
+  "runtime_seconds": 0.05722576892003417,
+  "trainable_parameters": 2048,
+  "weight_l2": 0.36996088282524964
+}
