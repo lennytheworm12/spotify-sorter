@@ -13,3 +13,24 @@ Open `http://127.0.0.1:8785`. This uses the same `frozen100_v3` artifacts and `.
 The original frozen HTML, backend, analysis code, input manifests, extraction outputs and ratings remain unchanged. The separate launcher allows the presentation update without rewriting the frozen implementation reference. All method/rank/score/probe metadata remains inaccessible through the reviewer. Post-review snapshot/analysis commands remain unchanged.
 
 Validation: `python -m pytest -q tests/test_stage5e3_compact_ui.py` in the locked environment: 1 passed, 9.75 seconds. The isolated Chromium fixture checks playback/seeking, draft persistence across reload/navigation, complete-packet submission, saved-state reload, continued navigation after saving, global blinding and a 390px mobile viewport. No fixture judgments enter the real state. Frozen input integrity and unchanged real ledger verified after the local-server restart.
+
+## Recover and save existing drafts
+
+Keep the original review tab open and refresh that same tab at the same address.
+Session storage survives a refresh; a different tab/browser/origin may not have
+those drafts. The header reports complete drafts ready to save and packets still
+missing judgments. This count is local to the current tab.
+
+Use **Export ratings and notes CSV** first for a downloadable backup of the
+current tab's drafts and server-submitted answers. It includes notes, stable
+packet/pair IDs, song names, and draft/submitted status, but no method, score,
+rank, historical rating, or probe metadata. Spreadsheet formula prefixes are
+escaped with an apostrophe in the CSV only; server notes remain unchanged.
+
+Use **Save all completed drafts** to submit all previously unsubmitted complete
+packets sequentially. Each packet uses the original atomic submission endpoint.
+Incomplete drafts are preserved; revisions to already-submitted packets still
+require the existing revision reason and individual save. On failure, successful
+packets remain saved and remaining drafts remain in session storage. Refresh to
+reconcile server state before retrying. No judgments or playback are fabricated.
+This is an explicit bulk save, not background server autosave.

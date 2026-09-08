@@ -47,6 +47,29 @@ def test_compact_drafts_playback_submit_and_blinding(tmp_path):
             assert page.request.get(url + '/api/reveal').status == 404
             payload = page.request.get(url + '/api/session').text()
             assert not any(key in payload for key in ('method_id', 'score', 'rank', 'probe_type', 'known_rating'))
+            # Recover drafts left by the earlier UI without submitting test data to the real run.
+            page.evaluate("""() => {
+                for(const p of packets.filter(p=>!p.submitted)) {
+                    const values=Object.fromEntries(p.candidates.map(c=>[c.pair_id,
+                        {pair_id:c.pair_id,label:'3',note:'=note, "quoted"\\nsecond line'}]));
+                    sessionStorage.setItem(draftKey(p),JSON.stringify(values));
+                }
+            }""")
+            page.reload()
+            page.wait_for_load_state('networkidle')
+            with page.expect_download() as download_info:
+                page.locator('#export').click()
+            import csv
+            with open(download_info.value.path(), encoding='utf-8-sig', newline='') as stream:
+                exported=list(csv.DictReader(stream))
+            drafts=[r for r in exported if r['save_status']=='DRAFT']
+            assert drafts and all(r['note'].startswith("'=note") for r in drafts)
+            assert all('method_id' not in r and 'score' not in r for r in exported)
+            page.locator('#save-all').click()
+            page.wait_for_function('() => packets.every(p=>p.submitted) && !busy')
+            assert len(store.events()) == len(store.packets)
+            assert all(a['note'].startswith('=note') for event in store.events()[1:] for a in event['answers'])
+            assert page.locator('#save-all').is_disabled()
             page.screenshot(path='/tmp/stage5e3-compact-desktop.png', full_page=True)
             page.set_viewport_size({'width':390, 'height':844})
             assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')

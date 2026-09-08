@@ -1,0 +1,20 @@
+{
+  "csv_matches_server_snapshot": true,
+  "csv_sha256": "537a4751f136ce80e89d5bc595709895a960144502481972e9a54becc9ed5eb5",
+  "notes": 6,
+  "packets": 98,
+  "production_activation": false,
+  "rating_counts": {
+    "1": 11,
+    "2": 44,
+    "3": 113,
+    "4": 191,
+    "5": 60
+  },
+  "scientific_analysis": "NOT_RUN",
+  "snapshot_label_count_including_historical": 1011,
+  "snapshot_path": "reports/stage5e3_full_song_muq_playlist_compatibility/frozen100_v3/post_review_rating_snapshot.json",
+  "snapshot_sha256": "c1fb7560f8446e0ea0e43b6fa24180cc14860eb9a62bbfdd171b5bdcec223135",
+  "status": "COMPLETED_REVIEW_LABELS_FROZEN",
+  "unique_review_pairs": 419
+}
