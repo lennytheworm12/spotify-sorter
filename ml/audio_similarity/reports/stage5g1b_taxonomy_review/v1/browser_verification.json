@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "pairs": 16,
+  "browser": "real isolated Chromium via Playwright",
+  "all_32_audio_metadata_loaded": true,
+  "playback_and_seeking_both_players": true,
+  "HTTP_range_206": true,
+  "mutually_exclusive_playback": true,
+  "autosave_reload": true,
+  "offline_draft_reload_and_csv_export": true,
+  "multi_tab_conflict_detection": true,
+  "completion_and_export": true,
+  "mobile_no_horizontal_overflow": true,
+  "page_errors": [],
+  "unexpected_console_errors": [],
+  "intentional_failure_console_events": 5,
+  "historical_inputs_unchanged": true,
+  "test_server_mode": "taxonomy_audit_disposable",
+  "real_review_answers_written": 0
+}

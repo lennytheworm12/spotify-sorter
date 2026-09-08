@@ -1,0 +1,48 @@
+{
+  "allocation": "four bad/high, four bad/low, four good/high, four good/low",
+  "analysis_limit": "purposefully balanced developmental audit; do not estimate corpus prevalence from this sample",
+  "annotation": "one dominant difference; OTHER needs a note to count complete; NONE and UNSURE are valid answers",
+  "choices": {
+    "FAMILY": [
+      "Musical style / family",
+      "The overall musical language or style feels different."
+    ],
+    "GROOVE": [
+      "Groove / rhythmic feel",
+      "The pace, beat, swing, or rhythmic feel."
+    ],
+    "MELODY": [
+      "Melody / harmony",
+      "The melodic writing, chords, or harmonic character."
+    ],
+    "NONE": [
+      "No meaningful mismatch",
+      "No difference stands out enough to keep these songs apart."
+    ],
+    "OTHER": [
+      "Another difference",
+      "A difference that does not fit these choices; describe it below."
+    ],
+    "STRUCTURE": [
+      "Arrangement / development",
+      "How layers, sections, or intensity change through the song."
+    ],
+    "TEXTURE": [
+      "Production / sound texture",
+      "The instruments, sound palette, distortion, or recording texture."
+    ],
+    "UNSURE": [
+      "Not sure",
+      "I cannot identify a clear main difference."
+    ],
+    "VOCALS": [
+      "Vocal role / delivery",
+      "Singing, rapping, vocal presence, or how the voice is used."
+    ]
+  },
+  "pairs": 16,
+  "presentation": "hash-shuffled pairs and left/right order; no prior labels, probe values, strata or model metadata in public payload",
+  "primary_rubric": "PLAYLIST_COMPATIBILITY_V1",
+  "ranking": "confident union flags first, then maximum axis divergence, then pair ID; upper/lower halves within rating bin",
+  "selection": "round-robin strata, no repeated tracks, minimize repeated credited artists then confident flags in high strata then frozen hash"
+}

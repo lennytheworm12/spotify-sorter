@@ -1,0 +1,25 @@
+{
+  "browser_verification": "PASS",
+  "credited_artists": 46,
+  "focused_tests": {
+    "passed": 3
+  },
+  "full_nonheavy_suite": {
+    "deselected": 12,
+    "failed": 2,
+    "failure_reason": "Existing Stage2B publication lock requires HEAD to be an ancestor of origin/ml/stage5f1-energy-motion; local Stage5G1B commit is not pushed. Historical checks were preserved.",
+    "passed": 1274,
+    "seconds": 151.66,
+    "warnings": 11
+  },
+  "historical_hashes": "UNCHANGED",
+  "new_annotation_schema": "DOMINANT_PLAYLIST_MISMATCH_V1",
+  "new_scientific_verdict": null,
+  "pairs": 16,
+  "real_answers_at_handoff": 0,
+  "status": "READY_FOR_HUMAN_REVIEW",
+  "test_answers_in_real_database": 0,
+  "unique_sources": 32,
+  "unique_tracks": 32,
+  "url": "http://localhost:8791"
+}
