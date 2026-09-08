@@ -1,0 +1,125 @@
+{
+  "axes": {
+    "musical_family": [
+      [
+        "hip-hop and rap music",
+        "music in a rap or hip-hop style"
+      ],
+      [
+        "pop music",
+        "a pop song"
+      ],
+      [
+        "rock music",
+        "music in a rock style"
+      ],
+      [
+        "electronic dance music",
+        "dance music made with electronic instruments"
+      ],
+      [
+        "acoustic folk music",
+        "folk music with acoustic instruments"
+      ],
+      [
+        "jazz and soul music",
+        "music in a jazz or soul style"
+      ],
+      [
+        "ambient music",
+        "atmospheric ambient music"
+      ],
+      [
+        "classical orchestral music",
+        "music performed by an orchestra"
+      ]
+    ],
+    "production_texture": [
+      [
+        "distorted rough noisy sounds",
+        "a gritty noisy distorted sound texture"
+      ],
+      [
+        "clean polished electronic sounds",
+        "a crisp synthetic studio sound"
+      ],
+      [
+        "warm hazy sampled sounds",
+        "a soft blurred sample-based sound texture"
+      ],
+      [
+        "natural acoustic instrument sounds",
+        "an organic acoustic sound texture"
+      ]
+    ],
+    "rhythmic_behavior": [
+      [
+        "a steady driving dance beat",
+        "a persistent propulsive dance rhythm"
+      ],
+      [
+        "a relaxed laid-back groove",
+        "a gentle unhurried rhythmic groove"
+      ],
+      [
+        "busy syncopated rhythms",
+        "an active rhythm with offbeat accents"
+      ],
+      [
+        "free flowing music without a steady beat",
+        "music with no regular rhythmic pulse"
+      ]
+    ],
+    "vocal_delivery": [
+      [
+        "rhythmically spoken or rapped lead vocals",
+        "a lead voice rapping or speaking in rhythm"
+      ],
+      [
+        "melodically sung lead vocals",
+        "a lead singer singing a melody"
+      ],
+      [
+        "no vocals, instrumental music",
+        "instruments playing without a human voice"
+      ],
+      [
+        "wordless or chopped vocal samples",
+        "wordless voices or chopped voice samples"
+      ],
+      [
+        "shouted or screamed vocals",
+        "a vocalist shouting or screaming"
+      ]
+    ]
+  },
+  "decision": "PROMISING_ZERO_SHOT_SIGNAL if any axis meets every gate in both paraphrases and exact-D sensitivity, lower AUC interval >.5, neighbor AUC>.5, and diagnostic-artist-excluded AUC>.5; otherwise ZERO_SHOT_NOT_ESTABLISHED. Neither outcome validates causal mismatch taxonomy without independent annotations.",
+  "exclusions": "no fitting, prompt selection, new models, audio inference, new ratings, production activation, or per-song rules; structure/harmony deferred because reliable direct measurement unavailable in this small probe study",
+  "gate": {
+    "maximum_good_flag_rate": 0.2,
+    "minimum_anchors": 20,
+    "minimum_bad_flag_rate": 0.5,
+    "minimum_leave_artist_out_auc": 0.55,
+    "minimum_macro_auc": 0.65,
+    "minimum_neighbor_anchors": 10
+  },
+  "manual_annotation": "no new annotations; preserve six existing notes as qualitative development evidence only",
+  "minimum_cosine_margin": 0.02,
+  "neighbor_slice": "either endpoint in exact ArmD top10 of other, excluding self; ties by track ID",
+  "pair_continuous": "Jensen-Shannon divergence of prompt-mean softmax profiles, divided by log(2)",
+  "pair_flag": "both tracks reliable and top concepts differ; otherwise explicit abstention",
+  "primary_audio": "mean normalized full-song Stage5G1 segment vectors, without renormalizing the mean; mean cosine logits",
+  "primary_labels": "frozen Stage5E3 PLAYLIST_COMPATIBILITY_V1 labels only; 1-2 bad, 4-5 good, 3 ambiguous",
+  "probabilities": "softmax over each non-exhaustive prompt vocabulary; relative probe weights, not calibrated class probabilities",
+  "prompt_templates": [
+    "This music features {}.",
+    "The recording contains {}."
+  ],
+  "reliability": "both paraphrases choose the same top concept and each top-minus-second cosine margin >=.02",
+  "secondary_labels": "Stage5G1 HOLISTIC_SIMILARITY separately, same bins",
+  "seed": 20260909,
+  "sensitivity_audio": "mean exact Arm-D four normalized view vectors, same mean cosine logits",
+  "temperature": 0.07,
+  "uncertainty": "2000 paired anchor bootstrap draws; per-axis 98.75% percentile intervals (four-axis Bonferroni); union descriptive 95%",
+  "version": "stage5g1b-v1"
+}

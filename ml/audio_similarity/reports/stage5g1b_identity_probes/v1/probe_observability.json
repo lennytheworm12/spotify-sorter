@@ -1,0 +1,71 @@
+{
+  "musical_family": {
+    "reliable_tracks": 56,
+    "top_concept_counts": [
+      {
+        "acoustic folk music": 1,
+        "electronic dance music": 2,
+        "hip-hop and rap music": 72,
+        "jazz and soul music": 16,
+        "pop music": 9
+      },
+      {
+        "atmospheric ambient music": 7,
+        "dance music made with electronic instruments": 3,
+        "music in a jazz or soul style": 12,
+        "music in a rap or hip-hop style": 78
+      }
+    ]
+  },
+  "production_texture": {
+    "reliable_tracks": 17,
+    "top_concept_counts": [
+      {
+        "clean polished electronic sounds": 25,
+        "distorted rough noisy sounds": 16,
+        "natural acoustic instrument sounds": 26,
+        "warm hazy sampled sounds": 33
+      },
+      {
+        "a crisp synthetic studio sound": 14,
+        "a gritty noisy distorted sound texture": 2,
+        "a soft blurred sample-based sound texture": 11,
+        "an organic acoustic sound texture": 73
+      }
+    ]
+  },
+  "rhythmic_behavior": {
+    "reliable_tracks": 8,
+    "top_concept_counts": [
+      {
+        "a relaxed laid-back groove": 27,
+        "a steady driving dance beat": 71,
+        "free flowing music without a steady beat": 2
+      },
+      {
+        "a gentle unhurried rhythmic groove": 7,
+        "a persistent propulsive dance rhythm": 12,
+        "an active rhythm with offbeat accents": 5,
+        "music with no regular rhythmic pulse": 76
+      }
+    ]
+  },
+  "vocal_delivery": {
+    "reliable_tracks": 7,
+    "top_concept_counts": [
+      {
+        "melodically sung lead vocals": 13,
+        "no vocals, instrumental music": 25,
+        "rhythmically spoken or rapped lead vocals": 20,
+        "shouted or screamed vocals": 18,
+        "wordless or chopped vocal samples": 24
+      },
+      {
+        "a lead singer singing a melody": 95,
+        "a lead voice rapping or speaking in rhythm": 2,
+        "a vocalist shouting or screaming": 1,
+        "instruments playing without a human voice": 2
+      }
+    ]
+  }
+}

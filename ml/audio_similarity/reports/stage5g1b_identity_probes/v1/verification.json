@@ -1,0 +1,28 @@
+{
+  "analysis_replay_identical": true,
+  "audio_inference": 0,
+  "closeout_replay_identical": true,
+  "exact_D_view_count": 400,
+  "focused_tests": {
+    "passed": 6
+  },
+  "full_nonheavy_tests": {
+    "deselected": 12,
+    "passed": 1273,
+    "seconds": 131.4,
+    "warnings": 11
+  },
+  "full_song_segment_count": 1927,
+  "historical_artifacts": "UNCHANGED",
+  "limitation": "taxonomy causes remain unannotated; intervals are descriptive because tracks and artists recur",
+  "numeric_outputs": "finite; unreliable flags explicitly null",
+  "original_execution_ledger_preserved": true,
+  "original_text_embeddings": 42,
+  "production_activation": false,
+  "protected_input_hashes_verified": 468,
+  "replay_cache_hits": 42,
+  "replay_text_embeddings": 0,
+  "review": "checked rubric separation, stable ID joins, prompt ordering, symmetric divergence, abstention denominators, cache integrity, offline checkpoint load, grouped descriptive uncertainty and absence of training/production paths",
+  "track_count": 100,
+  "trained_parameters": 0
+}

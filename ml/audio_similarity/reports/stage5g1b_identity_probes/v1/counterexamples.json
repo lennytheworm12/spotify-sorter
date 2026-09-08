@@ -1,0 +1,2470 @@
+{
+  "holistic": {
+    "musical_family": {
+      "bad_high_probe_distance": [
+        {
+          "axis": "musical_family",
+          "distance": 0.22742666523407226,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "2d0c135d724df498ed524baf",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "Pray — City Girl, tiffi",
+            "The Hills — The Weeknd"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2yQY2IzeQtUKanVo78Fg23",
+            "7fBv7CLKzipRk6EC6TWHOB"
+          ],
+          "variant0": 0.18504660034188275,
+          "variant1": 0.27795592087945203
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.21892399440646726,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "dbfffdf5fb93e2add7645c7b",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "strawberry moon — IU",
+            "blue (with MINNIE) — yung kai, MINNIE"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2g0LdZQce9xlcHb1mBJyuz",
+            "6HIngEWX8ycnLjuUfSZyah"
+          ],
+          "variant0": 0.21600543049235124,
+          "variant1": 0.23933747975759187
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.21745941842606809,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "e6b1f80280fe00581f794793",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "We (OUI) (Feat. sogumm) — jeebanoff, sogumm",
+            "Fade (Feat. Rachel Lim) — JIDA, Rachel Lim"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "043ryKJlgSnAUzpXnfxU6b",
+            "49iccsmr8Su1SXXwNfFO70"
+          ],
+          "variant0": 0.16976327787503964,
+          "variant1": 0.27228393095935083
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.21354150885313597,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "f9ab2712751dcbbb62f4a0c7",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "To My Youth — BOL4",
+            "Bullet Train Fantasy — Ibrahim, Luvbird"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "4gMPlHHAjOQnUrhsuqHivn",
+            "6JjD8b5nYnwJ3zxYZ16rKg"
+          ],
+          "variant0": 0.24593308864889452,
+          "variant1": 0.19811367711242175
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.20965012972214753,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "8d50ccfc4567549561840724",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "blue (with MINNIE) — yung kai, MINNIE",
+            "She loves the color green and I love her — City Girl"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "6HIngEWX8ycnLjuUfSZyah",
+            "7hFW5IN7mQ99PuO86r38Sf"
+          ],
+          "variant0": 0.14003478504971176,
+          "variant1": 0.33488193756373763
+        }
+      ],
+      "bad_low_probe_distance_misses": [
+        {
+          "axis": "musical_family",
+          "distance": 0.004404866817651198,
+          "flag": false,
+          "neighbor": true,
+          "pair_id": "1386289d909067cd09304ec7",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "TOUCH — keshi",
+            "Favorite Part — JO YURI"
+          ],
+          "status": "OK",
+          "tracks": [
+            "5cgy5vMqVZbd8hYutp2txu",
+            "6zKX91EvxRHr42ZiZ5C9kN"
+          ],
+          "variant0": 0.006357474326560261,
+          "variant1": 0.01157049561459397
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.006326874039541739,
+          "flag": false,
+          "neighbor": false,
+          "pair_id": "1cb68196512ca34f5c6875bd",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "Magnetic — ILLIT",
+            "The Weekend — 88rising, BIBI"
+          ],
+          "status": "OK",
+          "tracks": [
+            "1aKvZDoLGkNMxoRYgkckZG",
+            "5q3LwAHTqo9d3rET2EA9Nq"
+          ],
+          "variant0": 0.005609093451802211,
+          "variant1": 0.012429454239568618
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.008632495199245171,
+          "flag": false,
+          "neighbor": true,
+          "pair_id": "07fd4e70a7bb3588743ba5bb",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "OMG — NewJeans",
+            "Die Right Here — david hugo"
+          ],
+          "status": "OK",
+          "tracks": [
+            "65FftemJ1DbbZ45DUfHJXE",
+            "7fXYFuCTmNrYRGwEUUf5iz"
+          ],
+          "variant0": 0.01869693407861912,
+          "variant1": 0.007148157598757532
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.009601020621230685,
+          "flag": false,
+          "neighbor": true,
+          "pair_id": "131d01d062d9269398e123b6",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "The Way — Ariana Grande, Mac Miller",
+            "Perfect Night — LE SSERAFIM"
+          ],
+          "status": "OK",
+          "tracks": [
+            "06EL94D0TA27Ik0Ke5usbj",
+            "74X2u8JMVooG2QbjRxXwR8"
+          ],
+          "variant0": 0.004332567937600026,
+          "variant1": 0.01643613518798008
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.009742533751345265,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "5944cb6ff0acd6173449d956",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "strawberry moon — IU",
+            "If I Weren't Me — Katherine Li"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2g0LdZQce9xlcHb1mBJyuz",
+            "5VGDusp81Ed3T9xACRw5Os"
+          ],
+          "variant0": 0.004402952489801531,
+          "variant1": 0.02131154579938956
+        }
+      ],
+      "good_high_probe_distance_counterexamples": [
+        {
+          "axis": "musical_family",
+          "distance": 0.4002210504824513,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "60e735a2614a3be2bb74809a",
+          "rating": 4,
+          "rubric": "holistic",
+          "songs": [
+            "(empty) — OuiOui",
+            "Dear My All — Mingginyu"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "0ayK1CJh1cMRjUJRCDWhCd",
+            "2X71ww8wImSYbw4s0Mr2ur"
+          ],
+          "variant0": 0.44417612380727806,
+          "variant1": 0.361760270625236
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.39545406338469535,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "12034ebc8cc0802d48b784cb",
+          "rating": 4,
+          "rubric": "holistic",
+          "songs": [
+            "Shiawase no Monosashi — Pokke",
+            "Bullet Train Fantasy — Ibrahim, Luvbird"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "0xlx3pH8TxNah8hdiINqeA",
+            "6JjD8b5nYnwJ3zxYZ16rKg"
+          ],
+          "variant0": 0.39093091606367963,
+          "variant1": 0.41270828761197076
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.36326335004568083,
+          "flag": true,
+          "neighbor": true,
+          "pair_id": "90eebca3c228e612c3fbaff5",
+          "rating": 5,
+          "rubric": "holistic",
+          "songs": [
+            "Ever2Late! — KiiiKiii",
+            "Thirsty — aespa"
+          ],
+          "status": "OK",
+          "tracks": [
+            "37BvHZhn4399Zhh6EDa4km",
+            "6nICBdDevG4NZysIqDFPEa"
+          ],
+          "variant0": 0.34366186009227623,
+          "variant1": 0.3861242274429202
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.3591981806128412,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "240419d0f738f0c479634538",
+          "rating": 4,
+          "rubric": "holistic",
+          "songs": [
+            "Morning Walk — Park Bird",
+            "Bullet Train Fantasy — Ibrahim, Luvbird"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "53eKx8ec2jDjt1m3VBUCEM",
+            "6JjD8b5nYnwJ3zxYZ16rKg"
+          ],
+          "variant0": 0.35775156255209584,
+          "variant1": 0.3648216041925298
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.354031392898159,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "43250af1d70297e924d16402",
+          "rating": 4,
+          "rubric": "holistic",
+          "songs": [
+            "blue (with MINNIE) — yung kai, MINNIE",
+            "By My Side — JUNNY"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "6HIngEWX8ycnLjuUfSZyah",
+            "6nzCvAtyADh0wwZEVMoujK"
+          ],
+          "variant0": 0.3765599780279903,
+          "variant1": 0.3370431118259286
+        }
+      ]
+    },
+    "production_texture": {
+      "bad_high_probe_distance": [
+        {
+          "axis": "production_texture",
+          "distance": 0.15263761941063228,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "e870df7b3e8aa54a5536af44",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "id T41104 (feat. 267) — W/N, 267",
+            "My Gamecube Broke. — .Uzu"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "07tiPBhMqiKqHowwqDBtfK",
+            "2Vu2hkPW7LxMHPqoMjSIEJ"
+          ],
+          "variant0": 0.2432959086223163,
+          "variant1": 0.08158285331438292
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.14465939940823222,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "fa89066154952a943b98056e",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "My Gamecube Broke. — .Uzu",
+            "me2urs2ours — Yayyoung, Sojou Kim"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2Vu2hkPW7LxMHPqoMjSIEJ",
+            "6B9HXnRzmokTTxZNdV5T48"
+          ],
+          "variant0": 0.17159669444884593,
+          "variant1": 0.1308270157509019
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.12985607238070407,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "3538776a57faebe2b244cf5e",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "falling down — Nohidea",
+            "It'll Be Ok — Yoandri"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "0ASYuzPsTBA6ZmIsuvNZby",
+            "2YO6ZDPdQFkrOa6YYceEN4"
+          ],
+          "variant0": 0.11911512141802835,
+          "variant1": 0.191803015768404
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.11476677302886906,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "57d98859f5d47c7592434894",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "for what — potsu",
+            "blue (with MINNIE) — yung kai, MINNIE"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "4B8L0sByBRJRUV1Uot2Ebd",
+            "6HIngEWX8ycnLjuUfSZyah"
+          ],
+          "variant0": 0.19875598687809043,
+          "variant1": 0.06121567081435236
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.09883645370625974,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "e303a9f18368c7a481b95fbf",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "By My Side — JUNNY",
+            "Perfect Night — LE SSERAFIM"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "6nzCvAtyADh0wwZEVMoujK",
+            "74X2u8JMVooG2QbjRxXwR8"
+          ],
+          "variant0": 0.1503543606921144,
+          "variant1": 0.08227436544928315
+        }
+      ],
+      "bad_low_probe_distance_misses": [
+        {
+          "axis": "production_texture",
+          "distance": 0.00035902106168741137,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "80a95532388c1807be4045e7",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "Temporary — Kiri T",
+            "Not Afraid — INTRN"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "1AHtqWqufKsgBmdNEi1WVO",
+            "4yNhVidUIAtKPT72PrZuLP"
+          ],
+          "variant0": 0.02771041797415056,
+          "variant1": 0.028766704960985105
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.0014397056002486096,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "bb1a62be64ed7920ab6ec1a0",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "DANCING ALONE — KiiiKiii",
+            "Die Right Here — david hugo"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "3vC63Nh3rSREo7qDHgnx8I",
+            "7fXYFuCTmNrYRGwEUUf5iz"
+          ],
+          "variant0": 0.0068935378350628695,
+          "variant1": 0.0028154530559949924
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.0015985323424254183,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "4b2718137707e57cc2569db7",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "慢冷 — Ren Ran",
+            "Celestial Angel — City Girl"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "3fzeNQfannmBQWGecQZ93s",
+            "7rAOIiVhiD3vklTrCUpfYo"
+          ],
+          "variant0": 0.011610302087376618,
+          "variant1": 0.019468861911663884
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.0036564344498866233,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "291aee9036f546b46ad6fc8d",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "Not Afraid — INTRN",
+            "Lucid (feat. LILAC) — JIDA, Kate Kim"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "4yNhVidUIAtKPT72PrZuLP",
+            "7iov2YtUJgLmHXwpYXLcoo"
+          ],
+          "variant0": 0.008020171278213516,
+          "variant1": 0.0015444375072969
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.0038564479571074734,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "8959a418ed6b4366cf36cbec",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "Shoota (feat. Lil Uzi Vert) — Playboi Carti, Lil Uzi Vert",
+            "Fresh Air — Maasho, Weston Estate"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2BJSMvOGABRxokHKB0OI8i",
+            "30NAF18yQGvwKrbn1IEMKn"
+          ],
+          "variant0": 0.00510351940139855,
+          "variant1": 0.01897431487912237
+        }
+      ],
+      "good_high_probe_distance_counterexamples": [
+        {
+          "axis": "production_texture",
+          "distance": 0.23403352421287682,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "cf1d41790e484b06a1d83646",
+          "rating": 4,
+          "rubric": "holistic",
+          "songs": [
+            "too afraid — hateful",
+            "for what — potsu"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "1ZhrRS2xY1ZoD2QJ9aZQxX",
+            "4B8L0sByBRJRUV1Uot2Ebd"
+          ],
+          "variant0": 0.3243375133215772,
+          "variant1": 0.20951098827713782
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.2120007540791151,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "e74d31dc7fbf72472f729a5b",
+          "rating": 4,
+          "rubric": "holistic",
+          "songs": [
+            "My Gamecube Broke. — .Uzu",
+            "Morning Walk — Park Bird"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2Vu2hkPW7LxMHPqoMjSIEJ",
+            "53eKx8ec2jDjt1m3VBUCEM"
+          ],
+          "variant0": 0.34030313646405724,
+          "variant1": 0.11804354728631399
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.1692825228309939,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "10affea5894895c159096beb",
+          "rating": 4,
+          "rubric": "holistic",
+          "songs": [
+            "Temporary — Kiri T",
+            "Dear My All — Mingginyu"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "1AHtqWqufKsgBmdNEi1WVO",
+            "2X71ww8wImSYbw4s0Mr2ur"
+          ],
+          "variant0": 0.23717848007184306,
+          "variant1": 0.16783914601956196
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.16490984173363057,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "5fd21bce850339fddbb88a56",
+          "rating": 4,
+          "rubric": "holistic",
+          "songs": [
+            "My Gamecube Broke. — .Uzu",
+            "for what — potsu"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2Vu2hkPW7LxMHPqoMjSIEJ",
+            "4B8L0sByBRJRUV1Uot2Ebd"
+          ],
+          "variant0": 0.28188836971397196,
+          "variant1": 0.10005642829124606
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.15994671539220612,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "6b72a7a304cafe4cb8c325d6",
+          "rating": 4,
+          "rubric": "holistic",
+          "songs": [
+            "falling down — Nohidea",
+            "You Are Enough — .Uzu, Clavita"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "0ASYuzPsTBA6ZmIsuvNZby",
+            "2BFAfMIblG0RZeAvlmLC81"
+          ],
+          "variant0": 0.13639497968233696,
+          "variant1": 0.2226799572582937
+        }
+      ]
+    },
+    "rhythmic_behavior": {
+      "bad_high_probe_distance": [
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.13714843289211115,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "4c945edd24fdc8e9b89ad426",
+          "rating": 1,
+          "rubric": "holistic",
+          "songs": [
+            "No I Don't Want, Just Anyone — Unclenathannn, Shiloh Dynasty",
+            "The Hills — The Weeknd"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "23V5SeHanwL6PlqyJ99dH8",
+            "7fBv7CLKzipRk6EC6TWHOB"
+          ],
+          "variant0": 0.18779067864254348,
+          "variant1": 0.09810797188235315
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.1156509540209622,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "dbfffdf5fb93e2add7645c7b",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "strawberry moon — IU",
+            "blue (with MINNIE) — yung kai, MINNIE"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2g0LdZQce9xlcHb1mBJyuz",
+            "6HIngEWX8ycnLjuUfSZyah"
+          ],
+          "variant0": 0.20541032348536878,
+          "variant1": 0.06434535408116847
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.11290325506026896,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "8d50ccfc4567549561840724",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "blue (with MINNIE) — yung kai, MINNIE",
+            "She loves the color green and I love her — City Girl"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "6HIngEWX8ycnLjuUfSZyah",
+            "7hFW5IN7mQ99PuO86r38Sf"
+          ],
+          "variant0": 0.24294876286283393,
+          "variant1": 0.03814256334948682
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.09520277477298386,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "f83f3d77d1d8ca0508de8b4e",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "2080 — chicken97",
+            "Do We Start to Like Each Other ? — Jordy Chandra"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "3F5HhdyBfvCbzuPJbGBHkc",
+            "5UUnRflW65AsvluD8d5N2U"
+          ],
+          "variant0": 0.09856743726046034,
+          "variant1": 0.10244430201364448
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.08551857431344406,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "b7b2cb46c4d97508fe64f44e",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "2080 — chicken97",
+            "DINOSAUR — AKMU"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "3F5HhdyBfvCbzuPJbGBHkc",
+            "49KDK2ccYnOCYPeXfDO3YT"
+          ],
+          "variant0": 0.03469504828701708,
+          "variant1": 0.16672822368788068
+        }
+      ],
+      "bad_low_probe_distance_misses": [
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.0009535246490682825,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "2b8c45a85f795b974eb906a2",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "You Never Know — BLACKPINK",
+            "SATELLITE — City Girl, Kelsey Kuan"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "39kzWAiVPpycdMpr745oPj",
+            "3X45Wd5yRNoe2twmyc5CvO"
+          ],
+          "variant0": 0.0036457756115072758,
+          "variant1": 0.003998265318344242
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.0026037783997923426,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "1296aa9e0b77e6a944303fcf",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "strawberry moon — IU",
+            "summer — raph, EJEAN"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2g0LdZQce9xlcHb1mBJyuz",
+            "4osRLDg7abL4hLdfZ1c39g"
+          ],
+          "variant0": 0.01121695454438008,
+          "variant1": 0.009735632757246811
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.0026140241847898912,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "b7048206b0146b2fc51d3138",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "It'll Be Ok — Yoandri",
+            "Not Afraid — INTRN"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2YO6ZDPdQFkrOa6YYceEN4",
+            "4yNhVidUIAtKPT72PrZuLP"
+          ],
+          "variant0": 0.0013316816629707177,
+          "variant1": 0.008866645376228981
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.002727037550754717,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "75b8ec44e61a5df1ad5f98e6",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "Heart — chicken97",
+            "Flash Forward — LE SSERAFIM"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "0mjbciwK9zhfQl44jXfQv6",
+            "74cpuIw43kA8xPgbQEPdss"
+          ],
+          "variant0": 0.00978937238754576,
+          "variant1": 0.008292417058118813
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.002790477961219865,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "df6ed509f53ed31ffe6cf5a4",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "Sunday (feat. HEIZE, Jay Park) — GroovyRoom, Heize, Jay Park",
+            "The Color Violet — Tory Lanez"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "0JJeoiCAa1hwcBsPxBN2w4",
+            "3azJifCSqg9fRij2yKIbWz"
+          ],
+          "variant0": 0.00417464589179287,
+          "variant1": 0.021022251419644488
+        }
+      ],
+      "good_high_probe_distance_counterexamples": [
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.21525966976447036,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "fac36320bbdfa07d72d5195e",
+          "rating": 4,
+          "rubric": "holistic",
+          "songs": [
+            "Soft Static Sky on Early Mornings — City Girl",
+            "SATELLITE — City Girl, Kelsey Kuan"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2Ah7oAy4esXD8pEEhY0hyR",
+            "3X45Wd5yRNoe2twmyc5CvO"
+          ],
+          "variant0": 0.28341344450815154,
+          "variant1": 0.15924791254316925
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.1668302568486001,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "bb6829bf9163154ca9a560fa",
+          "rating": 4,
+          "rubric": "holistic",
+          "songs": [
+            "No I Don't Want, Just Anyone — Unclenathannn, Shiloh Dynasty",
+            "TOUCH — keshi"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "23V5SeHanwL6PlqyJ99dH8",
+            "5cgy5vMqVZbd8hYutp2txu"
+          ],
+          "variant0": 0.2139349987463734,
+          "variant1": 0.1332712335206974
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.13575863427561688,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "93d9509922dc4cef09bf5dbb",
+          "rating": 5,
+          "rubric": "holistic",
+          "songs": [
+            "Stay With Me — jrd.",
+            "Soft Static Sky on Early Mornings — City Girl"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "02CCi0N3pMK4Rjxq5e6UmE",
+            "2Ah7oAy4esXD8pEEhY0hyR"
+          ],
+          "variant0": 0.2648221445107318,
+          "variant1": 0.036152254846464414
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.12722209076986996,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "f4066db547d456dbfcbc26e3",
+          "rating": 4,
+          "rubric": "holistic",
+          "songs": [
+            "Saturation in Delay, Love in Anger — City Girl, tiffi",
+            "No I Don't Want, Just Anyone — Unclenathannn, Shiloh Dynasty"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "00njeQb198Lm7Jge2Rsrlg",
+            "23V5SeHanwL6PlqyJ99dH8"
+          ],
+          "variant0": 0.21521974222920165,
+          "variant1": 0.07845533663076903
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.12254707281531112,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "512035b56fde1f3a80c4d560",
+          "rating": 4,
+          "rubric": "holistic",
+          "songs": [
+            "Soft Static Sky on Early Mornings — City Girl",
+            "She loves the color green and I love her — City Girl"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2Ah7oAy4esXD8pEEhY0hyR",
+            "7hFW5IN7mQ99PuO86r38Sf"
+          ],
+          "variant0": 0.2428906246554381,
+          "variant1": 0.02990722495013089
+        }
+      ]
+    },
+    "vocal_delivery": {
+      "bad_high_probe_distance": [
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.23523043473830663,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "dbfffdf5fb93e2add7645c7b",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "strawberry moon — IU",
+            "blue (with MINNIE) — yung kai, MINNIE"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2g0LdZQce9xlcHb1mBJyuz",
+            "6HIngEWX8ycnLjuUfSZyah"
+          ],
+          "variant0": 0.2981184037899277,
+          "variant1": 0.1996880458105708
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.19333870928144664,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "8d50ccfc4567549561840724",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "blue (with MINNIE) — yung kai, MINNIE",
+            "She loves the color green and I love her — City Girl"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "6HIngEWX8ycnLjuUfSZyah",
+            "7hFW5IN7mQ99PuO86r38Sf"
+          ],
+          "variant0": 0.39448120926827407,
+          "variant1": 0.07208448454912302
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.17467673671008052,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "57d98859f5d47c7592434894",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "for what — potsu",
+            "blue (with MINNIE) — yung kai, MINNIE"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "4B8L0sByBRJRUV1Uot2Ebd",
+            "6HIngEWX8ycnLjuUfSZyah"
+          ],
+          "variant0": 0.27858765275176667,
+          "variant1": 0.11199462142335948
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.15930753482652146,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "e6b1f80280fe00581f794793",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "We (OUI) (Feat. sogumm) — jeebanoff, sogumm",
+            "Fade (Feat. Rachel Lim) — JIDA, Rachel Lim"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "043ryKJlgSnAUzpXnfxU6b",
+            "49iccsmr8Su1SXXwNfFO70"
+          ],
+          "variant0": 0.312741179663578,
+          "variant1": 0.08654550703998962
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.14346492695744315,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "94630f75142c5e79f8e7f371",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "strawberry moon — IU",
+            "Celestial Angel — City Girl"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2g0LdZQce9xlcHb1mBJyuz",
+            "7rAOIiVhiD3vklTrCUpfYo"
+          ],
+          "variant0": 0.0988572293793895,
+          "variant1": 0.22972922727590675
+        }
+      ],
+      "bad_low_probe_distance_misses": [
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.0009104727773132259,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "80c15d525db38fe52a579c6c",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "It'll Be Ok — Yoandri",
+            "Liability — Lorde"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2YO6ZDPdQFkrOa6YYceEN4",
+            "6Kkt27YmFyIFrcX3QXFi2o"
+          ],
+          "variant0": 0.025286074862951737,
+          "variant1": 0.012026240029566298
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.0029921003020954586,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "2b90d33fb739514a81ce490b",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "vampire — Olivia Rodrigo",
+            "To My Youth — BOL4"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "1kuGVB7EU95pJObxwvfwKS",
+            "4gMPlHHAjOQnUrhsuqHivn"
+          ],
+          "variant0": 0.0036680059783614914,
+          "variant1": 0.006850536185776674
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.003905887805618385,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "5aa11a87143e039e540166a8",
+          "rating": 1,
+          "rubric": "holistic",
+          "songs": [
+            "Fall in love with you in every 4AM. — Friday Night Plans",
+            "Stay With Me — Teqkoi, Mouse"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2sXQnT404FrXeSEZkJXfKM",
+            "5ri8u5RA8e4vGMyMAGXy0p"
+          ],
+          "variant0": 0.0032267883044454103,
+          "variant1": 0.011259602099887696
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.004027633033976868,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "ac256feb0dac56a0191f1320",
+          "rating": 1,
+          "rubric": "holistic",
+          "songs": [
+            "Pray — City Girl, tiffi",
+            "The Color Violet — Tory Lanez"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2yQY2IzeQtUKanVo78Fg23",
+            "3azJifCSqg9fRij2yKIbWz"
+          ],
+          "variant0": 0.06512657153357226,
+          "variant1": 0.05099532367821775
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.005929428499283853,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "bb1a62be64ed7920ab6ec1a0",
+          "rating": 2,
+          "rubric": "holistic",
+          "songs": [
+            "DANCING ALONE — KiiiKiii",
+            "Die Right Here — david hugo"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "3vC63Nh3rSREo7qDHgnx8I",
+            "7fXYFuCTmNrYRGwEUUf5iz"
+          ],
+          "variant0": 0.0047543297885753455,
+          "variant1": 0.015121332074036304
+        }
+      ],
+      "good_high_probe_distance_counterexamples": [
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.16678209267760163,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "5cc20b63daa7f00643e5fcbb",
+          "rating": 4,
+          "rubric": "holistic",
+          "songs": [
+            "Soft Static Sky on Early Mornings — City Girl",
+            "Phantom Embrace — City Girl"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2Ah7oAy4esXD8pEEhY0hyR",
+            "6rj9qDXWANe0U69asDzxMp"
+          ],
+          "variant0": 0.349400298915129,
+          "variant1": 0.06305473398446709
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.1621462838437022,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "666beb7ec9fe3a567cc9bb6f",
+          "rating": 4,
+          "rubric": "holistic",
+          "songs": [
+            "Soft Static Sky on Early Mornings — City Girl",
+            "Do We Start to Like Each Other ? — Jordy Chandra"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2Ah7oAy4esXD8pEEhY0hyR",
+            "5UUnRflW65AsvluD8d5N2U"
+          ],
+          "variant0": 0.27040279210512286,
+          "variant1": 0.07637335722195086
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.15646598402531356,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "fac36320bbdfa07d72d5195e",
+          "rating": 4,
+          "rubric": "holistic",
+          "songs": [
+            "Soft Static Sky on Early Mornings — City Girl",
+            "SATELLITE — City Girl, Kelsey Kuan"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2Ah7oAy4esXD8pEEhY0hyR",
+            "3X45Wd5yRNoe2twmyc5CvO"
+          ],
+          "variant0": 0.20632629236307137,
+          "variant1": 0.11611389997067204
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.15359845419256468,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "62cfd6cfd0b5ddd517df4715",
+          "rating": 5,
+          "rubric": "holistic",
+          "songs": [
+            "Jocelyn Flores — Dontcry",
+            "Soft Static Sky on Early Mornings — City Girl"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "0WJxkgYXRoOxFb4Vq3Ddmg",
+            "2Ah7oAy4esXD8pEEhY0hyR"
+          ],
+          "variant0": 0.26448923296037447,
+          "variant1": 0.07843609871300067
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.142169227288108,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "ecc6d1710e767256aec1ba8c",
+          "rating": 4,
+          "rubric": "holistic",
+          "songs": [
+            "(empty) — OuiOui",
+            "Cloudy Thoughts — HYEJIN"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "0ayK1CJh1cMRjUJRCDWhCd",
+            "70YbAV2UKPee15B00RbPcT"
+          ],
+          "variant0": 0.17623825389911882,
+          "variant1": 0.17110870149212157
+        }
+      ]
+    }
+  },
+  "playlist": {
+    "musical_family": {
+      "bad_high_probe_distance": [
+        {
+          "axis": "musical_family",
+          "distance": 0.3654672661616336,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "6399a09dba3f2c283073136a",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "Fresh Air — Maasho, Weston Estate",
+            "Season of Memories — GFRIEND"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "30NAF18yQGvwKrbn1IEMKn",
+            "7LFwi4RolcCPnVEXXXVfQP"
+          ],
+          "variant0": 0.4029088687845567,
+          "variant1": 0.3486268075733744
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.32693441652358113,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "f31d789fb0118a945ec31911",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "Stoked — Weston Estate",
+            "Season of Memories — GFRIEND"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "6nef0wHkelfKqNVHAtzJbR",
+            "7LFwi4RolcCPnVEXXXVfQP"
+          ],
+          "variant0": 0.30795714999735585,
+          "variant1": 0.36085456360148066
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.2688356095823735,
+          "flag": true,
+          "neighbor": false,
+          "pair_id": "98804bb658f81f3e6c972321",
+          "rating": 1,
+          "rubric": "playlist",
+          "songs": [
+            "Wet Dreamz — J. Cole",
+            "Cloudy Thoughts — HYEJIN"
+          ],
+          "status": "OK",
+          "tracks": [
+            "4tqcoej1zPvwePZCzuAjJd",
+            "70YbAV2UKPee15B00RbPcT"
+          ],
+          "variant0": 0.2327194882590845,
+          "variant1": 0.34861234998442825
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.2538482550485212,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "0c5936c926b05b48e671b3fa",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "Fresh Air — Maasho, Weston Estate",
+            "Look At Me Now — Yayyoung"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "30NAF18yQGvwKrbn1IEMKn",
+            "5zfpJXfqGGh94YcStRlI2s"
+          ],
+          "variant0": 0.23171419400564092,
+          "variant1": 0.280329231259421
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.20477047616312477,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "42d4178a32886044e973c0ef",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "too afraid — hateful",
+            "GET IT — keshi"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "1ZhrRS2xY1ZoD2QJ9aZQxX",
+            "4LaZ8RpIP6DIgN73bXQVlO"
+          ],
+          "variant0": 0.1772781897503349,
+          "variant1": 0.262573422388509
+        }
+      ],
+      "bad_low_probe_distance_misses": [
+        {
+          "axis": "musical_family",
+          "distance": 0.008632495199245171,
+          "flag": false,
+          "neighbor": true,
+          "pair_id": "07fd4e70a7bb3588743ba5bb",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "OMG — NewJeans",
+            "Die Right Here — david hugo"
+          ],
+          "status": "OK",
+          "tracks": [
+            "65FftemJ1DbbZ45DUfHJXE",
+            "7fXYFuCTmNrYRGwEUUf5iz"
+          ],
+          "variant0": 0.01869693407861912,
+          "variant1": 0.007148157598757532
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.011356161613800795,
+          "flag": false,
+          "neighbor": false,
+          "pair_id": "20827e21a8235e81a5f0315c",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "CLOUT CHASER — Tiffany Day",
+            "Bullet Train Fantasy — Ibrahim, Luvbird"
+          ],
+          "status": "OK",
+          "tracks": [
+            "5aawFqyuCB3K2P8KQvhFVs",
+            "6JjD8b5nYnwJ3zxYZ16rKg"
+          ],
+          "variant0": 0.010534620506249393,
+          "variant1": 0.01827107776162815
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.011958699634611014,
+          "flag": false,
+          "neighbor": false,
+          "pair_id": "f748ec5c176fab12120db9a9",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "Fall in love — Han Jihyo, Park Soeun",
+            "Die Right Here — david hugo"
+          ],
+          "status": "OK",
+          "tracks": [
+            "5h6c3ArwadWdEny5yXUPOt",
+            "7fXYFuCTmNrYRGwEUUf5iz"
+          ],
+          "variant0": 0.012558900485587988,
+          "variant1": 0.014257755284716815
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.012245874835267576,
+          "flag": false,
+          "neighbor": false,
+          "pair_id": "ac6d8115dcff793c5b31656f",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "Stay With Me — Teqkoi, Mouse",
+            "m o v i e (Feat. Jade) — Stupinuts, Jade"
+          ],
+          "status": "OK",
+          "tracks": [
+            "5ri8u5RA8e4vGMyMAGXy0p",
+            "7nD9LjsenfCRv4uxy93xhZ"
+          ],
+          "variant0": 0.008718311231943216,
+          "variant1": 0.024703029989145756
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.012594964007478164,
+          "flag": false,
+          "neighbor": false,
+          "pair_id": "f1da62c6f09fde0ccf1531a2",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "The Bottom — Gracie Abrams",
+            "The Peace — underscores"
+          ],
+          "status": "OK",
+          "tracks": [
+            "4Sk74gcXTe9dnE1HU5Pn1y",
+            "6wm3t4VpTxSFfOUgTMlHZM"
+          ],
+          "variant0": 0.012143110116797714,
+          "variant1": 0.023677598950916024
+        }
+      ],
+      "good_high_probe_distance_counterexamples": [
+        {
+          "axis": "musical_family",
+          "distance": 0.4002210504824513,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "60e735a2614a3be2bb74809a",
+          "rating": 4,
+          "rubric": "playlist",
+          "songs": [
+            "(empty) — OuiOui",
+            "Dear My All — Mingginyu"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "0ayK1CJh1cMRjUJRCDWhCd",
+            "2X71ww8wImSYbw4s0Mr2ur"
+          ],
+          "variant0": 0.44417612380727806,
+          "variant1": 0.361760270625236
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.39545406338469535,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "12034ebc8cc0802d48b784cb",
+          "rating": 5,
+          "rubric": "playlist",
+          "songs": [
+            "Shiawase no Monosashi — Pokke",
+            "Bullet Train Fantasy — Ibrahim, Luvbird"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "0xlx3pH8TxNah8hdiINqeA",
+            "6JjD8b5nYnwJ3zxYZ16rKg"
+          ],
+          "variant0": 0.39093091606367963,
+          "variant1": 0.41270828761197076
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.36326335004568083,
+          "flag": true,
+          "neighbor": true,
+          "pair_id": "90eebca3c228e612c3fbaff5",
+          "rating": 4,
+          "rubric": "playlist",
+          "songs": [
+            "Ever2Late! — KiiiKiii",
+            "Thirsty — aespa"
+          ],
+          "status": "OK",
+          "tracks": [
+            "37BvHZhn4399Zhh6EDa4km",
+            "6nICBdDevG4NZysIqDFPEa"
+          ],
+          "variant0": 0.34366186009227623,
+          "variant1": 0.3861242274429202
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.3419885599669884,
+          "flag": true,
+          "neighbor": false,
+          "pair_id": "d43b21aae0e5eea2bb5e958d",
+          "rating": 5,
+          "rubric": "playlist",
+          "songs": [
+            "Ever2Late! — KiiiKiii",
+            "Smart — LE SSERAFIM"
+          ],
+          "status": "OK",
+          "tracks": [
+            "37BvHZhn4399Zhh6EDa4km",
+            "4lR8sYGMGZPvthF2yUfo7T"
+          ],
+          "variant0": 0.33255399193809654,
+          "variant1": 0.3596223555937924
+        },
+        {
+          "axis": "musical_family",
+          "distance": 0.32956421688781284,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "dce573bee4f4963cab905b1f",
+          "rating": 4,
+          "rubric": "playlist",
+          "songs": [
+            "Dear My All — Mingginyu",
+            "me2urs2ours — Yayyoung, Sojou Kim"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2X71ww8wImSYbw4s0Mr2ur",
+            "6B9HXnRzmokTTxZNdV5T48"
+          ],
+          "variant0": 0.37335297035380777,
+          "variant1": 0.30293198607996774
+        }
+      ]
+    },
+    "production_texture": {
+      "bad_high_probe_distance": [
+        {
+          "axis": "production_texture",
+          "distance": 0.139033896436983,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "b92e310a0819688b25d1f5af",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "Magnetic — ILLIT",
+            "No I Don't Want, Just Anyone — Unclenathannn, Shiloh Dynasty"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "1aKvZDoLGkNMxoRYgkckZG",
+            "23V5SeHanwL6PlqyJ99dH8"
+          ],
+          "variant0": 0.30136181416234004,
+          "variant1": 0.07938072040250098
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.11150817264714218,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "74fe2764363673c6932459dc",
+          "rating": 1,
+          "rubric": "playlist",
+          "songs": [
+            "You Are Enough — .Uzu, Clavita",
+            "Wet Dreamz — J. Cole"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2BFAfMIblG0RZeAvlmLC81",
+            "4tqcoej1zPvwePZCzuAjJd"
+          ],
+          "variant0": 0.23021170076762554,
+          "variant1": 0.02888375354170838
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.10503477434830444,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "58184bfcf2bb1532c2ebf7aa",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "DOWNPOUR (feat. Gliiico) — CHAEYOUNG, Gliiico",
+            "Not Afraid — INTRN"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "1IIcy1TpuiAT6S206OjYvC",
+            "4yNhVidUIAtKPT72PrZuLP"
+          ],
+          "variant0": 0.17489236629272953,
+          "variant1": 0.05395468735940967
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.09233739833856763,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "20827e21a8235e81a5f0315c",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "CLOUT CHASER — Tiffany Day",
+            "Bullet Train Fantasy — Ibrahim, Luvbird"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "5aawFqyuCB3K2P8KQvhFVs",
+            "6JjD8b5nYnwJ3zxYZ16rKg"
+          ],
+          "variant0": 0.16121148419592835,
+          "variant1": 0.038427032769542895
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.08032443788851543,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "6ffab14d2f1afcc5f8bd8f72",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "Fresh Air — Maasho, Weston Estate",
+            "Perfect Night — LE SSERAFIM"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "30NAF18yQGvwKrbn1IEMKn",
+            "74X2u8JMVooG2QbjRxXwR8"
+          ],
+          "variant0": 0.09723003192756048,
+          "variant1": 0.06431321834100648
+        }
+      ],
+      "bad_low_probe_distance_misses": [
+        {
+          "axis": "production_texture",
+          "distance": 0.00035902106168741137,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "80a95532388c1807be4045e7",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "Temporary — Kiri T",
+            "Not Afraid — INTRN"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "1AHtqWqufKsgBmdNEi1WVO",
+            "4yNhVidUIAtKPT72PrZuLP"
+          ],
+          "variant0": 0.02771041797415056,
+          "variant1": 0.028766704960985105
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.0014397056002486096,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "bb1a62be64ed7920ab6ec1a0",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "DANCING ALONE — KiiiKiii",
+            "Die Right Here — david hugo"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "3vC63Nh3rSREo7qDHgnx8I",
+            "7fXYFuCTmNrYRGwEUUf5iz"
+          ],
+          "variant0": 0.0068935378350628695,
+          "variant1": 0.0028154530559949924
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.005092706709583729,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "683d561aca8a715d302b847a",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "SATELLITE — City Girl, Kelsey Kuan",
+            "The Color Violet — Tory Lanez"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "3X45Wd5yRNoe2twmyc5CvO",
+            "3azJifCSqg9fRij2yKIbWz"
+          ],
+          "variant0": 0.023851768377363074,
+          "variant1": 0.01239835176231022
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.005546111468022983,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "a50ad7b27dc172979f8c19ee",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "Stay With Me — Teqkoi, Mouse",
+            "me2urs2ours — Yayyoung, Sojou Kim"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "5ri8u5RA8e4vGMyMAGXy0p",
+            "6B9HXnRzmokTTxZNdV5T48"
+          ],
+          "variant0": 0.009599836867323727,
+          "variant1": 0.016183332837517973
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.01017061203803555,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "2b8c45a85f795b974eb906a2",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "You Never Know — BLACKPINK",
+            "SATELLITE — City Girl, Kelsey Kuan"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "39kzWAiVPpycdMpr745oPj",
+            "3X45Wd5yRNoe2twmyc5CvO"
+          ],
+          "variant0": 0.03929544048805828,
+          "variant1": 0.008106877210493597
+        }
+      ],
+      "good_high_probe_distance_counterexamples": [
+        {
+          "axis": "production_texture",
+          "distance": 0.23403352421287682,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "cf1d41790e484b06a1d83646",
+          "rating": 4,
+          "rubric": "playlist",
+          "songs": [
+            "too afraid — hateful",
+            "for what — potsu"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "1ZhrRS2xY1ZoD2QJ9aZQxX",
+            "4B8L0sByBRJRUV1Uot2Ebd"
+          ],
+          "variant0": 0.3243375133215772,
+          "variant1": 0.20951098827713782
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.21318573506057167,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "9ea78093463e8ad1e9082798",
+          "rating": 4,
+          "rubric": "playlist",
+          "songs": [
+            "Stay With Me — jrd.",
+            "falling down — Nohidea"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "02CCi0N3pMK4Rjxq5e6UmE",
+            "0ASYuzPsTBA6ZmIsuvNZby"
+          ],
+          "variant0": 0.2382522593103441,
+          "variant1": 0.21205949996849932
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.2120007540791151,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "e74d31dc7fbf72472f729a5b",
+          "rating": 4,
+          "rubric": "playlist",
+          "songs": [
+            "My Gamecube Broke. — .Uzu",
+            "Morning Walk — Park Bird"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2Vu2hkPW7LxMHPqoMjSIEJ",
+            "53eKx8ec2jDjt1m3VBUCEM"
+          ],
+          "variant0": 0.34030313646405724,
+          "variant1": 0.11804354728631399
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.19543981877035216,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "d0e924b48470808010b238e7",
+          "rating": 4,
+          "rubric": "playlist",
+          "songs": [
+            "Stay With Me — jrd.",
+            "My Gamecube Broke. — .Uzu"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "02CCi0N3pMK4Rjxq5e6UmE",
+            "2Vu2hkPW7LxMHPqoMjSIEJ"
+          ],
+          "variant0": 0.26423814901407217,
+          "variant1": 0.15821218320761718
+        },
+        {
+          "axis": "production_texture",
+          "distance": 0.16005827096514622,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "97c667bd720d234adc086ba6",
+          "rating": 4,
+          "rubric": "playlist",
+          "songs": [
+            "too afraid — hateful",
+            "Not Afraid — INTRN"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "1ZhrRS2xY1ZoD2QJ9aZQxX",
+            "4yNhVidUIAtKPT72PrZuLP"
+          ],
+          "variant0": 0.14523283892189368,
+          "variant1": 0.22558506042688203
+        }
+      ]
+    },
+    "rhythmic_behavior": {
+      "bad_high_probe_distance": [
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.2128651644573937,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "b92e310a0819688b25d1f5af",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "Magnetic — ILLIT",
+            "No I Don't Want, Just Anyone — Unclenathannn, Shiloh Dynasty"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "1aKvZDoLGkNMxoRYgkckZG",
+            "23V5SeHanwL6PlqyJ99dH8"
+          ],
+          "variant0": 0.27371518280121226,
+          "variant1": 0.16678004742123415
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.13714843289211115,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "4c945edd24fdc8e9b89ad426",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "No I Don't Want, Just Anyone — Unclenathannn, Shiloh Dynasty",
+            "The Hills — The Weeknd"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "23V5SeHanwL6PlqyJ99dH8",
+            "7fBv7CLKzipRk6EC6TWHOB"
+          ],
+          "variant0": 0.18779067864254348,
+          "variant1": 0.09810797188235315
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.07177521280079607,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "ac6d8115dcff793c5b31656f",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "Stay With Me — Teqkoi, Mouse",
+            "m o v i e (Feat. Jade) — Stupinuts, Jade"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "5ri8u5RA8e4vGMyMAGXy0p",
+            "7nD9LjsenfCRv4uxy93xhZ"
+          ],
+          "variant0": 0.0845027874680963,
+          "variant1": 0.07329056829306402
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.06983649003751102,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "6000062a448b766bc778e0e4",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "Sunday (feat. HEIZE, Jay Park) — GroovyRoom, Heize, Jay Park",
+            "The Peace — underscores"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "0JJeoiCAa1hwcBsPxBN2w4",
+            "6wm3t4VpTxSFfOUgTMlHZM"
+          ],
+          "variant0": 0.08649990392142469,
+          "variant1": 0.06362462676241595
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.06415371043706329,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "86b23dea003b99361025d7ed",
+          "rating": 1,
+          "rubric": "playlist",
+          "songs": [
+            "Wet Dreamz — J. Cole",
+            "Stay With Me — Teqkoi, Mouse"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "4tqcoej1zPvwePZCzuAjJd",
+            "5ri8u5RA8e4vGMyMAGXy0p"
+          ],
+          "variant0": 0.1273132638593721,
+          "variant1": 0.035895448711947726
+        }
+      ],
+      "bad_low_probe_distance_misses": [
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.0009535246490682825,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "2b8c45a85f795b974eb906a2",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "You Never Know — BLACKPINK",
+            "SATELLITE — City Girl, Kelsey Kuan"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "39kzWAiVPpycdMpr745oPj",
+            "3X45Wd5yRNoe2twmyc5CvO"
+          ],
+          "variant0": 0.0036457756115072758,
+          "variant1": 0.003998265318344242
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.0010275230876920657,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "e32193a16a94489a4dcb13bf",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "Saturation in Delay, Love in Anger — City Girl, tiffi",
+            "GET IT — keshi"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "00njeQb198Lm7Jge2Rsrlg",
+            "4LaZ8RpIP6DIgN73bXQVlO"
+          ],
+          "variant0": 0.007254159696799309,
+          "variant1": 0.0019972916085052436
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.00425510199238751,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "a8a62fdf2176b0db1c8c2a0e",
+          "rating": 1,
+          "rubric": "playlist",
+          "songs": [
+            "The Hills — The Weeknd",
+            "m o v i e (Feat. Jade) — Stupinuts, Jade"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "7fBv7CLKzipRk6EC6TWHOB",
+            "7nD9LjsenfCRv4uxy93xhZ"
+          ],
+          "variant0": 0.012692656555409416,
+          "variant1": 0.031678996244040074
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.004796288051648025,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "85cc57567fd90225e756eb3c",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "DOWNPOUR (feat. Gliiico) — CHAEYOUNG, Gliiico",
+            "Wet Dreamz — J. Cole"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "1IIcy1TpuiAT6S206OjYvC",
+            "4tqcoej1zPvwePZCzuAjJd"
+          ],
+          "variant0": 0.006613730449300188,
+          "variant1": 0.005815306150035588
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.00488214167842202,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "f31d789fb0118a945ec31911",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "Stoked — Weston Estate",
+            "Season of Memories — GFRIEND"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "6nef0wHkelfKqNVHAtzJbR",
+            "7LFwi4RolcCPnVEXXXVfQP"
+          ],
+          "variant0": 0.06956777297864396,
+          "variant1": 0.022383204466777912
+        }
+      ],
+      "good_high_probe_distance_counterexamples": [
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.21525966976447036,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "fac36320bbdfa07d72d5195e",
+          "rating": 4,
+          "rubric": "playlist",
+          "songs": [
+            "Soft Static Sky on Early Mornings — City Girl",
+            "SATELLITE — City Girl, Kelsey Kuan"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2Ah7oAy4esXD8pEEhY0hyR",
+            "3X45Wd5yRNoe2twmyc5CvO"
+          ],
+          "variant0": 0.28341344450815154,
+          "variant1": 0.15924791254316925
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.15869649772219271,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "45692b24450de07fc6e125e1",
+          "rating": 4,
+          "rubric": "playlist",
+          "songs": [
+            "risk — lace",
+            "blue (with MINNIE) — yung kai, MINNIE"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2js0td9w2MzNUVPlMKYOEs",
+            "6HIngEWX8ycnLjuUfSZyah"
+          ],
+          "variant0": 0.3066565471578512,
+          "variant1": 0.05077278725178593
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.153988776518658,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "f214467f12ae2de458761b32",
+          "rating": 4,
+          "rubric": "playlist",
+          "songs": [
+            "2080 — chicken97",
+            "blue (with MINNIE) — yung kai, MINNIE"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "3F5HhdyBfvCbzuPJbGBHkc",
+            "6HIngEWX8ycnLjuUfSZyah"
+          ],
+          "variant0": 0.23535632903571646,
+          "variant1": 0.10002492736822452
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.14040981874091002,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "641f59d76e00e9448a050e89",
+          "rating": 4,
+          "rubric": "playlist",
+          "songs": [
+            "If I Weren't Me — Katherine Li",
+            "Shouldn't Be — Luke Chiang"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "5VGDusp81Ed3T9xACRw5Os",
+            "7F6PtLP6fJPVtA1FWVkl8K"
+          ],
+          "variant0": 0.16757696515965118,
+          "variant1": 0.11876307540047129
+        },
+        {
+          "axis": "rhythmic_behavior",
+          "distance": 0.13575863427561688,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "93d9509922dc4cef09bf5dbb",
+          "rating": 5,
+          "rubric": "playlist",
+          "songs": [
+            "Stay With Me — jrd.",
+            "Soft Static Sky on Early Mornings — City Girl"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "02CCi0N3pMK4Rjxq5e6UmE",
+            "2Ah7oAy4esXD8pEEhY0hyR"
+          ],
+          "variant0": 0.2648221445107318,
+          "variant1": 0.036152254846464414
+        }
+      ]
+    },
+    "vocal_delivery": {
+      "bad_high_probe_distance": [
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.2539919902890151,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "98804bb658f81f3e6c972321",
+          "rating": 1,
+          "rubric": "playlist",
+          "songs": [
+            "Wet Dreamz — J. Cole",
+            "Cloudy Thoughts — HYEJIN"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "4tqcoej1zPvwePZCzuAjJd",
+            "70YbAV2UKPee15B00RbPcT"
+          ],
+          "variant0": 0.42295627203921793,
+          "variant1": 0.12685970019773488
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.16241702740799913,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "86b23dea003b99361025d7ed",
+          "rating": 1,
+          "rubric": "playlist",
+          "songs": [
+            "Wet Dreamz — J. Cole",
+            "Stay With Me — Teqkoi, Mouse"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "4tqcoej1zPvwePZCzuAjJd",
+            "5ri8u5RA8e4vGMyMAGXy0p"
+          ],
+          "variant0": 0.24479203522990617,
+          "variant1": 0.09807633136501644
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.15092322422292595,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "74fe2764363673c6932459dc",
+          "rating": 1,
+          "rubric": "playlist",
+          "songs": [
+            "You Are Enough — .Uzu, Clavita",
+            "Wet Dreamz — J. Cole"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2BFAfMIblG0RZeAvlmLC81",
+            "4tqcoej1zPvwePZCzuAjJd"
+          ],
+          "variant0": 0.21658857087465147,
+          "variant1": 0.12775985883077806
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.12788340090824044,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "c595e35533c3833381a52cda",
+          "rating": 1,
+          "rubric": "playlist",
+          "songs": [
+            "Saturation in Delay, Love in Anger — City Girl, tiffi",
+            "Wet Dreamz — J. Cole"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "00njeQb198Lm7Jge2Rsrlg",
+            "4tqcoej1zPvwePZCzuAjJd"
+          ],
+          "variant0": 0.19480249231501187,
+          "variant1": 0.09322335079532125
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.12375133919429208,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "82f00bd962f0fcd721804f3b",
+          "rating": 1,
+          "rubric": "playlist",
+          "songs": [
+            "Shoota (feat. Lil Uzi Vert) — Playboi Carti, Lil Uzi Vert",
+            "Stay With Me — Teqkoi, Mouse"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2BJSMvOGABRxokHKB0OI8i",
+            "5ri8u5RA8e4vGMyMAGXy0p"
+          ],
+          "variant0": 0.18011182725396838,
+          "variant1": 0.07088666147696002
+        }
+      ],
+      "bad_low_probe_distance_misses": [
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.003905887805618385,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "5aa11a87143e039e540166a8",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "Fall in love with you in every 4AM. — Friday Night Plans",
+            "Stay With Me — Teqkoi, Mouse"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2sXQnT404FrXeSEZkJXfKM",
+            "5ri8u5RA8e4vGMyMAGXy0p"
+          ],
+          "variant0": 0.0032267883044454103,
+          "variant1": 0.011259602099887696
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.004825097329335704,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "683d561aca8a715d302b847a",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "SATELLITE — City Girl, Kelsey Kuan",
+            "The Color Violet — Tory Lanez"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "3X45Wd5yRNoe2twmyc5CvO",
+            "3azJifCSqg9fRij2yKIbWz"
+          ],
+          "variant0": 0.016757849448205946,
+          "variant1": 0.017314282537480147
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.005929428499283853,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "bb1a62be64ed7920ab6ec1a0",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "DANCING ALONE — KiiiKiii",
+            "Die Right Here — david hugo"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "3vC63Nh3rSREo7qDHgnx8I",
+            "7fXYFuCTmNrYRGwEUUf5iz"
+          ],
+          "variant0": 0.0047543297885753455,
+          "variant1": 0.015121332074036304
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.008498821482385548,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "f748ec5c176fab12120db9a9",
+          "rating": 2,
+          "rubric": "playlist",
+          "songs": [
+            "Fall in love — Han Jihyo, Park Soeun",
+            "Die Right Here — david hugo"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "5h6c3ArwadWdEny5yXUPOt",
+            "7fXYFuCTmNrYRGwEUUf5iz"
+          ],
+          "variant0": 0.022364611251313896,
+          "variant1": 0.008853650316137576
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.00947077307011904,
+          "flag": null,
+          "neighbor": true,
+          "pair_id": "a8a62fdf2176b0db1c8c2a0e",
+          "rating": 1,
+          "rubric": "playlist",
+          "songs": [
+            "The Hills — The Weeknd",
+            "m o v i e (Feat. Jade) — Stupinuts, Jade"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "7fBv7CLKzipRk6EC6TWHOB",
+            "7nD9LjsenfCRv4uxy93xhZ"
+          ],
+          "variant0": 0.048043605818798345,
+          "variant1": 0.017345279799058113
+        }
+      ],
+      "good_high_probe_distance_counterexamples": [
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.22132937791830476,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "9583cf2e64ccbac6ceb3d088",
+          "rating": 5,
+          "rubric": "playlist",
+          "songs": [
+            "My Gamecube Broke. — .Uzu",
+            "Phantom Embrace — City Girl"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2Vu2hkPW7LxMHPqoMjSIEJ",
+            "6rj9qDXWANe0U69asDzxMp"
+          ],
+          "variant0": 0.2775556751972173,
+          "variant1": 0.16980767263880764
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.2025427526506475,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "45692b24450de07fc6e125e1",
+          "rating": 4,
+          "rubric": "playlist",
+          "songs": [
+            "risk — lace",
+            "blue (with MINNIE) — yung kai, MINNIE"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "2js0td9w2MzNUVPlMKYOEs",
+            "6HIngEWX8ycnLjuUfSZyah"
+          ],
+          "variant0": 0.47633318579318223,
+          "variant1": 0.04355292569259392
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.20039400475790708,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "6cad14fd02cb9f12b8311597",
+          "rating": 4,
+          "rubric": "playlist",
+          "songs": [
+            "慢冷 — Ren Ran",
+            "blue (with MINNIE) — yung kai, MINNIE"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "3fzeNQfannmBQWGecQZ93s",
+            "6HIngEWX8ycnLjuUfSZyah"
+          ],
+          "variant0": 0.2763320382402169,
+          "variant1": 0.14827072748970724
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.19538689972420148,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "487c7e71390db90a7bafc3cb",
+          "rating": 4,
+          "rubric": "playlist",
+          "songs": [
+            "idontwannabeyouanymore — Billie Eilish",
+            "blue (with MINNIE) — yung kai, MINNIE"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "41zXlQxzTi6cGAjpOXyLYH",
+            "6HIngEWX8ycnLjuUfSZyah"
+          ],
+          "variant0": 0.2666050316131314,
+          "variant1": 0.15021834818471014
+        },
+        {
+          "axis": "vocal_delivery",
+          "distance": 0.17922484654431586,
+          "flag": null,
+          "neighbor": false,
+          "pair_id": "39b136abf48b77b9a666a545",
+          "rating": 4,
+          "rubric": "playlist",
+          "songs": [
+            "me2urs2ours — Yayyoung, Sojou Kim",
+            "blue (with MINNIE) — yung kai, MINNIE"
+          ],
+          "status": "ABSTAIN_AMBIGUOUS_PROBE",
+          "tracks": [
+            "6B9HXnRzmokTTxZNdV5T48",
+            "6HIngEWX8ycnLjuUfSZyah"
+          ],
+          "variant0": 0.226300040041521,
+          "variant1": 0.14258137510160085
+        }
+      ]
+    }
+  }
+}
