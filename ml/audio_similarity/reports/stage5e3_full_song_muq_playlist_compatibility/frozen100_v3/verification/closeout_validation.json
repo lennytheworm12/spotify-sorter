@@ -1,0 +1,30 @@
+{
+  "deterministic_analysis_rerun": {
+    "status": "PASS",
+    "unchanged_preexisting_run_files": 54
+  },
+  "independent_audit": {
+    "bootstrap_replicates": 2000,
+    "finite_json_and_symmetric_matrices": "PASS",
+    "historical_and_frozen_review_hashes": "PASS",
+    "independently_checked_comparisons": 12,
+    "methods": 4,
+    "natural_slots": 2000,
+    "paired_quality_anchors": 100,
+    "status": "PASS"
+  },
+  "legacy_experiment_report": "Preserved immutable pre-review engineering handoff; superseded for scientific status by scientific_closeout_report.md.",
+  "new_human_judgments": 0,
+  "new_inference": 0,
+  "non_heavy_suite": {
+    "command": ".venv/bin/python -m pytest -q",
+    "deselected": 12,
+    "passed": 1250,
+    "seconds": 154.19,
+    "warnings": 11
+  },
+  "production_activation": false,
+  "report_location": "scientific_closeout_report.md",
+  "status": "PASS",
+  "weights_changed": false
+}

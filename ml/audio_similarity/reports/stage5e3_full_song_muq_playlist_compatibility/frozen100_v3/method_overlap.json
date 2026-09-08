@@ -1,0 +1,50 @@
+{
+  "M1_C_CLAP__vs__M2_FULL_MUQ": {
+    "mean_top5_jaccard": 0.25111111111111106,
+    "shared_slots": 192,
+    "shared_unique_pairs": 155,
+    "unique_pairs_requiring_new_review": 249,
+    "unique_slots_x": 308,
+    "unique_slots_y": 308
+  },
+  "M1_C_CLAP__vs__M3_C_PLUS_FIXED_MUQ": {
+    "mean_top5_jaccard": 0.5630952380952382,
+    "shared_slots": 350,
+    "shared_unique_pairs": 273,
+    "unique_pairs_requiring_new_review": 163,
+    "unique_slots_x": 150,
+    "unique_slots_y": 150
+  },
+  "M1_C_CLAP__vs__M4_C_PLUS_FULL_MUQ": {
+    "mean_top5_jaccard": 0.6826190476190479,
+    "shared_slots": 399,
+    "shared_unique_pairs": 303,
+    "unique_pairs_requiring_new_review": 160,
+    "unique_slots_x": 101,
+    "unique_slots_y": 101
+  },
+  "M2_FULL_MUQ__vs__M3_C_PLUS_FIXED_MUQ": {
+    "mean_top5_jaccard": 0.3228174603174602,
+    "shared_slots": 231,
+    "shared_unique_pairs": 195,
+    "unique_pairs_requiring_new_review": 213,
+    "unique_slots_x": 269,
+    "unique_slots_y": 269
+  },
+  "M2_FULL_MUQ__vs__M4_C_PLUS_FULL_MUQ": {
+    "mean_top5_jaccard": 0.38829365079365075,
+    "shared_slots": 267,
+    "shared_unique_pairs": 210,
+    "unique_pairs_requiring_new_review": 217,
+    "unique_slots_x": 233,
+    "unique_slots_y": 233
+  },
+  "M3_C_PLUS_FIXED_MUQ__vs__M4_C_PLUS_FULL_MUQ": {
+    "mean_top5_jaccard": 0.6110714285714287,
+    "shared_slots": 369,
+    "shared_unique_pairs": 287,
+    "unique_pairs_requiring_new_review": 147,
+    "unique_slots_x": 131,
+    "unique_slots_y": 131
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "analysis_reference": {
+    "input_hashes": {
+      "post_review_rating_snapshot.json": "c1fb7560f8446e0ea0e43b6fa24180cc14860eb9a62bbfdd171b5bdcec223135",
+      "verdict_predicates.json": "195da38c02398bb943437e212d3de84f1d65662a4b71513da69f4d0de4990ef8"
+    },
+    "snapshot_hash": "c1fb7560f8446e0ea0e43b6fa24180cc14860eb9a62bbfdd171b5bdcec223135"
+  },
+  "limitations": [
+    "Selected frozen100, mixed historical labels, one owner; not held-out playlist validation.",
+    "Coverage, input context and pooling change jointly; shared candidate dependence remains."
+  ],
+  "production_activation": false,
+  "verdict": "INCONCLUSIVE"
+}

@@ -69,3 +69,29 @@ Only after the entire queue is submitted:
 ```
 
 The analysis/reveal/closeout boundary was tested only with isolated synthetic fixtures. No real-data winner selection or final scientific verdict was run at this handoff.
+
+## Completed scientific closeout (2026-09-07)
+
+**INCONCLUSIVE**, under the frozen revision-2 precedence. All 98 packets / 419
+judgments and six notes are saved and frozen; all four methods have 100% numeric
+Top-5 coverage. Analysis used cached results only, with no new inference,
+judgments, weight changes, or production activation.
+
+Read the [scientific report](../reports/stage5e3_full_song_muq_playlist_compatibility/frozen100_v3/scientific_closeout_report.md).
+The original run's `experiment_report.md` and earlier handoff artifacts remain
+byte-for-byte unchanged as historical engineering evidence. The new scientific
+report and `closeout.json` supersede their pending scientific status.
+
+M4 versus M3: unacceptable +1.0 percentage point (95% interval -0.4 to +2.6),
+coherent +0.4 points (-2.8 to +3.405), mean rating effectively 0.000 (-0.054 to
++0.050), historical-positive recovery -4.547 points (-8.466 to -0.983).
+ACCEPT passes, GAIN fails, and no ordered recommendation branch passes.
+This does not prove equivalence or superiority of the existing configuration.
+
+Non-heavy suite: **1,250 passed, 12 deselected, 11 warnings, 154.19 seconds**.
+Independent arithmetic checks matched all 12 ordered comparisons' quality
+vectors, means, and 2,000-replicate bootstrap intervals. Analysis rerun preserved
+all 54 preexisting run files. Final evidence is inventoried by
+`closeout_artifact_manifest.json`, leaving the original pre-review manifest
+unchanged. Full test output and the repeatable independent audit are in the
+run's `verification/` directory.

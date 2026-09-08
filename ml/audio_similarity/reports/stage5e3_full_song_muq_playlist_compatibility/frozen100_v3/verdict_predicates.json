@@ -1,0 +1,99 @@
+{
+  "comparisons": {
+    "M1_C_CLAP__vs__M2_FULL_MUQ": {
+      "ACCEPT": true,
+      "GAIN": true,
+      "ROBUST_WIN": true,
+      "STABLE": true,
+      "WIN": true
+    },
+    "M1_C_CLAP__vs__M3_C_PLUS_FIXED_MUQ": {
+      "ACCEPT": true,
+      "GAIN": false,
+      "ROBUST_WIN": false,
+      "STABLE": false,
+      "WIN": false
+    },
+    "M1_C_CLAP__vs__M4_C_PLUS_FULL_MUQ": {
+      "ACCEPT": true,
+      "GAIN": false,
+      "ROBUST_WIN": false,
+      "STABLE": false,
+      "WIN": false
+    },
+    "M2_FULL_MUQ__vs__M1_C_CLAP": {
+      "ACCEPT": false,
+      "GAIN": false,
+      "ROBUST_WIN": false,
+      "STABLE": false,
+      "WIN": false
+    },
+    "M2_FULL_MUQ__vs__M3_C_PLUS_FIXED_MUQ": {
+      "ACCEPT": false,
+      "GAIN": false,
+      "ROBUST_WIN": false,
+      "STABLE": false,
+      "WIN": false
+    },
+    "M2_FULL_MUQ__vs__M4_C_PLUS_FULL_MUQ": {
+      "ACCEPT": false,
+      "GAIN": false,
+      "ROBUST_WIN": false,
+      "STABLE": false,
+      "WIN": false
+    },
+    "M3_C_PLUS_FIXED_MUQ__vs__M1_C_CLAP": {
+      "ACCEPT": true,
+      "GAIN": false,
+      "ROBUST_WIN": false,
+      "STABLE": false,
+      "WIN": false
+    },
+    "M3_C_PLUS_FIXED_MUQ__vs__M2_FULL_MUQ": {
+      "ACCEPT": true,
+      "GAIN": true,
+      "ROBUST_WIN": true,
+      "STABLE": true,
+      "WIN": true
+    },
+    "M3_C_PLUS_FIXED_MUQ__vs__M4_C_PLUS_FULL_MUQ": {
+      "ACCEPT": true,
+      "GAIN": false,
+      "ROBUST_WIN": false,
+      "STABLE": false,
+      "WIN": false
+    },
+    "M4_C_PLUS_FULL_MUQ__vs__M1_C_CLAP": {
+      "ACCEPT": true,
+      "GAIN": false,
+      "ROBUST_WIN": false,
+      "STABLE": false,
+      "WIN": false
+    },
+    "M4_C_PLUS_FULL_MUQ__vs__M2_FULL_MUQ": {
+      "ACCEPT": true,
+      "GAIN": true,
+      "ROBUST_WIN": true,
+      "STABLE": true,
+      "WIN": true
+    },
+    "M4_C_PLUS_FULL_MUQ__vs__M3_C_PLUS_FIXED_MUQ": {
+      "ACCEPT": true,
+      "GAIN": false,
+      "ROBUST_WIN": false,
+      "STABLE": false,
+      "WIN": false
+    }
+  },
+  "support_gates": {
+    "all_method_coverage": true,
+    "complete_paired_anchors": true,
+    "full100_materialized": true,
+    "historical_integrity": true,
+    "paired_evidence_anchors": true,
+    "positive_bank_anchors": true,
+    "primary_coverage": true,
+    "review_complete": true
+  },
+  "verdict": "INCONCLUSIVE"
+}
