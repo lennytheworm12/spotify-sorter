@@ -111,3 +111,21 @@ test('audio byte ranges include seeking, suffixes, clipping and rejection', () =
   for (const range of ['bytes=100-', 'bytes=30-20', 'bytes=-0', 'bytes=0-1,5-8', 'bad', 'bytes=-'])
     assert.throws(() => byteRange(range, 100))
 })
+
+test('quarantined source remains visible as an isolated song with its reason', () => {
+  const data = fixture()
+  data.songs[3].sourceIssue = 'Verified replacement unavailable.'
+  data.links = data.links.filter((edge) => edge.source !== 'd' && edge.target !== 'd')
+  const parsed = parseDataset(data)
+  assert.equal(parsed.songs[3].sourceIssue, data.songs[3].sourceIssue)
+  const layout = buildLayout(parsed)
+  const song = layout.songs.find((entry) => entry.id === 'd')!
+  assert.equal(song.degree, 0)
+  assert.equal(song.audioUrl, undefined)
+  assert.equal(song.sourceIssue, data.songs[3].sourceIssue)
+  data.songs[3].audioUrl = '/wrong.mp3'
+  assert.throws(() => parseDataset(data), /Quarantined/)
+  delete data.songs[3].audioUrl
+  data.links = fixture().links
+  assert.throws(() => parseDataset(data), /Quarantined/)
+})

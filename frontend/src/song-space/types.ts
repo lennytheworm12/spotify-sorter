@@ -6,6 +6,7 @@ export interface Song {
   album?: string
   durationMs?: number
   audioUrl?: string
+  sourceIssue?: string
   community?: string
   x?: number
   y?: number

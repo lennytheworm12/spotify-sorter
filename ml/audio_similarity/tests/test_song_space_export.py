@@ -48,3 +48,19 @@ def test_source_correction_is_hash_locked_and_preserves_original(tmp_path):
     record.write_text(json.dumps(replacement) + ' ')
     with pytest.raises(ValueError):
         apply_source_corrections(tmp_path, copy.deepcopy(original), [], set())
+
+
+def test_source_quarantine_matches_hash_and_cannot_touch_frozen_c(tmp_path):
+    from audio_similarity.song_space_export import source_quarantines
+    from audio_similarity.stage5e3_artifacts import freeze_json
+    path = tmp_path / '.research_audio/library_batches_v1/source_quarantines.json'
+    freeze_json(path, {'schema_version': 'library-source-quarantines-v1', 'tracks': [{
+        'spotify_track_id': 'a', 'source_sha256': 'wrong', 'reason': 'Verified replacement unavailable.'}]})
+    rows = {'a': {'result': {'source_sha256': 'wrong'}}}
+    paths = []
+    assert source_quarantines(tmp_path, rows, paths, set()) == {'a': 'Verified replacement unavailable.'}
+    assert paths == [path]
+    with pytest.raises(ValueError, match='frozen-C'):
+        source_quarantines(tmp_path, rows, [], {'a'})
+    with pytest.raises(ValueError, match='current source'):
+        source_quarantines(tmp_path, {'a': {'result': {'source_sha256': 'corrected'}}}, [], set())

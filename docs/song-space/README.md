@@ -7,20 +7,22 @@ The default React/Vite view explores a read-only similarity graph. Search or cli
 From `ml/audio_similarity`, reuse the processed-library and frozen C caches:
 
 ```bash
-PYTHONPATH=src .venv/bin/python -m audio_similarity.song_space_export
+PYTHONPATH=src .venv/bin/python -m audio_similarity.song_space_export --output .research_audio/song_space/v3
 ```
 
 From `frontend`, start the optional local bridge:
 
 ```bash
-SONG_SPACE_DATA_DIR="$PWD/../ml/audio_similarity/.research_audio/song_space/v1" pnpm dev
+SONG_SPACE_DATA_DIR="$PWD/../ml/audio_similarity/.research_audio/song_space/v3" pnpm dev
 ```
 
 Open `http://127.0.0.1:5173/`. The bridge forces loopback binding and only reads explicitly configured snapshots and retained audio. It supports HTTP byte ranges for playback/seeking. No backend, Spotify session, inference or Spotify writes are needed to explore it. Library JSON, source audio and receipts remain in ignored `.research_audio/`; none are production build assets or Git inputs.
 
 The 1,257-track library currently uses cached centered-excerpt CLAP, **not full-song CLAP C**. A separate 100-track map uses exact frozen C scores. The selector and representation descriptions distinguish these. Do not compare scores across maps as calibrated probabilities. Missing cache rows fail the exporter; it never silently shrinks the library.
 
-The exporter sorts identities and scores with stable-ID tie breaking, verifies vector blobs and emits the union of directional Top-12 lists. Rerunning verifies frozen outputs rather than overwriting them. Use a new `--output .research_audio/song_space/v2` directory for changed inputs or export code. `provenance.json` records input/code hashes; `vector-receipts.json` records cache analysis identities and vector hashes. No model inference occurs.
+The exporter sorts identities and scores with stable-ID tie breaking, verifies vector blobs and emits the union of directional Top-12 lists. Rerunning verifies frozen outputs rather than overwriting them. Use a new `--output .research_audio/song_space/v4` directory for changed inputs or export code. `provenance.json` records input/code hashes; `vector-receipts.json` records cache analysis identities and vector hashes. No model inference occurs.
+
+The current v3 snapshot includes [verified source repairs and one explicit quarantine](problem-source-corrections.md). All 1,257 identities remain visible; 1,256 have active representations. A song with `sourceIssue` has no audio or similarity links. The importer rejects snapshots that violate that rule.
 
 ## Replaceable inputs
 

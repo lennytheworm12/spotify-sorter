@@ -72,10 +72,14 @@ export function parseDataset(value: unknown): SongSpaceDataset {
       ...duration,
       ...(song.album === undefined ? {} : { album: text(song.album, 'album') }),
       ...(song.audioUrl === undefined ? {} : { audioUrl: safeUrl(song.audioUrl) }),
+      ...(song.sourceIssue === undefined ? {} : { sourceIssue: text(song.sourceIssue, 'source issue') }),
       ...(song.community === undefined ? {} : { community: text(song.community, 'community') }),
     }
   })
   const k = finite(data.neighborhoodSize, 'neighborhood size')
+  const quarantined = new Set(songs.filter((song) => song.sourceIssue).map((song) => song.id))
+  if (songs.some((song) => song.sourceIssue && song.audioUrl))
+    throw new Error('Quarantined sources cannot supply audio.')
   if (!Number.isInteger(k) || k < 1 || k > 100)
     throw new Error('Neighborhood size must be between 1 and 100.')
   const pairs = new Set<string>()
@@ -97,6 +101,8 @@ export function parseDataset(value: unknown): SongSpaceDataset {
       target = text(link.target, 'target')
     if (!ids.has(source) || !ids.has(target) || source === target)
       throw new Error('A connection references a missing song or itself.')
+    if (quarantined.has(source) || quarantined.has(target))
+      throw new Error('Quarantined sources cannot supply similarity connections.')
     const key = JSON.stringify([source, target].sort())
     if (pairs.has(key)) throw new Error('Duplicate similarity connection.')
     pairs.add(key)

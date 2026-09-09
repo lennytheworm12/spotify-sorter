@@ -63,6 +63,28 @@ def apply_source_corrections(root, rows, paths, protected_ids):
         paths.append(record_path)
 
 
+def source_quarantines(root, rows, paths, protected_ids):
+    """Keep unresolved identities visible without exposing their wrong audio/vectors."""
+    path = root / '.research_audio/library_batches_v1/source_quarantines.json'
+    if not path.exists():
+        return {}
+    document = read(path)
+    if document.get('schema_version') != 'library-source-quarantines-v1':
+        raise ValueError('unsupported source quarantine index')
+    blocked = {}
+    for row in document['tracks']:
+        tid = row['spotify_track_id']
+        if tid in blocked or tid not in rows or tid in protected_ids:
+            raise ValueError('duplicate, unknown, or frozen-C source quarantine')
+        if rows[tid]['result']['source_sha256'] != row['source_sha256']:
+            raise ValueError('quarantine does not match current source')
+        if not isinstance(row.get('reason'), str) or not row['reason'].strip():
+            raise ValueError('quarantine requires an explicit reason')
+        blocked[tid] = row['reason']
+    paths.append(path)
+    return blocked
+
+
 def load_processed(root):
     library = root / '.research_audio/library_batches_v1'
     manifest = read(library / 'manifest.json')
@@ -87,6 +109,7 @@ def load_processed(root):
     with np.load(root / E3 / 'historical_reference_matrices.npz', allow_pickle=False) as frozen:
         protected_ids = set(map(str, frozen['spotify_ids']))
     apply_source_corrections(root, rows, paths, protected_ids)
+    blocked = source_quarantines(root, rows, paths, protected_ids)
     if not set(tracks) <= set(rows):
         raise ValueError(f'{len(set(tracks) - set(rows))} library tracks not processed; do not silently shrink the map')
     contract = load_contract(root / 'reports/holistic_stage4a_dual/audio_representation_v1.json')
@@ -95,6 +118,8 @@ def load_processed(root):
     connections = {}
     try:
         for tid, track in sorted(tracks.items()):
+            if tid in blocked:
+                continue
             result = rows[tid]['result']; record = result['representation']
             cache = root / record['cache_path']
             if not cache.resolve().is_relative_to((root / 'artifacts').resolve()):
@@ -123,22 +148,24 @@ def load_processed(root):
     finally:
         for db in connections.values():
             db.close()
-    return tracks, vectors, media, receipts, paths
+    return tracks, vectors, media, receipts, paths, blocked
 
 
 def export(root, output, k):
-    tracks, vectors, media, receipts, paths = load_processed(root)
-    def dataset(ids, matrix, label, scorer_id, description):
+    tracks, vectors, media, receipts, paths, blocked = load_processed(root)
+    def dataset(ids, matrix, label, scorer_id, description, visible_ids=None):
         return {'schemaVersion': 'song-space-v1', 'id': scorer_id + '-' + digest(ids)[:12], 'name': label, 'description': description,
                 'scorer': {'id': scorer_id, 'label': label, 'description': description, 'scoreRange': [-1, 1], 'higherIsCloser': True},
                 'neighborhoodSize': k,
                 'songs': [{'id': tid, 'title': tracks[tid]['title'], 'artists': tracks[tid]['artists'], 'album': tracks[tid].get('album') or 'Unknown album',
-                           'durationMs': tracks[tid]['duration_ms'], 'audioUrl': '/__song-space/audio/' + tid} for tid in ids],
+                           'durationMs': tracks[tid]['duration_ms'],
+                           **({'sourceIssue': blocked[tid]} if tid in blocked else {'audioUrl': '/__song-space/audio/' + tid})}
+                          for tid in (visible_ids if visible_ids is not None else ids)],
                 'links': knn_links(ids, matrix, k)}
-    ids = sorted(tracks)
+    ids = sorted(vectors)
     x = np.stack([vectors[tid] for tid in ids])
     library = dataset(ids, np.clip(x @ x.T, -1, 1), 'Library · excerpt CLAP', 'centered30-clap-v1',
-                      'All processed library songs. Existing CLAP embeddings pooled from three windows in the retained 30-second excerpt. This is not full-song CLAP C; MuQ and fusion are not map inputs.')
+                      'All library identities; quarantined sources have no audio or similarity links. Existing CLAP embeddings pooled from three windows in the retained 30-second excerpt. This is not full-song CLAP C; MuQ and fusion are not map inputs.', sorted(tracks))
     with np.load(root / E3 / 'historical_reference_matrices.npz', allow_pickle=False) as data:
         order = list(data['spotify_ids']); c_ids = sorted(str(t) for t in order)
         if not set(c_ids) <= set(tracks):
@@ -151,8 +178,10 @@ def export(root, output, k):
     freeze_json(output / 'catalog.json', [{'id': name, 'label': data['name'], 'url': '/__song-space/data/' + name} for name, data in [('library', library), ('clap-c', c)]])
     freeze_json(output / 'provenance.json', {'input_hashes': hashes(paths + [Path(__file__), root / E3 / 'historical_reference_matrices.npz'], root),
                 'configuration': {'k': k, 'knn': 'union of directed top-k, exact score descending, stable track ID tie break', 'inference_calls': 0},
-                'library_tracks': len(ids), 'clap_c_tracks': len(c_ids), 'score_inputs': 'CLAP only; no fusion, MuQ, labels, genre or style features'})
-    print({'library_tracks': len(ids), 'library_links': len(library['links']), 'C_tracks': len(c_ids), 'output': str(output), 'inference_calls': 0})
+                'library_tracks': len(tracks), 'represented_tracks': len(ids), 'quarantined_sources': blocked,
+                'clap_c_tracks': len(c_ids), 'score_inputs': 'CLAP only; no fusion, MuQ, labels, genre or style features'})
+    print({'library_tracks': len(tracks), 'represented_tracks': len(ids), 'quarantined_tracks': len(blocked),
+           'library_links': len(library['links']), 'C_tracks': len(c_ids), 'output': str(output), 'inference_calls': 0})
 
 
 if __name__ == '__main__':

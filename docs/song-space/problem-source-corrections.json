@@ -1,0 +1,522 @@
+{
+  "artifact_hashes": {
+    ".research_audio/song_space/v3/audio-index.json": "fd4a64c3aa796e4858a2c2b8ac4dc939d07704c680ff0dfab4e2d89f4de51707",
+    ".research_audio/song_space/v3/catalog.json": "9d5b2818111c913015a6ccabd7f744bcb2f2100652900ab9168c0144d07ea5a0",
+    ".research_audio/song_space/v3/clap-c.json": "273bb37766bbe86518cc2697874a197ef5f7694d8459da1495c110d2757a6f70",
+    ".research_audio/song_space/v3/library.json": "d4a1a6399c3f447e036cbf49bf9a8fffe5fc7eea2bc5890c57063de5ab54bc73",
+    ".research_audio/song_space/v3/provenance.json": "d6c76fd60057e63ce95b4d76d615ca7958d68ef12348aacaddbe330c60059e71",
+    ".research_audio/song_space/v3/vector-receipts.json": "4c9909730d4fc25b3db2a7bec9e6aba4e2eaf842db7d948d46069fc8fcfcc187",
+    ".research_audio/source_corrections/problem_cases_v1/execution_initial.json": "1c7bcf7c721de8e10b00d66e0b8796cadcb089ec8248884f1ec68255cde06ee1",
+    ".research_audio/source_corrections/problem_cases_v1/inputs.json": "4a91d7b2543137ec2a631f142d6a8864d735e46c9c04ac12daf937a4f7a3f768",
+    ".research_audio/source_corrections/problem_cases_v1/original_hashes.json": "88481078da3afb92345d7e0d2a82aa2345e60bb7c1666290d64424ee748ed3c5",
+    ".research_audio/source_corrections/problem_cases_v1/published_corrections.json": "4197a71d561e3540fdcb3432714875d3d91d722a7a25ea39c210255dcaefe069",
+    ".research_audio/source_corrections/problem_cases_v1/replay.json": "7bd77ae8d8e5500f67b8f797aac96d7d76679f412487956b0a3970ab8df1afc6"
+  },
+  "browser_audio_checks": [
+    {
+      "duration": 152.624762,
+      "http_hash_matches": true,
+      "played": 0.305062,
+      "range_206": true,
+      "seek": 50,
+      "track_id": "1FXSJDp0dGGSAyRZzLCoIN"
+    },
+    {
+      "duration": 221.341,
+      "http_hash_matches": true,
+      "played": 0.287793,
+      "range_206": true,
+      "seek": 50,
+      "track_id": "4PoMMt1P8TAIRbeAcY8PN3"
+    },
+    {
+      "duration": 205.981,
+      "http_hash_matches": true,
+      "played": 0.220513,
+      "range_206": true,
+      "seek": 50,
+      "track_id": "4ujrrZFO7Cydli06jZtyQd"
+    },
+    {
+      "duration": 185.641,
+      "http_hash_matches": true,
+      "played": 0.177015,
+      "range_206": true,
+      "seek": 50,
+      "track_id": "7sLIVmzjMDb1YUCE1ueP2H"
+    }
+  ],
+  "code_hashes": {
+    "frontend/src/song-space/Inspector.tsx": "381d1349d6364a0979e050d075d02704b7dd40b8127d4df24ea413711eae83ff",
+    "frontend/src/song-space/data.ts": "8d7ba760a62d152aa9f77dad90d8ac4d3a54f76ddd6893fbd20595a6e93ddde2",
+    "frontend/src/song-space/types.ts": "2ecb3f528ea215eb0c9698413c1f2cad2e5aec0cf2ba579696cf7119a04d0b8c",
+    "ml/audio_similarity/src/audio_similarity/song_space_export.py": "cb5aaa667b8fb43bb19262c8a8d96d4315b32b17db7c89838b1a79bc827574a4"
+  },
+  "corrections": [
+    {
+      "artists": [
+        "luv, jacob",
+        "kate hyun"
+      ],
+      "canonical_pcm_sha256": "fd6438de9aecee6792982e2b53442fb742e24dd8ce929225b7b8d805dc44c637",
+      "corrected_neighbors": [
+        {
+          "artists": [
+            "Diego Gonzalez"
+          ],
+          "score": 0.8975235029108563,
+          "title": "You & I",
+          "track_id": "3mX2GKPSW38pRpdmC9tdvY"
+        },
+        {
+          "artists": [
+            "fin peach"
+          ],
+          "score": 0.8545769695068054,
+          "title": "maneater",
+          "track_id": "37tKhHdHbLwRs4HfMpUkNN"
+        },
+        {
+          "artists": [
+            "NAV",
+            "Lil Uzi Vert"
+          ],
+          "score": 0.8487889308320449,
+          "title": "Wanted You (feat. Lil Uzi Vert)",
+          "track_id": "790MhTXPFrYkrqCKvpg4t1"
+        },
+        {
+          "artists": [
+            "frad",
+            "Hayne",
+            "Milky Day"
+          ],
+          "score": 0.8474923155327732,
+          "title": "fool",
+          "track_id": "6lXGf0irWo1XWl8acAlzso"
+        },
+        {
+          "artists": [
+            "Frank Ocean"
+          ],
+          "score": 0.8465563873392986,
+          "title": "Ivy",
+          "track_id": "2ZWlPOoWh0626oTaHrnl2a"
+        }
+      ],
+      "duration_seconds": 152.625,
+      "new_source_sha256": "a473313f6a2f188c5798bb03971b7a17b6a9de5f9fde93960af7944f27ac1819",
+      "new_source_url": "https://soundcloud.com/luvjacob7/head-over-heels-kate-hyun",
+      "old_source_sha256": "4543097ae77f1ead1a05258aaa8a702b29b846618ba0a24006a12c89d45ba4db",
+      "old_source_url": "https://www.youtube.com/watch?v=73JFV3R_hak",
+      "previous_neighbors": [
+        {
+          "artists": [
+            "eery"
+          ],
+          "score": 0.7554221259218501,
+          "title": "Her",
+          "track_id": "4kVmLlBnLcfXIZIIhq3VUq"
+        },
+        {
+          "artists": [
+            "Elijah Who"
+          ],
+          "score": 0.7533599475288696,
+          "title": "this girl",
+          "track_id": "19JzJOMs4wkuKxY8WEOMea"
+        },
+        {
+          "artists": [
+            "RIPLEY"
+          ],
+          "score": 0.7408673417272591,
+          "title": "Fool to love",
+          "track_id": "7aooyCtNQQ2X7NPgjfQrzd"
+        },
+        {
+          "artists": [
+            "NIKI"
+          ],
+          "score": 0.7316331014350902,
+          "title": "See U Never",
+          "track_id": "5nPdol1JZWJqG4OSHVzSCF"
+        },
+        {
+          "artists": [
+            "Limit"
+          ],
+          "score": 0.7296004280433844,
+          "title": "IDTAY (I don’t think anything of you)",
+          "track_id": "0jnvohKC2aOii15ZCskAhP"
+        }
+      ],
+      "representation_identity": "7eacac9047c5f52608e606b24028f259840aa203b0bf2b2c7492c5b4e5bc8537",
+      "spotify_track_id": "1FXSJDp0dGGSAyRZzLCoIN",
+      "title": "head over heels"
+    },
+    {
+      "artists": [
+        "JO YURI"
+      ],
+      "canonical_pcm_sha256": "a905d7651182f6510754b1098dfdb4df07708bc1a1a1a920f1cdaab3487c5e90",
+      "corrected_neighbors": [
+        {
+          "artists": [
+            "LUCY"
+          ],
+          "score": 0.8360249108355388,
+          "title": "The knight who can't die and the silk cradle",
+          "track_id": "7liPa1ogr6uKLBBfuKuCJh"
+        },
+        {
+          "artists": [
+            "Yerin Baek"
+          ],
+          "score": 0.8032905826894681,
+          "title": "Square (2017)",
+          "track_id": "2cTK5kS6aPYBNdhUQCzFN7"
+        },
+        {
+          "artists": [
+            "yung kai",
+            "MINNIE"
+          ],
+          "score": 0.7880887765586133,
+          "title": "blue (with MINNIE)",
+          "track_id": "6HIngEWX8ycnLjuUfSZyah"
+        },
+        {
+          "artists": [
+            "Gracie Abrams"
+          ],
+          "score": 0.780886220231357,
+          "title": "Blowing Smoke",
+          "track_id": "7Eg4LsQTM6QOqeCS8EihZI"
+        },
+        {
+          "artists": [
+            "yuni",
+            "Lydia Ganada"
+          ],
+          "score": 0.7756073777891817,
+          "title": "stay (with Lydia Ganada)",
+          "track_id": "2wIaCbkQtEFszbalEsqpNN"
+        }
+      ],
+      "duration_seconds": 221.341,
+      "new_source_sha256": "b8b45ef59a9936724d90bb0b0d7e2ba0881efde42cc80e2027330a66ca26503b",
+      "new_source_url": "https://www.youtube.com/watch?v=q0ZEMR7pC18",
+      "old_source_sha256": "b374f46e5c1a7b2803eb668bb9174a1651ad11f526982cd54cbee359655c6798",
+      "old_source_url": "https://www.youtube.com/watch?v=5Ybpw22iAb8",
+      "previous_neighbors": [
+        {
+          "artists": [
+            "Gracie Abrams"
+          ],
+          "score": 0.9057299735330195,
+          "title": "I miss you, I’m sorry",
+          "track_id": "4nyF5lmSziBAt7ESAUjpbx"
+        },
+        {
+          "artists": [
+            "Lovewave"
+          ],
+          "score": 0.8763326288544457,
+          "title": "The Night",
+          "track_id": "2H3xzzEnqplPFBEj3WfKWI"
+        },
+        {
+          "artists": [
+            "單依純"
+          ],
+          "score": 0.8643145312161877,
+          "title": "在夜裡跳舞",
+          "track_id": "76DCJJrwlBloEi6rQOyEIx"
+        },
+        {
+          "artists": [
+            "Heize"
+          ],
+          "score": 0.857855211773777,
+          "title": "내 맘을 볼 수 있나요",
+          "track_id": "6hyEJPfwy51mqYhbuxjVTu"
+        },
+        {
+          "artists": [
+            "tiffi",
+            "City Girl"
+          ],
+          "score": 0.8571605730886662,
+          "title": "drive by (chill version)",
+          "track_id": "0jdhoWxjxXPQaQfGIvyAvz"
+        }
+      ],
+      "representation_identity": "5b8cbad046f38be15d4dc0944750f07a686d16282bd3f3d529a0232ce92cccb5",
+      "spotify_track_id": "4PoMMt1P8TAIRbeAcY8PN3",
+      "title": "Maybe"
+    },
+    {
+      "artists": [
+        "CRUCiAL STAR",
+        "Leellamarz",
+        "chicken97"
+      ],
+      "canonical_pcm_sha256": "e4cec85ada27bdd9b3fdd92df56b2866e11bf47eb80ceb5dd35b8507e7b85730",
+      "corrected_neighbors": [
+        {
+          "artists": [
+            "Cloud koh"
+          ],
+          "score": 0.860737486682431,
+          "title": "Lost In Summer",
+          "track_id": "1JPuEZkp9mFclVM4Ivkdyn"
+        },
+        {
+          "artists": [
+            "KIMSEJEONG"
+          ],
+          "score": 0.8567466044236777,
+          "title": "SKYLINE",
+          "track_id": "1VO8RJxFecb2flEEImb34o"
+        },
+        {
+          "artists": [
+            "dosii"
+          ],
+          "score": 0.83745774895764,
+          "title": "fairy of shampoo",
+          "track_id": "72eVBUhcdUQusHUhDbfQoQ"
+        },
+        {
+          "artists": [
+            "MEOVV"
+          ],
+          "score": 0.8307374312721911,
+          "title": "DROP TOP",
+          "track_id": "63gioPx2WipyXiigLMf1nB"
+        },
+        {
+          "artists": [
+            "Alina Baraz",
+            "Galimatias"
+          ],
+          "score": 0.8286529409548384,
+          "title": "Fantasy",
+          "track_id": "11OoUqXLghsFEEh47JeALh"
+        }
+      ],
+      "duration_seconds": 205.981,
+      "new_source_sha256": "990a5ec829c7903d14f175649c1d47b83e3290a163e0a58d096591862ffd344f",
+      "new_source_url": "https://www.youtube.com/watch?v=bGU-l8oqOx4",
+      "old_source_sha256": "318d8efd9240dcd23788a0e65f2062ebd19e96f84c44df20f7216f38272d7682",
+      "old_source_url": "https://www.youtube.com/watch?v=G_AeA4ZEXtg",
+      "previous_neighbors": [
+        {
+          "artists": [
+            "chicken97"
+          ],
+          "score": 0.9753361615839649,
+          "title": "2080",
+          "track_id": "3F5HhdyBfvCbzuPJbGBHkc"
+        },
+        {
+          "artists": [
+            "i-dle"
+          ],
+          "score": 0.8696951755716695,
+          "title": "MOON",
+          "track_id": "3uOeutrLztSX6lU0b0et3B"
+        },
+        {
+          "artists": [
+            "Han Jihyo",
+            "Park Soeun"
+          ],
+          "score": 0.833502504028244,
+          "title": "Fall in love",
+          "track_id": "5h6c3ArwadWdEny5yXUPOt"
+        },
+        {
+          "artists": [
+            "Gracie Abrams"
+          ],
+          "score": 0.8324232604152491,
+          "title": "The Bottom",
+          "track_id": "4Sk74gcXTe9dnE1HU5Pn1y"
+        },
+        {
+          "artists": [
+            "NewJeans"
+          ],
+          "score": 0.8263340191072753,
+          "title": "Right Now",
+          "track_id": "58Q3FZFs1YXPpliWQB5kXB"
+        }
+      ],
+      "representation_identity": "9ac0d1e5a55d45c9d8a75222fbbfad0890e9127a5f3aaeb9a2cf86af37659cc0",
+      "spotify_track_id": "4ujrrZFO7Cydli06jZtyQd",
+      "title": "Telescope (feat. Leellamarz, msftz)"
+    },
+    {
+      "artists": [
+        "Park Bird",
+        "Mich"
+      ],
+      "canonical_pcm_sha256": "01302c109aa0e1a7f1f70f64434af3e28137b97bab80b1115807fbebc12d13a2",
+      "corrected_neighbors": [
+        {
+          "artists": [
+            "Emi Choi"
+          ],
+          "score": 0.865143179010817,
+          "title": "Stranger's Sweater",
+          "track_id": "7HW00QUChCBuj0zkraLfyi"
+        },
+        {
+          "artists": [
+            "2xxx",
+            "Miso"
+          ],
+          "score": 0.8621721710408099,
+          "title": "Girl, Interrupted",
+          "track_id": "1cBNzkPsAdI7XJaKIsjKUk"
+        },
+        {
+          "artists": [
+            "Sarcastic Sounds"
+          ],
+          "score": 0.8580801193875518,
+          "title": "I Can't Help",
+          "track_id": "3TwgZ3wCKwObhP8qNkbLYR"
+        },
+        {
+          "artists": [
+            "JIDA",
+            "Rachel Lim"
+          ],
+          "score": 0.8539204398255804,
+          "title": "Blind (Feat. Rachel Lim)",
+          "track_id": "2zN19Caz8do2yNNqMmaZC8"
+        },
+        {
+          "artists": [
+            "Medda",
+            "Faye"
+          ],
+          "score": 0.8524300060854186,
+          "title": "Wish Upon a Star",
+          "track_id": "4vsCZnY7P8ccugYcCx6j7d"
+        }
+      ],
+      "duration_seconds": 185.641,
+      "new_source_sha256": "c5a244310026139952ac5da28a3ae9650afc97595953b493213e4308ebc96636",
+      "new_source_url": "https://www.youtube.com/watch?v=9gL1_XJR3GY",
+      "old_source_sha256": "bc5a729e59994b40e9c88ce8c2e7844a192bddccee865283eabacb8b078430cb",
+      "old_source_url": "https://www.youtube.com/watch?v=znNnFQYAM_w",
+      "previous_neighbors": [
+        {
+          "artists": [
+            "DAVICHI"
+          ],
+          "score": 0.659506264268419,
+          "title": "사랑과 전쟁 (하하 Narration Version)",
+          "track_id": "0BVfqaWPOUTGymk4RXScn6"
+        },
+        {
+          "artists": [
+            "luv, jacob",
+            "kate hyun"
+          ],
+          "score": 0.6518682631362009,
+          "title": "head over heels",
+          "track_id": "1FXSJDp0dGGSAyRZzLCoIN"
+        },
+        {
+          "artists": [
+            "ZICO",
+            "IU"
+          ],
+          "score": 0.6286312422093137,
+          "title": "SoulMate (feat. IU)",
+          "track_id": "1pz24zu5H9A0S1a2NKT4F0"
+        },
+        {
+          "artists": [
+            "Beowülf"
+          ],
+          "score": 0.6237831279954235,
+          "title": "Is It Too Late for Me",
+          "track_id": "5qbWgH6xs6CUkua6tG2BNP"
+        },
+        {
+          "artists": [
+            "Rook1e"
+          ],
+          "score": 0.6032068799663189,
+          "title": "Grape Soda",
+          "track_id": "1VFbHdNzYUJr0FsxoayP1N"
+        }
+      ],
+      "representation_identity": "4150f2e6fbbe8793319d0363079ec24325e743a7a350b2d6822339ec20b261fa",
+      "spotify_track_id": "7sLIVmzjMDb1YUCE1ueP2H",
+      "title": "I Will Be Just Fine"
+    }
+  ],
+  "initial_execution": {
+    "clap": {
+      "inference_seconds": 3.3435305429998152,
+      "inferred_segments": 12,
+      "inferred_segments_per_second": 3.5890206013292767,
+      "reused_pooled": 0,
+      "reused_segments": 0
+    },
+    "failed_tracks": 0,
+    "input_tracks": 4,
+    "muq": {
+      "inference_seconds": 0.8588306869996813,
+      "inferred_segments": 12,
+      "inferred_segments_per_second": 13.972486290542216,
+      "reused_pooled": 0,
+      "reused_segments": 0
+    },
+    "successful_tracks": 4
+  },
+  "library_counts": {
+    "edges": 11295,
+    "identities": 1257,
+    "quarantined": 1,
+    "represented": 1256
+  },
+  "quarantine_browser": {
+    "audio_endpoint_status": 404,
+    "page_errors": 0,
+    "player_absent": true,
+    "reason_visible": true,
+    "similarity_links": 0
+  },
+  "quarantines": [
+    {
+      "reason": "The retained recording is attributed to lost son and is 60 seconds; the intended Playstation Lo-Five recording is 78 seconds. Its exact source is currently unavailable for acquisition.",
+      "source_sha256": "d98d73ffd33f4d86108da668d9eba4a3b4e9e43f2ee390eee2e1201a186127a4",
+      "spotify_track_id": "0PaBoiXOmzNgUTNrxDPQHY"
+    }
+  ],
+  "replay": {
+    "dataset_bytes_identical": true,
+    "new_inference_calls": 0,
+    "new_network_requests": 0,
+    "reused_complete_tracks": 4
+  },
+  "schema_version": "problem-source-correction-audit-v1",
+  "validation": {
+    "deterministic_export_replay": "PASS",
+    "frontend_build": "PASS",
+    "frontend_lint": "PASS",
+    "frontend_tests_passed": 6,
+    "frozen_c100_bytes_unchanged": true,
+    "historical_input_hashes_verified": true,
+    "ml_heavy_deselected": 12,
+    "ml_passed": 1309
+  }
+}

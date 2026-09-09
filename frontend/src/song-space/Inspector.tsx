@@ -3,6 +3,7 @@ import type { SongSpaceDataset, SongSpaceLayout, PlacedSong, PlacedLink } from '
 
 function Player({ song }: { song: PlacedSong }) {
   const [failed, setFailed] = useState(false)
+  if (song.sourceIssue) return <p role="status">Source needs verification: {song.sourceIssue} Audio and similarity links are withheld.</p>
   if (!song.audioUrl) return <p className="space-small">No audio supplied in this snapshot.</p>
   return (
     <div className="space-player">
