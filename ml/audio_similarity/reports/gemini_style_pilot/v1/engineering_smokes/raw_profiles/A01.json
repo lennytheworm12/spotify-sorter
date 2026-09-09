@@ -1,0 +1,39 @@
+{
+  "status": "classified",
+  "primary_family": "hip_hop_rap",
+  "secondary_families": [
+    "rnb_soul"
+  ],
+  "primary_style": "boom_bap",
+  "secondary_styles": [],
+  "vocal_role": "mixed_rap_and_singing",
+  "arrangement_focus": "lead_vocal",
+  "texture_tags": [
+    "sample_based",
+    "clean"
+  ],
+  "active_section_density": "moderate",
+  "section_variation": "contrasting_sections",
+  "certainty": {
+    "family": "clear",
+    "style": "clear"
+  },
+  "audio_evidence": [
+    {
+      "start_seconds": 22.0,
+      "end_seconds": 45.0,
+      "observation": "Rapped storytelling verses over a steady acoustic-style boom bap drum groove with warm electric piano chords and light bass."
+    },
+    {
+      "start_seconds": 66.0,
+      "end_seconds": 86.0,
+      "observation": "Contrasting chorus section featuring repetitive soul-infused sung hooks over a sustained, open rhythm section."
+    },
+    {
+      "start_seconds": 340.0,
+      "end_seconds": 360.0,
+      "observation": "Instrumental outro showcasing the core loop of laid-back drums, Rhodes-style chords, vocal sample chops, and bassline."
+    }
+  ],
+  "unmapped_styles": []
+}

@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"status\": \"classified\",\n  \"primary_family\": \"hip_hop_rap\",\n  \"secondary_families\": [],\n  \"primary_style\": \"lofi_hip_hop\",\n  \"secondary_styles\": [\"chillhop\", \"instrumental_hip_hop\"],\n  \"vocal_role\": \"vocal_samples_only\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"texture_tags\": [\"sample_based\", \"hazy\", \"electronic\"],\n  \"active_section_density\": \"moderate\",\n  \"section_variation\": \"contrasting_sections\",\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"audio_evidence\": [\n    {\"start_seconds\": 0.0, \"end_seconds\": 29.5, \"observation\": \"Ambient room texture, a ticking clock sound, and sparse piano chords establish an intimate, tape-like introductory mood.\"},\n    {\"start_seconds\": 30.0, \"end_seconds\": 60.0, \"observation\": \"A downtempo boom-bap drum groove enters beneath filtered piano loops, mellow sub-bass, and intermittent vocal samples.\"},\n    {\"start_seconds\": 85.0, \"end_seconds\": 120.0, \"observation\": \"Warm jazz-influenced electric piano chords, mellow synthesized basslines, and filtered hi-hats maintain a relaxed, lofi hip-hop beat.\"}\n  ],\n  \"unmapped_styles\": []\n}",
+            "thoughtSignature": "EmcKZQERTTIPpHv8Dux4/aRWDnFn8QxYLlgrVGv/MuTLtz3p/onL6u36xaXPFNC9WjUAPV4dFV9oRBGaO4VYQ/dstvaqyXMMwLsaqWMj8ltYTdcNyU9hVb7JNbuwmw9JFaJV02Hafn+A"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 7350,
+    "candidatesTokenCount": 351,
+    "totalTokenCount": 7701,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3079
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4271
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "wtChauf0B7HvqtsPyYq50As"
+}

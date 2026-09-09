@@ -1,0 +1,41 @@
+{
+  "status": "classified",
+  "primary_family": "hip_hop_rap",
+  "secondary_families": [],
+  "primary_style": "lofi_hip_hop",
+  "secondary_styles": [
+    "chillhop",
+    "instrumental_hip_hop"
+  ],
+  "vocal_role": "vocal_samples_only",
+  "arrangement_focus": "beat_or_instrumental",
+  "texture_tags": [
+    "sample_based",
+    "hazy",
+    "electronic"
+  ],
+  "active_section_density": "moderate",
+  "section_variation": "contrasting_sections",
+  "certainty": {
+    "family": "clear",
+    "style": "clear"
+  },
+  "audio_evidence": [
+    {
+      "start_seconds": 0.0,
+      "end_seconds": 29.5,
+      "observation": "Ambient room texture, a ticking clock sound, and sparse piano chords establish an intimate, tape-like introductory mood."
+    },
+    {
+      "start_seconds": 30.0,
+      "end_seconds": 60.0,
+      "observation": "A downtempo boom-bap drum groove enters beneath filtered piano loops, mellow sub-bass, and intermittent vocal samples."
+    },
+    {
+      "start_seconds": 85.0,
+      "end_seconds": 120.0,
+      "observation": "Warm jazz-influenced electric piano chords, mellow synthesized basslines, and filtered hi-hats maintain a relaxed, lofi hip-hop beat."
+    }
+  ],
+  "unmapped_styles": []
+}

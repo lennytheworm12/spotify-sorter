@@ -1,0 +1,36 @@
+{
+  "audio_uploads": 2,
+  "complete_all16_profile_snapshot": false,
+  "count_tokens_requests": 2,
+  "generation_attempts": 2,
+  "historical_rating_join": "NOT_RUN_ENGINEERING_GATE_FAILED; full-pilot rating inventory remains unread",
+  "http_operations_total": 9,
+  "invalid_profiles": 1,
+  "model_metadata_requests": 1,
+  "not_inferred_tracks": 14,
+  "owner_review": "SHEET_PREPARED_NO_OWNER_STYLE_JUDGMENTS",
+  "playlist_diagnostics": "NOT_RUN; no compatibility, contraction, separation or ranking claim",
+  "prepared_full_recordings": 16,
+  "production_changes": false,
+  "remaining_generation_attempt_allowance": 18,
+  "repeated_paid_requests": "NOT_RUN_ENGINEERING_GATE_FAILED",
+  "six_control_pair_verification": "NOT_RUN; no claimed verified ratings",
+  "source_identities_resolved": 16,
+  "standard_rate_token_cost_usd": "0.01500000",
+  "status": "ENGINEERING_SMOKE_FAILED_FULL_PILOT_NOT_EXECUTED",
+  "style_accuracy": "NOT_ESTABLISHED; no owner style truth",
+  "unresolved_source_tracks": [],
+  "valid_profiles": 1,
+  "validated_cache_replay": {
+    "api_client_disabled": true,
+    "execution_artifacts_unchanged": true,
+    "original_sources_caches_maps_unchanged": true,
+    "result": {
+      "new_api_calls": 0,
+      "status": "CACHE_REPLAY_VERIFIED",
+      "unique_profiles": 1,
+      "validated_attempts": 1
+    },
+    "scope": "one valid primary profile only; invalid Wet Dreamz response is retained outside the validated cache"
+  }
+}

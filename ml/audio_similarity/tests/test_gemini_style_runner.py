@@ -228,3 +228,15 @@ def test_no_upload_or_key_to_unexpected_provider_host(tmp_path):
         lambda _: pytest.fail('unexpected external request'))))
     with pytest.raises(TransportStopped, match='unexpected provider host'):
         transport.request('POST', 'https://unrelated.example/upload', label='upload')
+
+
+def test_live_provider_hex_digest_encoding_is_exact_and_wrong_hashes_still_fail():
+    sha = 'ab' * 32
+    value = {'state': 'ACTIVE', 'mimeType': 'audio/flac', 'displayName': 'N001', 'sizeBytes': '100',
+             'uri': 'https://generativelanguage.googleapis.com/v1beta/files/example',
+             'expirationTime': '2030-01-01T00:00:00Z'}
+    for encoded in [base64.b64encode(bytes.fromhex(sha)).decode(), base64.b64encode(sha.encode()).decode()]:
+        GeminiTransport._verify_file({**value, 'sha256Hash': encoded}, sha, 100, 'N001')
+    for encoded in [base64.b64encode(('cd'*32).encode()).decode(), sha, 'not base64!']:
+        with pytest.raises(TransportStopped):
+            GeminiTransport._verify_file({**value, 'sha256Hash': encoded}, sha, 100, 'N001')

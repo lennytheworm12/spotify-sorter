@@ -1,0 +1,18 @@
+{
+  "authorization": "Original user execution instruction: Run two engineering smoke requests first (Wet Dreamz and My Gamecube Broke.).",
+  "base_execution_manifest_sha256": "eee25ae7610aae40e572e7a9cf46aa81f36d8e035ac7a9fffdcc2bd7e09bc081",
+  "full_run_gate_remains_failed": true,
+  "generation_attempt": 2,
+  "neutral_id": "N003",
+  "original_stop_record_sha256": "43a051d81aa63aca6b08a93c14bdd1b63ba4688ad66660ba19ec1c078aa0527c",
+  "pilot_id": "A03",
+  "policy_exception": "The original runner stops after any operational failure. Complete only the second explicitly prescribed engineering smoke with the existing guarded _attempt method, preserving STOPPED.json. Do not call run-next or start attempt 3.",
+  "prior_attempts": 1,
+  "prior_settled_standard_rate_usd": "0.00817125",
+  "prompt_schema_ontology_model_sampler_changed": false,
+  "purpose": "Complete the second smoke explicitly requested by the owner after the first response failed timestamp validation. This is not a retry and cannot enable the full-run gate.",
+  "repeat_or_repair_attempt_1": false,
+  "schema_version": "second-engineering-smoke-completion-v1",
+  "total_generation_attempt_cap": 20,
+  "total_spend_cap_usd": "2"
+}

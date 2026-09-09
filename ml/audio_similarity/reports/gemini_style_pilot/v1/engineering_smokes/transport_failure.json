@@ -1,0 +1,13 @@
+{
+  "continuation": "Accept either exact 32-byte digest or exact 64-character ASCII hex digest after strict base64 decode. No classification/prompt/schema change. Reuse the verified uploaded file. New frozen run preserves the old STOPPED record and ledger.",
+  "generation_attempts": 0,
+  "generation_spend_usd": "0",
+  "old_manifest_sha256": "fa874ac8ee415428191460eabbb49ac10327e4f5be703bcaaeede55e3ebde892",
+  "prepared_sha256": "c7426f84d7a6d9d3523c53d5a94c06a54a482a63cc1c6ebeb3b6c87b832efb8e",
+  "provider_response_sha256": "f6b86055478253be1fb2217c146802f633a2345c3681d87e877adf5149b6000d",
+  "provider_sha256Hash": "Yzc0MjZmODRkN2E2ZDlkMzUyM2M1M2Q1YTk0YzA2YTU0YTQ4MmE2M2NjMWM2ZWJlYjNiNmM4N2I4MzJlZmI4ZQ==",
+  "reason": "Files API sha256Hash is base64 of 64 ASCII hexadecimal characters rather than base64 of 32 digest bytes. Decoding yields exactly the local SHA-256.",
+  "status": "UPLOAD_SUCCEEDED_GENERATION_NOT_ATTEMPTED",
+  "upload_requests": 2,
+  "uploaded_recordings": 1
+}

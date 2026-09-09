@@ -118,9 +118,17 @@ class GeminiTransport:
 
     @staticmethod
     def _verify_file(value: dict, expected_sha256: str, size: int, neutral_id: str):
+        try:
+            reported = base64.b64decode(value.get('sha256Hash', ''), validate=True)
+        except (ValueError, TypeError):
+            raise TransportStopped('invalid provider file hash encoding') from None
+        # The live Files API returns base64 of the ASCII hexadecimal digest.
+        # Also accept the conventional protobuf bytes form (32 digest bytes).
+        # Both must exactly match the independently computed prepared-file hash.
+        hash_matches = reported in (bytes.fromhex(expected_sha256), expected_sha256.encode('ascii'))
         if (value.get('state') != 'ACTIVE' or value.get('mimeType') != 'audio/flac'
                 or value.get('displayName') != neutral_id or int(value.get('sizeBytes', -1)) != size
-                or value.get('sha256Hash') != base64.b64encode(bytes.fromhex(expected_sha256)).decode()):
+                or not hash_matches):
             raise TransportStopped('provider did not verify the full prepared audio bytes')
         if not re.fullmatch(re.escape(BASE) + r'/v1beta/files/[a-z0-9-]+', value.get('uri', '')):
             raise TransportStopped('invalid provider audio URI')

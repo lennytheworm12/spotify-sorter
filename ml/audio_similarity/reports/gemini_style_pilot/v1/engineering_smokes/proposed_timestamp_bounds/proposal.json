@@ -1,0 +1,21 @@
+{
+  "already_settled_standard_rate_usd": "0.01500000",
+  "base_response_schema_sha256": "4cdea0d10f22580fd971c1fd081d56dcf23f6e064ac1ce446c9e60e987acc672",
+  "change": "Add maximum=prepared.duration_seconds to start_seconds and end_seconds in each request response schema. Keep all existing enums, fields and validation rules. No edit to previous responses.",
+  "full_pilot_and_repeat_allocation": "Re-freeze the remaining schedule before further calls. A new full 16-track pass would use 18 total generations including prior smokes; the original four-repeat plan no longer fits the 20-attempt cap.",
+  "global_generation_attempt_cap": 20,
+  "global_generation_attempts_already_used": 2,
+  "global_spend_cap_usd": "2",
+  "initial_requests_if_approved": 2,
+  "interpretation_limit": "Bounding timestamps prevents out-of-range output but does not establish accurate temporal grounding or correct style classification. Owner review is still required.",
+  "prohibited": "No new allowance of 20 requests for a fresh directory. Preserve the old attempts and aggregate their usage.",
+  "remaining_global_attempts_before_proposal": 18,
+  "scope": "General physical duration bound, not a song/style-specific rule.",
+  "status": "PROPOSAL_ONLY_NOT_APPROVED_OR_EXECUTED",
+  "tracks": [
+    "A01",
+    "A03"
+  ],
+  "unchanged_ontology_sha256": "47fe7163378561495b049746d7300d88c4ff10e2ef3b9226e43983c018208dff",
+  "unchanged_prompt_sha256": "f9f1f530b34a055580e2d58dea5a0eea0c5ea400b2bb10605fd7a91b8dfee4bb"
+}
