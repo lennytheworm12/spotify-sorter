@@ -24,6 +24,9 @@ def safe_cell(value):
 
 
 class TaxonomyReviewStore:
+    max_request_bytes = 1_048_576
+    max_note_length = 50_000
+
     def __init__(self, packet_path, state_dir, root):
         self.root = Path(root).resolve()
         self.packet = read(packet_path)
@@ -89,7 +92,7 @@ class TaxonomyReviewStore:
                     'completed': sum(p['complete'] for p in pairs), 'total': len(pairs), 'frozen': self._frozen()}
 
     def submit(self, stable_track_id, video_id, label, candidate_note='', track_note=''):
-        if not isinstance(label, str) or label not in ('', *CHOICES) or not isinstance(candidate_note, str) or len(candidate_note) > 2000:
+        if not isinstance(label, str) or label not in ('', *CHOICES) or not isinstance(candidate_note, str) or len(candidate_note) > self.max_note_length:
             raise Stage5B1AValidationError('Invalid taxonomy answer or note.')
         pair_id = canonical_pair_id(str(stable_track_id), str(video_id))
         if pair_id not in self.pairs:

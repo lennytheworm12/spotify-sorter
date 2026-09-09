@@ -58,7 +58,7 @@ def test_public_whitelist_and_unknown_pairs(packet, tmp_path):
     assert store.local_audio_for_request('../secrets') is None
     with pytest.raises(Stage5B1AValidationError):store.submit('a', 'z', 'NONE', '', '0')
     with pytest.raises(Stage5B1AValidationError):store.submit('a', 'b', '1', '', '0')
-    with pytest.raises(Stage5B1AValidationError):store.submit('a', 'b', 'NONE', 'x'*2001, '0')
+    with pytest.raises(Stage5B1AValidationError):store.submit('a', 'b', 'NONE', 'x'*50001, '0')
     store.close()
 
 
@@ -71,3 +71,13 @@ def test_balanced_selection_deterministic_and_no_track_reuse():
     assert len(selected) == 16 and len({id for p in selected for id in p['tracks']}) == 32
     assert all(sum(p['selection_stratum']==s for p in selected)==4 for s in ('bad_high','bad_low','good_high','good_low'))
     assert complete('UNSURE', '') and complete('NONE', '') and not complete('', 'note')
+
+
+def test_long_unicode_note_persists_without_truncation(packet, tmp_path):
+    store = TaxonomyReviewStore(packet, tmp_path / 'long-state', tmp_path)
+    note = '音楽🎵,\n' * 5000
+    assert len(note) > 2000
+    store.submit('a', 'b', 'OTHER', note, '0')
+    assert store.session()['pairs'][0]['answer']['note'] == note
+    assert list(csv.DictReader(store.review_path.open(encoding='utf-8-sig')))[0]['note'] == note
+    store.close()

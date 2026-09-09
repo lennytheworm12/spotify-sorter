@@ -206,7 +206,7 @@ def make_review_handler(
                 if origin and origin not in {f"http://{host}", f"https://{host}"}:
                     raise Stage5B1AValidationError("cross-origin review request rejected")
                 size = int(self.headers.get("Content-Length", "0"))
-                if not 1 <= size <= MAX_REQUEST_BYTES:
+                if not 1 <= size <= getattr(store, "max_request_bytes", MAX_REQUEST_BYTES):
                     raise Stage5B1AValidationError("invalid request size")
                 payload = json.loads(self.rfile.read(size))
                 if not isinstance(payload, dict):

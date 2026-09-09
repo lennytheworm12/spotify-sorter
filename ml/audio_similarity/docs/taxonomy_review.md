@@ -2,7 +2,7 @@
 
 Open **http://localhost:8791** while the local reviewer is running. Listen to the two full songs, select the main difference that matters for playlist compatibility, and optionally explain it. “No meaningful mismatch” and “Not sure” are valid answers. “Another difference” needs a short note to count as complete.
 
-Choices save immediately; notes save automatically after a short typing pause. Wait for **Saved to disk** before closing. Unsent drafts also persist in this browser, including after a reload. CSV export includes notes and marks any unsaved browser drafts explicitly. No packet-by-packet Submit button is needed.
+Notes support up to 50,000 characters. Choices save immediately; notes save automatically after a short typing pause. Wait for **Saved to disk** before closing. Unsent drafts also persist in this browser, including after a reload. CSV export includes notes and marks any unsaved browser drafts explicitly. No packet-by-packet Submit button is needed.
 
 To launch or resume from `ml/audio_similarity`:
 
