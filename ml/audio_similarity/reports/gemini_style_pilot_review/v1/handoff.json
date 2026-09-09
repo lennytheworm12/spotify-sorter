@@ -1,0 +1,13 @@
+{
+  "completion_snapshot": "artifacts/gemini_style_pilot_review/duration_v3/owner_snapshot.json",
+  "cwd": "/home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity",
+  "export_required": false,
+  "launch_command": ".venv/bin/python -m audio_similarity.cli.gemini_style_review --port 8794",
+  "per_track_submit_required": false,
+  "saved_csv": "artifacts/gemini_style_pilot_review/duration_v3/owner-review-answers.csv",
+  "scientific_pilot_closeout": "Still awaiting owner judgments; frontend completion is not a scientific verdict.",
+  "state_directory": "artifacts/gemini_style_pilot_review/duration_v3",
+  "status": "READY_FOR_OWNER_AUDIO_REVIEW",
+  "tracks": 16,
+  "url": "http://127.0.0.1:8794"
+}

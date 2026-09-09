@@ -1,0 +1,43 @@
+{
+  "browser_test_state": "/tmp/gemini-owner-browser-20260909-v2",
+  "focused_tests": {
+    "elapsed_seconds": 10.58,
+    "passed": 25
+  },
+  "frozen_Gemini_execution_unchanged": true,
+  "full_non_heavy_tests": {
+    "deselected": 12,
+    "elapsed_seconds": 121.56,
+    "passed": 1357,
+    "warnings": 11
+  },
+  "historical_pilot_artifacts_unchanged": true,
+  "historical_ratings_unchanged": true,
+  "live_read_only_check": {
+    "described_at_check": 0,
+    "page_errors": [],
+    "phase": "listen",
+    "reviewed_at_check": 0,
+    "tracks": 16,
+    "url": "http://127.0.0.1:8794"
+  },
+  "new_Gemini_calls": 0,
+  "oversized_note_regression": "Removed browser maxlength trimming. Real Chromium preserved a 250,001-character draft, showed a save error, and exported its full text with LOCAL_DRAFT status.",
+  "protected_original_sources_and_maps_unchanged": true,
+  "real_owner_answers_written_by_tests": 0,
+  "review_notes": [
+    "Preserves both the independent snapshot and later comparison answers. Prior conversation exposure is disclosed in documentation; this is not untouched evidence.",
+    "CAS revisions stop stale tabs from silently overwriting saved notes. Idempotent save repairs a failed CSV export without adding a revision.",
+    "Model data is withheld at the server before the global listening pass is frozen; no new numeric playlist labels are created.",
+    "All tests that enter answers use disposable state. The live owner page was inspected read-only."
+  ],
+  "source_hashes": {
+    "docs/gemini_style_review.md": "da2efb514499e2eee923ffc2585f5c3d929e1b2f5e104091de464f306fdd5b55",
+    "evaluation/static/gemini_style_review.html": "c4cdb17ffcdc089f6a0bcbf52afce6897896e630b2d5c1ff37ef71f355d6f883",
+    "src/audio_similarity/cli/gemini_style_review.py": "0a33c07d539c7bb6be35032efc0c46ff9a264982be1be1e21e54a1378b66ac44",
+    "src/audio_similarity/gemini_style_review_store.py": "ef55b08777f82deb8409dac4cb58abd67a6317dd92802194b5b38913cefd47bf",
+    "tests/browser_gemini_style_review.py": "f023f33feb4c3fb048d7e20d5414f42c29c605d4a73f79aff72ff02082694e81",
+    "tests/test_gemini_style_review.py": "514c9f00f32ec51ce9594a0543ef32951ce86f7d0395f73b6f169a641160ac69"
+  },
+  "visual_review": "Inspected desktop listening and mobile comparison screenshots; readable form labels, native full-track playback, no horizontal overflow, same compact dark review styling."
+}

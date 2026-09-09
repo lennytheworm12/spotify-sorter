@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "browser": "isolated real Chromium via Playwright",
+  "tracks": 16,
+  "all_full_FLAC_metadata_and_durations_verified": true,
+  "playback_and_seeking": true,
+  "HTTP_range_206_and_416": true,
+  "model_profiles_server_gated_before_first_pass": true,
+  "autosave_reload": true,
+  "offline_draft_recovery_and_export": true,
+  "multi_tab_conflicts": true,
+  "immutable_independent_pass": true,
+  "two_pass_completion_reload_export": true,
+  "long_unicode_notes_preserved": true,
+  "mobile_no_horizontal_overflow": true,
+  "oversized_paste_preserved_and_exported_without_truncation": true,
+  "page_errors": [],
+  "unexpected_console_errors": [],
+  "intentional_failure_console_events": 7,
+  "real_owner_answers_written": 0
+}
