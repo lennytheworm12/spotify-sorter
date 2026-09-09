@@ -94,6 +94,8 @@ class AttemptLedger:
             thoughts = nonnegative_int(usage.get('thoughtsTokenCount', 0))
             total = nonnegative_int(usage.get('totalTokenCount'))
             tools = nonnegative_int(usage.get('toolUsePromptTokenCount', 0))
+            if usage.get('serviceTier', 'standard') not in ('standard', 'unspecified'):
+                raise BudgetStopped('provider used an unexpected service tier; pricing is not established')
             if tools or total != prompt + output + thoughts:
                 raise BudgetStopped('usage is incomplete, inconsistent, or includes prohibited tool use')
             if prompt > self.input_limit or output + thoughts > reservation['max_output_including_thinking_tokens']:

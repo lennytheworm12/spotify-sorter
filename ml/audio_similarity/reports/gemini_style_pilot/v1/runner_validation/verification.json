@@ -1,0 +1,73 @@
+{
+  "blocked_pilot_ids": [
+    "C04"
+  ],
+  "focused_tests": {
+    "passed": 41,
+    "runtime_seconds": 7.76
+  },
+  "full_non_heavy_tests": {
+    "deselected": 12,
+    "exit_code": 0,
+    "passed": 1350,
+    "runtime_seconds": 133.23,
+    "warnings": 11
+  },
+  "implementation_hashes": {
+    "src/audio_similarity/gemini_style_pilot/__init__.py": "1fbefa0177030dd056604f8c0fc6dafebbb9fba52f67aa939fc3ef935bf38e66",
+    "src/audio_similarity/gemini_style_pilot/__main__.py": "dc26442b16fb1dca9a36bf0ff4b42030d2b13f98d95ddc8e99252a2a21c53007",
+    "src/audio_similarity/gemini_style_pilot/budget.py": "f987fdb5b6fcc96f58eb9d9835f67bb6c9f7a47073441a0220c1a5cd7678a7ff",
+    "src/audio_similarity/gemini_style_pilot/contract.py": "89e165784e29c11466f2523a4f88548cab6c2be36e1e7fc9e2a698972568c1df",
+    "src/audio_similarity/gemini_style_pilot/inputs.py": "6d0ed4565f9df80b325d43871ab1b59b0ff3ddac86dd381c17cb3b14f9fc3840",
+    "src/audio_similarity/gemini_style_pilot/inventory.py": "1158168a183e9f782f60be9a17193b74195907d2cd2e9fa624f887706c19a93f",
+    "src/audio_similarity/gemini_style_pilot/manifest.py": "d80b7e1c80ce6dbf67ccb5123db252fcf2d09dfd958dcf1a2ac2ee3465f229f4",
+    "src/audio_similarity/gemini_style_pilot/prepare.py": "079289834ba747302702f621b868c94216104854e04e44bf77baaa15df7f49d1",
+    "src/audio_similarity/gemini_style_pilot/responses.py": "348a76c33239265a80a0b6407b772b9a41ead6bbb47ab69c2c7784579d5b4883",
+    "src/audio_similarity/gemini_style_pilot/runner.py": "6b47e52eca45cdaa3e491b4164f16c9a8374ab6f78beba48f87c55ab411da02e",
+    "src/audio_similarity/gemini_style_pilot/transport.py": "d3b77d866353497c5bb7230aa743314fc50c6451eb75cb731dacba7e64f6b70e",
+    "src/audio_similarity/gemini_style_pilot/validation.py": "1f686b41ac5f5bdaa7edafef01302084563987de23ee9a7dee3c6b5438044b64"
+  },
+  "original_preflight_files_unchanged": 31,
+  "protected_file_count": 60,
+  "real_audio_uploads": 0,
+  "real_execution_manifest_exists": false,
+  "real_generation_calls": 0,
+  "real_model_metadata_calls": 1,
+  "real_profiles_exist": false,
+  "source_gate_check": {
+    "audio_uploads": 0,
+    "blocked_pilot_ids": [
+      "C04"
+    ],
+    "execution_manifest_exists": false,
+    "generation_calls": 0,
+    "historical_inputs_verified": true,
+    "note": "make_manifest rejected the actual unresolved inventory before any provider access.",
+    "status": "SOURCE_GATE_VERIFIED"
+  },
+  "status": "OFFLINE_RUNNER_VALIDATED_REAL_PILOT_SOURCE_BLOCKED",
+  "synthetic_only": {
+    "explicit_repeats": 4,
+    "failure_cases": [
+      "wrong upload hash",
+      "token count missing",
+      "HTTP failure",
+      "connection loss",
+      "usage missing",
+      "wrong service tier",
+      "audio input evidence missing",
+      "schema error",
+      "incomplete finish",
+      "interrupted reservation",
+      "substituted track",
+      "unresolved source despite eligibility flag",
+      "cache classification tampering",
+      "changed prepared audio",
+      "unapproved provider host"
+    ],
+    "full_successful_schedule_generations": 20,
+    "primary_profile_bytes_preserved": true,
+    "primary_profiles": 16,
+    "replay_new_api_calls": 0
+  }
+}
