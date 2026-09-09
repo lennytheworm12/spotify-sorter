@@ -1,0 +1,247 @@
+{
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "classified",
+        "uncertain",
+        "not_music"
+      ]
+    },
+    "primary_family": {
+      "type": "string",
+      "enum": [
+        "hip_hop_rap",
+        "rnb_soul",
+        "pop",
+        "electronic",
+        "rock",
+        "folk_acoustic",
+        "jazz",
+        "classical",
+        "other",
+        "unknown"
+      ]
+    },
+    "secondary_families": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "hip_hop_rap",
+          "rnb_soul",
+          "pop",
+          "electronic",
+          "rock",
+          "folk_acoustic",
+          "jazz",
+          "classical",
+          "other"
+        ]
+      },
+      "maxItems": 2
+    },
+    "primary_style": {
+      "type": "string",
+      "enum": [
+        "boom_bap",
+        "trap",
+        "melodic_trap",
+        "cloud_rap",
+        "rage",
+        "alternative_rnb",
+        "contemporary_rnb",
+        "neo_soul",
+        "pop_rnb",
+        "dance_pop",
+        "indie_pop",
+        "synthpop",
+        "electropop",
+        "hyperpop",
+        "digicore",
+        "lofi_hip_hop",
+        "chillhop",
+        "instrumental_hip_hop",
+        "indie_rock",
+        "ambient",
+        "acoustic_ballad",
+        "unknown"
+      ]
+    },
+    "secondary_styles": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "boom_bap",
+          "trap",
+          "melodic_trap",
+          "cloud_rap",
+          "rage",
+          "alternative_rnb",
+          "contemporary_rnb",
+          "neo_soul",
+          "pop_rnb",
+          "dance_pop",
+          "indie_pop",
+          "synthpop",
+          "electropop",
+          "hyperpop",
+          "digicore",
+          "lofi_hip_hop",
+          "chillhop",
+          "instrumental_hip_hop",
+          "indie_rock",
+          "ambient",
+          "acoustic_ballad"
+        ]
+      },
+      "maxItems": 2
+    },
+    "vocal_role": {
+      "type": "string",
+      "enum": [
+        "rap_led",
+        "sung_led",
+        "mixed_rap_and_singing",
+        "instrumental",
+        "vocal_samples_only",
+        "spoken_only",
+        "unclear"
+      ]
+    },
+    "arrangement_focus": {
+      "type": "string",
+      "enum": [
+        "lead_vocal",
+        "beat_or_instrumental",
+        "balanced",
+        "varies",
+        "unclear"
+      ]
+    },
+    "texture_tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "sample_based",
+          "electronic",
+          "acoustic",
+          "hazy",
+          "distorted",
+          "clean",
+          "layered"
+        ]
+      },
+      "maxItems": 3
+    },
+    "active_section_density": {
+      "type": "string",
+      "enum": [
+        "sparse",
+        "moderate",
+        "dense",
+        "varies",
+        "unclear"
+      ]
+    },
+    "section_variation": {
+      "type": "string",
+      "enum": [
+        "mostly_consistent",
+        "contrasting_sections",
+        "cannot_assess"
+      ]
+    },
+    "certainty": {
+      "type": "object",
+      "properties": {
+        "family": {
+          "type": "string",
+          "enum": [
+            "clear",
+            "tentative",
+            "unresolved"
+          ]
+        },
+        "style": {
+          "type": "string",
+          "enum": [
+            "clear",
+            "tentative",
+            "unresolved"
+          ]
+        }
+      },
+      "required": [
+        "family",
+        "style"
+      ],
+      "additionalProperties": false
+    },
+    "audio_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "start_seconds": {
+            "type": "number",
+            "minimum": 0
+          },
+          "end_seconds": {
+            "type": "number",
+            "minimum": 0
+          },
+          "observation": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "start_seconds",
+          "end_seconds",
+          "observation"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 3
+    },
+    "unmapped_styles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "proposed_label": {
+            "type": "string"
+          },
+          "audible_basis": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "proposed_label",
+          "audible_basis"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 2
+    }
+  },
+  "required": [
+    "status",
+    "primary_family",
+    "secondary_families",
+    "primary_style",
+    "secondary_styles",
+    "vocal_role",
+    "arrangement_focus",
+    "texture_tags",
+    "active_section_density",
+    "section_variation",
+    "certainty",
+    "audio_evidence",
+    "unmapped_styles"
+  ],
+  "additionalProperties": false
+}

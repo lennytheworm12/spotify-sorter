@@ -1,0 +1,124 @@
+{
+  "audio_preparation_replay": {
+    "gemini_calls": 0,
+    "inventory_identical": true,
+    "new_conversions": 0,
+    "prepared_count": 16,
+    "profile_cache_replay_tested": false,
+    "protected_hashes_verified": true,
+    "subprocess_calls_disabled": true
+  },
+  "audio_uploads": 0,
+  "focused": {
+    "command": ".venv/bin/python -m pytest tests/test_gemini_style_pilot.py tests/test_gemini_style_contract.py -q",
+    "passed": 26
+  },
+  "full_non_heavy": {
+    "command": ".venv/bin/python -m pytest -q",
+    "deselected": 12,
+    "exit_code": 0,
+    "initial_sandbox_run": "Interrupted: sandbox denied local HTTP connection; rerun completed with loopback access.",
+    "passed": 1335,
+    "runtime_seconds": 126.38,
+    "warnings": 11
+  },
+  "generation_calls": 0,
+  "implementation_hashes": {
+    "src/audio_similarity/gemini_style_pilot/__init__.py": "1fbefa0177030dd056604f8c0fc6dafebbb9fba52f67aa939fc3ef935bf38e66",
+    "src/audio_similarity/gemini_style_pilot/budget.py": "998770579a484c75183b1a66fffe84f1710e2c73d42fc3431d6f9c4c71467b1a",
+    "src/audio_similarity/gemini_style_pilot/contract.py": "89e165784e29c11466f2523a4f88548cab6c2be36e1e7fc9e2a698972568c1df",
+    "src/audio_similarity/gemini_style_pilot/inputs.py": "6d0ed4565f9df80b325d43871ab1b59b0ff3ddac86dd381c17cb3b14f9fc3840",
+    "src/audio_similarity/gemini_style_pilot/inventory.py": "1158168a183e9f782f60be9a17193b74195907d2cd2e9fa624f887706c19a93f",
+    "src/audio_similarity/gemini_style_pilot/prepare.py": "079289834ba747302702f621b868c94216104854e04e44bf77baaa15df7f49d1",
+    "src/audio_similarity/gemini_style_pilot/validation.py": "1f686b41ac5f5bdaa7edafef01302084563987de23ee9a7dee3c6b5438044b64"
+  },
+  "offline_input_boundary": {
+    "checks": [
+      {
+        "neutral_id": "N006",
+        "offline_body_sha256": "89b9126d08a8ef64900c0c73634316123d210f5d950db76f1114e1d1fcfd1812",
+        "pilot_id": "A01"
+      },
+      {
+        "neutral_id": "N012",
+        "offline_body_sha256": "69d84d7dedac4baec0795be262162341532ba75a99203c771cb2dc918902fab0",
+        "pilot_id": "A02"
+      },
+      {
+        "neutral_id": "N003",
+        "offline_body_sha256": "0fbde8dae94dc629401f3210827ddccb74b025b406cdcde995e3e5cfa7a6bbff",
+        "pilot_id": "A03"
+      },
+      {
+        "neutral_id": "N016",
+        "offline_body_sha256": "4df1856371f534efda866199f04e72280e76a04a18f1d1467df51c5949da2905",
+        "pilot_id": "A04"
+      },
+      {
+        "neutral_id": "N007",
+        "offline_body_sha256": "66f27c25dec5f38d85b4b67eb273cf7f50d18a398ac88e75d2830a84cbf9f5b8",
+        "pilot_id": "A05"
+      },
+      {
+        "neutral_id": "N005",
+        "offline_body_sha256": "5c6ed7e846a592f47c84a2f9c1568ed715f9842895fa281f87b4a845ced4c4e6",
+        "pilot_id": "A06"
+      },
+      {
+        "neutral_id": "N015",
+        "offline_body_sha256": "e9e2b46e8729469157c5d3dc40cdafe88e2d6dcc85c8f5ea3a2f5998205bfe57",
+        "pilot_id": "A07"
+      },
+      {
+        "neutral_id": "N014",
+        "offline_body_sha256": "613aafa57ad20697de69fa7365f8fa0a2e7add25053880871a6b2e24d4f812d6",
+        "pilot_id": "A08"
+      },
+      {
+        "neutral_id": "N013",
+        "offline_body_sha256": "aaf85c9df055f093026034f75c1a906f7dadbcf15df03665c7a28f334d57fab0",
+        "pilot_id": "A09"
+      },
+      {
+        "neutral_id": "N008",
+        "offline_body_sha256": "04508de596f92c3ac3e8089b78f695bd4eb143bb2cfc14320290491c1e981585",
+        "pilot_id": "A10"
+      },
+      {
+        "neutral_id": "N001",
+        "offline_body_sha256": "a2b4c12fc4a1c9bf4f90182f2a79d263792873b636febb793eeb08aebfb54f1e",
+        "pilot_id": "C01"
+      },
+      {
+        "neutral_id": "N009",
+        "offline_body_sha256": "582b3b6d03cf2e033f868750af9c3357c92cd5351cd81a13f4488e773d38850a",
+        "pilot_id": "C02"
+      },
+      {
+        "neutral_id": "N004",
+        "offline_body_sha256": "f054a1782e5e87d20529a18db8ac45900371d3906f4296af8b44daad018b6f33",
+        "pilot_id": "C03"
+      },
+      {
+        "neutral_id": "N002",
+        "offline_body_sha256": "c28c417f75baf01832705abdabab2d909c113a675df2a4cdcd816dcb096062b3",
+        "pilot_id": "C04"
+      },
+      {
+        "neutral_id": "N010",
+        "offline_body_sha256": "f1e0307eb8798f4cfdcf81049f6f05e5d1185e849b9ee8c8eb2737f9f27bbd5c",
+        "pilot_id": "C05"
+      },
+      {
+        "neutral_id": "N011",
+        "offline_body_sha256": "000d041c8bd4c458b117c9b0f74015cbfb3c27c8a4444c9c61a6509f26671a00",
+        "pilot_id": "C06"
+      }
+    ],
+    "generation_calls": 0,
+    "kind": "OFFLINE_PLACEHOLDER_URI_NOT_A_PROVIDER_REQUEST"
+  },
+  "original_preflight_files_unchanged": 31,
+  "profile_cache_replay": "NOT_TESTED_NO_PROFILES",
+  "protected_file_count": 60
+}

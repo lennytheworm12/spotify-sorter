@@ -1,0 +1,38 @@
+{
+  "audio_uploads": 0,
+  "blocked_tracks": [
+    "C04"
+  ],
+  "execution_manifest_frozen": false,
+  "expectation_exposure": {
+    "assistant_exposed_before_inference": true,
+    "generation_calls_at_exposure": 0,
+    "mitigation": "Exact supplied prompt, ontology, schema remain unchanged. Private design/candidate/rating sections are excluded by construction from model payloads. No historical rating inventory has been read in this run. Treat all outcomes as selected development diagnostics.",
+    "reason": "The supplied consolidated design was displayed in full and contains candidate hypotheses and six cited ratings."
+  },
+  "gemini_model_metadata_calls": 1,
+  "generation_calls": 0,
+  "generation_spend_usd": "0",
+  "historical_ratings_joined": false,
+  "input_hashes": {
+    "model/ontology.md": "47fe7163378561495b049746d7300d88c4ff10e2ef3b9226e43983c018208dff",
+    "model/prompt.txt": "f9f1f530b34a055580e2d58dea5a0eea0c5ea400b2bb10605fd7a91b8dfee4bb",
+    "model/response_schema.json": "4cdea0d10f22580fd971c1fd081d56dcf23f6e064ac1ce446c9e60e987acc672",
+    "private/candidates.json": "2b4b8604bb7de576bf4eab3fba18bd84039cd21621fd72091eae46c8861e2b1d",
+    "private/design-contract.md": "451ccfccb5a3a667b58dad7df904e7d19a2e8b33fa4f88392f131f2843be2c8c",
+    "style_allowed_families.json": "ca92ba8a4436d0f8f2958d70bd456b5c8d66744910c40f542c166f8cee15f424"
+  },
+  "pending": "Confirm whether the exact retained C04 audio is the intended Spotify recording; finish/test paid transport and execution manifest before smoke generation.",
+  "prepared_tracks": 16,
+  "profiles_frozen": false,
+  "source_preparation_replay": {
+    "gemini_calls": 0,
+    "inventory_identical": true,
+    "new_conversions": 0,
+    "prepared_count": 16,
+    "profile_cache_replay_tested": false,
+    "protected_hashes_verified": true,
+    "subprocess_calls_disabled": true
+  },
+  "status": "PREPARED_NOT_RUN_SOURCE_IDENTITY_BLOCKED"
+}
