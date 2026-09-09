@@ -1,0 +1,181 @@
+{
+  "attempted": 2,
+  "primary_profiles_never_replaced": true,
+  "repeats": [
+    {
+      "changed_fields": {
+        "audio_evidence": {
+          "primary": [
+            {
+              "end_seconds": 23.0,
+              "observation": "Introductory section features pitched vocal chops, subtle keys, and spoken introductory lines before the beat drops.",
+              "start_seconds": 0.0
+            },
+            {
+              "end_seconds": 65.0,
+              "observation": "Boom-bap rhythm enters with a hard-hitting kick and snare backbeat, looped soul/vocal sample chop, and rhythmic rap delivery.",
+              "start_seconds": 23.0
+            },
+            {
+              "end_seconds": 126.0,
+              "observation": "Chorus section brings layered sung melodic vocals over the looped sample-driven boom-bap drum pattern.",
+              "start_seconds": 106.0
+            }
+          ],
+          "repeat": [
+            {
+              "end_seconds": 23.5,
+              "observation": "Spoken intro over a sampled soul/vocal loop and an emerging mid-tempo hip-hop drum beat with a punchy kick and snare.",
+              "start_seconds": 0.0
+            },
+            {
+              "end_seconds": 65.0,
+              "observation": "Narrative rap verse delivered over a sample-based boom-bap rhythm featuring acoustic drum textures and pitched vocal sample chops.",
+              "start_seconds": 23.5
+            },
+            {
+              "end_seconds": 126.0,
+              "observation": "Melodic sung hook section with layered vocal refrains repeating over the steady boom-bap drum loop and bassline.",
+              "start_seconds": 106.0
+            }
+          ]
+        },
+        "secondary_families": {
+          "primary": [],
+          "repeat": [
+            "rnb_soul"
+          ]
+        },
+        "section_variation": {
+          "primary": "contrasting_sections",
+          "repeat": "mostly_consistent"
+        },
+        "texture_tags": {
+          "primary": [
+            "sample_based",
+            "clean",
+            "layered"
+          ],
+          "repeat": [
+            "sample_based",
+            "clean"
+          ]
+        },
+        "vocal_role": {
+          "primary": "rap_led",
+          "repeat": "mixed_rap_and_singing"
+        }
+      },
+      "independent_correctness_evidence": false,
+      "pilot_id": "A01",
+      "primary_family_stable": true,
+      "primary_style_stable": true,
+      "same_prepared_audio_and_request_config": true
+    },
+    {
+      "changed_fields": {
+        "audio_evidence": {
+          "primary": [
+            {
+              "end_seconds": 23.5,
+              "observation": "Spoken English vocal sample loop plays over distant, filtered background noise before the beat enters.",
+              "start_seconds": 0.0
+            },
+            {
+              "end_seconds": 58.0,
+              "observation": "Relaxed downtempo hip-hop drum beat enters with a soft electric piano chord vamp, dusty crackle, and deep mellow bassline.",
+              "start_seconds": 23.5
+            },
+            {
+              "end_seconds": 150.0,
+              "observation": "Groove continues with gentle electric piano melodies, repeating bass phrases, vinyl texture, and no lead vocal.",
+              "start_seconds": 95.0
+            }
+          ],
+          "repeat": [
+            {
+              "end_seconds": 24.5,
+              "observation": "A sparse beat with woodblock/rim clicks, shaker-like percussion, and sustained background tones provides minimal instrumental movement.",
+              "start_seconds": 0.0
+            },
+            {
+              "end_seconds": 90.0,
+              "observation": "Muted melodic synthesizer pads and occasional subtle vocalizations or low-frequency hits enter over the steady, unadorned pulse.",
+              "start_seconds": 35.0
+            },
+            {
+              "end_seconds": 170.8,
+              "observation": "Deep sub-bass tones and ambient synthesizer layers interact gently while the percussion remains very minimal and spacious.",
+              "start_seconds": 125.0
+            }
+          ]
+        },
+        "certainty": {
+          "primary": {
+            "family": "clear",
+            "style": "clear"
+          },
+          "repeat": {
+            "family": "clear",
+            "style": "tentative"
+          }
+        },
+        "primary_family": {
+          "primary": "hip_hop_rap",
+          "repeat": "electronic"
+        },
+        "primary_style": {
+          "primary": "lofi_hip_hop",
+          "repeat": "ambient"
+        },
+        "secondary_families": {
+          "primary": [
+            "electronic"
+          ],
+          "repeat": []
+        },
+        "secondary_styles": {
+          "primary": [
+            "chillhop",
+            "instrumental_hip_hop"
+          ],
+          "repeat": []
+        },
+        "texture_tags": {
+          "primary": [
+            "hazy",
+            "sample_based",
+            "electronic"
+          ],
+          "repeat": [
+            "electronic",
+            "clean",
+            "hazy"
+          ]
+        },
+        "unmapped_styles": {
+          "primary": [],
+          "repeat": [
+            {
+              "audible_basis": "Sub-bass pulses paired with minimalist, spaced-out percussion grooves in a calm, ambient tempo.",
+              "proposed_label": "minimal_downtempo"
+            }
+          ]
+        },
+        "vocal_role": {
+          "primary": "vocal_samples_only",
+          "repeat": "instrumental"
+        }
+      },
+      "independent_correctness_evidence": false,
+      "pilot_id": "A03",
+      "primary_family_stable": false,
+      "primary_style_stable": false,
+      "same_prepared_audio_and_request_config": true
+    }
+  ],
+  "unattempted_due_to_global_cap": [
+    "A08",
+    "C05"
+  ]
+}

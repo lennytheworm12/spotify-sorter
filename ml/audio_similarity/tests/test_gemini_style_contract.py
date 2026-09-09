@@ -7,6 +7,7 @@ import pytest
 from audio_similarity.gemini_style_pilot.contract import extract_contract, freeze_contract
 from audio_similarity.gemini_style_pilot.inputs import ModelInput, profile_cache_key, request_body
 from audio_similarity.gemini_style_pilot.validation import InvalidProfile, validate_profile, validate_schema
+from audio_similarity.gemini_style_pilot.duration_revision import bounded_schema
 
 
 FIXTURES = Path(__file__).parent / 'fixtures/gemini_style_pilot'
@@ -78,6 +79,26 @@ def test_cross_family_style_and_exact_end_timestamp_are_supported():
     assert validate(value) == value
     with pytest.raises(InvalidProfile, match='unsupported schema'):
         validate_schema('anything', {'type': 'string', 'minLength': 2})
+
+
+def test_duration_schema_is_only_a_physical_bound_and_rejects_out_of_range_without_repair():
+    original = copy.deepcopy(SCHEMA)
+    revised = bounded_schema(SCHEMA, 100.25)
+    assert SCHEMA == original
+    restored = copy.deepcopy(revised)
+    fields = restored['properties']['audio_evidence']['items']['properties']
+    for key in ('start_seconds', 'end_seconds'):
+        assert fields[key].pop('maximum') == 100.25
+    assert restored == SCHEMA
+    value = profile()
+    value['audio_evidence'] = [{'start_seconds': 0, 'end_seconds': 100.25, 'observation': 'synthetic'}]
+    validate_schema(value, revised)
+    value['audio_evidence'][0]['end_seconds'] = 100.25001
+    with pytest.raises(InvalidProfile, match='above maximum'):
+        validate_schema(value, revised)
+    assert value['audio_evidence'][0]['end_seconds'] == 100.25001
+    with pytest.raises(ValueError, match='invalid recording'):
+        bounded_schema(SCHEMA, float('nan'))
 
 
 def document():

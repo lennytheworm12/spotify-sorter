@@ -42,8 +42,14 @@ class PilotRunner:
         return profile_cache_key(self.track_input(pilot_id), model_id=self.manifest['model_id'],
             generation_config=self.manifest['generation_config'],
             prompt_sha256=file_sha256(model / 'prompt.txt'), ontology_sha256=file_sha256(model / 'ontology.md'),
-            schema_sha256=file_sha256(model / 'response_schema.json'),
+            schema_sha256=file_sha256(self.schema_path(pilot_id)),
             implementation_sha256=self.manifest['implementation_sha256'])
+
+    def schema_path(self, pilot_id: str) -> Path:
+        return self.run / self.manifest.get('response_schemas', {}).get(pilot_id, 'contract/model/response_schema.json')
+
+    def schema_for(self, pilot_id: str) -> dict:
+        return read(self.schema_path(pilot_id))
 
     def ledger(self) -> AttemptLedger:
         m = self.manifest
@@ -64,7 +70,7 @@ class PilotRunner:
         verify_hashes(self.run, result['evidence_hashes'])
         if result['response_file'] not in result['evidence_hashes']:
             raise RunStopped('raw response missing from integrity evidence')
-        parsed = validate_response(read(self.run / result['response_file']), schema=self.schema, allowed=self.allowed,
+        parsed = validate_response(read(self.run / result['response_file']), schema=self.schema_for(slot['pilot_id']), allowed=self.allowed,
                                    duration=self.track_input(slot['pilot_id']).duration_seconds)
         if any(result[k] != v for k, v in parsed.items()):
             raise RunStopped('cached profile differs from original provider response')
@@ -136,7 +142,7 @@ class PilotRunner:
         uploaded = transport.upload(prepared_path, neutral_id=track.neutral_id,
                                     expected_sha256=track.prepared_sha256)
         body = request_body(track, file_uri=uploaded['uri'], prompt=self.prompt, ontology=self.ontology,
-                            schema=self.schema, generation_config=self.manifest['generation_config'])
+                            schema=self.schema_for(pid), generation_config=self.manifest['generation_config'])
         count, count_stem = transport.count_tokens(self.manifest['model_id'], body)
         ledger = self.ledger()
         reservation = ledger.reserve(counted_input=count.get('totalTokens'),
@@ -154,7 +160,7 @@ class PilotRunner:
             raise RunStopped('generation HTTP failure; reservation remains unresolved')
         value = response.json()
         settlement = ledger.settle(index, value.get('usageMetadata', {}))
-        parsed = validate_response(value, schema=self.schema, allowed=self.allowed, duration=track.duration_seconds)
+        parsed = validate_response(value, schema=self.schema_for(pid), allowed=self.allowed, duration=track.duration_seconds)
         evidence = [request_path, count_stem.with_suffix('.response.bin'), response_stem.with_suffix('.response.bin'),
                     response_stem.with_suffix('.response.json'), attempts / f'attempt-{index:02d}.reservation.json',
                     attempts / f'attempt-{index:02d}.settlement.json']
@@ -172,9 +178,10 @@ class PilotRunner:
 
     def replay(self, *, require_complete=True) -> dict:
         """Read/validate only. Never constructs a transport client or touches the key."""
-        results = [self.verified_result(i) for i in range(1, 21) if self.result_path(i).exists()]
-        if require_complete and len(results) != 20:
-            raise RunStopped('full replay requires all 16 primaries and four explicit repeats')
+        expected = len(self.manifest['schedule'])
+        results = [self.verified_result(i) for i in range(1, expected + 1) if self.result_path(i).exists()]
+        if require_complete and len(results) != expected:
+            raise RunStopped('full replay requires the complete frozen primary and repeat schedule')
         if (self.run / 'profiles_frozen.json').exists():
             verify_hashes(self.run, read(self.run / 'profiles_frozen.json')['files'])
         return {'status': 'CACHE_REPLAY_VERIFIED', 'validated_attempts': len(results),

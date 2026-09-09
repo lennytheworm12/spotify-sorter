@@ -2,12 +2,15 @@
 import base64
 import copy
 import json
+import shutil
+from decimal import Decimal
 from pathlib import Path
 
 import httpx
 import pytest
 
 from audio_similarity.gemini_style_pilot.manifest import CONFIG, MODEL, PILOT_IDS, make_manifest
+from audio_similarity.gemini_style_pilot.duration_revision import bounded_schema
 from audio_similarity.gemini_style_pilot.runner import PilotRunner, RunStopped
 from audio_similarity.gemini_style_pilot.transport import GeminiTransport, TransportStopped
 from audio_similarity.stage5b1a_models import file_sha256
@@ -58,8 +61,9 @@ def uncertain_profile():
 
 
 class FakeProvider:
-    def __init__(self, run, *, fault=None):
+    def __init__(self, run, *, fault=None, duration_bounded=False):
         self.run, self.fault, self.calls, self.generations, self.files = run, fault, [], 0, {}
+        self.duration_bounded = duration_bounded
 
     def factory(self):
         return GeminiTransport(self.run / 'execution/transport', 'TEST-KEY-NEVER-LOG',
@@ -85,7 +89,10 @@ class FakeProvider:
         body = json.loads(request.content)
         if request.url.path.endswith(':countTokens'):
             assert body['generateContentRequest']['model'] == f'models/{MODEL}'
-            assert body['generateContentRequest']['generationConfig']['responseJsonSchema'] == read(FIXTURE / 'response_schema.json')
+            schema = read(FIXTURE / 'response_schema.json')
+            if self.duration_bounded:
+                schema = bounded_schema(schema, 150)
+            assert body['generateContentRequest']['generationConfig']['responseJsonSchema'] == schema
             if self.fault == 'count':
                 return httpx.Response(200, json={})
             return httpx.Response(200, json={'totalTokens': 7000})
@@ -194,6 +201,60 @@ def test_interrupted_reservation_is_not_dispatched_again(tmp_path):
     with pytest.raises(RunStopped, match='interrupted'):
         value.next()
     assert not provider.calls
+
+
+def duration_continuation(root):
+    previous, provider = runner(root)
+    previous.next()
+    previous.next()
+    freeze_json(previous.directory / 'STOPPED.json', {'reason': 'SYNTHETIC continuation fixture'})
+    run = root / 'research/duration_fixture'
+    for name in ('contract', 'prepared', 'preflight', 'source_checks'):
+        shutil.copytree(previous.run / name, run / name)
+    approval = run / 'revision/approval.json'
+    freeze_json(approval, {'schema_policy': 'duration-maximum-v1', 'owner_message': 'SYNTHETIC approval only',
+                           'prior_run': str(previous.run.relative_to(root))})
+    return previous, run, approval
+
+
+def test_duration_continuation_carries_global_allowance_and_replays_without_calls(tmp_path):
+    previous, run, approval = duration_continuation(tmp_path)
+    before = hashes(list(previous.run.rglob('*')), tmp_path)
+    manifest = make_manifest(tmp_path, run, run / 'source_checks/inventory.json', duration_revision=approval)
+    assert manifest['max_attempts'] == 18
+    assert Decimal(manifest['spend_cap_usd']) == Decimal('1.982')
+    assert manifest['continuation']['prior_generation_attempts'] == 2
+    assert [s['pilot_id'] for s in manifest['schedule'] if s['repeat']] == ['A01', 'A03']
+    provider = FakeProvider(run, duration_bounded=True)
+    value = PilotRunner(tmp_path, run, transport_factory=provider.factory)
+    assert value.key('A01') != previous.key('A01')
+    for i in range(1, 19):
+        assert value.next()['attempt'] == i
+    assert provider.generations == 18
+    policy = read(value.directory / 'attempts/policy.json')
+    assert policy['max_attempts'] == 18 and Decimal(policy['cap_usd']) == Decimal('1.982')
+    value.transport_factory = lambda: pytest.fail('replay must never construct an API client')
+    assert value.freeze_profiles()['replay']['unique_profiles'] == 16
+    assert value.replay()['new_api_calls'] == 0
+    assert hashes(list(previous.run.rglob('*')), tmp_path) == before
+    manifest['spend_cap_usd'] = '2'
+    (run / 'execution_manifest.json').write_text(json.dumps(manifest))
+    with pytest.raises(ValueError, match='global allowance'):
+        PilotRunner(tmp_path, run, transport_factory=provider.factory)
+
+
+def test_duration_continuation_rejects_missing_settlement_and_changed_contract(tmp_path):
+    previous, run, approval = duration_continuation(tmp_path)
+    settlement = previous.directory / 'attempts/attempt-02.settlement.json'
+    contents = settlement.read_bytes()
+    settlement.unlink()
+    with pytest.raises(ValueError, match='accounted predecessor'):
+        make_manifest(tmp_path, run, run / 'source_checks/inventory.json', duration_revision=approval)
+    settlement.write_bytes(contents)
+    (run / 'contract/model/prompt.txt').write_text('CHANGED SYNTHETIC PROMPT')
+    with pytest.raises(ValueError):
+        make_manifest(tmp_path, run, run / 'source_checks/inventory.json', duration_revision=approval)
+    assert not (run / 'execution_manifest.json').exists()
 
 
 def test_eligible_flag_cannot_override_an_unresolved_source_status(tmp_path):

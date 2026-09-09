@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"dense\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"end_seconds\": 41.5,\n      \"observation\": \"Spoken/sung male lead vocal over heavy, distorted 808-style bass and trap hi-hats with synthetic pads in verse.\",\n      \"start_seconds\": 8.0\n    },\n    {\n      \"end_seconds\": 78.0,\n      \"observation\": \"Loud, high-pitched female vocal hook with distorted bass drops, trap percussion, and dense electronic synths.\",\n      \"start_seconds\": 42.0\n    },\n    {\n      \"end_seconds\": 180.0,\n      \"observation\": \"Repetition of maximalist, pitch-shifted hook with heavy electronic processing, distorted low end, and syncopated trap beats.\",\n      \"start_seconds\": 152.0\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"electronic\",\n  \"primary_style\": \"hyperpop\",\n  \"secondary_families\": [\"hip_hop_rap\", \"pop\"],\n  \"secondary_styles\": [\"digicore\", \"trap\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"distorted\", \"layered\"],\n  \"unmapped_styles\": [],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIP/PYZHcl8fZZ+vF+5JD6bhTdqvFHSVBStb+AtR3vPN/UBeitjS1mOYvpiuIo8EG74CSGGqrKGbc3NEdPRdxJ9ECSrYGdBW/9Q/VVQeBQljfMvAjYTduTJQxrDJBtbuX/0"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 8934,
+    "candidatesTokenCount": 368,
+    "totalTokenCount": 9302,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5855
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 3079
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "3N-hapKyEY21_uMPwqOGuQI"
+}

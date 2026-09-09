@@ -1,0 +1,6 @@
+{
+  "before_inventory_sha256": "92efeb1e9e42aa6fcf363f6b2ddf1f43c9af94d847c2172eab2f406e52e40a34",
+  "files_verified_unchanged": 200,
+  "method": "Reran the offline create-once exporter, then compared every exported file hash with the saved pre-replay inventory.",
+  "new_api_calls": 0
+}

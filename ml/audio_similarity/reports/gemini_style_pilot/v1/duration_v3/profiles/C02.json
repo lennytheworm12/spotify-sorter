@@ -1,0 +1,43 @@
+{
+  "active_section_density": "moderate",
+  "arrangement_focus": "lead_vocal",
+  "audio_evidence": [
+    {
+      "end_seconds": 27.5,
+      "observation": "Sped-up/pitched vocal sample loop provides the primary melodic and rhythmic bedrock before main instrumentation enters.",
+      "start_seconds": 0.0
+    },
+    {
+      "end_seconds": 47.0,
+      "observation": "Female sung lead vocal enters over a punchy hip-hop kick/snare pattern, sub-bass, and persistent high-pitched vocal loop.",
+      "start_seconds": 27.5
+    },
+    {
+      "end_seconds": 150.0,
+      "observation": "Full verse and chorus with layered pop vocal harmonies over crisp hip-hop/R&B drum beat and warm Rhodes/synth chords.",
+      "start_seconds": 123.0
+    }
+  ],
+  "certainty": {
+    "family": "clear",
+    "style": "clear"
+  },
+  "primary_family": "rnb_soul",
+  "primary_style": "pop_rnb",
+  "secondary_families": [
+    "pop",
+    "hip_hop_rap"
+  ],
+  "secondary_styles": [
+    "contemporary_rnb"
+  ],
+  "section_variation": "contrasting_sections",
+  "status": "classified",
+  "texture_tags": [
+    "sample_based",
+    "clean",
+    "layered"
+  ],
+  "unmapped_styles": [],
+  "vocal_role": "sung_led"
+}

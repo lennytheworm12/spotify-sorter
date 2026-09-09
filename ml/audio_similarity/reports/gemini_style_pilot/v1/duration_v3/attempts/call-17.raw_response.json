@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"end_seconds\": 22.0,\n      \"observation\": \"Intro features prominent chopped/pitched vocal samples and stuttering electronic beat elements before lead vocals enter.\",\n      \"start_seconds\": 2.5\n    },\n    {\n      \"end_seconds\": 58.0,\n      \"observation\": \"Rhythmic, melodic lead singing over a sparse-to-moderate digital beat with 808-style bass and sampled vocal chops.\",\n      \"start_seconds\": 23.0\n    },\n    {\n      \"end_seconds\": 146.0,\n      \"observation\": \"Chorus section with layered, pitch-shifted backing vocals, syncopated electronic percussion, and a bright, glossy hook.\",\n      \"start_seconds\": 123.0\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"tentative\"\n  },\n  \"primary_family\": \"rnb_soul\",\n  \"primary_style\": \"contemporary_rnb\",\n  \"secondary_families\": [\n    \"pop\",\n    \"electronic\"\n  ],\n  \"secondary_styles\": [\n    \"pop_rnb\",\n    \"alternative_rnb\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"sample_based\",\n    \"electronic\",\n    \"clean\"\n  ],\n  \"unmapped_styles\": [],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPzTdKB8ftoHWKSuhWd4IedODSsSb+XXNbLWuAuzyGvZ9TeHOV06xWWQyNvAKUgINSzm7XOVgdTulrTJLU1ZWyjX+YjtUIyhdGVCDuROgSuLrfeXrGRiaCCwEIS3Ri/OFQ"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 7412,
+    "candidatesTokenCount": 393,
+    "totalTokenCount": 7805,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3079
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4333
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "HuChao6yNZXjqtsP4aXssA0"
+}

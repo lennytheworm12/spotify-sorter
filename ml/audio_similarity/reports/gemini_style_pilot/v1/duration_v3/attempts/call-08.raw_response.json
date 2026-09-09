@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"balanced\",\n  \"audio_evidence\": [\n    {\n      \"end_seconds\": 39.5,\n      \"observation\": \"Spacious electronic beat with crisp trap-style snares, sub-bass, and rapid rhythmic rap vocals delivered with auto-tune processing.\",\n      \"start_seconds\": 18.0\n    },\n    {\n      \"end_seconds\": 125.0,\n      \"observation\": \"Catchy melodic sung vocal hook accompanied by shimmering synthesizer pads, melodic trap drum programming, and 808 bass.\",\n      \"start_seconds\": 103.5\n    },\n    {\n      \"end_seconds\": 20.0,\n      \"observation\": \"Spoken atmospheric intro gives way to a stuttering drop with synthetic textures and vocal chops leading into the primary beat.\",\n      \"start_seconds\": 0.0\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"hip_hop_rap\",\n  \"primary_style\": \"melodic_trap\",\n  \"secondary_families\": [\n    \"pop\",\n    \"electronic\"\n  ],\n  \"secondary_styles\": [\n    \"trap\",\n    \"electropop\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"clean\",\n    \"layered\"\n  ],\n  \"unmapped_styles\": [],\n  \"vocal_role\": \"mixed_rap_and_singing\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPxtbP5by3Vw2q/ErCCgM/OnFwSG0rdCzbhDpPX7x1nA0McumR8EvVrP7SkULe8RexWaTSEYcBEYxHB61Z4vPXyhIFpRty32g4ZNezvWWu7pfdLpMbN9Rs1Rwo99Pe7i4I"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 7047,
+    "candidatesTokenCount": 394,
+    "totalTokenCount": 7441,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3968
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 3079
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "1N-hau2KLOqIz7IPy82L2QI"
+}

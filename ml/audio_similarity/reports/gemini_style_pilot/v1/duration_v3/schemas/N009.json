@@ -1,0 +1,249 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "active_section_density": {
+      "enum": [
+        "sparse",
+        "moderate",
+        "dense",
+        "varies",
+        "unclear"
+      ],
+      "type": "string"
+    },
+    "arrangement_focus": {
+      "enum": [
+        "lead_vocal",
+        "beat_or_instrumental",
+        "balanced",
+        "varies",
+        "unclear"
+      ],
+      "type": "string"
+    },
+    "audio_evidence": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "end_seconds": {
+            "maximum": 219.8349375,
+            "minimum": 0,
+            "type": "number"
+          },
+          "observation": {
+            "type": "string"
+          },
+          "start_seconds": {
+            "maximum": 219.8349375,
+            "minimum": 0,
+            "type": "number"
+          }
+        },
+        "required": [
+          "start_seconds",
+          "end_seconds",
+          "observation"
+        ],
+        "type": "object"
+      },
+      "maxItems": 3,
+      "type": "array"
+    },
+    "certainty": {
+      "additionalProperties": false,
+      "properties": {
+        "family": {
+          "enum": [
+            "clear",
+            "tentative",
+            "unresolved"
+          ],
+          "type": "string"
+        },
+        "style": {
+          "enum": [
+            "clear",
+            "tentative",
+            "unresolved"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "family",
+        "style"
+      ],
+      "type": "object"
+    },
+    "primary_family": {
+      "enum": [
+        "hip_hop_rap",
+        "rnb_soul",
+        "pop",
+        "electronic",
+        "rock",
+        "folk_acoustic",
+        "jazz",
+        "classical",
+        "other",
+        "unknown"
+      ],
+      "type": "string"
+    },
+    "primary_style": {
+      "enum": [
+        "boom_bap",
+        "trap",
+        "melodic_trap",
+        "cloud_rap",
+        "rage",
+        "alternative_rnb",
+        "contemporary_rnb",
+        "neo_soul",
+        "pop_rnb",
+        "dance_pop",
+        "indie_pop",
+        "synthpop",
+        "electropop",
+        "hyperpop",
+        "digicore",
+        "lofi_hip_hop",
+        "chillhop",
+        "instrumental_hip_hop",
+        "indie_rock",
+        "ambient",
+        "acoustic_ballad",
+        "unknown"
+      ],
+      "type": "string"
+    },
+    "secondary_families": {
+      "items": {
+        "enum": [
+          "hip_hop_rap",
+          "rnb_soul",
+          "pop",
+          "electronic",
+          "rock",
+          "folk_acoustic",
+          "jazz",
+          "classical",
+          "other"
+        ],
+        "type": "string"
+      },
+      "maxItems": 2,
+      "type": "array"
+    },
+    "secondary_styles": {
+      "items": {
+        "enum": [
+          "boom_bap",
+          "trap",
+          "melodic_trap",
+          "cloud_rap",
+          "rage",
+          "alternative_rnb",
+          "contemporary_rnb",
+          "neo_soul",
+          "pop_rnb",
+          "dance_pop",
+          "indie_pop",
+          "synthpop",
+          "electropop",
+          "hyperpop",
+          "digicore",
+          "lofi_hip_hop",
+          "chillhop",
+          "instrumental_hip_hop",
+          "indie_rock",
+          "ambient",
+          "acoustic_ballad"
+        ],
+        "type": "string"
+      },
+      "maxItems": 2,
+      "type": "array"
+    },
+    "section_variation": {
+      "enum": [
+        "mostly_consistent",
+        "contrasting_sections",
+        "cannot_assess"
+      ],
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "classified",
+        "uncertain",
+        "not_music"
+      ],
+      "type": "string"
+    },
+    "texture_tags": {
+      "items": {
+        "enum": [
+          "sample_based",
+          "electronic",
+          "acoustic",
+          "hazy",
+          "distorted",
+          "clean",
+          "layered"
+        ],
+        "type": "string"
+      },
+      "maxItems": 3,
+      "type": "array"
+    },
+    "unmapped_styles": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "audible_basis": {
+            "type": "string"
+          },
+          "proposed_label": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "proposed_label",
+          "audible_basis"
+        ],
+        "type": "object"
+      },
+      "maxItems": 2,
+      "type": "array"
+    },
+    "vocal_role": {
+      "enum": [
+        "rap_led",
+        "sung_led",
+        "mixed_rap_and_singing",
+        "instrumental",
+        "vocal_samples_only",
+        "spoken_only",
+        "unclear"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "status",
+    "primary_family",
+    "secondary_families",
+    "primary_style",
+    "secondary_styles",
+    "vocal_role",
+    "arrangement_focus",
+    "texture_tags",
+    "active_section_density",
+    "section_variation",
+    "certainty",
+    "audio_evidence",
+    "unmapped_styles"
+  ],
+  "type": "object"
+}

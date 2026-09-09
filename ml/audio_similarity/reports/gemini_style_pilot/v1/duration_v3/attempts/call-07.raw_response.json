@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\"end_seconds\": 32.5, \"observation\": \"Repetitive degraded electric piano chords play over a steady boom-bap drum pattern with prominent vinyl crackle and tape hiss.\", \"start_seconds\": 0.0},\n    {\"end_seconds\": 65.0, \"observation\": \"The low-fidelity drum beat and mellow keyboard progression continue with subtle percussion fills and occasional ambient textures.\", \"start_seconds\": 32.5},\n    {\"end_seconds\": 106.6, \"observation\": \"Mellow female vocal enters, singing melodically over the sustained relaxed lofi beat and dusty piano loop.\", \"start_seconds\": 87.0}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"hip_hop_rap\",\n  \"primary_style\": \"lofi_hip_hop\",\n  \"secondary_families\": [\"electronic\"],\n  \"secondary_styles\": [\"chillhop\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"sample_based\", \"hazy\"],\n  \"unmapped_styles\": [],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIP6LucgPvk9mzcfbuS8ShAC99aatWwhYOjAJinE3YCRVAdtjxhBHDw2i0obfwl5UL7FoiT1lh+AiOxlwtjGolYUDmuRUneiPvH7A9KYWWpTE2rBkyZCYyjIdMsXbYe7DW8"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5747,
+    "candidatesTokenCount": 326,
+    "totalTokenCount": 6073,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 2668
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 3079
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "zd-hatTnPMaHz7IPoobtkQo"
+}

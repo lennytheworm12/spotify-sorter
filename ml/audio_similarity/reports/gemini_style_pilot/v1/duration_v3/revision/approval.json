@@ -1,0 +1,23 @@
+{
+  "authorization_scope": "Apply recording-duration bounds; rerun two engineering smokes; continue frozen full pilot if both pass. Original global $2 / 20 generations including all old attempts. No semantic repair or old artifact changes.",
+  "owner_message": "go ahead and make the calls",
+  "prior_code_snapshot": {
+    "prior_code_snapshot/__init__.py": "1fbefa0177030dd056604f8c0fc6dafebbb9fba52f67aa939fc3ef935bf38e66",
+    "prior_code_snapshot/__main__.py": "dc26442b16fb1dca9a36bf0ff4b42030d2b13f98d95ddc8e99252a2a21c53007",
+    "prior_code_snapshot/budget.py": "f987fdb5b6fcc96f58eb9d9835f67bb6c9f7a47073441a0220c1a5cd7678a7ff",
+    "prior_code_snapshot/contract.py": "89e165784e29c11466f2523a4f88548cab6c2be36e1e7fc9e2a698972568c1df",
+    "prior_code_snapshot/inputs.py": "6d0ed4565f9df80b325d43871ab1b59b0ff3ddac86dd381c17cb3b14f9fc3840",
+    "prior_code_snapshot/inventory.py": "1158168a183e9f782f60be9a17193b74195907d2cd2e9fa624f887706c19a93f",
+    "prior_code_snapshot/manifest.py": "d80b7e1c80ce6dbf67ccb5123db252fcf2d09dfd958dcf1a2ac2ee3465f229f4",
+    "prior_code_snapshot/prepare.py": "079289834ba747302702f621b868c94216104854e04e44bf77baaa15df7f49d1",
+    "prior_code_snapshot/responses.py": "348a76c33239265a80a0b6407b772b9a41ead6bbb47ab69c2c7784579d5b4883",
+    "prior_code_snapshot/runner.py": "6b47e52eca45cdaa3e491b4164f16c9a8374ab6f78beba48f87c55ab411da02e",
+    "prior_code_snapshot/transport.py": "dd36e45af01154935c1ba86511a88329985c1af1eab0268b66d77638f1d4d314",
+    "prior_code_snapshot/validation.py": "1f686b41ac5f5bdaa7edafef01302084563987de23ee9a7dee3c6b5438044b64"
+  },
+  "prior_run": ".research_audio/gemini_style_pilot/style-pilot-v1-transport-v2",
+  "recorded_utc": "2026-09-09T22:35:47.832678+00:00",
+  "reviewed_proposal_sha256": "1973c06c48887b7363cefefadc423401f53950e8372204dba6b239b8a8daae7e",
+  "schedule_policy": "16 new primaries, including the two new smokes, then A01 and A03 repeated once each. Global calls 3-20. A08 and C05 repeats omitted due to prior attempts.",
+  "schema_policy": "duration-maximum-v1"
+}

@@ -1,0 +1,48 @@
+{
+  "active_section_density": "moderate",
+  "arrangement_focus": "balanced",
+  "audio_evidence": [
+    {
+      "end_seconds": 15.0,
+      "observation": "Introductory section with isolated female vocals over subtle ambient synth pads and a ticking rhythmic motif.",
+      "start_seconds": 1.0
+    },
+    {
+      "end_seconds": 45.0,
+      "observation": "A bouncy UK garage-inflected two-step beat enters with a syncopated kick, skittering snare, and soft electric piano chords accompanying lead vocals.",
+      "start_seconds": 15.0
+    },
+    {
+      "end_seconds": 80.0,
+      "observation": "Pop chorus hook driven by stacked melodic vocals, tight sub-bass, clean electronic percussion, and pitched vocal chops.",
+      "start_seconds": 45.0
+    }
+  ],
+  "certainty": {
+    "family": "clear",
+    "style": "tentative"
+  },
+  "primary_family": "pop",
+  "primary_style": "pop_rnb",
+  "secondary_families": [
+    "electronic",
+    "rnb_soul"
+  ],
+  "secondary_styles": [
+    "dance_pop"
+  ],
+  "section_variation": "contrasting_sections",
+  "status": "classified",
+  "texture_tags": [
+    "clean",
+    "electronic",
+    "layered"
+  ],
+  "unmapped_styles": [
+    {
+      "audible_basis": "Prominent UK garage 2-step rhythm pattern combined with polished girl-group pop songwriting.",
+      "proposed_label": "uk_garage_pop"
+    }
+  ],
+  "vocal_role": "sung_led"
+}

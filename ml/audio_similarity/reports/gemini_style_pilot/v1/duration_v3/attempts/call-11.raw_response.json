@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"end_seconds\": 15.0,\n      \"observation\": \"Introductory electric guitar chord strums and muted picking with subtle room reverb before the beat drops.\",\n      \"start_seconds\": 0.0\n    },\n    {\n      \"end_seconds\": 36.0,\n      \"observation\": \"Sparse pop verse featuring upfront sung lead female vocals over a clean electric bassline and rhythmic drum kit.\",\n      \"start_seconds\": 15.0\n    },\n    {\n      \"end_seconds\": 58.0,\n      \"observation\": \"Bright dance-pop chorus featuring layered vocal harmonies, prominent pulsing four-on-the-floor beat, and synth accents.\",\n      \"start_seconds\": 36.0\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"pop\",\n  \"primary_style\": \"dance_pop\",\n  \"secondary_families\": [\"electronic\", \"rock\"],\n  \"secondary_styles\": [\"indie_pop\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"clean\", \"layered\", \"electronic\"],\n  \"unmapped_styles\": [],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPUaW+MLwcfMdJxjV5SX5OxmcHmK1DWoe90r9fMqUsHTUPWjfoLctDvHlvw38y6kXNQ4se/ceTKoOWkQc7vQV7SmbOUmno3UUWzYzpSqe97XhpmdCB9sK0MZBhPc9QijGr"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 7133,
+    "candidatesTokenCount": 346,
+    "totalTokenCount": 7479,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3079
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4054
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "7N-har2NIYKq_uMPwtjWuAs"
+}

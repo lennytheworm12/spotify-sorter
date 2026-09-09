@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"end_seconds\": 32.0,\n      \"observation\": \"Slow tempo beat begins with filtered synth pads, deep sub-bass/808 notes, and prominent contemporary R&B vocal melodies.\",\n      \"start_seconds\": 6.5\n    },\n    {\n      \"end_seconds\": 63.0,\n      \"observation\": \"Spacious, emotive chorus with lush layered vocal harmonies over trap-influenced slow percussion and atmospheric textures.\",\n      \"start_seconds\": 38.0\n    },\n    {\n      \"end_seconds\": 182.0,\n      \"observation\": \"Vocal breakdown where sparse electronic pads swell into a dramatic full-chorus return with wide vocal layers.\",\n      \"start_seconds\": 140.0\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"rnb_soul\",\n  \"primary_style\": \"alternative_rnb\",\n  \"secondary_families\": [\"electronic\", \"pop\"],\n  \"secondary_styles\": [\"contemporary_rnb\", \"pop_rnb\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"hazy\", \"layered\"],\n  \"unmapped_styles\": [],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPRQTe2eJo/SMgHqKMDv0DB6Okklm14hsnjtzPgzjmqmLlxhzUl7wZOReU4o8v5jRL3YnW4hnFGmfA+XgSALD6r7fVeQji0DdpqTEi6ar9lNg92gdnzSqDJxIzYnrJbRhC"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 8362,
+    "candidatesTokenCount": 364,
+    "totalTokenCount": 8726,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3079
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5283
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "5d-havu5Hcez_PUPxpbCwQI"
+}

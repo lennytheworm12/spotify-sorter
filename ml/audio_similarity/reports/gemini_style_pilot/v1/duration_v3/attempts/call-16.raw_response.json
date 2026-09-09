@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"dense\",\n  \"arrangement_focus\": \"balanced\",\n  \"audio_evidence\": [\n    {\n      \"end_seconds\": 12.0,\n      \"observation\": \"High-pitched chopped vocal synth loop and metallic percussion intro building into beat drop.\",\n      \"start_seconds\": 0.0\n    },\n    {\n      \"end_seconds\": 36.5,\n      \"observation\": \"Heavily pitch-shifted and autotuned melodic vocals over rapid electronic trap hi-hats, distorted 808 bass, and synth riffs.\",\n      \"start_seconds\": 12.5\n    },\n    {\n      \"end_seconds\": 121.6,\n      \"observation\": \"Outro featuring extreme digital vocal stuttering, pitch glides, and hyper-processed micro-edits.\",\n      \"start_seconds\": 105.0\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"electronic\",\n  \"primary_style\": \"digicore\",\n  \"secondary_families\": [\n    \"pop\",\n    \"hip_hop_rap\"\n  ],\n  \"secondary_styles\": [\n    \"hyperpop\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"distorted\",\n    \"layered\"\n  ],\n  \"unmapped_styles\": [],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIP5SK/ZiiWf3gDUrRN8yr8p11QEWqi3YpYUETNekR2SZN4yD6JE56JHh28qzOZGT9e74PdQS8ShFNwZ+TfauSVrTuehpOcOlVhaeEa8Z+RhjJgDBEGLyonbfhHiNhoGG1W"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 6122,
+    "candidatesTokenCount": 377,
+    "totalTokenCount": 6499,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3043
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 3079
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "F-Chap27EYfVz7IP6bnG-QE"
+}

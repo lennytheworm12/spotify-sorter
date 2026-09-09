@@ -1,0 +1,46 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"active_section_density\":\"sparse\",\"arrangement_focus\":\"beat_or_instrumental\",\"audio_evidence\":[{\"end_seconds\":24.5,\"observation\":\"A sparse beat with woodblock/rim clicks, shaker-like percussion, and sustained background tones provides minimal instrumental movement.\"   ,\"start_seconds\":0.0},{\"end_seconds\":90.0,\"observation\":\"Muted melodic synthesizer pads and occasional subtle vocalizations or low-frequency hits enter over the steady, unadorned pulse.\"  ,\"start_seconds\":35.0},{\"end_seconds\":170.8,\"observation\":\"Deep sub-bass tones and ambient synthesizer layers interact gently while the percussion remains very minimal and spacious.\"      ,\"start_seconds\":125.0}],\"certainty\":{\"family\":\"clear\",\"style\":\"tentative\"},\"primary_family\":\"electronic\",\"primary_style\":\"ambient\",\"secondary_families\":[],\"secondary_styles\":[],\"section_variation\":\"mostly_consistent\",\"status\":\"classified\",\"texture_tags\":[\"electronic\",\"clean\",\"hazy\"],\"unmapped_styles\":[{\"audible_basis\":\"Sub-bass pulses paired with minimalist, spaced-out percussion grooves in a calm, ambient tempo.\",\"proposed_label\":\"minimal_downtempo\"}],\"vocal_role\":\"instrumental\"}",
+            "thoughtSignature": "EmcKZQERTTIPyrO8RiChbeRo7YHEOdBmJlSIngLdDK+XX4bNWebjAStXtg5ynolUxrtrMjnXlRyVnCFvmE3FB2bvWVv5dkg94Naj1gXuZBjn4HKf1TMSFvddqNUDgH7l9NfJKBzOCcF7"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 7350,
+    "candidatesTokenCount": 270,
+    "totalTokenCount": 7620,
+    "cachedContentTokenCount": 3008,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3079
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4271
+      }
+    ],
+    "cacheTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1260
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 1748
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "MOChatvhEZ2_qtsPl9GkqA8"
+}

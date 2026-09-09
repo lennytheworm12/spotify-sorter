@@ -30,7 +30,7 @@ def strict_json(text: str):
 def validate_schema(value, schema: dict, path: str = '$') -> None:
     """Evaluate only the exact draft's schema vocabulary; reject unknown keywords."""
     supported = {'type', 'properties', 'required', 'additionalProperties', 'items',
-                 'maxItems', 'enum', 'minimum'}
+                 'maxItems', 'enum', 'minimum', 'maximum'}
     if set(schema) - supported:
         raise InvalidProfile(f'{path}: unsupported schema keyword')
     kind = schema['type']
@@ -57,8 +57,11 @@ def validate_schema(value, schema: dict, path: str = '$') -> None:
             raise InvalidProfile(f'{path}: too many items')
         for i, child in enumerate(value):
             validate_schema(child, schema['items'], f'{path}[{i}]')
-    elif kind == 'number' and value < schema.get('minimum', value):
-        raise InvalidProfile(f'{path}: below minimum')
+    elif kind == 'number':
+        if value < schema.get('minimum', value):
+            raise InvalidProfile(f'{path}: below minimum')
+        if value > schema.get('maximum', value):
+            raise InvalidProfile(f'{path}: above maximum')
 
 
 def validate_profile(text: str, *, schema: dict, allowed_families: dict,

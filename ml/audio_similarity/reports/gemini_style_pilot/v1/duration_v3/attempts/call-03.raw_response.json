@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"end_seconds\": 23.0,\n      \"observation\": \"Introductory section features pitched vocal chops, subtle keys, and spoken introductory lines before the beat drops.\",\n      \"start_seconds\": 0.0\n    },\n    {\n      \"end_seconds\": 65.0,\n      \"observation\": \"Boom-bap rhythm enters with a hard-hitting kick and snare backbeat, looped soul/vocal sample chop, and rhythmic rap delivery.\",\n      \"start_seconds\": 23.0\n    },\n    {\n      \"end_seconds\": 126.0,\n      \"observation\": \"Chorus section brings layered sung melodic vocals over the looped sample-driven boom-bap drum pattern.\",\n      \"start_seconds\": 106.0\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"hip_hop_rap\",\n  \"primary_style\": \"boom_bap\",\n  \"secondary_families\": [],\n  \"secondary_styles\": [],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"sample_based\", \"clean\", \"layered\"],\n  \"unmapped_styles\": [],\n  \"vocal_role\": \"rap_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPk/zoJrabOuiRi4s1f+mB3rJH/IuVO+cdyyc+PpDtGEWrYy1iEnY1fk0iTWtd7go5USqiTRIG6iaybdgBuhQU36/GMuUPQwIdsbA5aJ8jR6eoHfOT/y+5Ui1lX/TKi9cb"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 9090,
+    "candidatesTokenCount": 351,
+    "totalTokenCount": 9441,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 6011
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 3079
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "bd-hapTVIoOP6dkP793L-Q0"
+}

@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"balanced\",\n  \"audio_evidence\": [\n    {\n      \"end_seconds\": 15.0,\n      \"observation\": \"Introductory section with isolated female vocals over subtle ambient synth pads and a ticking rhythmic motif.\",\n      \"start_seconds\": 1.0\n    },\n    {\n      \"end_seconds\": 45.0,\n      \"observation\": \"A bouncy UK garage-inflected two-step beat enters with a syncopated kick, skittering snare, and soft electric piano chords accompanying lead vocals.\",\n      \"start_seconds\": 15.0\n    },\n    {\n      \"end_seconds\": 80.0,\n      \"observation\": \"Pop chorus hook driven by stacked melodic vocals, tight sub-bass, clean electronic percussion, and pitched vocal chops.\",\n      \"start_seconds\": 45.0\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"tentative\"\n  },\n  \"primary_family\": \"pop\",\n  \"primary_style\": \"pop_rnb\",\n  \"secondary_families\": [\"electronic\", \"rnb_soul\"],\n  \"secondary_styles\": [\"dance_pop\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"clean\", \"electronic\", \"layered\"],\n  \"unmapped_styles\": [\n    {\n      \"audible_basis\": \"Prominent UK garage 2-step rhythm pattern combined with polished girl-group pop songwriting.\",\n      \"proposed_label\": \"uk_garage_pop\"\n    }\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPbACck5V0b0N44io/M0VUr/afXIC6gDpBDlMC44tzBytu5khbjpVutJNu0tm37WtFhBbFCt6c68mhFjOFms3KibWrXuDNE1vXIxT7mV53khw1NIjPpolSdSUrWunJKugC"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 8387,
+    "candidatesTokenCount": 408,
+    "totalTokenCount": 8795,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5308
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 3079
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "9N-hapT2IsqhjrEPoNjmkAQ"
+}

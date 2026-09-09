@@ -4,6 +4,7 @@ from __future__ import annotations
 import importlib.metadata
 import platform
 from datetime import date
+from decimal import Decimal
 from pathlib import Path
 
 from audio_similarity.stage5e3_artifacts import digest, freeze_json, hashes, read, verify_hashes
@@ -24,7 +25,7 @@ def environment() -> dict:
     return {'python': platform.python_version(), 'httpx': importlib.metadata.version('httpx')}
 
 
-def make_manifest(root: Path, run: Path, inventory_path: Path) -> dict:
+def make_manifest(root: Path, run: Path, inventory_path: Path, *, duration_revision: Path | None = None) -> dict:
     root, run, inventory_path = root.resolve(), run.resolve(), inventory_path.resolve()
     inventory = read(inventory_path)
     tracks = inventory['tracks']
@@ -67,6 +68,11 @@ def make_manifest(root: Path, run: Path, inventory_path: Path) -> dict:
         if not prepared['full_recording_preserved'] or not prepared['identity_metadata_removed']:
             raise ValueError('prepared full-recording contract is not satisfied')
         files += [path, path.with_suffix('.json'), source]
+    extension = {}
+    if duration_revision is not None:
+        from .duration_revision import continuation_fields
+        extension, extra_files = continuation_fields(root, run, duration_revision, tracks)
+        files += extra_files
     implementation = hashes(list(Path(__file__).parent.glob('*.py')), Path(__file__).parent)
     value = {
         'schema_version': 'gemini-style-execution-v1', 'model_id': MODEL,
@@ -83,6 +89,8 @@ def make_manifest(root: Path, run: Path, inventory_path: Path) -> dict:
         'transport': 'Files API; neutral display names; full FLAC; verify returned uploaded-byte SHA-256.',
         'post_profile_boundary': 'Freeze all 16 primaries and attempted repeats before rating inventory or owner-style analysis.',
     }
+    value.update(extension)
+    value['schedule'] = value['schedule'][:value['max_attempts']]
     freeze_json(run / 'execution_manifest.json', value)
     return value
 
@@ -99,4 +107,22 @@ def load_manifest(root: Path, run: Path) -> dict:
     verify_hashes(root, value['input_hashes'])
     verify_hashes(Path(__file__).parent, value['implementation_hashes'])
     verify_hashes(root, value['protected_hashes'])
+    if value.get('continuation'):
+        from .duration_revision import bounded_schema
+        prior = value['continuation']
+        expected = ([{'pilot_id': pid, 'repeat': False} for pid in PRIMARY_ORDER]
+                    + [{'pilot_id': pid, 'repeat': True} for pid in REPEAT_ORDER[:2]])
+        if (value['max_attempts'] != 18 or value['schedule'] != expected
+                or prior['prior_generation_attempts'] != 2 or prior['global_attempt_cap'] != 20
+                or prior['global_spend_cap_usd'] != '2'
+                or Decimal(value['spend_cap_usd']) + Decimal(prior['prior_settled_usd']) != 2):
+            raise ValueError('continuation would reset or change the global allowance')
+        base = read(run / 'contract/model/response_schema.json')
+        if set(value['response_schemas']) != set(PILOT_IDS):
+            raise ValueError('duration schemas must cover all 16 tracks')
+        for track in value['tracks']:
+            schema = run / value['response_schemas'][track['pilot_id']]
+            if (str(schema.relative_to(root)) not in value['input_hashes']
+                    or read(schema) != bounded_schema(base, track['prepared']['duration_seconds'])):
+                raise ValueError('duration revision changed the classification contract')
     return value

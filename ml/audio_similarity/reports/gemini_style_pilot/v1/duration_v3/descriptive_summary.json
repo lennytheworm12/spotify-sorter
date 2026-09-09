@@ -1,0 +1,52 @@
+{
+  "family_certainty_counts": {
+    "clear": 16
+  },
+  "generation_attempts": 20,
+  "limitations": [
+    "Owner style truth not yet collected",
+    "Selected development pilot, not held out",
+    "Same family is never automatic playlist compatibility",
+    "No weights, score fitting, graph changes or production activation",
+    "Unknown and older holistic-only pairs retain null playlist ratings"
+  ],
+  "new_duration_bounded_attempts": 18,
+  "new_schema_or_transport_failures": 0,
+  "primary_family_counts": {
+    "electronic": 2,
+    "hip_hop_rap": 6,
+    "pop": 4,
+    "rnb_soul": 4
+  },
+  "primary_vocabulary_gaps": {
+    "A10": [
+      {
+        "audible_basis": "Prominent UK garage 2-step rhythm pattern combined with polished girl-group pop songwriting.",
+        "proposed_label": "uk_garage_pop"
+      }
+    ]
+  },
+  "prior_invalid_attempts_preserved": 1,
+  "profile_status_counts": {
+    "classified": 16
+  },
+  "qualitative_category_definition": "For classified rated pairs: style-label overlap suggests possible contraction, no overlap suggests possible separation; conflict marks disagreement with a 4–5 or 1–2 rating respectively. Rating 3/unrated/uncertain means no information. These are descriptive review cues, not a reranking rule or correctness score.",
+  "rated_pairs_with_any_shared_family": {
+    "ambiguous": 1,
+    "bad": 7,
+    "good": 7
+  },
+  "rated_pairs_with_no_shared_style": {
+    "ambiguous": 1,
+    "bad": 5,
+    "good": 4
+  },
+  "remaining_generation_allowance": 0,
+  "status": "INFERENCE_COMPLETE_AWAITING_OWNER_AUDIO_REVIEW",
+  "style_certainty_counts": {
+    "clear": 13,
+    "tentative": 3
+  },
+  "total_settled_standard_rate_usd": "0.14680800",
+  "valid_unique_primary_profiles": 16
+}

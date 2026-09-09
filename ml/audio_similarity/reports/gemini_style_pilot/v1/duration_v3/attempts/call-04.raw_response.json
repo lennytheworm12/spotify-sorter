@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"end_seconds\": 23.5,\n      \"observation\": \"Spoken English vocal sample loop plays over distant, filtered background noise before the beat enters.\"\n        ,\n      \"start_seconds\": 0.0\n    },\n    {\n      \"end_seconds\": 58.0,\n      \"observation\": \"Relaxed downtempo hip-hop drum beat enters with a soft electric piano chord vamp, dusty crackle, and deep mellow bassline.\"\n    ,\n      \"start_seconds\": 23.5\n    },\n    {\n      \"end_seconds\": 150.0,\n      \"observation\": \"Groove continues with gentle electric piano melodies, repeating bass phrases, vinyl texture, and no lead vocal.\"\n    ,\n      \"start_seconds\": 95.0\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"hip_hop_rap\",\n  \"primary_style\": \"lofi_hip_hop\",\n  \"secondary_families\": [\n    \"electronic\"\n  ],\n  \"secondary_styles\": [\n    \"chillhop\",\n    \"instrumental_hip_hop\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"hazy\",\n    \"sample_based\",\n    \"electronic\"\n  ],\n  \"unmapped_styles\": [],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPNI+dqp0YhI1FNuq6lY1Ra9P0cd5GBiP3/nxpYNg2292uT8bGCRbRgWTvv+ML58AR0qoTkoFIFNpiAJt6z46Oa4UtFFnjxTKanhzwTNYwJNpBXS10SMfIuv9adko2ldwU"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 7350,
+    "candidatesTokenCount": 401,
+    "totalTokenCount": 7751,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4271
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 3079
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "l9-hauidDf6tz7IPpL6ZiQE"
+}

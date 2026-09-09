@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"end_seconds\": 29.0,\n      \"observation\": \"Sparse intro with soft, warm electric piano chords, subtle tape hiss, and ambient bird and nature field recordings.\",\n      \"start_seconds\": 0.0\n    },\n    {\n      \"end_seconds\": 65.0,\n      \"observation\": \"Relaxed downtempo hip-hop drum beat enters with subdued kick, muffled rimshot snare, and gentle hi-hat pattern over Rhodes chords.\",\n      \"start_seconds\": 29.0\n    },\n    {\n      \"end_seconds\": 136.5,\n      \"observation\": \"Instrumental beat continues with laid-back swing, repeated mellow electric piano progression, quiet sub bass, and background environmental noise.\",\n      \"start_seconds\": 85.0\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"hip_hop_rap\",\n  \"primary_style\": \"lofi_hip_hop\",\n  \"secondary_families\": [\n    \"electronic\"\n  ],\n  \"secondary_styles\": [\n    \"chillhop\",\n    \"instrumental_hip_hop\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"hazy\",\n    \"electronic\",\n    \"sample_based\"\n  ],\n  \"unmapped_styles\": [],\n  \"vocal_role\": \"instrumental\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPjoVxOd6HotUhJJNkpotoqsf7v3mcTfhrXxdjg9Fa3NUvUn3W3e3MRUA/JrpnIIkEHDMrNUJp6v6q+2aZdEPICrvNsFAMk7Ly5FHMTXTec/yeE85s5iW9HgLth0NQG3Ka"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 6492,
+    "candidatesTokenCount": 396,
+    "totalTokenCount": 6888,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3413
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 3079
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "x9-haojOHK6h1MkP3JqOsAM"
+}

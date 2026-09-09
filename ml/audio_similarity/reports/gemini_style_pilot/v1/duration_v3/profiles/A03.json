@@ -1,0 +1,43 @@
+{
+  "active_section_density": "sparse",
+  "arrangement_focus": "beat_or_instrumental",
+  "audio_evidence": [
+    {
+      "end_seconds": 23.5,
+      "observation": "Spoken English vocal sample loop plays over distant, filtered background noise before the beat enters.",
+      "start_seconds": 0.0
+    },
+    {
+      "end_seconds": 58.0,
+      "observation": "Relaxed downtempo hip-hop drum beat enters with a soft electric piano chord vamp, dusty crackle, and deep mellow bassline.",
+      "start_seconds": 23.5
+    },
+    {
+      "end_seconds": 150.0,
+      "observation": "Groove continues with gentle electric piano melodies, repeating bass phrases, vinyl texture, and no lead vocal.",
+      "start_seconds": 95.0
+    }
+  ],
+  "certainty": {
+    "family": "clear",
+    "style": "clear"
+  },
+  "primary_family": "hip_hop_rap",
+  "primary_style": "lofi_hip_hop",
+  "secondary_families": [
+    "electronic"
+  ],
+  "secondary_styles": [
+    "chillhop",
+    "instrumental_hip_hop"
+  ],
+  "section_variation": "mostly_consistent",
+  "status": "classified",
+  "texture_tags": [
+    "hazy",
+    "sample_based",
+    "electronic"
+  ],
+  "unmapped_styles": [],
+  "vocal_role": "vocal_samples_only"
+}

@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"status\": \"classified\",\n  \"primary_family\": \"hip_hop_rap\",\n  \"secondary_families\": [\"rnb_soul\"],\n  \"primary_style\": \"boom_bap\",\n  \"secondary_styles\": [],\n  \"vocal_role\": \"mixed_rap_and_singing\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"texture_tags\": [\"sample_based\", \"clean\"],\n  \"active_section_density\": \"moderate\",\n  \"section_variation\": \"contrasting_sections\",\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"audio_evidence\": [\n    {\n      \"start_seconds\": 22.0,\n      \"end_seconds\": 45.0,\n      \"observation\": \"Rapped storytelling verses over a steady acoustic-style boom bap drum groove with warm electric piano chords and light bass.\"\n    },\n    {\n      \"start_seconds\": 66.0,\n      \"end_seconds\": 86.0,\n      \"observation\": \"Contrasting chorus section featuring repetitive soul-infused sung hooks over a sustained, open rhythm section.\"\n    },\n    {\n      \"start_seconds\": 340.0,\n      \"end_seconds\": 360.0,\n      \"observation\": \"Instrumental outro showcasing the core loop of laid-back drums, Rhodes-style chords, vocal sample chops, and bassline.\"\n    }\n  ],\n  \"unmapped_styles\": []\n}",
+            "thoughtSignature": "EmcKZQERTTIPoehImcFIsW9vM86zy6DPVC53a3sB1Aega1DRT0ytIUVjHOwKiZjrpr/wG6WsE7KmZDWMfMAbd/3UYcM0qh0jMjfVic8aUlAn9pwLQuTfU1Py0Q1GAzxsNi39U61IRi/R"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 9090,
+    "candidatesTokenCount": 361,
+    "totalTokenCount": 9451,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3079
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 6011
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ONCharzuEJ7S_uMP2-zTkQ4"
+}
