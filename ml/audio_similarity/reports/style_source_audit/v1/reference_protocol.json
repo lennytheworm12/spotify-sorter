@@ -1,0 +1,12 @@
+{
+  "comparison": "all cached patch logits after sigmoid; exact shape and maximum absolute prediction error",
+  "no_new_scoring_rule": true,
+  "reference": "fresh process and model per track; official Essentia MonoLoader and TensorflowPredictEffnetDiscogs with frozen v2 settings and lossless PCM bridge",
+  "selection": "three already-exposed strong contradictions; engineering reproduction only, not efficacy evaluation",
+  "tolerance": 1e-06,
+  "tracks": [
+    "1U90UBmMrQTx9GNweUA4LZ",
+    "30NAF18yQGvwKrbn1IEMKn",
+    "7fXYFuCTmNrYRGwEUUf5iz"
+  ]
+}
