@@ -1,4 +1,5 @@
-import { useEffect } from 'react'
+import { useEffect, useSyncExternalStore } from 'react'
+import { SongSpace } from './song-space/SongSpace'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { useAuth } from './hooks/useAuth'
 import { cleanupOAuthUrlParams } from './utils/oauthCleanup'
@@ -61,10 +62,13 @@ function AppShell() {
   return <Dashboard user={user} onLogout={logout} isSigningOut={isLoggingOut} />
 }
 
+function subscribeRoute(callback: () => void) { window.addEventListener('hashchange', callback); return () => window.removeEventListener('hashchange', callback) }
 function App() {
+  const route = useSyncExternalStore(subscribeRoute, () => window.location.hash)
+  const isOrganizer = route.startsWith('#/organize') || new URLSearchParams(window.location.search).has('auth')
   return (
     <QueryClientProvider client={queryClient}>
-      <AppShell />
+      {isOrganizer ? <><a className="organizer-return" href="#/" onClick={() => { if (window.location.search) window.history.replaceState(null, '', window.location.pathname + '#/') }}>← Back to song space</a><AppShell /></> : <SongSpace />}
     </QueryClientProvider>
   )
 }
