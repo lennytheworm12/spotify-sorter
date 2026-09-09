@@ -1,0 +1,66 @@
+{
+  "bad_max": 2,
+  "baseline": "exact frozen Arm D cosine; C cosine sensitivity separately",
+  "bootstrap": {
+    "confidence": 0.95,
+    "replicates": 5000,
+    "seed": 5101,
+    "unit": "anchor"
+  },
+  "conditional_penalty": {
+    "formula": "D cosine - lambda * style distance",
+    "lambdas": [
+      0,
+      0.05,
+      0.1,
+      0.2,
+      0.4
+    ],
+    "selection": "maximum training anchor-macro strict ordinal preference accuracy; ties within 1e-12 choose smallest lambda; heldout tracks/artists excluded from both endpoints of training"
+  },
+  "cosine_caliper": 0.05,
+  "distance": "Jensen-Shannon divergence divided by ln(2), of (raw mean sigmoid + 1e-8) normalized to sum one",
+  "epsilon": 1e-08,
+  "folds": 3,
+  "good_min": 4,
+  "grouping": "transitive source/video/all credited artists; descending group size then sha256(style-prior-v1:+minimum track id); greedily smallest bucket, index tie-break",
+  "high_neighbor_slice": "either endpoint in the other endpoint's exact D top 10 among all other frozen tracks; track ID breaks score ties",
+  "limitations": [
+    "all data are previously exposed development evidence",
+    "single reviewer",
+    "artist-fold uncertainty cannot be estimated credibly with only three folds",
+    "anchor bootstrap is descriptive because candidates recur across anchors",
+    "Discogs training membership unknown",
+    "normalized multilabel sigmoid scores are not calibrated categorical probabilities"
+  ],
+  "material_improvement": 0.03,
+  "metadata_sha256": "395479c8d0e23c1185bf903079c38b9c536014787db6e1184abd68463c92b2da",
+  "minimum_fold_anchors": 10,
+  "minimum_fold_preferences": 30,
+  "model": "Discogs-EffNet bs64-1; frozen; CPU only",
+  "model_sha256": "3ed9af50d5367c0b9c795b294b00e7599e4943244f4cbd376869f3bfc87721b1",
+  "preprocessing": {
+    "audio": "full retained source; Essentia MonoLoader mono 16000 Hz resampleQuality=4; no loudness normalization",
+    "pooling": "float64 arithmetic mean of every returned patch sigmoid vector",
+    "predictor": {
+      "batchSize": 64,
+      "input": "serving_default_melspectrogram",
+      "lastBatchMode": "same",
+      "lastPatchMode": "repeat",
+      "output": "PartitionedCall:0",
+      "patchHopSize": 62,
+      "patchSize": 128
+    }
+  },
+  "primary_rubric": "PLAYLIST_COMPATIBILITY_V1",
+  "secondary_rubric": "historical holistic; separate, never pooled",
+  "signal_gate": {
+    "caliper_macro_auc_above": 0.5,
+    "high_neighbor_macro_auc_above": 0.5,
+    "macro_auc_lower_bound_above": 0.5,
+    "minimum_anchors": 20
+  },
+  "stop": "No production activation; no new review queue until results identify a bounded question requiring human judgment. No alternate classifier or prompt search in v1.",
+  "tie_tolerance": 1e-06,
+  "version": "style-prior-pilot-v1"
+}

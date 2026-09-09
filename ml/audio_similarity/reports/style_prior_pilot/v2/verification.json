@@ -1,0 +1,41 @@
+{
+  "aggregate_bytes_reconstructed_exactly": true,
+  "analysis_replay_identical": true,
+  "artist_source_track_folds_disjoint": true,
+  "browser_real_review_answers_written": 0,
+  "distance_symmetric_and_self_zero": true,
+  "extraction_seconds": 912.7014093230246,
+  "first_inference_tracks": 100,
+  "focused_tests": {
+    "failed": 0,
+    "passed": 14
+  },
+  "full_non_heavy_tests": {
+    "deselected": 12,
+    "failed": 2,
+    "failures": [
+      "tests/test_stage2b_test.py::test_real_selection_checkpoint_is_tracked_clean_committed_pushed_and_hash_locked",
+      "tests/test_stage2b_test.py::test_existing_one_time_reveal_hashes_verify_without_rerun"
+    ],
+    "passed": 1285,
+    "reason": "existing publication gate: git merge-base --is-ancestor HEAD origin/ml/stage5f1-energy-motion fails because local HEAD is not pushed",
+    "seconds": 144.48
+  },
+  "handoff": "READY_FOR_HUMAN_REVIEW",
+  "historical_integrity": {
+    "stage5g1_clap_similarity": true,
+    "stage5g1a_scorer_diagnostic": true,
+    "stage5g1b_identity_probes": true
+  },
+  "new_human_judgments": 0,
+  "original_extraction_ledger_preserved": true,
+  "production_activated": false,
+  "replay_cache_hits": 100,
+  "replay_inference_tracks": 0,
+  "replay_seconds": 0.364179230062291,
+  "report_replay_identical": true,
+  "review_packet_hash": "76840253b0242652466b3f3d3c4020ed630e64eff6a8a8259502ada3d2a4fd7b",
+  "review_pairs": 12,
+  "total_real_patches": 18823,
+  "valid_tracks": 100
+}

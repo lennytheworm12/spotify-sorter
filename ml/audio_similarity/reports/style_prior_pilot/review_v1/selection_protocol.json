@@ -1,0 +1,10 @@
+{
+  "allocation": "six accepted/high style distance and six rejected/low style distance",
+  "analysis_limit": "Annotate first; distinguish detector error from acceptable style difference after annotation snapshot freezes. No tuning or production activation.",
+  "blinding": "model labels, scores, ranks, strata and old ratings absent from public payload",
+  "historical_ratings": "reused unchanged; hidden, not overwritten by these annotations",
+  "pairs": 12,
+  "purpose": "Post-result explanatory audit, not an untouched efficacy test",
+  "question": "Which audible differences matter for sharing a playlist? If a pair works despite a difference, explain what connects it. No genre vocabulary required.",
+  "selection": "round-robin; no repeated tracks; exclude all 16 prior taxonomy pairs; minimize credited-artist reuse then distance rank then pair ID"
+}

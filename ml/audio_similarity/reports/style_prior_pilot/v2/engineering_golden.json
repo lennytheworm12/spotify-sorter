@@ -1,0 +1,34 @@
+{
+  "amplitude": 0.05,
+  "checks": [
+    {
+      "finite": true,
+      "repeat_max_error": 0.0,
+      "samples": 32000,
+      "shape": [
+        1,
+        400
+      ]
+    },
+    {
+      "finite": true,
+      "repeat_max_error": 0.0,
+      "samples": 160000,
+      "shape": [
+        10,
+        400
+      ]
+    },
+    {
+      "finite": true,
+      "repeat_max_error": 0.0,
+      "samples": 170001,
+      "shape": [
+        10,
+        400
+      ]
+    }
+  ],
+  "no_human_ratings_used": true,
+  "synthetic_sine_hz": 440
+}

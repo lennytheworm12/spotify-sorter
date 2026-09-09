@@ -1,0 +1,11 @@
+{
+  "attempts": 2,
+  "cause": "Essentia MonoLoader Unsupported codec for retained WebM; native segfault while handling exception",
+  "classifier_inference_tracks": 0,
+  "exit_code": 139,
+  "note": "Original input hashes retain pre-amendment code identity. Current source is v2; verify original code through implementation snapshots.",
+  "source_snapshot_directory": "implementation",
+  "statistical_rules_changed": false,
+  "status": "ENGINEERING_ABORT_BEFORE_PREDICTIONS",
+  "superseded_by": "../v2"
+}

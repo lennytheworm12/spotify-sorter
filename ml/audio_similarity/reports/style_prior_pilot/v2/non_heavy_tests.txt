@@ -1,0 +1,127 @@
+........................................................................ [  5%]
+........................................................................ [ 11%]
+........................................................................ [ 16%]
+........................................................................ [ 22%]
+........................................................................ [ 27%]
+........................................................................ [ 33%]
+......FF................................................................ [ 39%]
+........................................................................ [ 44%]
+........................................................................ [ 50%]
+........................................................................ [ 55%]
+........................................................................ [ 61%]
+........................................................................ [ 67%]
+........................................................................ [ 72%]
+........................................................................ [ 78%]
+........................................................................ [ 83%]
+........................................................................ [ 89%]
+........................................................................ [ 95%]
+...............................................................          [100%]
+=================================== FAILURES ===================================
+_ test_real_selection_checkpoint_is_tracked_clean_committed_pushed_and_hash_locked _
+
+    def test_real_selection_checkpoint_is_tracked_clean_committed_pushed_and_hash_locked():
+>       lock = verify_test_lock(CONFIG, ROOT, allow_existing=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_stage2b_test.py:52: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/audio_similarity/stage2b_test.py:50: in verify_test_lock
+    _git(git_root, "merge-base", "--is-ancestor", "HEAD", upstream)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = PosixPath('/home/bphan944/PersonalProjects/spotifyProject')
+capture = False
+args = ('merge-base', '--is-ancestor', 'HEAD', 'origin/ml/stage5f1-energy-motion')
+
+    def _git(root: Path, *args: str, capture: bool = False) -> str:
+        result = subprocess.run(
+            ["git", *args], cwd=root, check=False,
+            stdout=subprocess.PIPE if capture else subprocess.DEVNULL,
+            stderr=subprocess.PIPE,
+            text=True,
+        )
+        if result.returncode:
+            message = result.stderr.strip() if result.stderr else "git checkpoint check failed"
+>           raise TestLockError(message)
+E           audio_similarity.stage2b_test.TestLockError: git checkpoint check failed
+
+src/audio_similarity/stage2b_test.py:34: TestLockError
+__________ test_existing_one_time_reveal_hashes_verify_without_rerun ___________
+
+    def test_existing_one_time_reveal_hashes_verify_without_rerun():
+>       verified = verify_existing_test(CONFIG, ROOT)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_stage2b_test.py:60: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/audio_similarity/stage2b_verify.py:16: in verify_existing_test
+    lock = verify_test_lock(config_path, root, allow_existing=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/audio_similarity/stage2b_test.py:50: in verify_test_lock
+    _git(git_root, "merge-base", "--is-ancestor", "HEAD", upstream)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = PosixPath('/home/bphan944/PersonalProjects/spotifyProject')
+capture = False
+args = ('merge-base', '--is-ancestor', 'HEAD', 'origin/ml/stage5f1-energy-motion')
+
+    def _git(root: Path, *args: str, capture: bool = False) -> str:
+        result = subprocess.run(
+            ["git", *args], cwd=root, check=False,
+            stdout=subprocess.PIPE if capture else subprocess.DEVNULL,
+            stderr=subprocess.PIPE,
+            text=True,
+        )
+        if result.returncode:
+            message = result.stderr.strip() if result.stderr else "git checkpoint check failed"
+>           raise TestLockError(message)
+E           audio_similarity.stage2b_test.TestLockError: git checkpoint check failed
+
+src/audio_similarity/stage2b_test.py:34: TestLockError
+=============================== warnings summary ===============================
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+tests/test_mir_metrics.py::test_deterministic_reextraction
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=533
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=799
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=400
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=941
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=471
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=750
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=375
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_feature_cache_roundtrip
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=698
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_feature_cache_roundtrip
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=349
+    warnings.warn(
+
+tests/test_stage2_residuals.py::test_extract_is_finite_complete_and_resumable_with_fake_merit
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/pitch.py:103: UserWarning: Trying to estimate tuning from empty frequency set.
+    return pitch_tuning(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_stage2b_test.py::test_real_selection_checkpoint_is_tracked_clean_committed_pushed_and_hash_locked
+FAILED tests/test_stage2b_test.py::test_existing_one_time_reveal_hashes_verify_without_rerun
+2 failed, 1285 passed, 12 deselected, 11 warnings in 144.48s (0:02:24)

@@ -1,0 +1,29 @@
+{
+  "ffmpeg_sha256": "36d94a605d612e4090d1b8aec889d0c0801c6eafb1593c90f5c0dfd2e2966a45",
+  "implementation": "99ee0253f195633f93b81645c9d2c2ab20c92ac9bfa42e6ab9c461be277d9d6a",
+  "metadata_sha256": "395479c8d0e23c1185bf903079c38b9c536014787db6e1184abd68463c92b2da",
+  "model_sha256": "3ed9af50d5367c0b9c795b294b00e7599e4943244f4cbd376869f3bfc87721b1",
+  "preprocessing": {
+    "audio": "ffmpeg decode full retained source to temporary original-rate/channel float32 PCM WAV; Essentia MonoLoader mono 16000 Hz resampleQuality=4; no loudness normalization",
+    "pooling": "float64 arithmetic mean of every returned patch sigmoid vector",
+    "predictor": {
+      "batchSize": 64,
+      "input": "serving_default_melspectrogram",
+      "lastBatchMode": "same",
+      "lastPatchMode": "repeat",
+      "output": "PartitionedCall:0",
+      "patchHopSize": 62,
+      "patchSize": 128
+    }
+  },
+  "runtime": {
+    "essentia": "2.1b6.dev1389",
+    "essentia_binary": {
+      "lib/python3.11/site-packages/essentia/_essentia.cpython-311-x86_64-linux-gnu.so": "0ee18bb27cf5d8ecf7c6c439e1b6595cf3202d1efa0343da1d383365ecf3380b"
+    },
+    "machine": "x86_64",
+    "numpy": "1.26.4",
+    "python": "3.11.16"
+  },
+  "serialization": "83a193985c60bb67fa36e696162d7447bf0313d14660166bd1b207ebd8afbed3"
+}

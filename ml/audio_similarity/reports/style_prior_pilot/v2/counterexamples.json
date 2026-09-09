@@ -1,0 +1,372 @@
+{
+  "accepted_high_distance": [
+    {
+      "C_cosine": 0.6151715517044067,
+      "D_cosine": 0.597011387348175,
+      "high_D_top10": false,
+      "pair_id": "8c70e29ee56097c64a585a6b",
+      "rating": 5,
+      "rubric": "playlist",
+      "style_distance": 0.6021519411759603,
+      "tracks": [
+        "30NAF18yQGvwKrbn1IEMKn",
+        "7fXYFuCTmNrYRGwEUUf5iz"
+      ]
+    },
+    {
+      "C_cosine": 0.6707318425178528,
+      "D_cosine": 0.6961730122566223,
+      "high_D_top10": true,
+      "pair_id": "d8e2cbfa735c8b95a6757be7",
+      "rating": 4,
+      "rubric": "playlist",
+      "style_distance": 0.5314780723764161,
+      "tracks": [
+        "2js0td9w2MzNUVPlMKYOEs",
+        "6rj9qDXWANe0U69asDzxMp"
+      ]
+    },
+    {
+      "C_cosine": 0.5852230787277222,
+      "D_cosine": 0.6112896203994751,
+      "high_D_top10": false,
+      "pair_id": "1df4383d3df854e5db21a6e6",
+      "rating": 4,
+      "rubric": "playlist",
+      "style_distance": 0.5149461845589342,
+      "tracks": [
+        "1ON9XudZFxwu43tQXBszIX",
+        "2BJSMvOGABRxokHKB0OI8i"
+      ]
+    },
+    {
+      "C_cosine": 0.6931704878807068,
+      "D_cosine": 0.6545148491859436,
+      "high_D_top10": false,
+      "pair_id": "94d833dd57e4e892f631c779",
+      "rating": 4,
+      "rubric": "playlist",
+      "style_distance": 0.48815416064109896,
+      "tracks": [
+        "5sEeuhYWHNczuPKek1zJeG",
+        "6pWqlKm9ugucgKNldCLigX"
+      ]
+    },
+    {
+      "C_cosine": 0.6507582068443298,
+      "D_cosine": 0.4309743046760559,
+      "high_D_top10": false,
+      "pair_id": "39b136abf48b77b9a666a545",
+      "rating": 4,
+      "rubric": "playlist",
+      "style_distance": 0.4841181378329781,
+      "tracks": [
+        "6B9HXnRzmokTTxZNdV5T48",
+        "6HIngEWX8ycnLjuUfSZyah"
+      ]
+    },
+    {
+      "C_cosine": 0.6590878963470459,
+      "D_cosine": 0.7629843950271606,
+      "high_D_top10": true,
+      "pair_id": "1eaa125be47f4ef6dfc964b2",
+      "rating": 5,
+      "rubric": "playlist",
+      "style_distance": 0.4786109539452266,
+      "tracks": [
+        "2js0td9w2MzNUVPlMKYOEs",
+        "3F5HhdyBfvCbzuPJbGBHkc"
+      ]
+    },
+    {
+      "C_cosine": 0.492197722196579,
+      "D_cosine": 0.5362507104873657,
+      "high_D_top10": false,
+      "pair_id": "1ee439e08ff65ae8ed8b628a",
+      "rating": 5,
+      "rubric": "playlist",
+      "style_distance": 0.4633044306957572,
+      "tracks": [
+        "0xlx3pH8TxNah8hdiINqeA",
+        "5UUnRflW65AsvluD8d5N2U"
+      ]
+    },
+    {
+      "C_cosine": 0.7127524614334106,
+      "D_cosine": 0.6442190408706665,
+      "high_D_top10": true,
+      "pair_id": "c4b5ce81836c09ae759ec230",
+      "rating": 5,
+      "rubric": "playlist",
+      "style_distance": 0.45142653316481923,
+      "tracks": [
+        "6nzCvAtyADh0wwZEVMoujK",
+        "7F6PtLP6fJPVtA1FWVkl8K"
+      ]
+    },
+    {
+      "C_cosine": 0.6695025563240051,
+      "D_cosine": 0.3540080785751343,
+      "high_D_top10": false,
+      "pair_id": "45692b24450de07fc6e125e1",
+      "rating": 4,
+      "rubric": "playlist",
+      "style_distance": 0.45019989787158315,
+      "tracks": [
+        "2js0td9w2MzNUVPlMKYOEs",
+        "6HIngEWX8ycnLjuUfSZyah"
+      ]
+    },
+    {
+      "C_cosine": 0.6296740770339966,
+      "D_cosine": 0.5820963978767395,
+      "high_D_top10": true,
+      "pair_id": "1b4c1b56281e4b66b2b9b434",
+      "rating": 4,
+      "rubric": "playlist",
+      "style_distance": 0.44973674082724646,
+      "tracks": [
+        "2Ah7oAy4esXD8pEEhY0hyR",
+        "6HIngEWX8ycnLjuUfSZyah"
+      ]
+    }
+  ],
+  "known_development_diagnostics": [
+    {
+      "C_cosine": 0.7976068258285522,
+      "D_cosine": 0.6259838342666626,
+      "high_D_top10": false,
+      "pair_id": "dfaa8d8e883fc2348715792e",
+      "rating": 4,
+      "rubric": "playlist",
+      "style_distance": 0.3199735205542354,
+      "tracks": [
+        "2js0td9w2MzNUVPlMKYOEs",
+        "6pWqlKm9ugucgKNldCLigX"
+      ]
+    },
+    {
+      "C_cosine": 0.7059766054153442,
+      "D_cosine": 0.5828955173492432,
+      "high_D_top10": false,
+      "pair_id": "001d89314d80b43d5fdf8563",
+      "rating": 4,
+      "rubric": "playlist",
+      "style_distance": 0.3080522823604604,
+      "tracks": [
+        "1DaXVM8npVKa2AQBrYz4xS",
+        "7nD9LjsenfCRv4uxy93xhZ"
+      ]
+    },
+    {
+      "C_cosine": 0.800835132598877,
+      "D_cosine": 0.7832813858985901,
+      "high_D_top10": false,
+      "pair_id": "319e2d3812c35a62bc70fbb3",
+      "rating": 4,
+      "rubric": "playlist",
+      "style_distance": 0.24308752845566572,
+      "tracks": [
+        "0mjbciwK9zhfQl44jXfQv6",
+        "3F5HhdyBfvCbzuPJbGBHkc"
+      ]
+    },
+    {
+      "C_cosine": 0.678598940372467,
+      "D_cosine": 0.7778418064117432,
+      "high_D_top10": true,
+      "pair_id": "6d870cffbe333d887271abc8",
+      "rating": 4,
+      "rubric": "playlist",
+      "style_distance": 0.21313467809217307,
+      "tracks": [
+        "37BvHZhn4399Zhh6EDa4km",
+        "6wm3t4VpTxSFfOUgTMlHZM"
+      ]
+    },
+    {
+      "C_cosine": 0.5503394603729248,
+      "D_cosine": 0.7097211480140686,
+      "high_D_top10": true,
+      "pair_id": "78228b72fde7c5586d53ada7",
+      "rating": 1,
+      "rubric": "playlist",
+      "style_distance": 0.6070418539207071,
+      "tracks": [
+        "4tqcoej1zPvwePZCzuAjJd",
+        "6pWqlKm9ugucgKNldCLigX"
+      ]
+    },
+    {
+      "C_cosine": 0.5403996706008911,
+      "D_cosine": 0.4101449251174927,
+      "high_D_top10": false,
+      "pair_id": "98804bb658f81f3e6c972321",
+      "rating": 1,
+      "rubric": "playlist",
+      "style_distance": 0.4976862290949304,
+      "tracks": [
+        "4tqcoej1zPvwePZCzuAjJd",
+        "70YbAV2UKPee15B00RbPcT"
+      ]
+    },
+    {
+      "C_cosine": 0.49466586112976074,
+      "D_cosine": 0.716524600982666,
+      "high_D_top10": true,
+      "pair_id": "82f00bd962f0fcd721804f3b",
+      "rating": 1,
+      "rubric": "playlist",
+      "style_distance": 0.30559696056993413,
+      "tracks": [
+        "2BJSMvOGABRxokHKB0OI8i",
+        "5ri8u5RA8e4vGMyMAGXy0p"
+      ]
+    },
+    {
+      "C_cosine": 0.5166787505149841,
+      "D_cosine": 0.6493088603019714,
+      "high_D_top10": false,
+      "pair_id": "8b4c856cc105d08b910108e6",
+      "rating": 1,
+      "rubric": "playlist",
+      "style_distance": 0.3382546807781712,
+      "tracks": [
+        "1ON9XudZFxwu43tQXBszIX",
+        "6pWqlKm9ugucgKNldCLigX"
+      ]
+    }
+  ],
+  "rejected_low_distance": [
+    {
+      "C_cosine": 0.5547868609428406,
+      "D_cosine": 0.6800307035446167,
+      "high_D_top10": false,
+      "pair_id": "58184bfcf2bb1532c2ebf7aa",
+      "rating": 2,
+      "rubric": "playlist",
+      "style_distance": 0.15034558634103098,
+      "tracks": [
+        "1IIcy1TpuiAT6S206OjYvC",
+        "4yNhVidUIAtKPT72PrZuLP"
+      ]
+    },
+    {
+      "C_cosine": 0.7487860918045044,
+      "D_cosine": 0.7502540946006775,
+      "high_D_top10": false,
+      "pair_id": "685ef380c9cdc1b01308102b",
+      "rating": 2,
+      "rubric": "playlist",
+      "style_distance": 0.16008441120028394,
+      "tracks": [
+        "1U90UBmMrQTx9GNweUA4LZ",
+        "3azJifCSqg9fRij2yKIbWz"
+      ]
+    },
+    {
+      "C_cosine": 0.7387204766273499,
+      "D_cosine": 0.8419917821884155,
+      "high_D_top10": true,
+      "pair_id": "c6e45425d61de8061453a730",
+      "rating": 2,
+      "rubric": "playlist",
+      "style_distance": 0.1756267987608449,
+      "tracks": [
+        "1aKvZDoLGkNMxoRYgkckZG",
+        "7fXYFuCTmNrYRGwEUUf5iz"
+      ]
+    },
+    {
+      "C_cosine": 0.7408887147903442,
+      "D_cosine": 0.8144686222076416,
+      "high_D_top10": true,
+      "pair_id": "2b8c45a85f795b974eb906a2",
+      "rating": 2,
+      "rubric": "playlist",
+      "style_distance": 0.17670022544422484,
+      "tracks": [
+        "39kzWAiVPpycdMpr745oPj",
+        "3X45Wd5yRNoe2twmyc5CvO"
+      ]
+    },
+    {
+      "C_cosine": 0.6135786175727844,
+      "D_cosine": 0.7308931350708008,
+      "high_D_top10": true,
+      "pair_id": "1c4487aa949aa378a418177a",
+      "rating": 2,
+      "rubric": "playlist",
+      "style_distance": 0.19743243520783899,
+      "tracks": [
+        "4LaZ8RpIP6DIgN73bXQVlO",
+        "4P1L6AniTDJzANaubzWGYs"
+      ]
+    },
+    {
+      "C_cosine": 0.661366879940033,
+      "D_cosine": 0.5392206311225891,
+      "high_D_top10": false,
+      "pair_id": "20827e21a8235e81a5f0315c",
+      "rating": 2,
+      "rubric": "playlist",
+      "style_distance": 0.21499032343580152,
+      "tracks": [
+        "5aawFqyuCB3K2P8KQvhFVs",
+        "6JjD8b5nYnwJ3zxYZ16rKg"
+      ]
+    },
+    {
+      "C_cosine": 0.6283429861068726,
+      "D_cosine": 0.5720548629760742,
+      "high_D_top10": true,
+      "pair_id": "bb0e7742a680ee9d3d7472ec",
+      "rating": 2,
+      "rubric": "playlist",
+      "style_distance": 0.2168014528024503,
+      "tracks": [
+        "043ryKJlgSnAUzpXnfxU6b",
+        "6kAMaQt8UveeTctekIpUjF"
+      ]
+    },
+    {
+      "C_cosine": 0.7294594645500183,
+      "D_cosine": 0.621532678604126,
+      "high_D_top10": false,
+      "pair_id": "4c945edd24fdc8e9b89ad426",
+      "rating": 2,
+      "rubric": "playlist",
+      "style_distance": 0.22543683806465314,
+      "tracks": [
+        "23V5SeHanwL6PlqyJ99dH8",
+        "7fBv7CLKzipRk6EC6TWHOB"
+      ]
+    },
+    {
+      "C_cosine": 0.527523934841156,
+      "D_cosine": 0.6997179388999939,
+      "high_D_top10": false,
+      "pair_id": "7dac06eeab643b230ea59c88",
+      "rating": 2,
+      "rubric": "playlist",
+      "style_distance": 0.22716556671428,
+      "tracks": [
+        "1aKvZDoLGkNMxoRYgkckZG",
+        "6nef0wHkelfKqNVHAtzJbR"
+      ]
+    },
+    {
+      "C_cosine": 0.6660147905349731,
+      "D_cosine": 0.7022664546966553,
+      "high_D_top10": false,
+      "pair_id": "f1da62c6f09fde0ccf1531a2",
+      "rating": 2,
+      "rubric": "playlist",
+      "style_distance": 0.22819729795423851,
+      "tracks": [
+        "4Sk74gcXTe9dnE1HU5Pn1y",
+        "6wm3t4VpTxSFfOUgTMlHZM"
+      ]
+    }
+  ]
+}
