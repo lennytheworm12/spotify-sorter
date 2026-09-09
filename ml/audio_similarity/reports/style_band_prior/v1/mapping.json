@@ -1,0 +1,2857 @@
+{
+  "bands_with_unknown": [
+    "ambient_experimental",
+    "beats",
+    "classical_screen",
+    "dreamy_indie",
+    "electronic_dance",
+    "folk_world",
+    "jazz_blues",
+    "latin",
+    "pop",
+    "rap",
+    "reggae",
+    "rock",
+    "soul_rnb",
+    "unknown"
+  ],
+  "classes": [
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Blues---Boogie Woogie"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Blues---Chicago Blues"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Blues---Country Blues"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Blues---Delta Blues"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Blues---Electric Blues"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Blues---Harmonica Blues"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Blues---Jump Blues"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Blues---Louisiana Blues"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Blues---Modern Electric Blues"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Blues---Piano Blues"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Blues---Rhythm & Blues"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Blues---Texas Blues"
+    },
+    {
+      "bands": {
+        "classical_screen": 1.0
+      },
+      "rule": "family_default",
+      "style": "Brass & Military---Brass Band"
+    },
+    {
+      "bands": {
+        "classical_screen": 1.0
+      },
+      "rule": "family_default",
+      "style": "Brass & Military---Marches"
+    },
+    {
+      "bands": {
+        "classical_screen": 1.0
+      },
+      "rule": "family_default",
+      "style": "Brass & Military---Military"
+    },
+    {
+      "bands": {
+        "unknown": 1.0
+      },
+      "rule": "family_default",
+      "style": "Children's---Educational"
+    },
+    {
+      "bands": {
+        "unknown": 1.0
+      },
+      "rule": "family_default",
+      "style": "Children's---Nursery Rhymes"
+    },
+    {
+      "bands": {
+        "unknown": 1.0
+      },
+      "rule": "family_default",
+      "style": "Children's---Story"
+    },
+    {
+      "bands": {
+        "classical_screen": 1.0
+      },
+      "rule": "family_default",
+      "style": "Classical---Baroque"
+    },
+    {
+      "bands": {
+        "classical_screen": 1.0
+      },
+      "rule": "family_default",
+      "style": "Classical---Choral"
+    },
+    {
+      "bands": {
+        "classical_screen": 1.0
+      },
+      "rule": "family_default",
+      "style": "Classical---Classical"
+    },
+    {
+      "bands": {
+        "classical_screen": 1.0
+      },
+      "rule": "family_default",
+      "style": "Classical---Contemporary"
+    },
+    {
+      "bands": {
+        "classical_screen": 1.0
+      },
+      "rule": "family_default",
+      "style": "Classical---Impressionist"
+    },
+    {
+      "bands": {
+        "classical_screen": 1.0
+      },
+      "rule": "family_default",
+      "style": "Classical---Medieval"
+    },
+    {
+      "bands": {
+        "classical_screen": 1.0
+      },
+      "rule": "family_default",
+      "style": "Classical---Modern"
+    },
+    {
+      "bands": {
+        "classical_screen": 1.0
+      },
+      "rule": "family_default",
+      "style": "Classical---Neo-Classical"
+    },
+    {
+      "bands": {
+        "classical_screen": 1.0
+      },
+      "rule": "family_default",
+      "style": "Classical---Neo-Romantic"
+    },
+    {
+      "bands": {
+        "classical_screen": 1.0
+      },
+      "rule": "family_default",
+      "style": "Classical---Opera"
+    },
+    {
+      "bands": {
+        "classical_screen": 1.0
+      },
+      "rule": "family_default",
+      "style": "Classical---Post-Modern"
+    },
+    {
+      "bands": {
+        "classical_screen": 1.0
+      },
+      "rule": "family_default",
+      "style": "Classical---Renaissance"
+    },
+    {
+      "bands": {
+        "classical_screen": 1.0
+      },
+      "rule": "family_default",
+      "style": "Classical---Romantic"
+    },
+    {
+      "bands": {
+        "beats": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Abstract"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Acid"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Acid House"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Acid Jazz"
+    },
+    {
+      "bands": {
+        "ambient_experimental": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Ambient"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Bassline"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Beatdown"
+    },
+    {
+      "bands": {
+        "ambient_experimental": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Berlin-School"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Big Beat"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Bleep"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Breakbeat"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Breakcore"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Breaks"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Broken Beat"
+    },
+    {
+      "bands": {
+        "dreamy_indie": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Chillwave"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Chiptune"
+    },
+    {
+      "bands": {
+        "pop": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Dance-pop"
+    },
+    {
+      "bands": {
+        "ambient_experimental": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Dark Ambient"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Darkwave"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Deep House"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Deep Techno"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Disco"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Disco Polo"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Donk"
+    },
+    {
+      "bands": {
+        "beats": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Downtempo"
+    },
+    {
+      "bands": {
+        "ambient_experimental": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Drone"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Drum n Bass"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Dub"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Dub Techno"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Dubstep"
+    },
+    {
+      "bands": {
+        "ambient_experimental": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Dungeon Synth"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---EBM"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Electro"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Electro House"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Electroclash"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Euro House"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Euro-Disco"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Eurobeat"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Eurodance"
+    },
+    {
+      "bands": {
+        "ambient_experimental": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Experimental"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Freestyle"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Future Jazz"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Gabber"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Garage House"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Ghetto"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Ghetto House"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Glitch"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Goa Trance"
+    },
+    {
+      "bands": {
+        "rap": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Grime"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Halftime"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Hands Up"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Happy Hardcore"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Hard House"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Hard Techno"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Hard Trance"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Hardcore"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Hardstyle"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Hi NRG"
+    },
+    {
+      "bands": {
+        "beats": 0.5,
+        "rap": 0.5
+      },
+      "rule": "override",
+      "style": "Electronic---Hip Hop"
+    },
+    {
+      "bands": {
+        "electronic_dance": 0.5,
+        "rap": 0.5
+      },
+      "rule": "override",
+      "style": "Electronic---Hip-House"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---House"
+    },
+    {
+      "bands": {
+        "ambient_experimental": 1
+      },
+      "rule": "override",
+      "style": "Electronic---IDM"
+    },
+    {
+      "bands": {
+        "beats": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Illbient"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Industrial"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Italo House"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Italo-Disco"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Italodance"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Jazzdance"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Juke"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Jumpstyle"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Jungle"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Latin"
+    },
+    {
+      "bands": {
+        "ambient_experimental": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Leftfield"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Makina"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Minimal"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Minimal Techno"
+    },
+    {
+      "bands": {
+        "ambient_experimental": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Modern Classical"
+    },
+    {
+      "bands": {
+        "ambient_experimental": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Musique Concrète"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Neofolk"
+    },
+    {
+      "bands": {
+        "ambient_experimental": 1
+      },
+      "rule": "override",
+      "style": "Electronic---New Age"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---New Beat"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---New Wave"
+    },
+    {
+      "bands": {
+        "ambient_experimental": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Noise"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Nu-Disco"
+    },
+    {
+      "bands": {
+        "ambient_experimental": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Power Electronics"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Progressive Breaks"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Progressive House"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Progressive Trance"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Psy-Trance"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Rhythmic Noise"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Schranz"
+    },
+    {
+      "bands": {
+        "ambient_experimental": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Sound Collage"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Speed Garage"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Speedcore"
+    },
+    {
+      "bands": {
+        "pop": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Synth-pop"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Synthwave"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Tech House"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Tech Trance"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Techno"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Trance"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Tribal"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Tribal House"
+    },
+    {
+      "bands": {
+        "beats": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Trip Hop"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---Tropical House"
+    },
+    {
+      "bands": {
+        "electronic_dance": 1.0
+      },
+      "rule": "family_default",
+      "style": "Electronic---UK Garage"
+    },
+    {
+      "bands": {
+        "ambient_experimental": 1
+      },
+      "rule": "override",
+      "style": "Electronic---Vaporwave"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---African"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Bluegrass"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Cajun"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Canzone Napoletana"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Catalan Music"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Celtic"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Country"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Fado"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Flamenco"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Folk"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Gospel"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Highlife"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Hillbilly"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Hindustani"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Honky Tonk"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Indian Classical"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Laïkó"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Nordic"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Pacific"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Polka"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Raï"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Romani"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Soukous"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Séga"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Volksmusik"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Zouk"
+    },
+    {
+      "bands": {
+        "folk_world": 1.0
+      },
+      "rule": "family_default",
+      "style": "Folk, World, & Country---Éntekhno"
+    },
+    {
+      "bands": {
+        "soul_rnb": 1.0
+      },
+      "rule": "family_default",
+      "style": "Funk / Soul---Afrobeat"
+    },
+    {
+      "bands": {
+        "soul_rnb": 1.0
+      },
+      "rule": "family_default",
+      "style": "Funk / Soul---Boogie"
+    },
+    {
+      "bands": {
+        "soul_rnb": 1.0
+      },
+      "rule": "family_default",
+      "style": "Funk / Soul---Contemporary R&B"
+    },
+    {
+      "bands": {
+        "soul_rnb": 1.0
+      },
+      "rule": "family_default",
+      "style": "Funk / Soul---Disco"
+    },
+    {
+      "bands": {
+        "soul_rnb": 1.0
+      },
+      "rule": "family_default",
+      "style": "Funk / Soul---Free Funk"
+    },
+    {
+      "bands": {
+        "soul_rnb": 1.0
+      },
+      "rule": "family_default",
+      "style": "Funk / Soul---Funk"
+    },
+    {
+      "bands": {
+        "soul_rnb": 1.0
+      },
+      "rule": "family_default",
+      "style": "Funk / Soul---Gospel"
+    },
+    {
+      "bands": {
+        "soul_rnb": 1.0
+      },
+      "rule": "family_default",
+      "style": "Funk / Soul---Neo Soul"
+    },
+    {
+      "bands": {
+        "soul_rnb": 1.0
+      },
+      "rule": "family_default",
+      "style": "Funk / Soul---New Jack Swing"
+    },
+    {
+      "bands": {
+        "soul_rnb": 1.0
+      },
+      "rule": "family_default",
+      "style": "Funk / Soul---P.Funk"
+    },
+    {
+      "bands": {
+        "soul_rnb": 1.0
+      },
+      "rule": "family_default",
+      "style": "Funk / Soul---Psychedelic"
+    },
+    {
+      "bands": {
+        "soul_rnb": 1.0
+      },
+      "rule": "family_default",
+      "style": "Funk / Soul---Rhythm & Blues"
+    },
+    {
+      "bands": {
+        "soul_rnb": 1.0
+      },
+      "rule": "family_default",
+      "style": "Funk / Soul---Soul"
+    },
+    {
+      "bands": {
+        "soul_rnb": 1.0
+      },
+      "rule": "family_default",
+      "style": "Funk / Soul---Swingbeat"
+    },
+    {
+      "bands": {
+        "soul_rnb": 1.0
+      },
+      "rule": "family_default",
+      "style": "Funk / Soul---UK Street Soul"
+    },
+    {
+      "bands": {
+        "rap": 1.0
+      },
+      "rule": "family_default",
+      "style": "Hip Hop---Bass Music"
+    },
+    {
+      "bands": {
+        "rap": 1.0
+      },
+      "rule": "family_default",
+      "style": "Hip Hop---Boom Bap"
+    },
+    {
+      "bands": {
+        "rap": 1.0
+      },
+      "rule": "family_default",
+      "style": "Hip Hop---Bounce"
+    },
+    {
+      "bands": {
+        "rap": 1.0
+      },
+      "rule": "family_default",
+      "style": "Hip Hop---Britcore"
+    },
+    {
+      "bands": {
+        "rap": 1.0
+      },
+      "rule": "family_default",
+      "style": "Hip Hop---Cloud Rap"
+    },
+    {
+      "bands": {
+        "rap": 1.0
+      },
+      "rule": "family_default",
+      "style": "Hip Hop---Conscious"
+    },
+    {
+      "bands": {
+        "rap": 1.0
+      },
+      "rule": "family_default",
+      "style": "Hip Hop---Crunk"
+    },
+    {
+      "bands": {
+        "beats": 1
+      },
+      "rule": "override",
+      "style": "Hip Hop---Cut-up/DJ"
+    },
+    {
+      "bands": {
+        "beats": 1
+      },
+      "rule": "override",
+      "style": "Hip Hop---DJ Battle Tool"
+    },
+    {
+      "bands": {
+        "rap": 1.0
+      },
+      "rule": "family_default",
+      "style": "Hip Hop---Electro"
+    },
+    {
+      "bands": {
+        "rap": 1.0
+      },
+      "rule": "family_default",
+      "style": "Hip Hop---G-Funk"
+    },
+    {
+      "bands": {
+        "rap": 1.0
+      },
+      "rule": "family_default",
+      "style": "Hip Hop---Gangsta"
+    },
+    {
+      "bands": {
+        "rap": 1.0
+      },
+      "rule": "family_default",
+      "style": "Hip Hop---Grime"
+    },
+    {
+      "bands": {
+        "rap": 1.0
+      },
+      "rule": "family_default",
+      "style": "Hip Hop---Hardcore Hip-Hop"
+    },
+    {
+      "bands": {
+        "rap": 1.0
+      },
+      "rule": "family_default",
+      "style": "Hip Hop---Horrorcore"
+    },
+    {
+      "bands": {
+        "beats": 1
+      },
+      "rule": "override",
+      "style": "Hip Hop---Instrumental"
+    },
+    {
+      "bands": {
+        "beats": 0.5,
+        "rap": 0.5
+      },
+      "rule": "override",
+      "style": "Hip Hop---Jazzy Hip-Hop"
+    },
+    {
+      "bands": {
+        "rap": 1.0
+      },
+      "rule": "family_default",
+      "style": "Hip Hop---Miami Bass"
+    },
+    {
+      "bands": {
+        "rap": 1.0
+      },
+      "rule": "family_default",
+      "style": "Hip Hop---Pop Rap"
+    },
+    {
+      "bands": {
+        "rap": 1.0
+      },
+      "rule": "family_default",
+      "style": "Hip Hop---Ragga HipHop"
+    },
+    {
+      "bands": {
+        "soul_rnb": 1
+      },
+      "rule": "override",
+      "style": "Hip Hop---RnB/Swing"
+    },
+    {
+      "bands": {
+        "rap": 1.0
+      },
+      "rule": "family_default",
+      "style": "Hip Hop---Screw"
+    },
+    {
+      "bands": {
+        "rap": 1.0
+      },
+      "rule": "family_default",
+      "style": "Hip Hop---Thug Rap"
+    },
+    {
+      "bands": {
+        "rap": 1.0
+      },
+      "rule": "family_default",
+      "style": "Hip Hop---Trap"
+    },
+    {
+      "bands": {
+        "beats": 1
+      },
+      "rule": "override",
+      "style": "Hip Hop---Trip Hop"
+    },
+    {
+      "bands": {
+        "beats": 1
+      },
+      "rule": "override",
+      "style": "Hip Hop---Turntablism"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Afro-Cuban Jazz"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Afrobeat"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Avant-garde Jazz"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Big Band"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Bop"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Bossa Nova"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Contemporary Jazz"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Cool Jazz"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Dixieland"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Easy Listening"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Free Improvisation"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Free Jazz"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Fusion"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Gypsy Jazz"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Hard Bop"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Jazz-Funk"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Jazz-Rock"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Latin Jazz"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Modal"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Post Bop"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Ragtime"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Smooth Jazz"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Soul-Jazz"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Space-Age"
+    },
+    {
+      "bands": {
+        "jazz_blues": 1.0
+      },
+      "rule": "family_default",
+      "style": "Jazz---Swing"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Afro-Cuban"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Baião"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Batucada"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Beguine"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Bolero"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Boogaloo"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Bossanova"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Cha-Cha"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Charanga"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Compas"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Cubano"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Cumbia"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Descarga"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Forró"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Guaguancó"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Guajira"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Guaracha"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---MPB"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Mambo"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Mariachi"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Merengue"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Norteño"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Nueva Cancion"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Pachanga"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Porro"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Ranchera"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Reggaeton"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Rumba"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Salsa"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Samba"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Son"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Son Montuno"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Tango"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Tejano"
+    },
+    {
+      "bands": {
+        "latin": 1.0
+      },
+      "rule": "family_default",
+      "style": "Latin---Vallenato"
+    },
+    {
+      "bands": {
+        "unknown": 1.0
+      },
+      "rule": "family_default",
+      "style": "Non-Music---Audiobook"
+    },
+    {
+      "bands": {
+        "unknown": 1.0
+      },
+      "rule": "family_default",
+      "style": "Non-Music---Comedy"
+    },
+    {
+      "bands": {
+        "unknown": 1.0
+      },
+      "rule": "family_default",
+      "style": "Non-Music---Dialogue"
+    },
+    {
+      "bands": {
+        "unknown": 1.0
+      },
+      "rule": "family_default",
+      "style": "Non-Music---Education"
+    },
+    {
+      "bands": {
+        "unknown": 1.0
+      },
+      "rule": "family_default",
+      "style": "Non-Music---Field Recording"
+    },
+    {
+      "bands": {
+        "unknown": 1.0
+      },
+      "rule": "family_default",
+      "style": "Non-Music---Interview"
+    },
+    {
+      "bands": {
+        "unknown": 1.0
+      },
+      "rule": "family_default",
+      "style": "Non-Music---Monolog"
+    },
+    {
+      "bands": {
+        "unknown": 1.0
+      },
+      "rule": "family_default",
+      "style": "Non-Music---Poetry"
+    },
+    {
+      "bands": {
+        "unknown": 1.0
+      },
+      "rule": "family_default",
+      "style": "Non-Music---Political"
+    },
+    {
+      "bands": {
+        "unknown": 1.0
+      },
+      "rule": "family_default",
+      "style": "Non-Music---Promotional"
+    },
+    {
+      "bands": {
+        "unknown": 1.0
+      },
+      "rule": "family_default",
+      "style": "Non-Music---Radioplay"
+    },
+    {
+      "bands": {
+        "unknown": 1.0
+      },
+      "rule": "family_default",
+      "style": "Non-Music---Religious"
+    },
+    {
+      "bands": {
+        "unknown": 1.0
+      },
+      "rule": "family_default",
+      "style": "Non-Music---Spoken Word"
+    },
+    {
+      "bands": {
+        "pop": 1.0
+      },
+      "rule": "family_default",
+      "style": "Pop---Ballad"
+    },
+    {
+      "bands": {
+        "pop": 1.0
+      },
+      "rule": "family_default",
+      "style": "Pop---Bollywood"
+    },
+    {
+      "bands": {
+        "pop": 1.0
+      },
+      "rule": "family_default",
+      "style": "Pop---Bubblegum"
+    },
+    {
+      "bands": {
+        "pop": 1.0
+      },
+      "rule": "family_default",
+      "style": "Pop---Chanson"
+    },
+    {
+      "bands": {
+        "pop": 1.0
+      },
+      "rule": "family_default",
+      "style": "Pop---City Pop"
+    },
+    {
+      "bands": {
+        "pop": 1.0
+      },
+      "rule": "family_default",
+      "style": "Pop---Europop"
+    },
+    {
+      "bands": {
+        "dreamy_indie": 0.5,
+        "pop": 0.5
+      },
+      "rule": "override",
+      "style": "Pop---Indie Pop"
+    },
+    {
+      "bands": {
+        "pop": 1.0
+      },
+      "rule": "family_default",
+      "style": "Pop---J-pop"
+    },
+    {
+      "bands": {
+        "pop": 1.0
+      },
+      "rule": "family_default",
+      "style": "Pop---K-pop"
+    },
+    {
+      "bands": {
+        "pop": 1.0
+      },
+      "rule": "family_default",
+      "style": "Pop---Kayōkyoku"
+    },
+    {
+      "bands": {
+        "pop": 1.0
+      },
+      "rule": "family_default",
+      "style": "Pop---Light Music"
+    },
+    {
+      "bands": {
+        "pop": 1.0
+      },
+      "rule": "family_default",
+      "style": "Pop---Music Hall"
+    },
+    {
+      "bands": {
+        "pop": 1.0
+      },
+      "rule": "family_default",
+      "style": "Pop---Novelty"
+    },
+    {
+      "bands": {
+        "pop": 1.0
+      },
+      "rule": "family_default",
+      "style": "Pop---Parody"
+    },
+    {
+      "bands": {
+        "pop": 1.0
+      },
+      "rule": "family_default",
+      "style": "Pop---Schlager"
+    },
+    {
+      "bands": {
+        "pop": 1.0
+      },
+      "rule": "family_default",
+      "style": "Pop---Vocal"
+    },
+    {
+      "bands": {
+        "reggae": 1.0
+      },
+      "rule": "family_default",
+      "style": "Reggae---Calypso"
+    },
+    {
+      "bands": {
+        "reggae": 1.0
+      },
+      "rule": "family_default",
+      "style": "Reggae---Dancehall"
+    },
+    {
+      "bands": {
+        "reggae": 1.0
+      },
+      "rule": "family_default",
+      "style": "Reggae---Dub"
+    },
+    {
+      "bands": {
+        "reggae": 1.0
+      },
+      "rule": "family_default",
+      "style": "Reggae---Lovers Rock"
+    },
+    {
+      "bands": {
+        "reggae": 1.0
+      },
+      "rule": "family_default",
+      "style": "Reggae---Ragga"
+    },
+    {
+      "bands": {
+        "reggae": 1.0
+      },
+      "rule": "family_default",
+      "style": "Reggae---Reggae"
+    },
+    {
+      "bands": {
+        "reggae": 1.0
+      },
+      "rule": "family_default",
+      "style": "Reggae---Reggae-Pop"
+    },
+    {
+      "bands": {
+        "reggae": 1.0
+      },
+      "rule": "family_default",
+      "style": "Reggae---Rocksteady"
+    },
+    {
+      "bands": {
+        "reggae": 1.0
+      },
+      "rule": "family_default",
+      "style": "Reggae---Roots Reggae"
+    },
+    {
+      "bands": {
+        "reggae": 1.0
+      },
+      "rule": "family_default",
+      "style": "Reggae---Ska"
+    },
+    {
+      "bands": {
+        "reggae": 1.0
+      },
+      "rule": "family_default",
+      "style": "Reggae---Soca"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---AOR"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Acid Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Acoustic"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Alternative Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Arena Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Art Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Atmospheric Black Metal"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Avantgarde"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Beat"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Black Metal"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Blues Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Brit Pop"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Classic Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Coldwave"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Country Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Crust"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Death Metal"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Deathcore"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Deathrock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Depressive Black Metal"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Doo Wop"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Doom Metal"
+    },
+    {
+      "bands": {
+        "dreamy_indie": 1
+      },
+      "rule": "override",
+      "style": "Rock---Dream Pop"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Emo"
+    },
+    {
+      "bands": {
+        "dreamy_indie": 1
+      },
+      "rule": "override",
+      "style": "Rock---Ethereal"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Experimental"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Folk Metal"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Folk Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Funeral Doom Metal"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Funk Metal"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Garage Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Glam"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Goregrind"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Goth Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Gothic Metal"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Grindcore"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Grunge"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Hard Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Hardcore"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Heavy Metal"
+    },
+    {
+      "bands": {
+        "dreamy_indie": 0.5,
+        "rock": 0.5
+      },
+      "rule": "override",
+      "style": "Rock---Indie Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Industrial"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Krautrock"
+    },
+    {
+      "bands": {
+        "dreamy_indie": 0.5,
+        "rock": 0.5
+      },
+      "rule": "override",
+      "style": "Rock---Lo-Fi"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Lounge"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Math Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Melodic Death Metal"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Melodic Hardcore"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Metalcore"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Mod"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Neofolk"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---New Wave"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---No Wave"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Noise"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Noisecore"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Nu Metal"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Oi"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Parody"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Pop Punk"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Pop Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Pornogrind"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Post Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Post-Hardcore"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Post-Metal"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Post-Punk"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Power Metal"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Power Pop"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Power Violence"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Prog Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Progressive Metal"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Psychedelic Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Psychobilly"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Pub Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Punk"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Rock & Roll"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Rockabilly"
+    },
+    {
+      "bands": {
+        "dreamy_indie": 1
+      },
+      "rule": "override",
+      "style": "Rock---Shoegaze"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Ska"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Sludge Metal"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Soft Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Southern Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Space Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Speed Metal"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Stoner Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Surf"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Symphonic Rock"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Technical Death Metal"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Thrash"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Twist"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Viking Metal"
+    },
+    {
+      "bands": {
+        "rock": 1.0
+      },
+      "rule": "family_default",
+      "style": "Rock---Yé-Yé"
+    },
+    {
+      "bands": {
+        "classical_screen": 1.0
+      },
+      "rule": "family_default",
+      "style": "Stage & Screen---Musical"
+    },
+    {
+      "bands": {
+        "classical_screen": 1.0
+      },
+      "rule": "family_default",
+      "style": "Stage & Screen---Score"
+    },
+    {
+      "bands": {
+        "classical_screen": 1.0
+      },
+      "rule": "family_default",
+      "style": "Stage & Screen---Soundtrack"
+    },
+    {
+      "bands": {
+        "classical_screen": 1.0
+      },
+      "rule": "family_default",
+      "style": "Stage & Screen---Theme"
+    }
+  ],
+  "effective_style_counts": {
+    "ambient_experimental": 15.0,
+    "beats": 10.0,
+    "classical_screen": 20.0,
+    "dreamy_indie": 5.5,
+    "electronic_dance": 81.5,
+    "folk_world": 27.0,
+    "jazz_blues": 37.0,
+    "latin": 35.0,
+    "pop": 17.5,
+    "rap": 21.5,
+    "reggae": 11.0,
+    "rock": 87.0,
+    "soul_rnb": 16.0,
+    "unknown": 16.0
+  },
+  "parents": {
+    "ambient_experimental": "electronic",
+    "beats": "hip_hop",
+    "classical_screen": "classical_screen",
+    "dreamy_indie": "popular_song",
+    "electronic_dance": "electronic",
+    "folk_world": "folk_world",
+    "jazz_blues": "jazz_blues",
+    "latin": "latin",
+    "pop": "popular_song",
+    "rap": "hip_hop",
+    "reggae": "reggae",
+    "rock": "popular_song",
+    "soul_rnb": "popular_song"
+  }
+}

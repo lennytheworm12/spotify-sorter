@@ -1,0 +1,208 @@
+{
+  "aggregation": "sum raw full-track mean sigmoid scores through row-stochastic style-to-band mapping; exclude unknown; add epsilon to informative band sums and normalize; sum band probabilities to parents",
+  "bootstrap": {
+    "confidence": 0.95,
+    "replicates": 5000,
+    "seed": 5101,
+    "unit": "paired anchor; additional artist/source connected-group cluster sensitivity"
+  },
+  "conditional_penalty": {
+    "lambdas": [
+      0,
+      0.025,
+      0.05,
+      0.1
+    ]
+  },
+  "cosine_caliper": 0.05,
+  "development_only": true,
+  "distance": "known_fraction(a)*known_fraction(b)*(0.5*JS_bits(bands_a,bands_b)+0.5*JS_bits(parents_a,parents_b)); unknown/zero signal abstains with zero penalty",
+  "epsilon": 1e-08,
+  "family_defaults": {
+    "Blues": "jazz_blues",
+    "Brass & Military": "classical_screen",
+    "Children's": "unknown",
+    "Classical": "classical_screen",
+    "Electronic": "electronic_dance",
+    "Folk, World, & Country": "folk_world",
+    "Funk / Soul": "soul_rnb",
+    "Hip Hop": "rap",
+    "Jazz": "jazz_blues",
+    "Latin": "latin",
+    "Non-Music": "unknown",
+    "Pop": "pop",
+    "Reggae": "reggae",
+    "Rock": "rock",
+    "Stage & Screen": "classical_screen"
+  },
+  "minimum_fold_anchors": 10,
+  "minimum_fold_preferences": 20,
+  "negative_interpretation": "This one frozen hierarchy/aggregation/penalty has not demonstrated complementary ranking value; close this coarse shortcut and return to learned playlist-compatibility scorer/supervision path, not a universal impossibility claim.",
+  "no_new_inference": true,
+  "no_new_labels": true,
+  "no_production": true,
+  "parents": {
+    "ambient_experimental": "electronic",
+    "beats": "hip_hop",
+    "classical_screen": "classical_screen",
+    "dreamy_indie": "popular_song",
+    "electronic_dance": "electronic",
+    "folk_world": "folk_world",
+    "jazz_blues": "jazz_blues",
+    "latin": "latin",
+    "pop": "popular_song",
+    "rap": "hip_hop",
+    "reggae": "reggae",
+    "rock": "popular_song",
+    "soul_rnb": "popular_song"
+  },
+  "positive_gate": {
+    "minimum_anchors_per_region": 3,
+    "minimum_macro_delta": 0.02,
+    "minimum_positive_parent_regions": 3,
+    "paired_anchor_lower_above": 0,
+    "requirements": [
+      "artist/source-cluster bootstrap lower > 0",
+      "more corrected than newly broken strict good/bad orderings",
+      "positive point delta after excluding diagnostic artists",
+      "positive point delta after dropping largest eligible parent region by anchor count"
+    ]
+  },
+  "primary": "same frozen 3 artist/source-grouped folds; playlist-only strict ordinal preference accuracy, anchor macro; all evidence previously exposed",
+  "score": "frozen C cosine - lambda * distance; no clipping or hard rejection",
+  "secondary": [
+    "strong gap>=2",
+    "good>=4 versus bad<=2 crossings",
+    "frozen C top5 restricted to each heldout candidate partition",
+    "all-100-candidate Top5 query-heldout diagnostic only (training candidates permitted; not generalization)",
+    "exclude historically named diagnostic artists without refitting",
+    "per dominant predicted band and parent; descriptive only",
+    "raw 400-style distance with identical train-only lambda selection as nonprimary control"
+  ],
+  "selection": "maximize training strict ordinal anchor-macro agreement; smallest lambda within 1e-12 of best; all three endpoints inside training group; no heldout selection",
+  "style_overrides": {
+    "Electronic---Abstract": {
+      "beats": 1
+    },
+    "Electronic---Ambient": {
+      "ambient_experimental": 1
+    },
+    "Electronic---Berlin-School": {
+      "ambient_experimental": 1
+    },
+    "Electronic---Chillwave": {
+      "dreamy_indie": 1
+    },
+    "Electronic---Dance-pop": {
+      "pop": 1
+    },
+    "Electronic---Dark Ambient": {
+      "ambient_experimental": 1
+    },
+    "Electronic---Downtempo": {
+      "beats": 1
+    },
+    "Electronic---Drone": {
+      "ambient_experimental": 1
+    },
+    "Electronic---Dungeon Synth": {
+      "ambient_experimental": 1
+    },
+    "Electronic---Experimental": {
+      "ambient_experimental": 1
+    },
+    "Electronic---Grime": {
+      "rap": 1
+    },
+    "Electronic---Hip Hop": {
+      "beats": 0.5,
+      "rap": 0.5
+    },
+    "Electronic---Hip-House": {
+      "electronic_dance": 0.5,
+      "rap": 0.5
+    },
+    "Electronic---IDM": {
+      "ambient_experimental": 1
+    },
+    "Electronic---Illbient": {
+      "beats": 1
+    },
+    "Electronic---Leftfield": {
+      "ambient_experimental": 1
+    },
+    "Electronic---Modern Classical": {
+      "ambient_experimental": 1
+    },
+    "Electronic---Musique Concrète": {
+      "ambient_experimental": 1
+    },
+    "Electronic---New Age": {
+      "ambient_experimental": 1
+    },
+    "Electronic---Noise": {
+      "ambient_experimental": 1
+    },
+    "Electronic---Power Electronics": {
+      "ambient_experimental": 1
+    },
+    "Electronic---Sound Collage": {
+      "ambient_experimental": 1
+    },
+    "Electronic---Synth-pop": {
+      "pop": 1
+    },
+    "Electronic---Trip Hop": {
+      "beats": 1
+    },
+    "Electronic---Vaporwave": {
+      "ambient_experimental": 1
+    },
+    "Hip Hop---Cut-up/DJ": {
+      "beats": 1
+    },
+    "Hip Hop---DJ Battle Tool": {
+      "beats": 1
+    },
+    "Hip Hop---Instrumental": {
+      "beats": 1
+    },
+    "Hip Hop---Jazzy Hip-Hop": {
+      "beats": 0.5,
+      "rap": 0.5
+    },
+    "Hip Hop---RnB/Swing": {
+      "soul_rnb": 1
+    },
+    "Hip Hop---Trip Hop": {
+      "beats": 1
+    },
+    "Hip Hop---Turntablism": {
+      "beats": 1
+    },
+    "Pop---Indie Pop": {
+      "dreamy_indie": 0.5,
+      "pop": 0.5
+    },
+    "Rock---Dream Pop": {
+      "dreamy_indie": 1
+    },
+    "Rock---Ethereal": {
+      "dreamy_indie": 1
+    },
+    "Rock---Indie Rock": {
+      "dreamy_indie": 0.5,
+      "rock": 0.5
+    },
+    "Rock---Lo-Fi": {
+      "dreamy_indie": 0.5,
+      "rock": 0.5
+    },
+    "Rock---Shoegaze": {
+      "dreamy_indie": 1
+    }
+  },
+  "tie_tolerance": 1e-06,
+  "top_k": 5,
+  "version": "style-band-prior-v1"
+}
