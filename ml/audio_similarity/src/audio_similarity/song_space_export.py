@@ -29,6 +29,40 @@ def knn_links(ids, matrix, k=12):
     return [links[key] for key in sorted(links)]
 
 
+def apply_source_corrections(root, rows, paths, protected_ids):
+    """Apply explicit, hash-locked corrections without changing historical ledgers."""
+    index = root / '.research_audio/library_batches_v1/source_corrections.json'
+    if not index.exists():
+        return
+    document = read(index)
+    if document.get('schema_version') != 'library-source-corrections-v1':
+        raise ValueError('unsupported source correction index')
+    paths.append(index)
+    seen = set()
+    for correction in document['corrections']:
+        tid = correction['spotify_track_id']
+        if tid in seen or tid not in rows or tid in protected_ids:
+            raise ValueError('duplicate, unknown, or frozen-C source correction')
+        seen.add(tid)
+        if rows[tid]['result']['source_sha256'] != correction['expected_old_source_sha256']:
+            raise ValueError('source correction does not match historical source')
+        record_path = (root / correction['record_path']).resolve()
+        if not record_path.is_relative_to((root / '.research_audio').resolve()):
+            raise ValueError('source correction record outside private data root')
+        verify_hashes(root, {str(record_path.relative_to(root)): correction['record_sha256']})
+        replacement = read(record_path)
+        result = replacement.get('result', {})
+        representation = result.get('representation', {})
+        if (replacement.get('state') != 'COMPLETE'
+                or representation.get('status') != 'SUCCESS'
+                or representation.get('stable_track_id') != tid
+                or representation.get('source_audio_sha256') != result.get('source_sha256')
+                or result.get('source_sha256') == correction['expected_old_source_sha256']):
+            raise ValueError('incomplete or inconsistent source correction')
+        rows[tid] = replacement
+        paths.append(record_path)
+
+
 def load_processed(root):
     library = root / '.research_audio/library_batches_v1'
     manifest = read(library / 'manifest.json')
@@ -50,6 +84,9 @@ def load_processed(root):
         for tid, row in read(state)['tracks'].items():
             if row['state'] == 'COMPLETE':
                 rows[tid] = row
+    with np.load(root / E3 / 'historical_reference_matrices.npz', allow_pickle=False) as frozen:
+        protected_ids = set(map(str, frozen['spotify_ids']))
+    apply_source_corrections(root, rows, paths, protected_ids)
     if not set(tracks) <= set(rows):
         raise ValueError(f'{len(set(tracks) - set(rows))} library tracks not processed; do not silently shrink the map')
     contract = load_contract(root / 'reports/holistic_stage4a_dual/audio_representation_v1.json')
