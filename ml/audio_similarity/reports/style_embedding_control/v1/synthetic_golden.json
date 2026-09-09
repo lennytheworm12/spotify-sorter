@@ -1,0 +1,15 @@
+{
+  "implementation": {
+    "tests/style_embedding_golden.py": "14d2f319f0f08d2d071c6914367a051e76aafd897096c8225205a58aed401328"
+  },
+  "input_response_max_difference": 0.4282885193824768,
+  "passes": true,
+  "real_tracks_recomputed": 0,
+  "repeat_error": 0.0,
+  "samples": 170001,
+  "shape": [
+    10,
+    1280
+  ],
+  "unit_norm": 1.0
+}

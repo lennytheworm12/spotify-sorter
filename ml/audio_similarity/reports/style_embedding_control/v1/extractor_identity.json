@@ -1,0 +1,23 @@
+{
+  "implementation_sha256": "15f717273245a67acbfa7c82f7c2f583d8b62c452f7ba3223b1d594072527c59",
+  "metadata_sha256": "395479c8d0e23c1185bf903079c38b9c536014787db6e1184abd68463c92b2da",
+  "model_sha256": "3ed9af50d5367c0b9c795b294b00e7599e4943244f4cbd376869f3bfc87721b1",
+  "runtime": {
+    "binary": {
+      "lib/python3.11/site-packages/essentia/_essentia.cpython-311-x86_64-linux-gnu.so": "0ee18bb27cf5d8ecf7c6c439e1b6595cf3202d1efa0343da1d383365ecf3380b"
+    },
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "-1",
+      "OMP_NUM_THREADS": "1",
+      "TF_DETERMINISTIC_OPS": "1",
+      "TF_NUM_INTEROP_THREADS": "1",
+      "TF_NUM_INTRAOP_THREADS": "1"
+    },
+    "essentia": "2.1b6.dev1389",
+    "ffmpeg": "36d94a605d612e4090d1b8aec889d0c0801c6eafb1593c90f5c0dfd2e2966a45",
+    "numpy": "1.26.4",
+    "python": "3.11.16"
+  },
+  "serialization_sha256": "83a193985c60bb67fa36e696162d7447bf0313d14660166bd1b207ebd8afbed3",
+  "source_independent_protocol_sha256": "346a93284b5b79072125743c7d488ea4bf2c95a48b38cb2a8d5b080b4cc10cb3"
+}

@@ -1,0 +1,43 @@
+{
+  "all_evidence_previously_exposed": true,
+  "cache": "source hash, model/metadata hashes, full extraction configuration, worker hash, serialization hash, runtime/native binary/FFmpeg identity; fail rather than infer on replay",
+  "comparators": [
+    "exact D cosine",
+    "C cosine sensitivity",
+    "1 - frozen 400-label Jensen-Shannon divergence"
+  ],
+  "decision": "Label-output bottleneck supported only if latent-minus-label primary delta >= .03 and descriptive lower bound > 0. A complementary-representation candidate additionally requires the same improvement over D. Otherwise no demonstrated latent advantage. C comparison always reported, never selected away.",
+  "dimension": 1280,
+  "material_delta": 0.03,
+  "model": "same frozen discogs-effnet-bs64-1.pb",
+  "no_fusion": true,
+  "no_new_labels": true,
+  "no_training": true,
+  "output": "PartitionedCall:1",
+  "pooling": "float64 arithmetic mean of raw 1280-D patch embeddings, then one L2 normalization; no patch normalization, scaler or fitted transform",
+  "preprocessing": {
+    "audio": "ffmpeg decode full retained source to temporary original-rate/channel float32 PCM WAV; Essentia MonoLoader mono 16000 Hz resampleQuality=4; no loudness normalization",
+    "pooling": "float64 arithmetic mean of every returned patch sigmoid vector",
+    "predictor": {
+      "batchSize": 64,
+      "input": "serving_default_melspectrogram",
+      "lastBatchMode": "same",
+      "lastPatchMode": "repeat",
+      "output": "PartitionedCall:0",
+      "patchHopSize": 62,
+      "patchSize": 128
+    }
+  },
+  "primary": "existing playlist rubric; same three frozen artist/source-grouped heldout partitions; strict ordinal preference anchor macro",
+  "reference_patch_count": "must equal cached classifier patch count for each track",
+  "secondary": [
+    "gap >= 2 preferences",
+    "bad <= 2 versus good >= 4 discrimination",
+    "separate holistic rubric",
+    "exclude three owner-confirmed alias/title cases from evaluation only"
+  ],
+  "similarity": "cosine; clip numerical roundoff to [-1,1]",
+  "tie_tolerance": 1e-06,
+  "uncertainty": "5000 paired anchor bootstrap replicates, PCG64 seed 5101, descriptive 95% intervals; shared candidates and three folds limit independence",
+  "version": "discogs-latent-control-v1"
+}
