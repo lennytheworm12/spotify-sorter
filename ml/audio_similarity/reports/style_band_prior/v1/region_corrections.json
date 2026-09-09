@@ -1,0 +1,150 @@
+{
+  "band": {
+    "ambient_experimental": {
+      "all_ordinal_net_credit": 0.0,
+      "baseline_strict_correct": 0,
+      "baseline_strict_errors": 0,
+      "broken_orderings": 0,
+      "broken_unique_pairs": 0,
+      "corrected_orderings": 0,
+      "corrected_unique_pairs": 0,
+      "good_bad_constraints": 0,
+      "good_bad_net_credit": 0,
+      "good_bad_tie_changes": 0
+    },
+    "beats": {
+      "all_ordinal_net_credit": 0.0,
+      "baseline_strict_correct": 0,
+      "baseline_strict_errors": 0,
+      "broken_orderings": 0,
+      "broken_unique_pairs": 0,
+      "corrected_orderings": 0,
+      "corrected_unique_pairs": 0,
+      "good_bad_constraints": 0,
+      "good_bad_net_credit": 0,
+      "good_bad_tie_changes": 0
+    },
+    "dreamy_indie": {
+      "all_ordinal_net_credit": 0.0,
+      "baseline_strict_correct": 0,
+      "baseline_strict_errors": 0,
+      "broken_orderings": 0,
+      "broken_unique_pairs": 0,
+      "corrected_orderings": 0,
+      "corrected_unique_pairs": 0,
+      "good_bad_constraints": 0,
+      "good_bad_net_credit": 0,
+      "good_bad_tie_changes": 0
+    },
+    "electronic_dance": {
+      "all_ordinal_net_credit": 0.0,
+      "baseline_strict_correct": 8,
+      "baseline_strict_errors": 3,
+      "broken_orderings": 0,
+      "broken_unique_pairs": 0,
+      "corrected_orderings": 0,
+      "corrected_unique_pairs": 0,
+      "good_bad_constraints": 11,
+      "good_bad_net_credit": 0.0,
+      "good_bad_tie_changes": 0
+    },
+    "jazz_blues": {
+      "all_ordinal_net_credit": 0.0,
+      "baseline_strict_correct": 0,
+      "baseline_strict_errors": 0,
+      "broken_orderings": 0,
+      "broken_unique_pairs": 0,
+      "corrected_orderings": 0,
+      "corrected_unique_pairs": 0,
+      "good_bad_constraints": 0,
+      "good_bad_net_credit": 0,
+      "good_bad_tie_changes": 0
+    },
+    "pop": {
+      "all_ordinal_net_credit": 0.0,
+      "baseline_strict_correct": 13,
+      "baseline_strict_errors": 2,
+      "broken_orderings": 0,
+      "broken_unique_pairs": 0,
+      "corrected_orderings": 0,
+      "corrected_unique_pairs": 0,
+      "good_bad_constraints": 15,
+      "good_bad_net_credit": 0.0,
+      "good_bad_tie_changes": 0
+    },
+    "rap": {
+      "all_ordinal_net_credit": 0.0,
+      "baseline_strict_correct": 5,
+      "baseline_strict_errors": 5,
+      "broken_orderings": 0,
+      "broken_unique_pairs": 0,
+      "corrected_orderings": 0,
+      "corrected_unique_pairs": 0,
+      "good_bad_constraints": 10,
+      "good_bad_net_credit": 0.0,
+      "good_bad_tie_changes": 0
+    },
+    "rock": {
+      "all_ordinal_net_credit": 0.0,
+      "baseline_strict_correct": 0,
+      "baseline_strict_errors": 0,
+      "broken_orderings": 0,
+      "broken_unique_pairs": 0,
+      "corrected_orderings": 0,
+      "corrected_unique_pairs": 0,
+      "good_bad_constraints": 0,
+      "good_bad_net_credit": 0,
+      "good_bad_tie_changes": 0
+    },
+    "soul_rnb": {
+      "all_ordinal_net_credit": 0.0,
+      "baseline_strict_correct": 2,
+      "baseline_strict_errors": 1,
+      "broken_orderings": 0,
+      "broken_unique_pairs": 0,
+      "corrected_orderings": 0,
+      "corrected_unique_pairs": 0,
+      "good_bad_constraints": 3,
+      "good_bad_net_credit": 0.0,
+      "good_bad_tie_changes": 0
+    }
+  },
+  "parent": {
+    "electronic": {
+      "all_ordinal_net_credit": 0.0,
+      "baseline_strict_correct": 5,
+      "baseline_strict_errors": 2,
+      "broken_orderings": 0,
+      "broken_unique_pairs": 0,
+      "corrected_orderings": 0,
+      "corrected_unique_pairs": 0,
+      "good_bad_constraints": 7,
+      "good_bad_net_credit": 0.0,
+      "good_bad_tie_changes": 0
+    },
+    "hip_hop": {
+      "all_ordinal_net_credit": 0.0,
+      "baseline_strict_correct": 3,
+      "baseline_strict_errors": 5,
+      "broken_orderings": 0,
+      "broken_unique_pairs": 0,
+      "corrected_orderings": 0,
+      "corrected_unique_pairs": 0,
+      "good_bad_constraints": 8,
+      "good_bad_net_credit": 0.0,
+      "good_bad_tie_changes": 0
+    },
+    "popular_song": {
+      "all_ordinal_net_credit": 0.0,
+      "baseline_strict_correct": 20,
+      "baseline_strict_errors": 4,
+      "broken_orderings": 0,
+      "broken_unique_pairs": 0,
+      "corrected_orderings": 0,
+      "corrected_unique_pairs": 0,
+      "good_bad_constraints": 24,
+      "good_bad_net_credit": 0.0,
+      "good_bad_tie_changes": 0
+    }
+  }
+}

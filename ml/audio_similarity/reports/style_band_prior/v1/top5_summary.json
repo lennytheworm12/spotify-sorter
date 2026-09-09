@@ -1,0 +1,102 @@
+{
+  "top5_all_candidates_diagnostic": {
+    "added_bad": {
+      "directed": 0,
+      "unique_pairs": 0
+    },
+    "added_good": {
+      "directed": 0,
+      "unique_pairs": 0
+    },
+    "added_middle": {
+      "directed": 2,
+      "unique_pairs": 2
+    },
+    "added_unknown": {
+      "directed": 1,
+      "unique_pairs": 1
+    },
+    "kept_bad": {
+      "directed": 9,
+      "unique_pairs": 9
+    },
+    "kept_good": {
+      "directed": 133,
+      "unique_pairs": 111
+    },
+    "kept_middle": {
+      "directed": 31,
+      "unique_pairs": 27
+    },
+    "kept_unknown": {
+      "directed": 324,
+      "unique_pairs": 226
+    },
+    "removed_bad": {
+      "directed": 0,
+      "unique_pairs": 0
+    },
+    "removed_good": {
+      "directed": 2,
+      "unique_pairs": 2
+    },
+    "removed_middle": {
+      "directed": 0,
+      "unique_pairs": 0
+    },
+    "removed_unknown": {
+      "directed": 1,
+      "unique_pairs": 1
+    }
+  },
+  "top5_grouped": {
+    "added_bad": {
+      "directed": 0,
+      "unique_pairs": 0
+    },
+    "added_good": {
+      "directed": 1,
+      "unique_pairs": 1
+    },
+    "added_middle": {
+      "directed": 0,
+      "unique_pairs": 0
+    },
+    "added_unknown": {
+      "directed": 7,
+      "unique_pairs": 6
+    },
+    "kept_bad": {
+      "directed": 9,
+      "unique_pairs": 6
+    },
+    "kept_good": {
+      "directed": 117,
+      "unique_pairs": 77
+    },
+    "kept_middle": {
+      "directed": 22,
+      "unique_pairs": 18
+    },
+    "kept_unknown": {
+      "directed": 344,
+      "unique_pairs": 256
+    },
+    "removed_bad": {
+      "directed": 2,
+      "unique_pairs": 2
+    },
+    "removed_good": {
+      "directed": 0,
+      "unique_pairs": 0
+    },
+    "removed_middle": {
+      "directed": 0,
+      "unique_pairs": 0
+    },
+    "removed_unknown": {
+      "directed": 6,
+      "unique_pairs": 6
+    }
+  }
+}

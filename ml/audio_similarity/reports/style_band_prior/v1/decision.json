@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "anchor_interval_positive": false,
+    "cluster_interval_positive": false,
+    "diagnostic_exclusion_positive": false,
+    "largest_region_exclusion_positive": false,
+    "material_primary_gain": false,
+    "more_corrections_than_damage": false,
+    "multiple_regions": false
+  },
+  "largest_parent_region": "popular_song",
+  "outcome": "STYLE_BAND_SHORTCUT_NOT_ESTABLISHED",
+  "without_largest_parent_delta": {
+    "high": 0.0,
+    "low": 0.0,
+    "point": 0.0
+  }
+}

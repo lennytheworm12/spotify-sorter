@@ -1,0 +1,62 @@
+{
+  "cache_reuse": {
+    "aggregate_reconstruction_exact": true,
+    "new_audio_inference_calls": 0,
+    "source": "reports/style_prior_pilot/v2",
+    "validated_cached_patches": 18823,
+    "validated_cached_tracks": 100
+  },
+  "focused": {
+    "command": ".venv/bin/python -m pytest tests/test_style_band_prior.py tests/test_style_prior.py tests/test_style_embedding_control.py -q",
+    "failed": 0,
+    "new_stage_tests": 7,
+    "passed": 22,
+    "seconds": 1.73
+  },
+  "frozen_pre_analysis_commit": "270758fd8084ddf8bdff977a9a0655bf070c45f6",
+  "full_non_heavy": {
+    "command": ".venv/bin/python -m pytest --junitxml=/tmp/style-band-full-suite-permitted.xml -q",
+    "deselected_heavy": 12,
+    "failed": 0,
+    "includes_both_git_publication_checks": true,
+    "junit_seconds": 119.522,
+    "local_integration_permissions": true,
+    "passed": 1303,
+    "seconds": 120.15,
+    "warnings": 11
+  },
+  "historical_inputs_unchanged": true,
+  "initial_full_attempt": {
+    "reason": "Network access to 127.0.0.1 was blocked by sandbox policy during existing localhost tests; no completed suite result. Reran unchanged suite with local integration permissions.",
+    "status": "SANDBOX_BLOCKED"
+  },
+  "new_audio_inference_calls": 0,
+  "new_labels": 0,
+  "production_activated": false,
+  "protected_input_files_verified": 485,
+  "replay": {
+    "byte_identical": true,
+    "cached_track_outputs_reused": 100,
+    "exact_artifact_hashes": {
+      "band_features.npz": "61439136e22a4e6f7b2310725d46fa954108c6798e092d391c0196c77a5edfff",
+      "pair_results.json": "4f400144af8dd931d5b4d051e35e274f0ad3d80ffe5788557e629b2f32ea83d5",
+      "preference_changes.json": "041f1456af82c7aba456830cc5b99f1886e55e4d5c50c39a3775d5633fc675ed",
+      "results.json": "c4b66501a6ac5e8c7b707a6e1121db1f3c96a38d39aabdb9a3304dfc7ab7c2f4",
+      "top5_all_candidates_diagnostic.json": "6453f1c30714b98dc7953d27214ca6d3ba68f867eb61431806e136a6ce255d14",
+      "top5_grouped.json": "bd787e3402407c665b8a52811c45adf7daf6ea83787743d71f16079d632056c9",
+      "track_bands.json": "2cc9d0e660422cc37854b8afc44c41417f27381df2e4aee6722a75ad131ba472"
+    },
+    "historical_inputs_unchanged": true,
+    "new_audio_inference_calls": 0
+  },
+  "source_config_hashes": {
+    "configs/style_band_prior_v1.json": "4420627c42b40fe20589889ef7ec7914f3eead0be9c55782b3e022a18d2047c9",
+    "docs/style_band_prior.md": "37a491f591f2ad3e67f29f511de5e28c861caf39cab725a4fab6ceef854c1ca8",
+    "src/audio_similarity/style_band_experiment.py": "0c671b321d6b66d1de4f136b4661a35326e9c97eb8f54c8b26a60a2f082e8291",
+    "src/audio_similarity/style_band_math.py": "fc13f2c49a1dbdd564958df842f76c548d5e6c4024d1d59ca74185084fa9f4dd",
+    "src/audio_similarity/style_band_metrics.py": "663fce3f4468b1e1e2d2e88bd9c6693b1fa525056253a28cb38415c87e047543",
+    "src/audio_similarity/style_band_report.py": "b06af602e26b8889843c0921955922509d317d006a42231c41c6856a4e882e86",
+    "tests/test_style_band_prior.py": "918a982edb07bd0b767636c7d65e43a06df2c0fa78d76cf83cab08519fba899e"
+  },
+  "workspace_scope": "Ran in the existing feature checkout, preserving pre-existing unrelated dirty library/download code and tests. Only new style-band implementation and evidence are committed for this task."
+}
