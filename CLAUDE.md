@@ -38,10 +38,13 @@ Frontend (from `frontend/`):
 pnpm dev       # Vite dev server, http://127.0.0.1:5173
 pnpm build     # tsc -b && vite build
 pnpm lint      # ESLint
+pnpm test      # song-space snapshot/layout/Range tests
 pnpm preview   # preview production build
 ```
 
-There is no frontend test runner; build + lint are the frontend checks.
+Frontend checks are `pnpm test`, `pnpm build`, and `pnpm lint`. Song-space browser
+checks and its optional loopback-only data bridge are documented in
+`docs/song-space/README.md`.
 
 ## Startup & listeners
 

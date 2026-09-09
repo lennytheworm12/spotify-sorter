@@ -56,9 +56,9 @@ Songs optionally supply `album`, `durationMs`, `audioUrl` (http/https or relativ
 
 Sigma 3 renders the graph with WebGL. Graphology supplies graph operations; seeded Louvain finds neighborhoods and fixed-iteration ForceAtlas2 arranges them in a dedicated Vite worker. This avoids blocking the interface during layout. D3 density contours trace actual point density beneath the graph. No genre rules or model training enter the display.
 
-Canonical node/edge ordering and seed 17531 make layout reproducible in the same environment. Layout weights are `max(0.01, closeness²)`, with closeness a linear transformation of the declared score range/direction. Original scores/ranks remain unchanged. Louvain resolution is 1. ForceAtlas2 uses 360 iterations (220 above 3,000 songs), Barnes–Hut theta .5, gravity .7, scaling 12, slowdown 4 and lin-log mode. Positions are uniformly scaled into a 1,000-square coordinate system. Contours use bandwidth 30 and seven thresholds. Artist names on areas are navigation labels selected by frequency, never predictive features or genre assertions.
+Canonical node/edge ordering and seed 17531 make layout reproducible in the same environment. Layout weights are `max(0.01, closeness²)`, with closeness a linear transformation of the declared score range/direction. Original scores/ranks remain unchanged. Louvain resolution is 1. ForceAtlas2 uses 1,600 iterations (800 above 3,000 songs), Barnes–Hut theta .5, gravity .7, scaling 2, slowdown 1 and lin-log mode. Positions are uniformly scaled into a 1,000-square coordinate system. Contours use bandwidth 30 and seven thresholds. Artist names on areas are navigation labels selected by frequency, never predictive features or genre assertions.
 
-A bridge crosses community assignments. Shared-neighbor count uses the undirected union graph. The bridge list orders by ascending shared count then closeness and shows the first 80; all map edges remain inspectable. Song search reaches every identity, while list rendering is bounded to 200 matches. The map is an approximation: physical distance is not the raw similarity function. Communities are unstable under changed data/scorers and must not be treated as production playlist membership.
+A bridge crosses community assignments. Shared-neighbor count uses the undirected union graph. The bridge list orders by ascending shared count then closeness and shows the first 80; all map edges remain inspectable. Song search reaches every identity, while the list initially renders 200 matches and offers a Show more control. The map is an approximation: physical distance is not the raw similarity function. Communities are unstable under changed data/scorers and must not be treated as production playlist membership.
 
 ## Checks
 
@@ -67,3 +67,11 @@ From `frontend`: `pnpm test`, `pnpm build`, `pnpm lint`.
 From `ml/audio_similarity`: `.venv/bin/python -m pytest tests/test_song_space_export.py -q`.
 
 Browser validation covers the real 1,257-song map, frozen C selection, search/selection, graph controls, community/bridge inspection, audio/Range seeking, file import, empty/error states, mobile layout and console errors. Browser tests use an isolated profile and never write review labels or call Spotify mutations.
+
+Run the browser checks from the repository root while the configured Vite server is running:
+
+```bash
+ml/audio_similarity/.venv/bin/python frontend/tests/browser_song_space.py --output /tmp/song-space-browser
+```
+
+This uses an isolated Chromium profile and writes private screenshots/results only to the chosen directory. It expects the complete local library and frozen C exports; imports and failure fixtures are isolated in browser memory. See [verification.json](verification.json) for the recorded run.

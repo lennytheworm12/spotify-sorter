@@ -24,14 +24,24 @@ export interface SongSpaceDataset {
   id: string
   name: string
   description: string
-  scorer: { id: string; label: string; description: string; scoreRange: [number, number]; higherIsCloser: boolean }
+  scorer: {
+    id: string
+    label: string
+    description: string
+    scoreRange: [number, number]
+    higherIsCloser: boolean
+  }
   neighborhoodSize: number
   songs: Song[]
   links: SimilarityLink[]
   communities?: { id: string; label: string }[]
 }
 
-export interface DatasetSource { id: string; label: string; url: string }
+export interface DatasetSource {
+  id: string
+  label: string
+  url: string
+}
 export interface SongSpaceProvider {
   catalog(signal: AbortSignal): Promise<DatasetSource[]>
   load(source: DatasetSource, signal: AbortSignal): Promise<SongSpaceDataset>
@@ -45,8 +55,19 @@ export interface Community {
   x: number
   y: number
 }
-export interface PlacedSong extends Song { x: number; y: number; community: string; color: string; degree: number }
-export interface PlacedLink extends SimilarityLink { id: string; bridge: boolean; sharedNeighbors: number; weight: number }
+export interface PlacedSong extends Song {
+  x: number
+  y: number
+  community: string
+  color: string
+  degree: number
+}
+export interface PlacedLink extends SimilarityLink {
+  id: string
+  bridge: boolean
+  sharedNeighbors: number
+  weight: number
+}
 export interface SongSpaceLayout {
   songs: PlacedSong[]
   links: PlacedLink[]

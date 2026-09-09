@@ -62,13 +62,41 @@ function AppShell() {
   return <Dashboard user={user} onLogout={logout} isSigningOut={isLoggingOut} />
 }
 
-function subscribeRoute(callback: () => void) { window.addEventListener('hashchange', callback); return () => window.removeEventListener('hashchange', callback) }
+function subscribeRoute(callback: () => void) {
+  window.addEventListener('hashchange', callback)
+  window.addEventListener('popstate', callback)
+  return () => {
+    window.removeEventListener('hashchange', callback)
+    window.removeEventListener('popstate', callback)
+  }
+}
 function App() {
-  const route = useSyncExternalStore(subscribeRoute, () => window.location.hash)
-  const isOrganizer = route.startsWith('#/organize') || new URLSearchParams(window.location.search).has('auth')
+  const location = new URL(useSyncExternalStore(subscribeRoute, () => window.location.href))
+  const isOrganizer = location.hash.startsWith('#/organize') || location.searchParams.has('auth')
   return (
     <QueryClientProvider client={queryClient}>
-      {isOrganizer ? <><a className="organizer-return" href="#/" onClick={() => { if (window.location.search) window.history.replaceState(null, '', window.location.pathname + '#/') }}>← Back to song space</a><AppShell /></> : <SongSpace />}
+      {isOrganizer ? (
+        <>
+          <a
+            className="organizer-return"
+            href="#/"
+            onClick={(event) => {
+              event.preventDefault()
+              const destination = new URL(window.location.href)
+              destination.searchParams.delete('auth')
+              destination.searchParams.delete('reason')
+              destination.hash = '/'
+              window.history.pushState(null, '', destination)
+              window.dispatchEvent(new PopStateEvent('popstate'))
+            }}
+          >
+            ← Back to song space
+          </a>
+          <AppShell />
+        </>
+      ) : (
+        <SongSpace />
+      )}
     </QueryClientProvider>
   )
 }

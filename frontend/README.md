@@ -1,8 +1,14 @@
-# Spotify Playlist Organizer — Frontend
+# Spotify Sorter — Frontend
 
-React + TypeScript + Vite frontend for the Spotify Sorter app. It talks to the
-Express backend in `../backend` and never stores Spotify tokens in the browser;
-auth is handled server-side with an HTTP-only JWT cookie.
+React + TypeScript + Vite frontend for the Spotify Sorter app. The default view
+is a read-only song-space graph with search, community and connection inspection,
+ranked neighbors and optional retained-audio playback. See the
+[song-space setup and data contract](../docs/song-space/README.md) to open the
+processed library or provide a different similarity snapshot.
+
+The existing organizer is available at `#/organize`. It talks to the Express
+backend in `../backend` and never stores Spotify tokens in the browser; auth is
+handled server-side with an HTTP-only JWT cookie.
 
 ## Getting started
 
@@ -11,7 +17,7 @@ pnpm install
 pnpm dev
 ```
 
-The app expects the backend to be running at `http://127.0.0.1:3000`. To point
+The organizer expects the backend to be running at `http://127.0.0.1:3000`. To point
 at a different backend, copy `.env.example` to `.env.local` and set
 `VITE_API_URL`. `VITE_API_URL` is browser-facing and stays on the 127.0.0.1
 loopback because Spotify rejects `localhost` for local OAuth redirects.
@@ -23,11 +29,18 @@ That bind address is not a browser URL: open the app at
 `http://127.0.0.1:5173` in the Windows browser, which the portproxy routes to
 the WSL dev server.
 
+With `SONG_SPACE_DATA_DIR` configured, the read-only development bridge binds
+**127.0.0.1 only** to protect local library/audio files. The normal all-interface
+organizer development mode described above is unchanged when this option is absent.
+Production builds use a configured provider or local map import; private exports
+are never bundled.
+
 ## Scripts
 
 - `pnpm dev` — Vite dev server bound to `0.0.0.0:5173`, browsed at `http://127.0.0.1:5173`
 - `pnpm build` — TypeScript check + production build
 - `pnpm lint` — ESLint
+- `pnpm test` — snapshot, layout, and HTTP Range contract tests
 - `pnpm preview` — preview the production build
 
 ## Notes

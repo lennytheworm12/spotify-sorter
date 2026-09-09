@@ -2,6 +2,10 @@
 
 Organize your Spotify library by genre. Log in with Spotify, choose a source — your Liked Songs or an existing playlist — and Spotify Sorter buckets every track into one of 16 fixed genre groups, then writes them into playlists for you: either newly created per-genre playlists or playlists you own or collaborate on.
 
+The frontend now opens on an exploratory **song-space map** of processed audio
+similarities. It is read-only and independent of the genre organizer, which remains
+at `#/organize`. [Set up the local map or provide a snapshot](docs/song-space/README.md).
+
 ## The problem
 
 Hand-sorting a large library by genre is tedious and inconsistent. Spotify Sorter automates the grunt work while keeping safety controls visible:

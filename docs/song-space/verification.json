@@ -1,0 +1,133 @@
+{
+  "status": "IMPLEMENTED_AND_BROWSER_VERIFIED",
+  "date": "2026-09-09",
+  "scope": "Read-only local exploration. No production ranking or Spotify mutation.",
+  "library": {
+    "tracks": 1257,
+    "connections": 11310,
+    "communities": 9,
+    "representation": "Existing pooled excerpt CLAP; not full-song C"
+  },
+  "frozen_C": {
+    "tracks": 100,
+    "connections": 857,
+    "representation": "Exact frozen Stage 5E full-song CLAP C"
+  },
+  "frontend": {
+    "build": "PASS",
+    "lint": "PASS",
+    "unit_tests": 5
+  },
+  "python_non_heavy": {
+    "passed": 1307,
+    "heavy_deselected": 12,
+    "warnings": 11,
+    "seconds": 125.5,
+    "command": ".venv/bin/python -m pytest -q"
+  },
+  "browser": {
+    "checks": [
+      "actual library graph loads",
+      "complete 1257-track cached library",
+      "rendered library count",
+      "song list starts with bounded rendering",
+      "all songs remain reachable through list pagination",
+      "search and keyboard selection",
+      "displayed ranked scores exactly match snapshot",
+      "Chromium audio plays and seeks to 60 seconds",
+      "HTTP Range returns exact bytes",
+      "invalid Range is explicit 416",
+      "cross-origin local bridge denied",
+      "malformed origin handled",
+      "neighbor navigation",
+      "community focus",
+      "bridges mode clears incompatible area filter",
+      "area focus restores its internal connections",
+      "bridge inspection and exact connection details",
+      "frozen full-song C is distinct and has 100 songs",
+      "mobile inspector and accessible search",
+      "no horizontal mobile overflow",
+      "real WebGL node hover and click select the correct song",
+      "zoom, reset and keyboard controls with reduced motion",
+      "local import preserves non-CLAP score direction and supplied communities",
+      "same-ID reimport replaces stale layout",
+      "invalid import retains current map",
+      "empty snapshot state",
+      "source failure is explicit",
+      "retry recovers source",
+      "existing organizer and return navigation preserved",
+      "WebGL failure preserves usable song-list inspection",
+      "unconfigured provider offers file import",
+      "no uncaught browser errors",
+      "no review or Spotify mutations"
+    ],
+    "count": 33,
+    "initial_load_seconds": 8.94,
+    "page_errors": [],
+    "mutations": [],
+    "browser_audio_partial_responses": 1
+  },
+  "navigation_regressions": {
+    "checks": [
+      "OAuth error can return to song space even when hash is already root",
+      "browser Back restores song-space route"
+    ],
+    "count": 2
+  },
+  "export_replay": {
+    "export_files_unchanged": true,
+    "inference_calls": 0,
+    "sha256": {
+      "audio-index.json": "25eb6aed6e4c65fe096f0268110b2f73181ade9c269187e139ca9ab110a22bf2",
+      "catalog.json": "9d5b2818111c913015a6ccabd7f744bcb2f2100652900ab9168c0144d07ea5a0",
+      "clap-c.json": "273bb37766bbe86518cc2697874a197ef5f7694d8459da1495c110d2757a6f70",
+      "library.json": "70cfdf06abddbc3d65560a026e0bfa1c46104ae5af7e85baf380e3af434d47ec",
+      "provenance.json": "77ecadaa52f7fb677d384d996a48a860041653166db7581abce3964c0e33be5f",
+      "vector-receipts.json": "a3742bf6e385c6df117d8673f2a98c4a6f561b045ff68ff2f2f16a4e9d7900fd"
+    }
+  },
+  "production_dependency_audit": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0
+    },
+    "dependencies": 22,
+    "devDependencies": 0,
+    "optionalDependencies": 0,
+    "totalDependencies": 22
+  },
+  "source_sha256": {
+    "frontend/dev/songSpacePlugin.ts": "1d3484add1387f4ebeb344301332480d93765b70dfe41e34220be09392a085db",
+    "frontend/index.html": "aaf03d7e6661c3cfb3c18be1728b5ef08d11ce51ad436210cf3d6a21f5070c02",
+    "frontend/package.json": "b3a9aa3c8e0967739f93fda6eeadce3dd9ba4d447a8cea6e96d45b338d4e5d69",
+    "frontend/pnpm-lock.yaml": "6f0d352a0aed1ce455120298faccace038477cb239c2fdcb42be7127d72d6b23",
+    "frontend/src/App.tsx": "98749eb04263ba4e994866a04cd4382cee34817d6a523b01f79ebfe4685ba80e",
+    "frontend/src/song-space/Inspector.tsx": "e1ee353598ee142a685ff9c49d9108ac4ddf340550ea0ec49be66e8ab9dfd92f",
+    "frontend/src/song-space/SongSpace.tsx": "36b7333f10c72f31d3337be2d3fe933a1ace6e185f876984dc4d1f625731f1fe",
+    "frontend/src/song-space/SpaceCanvas.tsx": "9ce302fef4fbe192d8706c0ea55d181bdcf48bb01555480c7fc8833af85cdf38",
+    "frontend/src/song-space/data.ts": "eaa7ec8e97c14c093b1db5dd34620b5ebe805a477a66d299bc1e7993ab9feca6",
+    "frontend/src/song-space/layout.ts": "001c253b4d1ac860b4368d3280132f6e5f5f8f3dd7fe9e045becfbbb6ae31234",
+    "frontend/src/song-space/layout.worker.ts": "ce8de6558c2a50b5c4d11d051d8e46e4471897e4343ce3dbd99fb08f79fe781d",
+    "frontend/src/song-space/song-space.css": "04e9604bf1d3ec695a950cd60fea414ac86be6f31b2df66000bbc7be0cf21f6c",
+    "frontend/src/song-space/types.ts": "4335964a151d4d3ccd17391ea7745f34632dabb51f1b27a2afa7ac50273233be",
+    "frontend/src/song-space/useLayout.ts": "a7bf389e94ae29c4f7ba3f1043789cfb46d15fb40be9026fd988b936a8a91fca",
+    "frontend/vite.config.ts": "99d0329f38684e067a0ef3231996e6a3475e8b232289b4c67a5d72289f2c5d0f",
+    "ml/audio_similarity/src/audio_similarity/song_space_export.py": "eb26763d8aba0fed84726f3dab040c46ada8aa27737943a5ae96a59fd8989c60"
+  },
+  "limitations": [
+    "Headless Chromium used software WebGL; initial full-library load was 8.94 seconds on this machine. Layout runs in a worker.",
+    "No universal similarity or playlist-fit claim. Graph layout distances and communities are exploratory.",
+    "Full-song C covers only the frozen 100 tracks. No additional audio inference was run.",
+    "Real-library screenshots and JSON exports stay local and are not published."
+  ],
+  "review": {
+    "correctness": "Scores and directional ranks are preserved; input validation, worker failures, same-ID imports, and mutually exclusive filters checked.",
+    "readability": "Feature modules separate input parsing, layout worker, WebGL view, inspector, and local media bridge. Formatting follows frontend conventions.",
+    "architecture": "Provider interface and versioned JSON contract admit alternative similarity functions; existing organizer/auth remain separate.",
+    "security": "Opt-in loopback bridge, strict media paths and origins, GET/HEAD only; no credentials or private library exports in bundle/Git.",
+    "performance": "Worker-based deterministic layout, WebGL rendering, bounded initial lists with pagination, no idle animation or new inference."
+  }
+}
