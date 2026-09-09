@@ -45,3 +45,8 @@ SONG_SPACE_DATA_DIR="$PWD/../ml/audio_similarity/.research_audio/song_space/v2" 
 Earlier map findings involving this incorrectly sourced node describe v1 and
 must not be interpreted as evidence of a CLAP musical-identity failure.
 Other source-quality findings remain separate unresolved issues.
+
+Full non-heavy regression verification: **1,308 passed, 12 deselected,
+11 warnings** in 126.59 seconds. The suite ran with localhost access for its
+HTTP fixtures; the initial sandboxed attempt was interrupted by a localhost
+network restriction and is not counted as a passing run.
