@@ -1,0 +1,64 @@
+........................................................................ [  5%]
+........................................................................ [ 10%]
+........................................................................ [ 15%]
+........................................................................ [ 20%]
+........................................................................ [ 25%]
+........................................................................ [ 30%]
+........................................................................ [ 35%]
+........................................................................ [ 40%]
+........................................................................ [ 45%]
+........................................................................ [ 50%]
+........................................................................ [ 55%]
+........................................................................ [ 61%]
+........................................................................ [ 66%]
+........................................................................ [ 71%]
+........................................................................ [ 76%]
+........................................................................ [ 81%]
+........................................................................ [ 86%]
+........................................................................ [ 91%]
+........................................................................ [ 96%]
+................................................                         [100%]
+=============================== warnings summary ===============================
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+tests/test_mir_metrics.py::test_deterministic_reextraction
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=533
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=799
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=400
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=941
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=471
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=750
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=375
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_feature_cache_roundtrip
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=698
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_feature_cache_roundtrip
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=349
+    warnings.warn(
+
+tests/test_stage2_residuals.py::test_extract_is_finite_complete_and_resumable_with_fake_merit
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/pitch.py:103: UserWarning: Trying to estimate tuning from empty frequency set.
+    return pitch_tuning(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+1416 passed, 12 deselected, 11 warnings in 199.75s (0:03:19)
