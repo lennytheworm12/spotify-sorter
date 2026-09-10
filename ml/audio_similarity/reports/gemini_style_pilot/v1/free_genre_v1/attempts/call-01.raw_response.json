@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"end_seconds\": 22.0,\n      \"observation\": \"Spoken intro over a downtempo, soul-sampled instrumental with brass chords, vocal chops, and vinyl crackle.\"\n        ,\n      \"start_seconds\": 0.0\n    },\n    {\n      \"end_seconds\": 66.0,\n      \"observation\": \"Narrative rap verse entering over a midtempo boom-bap rhythm with laid-back kicks, snares, and pitch-shifted vocal samples.\"\n    ,\n      \"start_seconds\": 22.5\n    },\n    {\n      \"end_seconds\": 126.5,\n      \"observation\": \"Melodic, soulful hook section with repeated vocal refrain layered over the steady beat.\"\n    ,\n      \"start_seconds\": 106.0\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip Hop\",\n  \"primary_style\": \"Conscious Hip Hop\",\n  \"secondary_families\": [\n    \"R&B\",\n    \"Soul\"\n  ],\n  \"secondary_styles\": [\n    \"Boom Bap\",\n    \"Neo-Soul\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"sample_based\",\n    \"layered\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"mixed_rap_and_singing\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPSAQyA4uDn5EccZrQvQfLYlId7eNtA+opMktWN/jG83QheNmw/IQD1DsDeTOaC2Uhed18sMkdhihyWIlKVkoA2t4TZiJCwRPWGVUwI5o1bj1aIdurDgiWbyvZgFm+nPdH"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 6457,
+    "candidatesTokenCount": 396,
+    "totalTokenCount": 6853,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 446
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 6011
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "9RWiap2SDdODz7IPhcTi0QE"
+}

@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00352650",
+  "attempt": 5,
+  "cache_key": "8486eb9a17666884940c80c48efcea088cdc12270975ebeb33d4379b8ef2c9c7",
+  "evidence_hashes": {
+    "execution/attempts/attempt-05.request.json": "3ce403882a1e3d8660830813aa369e6e20435755f7ada9ab799364f219496636",
+    "execution/attempts/attempt-05.reservation.json": "f625a2e66c70af10be181fd386eb191753841043ca6089895a574c372ba6f8d4",
+    "execution/attempts/attempt-05.settlement.json": "8179b7561554fecdda142e503b7a569f274f6b4aae731f73c5b67aaa34c021ec",
+    "execution/transport/call-009.response.bin": "08b2f10548dfaf188b67152c691e88eaf6ba97fb5cf81abbe00a25dcd17740e4",
+    "execution/transport/call-010.response.bin": "e674704eaa7622c2daffbd5eb6208246379897830c62d651dc396e2d0682011d",
+    "execution/transport/call-010.response.json": "8945f8d179acfa116277cfc52ef78cc8eee42a311a1e402737445b7fdc410f7c",
+    "execution/transport/upload-N007.json": "7591ecdd26c4af614c05ad5222f9be309f767886a0af0e2f46f8bb67f5406836"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N007",
+  "pilot_id": "A05",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 9.5,
+        "observation": "Slow boom bap drums enter alongside a melancholic plucked acoustic instrument riff."
+      },
+      {
+        "at_seconds": 38.0,
+        "observation": "Downtempo beat continues with repetitive plucked melodies and subtle atmospheric bass."
+      },
+      {
+        "at_seconds": 88.0,
+        "observation": "Female vocal passage enters softly over the repeating instrumental hip-hop beat."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "hip_hop",
+    "primary_style": "lo_fi_hip_hop",
+    "secondary_families": [
+      "electronic"
+    ],
+    "secondary_styles": [
+      "chillhop",
+      "downtempo"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "sample_based",
+      "hazy",
+      "clean"
+    ],
+    "vocal_role": "vocal_samples_only"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-010.response.bin",
+  "response_id": "KBiiaplH5tyMxw-pm7PBAg",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 9.5,\n      \"observation\": \"Slow boom bap drums enter alongside a melancholic plucked acoustic instrument riff.\"\n    },\n    {\n      \"at_seconds\": 38.0,\n      \"observation\": \"Downtempo beat continues with repetitive plucked melodies and subtle atmospheric bass.\"\n    },\n    {\n      \"at_seconds\": 88.0,\n      \"observation\": \"Female vocal passage enters softly over the repeating instrumental hip-hop beat.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"hip_hop\",\n  \"primary_style\": \"lo_fi_hip_hop\",\n  \"secondary_families\": [\n    \"electronic\"\n  ],\n  \"secondary_styles\": [\n    \"chillhop\",\n    \"downtempo\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"sample_based\",\n    \"hazy\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+  "usage": {
+    "candidatesTokenCount": 317,
+    "promptTokenCount": 3117,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 2668
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 3434
+  }
+}

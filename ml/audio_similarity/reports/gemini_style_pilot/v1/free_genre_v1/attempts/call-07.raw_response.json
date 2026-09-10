@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 9.5,\n      \"observation\": \"Slow boom bap drums enter alongside a melancholic plucked acoustic instrument riff.\"\n    },\n    {\n      \"at_seconds\": 38.0,\n      \"observation\": \"Downtempo beat continues with repetitive plucked melodies and subtle atmospheric bass.\"\n    },\n    {\n      \"at_seconds\": 88.0,\n      \"observation\": \"Female vocal passage enters softly over the repeating instrumental hip-hop beat.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"hip_hop\",\n  \"primary_style\": \"lo_fi_hip_hop\",\n  \"secondary_families\": [\n    \"electronic\"\n  ],\n  \"secondary_styles\": [\n    \"chillhop\",\n    \"downtempo\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"sample_based\",\n    \"hazy\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPb8+qH56yHpn1vb0jONBb5e8H3s4At5mEuZj+nlu1yP/N5JXlhV9OjTpuUuCBLgP71cyQG79QtEL/8ayQG3Jtmm1etRhduptKhtvzGxNQkGVTktVa9y8Gmnw1EAk72YMc"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 3117,
+    "candidatesTokenCount": 317,
+    "totalTokenCount": 3434,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 2668
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "KBiiaplH5tyMxw-pm7PBAg"
+}

@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00557625",
+  "attempt": 12,
+  "cache_key": "d6b9a6ae6adb1a7e4f0eb7ef68fec2fd637a1c1d4b94c61958c86095f3e65739",
+  "evidence_hashes": {
+    "execution/attempts/attempt-12.request.json": "e8e2c4be045e1ae2fd23f88eb7b04e353835615cbf23ad3ab15ebbb2baf6a92f",
+    "execution/attempts/attempt-12.reservation.json": "dd09f4faccbb701bfb354791f1beb3ad45419de43c7fa01f7b1dabb03d5499f2",
+    "execution/attempts/attempt-12.settlement.json": "0d7d9da43bde6979bade24aa92f40db58bf6c7d684522e47843543e2fd321e10",
+    "execution/transport/call-023.response.bin": "ed6fe4910ca33961beceb31a2e796d27c118aa668bfd095457014e5048820ac4",
+    "execution/transport/call-024.response.bin": "f0584220413366a6b644ed9534163de92a01fa5ef1e90634d9f58836299cbe0a",
+    "execution/transport/call-024.response.json": "307237027118c433fbefca6843978c9392dab2f78108b65719e2c2665f532e1e",
+    "execution/transport/upload-N009.json": "af0a2167c8bb4b5e52286c57b46bb66ec499c21a224deac23a37efd1a4a0eb83"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N009",
+  "pilot_id": "C02",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.2,
+        "observation": "A downtempo electronic beat enters under looping vocal chops, introducing a warm synthesizer bassline."
+      },
+      {
+        "at_seconds": 28.5,
+        "observation": "Intimate female lead vocals enter with soft, melodic indie pop phrasing over electronic percussion."
+      },
+      {
+        "at_seconds": 124.0,
+        "observation": "Vocal harmonies build in an airy chorus hook layered with atmospheric synth pads and rhythmic bass."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Indie Pop",
+    "secondary_families": [
+      "Electronic",
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Electropop",
+      "Alternative R&B"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-024.response.bin",
+  "response_id": "UBiiatSfDLGHz7IP36jV0A8",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 15.2,\n      \"observation\": \"A downtempo electronic beat enters under looping vocal chops, introducing a warm synthesizer bassline.\"\n    },\n    {\n      \"at_seconds\": 28.5,\n      \"observation\": \"Intimate female lead vocals enter with soft, melodic indie pop phrasing over electronic percussion.\"\n    },\n    {\n      \"at_seconds\": 124.0,\n      \"observation\": \"Vocal harmonies build in an airy chorus hook layered with atmospheric synth pads and rhythmic bass.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Indie Pop\",\n  \"secondary_families\": [\"Electronic\", \"R&B\"],\n  \"secondary_styles\": [\"Electropop\", \"Alternative R&B\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 298,
+    "promptTokenCount": 5945,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5496
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 6243
+  }
+}

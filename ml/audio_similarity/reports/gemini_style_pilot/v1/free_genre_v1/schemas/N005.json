@@ -1,0 +1,152 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "active_section_density": {
+      "enum": [
+        "sparse",
+        "moderate",
+        "dense",
+        "varies",
+        "unclear"
+      ],
+      "type": "string"
+    },
+    "arrangement_focus": {
+      "enum": [
+        "lead_vocal",
+        "beat_or_instrumental",
+        "balanced",
+        "varies",
+        "unclear"
+      ],
+      "type": "string"
+    },
+    "audio_evidence": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "at_seconds": {
+            "maximum": 158.70839583333333,
+            "minimum": 0,
+            "type": "number"
+          },
+          "observation": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "at_seconds",
+          "observation"
+        ],
+        "type": "object"
+      },
+      "maxItems": 3,
+      "type": "array"
+    },
+    "certainty": {
+      "additionalProperties": false,
+      "properties": {
+        "family": {
+          "enum": [
+            "clear",
+            "tentative",
+            "unresolved"
+          ],
+          "type": "string"
+        },
+        "style": {
+          "enum": [
+            "clear",
+            "tentative",
+            "unresolved"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "family",
+        "style"
+      ],
+      "type": "object"
+    },
+    "primary_family": {
+      "type": "string"
+    },
+    "primary_style": {
+      "type": "string"
+    },
+    "secondary_families": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 2,
+      "type": "array"
+    },
+    "secondary_styles": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 2,
+      "type": "array"
+    },
+    "section_variation": {
+      "enum": [
+        "mostly_consistent",
+        "contrasting_sections",
+        "cannot_assess"
+      ],
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "classified",
+        "uncertain",
+        "not_music"
+      ],
+      "type": "string"
+    },
+    "texture_tags": {
+      "items": {
+        "enum": [
+          "sample_based",
+          "electronic",
+          "acoustic",
+          "hazy",
+          "distorted",
+          "clean",
+          "layered"
+        ],
+        "type": "string"
+      },
+      "maxItems": 3,
+      "type": "array"
+    },
+    "vocal_role": {
+      "enum": [
+        "rap_led",
+        "sung_led",
+        "mixed_rap_and_singing",
+        "instrumental",
+        "vocal_samples_only",
+        "spoken_only",
+        "unclear"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "status",
+    "primary_family",
+    "secondary_families",
+    "primary_style",
+    "secondary_styles",
+    "vocal_role",
+    "arrangement_focus",
+    "texture_tags",
+    "active_section_density",
+    "section_variation",
+    "certainty",
+    "audio_evidence"
+  ],
+  "type": "object"
+}

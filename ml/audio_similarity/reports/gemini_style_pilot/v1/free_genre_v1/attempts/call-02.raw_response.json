@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"end_seconds\": 30.0,\n      \"observation\": \"Spacious percussion intro featuring woodblock/clave ticking, deep shaker sweeps, and quiet synthetic atmosphere.\"\n            ,\n        \"start_seconds\": 31.0\n  },\n  {\n    \"end_seconds\": 60.0,\n    \"observation\": \"Sub-bass pulse enters alongside sparse filtered vocal chops, metallic accents, and a halftime downbeat groove.\",\n    \"start_seconds\": 31.0\n  },\n  {\n    \"end_seconds\": 120.0,\n    \"observation\": \"Minimalist deep dub-style drop with warm sub bass, rim clicks, and spatialized glitchy percussion hits.\",\n    \"start_seconds\": 88.0\n  }\n],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"electronic\",\n  \"primary_style\": \"dubstep\",\n  \"secondary_families\": [\"reggae_and_dancehall\", \"hip_hop_and_r_and_b\"],\n  \"secondary_styles\": [\"deep_dubstep\", \"halftime\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"sample_based\"],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+            "thoughtSignature": "EmcKZQERTTIP8l6MDRRUgF4ag5etx46tTFH/ZEehmzZx1tHkisiGBm3tXr0nfN60TYEddDxNLi7rdBBikxPYth53JF6JG7rHujSwCVTbE5oQl8C4KM7PFlsvs7RmggHjisjssvJhJgkP"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 4717,
+    "candidatesTokenCount": 370,
+    "totalTokenCount": 5087,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 446
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4271
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "-xWiaoOEG7uMjrEPv7v3WA"
+}

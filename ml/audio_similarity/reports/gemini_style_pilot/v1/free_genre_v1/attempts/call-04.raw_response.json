@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 16.5,\n      \"observation\": \"Orchestral strings enter with an ascending dramatic build, accompanied by digital tick beats.\"\n    },\n    {\n      \"at_seconds\": 32.2,\n      \"observation\": \"Main instrumental drop features aggressive distorted reese bass, rolling breakbeats, and synth arpeggios.\"\n    },\n    {\n      \"at_seconds\": 108.7,\n      \"observation\": \"Half-time breakdown section introduces sub-bass wobbles and processed melodic vocal chops.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Electronic\",\n  \"primary_style\": \"Drum and Bass\",\n  \"secondary_families\": [\"Bass Music\"],\n  \"secondary_styles\": [\"Neurofunk\", \"Dubstep\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"distorted\", \"layered\"],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+            "thoughtSignature": "EmcKZQERTTIP1QZIHzsNi1qi5BHqIH2S79P9i5lRI9gzhZWnFaQmVJ4PlOrjjwpyxaxx2R4+33SjUlyHi0DPteS4X3wwKj2xTMTDPH47L9L6ce0VoionNwTEq6YwxTDdRh1zWBkXY5Ch"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 4720,
+    "candidatesTokenCount": 301,
+    "totalTokenCount": 5021,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4271
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "4ReiauXSG72Hz7IPtZC2-Q8"
+}

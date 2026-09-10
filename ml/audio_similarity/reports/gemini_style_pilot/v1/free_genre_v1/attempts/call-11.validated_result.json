@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00458475",
+  "attempt": 9,
+  "cache_key": "7381a4d10f960f4070c5e40be3f079eca818215b96014bbcef12b3bcf7f60e9c",
+  "evidence_hashes": {
+    "execution/attempts/attempt-09.request.json": "0f646527c7b053ab60ccd4e5c6cb68cd4fba4f19d7d37afed133fe14b1c88552",
+    "execution/attempts/attempt-09.reservation.json": "94622501e5c1dbcb4c00df9032d5aa9dc300ae8e75ae669db7d97794472cb779",
+    "execution/attempts/attempt-09.settlement.json": "015b235d7243f4028886d85474c6eac70a876db0eb20dcd57bbe84d00c33cf14",
+    "execution/transport/call-017.response.bin": "f78f2e4085b24870a7e9643814cd7b6d3a6991343d07bfbaa852b83657d6aabc",
+    "execution/transport/call-018.response.bin": "602853993b9ac672e4fda602dcb143ab48c940e16305131d9d4a0a13aee6e476",
+    "execution/transport/call-018.response.json": "5b491baadffe91ee4a50bed3a23647fc0795b89d578b0e19d9060c698427d7da",
+    "execution/transport/upload-N013.json": "d22eaadf2542316335a140028f8a26d46145ff7ab18d34d1c7cc5e88180ee799"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N013",
+  "pilot_id": "A09",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 0.0,
+        "observation": "A sparse acoustic guitar plucking motif establishes the intro groove before drums enter."
+      },
+      {
+        "at_seconds": 15.0,
+        "observation": "Female lead vocal enters over upbeat pop-funk rhythm guitar, syncopated bass, and modern electronic drums."
+      },
+      {
+        "at_seconds": 50.0,
+        "observation": "Energetic dance-pop chorus featuring layered melodic vocals and driving dance rhythms."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Dance-Pop",
+    "secondary_families": [
+      "R&B",
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Contemporary R&B",
+      "Nu-Disco"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-018.response.bin",
+  "response_id": "OxiiaoqsNICc6dkP97Gm6A0",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 0.0,\n      \"observation\": \"A sparse acoustic guitar plucking motif establishes the intro groove before drums enter.\"\n    },\n    {\n      \"at_seconds\": 15.0,\n      \"observation\": \"Female lead vocal enters over upbeat pop-funk rhythm guitar, syncopated bass, and modern electronic drums.\"\n    },\n    {\n      \"at_seconds\": 50.0,\n      \"observation\": \"Energetic dance-pop chorus featuring layered melodic vocals and driving dance rhythms.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Dance-Pop\",\n  \"secondary_families\": [\n    \"R&B\",\n    \"Electronic\"\n  ],\n  \"secondary_styles\": [\n    \"Contemporary R&B\",\n    \"Nu-Disco\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"clean\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 322,
+    "promptTokenCount": 4503,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4054
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 4825
+  }
+}

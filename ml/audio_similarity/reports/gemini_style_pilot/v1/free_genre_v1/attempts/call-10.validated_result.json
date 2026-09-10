@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00528150",
+  "attempt": 8,
+  "cache_key": "5592a40e10edda9ba762172a39ec1685ca90c612a311c2dd092f94726bfcaaaa",
+  "evidence_hashes": {
+    "execution/attempts/attempt-08.request.json": "88a660c9a6c68e0764c6351c04f25d769738dd8370df8e6e3a7ab920b8586c69",
+    "execution/attempts/attempt-08.reservation.json": "9998127ccc479dfd07e770e5c8e15728f4018c1aa9ad64a996fe412f3a29dc60",
+    "execution/attempts/attempt-08.settlement.json": "df2035cfc4c9cb4d67801b3ac6fb02bc81ee6caf2493f21df335fd4a08047a52",
+    "execution/transport/call-015.response.bin": "a63162faa651f9456cab4f301c64f4b9e02f92725501a81a1672ea4107259a51",
+    "execution/transport/call-016.response.bin": "6564d1b369e040f0b3b2a24215a2dac829bc21f23948cbe25a85f3300fc6780e",
+    "execution/transport/call-016.response.json": "07835be888b3423fc4aaa2579799e4dfd0287734e4dd2c70cad3a6cca39b0958",
+    "execution/transport/upload-N014.json": "1c6bf7f1461cd50b86aced8494da7d46229a50853081df6d40c3af60ee8b3b1e"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N014",
+  "pilot_id": "A08",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 6.7,
+        "observation": "Subdued electronic beat enters behind the emotive solo male vocal and sparse ambient keys."
+      },
+      {
+        "at_seconds": 40.5,
+        "observation": "Chorus hook features multi-tracked background vocal harmonies emphasizing emotional delivery."
+      },
+      {
+        "at_seconds": 138.0,
+        "observation": "Mellow electronic instrumentation with subtle synths supporting passionate vocal performance."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Pop",
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Alt-Pop",
+      "Ambient Pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-016.response.bin",
+  "response_id": "NhiiauO-LKupqtsPuvLtmAc",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 6.7, \"observation\": \"Subdued electronic beat enters behind the emotive solo male vocal and sparse ambient keys.\"},\n    {\"at_seconds\": 40.5, \"observation\": \"Chorus hook features multi-tracked background vocal harmonies emphasizing emotional delivery.\"},\n    {\"at_seconds\": 138.0, \"observation\": \"Mellow electronic instrumentation with subtle synths supporting passionate vocal performance.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\"Pop\", \"Electronic\"],\n  \"secondary_styles\": [\"Alt-Pop\", \"Ambient Pop\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 262,
+    "promptTokenCount": 5732,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5283
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5994
+  }
+}

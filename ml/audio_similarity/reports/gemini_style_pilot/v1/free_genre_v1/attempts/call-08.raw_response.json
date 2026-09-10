@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"balanced\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 18.2, \"observation\": \"Trap beat enters with prominent sub-bass 808s, rapid hi-hat rolls, and rhythmic rap vocals.\"},\n    {\"at_seconds\": 64.5, \"observation\": \"Melodic, autotuned singing hook over the trap drum groove and ambient synth pads.\"},\n    {\"at_seconds\": 149.0, \"observation\": \"Atmospheric breakdown with ethereal female vocals over a stripped synth bed.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip Hop\",\n  \"primary_style\": \"Trap\",\n  \"secondary_families\": [\"Pop\", \"R&B\"],\n  \"secondary_styles\": [\"Pop Rap\", \"Melodic Rap\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"layered\", \"clean\"],\n  \"vocal_role\": \"mixed_rap_and_singing\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPIgSczwO8JshUO5GnZQvHimlll09E278De4u0xct/pGLkwHxfvP8VaYLyhTHWXH1alOKRpaQJMAJ67WyCRqiVG4mbxgThlmli0SwlrSaqur6p8W0XGgepHcmEDPmqNeC0"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 4417,
+    "candidatesTokenCount": 278,
+    "totalTokenCount": 4695,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3968
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "LBiiarnDF5DQz7IP_u-h2A4"
+}

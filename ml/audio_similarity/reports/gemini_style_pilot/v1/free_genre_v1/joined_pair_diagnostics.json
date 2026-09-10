@@ -1,0 +1,2288 @@
+[
+  {
+    "free_profile_a": {
+      "active_section_density": "moderate",
+      "arrangement_focus": "lead_vocal",
+      "audio_evidence": [
+        {
+          "at_seconds": 15.0,
+          "observation": "Introduction of mid-tempo Baltimore club-influenced rhythm pattern with vocal lead in Korean."
+        },
+        {
+          "at_seconds": 45.8,
+          "observation": "Chorus hook arrives with buoyant synth chords, 4-on-the-floor kick, and call-and-response vocal delivery."
+        },
+        {
+          "at_seconds": 133.0,
+          "observation": "Rap-sung verse section over crisp percussion and subdued bass."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "Pop",
+      "primary_style": "K-Pop",
+      "secondary_families": [
+        "R&B and Soul",
+        "Dance"
+      ],
+      "secondary_styles": [
+        "Contemporary R&B",
+        "Synth-Pop"
+      ],
+      "section_variation": "mostly_consistent",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "clean",
+        "layered"
+      ],
+      "vocal_role": "mixed_rap_and_singing"
+    },
+    "free_profile_b": {
+      "active_section_density": "moderate",
+      "arrangement_focus": "lead_vocal",
+      "audio_evidence": [
+        {
+          "at_seconds": 8.0,
+          "observation": "Sparse intro featuring a clean melodic electric guitar riff underneath a soft, breathy male lead vocal."
+        },
+        {
+          "at_seconds": 22.0,
+          "observation": "Transition into full arrangement with a four-on-the-floor kick, synth bassline, and funk-influenced guitar chops."
+        },
+        {
+          "at_seconds": 37.0,
+          "observation": "Catchy pop hook kicks in with energetic drum programming, vocal harmonies, and upbeat disco-pop groove."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "Pop",
+      "primary_style": "Dance-Pop",
+      "secondary_families": [
+        "R&B",
+        "Electronic"
+      ],
+      "secondary_styles": [
+        "Nu-Disco",
+        "Synth-Pop"
+      ],
+      "section_variation": "contrasting_sections",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "clean",
+        "layered"
+      ],
+      "vocal_role": "sung_led"
+    },
+    "frozen_pair_evidence": {
+      "arrangement_a": "balanced",
+      "arrangement_b": "lead_vocal",
+      "c_status": "FROZEN_C_AVAILABLE",
+      "certainty_a": {
+        "family": "clear",
+        "style": "tentative"
+      },
+      "certainty_b": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "human_playlist_rating": 2,
+      "original_c_similarity": 0.7834454774856567,
+      "pair_id": "07fd4e70a7bb3588743ba5bb",
+      "pilot_a": "A10",
+      "pilot_b": "C06",
+      "primary_family_a": "pop",
+      "primary_family_b": "pop",
+      "primary_style_a": "pop_rnb",
+      "primary_style_b": "dance_pop",
+      "qualitative_implication": "conflict",
+      "rating_status": "PLAYLIST_COMPATIBILITY_V1",
+      "sections_a": "contrasting_sections",
+      "sections_b": "contrasting_sections",
+      "shared_families": [
+        "electronic",
+        "pop"
+      ],
+      "shared_styles": [
+        "dance_pop"
+      ],
+      "song_a": "OMG — NewJeans",
+      "song_b": "Die Right Here — david hugo",
+      "spotify_a": "65FftemJ1DbbZ45DUfHJXE",
+      "spotify_b": "7fXYFuCTmNrYRGwEUUf5iz",
+      "texture_a": [
+        "clean",
+        "electronic",
+        "layered"
+      ],
+      "texture_b": [
+        "electronic",
+        "clean",
+        "layered"
+      ],
+      "vocal_role_a": "sung_led",
+      "vocal_role_b": "sung_led"
+    },
+    "new_playlist_rating": null,
+    "numeric_reranking_score": null,
+    "owner_first_pass_a": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "kpop hip hop contemporary rnb",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_first_pass_b": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "alt upbeat indie",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_review_of_new_profiles": "PENDING"
+  },
+  {
+    "free_profile_a": {
+      "active_section_density": "sparse",
+      "arrangement_focus": "lead_vocal",
+      "audio_evidence": [
+        {
+          "at_seconds": 18.9,
+          "observation": "Trap drums drop with crisp hi-hat rolls, snapping snare, and a deep 808 sub bass alongside rap vocals."
+        },
+        {
+          "at_seconds": 51.2,
+          "observation": "Melodic rap delivery over a minimal synth bell/piano melody and subtle 808 percussion."
+        },
+        {
+          "at_seconds": 110.5,
+          "observation": "Different verse section enters with rhythmic, percussive ad-libs, low bassline, and syncopated snare hits."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "hip hop",
+      "primary_style": "trap",
+      "secondary_families": [],
+      "secondary_styles": [
+        "plugg"
+      ],
+      "section_variation": "mostly_consistent",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "clean"
+      ],
+      "vocal_role": "rap_led"
+    },
+    "free_profile_b": {
+      "active_section_density": "moderate",
+      "arrangement_focus": "lead_vocal",
+      "audio_evidence": [
+        {
+          "at_seconds": 12.5,
+          "observation": "Spoken-word-style rap vocal enters over a minimal trap-influenced beat featuring 808 sub-bass and hi-hats."
+        },
+        {
+          "at_seconds": 25.0,
+          "observation": "High-pitched auto-tuned melodic chorus vocal hook enters with layered backing."
+        },
+        {
+          "at_seconds": 96.0,
+          "observation": "Bridge section featuring pitched vocal samples, ambient synths, and emotional sung-melodic rap delivery."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "Hip Hop",
+      "primary_style": "Trap",
+      "secondary_families": [
+        "Pop",
+        "R&B"
+      ],
+      "secondary_styles": [
+        "Emo Rap",
+        "Melodic Rap"
+      ],
+      "section_variation": "mostly_consistent",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "layered",
+        "sample_based"
+      ],
+      "vocal_role": "mixed_rap_and_singing"
+    },
+    "frozen_pair_evidence": {
+      "arrangement_a": "lead_vocal",
+      "arrangement_b": "balanced",
+      "c_status": "FROZEN_C_AVAILABLE",
+      "certainty_a": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "certainty_b": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "human_playlist_rating": 4,
+      "original_c_similarity": 0.5852230787277222,
+      "pair_id": "1df4383d3df854e5db21a6e6",
+      "pilot_a": "A02",
+      "pilot_b": "C04",
+      "primary_family_a": "hip_hop_rap",
+      "primary_family_b": "electronic",
+      "primary_style_a": "trap",
+      "primary_style_b": "digicore",
+      "qualitative_implication": "conflict",
+      "rating_status": "PLAYLIST_COMPATIBILITY_V1",
+      "sections_a": "contrasting_sections",
+      "sections_b": "contrasting_sections",
+      "shared_families": [
+        "hip_hop_rap"
+      ],
+      "shared_styles": [],
+      "song_a": "Shoota (feat. Lil Uzi Vert) — Playboi Carti, Lil Uzi Vert",
+      "song_b": "boys dont cry — sysmint",
+      "spotify_a": "2BJSMvOGABRxokHKB0OI8i",
+      "spotify_b": "1ON9XudZFxwu43tQXBszIX",
+      "texture_a": [
+        "electronic",
+        "clean"
+      ],
+      "texture_b": [
+        "electronic",
+        "distorted",
+        "layered"
+      ],
+      "vocal_role_a": "rap_led",
+      "vocal_role_b": "sung_led"
+    },
+    "new_playlist_rating": null,
+    "numeric_reranking_score": null,
+    "owner_first_pass_a": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "trap rap heavy fast/aggressive",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_first_pass_b": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "electronic hyperpop",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_review_of_new_profiles": "PENDING"
+  },
+  {
+    "free_profile_a": {
+      "active_section_density": "sparse",
+      "arrangement_focus": "lead_vocal",
+      "audio_evidence": [
+        {
+          "at_seconds": 18.9,
+          "observation": "Trap drums drop with crisp hi-hat rolls, snapping snare, and a deep 808 sub bass alongside rap vocals."
+        },
+        {
+          "at_seconds": 51.2,
+          "observation": "Melodic rap delivery over a minimal synth bell/piano melody and subtle 808 percussion."
+        },
+        {
+          "at_seconds": 110.5,
+          "observation": "Different verse section enters with rhythmic, percussive ad-libs, low bassline, and syncopated snare hits."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "hip hop",
+      "primary_style": "trap",
+      "secondary_families": [],
+      "secondary_styles": [
+        "plugg"
+      ],
+      "section_variation": "mostly_consistent",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "clean"
+      ],
+      "vocal_role": "rap_led"
+    },
+    "free_profile_b": {
+      "active_section_density": "moderate",
+      "arrangement_focus": "lead_vocal",
+      "audio_evidence": [
+        {
+          "at_seconds": 9.2,
+          "observation": "Slow down-tempo verse begins with low male vocals accompanied by minimal rhythmic bass and snare accents."
+        },
+        {
+          "at_seconds": 44.5,
+          "observation": "The chorus drops into a heavier trap-influenced drum groove with high pitched, pitched-up singing vocals."
+        },
+        {
+          "at_seconds": 154.5,
+          "observation": "Return of the powerful, booming bass chorus featuring high-register processed melodic vocals and synth pads."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "R&B",
+      "primary_style": "Contemporary R&B",
+      "secondary_families": [
+        "Hip-Hop",
+        "Pop"
+      ],
+      "secondary_styles": [
+        "Trap",
+        "Alternative R&B"
+      ],
+      "section_variation": "contrasting_sections",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "layered"
+      ],
+      "vocal_role": "sung_led"
+    },
+    "frozen_pair_evidence": {
+      "arrangement_a": "lead_vocal",
+      "arrangement_b": "lead_vocal",
+      "c_status": "FROZEN_C_AVAILABLE",
+      "certainty_a": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "certainty_b": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "human_playlist_rating": 4,
+      "original_c_similarity": 0.5984339118003845,
+      "pair_id": "31800d4ae76e22af71e3ee25",
+      "pilot_a": "A02",
+      "pilot_b": "A07",
+      "primary_family_a": "hip_hop_rap",
+      "primary_family_b": "electronic",
+      "primary_style_a": "trap",
+      "primary_style_b": "hyperpop",
+      "qualitative_implication": "possible contraction",
+      "rating_status": "PLAYLIST_COMPATIBILITY_V1",
+      "sections_a": "contrasting_sections",
+      "sections_b": "contrasting_sections",
+      "shared_families": [
+        "hip_hop_rap"
+      ],
+      "shared_styles": [
+        "trap"
+      ],
+      "song_a": "Shoota (feat. Lil Uzi Vert) — Playboi Carti, Lil Uzi Vert",
+      "song_b": "The Hills — The Weeknd",
+      "spotify_a": "2BJSMvOGABRxokHKB0OI8i",
+      "spotify_b": "7fBv7CLKzipRk6EC6TWHOB",
+      "texture_a": [
+        "electronic",
+        "clean"
+      ],
+      "texture_b": [
+        "electronic",
+        "distorted",
+        "layered"
+      ],
+      "vocal_role_a": "rap_led",
+      "vocal_role_b": "sung_led"
+    },
+    "new_playlist_rating": null,
+    "numeric_reranking_score": null,
+    "owner_first_pass_a": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "trap rap heavy fast/aggressive",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_first_pass_b": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "dark heavy rnb",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_review_of_new_profiles": "PENDING"
+  },
+  {
+    "free_profile_a": {
+      "active_section_density": "sparse",
+      "arrangement_focus": "beat_or_instrumental",
+      "audio_evidence": [
+        {
+          "at_seconds": 9.5,
+          "observation": "Slow boom bap drums enter alongside a melancholic plucked acoustic instrument riff."
+        },
+        {
+          "at_seconds": 38.0,
+          "observation": "Downtempo beat continues with repetitive plucked melodies and subtle atmospheric bass."
+        },
+        {
+          "at_seconds": 88.0,
+          "observation": "Female vocal passage enters softly over the repeating instrumental hip-hop beat."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "hip_hop",
+      "primary_style": "lo_fi_hip_hop",
+      "secondary_families": [
+        "electronic"
+      ],
+      "secondary_styles": [
+        "chillhop",
+        "downtempo"
+      ],
+      "section_variation": "contrasting_sections",
+      "status": "classified",
+      "texture_tags": [
+        "sample_based",
+        "hazy",
+        "clean"
+      ],
+      "vocal_role": "vocal_samples_only"
+    },
+    "free_profile_b": {
+      "active_section_density": "moderate",
+      "arrangement_focus": "balanced",
+      "audio_evidence": [
+        {
+          "at_seconds": 18.2,
+          "observation": "Trap beat enters with prominent sub-bass 808s, rapid hi-hat rolls, and rhythmic rap vocals."
+        },
+        {
+          "at_seconds": 64.5,
+          "observation": "Melodic, autotuned singing hook over the trap drum groove and ambient synth pads."
+        },
+        {
+          "at_seconds": 149.0,
+          "observation": "Atmospheric breakdown with ethereal female vocals over a stripped synth bed."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "Hip Hop",
+      "primary_style": "Trap",
+      "secondary_families": [
+        "Pop",
+        "R&B"
+      ],
+      "secondary_styles": [
+        "Pop Rap",
+        "Melodic Rap"
+      ],
+      "section_variation": "contrasting_sections",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "layered",
+        "clean"
+      ],
+      "vocal_role": "mixed_rap_and_singing"
+    },
+    "frozen_pair_evidence": {
+      "arrangement_a": "beat_or_instrumental",
+      "arrangement_b": "balanced",
+      "c_status": "FROZEN_C_AVAILABLE",
+      "certainty_a": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "certainty_b": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "human_playlist_rating": 3,
+      "original_c_similarity": 0.7361983060836792,
+      "pair_id": "33848297c1d058bea85ba4f8",
+      "pilot_a": "A05",
+      "pilot_b": "A06",
+      "primary_family_a": "hip_hop_rap",
+      "primary_family_b": "hip_hop_rap",
+      "primary_style_a": "lofi_hip_hop",
+      "primary_style_b": "melodic_trap",
+      "qualitative_implication": "no information",
+      "rating_status": "PLAYLIST_COMPATIBILITY_V1",
+      "sections_a": "mostly_consistent",
+      "sections_b": "contrasting_sections",
+      "shared_families": [
+        "electronic",
+        "hip_hop_rap"
+      ],
+      "shared_styles": [],
+      "song_a": "Tea Time — Disvstxr",
+      "song_b": "GET IT — keshi",
+      "spotify_a": "5sEeuhYWHNczuPKek1zJeG",
+      "spotify_b": "4LaZ8RpIP6DIgN73bXQVlO",
+      "texture_a": [
+        "sample_based",
+        "hazy"
+      ],
+      "texture_b": [
+        "electronic",
+        "clean",
+        "layered"
+      ],
+      "vocal_role_a": "sung_led",
+      "vocal_role_b": "mixed_rap_and_singing"
+    },
+    "new_playlist_rating": null,
+    "numeric_reranking_score": null,
+    "owner_first_pass_a": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "lofi hip hop ",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_first_pass_b": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "dark alt rnb ",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_review_of_new_profiles": "PENDING"
+  },
+  {
+    "free_profile_a": {
+      "active_section_density": "moderate",
+      "arrangement_focus": "lead_vocal",
+      "audio_evidence": [
+        {
+          "at_seconds": 0.0,
+          "observation": "A sparse acoustic guitar plucking motif establishes the intro groove before drums enter."
+        },
+        {
+          "at_seconds": 15.0,
+          "observation": "Female lead vocal enters over upbeat pop-funk rhythm guitar, syncopated bass, and modern electronic drums."
+        },
+        {
+          "at_seconds": 50.0,
+          "observation": "Energetic dance-pop chorus featuring layered melodic vocals and driving dance rhythms."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "Pop",
+      "primary_style": "Dance-Pop",
+      "secondary_families": [
+        "R&B",
+        "Electronic"
+      ],
+      "secondary_styles": [
+        "Contemporary R&B",
+        "Nu-Disco"
+      ],
+      "section_variation": "contrasting_sections",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "clean",
+        "layered"
+      ],
+      "vocal_role": "sung_led"
+    },
+    "free_profile_b": {
+      "active_section_density": "moderate",
+      "arrangement_focus": "lead_vocal",
+      "audio_evidence": [
+        {
+          "at_seconds": 3.7,
+          "observation": "High-pitched vocal chop loop initiates the track over silence before main instrumentation enters."
+        },
+        {
+          "at_seconds": 23.3,
+          "observation": "Female lead vocals begin in a smooth, mid-tempo R&B cadence over pitched vocal chops and bass."
+        },
+        {
+          "at_seconds": 58.7,
+          "observation": "Trap-style programmed drums kick in with heavy sub-bass and hi-hats, building into a rhythmic verse."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "R&B and Soul",
+      "primary_style": "Contemporary R&B",
+      "secondary_families": [
+        "Hip-Hop",
+        "Pop"
+      ],
+      "secondary_styles": [
+        "Trap",
+        "Alternative R&B"
+      ],
+      "section_variation": "contrasting_sections",
+      "status": "classified",
+      "texture_tags": [
+        "sample_based",
+        "electronic",
+        "layered"
+      ],
+      "vocal_role": "sung_led"
+    },
+    "frozen_pair_evidence": {
+      "arrangement_a": "lead_vocal",
+      "arrangement_b": "lead_vocal",
+      "c_status": "FROZEN_C_AVAILABLE",
+      "certainty_a": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "certainty_b": {
+        "family": "clear",
+        "style": "tentative"
+      },
+      "human_playlist_rating": 2,
+      "original_c_similarity": 0.7026604413986206,
+      "pair_id": "45d0d4beb993663b37273778",
+      "pilot_a": "A09",
+      "pilot_b": "C05",
+      "primary_family_a": "pop",
+      "primary_family_b": "rnb_soul",
+      "primary_style_a": "dance_pop",
+      "primary_style_b": "contemporary_rnb",
+      "qualitative_implication": "possible separation",
+      "rating_status": "PLAYLIST_COMPATIBILITY_V1",
+      "sections_a": "contrasting_sections",
+      "sections_b": "mostly_consistent",
+      "shared_families": [
+        "electronic",
+        "pop"
+      ],
+      "shared_styles": [],
+      "song_a": "Perfect Night — LE SSERAFIM",
+      "song_b": "The Peace — underscores",
+      "spotify_a": "74X2u8JMVooG2QbjRxXwR8",
+      "spotify_b": "6wm3t4VpTxSFfOUgTMlHZM",
+      "texture_a": [
+        "clean",
+        "layered",
+        "electronic"
+      ],
+      "texture_b": [
+        "sample_based",
+        "electronic",
+        "clean"
+      ],
+      "vocal_role_a": "sung_led",
+      "vocal_role_b": "sung_led"
+    },
+    "new_playlist_rating": null,
+    "numeric_reranking_score": null,
+    "owner_first_pass_a": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "kpop contemporary rnb",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_first_pass_b": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "alt pop ballad hyperpop",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_review_of_new_profiles": "PENDING"
+  },
+  {
+    "free_profile_a": {
+      "active_section_density": "sparse",
+      "arrangement_focus": "beat_or_instrumental",
+      "audio_evidence": [
+        {
+          "at_seconds": 1.0,
+          "observation": "Spoken/chanted vocal sample repeated over a bare, syncopated kick-and-percussion groove."
+        },
+        {
+          "at_seconds": 26.5,
+          "observation": "Sub-bass pulse enters underneath continuous vocal fragments and ambient spatial textures."
+        },
+        {
+          "at_seconds": 254.0,
+          "observation": "Minimalist hand percussion pattern slowly builds with subtle shaker accents and reverberant dub delay."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "electronic",
+      "primary_style": "minimal techno",
+      "secondary_families": [
+        "ambient"
+      ],
+      "secondary_styles": [
+        "dub techno",
+        "microhouse"
+      ],
+      "section_variation": "mostly_consistent",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "sample_based",
+        "clean"
+      ],
+      "vocal_role": "vocal_samples_only"
+    },
+    "free_profile_b": {
+      "active_section_density": "moderate",
+      "arrangement_focus": "lead_vocal",
+      "audio_evidence": [
+        {
+          "at_seconds": 15.2,
+          "observation": "A downtempo electronic beat enters under looping vocal chops, introducing a warm synthesizer bassline."
+        },
+        {
+          "at_seconds": 28.5,
+          "observation": "Intimate female lead vocals enter with soft, melodic indie pop phrasing over electronic percussion."
+        },
+        {
+          "at_seconds": 124.0,
+          "observation": "Vocal harmonies build in an airy chorus hook layered with atmospheric synth pads and rhythmic bass."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "Pop",
+      "primary_style": "Indie Pop",
+      "secondary_families": [
+        "Electronic",
+        "R&B"
+      ],
+      "secondary_styles": [
+        "Electropop",
+        "Alternative R&B"
+      ],
+      "section_variation": "mostly_consistent",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "clean",
+        "layered"
+      ],
+      "vocal_role": "sung_led"
+    },
+    "frozen_pair_evidence": {
+      "arrangement_a": "balanced",
+      "arrangement_b": "lead_vocal",
+      "c_status": "FROZEN_C_AVAILABLE",
+      "certainty_a": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "certainty_b": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "human_playlist_rating": 4,
+      "original_c_similarity": 0.7446252703666687,
+      "pair_id": "47b3a709f87de07ea98337f2",
+      "pilot_a": "C01",
+      "pilot_b": "C02",
+      "primary_family_a": "pop",
+      "primary_family_b": "rnb_soul",
+      "primary_style_a": "hyperpop",
+      "primary_style_b": "pop_rnb",
+      "qualitative_implication": "conflict",
+      "rating_status": "PLAYLIST_COMPATIBILITY_V1",
+      "sections_a": "contrasting_sections",
+      "sections_b": "contrasting_sections",
+      "shared_families": [
+        "hip_hop_rap",
+        "pop"
+      ],
+      "shared_styles": [],
+      "song_a": "Saturation in Delay, Love in Anger — City Girl, tiffi",
+      "song_b": "Sit Around — City Girl, tiffi",
+      "spotify_a": "00njeQb198Lm7Jge2Rsrlg",
+      "spotify_b": "6pWqlKm9ugucgKNldCLigX",
+      "texture_a": [
+        "electronic",
+        "distorted",
+        "layered"
+      ],
+      "texture_b": [
+        "sample_based",
+        "clean",
+        "layered"
+      ],
+      "vocal_role_a": "sung_led",
+      "vocal_role_b": "sung_led"
+    },
+    "new_playlist_rating": null,
+    "numeric_reranking_score": null,
+    "owner_first_pass_a": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "lofi",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_first_pass_b": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "lofi soft vibes",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_review_of_new_profiles": "PENDING"
+  },
+  {
+    "free_profile_a": {
+      "active_section_density": "moderate",
+      "arrangement_focus": "beat_or_instrumental",
+      "audio_evidence": [
+        {
+          "at_seconds": 16.5,
+          "observation": "Orchestral strings enter with an ascending dramatic build, accompanied by digital tick beats."
+        },
+        {
+          "at_seconds": 32.2,
+          "observation": "Main instrumental drop features aggressive distorted reese bass, rolling breakbeats, and synth arpeggios."
+        },
+        {
+          "at_seconds": 108.7,
+          "observation": "Half-time breakdown section introduces sub-bass wobbles and processed melodic vocal chops."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "Electronic",
+      "primary_style": "Drum and Bass",
+      "secondary_families": [
+        "Bass Music"
+      ],
+      "secondary_styles": [
+        "Neurofunk",
+        "Dubstep"
+      ],
+      "section_variation": "contrasting_sections",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "distorted",
+        "layered"
+      ],
+      "vocal_role": "vocal_samples_only"
+    },
+    "free_profile_b": {
+      "active_section_density": "sparse",
+      "arrangement_focus": "beat_or_instrumental",
+      "audio_evidence": [
+        {
+          "at_seconds": 9.5,
+          "observation": "Slow boom bap drums enter alongside a melancholic plucked acoustic instrument riff."
+        },
+        {
+          "at_seconds": 38.0,
+          "observation": "Downtempo beat continues with repetitive plucked melodies and subtle atmospheric bass."
+        },
+        {
+          "at_seconds": 88.0,
+          "observation": "Female vocal passage enters softly over the repeating instrumental hip-hop beat."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "hip_hop",
+      "primary_style": "lo_fi_hip_hop",
+      "secondary_families": [
+        "electronic"
+      ],
+      "secondary_styles": [
+        "chillhop",
+        "downtempo"
+      ],
+      "section_variation": "contrasting_sections",
+      "status": "classified",
+      "texture_tags": [
+        "sample_based",
+        "hazy",
+        "clean"
+      ],
+      "vocal_role": "vocal_samples_only"
+    },
+    "frozen_pair_evidence": {
+      "arrangement_a": "beat_or_instrumental",
+      "arrangement_b": "beat_or_instrumental",
+      "c_status": "FROZEN_C_AVAILABLE",
+      "certainty_a": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "certainty_b": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "human_playlist_rating": 4,
+      "original_c_similarity": 0.6315187215805054,
+      "pair_id": "48a01903c65059f137cd7258",
+      "pilot_a": "A03",
+      "pilot_b": "A05",
+      "primary_family_a": "hip_hop_rap",
+      "primary_family_b": "hip_hop_rap",
+      "primary_style_a": "lofi_hip_hop",
+      "primary_style_b": "lofi_hip_hop",
+      "qualitative_implication": "possible contraction",
+      "rating_status": "PLAYLIST_COMPATIBILITY_V1",
+      "sections_a": "mostly_consistent",
+      "sections_b": "mostly_consistent",
+      "shared_families": [
+        "electronic",
+        "hip_hop_rap"
+      ],
+      "shared_styles": [
+        "chillhop",
+        "lofi_hip_hop"
+      ],
+      "song_a": "My Gamecube Broke. — .Uzu",
+      "song_b": "Tea Time — Disvstxr",
+      "spotify_a": "2Vu2hkPW7LxMHPqoMjSIEJ",
+      "spotify_b": "5sEeuhYWHNczuPKek1zJeG",
+      "texture_a": [
+        "hazy",
+        "sample_based",
+        "electronic"
+      ],
+      "texture_b": [
+        "sample_based",
+        "hazy"
+      ],
+      "vocal_role_a": "vocal_samples_only",
+      "vocal_role_b": "sung_led"
+    },
+    "new_playlist_rating": null,
+    "numeric_reranking_score": null,
+    "owner_first_pass_a": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "lofi electronic/gamey style",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_first_pass_b": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "lofi hip hop ",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_review_of_new_profiles": "PENDING"
+  },
+  {
+    "free_profile_a": {
+      "active_section_density": "sparse",
+      "arrangement_focus": "beat_or_instrumental",
+      "audio_evidence": [
+        {
+          "at_seconds": 9.5,
+          "observation": "Slow boom bap drums enter alongside a melancholic plucked acoustic instrument riff."
+        },
+        {
+          "at_seconds": 38.0,
+          "observation": "Downtempo beat continues with repetitive plucked melodies and subtle atmospheric bass."
+        },
+        {
+          "at_seconds": 88.0,
+          "observation": "Female vocal passage enters softly over the repeating instrumental hip-hop beat."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "hip_hop",
+      "primary_style": "lo_fi_hip_hop",
+      "secondary_families": [
+        "electronic"
+      ],
+      "secondary_styles": [
+        "chillhop",
+        "downtempo"
+      ],
+      "section_variation": "contrasting_sections",
+      "status": "classified",
+      "texture_tags": [
+        "sample_based",
+        "hazy",
+        "clean"
+      ],
+      "vocal_role": "vocal_samples_only"
+    },
+    "free_profile_b": {
+      "active_section_density": "sparse",
+      "arrangement_focus": "beat_or_instrumental",
+      "audio_evidence": [
+        {
+          "at_seconds": 1.0,
+          "observation": "Spoken/chanted vocal sample repeated over a bare, syncopated kick-and-percussion groove."
+        },
+        {
+          "at_seconds": 26.5,
+          "observation": "Sub-bass pulse enters underneath continuous vocal fragments and ambient spatial textures."
+        },
+        {
+          "at_seconds": 254.0,
+          "observation": "Minimalist hand percussion pattern slowly builds with subtle shaker accents and reverberant dub delay."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "electronic",
+      "primary_style": "minimal techno",
+      "secondary_families": [
+        "ambient"
+      ],
+      "secondary_styles": [
+        "dub techno",
+        "microhouse"
+      ],
+      "section_variation": "mostly_consistent",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "sample_based",
+        "clean"
+      ],
+      "vocal_role": "vocal_samples_only"
+    },
+    "frozen_pair_evidence": {
+      "arrangement_a": "beat_or_instrumental",
+      "arrangement_b": "balanced",
+      "c_status": "FROZEN_C_AVAILABLE",
+      "certainty_a": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "certainty_b": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "human_playlist_rating": 5,
+      "original_c_similarity": 0.7905222773551941,
+      "pair_id": "6e2e1c9abae1fc6f7ae86a11",
+      "pilot_a": "A05",
+      "pilot_b": "C01",
+      "primary_family_a": "hip_hop_rap",
+      "primary_family_b": "pop",
+      "primary_style_a": "lofi_hip_hop",
+      "primary_style_b": "hyperpop",
+      "qualitative_implication": "conflict",
+      "rating_status": "PLAYLIST_COMPATIBILITY_V1",
+      "sections_a": "mostly_consistent",
+      "sections_b": "contrasting_sections",
+      "shared_families": [
+        "electronic",
+        "hip_hop_rap"
+      ],
+      "shared_styles": [],
+      "song_a": "Tea Time — Disvstxr",
+      "song_b": "Saturation in Delay, Love in Anger — City Girl, tiffi",
+      "spotify_a": "5sEeuhYWHNczuPKek1zJeG",
+      "spotify_b": "00njeQb198Lm7Jge2Rsrlg",
+      "texture_a": [
+        "sample_based",
+        "hazy"
+      ],
+      "texture_b": [
+        "electronic",
+        "distorted",
+        "layered"
+      ],
+      "vocal_role_a": "sung_led",
+      "vocal_role_b": "sung_led"
+    },
+    "new_playlist_rating": null,
+    "numeric_reranking_score": null,
+    "owner_first_pass_a": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "lofi hip hop ",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_first_pass_b": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "lofi",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_review_of_new_profiles": "PENDING"
+  },
+  {
+    "free_profile_a": {
+      "active_section_density": "moderate",
+      "arrangement_focus": "lead_vocal",
+      "audio_evidence": [
+        {
+          "at_seconds": 23.5,
+          "observation": "A male vocalist begins rapping narrative verses over a slow, punchy boom-bap rhythm."
+        },
+        {
+          "at_seconds": 68.0,
+          "observation": "Soulful pitched-down vocal samples and sing-along hook enter on the refrain."
+        },
+        {
+          "at_seconds": 133.0,
+          "observation": "The second verse continues the storytelling rap delivery over looped piano, horn, and drum hits."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "Hip Hop",
+      "primary_style": "Boom Bap",
+      "secondary_families": [
+        "R&B"
+      ],
+      "secondary_styles": [
+        "Conscious Hip Hop",
+        "East Coast Hip Hop"
+      ],
+      "section_variation": "mostly_consistent",
+      "status": "classified",
+      "texture_tags": [
+        "sample_based",
+        "layered"
+      ],
+      "vocal_role": "rap_led"
+    },
+    "free_profile_b": {
+      "active_section_density": "moderate",
+      "arrangement_focus": "lead_vocal",
+      "audio_evidence": [
+        {
+          "at_seconds": 15.2,
+          "observation": "A downtempo electronic beat enters under looping vocal chops, introducing a warm synthesizer bassline."
+        },
+        {
+          "at_seconds": 28.5,
+          "observation": "Intimate female lead vocals enter with soft, melodic indie pop phrasing over electronic percussion."
+        },
+        {
+          "at_seconds": 124.0,
+          "observation": "Vocal harmonies build in an airy chorus hook layered with atmospheric synth pads and rhythmic bass."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "Pop",
+      "primary_style": "Indie Pop",
+      "secondary_families": [
+        "Electronic",
+        "R&B"
+      ],
+      "secondary_styles": [
+        "Electropop",
+        "Alternative R&B"
+      ],
+      "section_variation": "mostly_consistent",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "clean",
+        "layered"
+      ],
+      "vocal_role": "sung_led"
+    },
+    "frozen_pair_evidence": {
+      "arrangement_a": "lead_vocal",
+      "arrangement_b": "lead_vocal",
+      "c_status": "FROZEN_C_AVAILABLE",
+      "certainty_a": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "certainty_b": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "human_playlist_rating": 1,
+      "original_c_similarity": 0.5503394603729248,
+      "pair_id": "78228b72fde7c5586d53ada7",
+      "pilot_a": "A01",
+      "pilot_b": "C02",
+      "primary_family_a": "hip_hop_rap",
+      "primary_family_b": "rnb_soul",
+      "primary_style_a": "boom_bap",
+      "primary_style_b": "pop_rnb",
+      "qualitative_implication": "possible separation",
+      "rating_status": "PLAYLIST_COMPATIBILITY_V1",
+      "sections_a": "contrasting_sections",
+      "sections_b": "contrasting_sections",
+      "shared_families": [
+        "hip_hop_rap"
+      ],
+      "shared_styles": [],
+      "song_a": "Wet Dreamz — J. Cole",
+      "song_b": "Sit Around — City Girl, tiffi",
+      "spotify_a": "4tqcoej1zPvwePZCzuAjJd",
+      "spotify_b": "6pWqlKm9ugucgKNldCLigX",
+      "texture_a": [
+        "sample_based",
+        "clean",
+        "layered"
+      ],
+      "texture_b": [
+        "sample_based",
+        "clean",
+        "layered"
+      ],
+      "vocal_role_a": "rap_led",
+      "vocal_role_b": "sung_led"
+    },
+    "new_playlist_rating": null,
+    "numeric_reranking_score": null,
+    "owner_first_pass_a": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "the song sounds like boom bap/ golden age rap ",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_first_pass_b": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "lofi soft vibes",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_review_of_new_profiles": "PENDING"
+  },
+  {
+    "free_profile_a": {
+      "active_section_density": "moderate",
+      "arrangement_focus": "beat_or_instrumental",
+      "audio_evidence": [
+        {
+          "at_seconds": 16.5,
+          "observation": "Orchestral strings enter with an ascending dramatic build, accompanied by digital tick beats."
+        },
+        {
+          "at_seconds": 32.2,
+          "observation": "Main instrumental drop features aggressive distorted reese bass, rolling breakbeats, and synth arpeggios."
+        },
+        {
+          "at_seconds": 108.7,
+          "observation": "Half-time breakdown section introduces sub-bass wobbles and processed melodic vocal chops."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "Electronic",
+      "primary_style": "Drum and Bass",
+      "secondary_families": [
+        "Bass Music"
+      ],
+      "secondary_styles": [
+        "Neurofunk",
+        "Dubstep"
+      ],
+      "section_variation": "contrasting_sections",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "distorted",
+        "layered"
+      ],
+      "vocal_role": "vocal_samples_only"
+    },
+    "free_profile_b": {
+      "active_section_density": "moderate",
+      "arrangement_focus": "balanced",
+      "audio_evidence": [
+        {
+          "at_seconds": 18.2,
+          "observation": "Trap beat enters with prominent sub-bass 808s, rapid hi-hat rolls, and rhythmic rap vocals."
+        },
+        {
+          "at_seconds": 64.5,
+          "observation": "Melodic, autotuned singing hook over the trap drum groove and ambient synth pads."
+        },
+        {
+          "at_seconds": 149.0,
+          "observation": "Atmospheric breakdown with ethereal female vocals over a stripped synth bed."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "Hip Hop",
+      "primary_style": "Trap",
+      "secondary_families": [
+        "Pop",
+        "R&B"
+      ],
+      "secondary_styles": [
+        "Pop Rap",
+        "Melodic Rap"
+      ],
+      "section_variation": "contrasting_sections",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "layered",
+        "clean"
+      ],
+      "vocal_role": "mixed_rap_and_singing"
+    },
+    "frozen_pair_evidence": {
+      "arrangement_a": "beat_or_instrumental",
+      "arrangement_b": "balanced",
+      "c_status": "FROZEN_C_AVAILABLE",
+      "certainty_a": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "certainty_b": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "human_playlist_rating": 2,
+      "original_c_similarity": 0.4787411391735077,
+      "pair_id": "8716337735b891a7c92a03d1",
+      "pilot_a": "A03",
+      "pilot_b": "A06",
+      "primary_family_a": "hip_hop_rap",
+      "primary_family_b": "hip_hop_rap",
+      "primary_style_a": "lofi_hip_hop",
+      "primary_style_b": "melodic_trap",
+      "qualitative_implication": "possible separation",
+      "rating_status": "PLAYLIST_COMPATIBILITY_V1",
+      "sections_a": "mostly_consistent",
+      "sections_b": "contrasting_sections",
+      "shared_families": [
+        "electronic",
+        "hip_hop_rap"
+      ],
+      "shared_styles": [],
+      "song_a": "My Gamecube Broke. — .Uzu",
+      "song_b": "GET IT — keshi",
+      "spotify_a": "2Vu2hkPW7LxMHPqoMjSIEJ",
+      "spotify_b": "4LaZ8RpIP6DIgN73bXQVlO",
+      "texture_a": [
+        "hazy",
+        "sample_based",
+        "electronic"
+      ],
+      "texture_b": [
+        "electronic",
+        "clean",
+        "layered"
+      ],
+      "vocal_role_a": "vocal_samples_only",
+      "vocal_role_b": "mixed_rap_and_singing"
+    },
+    "new_playlist_rating": null,
+    "numeric_reranking_score": null,
+    "owner_first_pass_a": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "lofi electronic/gamey style",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_first_pass_b": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "dark alt rnb ",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_review_of_new_profiles": "PENDING"
+  },
+  {
+    "free_profile_a": {
+      "active_section_density": "moderate",
+      "arrangement_focus": "lead_vocal",
+      "audio_evidence": [
+        {
+          "at_seconds": 15.2,
+          "observation": "A downtempo electronic beat enters under looping vocal chops, introducing a warm synthesizer bassline."
+        },
+        {
+          "at_seconds": 28.5,
+          "observation": "Intimate female lead vocals enter with soft, melodic indie pop phrasing over electronic percussion."
+        },
+        {
+          "at_seconds": 124.0,
+          "observation": "Vocal harmonies build in an airy chorus hook layered with atmospheric synth pads and rhythmic bass."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "Pop",
+      "primary_style": "Indie Pop",
+      "secondary_families": [
+        "Electronic",
+        "R&B"
+      ],
+      "secondary_styles": [
+        "Electropop",
+        "Alternative R&B"
+      ],
+      "section_variation": "mostly_consistent",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "clean",
+        "layered"
+      ],
+      "vocal_role": "sung_led"
+    },
+    "free_profile_b": {
+      "active_section_density": "moderate",
+      "arrangement_focus": "lead_vocal",
+      "audio_evidence": [
+        {
+          "at_seconds": 12.5,
+          "observation": "Spoken-word-style rap vocal enters over a minimal trap-influenced beat featuring 808 sub-bass and hi-hats."
+        },
+        {
+          "at_seconds": 25.0,
+          "observation": "High-pitched auto-tuned melodic chorus vocal hook enters with layered backing."
+        },
+        {
+          "at_seconds": 96.0,
+          "observation": "Bridge section featuring pitched vocal samples, ambient synths, and emotional sung-melodic rap delivery."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "Hip Hop",
+      "primary_style": "Trap",
+      "secondary_families": [
+        "Pop",
+        "R&B"
+      ],
+      "secondary_styles": [
+        "Emo Rap",
+        "Melodic Rap"
+      ],
+      "section_variation": "mostly_consistent",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "layered",
+        "sample_based"
+      ],
+      "vocal_role": "mixed_rap_and_singing"
+    },
+    "frozen_pair_evidence": {
+      "arrangement_a": "lead_vocal",
+      "arrangement_b": "balanced",
+      "c_status": "FROZEN_C_AVAILABLE",
+      "certainty_a": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "certainty_b": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "human_playlist_rating": 1,
+      "original_c_similarity": 0.5166787505149841,
+      "pair_id": "8b4c856cc105d08b910108e6",
+      "pilot_a": "C02",
+      "pilot_b": "C04",
+      "primary_family_a": "rnb_soul",
+      "primary_family_b": "electronic",
+      "primary_style_a": "pop_rnb",
+      "primary_style_b": "digicore",
+      "qualitative_implication": "possible separation",
+      "rating_status": "PLAYLIST_COMPATIBILITY_V1",
+      "sections_a": "contrasting_sections",
+      "sections_b": "contrasting_sections",
+      "shared_families": [
+        "hip_hop_rap",
+        "pop"
+      ],
+      "shared_styles": [],
+      "song_a": "Sit Around — City Girl, tiffi",
+      "song_b": "boys dont cry — sysmint",
+      "spotify_a": "6pWqlKm9ugucgKNldCLigX",
+      "spotify_b": "1ON9XudZFxwu43tQXBszIX",
+      "texture_a": [
+        "sample_based",
+        "clean",
+        "layered"
+      ],
+      "texture_b": [
+        "electronic",
+        "distorted",
+        "layered"
+      ],
+      "vocal_role_a": "sung_led",
+      "vocal_role_b": "sung_led"
+    },
+    "new_playlist_rating": null,
+    "numeric_reranking_score": null,
+    "owner_first_pass_a": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "lofi soft vibes",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_first_pass_b": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "electronic hyperpop",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_review_of_new_profiles": "PENDING"
+  },
+  {
+    "free_profile_a": {
+      "active_section_density": "sparse",
+      "arrangement_focus": "beat_or_instrumental",
+      "audio_evidence": [
+        {
+          "at_seconds": 9.5,
+          "observation": "Slow boom bap drums enter alongside a melancholic plucked acoustic instrument riff."
+        },
+        {
+          "at_seconds": 38.0,
+          "observation": "Downtempo beat continues with repetitive plucked melodies and subtle atmospheric bass."
+        },
+        {
+          "at_seconds": 88.0,
+          "observation": "Female vocal passage enters softly over the repeating instrumental hip-hop beat."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "hip_hop",
+      "primary_style": "lo_fi_hip_hop",
+      "secondary_families": [
+        "electronic"
+      ],
+      "secondary_styles": [
+        "chillhop",
+        "downtempo"
+      ],
+      "section_variation": "contrasting_sections",
+      "status": "classified",
+      "texture_tags": [
+        "sample_based",
+        "hazy",
+        "clean"
+      ],
+      "vocal_role": "vocal_samples_only"
+    },
+    "free_profile_b": {
+      "active_section_density": "moderate",
+      "arrangement_focus": "lead_vocal",
+      "audio_evidence": [
+        {
+          "at_seconds": 15.2,
+          "observation": "A downtempo electronic beat enters under looping vocal chops, introducing a warm synthesizer bassline."
+        },
+        {
+          "at_seconds": 28.5,
+          "observation": "Intimate female lead vocals enter with soft, melodic indie pop phrasing over electronic percussion."
+        },
+        {
+          "at_seconds": 124.0,
+          "observation": "Vocal harmonies build in an airy chorus hook layered with atmospheric synth pads and rhythmic bass."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "Pop",
+      "primary_style": "Indie Pop",
+      "secondary_families": [
+        "Electronic",
+        "R&B"
+      ],
+      "secondary_styles": [
+        "Electropop",
+        "Alternative R&B"
+      ],
+      "section_variation": "mostly_consistent",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "clean",
+        "layered"
+      ],
+      "vocal_role": "sung_led"
+    },
+    "frozen_pair_evidence": {
+      "arrangement_a": "beat_or_instrumental",
+      "arrangement_b": "lead_vocal",
+      "c_status": "FROZEN_C_AVAILABLE",
+      "certainty_a": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "certainty_b": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "human_playlist_rating": 4,
+      "original_c_similarity": 0.6931704878807068,
+      "pair_id": "94d833dd57e4e892f631c779",
+      "pilot_a": "A05",
+      "pilot_b": "C02",
+      "primary_family_a": "hip_hop_rap",
+      "primary_family_b": "rnb_soul",
+      "primary_style_a": "lofi_hip_hop",
+      "primary_style_b": "pop_rnb",
+      "qualitative_implication": "conflict",
+      "rating_status": "PLAYLIST_COMPATIBILITY_V1",
+      "sections_a": "mostly_consistent",
+      "sections_b": "contrasting_sections",
+      "shared_families": [
+        "hip_hop_rap"
+      ],
+      "shared_styles": [],
+      "song_a": "Tea Time — Disvstxr",
+      "song_b": "Sit Around — City Girl, tiffi",
+      "spotify_a": "5sEeuhYWHNczuPKek1zJeG",
+      "spotify_b": "6pWqlKm9ugucgKNldCLigX",
+      "texture_a": [
+        "sample_based",
+        "hazy"
+      ],
+      "texture_b": [
+        "sample_based",
+        "clean",
+        "layered"
+      ],
+      "vocal_role_a": "sung_led",
+      "vocal_role_b": "sung_led"
+    },
+    "new_playlist_rating": null,
+    "numeric_reranking_score": null,
+    "owner_first_pass_a": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "lofi hip hop ",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_first_pass_b": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "lofi soft vibes",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_review_of_new_profiles": "PENDING"
+  },
+  {
+    "free_profile_a": {
+      "active_section_density": "moderate",
+      "arrangement_focus": "lead_vocal",
+      "audio_evidence": [
+        {
+          "at_seconds": 23.5,
+          "observation": "A male vocalist begins rapping narrative verses over a slow, punchy boom-bap rhythm."
+        },
+        {
+          "at_seconds": 68.0,
+          "observation": "Soulful pitched-down vocal samples and sing-along hook enter on the refrain."
+        },
+        {
+          "at_seconds": 133.0,
+          "observation": "The second verse continues the storytelling rap delivery over looped piano, horn, and drum hits."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "Hip Hop",
+      "primary_style": "Boom Bap",
+      "secondary_families": [
+        "R&B"
+      ],
+      "secondary_styles": [
+        "Conscious Hip Hop",
+        "East Coast Hip Hop"
+      ],
+      "section_variation": "mostly_consistent",
+      "status": "classified",
+      "texture_tags": [
+        "sample_based",
+        "layered"
+      ],
+      "vocal_role": "rap_led"
+    },
+    "free_profile_b": {
+      "active_section_density": "sparse",
+      "arrangement_focus": "beat_or_instrumental",
+      "audio_evidence": [
+        {
+          "at_seconds": 1.0,
+          "observation": "Spoken/chanted vocal sample repeated over a bare, syncopated kick-and-percussion groove."
+        },
+        {
+          "at_seconds": 26.5,
+          "observation": "Sub-bass pulse enters underneath continuous vocal fragments and ambient spatial textures."
+        },
+        {
+          "at_seconds": 254.0,
+          "observation": "Minimalist hand percussion pattern slowly builds with subtle shaker accents and reverberant dub delay."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "electronic",
+      "primary_style": "minimal techno",
+      "secondary_families": [
+        "ambient"
+      ],
+      "secondary_styles": [
+        "dub techno",
+        "microhouse"
+      ],
+      "section_variation": "mostly_consistent",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "sample_based",
+        "clean"
+      ],
+      "vocal_role": "vocal_samples_only"
+    },
+    "frozen_pair_evidence": {
+      "arrangement_a": "lead_vocal",
+      "arrangement_b": "balanced",
+      "c_status": "FROZEN_C_AVAILABLE",
+      "certainty_a": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "certainty_b": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "human_playlist_rating": 1,
+      "original_c_similarity": 0.6012573838233948,
+      "pair_id": "c595e35533c3833381a52cda",
+      "pilot_a": "A01",
+      "pilot_b": "C01",
+      "primary_family_a": "hip_hop_rap",
+      "primary_family_b": "pop",
+      "primary_style_a": "boom_bap",
+      "primary_style_b": "hyperpop",
+      "qualitative_implication": "possible separation",
+      "rating_status": "PLAYLIST_COMPATIBILITY_V1",
+      "sections_a": "contrasting_sections",
+      "sections_b": "contrasting_sections",
+      "shared_families": [
+        "hip_hop_rap"
+      ],
+      "shared_styles": [],
+      "song_a": "Wet Dreamz — J. Cole",
+      "song_b": "Saturation in Delay, Love in Anger — City Girl, tiffi",
+      "spotify_a": "4tqcoej1zPvwePZCzuAjJd",
+      "spotify_b": "00njeQb198Lm7Jge2Rsrlg",
+      "texture_a": [
+        "sample_based",
+        "clean",
+        "layered"
+      ],
+      "texture_b": [
+        "electronic",
+        "distorted",
+        "layered"
+      ],
+      "vocal_role_a": "rap_led",
+      "vocal_role_b": "sung_led"
+    },
+    "new_playlist_rating": null,
+    "numeric_reranking_score": null,
+    "owner_first_pass_a": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "the song sounds like boom bap/ golden age rap ",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_first_pass_b": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "lofi",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_review_of_new_profiles": "PENDING"
+  },
+  {
+    "free_profile_a": {
+      "active_section_density": "moderate",
+      "arrangement_focus": "lead_vocal",
+      "audio_evidence": [
+        {
+          "at_seconds": 15.2,
+          "observation": "A downtempo electronic beat enters under looping vocal chops, introducing a warm synthesizer bassline."
+        },
+        {
+          "at_seconds": 28.5,
+          "observation": "Intimate female lead vocals enter with soft, melodic indie pop phrasing over electronic percussion."
+        },
+        {
+          "at_seconds": 124.0,
+          "observation": "Vocal harmonies build in an airy chorus hook layered with atmospheric synth pads and rhythmic bass."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "Pop",
+      "primary_style": "Indie Pop",
+      "secondary_families": [
+        "Electronic",
+        "R&B"
+      ],
+      "secondary_styles": [
+        "Electropop",
+        "Alternative R&B"
+      ],
+      "section_variation": "mostly_consistent",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "clean",
+        "layered"
+      ],
+      "vocal_role": "sung_led"
+    },
+    "free_profile_b": {
+      "active_section_density": "moderate",
+      "arrangement_focus": "lead_vocal",
+      "audio_evidence": [
+        {
+          "at_seconds": 18.2,
+          "observation": "Airy, breathy female vocal enters over a sparse kick pulse and ambient synth pads."
+        },
+        {
+          "at_seconds": 105.0,
+          "observation": "Vocals expand with lush harmonies, swelling pads, and subtle electronic percussion."
+        },
+        {
+          "at_seconds": 30.5,
+          "observation": "Syncopated sub bass and layered vocal ad-libs introduce a prominent trip hop / chillout groove."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "Electronic",
+      "primary_style": "Trip Hop",
+      "secondary_families": [
+        "Pop",
+        "Downtempo"
+      ],
+      "secondary_styles": [
+        "Downtempo",
+        "Dream Pop"
+      ],
+      "section_variation": "mostly_consistent",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "hazy",
+        "layered"
+      ],
+      "vocal_role": "sung_led"
+    },
+    "frozen_pair_evidence": {
+      "arrangement_a": "lead_vocal",
+      "arrangement_b": "lead_vocal",
+      "c_status": "FROZEN_C_AVAILABLE",
+      "certainty_a": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "certainty_b": {
+        "family": "clear",
+        "style": "tentative"
+      },
+      "human_playlist_rating": 4,
+      "original_c_similarity": 0.7976068258285522,
+      "pair_id": "dfaa8d8e883fc2348715792e",
+      "pilot_a": "C02",
+      "pilot_b": "C03",
+      "primary_family_a": "rnb_soul",
+      "primary_family_b": "rnb_soul",
+      "primary_style_a": "pop_rnb",
+      "primary_style_b": "alternative_rnb",
+      "qualitative_implication": "possible contraction",
+      "rating_status": "PLAYLIST_COMPATIBILITY_V1",
+      "sections_a": "contrasting_sections",
+      "sections_b": "mostly_consistent",
+      "shared_families": [
+        "pop",
+        "rnb_soul"
+      ],
+      "shared_styles": [
+        "contemporary_rnb"
+      ],
+      "song_a": "Sit Around — City Girl, tiffi",
+      "song_b": "risk — lace",
+      "spotify_a": "6pWqlKm9ugucgKNldCLigX",
+      "spotify_b": "2js0td9w2MzNUVPlMKYOEs",
+      "texture_a": [
+        "sample_based",
+        "clean",
+        "layered"
+      ],
+      "texture_b": [
+        "electronic",
+        "hazy",
+        "clean"
+      ],
+      "vocal_role_a": "sung_led",
+      "vocal_role_b": "sung_led"
+    },
+    "new_playlist_rating": null,
+    "numeric_reranking_score": null,
+    "owner_first_pass_a": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "lofi soft vibes",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_first_pass_b": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "dreamy whisper dream pop bedroom pop",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_review_of_new_profiles": "PENDING"
+  },
+  {
+    "free_profile_a": {
+      "active_section_density": "moderate",
+      "arrangement_focus": "balanced",
+      "audio_evidence": [
+        {
+          "at_seconds": 18.2,
+          "observation": "Trap beat enters with prominent sub-bass 808s, rapid hi-hat rolls, and rhythmic rap vocals."
+        },
+        {
+          "at_seconds": 64.5,
+          "observation": "Melodic, autotuned singing hook over the trap drum groove and ambient synth pads."
+        },
+        {
+          "at_seconds": 149.0,
+          "observation": "Atmospheric breakdown with ethereal female vocals over a stripped synth bed."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "Hip Hop",
+      "primary_style": "Trap",
+      "secondary_families": [
+        "Pop",
+        "R&B"
+      ],
+      "secondary_styles": [
+        "Pop Rap",
+        "Melodic Rap"
+      ],
+      "section_variation": "contrasting_sections",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "layered",
+        "clean"
+      ],
+      "vocal_role": "mixed_rap_and_singing"
+    },
+    "free_profile_b": {
+      "active_section_density": "sparse",
+      "arrangement_focus": "beat_or_instrumental",
+      "audio_evidence": [
+        {
+          "at_seconds": 1.0,
+          "observation": "Spoken/chanted vocal sample repeated over a bare, syncopated kick-and-percussion groove."
+        },
+        {
+          "at_seconds": 26.5,
+          "observation": "Sub-bass pulse enters underneath continuous vocal fragments and ambient spatial textures."
+        },
+        {
+          "at_seconds": 254.0,
+          "observation": "Minimalist hand percussion pattern slowly builds with subtle shaker accents and reverberant dub delay."
+        }
+      ],
+      "certainty": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "primary_family": "electronic",
+      "primary_style": "minimal techno",
+      "secondary_families": [
+        "ambient"
+      ],
+      "secondary_styles": [
+        "dub techno",
+        "microhouse"
+      ],
+      "section_variation": "mostly_consistent",
+      "status": "classified",
+      "texture_tags": [
+        "electronic",
+        "sample_based",
+        "clean"
+      ],
+      "vocal_role": "vocal_samples_only"
+    },
+    "frozen_pair_evidence": {
+      "arrangement_a": "balanced",
+      "arrangement_b": "balanced",
+      "c_status": "FROZEN_C_AVAILABLE",
+      "certainty_a": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "certainty_b": {
+        "family": "clear",
+        "style": "clear"
+      },
+      "human_playlist_rating": 2,
+      "original_c_similarity": 0.7027162909507751,
+      "pair_id": "e32193a16a94489a4dcb13bf",
+      "pilot_a": "A06",
+      "pilot_b": "C01",
+      "primary_family_a": "hip_hop_rap",
+      "primary_family_b": "pop",
+      "primary_style_a": "melodic_trap",
+      "primary_style_b": "hyperpop",
+      "qualitative_implication": "conflict",
+      "rating_status": "PLAYLIST_COMPATIBILITY_V1",
+      "sections_a": "contrasting_sections",
+      "sections_b": "contrasting_sections",
+      "shared_families": [
+        "electronic",
+        "hip_hop_rap",
+        "pop"
+      ],
+      "shared_styles": [
+        "electropop"
+      ],
+      "song_a": "GET IT — keshi",
+      "song_b": "Saturation in Delay, Love in Anger — City Girl, tiffi",
+      "spotify_a": "4LaZ8RpIP6DIgN73bXQVlO",
+      "spotify_b": "00njeQb198Lm7Jge2Rsrlg",
+      "texture_a": [
+        "electronic",
+        "clean",
+        "layered"
+      ],
+      "texture_b": [
+        "electronic",
+        "distorted",
+        "layered"
+      ],
+      "vocal_role_a": "mixed_rap_and_singing",
+      "vocal_role_b": "sung_led"
+    },
+    "new_playlist_rating": null,
+    "numeric_reranking_score": null,
+    "owner_first_pass_a": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "dark alt rnb ",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_first_pass_b": {
+      "acceptable_alternative_labels": "",
+      "description_verdict": "",
+      "model_certainty_appropriate": "",
+      "model_description_or_timestamp_issues": "",
+      "notes": "",
+      "owner_family_or_style_words": "lofi",
+      "owner_recording_identity_ok": "yes",
+      "owner_section_changes": "",
+      "owner_vocals_and_arrangement": ""
+    },
+    "owner_review_of_new_profiles": "PENDING"
+  }
+]

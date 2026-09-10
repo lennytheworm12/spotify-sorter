@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00560400",
+  "attempt": 4,
+  "cache_key": "8dda2c4579ec643856561f329cb74f4666a5557126fff5eefc08b529fe62bbce",
+  "evidence_hashes": {
+    "execution/attempts/attempt-04.request.json": "fe9ee58b1a9bec4e9abc713479c48c4ac4d17cd962ee3862e0ae103f9ef18ec4",
+    "execution/attempts/attempt-04.reservation.json": "d4b3c4c911d048a11833ed35553128d282278d6cc38f8b64bf928ada0847d0b5",
+    "execution/attempts/attempt-04.settlement.json": "e2c5e2f36c38d6189fcec35723dd2c9f56baf6fd649687ae51461c49c302ee75",
+    "execution/transport/call-007.response.bin": "af041825280744ad185ea1c04bc9506869215cb6ce0cad4a9ed797c8a21a58ae",
+    "execution/transport/call-008.response.bin": "59808382315c321b45bb3d98a8de0b1dadd5599e6d4fb726e443328c34ef70b3",
+    "execution/transport/call-008.response.json": "b10b9b00f6094807f4d73689e5259b3e21a490348acaff7ec7cc1866d0484b49",
+    "execution/transport/upload-N016.json": "4eb01e9a0e14eecb3a3cc76a9d3697b9cdc3236993397fe07a630e5506b7237e"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N016",
+  "pilot_id": "A04",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 6.0,
+        "observation": "Mellow electric piano chords with prominent tape hiss and hazy reverb create a slow ambient intro."
+      },
+      {
+        "at_seconds": 28.5,
+        "observation": "A relaxed, downtempo boom-bap drum pattern enters accompanied by deep sub-bass and vinyl crackle."
+      },
+      {
+        "at_seconds": 65.0,
+        "observation": "Atmospheric vocal sample sighs weave through the repetitive lo-fi Rhodes groove."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Lo-Fi Hip Hop",
+    "secondary_families": [
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Downtempo",
+      "Chillout"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "sample_based",
+      "electronic",
+      "hazy"
+    ],
+    "vocal_role": "vocal_samples_only"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-008.response.bin",
+  "response_id": "IhiiaszUB_Gfz7IP7sG06Qo",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 6.0,\n      \"observation\": \"Mellow electric piano chords with prominent tape hiss and hazy reverb create a slow ambient intro.\"\n    },\n    {\n      \"at_seconds\": 28.5,\n      \"observation\": \"A relaxed, downtempo boom-bap drum pattern enters accompanied by deep sub-bass and vinyl crackle.\"\n    },\n    {\n      \"at_seconds\": 65.0,\n      \"observation\": \"Atmospheric vocal sample sighs weave through the repetitive lo-fi Rhodes groove.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip Hop\",\n  \"primary_style\": \"Lo-Fi Hip Hop\",\n  \"secondary_families\": [\"Electronic\"],\n  \"secondary_styles\": [\"Downtempo\", \"Chillout\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"sample_based\", \"electronic\", \"hazy\"],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+  "usage": {
+    "candidatesTokenCount": 303,
+    "promptTokenCount": 3862,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3413
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "thoughtsTokenCount": 419,
+    "totalTokenCount": 4584
+  }
+}

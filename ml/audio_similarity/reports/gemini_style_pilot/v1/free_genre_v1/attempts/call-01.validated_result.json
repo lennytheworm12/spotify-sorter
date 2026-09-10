@@ -1,0 +1,82 @@
+{
+  "actual_cost_usd": "0.00632775",
+  "attempt": 1,
+  "cache_key": "fd568e57059462663761ef1b3054707843ae94513f420910119dfd3b827225cc",
+  "evidence_hashes": {
+    "execution/attempts/attempt-01.request.json": "eb5039f132acae83fb68b8e4483f3246418cc03691d1263f67a301270a9b2c10",
+    "execution/attempts/attempt-01.reservation.json": "264390a8f996242ad0f80d8d66b24a8ebf44dbd21b3f80ef0a454ace0aa70545",
+    "execution/attempts/attempt-01.settlement.json": "8c39e882179bcd4702a6a48845594c3816552cc7ecb2627e45d367589d7800b4",
+    "execution/transport/call-001.response.bin": "713ec5fc3b013dda996cb04a15286d5bd03ebdd6b84bdb2dd27360674b9fd8ea",
+    "execution/transport/call-002.response.bin": "60c9f155f55dbb2cd057006144b70cded6c4ddf12e3247f72247400f2bca09a8",
+    "execution/transport/call-002.response.json": "3b15be7888ab9d4e7f3895b8b1e66f2f42eb29b3501c015db898c3c7586cff00",
+    "execution/transport/upload-N006.json": "3829c23069e410dbebc88758c35c0f90ab2ab2444c4a1df32e1e4ed49517baff"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "ec94b689b215d94e62f2cf7a69dc86a3d0e5315e577d9b944280deffd0edb326",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N006",
+  "pilot_id": "A01",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "end_seconds": 22.0,
+        "observation": "Spoken intro over a downtempo, soul-sampled instrumental with brass chords, vocal chops, and vinyl crackle.",
+        "start_seconds": 0.0
+      },
+      {
+        "end_seconds": 66.0,
+        "observation": "Narrative rap verse entering over a midtempo boom-bap rhythm with laid-back kicks, snares, and pitch-shifted vocal samples.",
+        "start_seconds": 22.5
+      },
+      {
+        "end_seconds": 126.5,
+        "observation": "Melodic, soulful hook section with repeated vocal refrain layered over the steady beat.",
+        "start_seconds": 106.0
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Conscious Hip Hop",
+    "secondary_families": [
+      "R&B",
+      "Soul"
+    ],
+    "secondary_styles": [
+      "Boom Bap",
+      "Neo-Soul"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "sample_based",
+      "layered",
+      "clean"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-002.response.bin",
+  "response_id": "9RWiap2SDdODz7IPhcTi0QE",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"end_seconds\": 22.0,\n      \"observation\": \"Spoken intro over a downtempo, soul-sampled instrumental with brass chords, vocal chops, and vinyl crackle.\"\n        ,\n      \"start_seconds\": 0.0\n    },\n    {\n      \"end_seconds\": 66.0,\n      \"observation\": \"Narrative rap verse entering over a midtempo boom-bap rhythm with laid-back kicks, snares, and pitch-shifted vocal samples.\"\n    ,\n      \"start_seconds\": 22.5\n    },\n    {\n      \"end_seconds\": 126.5,\n      \"observation\": \"Melodic, soulful hook section with repeated vocal refrain layered over the steady beat.\"\n    ,\n      \"start_seconds\": 106.0\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip Hop\",\n  \"primary_style\": \"Conscious Hip Hop\",\n  \"secondary_families\": [\n    \"R&B\",\n    \"Soul\"\n  ],\n  \"secondary_styles\": [\n    \"Boom Bap\",\n    \"Neo-Soul\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"sample_based\",\n    \"layered\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"mixed_rap_and_singing\"\n}",
+  "usage": {
+    "candidatesTokenCount": 396,
+    "promptTokenCount": 6457,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 446
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 6011
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 6853
+  }
+}

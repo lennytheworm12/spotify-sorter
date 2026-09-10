@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00435525",
+  "attempt": 6,
+  "cache_key": "6cc48d1b15b56075b1982593250a3bcb50f74d39286e7e0c7bdfebe7b307d4f8",
+  "evidence_hashes": {
+    "execution/attempts/attempt-06.request.json": "847490efe3099809bc7801338b593991956276cfdfd21e9d362f6108b8afd911",
+    "execution/attempts/attempt-06.reservation.json": "5ad34ee9baca6e6b006712a67695fbe579ff4128613d8a8e1f70eb715c6f65d8",
+    "execution/attempts/attempt-06.settlement.json": "6df58a982fcb949b9a2d3575db6b29ff165d88bc6d19cdc2d9cc57cf8ebc3649",
+    "execution/transport/call-011.response.bin": "c1d6474103a241c3b66c9e6957022d39832a6dd5f4a78fedba37a7e63d8164b2",
+    "execution/transport/call-012.response.bin": "8a960b5b404ced2a38dcaca89cb355ec1241b6c872c27e4801146b748313cd7d",
+    "execution/transport/call-012.response.json": "6efd1861645c255339e59b4d94401834c6f9855895650ece099aa6eecc7740f9",
+    "execution/transport/upload-N005.json": "ab3917a0572d9427198df4c160eabb4e112dd20312a167ebd0e6551481f00fe6"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N005",
+  "pilot_id": "A06",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "balanced",
+    "audio_evidence": [
+      {
+        "at_seconds": 18.2,
+        "observation": "Trap beat enters with prominent sub-bass 808s, rapid hi-hat rolls, and rhythmic rap vocals."
+      },
+      {
+        "at_seconds": 64.5,
+        "observation": "Melodic, autotuned singing hook over the trap drum groove and ambient synth pads."
+      },
+      {
+        "at_seconds": 149.0,
+        "observation": "Atmospheric breakdown with ethereal female vocals over a stripped synth bed."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Trap",
+    "secondary_families": [
+      "Pop",
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Pop Rap",
+      "Melodic Rap"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "clean"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-012.response.bin",
+  "response_id": "LBiiarnDF5DQz7IP_u-h2A4",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"balanced\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 18.2, \"observation\": \"Trap beat enters with prominent sub-bass 808s, rapid hi-hat rolls, and rhythmic rap vocals.\"},\n    {\"at_seconds\": 64.5, \"observation\": \"Melodic, autotuned singing hook over the trap drum groove and ambient synth pads.\"},\n    {\"at_seconds\": 149.0, \"observation\": \"Atmospheric breakdown with ethereal female vocals over a stripped synth bed.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip Hop\",\n  \"primary_style\": \"Trap\",\n  \"secondary_families\": [\"Pop\", \"R&B\"],\n  \"secondary_styles\": [\"Pop Rap\", \"Melodic Rap\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"layered\", \"clean\"],\n  \"vocal_role\": \"mixed_rap_and_singing\"\n}",
+  "usage": {
+    "candidatesTokenCount": 278,
+    "promptTokenCount": 4417,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3968
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 4695
+  }
+}

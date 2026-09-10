@@ -1,0 +1,26 @@
+{
+  "complete_new_profiles": 16,
+  "earlier_checkpoint_failures": {
+    "cause": "HEAD not pushed; repository ancestry checks failed",
+    "count": 2,
+    "resolution": "Pushed checkpoint and reran full suite with zero test modifications"
+  },
+  "final_non_heavy_tests": {
+    "code_commit": "7aa8a1a",
+    "deselected": 12,
+    "passed": 1379,
+    "seconds": 172.64,
+    "warnings": 11
+  },
+  "focused_tests": {
+    "expanded_continuation_fixture_passed": true,
+    "passed": 43,
+    "seconds": 20.32
+  },
+  "new_human_ratings": 0,
+  "new_real_generation_calls": 18,
+  "original_review_dataset_modified": false,
+  "production_changes": false,
+  "same_request_repeats_in_final_arm": 0,
+  "stopped_reversed_interval_responses": 1
+}
