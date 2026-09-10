@@ -7,6 +7,7 @@ import pytest
 
 from audio_similarity.gemini_free_genre import PROMPT, free_schema, prepare, validate_free_profile
 from audio_similarity.gemini_free_genre_runner import FreeGenreRunner
+from audio_similarity.gemini_free_genre_point import POINT_PROMPT, point_schema
 from audio_similarity.gemini_style_pilot.duration_revision import bounded_schema
 from audio_similarity.gemini_style_pilot.manifest import PRIMARY_ORDER, make_manifest
 from audio_similarity.gemini_style_pilot.runner import PilotRunner, RunStopped
@@ -25,15 +26,27 @@ class FreeProvider(FakeProvider):
         if request.url.path.endswith(':countTokens'):
             self.calls.append((request.method, request.url.path))
             body = json.loads(request.content)['generateContentRequest']
-            assert body['systemInstruction'] == {'parts': [{'text': PROMPT}]}
-            assert body['generationConfig']['responseJsonSchema'] == bounded_schema(free_schema(read(FIXTURE / 'response_schema.json')), 150)
+            point = getattr(self, 'point', False)
+            assert body['systemInstruction'] == {'parts': [{'text': POINT_PROMPT if point else PROMPT}]}
+            schema = free_schema(read(FIXTURE / 'response_schema.json'))
+            if point:
+                schema = point_schema(schema)
+                schema['properties']['audio_evidence']['items']['properties']['at_seconds']['maximum'] = 150
+            else:
+                schema = bounded_schema(schema, 150)
+            assert body['generationConfig']['responseJsonSchema'] == schema
             assert len(body['contents'][0]['parts']) == 2
             assert not any(word in json.dumps(body).casefold() for word in ['hyperpop', 'digicore', 'boom_bap', 'weeknd', 'keshi'])
             return httpx.Response(200, json={} if self.fault == 'count' else {'totalTokens': 7000})
         response = super().handle(request)
         if request.url.path.endswith(':generateContent') and response.is_success and self.fault != 'schema':
             value = response.json()
-            value['candidates'][0]['content']['parts'][0]['text'] = json.dumps(profile())
+            p = profile()
+            if getattr(self, 'point', False):
+                p['audio_evidence'] = [{'at_seconds': 42, 'observation': 'Synthetic point cue'}]
+            if self.fault == 'reverse_second' and self.generations == 2:
+                p['audio_evidence'] = [{'start_seconds': 31, 'end_seconds': 30, 'observation': 'Synthetic'}]
+            value['candidates'][0]['content']['parts'][0]['text'] = json.dumps(p)
             return httpx.Response(response.status_code, json=value)
         return response
 
@@ -70,6 +83,17 @@ def test_free_genres_have_no_mapping_and_preserve_output_verbatim():
     assert 'enum' not in schema['properties']['primary_style']
     assert 'enum' not in schema['properties']['secondary_families']['items']
     assert 'hyperpop' not in PROMPT.casefold()
+
+
+def test_point_timestamps_allow_end_of_recording_but_not_outside_and_genre_prompt_unchanged():
+    schema = point_schema(free_schema(read(FIXTURE / 'response_schema.json')))
+    schema['properties']['audio_evidence']['items']['properties']['at_seconds']['maximum'] = 150
+    p = profile()
+    p['audio_evidence'] = [{'at_seconds': 150, 'observation': 'Synthetic endpoint'}]
+    assert validate_free_profile(json.dumps(p), schema=schema, duration=150) == p
+    p['audio_evidence'][0]['at_seconds'] = 151
+    with pytest.raises(ValueError): validate_free_profile(json.dumps(p), schema=schema, duration=150)
+    assert POINT_PROMPT.replace('one approximate at_seconds timestamp per cue', 'approximate start/end times') == PROMPT
 
 
 @pytest.mark.parametrize('fault', ['duplicate', 'empty_label', 'long_label', 'timestamp', 'nan', 'extra_field', 'not_music'])
@@ -170,3 +194,25 @@ def test_prepare_accounts_for_prior_paid_calls_and_preserves_prior_artifacts(tmp
     runner = FreeGenreRunner(tmp_path, tmp_path / 'new_arm', transport_factory=lambda: pytest.fail('provider'))
     assert len(runner.reuse_uploads()['reused_uploads']) == 16
     assert runner.replay(require_complete=False)['new_api_calls'] == 0
+    new_provider = FreeProvider(runner.run, fault='reverse_second')
+    runner.transport_factory = new_provider.factory
+    runner.next()
+    with pytest.raises(ValueError, match='audio evidence'): runner.next()
+    assert new_provider.generations == 2
+    freeze_json(runner.run / 'implementation_snapshot.json', {})
+    stopped_before = hashes(list(runner.run.rglob('*')), tmp_path)
+    point = prepare(tmp_path, prior, tmp_path / 'point_arm', report, approval, point_revision=runner.run)
+    assert point['max_attempts'] == 16 and point['prior_attempts'] == 22
+    assert Decimal(point['prior_settled_usd']) == Decimal('0.198')
+    assert len(point['schedule']) == 16 and not any(s['repeat'] for s in point['schedule'])
+    assert hashes(list(runner.run.rglob('*')), tmp_path) == stopped_before
+    assert (tmp_path / 'point_arm/prompt.txt').read_text() == POINT_PROMPT
+    point_provider = FreeProvider(tmp_path / 'point_arm')
+    point_provider.point = True
+    point_runner = FreeGenreRunner(tmp_path, tmp_path / 'point_arm', transport_factory=point_provider.factory)
+    point_runner.reuse_uploads()
+    for _ in range(16): point_runner.next()
+    point_runner.transport_factory = lambda: pytest.fail('replay contacted provider')
+    assert point_runner.freeze_profiles()['replay']['unique_profiles'] == 16
+    assert point_runner.next()['new_generation_calls'] == 0
+    assert point_provider.generations == 16

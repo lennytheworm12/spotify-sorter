@@ -56,7 +56,9 @@ def validate_free_profile(text, *, schema, duration):
         if primary and any(not 1 <= len(s.strip()) <= 120 for s in values):
             raise InvalidProfile('empty or overlong free genre label')
     for e in profile['audio_evidence']:
-        if not 0 <= e['start_seconds'] < e['end_seconds'] <= duration:
+        valid = (0 <= e['at_seconds'] <= duration) if 'at_seconds' in e else (
+            0 <= e['start_seconds'] < e['end_seconds'] <= duration)
+        if not valid:
             raise InvalidProfile('audio evidence outside recording or empty interval')
         if not 1 <= len(e['observation'].strip()) <= 220:
             raise InvalidProfile('invalid audio observation length')
@@ -73,11 +75,12 @@ def validate_free_profile(text, *, schema, duration):
 def implementation_files():
     here = Path(__file__).parent
     return [here / 'gemini_free_genre.py', here / 'gemini_free_genre_runner.py',
+            here / 'gemini_free_genre_point.py',
             *sorted((here / 'gemini_style_pilot').glob('*.py')),
             here / 'stage5e3_artifacts.py', here / 'stage5b1a_models.py']
 
 
-def prepare(root: Path, prior: Path, run: Path, report: Path, approval: Path):
+def prepare(root: Path, prior: Path, run: Path, report: Path, approval: Path, *, point_revision=None):
     root, prior, run, report = (p.resolve() for p in (root, prior, run, report))
     if run == prior or prior in run.parents or run in prior.parents:
         raise ValueError('new arm requires a separate research directory')
@@ -103,15 +106,27 @@ def prepare(root: Path, prior: Path, run: Path, report: Path, approval: Path):
         if cost != Decimal(row['settled_standard_rate_usd']):
             raise ValueError('prior paid cost differs from original raw response')
         spent += cost
-    freeze(run / 'prompt.txt', PROMPT.encode())
+    prompt = PROMPT
+    if point_revision:
+        from .gemini_free_genre_point import POINT_PROMPT
+        prompt = POINT_PROMPT
+    freeze(run / 'prompt.txt', prompt.encode())
     freeze_json(run / 'approval.json', owner)
     base = free_schema(read(prior / 'contract/model/response_schema.json'))
+    if point_revision:
+        from .gemini_free_genre_point import point_schema
+        base = point_schema(base)
     freeze_json(run / 'response_schema.json', base)
     schemas, uploads = {}, {}
     for t in old['tracks']:
         pid, prepared = t['pilot_id'], t['prepared']
         schemas[pid] = 'schemas/' + t['neutral_id'] + '.json'
-        freeze_json(run / schemas[pid], bounded_schema(base, prepared['duration_seconds']))
+        if point_revision:
+            schema = copy.deepcopy(base)
+            schema['properties']['audio_evidence']['items']['properties']['at_seconds']['maximum'] = prepared['duration_seconds']
+        else:
+            schema = bounded_schema(base, prepared['duration_seconds'])
+        freeze_json(run / schemas[pid], schema)
         receipt = prior / 'execution/transport' / f'upload-{t["neutral_id"]}.json'
         if receipt.exists():
             uploads[pid] = str(receipt.relative_to(root))
@@ -148,17 +163,22 @@ def prepare(root: Path, prior: Path, run: Path, report: Path, approval: Path):
                         'https://ai.google.dev/gemini-api/docs/pricing',
                         'https://ai.google.dev/api/generate-content', 'https://ai.google.dev/api/tokens'],
     }
+    if point_revision:
+        from .gemini_free_genre_point import extend_manifest
+        manifest = extend_manifest(root, run, manifest, point_revision.resolve())
     freeze_json(run / 'execution_manifest.json', manifest)
     return manifest
 
 
 def load(root, run):
     m = read(run / 'execution_manifest.json')
-    expected = [{'pilot_id': p, 'repeat': False} for p in PRIMARY_ORDER] + [
-        {'pilot_id': p, 'repeat': True} for p in ('A01', 'A03')]
-    if (m['schema_version'] != 'gemini-free-genre-v1' or m['model_id'] != MODEL
+    point = m['schema_version'] == 'gemini-free-genre-point-v1'
+    expected = [{'pilot_id': p, 'repeat': False} for p in PRIMARY_ORDER]
+    if not point:
+        expected += [{'pilot_id': p, 'repeat': True} for p in ('A01', 'A03')]
+    if (m['schema_version'] not in ('gemini-free-genre-v1', 'gemini-free-genre-point-v1') or m['model_id'] != MODEL
         or m['generation_config'] != CONFIG or m['environment'] != environment()
-        or m['schedule'] != expected or m['max_attempts'] != 18 or m['prior_attempts'] != 20
+        or m['schedule'] != expected or m['max_attempts'] != (16 if point else 18) or m['prior_attempts'] != (22 if point else 20)
         or m['combined_attempt_cap'] != 38 or m['combined_spend_cap_usd'] != '2'
         or Decimal(m['spend_cap_usd']) + Decimal(m['prior_settled_usd']) != 2
         or m['ontology'] is not None):

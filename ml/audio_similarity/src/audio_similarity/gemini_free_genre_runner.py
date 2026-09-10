@@ -181,10 +181,11 @@ def main():
     parser.add_argument('--prior', type=Path)
     parser.add_argument('--report', type=Path)
     parser.add_argument('--approval', type=Path)
+    parser.add_argument('--point-revision', type=Path, help='Preserved two-smoke predecessor; consumes its calls and cost.')
     args = parser.parse_args()
     root = Path.cwd()
     if args.action == 'prepare':
-        m = prepare(root, args.prior, args.run, args.report, args.approval)
+        m = prepare(root, args.prior, args.run, args.report, args.approval, point_revision=args.point_revision)
         print({'status': 'MANIFEST_FROZEN', 'attempt_cap': m['max_attempts'], 'prior_settled_usd': m['prior_settled_usd']})
         return
     runner = FreeGenreRunner(root, args.run)
