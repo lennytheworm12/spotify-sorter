@@ -25,6 +25,14 @@ canonical concepts ───────────────→ primary pair
 
 Canonical concepts are the primary pairwise signal because manual review indicates that the normalized concepts are highly descriptive. Neighborhoods remain useful as a lower-dimensional relationship/indexing representation.
 
+## Development corpus
+
+Use the **entire frozen 100-song corpus** for the interactive genre-scoring explorer. Score all 99 candidates for every anchor. There are only 4,950 unordered song pairs, so exhaustive pairwise scoring is trivial at this scale.
+
+The original 16-song subset is retained only for quick mapper/Gemini semantic sanity review and may be exposed as an optional UI filter. It is not the scoring surface.
+
+Once the frozen 100 is inspected or used to choose alpha/beta/eta, source mode or polarity, it is development data. Freeze the chosen rule before any fresh confirmatory evaluation.
+
 ## Pairwise genre scoring
 
 Primary exact comparison:
@@ -87,6 +95,8 @@ Candidates(anchor)
 
 Deduplicate the union before final scoring. Neighborhood retrieval affects candidate availability only; it does not automatically make a candidate a strong final match.
 
+For the frozen100 explorer, score all pairs exhaustively; retrieval can be shown as a diagnostic for eventual large-library use.
+
 ## Overall development score
 
 Keep genre additive and independent of the frozen audio score:
@@ -105,16 +115,19 @@ where:
 
 A negative signed result is not evidence of true genre incompatibility.
 
+Keep `vocal_role` and `arrangement_focus` visible in the UI but score-neutral during this stage. They are reserved for a later orthogonal ablation.
+
 ## Development sequence
 
-1. Implement the 138-concept mapper unchanged.
-2. Manually review the original 16 frozen Gemini profiles.
-3. Implement canonical weighted-Jaccard scoring.
-4. Implement residual-neighborhood fusion.
-5. Compare the three pairwise source modes on the same 16.
-6. Use pull-only as the default; keep signed mode as a development ablation.
-7. Show original score, adjusted score, rank changes and the exact contributing concepts/neighborhoods in the frontend.
-8. Only then apply the unchanged definitions to the frozen 100 development set.
-9. Freeze a chosen rule before any fresh confirmatory evaluation.
+1. Keep the 138-concept mapper unchanged.
+2. Use the original 16 plus spot checks only for mapper/Gemini semantic sanity.
+3. Implement canonical weighted-Jaccard scoring across all 100 frozen tracks.
+4. Implement residual-neighborhood fusion across the same 100.
+5. Build the interactive 100-song explorer with 99-candidate rankings per anchor.
+6. Compare the three pairwise source modes on frozen100.
+7. Use pull-only as the default; keep signed mode as a development ablation.
+8. Show original score, adjusted score, rank changes and exact contributing concepts/neighborhoods; include top-K entry/exit and largest-mover diagnostics.
+9. Treat any mode/parameter choice informed by frozen100 as development tuning.
+10. Freeze the chosen rule before fresh confirmatory evaluation on new held-out songs/pairs.
 
 No new Gemini calls, Gemini prompt changes, song-specific mapper hacks, or production playlist activation are allowed in this stage.
