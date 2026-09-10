@@ -111,6 +111,12 @@ function Explorer({ packet }: { packet: ForcePacket }) {
     setSettings((s) => ({ ...s, ...change }))
     setTemporary({})
   }
+  function resetSettings() {
+    setSettings({ ...packet.defaults })
+    setMove(false)
+    setTemporary({})
+    setK(5)
+  }
   function select(id: string) {
     setAnchor(id)
     setCandidate('')
@@ -204,6 +210,7 @@ function Explorer({ packet }: { packet: ForcePacket }) {
           Move graph
         </label>
         <button onClick={() => update({ alpha: 0 })}>Original audio · α = 0</button>
+        <button onClick={resetSettings}>Reset to original settings</button>
         <label>
           Maximum genre contribution β
           <input

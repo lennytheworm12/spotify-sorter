@@ -48,6 +48,11 @@ Jaccard remain explicit alternatives. Pull-only uses G; signed_experimental uses
 parameter selection, rating ingestion, new model calls or production writes occur.
 Scores are not normalized, clipped, calibrated probabilities, or inferred labels.
 
+“Reset to original settings” restores alpha 0, beta .05, eta .25,
+canonical-plus-residual, pull-only, Move graph off and diagnostic Top-K 5.
+It keeps the selected songs and search text. “Original audio · α = 0” remains a
+separate shortcut that only zeroes alpha.
+
 The table shows every candidate's original/adjusted scores and ranks, delta and G.
 The inspector shows union/shared/unique/residual canonical mass, recovered
 neighborhood relationships, exclusions, raw labels, mapping traces, coefficients,
