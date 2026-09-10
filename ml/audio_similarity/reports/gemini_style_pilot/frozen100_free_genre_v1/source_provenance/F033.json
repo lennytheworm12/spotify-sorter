@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.4294803109951317,
+  "acquisition_ended_at": "2026-09-04T20:18:32.396065+00:00",
+  "acquisition_started_at": "2026-09-04T20:18:30.966585+00:00",
+  "acquisition_timestamp": "2026-09-04T20:18:30.966722+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3774199,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 220,
+  "provider_result": "SUCCESS",
+  "provider_title": "[MV] IU(아이유) _ strawberry moon",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "c6b2fb3072812d8b7a33bd3586adb13235ab3dc376828e86664f53bf099701b9",
+      "representation_identity": "88c5a7d399fa957b5752e4388f15256c762d121bc02a8ce3d2b61e60d0ee8011",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "92ad13a44e5962ed0d61f2e13262b6ac6feefa2c568dc5d5053d4f52ada296d1",
+          "25": "e654327422d96a6112404974c789dd10881587bff7e174b58b87cdf4b63c3886",
+          "5": "0f0b249b4ec2ca49e99b1057988c8c20bd07d85f48c75d01e602976435283427"
+        },
+        "muq_mulan_large": {
+          "15": "5d016f3905de4acd87ddfd0d800d80970af9e110d4477687a9ca308b32a8c0dc",
+          "25": "cf03278620c4e7009fd37f472828200de0512d323bcb22a8302edff8e06befab",
+          "5": "ef30f2eeed0faf71e5b234c32eea48f2b26d27d32a73245d088655c9ad84ed53"
+        }
+      },
+      "source_audio_sha256": "977b9017d4057e5ab09446cf26191774cc5e496fc3f22fa4fecd4759e3da079a"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "sqgxcCjD04s"
+  },
+  "retained_relative_path": "2g0LdZQce9xlcHb1mBJyuz/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 219.901,
+  "source_sha256": "d5ccb25cc4181d21b0f819f94093da56f105926cdaaf010b4e50b10d4b2d50f5",
+  "source_url": "https://www.youtube.com/watch?v=sqgxcCjD04s",
+  "spotify_artists": [
+    "IU"
+  ],
+  "spotify_title": "strawberry moon",
+  "spotify_track_id": "2g0LdZQce9xlcHb1mBJyuz",
+  "successful_query": "strawberry moon IU",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "sqgxcCjD04s"
+}

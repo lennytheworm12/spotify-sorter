@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.508152253984008,
+  "acquisition_ended_at": "2026-09-04T20:14:12.472775+00:00",
+  "acquisition_started_at": "2026-09-04T20:14:10.964623+00:00",
+  "acquisition_timestamp": "2026-09-04T20:14:10.964719+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2610686,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 161,
+  "provider_result": "SUCCESS",
+  "provider_title": "Dear My All",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "4f4e81be9002bf6ea936ff3d00f66f5ed397768da9c17804098c40f8a6f21244",
+      "representation_identity": "62c02181e65a0be6371b319fa3f38f2e88db8462ac49896445d08d4f4eb73e3d",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "23301edb11b8c89440d40d9768c055876d118e0bb2b3f919f6ed01b81aa5fa64",
+          "25": "83a291c3fb2254b3307221c9baffb6ddc460afabcb481650d15458028c289f02",
+          "5": "f062dc4937468c5ef63c8a910c81a8e6861728a9912b7061ce4c802c3ee246b1"
+        },
+        "muq_mulan_large": {
+          "15": "ca3e16e90d37ba019d87f2b79fe9aef1fea7e1726af8a1db206ab5dc5907827f",
+          "25": "7631049cd1200f591cbc094d9f1b70c3dc3812d8c33748d11e693b4da8fa6a27",
+          "5": "7485168891ce67a76ee6eef506fd57706fe2d4dd41417316ffa34af83b8da2b2"
+        }
+      },
+      "source_audio_sha256": "cb0a9bdde70cc4968f23efd004f29a611dfb735d31010ab1aceec9b18a4ba7db"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "21Jz5U8iOAw"
+  },
+  "retained_relative_path": "2X71ww8wImSYbw4s0Mr2ur/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 161.261,
+  "source_sha256": "ab461cd211d55edf6ced78230e4df1b3645ab552f8c1613caaf38309a2a9cfde",
+  "source_url": "https://www.youtube.com/watch?v=21Jz5U8iOAw",
+  "spotify_artists": [
+    "Mingginyu"
+  ],
+  "spotify_title": "Dear My All",
+  "spotify_track_id": "2X71ww8wImSYbw4s0Mr2ur",
+  "successful_query": "Dear My All Mingginyu",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "21Jz5U8iOAw"
+}

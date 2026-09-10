@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.707109346985817,
+  "acquisition_ended_at": "2026-09-04T20:15:32.672633+00:00",
+  "acquisition_started_at": "2026-09-04T20:15:30.965524+00:00",
+  "acquisition_timestamp": "2026-09-04T20:15:30.965765+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2074096,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 121,
+  "provider_result": "SUCCESS",
+  "provider_title": "elijah who - we used to talk every night",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "9e6f421ab6da63e5971d1a26ec9e267d4ec8dc46590c09da2aade89478be0dc8",
+      "representation_identity": "2ef2499386f05f3c0bfdacad8735b4d2a62c764f1d693cbffbb1b117919ac33d",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "443ce30cc02dceb5d8f478d29dcf7ed8647590db6ab3aa834958d20c633f4893",
+          "25": "031c7379138f51c27bc3c60a0ccc34d27d4b73fa4bef392ca7f18a8b899ad98f",
+          "5": "3b27772ab830d8e946aa2c53e6088120993a591055a44b33afc755ab961442a6"
+        },
+        "muq_mulan_large": {
+          "15": "8e6a988b6ac66a68ca56e1b891ee49fd72326a330c537de57437d449105c64c8",
+          "25": "3e2d93e471ad065e963248068eeac2c1d3f33e0b59c87f2034daadd971ae2554",
+          "5": "1851ad79d349d745353b0a9685bba24345cd8bec162d2a0e2cb5ce27ac7c164c"
+        }
+      },
+      "source_audio_sha256": "022f88305fbecaac584ab241788d1a9c245b1398230f0f507d372c366fe7e5d6"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "ENLFl2b6raI"
+  },
+  "retained_relative_path": "6kAMaQt8UveeTctekIpUjF/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 121.361,
+  "source_sha256": "9ae95ebd639ab7a8f1de9882102a4199d7bc2ff4f9508cf9d0d1941f6931cf13",
+  "source_url": "https://www.youtube.com/watch?v=ENLFl2b6raI",
+  "spotify_artists": [
+    "Elijah Who"
+  ],
+  "spotify_title": "we used to talk every night",
+  "spotify_track_id": "6kAMaQt8UveeTctekIpUjF",
+  "successful_query": "we used to talk every night Elijah Who",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "ENLFl2b6raI"
+}

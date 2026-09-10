@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 12.0,
+        "observation": "Sparse intro with music box synth glockenspiel melody and solitary soft female Korean vocals."
+      },
+      {
+        "at_seconds": 65.0,
+        "observation": "Dynamic chorus bloom with lush synth pads, punchy pop drum programming, and expansive vocal harmonizations."
+      },
+      {
+        "at_seconds": 175.0,
+        "observation": "Bridge section with emotional solo vocal delivery over gentle keyboard backing before building back into the chorus."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "Electronic",
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Synthpop",
+      "Ballad"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "electronic",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "QyGiav-1A-bcjMcPqZuzwQI",
+  "spotify_track_id": "3F5HhdyBfvCbzuPJbGBHkc"
+}

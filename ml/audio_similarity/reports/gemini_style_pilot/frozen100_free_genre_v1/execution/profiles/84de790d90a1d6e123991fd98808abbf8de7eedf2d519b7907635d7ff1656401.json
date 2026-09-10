@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00870750",
+  "attempt": 11,
+  "cache_key": "84de790d90a1d6e123991fd98808abbf8de7eedf2d519b7907635d7ff1656401",
+  "evidence_hashes": {
+    "execution/attempts/attempt-11.request.json": "a0efefec639c3b02e3adac417b0b8844b626845c8324e1603b1afc4c9715a794",
+    "execution/attempts/attempt-11.reservation.json": "aed225c4e5683c813dc5015c061e70e9cf76664dbcb059e2c1e4af50842bacf1",
+    "execution/attempts/attempt-11.settlement.json": "c79eacb730972400f33cff11dc7f2cc9d66e24545b46b4b63e257a8ee11d5dcd",
+    "execution/transport/call-043.response.bin": "40426cafda163ef39f8e51ca3e946dec7d7b4de6ca15e0705f7815b9d7385e67",
+    "execution/transport/call-044.response.bin": "4a487eef0110d6c54f3da209325dc7d24335e5d8e62b6ac0e622e5fbe89e12fb",
+    "execution/transport/call-044.response.json": "fb36c6c3be6deb62633b0fef50fa729dcf71acfc811fe757328691ad467fcfdd",
+    "execution/transport/upload-N027.json": "6b382047872cff2f8855a5eebce9a63d03b34f45b8dfd0e887822ab6de701555"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N027",
+  "pilot_id": "F012",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 16.0,
+        "observation": "High-pitched repeating bell/glockenspiel ostinato plays with minimal ambient space."
+      },
+      {
+        "at_seconds": 125.0,
+        "observation": "Deep electronic bass pulses beneath repetitive metallic percussion loops."
+      },
+      {
+        "at_seconds": 240.0,
+        "observation": "Continuous slowly evolving minimalist percussion patterns with subtle ambient synthesizer swells."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Electronic",
+    "primary_style": "Ambient",
+    "secondary_families": [
+      "Modern Classical",
+      "Experimental"
+    ],
+    "secondary_styles": [
+      "Minimalism",
+      "Glitch"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean"
+    ],
+    "vocal_role": "instrumental"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-044.response.bin",
+  "response_id": "mCCiavfuEuO6jMcPjbXZwAI",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 16.0,\n      \"observation\": \"High-pitched repeating bell/glockenspiel ostinato plays with minimal ambient space.\"\n    },\n    {\n      \"at_seconds\": 125.0,\n      \"observation\": \"Deep electronic bass pulses beneath repetitive metallic percussion loops.\"\n    },\n    {\n      \"at_seconds\": 240.0,\n      \"observation\": \"Continuous slowly evolving minimalist percussion patterns with subtle ambient synthesizer swells.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Electronic\",\n  \"primary_style\": \"Ambient\",\n  \"secondary_families\": [\"Modern Classical\", \"Experimental\"],\n  \"secondary_styles\": [\"Minimalism\", \"Glitch\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\"],\n  \"vocal_role\": \"instrumental\"\n}",
+  "usage": {
+    "candidatesTokenCount": 278,
+    "promptTokenCount": 10220,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 9771
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 10498
+  }
+}

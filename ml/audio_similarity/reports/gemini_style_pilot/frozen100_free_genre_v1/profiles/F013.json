@@ -1,0 +1,46 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 1.5,
+        "observation": "Female lead vocal begins over warm, low-tempo Rhodes-like electric piano chords with a sparse beat."
+      },
+      {
+        "at_seconds": 37.0,
+        "observation": "Chorus enters with a pulsing sub-bass, snare snaps, and layered melodic vocal harmonies."
+      },
+      {
+        "at_seconds": 132.0,
+        "observation": "Second chorus with a tight contemporary R&B drum pattern, syncopated bassline, and lead vocal ad-libs."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "r&b",
+    "primary_style": "contemporary r&b",
+    "secondary_families": [
+      "pop"
+    ],
+    "secondary_styles": [
+      "neo soul",
+      "downtempo pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "niCiapGrJOyO1MkP2YCfkQw",
+  "spotify_track_id": "1AHtqWqufKsgBmdNEi1WVO"
+}

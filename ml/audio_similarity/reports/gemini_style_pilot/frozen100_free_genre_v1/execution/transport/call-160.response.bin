@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 21.0, \"observation\": \"Intimate, breathy female vocal enters over a simple looping acoustic piano progression.\"},\n    {\"at_seconds\": 101.5, \"observation\": \"Subtle bass pulse, soft electronic kick, and ambient pad textures join beneath the emotional lead vocal.\"},\n    {\"at_seconds\": 244.0, \"observation\": \"Minimal piano and sparse bassline accompany vocal lines with atmospheric reverb.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\"Pop\"],\n  \"secondary_styles\": [\"Alt-Pop\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"acoustic\", \"electronic\", \"clean\"],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPHNQ3LdtYCOvhPgrDJ6nak9W3VSCFdKuKX7ihSyeCanAy1Ywv7E9+JyPH17P/HXsfucpXsCyx8GH34AR0M7aKRMh+VN2dDXdbNwTA4KIvq5ZtcRPdjXW/e+n5fdS5iBH1"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 6870,
+    "candidatesTokenCount": 264,
+    "totalTokenCount": 7134,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 6421
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "XCGiav-9LuXI-sAP_bXYwAQ"
+}

@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 17.5,
+        "observation": "A slow, punchy R&B groove enters with trap-influenced hi-hats, deep 808 sub-bass, and emotional female lead vocals."
+      },
+      {
+        "at_seconds": 56.2,
+        "observation": "The chorus expands with layered vocal harmonies, lush synth pads, and resonant basslines emphasizing contemporary R&B tropes."
+      },
+      {
+        "at_seconds": 133.0,
+        "observation": "Verse transition with stripped-back keys and intimate, breathy solo vocal phrasing before the fuller beat returns."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B and Soul",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Pop",
+      "Hip-Hop"
+    ],
+    "secondary_styles": [
+      "Alternative R&B",
+      "Trap Soul"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "HCKiavK2NqXnz7IPkN3a0Aw",
+  "spotify_track_id": "6B9HXnRzmokTTxZNdV5T48"
+}

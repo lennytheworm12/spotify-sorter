@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.4924323500017636,
+  "acquisition_ended_at": "2026-09-04T20:06:12.453316+00:00",
+  "acquisition_started_at": "2026-09-04T20:06:10.960884+00:00",
+  "acquisition_timestamp": "2026-09-04T20:06:10.960991+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3330117,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 171,
+  "provider_result": "SUCCESS",
+  "provider_title": "city girl | soft static sky on early mornings",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "5ef25f5c5cb5c253f6b8e30ba887e6c1873538f653d4105746cdb3d786457488",
+      "representation_identity": "a75e647349b984a8ca08696ef5cb264c2a21037c1196527681853f48bdf240ec",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "51344ff099b2365d39c8f1f9786be3aeb435c773dc3c886d61d9c02bbce41a08",
+          "25": "d3667573b5cb3df391b07f26e94071b72a78e611e42eec9c0bfa0dbb3100a1e3",
+          "5": "f7d6bbe09770b67e07381e1adf714ea84f881968132bfb8d4f38f9fc3d22b3e6"
+        },
+        "muq_mulan_large": {
+          "15": "57fa0833f16cc247c45ecba4be7e9f90057b2abad6a1b73a88d84257fc737b10",
+          "25": "db20a2bee67d9b50ecaadb2f362acfaa83721df8bcad99ce1674439560abba99",
+          "5": "990899560a4d23c0dd949b19eae0bdee7e8bccd450ffc0a992a21b7f9a866677"
+        }
+      },
+      "source_audio_sha256": "4c7886dd097adc816161262840945f3a95179c4ceb4b35a3b78b2ac96a9b762a"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "2DDPiGHA14w"
+  },
+  "retained_relative_path": "2Ah7oAy4esXD8pEEhY0hyR/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 170.501,
+  "source_sha256": "e30c54c310af74e4d686f9850f1765d9b484e8aef91867a00f2ee4771abbd81e",
+  "source_url": "https://www.youtube.com/watch?v=2DDPiGHA14w",
+  "spotify_artists": [
+    "City Girl"
+  ],
+  "spotify_title": "Soft Static Sky on Early Mornings",
+  "spotify_track_id": "2Ah7oAy4esXD8pEEhY0hyR",
+  "successful_query": "Soft Static Sky on Early Mornings City Girl",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "2DDPiGHA14w"
+}

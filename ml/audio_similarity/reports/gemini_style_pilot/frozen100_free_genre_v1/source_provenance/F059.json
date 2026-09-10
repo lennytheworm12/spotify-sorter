@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.9299712509964593,
+  "acquisition_ended_at": "2026-09-04T20:24:12.899403+00:00",
+  "acquisition_started_at": "2026-09-04T20:24:10.969432+00:00",
+  "acquisition_timestamp": "2026-09-04T20:24:10.969685+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2819321,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 166,
+  "provider_result": "SUCCESS",
+  "provider_title": "LE SSERAFIM (르세라핌) - 'SMART' Lyrics [Color Coded_Han_Rom_Eng]",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "774374c044541042df7ef51903dc30d2120dea99aaac400b48da064527cfa0a3",
+      "representation_identity": "20254a9e07ac468b9b3d29513b591d391c62d8723773f0229d5dd05c04b3deac",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "0d2db6e4b60cead1c2b406f7a6969d1b482b82d94514e7e3e3cce4d302bc23a6",
+          "25": "8b080951348f4e4cbf66115ab7f15c4ffbba5d97d6c04bab99806ee709bbbbfb",
+          "5": "86b7f80a7fc5a9e1d4a41b9aab878373b8cb01ff449f92885c2d64196c9388eb"
+        },
+        "muq_mulan_large": {
+          "15": "c342c350782db8cf79f0975716f05356eb11a346c82bf2f3beb1db6d4aba17d8",
+          "25": "1c6afc0ab65df97184b36d407d9a6cdb76838b885afef8b2674678613eb03590",
+          "5": "53f505bace2e09d57471bb54fc95ac0d2309dafc0f22b4bb18ec28e11dc6ef3d"
+        }
+      },
+      "source_audio_sha256": "c8c15886cd2efe44d661157daf896109708d9defb3ce3c8f766c81dc4dee9dbc"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "FshZLv0_2w4"
+  },
+  "retained_relative_path": "4lR8sYGMGZPvthF2yUfo7T/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 3,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 166.461,
+  "source_sha256": "b0158e9794464d6fe8b7ecef80515d5c9b740cce4538b18ba3031bc79acaa33a",
+  "source_url": "https://www.youtube.com/watch?v=FshZLv0_2w4",
+  "spotify_artists": [
+    "LE SSERAFIM"
+  ],
+  "spotify_title": "Smart",
+  "spotify_track_id": "4lR8sYGMGZPvthF2yUfo7T",
+  "successful_query": "Smart LE SSERAFIM",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "FshZLv0_2w4"
+}

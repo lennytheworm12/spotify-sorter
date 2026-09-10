@@ -1,0 +1,46 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 13.5,
+        "observation": "Female lead vocal enters singing intimate, mellow lines over a gentle, steady fingerpicked acoustic guitar pattern."
+      },
+      {
+        "at_seconds": 54.0,
+        "observation": "Soft, muted percussive beat and subdued bassline enter subtly without overwhelming the acoustic guitar and vocals."
+      },
+      {
+        "at_seconds": 112.5,
+        "observation": "Lead vocal shifts into conversational English lyrics over a restrained, downtempo acoustic groove."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B/Soul",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Pop",
+      "Folk/Americana"
+    ],
+    "secondary_styles": [
+      "K-Indie",
+      "Acoustic Pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "gCGiaurZM63Uz7IP6KPHUQ",
+  "spotify_track_id": "40TJl2hLf6Sr7K1a2SkkVA"
+}

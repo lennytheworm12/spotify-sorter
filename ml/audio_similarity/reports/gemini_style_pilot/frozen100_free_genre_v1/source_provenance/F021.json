@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.653089340950828,
+  "acquisition_ended_at": "2026-09-04T20:04:52.613374+00:00",
+  "acquisition_started_at": "2026-09-04T20:04:50.960285+00:00",
+  "acquisition_timestamp": "2026-09-04T20:04:50.960403+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2387312,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 148,
+  "provider_result": "SUCCESS",
+  "provider_title": "hateful - too afraid (official audio)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "8a8ad3a75d66f791c55f135a8f3a1fcdf0236de92d04c60a06547f918ba23e25",
+      "representation_identity": "f9248906c10adec67b45da4b7d3fc4e334cfa9c7dfc78db1ea722f08ab518a99",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "8b76013a21aead5c9b8b4f623e3015fbf28c55f60ba7c2987cba5156a0dd0923",
+          "25": "f3d3e6bdfa14d3871ee5ed16bb6946acf44f8f87411a850221381bce4ab4a4d4",
+          "5": "6be9e06d8739619df803f0056c82d997ddd8ebd5d9b7c779a39654470d0ceb8c"
+        },
+        "muq_mulan_large": {
+          "15": "7e3b2c3c6de16b4dd381677892f023394138f589ab4ae16d56d468c43820b5d5",
+          "25": "20d968bfebde4edbbeab9f7aa3607df5316f50c7fac7e90972d95031ccbd0794",
+          "5": "c632dad9dc1dc711cb3958c90dad3cd65e329c3235b0787b49457b017b17a708"
+        }
+      },
+      "source_audio_sha256": "3ed2b958bf40816c3477ed7d9a4360abdbddb50c3ab9f400c582fc4424bc0b09"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "wzKn7uGBxpI"
+  },
+  "retained_relative_path": "1ZhrRS2xY1ZoD2QJ9aZQxX/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 148.221,
+  "source_sha256": "d3306f9295223ace2a53f556b3eed27710917b8f5e79e3b683006b0e611e4e93",
+  "source_url": "https://www.youtube.com/watch?v=wzKn7uGBxpI",
+  "spotify_artists": [
+    "hateful"
+  ],
+  "spotify_title": "too afraid",
+  "spotify_track_id": "1ZhrRS2xY1ZoD2QJ9aZQxX",
+  "successful_query": "too afraid hateful",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "wzKn7uGBxpI"
+}

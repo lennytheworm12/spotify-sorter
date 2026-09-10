@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.855582383053843,
+  "acquisition_ended_at": "2026-09-04T20:05:32.816203+00:00",
+  "acquisition_started_at": "2026-09-04T20:05:30.960621+00:00",
+  "acquisition_timestamp": "2026-09-04T20:05:30.960751+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3768688,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 232,
+  "provider_result": "SUCCESS",
+  "provider_title": "Ariana Grande - The Way (Official Video) ft. Mac Miller",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "adcd79e9f8dc2dc66053cb4d4575c4fbcb70e9fe2e24460d6cd12e5a22864219",
+      "representation_identity": "7b14312e7193f42b1d6fd369f7adf2e88e927c626a7de323af9eb4f8914b904d",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "05593920c68ee47bc7b4c98f69282e7ca5f763671bc81bae24e492d82ac48459",
+          "25": "ad37c2577e8bfbe5a99c4c0b4c821b95f2e31576b43105d438fa1733ce4c844c",
+          "5": "bfdfa4f67146848ca7d1b7943c2d1e25393e545d19367b0a614a88766038d7ba"
+        },
+        "muq_mulan_large": {
+          "15": "7eb431af582221e8814514c2dbce43a670e91b4d4841ca2de4a2d33fef243e0a",
+          "25": "101e48b7b047d1562356750ebbca3f4800b5223e246342096b5e440493240c61",
+          "5": "a9dff1592f18b5d3fa445f966e987eb5e7023f9b0b608824dbcd2671af310be0"
+        }
+      },
+      "source_audio_sha256": "68b5d6028cb6864d1f90cc6f1df32800106bf5c83bbe04b4d8fc182b0cec4d7d"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "_sV0S8qWSy0"
+  },
+  "retained_relative_path": "06EL94D0TA27Ik0Ke5usbj/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 231.741,
+  "source_sha256": "c235ae21612a837e0a00254a2874da76e9a871635b5b87b732eabd43d2755bcb",
+  "source_url": "https://www.youtube.com/watch?v=_sV0S8qWSy0",
+  "spotify_artists": [
+    "Ariana Grande",
+    "Mac Miller"
+  ],
+  "spotify_title": "The Way",
+  "spotify_track_id": "06EL94D0TA27Ik0Ke5usbj",
+  "successful_query": "The Way Ariana Grande Mac Miller",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "_sV0S8qWSy0"
+}

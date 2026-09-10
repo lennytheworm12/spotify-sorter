@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.800616975990124,
+  "acquisition_ended_at": "2026-09-04T20:12:32.764593+00:00",
+  "acquisition_started_at": "2026-09-04T20:12:30.963976+00:00",
+  "acquisition_timestamp": "2026-09-04T20:12:30.964080+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3445565,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 198,
+  "provider_result": "SUCCESS",
+  "provider_title": "HYEJIN - Cloudy Thoughts MV",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "3e79b39b3846dde1dfe669a89116a9d1086bdeec8d6135f3ba8728078da5cff3",
+      "representation_identity": "18d9655f4a1ebe83c683c72d2e4ab3a44978a44d01704668820383fe0a41e7fe",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "0fba9a6af0e4c90b1d6530ed9abdc62e7167b5fae61f60cd63fe9fa9d7c73b18",
+          "25": "9e341776d792a6aeb76ab3c2432f5c0012490d82e6945b80f5839bfe4e94af31",
+          "5": "2e4db74d3cfade619a77922de2597a455cd4d5c6689fc9aaca46c0a7a44451f9"
+        },
+        "muq_mulan_large": {
+          "15": "e440ece2bcbb1fa6331530ded85eb5cc58e121f0b21f4e19f4a60a5ea02614f6",
+          "25": "b44513f642cc154efb82872849776f974f16038b1f45c5e35f2f2beda090fd4c",
+          "5": "f8de1a4a815640198589883f8a01c19c3a14b213f8b636f53001eb34474b4013"
+        }
+      },
+      "source_audio_sha256": "bbbf4ad69e0089977176cb0b29747e5ae0c54a107ddeba9bf3737dc81a89d9aa"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "tz8QB1ZH5sE"
+  },
+  "retained_relative_path": "70YbAV2UKPee15B00RbPcT/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 198.081,
+  "source_sha256": "0b576d95eb236a0357371eba5c42f8ba1819ec4ea834a39e288cbf9f5021f20d",
+  "source_url": "https://www.youtube.com/watch?v=tz8QB1ZH5sE",
+  "spotify_artists": [
+    "HYEJIN"
+  ],
+  "spotify_title": "Cloudy Thoughts",
+  "spotify_track_id": "70YbAV2UKPee15B00RbPcT",
+  "successful_query": "Cloudy Thoughts HYEJIN",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "tz8QB1ZH5sE"
+}

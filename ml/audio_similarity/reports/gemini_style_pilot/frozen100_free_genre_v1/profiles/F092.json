@@ -1,0 +1,46 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "dense",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 8.4,
+        "observation": "Solo female vocal enters over a driving electronic pop beat and synth chords"
+      },
+      {
+        "at_seconds": 41.2,
+        "observation": "Explosive dance-pop chorus drops with layered bright synths, four-on-the-floor kick, and full backing vocals"
+      },
+      {
+        "at_seconds": 148.0,
+        "observation": "Second high-energy chorus section featuring dense electronic production and energetic vocal delivery"
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Dance-Pop",
+      "Electropop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "biKiatPiE5WGz7IP8Pe0gQQ",
+  "spotify_track_id": "74cpuIw43kA8xPgbQEPdss"
+}

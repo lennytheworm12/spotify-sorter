@@ -1,0 +1,46 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 14.5,
+        "observation": "A laid-back boom bap drum pattern enters over looping electric piano and saxophone chords."
+      },
+      {
+        "at_seconds": 37.0,
+        "observation": "Vocal scatting and melodic singing snippets weave briefly through the jazz-hop instrumentation."
+      },
+      {
+        "at_seconds": 63.8,
+        "observation": "Mellow electric piano chords continue with vinyl crackle texture and occasional turntable scratching."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Lo-Fi Beats",
+    "secondary_families": [
+      "Jazz"
+    ],
+    "secondary_styles": [
+      "Jazz Rap",
+      "Chillhop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "sample_based",
+      "hazy",
+      "electronic"
+    ],
+    "vocal_role": "vocal_samples_only"
+  },
+  "response_id": "gyCiarq0PP-qsOIP7JvQ2QQ",
+  "spotify_track_id": "0WJxkgYXRoOxFb4Vq3Ddmg"
+}

@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00598350",
+  "attempt": 3,
+  "cache_key": "d1ee3817b849e2f1651e0a8ab8c1984c7447e60a7c87e10f7806b0abfd45f413",
+  "evidence_hashes": {
+    "execution/attempts/attempt-03.request.json": "5b0485a6ed92d26b00e86e67b2a1d6278456c8de16a92942d6ae68887371a52b",
+    "execution/attempts/attempt-03.reservation.json": "b78b0b0e626232fcab61fce78477be35cd7a3d8476669420141a06418df93d01",
+    "execution/attempts/attempt-03.settlement.json": "fc3142241b9c67f735a48cc77265adf99fb41e678c53c3da4d7b77e0d1b24bdf",
+    "execution/transport/call-011.response.bin": "fda4b99983a664296dbdbc9e4b317d91274fe960c1ac9c9a1475505a0c1ed6b3",
+    "execution/transport/call-012.response.bin": "990fc1b08fb757c59294106502d50aefe41d50155d02f441ad47a3cc91172842",
+    "execution/transport/call-012.response.json": "103960e97c7e0f9f44eeda909c2c62b36d041733d2bc2c016898eef8e261f386",
+    "execution/transport/upload-N019.json": "2daff5ed4658db5c6db971e9ed12baba2e9aaf877bc34cdf4535ed58072221cd"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N019",
+  "pilot_id": "F004",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 22.0,
+        "observation": "Rapped male verse begins over a prominent, upbeat piano riff and a syncopated R&B hip-hop beat."
+      },
+      {
+        "at_seconds": 34.0,
+        "observation": "Female lead vocal enters with sweet, expressive melismatic delivery, singing an R&B pre-chorus."
+      },
+      {
+        "at_seconds": 115.0,
+        "observation": "Anthemic chorus featuring prominent, layered female vocals over rhythmic piano chords, bass, and handclaps."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "r&b",
+    "primary_style": "contemporary r&b",
+    "secondary_families": [
+      "pop",
+      "hip hop"
+    ],
+    "secondary_styles": [
+      "dance-pop",
+      "pop rap"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "layered",
+      "sample_based"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-012.response.bin",
+  "response_id": "XiCiavDyPICc6dkP97Gm6A0",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 22.0,\n      \"observation\": \"Rapped male verse begins over a prominent, upbeat piano riff and a syncopated R&B hip-hop beat.\"\n    },\n    {\n      \"at_seconds\": 34.0,\n      \"observation\": \"Female lead vocal enters with sweet, expressive melismatic delivery, singing an R&B pre-chorus.\"\n    },\n    {\n      \"at_seconds\": 115.0,\n      \"observation\": \"Anthemic chorus featuring prominent, layered female vocals over rhythmic piano chords, bass, and handclaps.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"r&b\",\n  \"primary_style\": \"contemporary r&b\",\n  \"secondary_families\": [\n    \"pop\",\n    \"hip hop\"\n  ],\n  \"secondary_styles\": [\n    \"dance-pop\",\n    \"pop rap\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"clean\",\n    \"layered\",\n    \"sample_based\"\n  ],\n  \"vocal_role\": \"mixed_rap_and_singing\"\n}",
+  "usage": {
+    "candidatesTokenCount": 347,
+    "promptTokenCount": 6243,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5794
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 6590
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"active_section_density\":\"dense\",\"arrangement_focus\":\"lead_vocal\",\"audio_evidence\":[{\"at_seconds\":8.4,\"observation\":\"Solo female vocal enters over a driving electronic pop beat and synth chords\"},{\"at_seconds\":41.2,\"observation\":\"Explosive dance-pop chorus drops with layered bright synths, four-on-the-floor kick, and full backing vocals\"},{\"at_seconds\":148.0,\"observation\":\"Second high-energy chorus section featuring dense electronic production and energetic vocal delivery\"}],\"certainty\":{\"family\":\"clear\",\"style\":\"clear\"},\"primary_family\":\"Pop\",\"primary_style\":\"K-Pop\",\"secondary_families\":[\"Electronic\"],\"secondary_styles\":[\"Dance-Pop\",\"Electropop\"],\"section_variation\":\"contrasting_sections\",\"status\":\"classified\",\"texture_tags\":[\"electronic\",\"layered\",\"clean\"],\"vocal_role\":\"sung_led\"}",
+            "thoughtSignature": "EmcKZQERTTIPagONSoEafm3+61iUuu1EFgx31VMUrBV0pWOBybCLYeH2qYdvWf3cSMmOPEcOj5C+e/6U1JXO1hM5TI8uRnzEECArUlVM7MnCSjjna3UZED21RDv7n5UK71m6mCtpeaqi"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5337,
+    "candidatesTokenCount": 189,
+    "totalTokenCount": 5526,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4888
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "biKiatPiE5WGz7IP8Pe0gQQ"
+}

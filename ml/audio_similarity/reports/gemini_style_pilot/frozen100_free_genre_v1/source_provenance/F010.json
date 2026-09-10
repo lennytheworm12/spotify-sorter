@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.6732299709692597,
+  "acquisition_ended_at": "2026-09-04T20:32:32.646763+00:00",
+  "acquisition_started_at": "2026-09-04T20:32:30.973533+00:00",
+  "acquisition_timestamp": "2026-09-04T20:32:30.973725+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3857199,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 211,
+  "provider_result": "SUCCESS",
+  "provider_title": "OuiOui (위위) - 괜찮은 척 (empty) Lyric Video",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "1cf4b552d7e4c34fa91d5f23458b324b3efade88c37b8914c63281c7d5b430cf",
+      "representation_identity": "71974c11f1b44175b710e2945b82a5143f596e5e60a722e5521e8006670ec4b3",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "0b45ccb0b799b086eb7fedc674c543851220f3dc75c2b62270da5066e781d76a",
+          "25": "b2d6c179ca3122a2cccf3a5aca45f462704d97898bf93b3dcab8d6d1502da498",
+          "5": "32a15ad5667d57d601c112f386522951e60da5c50f707378768fb5a7f5a4bb68"
+        },
+        "muq_mulan_large": {
+          "15": "0e65b05dec7b0db1a8a231ed1514eea22da47ecf5414adc81704a3d2d7fc7bec",
+          "25": "161a877b89c4a9ad69daf6ba8b8fdf1d6199c34ebf0d3547cfbbd5ddf6270563",
+          "5": "cb8a2330df4fb8d9a67ac00c63c8840a36067764c4463f0cefaea405ccc5fb7f"
+        }
+      },
+      "source_audio_sha256": "528c4e66038eb8d8dde215a544b1b369dafa7f83317348113ce58a3d83513000"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "Z2Oc2DjzL2A"
+  },
+  "retained_relative_path": "0ayK1CJh1cMRjUJRCDWhCd/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 211.001,
+  "source_sha256": "413a26609a857fe3cdd787560a955ec7c72c565e3b74e7b6dff360a328c51095",
+  "source_url": "https://www.youtube.com/watch?v=Z2Oc2DjzL2A",
+  "spotify_artists": [
+    "OuiOui"
+  ],
+  "spotify_title": "(empty)",
+  "spotify_track_id": "0ayK1CJh1cMRjUJRCDWhCd",
+  "successful_query": "(empty) OuiOui",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "Z2Oc2DjzL2A"
+}

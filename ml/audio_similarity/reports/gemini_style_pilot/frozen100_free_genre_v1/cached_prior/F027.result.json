@@ -1,0 +1,74 @@
+{
+  "actual_cost_usd": "0.00425400",
+  "attempt": 3,
+  "cache_key": "157053d495399e1eff02a9cc1b36af4fb81745c013fd7fff69ba1fffb8f18569",
+  "evidence_hashes": {
+    "execution/attempts/attempt-03.request.json": "2c65b63a045497391592ebade6fd87ecab103e19f4a1f04b5ae22715cf0c9174",
+    "execution/attempts/attempt-03.reservation.json": "fec7ae5dc42ce29e637c25a41a9bad4f2f80c0f611312adf5c0200424aa84963",
+    "execution/attempts/attempt-03.settlement.json": "e99f9e39344181011f42670904dfacfc972f5f98c790bcae255988ca9aa9613e",
+    "execution/transport/call-005.response.bin": "1565497acfe85d8ae62a0599d53ebf8906d87054bb8ddf45b845b88d09e115c2",
+    "execution/transport/call-006.response.bin": "d04f934af0c08e33020584377c0414c2a5ca342e2f69f8b40cf1906b42d3e3f9",
+    "execution/transport/call-006.response.json": "9c626878ef0a1270258e402b2d0bf108f693b762aa25c22f9d5d740487157b63",
+    "execution/transport/upload-N012.json": "867fee45b37427c8ac8ef45f26c1105b8ae21ec4d35b4b6e3663197d21da8ee1"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N012",
+  "pilot_id": "A02",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 18.9,
+        "observation": "Trap drums drop with crisp hi-hat rolls, snapping snare, and a deep 808 sub bass alongside rap vocals."
+      },
+      {
+        "at_seconds": 51.2,
+        "observation": "Melodic rap delivery over a minimal synth bell/piano melody and subtle 808 percussion."
+      },
+      {
+        "at_seconds": 110.5,
+        "observation": "Different verse section enters with rhythmic, percussive ad-libs, low bassline, and syncopated snare hits."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "hip hop",
+    "primary_style": "trap",
+    "secondary_families": [],
+    "secondary_styles": [
+      "plugg"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean"
+    ],
+    "vocal_role": "rap_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-006.response.bin",
+  "response_id": "GhiiavOoDICc6dkP97Gm6A0",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 18.9, \"observation\": \"Trap drums drop with crisp hi-hat rolls, snapping snare, and a deep 808 sub bass alongside rap vocals.\"},\n    {\"at_seconds\": 51.2, \"observation\": \"Melodic rap delivery over a minimal synth bell/piano melody and subtle 808 percussion.\"},\n    {\"at_seconds\": 110.5, \"observation\": \"Different verse section enters with rhythmic, percussive ad-libs, low bassline, and syncopated snare hits.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"hip hop\",\n  \"primary_style\": \"trap\",\n  \"secondary_families\": [],\n  \"secondary_styles\": [\"plugg\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\"],\n  \"vocal_role\": \"rap_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 275,
+    "promptTokenCount": 4297,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3848
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 4572
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "acquisition_duration_seconds": 3.1242018319899216,
+  "acquisition_ended_at": "2026-09-04T20:21:34.092137+00:00",
+  "acquisition_started_at": "2026-09-04T20:21:30.967935+00:00",
+  "acquisition_timestamp": "2026-09-04T20:21:30.968034+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 7531613,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 391,
+  "provider_result": "SUCCESS",
+  "provider_title": "Shiawase no Monosashi - Pokke Cover",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "20a82f9cd6ca8dff66514d9e0691f10e7bb46ea0c718bf09609a5164fde6daa3",
+      "representation_identity": "58cc90e7e3de688cb215c4625a282fca438b03959321aeaefcac20cf3227eeda",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "f079cc4c5233d500e0debfcbfcdd92b45b8109941e337edb00ac51d363646b91",
+          "25": "109f81d36b1d3fd3997509c8143993853e5254d78a2837367b0edb63536731cb",
+          "5": "a81ed82e58eb90fb4ae9310d72f2456656fab8bc9a442ceaa008463fb4f57456"
+        },
+        "muq_mulan_large": {
+          "15": "2a8cb3dd678a0903b651fd45e778a641e35ed4049296d16657ec667da381014f",
+          "25": "a93c260130f2da8e1475518377822b14b892e7996190a38249b29c411fd6db53",
+          "5": "0b89bdc78e43095b1f5834ed7c8717c5ec46796feb1bf32b536a706bde30f5ad"
+        }
+      },
+      "source_audio_sha256": "8d3be77a1cfb567390321287bf5f298d9410888d94bb7c50333bf6c0352de5e3"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "NybKgXkEse8"
+  },
+  "retained_relative_path": "0xlx3pH8TxNah8hdiINqeA/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 390.821,
+  "source_sha256": "2a0cbd7f7481571d371e49b7283fd128a1cd159ad948b625c0293fbbda26b53d",
+  "source_url": "https://www.youtube.com/watch?v=NybKgXkEse8",
+  "spotify_artists": [
+    "Pokke"
+  ],
+  "spotify_title": "Shiawase no Monosashi",
+  "spotify_track_id": "0xlx3pH8TxNah8hdiINqeA",
+  "successful_query": "Shiawase no Monosashi Pokke",
+  "warnings": [
+    "[youtube] unable to extract yt initial data; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U",
+    "[youtube] Incomplete data received in embedded initial data; re-fetching using API.",
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "NybKgXkEse8"
+}

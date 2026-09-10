@@ -1,0 +1,45 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 6.7,
+        "observation": "Bright acoustic guitar arpeggiation sets the tempo and mood before drums enter."
+      },
+      {
+        "at_seconds": 17.5,
+        "observation": "Female lead vocal enters in Korean over a steady mid-tempo pop rhythm section."
+      },
+      {
+        "at_seconds": 62.0,
+        "observation": "Full chorus opens up with layered vocal harmonies, bassline, and upbeat drum groove."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "R&B/Soul"
+    ],
+    "secondary_styles": [
+      "Acoustic Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "ECGiaoqIF4Wf-8YPsbXr-QY",
+  "spotify_track_id": "2g0LdZQce9xlcHb1mBJyuz"
+}

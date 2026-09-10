@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.5813206229940988,
+  "acquisition_ended_at": "2026-09-04T20:09:32.543915+00:00",
+  "acquisition_started_at": "2026-09-04T20:09:30.962594+00:00",
+  "acquisition_timestamp": "2026-09-04T20:09:30.962706+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3162011,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 185,
+  "provider_result": "SUCCESS",
+  "provider_title": "GFRIEND (여자친구) 'Season of Memories (우리의다정한계절속에)' (Color Coded Lyrics)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "62f6c6c388ed06aecba19232e39eaad723009ea9bc95a373fdf08f98126183cc",
+      "representation_identity": "225e3beb417bd53e1982a9b9fdebbc338631ec659b52e69c68374dc0191e8492",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "d5564d1ddf4935a66cdc8aa4334ee5dd23bd5a67ec8c865eba91781c42a2e660",
+          "25": "2656db45f1600b3734303169e9686eb026a9c0db8c7bfd9955fff9f302739890",
+          "5": "dd75e21d92897d05cb464deae14cde984d949d1bf3135c31d4eeba8d8dc3245c"
+        },
+        "muq_mulan_large": {
+          "15": "fb7d24253c845807b7262014a39f27cfd274f8932f1ec7e114ad4ebe73dba6da",
+          "25": "ad1868da31241d7cf784c9dafc18f4fc935fc2a5d892b985fd0d918c228b20e4",
+          "5": "b2b8e91b2f4214e2e40d0eec491220228ba5e33d883cb017fe0581eda968fab8"
+        }
+      },
+      "source_audio_sha256": "e616e01221518ec8f67576ac3327f95cffa1a292c2a6ba1bbf6ca2822b6d18f3"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "k_5LIwYVmfg"
+  },
+  "retained_relative_path": "7LFwi4RolcCPnVEXXXVfQP/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 2,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 184.861,
+  "source_sha256": "ee8e0e4c6187610ae49d49392b66e02e51c5c4eaba410328e3efce7bf2baf8a6",
+  "source_url": "https://www.youtube.com/watch?v=k_5LIwYVmfg",
+  "spotify_artists": [
+    "GFRIEND"
+  ],
+  "spotify_title": "Season of Memories",
+  "spotify_track_id": "7LFwi4RolcCPnVEXXXVfQP",
+  "successful_query": "Season of Memories GFRIEND",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "k_5LIwYVmfg"
+}

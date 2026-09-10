@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.4743213210022077,
+  "acquisition_ended_at": "2026-09-04T20:22:32.442910+00:00",
+  "acquisition_started_at": "2026-09-04T20:22:30.968589+00:00",
+  "acquisition_timestamp": "2026-09-04T20:22:30.968692+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3794416,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 227,
+  "provider_result": "SUCCESS",
+  "provider_title": "Tory Lanez - The Color Violet [Official Audio]",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "62c374c070543353af3fb0f197eb2d1037ab25eceb6979cda3aafd4fa5b475ab",
+      "representation_identity": "8ca78de486ed50f0255ca4b389bdbad0283482ecaf54a6b84221bb84e572dbd7",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "c0cc0ae0332280df6cdd4acf6bb92a50c33339664c7bfcee8c5a13798a5c25a7",
+          "25": "8ff293d2fd4ca79e76fab04a9ea96d0f98ec23709497869ec0f84c6bc2ed8ba1",
+          "5": "c558d0a14eeec8dc684590a298fca1cdbf03c88e45675e5f49b337ff6959dc6f"
+        },
+        "muq_mulan_large": {
+          "15": "f56f4d1f718e5c00e0848d876915e51b26b07ecd3111d6e52dbb8f7dc742b89d",
+          "25": "979e64b89549e86aaf396c29eba07020c2685c18cff1afc5e09875ea1b196d83",
+          "5": "60b06a011600f24de376f910e35cf0c5d23511b3dd20503aac3faec00fd34efc"
+        }
+      },
+      "source_audio_sha256": "034f44b24880e68ec5955a99d0ac51504f1dc4ee760dcf298b5dcc2fc1344148"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "07fhkAoCnig"
+  },
+  "retained_relative_path": "3azJifCSqg9fRij2yKIbWz/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 2,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 226.501,
+  "source_sha256": "1010a1cc66a80d5691904ff6347ae4a0c5595baf5cec98c114fd44a6bd718fda",
+  "source_url": "https://www.youtube.com/watch?v=07fhkAoCnig",
+  "spotify_artists": [
+    "Tory Lanez"
+  ],
+  "spotify_title": "The Color Violet",
+  "spotify_track_id": "3azJifCSqg9fRij2yKIbWz",
+  "successful_query": "The Color Violet Tory Lanez",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "07fhkAoCnig"
+}

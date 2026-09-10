@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.9041907949722372,
+  "acquisition_ended_at": "2026-09-04T20:33:12.878056+00:00",
+  "acquisition_started_at": "2026-09-04T20:33:10.973865+00:00",
+  "acquisition_timestamp": "2026-09-04T20:33:10.973969+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3343773,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 195,
+  "provider_result": "SUCCESS",
+  "provider_title": "我是土豆 - 門沒鎖（原唱：品冠）『天都黑了你都沒來過沒來坐，戲都完了眼都沒眨過沒哭過。』【動態歌詞/Vietsub/Pinyin Lyrics】",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "d9643a0e22ba9d68ede5ee7d6ad4dccf1a1d38aa50ee9f0efc99fe1be5ba08e9",
+      "representation_identity": "c4ce238f802e1900fb42f13b705384a344c753ac4061c7a4a08aee880a8d116e",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "5e78c8ec8f1d811e4289a470f3c6ceb3ad9c8a69653e2db61f61dd781313d156",
+          "25": "2d6dbf1d5e37fb16a6c248d23a711c4ac964251c8eb5b42bb6dafe3a2d339882",
+          "5": "3d93d0616233d6ba637a4a1b7f469ab35367f5b53387768700b2f4d70e3a5650"
+        },
+        "muq_mulan_large": {
+          "15": "3c4a4ae0d1df86f9f62393967610c0e23e469b2b9a20ba690361b226a2f387f2",
+          "25": "c030d59a7f317afeb7355bf66a437abd95dcd41e57303ba6ce66c8cd412154f0",
+          "5": "1c4b1d6e04794dfdac09f3c164d136484fada25acc8f92f8a9701b61470300da"
+        }
+      },
+      "source_audio_sha256": "0e91dc9089d2c06443b7420a47144e54066db97a7cd32689fb5f0bbad4dcb3e0"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "dpWP_I9BQs4"
+  },
+  "retained_relative_path": "1Y6Ra2erZ6Mru0JOcJBSzK/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 195.161,
+  "source_sha256": "3d3e7dd76d6005c127a1ce5f89cbd053a160c620c4c3e58114f808607b9c9b79",
+  "source_url": "https://www.youtube.com/watch?v=dpWP_I9BQs4",
+  "spotify_artists": [
+    "我是土豆"
+  ],
+  "spotify_title": "门没锁",
+  "spotify_track_id": "1Y6Ra2erZ6Mru0JOcJBSzK",
+  "successful_query": "门没锁 我是土豆",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "dpWP_I9BQs4"
+}

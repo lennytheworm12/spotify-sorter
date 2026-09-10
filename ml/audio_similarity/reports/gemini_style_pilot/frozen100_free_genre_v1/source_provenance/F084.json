@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.3717312929802574,
+  "acquisition_ended_at": "2026-09-04T20:10:32.334817+00:00",
+  "acquisition_started_at": "2026-09-04T20:10:30.963086+00:00",
+  "acquisition_timestamp": "2026-09-04T20:10:30.963199+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3069942,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 190,
+  "provider_result": "SUCCESS",
+  "provider_title": "Weston Estate - Stoked (Lyrics)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "ed38e2e6f2f8f91dbb5a72d6df2a3f2447bb3b2881fced9cb751cf36427c854a",
+      "representation_identity": "82eea2658c23793139e9092dfcf1273a8c7b2fa167449babb4b79f6acb8da413",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "125ff18c32ff8a4cdbdd8f725e0c1d3e839291e9e5b15040f0602de7569360df",
+          "25": "28f159ff83628b965bdfde1cab2057691162592403c9680061833cc57817b450",
+          "5": "141c336b9b6b4f05a0c57d68abc2c9092f2c96f552b5849fe1810389fc8a7cd6"
+        },
+        "muq_mulan_large": {
+          "15": "6b2a63b48cadd9856ee82694f083d2b233bb26ea3761dc48cdaafac51105244b",
+          "25": "2594cc186b59b69b193fe7cdc8345bef3f09d428b8fe69fc1d3118a2de3d5c70",
+          "5": "5a717ded5824b95387738094283fa8073defcff2cde38d7896f05c0956ceb63c"
+        }
+      },
+      "source_audio_sha256": "014cc8cf79eb83e7f5c367694b97efbb5f05b9a8d2c7781a3d0e89a4ede9cdfb"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "DzP5CcMnaKU"
+  },
+  "retained_relative_path": "6nef0wHkelfKqNVHAtzJbR/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 2,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 189.861,
+  "source_sha256": "fe65acc5858e79a704f224e86d28b8bfca2f805b55d78a8f66072fc20d2431a7",
+  "source_url": "https://www.youtube.com/watch?v=DzP5CcMnaKU",
+  "spotify_artists": [
+    "Weston Estate"
+  ],
+  "spotify_title": "Stoked",
+  "spotify_track_id": "6nef0wHkelfKqNVHAtzJbR",
+  "successful_query": "Stoked Weston Estate",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "DzP5CcMnaKU"
+}

@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.6199280130094849,
+  "acquisition_ended_at": "2026-09-04T20:21:12.587734+00:00",
+  "acquisition_started_at": "2026-09-04T20:21:10.967806+00:00",
+  "acquisition_timestamp": "2026-09-04T20:21:10.967991+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2027563,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 113,
+  "provider_result": "SUCCESS",
+  "provider_title": "Teqkoi - Stay With Me (ft. Mouse)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "f7913d1c1576db22b6d0d4d025e83469cb56d3d9bfcca452ff8d66de3c4ac5bd",
+      "representation_identity": "49001ce546ef64ad1f769ad07ff6cf39c06b1653b7e9896c20c8c76b1f190665",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "e876b8cdf991503b91c49016ef6d5c88e11851ba85953577c21d944354fde924",
+          "25": "dd7d12142bea15eb24d632a1a3055bdb395865eb9466067a1e2d0417cf21ada0",
+          "5": "ef4fbb513a6aaa8dc52045dc47bd92fcc970088052a4a1eaae973a2a4098cc66"
+        },
+        "muq_mulan_large": {
+          "15": "3a9a7b55c77bf5774b0fbcbbb44c595cf7166138786ec2fa246f761b1699f1d7",
+          "25": "4e1248ba6c21d8e3709953d0ef90ccc848bae3c4493ce9bf301b76a2c54c8ac0",
+          "5": "af6da9466bca7a9d5c9612060e8be2dfb0aab3e75830a254711434b1c05d2cfb"
+        }
+      },
+      "source_audio_sha256": "0316fcf0eb7caedcf62a5e773ffbd7aebad01aee26cac9011a81f53c72d9da48"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "-wTtTTAwMz8"
+  },
+  "retained_relative_path": "5ri8u5RA8e4vGMyMAGXy0p/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 113.281,
+  "source_sha256": "a813ecf93e16cd289d54fea88f970e6499a6eb63c6c322292f7fb6eeb45bb62a",
+  "source_url": "https://www.youtube.com/watch?v=-wTtTTAwMz8",
+  "spotify_artists": [
+    "Teqkoi",
+    "Mouse"
+  ],
+  "spotify_title": "Stay With Me",
+  "spotify_track_id": "5ri8u5RA8e4vGMyMAGXy0p",
+  "successful_query": "Stay With Me Teqkoi Mouse",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "-wTtTTAwMz8"
+}

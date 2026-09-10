@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 11.45,\n      \"observation\": \"A male Korean vocal begins over a clean acoustic guitar and an electronic kick beat.\"\n    },\n    {\n      \"at_seconds\": 58.74,\n      \"observation\": \"The arrangement builds into an upbeat EDM-influenced pop chorus with a bright synthesizer lead hook.\"\n    },\n    {\n      \"at_seconds\": 178.6,\n      \"observation\": \"A vocal chop synth hook plays with pulsing electronic dance percussion and sub-bass.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\n    \"Electronic\"\n  ],\n  \"secondary_styles\": [\n    \"Dance-Pop\",\n    \"Electropop\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"clean\",\n    \"electronic\",\n    \"acoustic\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPkULPWTx5aZJEr2YyRnUKD6YRpKd/UZmv3VHNZu2JcEIeRwbYec1JiEChyCsHMRhkuDN4XDlgyVecQ93/xq+Z/UAxnbCi6ewuy2/DkAht4GnX+O/IoTf3U15AST9hCofG"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 6367,
+    "candidatesTokenCount": 316,
+    "totalTokenCount": 6683,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5918
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "jyGiatv1B8ucz7IPvO7ayAg"
+}

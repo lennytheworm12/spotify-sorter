@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 12.0,\n      \"observation\": \"Sparse intro with music box synth glockenspiel melody and solitary soft female Korean vocals.\"\n    },\n    {\n      \"at_seconds\": 65.0,\n      \"observation\": \"Dynamic chorus bloom with lush synth pads, punchy pop drum programming, and expansive vocal harmonizations.\"\n    },\n    {\n      \"at_seconds\": 175.0,\n      \"observation\": \"Bridge section with emotional solo vocal delivery over gentle keyboard backing before building back into the chorus.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\n    \"Electronic\",\n    \"R&B\"\n  ],\n  \"secondary_styles\": [\n    \"Synthpop\",\n    \"Ballad\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"clean\",\n    \"electronic\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPBts8cIQhFdoCjwENyxSM3bVmsESocSMj/RzOrexnwOd0TUzhOSFDJFEBHs6ahWvann2yVxXH9QDNalCZe98b2dsOSZpf8SQ2wyDwkVJOd/IBW4DY4HwzpiLG05z0vSAh"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5972,
+    "candidatesTokenCount": 325,
+    "totalTokenCount": 6297,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5523
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "QyGiav-1A-bcjMcPqZuzwQI"
+}

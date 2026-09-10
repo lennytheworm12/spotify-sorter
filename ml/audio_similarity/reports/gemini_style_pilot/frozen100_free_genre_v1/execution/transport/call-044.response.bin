@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 16.0,\n      \"observation\": \"High-pitched repeating bell/glockenspiel ostinato plays with minimal ambient space.\"\n    },\n    {\n      \"at_seconds\": 125.0,\n      \"observation\": \"Deep electronic bass pulses beneath repetitive metallic percussion loops.\"\n    },\n    {\n      \"at_seconds\": 240.0,\n      \"observation\": \"Continuous slowly evolving minimalist percussion patterns with subtle ambient synthesizer swells.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Electronic\",\n  \"primary_style\": \"Ambient\",\n  \"secondary_families\": [\"Modern Classical\", \"Experimental\"],\n  \"secondary_styles\": [\"Minimalism\", \"Glitch\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\"],\n  \"vocal_role\": \"instrumental\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPcxOeqN4F/xH0Cwa6fi49HEHvoxnlPusZ7aZ//g0Pm9lBB0Hw/hNZtyM4RNZXp/txU+N7+piGVkEvTPYKCR6qaew+B/YD/qDu8ULNzOcWL0YVnNGeoI9KosG/AiKrKg2/"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 10220,
+    "candidatesTokenCount": 278,
+    "totalTokenCount": 10498,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 9771
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "mCCiavfuEuO6jMcPjbXZwAI"
+}

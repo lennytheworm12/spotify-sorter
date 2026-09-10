@@ -1,0 +1,54 @@
+{
+  "collection_status": "REUSED_EXACT_PRIOR_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": {
+    "cache_key": "5faefd4d0f79095aee337537ff04d5e7040cab3ae0777644c6c901bf87c69ae4",
+    "result_sha256": "993c612fb6ff9a538fbbbfe4d5c998b7fd8aa22fce1baf83940e620e7bd6bddb",
+    "source_attempt": 16,
+    "source_manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+    "source_pilot_id": "C06",
+    "source_run": ".research_audio/gemini_style_pilot/free-genre-point-v1"
+  },
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 8.0,
+        "observation": "Sparse intro featuring a clean melodic electric guitar riff underneath a soft, breathy male lead vocal."
+      },
+      {
+        "at_seconds": 22.0,
+        "observation": "Transition into full arrangement with a four-on-the-floor kick, synth bassline, and funk-influenced guitar chops."
+      },
+      {
+        "at_seconds": 37.0,
+        "observation": "Catchy pop hook kicks in with energetic drum programming, vocal harmonies, and upbeat disco-pop groove."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Dance-Pop",
+    "secondary_families": [
+      "R&B",
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Nu-Disco",
+      "Synth-Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "ZBiiarSMCNeKmtkPu6q8-Aw",
+  "spotify_track_id": "7fXYFuCTmNrYRGwEUUf5iz"
+}

@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00377625",
+  "attempt": 50,
+  "cache_key": "164025bbda057d7eb0407ceb7fb5243ea3924c78f9308b0cd389a92d4d7b242a",
+  "evidence_hashes": {
+    "execution/attempts/attempt-50.request.json": "d44d6a0cc2df95334d60a34ae001c473c25ecfb272e8b7d9d39e4b0fe78c9e44",
+    "execution/attempts/attempt-50.reservation.json": "e3d42e32761cb0d0d3d4dae41fd2c2750a303b41652f8f3a744a7c9c53ac9b8a",
+    "execution/attempts/attempt-50.settlement.json": "d1423a7a4fd3ec099b0aa2472ab2d58527c237204a5a5117e45bd7176482063d",
+    "execution/transport/call-199.response.bin": "43b7305136e025cc91503730946057915a2162611bf6716dbe6c7e3afeb044e5",
+    "execution/transport/call-200.response.bin": "ac7d3bfbe71b1f17af0575e9390fdf1856c4e3e2d5c6be54df04b3488ab956bf",
+    "execution/transport/call-200.response.json": "6e206a3d94aecee22ff234e8e6ff96fb608d078e04301ceb6f2c09582338b920",
+    "execution/transport/upload-N066.json": "dbc1d12f25509ae1bdcbfaba454a40eea3bf5b823c8262173a47b8b7cdea0319"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N066",
+  "pilot_id": "F056",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 13.0,
+        "observation": "Melancholic, autotuned sing-rap vocals enter over a low-key trap beat with deep 808s and soft chords."
+      },
+      {
+        "at_seconds": 21.0,
+        "observation": "A downtempo trap rhythm kicks in with rolling hi-hats, a sub-bass kick, and sparse snare snaps."
+      },
+      {
+        "at_seconds": 59.0,
+        "observation": "Percussion drops out, leaving ambient synthesizer pads and echoing vocal ad-libs."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Emo Rap",
+    "secondary_families": [
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Trap"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "hazy",
+      "layered"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-200.response.bin",
+  "response_id": "oiGiaqGJKJDQz7IP_u-h2A4",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 13.0,\n      \"observation\": \"Melancholic, autotuned sing-rap vocals enter over a low-key trap beat with deep 808s and soft chords.\"\n    },\n    {\n      \"at_seconds\": 21.0,\n      \"observation\": \"A downtempo trap rhythm kicks in with rolling hi-hats, a sub-bass kick, and sparse snare snaps.\"\n    },\n    {\n      \"at_seconds\": 59.0,\n      \"observation\": \"Percussion drops out, leaving ambient synthesizer pads and echoing vocal ad-libs.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip Hop\",\n  \"primary_style\": \"Emo Rap\",\n  \"secondary_families\": [\"R&B\"],\n  \"secondary_styles\": [\"Trap\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"hazy\", \"layered\"],\n  \"vocal_role\": \"mixed_rap_and_singing\"\n}",
+  "usage": {
+    "candidatesTokenCount": 311,
+    "promptTokenCount": 3480,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3031
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 3791
+  }
+}

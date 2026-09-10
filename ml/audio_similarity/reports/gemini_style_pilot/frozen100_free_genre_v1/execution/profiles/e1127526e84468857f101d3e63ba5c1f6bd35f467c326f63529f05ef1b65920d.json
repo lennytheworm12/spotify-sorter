@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00341925",
+  "attempt": 78,
+  "cache_key": "e1127526e84468857f101d3e63ba5c1f6bd35f467c326f63529f05ef1b65920d",
+  "evidence_hashes": {
+    "execution/attempts/attempt-78.request.json": "ece1874f9ef79cdc18a13c4f90a8874a575b96fd632548e71ed0913d2ca3116f",
+    "execution/attempts/attempt-78.reservation.json": "17b4855af39d7678e4f3a3513b476bdcdd4c2fa9a52296229ec0c4272e673823",
+    "execution/attempts/attempt-78.settlement.json": "d78e976797d0a5e20e9c3ef345af0d5b88259ea24fdd4b7c00dbea9ece230113",
+    "execution/transport/call-311.response.bin": "136742288b465db4cdd72db2f50d53b77cc61624754dd66a03d13720661b9f52",
+    "execution/transport/call-312.response.bin": "4af09acc34c0e11b0fe61167043867c64f4774ed776cdf77b1f14d50f459a83b",
+    "execution/transport/call-312.response.json": "9be206202d3af944c837bfdc6fe9573c05455511d60aa4ae6086bc526bcb644f",
+    "execution/transport/upload-N094.json": "00ad92d5c312bc776a3b971d6f05d5213fa1bc1492196ba83a20162afa967132"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N094",
+  "pilot_id": "F089",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 3.5,
+        "observation": "Spoken-word English fairy tale narration over playful plucked harp and synth textures."
+      },
+      {
+        "at_seconds": 15.0,
+        "observation": "Female lead vocal enters in Korean over a bouncy trap-influenced R&B beat."
+      },
+      {
+        "at_seconds": 45.3,
+        "observation": "Groove thickens with heavy 808 bass, crisp hi-hats, and rhythmic contemporary R&B vocal phrasing."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "R&B",
+      "Hip Hop"
+    ],
+    "secondary_styles": [
+      "Contemporary R&B",
+      "Trap"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-312.response.bin",
+  "response_id": "YSKiau_zD9Dd_uMP6vHz8Qs",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 3.5,\n      \"observation\": \"Spoken-word English fairy tale narration over playful plucked harp and synth textures.\"\n    },\n    {\n      \"at_seconds\": 15.0,\n      \"observation\": \"Female lead vocal enters in Korean over a bouncy trap-influenced R&B beat.\"\n    },\n    {\n      \"at_seconds\": 45.3,\n      \"observation\": \"Groove thickens with heavy 808 bass, crisp hi-hats, and rhythmic contemporary R&B vocal phrasing.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\n    \"R&B\",\n    \"Hip Hop\"\n  ],\n  \"secondary_styles\": [\n    \"Contemporary R&B\",\n    \"Trap\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"clean\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 329,
+    "promptTokenCount": 2914,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 2466
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 448
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 3243
+  }
+}

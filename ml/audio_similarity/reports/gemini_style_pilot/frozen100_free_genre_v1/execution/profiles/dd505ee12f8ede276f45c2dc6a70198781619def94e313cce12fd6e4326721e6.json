@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00309600",
+  "attempt": 8,
+  "cache_key": "dd505ee12f8ede276f45c2dc6a70198781619def94e313cce12fd6e4326721e6",
+  "evidence_hashes": {
+    "execution/attempts/attempt-08.request.json": "966eda54dcf6ac8ae6dbde532adbdfc11fd66790b6e928c30367ec0e73117671",
+    "execution/attempts/attempt-08.reservation.json": "368a261b3b2847d73e0a03d0152d1fe16ce5c407d7ae62360a58117379d1abb9",
+    "execution/attempts/attempt-08.settlement.json": "44895eaf44f80e82be54ae283b9873e0cfea03503c0e513095cfe99938f9cd13",
+    "execution/transport/call-031.response.bin": "31c072bdcb5acf7a4f93f9f355837896abc15c317f6bab031c191b4cdf0cc247",
+    "execution/transport/call-032.response.bin": "decdd1e8f4539c980ce7fb4273933d9d3f1809ebd956cb03034626be20371c36",
+    "execution/transport/call-032.response.json": "77df103cd2571a9ff07299da5ba4a6ac7beb1cbae2d975ed9b257b5d76574d3f",
+    "execution/transport/upload-N024.json": "3f6f86141c9921096f1049ce7a4ab139381d9a9250af0601bd2571bb9717cdac"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N024",
+  "pilot_id": "F009",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 14.5,
+        "observation": "A laid-back boom bap drum pattern enters over looping electric piano and saxophone chords."
+      },
+      {
+        "at_seconds": 37.0,
+        "observation": "Vocal scatting and melodic singing snippets weave briefly through the jazz-hop instrumentation."
+      },
+      {
+        "at_seconds": 63.8,
+        "observation": "Mellow electric piano chords continue with vinyl crackle texture and occasional turntable scratching."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Lo-Fi Beats",
+    "secondary_families": [
+      "Jazz"
+    ],
+    "secondary_styles": [
+      "Jazz Rap",
+      "Chillhop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "sample_based",
+      "hazy",
+      "electronic"
+    ],
+    "vocal_role": "vocal_samples_only"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-032.response.bin",
+  "response_id": "gyCiarq0PP-qsOIP7JvQ2QQ",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 14.5, \"observation\": \"A laid-back boom bap drum pattern enters over looping electric piano and saxophone chords.\"},\n    {\"at_seconds\": 37.0, \"observation\": \"Vocal scatting and melodic singing snippets weave briefly through the jazz-hop instrumentation.\"},\n    {\"at_seconds\": 63.8, \"observation\": \"Mellow electric piano chords continue with vinyl crackle texture and occasional turntable scratching.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip Hop\",\n  \"primary_style\": \"Lo-Fi Beats\",\n  \"secondary_families\": [\"Jazz\"],\n  \"secondary_styles\": [\"Jazz Rap\", \"Chillhop\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"sample_based\", \"hazy\", \"electronic\"],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+  "usage": {
+    "candidatesTokenCount": 273,
+    "promptTokenCount": 2763,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 448
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 2315
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 3036
+  }
+}

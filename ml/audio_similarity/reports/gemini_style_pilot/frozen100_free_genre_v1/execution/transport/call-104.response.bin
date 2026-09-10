@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 0.0, \"observation\": \"Intimate acoustic guitar fingerpicking and tapping rhythmic elements set a minimal, gentle groove.\"},\n    {\"at_seconds\": 47.5, \"observation\": \"Chorus section with layered vocal harmonies and subtle low-end bass support alongside ongoing acoustic guitar.\"},\n    {\"at_seconds\": 107.0, \"observation\": \"Catchy, melodic 'na na na' vocal hook layered with warm backing vocals and acoustic instrumentation.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop Ballad\",\n  \"secondary_families\": [\"Folk & Acoustic\"],\n  \"secondary_styles\": [\"Acoustic Pop\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"acoustic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPiWARxslX0BwFn5evPF9IbQaRD76UuLGzYzBFF4Sy2p/F0rdEg2PMrPkUaYHFHOhfzfZkYCl1MJR4/REhIDQX+0fN1c6KyIeTm+ZhavYfx3brVg/4kZ1szqaonq+Q0/K4"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 6013,
+    "candidatesTokenCount": 271,
+    "totalTokenCount": 6284,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5564
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "_CCiatTgE_fQz7IPw8fhyQ8"
+}

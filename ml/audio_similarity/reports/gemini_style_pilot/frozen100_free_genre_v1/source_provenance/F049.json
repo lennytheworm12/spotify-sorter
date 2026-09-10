@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.3499809599597938,
+  "acquisition_ended_at": "2026-09-04T20:17:32.316117+00:00",
+  "acquisition_started_at": "2026-09-04T20:17:30.966136+00:00",
+  "acquisition_timestamp": "2026-09-04T20:17:30.966239+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3619523,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 216,
+  "provider_result": "SUCCESS",
+  "provider_title": "KiiiKiii 키키 'DANCING ALONE' MV",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "e981bf2fe75639fb5db60d1c66cfdc083d6822b2bf3772d159767e482669535f",
+      "representation_identity": "c7d19854b52d35e69b907908e377b9224077ad8bd870226da2439a77487e669e",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "fcddd7612db10639e02e74efe9d16b92de72d9f521265328c50b144e8eef3f66",
+          "25": "a3b2520445318c7a934c3109516db54b2d102e79fbac237c7537e3b8ca937491",
+          "5": "c0f03e94d8e909411f35c167422d1d70dd75b348871717e04cab288a16206a41"
+        },
+        "muq_mulan_large": {
+          "15": "040d923b28a142d7d00870a7803a62adf095d94264b7b4343a8e61690b4baaf1",
+          "25": "0db744f780f4eaae46059a26a212bafa92bcf086877af3d8726974a1fac5f716",
+          "5": "20e80b2fe912efe5ead8d77687108909f5a570e2501a87c8b84cf407888ba3c0"
+        }
+      },
+      "source_audio_sha256": "0cc7ab3d608ff97848af6fe9719da4446e6e50c515548eb930b47c953f04b664"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "u5wMLWs6LSs"
+  },
+  "retained_relative_path": "3vC63Nh3rSREo7qDHgnx8I/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 216.321,
+  "source_sha256": "46cd0a02620b187caaf4081acd882b1f94e46f5f3e44d9fc072b9f23dec5cac1",
+  "source_url": "https://www.youtube.com/watch?v=u5wMLWs6LSs",
+  "spotify_artists": [
+    "KiiiKiii"
+  ],
+  "spotify_title": "DANCING ALONE",
+  "spotify_track_id": "3vC63Nh3rSREo7qDHgnx8I",
+  "successful_query": "DANCING ALONE KiiiKiii",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "u5wMLWs6LSs"
+}

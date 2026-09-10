@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00510600",
+  "attempt": 83,
+  "cache_key": "c9a9ce291530c7c0c3a39522cece0c0334097b342dd8a975d12d4075110fe644",
+  "evidence_hashes": {
+    "execution/attempts/attempt-83.request.json": "2f58935d0575bb5412e55a9b7c53312ea582d338c49c393a645dbeaea878bece",
+    "execution/attempts/attempt-83.reservation.json": "e0d05cf328df1e5bfb6f975c243d9582ecc0e13c34ff6557c2130ccd8ba69275",
+    "execution/attempts/attempt-83.settlement.json": "435d275b525d123da1250100170d10027dc27c2d14d4b43feb4b7bbe7bedd714",
+    "execution/transport/call-331.response.bin": "7055fae2d2427bf4c789c930e6665e1c42fde8fc10628b6010d2896dd108701b",
+    "execution/transport/call-332.response.bin": "89674c4b97d0601eb6891b76377ce65d3603db5252f026b7f97fdcd11aca9855",
+    "execution/transport/call-332.response.json": "4b2f2b931ba59f29cf08d0e12a60c95bd3d206eb516d4c974f291f9c813bba87",
+    "execution/transport/upload-N099.json": "08e0d77ae22dd92625a22b308512db58d79e46c62bc890004d2dc64b46ccb30c"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N099",
+  "pilot_id": "F099",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 0.0,
+        "observation": "Subdued downtempo electronic groove opens with deep kick, ticking percussive accents, and ambient pad textures."
+      },
+      {
+        "at_seconds": 26.5,
+        "observation": "Intimate female lead vocals enter over a minimal trip-hop style electronic beat and sustained warm bass tones."
+      },
+      {
+        "at_seconds": 82.0,
+        "observation": "Wordless vocal harmonizing interludes sit in an airy, reverb-drenched atmospheric electronic backdrop."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Electronic",
+    "primary_style": "Trip-Hop",
+    "secondary_families": [
+      "R&B / Soul",
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Downtempo",
+      "Chillout"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "hazy"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-332.response.bin",
+  "response_id": "iCKiaoXnFcvljMcP64DSoAY",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 0.0, \"observation\": \"Subdued downtempo electronic groove opens with deep kick, ticking percussive accents, and ambient pad textures.\"},\n    {\"at_seconds\": 26.5, \"observation\": \"Intimate female lead vocals enter over a minimal trip-hop style electronic beat and sustained warm bass tones.\"},\n    {\"at_seconds\": 82.0, \"observation\": \"Wordless vocal harmonizing interludes sit in an airy, reverb-drenched atmospheric electronic backdrop.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Electronic\",\n  \"primary_style\": \"Trip-Hop\",\n  \"secondary_families\": [\"R&B / Soul\", \"Pop\"],\n  \"secondary_styles\": [\"Downtempo\", \"Chillout\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"hazy\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 284,
+    "promptTokenCount": 5388,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4939
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5672
+  }
+}

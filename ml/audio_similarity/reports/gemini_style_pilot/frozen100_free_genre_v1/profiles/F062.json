@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 18.0,
+        "observation": "High-pitched, heavily reverberant pitched vocal hook enters over low ambient drones."
+      },
+      {
+        "at_seconds": 38.0,
+        "observation": "Subdued electronic beat enters beneath the high vocal motif with deep sub-bass tones."
+      },
+      {
+        "at_seconds": 58.0,
+        "observation": "Spoken/half-sung male lead vocal begins the main verse over sparse kick and bass."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "electronic",
+    "primary_style": "ambient pop",
+    "secondary_families": [
+      "hip hop",
+      "r&b"
+    ],
+    "secondary_styles": [
+      "cloud rap",
+      "alternative r&b"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "hazy",
+      "electronic",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "xSGiao-iDe6eqtsP7Iay8AM",
+  "spotify_track_id": "4yNhVidUIAtKPT72PrZuLP"
+}

@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.5869496590457857,
+  "acquisition_ended_at": "2026-09-04T20:04:32.547118+00:00",
+  "acquisition_started_at": "2026-09-04T20:04:30.960168+00:00",
+  "acquisition_timestamp": "2026-09-04T20:04:30.960409+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 1549211,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 96,
+  "provider_result": "SUCCESS",
+  "provider_title": "falling down",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "8e63bc0378261896262df897547bfb270c2f9fbdde7529222ec9923882fb89fc",
+      "representation_identity": "4b14ee77ee409f05d3968888553df7f6d57fd9b14395a20938ececf9c7388e19",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "881712d409cf0a7e53d8ecf91e4f29fa3a70610022d5845e128c4fe59b55a1c7",
+          "25": "27b95dd9082bcfd82f2b66c69a46fc8d48e36c381435ecc70ba5ba0df02ae922",
+          "5": "5998581e7976640f3990c81ca9318b1f87dc3cc2083fe6d2c3be701645dac12d"
+        },
+        "muq_mulan_large": {
+          "15": "e6623561ab2d5b391f732dac2265400f62951ea102d8c57707164762d95ac22e",
+          "25": "ca034b4d1ccbd47de6cade9a8237790477473415fd9ad46f8a5e175e66fd5c40",
+          "5": "76ad294c9e6e455fa5719ab49b8ec1e1e6a792bb24dbd9c75b5e1c354cd09195"
+        }
+      },
+      "source_audio_sha256": "960317f316da5bf04d0ce6b78d17b56d0f7dd22a2c3c6ef495658696ccea069e"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "dMJqYdK8QAw"
+  },
+  "retained_relative_path": "0ASYuzPsTBA6ZmIsuvNZby/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 96.021,
+  "source_sha256": "3842d8a24c0f116ab24d9c1ae25c167f9bb50bf91610fc9e23108771c5fcc63c",
+  "source_url": "https://www.youtube.com/watch?v=dMJqYdK8QAw",
+  "spotify_artists": [
+    "Nohidea"
+  ],
+  "spotify_title": "falling down",
+  "spotify_track_id": "0ASYuzPsTBA6ZmIsuvNZby",
+  "successful_query": "falling down Nohidea",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "dMJqYdK8QAw"
+}

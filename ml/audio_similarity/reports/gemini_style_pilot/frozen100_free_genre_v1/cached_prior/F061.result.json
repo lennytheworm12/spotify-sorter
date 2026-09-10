@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00604875",
+  "attempt": 1,
+  "cache_key": "5db1f9efc4329d555a42d5805f7703a70f1ee9a3975567cc4508f2d00444e4f2",
+  "evidence_hashes": {
+    "execution/attempts/attempt-01.request.json": "5d4d8e211d75327c2ad706304422955167cf046c22e8a253b6138c37eaac2a78",
+    "execution/attempts/attempt-01.reservation.json": "5954c862a5cf6d9d903f56cb3c0cbc83d5fd0f2ba1a28b4a6bb00b28976c6af3",
+    "execution/attempts/attempt-01.settlement.json": "21e597693800a3feaa8c89df55dff779ef42244bd7939d30ea8d3a5c9b039bf4",
+    "execution/transport/call-001.response.bin": "b189da45a7ad757b604ea21207d2c9379e8d0e30f2f27dc23068aa4fb985cc8b",
+    "execution/transport/call-002.response.bin": "86355901ce93c5aae67a34b4d0dd5ab446a81a2a3199825c6454e1e65bacaa5a",
+    "execution/transport/call-002.response.json": "026e8d0f20b55d13bfaae2443c2a652318a73773cce5efa8baf0bcb847412177",
+    "execution/transport/upload-N006.json": "3829c23069e410dbebc88758c35c0f90ab2ab2444c4a1df32e1e4ed49517baff"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N006",
+  "pilot_id": "A01",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 23.5,
+        "observation": "A male vocalist begins rapping narrative verses over a slow, punchy boom-bap rhythm."
+      },
+      {
+        "at_seconds": 68.0,
+        "observation": "Soulful pitched-down vocal samples and sing-along hook enter on the refrain."
+      },
+      {
+        "at_seconds": 133.0,
+        "observation": "The second verse continues the storytelling rap delivery over looped piano, horn, and drum hits."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Boom Bap",
+    "secondary_families": [
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Conscious Hip Hop",
+      "East Coast Hip Hop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "sample_based",
+      "layered"
+    ],
+    "vocal_role": "rap_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-002.response.bin",
+  "response_id": "2xeiaoWFNpugjrEPsa6lsQQ",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 23.5,\n      \"observation\": \"A male vocalist begins rapping narrative verses over a slow, punchy boom-bap rhythm.\"\n    },\n    {\n      \"at_seconds\": 68.0,\n      \"observation\": \"Soulful pitched-down vocal samples and sing-along hook enter on the refrain.\"\n    },\n    {\n      \"at_seconds\": 133.0,\n      \"observation\": \"The second verse continues the storytelling rap delivery over looped piano, horn, and drum hits.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip Hop\",\n  \"primary_style\": \"Boom Bap\",\n  \"secondary_families\": [\n    \"R&B\"\n  ],\n  \"secondary_styles\": [\n    \"Conscious Hip Hop\",\n    \"East Coast Hip Hop\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"sample_based\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"rap_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 321,
+    "promptTokenCount": 6460,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 6011
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 6781
+  }
+}

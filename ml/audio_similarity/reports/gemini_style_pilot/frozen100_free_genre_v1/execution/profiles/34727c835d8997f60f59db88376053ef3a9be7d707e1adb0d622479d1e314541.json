@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00440550",
+  "attempt": 59,
+  "cache_key": "34727c835d8997f60f59db88376053ef3a9be7d707e1adb0d622479d1e314541",
+  "evidence_hashes": {
+    "execution/attempts/attempt-59.request.json": "3d3464385a79139e64301432df2b57c83d0ac46042b938d99b074bdfd6b29636",
+    "execution/attempts/attempt-59.reservation.json": "375a1519be70cad7ad54f418a87cc557eab9aaeb6676979e208df821d31c7c9c",
+    "execution/attempts/attempt-59.settlement.json": "77e2c0dc6fcc2f3a49be952f2e06ea89ea8838b9c156c5db1d9163a2dab1c3f3",
+    "execution/transport/call-235.response.bin": "0bc9c977b5e1f74864345721f5eacbd5e4147c83a3e44a92772d27bbb84505c3",
+    "execution/transport/call-236.response.bin": "dc25214adbd1555fe67cdb2ce4a98f7a397fa2e77d490431d2fe2f8f7a5ab2e6",
+    "execution/transport/call-236.response.json": "2c632c339555ca56bfd9b9d7a97c9783eed201d9d954529040fccacce73cf3df",
+    "execution/transport/upload-N075.json": "ddfe450ca02a037988294e8c6c967024c2ad7cf1ed99d76489f6d9119eeb00c9"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N075",
+  "pilot_id": "F066",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 0.0,
+        "observation": "Introductory section with mellow electric piano, subtle vocal harmonies, and soft rhythmic backbeat."
+      },
+      {
+        "at_seconds": 32.4,
+        "observation": "Full groove drops in with modern trap-influenced hi-hats, sub-bass 808, and rhythmic female R&B vocals."
+      },
+      {
+        "at_seconds": 128.5,
+        "observation": "Vocal breakdown featuring layered melismatic phrasing over stripped-back keys and ambient vocal chops."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "rnb",
+    "primary_style": "contemporary_rnb",
+    "secondary_families": [
+      "pop",
+      "hip_hop"
+    ],
+    "secondary_styles": [
+      "trap_soul",
+      "pop_rnb"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-236.response.bin",
+  "response_id": "3iGiauCJMtCGz7IPp-vl-Q8",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 0.0,\n      \"observation\": \"Introductory section with mellow electric piano, subtle vocal harmonies, and soft rhythmic backbeat.\"\n    },\n    {\n      \"at_seconds\": 32.4,\n      \"observation\": \"Full groove drops in with modern trap-influenced hi-hats, sub-bass 808, and rhythmic female R&B vocals.\"\n    },\n    {\n      \"at_seconds\": 128.5,\n      \"observation\": \"Vocal breakdown featuring layered melismatic phrasing over stripped-back keys and ambient vocal chops.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"rnb\",\n  \"primary_style\": \"contemporary_rnb\",\n  \"secondary_families\": [\n    \"pop\",\n    \"hip_hop\"\n  ],\n  \"secondary_styles\": [\n    \"trap_soul\",\n    \"pop_rnb\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"clean\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 338,
+    "promptTokenCount": 4184,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3735
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 4522
+  }
+}

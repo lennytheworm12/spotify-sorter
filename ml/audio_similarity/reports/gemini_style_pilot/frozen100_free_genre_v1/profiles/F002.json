@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 1.4,
+        "observation": "Solo electric piano plays a repetitive, melancholic chord progression with vintage warmth."
+      },
+      {
+        "at_seconds": 23.8,
+        "observation": "A downtempo, dusty hip-hop drum beat drops with soft kick, snare, and vinyl crackle."
+      },
+      {
+        "at_seconds": 150.0,
+        "observation": "Subtle, ambient vocal chops blend into the background with continued low-key lo-fi beat."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "electronic",
+    "primary_style": "lo-fi beats",
+    "secondary_families": [
+      "hip-hop",
+      "ambient"
+    ],
+    "secondary_styles": [
+      "chillhop",
+      "downtempo"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "sample_based",
+      "electronic",
+      "hazy"
+    ],
+    "vocal_role": "vocal_samples_only"
+  },
+  "response_id": "MyCiarSsNLa1_uMP_MSP-AI",
+  "spotify_track_id": "02CCi0N3pMK4Rjxq5e6UmE"
+}

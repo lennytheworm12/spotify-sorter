@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 2.0180120280128904,
+  "acquisition_ended_at": "2026-09-04T20:22:52.986753+00:00",
+  "acquisition_started_at": "2026-09-04T20:22:50.968741+00:00",
+  "acquisition_timestamp": "2026-09-04T20:22:50.968902+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 4646297,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 276,
+  "provider_result": "SUCCESS",
+  "provider_title": "慢冷",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "12e442a26ff00648e60d0c36d0a5713c1cd9d84ed7a8731e0fa817fa04b70693",
+      "representation_identity": "8633f651ab5646e6df238019e796e6ef74470e4430649d0a3565a3667272a464",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "c703c0f97dc2fe7d434b0183809c212e8e5a0a9f5e5bfaa9ee201ac090595378",
+          "25": "901bbed06ebd10cffd734fddce9e45966ed7e70e18d0cb941baeaeb0890e17b6",
+          "5": "284ad98b5f5a73cae0c35aff0eb9e34543193ab31822a8094311d6f9be3af3f3"
+        },
+        "muq_mulan_large": {
+          "15": "f874f741971f0e0ea1f7652a2c2b17fc627544a3a09d665aa394e5da0384e416",
+          "25": "fddb8285e90b81fc8ae7737280f22c31992162e5ecb7e10bec727272c9cfd671",
+          "5": "5850694fdc3376c8fbcd5e18f65726b724f599a28e75e7e339f4caf25bce02d9"
+        }
+      },
+      "source_audio_sha256": "47e191ae607dd7f0bb8da95cf37fa59127df361aab31854810cd53cbb96cb487"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "Nbl_gj7TMsw"
+  },
+  "retained_relative_path": "3fzeNQfannmBQWGecQZ93s/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 276.381,
+  "source_sha256": "5bbc4243ba172f0f20c913d72347c46c02ddcc5ef7c1cc11e56e5369eb06be18",
+  "source_url": "https://www.youtube.com/watch?v=Nbl_gj7TMsw",
+  "spotify_artists": [
+    "Ren Ran"
+  ],
+  "spotify_title": "慢冷",
+  "spotify_track_id": "3fzeNQfannmBQWGecQZ93s",
+  "successful_query": "慢冷 Ren Ran",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "Nbl_gj7TMsw"
+}

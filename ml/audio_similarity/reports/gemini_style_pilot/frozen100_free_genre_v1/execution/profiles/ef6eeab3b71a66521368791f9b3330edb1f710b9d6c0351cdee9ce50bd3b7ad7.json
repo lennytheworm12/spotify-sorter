@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00521100",
+  "attempt": 65,
+  "cache_key": "ef6eeab3b71a66521368791f9b3330edb1f710b9d6c0351cdee9ce50bd3b7ad7",
+  "evidence_hashes": {
+    "execution/attempts/attempt-65.request.json": "3457e8df16e06e75cb86f6f40bce4d4509986f669d125105c86fdb2e68c26969",
+    "execution/attempts/attempt-65.reservation.json": "165fbdbf56eb3bd0458c5c41831f0d075f8ad78781d10d7549b578ab86921024",
+    "execution/attempts/attempt-65.settlement.json": "bb5e610d05609b92d79a27e85032657821b6e3de977b8b28bd908b351f44a8ac",
+    "execution/transport/call-259.response.bin": "ac572c9660439059c6a092b29b2374f8cd88732577416606e7187be1274c1ad7",
+    "execution/transport/call-260.response.bin": "59a1665ec9f480ad1ccbf7ddc0a8effa767a6ebc1168448ca7b8ec02b9796826",
+    "execution/transport/call-260.response.json": "7bcbfdb6e8517afa9295adfbc466f3f1183d4b8d18b37e81779bec05717aa483",
+    "execution/transport/upload-N081.json": "2d92228d2ec0f02446d8e53c41a1142cd7cba4868e0d87c9eb7199bd58f544a3"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N081",
+  "pilot_id": "F072",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 9.4,
+        "observation": "Beat begins with pitched melodic vocal chops, crisp 808 percussion, and rhythmic male sung verse in Korean."
+      },
+      {
+        "at_seconds": 74.5,
+        "observation": "Full bouncy hook featuring synthesized bass, syncopated snare hits, and a repetitive chanting vocal melody."
+      },
+      {
+        "at_seconds": 96.8,
+        "observation": "A contrasting smooth female vocal verse section enters over sustained chords and filtered drum groove."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "R&B",
+      "Hip-Hop"
+    ],
+    "secondary_styles": [
+      "Contemporary R&B",
+      "Pop Rap"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "electronic",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-260.response.bin",
+  "response_id": "CiKiaretE9qsz7IPtd7EsQ8",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 9.4, \"observation\": \"Beat begins with pitched melodic vocal chops, crisp 808 percussion, and rhythmic male sung verse in Korean.\"},\n    {\"at_seconds\": 74.5, \"observation\": \"Full bouncy hook featuring synthesized bass, syncopated snare hits, and a repetitive chanting vocal melody.\"},\n    {\"at_seconds\": 96.8, \"observation\": \"A contrasting smooth female vocal verse section enters over sustained chords and filtered drum groove.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\"R&B\", \"Hip-Hop\"],\n  \"secondary_styles\": [\"Contemporary R&B\", \"Pop Rap\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"clean\", \"electronic\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 281,
+    "promptTokenCount": 5543,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5094
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5824
+  }
+}

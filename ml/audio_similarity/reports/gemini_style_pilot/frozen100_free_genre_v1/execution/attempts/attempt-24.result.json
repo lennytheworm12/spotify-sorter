@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00500625",
+  "attempt": 24,
+  "cache_key": "0b84c1cf2d0321c9cd537fed448a5e92f4aab36ad69d62bfbd6f5147db82edea",
+  "evidence_hashes": {
+    "execution/attempts/attempt-24.request.json": "10b77d7f6014e00427cc2622fd8e8f11ff0e8d344c2a23b018b24b1de05412cc",
+    "execution/attempts/attempt-24.reservation.json": "22bab2646a0355c0a70ad636884025db52cf15a34b5157a49b3068246ba89102",
+    "execution/attempts/attempt-24.settlement.json": "5cc50691479b8d0f31b0f24afc4158aaa06e93200759afee5c0806c2f90e75ea",
+    "execution/transport/call-095.response.bin": "4dbf10c2f350babb9c3d877d7ffc50ea56324ab379de280f477aac6788ffbb16",
+    "execution/transport/call-096.response.bin": "1b4144bec1dd385542a4ce04889cef29ade00b10d852f3c8cee80ebcafd82789",
+    "execution/transport/call-096.response.json": "5a08faed8d246877a516a621c42a15a3efba8075b24f012ee24b9a3b9ce988e4",
+    "execution/transport/upload-N040.json": "9791b88b86c453feee7b3eb833aec1c5ba2c9b9109003de155eae98b139231ff"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N040",
+  "pilot_id": "F026",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 23.5,
+        "observation": "Downtempo R&B-infused beat enters with crisp snaps, subtle percussion, and intimate solo lead vocals."
+      },
+      {
+        "at_seconds": 69.2,
+        "observation": "Ambient, floating synth pads and warm sub-bass swell beneath emotive, layered vocal lines."
+      },
+      {
+        "at_seconds": 156.0,
+        "observation": "Minimalist chord progressions on Rhodes/soft keys accompanied by subdued, spaced-out beats and delicate vocal delivery."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "r&b",
+    "primary_style": "contemporary r&b",
+    "secondary_families": [
+      "electronic",
+      "pop"
+    ],
+    "secondary_styles": [
+      "ambient pop",
+      "downtempo"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "hazy"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-096.response.bin",
+  "response_id": "7CCiauSDJteKmtkPu6q8-Aw",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 23.5, \"observation\": \"Downtempo R&B-infused beat enters with crisp snaps, subtle percussion, and intimate solo lead vocals.\"},\n    {\"at_seconds\": 69.2, \"observation\": \"Ambient, floating synth pads and warm sub-bass swell beneath emotive, layered vocal lines.\"},\n    {\"at_seconds\": 156.0, \"observation\": \"Minimalist chord progressions on Rhodes/soft keys accompanied by subdued, spaced-out beats and delicate vocal delivery.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"r&b\",\n  \"primary_style\": \"contemporary r&b\",\n  \"secondary_families\": [\"electronic\", \"pop\"],\n  \"secondary_styles\": [\"ambient pop\", \"downtempo\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"hazy\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 285,
+    "promptTokenCount": 5250,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4801
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5535
+  }
+}

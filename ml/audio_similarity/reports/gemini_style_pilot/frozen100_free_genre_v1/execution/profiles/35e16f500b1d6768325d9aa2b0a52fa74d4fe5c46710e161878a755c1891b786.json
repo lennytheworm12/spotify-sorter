@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00484575",
+  "attempt": 23,
+  "cache_key": "35e16f500b1d6768325d9aa2b0a52fa74d4fe5c46710e161878a755c1891b786",
+  "evidence_hashes": {
+    "execution/attempts/attempt-23.request.json": "e1282fec8956a00e466d45d1b5fbb68c57f6e03f3379bc7c1898133248aea018",
+    "execution/attempts/attempt-23.reservation.json": "7a31d973fbe90ec5984117c6e837f2fd024d8144eade05ad735e020605fec067",
+    "execution/attempts/attempt-23.settlement.json": "dc8acb131736783622ef2c3501484b2d38b660f36247c88ea01fcd30b7decb01",
+    "execution/transport/call-091.response.bin": "e8ad903f1e22af62602b086a97091d1571795a3db82bea64f437d03ed64dfb76",
+    "execution/transport/call-092.response.bin": "b84498da32692928a4e0641103840ea15fee400fa9a988001e480b99625cbd4d",
+    "execution/transport/call-092.response.json": "1cd68daf7db6ea7f98bfb9bca869b18adcc916d254d9af35648e2c466b879b76",
+    "execution/transport/upload-N039.json": "9d1e784c9a816a783054ad0cad9dd3993c0af8b85967f4eb513a247b4c299129"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N039",
+  "pilot_id": "F025",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 1.5,
+        "observation": "A resonant electric piano plays a slow, sustained minor chord progression with prominent vinyl crackle noise in the background."
+      },
+      {
+        "at_seconds": 17.8,
+        "observation": "A low-tempo boom-bap hip-hop drum beat enters with a soft, warm kick, delayed rimshot/snare, and steady hi-hat pattern."
+      },
+      {
+        "at_seconds": 78.4,
+        "observation": "Sparse, warm synth bass notes underpin the lo-fi Rhodes piano chords and relaxed drum groove."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip-Hop",
+    "primary_style": "Lo-Fi Beats",
+    "secondary_families": [
+      "Downtempo",
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Chillhop",
+      "Neo-Soul"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "hazy",
+      "electronic"
+    ],
+    "vocal_role": "instrumental"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-092.response.bin",
+  "response_id": "5iCias-_Cs3kz7IPu9vzgAY",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 1.5,\n      \"observation\": \"A resonant electric piano plays a slow, sustained minor chord progression with prominent vinyl crackle noise in the background.\"\n    },\n    {\n      \"at_seconds\": 17.8,\n      \"observation\": \"A low-tempo boom-bap hip-hop drum beat enters with a soft, warm kick, delayed rimshot/snare, and steady hi-hat pattern.\"\n    },\n    {\n      \"at_seconds\": 78.4,\n      \"observation\": \"Sparse, warm synth bass notes underpin the lo-fi Rhodes piano chords and relaxed drum groove.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip-Hop\",\n  \"primary_style\": \"Lo-Fi Beats\",\n  \"secondary_families\": [\n    \"Downtempo\",\n    \"R&B\"\n  ],\n  \"secondary_styles\": [\n    \"Chillhop\",\n    \"Neo-Soul\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"clean\",\n    \"hazy\",\n    \"electronic\"\n  ],\n  \"vocal_role\": \"instrumental\"\n}",
+  "usage": {
+    "candidatesTokenCount": 350,
+    "promptTokenCount": 4711,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4262
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5061
+  }
+}

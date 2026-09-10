@@ -1,0 +1,54 @@
+{
+  "collection_status": "REUSED_EXACT_PRIOR_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": {
+    "cache_key": "51c86ae3164d351c9d976b315b443bed7ee3ab6b859a101a22842ac35a03d111",
+    "result_sha256": "dcef149d446d482c09b407ef666070542e2fa9dadeb54a23077dcd7eaffc525b",
+    "source_attempt": 10,
+    "source_manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+    "source_pilot_id": "A10",
+    "source_run": ".research_audio/gemini_style_pilot/free-genre-point-v1"
+  },
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.0,
+        "observation": "Introduction of mid-tempo Baltimore club-influenced rhythm pattern with vocal lead in Korean."
+      },
+      {
+        "at_seconds": 45.8,
+        "observation": "Chorus hook arrives with buoyant synth chords, 4-on-the-floor kick, and call-and-response vocal delivery."
+      },
+      {
+        "at_seconds": 133.0,
+        "observation": "Rap-sung verse section over crisp percussion and subdued bass."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "R&B and Soul",
+      "Dance"
+    ],
+    "secondary_styles": [
+      "Contemporary R&B",
+      "Synth-Pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "response_id": "QRiiat_nF9qzqtsPn-uWgQ4",
+  "spotify_track_id": "65FftemJ1DbbZ45DUfHJXE"
+}

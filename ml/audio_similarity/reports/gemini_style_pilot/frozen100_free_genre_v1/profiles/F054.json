@@ -1,0 +1,45 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 12.5,
+        "observation": "Steady hand-drum polyrhythms and high-pitched acoustic percussion establish a West African drum pattern."
+      },
+      {
+        "at_seconds": 40.0,
+        "observation": "Electronic synth bassline enters underneath the traditional drumming, establishing a modern dance groove."
+      },
+      {
+        "at_seconds": 105.0,
+        "observation": "Vocals enter with sustained harmonized backing choral chants above the electronic and acoustic rhythmic bed."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "tentative"
+    },
+    "primary_family": "Electronic",
+    "primary_style": "Afro House",
+    "secondary_families": [
+      "African Traditional"
+    ],
+    "secondary_styles": [
+      "West African Folk Music"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "acoustic",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "nCGiaqL8Naj_qtsPpenqgAk",
+  "spotify_track_id": "4B8L0sByBRJRUV1Uot2Ebd"
+}

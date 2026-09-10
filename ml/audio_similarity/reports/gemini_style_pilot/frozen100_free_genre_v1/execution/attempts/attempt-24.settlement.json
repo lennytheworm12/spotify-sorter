@@ -1,0 +1,20 @@
+{
+  "actual_cost_usd": "0.00500625",
+  "attempt": 24,
+  "usage": {
+    "candidatesTokenCount": 285,
+    "promptTokenCount": 5250,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4801
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5535
+  }
+}

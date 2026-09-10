@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.448958627996035,
+  "acquisition_ended_at": "2026-09-04T20:14:32.413747+00:00",
+  "acquisition_started_at": "2026-09-04T20:14:30.964788+00:00",
+  "acquisition_timestamp": "2026-09-04T20:14:30.964889+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2643659,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 149,
+  "provider_result": "SUCCESS",
+  "provider_title": "Tiffany Day - CLOUT CHASER (lyric video)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "2e4d218199313d417605069a78927bc103c6b85019b3d31069b740908dcab7c3",
+      "representation_identity": "5beed63248f4684ba017358e014a7172920aa26affe7a898736c89e4d7d28349",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "c2eacaf0ab7c082d0e2a46a6a46c179fe787025d0d1874a24a2808508d7937c6",
+          "25": "20842cc5b0d5e93e1b927630bbafed0086ede87895f7f6fc8c277c095b121355",
+          "5": "14fa3477fc5c4bae8b4963e0bf2f6bc2c3bb0e62300b91036c88f73d1dfe3e89"
+        },
+        "muq_mulan_large": {
+          "15": "7667b634c34e46f74f7aa59003d7c0e06be3e9781de7355cbee772a84d2db6ce",
+          "25": "d39f80993f531c9f126933f185e4e4ff9ee15b4c07b76be34d4a8cb060832023",
+          "5": "83fd2b0c5ec385f01f374b4d4d2b078f32c3ea014c844e281dda11c0a2871c0c"
+        }
+      },
+      "source_audio_sha256": "063a3041b57fe3a0504e3aabddcba2dd518f5382e609801ba609675125f85e9c"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "BNWLAkFWy0w"
+  },
+  "retained_relative_path": "5aawFqyuCB3K2P8KQvhFVs/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 149.401,
+  "source_sha256": "a4c794032b9617aee93e1510a9d962fda2e3ced974198bf0e3a355b62c10b525",
+  "source_url": "https://www.youtube.com/watch?v=BNWLAkFWy0w",
+  "spotify_artists": [
+    "Tiffany Day"
+  ],
+  "spotify_title": "CLOUT CHASER",
+  "spotify_track_id": "5aawFqyuCB3K2P8KQvhFVs",
+  "successful_query": "CLOUT CHASER Tiffany Day",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "BNWLAkFWy0w"
+}

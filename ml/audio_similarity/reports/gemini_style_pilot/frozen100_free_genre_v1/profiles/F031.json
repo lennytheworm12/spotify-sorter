@@ -1,0 +1,46 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 1.5,
+        "observation": "Male lead vocal enters over electric piano chords with minimal rhythmic accompaniment."
+      },
+      {
+        "at_seconds": 31.0,
+        "observation": "The chorus begins with low bass notes and subtle hi-hat/clap elements supporting the vocal melody."
+      },
+      {
+        "at_seconds": 91.0,
+        "observation": "Vocal harmonies and ad-libs layer softly behind the main lead, maintaining an intimate, downtempo feel."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "rnb",
+    "primary_style": "contemporary_rnb",
+    "secondary_families": [
+      "pop"
+    ],
+    "secondary_styles": [
+      "neo_soul",
+      "pop_soul"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "electronic",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "AiGiavy1OqOzmtkPt-_ssQY",
+  "spotify_track_id": "2YO6ZDPdQFkrOa6YYceEN4"
+}

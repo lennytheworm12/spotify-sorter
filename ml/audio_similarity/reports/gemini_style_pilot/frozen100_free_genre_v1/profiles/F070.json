@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 1.0,
+        "observation": "Solo female vocal intro accompanied by subtle sustained atmospheric pad and light piano chords."
+      },
+      {
+        "at_seconds": 37.0,
+        "observation": "Entry of a sparse, slow-tempo trap-influenced beat featuring crisp handclaps, deep sub bass, and minimal percussion."
+      },
+      {
+        "at_seconds": 150.0,
+        "observation": "Mellow verse with breathy R&B vocal delivery over subdued electric piano and low sub bass."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Electronic",
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Trap",
+      "Alternative R&B"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "_CGiatPLAZrpz7IPmaOJgQk",
+  "spotify_track_id": "5ngJKkOmjkN460b2ApBnLk"
+}

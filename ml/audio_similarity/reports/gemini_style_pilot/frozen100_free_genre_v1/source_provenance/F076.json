@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.861435808998067,
+  "acquisition_ended_at": "2026-09-04T20:09:52.824184+00:00",
+  "acquisition_started_at": "2026-09-04T20:09:50.962748+00:00",
+  "acquisition_timestamp": "2026-09-04T20:09:50.962856+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3638260,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 212,
+  "provider_result": "SUCCESS",
+  "provider_title": "NewJeans 'OMG' Lyrics (뉴진스 OMG 가사) (Color Coded Lyrics)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "52a8f8f96016dcf8e58858aeef79bea1d3a56dc5fbd98cdfa9f2dceab322cb5a",
+      "representation_identity": "55ba26da7c53b173047604c0a3f2e3f782fc63d073c151525c741428a928066b",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "107cd271cd68408ba3df916ee1be77108698b6c94ec98d63ca3c5f76ef0ea513",
+          "25": "fe9dbae0aaf7701d2b328e5236f814234d95eda570145e2a93495f6cd37c8cdc",
+          "5": "c64894209898a3d1e301a23010f03a2da470cc33cf1a8516d271023ec5e09120"
+        },
+        "muq_mulan_large": {
+          "15": "446e1655d8b0dd4d4bee2f746f29e57ef858bd0be22398c284194976837793a1",
+          "25": "521e9e8d45ef17c1bca92eab2110d831823f53540340ff07de1c3f5433bc9b33",
+          "5": "5f5237d967ad2c41cbdc0bbe4545c2b0d75a2fe5646e44aeefa5e19678a7e262"
+        }
+      },
+      "source_audio_sha256": "e3dde6247ae61603a2fcc015cbcea2e7eaef8d1fca9aec045b9f8fffd7d641ff"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "hc32lb0po9U"
+  },
+  "retained_relative_path": "65FftemJ1DbbZ45DUfHJXE/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 2,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 212.301,
+  "source_sha256": "33579a69cf0e06d8d16aea16038212d8c754d14a1c8266a18a9048875b926dc9",
+  "source_url": "https://www.youtube.com/watch?v=hc32lb0po9U",
+  "spotify_artists": [
+    "NewJeans"
+  ],
+  "spotify_title": "OMG",
+  "spotify_track_id": "65FftemJ1DbbZ45DUfHJXE",
+  "successful_query": "OMG NewJeans",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "hc32lb0po9U"
+}

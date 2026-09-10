@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 11.2, \"observation\": \"Acoustic guitar arpeggios accompany a breathy, intimate female lead vocal introducing the main melodic theme.\"},\n    {\"at_seconds\": 29.8, \"observation\": \"Trap-style hi-hat rolls, programmed kicks, and deep sub-bass drop in under rhythmic vocal delivery.\"},\n    {\"at_seconds\": 70.3, \"observation\": \"Reverberant backing harmonies layer with the lead vocal over atmospheric guitar and a half-time beat.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\"Hip-Hop\"],\n  \"secondary_styles\": [\"Trap Soul\", \"Alt-Pop\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"acoustic\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPEFdQD/Xd8uZE1jbwjYsQKbcEe+D46Px/HKKU2dix2LAwWbE/da3DeqKt5bOxOdM2OuKkoTa2bmYy1/5+aASNn41K3qvidIP84fUP1R/Mxdyb3Psm0/50lK/ubPLvWWwX"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 4250,
+    "candidatesTokenCount": 285,
+    "totalTokenCount": 4535,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3801
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "VSGiatTyJJ-kmtkPu-S9oA4"
+}

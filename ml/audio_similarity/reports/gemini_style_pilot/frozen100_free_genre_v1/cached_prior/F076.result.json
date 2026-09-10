@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00547275",
+  "attempt": 10,
+  "cache_key": "51c86ae3164d351c9d976b315b443bed7ee3ab6b859a101a22842ac35a03d111",
+  "evidence_hashes": {
+    "execution/attempts/attempt-10.request.json": "bd311f13d5927d52e7b61972a7d658c83489c36548945cae0e219c50e8df719c",
+    "execution/attempts/attempt-10.reservation.json": "6da5badc2c40b08d4fcbcf1b3fb71b1ded6f97b2a437af9fdb8a6eb54f58a5c3",
+    "execution/attempts/attempt-10.settlement.json": "4a7aface8ac1720ecf05c9bf876ddc80599f84ddbedf4fe6d98ef3ed022fcc16",
+    "execution/transport/call-019.response.bin": "486a344fdb5f5f16943653224bb7e221d2f716c4ea241cab002ec6c39a090572",
+    "execution/transport/call-020.response.bin": "28816fb52594b37f7f1f9947448ba8e6a6cab184c16d834c29593835947f105e",
+    "execution/transport/call-020.response.json": "46d2f7a2f6541d895229ccf072de75ea4125aa822230db9ee8f99d0f262254d1",
+    "execution/transport/upload-N008.json": "b43422571a25b9f478ebab0a4ddcbf244094e303d91e64fd104f10594da6f2d0"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N008",
+  "pilot_id": "A10",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.0,
+        "observation": "Introduction of mid-tempo Baltimore club-influenced rhythm pattern with vocal lead in Korean."
+      },
+      {
+        "at_seconds": 45.8,
+        "observation": "Chorus hook arrives with buoyant synth chords, 4-on-the-floor kick, and call-and-response vocal delivery."
+      },
+      {
+        "at_seconds": 133.0,
+        "observation": "Rap-sung verse section over crisp percussion and subdued bass."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "R&B and Soul",
+      "Dance"
+    ],
+    "secondary_styles": [
+      "Contemporary R&B",
+      "Synth-Pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-020.response.bin",
+  "response_id": "QRiiat_nF9qzqtsPn-uWgQ4",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 15.0,\n      \"observation\": \"Introduction of mid-tempo Baltimore club-influenced rhythm pattern with vocal lead in Korean.\"\n    },\n    {\n      \"at_seconds\": 45.8,\n      \"observation\": \"Chorus hook arrives with buoyant synth chords, 4-on-the-floor kick, and call-and-response vocal delivery.\"\n    },\n    {\n      \"at_seconds\": 133.0,\n      \"observation\": \"Rap-sung verse section over crisp percussion and subdued bass.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\"R&B and Soul\", \"Dance\"],\n  \"secondary_styles\": [\"Contemporary R&B\", \"Synth-Pop\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"mixed_rap_and_singing\"\n}",
+  "usage": {
+    "candidatesTokenCount": 308,
+    "promptTokenCount": 5757,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5308
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 6065
+  }
+}

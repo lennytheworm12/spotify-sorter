@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 3.7, \"observation\": \"Solo female vocal enters accompanied by minimal acoustic bass pizzicato and finger snaps.\"},\n    {\"at_seconds\": 28.0, \"observation\": \"Sparse jazz/bossa-influenced rhythm continues with light acoustic bass and percussion.\"},\n    {\"at_seconds\": 111.8, \"observation\": \"Vocal melody repeats over ongoing minimal rhythm section of upright bass and soft brushed percussion.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Asian Pop\",\n  \"primary_style\": \"Mandopop\",\n  \"secondary_families\": [\"Jazz\", \"Easy Listening\"],\n  \"secondary_styles\": [\"Vocal Jazz\", \"Bossa Nova\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"acoustic\", \"clean\"],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIP2HaioSSe06FNLWv34Be+BWoQSrd+kSt1ltcDKmToFiMy/FgxNopoVNG6qOkC1zwlDxP/+x1/ODgCfagxHfkR1ginyjja+x6rMjZyJNc56WZ582RMsHzN41Z01JVAWBW7"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5328,
+    "candidatesTokenCount": 265,
+    "totalTokenCount": 5593,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4879
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "xCCiasuEAuLTjMcPgcLnwQI"
+}

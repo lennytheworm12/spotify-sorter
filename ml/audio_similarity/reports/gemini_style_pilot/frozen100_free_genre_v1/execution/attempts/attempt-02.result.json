@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00657975",
+  "attempt": 2,
+  "cache_key": "5949b8cd9b75e268d98e42c939955c8fca52465a25345212c3f7d96b00eaf34a",
+  "evidence_hashes": {
+    "execution/attempts/attempt-02.request.json": "1e8f5b6509fcd551c2cc3dd64275fc2f5c54482f8b2c701eb56e142bda55940a",
+    "execution/attempts/attempt-02.reservation.json": "85152e9332f0ea4406fb569d5181941e85db0b9541aa499dc201d614249021e2",
+    "execution/attempts/attempt-02.settlement.json": "4e5e66a86c1e90a69ba0e75b05b938d19cf39a847388b5f197a0ba40c863ff76",
+    "execution/transport/call-007.response.bin": "c2dc2fcdfecd6cea8da5a99a7c48dcee4fd549017a4836b3ff665ef25dbd7ce1",
+    "execution/transport/call-008.response.bin": "5090a1dbed6e21b62d9d4b536acb3fab735b6492f6d3108c02e9fbe356745662",
+    "execution/transport/call-008.response.json": "91b3211bca5c41097b38e0d5cfc6f0fd919e965bf093171afb8a38bb3f1282b2",
+    "execution/transport/upload-N018.json": "e4d7b6e8a763615a998f72f1721af712a6589321971fedbea50c286518740266"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N018",
+  "pilot_id": "F003",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 10.0,
+        "observation": "A mid-tempo R&B beat enters with soft electric piano chords, rimshot snare, and sub bass."
+      },
+      {
+        "at_seconds": 29.5,
+        "observation": "Clean female lead vocals enter in Korean, singing a melodic contemporary R&B ballad verse."
+      },
+      {
+        "at_seconds": 198.0,
+        "observation": "Second female vocal enters with a slightly more rap-adjacent rhythmic cadence before singing."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B and Soul",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Pop"
+    ],
+    "secondary_styles": [
+      "K-Pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "electronic",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-008.response.bin",
+  "response_id": "OyCiasL5Ls_jz7IP4ojf2Q4",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 10.0,\n      \"observation\": \"A mid-tempo R&B beat enters with soft electric piano chords, rimshot snare, and sub bass.\"\n    },\n    {\n      \"at_seconds\": 29.5,\n      \"observation\": \"Clean female lead vocals enter in Korean, singing a melodic contemporary R&B ballad verse.\"\n    },\n    {\n      \"at_seconds\": 198.0,\n      \"observation\": \"Second female vocal enters with a slightly more rap-adjacent rhythmic cadence before singing.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B and Soul\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\"Pop\"],\n  \"secondary_styles\": [\"K-Pop\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"clean\", \"electronic\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 296,
+    "promptTokenCount": 7293,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 6844
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 7589
+  }
+}

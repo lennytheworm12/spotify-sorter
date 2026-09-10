@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.0,
+        "observation": "Female vocal enters over a soft, syncopated electronic beat with subtle keys and bass."
+      },
+      {
+        "at_seconds": 32.0,
+        "observation": "Chorus features sweet, melodic pop vocals with smooth electronic production and layered backing harmonies."
+      },
+      {
+        "at_seconds": 96.0,
+        "observation": "A male guest feature enters, delivering rhythmic Korean and English rap vocals over the beat."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "R&B",
+      "Hip-Hop"
+    ],
+    "secondary_styles": [
+      "Contemporary R&B",
+      "Pop Rap"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "response_id": "TyGiaq_aItODz7IPhcTi0QE",
+  "spotify_track_id": "3JxRNkoNmAcPgnA5HSnKiz"
+}

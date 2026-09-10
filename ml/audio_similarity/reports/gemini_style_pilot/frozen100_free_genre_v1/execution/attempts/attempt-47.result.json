@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00596025",
+  "attempt": 47,
+  "cache_key": "878cc3211d6543da5971d28ff351c29b62007fa51f76304833e41240377e73f7",
+  "evidence_hashes": {
+    "execution/attempts/attempt-47.request.json": "7245a9cb8691c8ade1df7b57fee69584f0d9b2c193368dd200aab3e2bd263725",
+    "execution/attempts/attempt-47.reservation.json": "ed5c3dd710e16eabd731339c4bc76dfb6b2a1b339428d9a3d23b1123537dbbe9",
+    "execution/attempts/attempt-47.settlement.json": "19fb68ffe724be2096c4602000c3ed2694a1aa88fb8e519ddb0df662cd562faf",
+    "execution/transport/call-187.response.bin": "b6f7cf0744e148b5af5f26abdc75e2dc60800b73daa7823a4431a09dad2c4f89",
+    "execution/transport/call-188.response.bin": "7e5a140eba6e0b1961ad5a25712317372bde8240b528006a611077d0ce4cf235",
+    "execution/transport/call-188.response.json": "292017048134ae31135df1a5767642ebd285870239fd250694927e4f21c8043f",
+    "execution/transport/upload-N063.json": "01770ecbe4eb0d9f9ab04d54c3e2a2d580f2f5a7c01886eff6e58835134a6e1a"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N063",
+  "pilot_id": "F052",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 11.45,
+        "observation": "A male Korean vocal begins over a clean acoustic guitar and an electronic kick beat."
+      },
+      {
+        "at_seconds": 58.74,
+        "observation": "The arrangement builds into an upbeat EDM-influenced pop chorus with a bright synthesizer lead hook."
+      },
+      {
+        "at_seconds": 178.6,
+        "observation": "A vocal chop synth hook plays with pulsing electronic dance percussion and sub-bass."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Dance-Pop",
+      "Electropop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "electronic",
+      "acoustic"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-188.response.bin",
+  "response_id": "jyGiatv1B8ucz7IPvO7ayAg",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 11.45,\n      \"observation\": \"A male Korean vocal begins over a clean acoustic guitar and an electronic kick beat.\"\n    },\n    {\n      \"at_seconds\": 58.74,\n      \"observation\": \"The arrangement builds into an upbeat EDM-influenced pop chorus with a bright synthesizer lead hook.\"\n    },\n    {\n      \"at_seconds\": 178.6,\n      \"observation\": \"A vocal chop synth hook plays with pulsing electronic dance percussion and sub-bass.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\n    \"Electronic\"\n  ],\n  \"secondary_styles\": [\n    \"Dance-Pop\",\n    \"Electropop\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"clean\",\n    \"electronic\",\n    \"acoustic\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 316,
+    "promptTokenCount": 6367,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5918
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 6683
+  }
+}

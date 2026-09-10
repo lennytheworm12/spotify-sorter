@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00412050",
+  "attempt": 54,
+  "cache_key": "def3d68a796651141062bd4a56d6f54598d64fbbbbd86e13dac8b4149102f7e9",
+  "evidence_hashes": {
+    "execution/attempts/attempt-54.request.json": "0ec7578bfff3cb53704e3381946a8622ef3e69b65c87bd64149ce2214ac153a4",
+    "execution/attempts/attempt-54.reservation.json": "3ec15c8eb5be88bb03fc5a2e9b9f2d7b43ca2d42a4a635e44df1a074b73684ae",
+    "execution/attempts/attempt-54.settlement.json": "5f4540e0e33f151580fd832246d94c9ca31374287e3b06720aff7aea1eddc039",
+    "execution/transport/call-215.response.bin": "d35d386401cb628f95d942226b5be4b6034443ac069def3d52e2582d80eb8a8b",
+    "execution/transport/call-216.response.bin": "e351544cce581b134793abc0ce6697422e24e9ca0c29dbcbb2cb8a6d200fc33f",
+    "execution/transport/call-216.response.json": "2d8d4697e8bdfc9daa39bd553e248186c3d5f891356656aead707def5537f736",
+    "execution/transport/upload-N070.json": "9b4563c75f54364b11fcc44c5eec99e094b446cee8b0592e769372a0b748551a"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N070",
+  "pilot_id": "F060",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 6.88,
+        "observation": "Female lead vocal enters over sparse electronic keyboard chords and a subtle beat."
+      },
+      {
+        "at_seconds": 47.98,
+        "observation": "Transition into a fuller chorus section with resonant synth bass, trap-influenced electronic drums, and vocal harmonies."
+      },
+      {
+        "at_seconds": 68.64,
+        "observation": "Male lead vocal takes over the second verse with auto-tuned/processed vocal effects over the beat."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Alt-R&B"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-216.response.bin",
+  "response_id": "viGiapCXM4Ssz7IP4eSj6AM",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 6.88,\n      \"observation\": \"Female lead vocal enters over sparse electronic keyboard chords and a subtle beat.\"\n    },\n    {\n      \"at_seconds\": 47.98,\n      \"observation\": \"Transition into a fuller chorus section with resonant synth bass, trap-influenced electronic drums, and vocal harmonies.\"\n    },\n    {\n      \"at_seconds\": 68.64,\n      \"observation\": \"Male lead vocal takes over the second verse with auto-tuned/processed vocal effects over the beat.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\n    \"Pop\"\n  ],\n  \"secondary_styles\": [\n    \"Alt-R&B\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"clean\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 318,
+    "promptTokenCount": 3904,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3455
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 4222
+  }
+}

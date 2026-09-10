@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00529725",
+  "attempt": 63,
+  "cache_key": "5aba983e531f3d7cf319db3de4aff4cf8d45c2f1f343ff656e3e4e0f592cbfa9",
+  "evidence_hashes": {
+    "execution/attempts/attempt-63.request.json": "f07e2a2b1df77573b802e3135664fcdeb0538d2e4aed416e3ed916b8a02ece21",
+    "execution/attempts/attempt-63.reservation.json": "3a07e6e7c291b42c5667ab404e453be2ea40997438c225eec1d810fa4477d53b",
+    "execution/attempts/attempt-63.settlement.json": "3b63b7ab15cb0bdd8ae6ece192e10c019d6b01257b5669ac3edc748e50d859ac",
+    "execution/transport/call-251.response.bin": "1073082f69bd2529304ac8a9184291730f2730c49778cf36f22968891ba05151",
+    "execution/transport/call-252.response.bin": "692f08af2a351de93a83843038d60eb2b8545b5f311dc808db0e92236b6076e7",
+    "execution/transport/call-252.response.json": "dd896dfa7f11d4fe40adf8ccc0782c6cf8bba4b0923b58c06f86caaebc1012b5",
+    "execution/transport/upload-N079.json": "7c3a038fdfbea142349d0361199580a29e41b04162cb536e3839e34d5fc10ff3"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N079",
+  "pilot_id": "F070",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 1.0,
+        "observation": "Solo female vocal intro accompanied by subtle sustained atmospheric pad and light piano chords."
+      },
+      {
+        "at_seconds": 37.0,
+        "observation": "Entry of a sparse, slow-tempo trap-influenced beat featuring crisp handclaps, deep sub bass, and minimal percussion."
+      },
+      {
+        "at_seconds": 150.0,
+        "observation": "Mellow verse with breathy R&B vocal delivery over subdued electric piano and low sub bass."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Electronic",
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Trap",
+      "Alternative R&B"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-252.response.bin",
+  "response_id": "_CGiatPLAZrpz7IPmaOJgQk",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 1.0, \"observation\": \"Solo female vocal intro accompanied by subtle sustained atmospheric pad and light piano chords.\"},\n    {\"at_seconds\": 37.0, \"observation\": \"Entry of a sparse, slow-tempo trap-influenced beat featuring crisp handclaps, deep sub bass, and minimal percussion.\"},\n    {\"at_seconds\": 150.0, \"observation\": \"Mellow verse with breathy R&B vocal delivery over subdued electric piano and low sub bass.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\"Electronic\", \"Pop\"],\n  \"secondary_styles\": [\"Trap\", \"Alternative R&B\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 282,
+    "promptTokenCount": 5653,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5204
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5935
+  }
+}

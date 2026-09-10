@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00488700",
+  "attempt": 68,
+  "cache_key": "0411fe6e7333a8710a496ec955a0034ba71032a940c58c83e27565bdcb64775f",
+  "evidence_hashes": {
+    "execution/attempts/attempt-68.request.json": "272dac405d63991bbb1ff5e38e2a24bd1072c80b929aa5b9ef9a65027bc92650",
+    "execution/attempts/attempt-68.reservation.json": "f8692902c461d44f43d9664c8e9071e36045cba55feb4523a8f3c6c7ea33e4d0",
+    "execution/attempts/attempt-68.settlement.json": "13724b6e8b88081f9a865c396e515a43ad1180fd3413c51368788cbca6bc59c4",
+    "execution/transport/call-271.response.bin": "892daa15cd7fcbccbaa25f0273dcd9702c3a5442480c28d643184d2966cd2049",
+    "execution/transport/call-272.response.bin": "cefe8362fba2be4e4b9c9640ca15486cad567b66ff79cb472db6647720d1d729",
+    "execution/transport/call-272.response.json": "3a223ecc7eaf92579566af22cd8ad961c4c9843e9563ae5706307ebdedcce789",
+    "execution/transport/upload-N084.json": "fc6e9ce588ed707afffe8282798f198be4464853d7059719f1e050e0d8761d74"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N084",
+  "pilot_id": "F077",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 17.5,
+        "observation": "A slow, punchy R&B groove enters with trap-influenced hi-hats, deep 808 sub-bass, and emotional female lead vocals."
+      },
+      {
+        "at_seconds": 56.2,
+        "observation": "The chorus expands with layered vocal harmonies, lush synth pads, and resonant basslines emphasizing contemporary R&B tropes."
+      },
+      {
+        "at_seconds": 133.0,
+        "observation": "Verse transition with stripped-back keys and intimate, breathy solo vocal phrasing before the fuller beat returns."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B and Soul",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Pop",
+      "Hip-Hop"
+    ],
+    "secondary_styles": [
+      "Alternative R&B",
+      "Trap Soul"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-272.response.bin",
+  "response_id": "HCKiavK2NqXnz7IPkN3a0Aw",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 17.5,\n      \"observation\": \"A slow, punchy R&B groove enters with trap-influenced hi-hats, deep 808 sub-bass, and emotional female lead vocals.\"\n    },\n    {\n      \"at_seconds\": 56.2,\n      \"observation\": \"The chorus expands with layered vocal harmonies, lush synth pads, and resonant basslines emphasizing contemporary R&B tropes.\"\n    },\n    {\n      \"at_seconds\": 133.0,\n      \"observation\": \"Verse transition with stripped-back keys and intimate, breathy solo vocal phrasing before the fuller beat returns.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B and Soul\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\n    \"Pop\",\n    \"Hip-Hop\"\n  ],\n  \"secondary_styles\": [\n    \"Alternative R&B\",\n    \"Trap Soul\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"layered\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 353,
+    "promptTokenCount": 4751,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4302
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5104
+  }
+}

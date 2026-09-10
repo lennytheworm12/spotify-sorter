@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 10.4,\n      \"observation\": \"Sparse, resonant electric piano chords enter accompanied by subtle bird/nature sounds.\"\n    },\n    {\n      \"at_seconds\": 29.8,\n      \"observation\": \"Down-tempo, relaxed hip hop drum kit beat enters underneath the laid-back keyboard progression.\"\n    },\n    {\n      \"at_seconds\": 96.0,\n      \"observation\": \"Mellow electric guitar embellishments layer softly over the continuous, loop-based lofi beat.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip Hop\",\n  \"primary_style\": \"Lo-Fi Hip Hop\",\n  \"secondary_families\": [\n    \"Electronic\",\n    \"Jazz\"\n  ],\n  \"secondary_styles\": [\n    \"Chillhop\",\n    \"Downtempo\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"clean\",\n    \"electronic\",\n    \"sample_based\"\n  ],\n  \"vocal_role\": \"instrumental\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPo1LJ775iAyyBQxGdk4F9mW5rmQecL5xOdG7sdWU5n8w6dS0hxP4hd4e9bXZiT0cq3K2HmYJRl5R7I4Tac0cvclPJtlmcO4UhkmdDydITDaovY6Pf6c6z0K0wrKE8jYEV"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 4018,
+    "candidatesTokenCount": 325,
+    "totalTokenCount": 4343,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3569
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "yyGiauDGF9Khz7IPnNaKyAg"
+}

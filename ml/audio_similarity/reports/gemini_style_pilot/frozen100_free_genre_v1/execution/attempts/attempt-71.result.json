@@ -1,0 +1,76 @@
+{
+  "actual_cost_usd": "0.00453600",
+  "attempt": 71,
+  "cache_key": "486c6397b106581790f8c7af6c08f34f955ae57b05b01156987dac13c776a455",
+  "evidence_hashes": {
+    "execution/attempts/attempt-71.request.json": "c17a2d80e8709498d12b83b172e434d8062bff8ff4e157064972879abc9fc08b",
+    "execution/attempts/attempt-71.reservation.json": "dd902c327c25904064e5fdca1bdb8db688d1fc38c585f8e026aa8f9c96357b4e",
+    "execution/attempts/attempt-71.settlement.json": "5dd50d6888b03e90eade8c46c555e22b181f5dd62390456bf87c6396c9780cbc",
+    "execution/transport/call-283.response.bin": "c419d039b094cc60fcd88293eb683df2932b5192511f6c776868f3b07d3c5127",
+    "execution/transport/call-284.response.bin": "eb2ad176f98294a30a41dd03be3605beaf9998a5fbc35367ff4aac3055880a51",
+    "execution/transport/call-284.response.json": "4f564db4df4718d3145de8d3c947d0b3f2fdb8b9ad85f83bf9e552c5026306f8",
+    "execution/transport/upload-N087.json": "ce0eb367f0f4591df47364afe546a251fb4e55632de0c4064aecddf93231e472"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N087",
+  "pilot_id": "F080",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 6.0,
+        "observation": "Intimate acoustic piano chords begin playing a gentle, rhythmic progression."
+      },
+      {
+        "at_seconds": 18.5,
+        "observation": "Solo female lead vocals enter with conversational, expressive phrasing over sparse piano."
+      },
+      {
+        "at_seconds": 68.0,
+        "observation": "Background vocal harmonies and subtle claps or percussive accents enter the piano ballad texture."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Piano Pop",
+    "secondary_families": [
+      "Singer-Songwriter"
+    ],
+    "secondary_styles": [
+      "Indie Pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-284.response.bin",
+  "response_id": "MCKiav7DMYfVz7IP6bnG-QE",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 6.0, \"observation\": \"Intimate acoustic piano chords begin playing a gentle, rhythmic progression.\"},\n    {\"at_seconds\": 18.5, \"observation\": \"Solo female lead vocals enter with conversational, expressive phrasing over sparse piano.\"},\n    {\"at_seconds\": 68.0, \"observation\": \"Background vocal harmonies and subtle claps or percussive accents enter the piano ballad texture.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Piano Pop\",\n  \"secondary_families\": [\"Singer-Songwriter\"],\n  \"secondary_styles\": [\"Indie Pop\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"acoustic\", \"clean\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 253,
+    "promptTokenCount": 4783,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4334
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5036
+  }
+}

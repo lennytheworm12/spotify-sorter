@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 16.0,\n      \"observation\": \"Female lead vocal enters over sparse electronic kick, snare, and soft synth pads.\"\n    },\n    {\n      \"at_seconds\": 64.0,\n      \"observation\": \"Vocal harmonies layer over swelling synth layers as the track builds in intensity.\"\n    },\n    {\n      \"at_seconds\": 109.0,\n      \"observation\": \"Rhythm drops into a full synth-pop chorus beat with pulsing synth bass.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Electronic\",\n  \"primary_style\": \"Synth-pop\",\n  \"secondary_families\": [\n    \"Pop\"\n  ],\n  \"secondary_styles\": [\n    \"Dream Pop\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"layered\",\n    \"hazy\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPE+3CtUJiqmK1Awec0nCez3cz4YRnTQyCWc24i0AYwXlRfUVLypeYdVupq+2/1C+PiBT+KyMfyBkM1fTPT0wWIL3sdh3lv3mT9s7Qz8pHX5vfd70ywBHDdhvrIQpNgKOx"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5683,
+    "candidatesTokenCount": 304,
+    "totalTokenCount": 5987,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5234
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "gSKiasjrM9zX-sAPwuHcmQc"
+}

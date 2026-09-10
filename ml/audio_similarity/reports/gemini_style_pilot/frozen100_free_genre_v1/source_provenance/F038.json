@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.769392215006519,
+  "acquisition_ended_at": "2026-09-04T20:01:32.727802+00:00",
+  "acquisition_started_at": "2026-09-04T20:01:30.958410+00:00",
+  "acquisition_timestamp": "2026-09-04T20:01:30.958536+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3253253,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 187,
+  "provider_result": "SUCCESS",
+  "provider_title": "g0nny (거니) - 같애 (Feat. SHIRT) MV",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "ca667ff42f5fc334d13e42c74e440ce4d250b5a8b134c49722da50eebfd620ff",
+      "representation_identity": "dc4bdce5928f86225c2b44c48e7bd5cbbbb77533c228c676d567dc8bc6840376",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "d3fffdef08ab561ab0de57f677806f66f7499bfc2688764cff49f67ab8fba0b2",
+          "25": "86ad15b01ca28c9792b4c4263d70736e565397436dcdfaa607a8998f2fd479c0",
+          "5": "4d19ac32f97b18d472fd2b6601f6ac5c2a208971288a95395fdb44ce762642be"
+        },
+        "muq_mulan_large": {
+          "15": "a2d1a65fed91fde272bd9b3ff2809a861d7f05e6e0477f496b41284cfbcfdc5b",
+          "25": "3c2bb12e94b9cf138e2a7ad6cfd0a17f27f6b8c49eb8bf6a8f71b14b6a14f164",
+          "5": "bf7e735c1c3557da959dd3efd9686bfad102ed0a2b423c9604ddf3634f33b193"
+        }
+      },
+      "source_audio_sha256": "7e4966aec7893bcbe3346dbb281c7c7894f071abe3dd8fc519bb18b8669811e8"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "rrqWbMhtzEM"
+  },
+  "retained_relative_path": "340yvMO5adu3bo1x5Zrw14/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 187.201,
+  "source_sha256": "3d328fc7289a162b5179b9c7169df16eae3f04255d56b3c875dbec1699e8c705",
+  "source_url": "https://www.youtube.com/watch?v=rrqWbMhtzEM",
+  "spotify_artists": [
+    "g0nny",
+    "SHIRT"
+  ],
+  "spotify_title": "You Might (Feat. SHIRT)",
+  "spotify_track_id": "340yvMO5adu3bo1x5Zrw14",
+  "successful_query": "You Might (Feat. SHIRT) g0nny SHIRT",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "rrqWbMhtzEM"
+}

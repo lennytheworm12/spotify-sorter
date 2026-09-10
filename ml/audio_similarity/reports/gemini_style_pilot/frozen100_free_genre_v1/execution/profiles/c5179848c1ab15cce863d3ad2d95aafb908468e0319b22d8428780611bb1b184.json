@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00618225",
+  "attempt": 70,
+  "cache_key": "c5179848c1ab15cce863d3ad2d95aafb908468e0319b22d8428780611bb1b184",
+  "evidence_hashes": {
+    "execution/attempts/attempt-70.request.json": "b6be647ec8cd75245da77d3e99a6e3792c7289682c1e4e396e9b7b80b3d906e3",
+    "execution/attempts/attempt-70.reservation.json": "a9ebfb60bc654eeb172403de40f95fd04a3e05b61aae8120b286638072bae54f",
+    "execution/attempts/attempt-70.settlement.json": "8aef7bc4788dfcbdfaeb75b653e27ca523b36c1a3eab8d5a7febb0bb3708e0dd",
+    "execution/transport/call-279.response.bin": "1268238d2af4abab3b7005c29b42419eb23a3ef029f9db5ef1a5357df2a6204d",
+    "execution/transport/call-280.response.bin": "9daae421fd5ab95683b30bcbc773dff762f5bf5e47611d59fe9fc2b2a11acb86",
+    "execution/transport/call-280.response.json": "fcb0e3784dcb1978097e08399edfea44a9e0fa205a47fa319da35938ead01b8e",
+    "execution/transport/upload-N086.json": "bb74c80956ee70a5c79246ed74533a464ce022f9adbc6f802e16e9bfe6569472"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N086",
+  "pilot_id": "F079",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 22.5,
+        "observation": "A slow, laid-back hip-hop beat enters with relaxed acoustic guitar chords and subtle kick/snare pattern."
+      },
+      {
+        "at_seconds": 83.2,
+        "observation": "Melodic electric guitar leads interplay over the chill hop drum groove and soft bassline."
+      },
+      {
+        "at_seconds": 184.0,
+        "observation": "Percussion drops out, leaving gentle clean guitar arpeggios in a warm ambient space."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip-Hop",
+    "primary_style": "Lo-Fi Hip-Hop",
+    "secondary_families": [
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Chillout",
+      "Downtempo"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "acoustic",
+      "sample_based"
+    ],
+    "vocal_role": "instrumental"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-280.response.bin",
+  "response_id": "KiKiaqL3BfuAz7IPpc-t0QM",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 22.5,\n      \"observation\": \"A slow, laid-back hip-hop beat enters with relaxed acoustic guitar chords and subtle kick/snare pattern.\"\n    },\n    {\n      \"at_seconds\": 83.2,\n      \"observation\": \"Melodic electric guitar leads interplay over the chill hop drum groove and soft bassline.\"\n    },\n    {\n      \"at_seconds\": 184.0,\n      \"observation\": \"Percussion drops out, leaving gentle clean guitar arpeggios in a warm ambient space.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip-Hop\",\n  \"primary_style\": \"Lo-Fi Hip-Hop\",\n  \"secondary_families\": [\n    \"Electronic\"\n  ],\n  \"secondary_styles\": [\n    \"Chillout\",\n    \"Downtempo\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"clean\",\n    \"acoustic\",\n    \"sample_based\"\n  ],\n  \"vocal_role\": \"instrumental\"\n}",
+  "usage": {
+    "candidatesTokenCount": 330,
+    "promptTokenCount": 6593,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 6144
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 6923
+  }
+}

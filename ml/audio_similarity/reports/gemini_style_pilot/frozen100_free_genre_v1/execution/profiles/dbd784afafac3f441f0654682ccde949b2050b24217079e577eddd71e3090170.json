@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00515550",
+  "attempt": 43,
+  "cache_key": "dbd784afafac3f441f0654682ccde949b2050b24217079e577eddd71e3090170",
+  "evidence_hashes": {
+    "execution/attempts/attempt-43.request.json": "a55dbccaf3fbe053b5061c8ab37bc73786238f2f357536c1c0bb8bd7492330ae",
+    "execution/attempts/attempt-43.reservation.json": "3d40d321d2fd4e8ca3a2af64844c50e66501de7710296b18a68c3676bd4b643d",
+    "execution/attempts/attempt-43.settlement.json": "6d5b858bd6bcbdff40e8509283aa0b58ea78ce333e3c71181dde77a753cf7082",
+    "execution/transport/call-171.response.bin": "45d3517024dfbcda06a4546ec29913303fa7d71f5ac566da6a79eaae69b1f891",
+    "execution/transport/call-172.response.bin": "f0898bca49a1cd0fa3ed13b362248330eb0d3cf606765d3ef1efa5f8986766b2",
+    "execution/transport/call-172.response.json": "8c72b766330f66f40791621a100feeba3ac783fd561f6dc9241f3d8432f87087",
+    "execution/transport/upload-N059.json": "5d2d0fafd2a7aa4330121334b8429304e38057e9d7b1439a49c054bae321fa62"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N059",
+  "pilot_id": "F048",
+  "profile": {
+    "active_section_density": "dense",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 39.5,
+        "observation": "Upbeat electropop chorus enters with four-on-the-floor kick, synth bass, and layered female pop vocals."
+      },
+      {
+        "at_seconds": 121.0,
+        "observation": "Synthesizer arpeggios and filtered synth sweeps drive the pre-chorus dynamic build."
+      },
+      {
+        "at_seconds": 160.0,
+        "observation": "Vocal harmonies and ad-libs soar over a pumping electronic dance-pop beat during the climax."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "electronic",
+    "primary_style": "k-pop",
+    "secondary_families": [
+      "pop"
+    ],
+    "secondary_styles": [
+      "dance-pop",
+      "electropop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-172.response.bin",
+  "response_id": "cyGiaveJE62M_PUPpf2jwA8",
+  "response_text": "{\n  \"active_section_density\": \"dense\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 39.5, \"observation\": \"Upbeat electropop chorus enters with four-on-the-floor kick, synth bass, and layered female pop vocals.\"},\n    {\"at_seconds\": 121.0, \"observation\": \"Synthesizer arpeggios and filtered synth sweeps drive the pre-chorus dynamic build.\"},\n    {\"at_seconds\": 160.0, \"observation\": \"Vocal harmonies and ad-libs soar over a pumping electronic dance-pop beat during the climax.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"electronic\",\n  \"primary_style\": \"k-pop\",\n  \"secondary_families\": [\"pop\"],\n  \"secondary_styles\": [\"dance-pop\", \"electropop\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 283,
+    "promptTokenCount": 5459,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5010
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5742
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 10.0,
+        "observation": "A mid-tempo R&B beat enters with soft electric piano chords, rimshot snare, and sub bass."
+      },
+      {
+        "at_seconds": 29.5,
+        "observation": "Clean female lead vocals enter in Korean, singing a melodic contemporary R&B ballad verse."
+      },
+      {
+        "at_seconds": 198.0,
+        "observation": "Second female vocal enters with a slightly more rap-adjacent rhythmic cadence before singing."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B and Soul",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Pop"
+    ],
+    "secondary_styles": [
+      "K-Pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "electronic",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "OyCiasL5Ls_jz7IP4ojf2Q4",
+  "spotify_track_id": "043ryKJlgSnAUzpXnfxU6b"
+}

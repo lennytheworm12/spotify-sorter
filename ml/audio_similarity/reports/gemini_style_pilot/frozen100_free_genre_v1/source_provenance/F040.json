@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.4349538199603558,
+  "acquisition_ended_at": "2026-09-04T20:17:52.401250+00:00",
+  "acquisition_started_at": "2026-09-04T20:17:50.966296+00:00",
+  "acquisition_timestamp": "2026-09-04T20:17:50.966439+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 4056325,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 229,
+  "provider_result": "SUCCESS",
+  "provider_title": "You Never Know",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "e2be7519773e71352dae66d73823d455e05ad7878683eada51eeeb9685b33e62",
+      "representation_identity": "552ab06168a52887faa3eee8b97652bc7cbf8b840111d9ad3afd001762669867",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "688b3122d00525c61b25e455f386e2487e31f6c283177c8f828050ec699c054a",
+          "25": "dc1d45e55f847e4a450f9fa01162635b7f6987fe74ea48a656e9983cff84bdd9",
+          "5": "7e6c883f9ed19cc3aa75ea5c4c6fa77e8595f981afc479f307cbab64ee0c7cb0"
+        },
+        "muq_mulan_large": {
+          "15": "f74ebc38ff1933cf188f367858dd0934ded61f1e55c2c290a983cd440b3b9440",
+          "25": "ba8bf48c0c9068f6e695ac3a944d472cafbd4abb223169ac6d0c223fb492d84a",
+          "5": "cce92510291bb63c3dbb245c39b0e56003c2933c0f0072e22fe95f809328c3e3"
+        }
+      },
+      "source_audio_sha256": "faae689c23fd58d71a7fc16f50784a92a94af18e7d1169c8b878f6b0fc9b129d"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "4Kk_iaaHd_Y"
+  },
+  "retained_relative_path": "39kzWAiVPpycdMpr745oPj/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 229.221,
+  "source_sha256": "c17f16fa88eb69a603b4f42724b720007089f5e94e9594728fdb2cb230ead534",
+  "source_url": "https://www.youtube.com/watch?v=4Kk_iaaHd_Y",
+  "spotify_artists": [
+    "BLACKPINK"
+  ],
+  "spotify_title": "You Never Know",
+  "spotify_track_id": "39kzWAiVPpycdMpr745oPj",
+  "successful_query": "You Never Know BLACKPINK",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "4Kk_iaaHd_Y"
+}

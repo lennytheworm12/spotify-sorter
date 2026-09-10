@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 2.028872554015834,
+  "acquisition_ended_at": "2026-09-04T20:07:12.990243+00:00",
+  "acquisition_started_at": "2026-09-04T20:07:10.961370+00:00",
+  "acquisition_timestamp": "2026-09-04T20:07:10.961490+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3204434,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 193,
+  "provider_result": "SUCCESS",
+  "provider_title": "Look At Me Now",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "71d9c10e4ba20bc6b8a461da61d8a4977a51a20119719345a7f4c6e1647e0d30",
+      "representation_identity": "438c34861ba305b81e07eef258275e6991f9e7e97fd2a9c684ad23c5bbb059f2",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "b4192a13289fc1bde91746e1c5d9d5a6d3ca8e4bc7502aa6317a3e011953d116",
+          "25": "6aab81cf99da8506367af89318169fd364d155219f7ce821af64cf5340a944b9",
+          "5": "74543291e748a634482181e954ba342c6ab05204ba943a2a85e2770b765b04e0"
+        },
+        "muq_mulan_large": {
+          "15": "b0e98360f4e2686f328923346e23c1377f6c9b9bb257e4c97c19fb9b668c837f",
+          "25": "9afc850824a44104d40706ff7327b2de813bff91c1bb7d8a227639093a991ccf",
+          "5": "f16e82acbdcc3d3ed0935854d4bd7fb57401ed66c0b70c2b314c97d6f17de7bf"
+        }
+      },
+      "source_audio_sha256": "58718cb396a09b34f9f270a9f2261be0410fff00ac0b3d2bea44da34f3828235"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "RWabpd7ah5E"
+  },
+  "retained_relative_path": "5zfpJXfqGGh94YcStRlI2s/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 192.781,
+  "source_sha256": "b171f043feb7b924a491781e583be313f938d0cd72fbfbbc1a91ddeeeb95fd18",
+  "source_url": "https://www.youtube.com/watch?v=RWabpd7ah5E",
+  "spotify_artists": [
+    "Yayyoung"
+  ],
+  "spotify_title": "Look At Me Now",
+  "spotify_track_id": "5zfpJXfqGGh94YcStRlI2s",
+  "successful_query": "Look At Me Now Yayyoung",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "RWabpd7ah5E"
+}

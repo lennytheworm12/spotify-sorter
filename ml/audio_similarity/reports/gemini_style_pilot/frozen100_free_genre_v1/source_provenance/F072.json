@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.587952375994064,
+  "acquisition_ended_at": "2026-09-04T20:03:12.547294+00:00",
+  "acquisition_started_at": "2026-09-04T20:03:10.959342+00:00",
+  "acquisition_timestamp": "2026-09-04T20:03:10.959460+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "SINGLE_ARTIST_UNSELECTABLE_FALLBACK",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3426588,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 204,
+  "provider_result": "SUCCESS",
+  "provider_title": "박재범 (Jay Park) - ‘GANADARA (Feat. 아이유 IU)’ Official Audio",
+  "query_variant_index": 1,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "9e61db283e5639d3d0ada1af8804ae02c0ca025bc3e1a23dc7ef53f984327a7d",
+      "representation_identity": "0857d3a6ddf8dfe02bcaec43c547a131751b18c4477c1ea8d51cc1e0f3476bf5",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "7dd088956bf3ec7c3e743e5f3270a7c4d9202ecaeadedee7a2065dbfd2ad006d",
+          "25": "2abfbc41652b11996c21a3b358d61f3248fee87841d29d7f431fbe3fa9f32b20",
+          "5": "80b279d1020f835b257634c2e2c16d6d0297cfa0a43d39ad194871ecf75c4970"
+        },
+        "muq_mulan_large": {
+          "15": "00e25c46565e603f38693d81affc71a78f6c41f9ba693934f2ffe5b8e525a40b",
+          "25": "6befcd1b60339259e6ea3d649824dffbf46840da775f384ea9f520d67cc4ea91",
+          "5": "ee58d788c37cd157e70f8802025ab32103accc9bb3081b725c5785aa8e850a47"
+        }
+      },
+      "source_audio_sha256": "dcca4e767e1efb750c02415f68e1685d3f46a6b6dbc41d27378a7b9c67ecb57c"
+    },
+    "materialization_report": "reports/stage5c2_representative_100_amended_v2_supplement_materialization/materialization_results.json",
+    "youtube_video_id": "v224EdAkZr8"
+  },
+  "retained_relative_path": "5quFr5s5PXYfUX5jV2EBZ1/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 3,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 203.761,
+  "source_sha256": "6755e0ea1025463a9930a4e4abd77e3610e8bbafd91e1a4567c5c1f76333d4f2",
+  "source_url": "https://www.youtube.com/watch?v=v224EdAkZr8",
+  "spotify_artists": [
+    "Jay Park",
+    "IU"
+  ],
+  "spotify_title": "GANADARA (Feat. IU)",
+  "spotify_track_id": "5quFr5s5PXYfUX5jV2EBZ1",
+  "successful_query": "GANADARA (Feat. IU) Jay Park",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "v224EdAkZr8"
+}

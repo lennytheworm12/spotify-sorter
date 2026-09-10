@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00421050",
+  "attempt": 34,
+  "cache_key": "0acc113e749758b62c49b80ba97b1274462522934198b1321c0a60a9242dbacc",
+  "evidence_hashes": {
+    "execution/attempts/attempt-34.request.json": "e9e2aec9a36293930dff10851f7b8528108d33951363d97f530de48674a016ce",
+    "execution/attempts/attempt-34.reservation.json": "c76a1e5929e0f411d018118d0d3dabec6e782d1017fc3f9b4d2e792d6b094eaf",
+    "execution/attempts/attempt-34.settlement.json": "fb013d0443a6139e53f6ba395355c0d14d9ddafeff6787468e0351c1e432034e",
+    "execution/transport/call-135.response.bin": "4af6b04996fb09cdcc4780c396f443e2d7b7106cde2da2c86d51dfa75f7415f2",
+    "execution/transport/call-136.response.bin": "2c2e29be2c6a8d6c896320e72aa24b4fe92195995c29e2cb3a6c5c78fd937a7c",
+    "execution/transport/call-136.response.json": "b10d358a87fd9443452a16e44bd6012e7dc57e897d640505b4cea1141aaf1561",
+    "execution/transport/upload-N050.json": "2ddc5b20a2acd927ebcde0363205372ec74b8fa2fe843df2bff34a4fe8521980"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N050",
+  "pilot_id": "F039",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "balanced",
+    "audio_evidence": [
+      {
+        "at_seconds": 0.0,
+        "observation": "Polyrhythmic hand percussion and pitched vocal chant loop begin the track."
+      },
+      {
+        "at_seconds": 26.6,
+        "observation": "Transition into an energetic dance-pop beat with bright synths and layered vocal hooks."
+      },
+      {
+        "at_seconds": 126.8,
+        "observation": "Vocal refrain in Korean over four-on-the-floor kick, synth stabs, and upbeat groove."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "pop",
+    "primary_style": "k-pop",
+    "secondary_families": [
+      "electronic / dance"
+    ],
+    "secondary_styles": [
+      "dance-pop",
+      "afro-house"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-136.response.bin",
+  "response_id": "NCGiaqumGPfQz7IPw8fhyQ8",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"balanced\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 0.0, \"observation\": \"Polyrhythmic hand percussion and pitched vocal chant loop begin the track.\"},\n    {\"at_seconds\": 26.6, \"observation\": \"Transition into an energetic dance-pop beat with bright synths and layered vocal hooks.\"},\n    {\"at_seconds\": 126.8, \"observation\": \"Vocal refrain in Korean over four-on-the-floor kick, synth stabs, and upbeat groove.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"pop\",\n  \"primary_style\": \"k-pop\",\n  \"secondary_families\": [\"electronic / dance\"],\n  \"secondary_styles\": [\"dance-pop\", \"afro-house\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"layered\", \"clean\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 270,
+    "promptTokenCount": 4264,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3815
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 4534
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.4711591490195133,
+  "acquisition_ended_at": "2026-09-04T20:33:32.445184+00:00",
+  "acquisition_started_at": "2026-09-04T20:33:30.974025+00:00",
+  "acquisition_timestamp": "2026-09-04T20:33:30.974125+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2319676,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 141,
+  "provider_result": "SUCCESS",
+  "provider_title": "ILLIT 'bamsopoong' Lyrics (아일릿 밤소풍 가사) [Color Coded Han_Rom_Eng] | ShadowByYoongi",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "12bf9586f7eb2c90e9d58580ce93388c7568fd01d099033fb158e1d53d70ddd9",
+      "representation_identity": "4edb329bef25d7d87f7a30a1377ff6aac868eb64bfd947c1cb31c2f25f08ed5c",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "e7d1b8c4a8d3133c13ab3277b80294e8392cc663b3f21bf9b167b26bcf5fd430",
+          "25": "ea075a659995b63320e4870a7891ba496c3a1593b3cc77dbb6488be501cac14c",
+          "5": "cab833c449d66b51c056fdfce1b9ca8b1391a5445b2373b045855e62222b6566"
+        },
+        "muq_mulan_large": {
+          "15": "73137ad0337c121e968ec1ac48ed6a603b48ebbfc8c544ce8197e53a02a2bbf6",
+          "25": "148d486a4c27b8a4bfbcae3b70d52ef588a6e460d04d3fc30e59ec595f5e2318",
+          "5": "bc58b8681b536dd16be23bcd1eb7e981fb150cd20788306abc67b61c9c769626"
+        }
+      },
+      "source_audio_sha256": "8533fe1884977b079890e99cdeea390eca1ce91afcb0b33d9e846cbf6f5d4faa"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "t1wYS2aiQaI"
+  },
+  "retained_relative_path": "3INETdToKVgt2vfp1wYBFw/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 141.321,
+  "source_sha256": "7d413ad1df6dc09bd9ab0fed0fa7102c4b6ac77b0a4240d9719a37c41b9b4f5c",
+  "source_url": "https://www.youtube.com/watch?v=t1wYS2aiQaI",
+  "spotify_artists": [
+    "ILLIT"
+  ],
+  "spotify_title": "bamsopoong",
+  "spotify_track_id": "3INETdToKVgt2vfp1wYBFw",
+  "successful_query": "bamsopoong ILLIT",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "t1wYS2aiQaI"
+}

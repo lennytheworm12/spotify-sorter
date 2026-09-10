@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 2.112246679025702,
+  "acquisition_ended_at": "2026-09-04T20:13:53.076744+00:00",
+  "acquisition_started_at": "2026-09-04T20:13:50.964497+00:00",
+  "acquisition_timestamp": "2026-09-04T20:13:50.964597+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3551952,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 211,
+  "provider_result": "SUCCESS",
+  "provider_title": "Luke Chiang - Shouldn't Be (Lyrics)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "6470eef166df54e84e0eb90addcc1f945509e77938ee6074ec5d1a2dc52053bc",
+      "representation_identity": "2c41feae105e3f76c3e662015afe97905f5af93510ebd28dad158c022364a69e",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "e64803251985cffdaea4b0d906c46c486fa6c89aabc037d5e21d25a2a0a3a144",
+          "25": "c747d2ef0f4adf8c3559a3af9ecddc9a3be9a3d13ea37881aec8829342f9c112",
+          "5": "52499ac1f8ce973267b0854429c03e17a48b4a0af3bac78b1e22b72f1885dbca"
+        },
+        "muq_mulan_large": {
+          "15": "20e42807e69736439dadf57b31935dd1e4a881401786d5de7b77eb3636ae8ddf",
+          "25": "85ca10de3c91f9cafcf74ade36bae6d53c74c91165f6b12c081fbf82e0f41761",
+          "5": "ef5e3ea373464e8acde32163260bf7f214d78615f4bab0b649007761f27d27cc"
+        }
+      },
+      "source_audio_sha256": "eaf0a3bba14efd7323914d44bb59e087bce7b04225a280c6552e1661b4f6e0b4"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "jfDu6KZ9O4w"
+  },
+  "retained_relative_path": "7F6PtLP6fJPVtA1FWVkl8K/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 211.301,
+  "source_sha256": "785855489ea95618f27541cb0771aee578ef12b8037f3333aaccc4b200c791b2",
+  "source_url": "https://www.youtube.com/watch?v=jfDu6KZ9O4w",
+  "spotify_artists": [
+    "Luke Chiang"
+  ],
+  "spotify_title": "Shouldn't Be",
+  "spotify_track_id": "7F6PtLP6fJPVtA1FWVkl8K",
+  "successful_query": "Shouldn't Be Luke Chiang",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "jfDu6KZ9O4w"
+}

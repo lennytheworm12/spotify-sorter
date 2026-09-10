@@ -1,0 +1,54 @@
+{
+  "collection_status": "REUSED_EXACT_PRIOR_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": {
+    "cache_key": "d6b9a6ae6adb1a7e4f0eb7ef68fec2fd637a1c1d4b94c61958c86095f3e65739",
+    "result_sha256": "063741bb157297e5b7b81ec5ecc69b879d66f643a2e35e3a3c90beecf194dd48",
+    "source_attempt": 12,
+    "source_manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+    "source_pilot_id": "C02",
+    "source_run": ".research_audio/gemini_style_pilot/free-genre-point-v1"
+  },
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.2,
+        "observation": "A downtempo electronic beat enters under looping vocal chops, introducing a warm synthesizer bassline."
+      },
+      {
+        "at_seconds": 28.5,
+        "observation": "Intimate female lead vocals enter with soft, melodic indie pop phrasing over electronic percussion."
+      },
+      {
+        "at_seconds": 124.0,
+        "observation": "Vocal harmonies build in an airy chorus hook layered with atmospheric synth pads and rhythmic bass."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Indie Pop",
+    "secondary_families": [
+      "Electronic",
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Electropop",
+      "Alternative R&B"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "UBiiatSfDLGHz7IP36jV0A8",
+  "spotify_track_id": "6pWqlKm9ugucgKNldCLigX"
+}

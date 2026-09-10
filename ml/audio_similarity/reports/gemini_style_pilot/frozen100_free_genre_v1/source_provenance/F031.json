@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.5731775689637288,
+  "acquisition_ended_at": "2026-09-04T20:08:52.535411+00:00",
+  "acquisition_started_at": "2026-09-04T20:08:50.962233+00:00",
+  "acquisition_timestamp": "2026-09-04T20:08:50.962352+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2652584,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 154,
+  "provider_result": "SUCCESS",
+  "provider_title": "YOANDRI - IT'LL BE OK (Official Lyric Video)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "e8abf083df792fb3dd9a2b43cf5629fa6e1be1e131e050928fd24d30b9750f6c",
+      "representation_identity": "975462a2dea02e9f60111745405e51cd7491e13eee8ffc9ba15bd2623301ec2f",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "85d6fd9c6dac69c6be35893ded31f627c01e8f4314d52a4e839921f2d389bdd2",
+          "25": "cf0953859db1c2a38583cbbc38e8fe024d065b087030ada87c5570eed44b5256",
+          "5": "8c9bc4b696b22dc36fcbc1708b055579a5892310f630d9e07ba3a16ec1284465"
+        },
+        "muq_mulan_large": {
+          "15": "499abe1473c530394bd95e114935f83c1a0b8cbd580bcaebf10f25bd7f2484ff",
+          "25": "fa78f926fbe1339e1cd0347f7d682385ffde87e9dc9ca946eaf4215944565918",
+          "5": "8e24d4b0de1bf5d96e2452fff07c601b37f20820583ebda5744df41531068ec9"
+        }
+      },
+      "source_audio_sha256": "f7bd403c79468d35b41d55385e39515d894e4898dbda9a7054ec10bf941754a1"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "bEEX-Ya7scc"
+  },
+  "retained_relative_path": "2YO6ZDPdQFkrOa6YYceEN4/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 154.021,
+  "source_sha256": "01e1c3468573690f9352b5b77c578550362fd95de2ec1802d6f0bc6f11f4aae6",
+  "source_url": "https://www.youtube.com/watch?v=bEEX-Ya7scc",
+  "spotify_artists": [
+    "Yoandri"
+  ],
+  "spotify_title": "It'll Be Ok",
+  "spotify_track_id": "2YO6ZDPdQFkrOa6YYceEN4",
+  "successful_query": "It'll Be Ok Yoandri",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "bEEX-Ya7scc"
+}

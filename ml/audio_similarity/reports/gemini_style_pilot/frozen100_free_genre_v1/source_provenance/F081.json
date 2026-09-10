@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.5451333519886248,
+  "acquisition_ended_at": "2026-09-04T20:08:12.507054+00:00",
+  "acquisition_started_at": "2026-09-04T20:08:10.961921+00:00",
+  "acquisition_timestamp": "2026-09-04T20:08:10.962064+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2783820,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 156,
+  "provider_result": "SUCCESS",
+  "provider_title": "sagun - I'm Drunk And Confused (Feat. Shiloh)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "b06fecd6953ce257a142cc1c9347e0fc9156cd41c439ae5632f87001dff487f1",
+      "representation_identity": "06d31d68b1e53a75bb9b094b5889e4bc291662980395e81ceb8bdc3df7f4a92e",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "752f7950d701db67f84a4523cc6761d9b769112d49dab6cb12f13b50770bc4c0",
+          "25": "cf10c63637a38469e61e32b8be045e4fb63dd93cb18a2d793f12e396b3b3190d",
+          "5": "861ac65b9ff45acf2a2387588e293c305f3c2fdfeae04b155d6a55275e2739d2"
+        },
+        "muq_mulan_large": {
+          "15": "c760e6736a15989d66256d98e78b138f4fbbffd8e7d48605702fc140b33c2e83",
+          "25": "eb1879af310292c3c7a747bf27d2887db394fee8badda3bfaf0aa71baa8d4922",
+          "5": "7924321bb8a3c4664619adec18288ce30c588ff16e2527f4c8647cd455ef8f07"
+        }
+      },
+      "source_audio_sha256": "72361d0a4d4538dd089280445452d42e514bec556c488f3282f6a30423bf3545"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "qB1kJUjPrVA"
+  },
+  "retained_relative_path": "6ZGqVXaJmhbYAK2DF8mWRR/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 156.141,
+  "source_sha256": "9798598a4a034aafca07b6d792c312d44d200b62a7d97a64c692eff5b678a8ae",
+  "source_url": "https://www.youtube.com/watch?v=qB1kJUjPrVA",
+  "spotify_artists": [
+    "sagun"
+  ],
+  "spotify_title": "I'm Drunk And Confused",
+  "spotify_track_id": "6ZGqVXaJmhbYAK2DF8mWRR",
+  "successful_query": "I'm Drunk And Confused sagun",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "qB1kJUjPrVA"
+}

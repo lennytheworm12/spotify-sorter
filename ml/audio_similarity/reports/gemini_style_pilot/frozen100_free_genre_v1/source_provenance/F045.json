@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 2.3454131279722787,
+  "acquisition_ended_at": "2026-09-04T20:11:33.308945+00:00",
+  "acquisition_started_at": "2026-09-04T20:11:30.963532+00:00",
+  "acquisition_timestamp": "2026-09-04T20:11:30.963651+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 4260314,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 257,
+  "provider_result": "SUCCESS",
+  "provider_title": "歐陽娜娜 Nana Ouyang【1-4-3】HD 高清官方完整版 MV",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "c9b7e795ea5629b973a350a566321fa0e83c8f7d465f023ddbc8abf0e76396ba",
+      "representation_identity": "cffee22704eeafbd44ab83d32d892bb839de3b4613340e34a969f877ae709d20",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "b3611a0d81e493de49e5ce33f05a2a7bbb29bbfd5bec6c8d7f73ee49bb63be92",
+          "25": "d59155095b7158b77fd96a1ead0024d5fa5b543b73a710797e9935152239b436",
+          "5": "53c6c3f1e9bded1ea633ed4e3c9eabaee4f9f708b367da33565333a7b2cb7dcc"
+        },
+        "muq_mulan_large": {
+          "15": "6475bde869da45a32898f7fbadc0772f70ef4467183900e676c555e4aa2dabef",
+          "25": "e5150740b2489bbe5d6c900e8f6a86514229e71fd7d78f12a2966263a3934443",
+          "5": "5a92b9a168c18b365025ef6ba2caf5e95bd45934b050d93dcbbcb9264fff44c9"
+        }
+      },
+      "source_audio_sha256": "0a88d1c2e298c944b99584e4e7fd6911a8bdc7d1d372a16a10e8092e10bc9286"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "NN90EGrioFU"
+  },
+  "retained_relative_path": "3aFh82SrVntBmW9Lx0Gb7W/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 256.821,
+  "source_sha256": "916c661acbc75ccca88dd4145758082c2ed8eea3d0781a0316ca64e6c56baa00",
+  "source_url": "https://www.youtube.com/watch?v=NN90EGrioFU",
+  "spotify_artists": [
+    "Nana Ou-Yang"
+  ],
+  "spotify_title": "1-4-3",
+  "spotify_track_id": "3aFh82SrVntBmW9Lx0Gb7W",
+  "successful_query": "1-4-3 Nana Ou-Yang",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "NN90EGrioFU"
+}

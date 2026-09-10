@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 1.5, \"observation\": \"Repetitive pitched-down, reverb-drenched vocal chops loop over subtle synth pad.\"},\n    {\"at_seconds\": 14.8, \"observation\": \"Minimal, rolling trap beat enters with crisp snares, fast hi-hat patterns, and low 808 sub-bass.\"},\n    {\"at_seconds\": 58.5, \"observation\": \"Beat continues with slight hi-hat variation beneath a continuously repeating hypnotic vocal phrase.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip Hop\",\n  \"primary_style\": \"Trap\",\n  \"secondary_families\": [\"Electronic\"],\n  \"secondary_styles\": [\"Phonk\", \"Cloud Rap\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"sample_based\", \"electronic\", \"hazy\"],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPe8TIs/ygK0ykGOyZXs9quiMwfdqYkPdxQ47qygkNtEM9kkFeUyOwhtRj4lzU98dxOXvmTvg5HZQiGelaIfI0juY6KHQKjem9CjFCN/zycYtbAUZEjnh0SQrd9AkYQLU4"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 3548,
+    "candidatesTokenCount": 281,
+    "totalTokenCount": 3829,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3099
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "3iCiau6lMd2hz7IP5tPywQg"
+}

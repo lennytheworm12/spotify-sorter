@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 15.0, \"observation\": \"Female vocal enters over a soft, syncopated electronic beat with subtle keys and bass.\"},\n    {\"at_seconds\": 32.0, \"observation\": \"Chorus features sweet, melodic pop vocals with smooth electronic production and layered backing harmonies.\"},\n    {\"at_seconds\": 96.0, \"observation\": \"A male guest feature enters, delivering rhythmic Korean and English rap vocals over the beat.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\"R&B\", \"Hip-Hop\"],\n  \"secondary_styles\": [\"Contemporary R&B\", \"Pop Rap\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"mixed_rap_and_singing\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPGNQDM6lWoCIqxPWWsyfgF4I1rVw6zyu/8BRvMzWEkCRu9mpYjv1e79DIK8rr59fZB3C/cZX80uDVv+HRNH0dFFNWUGAQl68/Nfs57uH+rXQl3KQFGI5i8VpHqg5perHM"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 4883,
+    "candidatesTokenCount": 279,
+    "totalTokenCount": 5162,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4434
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "TyGiaq_aItODz7IPhcTi0QE"
+}

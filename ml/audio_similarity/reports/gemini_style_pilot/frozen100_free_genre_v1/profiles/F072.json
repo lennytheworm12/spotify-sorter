@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 9.4,
+        "observation": "Beat begins with pitched melodic vocal chops, crisp 808 percussion, and rhythmic male sung verse in Korean."
+      },
+      {
+        "at_seconds": 74.5,
+        "observation": "Full bouncy hook featuring synthesized bass, syncopated snare hits, and a repetitive chanting vocal melody."
+      },
+      {
+        "at_seconds": 96.8,
+        "observation": "A contrasting smooth female vocal verse section enters over sustained chords and filtered drum groove."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "R&B",
+      "Hip-Hop"
+    ],
+    "secondary_styles": [
+      "Contemporary R&B",
+      "Pop Rap"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "electronic",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "CiKiaretE9qsz7IPtd7EsQ8",
+  "spotify_track_id": "5quFr5s5PXYfUX5jV2EBZ1"
+}

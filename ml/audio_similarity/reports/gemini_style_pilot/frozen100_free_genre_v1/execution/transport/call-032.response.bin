@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 14.5, \"observation\": \"A laid-back boom bap drum pattern enters over looping electric piano and saxophone chords.\"},\n    {\"at_seconds\": 37.0, \"observation\": \"Vocal scatting and melodic singing snippets weave briefly through the jazz-hop instrumentation.\"},\n    {\"at_seconds\": 63.8, \"observation\": \"Mellow electric piano chords continue with vinyl crackle texture and occasional turntable scratching.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip Hop\",\n  \"primary_style\": \"Lo-Fi Beats\",\n  \"secondary_families\": [\"Jazz\"],\n  \"secondary_styles\": [\"Jazz Rap\", \"Chillhop\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"sample_based\", \"hazy\", \"electronic\"],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPKgGRk3SgqDNBmFNhGMkXFnPoM4sJq5puKIYaMolFUtxu5KIUX1j4rGOlGibV0LVub4MDR5DZrgA5/CovFNNh9z6xpRgnu8yImqiLC2FOvqMhizaVdcjt6xclPPPeX4+o"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 2763,
+    "candidatesTokenCount": 273,
+    "totalTokenCount": 3036,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 448
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 2315
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "gyCiarq0PP-qsOIP7JvQ2QQ"
+}

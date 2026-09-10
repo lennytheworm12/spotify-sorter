@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.8903607960091904,
+  "acquisition_ended_at": "2026-09-04T20:03:52.849998+00:00",
+  "acquisition_started_at": "2026-09-04T20:03:50.959637+00:00",
+  "acquisition_timestamp": "2026-09-04T20:03:50.959748+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 4035669,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 247,
+  "provider_result": "SUCCESS",
+  "provider_title": "lace - risk (Official Music Video)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "5f0eafa9fd0e421fe842da67c4ca871e1dee91f75356cae3d6641aeb15c72827",
+      "representation_identity": "750e8c7541f0da316ed5339a04314355e02a8488e4bab4c1558f87024c4282fd",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "d1ef2d91beaf77c1f1d53ae08c1a33241d8a3cdfac55a1c82cf52e37e08a6855",
+          "25": "018b0a7001ad5b08df7f10dd0c327cf94461aa927eda3b07d00692bcec0dfd27",
+          "5": "ba5f9858c280f4f608ae89b85297a175062e613df56068da5fc51cf1c43cc326"
+        },
+        "muq_mulan_large": {
+          "15": "26cec06ab36cd52fd11dd640cbc4801f662d50e0526ce69a56541869b6be5608",
+          "25": "b7275f6e54896f485896e29ef4efbd840d3820189f29f45d0585adfbdf6809bd",
+          "5": "f578b0663652547a72005831c28ecb5d33fd13a52d9ded3f829d71240167ff0b"
+        }
+      },
+      "source_audio_sha256": "23248c4fc8bc2b37d9db9924bf26f19864dc4f15643ba79a039909bffd743654"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "IIsP4CMFcQc"
+  },
+  "retained_relative_path": "2js0td9w2MzNUVPlMKYOEs/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 246.861,
+  "source_sha256": "bba8b574a337d64406cdd5b12c751f0a37a7c1debd2a75b8ca966443fb69ccad",
+  "source_url": "https://www.youtube.com/watch?v=IIsP4CMFcQc",
+  "spotify_artists": [
+    "lace"
+  ],
+  "spotify_title": "risk",
+  "spotify_track_id": "2js0td9w2MzNUVPlMKYOEs",
+  "successful_query": "risk lace",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "IIsP4CMFcQc"
+}

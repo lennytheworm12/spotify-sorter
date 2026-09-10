@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00333600",
+  "attempt": 14,
+  "cache_key": "6cafc19afd0e4b2ebea3156408f712065b4bd7de693f27bde225004ef476a17c",
+  "evidence_hashes": {
+    "execution/attempts/attempt-14.request.json": "7035eab85d49836cd8fc64f771bf4e596baf53bd19075e6272cf1515008e8392",
+    "execution/attempts/attempt-14.reservation.json": "0ae48618ca366670a1612a0b4e1259283eead2702ac1b712c2e9f61fa7c4b18b",
+    "execution/attempts/attempt-14.settlement.json": "f9bdfce53b7d027d947e898d58879ac4c6e776a56cf96305fca2178b734090e9",
+    "execution/transport/call-055.response.bin": "bfe6b01cdafe4cf7cf583922f272a819c1c7320a08a9ff7a22381ab773bb0248",
+    "execution/transport/call-056.response.bin": "dc5343743ab24feb5f3bbafeb2aad31d58c72ce40db11c38e386cc277ec5b041",
+    "execution/transport/call-056.response.json": "4cc6d82179f87084c91cecffd971f4ff017f715eda263736d0fc00ef0cbe278b",
+    "execution/transport/upload-N030.json": "52e408947207621b6dc2d94e2d3201e71064010fd5313fc255a5265ba495f530"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N030",
+  "pilot_id": "F015",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 6.8,
+        "observation": "A slow, laid-back hip-hop beat enters with a clean snare, soft kick drum, and pitched vocal chime effect."
+      },
+      {
+        "at_seconds": 23.5,
+        "observation": "Sub-bass pulse and muted guitar/synth arpeggio continue beneath chopped vocal textures."
+      },
+      {
+        "at_seconds": 58.2,
+        "observation": "A sparse, downtempo groove persists with repetitive atmospheric vocal-like synth hooks."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip-Hop",
+    "primary_style": "Chillhop",
+    "secondary_families": [
+      "Electronic",
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Lo-Fi Hip-Hop",
+      "Downtempo"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "sample_based",
+      "clean"
+    ],
+    "vocal_role": "vocal_samples_only"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-056.response.bin",
+  "response_id": "qiCiavqEL5quqtsPho_oqA4",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 6.8,\n      \"observation\": \"A slow, laid-back hip-hop beat enters with a clean snare, soft kick drum, and pitched vocal chime effect.\"\n    },\n    {\n      \"at_seconds\": 23.5,\n      \"observation\": \"Sub-bass pulse and muted guitar/synth arpeggio continue beneath chopped vocal textures.\"\n    },\n    {\n      \"at_seconds\": 58.2,\n      \"observation\": \"A sparse, downtempo groove persists with repetitive atmospheric vocal-like synth hooks.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip-Hop\",\n  \"primary_style\": \"Chillhop\",\n  \"secondary_families\": [\n    \"Electronic\",\n    \"R&B\"\n  ],\n  \"secondary_styles\": [\n    \"Lo-Fi Hip-Hop\",\n    \"Downtempo\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"sample_based\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+  "usage": {
+    "candidatesTokenCount": 339,
+    "promptTokenCount": 2753,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 448
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 2305
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 3092
+  }
+}

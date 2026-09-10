@@ -1,0 +1,54 @@
+{
+  "collection_status": "REUSED_EXACT_PRIOR_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": {
+    "cache_key": "7381a4d10f960f4070c5e40be3f079eca818215b96014bbcef12b3bcf7f60e9c",
+    "result_sha256": "92880b74f111a5b98e7eed774e17833af587d36263b67437fed673640936d497",
+    "source_attempt": 9,
+    "source_manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+    "source_pilot_id": "A09",
+    "source_run": ".research_audio/gemini_style_pilot/free-genre-point-v1"
+  },
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 0.0,
+        "observation": "A sparse acoustic guitar plucking motif establishes the intro groove before drums enter."
+      },
+      {
+        "at_seconds": 15.0,
+        "observation": "Female lead vocal enters over upbeat pop-funk rhythm guitar, syncopated bass, and modern electronic drums."
+      },
+      {
+        "at_seconds": 50.0,
+        "observation": "Energetic dance-pop chorus featuring layered melodic vocals and driving dance rhythms."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Dance-Pop",
+    "secondary_families": [
+      "R&B",
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Contemporary R&B",
+      "Nu-Disco"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "OxiiaoqsNICc6dkP97Gm6A0",
+  "spotify_track_id": "74X2u8JMVooG2QbjRxXwR8"
+}

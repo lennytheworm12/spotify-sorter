@@ -1,0 +1,45 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "balanced",
+    "audio_evidence": [
+      {
+        "at_seconds": 12.0,
+        "observation": "A downtempo hip-hop drum loop drops in under pitch-shifted vocal chops."
+      },
+      {
+        "at_seconds": 26.5,
+        "observation": "Drums drop out, leaving mellow electric piano chords and dreamy vocal hums."
+      },
+      {
+        "at_seconds": 48.0,
+        "observation": "Beat re-enters with relaxed boom-bap kick and snare alongside pitched repetitive vocal fragments."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "hip-hop",
+    "primary_style": "lo-fi hip hop",
+    "secondary_families": [
+      "electronic"
+    ],
+    "secondary_styles": [
+      "chillout"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "sample_based",
+      "hazy",
+      "electronic"
+    ],
+    "vocal_role": "vocal_samples_only"
+  },
+  "response_id": "bCCiapqUFZquqtsPho_oqA4",
+  "spotify_track_id": "0ASYuzPsTBA6ZmIsuvNZby"
+}

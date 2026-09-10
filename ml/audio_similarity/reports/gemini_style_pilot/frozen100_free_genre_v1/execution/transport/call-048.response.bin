@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 1.5,\n      \"observation\": \"Female lead vocal begins over warm, low-tempo Rhodes-like electric piano chords with a sparse beat.\"\n    },\n    {\n      \"at_seconds\": 37.0,\n      \"observation\": \"Chorus enters with a pulsing sub-bass, snare snaps, and layered melodic vocal harmonies.\"\n    },\n    {\n      \"at_seconds\": 132.0,\n      \"observation\": \"Second chorus with a tight contemporary R&B drum pattern, syncopated bassline, and lead vocal ad-libs.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"r&b\",\n  \"primary_style\": \"contemporary r&b\",\n  \"secondary_families\": [\"pop\"],\n  \"secondary_styles\": [\"neo soul\", \"downtempo pop\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPwoesWKyOIBJ841jIzFL5aB7RgXAKYNvF9XgIo6P2oOsAZQK4HUcyiCF9GrK5MFRm4Knl9li+ZvDuhd0O54m0SHTy8dexHOWTkwqQjIZm4Ie2dcE7oMLKQ6au4SFTtTZ5"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 4950,
+    "candidatesTokenCount": 306,
+    "totalTokenCount": 5256,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4501
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "niCiapGrJOyO1MkP2YCfkQw"
+}

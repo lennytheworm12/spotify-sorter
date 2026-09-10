@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 2.1893894460517913,
+  "acquisition_ended_at": "2026-09-04T20:10:13.152275+00:00",
+  "acquisition_started_at": "2026-09-04T20:10:10.962886+00:00",
+  "acquisition_timestamp": "2026-09-04T20:10:10.962999+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3707971,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 189,
+  "provider_result": "SUCCESS",
+  "provider_title": "jrd. - Stay With Me",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "835c447752fc5965a20270cf04e1b4a4149424fe92d16c2d6015b1a696452325",
+      "representation_identity": "b280228f6ef3c89145749ccf0cbf6d24d3d0f4301c12a3988be3a424bfa84920",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "148b6e82026c220785ceaa348b513376fd9b2177253c03e8ab2a7de87d4fa565",
+          "25": "81c67a2d34668d2d234ee1b32d1a18b9e6b4dcf7dbbb9df4446bd64f22d83f8f",
+          "5": "46cdb331de9df176110baff6942f99cab0869c151289c7f8f5eff8ff3a34aeff"
+        },
+        "muq_mulan_large": {
+          "15": "5ac0f757a59b16ab4cc98833ab393dcc56fbc12b9876b0d2a363a6342df78c5d",
+          "25": "0c6304e18e2339d63ca2002846325fc7397f445e8bca209aeede43e78480631a",
+          "5": "709d747b2ac5fb3770f4dd515a495a873f586ac7794348e388e44481d85bd577"
+        }
+      },
+      "source_audio_sha256": "895847b5503cfdf4f10732cf59829848b30b27b93b2108a77f629f200da53336"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "AnijqH5nRmA"
+  },
+  "retained_relative_path": "02CCi0N3pMK4Rjxq5e6UmE/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 189.421,
+  "source_sha256": "2e19745a9779266e042ec8d8709397a7e781b75ee176455d9e62c2265505a886",
+  "source_url": "https://www.youtube.com/watch?v=AnijqH5nRmA",
+  "spotify_artists": [
+    "jrd."
+  ],
+  "spotify_title": "Stay With Me",
+  "spotify_track_id": "02CCi0N3pMK4Rjxq5e6UmE",
+  "successful_query": "Stay With Me jrd.",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "AnijqH5nRmA"
+}

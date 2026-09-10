@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"balanced\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 12.0,\n      \"observation\": \"A downtempo hip-hop drum loop drops in under pitch-shifted vocal chops.\"\n    },\n    {\n      \"at_seconds\": 26.5,\n      \"observation\": \"Drums drop out, leaving mellow electric piano chords and dreamy vocal hums.\"\n    },\n    {\n      \"at_seconds\": 48.0,\n      \"observation\": \"Beat re-enters with relaxed boom-bap kick and snare alongside pitched repetitive vocal fragments.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"hip-hop\",\n  \"primary_style\": \"lo-fi hip hop\",\n  \"secondary_families\": [\"electronic\"],\n  \"secondary_styles\": [\"chillout\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"sample_based\", \"hazy\", \"electronic\"],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPn5vUrYe4B9itRhkdIEmrDpr+cX+EJsocl3PxPhWttYonr77vY0v1VqUaaaTZj3JNHneLCI2PwpTCDF989FOssS2+rxMswnOGLBYr0wMWVmllDNeUBDU+7pVI7astKV/3"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 2848,
+    "candidatesTokenCount": 291,
+    "totalTokenCount": 3139,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 2400
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 448
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "bCCiapqUFZquqtsPho_oqA4"
+}

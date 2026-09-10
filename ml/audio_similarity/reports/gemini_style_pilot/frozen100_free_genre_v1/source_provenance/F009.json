@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.546219343028497,
+  "acquisition_ended_at": "2026-09-04T20:08:32.508283+00:00",
+  "acquisition_started_at": "2026-09-04T20:08:30.962064+00:00",
+  "acquisition_timestamp": "2026-09-04T20:08:30.962172+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 1617323,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 93,
+  "provider_result": "SUCCESS",
+  "provider_title": "dontcry - Jocelyn Flores",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "34032e772df8e2415469716b6ea29083978453178bb8d1ba09ca17970a2a8756",
+      "representation_identity": "c701a6e5f7027e1cc1c321f68351abca2d8f08d4799be2425775ae6ade530bf4",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "0f4fed21067a0e128db855bea4823fca925bd361a52343a5179a635e7a9c235c",
+          "25": "5a961489785e3ad0846bdeb4d59105c4976510cc6c6065ef87cfb9eb6ee3d834",
+          "5": "faf92282d308aacb1ed89d51b9658700306c975730d473c45c8717878f43415e"
+        },
+        "muq_mulan_large": {
+          "15": "c6177a685f4998223d37bfe0036b7c8fce0220a54581b43c6382e99ebb9c05bf",
+          "25": "1df873e6462c5bd231ed4b63d1a45f50c229a2a7b1ce0841300a9abe0eec5dfb",
+          "5": "b6402d46785ca2eb69d613c0694273adb2a578ed5381bf67435d044c11cce224"
+        }
+      },
+      "source_audio_sha256": "954ff8dbf9a493bd0f0c493f1f32db359e785b73d5286ac5a29d161ce415a9c7"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "h7rGEtJeaHQ"
+  },
+  "retained_relative_path": "0WJxkgYXRoOxFb4Vq3Ddmg/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 92.581,
+  "source_sha256": "325e76e6777a997516dfa5bcbc6b52d2fe72b44daf62f43907f5d2a4f6c5b3ed",
+  "source_url": "https://www.youtube.com/watch?v=h7rGEtJeaHQ",
+  "spotify_artists": [
+    "Dontcry"
+  ],
+  "spotify_title": "Jocelyn Flores",
+  "spotify_track_id": "0WJxkgYXRoOxFb4Vq3Ddmg",
+  "successful_query": "Jocelyn Flores Dontcry",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "h7rGEtJeaHQ"
+}

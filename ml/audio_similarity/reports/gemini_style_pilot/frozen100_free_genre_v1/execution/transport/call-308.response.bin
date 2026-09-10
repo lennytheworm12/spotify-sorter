@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 18.5, \"observation\": \"Plucked harp-like ostinato pattern enters over deep sub-bass and minimal ambient sound design.\"},\n    {\"at_seconds\": 65.0, \"observation\": \"Ethereal, wordless vocal vocalises and soft choral pads fade in, providing atmospheric texture.\"},\n    {\"at_seconds\": 158.0, \"observation\": \"Sparse, muffled four-on-the-floor kick pattern and faint click percussion subtle emerge beneath the ambient pads.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"electronic\",\n  \"primary_style\": \"ambient\",\n  \"secondary_families\": [\"dance_electronic\"],\n  \"secondary_styles\": [\"downtempo\", \"chillout\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"hazy\", \"layered\"],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPwqPE17lTmb2DVGZO12FDVR1RMIRVfYBiHvNnUAYh/3Ofi21YcducsDZosCxkVcmTbb9q1GaaqEyeqt4iU2sZ6eijHITzmYr2uA5u1BHPmL5Kai8xp+ya0x1KG+llsaX8"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5595,
+    "candidatesTokenCount": 284,
+    "totalTokenCount": 5879,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5146
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "WiKiavCCGtqsz7IPtd7EsQ8"
+}

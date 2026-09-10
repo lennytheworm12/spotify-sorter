@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.2735500520211644,
+  "acquisition_ended_at": "2026-09-04T20:29:12.245356+00:00",
+  "acquisition_started_at": "2026-09-04T20:29:10.971806+00:00",
+  "acquisition_timestamp": "2026-09-04T20:29:10.971912+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2145171,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 124,
+  "provider_result": "SUCCESS",
+  "provider_title": "No I Don't Want, Just Anyone",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "90afd162c1f1e00cc39f6ad27526d4dbb3ec4172c3beca98e9993702cfbdbf9d",
+      "representation_identity": "d06f151675677b101ab118784261ad3bf782b407d2f9144d4bd4d9b5f47c0808",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "fe65f289c08a8945fda897e1991a473a6f2fb297431f50d09282d83eb160c7bb",
+          "25": "d14f6ada3b3bddd37360c4817b091dcd33a3cf787f41e3574fe588f98330cb66",
+          "5": "5960a669e865dde317c51b5984cce426474a3526f76b1170795c39946f2c7cb1"
+        },
+        "muq_mulan_large": {
+          "15": "6fce243a30c6b5d8bd9728e9c383b6507632a30aa5fd7eb068f1a3a9a912a30f",
+          "25": "44e80f3a969c906a063bf6e1358c7b28eb9170b0f5374d26c3d9398a3f0d27d2",
+          "5": "cd30fbdccef178a15ba52bf112a34a5fb4b6333cc974540b615663fb6953e9a6"
+        }
+      },
+      "source_audio_sha256": "1850829fa31b50a2e7197e6a73ce765cb864fd8f758f0c183f61660f21577574"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "HzOLDbEdxAM"
+  },
+  "retained_relative_path": "23V5SeHanwL6PlqyJ99dH8/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 123.961,
+  "source_sha256": "e34ca34f1ab3592114a7367701b3ce0b794b9732ef9432f7f1eb30f03a4433da",
+  "source_url": "https://www.youtube.com/watch?v=HzOLDbEdxAM",
+  "spotify_artists": [
+    "Unclenathannn",
+    "Shiloh Dynasty"
+  ],
+  "spotify_title": "No I Don't Want, Just Anyone",
+  "spotify_track_id": "23V5SeHanwL6PlqyJ99dH8",
+  "successful_query": "No I Don't Want, Just Anyone Unclenathannn Shiloh Dynasty",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "HzOLDbEdxAM"
+}

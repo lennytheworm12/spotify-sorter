@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.628592433000449,
+  "acquisition_ended_at": "2026-09-04T20:17:12.594593+00:00",
+  "acquisition_started_at": "2026-09-04T20:17:10.966001+00:00",
+  "acquisition_timestamp": "2026-09-04T20:17:10.966201+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3283526,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 194,
+  "provider_result": "SUCCESS",
+  "provider_title": "[MV] Weeekly(위클리) - 몰래몰래 (Filmed By Weeekly)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "3a115e89cd9ae4ab345941186d47583427d0c4df6f4b3fe4c4e6a50c4226e523",
+      "representation_identity": "ba411e917e31cc2f7837ae9d194a9cb19c208efe8a0eca482dcc7306d1cb5e2f",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "a710a920f4d45ee7818e038091a28d971f847c30008cec1a5db3c11616ab9233",
+          "25": "cb9762c40a6fe0ee1133249f6d596de05ab82666cfc8dda2721fcc79dc955c54",
+          "5": "5f5770be7c407faff1ebf18c4862b47502e826dce2d6815925fb8d9db5e6d5b9"
+        },
+        "muq_mulan_large": {
+          "15": "e6c6d1e3cf57420848c1ad8d4ad2010c2cd1c4dc45725cfae2ba070b75d056ec",
+          "25": "3a7241df1d046781d1cc5a9f2c6435fa3773ca3025c943169975c66f4caf4e7f",
+          "5": "777323b94c97bac3e4959b412885576420ad1024d5c2d6f7ba51922660d5f504"
+        }
+      },
+      "source_audio_sha256": "1e3c765c09ffc8fdc3fdd500dafba49d3f24648253ccc4c92542073808f95ad7"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "zBCK8Z4a0Js"
+  },
+  "retained_relative_path": "1CwmoUvvRyhiwqhMfvbB4K/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 193.941,
+  "source_sha256": "bfabf8de20eaefccf7d6139273d672485b34b526d0d3ad5d51be1cb385083779",
+  "source_url": "https://www.youtube.com/watch?v=zBCK8Z4a0Js",
+  "spotify_artists": [
+    "Weeekly"
+  ],
+  "spotify_title": "Top Secret",
+  "spotify_track_id": "1CwmoUvvRyhiwqhMfvbB4K",
+  "successful_query": "Top Secret Weeekly",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "zBCK8Z4a0Js"
+}

@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.639643795962911,
+  "acquisition_ended_at": "2026-09-04T20:30:52.612383+00:00",
+  "acquisition_started_at": "2026-09-04T20:30:50.972739+00:00",
+  "acquisition_timestamp": "2026-09-04T20:30:50.972898+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3274231,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 194,
+  "provider_result": "SUCCESS",
+  "provider_title": "aespa Thirsty Lyrics (에스파 Thirsty 가사) (Color Coded Lyrics)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "b842e3ae8d054ace5174da78fbeb78b9c1cfa42f0b1395f5bd939bcb067339cc",
+      "representation_identity": "46147f6a9f58b78be256e7794b34c5b36e5a1f3850dd3d0189c7ede8069579a1",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "85b0a860090a904f3111dc7cd639833b64c6c4ec223f5c6412156099fd5793ea",
+          "25": "4da9ab3e972ba3636bec1ce20cfe55250bf2da6b2779b88f041341bb7e832259",
+          "5": "2a8beb0061d8593ade8b7de5df9485e431389e76781b250db929151c3045554b"
+        },
+        "muq_mulan_large": {
+          "15": "5c16266b309d704af14443d99225826a4a3120bae351658de45f9214be8fcc7c",
+          "25": "afbd2caae34d74ee76efe4276950f4d1b506221b89eb381c0ff11dcb36f0ff84",
+          "5": "a983755dea1c20d49dece248d7f34a2f2392e6d46fe4efd7d85ff72adb2ccb91"
+        }
+      },
+      "source_audio_sha256": "611eafec17039480700e2b38b1e8350f1e8ef5df1e76fd80add75284b6ff6c88"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "nlYI6G2hFyU"
+  },
+  "retained_relative_path": "6nICBdDevG4NZysIqDFPEa/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 2,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 193.521,
+  "source_sha256": "335d5c93246ba8d078b372b7f1e78a4bc9cf5e209e97d274e7335e8a5581ffe3",
+  "source_url": "https://www.youtube.com/watch?v=nlYI6G2hFyU",
+  "spotify_artists": [
+    "aespa"
+  ],
+  "spotify_title": "Thirsty",
+  "spotify_track_id": "6nICBdDevG4NZysIqDFPEa",
+  "successful_query": "Thirsty aespa",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "nlYI6G2hFyU"
+}

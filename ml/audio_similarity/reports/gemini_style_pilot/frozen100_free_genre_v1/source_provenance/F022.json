@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 2.132925432000775,
+  "acquisition_ended_at": "2026-09-04T20:20:13.100225+00:00",
+  "acquisition_started_at": "2026-09-04T20:20:10.967300+00:00",
+  "acquisition_timestamp": "2026-09-04T20:20:10.967420+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2724810,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 161,
+  "provider_result": "SUCCESS",
+  "provider_title": "ILLIT - Magnetic (Lyrics)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "7a96ffc7bbe6fe6f9a14546b13626458712f216487576c6ff1b27ed06c1df8f6",
+      "representation_identity": "baceff7b3128f18abf4027736d10c45ec217a13f9cffe7c7c1284092db95e9ef",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "be4de9497da19e7c308d74181269a1d3147ad2248381d880c12b8500754dc0d6",
+          "25": "fb3c27a8442301380fcf5f73492eb65ece1f20acdda4ac3f3f96605927653e79",
+          "5": "881d0ea7f512e8f5575f5a66216a5930a43baf6ec713cf9b04c2446fca47c854"
+        },
+        "muq_mulan_large": {
+          "15": "2c7c356d8a2f8cd1cf2437149ad97daae7c2260fb4d342e9926c1c8d02765fc5",
+          "25": "6af61ce9fbd5e1a924fd7c689dde65d9919c232189226213be98ac5458c6ba05",
+          "5": "a504939d72c6b1a7d58ed0e98b375bf79ec465fa0b7de71d07fbc10c847f93f1"
+        }
+      },
+      "source_audio_sha256": "34cab5c23f0c67f6bff0ff20de16c5ab7164f569181b352ad766b9ef4ea99cb6"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "PFHDkQgGfFI"
+  },
+  "retained_relative_path": "1aKvZDoLGkNMxoRYgkckZG/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 2,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 160.681,
+  "source_sha256": "0f47592ef2e476b636cc73c7b97003370717526444f68c1b6da4b46e24537d7a",
+  "source_url": "https://www.youtube.com/watch?v=PFHDkQgGfFI",
+  "spotify_artists": [
+    "ILLIT"
+  ],
+  "spotify_title": "Magnetic",
+  "spotify_track_id": "1aKvZDoLGkNMxoRYgkckZG",
+  "successful_query": "Magnetic ILLIT",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "PFHDkQgGfFI"
+}

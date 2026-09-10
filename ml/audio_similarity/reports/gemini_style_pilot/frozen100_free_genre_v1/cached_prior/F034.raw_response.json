@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 18.2,\n      \"observation\": \"Airy, breathy female vocal enters over a sparse kick pulse and ambient synth pads.\"\n    },\n    {\n      \"at_seconds\": 105.0,\n      \"observation\": \"Vocals expand with lush harmonies, swelling pads, and subtle electronic percussion.\"\n    },\n    {\n      \"at_seconds\": 30.5,\n      \"observation\": \"Syncopated sub bass and layered vocal ad-libs introduce a prominent trip hop / chillout groove.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Electronic\",\n  \"primary_style\": \"Trip Hop\",\n  \"secondary_families\": [\n    \"Pop\",\n    \"Downtempo\"\n  ],\n  \"secondary_styles\": [\n    \"Downtempo\",\n    \"Dream Pop\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"hazy\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPAqothnEIzx86gH0t6a8ltU/pDzMWv6fln4lF4JfQeg4JqfSxuj9bm+nMEYEwg5NpsCoABaOv5Y0d85Nw2TVXXLYmi1m1H6PLd09KpK5Jq68IYCJe2Z21LTgwP8fBI2c8"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 6620,
+    "candidatesTokenCount": 323,
+    "totalTokenCount": 6943,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 6171
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "VRiiaqPxHfGfz7IP7sG06Qo"
+}

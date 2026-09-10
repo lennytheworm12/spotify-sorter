@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 9.5, \"observation\": \"Intimate female lead vocal with sparse acoustic piano and soft bass pulsing beneath\"},\n    {\"at_seconds\": 38.5, \"observation\": \"Full indie pop chorus drops with upbeat drums, rhythm electric guitar, and punchy bass line\"},\n    {\"at_seconds\": 133.0, \"observation\": \"Second verse builds texture with shaker, sub-bass, and syncopated clean guitar accents\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Indie Pop\",\n  \"secondary_families\": [\"Rock\"],\n  \"secondary_styles\": [\"Alt-Pop\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"clean\", \"layered\", \"acoustic\"],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPP0JkuCVIUIe1vfXb8REVZHl8H//saP4K99TgHMRaw3gtJD668ABNPgbFMJXe50OlI+QMykMMX8zCRczWlGdFcogJG47Yq67ZpLFFtn5guq9rH+wf2TwLHUjwOiijvXXW"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 4963,
+    "candidatesTokenCount": 263,
+    "totalTokenCount": 5226,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4514
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "qiGiauC_L_b7qtsPlq7OiQQ"
+}

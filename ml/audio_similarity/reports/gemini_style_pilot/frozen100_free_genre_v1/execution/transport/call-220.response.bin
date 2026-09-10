@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 18.0,\n      \"observation\": \"High-pitched, heavily reverberant pitched vocal hook enters over low ambient drones.\"\n    },\n    {\n      \"at_seconds\": 38.0,\n      \"observation\": \"Subdued electronic beat enters beneath the high vocal motif with deep sub-bass tones.\"\n    },\n    {\n      \"at_seconds\": 58.0,\n      \"observation\": \"Spoken/half-sung male lead vocal begins the main verse over sparse kick and bass.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"electronic\",\n  \"primary_style\": \"ambient pop\",\n  \"secondary_families\": [\n    \"hip hop\",\n    \"r&b\"\n  ],\n  \"secondary_styles\": [\n    \"cloud rap\",\n    \"alternative r&b\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"hazy\",\n    \"electronic\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIP+2S4SGprkvUa+bZcahNpSVHS5ev0dQaIyOdZHcowJtEFwwNHsazYKWCr+JgJz7xK6ViLfdp+Q1evRcpgV2Nsln8+EUoPc9nOWlVYAvmwLI2y0/Fkaa+lTAZvf2SmCj7r"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5430,
+    "candidatesTokenCount": 322,
+    "totalTokenCount": 5752,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4981
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "xSGiao-iDe6eqtsP7Iay8AM"
+}

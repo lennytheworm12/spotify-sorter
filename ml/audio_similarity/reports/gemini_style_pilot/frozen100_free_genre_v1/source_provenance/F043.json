@@ -1,0 +1,61 @@
+{
+  "acquisition_duration_seconds": 2.2594245889922604,
+  "acquisition_ended_at": "2026-09-04T20:00:53.217391+00:00",
+  "acquisition_started_at": "2026-09-04T20:00:50.957966+00:00",
+  "acquisition_timestamp": "2026-09-04T20:00:50.958043+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3037020,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 177,
+  "provider_result": "SUCCESS",
+  "provider_title": "수비 (Soovi) - Make the Move (feat. pH-1) [Official Video]",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "152e1aaaab27ea59fd286e922f534d3cddf5011e5ff79f7850a85c851afdb736",
+      "representation_identity": "0d5928971dd4b213cfc4161a728598ae821f23a81cc7e35377c4a7c8fa15ef82",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "1f73061a097391e4fd459e77adb87ee7a1f15956edf0261862f4094f0b6d8f07",
+          "25": "39cb74aca07d47d233f0ace4fbf0803dc4a444e310745c83eb8933e68cf10974",
+          "5": "36db7f5d5b75aa052b3cbe564ad4cb49b984737c5a35130204af43e980062498"
+        },
+        "muq_mulan_large": {
+          "15": "1f4a2b71c813cee4a0a058712ddca1ece1b2acac5f13915adb63ea6877f97864",
+          "25": "e905e0e2daee602e59c35c1c426d2c7b4ce55ca8b0a7e1eb68820763270b42fc",
+          "5": "e5899803cee96532ec9c070b43f78cc3608f40fe9b088e69cd5995906a1c2047"
+        }
+      },
+      "source_audio_sha256": "57d6a59a2478780dd9fed1e43d931099017f7f81ed0fd51b0615d1421b56c958"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "rTKCBcDqyMg"
+  },
+  "retained_relative_path": "3JxRNkoNmAcPgnA5HSnKiz/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 177.361,
+  "source_sha256": "7dbe0ddf8df95887615ce290f9bce441b040c71b8abd99ae4415ebdcd617fde8",
+  "source_url": "https://www.youtube.com/watch?v=rTKCBcDqyMg",
+  "spotify_artists": [
+    "SOOVI",
+    "pH-1"
+  ],
+  "spotify_title": "Make the Move (feat. pH-1)",
+  "spotify_track_id": "3JxRNkoNmAcPgnA5HSnKiz",
+  "successful_query": "Make the Move (feat. pH-1) SOOVI pH-1",
+  "warnings": [
+    "[youtube] unable to extract yt initial data; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U",
+    "[youtube] Incomplete data received in embedded initial data; re-fetching using API.",
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "rTKCBcDqyMg"
+}

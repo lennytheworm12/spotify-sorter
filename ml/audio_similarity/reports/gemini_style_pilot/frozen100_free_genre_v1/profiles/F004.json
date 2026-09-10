@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 22.0,
+        "observation": "Rapped male verse begins over a prominent, upbeat piano riff and a syncopated R&B hip-hop beat."
+      },
+      {
+        "at_seconds": 34.0,
+        "observation": "Female lead vocal enters with sweet, expressive melismatic delivery, singing an R&B pre-chorus."
+      },
+      {
+        "at_seconds": 115.0,
+        "observation": "Anthemic chorus featuring prominent, layered female vocals over rhythmic piano chords, bass, and handclaps."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "r&b",
+    "primary_style": "contemporary r&b",
+    "secondary_families": [
+      "pop",
+      "hip hop"
+    ],
+    "secondary_styles": [
+      "dance-pop",
+      "pop rap"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "layered",
+      "sample_based"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "response_id": "XiCiavDyPICc6dkP97Gm6A0",
+  "spotify_track_id": "06EL94D0TA27Ik0Ke5usbj"
+}

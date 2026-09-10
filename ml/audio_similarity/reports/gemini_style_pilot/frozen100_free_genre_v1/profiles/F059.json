@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 9.1,
+        "observation": "A bouncy Afrobeat and amapiano-influenced percussion groove enters under melodic female pop vocals."
+      },
+      {
+        "at_seconds": 43.5,
+        "observation": "Rhythmic vocal chanting repeats rapid syllables alongside minimal percussion and subtle synth bass."
+      },
+      {
+        "at_seconds": 68.3,
+        "observation": "Full groove returns with layered female vocals singing a hook with an upbeat dance rhythm."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "Electronic",
+      "African Dancehall and Reggae"
+    ],
+    "secondary_styles": [
+      "Afrobeats",
+      "Dance-Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "uCGiaqbDHMXVz7IPwdaruAg",
+  "spotify_track_id": "4lR8sYGMGZPvthF2yUfo7T"
+}

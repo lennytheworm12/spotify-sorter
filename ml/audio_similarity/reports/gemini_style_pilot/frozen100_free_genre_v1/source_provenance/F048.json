@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.7796813499880955,
+  "acquisition_ended_at": "2026-09-04T20:19:12.746556+00:00",
+  "acquisition_started_at": "2026-09-04T20:19:10.966875+00:00",
+  "acquisition_timestamp": "2026-09-04T20:19:10.966999+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3463035,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 200,
+  "provider_result": "SUCCESS",
+  "provider_title": "MOON",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "29965ff7e30f4f93061fd503368848aeeb4bd9ef2f77459163014ddf81332751",
+      "representation_identity": "c5277069e950651915f4b7ab5409a3b94b1c7dfac8e861396634162aa2a075b1",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "fa1a278756a3181acc438516042e279b58bc6f70d85310b3cb77468344d5924d",
+          "25": "6a78861dda8eee7f7610742b92a2dccea6af28af782fd66ae3b9457c74b75bd4",
+          "5": "e281d5dc91ebf03f438ed42c57ae65f3dd6828f3583f5d37e10fc780aa264a96"
+        },
+        "muq_mulan_large": {
+          "15": "e07d3feda710d88c2282cb385b5c682753a6c062d233799053579cd0e6c3b91a",
+          "25": "411c5779fa1eebd5bf167b245397b7ebb25c23a20ce5035247cc009629811262",
+          "5": "81030ec9cc56c91b3cb8c92e561acca507ec6e3e0223dfac366c352c3a44a754"
+        }
+      },
+      "source_audio_sha256": "6e9a03a7e0bff4bc4cf2b2a6c4ed282dfb118f221819c723ad4f880970f28b05"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "OYtjo3CTAOM"
+  },
+  "retained_relative_path": "3uOeutrLztSX6lU0b0et3B/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 2,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 200.421,
+  "source_sha256": "8971b67b6939a05bf15e227d91eb313a3ae72fded2d74f4b3149ddf80841ae22",
+  "source_url": "https://www.youtube.com/watch?v=OYtjo3CTAOM",
+  "spotify_artists": [
+    "i-dle"
+  ],
+  "spotify_title": "MOON",
+  "spotify_track_id": "3uOeutrLztSX6lU0b0et3B",
+  "successful_query": "MOON i-dle",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "OYtjo3CTAOM"
+}

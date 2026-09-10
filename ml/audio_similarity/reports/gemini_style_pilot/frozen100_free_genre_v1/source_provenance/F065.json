@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.8273374649579637,
+  "acquisition_ended_at": "2026-09-04T20:05:12.787760+00:00",
+  "acquisition_started_at": "2026-09-04T20:05:10.960423+00:00",
+  "acquisition_timestamp": "2026-09-04T20:05:10.960529+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2463234,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 151,
+  "provider_result": "SUCCESS",
+  "provider_title": "Katherine Li - If I Weren't Me (Official Video)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "ea430c3f40f016c5c2f8339d6117e8749c1b6e8d8cbab3823d21e69d6f0ec309",
+      "representation_identity": "3a1d88761ffcaea4a3401ac20763f9215b8a812655447ba410eb384eb7eb9305",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "1401613bc1a21092186888d08ae9a62147b73b31d06e9e9204ae7bb5384f4990",
+          "25": "81e8e0e935da92982fe7cf79dbdd5cc45e26d323f239a7239f321c752be3a262",
+          "5": "ceaffd06e6acaa81d13afedb61c4808c52c7fa8d9866da0969c6fb0d70870e7c"
+        },
+        "muq_mulan_large": {
+          "15": "3925ba0cd9806ff979ca3a1e7bdee6d2018e12b6de54ff3ff33ba9c0d9fa7261",
+          "25": "fec5e4741d50776aa730d7e6b838037a5b967928d3fb1969d1ec6cf2c7fcf6f8",
+          "5": "f591613a13069f98ca4fc0d9f7bf29baf84710d8959fbcb8e6e3a05a042d5fd3"
+        }
+      },
+      "source_audio_sha256": "8e01762a91bcee638fe546a742a05117a3e62bfa27a4dbff5eb1779c0612528a"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "oclnUlduLkY"
+  },
+  "retained_relative_path": "5VGDusp81Ed3T9xACRw5Os/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 150.561,
+  "source_sha256": "64d9dba008ea666aeb612398790eb586ee04efe875d3dddd29a6aa9ea1340031",
+  "source_url": "https://www.youtube.com/watch?v=oclnUlduLkY",
+  "spotify_artists": [
+    "Katherine Li"
+  ],
+  "spotify_title": "If I Weren't Me",
+  "spotify_track_id": "5VGDusp81Ed3T9xACRw5Os",
+  "successful_query": "If I Weren't Me Katherine Li",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "oclnUlduLkY"
+}

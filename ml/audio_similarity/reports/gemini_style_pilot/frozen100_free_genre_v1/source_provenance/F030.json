@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.9819370220066048,
+  "acquisition_ended_at": "2026-09-04T20:30:32.954464+00:00",
+  "acquisition_started_at": "2026-09-04T20:30:30.972527+00:00",
+  "acquisition_timestamp": "2026-09-04T20:30:30.972684+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3815167,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 223,
+  "provider_result": "SUCCESS",
+  "provider_title": "Taeyeon (태연) - 11:11 Colour Coded Lyrics (Han/Rom/Eng)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "12a1e5e45570604089c911e320cecb6a88e6032d22b4adc012bee08bc8680e20",
+      "representation_identity": "a264b5e5cf9a6fedab0e1df94ad13e0eacc7b420199a63c9c06634d058498ac3",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "ecf6d8d50f1d15b1a256702676e18b8b553263a2f5ad8d6660c22ddacec072a3",
+          "25": "a7219c7fa46abea1275a7f355e91b21dc0b50348e21325a02e8e819fd984a3ba",
+          "5": "30e4c18d445635809d184a9b5bdb1b515fbf835e63fe52b2a6b8d2d56392c3e3"
+        },
+        "muq_mulan_large": {
+          "15": "49c35a4b01656136026e7f0bbb9b265cdbf525c583fcb9aef7ab1090fd3e81c8",
+          "25": "f716cc3e0e373d2f90c32362d6ba57561fd5a4627253f14296bf8af0be944dfb",
+          "5": "4dd48a1b9963aefa278112034d16e1a4973a62c282b54228fad267b11d976e0b"
+        }
+      },
+      "source_audio_sha256": "ffbdeb0e6d849690ddb1ca2a06bf67aa0559499564968dea632298a55de2af06"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "foRAF6OgOs8"
+  },
+  "retained_relative_path": "2Y4iTaIAamhYPyZcOdfL3g/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 222.541,
+  "source_sha256": "2ebcead92066a00e719a2c9f66817094accd614a3fb21efb5319625b36ba4e6f",
+  "source_url": "https://www.youtube.com/watch?v=foRAF6OgOs8",
+  "spotify_artists": [
+    "TAEYEON"
+  ],
+  "spotify_title": "11:11",
+  "spotify_track_id": "2Y4iTaIAamhYPyZcOdfL3g",
+  "successful_query": "11:11 TAEYEON",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "foRAF6OgOs8"
+}

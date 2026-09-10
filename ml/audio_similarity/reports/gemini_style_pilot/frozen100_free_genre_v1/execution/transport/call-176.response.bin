@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 15.6,\n      \"observation\": \"Percussive 808-style beat enters beneath sung female vocals with bright pop production.\"\n    },\n    {\n      \"at_seconds\": 50.8,\n      \"observation\": \"Upbeat dance-pop chorus drops with synthetic bassline, four-on-the-floor beat, and bright synth chords.\"\n    },\n    {\n      \"at_seconds\": 125.7,\n      \"observation\": \"Melodic pre-chorus vocal hook leading into another high-energy dance-pop chorus drop.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\"Electronic / Dance\"],\n  \"secondary_styles\": [\"Dance-Pop\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPJZ8yWbrECoZBzdvLWWhMuU3dPLJSE4Iy4pO4ZU1/+TlgqCHta1JpUnmg5vebN6L+f8kPKdNnlCQU0X++Ii2ZfcyUtJrmZoV5AURCxFwYDoi4ruKN+SVUx8NRhtlaQaca"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5857,
+    "candidatesTokenCount": 303,
+    "totalTokenCount": 6160,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5408
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "eiGiapHMKfe0_PUP78anuQI"
+}

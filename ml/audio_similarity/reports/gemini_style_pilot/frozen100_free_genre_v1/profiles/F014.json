@@ -1,0 +1,46 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 12.0,
+        "observation": "Solo female singing begins over synth brass pads, punchy bassline, and drum beat."
+      },
+      {
+        "at_seconds": 43.0,
+        "observation": "Energetic chorus section arrives with layered vocal hook and bouncy dance-pop groove."
+      },
+      {
+        "at_seconds": 120.0,
+        "observation": "Transition into a rap-influenced rhythmic vocal breakdown before building back to the chorus."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Dance-Pop",
+      "Bubblegum Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "response_id": "pSCiavr_BJrpz7IPmaOJgQk",
+  "spotify_track_id": "1CwmoUvvRyhiwqhMfvbB4K"
+}

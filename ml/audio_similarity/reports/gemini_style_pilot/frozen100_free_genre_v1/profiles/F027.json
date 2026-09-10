@@ -1,0 +1,49 @@
+{
+  "collection_status": "REUSED_EXACT_PRIOR_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": {
+    "cache_key": "157053d495399e1eff02a9cc1b36af4fb81745c013fd7fff69ba1fffb8f18569",
+    "result_sha256": "e39bb64d08460a8e409a19ddd8d187c764037eca6e8cbb9f89e96d7ebc811141",
+    "source_attempt": 3,
+    "source_manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+    "source_pilot_id": "A02",
+    "source_run": ".research_audio/gemini_style_pilot/free-genre-point-v1"
+  },
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 18.9,
+        "observation": "Trap drums drop with crisp hi-hat rolls, snapping snare, and a deep 808 sub bass alongside rap vocals."
+      },
+      {
+        "at_seconds": 51.2,
+        "observation": "Melodic rap delivery over a minimal synth bell/piano melody and subtle 808 percussion."
+      },
+      {
+        "at_seconds": 110.5,
+        "observation": "Different verse section enters with rhythmic, percussive ad-libs, low bassline, and syncopated snare hits."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "hip hop",
+    "primary_style": "trap",
+    "secondary_families": [],
+    "secondary_styles": [
+      "plugg"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean"
+    ],
+    "vocal_role": "rap_led"
+  },
+  "response_id": "GhiiavOoDICc6dkP97Gm6A0",
+  "spotify_track_id": "2BJSMvOGABRxokHKB0OI8i"
+}

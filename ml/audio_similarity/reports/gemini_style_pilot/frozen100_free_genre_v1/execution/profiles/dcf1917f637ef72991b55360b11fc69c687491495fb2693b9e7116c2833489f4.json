@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00484200",
+  "attempt": 81,
+  "cache_key": "dcf1917f637ef72991b55360b11fc69c687491495fb2693b9e7116c2833489f4",
+  "evidence_hashes": {
+    "execution/attempts/attempt-81.request.json": "8be114e541723d6b1b6255dd3ffc8a43e56a61bbb56416dee9bc6b3383b5b2cd",
+    "execution/attempts/attempt-81.reservation.json": "818da9285072ff842aa5caf545d1695e71ed96f8420afcd914eccd9c71376dba",
+    "execution/attempts/attempt-81.settlement.json": "0f415a77e52aa9f2ddeb89a7308c072660f01e434dbbed3b8ba9f5d2cb83c13b",
+    "execution/transport/call-323.response.bin": "d6b3937c2c6ce81d779873d3c1507e4597e7bd7522ba47c62d2f4bea90cf73c2",
+    "execution/transport/call-324.response.bin": "fc0bffbcb471fa29ec370fecca51f0ee64f4304bd1012412bbf8b1362718bf0b",
+    "execution/transport/call-324.response.json": "f3fa28161a40a7c3381eeeaefa54fe06eebebb498d307d8e69c6a829dda88534",
+    "execution/transport/upload-N097.json": "5231952f9cf23bc4df01c5311b18761f778cc223baaca4ac8587fbdd9bc5949a"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N097",
+  "pilot_id": "F094",
+  "profile": {
+    "active_section_density": "dense",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 12.0,
+        "observation": "Upbeat four-on-the-floor dance-pop groove with bright synth arpeggios and funky rhythm guitar."
+      },
+      {
+        "at_seconds": 47.0,
+        "observation": "Full chorus drops with high-energy electronic beats, driving bassline, and layered female vocals."
+      },
+      {
+        "at_seconds": 127.0,
+        "observation": "Verse transition with funk guitar strums, syncopated bass, and playful synth stabs."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "Electronic / Dance"
+    ],
+    "secondary_styles": [
+      "Dance-Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-324.response.bin",
+  "response_id": "dyKiaqDGBfe0_PUP78anuQI",
+  "response_text": "{\n  \"active_section_density\": \"dense\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 12.0, \"observation\": \"Upbeat four-on-the-floor dance-pop groove with bright synth arpeggios and funky rhythm guitar.\"},\n    {\"at_seconds\": 47.0, \"observation\": \"Full chorus drops with high-energy electronic beats, driving bassline, and layered female vocals.\"},\n    {\"at_seconds\": 127.0, \"observation\": \"Verse transition with funk guitar strums, syncopated bass, and playful synth stabs.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\"Electronic / Dance\"],\n  \"secondary_styles\": [\"Dance-Pop\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"layered\", \"clean\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 277,
+    "promptTokenCount": 5071,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4622
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5348
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 0.0,
+        "observation": "Upbeat synth arpeggio, bass synth, and acoustic drum beat intro establishing the groove."
+      },
+      {
+        "at_seconds": 13.9,
+        "observation": "Korean female lead vocals enter over electro-pop synth bassline and bright keyboard accents."
+      },
+      {
+        "at_seconds": 36.1,
+        "observation": "Full dance-pop chorus with layered backing vocals, four-on-the-floor beat, and pulsing synth bass."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "pop",
+    "primary_style": "k-pop",
+    "secondary_families": [
+      "electronic",
+      "dance"
+    ],
+    "secondary_styles": [
+      "dance-pop",
+      "electropop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "SSGiauK9Hrfiz7IP7MaD6Q8",
+  "spotify_track_id": "3INETdToKVgt2vfp1wYBFw"
+}

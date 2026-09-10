@@ -1,0 +1,45 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 18.9,
+        "observation": "Female lead vocal enters with auto-tuned, syncopated delivery over a minimalist four-on-the-floor kick pattern and hi-hats."
+      },
+      {
+        "at_seconds": 55.4,
+        "observation": "Chorus hook featuring catchy sung-melodic lines over simple electronic club beats and synth bass."
+      },
+      {
+        "at_seconds": 218.6,
+        "observation": "Spoken-melodic verse lines deliver personal narrative with sparse electronic club percussion accompaniment."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Electronic / Dance",
+    "primary_style": "Dance-Pop",
+    "secondary_families": [
+      "Hip Hop / Rap"
+    ],
+    "secondary_styles": [
+      "Pop Rap"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "response_id": "ZCGiaunjCruN_uMP-OyE6Qs",
+  "spotify_track_id": "3azJifCSqg9fRij2yKIbWz"
+}

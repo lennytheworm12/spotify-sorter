@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00585375",
+  "attempt": 35,
+  "cache_key": "130b2ac7f5341791ea46593edcd0541d0472ddd5cd004cf5988286d8cd14f419",
+  "evidence_hashes": {
+    "execution/attempts/attempt-35.request.json": "f464e711eb8b5c0b7811ada77dd318169a610765d738177e8833c451a355086a",
+    "execution/attempts/attempt-35.reservation.json": "c624340a6cc798e6cd7306d18b14f4a8b14e27e8786e123abf1b205184d93188",
+    "execution/attempts/attempt-35.settlement.json": "7703faa23e77010386d3b7e9a336e83142f8076c427f99bfe8134f7a05cd698b",
+    "execution/transport/call-139.response.bin": "702cd39f2e3ecc6b890121ef93e480ef333c76a4bea550854ad24b43e4620c0c",
+    "execution/transport/call-140.response.bin": "609ea85adbeaad5ffc2fb500acf1e6555042203459e85e58086e65e5ae3f5478",
+    "execution/transport/call-140.response.json": "de9cede0451e75e776dbc3f1ea207fad07687ef3833bd06c258bdad53321b046",
+    "execution/transport/upload-N051.json": "bb656a4ab2b2bc9ed69f5d663f5de08b23df338385f984cd91a0350bb7aa43af"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N051",
+  "pilot_id": "F040",
+  "profile": {
+    "active_section_density": "dense",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.0,
+        "observation": "Mellow verse with trap hi-hats, sub bass, and rhythmic female Korean/English pop vocals."
+      },
+      {
+        "at_seconds": 53.0,
+        "observation": "Energetic chorus drop featuring heavy bass, upbeat synth rhythms, and layered female vocals."
+      },
+      {
+        "at_seconds": 24.0,
+        "observation": "Melodic pre-chorus building tension over atmospheric pads and subtle percussion."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "Electronic",
+      "Hip-Hop"
+    ],
+    "secondary_styles": [
+      "Dance-Pop",
+      "Contemporary R&B"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-140.response.bin",
+  "response_id": "OiGiapHtOPuAz7IPpc-t0QM",
+  "response_text": "{\n  \"active_section_density\": \"dense\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 15.0,\n      \"observation\": \"Mellow verse with trap hi-hats, sub bass, and rhythmic female Korean/English pop vocals.\"\n    },\n    {\n      \"at_seconds\": 53.0,\n      \"observation\": \"Energetic chorus drop featuring heavy bass, upbeat synth rhythms, and layered female vocals.\"\n    },\n    {\n      \"at_seconds\": 24.0,\n      \"observation\": \"Melodic pre-chorus building tension over atmospheric pads and subtle percussion.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\n    \"Electronic\",\n    \"Hip-Hop\"\n  ],\n  \"secondary_styles\": [\n    \"Dance-Pop\",\n    \"Contemporary R&B\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"clean\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 325,
+    "promptTokenCount": 6180,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5731
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 6505
+  }
+}

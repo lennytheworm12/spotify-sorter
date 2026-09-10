@@ -1,0 +1,54 @@
+{
+  "collection_status": "REUSED_EXACT_PRIOR_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": {
+    "cache_key": "5592a40e10edda9ba762172a39ec1685ca90c612a311c2dd092f94726bfcaaaa",
+    "result_sha256": "e38228af03ff2c95eb72659731687553c309471e93df458e4337b19a19ef88a1",
+    "source_attempt": 8,
+    "source_manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+    "source_pilot_id": "A08",
+    "source_run": ".research_audio/gemini_style_pilot/free-genre-point-v1"
+  },
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 6.7,
+        "observation": "Subdued electronic beat enters behind the emotive solo male vocal and sparse ambient keys."
+      },
+      {
+        "at_seconds": 40.5,
+        "observation": "Chorus hook features multi-tracked background vocal harmonies emphasizing emotional delivery."
+      },
+      {
+        "at_seconds": 138.0,
+        "observation": "Mellow electronic instrumentation with subtle synths supporting passionate vocal performance."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Pop",
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Alt-Pop",
+      "Ambient Pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "NhiiauO-LKupqtsPuvLtmAc",
+  "spotify_track_id": "7F6PtLP6fJPVtA1FWVkl8K"
+}

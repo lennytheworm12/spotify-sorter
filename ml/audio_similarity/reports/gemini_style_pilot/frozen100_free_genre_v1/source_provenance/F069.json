@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 2.59364298498258,
+  "acquisition_ended_at": "2026-09-04T20:06:53.554881+00:00",
+  "acquisition_started_at": "2026-09-04T20:06:50.961238+00:00",
+  "acquisition_timestamp": "2026-09-04T20:06:50.961398+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "TITLE_ONLY_UNSELECTABLE_FALLBACK",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3501272,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 202,
+  "provider_result": "SUCCESS",
+  "provider_title": "Love Always Leaves Me",
+  "query_variant_index": 4,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "d169e6729d630fa28d8105de354659143c13c09f734408b13d0b4c3cfdcc30df",
+      "representation_identity": "12a67fc298f6c5a02653f1e2c6e65bfc2e5d9207964d4a428b7e1158f7f8dcb7",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "6f2205d1c674830d4eb737cdab6417d1432404e035c40b5806ad7271fad22618",
+          "25": "026848bfa9d130dc37a00305b37dfd9185317e2da001e24e68a952b70380615d",
+          "5": "084833261e947ed50f649ca7f25789f6b22c50064c0384acc04d0ab323aa114f"
+        },
+        "muq_mulan_large": {
+          "15": "200f8c5018f87d97751ac734c26ce068f2b45ff1bb9481b20549141927d9ce80",
+          "25": "2dd979915f36828b6a9d145cd12e850601d001b603d1abc8415458c3cf689a5d",
+          "5": "c48497f3314269decce4f8d0f5ce71cdaf9f514a755ecb95669e1600b7919c9f"
+        }
+      },
+      "source_audio_sha256": "5a8235ba9a4ed0c5d4be1b49295822897d209c89e851b969798934a5f68a0cb8"
+    },
+    "materialization_report": "reports/stage5c2_representative_100_amended_v2_supplement_materialization/materialization_results.json",
+    "youtube_video_id": "i4YFngxyJ0k"
+  },
+  "retained_relative_path": "5l45vVLs4JKkhzN0tvkWJv/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 2,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 202.021,
+  "source_sha256": "4caae69ecbb222ee527a0dda2507f18841565483eefd8708a973a3711b0e3fd0",
+  "source_url": "https://www.youtube.com/watch?v=i4YFngxyJ0k",
+  "spotify_artists": [
+    "오안과 편견",
+    "Lee Yerin"
+  ],
+  "spotify_title": "Love Always Leaves Me",
+  "spotify_track_id": "5l45vVLs4JKkhzN0tvkWJv",
+  "successful_query": "Love Always Leaves Me",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "i4YFngxyJ0k"
+}

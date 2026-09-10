@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00528000",
+  "attempt": 55,
+  "cache_key": "1b96226a2c9a84a12480f1f18561594f7f3518618128c4ce37416c7d784b2e7e",
+  "evidence_hashes": {
+    "execution/attempts/attempt-55.request.json": "17c61cfae0874cf6f1dc595c3c17e87bc8d1fd79013552d360b1c1aeab25eba8",
+    "execution/attempts/attempt-55.reservation.json": "97431231ab4c4e9146052fcbd80994e38bf7d2e47105076819cb6201c475d2d0",
+    "execution/attempts/attempt-55.settlement.json": "1a7384541828adaf8a9c916b8897ce638f38b687b0c049250ef727c51bcf1f54",
+    "execution/transport/call-219.response.bin": "2fef13d4e6c30f5279e78972acae259618fd6c39561fc0ed29a0eb35f3fb82ab",
+    "execution/transport/call-220.response.bin": "2600a435696731790fc23b517dc411ce07a69ca04a51a498b92c279427107eb8",
+    "execution/transport/call-220.response.json": "5b5970d3a4348bd1e83a1f3ad5584a63ef6bb8a71c603c9f0de441a1a79853cb",
+    "execution/transport/upload-N071.json": "1154e5d8be6a655114f18c383f0dca111037128c22625463a86ae9edf165b3ed"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N071",
+  "pilot_id": "F062",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 18.0,
+        "observation": "High-pitched, heavily reverberant pitched vocal hook enters over low ambient drones."
+      },
+      {
+        "at_seconds": 38.0,
+        "observation": "Subdued electronic beat enters beneath the high vocal motif with deep sub-bass tones."
+      },
+      {
+        "at_seconds": 58.0,
+        "observation": "Spoken/half-sung male lead vocal begins the main verse over sparse kick and bass."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "electronic",
+    "primary_style": "ambient pop",
+    "secondary_families": [
+      "hip hop",
+      "r&b"
+    ],
+    "secondary_styles": [
+      "cloud rap",
+      "alternative r&b"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "hazy",
+      "electronic",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-220.response.bin",
+  "response_id": "xSGiao-iDe6eqtsP7Iay8AM",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 18.0,\n      \"observation\": \"High-pitched, heavily reverberant pitched vocal hook enters over low ambient drones.\"\n    },\n    {\n      \"at_seconds\": 38.0,\n      \"observation\": \"Subdued electronic beat enters beneath the high vocal motif with deep sub-bass tones.\"\n    },\n    {\n      \"at_seconds\": 58.0,\n      \"observation\": \"Spoken/half-sung male lead vocal begins the main verse over sparse kick and bass.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"electronic\",\n  \"primary_style\": \"ambient pop\",\n  \"secondary_families\": [\n    \"hip hop\",\n    \"r&b\"\n  ],\n  \"secondary_styles\": [\n    \"cloud rap\",\n    \"alternative r&b\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"hazy\",\n    \"electronic\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 322,
+    "promptTokenCount": 5430,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4981
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5752
+  }
+}

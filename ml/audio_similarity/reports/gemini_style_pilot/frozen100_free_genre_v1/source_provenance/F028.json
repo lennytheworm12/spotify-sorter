@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.2242338269716129,
+  "acquisition_ended_at": "2026-09-04T20:14:52.189178+00:00",
+  "acquisition_started_at": "2026-09-04T20:14:50.964944+00:00",
+  "acquisition_timestamp": "2026-09-04T20:14:50.965050+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2875743,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 171,
+  "provider_result": "SUCCESS",
+  "provider_title": "My Gamecube Broke.",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "6cfa6ad77a8cd78f9c724ed8f41d9412315967d5fee155175ad7221ba5f08717",
+      "representation_identity": "572927579885d212d788e910ff63b67ce43a95fe749e7e0d45bc6e77d7077d17",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "12089eea62ab6c3eda9d1f5337ca20b78abb3f4a2bd765cf190c6285bb8329bf",
+          "25": "bbb63d49cfca69eb36673f99c4dec79785f4ab366401992867e6ce2a3b62d756",
+          "5": "360cc79f12fdd1ec020d0c6b078a274c24bb283b3bb0320528bbed78975fa962"
+        },
+        "muq_mulan_large": {
+          "15": "fb33864a9c924919d995a4d22c4662ad0ac02a0dfdc2efc635ff801ccb4bdb17",
+          "25": "f43009475778ac0d326bf7265a4b333513325f60799ee1492d0d74075863f538",
+          "5": "b317fb70a23938a699bb73c6c5f840db0f76b1d164159ce7620806f1b070d00b"
+        }
+      },
+      "source_audio_sha256": "81d273bfd714b37b7c7e4396b91c3597aa8acb0d28cd730928450bca287844cd"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "e3XBVbHn9qM"
+  },
+  "retained_relative_path": "2Vu2hkPW7LxMHPqoMjSIEJ/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 170.861,
+  "source_sha256": "1538821f0c3f325c0c8e7e1f200bc02d3c96f08e624804bb50dbfeb82a161cc9",
+  "source_url": "https://www.youtube.com/watch?v=e3XBVbHn9qM",
+  "spotify_artists": [
+    ".Uzu"
+  ],
+  "spotify_title": "My Gamecube Broke.",
+  "spotify_track_id": "2Vu2hkPW7LxMHPqoMjSIEJ",
+  "successful_query": "My Gamecube Broke. .Uzu",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "e3XBVbHn9qM"
+}

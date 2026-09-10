@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00445650",
+  "attempt": 45,
+  "cache_key": "541b5f5c7f6eea18bcb49b7b2c0d50164b01d91be08adf29cf4bc10e0c85be9e",
+  "evidence_hashes": {
+    "execution/attempts/attempt-45.request.json": "8da21e5770281046921e6156ed1f709126ade8f75229d666b891bf3e7ca88fd8",
+    "execution/attempts/attempt-45.reservation.json": "a3df0340b4b97763a2dc30ca5510a541d1e53c6c0bb42c12f03630a71f245a66",
+    "execution/attempts/attempt-45.settlement.json": "435cf5a1336872d3186eb53f9222c41d571c6835040ea5748e7267fda881079b",
+    "execution/transport/call-179.response.bin": "0cedbf40e8157113d87cda411066264a80f25c053500bc9cb5f0a43bc57b80e7",
+    "execution/transport/call-180.response.bin": "2bae9ee43f9ef5892e4dbd86d1f9e34ed27239d221f0b84fba011c72ab42c5c2",
+    "execution/transport/call-180.response.json": "9fc7b0fa4d605bf4744e182d7d0f2a39ef7f3624659f02919968c6aa004702ab",
+    "execution/transport/upload-N061.json": "4d2f23faa4cc64aa6824927685f622b50e0a29adf2860dd148dde81f129597a4"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N061",
+  "pilot_id": "F050",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 13.5,
+        "observation": "Female lead vocal enters singing intimate, mellow lines over a gentle, steady fingerpicked acoustic guitar pattern."
+      },
+      {
+        "at_seconds": 54.0,
+        "observation": "Soft, muted percussive beat and subdued bassline enter subtly without overwhelming the acoustic guitar and vocals."
+      },
+      {
+        "at_seconds": 112.5,
+        "observation": "Lead vocal shifts into conversational English lyrics over a restrained, downtempo acoustic groove."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B/Soul",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Pop",
+      "Folk/Americana"
+    ],
+    "secondary_styles": [
+      "K-Indie",
+      "Acoustic Pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-180.response.bin",
+  "response_id": "gCGiaurZM63Uz7IP6KPHUQ",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 13.5,\n      \"observation\": \"Female lead vocal enters singing intimate, mellow lines over a gentle, steady fingerpicked acoustic guitar pattern.\"\n    },\n    {\n      \"at_seconds\": 54.0,\n      \"observation\": \"Soft, muted percussive beat and subdued bassline enter subtly without overwhelming the acoustic guitar and vocals.\"\n    },\n    {\n      \"at_seconds\": 112.5,\n      \"observation\": \"Lead vocal shifts into conversational English lyrics over a restrained, downtempo acoustic groove.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B/Soul\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\n    \"Pop\",\n    \"Folk/Americana\"\n  ],\n  \"secondary_styles\": [\n    \"K-Indie\",\n    \"Acoustic Pop\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"acoustic\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 331,
+    "promptTokenCount": 4287,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3838
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 4618
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.6,
+        "observation": "Percussive 808-style beat enters beneath sung female vocals with bright pop production."
+      },
+      {
+        "at_seconds": 50.8,
+        "observation": "Upbeat dance-pop chorus drops with synthetic bassline, four-on-the-floor beat, and bright synth chords."
+      },
+      {
+        "at_seconds": 125.7,
+        "observation": "Melodic pre-chorus vocal hook leading into another high-energy dance-pop chorus drop."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "Electronic / Dance"
+    ],
+    "secondary_styles": [
+      "Dance-Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "eiGiapHMKfe0_PUP78anuQI",
+  "spotify_track_id": "3vC63Nh3rSREo7qDHgnx8I"
+}

@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 2.277609624026809,
+  "acquisition_ended_at": "2026-09-04T20:23:13.246507+00:00",
+  "acquisition_started_at": "2026-09-04T20:23:10.968897+00:00",
+  "acquisition_timestamp": "2026-09-04T20:23:10.968998+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2490240,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 143,
+  "provider_result": "SUCCESS",
+  "provider_title": "Morning Walk",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "c059e758dda44974d2e9e2b945345525922c998b1832c38124fd4422622f41fb",
+      "representation_identity": "bc99e870a50aba03e6bbe4b998d0e5b62503eeda464896932d10ccdf713e1ee1",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "18323bd1ebe73149768dc3911f7cb77d739e6bc25215f61a887bcf3b00a85da8",
+          "25": "15982f5d4699352b3764a226655f21b2dff1cf717d2a39fd389d987492aa8919",
+          "5": "5544079734cde5c1502652c5e593a983662466662575bf25fb46df91746f3bef"
+        },
+        "muq_mulan_large": {
+          "15": "b8c3bf38f7f7d1f4efeea0f702468834f62dc9a38802531f4d04d384a90f7347",
+          "25": "02a5cc48b69caf42594b446ac801acaf0b5046007e45bfb46e40d5373087db8f",
+          "5": "017f6fc1ec7cf90593250595e0b396a1dfc0f1dc704f4ee842551860a2ed8ba0"
+        }
+      },
+      "source_audio_sha256": "89c302636edad8d05231d15fa76b76a69848f1dabf8f7112dbded2a8b2b9a9ac"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "vupyhSd6ssM"
+  },
+  "retained_relative_path": "53eKx8ec2jDjt1m3VBUCEM/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 142.761,
+  "source_sha256": "1326e6eeff28e3f2d1cc6fb8bc53fdb59ea3649c19cfb5ad1918c9512ac83b26",
+  "source_url": "https://www.youtube.com/watch?v=vupyhSd6ssM",
+  "spotify_artists": [
+    "Park Bird"
+  ],
+  "spotify_title": "Morning Walk",
+  "spotify_track_id": "53eKx8ec2jDjt1m3VBUCEM",
+  "successful_query": "Morning Walk Park Bird",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "vupyhSd6ssM"
+}

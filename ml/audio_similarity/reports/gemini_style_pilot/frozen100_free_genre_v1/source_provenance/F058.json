@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.6743399830302224,
+  "acquisition_ended_at": "2026-09-04T20:31:12.647231+00:00",
+  "acquisition_started_at": "2026-09-04T20:31:10.972891+00:00",
+  "acquisition_timestamp": "2026-09-04T20:31:10.973002+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3764461,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 223,
+  "provider_result": "SUCCESS",
+  "provider_title": "bolbbalgan4 // to my youth 나의 사춘기에게 lyrics",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "126e6ad91f7aa83c9076e06ba674cc25106d0bb8b36bd62771435fc7eb7b40ac",
+      "representation_identity": "f5e71c09187cdbd35daaa62775f314377b1267e716db240dae7a7bda9f5adda1",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "00ec5d34dbb0efba746d3691ac93726bb26f90fc5eff5646692997a51f6faa65",
+          "25": "c24b41b8db5f6037d12928fa6d8fad981789ad84374796c5578b68ecae45642d",
+          "5": "8aa9fd8f4fc2562cf228027cd7f6e9329f2da1a085a347682c4a3a733965e95d"
+        },
+        "muq_mulan_large": {
+          "15": "00bfafe1994932e3ebbe00305965bfdbfebab7f196b6fc75144e6e2ec849da8e",
+          "25": "4eed9591daefa3cebfe83e6ec21b6325cec5afb03b693a8cf1f83037ffc8327c",
+          "5": "5ce8c8f53ad4cd0f09fa3f638c6b91e163afecbb46b6d4c7215906417d36082a"
+        }
+      },
+      "source_audio_sha256": "8a3232b6630a17f33e786ad5bfebd774a07046a71ea25f5e7167bb184753c361"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "sLZ_koI3qi8"
+  },
+  "retained_relative_path": "4gMPlHHAjOQnUrhsuqHivn/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 222.541,
+  "source_sha256": "7d9380030c819ecdc54e05656a7bc02a38e6d911da7c087df3535f7ac633a19c",
+  "source_url": "https://www.youtube.com/watch?v=sLZ_koI3qi8",
+  "spotify_artists": [
+    "BOL4"
+  ],
+  "spotify_title": "To My Youth",
+  "spotify_track_id": "4gMPlHHAjOQnUrhsuqHivn",
+  "successful_query": "To My Youth BOL4",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "sLZ_koI3qi8"
+}

@@ -1,0 +1,52 @@
+{
+  "collection_status": "REUSED_EXACT_PRIOR_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": {
+    "cache_key": "5db1f9efc4329d555a42d5805f7703a70f1ee9a3975567cc4508f2d00444e4f2",
+    "result_sha256": "a3666138fb6d66540390f0281f1744a2c8b29051a15618d8ce823cf93fa7d38d",
+    "source_attempt": 1,
+    "source_manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+    "source_pilot_id": "A01",
+    "source_run": ".research_audio/gemini_style_pilot/free-genre-point-v1"
+  },
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 23.5,
+        "observation": "A male vocalist begins rapping narrative verses over a slow, punchy boom-bap rhythm."
+      },
+      {
+        "at_seconds": 68.0,
+        "observation": "Soulful pitched-down vocal samples and sing-along hook enter on the refrain."
+      },
+      {
+        "at_seconds": 133.0,
+        "observation": "The second verse continues the storytelling rap delivery over looped piano, horn, and drum hits."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Boom Bap",
+    "secondary_families": [
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Conscious Hip Hop",
+      "East Coast Hip Hop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "sample_based",
+      "layered"
+    ],
+    "vocal_role": "rap_led"
+  },
+  "response_id": "2xeiaoWFNpugjrEPsa6lsQQ",
+  "spotify_track_id": "4tqcoej1zPvwePZCzuAjJd"
+}

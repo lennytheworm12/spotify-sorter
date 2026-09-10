@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 2.4113538850215264,
+  "acquisition_ended_at": "2026-09-04T20:25:13.381393+00:00",
+  "acquisition_started_at": "2026-09-04T20:25:10.970039+00:00",
+  "acquisition_timestamp": "2026-09-04T20:25:10.970148+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3467733,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 209,
+  "provider_result": "SUCCESS",
+  "provider_title": "Lucid (feat. LILAC)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "37e3fbed821b07650a7958e0a286ceef692ffb5fcfca402ca12e04c566f19ba1",
+      "representation_identity": "adb159e4b8465475e73c19bf7c4ccb40022f5232ef4c289661e1103c78c49218",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "d245a036e5af306d14a4fff0713e3d3bb674ad8ed94dc95c21f7c4acd2e7cab6",
+          "25": "e49c80e02290a058faefb69ebe71fc1cb21c2fca7afb16901168307a33db8e95",
+          "5": "418b551d1920035655c92ffb1f9ef0a316acc5e675ec7fa85075431820f60720"
+        },
+        "muq_mulan_large": {
+          "15": "08d7c0df94e5d1d6e7703f4705a9443bae8c08bf862651eae5aeb17a8901e246",
+          "25": "28467014dff1edea2a7219ae9d6a32d56debe5f6a84e6c569c55948546e732ab",
+          "5": "7f0ae284495bda69e921140227b021933fef81ccf2d62841d5b11943d3264467"
+        }
+      },
+      "source_audio_sha256": "868fc19c5b9070d3c157e2681bed6d68682b48f7e39430b3491f2d4f259e95a0"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "sydCbmjrsJE"
+  },
+  "retained_relative_path": "7iov2YtUJgLmHXwpYXLcoo/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 209.381,
+  "source_sha256": "02e7033d946b4a7e9c1c274a88b468e3d93ab80ea673d417c575dda9e70a9ee9",
+  "source_url": "https://www.youtube.com/watch?v=sydCbmjrsJE",
+  "spotify_artists": [
+    "JIDA",
+    "Kate Kim"
+  ],
+  "spotify_title": "Lucid (feat. LILAC)",
+  "spotify_track_id": "7iov2YtUJgLmHXwpYXLcoo",
+  "successful_query": "Lucid (feat. LILAC) JIDA Kate Kim",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "sydCbmjrsJE"
+}

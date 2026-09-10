@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 19.5,\n      \"observation\": \"Acoustic ukulele and light finger percussion support a soft, intimate female lead vocal.\"\n    },\n    {\n      \"at_seconds\": 48.0,\n      \"observation\": \"Chorus section with layered vocal harmonies and gentle shaker/wood percussion.\"\n    },\n    {\n      \"at_seconds\": 204.0,\n      \"observation\": \"Vocal harmonies and ukulele gradually transition into a spoken/choral bridge section.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"folk\",\n  \"primary_style\": \"indie folk\",\n  \"secondary_families\": [\n    \"pop\"\n  ],\n  \"secondary_styles\": [\n    \"indie pop\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"acoustic\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPCU0Svb48L1Fs/99YIm+C/GdfRbVYbLVDlcZbmDAHmwKvJ70rXp1EvD4JGnEF31B5KvkWtaO8UtNmouvv/8ZSPdqa+ChGhkiCaDALFXfLWnunfz1tqjpVxFifomakL2sz"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5783,
+    "candidatesTokenCount": 297,
+    "totalTokenCount": 6080,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5334
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "IyKiarXyFpmdz7IPw7SzgAo"
+}

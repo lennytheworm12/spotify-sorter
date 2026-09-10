@@ -1,0 +1,45 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 9.5,
+        "observation": "Intimate female lead vocal with sparse acoustic piano and soft bass pulsing beneath"
+      },
+      {
+        "at_seconds": 38.5,
+        "observation": "Full indie pop chorus drops with upbeat drums, rhythm electric guitar, and punchy bass line"
+      },
+      {
+        "at_seconds": 133.0,
+        "observation": "Second verse builds texture with shaker, sub-bass, and syncopated clean guitar accents"
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Indie Pop",
+    "secondary_families": [
+      "Rock"
+    ],
+    "secondary_styles": [
+      "Alt-Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "layered",
+      "acoustic"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "qiGiauC_L_b7qtsPlq7OiQQ",
+  "spotify_track_id": "4Sk74gcXTe9dnE1HU5Pn1y"
+}

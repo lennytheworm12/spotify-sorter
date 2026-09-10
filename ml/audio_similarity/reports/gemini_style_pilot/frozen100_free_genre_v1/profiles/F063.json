@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 10.4,
+        "observation": "Sparse, resonant electric piano chords enter accompanied by subtle bird/nature sounds."
+      },
+      {
+        "at_seconds": 29.8,
+        "observation": "Down-tempo, relaxed hip hop drum kit beat enters underneath the laid-back keyboard progression."
+      },
+      {
+        "at_seconds": 96.0,
+        "observation": "Mellow electric guitar embellishments layer softly over the continuous, loop-based lofi beat."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Lo-Fi Hip Hop",
+    "secondary_families": [
+      "Electronic",
+      "Jazz"
+    ],
+    "secondary_styles": [
+      "Chillhop",
+      "Downtempo"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "electronic",
+      "sample_based"
+    ],
+    "vocal_role": "instrumental"
+  },
+  "response_id": "yyGiauDGF9Khz7IPnNaKyAg",
+  "spotify_track_id": "53eKx8ec2jDjt1m3VBUCEM"
+}

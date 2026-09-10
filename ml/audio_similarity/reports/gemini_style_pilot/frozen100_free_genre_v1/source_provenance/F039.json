@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.535963197995443,
+  "acquisition_ended_at": "2026-09-04T20:18:12.502417+00:00",
+  "acquisition_started_at": "2026-09-04T20:18:10.966454+00:00",
+  "acquisition_timestamp": "2026-09-04T20:18:10.966556+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2676031,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 153,
+  "provider_result": "SUCCESS",
+  "provider_title": "Ever2Late!",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "950b45f321202a8b5feb2a1d30f07e28cc3732987451642b8c35f180a6110969",
+      "representation_identity": "f13c3e503cc9d1d740475d2762d846770528bf8713c49e822b3097d21fb6aa68",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "97fd84162ad8b0a18bef8364c3d133a50d80beb9d65b02142af36e72bb2d548f",
+          "25": "a542904e77e3ef4ed96f9a9a1a4b57ba99daffd1e3026b9acf4974a86a98c769",
+          "5": "5716b14c2ba9dbe9f5477cba3fef2012a94fb6fbb02ae9abd9a74cfec75b6379"
+        },
+        "muq_mulan_large": {
+          "15": "15d9605c601ee25eef548108dbad90bc873ff803dd78ad1e4b1e904f8dfc679d",
+          "25": "f7b56797b6a2d618690e31154d14e84b26cd5b90a2a115c6ba182c26edc540af",
+          "5": "c629a6d198c9db2a80205a371e3e5105517e3ec8e2f5511c15406885fc1c7476"
+        }
+      },
+      "source_audio_sha256": "11f6942fed7c46bfbf4df86846240dd370a404ec629b76757531101543b51d82"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "G6uhnkDPca8"
+  },
+  "retained_relative_path": "37BvHZhn4399Zhh6EDa4km/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 152.601,
+  "source_sha256": "043e2ffe32eac0eb5b083da9d7965d9a30f19a93039845546193779b186afc77",
+  "source_url": "https://www.youtube.com/watch?v=G6uhnkDPca8",
+  "spotify_artists": [
+    "KiiiKiii"
+  ],
+  "spotify_title": "Ever2Late!",
+  "spotify_track_id": "37BvHZhn4399Zhh6EDa4km",
+  "successful_query": "Ever2Late! KiiiKiii",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "G6uhnkDPca8"
+}

@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00514800",
+  "attempt": 4,
+  "cache_key": "b6b7702e3d54906dff9d042f3e1721d09093089181800e950dce97139f8b7c95",
+  "evidence_hashes": {
+    "execution/attempts/attempt-04.request.json": "f28837849fa08a58a6ef986430847a7986c2c8e3df80589d9fd3eddb48a9aa69",
+    "execution/attempts/attempt-04.reservation.json": "9e9d53244ab988c6271e8f711c3068d36513cfc63ceda8238a1b2949a8ef145b",
+    "execution/attempts/attempt-04.settlement.json": "72e230dfed8b8568236ddf0aa04c647e76c00794ddeb4237b3029a9680c591fe",
+    "execution/transport/call-015.response.bin": "e5180fc658394c22a3d996492367662d6c9f54e709c8f0dd9e24b5c7a20b55bf",
+    "execution/transport/call-016.response.bin": "fd9a715d55ce3b09a5f575516b7f77870cfd7d511028e4991e884c333e8e52a8",
+    "execution/transport/call-016.response.json": "005a665829d1c679048b1c2441b563e9228b126f60a0dbf0e368940c4f329428",
+    "execution/transport/upload-N020.json": "13691d02a092e568b72f58144bf37690b29d91b8d1e7bc97e89abf854a27026f"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N020",
+  "pilot_id": "F005",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 12.0,
+        "observation": "Intimate female lead vocals over a slow, spacious chillout hip-hop beat and electric piano"
+      },
+      {
+        "at_seconds": 65.0,
+        "observation": "Vocal chorus with subtle harmonized backing layers over soft synth pads and laid-back downtempo drums"
+      },
+      {
+        "at_seconds": 130.0,
+        "observation": "Low-frequency synth interlude with acoustic guitar strums and vinyl/lo-fi ambient texture"
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "electronic",
+    "primary_style": "lo-fi chill beats",
+    "secondary_families": [
+      "r&b",
+      "pop"
+    ],
+    "secondary_styles": [
+      "chillout",
+      "bedroom pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "hazy"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-016.response.bin",
+  "response_id": "ZiCiaqLWD9O4mtkPia_t-AU",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 12.0, \"observation\": \"Intimate female lead vocals over a slow, spacious chillout hip-hop beat and electric piano\"},\n    {\"at_seconds\": 65.0, \"observation\": \"Vocal chorus with subtle harmonized backing layers over soft synth pads and laid-back downtempo drums\"},\n    {\"at_seconds\": 130.0, \"observation\": \"Low-frequency synth interlude with acoustic guitar strums and vinyl/lo-fi ambient texture\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"electronic\",\n  \"primary_style\": \"lo-fi chill beats\",\n  \"secondary_families\": [\"r&b\", \"pop\"],\n  \"secondary_styles\": [\"chillout\", \"bedroom pop\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"hazy\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 282,
+    "promptTokenCount": 5454,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5005
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5736
+  }
+}

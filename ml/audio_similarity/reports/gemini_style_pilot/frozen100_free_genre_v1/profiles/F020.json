@@ -1,0 +1,46 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 3.7,
+        "observation": "Solo female vocal enters accompanied by minimal acoustic bass pizzicato and finger snaps."
+      },
+      {
+        "at_seconds": 28.0,
+        "observation": "Sparse jazz/bossa-influenced rhythm continues with light acoustic bass and percussion."
+      },
+      {
+        "at_seconds": 111.8,
+        "observation": "Vocal melody repeats over ongoing minimal rhythm section of upright bass and soft brushed percussion."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Asian Pop",
+    "primary_style": "Mandopop",
+    "secondary_families": [
+      "Jazz",
+      "Easy Listening"
+    ],
+    "secondary_styles": [
+      "Vocal Jazz",
+      "Bossa Nova"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "xCCiasuEAuLTjMcPgcLnwQI",
+  "spotify_track_id": "1Y6Ra2erZ6Mru0JOcJBSzK"
+}

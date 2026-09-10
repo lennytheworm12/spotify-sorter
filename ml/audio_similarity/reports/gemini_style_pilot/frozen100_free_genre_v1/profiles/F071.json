@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "balanced",
+    "audio_evidence": [
+      {
+        "at_seconds": 12.0,
+        "observation": "Trap hi-hat rolls and electronic snare enter under rhythmic sung-spoken vocal phrasing."
+      },
+      {
+        "at_seconds": 30.5,
+        "observation": "Full pop-trap chorus drops with a punchy kick drum, sub bass, and melodic lead vocals."
+      },
+      {
+        "at_seconds": 88.0,
+        "observation": "Breakdown with filtered beat and processed vocal ad-libs creating an atmospheric space."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Trap",
+    "secondary_families": [
+      "Pop",
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Pop Rap",
+      "Contemporary R&B"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "response_id": "AyKiapuMAYaGz7IPoJjBkAE",
+  "spotify_track_id": "5q3LwAHTqo9d3rET2EA9Nq"
+}

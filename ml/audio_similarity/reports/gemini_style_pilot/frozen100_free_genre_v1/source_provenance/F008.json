@@ -1,0 +1,60 @@
+{
+  "acquisition_duration_seconds": 1.629988561035134,
+  "acquisition_ended_at": "2026-09-04T20:03:32.589514+00:00",
+  "acquisition_started_at": "2026-09-04T20:03:30.959525+00:00",
+  "acquisition_timestamp": "2026-09-04T20:03:30.959679+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3000556,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 182,
+  "provider_result": "SUCCESS",
+  "provider_title": "GroovyRoom - 'Sunday(feat.박재범,헤이즈)' M/V",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "8acac7b5a9eff644183ba79dc1887dbccf80a2bda065fe1e21ac7bc21b9af046",
+      "representation_identity": "891019af5069e0c64ed0509b829ec145b084659958887a19242f0f6fb569ec9f",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "6bf2a65e4f66aa51e3cb23b7080060e5214edf368162a95e7adc73d6c2cee93a",
+          "25": "1c12e33565dd899ddc95a0e265911035122699b640ff6bb3ddceae072e7f1240",
+          "5": "da70c7d614ae3d8a3c524d1d6807e79cbc55d584c667aa6d462df9d4716930f0"
+        },
+        "muq_mulan_large": {
+          "15": "4b4abab29cd64ff3f45cc7724bde19986e7ecbad526eb31f34968b6269d0cb5b",
+          "25": "cadf3fbb59251c8cc01e667543199d306c8133f1e3ddb7e94f79cae6ed119758",
+          "5": "331e1f5bb6f3900ac76f7da8514dd4b0a4baf2ed5f06b7b755bad3704d0f406f"
+        }
+      },
+      "source_audio_sha256": "97f472b3b9a401983a9c3b0d9c2c5bdf4d9497a3f9730d736593f847f36a7acc"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "QKv2ocGhCpY"
+  },
+  "retained_relative_path": "0JJeoiCAa1hwcBsPxBN2w4/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 182.201,
+  "source_sha256": "5d7667ad29b459b5a15e4c289a049ece9c074f6c176972aac58b99c0dfc67243",
+  "source_url": "https://www.youtube.com/watch?v=QKv2ocGhCpY",
+  "spotify_artists": [
+    "GroovyRoom",
+    "Heize",
+    "Jay Park"
+  ],
+  "spotify_title": "Sunday (feat. HEIZE, Jay Park)",
+  "spotify_track_id": "0JJeoiCAa1hwcBsPxBN2w4",
+  "successful_query": "Sunday (feat. HEIZE, Jay Park) GroovyRoom Heize Jay Park",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "QKv2ocGhCpY"
+}

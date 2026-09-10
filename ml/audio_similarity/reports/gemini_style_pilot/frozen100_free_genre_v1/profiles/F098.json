@@ -1,0 +1,45 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 16.0,
+        "observation": "Female lead vocal enters over sparse electronic kick, snare, and soft synth pads."
+      },
+      {
+        "at_seconds": 64.0,
+        "observation": "Vocal harmonies layer over swelling synth layers as the track builds in intensity."
+      },
+      {
+        "at_seconds": 109.0,
+        "observation": "Rhythm drops into a full synth-pop chorus beat with pulsing synth bass."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Electronic",
+    "primary_style": "Synth-pop",
+    "secondary_families": [
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Dream Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "hazy"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "gSKiasjrM9zX-sAPwuHcmQc",
+  "spotify_track_id": "7iov2YtUJgLmHXwpYXLcoo"
+}

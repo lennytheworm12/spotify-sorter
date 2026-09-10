@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00552900",
+  "attempt": 44,
+  "cache_key": "93a5153aae0d1c7ab07358fd66ac02b147fb3a35cf2bb3c2f57ae732359c2756",
+  "evidence_hashes": {
+    "execution/attempts/attempt-44.request.json": "e1fb11dac64ff999d009b76f0d8fb23f88dee35b3cea5a0d256b8c6f3e03ee34",
+    "execution/attempts/attempt-44.reservation.json": "e9ac480947bb58337d5e7392205b21d06d49e5fbe0cb941a0cfe379e17a10d78",
+    "execution/attempts/attempt-44.settlement.json": "539b1c548e9d47ed3a47286ecfee3cacc378ba11f584fd491ec1060b58877cba",
+    "execution/transport/call-175.response.bin": "e083a0b0823bba25c45d13fa268c8c290189b13c73f9ddccf1be898c625fe49a",
+    "execution/transport/call-176.response.bin": "45c7e8e57332df7ee3121d3a54e90157c7415adfaa2d94dae3e5ade2c864fcee",
+    "execution/transport/call-176.response.json": "39b6b19bbb8e2e02d6d9505b3d07222f044dd2063bb4d3560f1a02a74d46551d",
+    "execution/transport/upload-N060.json": "277e36834e0515a2d0e5c46e82bf076a099a4b9cc2cb4339a71efb91fcfd2016"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N060",
+  "pilot_id": "F049",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.6,
+        "observation": "Percussive 808-style beat enters beneath sung female vocals with bright pop production."
+      },
+      {
+        "at_seconds": 50.8,
+        "observation": "Upbeat dance-pop chorus drops with synthetic bassline, four-on-the-floor beat, and bright synth chords."
+      },
+      {
+        "at_seconds": 125.7,
+        "observation": "Melodic pre-chorus vocal hook leading into another high-energy dance-pop chorus drop."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "Electronic / Dance"
+    ],
+    "secondary_styles": [
+      "Dance-Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-176.response.bin",
+  "response_id": "eiGiapHMKfe0_PUP78anuQI",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 15.6,\n      \"observation\": \"Percussive 808-style beat enters beneath sung female vocals with bright pop production.\"\n    },\n    {\n      \"at_seconds\": 50.8,\n      \"observation\": \"Upbeat dance-pop chorus drops with synthetic bassline, four-on-the-floor beat, and bright synth chords.\"\n    },\n    {\n      \"at_seconds\": 125.7,\n      \"observation\": \"Melodic pre-chorus vocal hook leading into another high-energy dance-pop chorus drop.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\"Electronic / Dance\"],\n  \"secondary_styles\": [\"Dance-Pop\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 303,
+    "promptTokenCount": 5857,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5408
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 6160
+  }
+}

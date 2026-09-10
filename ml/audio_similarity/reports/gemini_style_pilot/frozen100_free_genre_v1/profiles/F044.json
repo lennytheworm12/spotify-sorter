@@ -1,0 +1,46 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 11.2,
+        "observation": "Acoustic guitar arpeggios accompany a breathy, intimate female lead vocal introducing the main melodic theme."
+      },
+      {
+        "at_seconds": 29.8,
+        "observation": "Trap-style hi-hat rolls, programmed kicks, and deep sub-bass drop in under rhythmic vocal delivery."
+      },
+      {
+        "at_seconds": 70.3,
+        "observation": "Reverberant backing harmonies layer with the lead vocal over atmospheric guitar and a half-time beat."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Hip-Hop"
+    ],
+    "secondary_styles": [
+      "Trap Soul",
+      "Alt-Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "acoustic",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "VSGiatTyJJ-kmtkPu-S9oA4",
+  "spotify_track_id": "3X45Wd5yRNoe2twmyc5CvO"
+}

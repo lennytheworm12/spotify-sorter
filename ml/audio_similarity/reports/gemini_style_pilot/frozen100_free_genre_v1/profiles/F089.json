@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 3.5,
+        "observation": "Spoken-word English fairy tale narration over playful plucked harp and synth textures."
+      },
+      {
+        "at_seconds": 15.0,
+        "observation": "Female lead vocal enters in Korean over a bouncy trap-influenced R&B beat."
+      },
+      {
+        "at_seconds": 45.3,
+        "observation": "Groove thickens with heavy 808 bass, crisp hi-hats, and rhythmic contemporary R&B vocal phrasing."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "R&B",
+      "Hip Hop"
+    ],
+    "secondary_styles": [
+      "Contemporary R&B",
+      "Trap"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "YSKiau_zD9Dd_uMP6vHz8Qs",
+  "spotify_track_id": "6zKX91EvxRHr42ZiZ5C9kN"
+}

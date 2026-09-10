@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00540225",
+  "attempt": 82,
+  "cache_key": "324f170f5865967092898a25d7f576983b43e23b28475f675381a98bc8532254",
+  "evidence_hashes": {
+    "execution/attempts/attempt-82.request.json": "e6e804818358d6d592467a613297a6deadc1f3a47e522319e9beaae7fce24d96",
+    "execution/attempts/attempt-82.reservation.json": "19699ddc5103da50cfa2f600fb18d9c7eb1cc3ee25017478cac9e4669b631c18",
+    "execution/attempts/attempt-82.settlement.json": "6269a395f4a5892d9b7a5ba8f96ff9c3bc514d96d3e124f5fcafee4d4bc9f3bd",
+    "execution/transport/call-327.response.bin": "af05f44f99ec75ee0a4bfc2bda2728cd57617856ac93e863b1f199576799d623",
+    "execution/transport/call-328.response.bin": "5007713171139543f6c4d1e6d6ddde9685676392ec2adef6e67a2a0534527717",
+    "execution/transport/call-328.response.json": "caaa99bccc7eb9c3fe4b76cf59946efa1ed05917bf3b074a47e1d8e238cb8792",
+    "execution/transport/upload-N098.json": "eb5e2db5d86098c6147eef398449ad9fd384874debd4c5c97ba8e3473877a130"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N098",
+  "pilot_id": "F098",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 16.0,
+        "observation": "Female lead vocal enters over sparse electronic kick, snare, and soft synth pads."
+      },
+      {
+        "at_seconds": 64.0,
+        "observation": "Vocal harmonies layer over swelling synth layers as the track builds in intensity."
+      },
+      {
+        "at_seconds": 109.0,
+        "observation": "Rhythm drops into a full synth-pop chorus beat with pulsing synth bass."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Electronic",
+    "primary_style": "Synth-pop",
+    "secondary_families": [
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Dream Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "hazy"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-328.response.bin",
+  "response_id": "gSKiasjrM9zX-sAPwuHcmQc",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 16.0,\n      \"observation\": \"Female lead vocal enters over sparse electronic kick, snare, and soft synth pads.\"\n    },\n    {\n      \"at_seconds\": 64.0,\n      \"observation\": \"Vocal harmonies layer over swelling synth layers as the track builds in intensity.\"\n    },\n    {\n      \"at_seconds\": 109.0,\n      \"observation\": \"Rhythm drops into a full synth-pop chorus beat with pulsing synth bass.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Electronic\",\n  \"primary_style\": \"Synth-pop\",\n  \"secondary_families\": [\n    \"Pop\"\n  ],\n  \"secondary_styles\": [\n    \"Dream Pop\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"layered\",\n    \"hazy\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 304,
+    "promptTokenCount": 5683,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5234
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5987
+  }
+}

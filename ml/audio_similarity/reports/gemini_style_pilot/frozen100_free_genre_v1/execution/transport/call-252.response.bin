@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 1.0, \"observation\": \"Solo female vocal intro accompanied by subtle sustained atmospheric pad and light piano chords.\"},\n    {\"at_seconds\": 37.0, \"observation\": \"Entry of a sparse, slow-tempo trap-influenced beat featuring crisp handclaps, deep sub bass, and minimal percussion.\"},\n    {\"at_seconds\": 150.0, \"observation\": \"Mellow verse with breathy R&B vocal delivery over subdued electric piano and low sub bass.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\"Electronic\", \"Pop\"],\n  \"secondary_styles\": [\"Trap\", \"Alternative R&B\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIP4PwX2f3rpIxDqJJbrpvH04gYwaMa+fcNmsQ5mcuSRdARHNViPx82gzBUMP88de2dSKGqDpsZ4IxTjT0y0IYBSTuI+nBdYjeQ4zsV5CZozASiMfnfGVeuC+VcHa2w+Poe"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5653,
+    "candidatesTokenCount": 282,
+    "totalTokenCount": 5935,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5204
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "_CGiatPLAZrpz7IPmaOJgQk"
+}

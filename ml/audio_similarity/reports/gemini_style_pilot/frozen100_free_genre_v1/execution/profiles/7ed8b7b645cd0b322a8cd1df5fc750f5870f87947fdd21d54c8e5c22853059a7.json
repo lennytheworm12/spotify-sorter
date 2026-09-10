@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00470850",
+  "attempt": 51,
+  "cache_key": "7ed8b7b645cd0b322a8cd1df5fc750f5870f87947fdd21d54c8e5c22853059a7",
+  "evidence_hashes": {
+    "execution/attempts/attempt-51.request.json": "28026913f055308dfb0350aea5e76bf7b6f2e19948297cf1fe78e8528c71d0cd",
+    "execution/attempts/attempt-51.reservation.json": "f99bf149642cddd6842d22857e12fa9043b974b78d21d9c819bb8ce94b8f86eb",
+    "execution/attempts/attempt-51.settlement.json": "459adf5f47bb6a2ca22c083eb3baed69916f4bcda18ccb719bb03fcb85da2933",
+    "execution/transport/call-203.response.bin": "d117c451dd78e4b39f89b787e5b758903afb780436723f450e159019a2c6be55",
+    "execution/transport/call-204.response.bin": "a9d3b40bc2a4b0cdb8a9d5537f23677968637173911b7f87fef7f15a64e96140",
+    "execution/transport/call-204.response.json": "382862a31ae2d46e0e062b4ba2d9d6fa622e63591b142119d3dbe790ed1962d3",
+    "execution/transport/upload-N067.json": "122b60ea407b8027858a0d144fe763420328806e152293841895f6be8ca68ed5"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N067",
+  "pilot_id": "F057",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 9.5,
+        "observation": "Intimate female lead vocal with sparse acoustic piano and soft bass pulsing beneath"
+      },
+      {
+        "at_seconds": 38.5,
+        "observation": "Full indie pop chorus drops with upbeat drums, rhythm electric guitar, and punchy bass line"
+      },
+      {
+        "at_seconds": 133.0,
+        "observation": "Second verse builds texture with shaker, sub-bass, and syncopated clean guitar accents"
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Indie Pop",
+    "secondary_families": [
+      "Rock"
+    ],
+    "secondary_styles": [
+      "Alt-Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "layered",
+      "acoustic"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-204.response.bin",
+  "response_id": "qiGiauC_L_b7qtsPlq7OiQQ",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 9.5, \"observation\": \"Intimate female lead vocal with sparse acoustic piano and soft bass pulsing beneath\"},\n    {\"at_seconds\": 38.5, \"observation\": \"Full indie pop chorus drops with upbeat drums, rhythm electric guitar, and punchy bass line\"},\n    {\"at_seconds\": 133.0, \"observation\": \"Second verse builds texture with shaker, sub-bass, and syncopated clean guitar accents\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Indie Pop\",\n  \"secondary_families\": [\"Rock\"],\n  \"secondary_styles\": [\"Alt-Pop\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"clean\", \"layered\", \"acoustic\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 263,
+    "promptTokenCount": 4963,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4514
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5226
+  }
+}

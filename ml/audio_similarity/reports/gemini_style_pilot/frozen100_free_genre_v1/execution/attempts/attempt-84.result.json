@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00473400",
+  "attempt": 84,
+  "cache_key": "b8c50df20053170e2a1ffb2cb3aa70a7f4d850cb0d94e2c4bf634a03256312ed",
+  "evidence_hashes": {
+    "execution/attempts/attempt-84.request.json": "6c94519d1020273f49c4b54eaff3542f7f246c7f8a212f6615d199a2500727c2",
+    "execution/attempts/attempt-84.reservation.json": "9c51322566ba83ed418a5f36e99d54ea5003229584097949a40d0969adc21387",
+    "execution/attempts/attempt-84.settlement.json": "ad57042f9971254fe30b2abf4cb1190363e5eedbe29192f3d1d748bc58bf47fc",
+    "execution/transport/call-335.response.bin": "78a59219f9a00c6aa03b38ea8b5da23e05ff8867d31c25df88d4ca4e0d6623ad",
+    "execution/transport/call-336.response.bin": "4be759ccdd0dc9f399668c3578a5931e6407e52cdc7e31f31fbc2611b273e154",
+    "execution/transport/call-336.response.json": "2883c06eca84aa7a02897fc0783dae67c9893ce1f13348a3d33b9cd5216b22a1",
+    "execution/transport/upload-N100.json": "46a0dcd0de68d8fb59164c019438ba959cce09cd71e9b90591465bfd5acceb2c"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N100",
+  "pilot_id": "F100",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.5,
+        "observation": "An atmospheric, minimalist synthesizer pad sequence with slow chords, deep bass, and delicate chimes."
+      },
+      {
+        "at_seconds": 45.2,
+        "observation": "Slow ambient synth pad swells continue with subtle vinyl surface crackle, lacking percussion."
+      },
+      {
+        "at_seconds": 110.8,
+        "observation": "Wordless, reverbed vocalization ad-libs float in the background over minimal electronic chords."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Electronic",
+    "primary_style": "Ambient",
+    "secondary_families": [
+      "Easy Listening"
+    ],
+    "secondary_styles": [
+      "Chillout"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "hazy",
+      "clean"
+    ],
+    "vocal_role": "vocal_samples_only"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-336.response.bin",
+  "response_id": "jyKiavjnAeShz7IPh_fHqA0",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 15.5, \"observation\": \"An atmospheric, minimalist synthesizer pad sequence with slow chords, deep bass, and delicate chimes.\"},\n    {\"at_seconds\": 45.2, \"observation\": \"Slow ambient synth pad swells continue with subtle vinyl surface crackle, lacking percussion.\"},\n    {\"at_seconds\": 110.8, \"observation\": \"Wordless, reverbed vocalization ad-libs float in the background over minimal electronic chords.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Electronic\",\n  \"primary_style\": \"Ambient\",\n  \"secondary_families\": [\"Easy Listening\"],\n  \"secondary_styles\": [\"Chillout\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"hazy\", \"clean\"],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+  "usage": {
+    "candidatesTokenCount": 269,
+    "promptTokenCount": 4967,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4518
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5236
+  }
+}

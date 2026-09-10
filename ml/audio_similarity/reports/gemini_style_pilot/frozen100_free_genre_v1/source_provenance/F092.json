@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.5005582859739661,
+  "acquisition_ended_at": "2026-09-04T20:23:52.469777+00:00",
+  "acquisition_started_at": "2026-09-04T20:23:50.969219+00:00",
+  "acquisition_timestamp": "2026-09-04T20:23:50.969363+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3332816,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 196,
+  "provider_result": "SUCCESS",
+  "provider_title": "Flash Forward",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "7d6d30ca27ebe174e2d410f57c1c3009381ecfe3e084c5c0b54c3c72cbae77a4",
+      "representation_identity": "2180b81818d7c75abb42230e4252b83cbab09442b03a63ae2401c0b97b7ca226",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "2f04b9cb7d4d2726d2d4ffc943c3c40320c6bdd5337610d81f163c7505541e1e",
+          "25": "bfe4ccda0cfa01a0edec3fbf28b5113bdaf7b94755127ddb183ae0eb65b251d6",
+          "5": "18ae362f697089eecef87b91b6e8d01d3455518e5f5b50a18fe0a5a672b0b89d"
+        },
+        "muq_mulan_large": {
+          "15": "409afec56e00a4c1da8f22989a676c9aea4411f854ea07f916a2e1d1c193e30f",
+          "25": "ed9b610dfc519774fe670a66b40217dc71aac43ab1ee013f212f12864a4dd4d8",
+          "5": "48653aa0b1f4a880b98394f0ae01878ca7c573132dbb324ec8b50a2c058b10b4"
+        }
+      },
+      "source_audio_sha256": "66e53b193e10877f953f0d388d05dda60f13257bb5bafce7590f8f303b5e8bab"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "X8L2CV9PyHw"
+  },
+  "retained_relative_path": "74cpuIw43kA8xPgbQEPdss/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 195.521,
+  "source_sha256": "198008e51b386a47e57940e7a8033bc4f9f91c1c998885e0c2aaadc8043857f9",
+  "source_url": "https://www.youtube.com/watch?v=X8L2CV9PyHw",
+  "spotify_artists": [
+    "LE SSERAFIM"
+  ],
+  "spotify_title": "Flash Forward",
+  "spotify_track_id": "74cpuIw43kA8xPgbQEPdss",
+  "successful_query": "Flash Forward LE SSERAFIM",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "X8L2CV9PyHw"
+}

@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 6.8,\n      \"observation\": \"A slow, laid-back hip-hop beat enters with a clean snare, soft kick drum, and pitched vocal chime effect.\"\n    },\n    {\n      \"at_seconds\": 23.5,\n      \"observation\": \"Sub-bass pulse and muted guitar/synth arpeggio continue beneath chopped vocal textures.\"\n    },\n    {\n      \"at_seconds\": 58.2,\n      \"observation\": \"A sparse, downtempo groove persists with repetitive atmospheric vocal-like synth hooks.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip-Hop\",\n  \"primary_style\": \"Chillhop\",\n  \"secondary_families\": [\n    \"Electronic\",\n    \"R&B\"\n  ],\n  \"secondary_styles\": [\n    \"Lo-Fi Hip-Hop\",\n    \"Downtempo\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"sample_based\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPHIT9SEHuQyNseY6J5Pf9ReWD++a481bQcdU7cbfX9y9oNX+JyxSWJit0u7qWwSy1Gs93gb6mAV2vf4o8smF/FojdfTUb6cL4vZhQ5nzH4dVg02X15XiR0SMeJ4QPV8Hj"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 2753,
+    "candidatesTokenCount": 339,
+    "totalTokenCount": 3092,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 448
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 2305
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "qiCiavqEL5quqtsPho_oqA4"
+}

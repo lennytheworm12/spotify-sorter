@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00402900",
+  "attempt": 37,
+  "cache_key": "269f499b6c097ef8e8fcc1e730d9102d23a770e68e702dfccc0f1b4adc56ae82",
+  "evidence_hashes": {
+    "execution/attempts/attempt-37.request.json": "82ce6c0c95dc67c1d2cf33ad03bdc61fb345c61f141a6c44f7ac883a22c54d58",
+    "execution/attempts/attempt-37.reservation.json": "877d5e6988b24619af7709452da3a65cb03c93e3e6728ad9edd147c7c8dbba6a",
+    "execution/attempts/attempt-37.settlement.json": "b7a53c1ae90638ffecf058d2b21d607e83b23f01fe01f21146e5aace590b09fa",
+    "execution/transport/call-147.response.bin": "fd2c5fe23106564a18167609a17f983661165ccb34c1749cda50b146baff33ef",
+    "execution/transport/call-148.response.bin": "7f21be692bd616001282c9b6d59a6f80692bf11661ae82b7bfd1c348533fbcd7",
+    "execution/transport/call-148.response.json": "6e818535ac523be1b092a70788b6126bf0603cd8f1806eff795349a67bfefdb6",
+    "execution/transport/upload-N053.json": "c6c3216b24b617a4940bd88e0d1084ce67cf4a2cacaf958a98c7e879276a63cc"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N053",
+  "pilot_id": "F042",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 0.0,
+        "observation": "Upbeat synth arpeggio, bass synth, and acoustic drum beat intro establishing the groove."
+      },
+      {
+        "at_seconds": 13.9,
+        "observation": "Korean female lead vocals enter over electro-pop synth bassline and bright keyboard accents."
+      },
+      {
+        "at_seconds": 36.1,
+        "observation": "Full dance-pop chorus with layered backing vocals, four-on-the-floor beat, and pulsing synth bass."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "pop",
+    "primary_style": "k-pop",
+    "secondary_families": [
+      "electronic",
+      "dance"
+    ],
+    "secondary_styles": [
+      "dance-pop",
+      "electropop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-148.response.bin",
+  "response_id": "SSGiauK9Hrfiz7IP7MaD6Q8",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 0.0, \"observation\": \"Upbeat synth arpeggio, bass synth, and acoustic drum beat intro establishing the groove.\"},\n    {\"at_seconds\": 13.9, \"observation\": \"Korean female lead vocals enter over electro-pop synth bassline and bright keyboard accents.\"},\n    {\"at_seconds\": 36.1, \"observation\": \"Full dance-pop chorus with layered backing vocals, four-on-the-floor beat, and pulsing synth bass.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"pop\",\n  \"primary_style\": \"k-pop\",\n  \"secondary_families\": [\"electronic\", \"dance\"],\n  \"secondary_styles\": [\"dance-pop\", \"electropop\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"layered\", \"clean\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 278,
+    "promptTokenCount": 3982,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3533
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 4260
+  }
+}

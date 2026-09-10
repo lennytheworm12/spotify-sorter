@@ -1,0 +1,45 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 6.88,
+        "observation": "Female lead vocal enters over sparse electronic keyboard chords and a subtle beat."
+      },
+      {
+        "at_seconds": 47.98,
+        "observation": "Transition into a fuller chorus section with resonant synth bass, trap-influenced electronic drums, and vocal harmonies."
+      },
+      {
+        "at_seconds": 68.64,
+        "observation": "Male lead vocal takes over the second verse with auto-tuned/processed vocal effects over the beat."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Alt-R&B"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "viGiapCXM4Ssz7IP4eSj6AM",
+  "spotify_track_id": "4osRLDg7abL4hLdfZ1c39g"
+}

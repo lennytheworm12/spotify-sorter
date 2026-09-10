@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.8160620699636638,
+  "acquisition_ended_at": "2026-09-04T20:12:52.780165+00:00",
+  "acquisition_started_at": "2026-09-04T20:12:50.964103+00:00",
+  "acquisition_timestamp": "2026-09-04T20:12:50.964219+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 1784227,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 107,
+  "provider_result": "SUCCESS",
+  "provider_title": "Tea Time",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "bc046574ac77c0f5a3326bd8d31dd44fca2887a3dd6755fc619797ee58855690",
+      "representation_identity": "bc3683e899ee2cbad4aeb72897156887d23a0c2d7a4363f4547f26ae5b44fa6e",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "37663f9a59c690c58225d8a78bd86c5fa14e5e6d42ae50edf444b6c4bb31a23f",
+          "25": "2a7826e37fe222bfd331f52fda880517a089ce96486859edfbfbf538bf204367",
+          "5": "6f71cfce7bc4e8fcbc76f1d64b6d0cc7b8cf373708de4e008029b000be370f3f"
+        },
+        "muq_mulan_large": {
+          "15": "3262e2658fcb4497e6183e76c08a322f17363c26de29492d86ff26506b619c83",
+          "25": "4239f5253669b67556e6af12bab8f2ca0272e016d2cd2aa1ce9e2401b3cf2f8b",
+          "5": "913d83ca092870d05dd22a230d29059666699df16596f9fe9522b8ef341af2c6"
+        }
+      },
+      "source_audio_sha256": "37c4ce5e97333b263ecd83e913b0fabdc92d7037aeecf6c6d104b9258df1381b"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "vwNr2woNsG0"
+  },
+  "retained_relative_path": "5sEeuhYWHNczuPKek1zJeG/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 106.701,
+  "source_sha256": "ce8e51ac745f334ac6ad3d9784b2c853bf6de6b85888f8da6f1020f05134fd85",
+  "source_url": "https://www.youtube.com/watch?v=vwNr2woNsG0",
+  "spotify_artists": [
+    "Disvstxr"
+  ],
+  "spotify_title": "Tea Time",
+  "spotify_track_id": "5sEeuhYWHNczuPKek1zJeG",
+  "successful_query": "Tea Time Disvstxr",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "vwNr2woNsG0"
+}

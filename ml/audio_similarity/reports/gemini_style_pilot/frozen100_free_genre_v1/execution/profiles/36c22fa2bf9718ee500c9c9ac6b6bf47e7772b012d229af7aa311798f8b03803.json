@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00471150",
+  "attempt": 80,
+  "cache_key": "36c22fa2bf9718ee500c9c9ac6b6bf47e7772b012d229af7aa311798f8b03803",
+  "evidence_hashes": {
+    "execution/attempts/attempt-80.request.json": "5febc82b30bc8786ac23608d2d8d1726fbc400fa1c9eba22219eef784079a868",
+    "execution/attempts/attempt-80.reservation.json": "c5ab3cee94a3437adbe33b10708dafed9206ad7b26f3df0eb33aa451fe6cd556",
+    "execution/attempts/attempt-80.settlement.json": "c64762bc37ba107d125e54acd83394acb97d5c530f8ba0e82794af2e2a7579cd",
+    "execution/transport/call-319.response.bin": "cabb4e5ed9c13896a5815784f089d9ac61c21f27c23aef34874507db607410f7",
+    "execution/transport/call-320.response.bin": "798b1138cb37244ecae2b6951751f6533605e3020dfbc29aa2163369c580146c",
+    "execution/transport/call-320.response.json": "90aecd33d5382e8e2891fa466c1e835f42d259098620556f74ce1edc220ba26c",
+    "execution/transport/upload-N096.json": "cfc1691bc285468c5aef417d5b11d1b8d5905ab472da686f5311501500616294"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N096",
+  "pilot_id": "F092",
+  "profile": {
+    "active_section_density": "dense",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 8.4,
+        "observation": "Solo female vocal enters over a driving electronic pop beat and synth chords"
+      },
+      {
+        "at_seconds": 41.2,
+        "observation": "Explosive dance-pop chorus drops with layered bright synths, four-on-the-floor kick, and full backing vocals"
+      },
+      {
+        "at_seconds": 148.0,
+        "observation": "Second high-energy chorus section featuring dense electronic production and energetic vocal delivery"
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Dance-Pop",
+      "Electropop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-320.response.bin",
+  "response_id": "biKiatPiE5WGz7IP8Pe0gQQ",
+  "response_text": "{\"active_section_density\":\"dense\",\"arrangement_focus\":\"lead_vocal\",\"audio_evidence\":[{\"at_seconds\":8.4,\"observation\":\"Solo female vocal enters over a driving electronic pop beat and synth chords\"},{\"at_seconds\":41.2,\"observation\":\"Explosive dance-pop chorus drops with layered bright synths, four-on-the-floor kick, and full backing vocals\"},{\"at_seconds\":148.0,\"observation\":\"Second high-energy chorus section featuring dense electronic production and energetic vocal delivery\"}],\"certainty\":{\"family\":\"clear\",\"style\":\"clear\"},\"primary_family\":\"Pop\",\"primary_style\":\"K-Pop\",\"secondary_families\":[\"Electronic\"],\"secondary_styles\":[\"Dance-Pop\",\"Electropop\"],\"section_variation\":\"contrasting_sections\",\"status\":\"classified\",\"texture_tags\":[\"electronic\",\"layered\",\"clean\"],\"vocal_role\":\"sung_led\"}",
+  "usage": {
+    "candidatesTokenCount": 189,
+    "promptTokenCount": 5337,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4888
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5526
+  }
+}

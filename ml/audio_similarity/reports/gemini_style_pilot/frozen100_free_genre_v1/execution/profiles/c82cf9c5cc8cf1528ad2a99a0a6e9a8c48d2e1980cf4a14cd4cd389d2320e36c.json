@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00729150",
+  "attempt": 31,
+  "cache_key": "c82cf9c5cc8cf1528ad2a99a0a6e9a8c48d2e1980cf4a14cd4cd389d2320e36c",
+  "evidence_hashes": {
+    "execution/attempts/attempt-31.request.json": "d0a21e2abe6eee9da852b5f13f0b62c5f987961a63f08308c6d25a468e31db73",
+    "execution/attempts/attempt-31.reservation.json": "1f353349635a8e3775bd3476fdaf8bba25bc1c6797ffbafec3f4372622c6bd2e",
+    "execution/attempts/attempt-31.settlement.json": "46a1316506115dfa9fa3172e0ac603b1483cd895dbd9ed5bfb3437ec831f594d",
+    "execution/transport/call-123.response.bin": "0c629675e3dcd98e91e4e8ea1ce807597ab7c1f0a21880bb899df4808c89e1ca",
+    "execution/transport/call-124.response.bin": "8c92be1f88139a3651a953b2d5f1ebc1429032d7673346c86324b2f73e398645",
+    "execution/transport/call-124.response.json": "1b0792ce3c0344c315dd2dfc5f1dcec2d4c220c04d0ddde3019e1e0805752bfa",
+    "execution/transport/upload-N047.json": "b109694004a415259cc1d6dc19b6da91500f15f15a3dd691fd9f86d262742a12"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N047",
+  "pilot_id": "F036",
+  "profile": {
+    "active_section_density": "dense",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 23.5,
+        "observation": "Vocal refrain over swelling synth pad and low atmospheric rumble"
+      },
+      {
+        "at_seconds": 63.8,
+        "observation": "Sudden drop into a heavy, distorted 4-on-the-floor kick with resonant synth bass"
+      },
+      {
+        "at_seconds": 159.0,
+        "observation": "Distorted kick pattern continues with repetitive vocal hook layered over rolling hi-hats"
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Electronic",
+    "primary_style": "Hard Techno",
+    "secondary_families": [
+      "Dance"
+    ],
+    "secondary_styles": [
+      "Schranz",
+      "Industrial Techno"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "distorted",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-124.response.bin",
+  "response_id": "HiGiatL2OJ7S_uMP2-zTkQ4",
+  "response_text": "{\n  \"active_section_density\": \"dense\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 23.5, \"observation\": \"Vocal refrain over swelling synth pad and low atmospheric rumble\"},\n    {\"at_seconds\": 63.8, \"observation\": \"Sudden drop into a heavy, distorted 4-on-the-floor kick with resonant synth bass\"},\n    {\"at_seconds\": 159.0, \"observation\": \"Distorted kick pattern continues with repetitive vocal hook layered over rolling hi-hats\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Electronic\",\n  \"primary_style\": \"Hard Techno\",\n  \"secondary_families\": [\"Dance\"],\n  \"secondary_styles\": [\"Schranz\", \"Industrial Techno\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"distorted\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 268,
+    "promptTokenCount": 8382,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 7933
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 8650
+  }
+}

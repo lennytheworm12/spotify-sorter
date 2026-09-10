@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 6.8, \"observation\": \"Intimate female lead vocals enter with minimal ambient synthesizer drones and a deep sub bass drop.\"},\n    {\"at_seconds\": 96.0, \"observation\": \"Subtle synthesized vocal ad-libs join with shimmering high-register pads and low drone.\"},\n    {\"at_seconds\": 157.0, \"observation\": \"Aggressive, glitchy industrial percussion and heavy distorted synth beats abruptly break into the sparse texture.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"electronic\",\n  \"primary_style\": \"ambient pop\",\n  \"secondary_families\": [\"pop\", \"experimental\"],\n  \"secondary_styles\": [\"deconstructed club\", \"art pop\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"hazy\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIParotv70jXqn1fKL8QVbLrtG6Gt/q27hHMPlctmGEUB16e/KopB8CF8JTxNBb7T4m4w9gScXWH0bCsyMiTUAz12BVIYKz6ZrE3RZz4bGcwORBmvr3nNmYz9oDNFNJ/8ZW"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 6121,
+    "candidatesTokenCount": 273,
+    "totalTokenCount": 6394,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5672
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "vSCiapXbL8XVz7IPwdaruAg"
+}

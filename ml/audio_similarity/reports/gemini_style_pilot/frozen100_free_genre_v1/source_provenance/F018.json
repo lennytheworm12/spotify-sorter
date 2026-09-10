@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.5957469189888798,
+  "acquisition_ended_at": "2026-09-04T20:11:12.559138+00:00",
+  "acquisition_started_at": "2026-09-04T20:11:10.963391+00:00",
+  "acquisition_timestamp": "2026-09-04T20:11:10.963495+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3175159,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 196,
+  "provider_result": "SUCCESS",
+  "provider_title": "Gracie Abrams - Hit the Wall (Official Music Video)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "96af1db6bb4198e152a272c5bbc9298c24e707b6cbe64279d7c2f29b2f3785bd",
+      "representation_identity": "ce51727042b2dc69d83f45ac9928744d60238631599ad1032da1ba481eb8163a",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "a4f0107cf699c993367896b339e1b09b63927ff3adb70761c68513b7b9cc2524",
+          "25": "5177fb87450c3bd6a6f517391be3f3986a685643eb6d11e2e5201538c8703c2a",
+          "5": "bef025ae9c1f6c4f0df16cd4a1dc8b7e02192c42acf9d633759ec307fc54907d"
+        },
+        "muq_mulan_large": {
+          "15": "3a73c8601e03449c31882b58c55610a1a2400485620b2b1c2908296af1cfbd4e",
+          "25": "c0e9b65684572d2cfd1310ecb24c7f393689468ca5da1526e33cfdcf18f21354",
+          "5": "98e826531553951bb77ad6f4d990de8cd079bc47523e639c0ac0d0420bd71e82"
+        }
+      },
+      "source_audio_sha256": "6e6e5aa2037d949275580e4bff9e9237185074240aaef781dadfe864109a3420"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "jFCTQ68gxoY"
+  },
+  "retained_relative_path": "1U90UBmMrQTx9GNweUA4LZ/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 196.361,
+  "source_sha256": "00bf205b915fa9e901452388fd68afe74c47467151c2069bec1d66918cf88bb9",
+  "source_url": "https://www.youtube.com/watch?v=jFCTQ68gxoY",
+  "spotify_artists": [
+    "Gracie Abrams"
+  ],
+  "spotify_title": "Hit the Wall",
+  "spotify_track_id": "1U90UBmMrQTx9GNweUA4LZ",
+  "successful_query": "Hit the Wall Gracie Abrams",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "jFCTQ68gxoY"
+}

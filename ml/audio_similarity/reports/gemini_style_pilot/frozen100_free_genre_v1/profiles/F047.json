@@ -1,0 +1,45 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 25.8,
+        "observation": "Solo acoustic piano and tender female lead vocal begin the first verse"
+      },
+      {
+        "at_seconds": 71.5,
+        "observation": "Subtle low bass synth enters as lead vocal sustains slow lyrical pacing"
+      },
+      {
+        "at_seconds": 133.0,
+        "observation": "Lush chorus layers soft harmony vocals and synth pads over continuing minimalist piano"
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Mandopop",
+    "secondary_families": [
+      "Ambient"
+    ],
+    "secondary_styles": [
+      "Piano Pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "clean",
+      "electronic"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "ayGiaojJLKXnz7IPkN3a0Aw",
+  "spotify_track_id": "3fzeNQfannmBQWGecQZ93s"
+}

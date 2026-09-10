@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.652145341038704,
+  "acquisition_ended_at": "2026-09-04T20:16:52.618017+00:00",
+  "acquisition_started_at": "2026-09-04T20:16:50.965872+00:00",
+  "acquisition_timestamp": "2026-09-04T20:16:50.966019+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3220664,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 159,
+  "provider_result": "SUCCESS",
+  "provider_title": "Jordy Chandra - Do We Start to Like Each Other",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "5d6ea5f78317fc8b67e86780005e5b7328c81be0ab442e54a7a2c5db71bd4076",
+      "representation_identity": "8e8ab3c602b1b2b5359f9c027616885c41ad653c5109ba0f793b523ab8a0ad3c",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "8160a6c53758564d71484429c6fcb375c17c8151284363159bf7c7b6fe9d7486",
+          "25": "52191394f5131c14e8dd07f0066f7258f79aeebf5827465a6e2e583bdf683705",
+          "5": "4d3d948125325a1e9fa7b71d88c43402ed3f3025e4ccb23157123f42f0c91896"
+        },
+        "muq_mulan_large": {
+          "15": "f9cc7ec4df4c7b3c6346df261247de5a7a55c0035bdf890e60e1f951cef7896a",
+          "25": "2dd41bed66a3545d1060618a7d25209ac42cda0a5b980b81ee75a11bd03f6190",
+          "5": "1bf363eb4c3f462429fff57aec5c87569ce24a789c72b7a2b971f9172fa25386"
+        }
+      },
+      "source_audio_sha256": "d8e5f35b786b772aff9f89b6b73a290f7b2b1f6be8f9f52093699ec6962a573b"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "Abfsm4CAZiw"
+  },
+  "retained_relative_path": "5UUnRflW65AsvluD8d5N2U/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 159.401,
+  "source_sha256": "366465d63f54746308f7ccfcbfd79e0ce23ad67d8b7a9720d792758df3aafa54",
+  "source_url": "https://www.youtube.com/watch?v=Abfsm4CAZiw",
+  "spotify_artists": [
+    "Jordy Chandra"
+  ],
+  "spotify_title": "Do We Start to Like Each Other ?",
+  "spotify_track_id": "5UUnRflW65AsvluD8d5N2U",
+  "successful_query": "Do We Start to Like Each Other ? Jordy Chandra",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "Abfsm4CAZiw"
+}

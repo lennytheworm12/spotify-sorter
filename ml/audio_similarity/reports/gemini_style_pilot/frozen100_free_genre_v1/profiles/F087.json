@@ -1,0 +1,46 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 18.5,
+        "observation": "Plucked harp-like ostinato pattern enters over deep sub-bass and minimal ambient sound design."
+      },
+      {
+        "at_seconds": 65.0,
+        "observation": "Ethereal, wordless vocal vocalises and soft choral pads fade in, providing atmospheric texture."
+      },
+      {
+        "at_seconds": 158.0,
+        "observation": "Sparse, muffled four-on-the-floor kick pattern and faint click percussion subtle emerge beneath the ambient pads."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "electronic",
+    "primary_style": "ambient",
+    "secondary_families": [
+      "dance_electronic"
+    ],
+    "secondary_styles": [
+      "downtempo",
+      "chillout"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "hazy",
+      "layered"
+    ],
+    "vocal_role": "vocal_samples_only"
+  },
+  "response_id": "WiKiavCCGtqsz7IPtd7EsQ8",
+  "spotify_track_id": "6rj9qDXWANe0U69asDzxMp"
+}

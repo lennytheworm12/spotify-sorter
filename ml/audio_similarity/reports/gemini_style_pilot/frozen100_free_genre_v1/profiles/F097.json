@@ -1,0 +1,53 @@
+{
+  "collection_status": "REUSED_EXACT_PRIOR_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": {
+    "cache_key": "8dda2c4579ec643856561f329cb74f4666a5557126fff5eefc08b529fe62bbce",
+    "result_sha256": "7e543c2f572cedfb84cd9daed94608041818c0465f93720b7e1ca435def1e1e7",
+    "source_attempt": 4,
+    "source_manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+    "source_pilot_id": "A04",
+    "source_run": ".research_audio/gemini_style_pilot/free-genre-point-v1"
+  },
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 6.0,
+        "observation": "Mellow electric piano chords with prominent tape hiss and hazy reverb create a slow ambient intro."
+      },
+      {
+        "at_seconds": 28.5,
+        "observation": "A relaxed, downtempo boom-bap drum pattern enters accompanied by deep sub-bass and vinyl crackle."
+      },
+      {
+        "at_seconds": 65.0,
+        "observation": "Atmospheric vocal sample sighs weave through the repetitive lo-fi Rhodes groove."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Lo-Fi Hip Hop",
+    "secondary_families": [
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Downtempo",
+      "Chillout"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "sample_based",
+      "electronic",
+      "hazy"
+    ],
+    "vocal_role": "vocal_samples_only"
+  },
+  "response_id": "IhiiaszUB_Gfz7IP7sG06Qo",
+  "spotify_track_id": "7hFW5IN7mQ99PuO86r38Sf"
+}

@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "dense",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.0,
+        "observation": "Mellow verse with trap hi-hats, sub bass, and rhythmic female Korean/English pop vocals."
+      },
+      {
+        "at_seconds": 53.0,
+        "observation": "Energetic chorus drop featuring heavy bass, upbeat synth rhythms, and layered female vocals."
+      },
+      {
+        "at_seconds": 24.0,
+        "observation": "Melodic pre-chorus building tension over atmospheric pads and subtle percussion."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "Electronic",
+      "Hip-Hop"
+    ],
+    "secondary_styles": [
+      "Dance-Pop",
+      "Contemporary R&B"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "OiGiapHtOPuAz7IPpc-t0QM",
+  "spotify_track_id": "39kzWAiVPpycdMpr745oPj"
+}

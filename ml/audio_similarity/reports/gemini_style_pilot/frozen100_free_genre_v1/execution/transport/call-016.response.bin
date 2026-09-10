@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 12.0, \"observation\": \"Intimate female lead vocals over a slow, spacious chillout hip-hop beat and electric piano\"},\n    {\"at_seconds\": 65.0, \"observation\": \"Vocal chorus with subtle harmonized backing layers over soft synth pads and laid-back downtempo drums\"},\n    {\"at_seconds\": 130.0, \"observation\": \"Low-frequency synth interlude with acoustic guitar strums and vinyl/lo-fi ambient texture\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"electronic\",\n  \"primary_style\": \"lo-fi chill beats\",\n  \"secondary_families\": [\"r&b\", \"pop\"],\n  \"secondary_styles\": [\"chillout\", \"bedroom pop\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"hazy\"],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPBR/DOMI3vt1Eq2D58IsIjr610A7/nCr/410fCy6j6zzdzjiBIH19K1qbp6RddERmEWfm9dPCp3giKBUMXTVFTMBA+DsXduoWTEff+qRXQqazkDnEpumziXePMyDf1t8i"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5454,
+    "candidatesTokenCount": 282,
+    "totalTokenCount": 5736,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5005
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ZiCiaqLWD9O4mtkPia_t-AU"
+}

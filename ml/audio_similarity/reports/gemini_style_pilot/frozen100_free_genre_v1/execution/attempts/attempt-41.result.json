@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00574275",
+  "attempt": 41,
+  "cache_key": "4de9e6d3b5dd237bcbf9624030fa69cddb636da219f6a753436246950ef784bd",
+  "evidence_hashes": {
+    "execution/attempts/attempt-41.request.json": "a4a6bfa0e0d7f2c6a66cf993f54e28ad36794f42892be80ff10a95479a63507f",
+    "execution/attempts/attempt-41.reservation.json": "4d5d3d8b2f989dc7f5aff8284f81198c717d5fad6a15cd33a01e43ada6a8d80b",
+    "execution/attempts/attempt-41.settlement.json": "38010e77a3011b3d7c730d3f2262d00f5dba17a02ba6e464c487a89609ec1514",
+    "execution/transport/call-163.response.bin": "aaf9e430f65f6296a86c9cf238ec28f5576920478d34dc12e33e1b3548e2ac9f",
+    "execution/transport/call-164.response.bin": "727537c713915bea8de6691307dc0172a38403428cff3552d0789b074cc4a8a6",
+    "execution/transport/call-164.response.json": "d427e07c154aa31a56a01af521e3fbf2507aacc390f6f6c42754a92ad09667ab",
+    "execution/transport/upload-N057.json": "61387f249876571bcb1c153d3ae09a236a55f91327089d977c9e4c5590d0fe14"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N057",
+  "pilot_id": "F046",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 18.9,
+        "observation": "Female lead vocal enters with auto-tuned, syncopated delivery over a minimalist four-on-the-floor kick pattern and hi-hats."
+      },
+      {
+        "at_seconds": 55.4,
+        "observation": "Chorus hook featuring catchy sung-melodic lines over simple electronic club beats and synth bass."
+      },
+      {
+        "at_seconds": 218.6,
+        "observation": "Spoken-melodic verse lines deliver personal narrative with sparse electronic club percussion accompaniment."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Electronic / Dance",
+    "primary_style": "Dance-Pop",
+    "secondary_families": [
+      "Hip Hop / Rap"
+    ],
+    "secondary_styles": [
+      "Pop Rap"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-164.response.bin",
+  "response_id": "ZCGiaunjCruN_uMP-OyE6Qs",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 18.9,\n      \"observation\": \"Female lead vocal enters with auto-tuned, syncopated delivery over a minimalist four-on-the-floor kick pattern and hi-hats.\"\n    },\n    {\n      \"at_seconds\": 55.4,\n      \"observation\": \"Chorus hook featuring catchy sung-melodic lines over simple electronic club beats and synth bass.\"\n    },\n    {\n      \"at_seconds\": 218.6,\n      \"observation\": \"Spoken-melodic verse lines deliver personal narrative with sparse electronic club percussion accompaniment.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Electronic / Dance\",\n  \"primary_style\": \"Dance-Pop\",\n  \"secondary_families\": [\"Hip Hop / Rap\"],\n  \"secondary_styles\": [\"Pop Rap\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"mixed_rap_and_singing\"\n}",
+  "usage": {
+    "candidatesTokenCount": 309,
+    "promptTokenCount": 6112,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5663
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 6421
+  }
+}

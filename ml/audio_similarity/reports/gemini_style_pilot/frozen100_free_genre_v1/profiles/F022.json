@@ -1,0 +1,46 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 37.0,
+        "observation": "Bright electronic synth-pop hook kicks in with distinct vocal chopping effects, bubbling synth arpeggios, and crisp electronic percussion."
+      },
+      {
+        "at_seconds": 55.0,
+        "observation": "High-pitched repetitive vocal sample rhythmically interlocks with the synth bassline."
+      },
+      {
+        "at_seconds": 110.0,
+        "observation": "Verse features stripped-back bouncy bassline, soft synth keys, and melodic female lead vocals sung in Korean and English."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Synthpop",
+      "Dance-Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "sample_based",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "0CCiaomdNaOl1MkPsZiCeA",
+  "spotify_track_id": "1aKvZDoLGkNMxoRYgkckZG"
+}

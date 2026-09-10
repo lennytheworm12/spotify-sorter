@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.3756983040366322,
+  "acquisition_ended_at": "2026-09-04T20:27:52.346904+00:00",
+  "acquisition_started_at": "2026-09-04T20:27:50.971206+00:00",
+  "acquisition_timestamp": "2026-09-04T20:27:50.971319+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2071373,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 122,
+  "provider_result": "SUCCESS",
+  "provider_title": "ericdoa - boys dont cry (Full Unreleased Song)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "5c784d6f72329bb14eaaf0e990ab68bfe88323de153d89fba439c9ee4ade696f",
+      "representation_identity": "2babf246c6af19243efa14351d7148d1637c2ca9e071c25e45edb854f4b24232",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "8bf4baa901e65cb3cb94864f24812ae97d3779919591c933a2cdb8e8025a4ca7",
+          "25": "bf0b445498a3271f87b22129848cfbc03751f18256ca53439e57a57e7eb9acc0",
+          "5": "2f621bf58dfbbf2263c6aa4d7d3da87801b171a777d0ef0bfd9097fd97c91098"
+        },
+        "muq_mulan_large": {
+          "15": "f6d9f33bae11c224a96b5fe39a3b866ae5ee333d54a148317b4f25b53d9782b9",
+          "25": "c63faae9459919438714a73aa310918e1290e8913a52c9aefc24069ae8b9375d",
+          "5": "5410da6f310af7a0fc6604036806a1d9d833271c767d97dc20e40f566bfa3e8c"
+        }
+      },
+      "source_audio_sha256": "8621d0b1d38d8cf7bc595f8ebfa5338c6eeef43c9b4d3cd7290a4ff82cfd193b"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "3jTMJRKqR_I"
+  },
+  "retained_relative_path": "1ON9XudZFxwu43tQXBszIX/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 121.721,
+  "source_sha256": "91747896537a183bb6aac8dbb486963677a8ac7d5f39c412edb77f9ffaa1d3dc",
+  "source_url": "https://www.youtube.com/watch?v=3jTMJRKqR_I",
+  "spotify_artists": [
+    "sysmint"
+  ],
+  "spotify_title": "boys dont cry",
+  "spotify_track_id": "1ON9XudZFxwu43tQXBszIX",
+  "successful_query": "boys dont cry sysmint",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "3jTMJRKqR_I"
+}

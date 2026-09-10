@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.0,
+        "observation": "A cappella choral vocal entrance singing in English over atmospheric reverb before beat enters."
+      },
+      {
+        "at_seconds": 25.5,
+        "observation": "Downtempo R&B trap beat drops with deep bass and Korean/English sung-rap hybrid vocals."
+      },
+      {
+        "at_seconds": 71.0,
+        "observation": "Full chorus returns with layered vocal harmonies over a midtempo contemporary pop beat."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "R&B",
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Contemporary R&B",
+      "Trap"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "ZyKiaofVEe34qtsPlJfA4Qw",
+  "spotify_track_id": "70YbAV2UKPee15B00RbPcT"
+}

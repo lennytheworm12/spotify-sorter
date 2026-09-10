@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00374475",
+  "attempt": 73,
+  "cache_key": "55b6cf6e52a96a6fb865483652b5b5a1deab1250ff97de7b883f64d5014d5b00",
+  "evidence_hashes": {
+    "execution/attempts/attempt-73.request.json": "abdc8e350b4e5b97937d3a9e09bb5e3b9d4929f2847213c34b100f34ef95ef0e",
+    "execution/attempts/attempt-73.reservation.json": "77914c14d55af42ac013808ae0e025a7ef1aea2928aa7437c32655996a4fbcf2",
+    "execution/attempts/attempt-73.settlement.json": "102be055879a09d69f2d63457a63581a4af5cabfceb6e6d91877f35b152e9e4a",
+    "execution/transport/call-291.response.bin": "7ee2d57c8590ebd69c5cbf628e89cc83771c2536a7914083db12010173c4028d",
+    "execution/transport/call-292.response.bin": "0cb2b5b7744e023cb9df0e071a389400422c4cc338cdb4a52c1e770fb2196d00",
+    "execution/transport/call-292.response.json": "a7e562b9239f220b88c8a8b4a9cb7221ce24821559892a8d03e8787606b3a976",
+    "execution/transport/upload-N089.json": "992a7792794df8e9e0bb8a30bdde5df48dbae2a251188521b04f90794595d0cd"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N089",
+  "pilot_id": "F082",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 11.45,
+        "observation": "Boom-bap drum pattern enters underneath an atmospheric, filtered electric piano sample loop."
+      },
+      {
+        "at_seconds": 32.14,
+        "observation": "Vocal sample scratch and sound bite dropped over the continuous, steady instrumental groove."
+      },
+      {
+        "at_seconds": 100.85,
+        "observation": "Spoken-word vocal sample plays atop the chill, unhurried hip-hop beat."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Lo-Fi Beats",
+    "secondary_families": [
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Instrumental Hip Hop",
+      "Downtempo"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "sample_based",
+      "hazy"
+    ],
+    "vocal_role": "vocal_samples_only"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-292.response.bin",
+  "response_id": "PiKiat-ECeikqtsP17CpiQ0",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 11.45,\n      \"observation\": \"Boom-bap drum pattern enters underneath an atmospheric, filtered electric piano sample loop.\"\n    },\n    {\n      \"at_seconds\": 32.14,\n      \"observation\": \"Vocal sample scratch and sound bite dropped over the continuous, steady instrumental groove.\"\n    },\n    {\n      \"at_seconds\": 100.85,\n      \"observation\": \"Spoken-word vocal sample plays atop the chill, unhurried hip-hop beat.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip Hop\",\n  \"primary_style\": \"Lo-Fi Beats\",\n  \"secondary_families\": [\"Electronic\"],\n  \"secondary_styles\": [\"Instrumental Hip Hop\", \"Downtempo\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"sample_based\", \"hazy\"],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+  "usage": {
+    "candidatesTokenCount": 302,
+    "promptTokenCount": 3483,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3034
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 3785
+  }
+}

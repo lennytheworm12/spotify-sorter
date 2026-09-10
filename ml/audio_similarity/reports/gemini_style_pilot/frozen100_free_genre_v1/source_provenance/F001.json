@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.568407839979045,
+  "acquisition_ended_at": "2026-09-04T20:26:52.539175+00:00",
+  "acquisition_started_at": "2026-09-04T20:26:50.970767+00:00",
+  "acquisition_timestamp": "2026-09-04T20:26:50.970879+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 4476957,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 263,
+  "provider_result": "SUCCESS",
+  "provider_title": "Saturation in Delay, Love in Anger (feat. Tiffi)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "18872431c851a48ad6fa98798535e11c645582cd77f9182f6cac63b28ab35726",
+      "representation_identity": "882515551ddcdb5360e7e3e4aada6ad8072af42ed597069063114753d1be4c9d",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "e9af35f720d10abd85b1175d9f27d225b3114817191b45cf7459b002c83e05f4",
+          "25": "c2d3d00c7ccdcac4d758aabc6633b949ce24133f6c7a7278420b8171e75bece2",
+          "5": "455f348033064acfc6f586fce4343d74cb722421f0bd967d475fb2e4567ea3c3"
+        },
+        "muq_mulan_large": {
+          "15": "d2343b84250afb92199843521e635537bd9d6094154d9de503b243a2a8e97333",
+          "25": "23c47a93cb9f1b83b0cd721eafc1ec04dccb84d2cca1b4583b6050c3a8d1da9b",
+          "5": "9aae73635e2560a2db372bf8a36846bcd23a59c2e38749f02b9adb16b99f8c7b"
+        }
+      },
+      "source_audio_sha256": "c66b27f70a8a5aae2bd5364e159a39e4789cb1f9a6d0e3c9b09a39beee5a467f"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "ldSJmUkNaGY"
+  },
+  "retained_relative_path": "00njeQb198Lm7Jge2Rsrlg/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 263.021,
+  "source_sha256": "765a8be864679b237445f3fed4b04420b2e9136344577dcba914b30464a8755d",
+  "source_url": "https://www.youtube.com/watch?v=ldSJmUkNaGY",
+  "spotify_artists": [
+    "City Girl",
+    "tiffi"
+  ],
+  "spotify_title": "Saturation in Delay, Love in Anger",
+  "spotify_track_id": "00njeQb198Lm7Jge2Rsrlg",
+  "successful_query": "Saturation in Delay, Love in Anger City Girl tiffi",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "ldSJmUkNaGY"
+}

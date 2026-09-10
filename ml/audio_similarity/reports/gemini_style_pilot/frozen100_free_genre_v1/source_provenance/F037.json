@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.594771715987008,
+  "acquisition_ended_at": "2026-09-04T20:02:32.553733+00:00",
+  "acquisition_started_at": "2026-09-04T20:02:30.958961+00:00",
+  "acquisition_timestamp": "2026-09-04T20:02:30.959081+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3647867,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 211,
+  "provider_result": "SUCCESS",
+  "provider_title": "Maasho & Weston Estate - Fresh Air (Prod. Nick Nash & YoniMadeIt)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "4e758021623dd1c855de505e3cb589ec6d8eb5fb3885cb1419fba26c2b3fdd52",
+      "representation_identity": "ecd9a605deb9307ff39e0f8be0b36362477d7277807e6afa7d68a7f3be7ef816",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "df0da997657aac4a751ea2d084e701fb0b7217c69991989109941f21bd087774",
+          "25": "c4d990f06c90c620ee5b4b5340bcc9ddb60a0c8449a37459a60cc4c449aeb98b",
+          "5": "f377c30d93349268cd6dc5153ea8cd7f92a2a9595a4ded594f2ce32f57b0a793"
+        },
+        "muq_mulan_large": {
+          "15": "80b458c9bc0a904c6c9bc637fc168d0b4a07a3fff0c841456919cb1892da6170",
+          "25": "d401f5fefc4b21ca2bc3a257aaecdd210fc4e786b1d4466b2fc884ed68d4c700",
+          "5": "0ebe4210b00edbe39d45477670abf670a522a0bb5cf3940da9a4acb751f9ac77"
+        }
+      },
+      "source_audio_sha256": "cf0cd596e73edbfdcc3303c65dc4ec3f8efbc3e2eead92c80329a76e9746ee9b"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "DZrYIpwH-u8"
+  },
+  "retained_relative_path": "30NAF18yQGvwKrbn1IEMKn/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 210.501,
+  "source_sha256": "d14004d7984596894978736077e5666fc014f123d7bbf4565b141582dd0a83d1",
+  "source_url": "https://www.youtube.com/watch?v=DZrYIpwH-u8",
+  "spotify_artists": [
+    "Maasho",
+    "Weston Estate"
+  ],
+  "spotify_title": "Fresh Air",
+  "spotify_track_id": "30NAF18yQGvwKrbn1IEMKn",
+  "successful_query": "Fresh Air Maasho Weston Estate",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "DZrYIpwH-u8"
+}

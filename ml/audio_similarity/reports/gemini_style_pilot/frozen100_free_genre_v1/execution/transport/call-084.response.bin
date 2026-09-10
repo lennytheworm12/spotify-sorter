@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"varies\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 15.0,\n      \"observation\": \"Sparse intro featuring dry, close-mic'd lead vocals over an acoustic piano chord progression.\"\n    },\n    {\n      \"at_seconds\": 71.0,\n      \"observation\": \"Explosive transition into a driving pop-rock chorus with full kit drums, electric bass, and intense belting vocals.\"\n    },\n    {\n      \"at_seconds\": 178.0,\n      \"observation\": \"Arrangement drops back down to solo piano before rebuilding dynamic tension into the final crescendo.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Pop Rock\",\n  \"secondary_families\": [\n    \"Rock\"\n  ],\n  \"secondary_styles\": [\n    \"Piano Pop\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"acoustic\",\n    \"layered\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPFOznZUTzt4mwsYkbKTN1lg2i96WTtEaneLCtHRX9UlhMHOfWSubtTvM7bztFVvxcOwocybidYvgAkCEI5wa74+7kOkNbehftLZbrTfWcYe52ACQRkApZjZk5+uQpbe4v"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5945,
+    "candidatesTokenCount": 317,
+    "totalTokenCount": 6262,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5496
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "2CCiavr3FKaAmtkPg-nvkAE"
+}

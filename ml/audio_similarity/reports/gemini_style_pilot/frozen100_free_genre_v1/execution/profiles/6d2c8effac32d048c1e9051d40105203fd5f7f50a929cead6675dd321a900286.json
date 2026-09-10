@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00498975",
+  "attempt": 18,
+  "cache_key": "6d2c8effac32d048c1e9051d40105203fd5f7f50a929cead6675dd321a900286",
+  "evidence_hashes": {
+    "execution/attempts/attempt-18.request.json": "081637b663fe10253aee402e4e9f046e10ac531a43bb2b1c978c73d62893d316",
+    "execution/attempts/attempt-18.reservation.json": "978f9cca9f945d6f179917213d884e960372b3913218f6fa7f20662be05b05a9",
+    "execution/attempts/attempt-18.settlement.json": "c7a45ce7181088b28dc0d16cb01c0c77224828e2634e3c3f456844ed78615f63",
+    "execution/transport/call-071.response.bin": "dffaf0944e44ad067366169fcb5ec171344dcdcf61c5707efc790688f796346b",
+    "execution/transport/call-072.response.bin": "750363c995064c69fc4533f52d803704f48ebdc9727ebbdb0cd06f9f0ec2ef5a",
+    "execution/transport/call-072.response.json": "653786a012a3a88ac249d1c1ca301c65548cd980729cbf81e512bfd2d877f85c",
+    "execution/transport/upload-N034.json": "6b3cd30bc1f3b6a7aaff8ac466f40c52a00a51c9d71c1fd0017d1b88caba8392"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N034",
+  "pilot_id": "F020",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 3.7,
+        "observation": "Solo female vocal enters accompanied by minimal acoustic bass pizzicato and finger snaps."
+      },
+      {
+        "at_seconds": 28.0,
+        "observation": "Sparse jazz/bossa-influenced rhythm continues with light acoustic bass and percussion."
+      },
+      {
+        "at_seconds": 111.8,
+        "observation": "Vocal melody repeats over ongoing minimal rhythm section of upright bass and soft brushed percussion."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Asian Pop",
+    "primary_style": "Mandopop",
+    "secondary_families": [
+      "Jazz",
+      "Easy Listening"
+    ],
+    "secondary_styles": [
+      "Vocal Jazz",
+      "Bossa Nova"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-072.response.bin",
+  "response_id": "xCCiasuEAuLTjMcPgcLnwQI",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 3.7, \"observation\": \"Solo female vocal enters accompanied by minimal acoustic bass pizzicato and finger snaps.\"},\n    {\"at_seconds\": 28.0, \"observation\": \"Sparse jazz/bossa-influenced rhythm continues with light acoustic bass and percussion.\"},\n    {\"at_seconds\": 111.8, \"observation\": \"Vocal melody repeats over ongoing minimal rhythm section of upright bass and soft brushed percussion.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Asian Pop\",\n  \"primary_style\": \"Mandopop\",\n  \"secondary_families\": [\"Jazz\", \"Easy Listening\"],\n  \"secondary_styles\": [\"Vocal Jazz\", \"Bossa Nova\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"acoustic\", \"clean\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 265,
+    "promptTokenCount": 5328,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4879
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5593
+  }
+}

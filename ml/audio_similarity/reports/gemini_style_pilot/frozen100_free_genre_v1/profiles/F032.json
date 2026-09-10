@@ -1,0 +1,45 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 12.0,
+        "observation": "A solo female lead vocal enters singing a gentle R&B-pop melody over sparse, echoing synthesized keys."
+      },
+      {
+        "at_seconds": 53.0,
+        "observation": "Subdued electronic percussion and vocal harmonies enter, creating a relaxed, atmospheric contemporary R&B ballad groove."
+      },
+      {
+        "at_seconds": 92.0,
+        "observation": "The vocal cadence takes on subtle contemporary R&B phrasing while the backdrop remains ambient and spacious."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Alt-R&B"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "hazy",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "CSGiar-XJq6W-8YP8caP6QQ",
+  "spotify_track_id": "2aiVdNIqY5BDCM10fKlKpS"
+}

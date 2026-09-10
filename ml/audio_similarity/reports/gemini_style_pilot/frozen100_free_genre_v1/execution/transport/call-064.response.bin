@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 9.5,\n      \"observation\": \"Intimate female lead vocals enter over a sparse, reverberant plucked guitar figure.\"\n    },\n    {\n      \"at_seconds\": 41.0,\n      \"observation\": \"The arrangement expands with a sub-bass kick pulse and vocal harmonies entering on the hook.\"\n    },\n    {\n      \"at_seconds\": 121.0,\n      \"observation\": \"Subtle atmospheric synths and layered backing vocals support the emotive, breathy verse delivery.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Indie Pop\",\n  \"secondary_families\": [\n    \"Folk & Acoustic Pop\",\n    \"Electronic\"\n  ],\n  \"secondary_styles\": [\n    \"Bedroom Pop\",\n    \"Alt-Pop\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"acoustic\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPxH3T21+r3h+tneLjjtR81vaKZJv7ZArix3e+BRxGFje60D5T1/aQ8ejX7s9CC2EPVRJXGGzZM98/W3IfrzykOnDX50pjJ9uzrggo89lQ4/IpTVKlOqCa5ViTrP78uDJ2"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5358,
+    "candidatesTokenCount": 322,
+    "totalTokenCount": 5680,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4909
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "tyCiaoSPHNODz7IPhcTi0QE"
+}

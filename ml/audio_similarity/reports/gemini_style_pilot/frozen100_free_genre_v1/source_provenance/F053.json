@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.5366327749798074,
+  "acquisition_ended_at": "2026-09-04T20:19:52.503763+00:00",
+  "acquisition_started_at": "2026-09-04T20:19:50.967130+00:00",
+  "acquisition_timestamp": "2026-09-04T20:19:50.967270+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3550816,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 213,
+  "provider_result": "SUCCESS",
+  "provider_title": "Fade (feat. Rachel Lim)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "8c1cd75bbbe93ecb0fcc5dfae2d4f941ba2c88aaf4cf6c0de38efa68f31fec51",
+      "representation_identity": "abaa3eb229b337c3518b567e7fa8909b7c935dbc4f8f9ba28f2b1ee1248678e4",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "388f5f1ffce6ec31242d791b583883590508c5a3df16374b833b70ede55178d6",
+          "25": "977a23d83b7e1b7610437a6f45a4a09e2bc1f5110b5242fbff53449e19f7c42e",
+          "5": "b68436365ef0ac487fdd800a36521d187c26dedaad81d29ad3336fcaf46ff69e"
+        },
+        "muq_mulan_large": {
+          "15": "84618f1ea80e5d91a9f11733bc12839f5847b3125b6fb418837619355bbc3b1d",
+          "25": "eca6ad9fb77219d84f959b5b52d0530fb23ab164dc82c4e88fd119aab5aa7645",
+          "5": "5e1bc5bac164178e2be2d234c98f914cc897c5f8774a2f5f528b7dc6dc6f9a97"
+        }
+      },
+      "source_audio_sha256": "accc2250f38fe8601c646e2701d1457e0ebdeab402c34258b0c4fb5d8f58ec19"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "8_Hg0ounjcs"
+  },
+  "retained_relative_path": "49iccsmr8Su1SXXwNfFO70/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 213.121,
+  "source_sha256": "01638e9971fd4a479d99e202fcc28d1052e75556c803072dc14b43dba0a35eec",
+  "source_url": "https://www.youtube.com/watch?v=8_Hg0ounjcs",
+  "spotify_artists": [
+    "JIDA",
+    "Rachel Lim"
+  ],
+  "spotify_title": "Fade (Feat. Rachel Lim)",
+  "spotify_track_id": "49iccsmr8Su1SXXwNfFO70",
+  "successful_query": "Fade (Feat. Rachel Lim) JIDA Rachel Lim",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "8_Hg0ounjcs"
+}

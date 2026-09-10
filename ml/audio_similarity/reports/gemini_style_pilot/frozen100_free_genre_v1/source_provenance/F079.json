@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.7604529699892737,
+  "acquisition_ended_at": "2026-09-04T20:24:52.730330+00:00",
+  "acquisition_started_at": "2026-09-04T20:24:50.969877+00:00",
+  "acquisition_timestamp": "2026-09-04T20:24:50.970031+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 4601857,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 246,
+  "provider_result": "SUCCESS",
+  "provider_title": "Bullet Train Fantasy (feat. Luvbird)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "15928065545897bf9fb212f71ddf6a878fff362fcc3256087dde52d474492aab",
+      "representation_identity": "8647a8300e64ace2cccabb295f81cc87743da29c8ef1b7bb13e135fcfa2e15ac",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "12f880192903b7d44bfda6c0dd3a679424691d3f9df34daabf96c23b57d0f91e",
+          "25": "ea177eaddce3e93ff4aa59d0afad494672a96146d3bb2b5f82cd6f4bfdc2aedb",
+          "5": "2ea43ec3cc882facb6d6f8cdba72157b5ac02c19f90531f4913a3485f61ab0fd"
+        },
+        "muq_mulan_large": {
+          "15": "46287306d0b463b4584bb62c76748dda72ec82a807ecb2339b145a999042341e",
+          "25": "0365a91d237824fbd077745fc7a024becbb3f39220f205afb8f3355ba8342827",
+          "5": "593c6f6a598c2bf208e07d61c617dcc3d89eee936987a2aaa8de3126190ffa5e"
+        }
+      },
+      "source_audio_sha256": "58b59b47784cde809a4d6568d7ae3d79893c12451cd0968c8845d399a02dc1c0"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "2THlfaAo2dg"
+  },
+  "retained_relative_path": "6JjD8b5nYnwJ3zxYZ16rKg/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 245.781,
+  "source_sha256": "9127f8baddcb72104008af845cb3b3fa7b37977208ed93ad13b0057a34fa8680",
+  "source_url": "https://www.youtube.com/watch?v=2THlfaAo2dg",
+  "spotify_artists": [
+    "Ibrahim",
+    "Luvbird"
+  ],
+  "spotify_title": "Bullet Train Fantasy",
+  "spotify_track_id": "6JjD8b5nYnwJ3zxYZ16rKg",
+  "successful_query": "Bullet Train Fantasy Ibrahim Luvbird",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "2THlfaAo2dg"
+}

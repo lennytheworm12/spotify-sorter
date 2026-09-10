@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 3.42, \"observation\": \"Vocal enters over minimal electric piano chords and subtle sub-bass pulses with sparse percussive snaps.\"},\n    {\"at_seconds\": 37.15, \"observation\": \"Full groove introduces a relaxed, slow tempo trap-influenced beat beneath smooth R&B vocal melodies.\"},\n    {\"at_seconds\": 111.45, \"observation\": \"Dynamic drop leading into an intimate verse highlighting the lead vocal and filtered keyboard accompaniment.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\"Electronic\", \"Pop\"],\n  \"secondary_styles\": [\"Alt-R&B\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\"],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPcjpz13bP9YHExT3KiRBYLXmvbvI6+GlaQtuQDf6BdvgWNfTNuIcTnoOiFw9x+cnzkzfFL1mjpB4eVd7+RiJd649jXe134O/YtWI0rDUzYWCDVxtA8qlqYC3E+g4gcNxg"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 4859,
+    "candidatesTokenCount": 275,
+    "totalTokenCount": 5134,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4410
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "FyGiaoT-CJ_jz7IPtsnp2Qw"
+}

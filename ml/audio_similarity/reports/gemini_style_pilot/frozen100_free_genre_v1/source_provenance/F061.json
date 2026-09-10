@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.888633789960295,
+  "acquisition_ended_at": "2026-09-04T20:07:32.850167+00:00",
+  "acquisition_started_at": "2026-09-04T20:07:30.961533+00:00",
+  "acquisition_timestamp": "2026-09-04T20:07:30.961713+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3929752,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 240,
+  "provider_result": "SUCCESS",
+  "provider_title": "J. Cole - Wet Dreamz",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "2f32ba4e834000b4a3bad8138398b418731f1a661531d9263d4a80ffedd5dbdc",
+      "representation_identity": "f073c2290f58443985f3960c659f257d8986603f792d97f7c2f6c7e13e781cb4",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "87018b42a2344d76dd30efe2f11d3a01dc481695895221282414d5d4f8ebeed3",
+          "25": "79bfaa79a33e4adcbc5b285f195e2019c3d38e85426ed0df13dcef53fb49f63b",
+          "5": "4b2dc3fd0ef76d98b5fc698e845b281639dad6c50f56852e8c837e65cc4dd7df"
+        },
+        "muq_mulan_large": {
+          "15": "0e6cd5227d4dbe794bbd0e443a0dc18269d7a3a4f88828a2f673268279451bc3",
+          "25": "b92f70f7f5ccbe5c0f8c93f74f485492d3627218d223f73fbb1a5b04584f8668",
+          "5": "534d676b517d57e4f005f279232035145b1c73a5691dd2b3e1f7e7ca7641c106"
+        }
+      },
+      "source_audio_sha256": "129c701a40f8e89fcfb693e85539739c22404bd938ce5efe05fdf3d87e091fa0"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "eCGV26aj-mM"
+  },
+  "retained_relative_path": "4tqcoej1zPvwePZCzuAjJd/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 240.421,
+  "source_sha256": "59cc62cb3d463f790019fb279d91311dc453966027275770891e8cca6f6898d5",
+  "source_url": "https://www.youtube.com/watch?v=eCGV26aj-mM",
+  "spotify_artists": [
+    "J. Cole"
+  ],
+  "spotify_title": "Wet Dreamz",
+  "spotify_track_id": "4tqcoej1zPvwePZCzuAjJd",
+  "successful_query": "Wet Dreamz J. Cole",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "eCGV26aj-mM"
+}

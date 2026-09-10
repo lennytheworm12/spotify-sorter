@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 22.5,\n      \"observation\": \"A slow, laid-back hip-hop beat enters with relaxed acoustic guitar chords and subtle kick/snare pattern.\"\n    },\n    {\n      \"at_seconds\": 83.2,\n      \"observation\": \"Melodic electric guitar leads interplay over the chill hop drum groove and soft bassline.\"\n    },\n    {\n      \"at_seconds\": 184.0,\n      \"observation\": \"Percussion drops out, leaving gentle clean guitar arpeggios in a warm ambient space.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip-Hop\",\n  \"primary_style\": \"Lo-Fi Hip-Hop\",\n  \"secondary_families\": [\n    \"Electronic\"\n  ],\n  \"secondary_styles\": [\n    \"Chillout\",\n    \"Downtempo\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"clean\",\n    \"acoustic\",\n    \"sample_based\"\n  ],\n  \"vocal_role\": \"instrumental\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPc/dMhiIlkZl7M1Rvs2fytuw0pOKGtpE0cSdpmRoATe7qdkMpV/fOK+XiA38lG0xiVYS/MH+MoIe49jnZ2l1yEdhIbeVxKQlLr/N3LoguUmTKkjRjSFjuEudJHXECod1r"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 6593,
+    "candidatesTokenCount": 330,
+    "totalTokenCount": 6923,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 6144
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "KiKiaqL3BfuAz7IPpc-t0QM"
+}

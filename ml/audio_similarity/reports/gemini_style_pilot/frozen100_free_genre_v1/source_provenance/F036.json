@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.378137692983728,
+  "acquisition_ended_at": "2026-09-04T20:24:32.347881+00:00",
+  "acquisition_started_at": "2026-09-04T20:24:30.969743+00:00",
+  "acquisition_timestamp": "2026-09-04T20:24:30.970184+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 5436522,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 317,
+  "provider_result": "SUCCESS",
+  "provider_title": "Pray (feat. Tiffi)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "0624143d711ec5e72599430d9640549e2799585a7c60cb1cad71214df3e7be79",
+      "representation_identity": "34834e3930c37fa78f59dfc1ec4f662c23ede9812a6e303da8d578fc90fa3bdd",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "f2f9dd0c45670cc1dbf8fa6c9fd3d1c297c04a9e4005eb83670ab4a45884cff3",
+          "25": "1f93b2d04ad6209f874e1303fb89ec6e12f55bb7bddd0699b67ad43c0861bead",
+          "5": "18c524fb3f6d70326e5dc7b03d4a2cf0d9080b985364ecc4c805687a012f7922"
+        },
+        "muq_mulan_large": {
+          "15": "0c7c0e37fc00df0eaf85debe160ba6f0e32b11532b61a1ab86cf969e985c2df9",
+          "25": "cb09efa2d71480cdde6897ad8a6a3c51f4f1589bf8bf19020e9ac278fe3c92fc",
+          "5": "55d363be7c28e07435475df70efb361c7ffe1f3fdd5424c666ad7aecda6d75f7"
+        }
+      },
+      "source_audio_sha256": "803848572aa19c640e130f2a8369a6c18da7597750154f2ce79ce7eb8067aea7"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "gCcnTTK868o"
+  },
+  "retained_relative_path": "2yQY2IzeQtUKanVo78Fg23/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 317.341,
+  "source_sha256": "af01d949544541d1ea1b8d97663db7c8a9566b2dba323ebf4f49652e54a56ff8",
+  "source_url": "https://www.youtube.com/watch?v=gCcnTTK868o",
+  "spotify_artists": [
+    "City Girl",
+    "tiffi"
+  ],
+  "spotify_title": "Pray",
+  "spotify_track_id": "2yQY2IzeQtUKanVo78Fg23",
+  "successful_query": "Pray City Girl tiffi",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "gCcnTTK868o"
+}

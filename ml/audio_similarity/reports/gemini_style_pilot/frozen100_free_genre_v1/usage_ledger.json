@@ -1,0 +1,2607 @@
+[
+  {
+    "actual_cost_usd": "0.00514050",
+    "attempt": 1,
+    "counted_input_tokens": 6510,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.9683565590021317,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N017",
+    "pilot_id": "F002",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "MyCiarSsNLa1_uMP_MSP-AI",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 334,
+      "promptTokenCount": 5184,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4735
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5518
+    }
+  },
+  {
+    "actual_cost_usd": "0.00657975",
+    "attempt": 2,
+    "counted_input_tokens": 9209,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.6424327960012306,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N018",
+    "pilot_id": "F003",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "OyCiasL5Ls_jz7IP4ojf2Q4",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 296,
+      "promptTokenCount": 7293,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 6844
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 7589
+    }
+  },
+  {
+    "actual_cost_usd": "0.00598350",
+    "attempt": 3,
+    "counted_input_tokens": 7864,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.5014974260011513,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N019",
+    "pilot_id": "F004",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "XiCiavDyPICc6dkP97Gm6A0",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 347,
+      "promptTokenCount": 6243,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5794
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 6590
+    }
+  },
+  {
+    "actual_cost_usd": "0.00514800",
+    "attempt": 4,
+    "counted_input_tokens": 6855,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.923426051998831,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N020",
+    "pilot_id": "F005",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "ZiCiaqLWD9O4mtkPia_t-AU",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 282,
+      "promptTokenCount": 5454,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5005
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5736
+    }
+  },
+  {
+    "actual_cost_usd": "0.00322725",
+    "attempt": 5,
+    "counted_input_tokens": 3521,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.7690860770017025,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N021",
+    "pilot_id": "F006",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "bCCiapqUFZquqtsPho_oqA4",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 291,
+      "promptTokenCount": 2848,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 2400
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 448
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 3139
+    }
+  },
+  {
+    "actual_cost_usd": "0.00589800",
+    "attempt": 6,
+    "counted_input_tokens": 7847,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.395921853996697,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N022",
+    "pilot_id": "F007",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "dCCiaoGGFbSuqtsP4Zrn8Aw",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 327,
+      "promptTokenCount": 6229,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5780
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 6556
+    }
+  },
+  {
+    "actual_cost_usd": "0.00492675",
+    "attempt": 7,
+    "counted_input_tokens": 6279,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.9120791890018154,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N023",
+    "pilot_id": "F008",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "fSCiapiXDtqzqtsPn-uWgQ4",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 313,
+      "promptTokenCount": 5004,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4555
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5317
+    }
+  },
+  {
+    "actual_cost_usd": "0.00309600",
+    "attempt": 8,
+    "counted_input_tokens": 3411,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.095488391001709,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N024",
+    "pilot_id": "F009",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "gyCiarq0PP-qsOIP7JvQ2QQ",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 273,
+      "promptTokenCount": 2763,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 448
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 2315
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 3036
+    }
+  },
+  {
+    "actual_cost_usd": "0.00553050",
+    "attempt": 9,
+    "counted_input_tokens": 7201,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.6683714149985462,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N025",
+    "pilot_id": "F010",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "iSCiauz-OpyiqtsP_PmDkAI",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 330,
+      "promptTokenCount": 5724,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5275
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 6054
+    }
+  },
+  {
+    "actual_cost_usd": "0.00541425",
+    "attempt": 10,
+    "counted_input_tokens": 7021,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.1567062530011754,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N026",
+    "pilot_id": "F011",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "kSCiasq_Hub6qtsP9drVaQ",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 327,
+      "promptTokenCount": 5584,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5135
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5911
+    }
+  },
+  {
+    "actual_cost_usd": "0.00870750",
+    "attempt": 11,
+    "counted_input_tokens": 12955,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.337717767997674,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N027",
+    "pilot_id": "F012",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "mCCiavfuEuO6jMcPjbXZwAI",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 278,
+      "promptTokenCount": 10220,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 9771
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 10498
+    }
+  },
+  {
+    "actual_cost_usd": "0.00486000",
+    "attempt": 12,
+    "counted_input_tokens": 6209,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.532347224998375,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N028",
+    "pilot_id": "F013",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "niCiapGrJOyO1MkP2YCfkQw",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 306,
+      "promptTokenCount": 4950,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4501
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5256
+    }
+  },
+  {
+    "actual_cost_usd": "0.00499350",
+    "attempt": 13,
+    "counted_input_tokens": 6655,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.518753159998596,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N029",
+    "pilot_id": "F014",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "pSCiavr_BJrpz7IPmaOJgQk",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 272,
+      "promptTokenCount": 5298,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4849
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5570
+    }
+  },
+  {
+    "actual_cost_usd": "0.00333600",
+    "attempt": 14,
+    "counted_input_tokens": 3398,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.963108389998524,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N030",
+    "pilot_id": "F015",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "qiCiavqEL5quqtsPho_oqA4",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 339,
+      "promptTokenCount": 2753,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 448
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 2305
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 3092
+    }
+  },
+  {
+    "actual_cost_usd": "0.00358725",
+    "attempt": 15,
+    "counted_input_tokens": 3941,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.1528087699989555,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N031",
+    "pilot_id": "F016",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "sCCiauGTGraGz7IPtNbz6Ag",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 321,
+      "promptTokenCount": 3178,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 2729
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 3499
+    }
+  },
+  {
+    "actual_cost_usd": "0.00522600",
+    "attempt": 16,
+    "counted_input_tokens": 6732,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.071615868000663,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N032",
+    "pilot_id": "F018",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "tyCiaoSPHNODz7IPhcTi0QE",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 322,
+      "promptTokenCount": 5358,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4909
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5680
+    }
+  },
+  {
+    "actual_cost_usd": "0.00561450",
+    "attempt": 17,
+    "counted_input_tokens": 7708,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.9348064090008847,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N033",
+    "pilot_id": "F019",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "vSCiapXbL8XVz7IPwdaruAg",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 273,
+      "promptTokenCount": 6121,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5672
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 6394
+    }
+  },
+  {
+    "actual_cost_usd": "0.00498975",
+    "attempt": 18,
+    "counted_input_tokens": 6694,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.659058809000271,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N034",
+    "pilot_id": "F020",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "xCCiasuEAuLTjMcPgcLnwQI",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 265,
+      "promptTokenCount": 5328,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4879
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5593
+    }
+  },
+  {
+    "actual_cost_usd": "0.00432750",
+    "attempt": 19,
+    "counted_input_tokens": 5192,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.7652362909975636,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N035",
+    "pilot_id": "F021",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "ySCiar-LF-qZ6dkPwZy8uA0",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 323,
+      "promptTokenCount": 4155,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 3706
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 4478
+    }
+  },
+  {
+    "actual_cost_usd": "0.00459075",
+    "attempt": 20,
+    "counted_input_tokens": 5591,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.265808729996934,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N036",
+    "pilot_id": "F022",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "0CCiaomdNaOl1MkPsZiCeA",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 331,
+      "promptTokenCount": 4466,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4017
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 4797
+    }
+  },
+  {
+    "actual_cost_usd": "0.00564750",
+    "attempt": 21,
+    "counted_input_tokens": 7483,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.5376482200008468,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N037",
+    "pilot_id": "F023",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "2CCiavr3FKaAmtkPg-nvkAE",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 317,
+      "promptTokenCount": 5945,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5496
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 6262
+    }
+  },
+  {
+    "actual_cost_usd": "0.00371475",
+    "attempt": 22,
+    "counted_input_tokens": 4416,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 4.434655352000846,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N038",
+    "pilot_id": "F024",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "3iCiau6lMd2hz7IP5tPywQg",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 281,
+      "promptTokenCount": 3548,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 3099
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 3829
+    }
+  },
+  {
+    "actual_cost_usd": "0.00484575",
+    "attempt": 23,
+    "counted_input_tokens": 5905,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.1817044950003037,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N039",
+    "pilot_id": "F025",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "5iCias-_Cs3kz7IPu9vzgAY",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 350,
+      "promptTokenCount": 4711,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4262
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5061
+    }
+  },
+  {
+    "actual_cost_usd": "0.00500625",
+    "attempt": 24,
+    "counted_input_tokens": 6594,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.9569013740001537,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N040",
+    "pilot_id": "F026",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "7CCiauSDJteKmtkPu6q8-Aw",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 285,
+      "promptTokenCount": 5250,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4801
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5535
+    }
+  },
+  {
+    "actual_cost_usd": "0.00438825",
+    "attempt": 25,
+    "counted_input_tokens": 5609,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.902863161998539,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N041",
+    "pilot_id": "F029",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "8yCiav7QMISsz7IP4eSj6AM",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 274,
+      "promptTokenCount": 4481,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4032
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 4755
+    }
+  },
+  {
+    "actual_cost_usd": "0.00552600",
+    "attempt": 26,
+    "counted_input_tokens": 7570,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 4.0314964309982315,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N042",
+    "pilot_id": "F030",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "_CCiatTgE_fQz7IPw8fhyQ8",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 271,
+      "promptTokenCount": 6013,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5564
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 6284
+    }
+  },
+  {
+    "actual_cost_usd": "0.00424125",
+    "attempt": 27,
+    "counted_input_tokens": 5378,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.453661761002877,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N043",
+    "pilot_id": "F031",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "AiGiavy1OqOzmtkPt-_ssQY",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 271,
+      "promptTokenCount": 4300,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 3851
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 4571
+    }
+  },
+  {
+    "actual_cost_usd": "0.00366825",
+    "attempt": 28,
+    "counted_input_tokens": 4068,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.6343791330000386,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N044",
+    "pilot_id": "F032",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "CSGiar-XJq6W-8YP8caP6QQ",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 323,
+      "promptTokenCount": 3276,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 2827
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 3599
+    }
+  },
+  {
+    "actual_cost_usd": "0.00545025",
+    "attempt": 29,
+    "counted_input_tokens": 7486,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.2672058060015843,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N045",
+    "pilot_id": "F033",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "ECGiaoqIF4Wf-8YPsbXr-QY",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 264,
+      "promptTokenCount": 5947,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5498
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 6211
+    }
+  },
+  {
+    "actual_cost_usd": "0.00467550",
+    "attempt": 30,
+    "counted_input_tokens": 6093,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.34177330500097,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N046",
+    "pilot_id": "F035",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "FyGiaoT-CJ_jz7IPtsnp2Qw",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 275,
+      "promptTokenCount": 4859,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4410
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5134
+    }
+  },
+  {
+    "actual_cost_usd": "0.00729150",
+    "attempt": 31,
+    "counted_input_tokens": 10604,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.017499935998785,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N047",
+    "pilot_id": "F036",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "HiGiatL2OJ7S_uMP2-zTkQ4",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 268,
+      "promptTokenCount": 8382,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 7933
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 8650
+    }
+  },
+  {
+    "actual_cost_usd": "0.00555450",
+    "attempt": 32,
+    "counted_input_tokens": 7185,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.384753140999237,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N048",
+    "pilot_id": "F037",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "JSGiatu4B42hqtsPvaKC8Aw",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 339,
+      "promptTokenCount": 5711,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5262
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 6050
+    }
+  },
+  {
+    "actual_cost_usd": "0.00686175",
+    "attempt": 33,
+    "counted_input_tokens": 6439,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 4.992880069999956,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N049",
+    "pilot_id": "F038",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "KyGiav3RKOikqtsP17CpiQ0",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 313,
+      "promptTokenCount": 5129,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4680
+        }
+      ],
+      "serviceTier": "standard",
+      "thoughtsTokenCount": 491,
+      "totalTokenCount": 5933
+    }
+  },
+  {
+    "actual_cost_usd": "0.00421050",
+    "attempt": 34,
+    "counted_input_tokens": 5332,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.9839699719996133,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N050",
+    "pilot_id": "F039",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "NCGiaqumGPfQz7IPw8fhyQ8",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 270,
+      "promptTokenCount": 4264,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 3815
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 4534
+    }
+  },
+  {
+    "actual_cost_usd": "0.00585375",
+    "attempt": 35,
+    "counted_input_tokens": 7784,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.525439876000746,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N051",
+    "pilot_id": "F040",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "OiGiapHtOPuAz7IPpc-t0QM",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 325,
+      "promptTokenCount": 6180,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5731
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 6505
+    }
+  },
+  {
+    "actual_cost_usd": "0.00569775",
+    "attempt": 36,
+    "counted_input_tokens": 7518,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.9421134340009303,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N052",
+    "pilot_id": "F041",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "QyGiav-1A-bcjMcPqZuzwQI",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 325,
+      "promptTokenCount": 5972,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5523
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 6297
+    }
+  },
+  {
+    "actual_cost_usd": "0.00402900",
+    "attempt": 37,
+    "counted_input_tokens": 4971,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.684133537000889,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N053",
+    "pilot_id": "F042",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "SSGiauK9Hrfiz7IP7MaD6Q8",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 278,
+      "promptTokenCount": 3982,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 3533
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 4260
+    }
+  },
+  {
+    "actual_cost_usd": "0.00470850",
+    "attempt": 38,
+    "counted_input_tokens": 6124,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.966745618999994,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N054",
+    "pilot_id": "F043",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "TyGiaq_aItODz7IPhcTi0QE",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 279,
+      "promptTokenCount": 4883,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4434
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5162
+    }
+  },
+  {
+    "actual_cost_usd": "0.00425625",
+    "attempt": 39,
+    "counted_input_tokens": 5315,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.092743861998315,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N055",
+    "pilot_id": "F044",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "VSGiatTyJJ-kmtkPu-S9oA4",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 285,
+      "promptTokenCount": 4250,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 3801
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 4535
+    }
+  },
+  {
+    "actual_cost_usd": "0.00614250",
+    "attempt": 40,
+    "counted_input_tokens": 8667,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.616267354002048,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N056",
+    "pilot_id": "F045",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "XCGiav-9LuXI-sAP_bXYwAQ",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 264,
+      "promptTokenCount": 6870,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 6421
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 7134
+    }
+  },
+  {
+    "actual_cost_usd": "0.00574275",
+    "attempt": 41,
+    "counted_input_tokens": 7697,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.059721814999648,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N057",
+    "pilot_id": "F046",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "ZCGiaunjCruN_uMP-OyE6Qs",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 309,
+      "promptTokenCount": 6112,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5663
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 6421
+    }
+  },
+  {
+    "actual_cost_usd": "0.00646350",
+    "attempt": 42,
+    "counted_input_tokens": 9293,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.864778811999713,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N058",
+    "pilot_id": "F047",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "ayGiaojJLKXnz7IPkN3a0Aw",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 252,
+      "promptTokenCount": 7358,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 6909
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 7610
+    }
+  },
+  {
+    "actual_cost_usd": "0.00515550",
+    "attempt": 43,
+    "counted_input_tokens": 6862,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.8234973270009505,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N059",
+    "pilot_id": "F048",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "cyGiaveJE62M_PUPpf2jwA8",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 283,
+      "promptTokenCount": 5459,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5010
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5742
+    }
+  },
+  {
+    "actual_cost_usd": "0.00552900",
+    "attempt": 44,
+    "counted_input_tokens": 7371,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.380828137000208,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N060",
+    "pilot_id": "F049",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "eiGiapHMKfe0_PUP78anuQI",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 303,
+      "promptTokenCount": 5857,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5408
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 6160
+    }
+  },
+  {
+    "actual_cost_usd": "0.00445650",
+    "attempt": 45,
+    "counted_input_tokens": 5362,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.88349924999784,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N061",
+    "pilot_id": "F050",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "gCGiaurZM63Uz7IP6KPHUQ",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 331,
+      "promptTokenCount": 4287,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 3838
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 4618
+    }
+  },
+  {
+    "actual_cost_usd": "0.00516825",
+    "attempt": 46,
+    "counted_input_tokens": 6992,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.3112015400001837,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N062",
+    "pilot_id": "F051",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "hyGiaoXjMcaHz7IPoobtkQo",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 266,
+      "promptTokenCount": 5561,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5112
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5827
+    }
+  },
+  {
+    "actual_cost_usd": "0.00596025",
+    "attempt": 47,
+    "counted_input_tokens": 8023,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.4303906739987724,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N063",
+    "pilot_id": "F052",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "jyGiatv1B8ucz7IPvO7ayAg",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 316,
+      "promptTokenCount": 6367,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5918
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 6683
+    }
+  },
+  {
+    "actual_cost_usd": "0.00552525",
+    "attempt": 48,
+    "counted_input_tokens": 7268,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.9476937079998606,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N064",
+    "pilot_id": "F053",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "liGiaq-tHOPsz7IPq8je2Q8",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 318,
+      "promptTokenCount": 5777,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5328
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 6095
+    }
+  },
+  {
+    "actual_cost_usd": "0.00469275",
+    "attempt": 49,
+    "counted_input_tokens": 6149,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.5331420340007753,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N065",
+    "pilot_id": "F054",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "nCGiaqL8Naj_qtsPpenqgAk",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 271,
+      "promptTokenCount": 4902,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4453
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5173
+    }
+  },
+  {
+    "actual_cost_usd": "0.00377625",
+    "attempt": 50,
+    "counted_input_tokens": 4329,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 4.055433253000956,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N066",
+    "pilot_id": "F056",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "oiGiaqGJKJDQz7IP_u-h2A4",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 311,
+      "promptTokenCount": 3480,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 3031
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 3791
+    }
+  },
+  {
+    "actual_cost_usd": "0.00470850",
+    "attempt": 51,
+    "counted_input_tokens": 6226,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.857792721999431,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N067",
+    "pilot_id": "F057",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "qiGiauC_L_b7qtsPlq7OiQQ",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 263,
+      "promptTokenCount": 4963,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4514
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5226
+    }
+  },
+  {
+    "actual_cost_usd": "0.00556350",
+    "attempt": 52,
+    "counted_input_tokens": 7570,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.947066443000949,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N068",
+    "pilot_id": "F058",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "sCGiaoWGL9-Z6dkPjs3fsQ0",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 281,
+      "promptTokenCount": 6013,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5564
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 6294
+    }
+  },
+  {
+    "actual_cost_usd": "0.00456825",
+    "attempt": 53,
+    "counted_input_tokens": 5776,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.060763566998503,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N069",
+    "pilot_id": "F059",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "uCGiaqbDHMXVz7IPwdaruAg",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 296,
+      "promptTokenCount": 4611,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4162
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 4907
+    }
+  },
+  {
+    "actual_cost_usd": "0.00412050",
+    "attempt": 54,
+    "counted_input_tokens": 4871,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.0033975100013777,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N070",
+    "pilot_id": "F060",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "viGiapCXM4Ssz7IP4eSj6AM",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 318,
+      "promptTokenCount": 3904,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 3455
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 4222
+    }
+  },
+  {
+    "actual_cost_usd": "0.00528000",
+    "attempt": 55,
+    "counted_input_tokens": 6824,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.222566950000328,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N071",
+    "pilot_id": "F062",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "xSGiao-iDe6eqtsP7Iay8AM",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 322,
+      "promptTokenCount": 5430,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4981
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5752
+    }
+  },
+  {
+    "actual_cost_usd": "0.00423225",
+    "attempt": 56,
+    "counted_input_tokens": 5017,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.8937994560001243,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N072",
+    "pilot_id": "F063",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "yyGiauDGF9Khz7IPnNaKyAg",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 325,
+      "promptTokenCount": 4018,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 3569
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 4343
+    }
+  },
+  {
+    "actual_cost_usd": "0.00440925",
+    "attempt": 57,
+    "counted_input_tokens": 5550,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.2200618040005793,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N073",
+    "pilot_id": "F064",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "0SGiasz6HM-n1MkPzbKosA0",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 289,
+      "promptTokenCount": 4434,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 3985
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 4723
+    }
+  },
+  {
+    "actual_cost_usd": "0.00432600",
+    "attempt": 58,
+    "counted_input_tokens": 5267,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.049198728000192,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N074",
+    "pilot_id": "F065",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "2CGiarOpE9W0qtsP0NCIgQ0",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 311,
+      "promptTokenCount": 4213,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 3764
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 4524
+    }
+  },
+  {
+    "actual_cost_usd": "0.00440550",
+    "attempt": 59,
+    "counted_input_tokens": 5230,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.9061060220010404,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N075",
+    "pilot_id": "F066",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "3iGiauCJMtCGz7IPp-vl-Q8",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 338,
+      "promptTokenCount": 4184,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 3735
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 4522
+    }
+  },
+  {
+    "actual_cost_usd": "0.00550575",
+    "attempt": 60,
+    "counted_input_tokens": 7159,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 4.382504221001,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N076",
+    "pilot_id": "F067",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "5SGiaq3aHuikqtsP_-qJwAU",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 330,
+      "promptTokenCount": 5691,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5242
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 6021
+    }
+  },
+  {
+    "actual_cost_usd": "0.00532500",
+    "attempt": 61,
+    "counted_input_tokens": 6927,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.5313664940003946,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N077",
+    "pilot_id": "F068",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "7iGiaoTVC8XVz7IPwdaruAg",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 318,
+      "promptTokenCount": 5510,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5061
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5828
+    }
+  },
+  {
+    "actual_cost_usd": "0.00527550",
+    "attempt": 62,
+    "counted_input_tokens": 6913,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.8207581539973035,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N078",
+    "pilot_id": "F069",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "9SGiasHhL8vljMcP64DSoAY",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 307,
+      "promptTokenCount": 5499,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5050
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5806
+    }
+  },
+  {
+    "actual_cost_usd": "0.00529725",
+    "attempt": 63,
+    "counted_input_tokens": 7109,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.4029368039991823,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N079",
+    "pilot_id": "F070",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "_CGiatPLAZrpz7IPmaOJgQk",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 282,
+      "promptTokenCount": 5653,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5204
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5935
+    }
+  },
+  {
+    "actual_cost_usd": "0.00470700",
+    "attempt": 64,
+    "counted_input_tokens": 6141,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.3838699650004855,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N080",
+    "pilot_id": "F071",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "AyKiapuMAYaGz7IPoJjBkAE",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 276,
+      "promptTokenCount": 4896,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4447
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5172
+    }
+  },
+  {
+    "actual_cost_usd": "0.00521100",
+    "attempt": 65,
+    "counted_input_tokens": 6969,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.15760597100234,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N081",
+    "pilot_id": "F072",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "CiKiaretE9qsz7IPtd7EsQ8",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 281,
+      "promptTokenCount": 5543,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5094
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5824
+    }
+  },
+  {
+    "actual_cost_usd": "0.00364950",
+    "attempt": 66,
+    "counted_input_tokens": 4074,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.644998425999802,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N082",
+    "pilot_id": "F073",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "ECKiasPkBOrR-8YPzJa_6A0",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 317,
+      "promptTokenCount": 3281,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 2832
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 3598
+    }
+  },
+  {
+    "actual_cost_usd": "0.00496725",
+    "attempt": 67,
+    "counted_input_tokens": 6618,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.0740891700006614,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N083",
+    "pilot_id": "F075",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "FiKiasTMGsucz7IPvO7ayAg",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 271,
+      "promptTokenCount": 5268,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4819
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5539
+    }
+  },
+  {
+    "actual_cost_usd": "0.00488700",
+    "attempt": 68,
+    "counted_input_tokens": 5956,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.4400725569976203,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N084",
+    "pilot_id": "F077",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "HCKiavK2NqXnz7IPkN3a0Aw",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 353,
+      "promptTokenCount": 4751,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4302
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5104
+    }
+  },
+  {
+    "actual_cost_usd": "0.00545100",
+    "attempt": 69,
+    "counted_input_tokens": 7276,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.8699597559971153,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N085",
+    "pilot_id": "F078",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "IyKiarXyFpmdz7IPw7SzgAo",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 297,
+      "promptTokenCount": 5783,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5334
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 6080
+    }
+  },
+  {
+    "actual_cost_usd": "0.00618225",
+    "attempt": 70,
+    "counted_input_tokens": 8314,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.7579578590011806,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N086",
+    "pilot_id": "F079",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "KiKiaqL3BfuAz7IPpc-t0QM",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 330,
+      "promptTokenCount": 6593,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 6144
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 6923
+    }
+  },
+  {
+    "actual_cost_usd": "0.00453600",
+    "attempt": 71,
+    "counted_input_tokens": 5996,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 4.602852531999815,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N087",
+    "pilot_id": "F080",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "MCKiav7DMYfVz7IP6bnG-QE",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 253,
+      "promptTokenCount": 4783,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4334
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5036
+    }
+  },
+  {
+    "actual_cost_usd": "0.00452850",
+    "attempt": 72,
+    "counted_input_tokens": 5446,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.084156664001057,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N088",
+    "pilot_id": "F081",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "OCKiauOsApKcz7IPyIb1uQg",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 337,
+      "promptTokenCount": 4353,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 3904
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 4690
+    }
+  },
+  {
+    "actual_cost_usd": "0.00374475",
+    "attempt": 73,
+    "counted_input_tokens": 4333,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.8769635490025394,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N089",
+    "pilot_id": "F082",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "PiKiat-ECeikqtsP17CpiQ0",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 302,
+      "promptTokenCount": 3483,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 3034
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 3785
+    }
+  },
+  {
+    "actual_cost_usd": "0.00519150",
+    "attempt": 74,
+    "counted_input_tokens": 6641,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.17224003299998,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N090",
+    "pilot_id": "F083",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "RCKiarqgMLCEz7IPv9TM2Qg",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 327,
+      "promptTokenCount": 5287,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4838
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5614
+    }
+  },
+  {
+    "actual_cost_usd": "0.00508200",
+    "attempt": 75,
+    "counted_input_tokens": 6524,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.6914989840006456,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N091",
+    "pilot_id": "F084",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "SyKiaqyeJOPsz7IPq8je2Q8",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 316,
+      "promptTokenCount": 5196,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4747
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5512
+    }
+  },
+  {
+    "actual_cost_usd": "0.00522750",
+    "attempt": 76,
+    "counted_input_tokens": 7074,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.4666267769971455,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N092",
+    "pilot_id": "F085",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "UyKiaqzjFdiV_uMP87O46Qs",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 269,
+      "promptTokenCount": 5625,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5176
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5894
+    }
+  },
+  {
+    "actual_cost_usd": "0.00526125",
+    "attempt": 77,
+    "counted_input_tokens": 7036,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.6136770869998145,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N093",
+    "pilot_id": "F087",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "WiKiavCCGtqsz7IPtd7EsQ8",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 284,
+      "promptTokenCount": 5595,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5146
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5879
+    }
+  },
+  {
+    "actual_cost_usd": "0.00341925",
+    "attempt": 78,
+    "counted_input_tokens": 3605,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.717856932998984,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N094",
+    "pilot_id": "F089",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "YSKiau_zD9Dd_uMP6vHz8Qs",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 329,
+      "promptTokenCount": 2914,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 2466
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 448
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 3243
+    }
+  },
+  {
+    "actual_cost_usd": "0.00525825",
+    "attempt": 79,
+    "counted_input_tokens": 6787,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.2119222639994405,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N095",
+    "pilot_id": "F090",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "ZyKiaofVEe34qtsPlJfA4Qw",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 322,
+      "promptTokenCount": 5401,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4952
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5723
+    }
+  },
+  {
+    "actual_cost_usd": "0.00471150",
+    "attempt": 80,
+    "counted_input_tokens": 6706,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.1399119990019244,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N096",
+    "pilot_id": "F092",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "biKiatPiE5WGz7IP8Pe0gQQ",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 189,
+      "promptTokenCount": 5337,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4888
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5526
+    }
+  },
+  {
+    "actual_cost_usd": "0.00484200",
+    "attempt": 81,
+    "counted_input_tokens": 6364,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 8.423099398998602,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N097",
+    "pilot_id": "F094",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "dyKiaqDGBfe0_PUP78anuQI",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 277,
+      "promptTokenCount": 5071,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4622
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5348
+    }
+  },
+  {
+    "actual_cost_usd": "0.00540225",
+    "attempt": 82,
+    "counted_input_tokens": 7149,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.5232997029997932,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N098",
+    "pilot_id": "F098",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "gSKiasjrM9zX-sAPwuHcmQc",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 304,
+      "promptTokenCount": 5683,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 5234
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5987
+    }
+  },
+  {
+    "actual_cost_usd": "0.00510600",
+    "attempt": 83,
+    "counted_input_tokens": 6771,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 3.466552492001938,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N099",
+    "pilot_id": "F099",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "iCKiaoXnFcvljMcP64DSoAY",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 284,
+      "promptTokenCount": 5388,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        },
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4939
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5672
+    }
+  },
+  {
+    "actual_cost_usd": "0.00473400",
+    "attempt": 84,
+    "counted_input_tokens": 6231,
+    "finish_reasons": [
+      "STOP"
+    ],
+    "latency_seconds": 2.982743496999319,
+    "model_version": "gemini-3.8-flash",
+    "neutral_id": "N100",
+    "pilot_id": "F100",
+    "reserved_upper_cost_usd": "0.81715200",
+    "response_id": "jyKiavjnAeShz7IPh_fHqA0",
+    "status": "NEW_VALIDATED_PROFILE",
+    "usage": {
+      "candidatesTokenCount": 269,
+      "promptTokenCount": 4967,
+      "promptTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 4518
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 449
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5236
+    }
+  }
+]

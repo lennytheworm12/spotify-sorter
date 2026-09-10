@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 23.5,
+        "observation": "Downtempo R&B-infused beat enters with crisp snaps, subtle percussion, and intimate solo lead vocals."
+      },
+      {
+        "at_seconds": 69.2,
+        "observation": "Ambient, floating synth pads and warm sub-bass swell beneath emotive, layered vocal lines."
+      },
+      {
+        "at_seconds": 156.0,
+        "observation": "Minimalist chord progressions on Rhodes/soft keys accompanied by subdued, spaced-out beats and delicate vocal delivery."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "r&b",
+    "primary_style": "contemporary r&b",
+    "secondary_families": [
+      "electronic",
+      "pop"
+    ],
+    "secondary_styles": [
+      "ambient pop",
+      "downtempo"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "hazy"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "7CCiauSDJteKmtkPu6q8-Aw",
+  "spotify_track_id": "2BFAfMIblG0RZeAvlmLC81"
+}

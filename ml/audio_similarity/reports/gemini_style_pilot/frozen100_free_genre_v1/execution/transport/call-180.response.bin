@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 13.5,\n      \"observation\": \"Female lead vocal enters singing intimate, mellow lines over a gentle, steady fingerpicked acoustic guitar pattern.\"\n    },\n    {\n      \"at_seconds\": 54.0,\n      \"observation\": \"Soft, muted percussive beat and subdued bassline enter subtly without overwhelming the acoustic guitar and vocals.\"\n    },\n    {\n      \"at_seconds\": 112.5,\n      \"observation\": \"Lead vocal shifts into conversational English lyrics over a restrained, downtempo acoustic groove.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B/Soul\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\n    \"Pop\",\n    \"Folk/Americana\"\n  ],\n  \"secondary_styles\": [\n    \"K-Indie\",\n    \"Acoustic Pop\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"acoustic\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPlXreyrMtrG4YWUWvT0hF/QdFvkqp7117mS+YcvS/rqgxhhhCCquu18hoJ+90no9Hq9X8vBIJM2SHRS6M5Ntz3C6v56lTPVlb16em+mChqH3Iro4Gsg84bjLYtYPkFqta"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 4287,
+    "candidatesTokenCount": 331,
+    "totalTokenCount": 4618,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3838
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "gCGiaurZM63Uz7IP6KPHUQ"
+}

@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00686175",
+  "attempt": 33,
+  "cache_key": "2cb7308dbebe9a62b846fcdf93f9c2da32f8127d4de6c0c26fa545665726d141",
+  "evidence_hashes": {
+    "execution/attempts/attempt-33.request.json": "bbd67d0e05b8488b3f9b96f4af14d9225a023ff0f1348640b5898885b5227339",
+    "execution/attempts/attempt-33.reservation.json": "2effec85a15c7d3645ee0a2c9b6e64cb73d2160a2ca5fc54350c8d186814d408",
+    "execution/attempts/attempt-33.settlement.json": "a017ebeb3cc454ad5896b9629eb48f34b5cf1992628689fcbd420da4a4da7259",
+    "execution/transport/call-131.response.bin": "dad437215f96e843f382027f28f8f5052fe6aa3527d7f36bc55ac0f00cbf2d3f",
+    "execution/transport/call-132.response.bin": "c697d3451c18b9c9bcbaa4d083a12241c1e0659fe5b3de8a1243ae7b34a596d7",
+    "execution/transport/call-132.response.json": "1bf9e398e0b4d80745cd33501ec7215a71dce3def9f375fa87bb5f2f987b795c",
+    "execution/transport/upload-N049.json": "af87b19df05044bc3925d6ca2da9283258f7728fe33c6ebd9c2a9b9076f48404"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N049",
+  "pilot_id": "F038",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 12.5,
+        "observation": "Female lead vocal enters over light melodic keyboard accompaniment and a soft downbeat."
+      },
+      {
+        "at_seconds": 70.2,
+        "observation": "Male vocals take over the verse with a rhythmic, melodic delivery over a syncopated mid-tempo beat."
+      },
+      {
+        "at_seconds": 127.8,
+        "observation": "Both vocalists trade lines into a lush chorus hook featuring warm synth bass and percussion."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Contemporary R&B"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "electronic",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-132.response.bin",
+  "response_id": "KyGiav3RKOikqtsP17CpiQ0",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 12.5,\n      \"observation\": \"Female lead vocal enters over light melodic keyboard accompaniment and a soft downbeat.\"\n    },\n    {\n      \"at_seconds\": 70.2,\n      \"observation\": \"Male vocals take over the verse with a rhythmic, melodic delivery over a syncopated mid-tempo beat.\"\n    },\n    {\n      \"at_seconds\": 127.8,\n      \"observation\": \"Both vocalists trade lines into a lush chorus hook featuring warm synth bass and percussion.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\n    \"R&B\"\n  ],\n  \"secondary_styles\": [\n    \"Contemporary R&B\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"clean\",\n    \"electronic\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 313,
+    "promptTokenCount": 5129,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4680
+      }
+    ],
+    "serviceTier": "standard",
+    "thoughtsTokenCount": 491,
+    "totalTokenCount": 5933
+  }
+}

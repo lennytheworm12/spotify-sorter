@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.74506762198871,
+  "acquisition_ended_at": "2026-09-04T20:13:32.709444+00:00",
+  "acquisition_started_at": "2026-09-04T20:13:30.964376+00:00",
+  "acquisition_timestamp": "2026-09-04T20:13:30.964529+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 1573796,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 121,
+  "provider_result": "SUCCESS",
+  "provider_title": "Snøw & Teqkoi - I’m not enough and I’m sorry [lyrics]",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "e4b9888ec2b4a972cc8f7c3011ac8bdbc73f71f93e9c9fc40720fb63beccd98c",
+      "representation_identity": "dc63f9ad062b5b0ee51b9b842a2dbf4ec9c5320f078fc22ad3983f867aa45642",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "64c8253875b5b86ef122c909e3a658b368bc07eb1fecd8257a69c683cd98140e",
+          "25": "33056a600ff9990fa195724f505a0f946ffde84f1cc4e94aa9d0d9a53519e8cb",
+          "5": "402d30329053492d507f44feb0d1b8cb80d699cd37a530032b9b4b869c30eed9"
+        },
+        "muq_mulan_large": {
+          "15": "960290e94e7ebdd1465d6e94ac9381a71f596a2c75b67f0162508f926174a0a0",
+          "25": "d85390e1d670fddd93225fc178509388bbbe3b830641ca0d63b4f9deaeff72c7",
+          "5": "b34aca5c623c7a21710c5a1b3581b4095e355e510b57fd98d50a287cb9b5df88"
+        }
+      },
+      "source_audio_sha256": "c6ce86565e1683d6b73d48c21b4f7451c5670d3a10b3d58570eb09703840252e"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "Lm54QUV4Dt4"
+  },
+  "retained_relative_path": "4P1L6AniTDJzANaubzWGYs/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 121.241,
+  "source_sha256": "24b83da637c0a524b5dc91393ff5ecd68d8d7750cee7c5c69ba24f31e559bd6d",
+  "source_url": "https://www.youtube.com/watch?v=Lm54QUV4Dt4",
+  "spotify_artists": [
+    "Teqkoi",
+    "Snøw"
+  ],
+  "spotify_title": "I'm Not Enough and I'm Sorry",
+  "spotify_track_id": "4P1L6AniTDJzANaubzWGYs",
+  "successful_query": "I'm Not Enough and I'm Sorry Teqkoi Snøw",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "Lm54QUV4Dt4"
+}

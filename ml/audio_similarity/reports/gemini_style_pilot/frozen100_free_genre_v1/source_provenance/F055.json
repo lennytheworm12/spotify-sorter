@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.9967461740016006,
+  "acquisition_ended_at": "2026-09-04T20:04:12.956572+00:00",
+  "acquisition_started_at": "2026-09-04T20:04:10.959826+00:00",
+  "acquisition_timestamp": "2026-09-04T20:04:10.959966+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2749015,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 159,
+  "provider_result": "SUCCESS",
+  "provider_title": "keshi - GET IT",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "d71e3d30dcc57e86832b4de192680a43bdb812e36ffc12e3b4f45f83d9f44af2",
+      "representation_identity": "c676789a5dcd715c1f1cb557d9510594ebdd2e9006800b86dd5042e86459314b",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "8eaa80f0c1cedb405a7eb482a59b709fa318797fe510f6eb8470fc6323343b02",
+          "25": "f32f9e501862c212a1ce14d76cfd51c456a9d3f7909a51d3eed7b700fea058d9",
+          "5": "0e4a4f8b99ca392812e899b12411ca4a8ecff5bf5e73355f72f84f32a8bfa32a"
+        },
+        "muq_mulan_large": {
+          "15": "f7de7e2d66678df72f75872f47e6fa23a5e9323534d981ea1e84ef46aba09cfd",
+          "25": "757cbbe325c1563257403b72a4452fc2bd98c403be1213fefab815d93c78eab1",
+          "5": "24c050effbe3ba5519c99fde07728ae4ef5bf6d5f3a6adff5812c003e1f768f7"
+        }
+      },
+      "source_audio_sha256": "857f23b0f9479ac789c1d39808594ef5f70b0879f72b568383618f781b439cc4"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "5OLgj5s21Ps"
+  },
+  "retained_relative_path": "4LaZ8RpIP6DIgN73bXQVlO/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 158.721,
+  "source_sha256": "348c02563c8602ca93e2aa46947f72c587c56e2bf8becf8c6a2a180edb916d55",
+  "source_url": "https://www.youtube.com/watch?v=5OLgj5s21Ps",
+  "spotify_artists": [
+    "keshi"
+  ],
+  "spotify_title": "GET IT",
+  "spotify_track_id": "4LaZ8RpIP6DIgN73bXQVlO",
+  "successful_query": "GET IT keshi",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "5OLgj5s21Ps"
+}

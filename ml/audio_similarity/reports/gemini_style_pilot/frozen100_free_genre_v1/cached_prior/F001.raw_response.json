@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 1.0,\n      \"observation\": \"Spoken/chanted vocal sample repeated over a bare, syncopated kick-and-percussion groove.\"\n    },\n    {\n      \"at_seconds\": 26.5,\n      \"observation\": \"Sub-bass pulse enters underneath continuous vocal fragments and ambient spatial textures.\"\n    },\n    {\n      \"at_seconds\": 254.0,\n      \"observation\": \"Minimalist hand percussion pattern slowly builds with subtle shaker accents and reverberant dub delay.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"electronic\",\n  \"primary_style\": \"minimal techno\",\n  \"secondary_families\": [\"ambient\"],\n  \"secondary_styles\": [\"dub techno\", \"microhouse\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"sample_based\", \"clean\"],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPPmBBcX68fK1TQpzEqQ43cJg4rLqdHuFERheqPqjX413TWpxXaC6wmY2oI8nrugFSyIBlUBYmaOv7nFjLpbqz/3iU4XyX3BnVvKwT1pgd8zBM42kWMyQsgNSnbr26G9w4"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 7024,
+    "candidatesTokenCount": 295,
+    "totalTokenCount": 7319,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 6575
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "SRiiaqLCFMywqtsP9Yv3uQ0"
+}

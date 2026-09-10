@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.3110609659925103,
+  "acquisition_ended_at": "2026-09-04T20:10:52.274317+00:00",
+  "acquisition_started_at": "2026-09-04T20:10:50.963256+00:00",
+  "acquisition_timestamp": "2026-09-04T20:10:50.963398+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 1736884,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 109,
+  "provider_result": "SUCCESS",
+  "provider_title": "DOWNPOUR (feat. Gliiico)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "9df5bb9a5ff55d0c744ec5579a06db117ec3551984bea4b0691596a88baa4128",
+      "representation_identity": "9db5ed73683e267c4c77b1332d7ce1fcbbc556ec48e3abd64c3feb6507dd8bb3",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "0a6a49e53cb6a2863950237b0bec8cb5c1c56e10e6e20daf22771380415abd9f",
+          "25": "2652aa3a69e26586e4793c19c68184c85a407b3d598ce916c2e9125e00347d6c",
+          "5": "4955fc1e8e1a8d8f39251b1674d82a6fc42c9be724ae59691455bb3f7448cd6d"
+        },
+        "muq_mulan_large": {
+          "15": "00690d02e0f5652223e8f4b9d60a02885691cc7695b054e2da53688ec1852348",
+          "25": "bda86891762a7e5533a5c2862e95fdb6b1ed38e31e9fefa92ce23405a1f92856",
+          "5": "15f1c4b63ca739210fabbecf2fa513ab5a3e376cc6de33ce3c36f4877fe359b6"
+        }
+      },
+      "source_audio_sha256": "f5bab4cb6cd1ab5b480e9dd048f6ecfcca40c5197830eaf6c5c324289ce18d3c"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "-EN63cmt6Gw"
+  },
+  "retained_relative_path": "1IIcy1TpuiAT6S206OjYvC/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 109.141,
+  "source_sha256": "b94233fdcabb6188bdd47502c897fe073fb096f511665de61ee9909a5673e64e",
+  "source_url": "https://www.youtube.com/watch?v=-EN63cmt6Gw",
+  "spotify_artists": [
+    "CHAEYOUNG",
+    "Gliiico"
+  ],
+  "spotify_title": "DOWNPOUR (feat. Gliiico)",
+  "spotify_track_id": "1IIcy1TpuiAT6S206OjYvC",
+  "successful_query": "DOWNPOUR (feat. Gliiico) CHAEYOUNG Gliiico",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "-EN63cmt6Gw"
+}

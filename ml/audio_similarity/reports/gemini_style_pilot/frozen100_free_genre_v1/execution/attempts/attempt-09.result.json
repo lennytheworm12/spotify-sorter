@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00553050",
+  "attempt": 9,
+  "cache_key": "e2fb4977df486893631bc6350a655564f6cbe750a94abc213dd7837b49221f38",
+  "evidence_hashes": {
+    "execution/attempts/attempt-09.request.json": "aca6dfbee9d744723de84da9804c84e974f4a0cc1de2548f42c0c61f9b5829ff",
+    "execution/attempts/attempt-09.reservation.json": "5f4de5f522569c7f216375b110cd12702345e65b79ba9ac74e7d64413c50b64d",
+    "execution/attempts/attempt-09.settlement.json": "eaed1adc3d62b119f87cf2d9a1bad7ff345924730e741bf2ec10f99412c46125",
+    "execution/transport/call-035.response.bin": "5e78da98c85e0858808a1ca96c4100a7312b52aa553b5da4b53774f0e6d93dc2",
+    "execution/transport/call-036.response.bin": "384606eebea2abbd90035e0f8772dabb2d8b460ab07340c5c506cce7efe89baa",
+    "execution/transport/call-036.response.json": "68af57112c18b499756518720d9052d945e4dc061b9baa23bc751e98a34444fd",
+    "execution/transport/upload-N025.json": "930051fb57960aff14e62e29e1856bcd9c3b899c627d16bc0950195cc4171811"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N025",
+  "pilot_id": "F010",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.0,
+        "observation": "Female lead vocal enters with gentle R&B phrasing over a smooth synth chord progression and crisp mid-tempo beat."
+      },
+      {
+        "at_seconds": 60.5,
+        "observation": "Chorus section arrives with layered backing harmonies, a prominent bassline, and catchy melodic hooks."
+      },
+      {
+        "at_seconds": 160.0,
+        "observation": "Instrumental drop section highlighting synth keys, muted percussion, and rhythmic finger snaps."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B and Soul",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Pop",
+      "Hip Hop"
+    ],
+    "secondary_styles": [
+      "K-Pop",
+      "Pop Soul"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-036.response.bin",
+  "response_id": "iSCiauz-OpyiqtsP_PmDkAI",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 15.0,\n      \"observation\": \"Female lead vocal enters with gentle R&B phrasing over a smooth synth chord progression and crisp mid-tempo beat.\"\n    },\n    {\n      \"at_seconds\": 60.5,\n      \"observation\": \"Chorus section arrives with layered backing harmonies, a prominent bassline, and catchy melodic hooks.\"\n    },\n    {\n      \"at_seconds\": 160.0,\n      \"observation\": \"Instrumental drop section highlighting synth keys, muted percussion, and rhythmic finger snaps.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B and Soul\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\n    \"Pop\",\n    \"Hip Hop\"\n  ],\n  \"secondary_styles\": [\n    \"K-Pop\",\n    \"Pop Soul\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"clean\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 330,
+    "promptTokenCount": 5724,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5275
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 6054
+  }
+}

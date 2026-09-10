@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.4420893309870735,
+  "acquisition_ended_at": "2026-09-04T20:31:32.415134+00:00",
+  "acquisition_started_at": "2026-09-04T20:31:30.973045+00:00",
+  "acquisition_timestamp": "2026-09-04T20:31:30.973141+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2124176,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 130,
+  "provider_result": "SUCCESS",
+  "provider_title": "david hugo - Die Right Here (Official Visualizer)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "4b1d4f6812a6ae46b7839e534156820e88d51d561a8a1d305d567ecd1c2b71d3",
+      "representation_identity": "d6fdf0dbb59f14214ba066087b9916fd028dad120535d314b2442bcbf9d9cf1b",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "4c799ba3ce490e6dbfef2113717e6a188a171e706beb82f9fe972ae3cb875fd8",
+          "25": "8e14db47af593da812662a5e6244ffc0c4955e7a4c412352176decb6b5e928b9",
+          "5": "3a906214492f48997f98c4435e41f5918b19781e1b49f76ea5930496e55b537f"
+        },
+        "muq_mulan_large": {
+          "15": "eb442498e0b9bc7b0a2cb1a1650573bb39c5dd71ac47229fd824b14a0951ae06",
+          "25": "0e52d73a8fc15bed29344d554221fa7ebe1294a3fe39ca6faead65541227445a",
+          "5": "2171f2471e87a0acfce7633d21bd56460084cf7bb962d98f8edcb801ac5908a7"
+        }
+      },
+      "source_audio_sha256": "f30238dbfbfa0879155f6a0cfa2ef07420f90ff69ef53fefbee48db8356c6827"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "sVPST7mU6ec"
+  },
+  "retained_relative_path": "7fXYFuCTmNrYRGwEUUf5iz/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 129.501,
+  "source_sha256": "aa714760a4b38a8ac1e131fff454a9dfc2295355817b4ea05e727831d313e389",
+  "source_url": "https://www.youtube.com/watch?v=sVPST7mU6ec",
+  "spotify_artists": [
+    "david hugo"
+  ],
+  "spotify_title": "Die Right Here",
+  "spotify_track_id": "7fXYFuCTmNrYRGwEUUf5iz",
+  "successful_query": "Die Right Here david hugo",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "sVPST7mU6ec"
+}

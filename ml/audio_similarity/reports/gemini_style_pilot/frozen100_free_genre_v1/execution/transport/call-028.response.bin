@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 9.2,\n      \"observation\": \"Female lead vocal enters over a smooth contemporary R&B beat with bright keyboard chords and trap-influenced hi-hats.\"\n    },\n    {\n      \"at_seconds\": 47.4,\n      \"observation\": \"Catchy pop/R&B hook section introduced with layered vocal harmonies and steady mid-tempo bounce.\"\n    },\n    {\n      \"at_seconds\": 64.8,\n      \"observation\": \"Male rap verse enters, interacting stylistically with the ongoing melodic contemporary R&B production.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"r&b\",\n  \"primary_style\": \"contemporary r&b\",\n  \"secondary_families\": [\"pop\", \"hip hop\"],\n  \"secondary_styles\": [\"k-pop\", \"trap soul\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"mixed_rap_and_singing\"\n}",
+            "thoughtSignature": "EmcKZQERTTIP8kUxGYLGBAbaFyKnDQu+jEsclkQzqPEHaJR2JsV+TXKbmg/EGl4IG3FArv5gBOnWUlgH7uEVsoPEhF/HAoW9TGiueV7+DxTay3sxd8or1zE1jleXLYiWmY+A+BwWwk+g"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5004,
+    "candidatesTokenCount": 313,
+    "totalTokenCount": 5317,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4555
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "fSCiapiXDtqzqtsPn-uWgQ4"
+}

@@ -1,0 +1,35 @@
+{
+  "additional_source_and_budget": {
+    "duration_seconds": 2.16,
+    "note": "Inventory test added; budget test rechecked.",
+    "passed": 2
+  },
+  "automated_tests_use_real_gemini": false,
+  "browser_note": "No browser/UI source changes in this task; supplied existing graph launch command from docs/song-space/README.md.",
+  "focused": {
+    "command": ".venv/bin/python -m pytest -q tests/test_gemini_frozen100.py tests/test_gemini_free_genre.py tests/test_gemini_style_runner.py",
+    "duration_seconds": 75.59,
+    "note": "Before adding the additional source-inventory test.",
+    "passed": 50
+  },
+  "full_non_heavy": {
+    "command": ".venv/bin/python -m pytest -q",
+    "deselected": 12,
+    "duration_seconds": 226.68,
+    "exit_code": 0,
+    "log": "non_heavy_pytest.txt",
+    "passed": 1390,
+    "warnings": 11
+  },
+  "implementation_commit": "d3e0ce6",
+  "initial_full_run": {
+    "reason": "Sandbox blocked the existing localhost HTTP fixture. Reran the unchanged suite with localhost access; no test weakening.",
+    "status": "SANDBOX_INTERRUPTED"
+  },
+  "real_browser_test_performed": false,
+  "test_source_hashes": {
+    "tests/test_gemini_free_genre.py": "bcc0e1df95f31397459afaf7c2f377747aad97a14717cb5a3121f95281e2cd0e",
+    "tests/test_gemini_frozen100.py": "bacc804614fa66ca32bc0810f2b3585175d702f530a981f1369cb77cba872bb1",
+    "tests/test_gemini_style_runner.py": "74075678d9fe6533e8fc66f5107001705446805f268e8b38ecfe3037f2e9a2cc"
+  }
+}

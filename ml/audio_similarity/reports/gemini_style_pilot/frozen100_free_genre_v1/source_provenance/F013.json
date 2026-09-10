@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.5657955610076897,
+  "acquisition_ended_at": "2026-09-04T20:06:32.526838+00:00",
+  "acquisition_started_at": "2026-09-04T20:06:30.961042+00:00",
+  "acquisition_timestamp": "2026-09-04T20:06:30.961139+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2742064,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 180,
+  "provider_result": "SUCCESS",
+  "provider_title": "Kiri T - Temporary [Official Music Video]",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "297576324a88a1d87983611ac4e3da07616da89b4279557fc14aa5f600ce40d2",
+      "representation_identity": "766ce1b383f3284337fe06b1935f19a8d941f315c3df9e5ed2f02e678773560a",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "275e3e1563e55589066d4505fd65ae6907f662615eb7773fb541a7ea4edaae9b",
+          "25": "719018ba87d3e88ec1806aea15f33a47a54bc72e818560053bdb62b309cbe56c",
+          "5": "1798cdec6ca5243f0d1f204f3b12ac818e871d92d7add96c5e4a03b49fdc80a5"
+        },
+        "muq_mulan_large": {
+          "15": "6b1ffb3ada2ebad1ed7a8cfef8b689fde97b528ca6ad8bf81e3bc78ace124c3f",
+          "25": "55ef06bccef0221074ec75e49c6406f37b9927d910436a122aa65d479d3cb486",
+          "5": "1403db704ac18c16a31d7394531f9849d92b10eb68946f75fdfd7a0477f923be"
+        }
+      },
+      "source_audio_sha256": "54ad6186ad8f8614c0f452c00bcba81c848a8bebbadf9fc90f45dd8d53069788"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "usJeKVzoDeI"
+  },
+  "retained_relative_path": "1AHtqWqufKsgBmdNEi1WVO/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 180.021,
+  "source_sha256": "a524f43a0b76860051fd6da9c72568ea478fd540839b9b8076abf3e6f9e97b17",
+  "source_url": "https://www.youtube.com/watch?v=usJeKVzoDeI",
+  "spotify_artists": [
+    "Kiri T"
+  ],
+  "spotify_title": "Temporary",
+  "spotify_track_id": "1AHtqWqufKsgBmdNEi1WVO",
+  "successful_query": "Temporary Kiri T",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "usJeKVzoDeI"
+}

@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00552600",
+  "attempt": 26,
+  "cache_key": "355ef1ef6bf5118bff0b5421d20904c06d1b04fab5aedb17af73bf73fe04da48",
+  "evidence_hashes": {
+    "execution/attempts/attempt-26.request.json": "f5b8741bacbb1a0f6a21b1af9758649f08f7a1a54c55d77a9ccff8df17d557dd",
+    "execution/attempts/attempt-26.reservation.json": "7386f5b008d4af146611e9329e0ee80e1bc6ea764bdc2dc82d4b9640c5fc24bd",
+    "execution/attempts/attempt-26.settlement.json": "813bc95b0b85cfa86025f1dec08b9e935ab16fd4989d190b4dae00abe0e835b0",
+    "execution/transport/call-103.response.bin": "e25d7f45caae94c135eabda2b15ef5d906a0d31ac68db8309d1415430418307a",
+    "execution/transport/call-104.response.bin": "ca63a3efd094621f3671cadd211fbb7e4a92ab70cbe31117d92084baf46ff9c6",
+    "execution/transport/call-104.response.json": "0a65dd68df70e0f2489a345e0a6587a1dce7e4cf5658fddbe19bd2186083c1c6",
+    "execution/transport/upload-N042.json": "9866c1baa18bb238c0b3626c226768d8b3a4dc6af96d5ca79a5f5ce9c1421b66"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N042",
+  "pilot_id": "F030",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 0.0,
+        "observation": "Intimate acoustic guitar fingerpicking and tapping rhythmic elements set a minimal, gentle groove."
+      },
+      {
+        "at_seconds": 47.5,
+        "observation": "Chorus section with layered vocal harmonies and subtle low-end bass support alongside ongoing acoustic guitar."
+      },
+      {
+        "at_seconds": 107.0,
+        "observation": "Catchy, melodic 'na na na' vocal hook layered with warm backing vocals and acoustic instrumentation."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop Ballad",
+    "secondary_families": [
+      "Folk & Acoustic"
+    ],
+    "secondary_styles": [
+      "Acoustic Pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-104.response.bin",
+  "response_id": "_CCiatTgE_fQz7IPw8fhyQ8",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 0.0, \"observation\": \"Intimate acoustic guitar fingerpicking and tapping rhythmic elements set a minimal, gentle groove.\"},\n    {\"at_seconds\": 47.5, \"observation\": \"Chorus section with layered vocal harmonies and subtle low-end bass support alongside ongoing acoustic guitar.\"},\n    {\"at_seconds\": 107.0, \"observation\": \"Catchy, melodic 'na na na' vocal hook layered with warm backing vocals and acoustic instrumentation.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop Ballad\",\n  \"secondary_families\": [\"Folk & Acoustic\"],\n  \"secondary_styles\": [\"Acoustic Pop\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"acoustic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 271,
+    "promptTokenCount": 6013,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5564
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 6284
+  }
+}

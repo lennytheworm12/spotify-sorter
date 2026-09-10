@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00552525",
+  "attempt": 48,
+  "cache_key": "d31bf6b676113475f270c7537c4d3e1bb88e8e78f487b861cc08c30e38f4414c",
+  "evidence_hashes": {
+    "execution/attempts/attempt-48.request.json": "cf71618371b8b36720be3fb25569bb60f57882a77ae91eea305d075b4c7be56d",
+    "execution/attempts/attempt-48.reservation.json": "893252118398c905f2b720da3be207afa3fcd9f8df200f0a434de0c2c8c43631",
+    "execution/attempts/attempt-48.settlement.json": "ed56f429561b2c1698dde506f693aad30069b3aae107827c5299455d870e22c5",
+    "execution/transport/call-191.response.bin": "6dd4c457400d60d961243cc29b1c60c82dc84f0925856a1b81337eddf0e33a2c",
+    "execution/transport/call-192.response.bin": "1d52826f16102f528990704e4b8d733420d4f7348b5a22c4806cd70c86173823",
+    "execution/transport/call-192.response.json": "92c19c379b825cf51df8b545e3dc0d0bd6173f0d25d722794f587e4ebcdeca72",
+    "execution/transport/upload-N064.json": "c63b2b6b8a2864869643ca10b8fc3ef0e6b6b5e6c462c052d6ef21680ca671b4"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N064",
+  "pilot_id": "F053",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 22.0,
+        "observation": "Female lead vocal enters over sparse electronic keyboard accompaniment."
+      },
+      {
+        "at_seconds": 66.5,
+        "observation": "A low-tempo synth-pop beat enters with kick drum, subtle percussion, and airy synth pads."
+      },
+      {
+        "at_seconds": 126.0,
+        "observation": "Chorus section with layered, airy female vocal harmonies and pulsing synth bassline."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Dream Pop",
+    "secondary_families": [
+      "Electronic",
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Electropop",
+      "Contemporary R&B"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "hazy",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-192.response.bin",
+  "response_id": "liGiaq-tHOPsz7IPq8je2Q8",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 22.0,\n      \"observation\": \"Female lead vocal enters over sparse electronic keyboard accompaniment.\"\n    },\n    {\n      \"at_seconds\": 66.5,\n      \"observation\": \"A low-tempo synth-pop beat enters with kick drum, subtle percussion, and airy synth pads.\"\n    },\n    {\n      \"at_seconds\": 126.0,\n      \"observation\": \"Chorus section with layered, airy female vocal harmonies and pulsing synth bassline.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Dream Pop\",\n  \"secondary_families\": [\n    \"Electronic\",\n    \"R&B\"\n  ],\n  \"secondary_styles\": [\n    \"Electropop\",\n    \"Contemporary R&B\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"hazy\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 318,
+    "promptTokenCount": 5777,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5328
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 6095
+  }
+}

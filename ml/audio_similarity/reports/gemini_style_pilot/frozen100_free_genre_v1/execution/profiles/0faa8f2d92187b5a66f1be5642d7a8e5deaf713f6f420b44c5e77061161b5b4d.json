@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00440925",
+  "attempt": 57,
+  "cache_key": "0faa8f2d92187b5a66f1be5642d7a8e5deaf713f6f420b44c5e77061161b5b4d",
+  "evidence_hashes": {
+    "execution/attempts/attempt-57.request.json": "f61adc77223bb4e82d5b27be51e9a007a7c0bd80018aeafb3cfc759e4272ae10",
+    "execution/attempts/attempt-57.reservation.json": "32f93c5a008dae10e34f1c0cbac2be8baf63dcc694f0051b0e6305895b859099",
+    "execution/attempts/attempt-57.settlement.json": "9f315fbd87d4088aec9bc14bc0b23ed0199f5b472fce4a664e18e7f5e929fcf1",
+    "execution/transport/call-227.response.bin": "da34588ac275bbc62be543559a89725f2751803f27877aa4aec66526b1e0d6ae",
+    "execution/transport/call-228.response.bin": "d5bb405e7bce8eb51e224e4b0263bff03018ca8a02361180cbd8f50d69c6944f",
+    "execution/transport/call-228.response.json": "16f05d37e766dc64ba61cb4d0573f3a50ea9a5ea2703b9b2621464b9bc814d24",
+    "execution/transport/upload-N073.json": "e6577868f92afa9d32638e0bb6010a3c0d0d0795318dffd96bde6a84b333291d"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N073",
+  "pilot_id": "F064",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 18.0,
+        "observation": "A spoken vocal phrase 'I like you' is heard right before a chilled downtempo hip-hop beat drops."
+      },
+      {
+        "at_seconds": 23.5,
+        "observation": "A relaxed instrumental lo-fi hip hop groove plays with electric piano chords and light boom-bap drums."
+      },
+      {
+        "at_seconds": 147.0,
+        "observation": "Subtle, filtered instrumental layering with vinyl crackle and muted percussion continues the chillout groove."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Lo-Fi Hip Hop",
+    "secondary_families": [
+      "Electronic",
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Chillout",
+      "Downtempo"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "sample_based",
+      "clean",
+      "electronic"
+    ],
+    "vocal_role": "spoken_only"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-228.response.bin",
+  "response_id": "0SGiasz6HM-n1MkPzbKosA0",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 18.0, \"observation\": \"A spoken vocal phrase 'I like you' is heard right before a chilled downtempo hip-hop beat drops.\"},\n    {\"at_seconds\": 23.5, \"observation\": \"A relaxed instrumental lo-fi hip hop groove plays with electric piano chords and light boom-bap drums.\"},\n    {\"at_seconds\": 147.0, \"observation\": \"Subtle, filtered instrumental layering with vinyl crackle and muted percussion continues the chillout groove.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip Hop\",\n  \"primary_style\": \"Lo-Fi Hip Hop\",\n  \"secondary_families\": [\"Electronic\", \"Pop\"],\n  \"secondary_styles\": [\"Chillout\", \"Downtempo\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"sample_based\", \"clean\", \"electronic\"],\n  \"vocal_role\": \"spoken_only\"\n}",
+  "usage": {
+    "candidatesTokenCount": 289,
+    "promptTokenCount": 4434,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3985
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 4723
+  }
+}

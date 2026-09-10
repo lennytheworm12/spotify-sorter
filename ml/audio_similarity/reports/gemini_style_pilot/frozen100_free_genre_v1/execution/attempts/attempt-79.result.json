@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00525825",
+  "attempt": 79,
+  "cache_key": "e4610d7a7cbff61a3a1bbf5a3f498d82be12811edda06eadd8602de4b0731a24",
+  "evidence_hashes": {
+    "execution/attempts/attempt-79.request.json": "6793d9560600232666704c9f9ba812723124c14f889d9f2f6812018d34d9895c",
+    "execution/attempts/attempt-79.reservation.json": "66bcff6c4afeb77e3aa0e39276000ad90fa4790aaa83506c218fc7a4342f4866",
+    "execution/attempts/attempt-79.settlement.json": "bda3a93bd85ae1c0ff03068c6cc958459ef48bb4792605ac50db34cd946f9419",
+    "execution/transport/call-315.response.bin": "be552558a6a43cfbe82ef1b6c6ca7d3757131c043024da7e114cbbb92dc0ce0d",
+    "execution/transport/call-316.response.bin": "e5c93dd7aa81824ead51631ec121cebfdf6edae08b83de5c90df82b806d759ae",
+    "execution/transport/call-316.response.json": "124017f74731b1695829ef805acd8187980742eecd29ab5f077ffff116736684",
+    "execution/transport/upload-N095.json": "d4788b13527e01a907485ae0e1cd047ab266e4310d1f3ed441b5d7f175dee94a"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N095",
+  "pilot_id": "F090",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.0,
+        "observation": "A cappella choral vocal entrance singing in English over atmospheric reverb before beat enters."
+      },
+      {
+        "at_seconds": 25.5,
+        "observation": "Downtempo R&B trap beat drops with deep bass and Korean/English sung-rap hybrid vocals."
+      },
+      {
+        "at_seconds": 71.0,
+        "observation": "Full chorus returns with layered vocal harmonies over a midtempo contemporary pop beat."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "R&B",
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Contemporary R&B",
+      "Trap"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-316.response.bin",
+  "response_id": "ZyKiaofVEe34qtsPlJfA4Qw",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 15.0,\n      \"observation\": \"A cappella choral vocal entrance singing in English over atmospheric reverb before beat enters.\"\n    },\n    {\n      \"at_seconds\": 25.5,\n      \"observation\": \"Downtempo R&B trap beat drops with deep bass and Korean/English sung-rap hybrid vocals.\"\n    },\n    {\n      \"at_seconds\": 71.0,\n      \"observation\": \"Full chorus returns with layered vocal harmonies over a midtempo contemporary pop beat.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\n    \"R&B\",\n    \"Electronic\"\n  ],\n  \"secondary_styles\": [\n    \"Contemporary R&B\",\n    \"Trap\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"layered\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 322,
+    "promptTokenCount": 5401,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4952
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5723
+  }
+}

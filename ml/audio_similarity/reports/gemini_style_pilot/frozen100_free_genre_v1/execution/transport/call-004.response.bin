@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 1.4,\n      \"observation\": \"Solo electric piano plays a repetitive, melancholic chord progression with vintage warmth.\"\n    },\n    {\n      \"at_seconds\": 23.8,\n      \"observation\": \"A downtempo, dusty hip-hop drum beat drops with soft kick, snare, and vinyl crackle.\"\n    },\n    {\n      \"at_seconds\": 150.0,\n      \"observation\": \"Subtle, ambient vocal chops blend into the background with continued low-key lo-fi beat.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"electronic\",\n  \"primary_style\": \"lo-fi beats\",\n  \"secondary_families\": [\n    \"hip-hop\",\n    \"ambient\"\n  ],\n  \"secondary_styles\": [\n    \"chillhop\",\n    \"downtempo\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"sample_based\",\n    \"electronic\",\n    \"hazy\"\n  ],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPKWHcxDZHr9CrMLdt/r/B4PtgzHpDqQp8QUitBLn5K8+RkqpttS/hZxUOtZ9K42b/8UddGpbBoBXmUfwbYBEYiSdQ0sAhUxMyVe2Dmh/AzlrDlaBSgwl3K6cLb3gn4qif"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5184,
+    "candidatesTokenCount": 334,
+    "totalTokenCount": 5518,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4735
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "MyCiarSsNLa1_uMP_MSP-AI"
+}

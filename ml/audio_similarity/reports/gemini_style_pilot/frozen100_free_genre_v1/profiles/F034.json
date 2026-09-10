@@ -1,0 +1,54 @@
+{
+  "collection_status": "REUSED_EXACT_PRIOR_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": {
+    "cache_key": "b2bfe95accc40755b4a613261b549fea6ffa9aa8efaaa3c61437c06567a09547",
+    "result_sha256": "dbc82cb415f66e786f4960d343913b23ce8188c29afe721d94e5914a29000ef4",
+    "source_attempt": 13,
+    "source_manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+    "source_pilot_id": "C03",
+    "source_run": ".research_audio/gemini_style_pilot/free-genre-point-v1"
+  },
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 18.2,
+        "observation": "Airy, breathy female vocal enters over a sparse kick pulse and ambient synth pads."
+      },
+      {
+        "at_seconds": 105.0,
+        "observation": "Vocals expand with lush harmonies, swelling pads, and subtle electronic percussion."
+      },
+      {
+        "at_seconds": 30.5,
+        "observation": "Syncopated sub bass and layered vocal ad-libs introduce a prominent trip hop / chillout groove."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Electronic",
+    "primary_style": "Trip Hop",
+    "secondary_families": [
+      "Pop",
+      "Downtempo"
+    ],
+    "secondary_styles": [
+      "Downtempo",
+      "Dream Pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "hazy",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "VRiiaqPxHfGfz7IP7sG06Qo",
+  "spotify_track_id": "2js0td9w2MzNUVPlMKYOEs"
+}

@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"dense\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 15.0,\n      \"observation\": \"Mellow verse with trap hi-hats, sub bass, and rhythmic female Korean/English pop vocals.\"\n    },\n    {\n      \"at_seconds\": 53.0,\n      \"observation\": \"Energetic chorus drop featuring heavy bass, upbeat synth rhythms, and layered female vocals.\"\n    },\n    {\n      \"at_seconds\": 24.0,\n      \"observation\": \"Melodic pre-chorus building tension over atmospheric pads and subtle percussion.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\n    \"Electronic\",\n    \"Hip-Hop\"\n  ],\n  \"secondary_styles\": [\n    \"Dance-Pop\",\n    \"Contemporary R&B\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"clean\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPhuQ0TOADXMP/O06hjF3nXMSljKdIJxS2jh9GmGEDdhfL/Y/APGsS0w6ZYIgeEUYtSOVn6G0hV85fVlw+tXnE4qCLo8RvhcAQqibFvj+3Z5dQT/HZVa+A1sAITnkZtflk"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 6180,
+    "candidatesTokenCount": 325,
+    "totalTokenCount": 6505,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5731
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "OiGiapHtOPuAz7IPpc-t0QM"
+}

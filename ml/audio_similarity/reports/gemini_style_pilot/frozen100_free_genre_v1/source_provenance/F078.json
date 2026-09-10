@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.5958608119981363,
+  "acquisition_ended_at": "2026-09-04T20:28:52.567507+00:00",
+  "acquisition_started_at": "2026-09-04T20:28:50.971646+00:00",
+  "acquisition_timestamp": "2026-09-04T20:28:50.971748+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3731568,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 213,
+  "provider_result": "SUCCESS",
+  "provider_title": "yung kai - blue (with MINNIE) [Official Audio]",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "7c12a00f00bbf4280f0f648055e50164d1dcc3c8e455b87e260cef0dc7d7f01f",
+      "representation_identity": "1cfcaddcb64f7a03e2dc0b3c7756f2e1cdb947afb8565bd4d5c49cc4c41e8b07",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "9a73d13980c776941b4b6f5d80abfb038df9e33c42c8c49d90fa3ddc159fefe4",
+          "25": "e1d37e17718a812b6fdca8748932da62ba959adce05f5278da5dd48aec7220df",
+          "5": "4f1485fbe9337a042369368647d06b515cf2020bc75739c0357da70c3433f4a8"
+        },
+        "muq_mulan_large": {
+          "15": "ee4d06356df446dfab2f86606bd048411d601a0fa25150f7a63ab50c25b47df8",
+          "25": "9081fe6762e227ce4e282bece5793766f257b6b43504cdd5fc99eb873bbe5c2f",
+          "5": "1190e5e687954aca1348bf7df77dcbfb91711679a55ec2efc0bf4bb2924cd838"
+        }
+      },
+      "source_audio_sha256": "795f573187fda95613d1f7eeef6d9cbae9d87d2be8050c412f02f56dc5ae6cfa"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "jDf07wV5gMU"
+  },
+  "retained_relative_path": "6HIngEWX8ycnLjuUfSZyah/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 213.341,
+  "source_sha256": "06c55790570916c463338b3cb0cbe9be9fdda5a3ceaec909f659dba45c5612be",
+  "source_url": "https://www.youtube.com/watch?v=jDf07wV5gMU",
+  "spotify_artists": [
+    "yung kai",
+    "MINNIE"
+  ],
+  "spotify_title": "blue (with MINNIE)",
+  "spotify_track_id": "6HIngEWX8ycnLjuUfSZyah",
+  "successful_query": "blue (with MINNIE) yung kai MINNIE",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "jDf07wV5gMU"
+}

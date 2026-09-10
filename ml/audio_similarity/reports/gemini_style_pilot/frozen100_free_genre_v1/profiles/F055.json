@@ -1,0 +1,54 @@
+{
+  "collection_status": "REUSED_EXACT_PRIOR_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": {
+    "cache_key": "6cc48d1b15b56075b1982593250a3bcb50f74d39286e7e0c7bdfebe7b307d4f8",
+    "result_sha256": "9a28f64b27bfb4ccda57741cdc9eb8879a72f2353bf9be29599195e330cb466e",
+    "source_attempt": 6,
+    "source_manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+    "source_pilot_id": "A06",
+    "source_run": ".research_audio/gemini_style_pilot/free-genre-point-v1"
+  },
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "balanced",
+    "audio_evidence": [
+      {
+        "at_seconds": 18.2,
+        "observation": "Trap beat enters with prominent sub-bass 808s, rapid hi-hat rolls, and rhythmic rap vocals."
+      },
+      {
+        "at_seconds": 64.5,
+        "observation": "Melodic, autotuned singing hook over the trap drum groove and ambient synth pads."
+      },
+      {
+        "at_seconds": 149.0,
+        "observation": "Atmospheric breakdown with ethereal female vocals over a stripped synth bed."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Trap",
+    "secondary_families": [
+      "Pop",
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Pop Rap",
+      "Melodic Rap"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "clean"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "response_id": "LBiiarnDF5DQz7IP_u-h2A4",
+  "spotify_track_id": "4LaZ8RpIP6DIgN73bXQVlO"
+}

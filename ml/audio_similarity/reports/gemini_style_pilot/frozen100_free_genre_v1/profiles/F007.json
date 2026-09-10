@@ -1,0 +1,46 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "dense",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.0,
+        "observation": "High-energy synth-pop drop kicks in with driving four-on-the-floor electro bass and layered female vocals."
+      },
+      {
+        "at_seconds": 23.5,
+        "observation": "Bright female solo lead vocal begins the verse over a rhythmic electronic beat and synthesized keys."
+      },
+      {
+        "at_seconds": 68.0,
+        "observation": "Explosive chorus section features brassy synth riffs, sweeping risers, and anthemic female group vocals."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Electropop",
+      "Dance-Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "dCCiaoGGFbSuqtsP4Zrn8Aw",
+  "spotify_track_id": "0CnpSTdL9l5vQM4YnzXtyo"
+}

@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00526125",
+  "attempt": 77,
+  "cache_key": "ec0cf3d63ee85d926554df2224a58fa997d22a2e4da4010e48d4713c5f2f3bc8",
+  "evidence_hashes": {
+    "execution/attempts/attempt-77.request.json": "54b708d6562aacc663cc5c2e7cb2932a449591460bd663e30622c065dcef9ed1",
+    "execution/attempts/attempt-77.reservation.json": "72b2df1bfb4dcbad33d0b5a6e1aa3c258878790a56fc80eb1c255b3fe27157f7",
+    "execution/attempts/attempt-77.settlement.json": "b2cba9e419bcb7057838ecacacb787d02df5ea589667568e574b68e9c06cb544",
+    "execution/transport/call-307.response.bin": "dfcae360865718de4725de0f27e589a7041888ee11c73497ec7a322257f72d1f",
+    "execution/transport/call-308.response.bin": "59fadbf6dd2fb54cf230c6094155eaae8b3e0505f11816563b7a69fcf807cb72",
+    "execution/transport/call-308.response.json": "09e15846522980aba3600ef35d8ef96267e85539a10efbbe8e03c1571bd7e6e2",
+    "execution/transport/upload-N093.json": "bacc3215f443900fdafc00e2b8e7c186eff998bc60dfa4f4327468608498644f"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N093",
+  "pilot_id": "F087",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 18.5,
+        "observation": "Plucked harp-like ostinato pattern enters over deep sub-bass and minimal ambient sound design."
+      },
+      {
+        "at_seconds": 65.0,
+        "observation": "Ethereal, wordless vocal vocalises and soft choral pads fade in, providing atmospheric texture."
+      },
+      {
+        "at_seconds": 158.0,
+        "observation": "Sparse, muffled four-on-the-floor kick pattern and faint click percussion subtle emerge beneath the ambient pads."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "electronic",
+    "primary_style": "ambient",
+    "secondary_families": [
+      "dance_electronic"
+    ],
+    "secondary_styles": [
+      "downtempo",
+      "chillout"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "hazy",
+      "layered"
+    ],
+    "vocal_role": "vocal_samples_only"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-308.response.bin",
+  "response_id": "WiKiavCCGtqsz7IPtd7EsQ8",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 18.5, \"observation\": \"Plucked harp-like ostinato pattern enters over deep sub-bass and minimal ambient sound design.\"},\n    {\"at_seconds\": 65.0, \"observation\": \"Ethereal, wordless vocal vocalises and soft choral pads fade in, providing atmospheric texture.\"},\n    {\"at_seconds\": 158.0, \"observation\": \"Sparse, muffled four-on-the-floor kick pattern and faint click percussion subtle emerge beneath the ambient pads.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"electronic\",\n  \"primary_style\": \"ambient\",\n  \"secondary_families\": [\"dance_electronic\"],\n  \"secondary_styles\": [\"downtempo\", \"chillout\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"hazy\", \"layered\"],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+  "usage": {
+    "candidatesTokenCount": 284,
+    "promptTokenCount": 5595,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5146
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5879
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 15.0,\n      \"observation\": \"Main groove enters with trap beat, 808 bass, acoustic guitar arpeggios, and melodic R&B vocals.\"\n    },\n    {\n      \"at_seconds\": 113.0,\n      \"observation\": \"Vocalist sings verse melodies over a minimalist guitar and trap rhythm section.\"\n    },\n    {\n      \"at_seconds\": 202.0,\n      \"observation\": \"A guest vocalist delivers an auto-tuned melodic rap verse over the guitar trap groove.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip-Hop\",\n  \"primary_style\": \"Trap R&B\",\n  \"secondary_families\": [\n    \"R&B\",\n    \"Pop\"\n  ],\n  \"secondary_styles\": [\n    \"Melodic Trap\",\n    \"Contemporary R&B\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"clean\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"mixed_rap_and_singing\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPvzSle4cbndJYLe82XZS4ayYsU5/eQ+YvkcBX8Zi+xU+iJPsBtwLvshZXT93GypJ3n2EfkzilXrBFefG+ScgcsbJDO87gyMkoi9dOtGnp9zXGO8e161HU7XnQkqn7C84K"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5711,
+    "candidatesTokenCount": 339,
+    "totalTokenCount": 6050,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5262
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "JSGiatu4B42hqtsPvaKC8Aw"
+}

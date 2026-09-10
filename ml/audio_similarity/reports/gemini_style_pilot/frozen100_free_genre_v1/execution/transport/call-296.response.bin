@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 12.8,\n      \"observation\": \"A downtempo R&B trap beat enters with 808 sub-bass and crisp snare underneath Korean pop lead vocals.\"\n    },\n    {\n      \"at_seconds\": 50.0,\n      \"observation\": \"Catchy, melodic chorus with layered vocal harmonies and rhythmic synth plucks.\"\n    },\n    {\n      \"at_seconds\": 115.3,\n      \"observation\": \"Rhythmic, half-sung rap-influenced verse delivered over the trap percussion.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\n    \"R&B\",\n    \"Hip Hop\"\n  ],\n  \"secondary_styles\": [\n    \"Contemporary R&B\",\n    \"Trap\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"clean\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPJj79VnGWq53m59cum+amLJ42GgCIAFObKnw8up+BCUNG6TtQSIIMJeHuHibZ0KVR9vuTCiu6eL84hlRbtnED2U7m4FpPgtG/vxHUL3TcC/zGbvjBvInTjJGuUnvTnb3e"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5287,
+    "candidatesTokenCount": 327,
+    "totalTokenCount": 5614,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4838
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "RCKiarqgMLCEz7IPv9TM2Qg"
+}

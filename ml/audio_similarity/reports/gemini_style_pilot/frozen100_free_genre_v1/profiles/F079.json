@@ -1,0 +1,46 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 22.5,
+        "observation": "A slow, laid-back hip-hop beat enters with relaxed acoustic guitar chords and subtle kick/snare pattern."
+      },
+      {
+        "at_seconds": 83.2,
+        "observation": "Melodic electric guitar leads interplay over the chill hop drum groove and soft bassline."
+      },
+      {
+        "at_seconds": 184.0,
+        "observation": "Percussion drops out, leaving gentle clean guitar arpeggios in a warm ambient space."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip-Hop",
+    "primary_style": "Lo-Fi Hip-Hop",
+    "secondary_families": [
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Chillout",
+      "Downtempo"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "acoustic",
+      "sample_based"
+    ],
+    "vocal_role": "instrumental"
+  },
+  "response_id": "KiKiaqL3BfuAz7IPpc-t0QM",
+  "spotify_track_id": "6JjD8b5nYnwJ3zxYZ16rKg"
+}

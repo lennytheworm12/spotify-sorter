@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.6680634549702518,
+  "acquisition_ended_at": "2026-09-04T20:33:52.642201+00:00",
+  "acquisition_started_at": "2026-09-04T20:33:50.974138+00:00",
+  "acquisition_timestamp": "2026-09-04T20:33:50.974235+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3770214,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 231,
+  "provider_result": "SUCCESS",
+  "provider_title": "IZ*ONE (아이즈원) 'Panorama' MV",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "bca48b7eb89190ac9867eb4c0ea9ab41eae2d13fdaf7618eae36a3c9cdd08ba3",
+      "representation_identity": "778787e1ccede151de1661a1c38d3b1a343fe163705c0e1bddac217bedcea9e9",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "e447854f69b7f56e87b86a39cd27cf6b0a8de88c4fe7f8af8c15d21233ee0952",
+          "25": "725e89d9af2e02d05efabadf4387b2faacf3b1b37f22fbfbf289b7532698bd99",
+          "5": "9b6243e7771a225edd71cef9bf8f3ef6af8e127f428116baa3a42af58584fa8e"
+        },
+        "muq_mulan_large": {
+          "15": "8197179ada316dc250b2b262d6f693b03fe8a975379206c3da0110c046b898c9",
+          "25": "9c933f5ca0d98928714e449f1d4c1819d6d75dd158440409bfba917983272283",
+          "5": "e0f8dab44778f0093bc735a534f568b01da6d92f1edaf46970e2bc688d60e4e4"
+        }
+      },
+      "source_audio_sha256": "0b76ab8bd0406040ca3654607fdac4edb8f889ee89209957c3092e8e19b4b7ea"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "G8GaQdW2wHc"
+  },
+  "retained_relative_path": "0CnpSTdL9l5vQM4YnzXtyo/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 231.181,
+  "source_sha256": "125ac6afb2dd81166028f609bdf7bb50701257f4655635475efa329ec61b9b3c",
+  "source_url": "https://www.youtube.com/watch?v=G8GaQdW2wHc",
+  "spotify_artists": [
+    "IZ*ONE"
+  ],
+  "spotify_title": "Panorama",
+  "spotify_track_id": "0CnpSTdL9l5vQM4YnzXtyo",
+  "successful_query": "Panorama IZ*ONE",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "G8GaQdW2wHc"
+}

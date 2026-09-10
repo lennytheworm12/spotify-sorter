@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 6.8,
+        "observation": "Intimate female lead vocals enter with minimal ambient synthesizer drones and a deep sub bass drop."
+      },
+      {
+        "at_seconds": 96.0,
+        "observation": "Subtle synthesized vocal ad-libs join with shimmering high-register pads and low drone."
+      },
+      {
+        "at_seconds": 157.0,
+        "observation": "Aggressive, glitchy industrial percussion and heavy distorted synth beats abruptly break into the sparse texture."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "electronic",
+    "primary_style": "ambient pop",
+    "secondary_families": [
+      "pop",
+      "experimental"
+    ],
+    "secondary_styles": [
+      "deconstructed club",
+      "art pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "hazy",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "vSCiapXbL8XVz7IPwdaruAg",
+  "spotify_track_id": "1VAtYkKvDenA1KypImlZIY"
+}

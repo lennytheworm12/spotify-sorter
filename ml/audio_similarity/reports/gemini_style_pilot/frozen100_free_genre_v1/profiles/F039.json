@@ -1,0 +1,46 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "balanced",
+    "audio_evidence": [
+      {
+        "at_seconds": 0.0,
+        "observation": "Polyrhythmic hand percussion and pitched vocal chant loop begin the track."
+      },
+      {
+        "at_seconds": 26.6,
+        "observation": "Transition into an energetic dance-pop beat with bright synths and layered vocal hooks."
+      },
+      {
+        "at_seconds": 126.8,
+        "observation": "Vocal refrain in Korean over four-on-the-floor kick, synth stabs, and upbeat groove."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "pop",
+    "primary_style": "k-pop",
+    "secondary_families": [
+      "electronic / dance"
+    ],
+    "secondary_styles": [
+      "dance-pop",
+      "afro-house"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "NCGiaqumGPfQz7IPw8fhyQ8",
+  "spotify_track_id": "37BvHZhn4399Zhh6EDa4km"
+}

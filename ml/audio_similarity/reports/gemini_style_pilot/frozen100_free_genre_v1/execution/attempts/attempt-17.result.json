@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00561450",
+  "attempt": 17,
+  "cache_key": "57c791708d7ab6e099f66cb38a2c746438ef0cf2bdb39d9935002c454813b075",
+  "evidence_hashes": {
+    "execution/attempts/attempt-17.request.json": "da88402a43d0a31db820c382a51d8a3ef574eb9746e3596a9e25c0c06ef1e243",
+    "execution/attempts/attempt-17.reservation.json": "fe385bb6c71d4dba39a9e5eeace222f3bcd006979cc8a815624b204caa996cf9",
+    "execution/attempts/attempt-17.settlement.json": "3b713839a369a899730f2d6c1449c221b4eb53bfa9dff7139f9c7869186e6a87",
+    "execution/transport/call-067.response.bin": "68457ab43c94f53f2bd2a86b69154525cf860ccc13f38a94f2a9a7a95a16b894",
+    "execution/transport/call-068.response.bin": "5efa7c7f13cb4be0f038c52dad4b2c5d51abc14faf566bd3903f88b81eee863c",
+    "execution/transport/call-068.response.json": "85770246513b21b99172ccdd42803c464efb930cd8c409447424171c686af9a5",
+    "execution/transport/upload-N033.json": "51ea2b277023f914101947f47597fc37a0f5342764c864fefda401b71e831b8c"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N033",
+  "pilot_id": "F019",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 6.8,
+        "observation": "Intimate female lead vocals enter with minimal ambient synthesizer drones and a deep sub bass drop."
+      },
+      {
+        "at_seconds": 96.0,
+        "observation": "Subtle synthesized vocal ad-libs join with shimmering high-register pads and low drone."
+      },
+      {
+        "at_seconds": 157.0,
+        "observation": "Aggressive, glitchy industrial percussion and heavy distorted synth beats abruptly break into the sparse texture."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "electronic",
+    "primary_style": "ambient pop",
+    "secondary_families": [
+      "pop",
+      "experimental"
+    ],
+    "secondary_styles": [
+      "deconstructed club",
+      "art pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "hazy",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-068.response.bin",
+  "response_id": "vSCiapXbL8XVz7IPwdaruAg",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 6.8, \"observation\": \"Intimate female lead vocals enter with minimal ambient synthesizer drones and a deep sub bass drop.\"},\n    {\"at_seconds\": 96.0, \"observation\": \"Subtle synthesized vocal ad-libs join with shimmering high-register pads and low drone.\"},\n    {\"at_seconds\": 157.0, \"observation\": \"Aggressive, glitchy industrial percussion and heavy distorted synth beats abruptly break into the sparse texture.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"electronic\",\n  \"primary_style\": \"ambient pop\",\n  \"secondary_families\": [\"pop\", \"experimental\"],\n  \"secondary_styles\": [\"deconstructed club\", \"art pop\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"hazy\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 273,
+    "promptTokenCount": 6121,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5672
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 6394
+  }
+}

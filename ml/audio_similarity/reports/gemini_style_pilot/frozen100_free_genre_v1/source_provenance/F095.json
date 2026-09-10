@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.732900756993331,
+  "acquisition_ended_at": "2026-09-04T20:18:52.699642+00:00",
+  "acquisition_started_at": "2026-09-04T20:18:50.966741+00:00",
+  "acquisition_timestamp": "2026-09-04T20:18:50.966846+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3963578,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 234,
+  "provider_result": "SUCCESS",
+  "provider_title": "The Weeknd - The Hills",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "9f393bb45ac81d93830a0ea208cca1d329018298ae7019c1d715e8c33c98af14",
+      "representation_identity": "eac3e26461bdc312a1949c92be87eed89143eb644193737c1278dc94dfe0a96f",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "857586b4801ebfc82b1362046446c301085702c870c2ac179613dd766fdbe765",
+          "25": "a4b5446698eb514e6ca9f8807b0e8edbc39b7f392353343c76fa1600af24a259",
+          "5": "7f16e7ebdc756e5adf9d290aa30a4fc15457d0dd0d02a26933cf12cdb0f28aa3"
+        },
+        "muq_mulan_large": {
+          "15": "aef9c08ebaa0e2edd7b5048c9630cea79989ba5d75f4c77a5567ebb9c3e061de",
+          "25": "e20a76b80f3c743a12785d6417cc449d9e0a901ff35205c0107cbbfded3fe2b0",
+          "5": "81f1a7eab937e6145d644b4a1611002bb05c1fec77ac3c88544df0a20f0b30c1"
+        }
+      },
+      "source_audio_sha256": "d671839e206d3784acab812481f1fe92f9be23360249cd554706650cc4dd8745"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "yzTuBuRdAyA"
+  },
+  "retained_relative_path": "7fBv7CLKzipRk6EC6TWHOB/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 234.201,
+  "source_sha256": "97676cfffba7f425e8c4a72219b86c38a2fea1f47c361a5cc555e192316e93ef",
+  "source_url": "https://www.youtube.com/watch?v=yzTuBuRdAyA",
+  "spotify_artists": [
+    "The Weeknd"
+  ],
+  "spotify_title": "The Hills",
+  "spotify_track_id": "7fBv7CLKzipRk6EC6TWHOB",
+  "successful_query": "The Hills The Weeknd",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "yzTuBuRdAyA"
+}

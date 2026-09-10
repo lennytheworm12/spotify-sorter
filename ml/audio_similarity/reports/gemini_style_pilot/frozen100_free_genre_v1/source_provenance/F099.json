@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.7307574010337703,
+  "acquisition_ended_at": "2026-09-04T20:32:12.704090+00:00",
+  "acquisition_started_at": "2026-09-04T20:32:10.973333+00:00",
+  "acquisition_timestamp": "2026-09-04T20:32:10.973439+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3493340,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 198,
+  "provider_result": "SUCCESS",
+  "provider_title": "m o v i e (Feat. Jade)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "0a42c21fc9250bb269fd25cccd76d242162b828f5328175ccdde23972f041e7a",
+      "representation_identity": "3876efa31e35cd706da696d6df71c49e8132642c4676fcc4e8b76b69d2c913e1",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "c1cfdc8a3d01645ecb3e25882197784fa1be27bf3bc5bb233b40a71be0aae454",
+          "25": "d76893ff4022d62b08944f439e33a20cb1d420514376df10fe718e8079694e2f",
+          "5": "14eea7da57e82e8e4f13f0259225eb984e7bf1dc8e3403df2a132d19801fd33d"
+        },
+        "muq_mulan_large": {
+          "15": "962e9ab3554daed95594bb4e7aea96bdb36e107996920f73b908f49d9d03cd36",
+          "25": "c0f063e3a6308bd7c03a6c040c35d03045b51799699c764cf3af3971d7540478",
+          "5": "c06de900c57f51fec29435a5c20f3f98a6bc4c76b54ce268efe05695f5fe8a34"
+        }
+      },
+      "source_audio_sha256": "9dde401b1e599210d09d95d97e8d879e73a767284bf71a3f651ca441d83b240b"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "WL-G8mNyKrw"
+  },
+  "retained_relative_path": "7nD9LjsenfCRv4uxy93xhZ/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 197.561,
+  "source_sha256": "078e61973130a36ff70c8739e7c8e5c4849181ce0b843709b80cefd6e1a98ef4",
+  "source_url": "https://www.youtube.com/watch?v=WL-G8mNyKrw",
+  "spotify_artists": [
+    "Stupinuts",
+    "Jade"
+  ],
+  "spotify_title": "m o v i e (Feat. Jade)",
+  "spotify_track_id": "7nD9LjsenfCRv4uxy93xhZ",
+  "successful_query": "m o v i e (Feat. Jade) Stupinuts Jade",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "WL-G8mNyKrw"
+}

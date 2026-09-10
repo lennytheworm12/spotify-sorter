@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00522600",
+  "attempt": 16,
+  "cache_key": "9fc760f81d914e69c81fcdb26afe8fdeea72d7b77f8c56ab20e4846d276f219e",
+  "evidence_hashes": {
+    "execution/attempts/attempt-16.request.json": "092cb3b223231e237d544d2a710467a7d7c54e5664bdc23c27cd845924dc16a8",
+    "execution/attempts/attempt-16.reservation.json": "bf62f14b94131ae028c413cc0842f5475d4ea4cc01e292bbff21058cb819851f",
+    "execution/attempts/attempt-16.settlement.json": "00b48412eb705afc3f633ba18c9aa5c92a283c5faa603e859481518fe295b59d",
+    "execution/transport/call-063.response.bin": "524d11f71e18291ffa88f9ebc7a22fe05ca2d50e4d9d5fbe3dc8e59feae0ef67",
+    "execution/transport/call-064.response.bin": "8f63281c0b42ec0593b52355013d36f90f66bcdd1e177ae6410281120d8176cb",
+    "execution/transport/call-064.response.json": "c367334ed342872067c818c0b794a531998d3cafb56ce710e0674ba93d0dab40",
+    "execution/transport/upload-N032.json": "f76874b5f8eeacb67ba209eaee7bfc18669c6df116a71162ac18410a7c4eb1cf"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N032",
+  "pilot_id": "F018",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 9.5,
+        "observation": "Intimate female lead vocals enter over a sparse, reverberant plucked guitar figure."
+      },
+      {
+        "at_seconds": 41.0,
+        "observation": "The arrangement expands with a sub-bass kick pulse and vocal harmonies entering on the hook."
+      },
+      {
+        "at_seconds": 121.0,
+        "observation": "Subtle atmospheric synths and layered backing vocals support the emotive, breathy verse delivery."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Indie Pop",
+    "secondary_families": [
+      "Folk & Acoustic Pop",
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Bedroom Pop",
+      "Alt-Pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "acoustic",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-064.response.bin",
+  "response_id": "tyCiaoSPHNODz7IPhcTi0QE",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 9.5,\n      \"observation\": \"Intimate female lead vocals enter over a sparse, reverberant plucked guitar figure.\"\n    },\n    {\n      \"at_seconds\": 41.0,\n      \"observation\": \"The arrangement expands with a sub-bass kick pulse and vocal harmonies entering on the hook.\"\n    },\n    {\n      \"at_seconds\": 121.0,\n      \"observation\": \"Subtle atmospheric synths and layered backing vocals support the emotive, breathy verse delivery.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Indie Pop\",\n  \"secondary_families\": [\n    \"Folk & Acoustic Pop\",\n    \"Electronic\"\n  ],\n  \"secondary_styles\": [\n    \"Bedroom Pop\",\n    \"Alt-Pop\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"acoustic\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 322,
+    "promptTokenCount": 5358,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4909
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5680
+  }
+}

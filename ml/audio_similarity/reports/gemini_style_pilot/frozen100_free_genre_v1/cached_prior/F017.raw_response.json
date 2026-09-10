@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 12.5,\n      \"observation\": \"Spoken-word-style rap vocal enters over a minimal trap-influenced beat featuring 808 sub-bass and hi-hats.\"\n    },\n    {\n      \"at_seconds\": 25.0,\n      \"observation\": \"High-pitched auto-tuned melodic chorus vocal hook enters with layered backing.\"\n    },\n    {\n      \"at_seconds\": 96.0,\n      \"observation\": \"Bridge section featuring pitched vocal samples, ambient synths, and emotional sung-melodic rap delivery.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip Hop\",\n  \"primary_style\": \"Trap\",\n  \"secondary_families\": [\n    \"Pop\",\n    \"R&B\"\n  ],\n  \"secondary_styles\": [\n    \"Emo Rap\",\n    \"Melodic Rap\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"layered\",\n    \"sample_based\"\n  ],\n  \"vocal_role\": \"mixed_rap_and_singing\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPBUAhmT6WPMaVvLdgyNUe3I0Xgcv6kMto5+GCdftKBlbCMPvoQguqXDpvDpBoCYzMJv/N7hceJ9tph5DBEnt1T4Grxr7QtZ3OyHi/vErC54VYPWTLnNg7h2OGq1+SBl/B"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 3492,
+    "candidatesTokenCount": 339,
+    "totalTokenCount": 3831,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3043
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "WhiiavPaNoetz7IP3p2H2Q8"
+}

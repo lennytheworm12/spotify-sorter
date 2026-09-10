@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 12.0,
+        "observation": "Intimate female lead vocals over a slow, spacious chillout hip-hop beat and electric piano"
+      },
+      {
+        "at_seconds": 65.0,
+        "observation": "Vocal chorus with subtle harmonized backing layers over soft synth pads and laid-back downtempo drums"
+      },
+      {
+        "at_seconds": 130.0,
+        "observation": "Low-frequency synth interlude with acoustic guitar strums and vinyl/lo-fi ambient texture"
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "electronic",
+    "primary_style": "lo-fi chill beats",
+    "secondary_families": [
+      "r&b",
+      "pop"
+    ],
+    "secondary_styles": [
+      "chillout",
+      "bedroom pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "hazy"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "ZiCiaqLWD9O4mtkPia_t-AU",
+  "spotify_track_id": "07tiPBhMqiKqHowwqDBtfK"
+}

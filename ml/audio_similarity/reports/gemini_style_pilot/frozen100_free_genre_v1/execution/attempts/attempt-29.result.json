@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00545025",
+  "attempt": 29,
+  "cache_key": "d476e3a828a8352ef96cc718b1ef3295aecfc2fc68705fb088e0a82fb83bd3ba",
+  "evidence_hashes": {
+    "execution/attempts/attempt-29.request.json": "76efaeca621c7671be0a5b260167e624d48f0e2dfdd5e9d3d762b41ac09d4b58",
+    "execution/attempts/attempt-29.reservation.json": "bbd7d00bad863a28fb8c8e1c39cd6428d498f3e586617f25ea2c624b4af449be",
+    "execution/attempts/attempt-29.settlement.json": "c9ef4ed10068025fcb06e8e8bdb321baf0b307e90e1951e6a81f69cc542a4b34",
+    "execution/transport/call-115.response.bin": "9a31bbb864dc4f4c1a9a5efc11cd9a057fb6d3e868abdfe3a7bfe0595e8c2cf0",
+    "execution/transport/call-116.response.bin": "935a46a34349086def1855ca5d62415334f2b048a6e7a9d5ccdb2f5bfae06666",
+    "execution/transport/call-116.response.json": "972796f9f38f335a8e72940fe52b27201b1e2e97c2e72287bced7ed8ff4c9114",
+    "execution/transport/upload-N045.json": "0b756b38d6b4e51ae1fc510827bd16fd962d51c2ea31f6769326371e1f4655e3"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N045",
+  "pilot_id": "F033",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 6.7,
+        "observation": "Bright acoustic guitar arpeggiation sets the tempo and mood before drums enter."
+      },
+      {
+        "at_seconds": 17.5,
+        "observation": "Female lead vocal enters in Korean over a steady mid-tempo pop rhythm section."
+      },
+      {
+        "at_seconds": 62.0,
+        "observation": "Full chorus opens up with layered vocal harmonies, bassline, and upbeat drum groove."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "R&B/Soul"
+    ],
+    "secondary_styles": [
+      "Acoustic Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-116.response.bin",
+  "response_id": "ECGiaoqIF4Wf-8YPsbXr-QY",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 6.7, \"observation\": \"Bright acoustic guitar arpeggiation sets the tempo and mood before drums enter.\"},\n    {\"at_seconds\": 17.5, \"observation\": \"Female lead vocal enters in Korean over a steady mid-tempo pop rhythm section.\"},\n    {\"at_seconds\": 62.0, \"observation\": \"Full chorus opens up with layered vocal harmonies, bassline, and upbeat drum groove.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\"R&B/Soul\"],\n  \"secondary_styles\": [\"Acoustic Pop\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"acoustic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 264,
+    "promptTokenCount": 5947,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5498
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 6211
+  }
+}

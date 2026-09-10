@@ -1,0 +1,45 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 12.5,
+        "observation": "Female lead vocal enters over light melodic keyboard accompaniment and a soft downbeat."
+      },
+      {
+        "at_seconds": 70.2,
+        "observation": "Male vocals take over the verse with a rhythmic, melodic delivery over a syncopated mid-tempo beat."
+      },
+      {
+        "at_seconds": 127.8,
+        "observation": "Both vocalists trade lines into a lush chorus hook featuring warm synth bass and percussion."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Contemporary R&B"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "electronic",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "KyGiav3RKOikqtsP17CpiQ0",
+  "spotify_track_id": "340yvMO5adu3bo1x5Zrw14"
+}

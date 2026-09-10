@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 1.5, \"observation\": \"Male lead vocal enters over electric piano chords with minimal rhythmic accompaniment.\"},\n    {\"at_seconds\": 31.0, \"observation\": \"The chorus begins with low bass notes and subtle hi-hat/clap elements supporting the vocal melody.\"},\n    {\"at_seconds\": 91.0, \"observation\": \"Vocal harmonies and ad-libs layer softly behind the main lead, maintaining an intimate, downtempo feel.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"rnb\",\n  \"primary_style\": \"contemporary_rnb\",\n  \"secondary_families\": [\"pop\"],\n  \"secondary_styles\": [\"neo_soul\", \"pop_soul\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"clean\", \"electronic\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPTNcZMCmdOnKiwliMLaIssCTR7WFpl0dsHrT1QPVcruWzwqdrEGHdNgr8WwCdoStO7+WlveGBVFi7BarAHqbOilRNgOxGaxeibXtzqwwW1La2QtvaDcGAEOduGyya9jyu"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 4300,
+    "candidatesTokenCount": 271,
+    "totalTokenCount": 4571,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3851
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "AiGiavy1OqOzmtkPt-_ssQY"
+}

@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00366825",
+  "attempt": 28,
+  "cache_key": "009b8a9fd8f8b2cc95319f49da609387d12b490ffc7f299523a315b74411baa6",
+  "evidence_hashes": {
+    "execution/attempts/attempt-28.request.json": "a1258af0080fbc0338c199987a9131de418c4853213c9253e476c41fd60a38a3",
+    "execution/attempts/attempt-28.reservation.json": "434b605d74afddc7ba9ffaefe14bf190694022695261e2a8e85d481ac2332cd2",
+    "execution/attempts/attempt-28.settlement.json": "565d1e335f81702b39ac66de560ebaa3ca221f42f784e1364bcfd4472b4eac86",
+    "execution/transport/call-111.response.bin": "266dfbcd7cfe369935ce0035b4bdeb19af2eb9130b5098642da9b15987057a6a",
+    "execution/transport/call-112.response.bin": "964664b578b124a70c336dd345fa60e525fb7fea769833f9d87a1f67706ea3d4",
+    "execution/transport/call-112.response.json": "a9bf20c678e8d1067efe97aa12c7deddd9002d51395d9356bb2b3e16c38df024",
+    "execution/transport/upload-N044.json": "82b5764180a85a987427acf5eda65011991d4b5e4eb1dd58b431b014572d745f"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N044",
+  "pilot_id": "F032",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 12.0,
+        "observation": "A solo female lead vocal enters singing a gentle R&B-pop melody over sparse, echoing synthesized keys."
+      },
+      {
+        "at_seconds": 53.0,
+        "observation": "Subdued electronic percussion and vocal harmonies enter, creating a relaxed, atmospheric contemporary R&B ballad groove."
+      },
+      {
+        "at_seconds": 92.0,
+        "observation": "The vocal cadence takes on subtle contemporary R&B phrasing while the backdrop remains ambient and spacious."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Alt-R&B"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "hazy",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-112.response.bin",
+  "response_id": "CSGiar-XJq6W-8YP8caP6QQ",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 12.0,\n      \"observation\": \"A solo female lead vocal enters singing a gentle R&B-pop melody over sparse, echoing synthesized keys.\"\n    },\n    {\n      \"at_seconds\": 53.0,\n      \"observation\": \"Subdued electronic percussion and vocal harmonies enter, creating a relaxed, atmospheric contemporary R&B ballad groove.\"\n    },\n    {\n      \"at_seconds\": 92.0,\n      \"observation\": \"The vocal cadence takes on subtle contemporary R&B phrasing while the backdrop remains ambient and spacious.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\n    \"Pop\"\n  ],\n  \"secondary_styles\": [\n    \"Alt-R&B\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"hazy\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 323,
+    "promptTokenCount": 3276,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 2827
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 3599
+  }
+}

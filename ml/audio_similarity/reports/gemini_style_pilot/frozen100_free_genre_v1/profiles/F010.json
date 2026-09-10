@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.0,
+        "observation": "Female lead vocal enters with gentle R&B phrasing over a smooth synth chord progression and crisp mid-tempo beat."
+      },
+      {
+        "at_seconds": 60.5,
+        "observation": "Chorus section arrives with layered backing harmonies, a prominent bassline, and catchy melodic hooks."
+      },
+      {
+        "at_seconds": 160.0,
+        "observation": "Instrumental drop section highlighting synth keys, muted percussion, and rhythmic finger snaps."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B and Soul",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Pop",
+      "Hip Hop"
+    ],
+    "secondary_styles": [
+      "K-Pop",
+      "Pop Soul"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "iSCiauz-OpyiqtsP_PmDkAI",
+  "spotify_track_id": "0ayK1CJh1cMRjUJRCDWhCd"
+}

@@ -1,0 +1,45 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 3.42,
+        "observation": "Vocal enters over minimal electric piano chords and subtle sub-bass pulses with sparse percussive snaps."
+      },
+      {
+        "at_seconds": 37.15,
+        "observation": "Full groove introduces a relaxed, slow tempo trap-influenced beat beneath smooth R&B vocal melodies."
+      },
+      {
+        "at_seconds": 111.45,
+        "observation": "Dynamic drop leading into an intimate verse highlighting the lead vocal and filtered keyboard accompaniment."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Electronic",
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Alt-R&B"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "FyGiaoT-CJ_jz7IPtsnp2Qw",
+  "spotify_track_id": "2sXQnT404FrXeSEZkJXfKM"
+}

@@ -1,0 +1,46 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "dense",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 39.5,
+        "observation": "Upbeat electropop chorus enters with four-on-the-floor kick, synth bass, and layered female pop vocals."
+      },
+      {
+        "at_seconds": 121.0,
+        "observation": "Synthesizer arpeggios and filtered synth sweeps drive the pre-chorus dynamic build."
+      },
+      {
+        "at_seconds": 160.0,
+        "observation": "Vocal harmonies and ad-libs soar over a pumping electronic dance-pop beat during the climax."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "electronic",
+    "primary_style": "k-pop",
+    "secondary_families": [
+      "pop"
+    ],
+    "secondary_styles": [
+      "dance-pop",
+      "electropop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "cyGiaveJE62M_PUPpf2jwA8",
+  "spotify_track_id": "3uOeutrLztSX6lU0b0et3B"
+}

@@ -1,0 +1,46 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 9.5,
+        "observation": "Female lead vocal enters with a smooth, sweet delivery over a mid-tempo R&B groove and electric piano."
+      },
+      {
+        "at_seconds": 68.0,
+        "observation": "Chorus section with layered vocal harmonies, steady modern R&B rhythm, and subtle synth accents."
+      },
+      {
+        "at_seconds": 136.0,
+        "observation": "Mellow bridge section featuring rhodes piano, finger-snaps, and relaxed vocal phrasing."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Pop"
+    ],
+    "secondary_styles": [
+      "K-R&B",
+      "Pop Soul"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "kSCiasq_Hub6qtsP9drVaQ",
+  "spotify_track_id": "0mjbciwK9zhfQl44jXfQv6"
+}

@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.643869220977649,
+  "acquisition_ended_at": "2026-09-04T20:25:52.614175+00:00",
+  "acquisition_started_at": "2026-09-04T20:25:50.970306+00:00",
+  "acquisition_timestamp": "2026-09-04T20:25:50.970437+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2844731,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 162,
+  "provider_result": "SUCCESS",
+  "provider_title": "LE SSERAFIM (르세라핌) 'Perfect Night' OFFICIAL M/V with OVERWATCH 2 (Choreography ver.)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "9619c46119363325458a5059d4ec6e5846d2694ac4bf354504c28d1fdbec2f7d",
+      "representation_identity": "54b0cf6ea70401670917639acc438c2852efb8842eb6d8de17585707d49fce6e",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "6c72c2ef15ad8d51a0676ed8e4c8fd58976319c615349b5d4bb65f2fb8444843",
+          "25": "0e14cc662a101ccdaa3fb61b0a98beef4e413e58b7b5bb8c446a86a8e0b9b2d4",
+          "5": "a82b18a8366c7bf3c63df37fd90d8813dad13ec7c2655b2cf91d92a544bd525b"
+        },
+        "muq_mulan_large": {
+          "15": "3eb1196490b0e9fd00f7538a32841120dc0111b9b802d35e4618bc5531fce424",
+          "25": "98776427303fc49ac2832f30c977e324b4a3241892a6f6100951a8472921fd69",
+          "5": "af58d433e093d82fc89cbece648c92bf51473c1d31f507dbfa65d286682a9afb"
+        }
+      },
+      "source_audio_sha256": "255819602a5fda767642447160c461dc0c70b51a6b67685fb83d298bfe1891bd"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "oKBwWQI-IoI"
+  },
+  "retained_relative_path": "74X2u8JMVooG2QbjRxXwR8/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 2,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 162.141,
+  "source_sha256": "b7acecdb8c3b500a728978447cb6ffdcba55d0a6705e49fc096171f8df2675e2",
+  "source_url": "https://www.youtube.com/watch?v=oKBwWQI-IoI",
+  "spotify_artists": [
+    "LE SSERAFIM"
+  ],
+  "spotify_title": "Perfect Night",
+  "spotify_track_id": "74X2u8JMVooG2QbjRxXwR8",
+  "successful_query": "Perfect Night LE SSERAFIM",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "oKBwWQI-IoI"
+}

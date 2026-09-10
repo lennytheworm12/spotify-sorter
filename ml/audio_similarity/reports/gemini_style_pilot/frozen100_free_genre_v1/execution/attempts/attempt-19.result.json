@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00432750",
+  "attempt": 19,
+  "cache_key": "8d19e2c40b100dfbeb020e68e9ca3d57f1503b2a0696debf70e8b4624cdbb090",
+  "evidence_hashes": {
+    "execution/attempts/attempt-19.request.json": "4baf0202b36111ccf6486416c4ff3a55bb5481e5e44ab3a39190735b5c9cc482",
+    "execution/attempts/attempt-19.reservation.json": "9ee009e140fd78c7a25f80ac830367f462425a4935eb9dfaf96888f856c91663",
+    "execution/attempts/attempt-19.settlement.json": "1e07db6393d1d3a692ac16189286082cf42655d119220d99fef00e8838f13a9c",
+    "execution/transport/call-075.response.bin": "3598691a10ee82dda74ff2600794cebb06cf762144529e44979707b0e212e9d1",
+    "execution/transport/call-076.response.bin": "c262479656e38668045ee6d970a2f908dc84ea06271a3bad4230b899e534c7ff",
+    "execution/transport/call-076.response.json": "4e04894cede23f03eb018400ee618b7d3b75746db20e8f43f23c72e19e7fb9b2",
+    "execution/transport/upload-N035.json": "be652ec215c6e0d90604f3f4d6fb103869ecfa8c6fc1559400d7ce733c395a23"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N035",
+  "pilot_id": "F021",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 19.8,
+        "observation": "A sparse acoustic guitar picking pattern enters underneath pitched-down low male vocals."
+      },
+      {
+        "at_seconds": 52.0,
+        "observation": "Subtle bass and sustained ambient synths join the low-pitched lead vocal and acoustic guitar."
+      },
+      {
+        "at_seconds": 139.0,
+        "observation": "The chorus returns with deep vocal harmonies, warm ambient synth pads, and delicate guitar strums."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Bedroom Pop",
+    "secondary_families": [
+      "Folk",
+      "Indie"
+    ],
+    "secondary_styles": [
+      "Indie Pop",
+      "Indie Folk"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "hazy",
+      "electronic"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-076.response.bin",
+  "response_id": "ySCiar-LF-qZ6dkPwZy8uA0",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 19.8,\n      \"observation\": \"A sparse acoustic guitar picking pattern enters underneath pitched-down low male vocals.\"\n    },\n    {\n      \"at_seconds\": 52.0,\n      \"observation\": \"Subtle bass and sustained ambient synths join the low-pitched lead vocal and acoustic guitar.\"\n    },\n    {\n      \"at_seconds\": 139.0,\n      \"observation\": \"The chorus returns with deep vocal harmonies, warm ambient synth pads, and delicate guitar strums.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Bedroom Pop\",\n  \"secondary_families\": [\n    \"Folk\",\n    \"Indie\"\n  ],\n  \"secondary_styles\": [\n    \"Indie Pop\",\n    \"Indie Folk\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"acoustic\",\n    \"hazy\",\n    \"electronic\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 323,
+    "promptTokenCount": 4155,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3706
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 4478
+  }
+}

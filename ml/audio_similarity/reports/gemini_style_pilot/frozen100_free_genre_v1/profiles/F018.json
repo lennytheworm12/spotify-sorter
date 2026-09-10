@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 9.5,
+        "observation": "Intimate female lead vocals enter over a sparse, reverberant plucked guitar figure."
+      },
+      {
+        "at_seconds": 41.0,
+        "observation": "The arrangement expands with a sub-bass kick pulse and vocal harmonies entering on the hook."
+      },
+      {
+        "at_seconds": 121.0,
+        "observation": "Subtle atmospheric synths and layered backing vocals support the emotive, breathy verse delivery."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Indie Pop",
+    "secondary_families": [
+      "Folk & Acoustic Pop",
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Bedroom Pop",
+      "Alt-Pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "acoustic",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "tyCiaoSPHNODz7IPhcTi0QE",
+  "spotify_track_id": "1U90UBmMrQTx9GNweUA4LZ"
+}

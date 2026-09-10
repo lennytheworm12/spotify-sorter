@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 3.7,\n      \"observation\": \"High-pitched vocal chop loop initiates the track over silence before main instrumentation enters.\"\n    },\n    {\n      \"at_seconds\": 23.3,\n      \"observation\": \"Female lead vocals begin in a smooth, mid-tempo R&B cadence over pitched vocal chops and bass.\"\n    },\n    {\n      \"at_seconds\": 58.7,\n      \"observation\": \"Trap-style programmed drums kick in with heavy sub-bass and hi-hats, building into a rhythmic verse.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B and Soul\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\n    \"Hip-Hop\",\n    \"Pop\"\n  ],\n  \"secondary_styles\": [\n    \"Trap\",\n    \"Alternative R&B\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"sample_based\",\n    \"electronic\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPHkdzzfkZVWDEJcTA0ka/1aPfYcWQvLiALzwOtSUG85o15U968lRlDKapn2s1qk/IFutJTbL7tk2jeRWJ0DpUj/G7tPvFYSdASyXk61vZsqtcGL6Rz1eU/QwQWDvyB1ho"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 4782,
+    "candidatesTokenCount": 337,
+    "totalTokenCount": 5119,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4333
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "XxiiapalI8b5ugfZ45C4DA"
+}

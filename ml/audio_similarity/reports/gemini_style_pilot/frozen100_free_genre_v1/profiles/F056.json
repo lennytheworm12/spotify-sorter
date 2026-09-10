@@ -1,0 +1,45 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 13.0,
+        "observation": "Melancholic, autotuned sing-rap vocals enter over a low-key trap beat with deep 808s and soft chords."
+      },
+      {
+        "at_seconds": 21.0,
+        "observation": "A downtempo trap rhythm kicks in with rolling hi-hats, a sub-bass kick, and sparse snare snaps."
+      },
+      {
+        "at_seconds": 59.0,
+        "observation": "Percussion drops out, leaving ambient synthesizer pads and echoing vocal ad-libs."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Emo Rap",
+    "secondary_families": [
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Trap"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "hazy",
+      "layered"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "response_id": "oiGiaqGJKJDQz7IP_u-h2A4",
+  "spotify_track_id": "4P1L6AniTDJzANaubzWGYs"
+}

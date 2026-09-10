@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 0.0, \"observation\": \"Upbeat synth arpeggio, bass synth, and acoustic drum beat intro establishing the groove.\"},\n    {\"at_seconds\": 13.9, \"observation\": \"Korean female lead vocals enter over electro-pop synth bassline and bright keyboard accents.\"},\n    {\"at_seconds\": 36.1, \"observation\": \"Full dance-pop chorus with layered backing vocals, four-on-the-floor beat, and pulsing synth bass.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"pop\",\n  \"primary_style\": \"k-pop\",\n  \"secondary_families\": [\"electronic\", \"dance\"],\n  \"secondary_styles\": [\"dance-pop\", \"electropop\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"layered\", \"clean\"],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPuRy3DfK7sMOifWEiglWYqQA7WoVBzgeZx4nHEjyRMABbJnb0jFzHMwuDC2nd44o/OdpxLDDIxMWFH6RgaUwEuwG2ysYBxTaRj7z0Fw1PWptyoVq4yWvDR0at9xZA0Ywe"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 3982,
+    "candidatesTokenCount": 278,
+    "totalTokenCount": 4260,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3533
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "SSGiauK9Hrfiz7IP7MaD6Q8"
+}

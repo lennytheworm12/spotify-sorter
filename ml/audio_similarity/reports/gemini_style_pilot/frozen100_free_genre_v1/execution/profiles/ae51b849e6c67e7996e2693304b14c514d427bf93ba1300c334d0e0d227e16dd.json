@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00452850",
+  "attempt": 72,
+  "cache_key": "ae51b849e6c67e7996e2693304b14c514d427bf93ba1300c334d0e0d227e16dd",
+  "evidence_hashes": {
+    "execution/attempts/attempt-72.request.json": "0a5731e572c25e7a0600fb6f063a8093aec6af2cc565ac9fec2d1fa66b2b5bef",
+    "execution/attempts/attempt-72.reservation.json": "58eb2c12fbaa341b72b79428f2bf0902169875ab3bc3b1403a52408b71957d72",
+    "execution/attempts/attempt-72.settlement.json": "df93cc350e188df82bfdaadd47f6d90632a2dab9b538e0922dc0525b878fa75e",
+    "execution/transport/call-287.response.bin": "67be0fe7b700fd838df763aba2eb46d2b14c3f12264215de168e428bc01742be",
+    "execution/transport/call-288.response.bin": "a1250364bde791ac2e20c03c38938cf1fa25249564e6c83081b55b01021d7078",
+    "execution/transport/call-288.response.json": "04a6f4b7d21cee8e770d8d00470be80bead4473ab085d29d33e12ea470276636",
+    "execution/transport/upload-N088.json": "854f526d01fc479f755d445044f28444caef76a1189d9bdea94cf2ca9e5c1e30"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N088",
+  "pilot_id": "F081",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 6.88,
+        "observation": "Spacious, warm electric piano chords enter alongside chopped and pitched vocal phrases."
+      },
+      {
+        "at_seconds": 27.56,
+        "observation": "Laid-back, unquantized downtempo hip-hop drum groove drops in with deep sub-bass."
+      },
+      {
+        "at_seconds": 96.2,
+        "observation": "Drums drop out, leaving reverberant electric piano chords and drifting pitched vocal fragments."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "hip-hop",
+    "primary_style": "lo-fi hip-hop",
+    "secondary_families": [
+      "electronic",
+      "r&b"
+    ],
+    "secondary_styles": [
+      "chillwave",
+      "downtempo"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "sample_based",
+      "hazy",
+      "electronic"
+    ],
+    "vocal_role": "vocal_samples_only"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-288.response.bin",
+  "response_id": "OCKiauOsApKcz7IPyIb1uQg",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 6.88,\n      \"observation\": \"Spacious, warm electric piano chords enter alongside chopped and pitched vocal phrases.\"\n    },\n    {\n      \"at_seconds\": 27.56,\n      \"observation\": \"Laid-back, unquantized downtempo hip-hop drum groove drops in with deep sub-bass.\"\n    },\n    {\n      \"at_seconds\": 96.2,\n      \"observation\": \"Drums drop out, leaving reverberant electric piano chords and drifting pitched vocal fragments.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"hip-hop\",\n  \"primary_style\": \"lo-fi hip-hop\",\n  \"secondary_families\": [\n    \"electronic\",\n    \"r&b\"\n  ],\n  \"secondary_styles\": [\n    \"chillwave\",\n    \"downtempo\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"sample_based\",\n    \"hazy\",\n    \"electronic\"\n  ],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+  "usage": {
+    "candidatesTokenCount": 337,
+    "promptTokenCount": 4353,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3904
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 4690
+  }
+}

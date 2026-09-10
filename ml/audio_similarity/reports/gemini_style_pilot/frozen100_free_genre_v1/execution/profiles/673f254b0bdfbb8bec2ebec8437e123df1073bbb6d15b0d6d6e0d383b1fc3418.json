@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00470700",
+  "attempt": 64,
+  "cache_key": "673f254b0bdfbb8bec2ebec8437e123df1073bbb6d15b0d6d6e0d383b1fc3418",
+  "evidence_hashes": {
+    "execution/attempts/attempt-64.request.json": "2bbf41f85dba3779eb48dd67bb8666ad74e0e026cfc4e19326ed96067768b437",
+    "execution/attempts/attempt-64.reservation.json": "c3e94e2e298e054b050105b4107f3e587a167ae615d21fa3e54cfbcb3e5dffb5",
+    "execution/attempts/attempt-64.settlement.json": "a2f08caa36bdf58fea8d9b814f55fbe57792c25cb9f2496107683458807a270d",
+    "execution/transport/call-255.response.bin": "d0418c98d9e1a1e69c1145d13d099fb4d242bdce20661c40e728fb885666a5a2",
+    "execution/transport/call-256.response.bin": "78d0ca0ff6a827a84c01f682719a43d452315d41227ed51deba832e1a263935f",
+    "execution/transport/call-256.response.json": "1e4c55bdfb2bea888f6fc2bc515fe3e811525acf02798ea99e09024682034619",
+    "execution/transport/upload-N080.json": "a0cba986f409f0f7288274dbb2ec6478752edaf7bc964faa4948e699cc15a291"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N080",
+  "pilot_id": "F071",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "balanced",
+    "audio_evidence": [
+      {
+        "at_seconds": 12.0,
+        "observation": "Trap hi-hat rolls and electronic snare enter under rhythmic sung-spoken vocal phrasing."
+      },
+      {
+        "at_seconds": 30.5,
+        "observation": "Full pop-trap chorus drops with a punchy kick drum, sub bass, and melodic lead vocals."
+      },
+      {
+        "at_seconds": 88.0,
+        "observation": "Breakdown with filtered beat and processed vocal ad-libs creating an atmospheric space."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Trap",
+    "secondary_families": [
+      "Pop",
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Pop Rap",
+      "Contemporary R&B"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-256.response.bin",
+  "response_id": "AyKiapuMAYaGz7IPoJjBkAE",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"balanced\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 12.0, \"observation\": \"Trap hi-hat rolls and electronic snare enter under rhythmic sung-spoken vocal phrasing.\"},\n    {\"at_seconds\": 30.5, \"observation\": \"Full pop-trap chorus drops with a punchy kick drum, sub bass, and melodic lead vocals.\"},\n    {\"at_seconds\": 88.0, \"observation\": \"Breakdown with filtered beat and processed vocal ad-libs creating an atmospheric space.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip Hop\",\n  \"primary_style\": \"Trap\",\n  \"secondary_families\": [\"Pop\", \"R&B\"],\n  \"secondary_styles\": [\"Pop Rap\", \"Contemporary R&B\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"mixed_rap_and_singing\"\n}",
+  "usage": {
+    "candidatesTokenCount": 276,
+    "promptTokenCount": 4896,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4447
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5172
+  }
+}

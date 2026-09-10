@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 2.5153920570155606,
+  "acquisition_ended_at": "2026-09-04T20:15:53.480830+00:00",
+  "acquisition_started_at": "2026-09-04T20:15:50.965438+00:00",
+  "acquisition_timestamp": "2026-09-04T20:15:50.965549+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3835429,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 227,
+  "provider_result": "SUCCESS",
+  "provider_title": "Galdive - Shoulder (Sub. Español/Lyrics)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "b13c074cc71903821c83b279af0a469bc9c5e2347b5d200f9a48f9f9f8d0f315",
+      "representation_identity": "df58b84afea31b0a83cf618b1c5418b2e4ad0b5bf9f2e2559c2100ea68682adf",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "62d7e108242086b5fd294b474ccdc0bef9111929b3fb7ff0621dab1ab47f3115",
+          "25": "080cc2f40d679ec6218d242705560a39df835e23e4b2c14dd2d1d71516f0c8cd",
+          "5": "864e1ce7545e3d6b45d5b89022103f355df2da7c69a2fcb392b5defefe5b3399"
+        },
+        "muq_mulan_large": {
+          "15": "5fff4b26bb97194cf73c630be510f218d651eed8a2dd4b918346290ed27e8dc3",
+          "25": "21c4897ed5c7a3e3de2409c8cf91e12314f636ad3188714251f721f16a3b4b0b",
+          "5": "e1f0bf8fa1ddad9f45dfb4526780693d352c691a159abfe967c35976cb7f8aa9"
+        }
+      },
+      "source_audio_sha256": "24c0b85335f7c7c8ec72ccaa8cd1a5032d47e00c109340ceb1b68a78bbcfc9fe"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "2NG0Ivmv0g0"
+  },
+  "retained_relative_path": "1VAtYkKvDenA1KypImlZIY/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 2,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 226.861,
+  "source_sha256": "ff5d2217a543764406f19ad9231cdb47a44e96f4add7fe53f47f6bbc251583b3",
+  "source_url": "https://www.youtube.com/watch?v=2NG0Ivmv0g0",
+  "spotify_artists": [
+    "Galdive"
+  ],
+  "spotify_title": "Shoulder",
+  "spotify_track_id": "1VAtYkKvDenA1KypImlZIY",
+  "successful_query": "Shoulder Galdive",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "2NG0Ivmv0g0"
+}

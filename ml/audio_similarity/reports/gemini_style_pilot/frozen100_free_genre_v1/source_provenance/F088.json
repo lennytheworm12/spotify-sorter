@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.3300254130153917,
+  "acquisition_ended_at": "2026-09-04T20:05:52.290754+00:00",
+  "acquisition_started_at": "2026-09-04T20:05:50.960729+00:00",
+  "acquisition_timestamp": "2026-09-04T20:05:50.960827+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2863813,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 173,
+  "provider_result": "SUCCESS",
+  "provider_title": "underscores — The Peace",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "aac7d6745710b78b957c54a606c616388129725698f93cd0cdd6fe6864e38823",
+      "representation_identity": "55e4f9ac8acf4efb61294afc1a544a8a577c363fac05a3bdebc6417cf18ab9fd",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "0650a576cc8993a176a216df5847c303ed75ac124fed7e5c1f369df9cac6c329",
+          "25": "d683acc17d10e3a411e551000917f0fafc182ce5687f736dcb2f4575836a9cad",
+          "5": "d46fca319c56d96e72d8cf4b7b308d9374cd2b3154600a66a942f8559308fae3"
+        },
+        "muq_mulan_large": {
+          "15": "6a185c2e0c49dc565dc5d2bc1ff5778b698914e57b78fa7e4f8fb771f087a765",
+          "25": "a3537507f5c442e0c8b51f44a33e6ead81d6dad61100eb9b74f0dbf48a531983",
+          "5": "97196a73f63c3bcf77613a0e90e558b7544c86f39a887811d3d8aaa97c4e4308"
+        }
+      },
+      "source_audio_sha256": "6db7cdf49f863031452e5b52f37d17c21998a229b5f110f734a990b032d03cf8"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "Gf-fCJ6TkRU"
+  },
+  "retained_relative_path": "6wm3t4VpTxSFfOUgTMlHZM/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 173.321,
+  "source_sha256": "a4702cb27e3d034e380d9bf94fc2975947a326693fda4f180451041739a5c9b7",
+  "source_url": "https://www.youtube.com/watch?v=Gf-fCJ6TkRU",
+  "spotify_artists": [
+    "underscores"
+  ],
+  "spotify_title": "The Peace",
+  "spotify_track_id": "6wm3t4VpTxSFfOUgTMlHZM",
+  "successful_query": "The Peace underscores",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "Gf-fCJ6TkRU"
+}

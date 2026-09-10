@@ -1,0 +1,76 @@
+{
+  "actual_cost_usd": "0.00522750",
+  "attempt": 76,
+  "cache_key": "40a414661103dba40ad0cd79d89264c15384ebc6f397d5cf9fb5e0e4099e03a7",
+  "evidence_hashes": {
+    "execution/attempts/attempt-76.request.json": "8a85d8380ceac1dc6e1a312deab2a7903fab28ab18874ca4f01f81b1b38ce707",
+    "execution/attempts/attempt-76.reservation.json": "4af5b6d7ff0c1e1d045b1b99652f53362609a21c210c531ff7f59d3686572594",
+    "execution/attempts/attempt-76.settlement.json": "bd4d5b75e63ee3116f8639a9299d1fec20dac786c58180e64f555b56ef3fa4ec",
+    "execution/transport/call-303.response.bin": "a360dd8d7c16c9231d31427e98c632a08cc0f135b612a613f18dfc0a1c5dde6a",
+    "execution/transport/call-304.response.bin": "46d89ee65484516f59b64ac13bf73ebf46dec8bc6de93e7d0a051a1b81ad1f44",
+    "execution/transport/call-304.response.json": "e4fcc324d4d5b2ff23de73a8098ac9d9e16c16385dbf576f39f1b84138ec4ab3",
+    "execution/transport/upload-N092.json": "d72b83fe7e9069da7b202a4adce3fa6080f4aa3ce0c099598a6a03772eacef22"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N092",
+  "pilot_id": "F085",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 1.5,
+        "observation": "Clean electric guitar plays jazz-inflected chord voicings in a relaxed intro pattern."
+      },
+      {
+        "at_seconds": 18.0,
+        "observation": "Melodic male R&B singing enters, sung smoothly over guitar chords and subtle ambient bass."
+      },
+      {
+        "at_seconds": 55.8,
+        "observation": "A low-key electronic beat with programmed kicks, snappy snare, and hi-hat enters under the vocals."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Pop"
+    ],
+    "secondary_styles": [
+      "K-R&B"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "electronic"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-304.response.bin",
+  "response_id": "UyKiaqzjFdiV_uMP87O46Qs",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 1.5, \"observation\": \"Clean electric guitar plays jazz-inflected chord voicings in a relaxed intro pattern.\"},\n    {\"at_seconds\": 18.0, \"observation\": \"Melodic male R&B singing enters, sung smoothly over guitar chords and subtle ambient bass.\"},\n    {\"at_seconds\": 55.8, \"observation\": \"A low-key electronic beat with programmed kicks, snappy snare, and hi-hat enters under the vocals.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\"Pop\"],\n  \"secondary_styles\": [\"K-R&B\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"clean\", \"electronic\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 269,
+    "promptTokenCount": 5625,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5176
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5894
+  }
+}

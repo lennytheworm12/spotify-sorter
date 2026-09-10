@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 9.4, \"observation\": \"Beat begins with pitched melodic vocal chops, crisp 808 percussion, and rhythmic male sung verse in Korean.\"},\n    {\"at_seconds\": 74.5, \"observation\": \"Full bouncy hook featuring synthesized bass, syncopated snare hits, and a repetitive chanting vocal melody.\"},\n    {\"at_seconds\": 96.8, \"observation\": \"A contrasting smooth female vocal verse section enters over sustained chords and filtered drum groove.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\"R&B\", \"Hip-Hop\"],\n  \"secondary_styles\": [\"Contemporary R&B\", \"Pop Rap\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"clean\", \"electronic\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIP6sca/lqxM+o7sokwqPxCjTiKDU6tpUYmejf/Y59j1H4KnZIhx3NSMxPJyFOwb3az71qmRUyLLNMxFD7AEZqO7FMmaRtr/HoXbOErOkcXsRPPzPUOIWZo9jc2c3tJWR81"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5543,
+    "candidatesTokenCount": 281,
+    "totalTokenCount": 5824,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5094
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "CiKiaretE9qsz7IPtd7EsQ8"
+}

@@ -1,0 +1,24 @@
+{
+  "attempts": [
+    1,
+    2
+  ],
+  "checks": [
+    "uploaded audio hash",
+    "positive input AUDIO tokens",
+    "response ID/model version",
+    "STOP finish",
+    "complete usage accounting",
+    "schema and semantic validation"
+  ],
+  "model_versions": [
+    "gemini-3.8-flash",
+    "gemini-3.8-flash"
+  ],
+  "result_hashes": {
+    "execution/attempts/attempt-01.result.json": "b4d972ec260ae8499d66ac9aee8cf0e355e3176c5b7730e354505c758cf4fe37",
+    "execution/attempts/attempt-02.result.json": "c6ab2e16c5bab90c073264cfff2983fd8dc5a5fc97ee6864f222dcbbfd3c9e44"
+  },
+  "semantic_agreement_checked": false,
+  "status": "ENGINEERING_SMOKES_PASSED"
+}

@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.5598580910009332,
+  "acquisition_ended_at": "2026-09-04T20:12:12.523675+00:00",
+  "acquisition_started_at": "2026-09-04T20:12:10.963817+00:00",
+  "acquisition_timestamp": "2026-09-04T20:12:10.963920+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3726120,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 220,
+  "provider_result": "SUCCESS",
+  "provider_title": "city girl | sit around (feat. tiffi)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "52b0f53ce3798c6d8315fe84a9496f3d5836562a66953dc86b1c771202e4d8c7",
+      "representation_identity": "b5b3cc845b7ef6f1ab583b06d6427b5995d2cbeeb7ec4fd16598b22a3ccd5621",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "043ef4a023517f08baa82bee416966cbcfdc14f82305ee31231f8b76ec27a058",
+          "25": "89530304077ef57426a1ff0da07ac4ed05c64fca9126b67ca1df850932fdaaff",
+          "5": "fe17e257b4d92550253a16261ade5d931ed8a0a73187178dc14911c6cc058215"
+        },
+        "muq_mulan_large": {
+          "15": "0a15b0d3e02b46812d856e4e1adb67037bfa96604d052d1e0d82fc11568287ef",
+          "25": "3e180023e5bcdcfd87e86360256abe69da814a0e226fb1c70be596d9b38ed0e7",
+          "5": "626765789526cfd82be0ad9a4ee8fc4c19d14e5930cedf13187c7b2bc17ce954"
+        }
+      },
+      "source_audio_sha256": "2804e4f6a4915305dfc796a5a7c76b837798790d6c824086a1c1475929500b10"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "CcgppPtVwPs"
+  },
+  "retained_relative_path": "6pWqlKm9ugucgKNldCLigX/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 219.861,
+  "source_sha256": "698b9f055cd82ccbd0b8b1175aeb4d9ca9b1e961fd7b12afc356c7b48806a6a2",
+  "source_url": "https://www.youtube.com/watch?v=CcgppPtVwPs",
+  "spotify_artists": [
+    "City Girl",
+    "tiffi"
+  ],
+  "spotify_title": "Sit Around",
+  "spotify_track_id": "6pWqlKm9ugucgKNldCLigX",
+  "successful_query": "Sit Around City Girl tiffi",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "CcgppPtVwPs"
+}

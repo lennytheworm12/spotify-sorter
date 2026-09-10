@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00595050",
+  "attempt": 7,
+  "cache_key": "508a812d922c3b292b554a152b965a0d9ca0f1806bdc12ba903db61a4ce52b56",
+  "evidence_hashes": {
+    "execution/attempts/attempt-07.request.json": "e35d88bbb4ac5e48b19e2ff2557666c125be6e41ff3d6a593f66bc89fab55585",
+    "execution/attempts/attempt-07.reservation.json": "e2b3543e62790e8a77f6afb7b5e0ac804ba2bcebb1b93db5f06789fb311e971b",
+    "execution/attempts/attempt-07.settlement.json": "b3f32e40c78efb9f9d05c6e527529dcc92a10dc8b1a007011e0a9b66c142bcab",
+    "execution/transport/call-013.response.bin": "8c0cdd589c3b1cf832dcaf89b3d698ed9e618738a8004b886b736d00c2de38b2",
+    "execution/transport/call-014.response.bin": "ea945573698c1e2b848cc28cb0f1ea61a5cf8fe01a0c8d50eccd5db3934a155e",
+    "execution/transport/call-014.response.json": "bf7efe7a39b60f2fa8cc079c9dc1d19af3460cd0737e80eb5cd4bbd57690ec1d",
+    "execution/transport/upload-N015.json": "3bcaee92240ca37ce3c13faec227a7319c9a80398bea915c7153b5d9c6f71daa"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N015",
+  "pilot_id": "A07",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 9.2,
+        "observation": "Slow down-tempo verse begins with low male vocals accompanied by minimal rhythmic bass and snare accents."
+      },
+      {
+        "at_seconds": 44.5,
+        "observation": "The chorus drops into a heavier trap-influenced drum groove with high pitched, pitched-up singing vocals."
+      },
+      {
+        "at_seconds": 154.5,
+        "observation": "Return of the powerful, booming bass chorus featuring high-register processed melodic vocals and synth pads."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Hip-Hop",
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Trap",
+      "Alternative R&B"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-014.response.bin",
+  "response_id": "MRiiaobCEb-8_PUPudvA4QI",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 9.2,\n      \"observation\": \"Slow down-tempo verse begins with low male vocals accompanied by minimal rhythmic bass and snare accents.\"\n    },\n    {\n      \"at_seconds\": 44.5,\n      \"observation\": \"The chorus drops into a heavier trap-influenced drum groove with high pitched, pitched-up singing vocals.\"\n    },\n    {\n      \"at_seconds\": 154.5,\n      \"observation\": \"Return of the powerful, booming bass chorus featuring high-register processed melodic vocals and synth pads.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\n    \"Hip-Hop\",\n    \"Pop\"\n  ],\n  \"secondary_styles\": [\n    \"Trap\",\n    \"Alternative R&B\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 326,
+    "promptTokenCount": 6304,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5855
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 6630
+  }
+}

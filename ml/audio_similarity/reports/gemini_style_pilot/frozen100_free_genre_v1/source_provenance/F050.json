@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.4785821569967084,
+  "acquisition_ended_at": "2026-09-04T20:11:52.442237+00:00",
+  "acquisition_started_at": "2026-09-04T20:11:50.963655+00:00",
+  "acquisition_timestamp": "2026-09-04T20:11:50.963759+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2513409,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 154,
+  "provider_result": "SUCCESS",
+  "provider_title": "Tell Me",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "94813575485304f63be4bf29659d88f69b0b44a5ed84214c7bc7016311299578",
+      "representation_identity": "acc497d8e48b51a005e6c6160b45b845566afd5ea82873404f819170627fbf37",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "d56ed0a32eba777edd0edaeba24093160e136b2ae88a7a1a1620ae82a65b0804",
+          "25": "af362b1d10686328f16bb0bf33aaa018c0a3c27f56c8380f0f35add1fbb27e48",
+          "5": "c40e5067f1b09ba9e51f07a42bf8bc655262d00fdc3324746bae07905ef0db8e"
+        },
+        "muq_mulan_large": {
+          "15": "2e944b66284f5a3eb200c0de07e29f0beadf7159ce6d5fdf9d1cd07189c30ddd",
+          "25": "0beeb7c41ec257effb42c590495fa1621a3860a2a83797e926486bb2d1365048",
+          "5": "266bdcc7cbc3d7ededbc41ab44037a6ad4139c6249493965a56960ca3e701a91"
+        }
+      },
+      "source_audio_sha256": "e58f84a7493f7ca2cc5a3fef59ffd7a31f9d964d94bac7b55c27d7aa426edc71"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "acLkEhCBt1k"
+  },
+  "retained_relative_path": "40TJl2hLf6Sr7K1a2SkkVA/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 153.521,
+  "source_sha256": "225953b43943581a9914e3c68c94c7f1bde1a8c8c668c3d94c7edf5c959ed7bc",
+  "source_url": "https://www.youtube.com/watch?v=acLkEhCBt1k",
+  "spotify_artists": [
+    "hyejin"
+  ],
+  "spotify_title": "Tell Me",
+  "spotify_track_id": "40TJl2hLf6Sr7K1a2SkkVA",
+  "successful_query": "Tell Me hyejin",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "acLkEhCBt1k"
+}

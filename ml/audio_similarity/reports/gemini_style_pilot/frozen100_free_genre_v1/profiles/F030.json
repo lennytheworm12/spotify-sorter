@@ -1,0 +1,45 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 0.0,
+        "observation": "Intimate acoustic guitar fingerpicking and tapping rhythmic elements set a minimal, gentle groove."
+      },
+      {
+        "at_seconds": 47.5,
+        "observation": "Chorus section with layered vocal harmonies and subtle low-end bass support alongside ongoing acoustic guitar."
+      },
+      {
+        "at_seconds": 107.0,
+        "observation": "Catchy, melodic 'na na na' vocal hook layered with warm backing vocals and acoustic instrumentation."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop Ballad",
+    "secondary_families": [
+      "Folk & Acoustic"
+    ],
+    "secondary_styles": [
+      "Acoustic Pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "_CCiatTgE_fQz7IPw8fhyQ8",
+  "spotify_track_id": "2Y4iTaIAamhYPyZcOdfL3g"
+}

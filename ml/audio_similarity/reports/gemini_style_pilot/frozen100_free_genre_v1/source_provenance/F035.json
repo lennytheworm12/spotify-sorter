@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.8731400030083023,
+  "acquisition_ended_at": "2026-09-04T20:26:32.843751+00:00",
+  "acquisition_started_at": "2026-09-04T20:26:30.970611+00:00",
+  "acquisition_timestamp": "2026-09-04T20:26:30.970715+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3069539,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 176,
+  "provider_result": "SUCCESS",
+  "provider_title": "Friday Night Plans - Fall in love with you in every 4AM. (Prod.Atsushi Asada)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "04553fb1a12213c4b3f3d3d8e4a827778599d0c31aed2e771dd303ef75597c4f",
+      "representation_identity": "f058e9766124210458fc03749013edbbddff492c8588378c0dc925707956c54a",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "720759ac9ff3327685c27e14be9f3c0925ccdbab4ca81b8e22e55439d6402f19",
+          "25": "5ed10022c605cc4999c36cc37caba2cbaf50e365d00a93175c74c50b8e3e740d",
+          "5": "d97d9eeb8f0bb666df4b4e4c21a8c1f616bffe29ba083dc54510ec587d3daaeb"
+        },
+        "muq_mulan_large": {
+          "15": "c1e93293827d1fabb13fab0ec2c0d7637dc7070e3fcb74fefd5fa07ec31c611b",
+          "25": "5228858f2161fafe61f06461457a14520781c2b3f62e53869475da7bc61e893b",
+          "5": "2ed9b0e6e611e4ba07888709512cde80c8fb298d9253ebf9a2c8cd078f9953c5"
+        }
+      },
+      "source_audio_sha256": "d200a4184036195b3818ed41fb6af4d6ab68e245b88f83ecf1972769637f3289"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "UnpPoqXTkjQ"
+  },
+  "retained_relative_path": "2sXQnT404FrXeSEZkJXfKM/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 176.381,
+  "source_sha256": "b9ca3667689125d953b2a607e2e8011d26ddacd7a5e667cb37c3c334e619ecd9",
+  "source_url": "https://www.youtube.com/watch?v=UnpPoqXTkjQ",
+  "spotify_artists": [
+    "Friday Night Plans"
+  ],
+  "spotify_title": "Fall in love with you in every 4AM.",
+  "spotify_track_id": "2sXQnT404FrXeSEZkJXfKM",
+  "successful_query": "Fall in love with you in every 4AM. Friday Night Plans",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "UnpPoqXTkjQ"
+}

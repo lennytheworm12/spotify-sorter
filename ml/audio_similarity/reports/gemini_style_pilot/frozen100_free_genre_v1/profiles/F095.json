@@ -1,0 +1,53 @@
+{
+  "collection_status": "REUSED_EXACT_PRIOR_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": {
+    "cache_key": "508a812d922c3b292b554a152b965a0d9ca0f1806bdc12ba903db61a4ce52b56",
+    "result_sha256": "316e7b3383bb7553cd8f6767838dde224b0175daff44864046cc281fb7da0cdf",
+    "source_attempt": 7,
+    "source_manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+    "source_pilot_id": "A07",
+    "source_run": ".research_audio/gemini_style_pilot/free-genre-point-v1"
+  },
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 9.2,
+        "observation": "Slow down-tempo verse begins with low male vocals accompanied by minimal rhythmic bass and snare accents."
+      },
+      {
+        "at_seconds": 44.5,
+        "observation": "The chorus drops into a heavier trap-influenced drum groove with high pitched, pitched-up singing vocals."
+      },
+      {
+        "at_seconds": 154.5,
+        "observation": "Return of the powerful, booming bass chorus featuring high-register processed melodic vocals and synth pads."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Hip-Hop",
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Trap",
+      "Alternative R&B"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "MRiiaobCEb-8_PUPudvA4QI",
+  "spotify_track_id": "7fBv7CLKzipRk6EC6TWHOB"
+}

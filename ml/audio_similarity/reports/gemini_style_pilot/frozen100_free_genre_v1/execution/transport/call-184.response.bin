@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 16.5, \"observation\": \"Intimate, breathy female vocal enters over a simple, repetitive electric piano chord progression.\"},\n    {\"at_seconds\": 33.0, \"observation\": \"Subtle low bass note and minimal electronic percussion join the piano accompaniment under the singing.\"},\n    {\"at_seconds\": 91.5, \"observation\": \"Vocals expand with close-mic'd harmonies while the sparse keyboard arrangement continues consistently.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Bedroom Pop\",\n  \"secondary_families\": [\"R&B and Soul\"],\n  \"secondary_styles\": [\"Alt-Pop\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"clean\", \"acoustic\", \"electronic\"],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPhAf6vP2aCl2k8cpasdyDy48dnenqO2exqGvMW9aHdMermnjZm4OH0Z2/V3llDPS6TuwUcDep9WnsI70/pQFxKvHIEG6zEfl1tTfqxJiE/kye5s4XOaXzj74DRcxehmGI"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5561,
+    "candidatesTokenCount": 266,
+    "totalTokenCount": 5827,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5112
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "hyGiaoXjMcaHz7IPoobtkQo"
+}

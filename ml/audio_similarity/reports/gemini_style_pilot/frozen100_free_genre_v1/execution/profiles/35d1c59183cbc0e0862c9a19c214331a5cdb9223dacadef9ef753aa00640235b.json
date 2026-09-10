@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00564750",
+  "attempt": 21,
+  "cache_key": "35d1c59183cbc0e0862c9a19c214331a5cdb9223dacadef9ef753aa00640235b",
+  "evidence_hashes": {
+    "execution/attempts/attempt-21.request.json": "1b810fb5e7f9800f85c47ba098ee41ca325f78ed3d71f46e3cdc1e038ea25caf",
+    "execution/attempts/attempt-21.reservation.json": "2bf97f5b10c325ce3c4620b71371b199621351b1764d23fdf6eb06de2f8513e4",
+    "execution/attempts/attempt-21.settlement.json": "3fb3cc9fbd7db570fb7e35278bcff8fdb4041b6801cbda35c38a4730b74b74f2",
+    "execution/transport/call-083.response.bin": "cdbf3bdeb38439821fe058202bf0bf85d58c8abdc676499aae6a8baa0dc7e708",
+    "execution/transport/call-084.response.bin": "57ff0de177d5337a4497fb17d2b4c3a091f80429f1f5ee91f5cc53238fac1767",
+    "execution/transport/call-084.response.json": "91c9804c02537075b6f3cb239ddb6f8db2f7b8dd769c84c967ab13cc8e0d4b5a",
+    "execution/transport/upload-N037.json": "74821b51a0929241be07c0c35b321c64b9bd49f09075fab5fc8e1bdedc6a0948"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N037",
+  "pilot_id": "F023",
+  "profile": {
+    "active_section_density": "varies",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.0,
+        "observation": "Sparse intro featuring dry, close-mic'd lead vocals over an acoustic piano chord progression."
+      },
+      {
+        "at_seconds": 71.0,
+        "observation": "Explosive transition into a driving pop-rock chorus with full kit drums, electric bass, and intense belting vocals."
+      },
+      {
+        "at_seconds": 178.0,
+        "observation": "Arrangement drops back down to solo piano before rebuilding dynamic tension into the final crescendo."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Pop Rock",
+    "secondary_families": [
+      "Rock"
+    ],
+    "secondary_styles": [
+      "Piano Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "layered",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-084.response.bin",
+  "response_id": "2CCiavr3FKaAmtkPg-nvkAE",
+  "response_text": "{\n  \"active_section_density\": \"varies\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 15.0,\n      \"observation\": \"Sparse intro featuring dry, close-mic'd lead vocals over an acoustic piano chord progression.\"\n    },\n    {\n      \"at_seconds\": 71.0,\n      \"observation\": \"Explosive transition into a driving pop-rock chorus with full kit drums, electric bass, and intense belting vocals.\"\n    },\n    {\n      \"at_seconds\": 178.0,\n      \"observation\": \"Arrangement drops back down to solo piano before rebuilding dynamic tension into the final crescendo.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Pop Rock\",\n  \"secondary_families\": [\n    \"Rock\"\n  ],\n  \"secondary_styles\": [\n    \"Piano Pop\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"acoustic\",\n    \"layered\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 317,
+    "promptTokenCount": 5945,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5496
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 6262
+  }
+}

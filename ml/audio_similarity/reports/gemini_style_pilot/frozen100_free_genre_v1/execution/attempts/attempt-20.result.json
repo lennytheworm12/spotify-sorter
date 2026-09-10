@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00459075",
+  "attempt": 20,
+  "cache_key": "e2b03f93eda1ad0bdf25714575bbeacd9dd02fbbe64362adc0efbaf0979fe9d2",
+  "evidence_hashes": {
+    "execution/attempts/attempt-20.request.json": "ff13210200fb05289f47a9cbb881803df1a0cdbdcd3741b8dda5e06ee665f995",
+    "execution/attempts/attempt-20.reservation.json": "6b8f9c31dce89928996bdbdb67db2a8a0de8713fab1012982cbc7fba0136b14a",
+    "execution/attempts/attempt-20.settlement.json": "59d96ec955af9b80f661bf1be4159e9dc8f0d77b563a4e6fce1c0c4fad25f927",
+    "execution/transport/call-079.response.bin": "67607072b642736c21a4d6d0990c537db18296a7f8a2e1a08b90184287e84a9a",
+    "execution/transport/call-080.response.bin": "be8aa6a3c702c21dfa6da72e2d092c47b095e953a81e69f0cc9ef8768dc91906",
+    "execution/transport/call-080.response.json": "e3c3aa566b0745996406121ba3f00be43ea292e69043d6f60faadee5da103d24",
+    "execution/transport/upload-N036.json": "a8d646ad0b60dffba76a11973d227e7ece251304046af1b534bd348583d5603c"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N036",
+  "pilot_id": "F022",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 37.0,
+        "observation": "Bright electronic synth-pop hook kicks in with distinct vocal chopping effects, bubbling synth arpeggios, and crisp electronic percussion."
+      },
+      {
+        "at_seconds": 55.0,
+        "observation": "High-pitched repetitive vocal sample rhythmically interlocks with the synth bassline."
+      },
+      {
+        "at_seconds": 110.0,
+        "observation": "Verse features stripped-back bouncy bassline, soft synth keys, and melodic female lead vocals sung in Korean and English."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Synthpop",
+      "Dance-Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "sample_based",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-080.response.bin",
+  "response_id": "0CCiaomdNaOl1MkPsZiCeA",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 37.0,\n      \"observation\": \"Bright electronic synth-pop hook kicks in with distinct vocal chopping effects, bubbling synth arpeggios, and crisp electronic percussion.\"\n    },\n    {\n      \"at_seconds\": 55.0,\n      \"observation\": \"High-pitched repetitive vocal sample rhythmically interlocks with the synth bassline.\"\n    },\n    {\n      \"at_seconds\": 110.0,\n      \"observation\": \"Verse features stripped-back bouncy bassline, soft synth keys, and melodic female lead vocals sung in Korean and English.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\n    \"Electronic\"\n  ],\n  \"secondary_styles\": [\n    \"Synthpop\",\n    \"Dance-Pop\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"sample_based\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 331,
+    "promptTokenCount": 4466,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4017
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 4797
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00432600",
+  "attempt": 58,
+  "cache_key": "4c4cfe93fef178f1aff6539be2c39ffcc1e7be5da7686d397e970b66d032c259",
+  "evidence_hashes": {
+    "execution/attempts/attempt-58.request.json": "cfe2361ee0436a29294a3bad6cfbdf6828653630a3d975120c088c4a7b8e62ff",
+    "execution/attempts/attempt-58.reservation.json": "4aace18f3c121759bbb589aff7d549d7e3db94c0553e70b2de9e88b7651748e8",
+    "execution/attempts/attempt-58.settlement.json": "ffc79836315ed32fe3adc767677fe429179eab8250730af41f9e5f0f82b8465e",
+    "execution/transport/call-231.response.bin": "962ae38e1f620850bacd8b1ab17a1506bb67674e0f8e96991bce56df3acd9f0c",
+    "execution/transport/call-232.response.bin": "f00d4720e4f376c1010b6b014dfced6d1e198488f9804b1f9b4e79eeaa8fadd3",
+    "execution/transport/call-232.response.json": "f9942116a7e4b2f9ef7e666285f53b2d8871a287ee885ee324fa6bbd08eb2a04",
+    "execution/transport/upload-N074.json": "0c2de82c5ed39a7154a2c22673497daceb461bdfbbbee95478bf9beeafb1704c"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N074",
+  "pilot_id": "F065",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.2,
+        "observation": "Spoken-singing style female vocal enters a dynamic verse with muted electronic kick and subtle synth bass pad."
+      },
+      {
+        "at_seconds": 43.5,
+        "observation": "The chorus arrives with layered vocal harmonies over a pulsing electronic synth line and minimal percussion."
+      },
+      {
+        "at_seconds": 111.8,
+        "observation": "Intimate vocal delivery intensifies over minimal synthesized textures and subdued beat accompaniment."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Electropop",
+    "secondary_families": [
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Alt-Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-232.response.bin",
+  "response_id": "2CGiarOpE9W0qtsP0NCIgQ0",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 15.2,\n      \"observation\": \"Spoken-singing style female vocal enters a dynamic verse with muted electronic kick and subtle synth bass pad.\"\n    },\n    {\n      \"at_seconds\": 43.5,\n      \"observation\": \"The chorus arrives with layered vocal harmonies over a pulsing electronic synth line and minimal percussion.\"\n    },\n    {\n      \"at_seconds\": 111.8,\n      \"observation\": \"Intimate vocal delivery intensifies over minimal synthesized textures and subdued beat accompaniment.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Electropop\",\n  \"secondary_families\": [\n    \"Electronic\"\n  ],\n  \"secondary_styles\": [\n    \"Alt-Pop\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"clean\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 311,
+    "promptTokenCount": 4213,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3764
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 4524
+  }
+}

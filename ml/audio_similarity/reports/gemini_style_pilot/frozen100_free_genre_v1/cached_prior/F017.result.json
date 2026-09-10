@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00389025",
+  "attempt": 14,
+  "cache_key": "23cb991d434d00606cbfffe93512edad522cdb984d8eaf45af63d16dcd8653f0",
+  "evidence_hashes": {
+    "execution/attempts/attempt-14.request.json": "77a5e43b42e9586efb1f8569b5b95372868c2677373791a5322be3ddd4694642",
+    "execution/attempts/attempt-14.reservation.json": "9bfa8e932387bf77ac15db3715ca13b0e65f41ed65fd94634c9968be135a9e53",
+    "execution/attempts/attempt-14.settlement.json": "4aaf50a4df5fe4cbd6f2bd4af3a50a4904d7e89868a912730104c6da6ebcf65e",
+    "execution/transport/call-027.response.bin": "5154f4136bd226dc87b2569f098db75cbb229f96176ccdd52a7b91419fd8728c",
+    "execution/transport/call-028.response.bin": "6d6efd7dfb051ab4aed4c20da8aae2284714318eacae8d1bbedc59f7b1a5383c",
+    "execution/transport/call-028.response.json": "68487e15b2d869ede861ffa22068f8d629028dd3a42038a4b3b3a6f863860ce2",
+    "execution/transport/upload-N002.json": "bac1cfe938c847084dc6664c329193a9b3c581a23eb9e735cf50847f3c1507df"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N002",
+  "pilot_id": "C04",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 12.5,
+        "observation": "Spoken-word-style rap vocal enters over a minimal trap-influenced beat featuring 808 sub-bass and hi-hats."
+      },
+      {
+        "at_seconds": 25.0,
+        "observation": "High-pitched auto-tuned melodic chorus vocal hook enters with layered backing."
+      },
+      {
+        "at_seconds": 96.0,
+        "observation": "Bridge section featuring pitched vocal samples, ambient synths, and emotional sung-melodic rap delivery."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Trap",
+    "secondary_families": [
+      "Pop",
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Emo Rap",
+      "Melodic Rap"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "sample_based"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-028.response.bin",
+  "response_id": "WhiiavPaNoetz7IP3p2H2Q8",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 12.5,\n      \"observation\": \"Spoken-word-style rap vocal enters over a minimal trap-influenced beat featuring 808 sub-bass and hi-hats.\"\n    },\n    {\n      \"at_seconds\": 25.0,\n      \"observation\": \"High-pitched auto-tuned melodic chorus vocal hook enters with layered backing.\"\n    },\n    {\n      \"at_seconds\": 96.0,\n      \"observation\": \"Bridge section featuring pitched vocal samples, ambient synths, and emotional sung-melodic rap delivery.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip Hop\",\n  \"primary_style\": \"Trap\",\n  \"secondary_families\": [\n    \"Pop\",\n    \"R&B\"\n  ],\n  \"secondary_styles\": [\n    \"Emo Rap\",\n    \"Melodic Rap\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"layered\",\n    \"sample_based\"\n  ],\n  \"vocal_role\": \"mixed_rap_and_singing\"\n}",
+  "usage": {
+    "candidatesTokenCount": 339,
+    "promptTokenCount": 3492,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3043
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 3831
+  }
+}

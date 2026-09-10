@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00556350",
+  "attempt": 52,
+  "cache_key": "39291b521db8adb22dc6ae13e839c5fb9aebfe8b875d0387dba673080eea79c8",
+  "evidence_hashes": {
+    "execution/attempts/attempt-52.request.json": "a28e512dd63665dbb3ebb7be9ccc1daeab7350b77a2047357142bd0a4445e478",
+    "execution/attempts/attempt-52.reservation.json": "43b0e4c505b7350328779772f5f0d8c7ca48658a8d25cef346c6d50526f4b266",
+    "execution/attempts/attempt-52.settlement.json": "76edcbdf9414ab3e9a30e0a6d98dc7969d783846603dcc0bfd1110330c8176fc",
+    "execution/transport/call-207.response.bin": "e25d7f45caae94c135eabda2b15ef5d906a0d31ac68db8309d1415430418307a",
+    "execution/transport/call-208.response.bin": "4105accfa1e5b113f3012cbdbf818bde40dfd4c4274ab14788b7f9eb73fc47ef",
+    "execution/transport/call-208.response.json": "2cf92a76344f3a65835c4624635aca20611289a5250e3cc6d8dc1a56a0b4c092",
+    "execution/transport/upload-N068.json": "a788a35cf129bb70ce3286f69a02f6669712b0a9144e0e5e6ff101fc42c618dd"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N068",
+  "pilot_id": "F058",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 27.5,
+        "observation": "Delicate acoustic piano provides minimal accompaniment beneath gentle, intimate female lead singing."
+      },
+      {
+        "at_seconds": 126.0,
+        "observation": "Subtle, ambient electronic synth pads and soft, distant percussion layer into the piano-driven arrangement."
+      },
+      {
+        "at_seconds": 213.5,
+        "observation": "Vocal line intensifies into an emotional, resonant peak with dramatic, cinematic orchestration."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop Ballad",
+    "secondary_families": [
+      "Folk & Acoustic",
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Piano Ballad",
+      "Contemporary R&B"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-208.response.bin",
+  "response_id": "sCGiaoWGL9-Z6dkPjs3fsQ0",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 27.5, \"observation\": \"Delicate acoustic piano provides minimal accompaniment beneath gentle, intimate female lead singing.\"},\n    {\"at_seconds\": 126.0, \"observation\": \"Subtle, ambient electronic synth pads and soft, distant percussion layer into the piano-driven arrangement.\"},\n    {\"at_seconds\": 213.5, \"observation\": \"Vocal line intensifies into an emotional, resonant peak with dramatic, cinematic orchestration.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop Ballad\",\n  \"secondary_families\": [\"Folk & Acoustic\", \"R&B\"],\n  \"secondary_styles\": [\"Piano Ballad\", \"Contemporary R&B\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"acoustic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 281,
+    "promptTokenCount": 6013,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5564
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 6294
+  }
+}

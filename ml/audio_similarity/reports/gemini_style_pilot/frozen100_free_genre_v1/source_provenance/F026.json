@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.6319864200195298,
+  "acquisition_ended_at": "2026-09-04T20:16:12.597531+00:00",
+  "acquisition_started_at": "2026-09-04T20:16:10.965545+00:00",
+  "acquisition_timestamp": "2026-09-04T20:16:10.965670+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3266965,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 192,
+  "provider_result": "SUCCESS",
+  "provider_title": ".Uzu x clavita - You Are Enough",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "144c46f0a174139c88da6e19a5ac2fe7f7e1049cd822c4f26a41897fa069a6cd",
+      "representation_identity": "e4920ce8a2b0e56a1372e90dd6deccb475be6f5e311f32a44abe8553cb1ed7a3",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "70ff769dc92c684d49247faea3df4a84628f1ca087d0cfc945210959625ae0e3",
+          "25": "efb714bf242e0b37f9885d9994df91184dd9651a123c936a24074c17cc43a312",
+          "5": "21b79b2b6149f155faeb12db2931dbedd44a075cc324529ae29bb7e9b2e2ccb1"
+        },
+        "muq_mulan_large": {
+          "15": "d16be590e72fd3554c5ce1cf5e78901171f4f7de2246cfccf5ac786b99aa86fd",
+          "25": "3f0cd1bab127ee05643baec23206bfc3d02e745217c6dc64c175fab99b756ecb",
+          "5": "0bf37b3edde6fd3043fb517e09f21065cd83f3a4f40132246002196db91874de"
+        }
+      },
+      "source_audio_sha256": "1529aebdc14890be141e4ef87dbeed6408a212f033f70ac75a67f1abc5775aa1"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "4O3lW4OSpTA"
+  },
+  "retained_relative_path": "2BFAfMIblG0RZeAvlmLC81/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 192.021,
+  "source_sha256": "2ea93b27fb9e57e9080a2310e55baa2339fea647f67184faeb8d3a64e40dcb61",
+  "source_url": "https://www.youtube.com/watch?v=4O3lW4OSpTA",
+  "spotify_artists": [
+    ".Uzu",
+    "Clavita"
+  ],
+  "spotify_title": "You Are Enough",
+  "spotify_track_id": "2BFAfMIblG0RZeAvlmLC81",
+  "successful_query": "You Are Enough .Uzu Clavita",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "4O3lW4OSpTA"
+}

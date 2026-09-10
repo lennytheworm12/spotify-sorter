@@ -1,0 +1,76 @@
+{
+  "actual_cost_usd": "0.00508200",
+  "attempt": 75,
+  "cache_key": "5d2b765a5121c859e48c31e5e60eec7ab54eb550e70098e495d2788f384a945b",
+  "evidence_hashes": {
+    "execution/attempts/attempt-75.request.json": "d16375ddce3d90ac5bd6aba2d37f296d273649ab89dc02b2fe7b554b7f03207e",
+    "execution/attempts/attempt-75.reservation.json": "038e9dfaa7fa5c43f40809a71b5af33a816a0f1df745b341db0333119832aeb6",
+    "execution/attempts/attempt-75.settlement.json": "db8b27f63660050bb15f58f29a08b43ac7cf60cc0ff09f576bb8929924224bae",
+    "execution/transport/call-299.response.bin": "bae8530a5c541b3139068d8c2a53f0c2bca23e687a0735dfbe2985892c6f0b14",
+    "execution/transport/call-300.response.bin": "2c065b67dd11468af8df8ee89cb6bbf84388e091c80c2215a2453adf82b45a88",
+    "execution/transport/call-300.response.json": "a04d8a59eba7d15a520c9b05482d2dae2ea18ccc8eb7a1181663e990f661926c",
+    "execution/transport/upload-N091.json": "09ac2801a5c3acb2c92e483851cd0cf14c3d1cce885d497ebde79ca6e88462ef"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N091",
+  "pilot_id": "F084",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.0,
+        "observation": "Auto-tuned melodic lead vocals begin over a trap beat with pitched synth bells and rolling hi-hats."
+      },
+      {
+        "at_seconds": 97.0,
+        "observation": "Verse transition introduces rhythmic, chanted vocal delivery over standard trap 808 and clap patterns."
+      },
+      {
+        "at_seconds": 142.5,
+        "observation": "Guest vocal rap verse enters with dry, punchy delivery over the steady minimal trap arrangement."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Trap",
+    "secondary_families": [
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Melodic Rap"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-300.response.bin",
+  "response_id": "SyKiaqyeJOPsz7IPq8je2Q8",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 15.0,\n      \"observation\": \"Auto-tuned melodic lead vocals begin over a trap beat with pitched synth bells and rolling hi-hats.\"\n    },\n    {\n      \"at_seconds\": 97.0,\n      \"observation\": \"Verse transition introduces rhythmic, chanted vocal delivery over standard trap 808 and clap patterns.\"\n    },\n    {\n      \"at_seconds\": 142.5,\n      \"observation\": \"Guest vocal rap verse enters with dry, punchy delivery over the steady minimal trap arrangement.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip Hop\",\n  \"primary_style\": \"Trap\",\n  \"secondary_families\": [\n    \"R&B\"\n  ],\n  \"secondary_styles\": [\n    \"Melodic Rap\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"mixed_rap_and_singing\"\n}",
+  "usage": {
+    "candidatesTokenCount": 316,
+    "promptTokenCount": 5196,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4747
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5512
+  }
+}

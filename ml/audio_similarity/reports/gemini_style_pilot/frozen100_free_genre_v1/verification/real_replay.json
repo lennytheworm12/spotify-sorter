@@ -1,0 +1,31 @@
+{
+  "all_protected_hashes_verified": true,
+  "api_factory_guard": "Raises if a transport is constructed during cache replay or completed next()",
+  "blocked_tracks": [],
+  "execution_file_count": 1516,
+  "execution_files_byte_identical_before_after": true,
+  "execution_files_sha256": "8ac48c7fc1b8a2a8043b1dbdea5bd4515e164cc60312240db85e333d8d46ef5c",
+  "http_calls_by_kind": {
+    "countTokens": 84,
+    "generateContent": 84,
+    "upload-finalize": 84,
+    "upload-start": 84
+  },
+  "invalid_profiles": 0,
+  "new_generations": 84,
+  "protected_file_count": 702,
+  "repeats": 0,
+  "replay": {
+    "cached_prior_profiles": 16,
+    "invalid_profiles": 0,
+    "new_api_calls": 0,
+    "new_validated_profiles": 84,
+    "status": "CACHE_REPLAY_VERIFIED",
+    "unique_profiles": 100
+  },
+  "retries": 0,
+  "reused_profiles": 16,
+  "source_corrections_applied": 0,
+  "source_tracks": 100,
+  "status": "PASS"
+}

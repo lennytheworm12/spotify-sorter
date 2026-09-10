@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"balanced\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 12.0, \"observation\": \"Trap hi-hat rolls and electronic snare enter under rhythmic sung-spoken vocal phrasing.\"},\n    {\"at_seconds\": 30.5, \"observation\": \"Full pop-trap chorus drops with a punchy kick drum, sub bass, and melodic lead vocals.\"},\n    {\"at_seconds\": 88.0, \"observation\": \"Breakdown with filtered beat and processed vocal ad-libs creating an atmospheric space.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip Hop\",\n  \"primary_style\": \"Trap\",\n  \"secondary_families\": [\"Pop\", \"R&B\"],\n  \"secondary_styles\": [\"Pop Rap\", \"Contemporary R&B\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"mixed_rap_and_singing\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPV7/li+7vikvX1/DC/BpHe+VakVA81vC0bzbL0RhVNxiH6Na173G4U0eVvJ0jSC42o/fofJSMe7ZQfnwVTVQOnYdCZsMe5HXfjYgFFvsBoN88h9QEM7ig3Qzms7O1ttkG"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 4896,
+    "candidatesTokenCount": 276,
+    "totalTokenCount": 5172,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4447
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "AyKiapuMAYaGz7IPoJjBkAE"
+}

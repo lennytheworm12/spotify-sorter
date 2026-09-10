@@ -1,0 +1,54 @@
+{
+  "collection_status": "REUSED_EXACT_PRIOR_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": {
+    "cache_key": "86a9aea328e15dc537ad4fd772c609a84adc7ebff7ea82ff9c4e56f1a08afa95",
+    "result_sha256": "f6a65eca5646c72daed88d6716ffeac488a4888dae854ee55e52387355b954c2",
+    "source_attempt": 15,
+    "source_manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+    "source_pilot_id": "C05",
+    "source_run": ".research_audio/gemini_style_pilot/free-genre-point-v1"
+  },
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 3.7,
+        "observation": "High-pitched vocal chop loop initiates the track over silence before main instrumentation enters."
+      },
+      {
+        "at_seconds": 23.3,
+        "observation": "Female lead vocals begin in a smooth, mid-tempo R&B cadence over pitched vocal chops and bass."
+      },
+      {
+        "at_seconds": 58.7,
+        "observation": "Trap-style programmed drums kick in with heavy sub-bass and hi-hats, building into a rhythmic verse."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B and Soul",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Hip-Hop",
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Trap",
+      "Alternative R&B"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "sample_based",
+      "electronic",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "XxiiapalI8b5ugfZ45C4DA",
+  "spotify_track_id": "6wm3t4VpTxSFfOUgTMlHZM"
+}

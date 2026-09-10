@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00541425",
+  "attempt": 10,
+  "cache_key": "3044ba2e64ba380c54dcd0d617e21141c95bcc925da63adafa8bb16336acc0ab",
+  "evidence_hashes": {
+    "execution/attempts/attempt-10.request.json": "5048f3679bff12fe799b0cadd2dcec55e7ada2b3e973b73c49127a3712abbe58",
+    "execution/attempts/attempt-10.reservation.json": "2c9fe1a839b8376b8660df870d19a137548b2d57b305431e7c9d5f207ab38c12",
+    "execution/attempts/attempt-10.settlement.json": "b2583b0ffe231ba5edaa53962054c66331be075cf20b07b270ade927b710a778",
+    "execution/transport/call-039.response.bin": "d31395e92e0a975b901d5d0cbc9239f250c52ccb1b0981de6fed7047a550ccee",
+    "execution/transport/call-040.response.bin": "59c19e99bac1acf530f33d1685c4f9f7096368d853421ee2ce1a86bf7a313b46",
+    "execution/transport/call-040.response.json": "60abb9181703cd87acbe18b31748d2c3c8ab1c84cf0cf910df4a6b8c55a452dc",
+    "execution/transport/upload-N026.json": "b16fdf7ff47c8f6061b906cb49ff0343f8dee3fc321d9684beb7403f73e460f0"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N026",
+  "pilot_id": "F011",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 9.5,
+        "observation": "Female lead vocal enters with a smooth, sweet delivery over a mid-tempo R&B groove and electric piano."
+      },
+      {
+        "at_seconds": 68.0,
+        "observation": "Chorus section with layered vocal harmonies, steady modern R&B rhythm, and subtle synth accents."
+      },
+      {
+        "at_seconds": 136.0,
+        "observation": "Mellow bridge section featuring rhodes piano, finger-snaps, and relaxed vocal phrasing."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Pop"
+    ],
+    "secondary_styles": [
+      "K-R&B",
+      "Pop Soul"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-040.response.bin",
+  "response_id": "kSCiasq_Hub6qtsP9drVaQ",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 9.5,\n      \"observation\": \"Female lead vocal enters with a smooth, sweet delivery over a mid-tempo R&B groove and electric piano.\"\n    },\n    {\n      \"at_seconds\": 68.0,\n      \"observation\": \"Chorus section with layered vocal harmonies, steady modern R&B rhythm, and subtle synth accents.\"\n    },\n    {\n      \"at_seconds\": 136.0,\n      \"observation\": \"Mellow bridge section featuring rhodes piano, finger-snaps, and relaxed vocal phrasing.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\n    \"Pop\"\n  ],\n  \"secondary_styles\": [\n    \"K-R&B\",\n    \"Pop Soul\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"layered\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 327,
+    "promptTokenCount": 5584,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5135
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5911
+  }
+}

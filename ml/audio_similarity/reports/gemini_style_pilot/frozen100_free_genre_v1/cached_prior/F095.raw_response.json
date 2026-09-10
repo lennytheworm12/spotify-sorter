@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 9.2,\n      \"observation\": \"Slow down-tempo verse begins with low male vocals accompanied by minimal rhythmic bass and snare accents.\"\n    },\n    {\n      \"at_seconds\": 44.5,\n      \"observation\": \"The chorus drops into a heavier trap-influenced drum groove with high pitched, pitched-up singing vocals.\"\n    },\n    {\n      \"at_seconds\": 154.5,\n      \"observation\": \"Return of the powerful, booming bass chorus featuring high-register processed melodic vocals and synth pads.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\n    \"Hip-Hop\",\n    \"Pop\"\n  ],\n  \"secondary_styles\": [\n    \"Trap\",\n    \"Alternative R&B\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPh9MAle6pOZvmecmCQLd/X+rXH8jkCCHJByqeC4AWNIpAYygOTW3yAeYjhhXQXrySk+Gicv4xL6mjqyWly8euRp9vUwF4s8pxr2yNa6aIvRR6ltnKQQMq7rbOQYxKD7jb"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 6304,
+    "candidatesTokenCount": 326,
+    "totalTokenCount": 6630,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5855
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "MRiiaobCEb-8_PUPudvA4QI"
+}

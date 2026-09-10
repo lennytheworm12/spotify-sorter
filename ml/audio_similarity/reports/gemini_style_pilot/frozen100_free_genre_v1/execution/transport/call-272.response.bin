@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 17.5,\n      \"observation\": \"A slow, punchy R&B groove enters with trap-influenced hi-hats, deep 808 sub-bass, and emotional female lead vocals.\"\n    },\n    {\n      \"at_seconds\": 56.2,\n      \"observation\": \"The chorus expands with layered vocal harmonies, lush synth pads, and resonant basslines emphasizing contemporary R&B tropes.\"\n    },\n    {\n      \"at_seconds\": 133.0,\n      \"observation\": \"Verse transition with stripped-back keys and intimate, breathy solo vocal phrasing before the fuller beat returns.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B and Soul\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\n    \"Pop\",\n    \"Hip-Hop\"\n  ],\n  \"secondary_styles\": [\n    \"Alternative R&B\",\n    \"Trap Soul\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"layered\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIP+uRJNi6COGN9GYmi0UEoyS2fhc4+JJrDlL8eo4XrIAz//gTLOsJlzXpYDfkUXAuv2a5nB1Tt7ErZ99G/j4LmMSidGc0wMJ9SictjGy4kY7bO/HaHkQ0793alY/xNTkS5"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 4751,
+    "candidatesTokenCount": 353,
+    "totalTokenCount": 5104,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4302
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "HCKiavK2NqXnz7IPkN3a0Aw"
+}

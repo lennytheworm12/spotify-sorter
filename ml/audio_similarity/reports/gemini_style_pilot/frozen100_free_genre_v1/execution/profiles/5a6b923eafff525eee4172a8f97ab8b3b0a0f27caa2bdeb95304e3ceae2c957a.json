@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00358725",
+  "attempt": 15,
+  "cache_key": "5a6b923eafff525eee4172a8f97ab8b3b0a0f27caa2bdeb95304e3ceae2c957a",
+  "evidence_hashes": {
+    "execution/attempts/attempt-15.request.json": "ffd549d204676c0f7997bd543288256c3e62d5577bcb4b010646278976c99dce",
+    "execution/attempts/attempt-15.reservation.json": "db2fdf09af4ba2d302738df1f3f9257d2411737e507c9fcd0feaf6fd41c2faf0",
+    "execution/attempts/attempt-15.settlement.json": "903656ca472164881e569d222af8f8d168061a3bc8993277fb284f66977aad8e",
+    "execution/transport/call-059.response.bin": "81be4aa33d8e5a066bcf90b674a94d14a3369a75164ee5da26f18c855462d973",
+    "execution/transport/call-060.response.bin": "1610eed0c39dcd2acfc9b521bb6b6a423286829749282108b63f7f231d81357c",
+    "execution/transport/call-060.response.json": "be4bbb9d38b732c5c6b6e725520d3786111a79106b3c6662295e423d9e541866",
+    "execution/transport/upload-N031.json": "6800c52497fb86f5be3cedf3471f9d62f9e5e5ab31f53100f8721b71f72e344e"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N031",
+  "pilot_id": "F016",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 1.2,
+        "observation": "Sparse percussive beat with electronic snares and deep 808 bass begins the track."
+      },
+      {
+        "at_seconds": 8.5,
+        "observation": "Processed female singing vocal enters over a minimal trap beat and subtle ambient synth pads."
+      },
+      {
+        "at_seconds": 40.0,
+        "observation": "Repetitive hook phrase with layered, pitch-shifted vocal chops and deep sub-bass."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Trap",
+    "secondary_families": [
+      "R&B",
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Trap Soul",
+      "Alternative R&B"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-060.response.bin",
+  "response_id": "sCCiauGTGraGz7IPtNbz6Ag",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 1.2,\n      \"observation\": \"Sparse percussive beat with electronic snares and deep 808 bass begins the track.\"\n    },\n    {\n      \"at_seconds\": 8.5,\n      \"observation\": \"Processed female singing vocal enters over a minimal trap beat and subtle ambient synth pads.\"\n    },\n    {\n      \"at_seconds\": 40.0,\n      \"observation\": \"Repetitive hook phrase with layered, pitch-shifted vocal chops and deep sub-bass.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip Hop\",\n  \"primary_style\": \"Trap\",\n  \"secondary_families\": [\n    \"R&B\",\n    \"Electronic\"\n  ],\n  \"secondary_styles\": [\n    \"Trap Soul\",\n    \"Alternative R&B\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"clean\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 321,
+    "promptTokenCount": 3178,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 2729
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 3499
+  }
+}

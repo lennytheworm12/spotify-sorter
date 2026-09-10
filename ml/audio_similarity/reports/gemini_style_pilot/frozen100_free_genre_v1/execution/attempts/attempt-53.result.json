@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00456825",
+  "attempt": 53,
+  "cache_key": "73f88b6250c046033dc31f72ff6b2f71dbce51e2250660bdd864828d5b9704fc",
+  "evidence_hashes": {
+    "execution/attempts/attempt-53.request.json": "e11984c1491bf55a0b285579d82b76b62f5fa2916ae7ff1327884df73007fd40",
+    "execution/attempts/attempt-53.reservation.json": "719da29f6e0bb2bcbfcc9714453c1daa291206a5f93ca4f71bc813ad2a3da90e",
+    "execution/attempts/attempt-53.settlement.json": "828df754ccd0221db6180340cb710d6f5d1441a0dc3339e74e31e0b6f58ffac3",
+    "execution/transport/call-211.response.bin": "42e97777bba9ab8886837119c41a91f77237ec6987b0167c1e28470d0eaa6876",
+    "execution/transport/call-212.response.bin": "7d997f4e8b48b6978eb4b8baa31c36409e97501cd7142603c2317622ab6e25c4",
+    "execution/transport/call-212.response.json": "68320de492c55869454cb07fe73ba41c1ba637138690acf7f442439aa40924c3",
+    "execution/transport/upload-N069.json": "d63e4d84ae532bd192b38ecac102609011d7c265e6ba137c77a9ba2e2bd0a909"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N069",
+  "pilot_id": "F059",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 9.1,
+        "observation": "A bouncy Afrobeat and amapiano-influenced percussion groove enters under melodic female pop vocals."
+      },
+      {
+        "at_seconds": 43.5,
+        "observation": "Rhythmic vocal chanting repeats rapid syllables alongside minimal percussion and subtle synth bass."
+      },
+      {
+        "at_seconds": 68.3,
+        "observation": "Full groove returns with layered female vocals singing a hook with an upbeat dance rhythm."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "Electronic",
+      "African Dancehall and Reggae"
+    ],
+    "secondary_styles": [
+      "Afrobeats",
+      "Dance-Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-212.response.bin",
+  "response_id": "uCGiaqbDHMXVz7IPwdaruAg",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 9.1,\n      \"observation\": \"A bouncy Afrobeat and amapiano-influenced percussion groove enters under melodic female pop vocals.\"\n    },\n    {\n      \"at_seconds\": 43.5,\n      \"observation\": \"Rhythmic vocal chanting repeats rapid syllables alongside minimal percussion and subtle synth bass.\"\n    },\n    {\n      \"at_seconds\": 68.3,\n      \"observation\": \"Full groove returns with layered female vocals singing a hook with an upbeat dance rhythm.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\"Electronic\", \"African Dancehall and Reggae\"],\n  \"secondary_styles\": [\"Afrobeats\", \"Dance-Pop\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 296,
+    "promptTokenCount": 4611,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4162
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 4907
+  }
+}

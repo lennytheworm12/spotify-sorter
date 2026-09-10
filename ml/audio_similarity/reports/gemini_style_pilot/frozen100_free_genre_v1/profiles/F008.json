@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 9.2,
+        "observation": "Female lead vocal enters over a smooth contemporary R&B beat with bright keyboard chords and trap-influenced hi-hats."
+      },
+      {
+        "at_seconds": 47.4,
+        "observation": "Catchy pop/R&B hook section introduced with layered vocal harmonies and steady mid-tempo bounce."
+      },
+      {
+        "at_seconds": 64.8,
+        "observation": "Male rap verse enters, interacting stylistically with the ongoing melodic contemporary R&B production."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "r&b",
+    "primary_style": "contemporary r&b",
+    "secondary_families": [
+      "pop",
+      "hip hop"
+    ],
+    "secondary_styles": [
+      "k-pop",
+      "trap soul"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "response_id": "fSCiapiXDtqzqtsPn-uWgQ4",
+  "spotify_track_id": "0JJeoiCAa1hwcBsPxBN2w4"
+}

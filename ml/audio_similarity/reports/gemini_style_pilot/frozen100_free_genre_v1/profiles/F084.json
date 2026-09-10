@@ -1,0 +1,44 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.0,
+        "observation": "Auto-tuned melodic lead vocals begin over a trap beat with pitched synth bells and rolling hi-hats."
+      },
+      {
+        "at_seconds": 97.0,
+        "observation": "Verse transition introduces rhythmic, chanted vocal delivery over standard trap 808 and clap patterns."
+      },
+      {
+        "at_seconds": 142.5,
+        "observation": "Guest vocal rap verse enters with dry, punchy delivery over the steady minimal trap arrangement."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Trap",
+    "secondary_families": [
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Melodic Rap"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "response_id": "SyKiaqyeJOPsz7IPq8je2Q8",
+  "spotify_track_id": "6nef0wHkelfKqNVHAtzJbR"
+}

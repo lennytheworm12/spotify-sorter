@@ -1,0 +1,76 @@
+{
+  "actual_cost_usd": "0.00527550",
+  "attempt": 62,
+  "cache_key": "8640a15829001e87d6d1111002267acce28f0ed3a91540bb995b2506b4bd6d11",
+  "evidence_hashes": {
+    "execution/attempts/attempt-62.request.json": "327df5fc057d3c23e86057f32aaaae1ae4e5486d85d69937cc8d62ea9ab3a174",
+    "execution/attempts/attempt-62.reservation.json": "a8472e989d2643a2a0e4909638b45215fec36221d4f524af2b344fb4a0c52042",
+    "execution/attempts/attempt-62.settlement.json": "61225c6eddccccd2defea28bd64cac7b4affdba4cb5ee4b94424c9b59579bac6",
+    "execution/transport/call-247.response.bin": "f37fe5759ce26833e9510da67243c7ff6a5f206898117b1b9e6177cb292c01d9",
+    "execution/transport/call-248.response.bin": "6c2f9fbe56b0a9ad09dc9b89fcd519f177325750c46b25dd833f7acebe37b664",
+    "execution/transport/call-248.response.json": "dee8b8b8d8d9938adaeee4c977e04b1bb76e62c7dd0cd1be012861a4eedc53c4",
+    "execution/transport/upload-N078.json": "8ed9078c9c8c933952780a50a669a9222fd380116cdfb9262bc3af6ee1b1f135"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N078",
+  "pilot_id": "F069",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 0.0,
+        "observation": "Solo acoustic piano begins playing slow, melancholy, rubato arpeggios and chords."
+      },
+      {
+        "at_seconds": 25.0,
+        "observation": "Female lead vocal enters in Korean, delivering an intimate, breathy ballad phrase over sparse piano accompaniment."
+      },
+      {
+        "at_seconds": 152.0,
+        "observation": "Piano solo interlude featuring high-register bell-like tones and expressive rubato dynamic phrasing."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Korean Ballad",
+    "secondary_families": [
+      "Classical"
+    ],
+    "secondary_styles": [
+      "Piano Ballad"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-248.response.bin",
+  "response_id": "9SGiasHhL8vljMcP64DSoAY",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 0.0,\n      \"observation\": \"Solo acoustic piano begins playing slow, melancholy, rubato arpeggios and chords.\"\n    },\n    {\n      \"at_seconds\": 25.0,\n      \"observation\": \"Female lead vocal enters in Korean, delivering an intimate, breathy ballad phrase over sparse piano accompaniment.\"\n    },\n    {\n      \"at_seconds\": 152.0,\n      \"observation\": \"Piano solo interlude featuring high-register bell-like tones and expressive rubato dynamic phrasing.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Korean Ballad\",\n  \"secondary_families\": [\n    \"Classical\"\n  ],\n  \"secondary_styles\": [\n    \"Piano Ballad\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"acoustic\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 307,
+    "promptTokenCount": 5499,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5050
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5806
+  }
+}

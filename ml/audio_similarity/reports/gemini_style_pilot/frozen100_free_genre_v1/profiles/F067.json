@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 23.8,
+        "observation": "A low-pitched male vocal chorus enters over an electronic trap-influenced drum beat and deep sub bass."
+      },
+      {
+        "at_seconds": 45.5,
+        "observation": "A female lead vocal starts singing the verse over subtle atmospheric synths and rhythmic percussion."
+      },
+      {
+        "at_seconds": 128.5,
+        "observation": "Re-entry of the male vocal refrain layering back into the moody contemporary R&B groove."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Electronic",
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Alternative R&B",
+      "Pop Soul"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "hazy"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "5SGiaq3aHuikqtsP_-qJwAU",
+  "spotify_track_id": "5cgy5vMqVZbd8hYutp2txu"
+}

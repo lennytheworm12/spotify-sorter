@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00532500",
+  "attempt": 61,
+  "cache_key": "30e2a2782d8c2e6240a7cbfcceb5452a23670e02b9b0ecd46c90ad0873eda4fa",
+  "evidence_hashes": {
+    "execution/attempts/attempt-61.request.json": "af44031240ddaacc8d15443382df8710848bd905a95959458a8ea9c939624fb2",
+    "execution/attempts/attempt-61.reservation.json": "cf8b1bcc3bd8460fceb5224edc3c2a091b8ea9dae6094decadfe2f483e493b5c",
+    "execution/attempts/attempt-61.settlement.json": "e7007ab7fc40452bc434067c35a548aef40059dd34ca418da57d4c03e9bc11fb",
+    "execution/transport/call-243.response.bin": "cebaed1245237269fef26cf0f8ebb6dcf25a071934cb9facfa3a05c14d843d8e",
+    "execution/transport/call-244.response.bin": "ee2860b85657ce0c3534d1f9a5ea01be47150dc0d147f6e930ee38d9b7fb2a7d",
+    "execution/transport/call-244.response.json": "c9942abefbda06e0dd481a14699ba73619387554b26e8a36de82bc235b828315",
+    "execution/transport/upload-N077.json": "689e1c9995e635ab206c9b1d68e2f2a89dc109d52ac5212c9fad08a1ba19e565"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N077",
+  "pilot_id": "F068",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 13.9,
+        "observation": "Female lead vocal enters over a bright, clean electric guitar chop, bassline, and programmed pop beat."
+      },
+      {
+        "at_seconds": 42.4,
+        "observation": "Transition into an upbeat dance-pop chorus featuring layered vocal hooks and syncopated synth percussion."
+      },
+      {
+        "at_seconds": 140.0,
+        "observation": "Return of the dance-pop chorus with driving electronic kick, snare snaps, and layered melodic vocal lines."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Dance-Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-244.response.bin",
+  "response_id": "7iGiaoTVC8XVz7IPwdaruAg",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 13.9,\n      \"observation\": \"Female lead vocal enters over a bright, clean electric guitar chop, bassline, and programmed pop beat.\"\n    },\n    {\n      \"at_seconds\": 42.4,\n      \"observation\": \"Transition into an upbeat dance-pop chorus featuring layered vocal hooks and syncopated synth percussion.\"\n    },\n    {\n      \"at_seconds\": 140.0,\n      \"observation\": \"Return of the dance-pop chorus with driving electronic kick, snare snaps, and layered melodic vocal lines.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\n    \"Electronic\"\n  ],\n  \"secondary_styles\": [\n    \"Dance-Pop\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"clean\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 318,
+    "promptTokenCount": 5510,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5061
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5828
+  }
+}

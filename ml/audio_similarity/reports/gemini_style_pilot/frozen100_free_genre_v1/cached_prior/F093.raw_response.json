@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 6.7, \"observation\": \"Subdued electronic beat enters behind the emotive solo male vocal and sparse ambient keys.\"},\n    {\"at_seconds\": 40.5, \"observation\": \"Chorus hook features multi-tracked background vocal harmonies emphasizing emotional delivery.\"},\n    {\"at_seconds\": 138.0, \"observation\": \"Mellow electronic instrumentation with subtle synths supporting passionate vocal performance.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\"Pop\", \"Electronic\"],\n  \"secondary_styles\": [\"Alt-Pop\", \"Ambient Pop\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPTXQ/mRmvKvvsjT3yP0AynnY0bEWzxl18Qsu4+noVao51sMu5ReBahkEKSi2xV1WFqP1djK+MWtLH3oA0bHg6lZ/8UNPUxMpw9pXkz5tD1q16/HYxrGo0cFxMe+k2KHUK"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5732,
+    "candidatesTokenCount": 262,
+    "totalTokenCount": 5994,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5283
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "NhiiauO-LKupqtsPuvLtmAc"
+}

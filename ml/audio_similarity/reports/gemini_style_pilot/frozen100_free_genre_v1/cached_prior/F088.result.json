@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00485025",
+  "attempt": 15,
+  "cache_key": "86a9aea328e15dc537ad4fd772c609a84adc7ebff7ea82ff9c4e56f1a08afa95",
+  "evidence_hashes": {
+    "execution/attempts/attempt-15.request.json": "d6e7cfd153fee6744cc375565beb1e92f6ee140866eb1ae487024657b2ad236c",
+    "execution/attempts/attempt-15.reservation.json": "e3e3dc6dc20a6040277ce604ed71e1c916d1fb52c7fea0cd09780b9503328c80",
+    "execution/attempts/attempt-15.settlement.json": "e75e11bc30d97af3cf239e78f8113be30bafd493f408372bf85b8ac00bc8ba5c",
+    "execution/transport/call-029.response.bin": "c9dc848069d473f1a67a4134f4092f9b6ec5eeb6ac9fff6df1f23cc24d818871",
+    "execution/transport/call-030.response.bin": "b7459429f06b35c894d7380acde7de9efc18811572f5eddcf3bf06b88a310778",
+    "execution/transport/call-030.response.json": "06270ed803f06b2da147fb2d5435c0606b09ef0e889595ec40cb86cb9662c58c",
+    "execution/transport/upload-N010.json": "4f7b340b4f1e706e8a496b9f37b8f2d102ebad8be9b36e8105cecae65c0c2cb5"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N010",
+  "pilot_id": "C05",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 3.7,
+        "observation": "High-pitched vocal chop loop initiates the track over silence before main instrumentation enters."
+      },
+      {
+        "at_seconds": 23.3,
+        "observation": "Female lead vocals begin in a smooth, mid-tempo R&B cadence over pitched vocal chops and bass."
+      },
+      {
+        "at_seconds": 58.7,
+        "observation": "Trap-style programmed drums kick in with heavy sub-bass and hi-hats, building into a rhythmic verse."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B and Soul",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Hip-Hop",
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Trap",
+      "Alternative R&B"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "sample_based",
+      "electronic",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-030.response.bin",
+  "response_id": "XxiiapalI8b5ugfZ45C4DA",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 3.7,\n      \"observation\": \"High-pitched vocal chop loop initiates the track over silence before main instrumentation enters.\"\n    },\n    {\n      \"at_seconds\": 23.3,\n      \"observation\": \"Female lead vocals begin in a smooth, mid-tempo R&B cadence over pitched vocal chops and bass.\"\n    },\n    {\n      \"at_seconds\": 58.7,\n      \"observation\": \"Trap-style programmed drums kick in with heavy sub-bass and hi-hats, building into a rhythmic verse.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B and Soul\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\n    \"Hip-Hop\",\n    \"Pop\"\n  ],\n  \"secondary_styles\": [\n    \"Trap\",\n    \"Alternative R&B\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"sample_based\",\n    \"electronic\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 337,
+    "promptTokenCount": 4782,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4333
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5119
+  }
+}

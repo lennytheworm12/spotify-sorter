@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.5059299339773133,
+  "acquisition_ended_at": "2026-09-04T20:02:52.465099+00:00",
+  "acquisition_started_at": "2026-09-04T20:02:50.959169+00:00",
+  "acquisition_timestamp": "2026-09-04T20:02:50.959358+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2146377,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 138,
+  "provider_result": "SUCCESS",
+  "provider_title": "raph x EJEAN - summer (official video)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "8deac0d0da0fba1f83ba05457e83b03c3d2ba06b3cbcc46ef464162d2ada9303",
+      "representation_identity": "429ad15b2d61a5c7880d17ecd62c2bddcad6dc4008da5e63da13129f9eb155e9",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "a6efc04e41c81e4142fe1791de228e61d3d4a2dd7898d988cd30ef1e8f93e8d1",
+          "25": "500bfbf59b04904adbdfa8d10f5c46c26bbc2df062bbf683b9647659345c6013",
+          "5": "8bfe2ea8931e5c85d54d74646d79f9bd16aec5b7bd4ff9abb89f2851a9a6847c"
+        },
+        "muq_mulan_large": {
+          "15": "d819985145bd2f0d301fe575835bdc959e43a674de5e83f50e906e3a7bce565e",
+          "25": "7b846630be0cd5943b0c05015e9e9be1b4a22e8e027778ebb15ad3a6c180dc82",
+          "5": "f81c3ba7224f80c1c1c47ed14586cd9d69354568490c60252d971e452f4c9968"
+        }
+      },
+      "source_audio_sha256": "06ea8078fcb90758a1e951e68cb36548d5e08bf39e09e03ab46c8fcca250a851"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "m_0otXbkze8"
+  },
+  "retained_relative_path": "4osRLDg7abL4hLdfZ1c39g/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 138.181,
+  "source_sha256": "a3c1e1bcc5ebbbd6b3048d47bf21b90d029ea14fb81a197f60e36031063598c8",
+  "source_url": "https://www.youtube.com/watch?v=m_0otXbkze8",
+  "spotify_artists": [
+    "raph",
+    "EJEAN"
+  ],
+  "spotify_title": "summer",
+  "spotify_track_id": "4osRLDg7abL4hLdfZ1c39g",
+  "successful_query": "summer raph EJEAN",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "m_0otXbkze8"
+}

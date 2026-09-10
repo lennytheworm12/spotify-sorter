@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00637425",
+  "attempt": 11,
+  "cache_key": "b5134419de778d44c0ffae51651e388c072043473ed6fa2253d0c45e42395b3a",
+  "evidence_hashes": {
+    "execution/attempts/attempt-11.request.json": "ddf3415adf460aa3623dafaf48ffe3cc60505c235938b20fa5d0994beedc9f82",
+    "execution/attempts/attempt-11.reservation.json": "5e5e1ee9194b7c915ad2aa1b96235ca73094030e911bb293793db835ec7ae3ad",
+    "execution/attempts/attempt-11.settlement.json": "d428f7fd26555fe63be9cd46f255de836c16647607a79c45f2b5dbb7c913ee83",
+    "execution/transport/call-021.response.bin": "030f4c2077bfbfd6e1d2c0e2611288184353437d4b3594570e1a399a0d24913d",
+    "execution/transport/call-022.response.bin": "6462d21021d3bdc544a90f5b257a1fad219bda027af9f12fdeb391746f7d2050",
+    "execution/transport/call-022.response.json": "b3f91e1b0980f74119c36ef77f5c5a071acb291b0371336a28e93aa2a0f241da",
+    "execution/transport/upload-N001.json": "25b7cc0075fe41899343d64cf2c45cd1ce43d55eafec91c895f598a5ababd1e0"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N001",
+  "pilot_id": "C01",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 1.0,
+        "observation": "Spoken/chanted vocal sample repeated over a bare, syncopated kick-and-percussion groove."
+      },
+      {
+        "at_seconds": 26.5,
+        "observation": "Sub-bass pulse enters underneath continuous vocal fragments and ambient spatial textures."
+      },
+      {
+        "at_seconds": 254.0,
+        "observation": "Minimalist hand percussion pattern slowly builds with subtle shaker accents and reverberant dub delay."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "electronic",
+    "primary_style": "minimal techno",
+    "secondary_families": [
+      "ambient"
+    ],
+    "secondary_styles": [
+      "dub techno",
+      "microhouse"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "sample_based",
+      "clean"
+    ],
+    "vocal_role": "vocal_samples_only"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-022.response.bin",
+  "response_id": "SRiiaqLCFMywqtsP9Yv3uQ0",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 1.0,\n      \"observation\": \"Spoken/chanted vocal sample repeated over a bare, syncopated kick-and-percussion groove.\"\n    },\n    {\n      \"at_seconds\": 26.5,\n      \"observation\": \"Sub-bass pulse enters underneath continuous vocal fragments and ambient spatial textures.\"\n    },\n    {\n      \"at_seconds\": 254.0,\n      \"observation\": \"Minimalist hand percussion pattern slowly builds with subtle shaker accents and reverberant dub delay.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"electronic\",\n  \"primary_style\": \"minimal techno\",\n  \"secondary_families\": [\"ambient\"],\n  \"secondary_styles\": [\"dub techno\", \"microhouse\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"sample_based\", \"clean\"],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+  "usage": {
+    "candidatesTokenCount": 295,
+    "promptTokenCount": 7024,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 6575
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 7319
+  }
+}

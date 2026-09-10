@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.408564839977771,
+  "acquisition_ended_at": "2026-09-04T20:26:12.379011+00:00",
+  "acquisition_started_at": "2026-09-04T20:26:10.970446+00:00",
+  "acquisition_timestamp": "2026-09-04T20:26:10.970557+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3488769,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 205,
+  "provider_result": "SUCCESS",
+  "provider_title": "Billie Eilish - idontwannabeyouanymore (Official Vertical Video)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "7cbff3c8e2076466d1211d47f8a2cd10125a1e909bef8e12cb675d7699521f8d",
+      "representation_identity": "71dc3cfdcf4d4f9f90fcaf0549fd5cdd6a815cefe2ff6c5703f85686cf63b454",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "48b1652862e15afc02573342a9159a536e5398dc1f72246357bb5a63e46bdf8c",
+          "25": "feca09ee07141b23e942442b717b8df82e174ff01e4b1c4296af57ec9a6fb6a4",
+          "5": "b5fea32ef5a3764fa4003705f9e0f671fdbd407c9073a541783a251c27ad47d4"
+        },
+        "muq_mulan_large": {
+          "15": "72928be7d43ecab81878d91f85ba36561176d526b341828184245050e5027781",
+          "25": "02da37727c84069cb13d21225b42045fed76cd4370e3f255a81103c04a30a511",
+          "5": "1c5a36a6423fcb0efbbf2fbcb50814c6911cea8484424def90431ccf5142fa6d"
+        }
+      },
+      "source_audio_sha256": "66757ec2cb0fdcb07e83fb497b1636f4914f049879da5f4b77c08bd7fce7e077"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "-tn2S3kJlyU"
+  },
+  "retained_relative_path": "41zXlQxzTi6cGAjpOXyLYH/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 204.481,
+  "source_sha256": "c20075ec09af810f96f22728e3c30f28a11ef80e23eb70c0b80502bcf93cefb1",
+  "source_url": "https://www.youtube.com/watch?v=-tn2S3kJlyU",
+  "spotify_artists": [
+    "Billie Eilish"
+  ],
+  "spotify_title": "idontwannabeyouanymore",
+  "spotify_track_id": "41zXlQxzTi6cGAjpOXyLYH",
+  "successful_query": "idontwannabeyouanymore Billie Eilish",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "-tn2S3kJlyU"
+}

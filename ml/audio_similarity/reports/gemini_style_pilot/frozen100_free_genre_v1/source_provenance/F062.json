@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.650865366042126,
+  "acquisition_ended_at": "2026-09-04T20:20:52.618449+00:00",
+  "acquisition_started_at": "2026-09-04T20:20:50.967584+00:00",
+  "acquisition_timestamp": "2026-09-04T20:20:50.967687+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3622585,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 199,
+  "provider_result": "SUCCESS",
+  "provider_title": "INTRN - Not Afraid (Official Audio)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "8189a93e052888bee0c0a4bc040a6051d1a6883433dcef3306504f575eb7c0f6",
+      "representation_identity": "7441e2e5b09e5c7cbe8a09f02b226fff8d86db1eec267be428f1fc4724464fa7",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "9754dad42bcadc6642e2e47a80461e8a8dc999f2cb584deea86d1b0b69d34a44",
+          "25": "24b8dce92eecff94d569f39b4e23b184858c88ff40258522cc5b411b9943e2d6",
+          "5": "4209365efa47e9d82aa001f30919ba820ea4f937de15e666ce6959f7db83f421"
+        },
+        "muq_mulan_large": {
+          "15": "ef5940aa1bcd476ad92b060a3c1af9e7db6ed150cdec2d624a7d5fbfe0f6afc8",
+          "25": "b1dcb0780f6642d1fba35f74812e05a740bf4ede9b994faf15328458a065cd15",
+          "5": "ec0b7d5a095549e3f944bf6cad83767d4cc1934c5f81a497fdc57094a24e4e90"
+        }
+      },
+      "source_audio_sha256": "1271f81d3b0c4f576b7f0748d06a819a4ca4f1dedbfe6088300a4834e0f59c04"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "h4enMIDwQvs"
+  },
+  "retained_relative_path": "4yNhVidUIAtKPT72PrZuLP/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 199.241,
+  "source_sha256": "a79555a821ffc7c555cbeef37aaa3caeb595c9af091afe48c1906edd0b177c2b",
+  "source_url": "https://www.youtube.com/watch?v=h4enMIDwQvs",
+  "spotify_artists": [
+    "INTRN"
+  ],
+  "spotify_title": "Not Afraid",
+  "spotify_track_id": "4yNhVidUIAtKPT72PrZuLP",
+  "successful_query": "Not Afraid INTRN",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "h4enMIDwQvs"
+}

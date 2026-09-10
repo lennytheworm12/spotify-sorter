@@ -1,0 +1,53 @@
+{
+  "collection_status": "REUSED_EXACT_PRIOR_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": {
+    "cache_key": "b5134419de778d44c0ffae51651e388c072043473ed6fa2253d0c45e42395b3a",
+    "result_sha256": "fca80c7be9ea8e77e31a73baca0be49f3c8b911d7c3b8a44b3c0aaea34e132e6",
+    "source_attempt": 11,
+    "source_manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+    "source_pilot_id": "C01",
+    "source_run": ".research_audio/gemini_style_pilot/free-genre-point-v1"
+  },
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 1.0,
+        "observation": "Spoken/chanted vocal sample repeated over a bare, syncopated kick-and-percussion groove."
+      },
+      {
+        "at_seconds": 26.5,
+        "observation": "Sub-bass pulse enters underneath continuous vocal fragments and ambient spatial textures."
+      },
+      {
+        "at_seconds": 254.0,
+        "observation": "Minimalist hand percussion pattern slowly builds with subtle shaker accents and reverberant dub delay."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "electronic",
+    "primary_style": "minimal techno",
+    "secondary_families": [
+      "ambient"
+    ],
+    "secondary_styles": [
+      "dub techno",
+      "microhouse"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "sample_based",
+      "clean"
+    ],
+    "vocal_role": "vocal_samples_only"
+  },
+  "response_id": "SRiiaqLCFMywqtsP9Yv3uQ0",
+  "spotify_track_id": "00njeQb198Lm7Jge2Rsrlg"
+}

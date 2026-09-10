@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"dense\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 23.5, \"observation\": \"Vocal refrain over swelling synth pad and low atmospheric rumble\"},\n    {\"at_seconds\": 63.8, \"observation\": \"Sudden drop into a heavy, distorted 4-on-the-floor kick with resonant synth bass\"},\n    {\"at_seconds\": 159.0, \"observation\": \"Distorted kick pattern continues with repetitive vocal hook layered over rolling hi-hats\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Electronic\",\n  \"primary_style\": \"Hard Techno\",\n  \"secondary_families\": [\"Dance\"],\n  \"secondary_styles\": [\"Schranz\", \"Industrial Techno\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"distorted\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPx4itOgk2yJNEZlQBXMyKnjBbCN0txB8EYfVWPL6uklC5qUGEWeNM2jK+aOFd4bYdV4g0D9vF/5ZD7xXTwg8x/5sXXdthnQuM05y9h5Uc9h5jGBNjllzde4wSQMG7Qizg"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 8382,
+    "candidatesTokenCount": 268,
+    "totalTokenCount": 8650,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 7933
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "HiGiatL2OJ7S_uMP2-zTkQ4"
+}

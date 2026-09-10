@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.3198295540059917,
+  "acquisition_ended_at": "2026-09-04T20:29:52.291912+00:00",
+  "acquisition_started_at": "2026-09-04T20:29:50.972082+00:00",
+  "acquisition_timestamp": "2026-09-04T20:29:50.972203+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 1646367,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 99,
+  "provider_result": "SUCCESS",
+  "provider_title": "Favorite Part",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "321fa9b7d55658706ef1f8c0f320bd94c31245326f80af0a87a631150f143a1f",
+      "representation_identity": "1b9bfe2bd5c9106ea7c4b0d2742708a70ca3e330b54c2d77ba0eda14710cf727",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "8b8fab2802c3df28c1d4b33befef45b7bacdf631209cc5217f0260979d4dc1fd",
+          "25": "4257b0c2128c274800ddc3f230ded71abe4815731a54b1678f838cd7b5d8fc18",
+          "5": "55d05f4dc89d24baf5c60b26afabe6fa74b2271605acf19c536101716d2c858c"
+        },
+        "muq_mulan_large": {
+          "15": "4d7e75f648ebfbb6597dc252cb0cc15f813168be84cb10305f0fc3bb64ff6622",
+          "25": "b0926943a7c3c8743c4cb4f93fb45eb85d989aa3092c38b8ca157b3b61a0fb12",
+          "5": "44623adf760c34eb73a430c38e018d3e229f1d448ea7334d11e38610270cd962"
+        }
+      },
+      "source_audio_sha256": "09933972cdf818015b9b7c794ab66dceefb05d029c0382d15f3f04bfa146a2e2"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "galR8hC10vs"
+  },
+  "retained_relative_path": "6zKX91EvxRHr42ZiZ5C9kN/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 98.661,
+  "source_sha256": "5cc11d9e3fe0773800cdd735650d32096162402102ae4f8bce06cb635230677b",
+  "source_url": "https://www.youtube.com/watch?v=galR8hC10vs",
+  "spotify_artists": [
+    "JO YURI"
+  ],
+  "spotify_title": "Favorite Part",
+  "spotify_track_id": "6zKX91EvxRHr42ZiZ5C9kN",
+  "successful_query": "Favorite Part JO YURI",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "galR8hC10vs"
+}

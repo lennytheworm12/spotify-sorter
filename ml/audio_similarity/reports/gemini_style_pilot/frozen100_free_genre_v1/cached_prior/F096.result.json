@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00402150",
+  "attempt": 16,
+  "cache_key": "5faefd4d0f79095aee337537ff04d5e7040cab3ae0777644c6c901bf87c69ae4",
+  "evidence_hashes": {
+    "execution/attempts/attempt-16.request.json": "8c943eb957b6436aa5aa60abba26e6d28ab027e4f0fb02d280bf50bfc50b2e44",
+    "execution/attempts/attempt-16.reservation.json": "ec426e44ab1e97b27c5f9252a59d63fee20f72f1d4ff706d537fbb0694be72a6",
+    "execution/attempts/attempt-16.settlement.json": "e4fe358ae93e905bfb5c1df14f65a524c298260194f4df15892c75c89ed16ae1",
+    "execution/transport/call-031.response.bin": "bb305140c3ae954aba7af03564718f40ea9b4a2298e7398ae0c102de21025602",
+    "execution/transport/call-032.response.bin": "4a4b8ae91bf2e33b1ed13f30cbf4a75d3aadf81d6e2060b7da0009503621421a",
+    "execution/transport/call-032.response.json": "a35d696810794f38ae67f439d2340bfe15cc08ac52a4c543f79688b24fd8e733",
+    "execution/transport/upload-N011.json": "6e7f1a8c0c08c1b119ebeea67c4d4e92922a2d5d9ed207ca0d130cb1857192bb"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N011",
+  "pilot_id": "C06",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 8.0,
+        "observation": "Sparse intro featuring a clean melodic electric guitar riff underneath a soft, breathy male lead vocal."
+      },
+      {
+        "at_seconds": 22.0,
+        "observation": "Transition into full arrangement with a four-on-the-floor kick, synth bassline, and funk-influenced guitar chops."
+      },
+      {
+        "at_seconds": 37.0,
+        "observation": "Catchy pop hook kicks in with energetic drum programming, vocal harmonies, and upbeat disco-pop groove."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Dance-Pop",
+    "secondary_families": [
+      "R&B",
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Nu-Disco",
+      "Synth-Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-032.response.bin",
+  "response_id": "ZBiiarSMCNeKmtkPu6q8-Aw",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 8.0,\n      \"observation\": \"Sparse intro featuring a clean melodic electric guitar riff underneath a soft, breathy male lead vocal.\"\n    },\n    {\n      \"at_seconds\": 22.0,\n      \"observation\": \"Transition into full arrangement with a four-on-the-floor kick, synth bassline, and funk-influenced guitar chops.\"\n    },\n    {\n      \"at_seconds\": 37.0,\n      \"observation\": \"Catchy pop hook kicks in with energetic drum programming, vocal harmonies, and upbeat disco-pop groove.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Dance-Pop\",\n  \"secondary_families\": [\n    \"R&B\",\n    \"Electronic\"\n  ],\n  \"secondary_styles\": [\n    \"Nu-Disco\",\n    \"Synth-Pop\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"clean\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 335,
+    "promptTokenCount": 3687,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3238
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 4022
+  }
+}

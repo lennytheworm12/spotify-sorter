@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 10.0,\n      \"observation\": \"A mid-tempo R&B beat enters with soft electric piano chords, rimshot snare, and sub bass.\"\n    },\n    {\n      \"at_seconds\": 29.5,\n      \"observation\": \"Clean female lead vocals enter in Korean, singing a melodic contemporary R&B ballad verse.\"\n    },\n    {\n      \"at_seconds\": 198.0,\n      \"observation\": \"Second female vocal enters with a slightly more rap-adjacent rhythmic cadence before singing.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B and Soul\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\"Pop\"],\n  \"secondary_styles\": [\"K-Pop\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"clean\", \"electronic\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPts7sDKGJ9Ium7V/K+uh4RqP3r4gumXjbbel+IcYtQ/TbnQ2JXHeOx0MG/eXsdH+wQN+L2bbqVofWmcfllLE23VtC9zyQOQoUgm4p9NEim58fvfAUkVjD8j1goeuavNBC"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 7293,
+    "candidatesTokenCount": 296,
+    "totalTokenCount": 7589,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 6844
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "OyCiasL5Ls_jz7IP4ojf2Q4"
+}

@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.0,
+        "observation": "Main groove enters with trap beat, 808 bass, acoustic guitar arpeggios, and melodic R&B vocals."
+      },
+      {
+        "at_seconds": 113.0,
+        "observation": "Vocalist sings verse melodies over a minimalist guitar and trap rhythm section."
+      },
+      {
+        "at_seconds": 202.0,
+        "observation": "A guest vocalist delivers an auto-tuned melodic rap verse over the guitar trap groove."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip-Hop",
+    "primary_style": "Trap R&B",
+    "secondary_families": [
+      "R&B",
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Melodic Trap",
+      "Contemporary R&B"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "response_id": "JSGiatu4B42hqtsPvaKC8Aw",
+  "spotify_track_id": "30NAF18yQGvwKrbn1IEMKn"
+}

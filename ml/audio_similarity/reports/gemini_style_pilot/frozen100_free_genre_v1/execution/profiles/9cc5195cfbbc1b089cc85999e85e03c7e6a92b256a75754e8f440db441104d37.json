@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00516825",
+  "attempt": 46,
+  "cache_key": "9cc5195cfbbc1b089cc85999e85e03c7e6a92b256a75754e8f440db441104d37",
+  "evidence_hashes": {
+    "execution/attempts/attempt-46.request.json": "d9a14306d0447c2d76ebe808acd6407cf87055267c14696653530c4b3bbd5798",
+    "execution/attempts/attempt-46.reservation.json": "43f2efa6a4b040c08d809b334be1722ba14cf1f9f38386de19049d40f8e5be61",
+    "execution/attempts/attempt-46.settlement.json": "1ecda9ff52bc38b4b1f28258e419589fcb3f1762711a16b737949b02fef3ff59",
+    "execution/transport/call-183.response.bin": "69d8194b9697f3ec46f7b2669c8e7f2759ccdad42a7664f8b350f64971c2b1e9",
+    "execution/transport/call-184.response.bin": "dfe701626c9062e537b96ea3dba33a9bb8d13ff5ace9b80dc41c33a92c724b7a",
+    "execution/transport/call-184.response.json": "1796c66cac52cea93a2ee38fa6097421c9a9c39b5cec1624b884e1854e7bdf4e",
+    "execution/transport/upload-N062.json": "910c37c3a7c884531b499b500a3dca7befa1730d761dd4144351b8c67e85c7a8"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N062",
+  "pilot_id": "F051",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 16.5,
+        "observation": "Intimate, breathy female vocal enters over a simple, repetitive electric piano chord progression."
+      },
+      {
+        "at_seconds": 33.0,
+        "observation": "Subtle low bass note and minimal electronic percussion join the piano accompaniment under the singing."
+      },
+      {
+        "at_seconds": 91.5,
+        "observation": "Vocals expand with close-mic'd harmonies while the sparse keyboard arrangement continues consistently."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Bedroom Pop",
+    "secondary_families": [
+      "R&B and Soul"
+    ],
+    "secondary_styles": [
+      "Alt-Pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "acoustic",
+      "electronic"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-184.response.bin",
+  "response_id": "hyGiaoXjMcaHz7IPoobtkQo",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 16.5, \"observation\": \"Intimate, breathy female vocal enters over a simple, repetitive electric piano chord progression.\"},\n    {\"at_seconds\": 33.0, \"observation\": \"Subtle low bass note and minimal electronic percussion join the piano accompaniment under the singing.\"},\n    {\"at_seconds\": 91.5, \"observation\": \"Vocals expand with close-mic'd harmonies while the sparse keyboard arrangement continues consistently.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Bedroom Pop\",\n  \"secondary_families\": [\"R&B and Soul\"],\n  \"secondary_styles\": [\"Alt-Pop\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"clean\", \"acoustic\", \"electronic\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 266,
+    "promptTokenCount": 5561,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5112
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5827
+  }
+}

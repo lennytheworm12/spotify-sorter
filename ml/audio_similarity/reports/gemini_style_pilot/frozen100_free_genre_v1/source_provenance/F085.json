@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.7019425479811616,
+  "acquisition_ended_at": "2026-09-04T20:23:32.670978+00:00",
+  "acquisition_started_at": "2026-09-04T20:23:30.969035+00:00",
+  "acquisition_timestamp": "2026-09-04T20:23:30.969182+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3614980,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 207,
+  "provider_result": "SUCCESS",
+  "provider_title": "JUNNY - By My Side (Official Lyric video)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "3d109de4f48038c4316184c2e095976aab0cb250a44fca932558891419d3d4d2",
+      "representation_identity": "3778c6e6fe980f3d64c1db22373417adae7dab92e70c224f3dd357a07155b052",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "75e50f779dfda185b1af7a1e75c31bd3ba2a8e7d026cb3d7b0ebecbd36202909",
+          "25": "c8d6636f94ce408554f3b0b54b4e409a091f26f7ad31e22921362bca953bf038",
+          "5": "c41e2b3dde151d45558e6b489460788a3d31d0d8432e59f735168fda13aaac17"
+        },
+        "muq_mulan_large": {
+          "15": "8f32b2463de3c6b589277b12de4af4f0b2f5fe6ab9d835296423c1830028b12b",
+          "25": "93302767a156466a261cb57e8f49f2ff67bd7aca53ef80edf5f0213aac9f0f85",
+          "5": "8c40120019859d0d7e4819452060c553737b12daa93610a944d3fab9a8574739"
+        }
+      },
+      "source_audio_sha256": "8c68778e96d92cab8ebe6e0368f6f2bde78f36591d17a3fe2750656fa73d670d"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "PqWq6dORitQ"
+  },
+  "retained_relative_path": "6nzCvAtyADh0wwZEVMoujK/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 207.041,
+  "source_sha256": "ff23f729cb5f36df85edf482f13f9772a511666d5a403364296af0be43346fbe",
+  "source_url": "https://www.youtube.com/watch?v=PqWq6dORitQ",
+  "spotify_artists": [
+    "JUNNY"
+  ],
+  "spotify_title": "By My Side",
+  "spotify_track_id": "6nzCvAtyADh0wwZEVMoujK",
+  "successful_query": "By My Side JUNNY",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "PqWq6dORitQ"
+}

@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 12.8,
+        "observation": "A downtempo R&B trap beat enters with 808 sub-bass and crisp snare underneath Korean pop lead vocals."
+      },
+      {
+        "at_seconds": 50.0,
+        "observation": "Catchy, melodic chorus with layered vocal harmonies and rhythmic synth plucks."
+      },
+      {
+        "at_seconds": 115.3,
+        "observation": "Rhythmic, half-sung rap-influenced verse delivered over the trap percussion."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "R&B",
+      "Hip Hop"
+    ],
+    "secondary_styles": [
+      "Contemporary R&B",
+      "Trap"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "RCKiarqgMLCEz7IPv9TM2Qg",
+  "spotify_track_id": "6nICBdDevG4NZysIqDFPEa"
+}

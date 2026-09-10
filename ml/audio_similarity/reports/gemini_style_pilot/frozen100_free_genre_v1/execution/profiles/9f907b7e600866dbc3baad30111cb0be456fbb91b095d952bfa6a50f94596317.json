@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00425625",
+  "attempt": 39,
+  "cache_key": "9f907b7e600866dbc3baad30111cb0be456fbb91b095d952bfa6a50f94596317",
+  "evidence_hashes": {
+    "execution/attempts/attempt-39.request.json": "0c2c7c7d2729a99bdd4a221e195a070cfd47f60359dc0d24e1fad22d57e743ef",
+    "execution/attempts/attempt-39.reservation.json": "4720d23706d61074dedea5d45432f64292622b2b08701ce1b54c7441e5e12bf1",
+    "execution/attempts/attempt-39.settlement.json": "855cd766cc1c5f13e44236a7d32666e5f491d337d76fb5f57fe90f32f8fd31b4",
+    "execution/transport/call-155.response.bin": "29ca6e24d85ee62125b6f5dd6f77d9f465452aa99f3e08654076321e844da2c9",
+    "execution/transport/call-156.response.bin": "ac68942506e412b85a45a1481e9a3d642555e59c17208c3d6cb17c731b444859",
+    "execution/transport/call-156.response.json": "b13f85377d9e55b5267e1a1d29ddb24ce902e95d392cabbef6a5259ff9ae6a82",
+    "execution/transport/upload-N055.json": "6c8b47455e77d15f64a71f67b1bf72639486aa556dbea38a0176021328da767b"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N055",
+  "pilot_id": "F044",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 11.2,
+        "observation": "Acoustic guitar arpeggios accompany a breathy, intimate female lead vocal introducing the main melodic theme."
+      },
+      {
+        "at_seconds": 29.8,
+        "observation": "Trap-style hi-hat rolls, programmed kicks, and deep sub-bass drop in under rhythmic vocal delivery."
+      },
+      {
+        "at_seconds": 70.3,
+        "observation": "Reverberant backing harmonies layer with the lead vocal over atmospheric guitar and a half-time beat."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Hip-Hop"
+    ],
+    "secondary_styles": [
+      "Trap Soul",
+      "Alt-Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "acoustic",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-156.response.bin",
+  "response_id": "VSGiatTyJJ-kmtkPu-S9oA4",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 11.2, \"observation\": \"Acoustic guitar arpeggios accompany a breathy, intimate female lead vocal introducing the main melodic theme.\"},\n    {\"at_seconds\": 29.8, \"observation\": \"Trap-style hi-hat rolls, programmed kicks, and deep sub-bass drop in under rhythmic vocal delivery.\"},\n    {\"at_seconds\": 70.3, \"observation\": \"Reverberant backing harmonies layer with the lead vocal over atmospheric guitar and a half-time beat.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\"Hip-Hop\"],\n  \"secondary_styles\": [\"Trap Soul\", \"Alt-Pop\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"acoustic\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 285,
+    "promptTokenCount": 4250,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3801
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 4535
+  }
+}

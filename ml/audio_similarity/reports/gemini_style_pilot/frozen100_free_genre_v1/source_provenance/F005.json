@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.8357110010110773,
+  "acquisition_ended_at": "2026-09-04T20:01:12.793962+00:00",
+  "acquisition_started_at": "2026-09-04T20:01:10.958251+00:00",
+  "acquisition_timestamp": "2026-09-04T20:01:10.958594+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3467832,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 200,
+  "provider_result": "SUCCESS",
+  "provider_title": "Kara Lyrics | id T41104 - W/n feat. (267) | Lyrics Video",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "51b5efc3d428d8518eb1dee609f67308f7521b26c8b568fc090abd700d04e949",
+      "representation_identity": "f01f95d1b4b1023a60def72a40809ffea8cbde96e0c83d5b614d1c357aa270f4",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "c1514fd3cc2bc2ed952a24629977711721865f35ccb037b398ecb6b00f94c5ff",
+          "25": "c370b9e54a9522128d4c13847785fede13eacef0d6f353f963c7e887960f073d",
+          "5": "852c2e3b478dec351af46e012f026db8bcd54f05d4bf3875ed49e7e04cc8698d"
+        },
+        "muq_mulan_large": {
+          "15": "a1f746b1d79cc54644df1b4a83af0aa95788a26728d5d4dfc48c5cc14c2746b7",
+          "25": "3262b7534c75530092143d341c42f6d6b32e4316019fed52799c061e72de94cf",
+          "5": "e43f9e9154936adfb2aca71be60a6ec305fddff29220b25d7e62af075468a8eb"
+        }
+      },
+      "source_audio_sha256": "07fe3702429855d74107d75d1cbad43c7d54d62880d6eb6a3b5e9dd788ada3b5"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "LK4SwchA_jM"
+  },
+  "retained_relative_path": "07tiPBhMqiKqHowwqDBtfK/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 2,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 200.181,
+  "source_sha256": "69438f58e4edad523bb506699ee18faf93dcbfc5b3b0434df56604fddaa7ff19",
+  "source_url": "https://www.youtube.com/watch?v=LK4SwchA_jM",
+  "spotify_artists": [
+    "W/N",
+    "267"
+  ],
+  "spotify_title": "id T41104 (feat. 267)",
+  "spotify_track_id": "07tiPBhMqiKqHowwqDBtfK",
+  "successful_query": "id T41104 (feat. 267) W/N 267",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "LK4SwchA_jM"
+}

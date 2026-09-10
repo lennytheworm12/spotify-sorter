@@ -1,0 +1,45 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "varies",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.0,
+        "observation": "Sparse intro featuring dry, close-mic'd lead vocals over an acoustic piano chord progression."
+      },
+      {
+        "at_seconds": 71.0,
+        "observation": "Explosive transition into a driving pop-rock chorus with full kit drums, electric bass, and intense belting vocals."
+      },
+      {
+        "at_seconds": 178.0,
+        "observation": "Arrangement drops back down to solo piano before rebuilding dynamic tension into the final crescendo."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Pop Rock",
+    "secondary_families": [
+      "Rock"
+    ],
+    "secondary_styles": [
+      "Piano Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "layered",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "2CCiavr3FKaAmtkPg-nvkAE",
+  "spotify_track_id": "1kuGVB7EU95pJObxwvfwKS"
+}

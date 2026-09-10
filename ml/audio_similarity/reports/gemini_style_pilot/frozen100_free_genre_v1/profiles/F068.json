@@ -1,0 +1,45 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 13.9,
+        "observation": "Female lead vocal enters over a bright, clean electric guitar chop, bassline, and programmed pop beat."
+      },
+      {
+        "at_seconds": 42.4,
+        "observation": "Transition into an upbeat dance-pop chorus featuring layered vocal hooks and syncopated synth percussion."
+      },
+      {
+        "at_seconds": 140.0,
+        "observation": "Return of the dance-pop chorus with driving electronic kick, snare snaps, and layered melodic vocal lines."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Dance-Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "7iGiaoTVC8XVz7IPwdaruAg",
+  "spotify_track_id": "5h6c3ArwadWdEny5yXUPOt"
+}

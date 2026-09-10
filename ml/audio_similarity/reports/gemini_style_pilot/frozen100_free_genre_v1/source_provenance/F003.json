@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.486135329992976,
+  "acquisition_ended_at": "2026-09-04T20:13:12.450358+00:00",
+  "acquisition_started_at": "2026-09-04T20:13:10.964223+00:00",
+  "acquisition_timestamp": "2026-09-04T20:13:10.964323+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 4624803,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 274,
+  "provider_result": "SUCCESS",
+  "provider_title": "jeebanoff 지바노프 - we (OUI) (Feat. sogumm 소금) [Official Music Video] _ ENG/CHN",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "aa80798a3b78267b05fb69cbdc0e7484cd004f627f4377a81351436d7810a453",
+      "representation_identity": "eca0b618a5302d676b0e274f09f47035fcd7e43ecc4e6a9b4858f5a1afb67a5f",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "7431ddee8a8dc7d41e6de2e0cefc852085bd521540ff83278215b9f68201b428",
+          "25": "d8c3915614bf99ab7d44c680b2586b088bb0b972f4ab6d928d4a8ac9076cf555",
+          "5": "1d8cfa567909c821ea37d14f525fe201977ca03156269a616305ccc26296e1e0"
+        },
+        "muq_mulan_large": {
+          "15": "881c9927d6cc8ab133cd0bdcc6c899fa0f38d495567f08ca4658859efab1a507",
+          "25": "045562e3b809d72642a5da2a60ed1c3d35fd6ad3e60bec24cbed7f8940512468",
+          "5": "c3c745ac4267b5b838b185a2baf287d00f7a2a8b30521debb3a65d03d48bf2fc"
+        }
+      },
+      "source_audio_sha256": "e0fff6c3b8630cd818a1f7061b25031b130f56b0592631b85adba9a3917b37d9"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "q-X67J8I8Ik"
+  },
+  "retained_relative_path": "043ryKJlgSnAUzpXnfxU6b/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 273.761,
+  "source_sha256": "d6b96f0bdad8437495352f5b907793dd02b9b3d2c9048e91e6bb861aebcdd1f3",
+  "source_url": "https://www.youtube.com/watch?v=q-X67J8I8Ik",
+  "spotify_artists": [
+    "jeebanoff",
+    "sogumm"
+  ],
+  "spotify_title": "We (OUI) (Feat. sogumm)",
+  "spotify_track_id": "043ryKJlgSnAUzpXnfxU6b",
+  "successful_query": "We (OUI) (Feat. sogumm) jeebanoff sogumm",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "q-X67J8I8Ik"
+}

@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 0.0,
+        "observation": "Introductory section with mellow electric piano, subtle vocal harmonies, and soft rhythmic backbeat."
+      },
+      {
+        "at_seconds": 32.4,
+        "observation": "Full groove drops in with modern trap-influenced hi-hats, sub-bass 808, and rhythmic female R&B vocals."
+      },
+      {
+        "at_seconds": 128.5,
+        "observation": "Vocal breakdown featuring layered melismatic phrasing over stripped-back keys and ambient vocal chops."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "rnb",
+    "primary_style": "contemporary_rnb",
+    "secondary_families": [
+      "pop",
+      "hip_hop"
+    ],
+    "secondary_styles": [
+      "trap_soul",
+      "pop_rnb"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "3iGiauCJMtCGz7IPp-vl-Q8",
+  "spotify_track_id": "5aawFqyuCB3K2P8KQvhFVs"
+}

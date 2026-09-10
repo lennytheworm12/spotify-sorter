@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.898788382008206,
+  "acquisition_ended_at": "2026-09-04T20:30:12.871131+00:00",
+  "acquisition_started_at": "2026-09-04T20:30:10.972343+00:00",
+  "acquisition_timestamp": "2026-09-04T20:30:10.972441+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3027437,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 181,
+  "provider_result": "SUCCESS",
+  "provider_title": "Gracie Abrams - The Bottom (the lyrics)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "2ebb5ffecd37780fd02331835b7b5157623f0830b780f3fc35ad2ef92fe5ec4a",
+      "representation_identity": "89271bea3e78c057d401001d44f22fae47e60347251127e29b0e148d7a713a25",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "4067956831550ab9d995a3d3b1c9797febc67eb241c6c4e7f7a54c22d33be928",
+          "25": "58caf8967413c09005875ea0971a432019a0bf93462cf80b448abf0c61e20a67",
+          "5": "ab04357bc004eb102ad3e74d53b7690975ff16dc86871167f6c2895f5f67c1a9"
+        },
+        "muq_mulan_large": {
+          "15": "53ad24ec99bff365561c74885873716304f4e4561066388b18cd311b33d353c2",
+          "25": "4f42d345a93d49e7fc5251878548654da238b44cdf1a6a401b75fd4b6f273bfc",
+          "5": "c6ccf6f22a711eca3a8b616f3cad79d9c11a1315afd4ba8f27bbcfe241aee757"
+        }
+      },
+      "source_audio_sha256": "1d252a6ee5a66e76c0dc7f76cf410080decc1ede8c4b8e960dbdc0b2678ead58"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "1zi_otY0E0k"
+  },
+  "retained_relative_path": "4Sk74gcXTe9dnE1HU5Pn1y/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 2,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 180.541,
+  "source_sha256": "1d1a40efca29d8e9f12dc107fd3ff39ce46cbf295f45a7c1b17f173067a59d89",
+  "source_url": "https://www.youtube.com/watch?v=1zi_otY0E0k",
+  "spotify_artists": [
+    "Gracie Abrams"
+  ],
+  "spotify_title": "The Bottom",
+  "spotify_track_id": "4Sk74gcXTe9dnE1HU5Pn1y",
+  "successful_query": "The Bottom Gracie Abrams",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "1zi_otY0E0k"
+}

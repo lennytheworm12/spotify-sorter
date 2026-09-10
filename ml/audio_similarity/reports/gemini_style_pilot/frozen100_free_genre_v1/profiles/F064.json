@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 18.0,
+        "observation": "A spoken vocal phrase 'I like you' is heard right before a chilled downtempo hip-hop beat drops."
+      },
+      {
+        "at_seconds": 23.5,
+        "observation": "A relaxed instrumental lo-fi hip hop groove plays with electric piano chords and light boom-bap drums."
+      },
+      {
+        "at_seconds": 147.0,
+        "observation": "Subtle, filtered instrumental layering with vinyl crackle and muted percussion continues the chillout groove."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip Hop",
+    "primary_style": "Lo-Fi Hip Hop",
+    "secondary_families": [
+      "Electronic",
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Chillout",
+      "Downtempo"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "sample_based",
+      "clean",
+      "electronic"
+    ],
+    "vocal_role": "spoken_only"
+  },
+  "response_id": "0SGiasz6HM-n1MkPzbKosA0",
+  "spotify_track_id": "5UUnRflW65AsvluD8d5N2U"
+}

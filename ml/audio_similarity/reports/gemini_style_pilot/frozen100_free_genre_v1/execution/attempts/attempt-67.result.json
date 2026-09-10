@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00496725",
+  "attempt": 67,
+  "cache_key": "85547c441b95ff8795945e89ed39c832e760dbee0d5c661e5fcd24eb256c9636",
+  "evidence_hashes": {
+    "execution/attempts/attempt-67.request.json": "0470baaf862ebc43b26fbda58fa2fa6a024a44757087a6f9e310c46a851baa9f",
+    "execution/attempts/attempt-67.reservation.json": "372cfd2b8ffb0511a18bd87b545007dd02c90b6b53651410b06a700a602b4776",
+    "execution/attempts/attempt-67.settlement.json": "6ab2d2fec1763ed5b1e8776d5aea49b9c06ddc34a522cc5ef07014f67c3de320",
+    "execution/transport/call-267.response.bin": "f9856eb7650d2110f0de18966e1181142bc29fc8e301ed6150f180970da605b5",
+    "execution/transport/call-268.response.bin": "ef478e12b40c94665cbf9e39f8844b0ec1336de0420819ee20f086ceebcc6f57",
+    "execution/transport/call-268.response.json": "4377cd63231edb873472fa7a6cd3be18376a168f92bd66ccfe8633774c98a699",
+    "execution/transport/upload-N083.json": "13b57453e3ec558484555eadb36356b8c8b0071f836689279f63aad68a4e4764"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N083",
+  "pilot_id": "F075",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 16.5,
+        "observation": "Solo female vocal enters over a minimal, plucked acoustic guitar figure and subtle ambient bass tone."
+      },
+      {
+        "at_seconds": 47.0,
+        "observation": "Pre-chorus vocal layers introduce harmonies while the instrumentation remains stripped back and acoustic."
+      },
+      {
+        "at_seconds": 60.5,
+        "observation": "Chorus section with prominent female lead vocal accompanied by steady downbeat percussion and acoustic picking."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Acoustic Pop",
+    "secondary_families": [
+      "Folk",
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Contemporary Folk",
+      "Contemporary R&B"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-268.response.bin",
+  "response_id": "FiKiasTMGsucz7IPvO7ayAg",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 16.5, \"observation\": \"Solo female vocal enters over a minimal, plucked acoustic guitar figure and subtle ambient bass tone.\"},\n    {\"at_seconds\": 47.0, \"observation\": \"Pre-chorus vocal layers introduce harmonies while the instrumentation remains stripped back and acoustic.\"},\n    {\"at_seconds\": 60.5, \"observation\": \"Chorus section with prominent female lead vocal accompanied by steady downbeat percussion and acoustic picking.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Acoustic Pop\",\n  \"secondary_families\": [\"Folk\", \"R&B\"],\n  \"secondary_styles\": [\"Contemporary Folk\", \"Contemporary R&B\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"acoustic\", \"clean\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 271,
+    "promptTokenCount": 5268,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4819
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5539
+  }
+}

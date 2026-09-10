@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 0.0,\n      \"observation\": \"Solo acoustic piano begins playing slow, melancholy, rubato arpeggios and chords.\"\n    },\n    {\n      \"at_seconds\": 25.0,\n      \"observation\": \"Female lead vocal enters in Korean, delivering an intimate, breathy ballad phrase over sparse piano accompaniment.\"\n    },\n    {\n      \"at_seconds\": 152.0,\n      \"observation\": \"Piano solo interlude featuring high-register bell-like tones and expressive rubato dynamic phrasing.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Korean Ballad\",\n  \"secondary_families\": [\n    \"Classical\"\n  ],\n  \"secondary_styles\": [\n    \"Piano Ballad\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"acoustic\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPzovrrOiQstsAlNQGYdJZL9RJl1OB9r2a7oueQH6FxAiiO/iHc8gGqjOCJPHxu2w5JutiL7wJL9haqjgZbyDrZvPe57wKpzjZxEAcYWWbFeJDh/nBNK4m8YPJKUdo2Hll"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5499,
+    "candidatesTokenCount": 307,
+    "totalTokenCount": 5806,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5050
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "9SGiasHhL8vljMcP64DSoAY"
+}

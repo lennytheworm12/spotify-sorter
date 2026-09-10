@@ -1,0 +1,76 @@
+{
+  "actual_cost_usd": "0.00438825",
+  "attempt": 25,
+  "cache_key": "76a1a79606019b20b52e8b5cecab81a43481d51faf8472cf7755b5113ff5e659",
+  "evidence_hashes": {
+    "execution/attempts/attempt-25.request.json": "b15d85f15d209f65cef5852b2efa2fa57aafc02491ee9e3795db1a140ba6af6c",
+    "execution/attempts/attempt-25.reservation.json": "3a0b8650dc70c1206181fb5c944f4080c52dd94140f2cf10a6bcb13ce2374971",
+    "execution/attempts/attempt-25.settlement.json": "13cb5709fc944aa70e89666d18b40d8c24ce16d2f8d6936348ca97fb20eadf27",
+    "execution/transport/call-099.response.bin": "b8e1c93cbd98351d83f7d0db986704cf7cdca83f49f211cda35b50f7bc9315b3",
+    "execution/transport/call-100.response.bin": "b530ddaae632ad0b12b8720150ca30a4435deb558ad4a31ef6e2a67f1c24f01d",
+    "execution/transport/call-100.response.json": "d6a0a04ccc0f02a7a2bdc1b87c8d1491e96a081480ee7d512fc224503b6412e9",
+    "execution/transport/upload-N041.json": "4410bca2eb88d5b411d6db4447666b688a7e431b1529ba16d76a45661b1ad10a"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N041",
+  "pilot_id": "F029",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 0.0,
+        "observation": "Intro with solo female vocal singing in Korean with acoustic guitar accompaniment."
+      },
+      {
+        "at_seconds": 44.0,
+        "observation": "Chorus section with continuous fingerpicked acoustic guitar and emotional, breathy lead singing."
+      },
+      {
+        "at_seconds": 133.0,
+        "observation": "Second verse maintains the intimate, minimalist acoustic singer-songwriter arrangement."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Korean Ballad",
+    "secondary_families": [
+      "Folk"
+    ],
+    "secondary_styles": [
+      "Acoustic Pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-100.response.bin",
+  "response_id": "8yCiav7QMISsz7IP4eSj6AM",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 0.0,\n      \"observation\": \"Intro with solo female vocal singing in Korean with acoustic guitar accompaniment.\"\n    },\n    {\n      \"at_seconds\": 44.0,\n      \"observation\": \"Chorus section with continuous fingerpicked acoustic guitar and emotional, breathy lead singing.\"\n    },\n    {\n      \"at_seconds\": 133.0,\n      \"observation\": \"Second verse maintains the intimate, minimalist acoustic singer-songwriter arrangement.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Korean Ballad\",\n  \"secondary_families\": [\"Folk\"],\n  \"secondary_styles\": [\"Acoustic Pop\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"acoustic\", \"clean\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 274,
+    "promptTokenCount": 4481,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4032
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 4755
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 6.88,\n      \"observation\": \"Spacious, warm electric piano chords enter alongside chopped and pitched vocal phrases.\"\n    },\n    {\n      \"at_seconds\": 27.56,\n      \"observation\": \"Laid-back, unquantized downtempo hip-hop drum groove drops in with deep sub-bass.\"\n    },\n    {\n      \"at_seconds\": 96.2,\n      \"observation\": \"Drums drop out, leaving reverberant electric piano chords and drifting pitched vocal fragments.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"hip-hop\",\n  \"primary_style\": \"lo-fi hip-hop\",\n  \"secondary_families\": [\n    \"electronic\",\n    \"r&b\"\n  ],\n  \"secondary_styles\": [\n    \"chillwave\",\n    \"downtempo\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"sample_based\",\n    \"hazy\",\n    \"electronic\"\n  ],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+            "thoughtSignature": "EmcKZQERTTIP7QR0C+1xoNKUc/yS0YFi/U4V6pyaktvTMR+OrXVHAQ3a/3kePPM+j77N72XxGoh2KHrOKxGIwk33VV0B+IqJ67Mzy9lIszst7yH9F5fUtoT1krXe0l1Dbj9PWhw3aeaB"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 4353,
+    "candidatesTokenCount": 337,
+    "totalTokenCount": 4690,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3904
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "OCKiauOsApKcz7IPyIb1uQg"
+}

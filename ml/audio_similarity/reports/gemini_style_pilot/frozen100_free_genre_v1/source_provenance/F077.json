@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.4371455399668775,
+  "acquisition_ended_at": "2026-09-04T20:09:12.399607+00:00",
+  "acquisition_started_at": "2026-09-04T20:09:10.962461+00:00",
+  "acquisition_timestamp": "2026-09-04T20:09:10.962563+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2916727,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 172,
+  "provider_result": "SUCCESS",
+  "provider_title": "friendzone",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "31db4fd2bbb50a7c4d626fb1bdc211aa5e22d797b2f7c4b5ee43eade9e7790e8",
+      "representation_identity": "8ce8d43925d355b805fb90f4d82d671ebac65f111a403755af3925ed5fc80509",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "f1c45a1eece3191cf67b8405dc9fad108e5ca85c73026c9c9b3b1cd779806bac",
+          "25": "16a0f9e0c908f3e9aac01fec7e8e40c60f537fc42c560478c9e3b128b6310267",
+          "5": "b35e58f0dd2ea3a34aef2fe6133b1a35d8594034e153af50ed36709045ad9b8f"
+        },
+        "muq_mulan_large": {
+          "15": "de52126bd50dbaffb5cd2c806693cb02d16ba6f624d17806b2a4b7321f16d8e8",
+          "25": "10e801eef83ae2799fd6a99cbe7f351466a2431b5491a0962b46aa982e2fb558",
+          "5": "290f1bd529092af3e7ce3b54cc68866fb3d1f3088e36938214b9e9412f1f8f46"
+        }
+      },
+      "source_audio_sha256": "d713bfd5c175e39724087ef89cb5080f33a163258b8ec46f09e031a5d31081fa"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "ijLNC2OuyuM"
+  },
+  "retained_relative_path": "6B9HXnRzmokTTxZNdV5T48/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 2,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 172.101,
+  "source_sha256": "3f637f84d002730e7b1af224b3373a0e8f9d84aae51c8ceac46dfb305f894fa6",
+  "source_url": "https://www.youtube.com/watch?v=ijLNC2OuyuM",
+  "spotify_artists": [
+    "Yayyoung",
+    "Sojou Kim"
+  ],
+  "spotify_title": "me2urs2ours",
+  "spotify_track_id": "6B9HXnRzmokTTxZNdV5T48",
+  "successful_query": "me2urs2ours Yayyoung Sojou Kim",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "ijLNC2OuyuM"
+}

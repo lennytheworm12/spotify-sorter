@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.6196862460346892,
+  "acquisition_ended_at": "2026-09-04T20:27:32.590727+00:00",
+  "acquisition_started_at": "2026-09-04T20:27:30.971041+00:00",
+  "acquisition_timestamp": "2026-09-04T20:27:30.971144+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3476319,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 202,
+  "provider_result": "SUCCESS",
+  "provider_title": "[MV] Jihan(지한)(Weeekly),Park Soeun(박소은)(Weeekly) _ Fall in love(사랑이 내 안에 들어와) (사내맞선 OST Part.6)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "66f29fbb3b7c4f3c3a46a420a6a13044c8fcd4ba0684cd30602a667d90924f00",
+      "representation_identity": "4ff15edb2797186b4697cc8af1b2c3945f06cafb77e6686ebda693b271928f4f",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "19fe162d5be7c93d5ca78e111a0295a64c817e406d9044ad296516b0bd27090c",
+          "25": "8433114788ad26fbbd296e50da2be39e4ed2b9901a8f39bb1fe810fc9c580813",
+          "5": "a05843fe1623a570210708c47ed9cb0070144c08e9e81d9b46af6d69193a5db9"
+        },
+        "muq_mulan_large": {
+          "15": "7551392157916c53bb8fa9399d043542621bb953769dfbb5dee3dd335ba2dfcd",
+          "25": "9bd4fdfdeab4a0d8f465b689cf76cf223781389f2948967cb04e3d5d7ea394b4",
+          "5": "85eade465110ce196af41098fc47e06ab67ca7bd40f40828d2087a74dadd3524"
+        }
+      },
+      "source_audio_sha256": "1e2ec7cae8bec44a36791ec911042e8f62bb163e0e112e1034484dd887028b26"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "H_qnZB9uxLI"
+  },
+  "retained_relative_path": "5h6c3ArwadWdEny5yXUPOt/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 202.441,
+  "source_sha256": "04a755c3ada7e6a4032986d0f001e41f56598f93ff18c56aae8c78694beb7be5",
+  "source_url": "https://www.youtube.com/watch?v=H_qnZB9uxLI",
+  "spotify_artists": [
+    "Han Jihyo",
+    "Park Soeun"
+  ],
+  "spotify_title": "Fall in love",
+  "spotify_track_id": "5h6c3ArwadWdEny5yXUPOt",
+  "successful_query": "Fall in love Han Jihyo Park Soeun",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "H_qnZB9uxLI"
+}

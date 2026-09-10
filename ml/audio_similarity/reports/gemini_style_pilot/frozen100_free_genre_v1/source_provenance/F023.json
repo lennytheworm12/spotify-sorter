@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.7443653459777124,
+  "acquisition_ended_at": "2026-09-04T20:20:32.711789+00:00",
+  "acquisition_started_at": "2026-09-04T20:20:30.967424+00:00",
+  "acquisition_timestamp": "2026-09-04T20:20:30.967534+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3762618,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 220,
+  "provider_result": "SUCCESS",
+  "provider_title": "Olivia Rodrigo - vampire (Official Lyric Video)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "7fa00bdee52af74f96acaad5c71332a1b8ec8e7103d5b841b3ea7703829d362d",
+      "representation_identity": "46e7eef31f1f7479a67765a78db07bb1b59fed5c20bfd0199e717cca3365576c",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "5709d179bbbb9b3816e338322a593a67f6cd579a9a9f0b12cbf44806613e95d2",
+          "25": "4fd0953fbd2523921fdf14352b1d372bfec817db58ccd5e261b62af3028c3332",
+          "5": "753b69e766a696bc89e109205e2d4dc744a62ad970647079bf662b46e3dfb5b6"
+        },
+        "muq_mulan_large": {
+          "15": "b20781fad4fd9ff359ace94afc2811ea03dc6072c24d1732fd0ac6481ee2aac7",
+          "25": "954ac8c4f2a0e1d5e00563de13d527733f170e8c9084de03017ea4fbddc36d58",
+          "5": "bc36cc810892ba16158253c44c697ed2e68966894195137217948a64837a7d3c"
+        }
+      },
+      "source_audio_sha256": "3276c56ead7e07054c1ca02e06b6fbeade30fe5b23de49fab7f2622f929da2f4"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "Fqey8LxQxFU"
+  },
+  "retained_relative_path": "1kuGVB7EU95pJObxwvfwKS/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 2,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 219.821,
+  "source_sha256": "7382563092e9375f2933285a5b2299246ae8b4702889447298f55f530dd33426",
+  "source_url": "https://www.youtube.com/watch?v=Fqey8LxQxFU",
+  "spotify_artists": [
+    "Olivia Rodrigo"
+  ],
+  "spotify_title": "vampire",
+  "spotify_track_id": "1kuGVB7EU95pJObxwvfwKS",
+  "successful_query": "vampire Olivia Rodrigo",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "Fqey8LxQxFU"
+}

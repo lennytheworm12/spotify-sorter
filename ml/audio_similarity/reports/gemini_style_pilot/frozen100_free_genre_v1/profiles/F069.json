@@ -1,0 +1,44 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 0.0,
+        "observation": "Solo acoustic piano begins playing slow, melancholy, rubato arpeggios and chords."
+      },
+      {
+        "at_seconds": 25.0,
+        "observation": "Female lead vocal enters in Korean, delivering an intimate, breathy ballad phrase over sparse piano accompaniment."
+      },
+      {
+        "at_seconds": 152.0,
+        "observation": "Piano solo interlude featuring high-register bell-like tones and expressive rubato dynamic phrasing."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Korean Ballad",
+    "secondary_families": [
+      "Classical"
+    ],
+    "secondary_styles": [
+      "Piano Ballad"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "9SGiasHhL8vljMcP64DSoAY",
+  "spotify_track_id": "5l45vVLs4JKkhzN0tvkWJv"
+}

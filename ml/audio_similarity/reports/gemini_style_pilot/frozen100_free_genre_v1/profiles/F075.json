@@ -1,0 +1,46 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 16.5,
+        "observation": "Solo female vocal enters over a minimal, plucked acoustic guitar figure and subtle ambient bass tone."
+      },
+      {
+        "at_seconds": 47.0,
+        "observation": "Pre-chorus vocal layers introduce harmonies while the instrumentation remains stripped back and acoustic."
+      },
+      {
+        "at_seconds": 60.5,
+        "observation": "Chorus section with prominent female lead vocal accompanied by steady downbeat percussion and acoustic picking."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Acoustic Pop",
+    "secondary_families": [
+      "Folk",
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Contemporary Folk",
+      "Contemporary R&B"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "FiKiasTMGsucz7IPvO7ayAg",
+  "spotify_track_id": "5zfpJXfqGGh94YcStRlI2s"
+}

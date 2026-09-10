@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 12.5, \"observation\": \"Steady hand-drum polyrhythms and high-pitched acoustic percussion establish a West African drum pattern.\"},\n    {\"at_seconds\": 40.0, \"observation\": \"Electronic synth bassline enters underneath the traditional drumming, establishing a modern dance groove.\"},\n    {\"at_seconds\": 105.0, \"observation\": \"Vocals enter with sustained harmonized backing choral chants above the electronic and acoustic rhythmic bed.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"tentative\"\n  },\n  \"primary_family\": \"Electronic\",\n  \"primary_style\": \"Afro House\",\n  \"secondary_families\": [\"African Traditional\"],\n  \"secondary_styles\": [\"West African Folk Music\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"acoustic\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPJ76TeFwUKaHpZDY5hXXTdat636/QxRJi4e7bG3igkhw01Dnz66Lo/HGwHWQc1GcjLvlZZetebiBcmq26a8pe0YHukv5Z5ZDTvTvCGzq3sVDWLi2L9MSiAKgEtUCM7VXJ"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 4902,
+    "candidatesTokenCount": 271,
+    "totalTokenCount": 5173,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4453
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "nCGiaqL8Naj_qtsPpenqgAk"
+}

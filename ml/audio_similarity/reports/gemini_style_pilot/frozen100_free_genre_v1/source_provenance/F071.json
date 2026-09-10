@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.937292143004015,
+  "acquisition_ended_at": "2026-09-04T20:28:12.908653+00:00",
+  "acquisition_started_at": "2026-09-04T20:28:10.971361+00:00",
+  "acquisition_timestamp": "2026-09-04T20:28:10.971496+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3034898,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 178,
+  "provider_result": "SUCCESS",
+  "provider_title": "BIBI - The Weekend (Official Music Video)",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "2a26d77a8134018c4b37451625e09607adad89575e2dbba3eef6d0fe83f955b0",
+      "representation_identity": "9f84dd2ce6a9274faa7e678d0d12c72b1f51b3eb41d860dc799a3989056d930a",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "5350580fb9ba99370dbf32a444e6951b8978d858cd9e50eebc6b349006a0d241",
+          "25": "5c0d33330cb04d69381250fa3318f3eb1b3f14a9c95a8d131dc8daf79c40054c",
+          "5": "6d331dbcdf9453bf0a5e5c2c955ce57ea80db58cc94ab091968f9049a1207f45"
+        },
+        "muq_mulan_large": {
+          "15": "bb0fd4dffce592677f96acdaf79c17c8e02167fdab2429285c57becfeb7005de",
+          "25": "49b7495c31f3bec003c62be708696906c941035472135df7c9bab38f426d1ad5",
+          "5": "31713deb344f82fff4ecc459f30df95bd7a6ffce8da6d25ee8b4df913b340ca4"
+        }
+      },
+      "source_audio_sha256": "2f4687b49e156d5a97bbd13c131598f38a11c13098e4c6cd0bc9a16b12c915ea"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "K19M4o6vRL8"
+  },
+  "retained_relative_path": "5q3LwAHTqo9d3rET2EA9Nq/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 177.901,
+  "source_sha256": "9edd1d5ef705f36c16b70d7a18ad81ed3cdaec0e01a64785749fcd5dceaa1461",
+  "source_url": "https://www.youtube.com/watch?v=K19M4o6vRL8",
+  "spotify_artists": [
+    "88rising",
+    "BIBI"
+  ],
+  "spotify_title": "The Weekend",
+  "spotify_track_id": "5q3LwAHTqo9d3rET2EA9Nq",
+  "successful_query": "The Weekend 88rising BIBI",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "K19M4o6vRL8"
+}

@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00589800",
+  "attempt": 6,
+  "cache_key": "7db3b51c540d03445bbd1db3a4baf9c7b09ddc08e6ce74107842e85897162df6",
+  "evidence_hashes": {
+    "execution/attempts/attempt-06.request.json": "a6589cccd859db1c3ab2488720c337eeacaa6a9259063110c9eede61da33a1ab",
+    "execution/attempts/attempt-06.reservation.json": "4bc8b6ac1cc82288a281192fee5e7d57debecdf7e3bdc3f104d9d9af9a42e94a",
+    "execution/attempts/attempt-06.settlement.json": "9c07f1c8d78bb5cd27fa011e220aca3c97bff5c7b2ad844b4e9a5e35e5ead267",
+    "execution/transport/call-023.response.bin": "9795dc2d95b2ec8631046ac82e7c6508b9cbacfbfe3d4733c509b7550b14df72",
+    "execution/transport/call-024.response.bin": "bb2f5dcf4e55b48498856ee0fc1df10273fb9b5fa2cb5773d81bc44af76381d8",
+    "execution/transport/call-024.response.json": "6f28c2b15c36a5e8af14f79c23b02ad1f2227edf434890df964c8036201f52d0",
+    "execution/transport/upload-N022.json": "c64e0979d8d9fdd52883f36e048240e80461be9b515921314013eba5b1738cd0"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N022",
+  "pilot_id": "F007",
+  "profile": {
+    "active_section_density": "dense",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.0,
+        "observation": "High-energy synth-pop drop kicks in with driving four-on-the-floor electro bass and layered female vocals."
+      },
+      {
+        "at_seconds": 23.5,
+        "observation": "Bright female solo lead vocal begins the verse over a rhythmic electronic beat and synthesized keys."
+      },
+      {
+        "at_seconds": 68.0,
+        "observation": "Explosive chorus section features brassy synth riffs, sweeping risers, and anthemic female group vocals."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Electropop",
+      "Dance-Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "layered",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-024.response.bin",
+  "response_id": "dCCiaoGGFbSuqtsP4Zrn8Aw",
+  "response_text": "{\n  \"active_section_density\": \"dense\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 15.0,\n      \"observation\": \"High-energy synth-pop drop kicks in with driving four-on-the-floor electro bass and layered female vocals.\"\n    },\n    {\n      \"at_seconds\": 23.5,\n      \"observation\": \"Bright female solo lead vocal begins the verse over a rhythmic electronic beat and synthesized keys.\"\n    },\n    {\n      \"at_seconds\": 68.0,\n      \"observation\": \"Explosive chorus section features brassy synth riffs, sweeping risers, and anthemic female group vocals.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\n    \"Electronic\"\n  ],\n  \"secondary_styles\": [\n    \"Electropop\",\n    \"Dance-Pop\"\n  ],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"layered\",\n    \"clean\"\n  ],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 327,
+    "promptTokenCount": 6229,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5780
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 6556
+  }
+}

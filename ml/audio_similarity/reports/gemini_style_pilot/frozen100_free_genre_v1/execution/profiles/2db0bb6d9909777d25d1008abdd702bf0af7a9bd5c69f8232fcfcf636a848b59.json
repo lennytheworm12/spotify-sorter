@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00364950",
+  "attempt": 66,
+  "cache_key": "2db0bb6d9909777d25d1008abdd702bf0af7a9bd5c69f8232fcfcf636a848b59",
+  "evidence_hashes": {
+    "execution/attempts/attempt-66.request.json": "218dc5fc37f848e547df444af05a21fd4fd11e611f9b134ec331f6eedda235a7",
+    "execution/attempts/attempt-66.reservation.json": "bb062a96b7d5ee775139331325535fec4a7f1d72229a94262d337f3717ed7914",
+    "execution/attempts/attempt-66.settlement.json": "20c1b7963f663046aa992052d5eeaa5c68b2432ada877d460dbab24ae2171b74",
+    "execution/transport/call-263.response.bin": "0a02a374b74d355f752d3aa25b494084be66561d6d7ad83fa106c8a6f974984c",
+    "execution/transport/call-264.response.bin": "e8827ea1aca40373c0fcabaf024e15f0945756a2ac9b7f0b57b23f66355e9e76",
+    "execution/transport/call-264.response.json": "ddcd5f59f4f0dd90e2515b7157584026f500e6419405f77f4e7844901112818c",
+    "execution/transport/upload-N082.json": "02efe2e0f33047e70c6303b0553a33768ff88f36d344ed2aefd3f39a86f88f54"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N082",
+  "pilot_id": "F073",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 0.0,
+        "observation": "Slowed, pitched-down vocal loop begins over a minimal, ambient synth pad."
+      },
+      {
+        "at_seconds": 22.8,
+        "observation": "A low-tempo boom-bap style hip-hop beat enters with kick, snap/clap, and deep 808 bass."
+      },
+      {
+        "at_seconds": 45.3,
+        "observation": "The drum beat drops out, returning to the atmospheric chopped-and-screwed vocal and pad texture."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip-Hop",
+    "primary_style": "Chopped and Screwed",
+    "secondary_families": [
+      "Electronic",
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Cloud Rap",
+      "Trap"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "hazy",
+      "sample_based"
+    ],
+    "vocal_role": "vocal_samples_only"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-264.response.bin",
+  "response_id": "ECKiasPkBOrR-8YPzJa_6A0",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 0.0,\n      \"observation\": \"Slowed, pitched-down vocal loop begins over a minimal, ambient synth pad.\"\n    },\n    {\n      \"at_seconds\": 22.8,\n      \"observation\": \"A low-tempo boom-bap style hip-hop beat enters with kick, snap/clap, and deep 808 bass.\"\n    },\n    {\n      \"at_seconds\": 45.3,\n      \"observation\": \"The drum beat drops out, returning to the atmospheric chopped-and-screwed vocal and pad texture.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip-Hop\",\n  \"primary_style\": \"Chopped and Screwed\",\n  \"secondary_families\": [\"Electronic\", \"R&B\"],\n  \"secondary_styles\": [\"Cloud Rap\", \"Trap\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"hazy\", \"sample_based\"],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+  "usage": {
+    "candidatesTokenCount": 317,
+    "promptTokenCount": 3281,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 2832
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 3598
+  }
+}

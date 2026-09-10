@@ -1,0 +1,59 @@
+{
+  "acquisition_duration_seconds": 1.5115439529763535,
+  "acquisition_ended_at": "2026-09-04T20:27:12.482434+00:00",
+  "acquisition_started_at": "2026-09-04T20:27:10.970890+00:00",
+  "acquisition_timestamp": "2026-09-04T20:27:10.970983+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 2486146,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 152,
+  "provider_result": "SUCCESS",
+  "provider_title": "Satellite - Kelsey Kuan x @CityGirlMusic",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "2a6655fb42778a505906ce187f7c89717c217f50e097b66da542f033b17449c1",
+      "representation_identity": "6ceec653baf869cb908a34a5436671426716441253dd055f076586a48f5c655c",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "1f64a5df081a976300dc3f590f04eec869991a78727c62af58de5cf21eeef44b",
+          "25": "2b482939f525922d43e9c28c7105b680dc682754e95c6dcef311bc47dc8e5313",
+          "5": "8b018e6bcca0b32472cb0f718cb1960a8f89c8176f2744d2d2b39ed1ff33974c"
+        },
+        "muq_mulan_large": {
+          "15": "b3855b70cb059df4b96900f7f320d0cb00beaaaf82f4a411f7552f7a5fa9cbe0",
+          "25": "d968e1be5f97469edcc4c0a21ff6b73414b20a6eef251b4dbd1451fb4b8afb54",
+          "5": "634d9d4bdfc4e720f217e9f50d0989511c38d6a77877411a3042f10ddbb3b90c"
+        }
+      },
+      "source_audio_sha256": "2b786ee43da34ffa31bfb9a674ae47fd0393815b139baf4fee2b84f1a785a3cd"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "JnYataeP71M"
+  },
+  "retained_relative_path": "3X45Wd5yRNoe2twmyc5CvO/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 152.041,
+  "source_sha256": "a092dcb5529fbe25802b180db611db2268e4e395c2803ca09e9f4db3a7daa339",
+  "source_url": "https://www.youtube.com/watch?v=JnYataeP71M",
+  "spotify_artists": [
+    "City Girl",
+    "Kelsey Kuan"
+  ],
+  "spotify_title": "SATELLITE",
+  "spotify_track_id": "3X45Wd5yRNoe2twmyc5CvO",
+  "successful_query": "SATELLITE City Girl Kelsey Kuan",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "JnYataeP71M"
+}

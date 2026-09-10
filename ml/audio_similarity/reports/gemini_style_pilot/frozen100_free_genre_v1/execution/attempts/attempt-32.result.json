@@ -1,0 +1,79 @@
+{
+  "actual_cost_usd": "0.00555450",
+  "attempt": 32,
+  "cache_key": "b0bee8958eb37e88f71276a76d166786b0ebcb5cea4ae5343d6fc163948d4dd3",
+  "evidence_hashes": {
+    "execution/attempts/attempt-32.request.json": "beaa1e42afc8be4ed9d435c1d5940eae12dce14f79625c609560c3c1f21b10c7",
+    "execution/attempts/attempt-32.reservation.json": "0c29f0e54ff9face32258b85fd92dd6ac2937730779d779d944409b0a455d315",
+    "execution/attempts/attempt-32.settlement.json": "5d3af997a46e1d53e4e95bc51f633e699508662e53043513ef8df7b937bc0cb7",
+    "execution/transport/call-127.response.bin": "7bf4933a0bfe9a511a49a746734164ae1af233cc7bf2411db44c0c0e72a31044",
+    "execution/transport/call-128.response.bin": "4d5e69ce00f2aec826486d75273f84effe6538dbd1dc5e09d3a6753fc623f1c3",
+    "execution/transport/call-128.response.json": "4d3dd2c2caa712229b7f7056a657bdf42c738209a799cef0c94ca2bfe1546b09",
+    "execution/transport/upload-N048.json": "e30fd6f776efcd03e77a31877fabc79b2a3ce50999ad24e3e969fb6c6671b627"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N048",
+  "pilot_id": "F037",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 15.0,
+        "observation": "Main groove enters with trap beat, 808 bass, acoustic guitar arpeggios, and melodic R&B vocals."
+      },
+      {
+        "at_seconds": 113.0,
+        "observation": "Vocalist sings verse melodies over a minimalist guitar and trap rhythm section."
+      },
+      {
+        "at_seconds": 202.0,
+        "observation": "A guest vocalist delivers an auto-tuned melodic rap verse over the guitar trap groove."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip-Hop",
+    "primary_style": "Trap R&B",
+    "secondary_families": [
+      "R&B",
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Melodic Trap",
+      "Contemporary R&B"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-128.response.bin",
+  "response_id": "JSGiatu4B42hqtsPvaKC8Aw",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 15.0,\n      \"observation\": \"Main groove enters with trap beat, 808 bass, acoustic guitar arpeggios, and melodic R&B vocals.\"\n    },\n    {\n      \"at_seconds\": 113.0,\n      \"observation\": \"Vocalist sings verse melodies over a minimalist guitar and trap rhythm section.\"\n    },\n    {\n      \"at_seconds\": 202.0,\n      \"observation\": \"A guest vocalist delivers an auto-tuned melodic rap verse over the guitar trap groove.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip-Hop\",\n  \"primary_style\": \"Trap R&B\",\n  \"secondary_families\": [\n    \"R&B\",\n    \"Pop\"\n  ],\n  \"secondary_styles\": [\n    \"Melodic Trap\",\n    \"Contemporary R&B\"\n  ],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\n    \"electronic\",\n    \"clean\",\n    \"layered\"\n  ],\n  \"vocal_role\": \"mixed_rap_and_singing\"\n}",
+  "usage": {
+    "candidatesTokenCount": 339,
+    "promptTokenCount": 5711,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5262
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 6050
+  }
+}

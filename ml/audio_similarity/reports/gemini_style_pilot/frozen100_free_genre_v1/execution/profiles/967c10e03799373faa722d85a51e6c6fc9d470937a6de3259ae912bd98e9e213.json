@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00467550",
+  "attempt": 30,
+  "cache_key": "967c10e03799373faa722d85a51e6c6fc9d470937a6de3259ae912bd98e9e213",
+  "evidence_hashes": {
+    "execution/attempts/attempt-30.request.json": "0fa391586fa27a59caf25cec64937734268a1e2669bf83d51ff8cdbc0bee24f2",
+    "execution/attempts/attempt-30.reservation.json": "13270e59e9498df4581a30cc0e89ee84faee27af59ca624a34cb171162d25965",
+    "execution/attempts/attempt-30.settlement.json": "b1aaa5099e383a09ca4a9096cf79de86eebced5566f696374dca7105d8c63c00",
+    "execution/transport/call-119.response.bin": "53b4a3fb6f9984ce69aaf95ef20c835f9b0a97b620a173c1ad398a1f9fdf1743",
+    "execution/transport/call-120.response.bin": "eca147728e725c2e79027864a148a70c98d7d6623765e13e397fb96ca99a6578",
+    "execution/transport/call-120.response.json": "c6598a76c572e607a3be95aa26286cbd35727fbe2ecca5c51f6c2e74128eafb2",
+    "execution/transport/upload-N046.json": "e2f33290111f4194a22107d0f7b646278f506c6f81529b6ea81d151c474f7b5b"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N046",
+  "pilot_id": "F035",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 3.42,
+        "observation": "Vocal enters over minimal electric piano chords and subtle sub-bass pulses with sparse percussive snaps."
+      },
+      {
+        "at_seconds": 37.15,
+        "observation": "Full groove introduces a relaxed, slow tempo trap-influenced beat beneath smooth R&B vocal melodies."
+      },
+      {
+        "at_seconds": 111.45,
+        "observation": "Dynamic drop leading into an intimate verse highlighting the lead vocal and filtered keyboard accompaniment."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Electronic",
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Alt-R&B"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-120.response.bin",
+  "response_id": "FyGiaoT-CJ_jz7IPtsnp2Qw",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 3.42, \"observation\": \"Vocal enters over minimal electric piano chords and subtle sub-bass pulses with sparse percussive snaps.\"},\n    {\"at_seconds\": 37.15, \"observation\": \"Full groove introduces a relaxed, slow tempo trap-influenced beat beneath smooth R&B vocal melodies.\"},\n    {\"at_seconds\": 111.45, \"observation\": \"Dynamic drop leading into an intimate verse highlighting the lead vocal and filtered keyboard accompaniment.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\"Electronic\", \"Pop\"],\n  \"secondary_styles\": [\"Alt-R&B\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 275,
+    "promptTokenCount": 4859,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4410
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5134
+  }
+}

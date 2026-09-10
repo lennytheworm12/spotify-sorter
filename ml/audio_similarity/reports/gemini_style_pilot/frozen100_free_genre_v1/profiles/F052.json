@@ -1,0 +1,46 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 11.45,
+        "observation": "A male Korean vocal begins over a clean acoustic guitar and an electronic kick beat."
+      },
+      {
+        "at_seconds": 58.74,
+        "observation": "The arrangement builds into an upbeat EDM-influenced pop chorus with a bright synthesizer lead hook."
+      },
+      {
+        "at_seconds": 178.6,
+        "observation": "A vocal chop synth hook plays with pulsing electronic dance percussion and sub-bass."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Dance-Pop",
+      "Electropop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "electronic",
+      "acoustic"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "jyGiatv1B8ucz7IPvO7ayAg",
+  "spotify_track_id": "49KDK2ccYnOCYPeXfDO3YT"
+}

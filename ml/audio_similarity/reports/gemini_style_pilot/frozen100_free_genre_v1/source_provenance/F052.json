@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 2.1211942749796435,
+  "acquisition_ended_at": "2026-09-04T20:22:13.089636+00:00",
+  "acquisition_started_at": "2026-09-04T20:22:10.968442+00:00",
+  "acquisition_timestamp": "2026-09-04T20:22:10.968707+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 4108103,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 237,
+  "provider_result": "SUCCESS",
+  "provider_title": "AKMU – DINOSAUR Lyrics | COLOR CODED - HAN - ROM - ENG |",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "164ea2ee7abb44a0df7bc454e243a0acb4736e8dc39528302c02c0a5cfcc4cf0",
+      "representation_identity": "9b2140e3a8e059181542aa16835888d344bbbf56e6bc198245bdbf75cda30f32",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "e1b58556c49b4dea91dc1a63bc52c8e29e2fdd54a64b76cf4beef445f22d123c",
+          "25": "ce91ef89d859f66fc04a7d017754108892dc9df0a777f14aaec0fcf437191b77",
+          "5": "1d23eaa10e79d4ea7c527a82d151c6b29fef72927cefdd182d7d479bbe6bec70"
+        },
+        "muq_mulan_large": {
+          "15": "04d617afbf08f2ef73ea41f5ba6b0519c7e3151e332fe4fcd27f99e6605b5e17",
+          "25": "e684415544cf923860db2f6dbaaaa40ea0e5be96dec9480757dabcd037229bba",
+          "5": "00782f8d5d0748a0145bdb77c6b96ca1be70e31f89479abfd11415ce39246871"
+        }
+      },
+      "source_audio_sha256": "d3de54022f0b0542a956e6b6456a40fbb9d47bac91e0ac7a8afd5fcc49e5cdba"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "WNp_XLCOTBw"
+  },
+  "retained_relative_path": "49KDK2ccYnOCYPeXfDO3YT/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 2,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 236.701,
+  "source_sha256": "890c5d76f9512fd2454ee181013a92b31d65368743b1d2253bb3913206c7b51c",
+  "source_url": "https://www.youtube.com/watch?v=WNp_XLCOTBw",
+  "spotify_artists": [
+    "AKMU"
+  ],
+  "spotify_title": "DINOSAUR",
+  "spotify_track_id": "49KDK2ccYnOCYPeXfDO3YT",
+  "successful_query": "DINOSAUR AKMU",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "WNp_XLCOTBw"
+}

@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 19.8,
+        "observation": "A sparse acoustic guitar picking pattern enters underneath pitched-down low male vocals."
+      },
+      {
+        "at_seconds": 52.0,
+        "observation": "Subtle bass and sustained ambient synths join the low-pitched lead vocal and acoustic guitar."
+      },
+      {
+        "at_seconds": 139.0,
+        "observation": "The chorus returns with deep vocal harmonies, warm ambient synth pads, and delicate guitar strums."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Bedroom Pop",
+    "secondary_families": [
+      "Folk",
+      "Indie"
+    ],
+    "secondary_styles": [
+      "Indie Pop",
+      "Indie Folk"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "hazy",
+      "electronic"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "ySCiar-LF-qZ6dkPwZy8uA0",
+  "spotify_track_id": "1ZhrRS2xY1ZoD2QJ9aZQxX"
+}

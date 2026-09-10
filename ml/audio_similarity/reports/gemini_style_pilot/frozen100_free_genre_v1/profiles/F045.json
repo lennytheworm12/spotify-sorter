@@ -1,0 +1,45 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 21.0,
+        "observation": "Intimate, breathy female vocal enters over a simple looping acoustic piano progression."
+      },
+      {
+        "at_seconds": 101.5,
+        "observation": "Subtle bass pulse, soft electronic kick, and ambient pad textures join beneath the emotional lead vocal."
+      },
+      {
+        "at_seconds": 244.0,
+        "observation": "Minimal piano and sparse bassline accompany vocal lines with atmospheric reverb."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Alt-Pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "electronic",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "XCGiav-9LuXI-sAP_bXYwAQ",
+  "spotify_track_id": "3aFh82SrVntBmW9Lx0Gb7W"
+}

@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00646350",
+  "attempt": 42,
+  "cache_key": "dc11c5e7902755befee4a7e85009d8000f748c5bcf1e13b4b8dc6f6268810bb1",
+  "evidence_hashes": {
+    "execution/attempts/attempt-42.request.json": "51a92176639b65a4eba41a4fa21dc61482b8cd573e1ba1dd83813998efc19a81",
+    "execution/attempts/attempt-42.reservation.json": "449fa7594016a60f0a47e2dbbab5d4e1b7b9421ab24cd10ca841cc42daa66e5b",
+    "execution/attempts/attempt-42.settlement.json": "c0ac2502c03bd2c05524e33e749b9213855536bc95687a1389fde210fb1f5b95",
+    "execution/transport/call-167.response.bin": "9cf6bf112ac995b735c32e9477b8229e2df3aca3388af072dff93d7dc614ff8d",
+    "execution/transport/call-168.response.bin": "7814e4702c934086a91e60520906df5440e198eab57da80a1738b4b15ca29bfc",
+    "execution/transport/call-168.response.json": "d7e4d14554c34ac9fc39d5dad67da3302edc7df988c258c3c71e2a74516e591c",
+    "execution/transport/upload-N058.json": "a2d49a22972a8dec948038e59e73dc057e4bd9785dc77fd8b5c902b164675e21"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N058",
+  "pilot_id": "F047",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 25.8,
+        "observation": "Solo acoustic piano and tender female lead vocal begin the first verse"
+      },
+      {
+        "at_seconds": 71.5,
+        "observation": "Subtle low bass synth enters as lead vocal sustains slow lyrical pacing"
+      },
+      {
+        "at_seconds": 133.0,
+        "observation": "Lush chorus layers soft harmony vocals and synth pads over continuing minimalist piano"
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "Mandopop",
+    "secondary_families": [
+      "Ambient"
+    ],
+    "secondary_styles": [
+      "Piano Pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "clean",
+      "electronic"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-168.response.bin",
+  "response_id": "ayGiaojJLKXnz7IPkN3a0Aw",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 25.8, \"observation\": \"Solo acoustic piano and tender female lead vocal begin the first verse\"},\n    {\"at_seconds\": 71.5, \"observation\": \"Subtle low bass synth enters as lead vocal sustains slow lyrical pacing\"},\n    {\"at_seconds\": 133.0, \"observation\": \"Lush chorus layers soft harmony vocals and synth pads over continuing minimalist piano\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"Mandopop\",\n  \"secondary_families\": [\"Ambient\"],\n  \"secondary_styles\": [\"Piano Pop\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"acoustic\", \"clean\", \"electronic\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 252,
+    "promptTokenCount": 7358,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 6909
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 7610
+  }
+}

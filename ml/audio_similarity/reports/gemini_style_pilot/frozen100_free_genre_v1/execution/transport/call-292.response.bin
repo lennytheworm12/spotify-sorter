@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"beat_or_instrumental\",\n  \"audio_evidence\": [\n    {\n      \"at_seconds\": 11.45,\n      \"observation\": \"Boom-bap drum pattern enters underneath an atmospheric, filtered electric piano sample loop.\"\n    },\n    {\n      \"at_seconds\": 32.14,\n      \"observation\": \"Vocal sample scratch and sound bite dropped over the continuous, steady instrumental groove.\"\n    },\n    {\n      \"at_seconds\": 100.85,\n      \"observation\": \"Spoken-word vocal sample plays atop the chill, unhurried hip-hop beat.\"\n    }\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Hip Hop\",\n  \"primary_style\": \"Lo-Fi Beats\",\n  \"secondary_families\": [\"Electronic\"],\n  \"secondary_styles\": [\"Instrumental Hip Hop\", \"Downtempo\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"sample_based\", \"hazy\"],\n  \"vocal_role\": \"vocal_samples_only\"\n}",
+            "thoughtSignature": "EmcKZQERTTIPRUQm0o5zWws077gRALmGxPSM4yXQo9AgxEV7osREDdrtwZKPvHFss0gpUgmha/q9RDVGWOHwxDWEFliuKGmII3FcKFelLuDWZMvd6vv/Lt7eDwH0hNkMw4vTmrsDWhmV"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 3483,
+    "candidatesTokenCount": 302,
+    "totalTokenCount": 3785,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 3034
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "PiKiat-ECeikqtsP17CpiQ0"
+}

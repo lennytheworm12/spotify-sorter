@@ -1,0 +1,44 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 1.5,
+        "observation": "Clean electric guitar plays jazz-inflected chord voicings in a relaxed intro pattern."
+      },
+      {
+        "at_seconds": 18.0,
+        "observation": "Melodic male R&B singing enters, sung smoothly over guitar chords and subtle ambient bass."
+      },
+      {
+        "at_seconds": 55.8,
+        "observation": "A low-key electronic beat with programmed kicks, snappy snare, and hi-hat enters under the vocals."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Pop"
+    ],
+    "secondary_styles": [
+      "K-R&B"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "clean",
+      "electronic"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "response_id": "UyKiaqzjFdiV_uMP87O46Qs",
+  "spotify_track_id": "6nzCvAtyADh0wwZEVMoujK"
+}

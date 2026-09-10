@@ -1,0 +1,58 @@
+{
+  "acquisition_duration_seconds": 1.3388269180431962,
+  "acquisition_ended_at": "2026-09-04T20:28:32.310322+00:00",
+  "acquisition_started_at": "2026-09-04T20:28:30.971495+00:00",
+  "acquisition_timestamp": "2026-09-04T20:28:30.971595+00:00",
+  "channels": 2,
+  "codec": "opus",
+  "container": "matroska,webm",
+  "content_type": "audio/webm",
+  "discovery_mode": "PRIMARY_MULTI_ARTIST",
+  "experiment_id": "STAGE5C2A_PERSISTENT_100_RESEARCH_AUDIO",
+  "file_size_bytes": 3700759,
+  "full_decode_validated": true,
+  "provider_duration_seconds": 206,
+  "provider_result": "SUCCESS",
+  "provider_title": "Phantom Embrace",
+  "query_variant_index": 0,
+  "representation_linkage": {
+    "centered30_v1": {
+      "canonical_pcm_sha256": "7d20dfdcd38ac70c2395b4378a13ffdc37c8d62fc03cc6b95d994cf18dc1faeb",
+      "representation_identity": "4d6c2fd1d3391e7a6fbb330e5531511dbb46c15cc7221fda8d9352abca64a6b5",
+      "segment_embedding_sha256": {
+        "laion_clap": {
+          "15": "4b439fbfc181dd1059969fb123b8e2e5a4800035b92c6333bcf653c4c8c74b99",
+          "25": "23aabc124c89e20f754ceefece8dd190d0969973028ce209c0537b7a5159561d",
+          "5": "846a09bdc679c1f960b8757d00733eec93dc4780bed7dc009a0e1edf165342b2"
+        },
+        "muq_mulan_large": {
+          "15": "e5fb07caa99bf32d500c6ad05e15ad9212b1681bf367531ee96517c73b3c7084",
+          "25": "4628f41ef0c4e45a29b43d558fce9393596e032cb1bac84b106c17fadbd8ccee",
+          "5": "2f8f6db8aa9ab4be01866ddb67789ee6d79dd09aee0f8f325fed3a8fff2a9fdb"
+        }
+      },
+      "source_audio_sha256": "30cd440534cf7ebc3b7f23fba734fb94df5ab1fd0cb784179f57bbfaf494e543"
+    },
+    "materialization_report": "reports/stage5c2_representative_100/materialization_results.json",
+    "youtube_video_id": "1FSfqhnmeeE"
+  },
+  "retained_relative_path": "6rj9qDXWANe0U69asDzxMp/source.webm",
+  "sample_rate_hz": 48000,
+  "schema_version": "stage5c2a-retained-source-provenance-v1",
+  "selected_rank": 1,
+  "selected_sources_sha256": "b09447af7c28fec5dd9816dd9801da9963c3dbc4c8ae534dc5a67307db175088",
+  "selector_decision": "AUTO_SELECT",
+  "source_duration_seconds": 205.841,
+  "source_sha256": "b41bd529dc86edbe46b840991cc79f4de593b87314b12a6bed5364ae069d36f1",
+  "source_url": "https://www.youtube.com/watch?v=1FSfqhnmeeE",
+  "spotify_artists": [
+    "City Girl"
+  ],
+  "spotify_title": "Phantom Embrace",
+  "spotify_track_id": "6rj9qDXWANe0U69asDzxMp",
+  "successful_query": "Phantom Embrace City Girl",
+  "warnings": [
+    "[youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one"
+  ],
+  "youtube_video_id": "1FSfqhnmeeE"
+}

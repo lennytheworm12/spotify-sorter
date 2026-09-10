@@ -1,0 +1,47 @@
+{
+  "collection_status": "NEW_VALIDATED_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": null,
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 0.0,
+        "observation": "Slowed, pitched-down vocal loop begins over a minimal, ambient synth pad."
+      },
+      {
+        "at_seconds": 22.8,
+        "observation": "A low-tempo boom-bap style hip-hop beat enters with kick, snap/clap, and deep 808 bass."
+      },
+      {
+        "at_seconds": 45.3,
+        "observation": "The drum beat drops out, returning to the atmospheric chopped-and-screwed vocal and pad texture."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Hip-Hop",
+    "primary_style": "Chopped and Screwed",
+    "secondary_families": [
+      "Electronic",
+      "R&B"
+    ],
+    "secondary_styles": [
+      "Cloud Rap",
+      "Trap"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "hazy",
+      "sample_based"
+    ],
+    "vocal_role": "vocal_samples_only"
+  },
+  "response_id": "ECKiasPkBOrR-8YPzJa_6A0",
+  "spotify_track_id": "5ri8u5RA8e4vGMyMAGXy0p"
+}

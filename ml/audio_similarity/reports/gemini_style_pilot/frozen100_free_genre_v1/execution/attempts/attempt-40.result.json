@@ -1,0 +1,77 @@
+{
+  "actual_cost_usd": "0.00614250",
+  "attempt": 40,
+  "cache_key": "fc62fefc7cce29a6628e1e76756f04ecf550093afd630b711294f42877df92ed",
+  "evidence_hashes": {
+    "execution/attempts/attempt-40.request.json": "11e1af062ad1a5ab3195bf12ba4db31ac0048c5f0365bcc0cb1f49122e84289b",
+    "execution/attempts/attempt-40.reservation.json": "7e7b8a193d5bdc31f52e9122efaefbeebcd6a1f8e9191da936dd5a4695f53c9d",
+    "execution/attempts/attempt-40.settlement.json": "f5b3b2a97dbadaf70a2f5b980db044757141de1d51613979caa16691a7f6e879",
+    "execution/transport/call-159.response.bin": "0d876191a45ac04bea3b42596c6b7b2730a9f5601a975cdf2a55dea8d5fe9e51",
+    "execution/transport/call-160.response.bin": "dd1521021ee0082580771ae8fe3872e732cacd594ee5fcccedd531f3e7b0ea1a",
+    "execution/transport/call-160.response.json": "21cd587e650d138e962a4f1b1583904a93d52cf56a126550a0602d0631d9b733",
+    "execution/transport/upload-N056.json": "ead5cfbac99ec273ce5684cb03b19cf19f10388f9a6bb04a27a890741902e35d"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N056",
+  "pilot_id": "F045",
+  "profile": {
+    "active_section_density": "sparse",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 21.0,
+        "observation": "Intimate, breathy female vocal enters over a simple looping acoustic piano progression."
+      },
+      {
+        "at_seconds": 101.5,
+        "observation": "Subtle bass pulse, soft electronic kick, and ambient pad textures join beneath the emotional lead vocal."
+      },
+      {
+        "at_seconds": 244.0,
+        "observation": "Minimal piano and sparse bassline accompany vocal lines with atmospheric reverb."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "R&B",
+    "primary_style": "Contemporary R&B",
+    "secondary_families": [
+      "Pop"
+    ],
+    "secondary_styles": [
+      "Alt-Pop"
+    ],
+    "section_variation": "mostly_consistent",
+    "status": "classified",
+    "texture_tags": [
+      "acoustic",
+      "electronic",
+      "clean"
+    ],
+    "vocal_role": "sung_led"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-160.response.bin",
+  "response_id": "XCGiav-9LuXI-sAP_bXYwAQ",
+  "response_text": "{\n  \"active_section_density\": \"sparse\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 21.0, \"observation\": \"Intimate, breathy female vocal enters over a simple looping acoustic piano progression.\"},\n    {\"at_seconds\": 101.5, \"observation\": \"Subtle bass pulse, soft electronic kick, and ambient pad textures join beneath the emotional lead vocal.\"},\n    {\"at_seconds\": 244.0, \"observation\": \"Minimal piano and sparse bassline accompany vocal lines with atmospheric reverb.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"R&B\",\n  \"primary_style\": \"Contemporary R&B\",\n  \"secondary_families\": [\"Pop\"],\n  \"secondary_styles\": [\"Alt-Pop\"],\n  \"section_variation\": \"mostly_consistent\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"acoustic\", \"electronic\", \"clean\"],\n  \"vocal_role\": \"sung_led\"\n}",
+  "usage": {
+    "candidatesTokenCount": 264,
+    "promptTokenCount": 6870,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      },
+      {
+        "modality": "AUDIO",
+        "tokenCount": 6421
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 7134
+  }
+}

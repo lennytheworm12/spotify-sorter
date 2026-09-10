@@ -1,0 +1,78 @@
+{
+  "actual_cost_usd": "0.00499350",
+  "attempt": 13,
+  "cache_key": "9167abc625d8bca766ae6533e54b9a23fa3bf78c434ff332d76acb2dccb590ba",
+  "evidence_hashes": {
+    "execution/attempts/attempt-13.request.json": "a7ea5ef3d65637ee5048e2e3f32dd909a62c1a81b774857cafbdd1bcd81e99b8",
+    "execution/attempts/attempt-13.reservation.json": "192213d57c4cd8c4a376c5ca021fc70a60d923a46b8f0ff92e39444170c6ab70",
+    "execution/attempts/attempt-13.settlement.json": "9422ed7764da6a523934929068b44af548a9e2bfdb6364608f3e50839df4629c",
+    "execution/transport/call-051.response.bin": "a6d6ac454d78b851a0516a6d320e7a8eda5ad0c05b9f70521f15bd6e18595d10",
+    "execution/transport/call-052.response.bin": "d3ae0efff6274207a44ca18dbdba3bcd03aed31c6ad8b7b23f6fb209f6986951",
+    "execution/transport/call-052.response.json": "cae4340a0253fe16c3cb554e71f53cbfd2064eb52a4e37f075c291510c06f8a2",
+    "execution/transport/upload-N029.json": "56be4cf5ae529b699092fa72d45c0fbae48ff53351badc94a47976ffea334fb5"
+  },
+  "finish_reason": "STOP",
+  "manifest_sha256": "5dc5b45e8a0839f521e5556e23c8a80ffab0d6ee3a0cf66574207024b8286bbe",
+  "model_version": "gemini-3.8-flash",
+  "neutral_id": "N029",
+  "pilot_id": "F014",
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "lead_vocal",
+    "audio_evidence": [
+      {
+        "at_seconds": 12.0,
+        "observation": "Solo female singing begins over synth brass pads, punchy bassline, and drum beat."
+      },
+      {
+        "at_seconds": 43.0,
+        "observation": "Energetic chorus section arrives with layered vocal hook and bouncy dance-pop groove."
+      },
+      {
+        "at_seconds": 120.0,
+        "observation": "Transition into a rap-influenced rhythmic vocal breakdown before building back to the chorus."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Pop",
+    "primary_style": "K-Pop",
+    "secondary_families": [
+      "Electronic"
+    ],
+    "secondary_styles": [
+      "Dance-Pop",
+      "Bubblegum Pop"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "clean",
+      "layered"
+    ],
+    "vocal_role": "mixed_rap_and_singing"
+  },
+  "repeat": false,
+  "response_file": "execution/transport/call-052.response.bin",
+  "response_id": "pSCiavr_BJrpz7IPmaOJgQk",
+  "response_text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 12.0, \"observation\": \"Solo female singing begins over synth brass pads, punchy bassline, and drum beat.\"},\n    {\"at_seconds\": 43.0, \"observation\": \"Energetic chorus section arrives with layered vocal hook and bouncy dance-pop groove.\"},\n    {\"at_seconds\": 120.0, \"observation\": \"Transition into a rap-influenced rhythmic vocal breakdown before building back to the chorus.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\"Electronic\"],\n  \"secondary_styles\": [\"Dance-Pop\", \"Bubblegum Pop\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"electronic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"mixed_rap_and_singing\"\n}",
+  "usage": {
+    "candidatesTokenCount": 272,
+    "promptTokenCount": 5298,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 4849
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 5570
+  }
+}

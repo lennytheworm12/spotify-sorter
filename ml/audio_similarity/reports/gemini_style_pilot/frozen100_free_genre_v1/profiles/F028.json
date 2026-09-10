@@ -1,0 +1,53 @@
+{
+  "collection_status": "REUSED_EXACT_PRIOR_PROFILE",
+  "model_version": "gemini-3.8-flash",
+  "original_cache_reference": {
+    "cache_key": "159fc0d5bb26158fd0763b7ded0552efa6205a6a45d2480077d794fb0b19e044",
+    "result_sha256": "6bb96481a0ce671d45deb330c7150291e78e9f0d274b70eab4d1cc94480c5252",
+    "source_attempt": 2,
+    "source_manifest_sha256": "ecdbfcb4ad91688f840ad395e425fe68bf4eca5a26a8163820e979054e960a06",
+    "source_pilot_id": "A03",
+    "source_run": ".research_audio/gemini_style_pilot/free-genre-point-v1"
+  },
+  "profile": {
+    "active_section_density": "moderate",
+    "arrangement_focus": "beat_or_instrumental",
+    "audio_evidence": [
+      {
+        "at_seconds": 16.5,
+        "observation": "Orchestral strings enter with an ascending dramatic build, accompanied by digital tick beats."
+      },
+      {
+        "at_seconds": 32.2,
+        "observation": "Main instrumental drop features aggressive distorted reese bass, rolling breakbeats, and synth arpeggios."
+      },
+      {
+        "at_seconds": 108.7,
+        "observation": "Half-time breakdown section introduces sub-bass wobbles and processed melodic vocal chops."
+      }
+    ],
+    "certainty": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "primary_family": "Electronic",
+    "primary_style": "Drum and Bass",
+    "secondary_families": [
+      "Bass Music"
+    ],
+    "secondary_styles": [
+      "Neurofunk",
+      "Dubstep"
+    ],
+    "section_variation": "contrasting_sections",
+    "status": "classified",
+    "texture_tags": [
+      "electronic",
+      "distorted",
+      "layered"
+    ],
+    "vocal_role": "vocal_samples_only"
+  },
+  "response_id": "4ReiauXSG72Hz7IPtZC2-Q8",
+  "spotify_track_id": "2Vu2hkPW7LxMHPqoMjSIEJ"
+}

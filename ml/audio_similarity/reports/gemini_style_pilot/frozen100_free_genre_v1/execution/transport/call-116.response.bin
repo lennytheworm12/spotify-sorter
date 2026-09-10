@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"active_section_density\": \"moderate\",\n  \"arrangement_focus\": \"lead_vocal\",\n  \"audio_evidence\": [\n    {\"at_seconds\": 6.7, \"observation\": \"Bright acoustic guitar arpeggiation sets the tempo and mood before drums enter.\"},\n    {\"at_seconds\": 17.5, \"observation\": \"Female lead vocal enters in Korean over a steady mid-tempo pop rhythm section.\"},\n    {\"at_seconds\": 62.0, \"observation\": \"Full chorus opens up with layered vocal harmonies, bassline, and upbeat drum groove.\"}\n  ],\n  \"certainty\": {\n    \"family\": \"clear\",\n    \"style\": \"clear\"\n  },\n  \"primary_family\": \"Pop\",\n  \"primary_style\": \"K-Pop\",\n  \"secondary_families\": [\"R&B/Soul\"],\n  \"secondary_styles\": [\"Acoustic Pop\"],\n  \"section_variation\": \"contrasting_sections\",\n  \"status\": \"classified\",\n  \"texture_tags\": [\"acoustic\", \"clean\", \"layered\"],\n  \"vocal_role\": \"sung_led\"\n}",
+            "thoughtSignature": "EmcKZQERTTIP0FlkCz5zZMNd/IILmxcDJie8suCMzQ5yJJEHBa8u5LZZGSbrm7epm0NcA1YkpR/tVm8ypVsY6zZqaRYnXWebyMR0j/4y30iPgo61zmZq6Tbxy20HT1+6lP7JaMG3IyjV"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 5947,
+    "candidatesTokenCount": 264,
+    "totalTokenCount": 6211,
+    "promptTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 5498
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 449
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ECGiaoqIF4Wf-8YPsbXr-QY"
+}
