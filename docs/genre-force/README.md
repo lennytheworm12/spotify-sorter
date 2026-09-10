@@ -18,6 +18,11 @@ The docs say “existing frozen C + M,” but Stage 5E.3 contains two such matri
 M3 with existing centered30 MuQ, and M4 with full-song MuQ. The exporter requires
 an explicit matrix key; it never chooses one silently or recomputes fusion.
 Owner clarification was requested before freezing the actual exploratory run.
+The independent real-data preparation has completed in
+`.research_audio/genre_force/prepared_v1/`: 100 profiles, 99 with specific style
+evidence, all 100 source identities/hashes aligned with the frozen audio sources.
+`prepared_genres.json` deliberately contains no audio pair scores and cannot be
+loaded as a completed explorer packet until the baseline is chosen.
 
 ## Scoring and scope
 

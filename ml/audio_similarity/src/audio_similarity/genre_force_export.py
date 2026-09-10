@@ -48,7 +48,7 @@ def load_audio(root, key):
     return ids, matrix
 
 
-def build(root, output, key):
+def build(root, output, key=None):
     root, output = Path(root).resolve(), Path(output).resolve()
     if not output.is_relative_to(root / '.research_audio/genre_force'):
         raise ValueError('Use a separate .research_audio/genre_force run')
@@ -59,10 +59,15 @@ def build(root, output, key):
         raise ValueError('Reference mapper registry differs from current vault registry')
     # Existing public manifests verify source profiles and original scoring evidence.
     for directory in (SOURCE, E3):
-        verify_hashes(root/directory, read(root/directory/'artifact_manifest.json')['files'])
+        manifest=read(root/directory/'artifact_manifest.json')
+        verify_hashes(root/directory, manifest['files'] if directory==SOURCE else manifest)
     execution=read(root/SOURCE/'execution_manifest.json')
     historical={t['spotify_track_id']:t for t in read(root/E3/'source_manifest.json')['tracks']}
-    ids,matrix=load_audio(root,key)
+    if key is None:
+        with np.load(root/E3/'similarity_matrices.npz',allow_pickle=False) as data:
+            ids,matrix=list(map(str,data['spotify_ids'])),None
+    else:
+        ids,matrix=load_audio(root,key)
     tracks=execution['tracks']
     if {t['spotify_track_id'] for t in tracks} != set(ids) or len(tracks)!=100:
         raise ValueError('Frozen genre/audio membership differs')
@@ -92,7 +97,7 @@ def build(root, output, key):
                       'durationSeconds':prepared['duration_seconds'],'audioUrl':'/__song-space/genre/audio/'+tid,
                       'raw':profile['profile'],**mapped})
         index[tid]={'path':str(audio_path),'sha256':prepared['prepared_sha256']}
-    pairs=[{'a':a,'b':b,'audio':float(matrix[i,j])} for i,a in enumerate(ids) for j,b in enumerate(ids) if a<b]
+    pairs=[] if matrix is None else [{'a':a,'b':b,'audio':float(matrix[i,j])} for i,a in enumerate(ids) for j,b in enumerate(ids) if a<b]
     pairs.sort(key=lambda p:(p['a'],p['b']))
     paths=[root/E3/'similarity_matrices.npz',root/E3/'source_manifest.json',root/E3/'artifact_manifest.json',
            root/SOURCE/'artifact_manifest.json',root/MAP,root/'configs/genre_registry_v1/mapper_reference.py',Path(__file__),
@@ -102,22 +107,25 @@ def build(root, output, key):
                 'specificity_gate':'at least one reviewed kind=style concept on both endpoints; family/rap/electronica alone do not open gate',
                 'tie_break':'descending exact score then Spotify ID ascending','parameter_policy':'manual development only; beta UI 0..0.20; eta 0..1',
                 'unrated_pairs':'No ratings are read or manufactured; rank changes are not accuracy gains'}
-    freeze_json(output/'input.json',{'schemaVersion':'genre-force-explorer-v1','songs':songs,'pairs':pairs,'concepts':concepts,
+    input_name='input.json' if key else 'prepared_genres.json'
+    freeze_json(output/input_name,{'schemaVersion':'genre-force-explorer-v1','songs':songs,'pairs':pairs,'concepts':concepts,
                 'neighborhoodLabels':{k:v['label'] for k,v in engine.config['neighborhoods'].items()},
                 'defaults':{'alpha':0,'beta':force['beta']['default'],'eta':force['eta']['default'],'genreMode':'canonical_plus_residual','forceMode':'pull_only'},
-                'audioIdentity':AUDIO_KEYS[key],'provenance':provenance,
+                'audioIdentity':AUDIO_KEYS[key] if key else 'PENDING_AUDIO_BASELINE_CONFIRMATION','provenance':provenance,
                 'coordinateOrigin':'Existing frozen100 CLAP C Song Space view (v3), recreated with its unchanged deterministic layout engine. C + MuQ scores are a separate frozen source.'})
     freeze_json(output/'audio-index.json',index)
     freeze_json(output/'base-map.json',read(root/MAP))
-    freeze_json(output/'input_manifest.json',{'files':{n:file_sha256(output/n) for n in ['input.json','audio-index.json','base-map.json']}})
-    for directory in (SOURCE,E3):verify_hashes(root/directory,read(root/directory/'artifact_manifest.json')['files'])
+    freeze_json(output/('input_manifest.json' if key else 'prepared_manifest.json'),{'files':{n:file_sha256(output/n) for n in [input_name,'audio-index.json','base-map.json']}})
+    for directory in (SOURCE,E3):
+        manifest=read(root/directory/'artifact_manifest.json')
+        verify_hashes(root/directory,manifest['files'] if directory==SOURCE else manifest)
     return {'tracks':100,'pairs':len(pairs),'audio_key':key,'specific_style_tracks':sum(bool(s['specificStyleIds']) for s in songs),
             'source_mismatches':sum(not s['same_source'] for s in source_checks),'inference_calls':0}
 
 
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path,required=True)
-    p.add_argument('--audio-key',choices=AUDIO_KEYS,required=True);a=p.parse_args()
+    p.add_argument('--audio-key',choices=AUDIO_KEYS,help='Omit to prepare genres without selecting an audio baseline');a=p.parse_args()
     root=Path(__file__).resolve().parents[2];print(build(root,root/a.output,a.audio_key))
 
 
