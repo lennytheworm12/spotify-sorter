@@ -1,0 +1,37 @@
+{
+  "tracks": 100,
+  "pairs": 4950,
+  "zeroAlphaExact": true,
+  "symmetric": true,
+  "modelCalls": 0,
+  "canonical_only:pull_only": {
+    "min": 0,
+    "max": 0.05,
+    "nonzero": 3997
+  },
+  "canonical_only:signed_experimental": {
+    "min": -0.05,
+    "max": 0.05,
+    "nonzero": 4781
+  },
+  "canonical_plus_residual:pull_only": {
+    "min": 0,
+    "max": 0.05,
+    "nonzero": 4040
+  },
+  "canonical_plus_residual:signed_experimental": {
+    "min": -0.05,
+    "max": 0.05,
+    "nonzero": 4814
+  },
+  "neighborhood_only_diagnostic:pull_only": {
+    "min": 0,
+    "max": 0.05,
+    "nonzero": 2307
+  },
+  "neighborhood_only_diagnostic:signed_experimental": {
+    "min": -0.05,
+    "max": 0.05,
+    "nonzero": 4757
+  }
+}

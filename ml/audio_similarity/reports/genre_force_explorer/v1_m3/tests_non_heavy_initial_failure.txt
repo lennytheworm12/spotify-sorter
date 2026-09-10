@@ -1,0 +1,92 @@
+........................................................................ [  5%]
+........................................................................ [ 10%]
+........................................................................ [ 15%]
+................................F....................................... [ 20%]
+........................................................................ [ 25%]
+........................................................................ [ 30%]
+........................................................................ [ 35%]
+........................................................................ [ 40%]
+........................................................................ [ 45%]
+........................................................................ [ 50%]
+........................................................................ [ 55%]
+........................................................................ [ 60%]
+........................................................................ [ 65%]
+........................................................................ [ 70%]
+........................................................................ [ 75%]
+........................................................................ [ 81%]
+........................................................................ [ 86%]
+........................................................................ [ 91%]
+........................................................................ [ 96%]
+......................................................                   [100%]
+=================================== FAILURES ===================================
+_____________________ test_exact_frozen100_offline_replay ______________________
+
+tmp_path = PosixPath('/tmp/pytest-of-bphan944/pytest-41/test_exact_frozen100_offline_r0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7592ba6e0fd0>
+
+    def test_exact_frozen100_offline_replay(tmp_path,monkeypatch):
+        def forbidden(*args,**kwargs):raise AssertionError('No network during mapping')
+        monkeypatch.setattr(socket,'create_connection',forbidden)
+        rows=build(ROOT,tmp_path/'replay')
+>       verify_hashes(tmp_path/'replay',read(ROOT/REPORT/'artifact_manifest.json')['files'])
+
+tests/test_genre_registry_review.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = PosixPath('/tmp/pytest-of-bphan944/pytest-41/test_exact_frozen100_offline_r0/replay')
+expected = {'comparison.json': 'e8e5e67a479fa9e9d193cbfb86724b0f96696d5311e8a452eaf0eee90d2a5b0c', 'coverage.json': '0089f9df5d86...5af2ca62fd5a1abae84966507fe079', 'provenance.json': 'e228a7b8666936e69c2ef108d2b9af16536a3e3fe2f4001acbea2c0c1f95d147'}
+
+    def verify_hashes(root, expected):
+        for name, sha in expected.items():
+            path = Path(root) / name
+            if not path.is_file() or file_sha256(path) != sha:
+>               raise ValueError(f'integrity mismatch: {name}')
+E               ValueError: integrity mismatch: provenance.json
+
+src/audio_similarity/stage5e3_artifacts.py:87: ValueError
+=============================== warnings summary ===============================
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+tests/test_mir_metrics.py::test_deterministic_reextraction
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=533
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=799
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=400
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=941
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=471
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=750
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_all_features_finite_and_shaped
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=375
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_feature_cache_roundtrip
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=698
+    warnings.warn(
+
+tests/test_mir_metrics.py::test_feature_cache_roundtrip
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/spectrum.py:266: UserWarning: n_fft=1024 is too large for input signal of length=349
+    warnings.warn(
+
+tests/test_stage2_residuals.py::test_extract_is_finite_complete_and_resumable_with_fake_merit
+  /home/bphan944/PersonalProjects/spotifyProject/ml/audio_similarity/.venv/lib/python3.11/site-packages/librosa/core/pitch.py:103: UserWarning: Trying to estimate tuning from empty frequency set.
+    return pitch_tuning(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_genre_registry_review.py::test_exact_frozen100_offline_replay
+1 failed, 1421 passed, 12 deselected, 11 warnings in 223.74s (0:03:43)

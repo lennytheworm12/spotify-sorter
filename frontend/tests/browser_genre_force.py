@@ -1,4 +1,4 @@
-"""Isolated browser checks; synthetic mode until an audio baseline is confirmed."""
+"""Isolated browser checks; require --real for a real frozen audio packet."""
 import argparse,json
 from pathlib import Path
 from urllib.request import urlopen,Request
@@ -37,5 +37,5 @@ with urlopen(Request(a.url+packet['songs'][0]['audioUrl'],headers={'Range':'byte
 try:
  urlopen(Request(a.url+'/__song-space/genre/data',data=b'{}',headers={'Content-Type':'application/json'}));raise AssertionError('Write accepted')
 except HTTPError as e:assert e.code==405
-result={'status':'PASS','synthetic':not a.real,'tracks':100,'neighbors_per_anchor':99,'all_modes':True,'parameter_controls':True,'alpha_zero_restores':True,'fixed_coordinates_unchanged':True,'temporary_graph_changes_and_restores':True,'keyboard_search_audio_seek':True,'http_range':True,'write_rejected':True,'console_errors':errors,'review_writes':0}
+result={'status':'PASS','url':a.url,'synthetic':not a.real,'tracks':100,'neighbors_per_anchor':99,'all_modes':True,'parameter_controls':True,'alpha_zero_restores':True,'fixed_coordinates_unchanged':True,'temporary_graph_changes_and_restores':True,'keyboard_search_audio_seek':True,'http_range':True,'write_rejected':True,'console_errors':errors,'review_writes':0}
 (out/'verification.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result))

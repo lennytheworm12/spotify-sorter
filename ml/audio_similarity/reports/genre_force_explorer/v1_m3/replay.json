@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "counts": {
+    "tracks": 100,
+    "pairs": 4950,
+    "audio_key": "M3_C_PLUS_FIXED_MUQ",
+    "specific_style_tracks": 99,
+    "source_mismatches": 0,
+    "inference_calls": 0
+  },
+  "identical_hashes_and_mtimes": true,
+  "new_files": [],
+  "network_forbidden": true,
+  "files": {
+    "artifact_manifest.json": "32d21a74c17609c7ed49e6d46a92570194adaa85dada26d6349ab398b9a88687",
+    "audio-index.json": "2b12e28a206b9f810e192bf53efc94dfae8f8e7b8ecca4c2c03ca86e61ee82bf",
+    "base-map.json": "273bb37766bbe86518cc2697874a197ef5f7694d8459da1495c110d2757a6f70",
+    "baseline_rankings.json": "ad22d59a2b3afc4b67bef00fd640f0ee6585f24a1523aec0a93381809dc5fe65",
+    "engineering_checks.json": "24d370e7e5ab49882a1e8bb0b95da4fbaeaab935cdf75ed38c6d46fb26c5a539",
+    "explorer.json": "3532f89e65c934c594bb2aa0e1a3f2db70573bd1b3059e8944b93162ac3afad4",
+    "input.json": "941e2f903d3b9efa5156702dda463f86980982e5a2b59aa533623ca48f4f85ce",
+    "input_manifest.json": "d1fd0f473937652bb32480f85dcb0f1dbf4d175125423bbcd281ed293dca76a7",
+    "pair_genre_evidence.json": "dee5a587048cb5890d0312174dcc048f930e9fac6216cf875dd82feb0319b90b"
+  }
+}

@@ -1,0 +1,26 @@
+
+> frontend@0.0.0 test /home/bphan944/PersonalProjects/spotifyProject/frontend
+> node --import tsx --test tests/*.test.ts
+
+✔ weighted Jaccard uses weighted union; empty is unknown; rejects invalid inputs (1.128115ms)
+✔ same labels exhaust residual mass, no double count; reliable self equals one (1.108076ms)
+✔ same neighborhood different canonicals is discounted, not exact agreement (0.380103ms)
+✔ unequal shared mass is removed before projection; duplicate neighborhoods use max (0.352901ms)
+✔ unknown no-op in signed mode; known disjoint pull-only does not repel (0.285212ms)
+✔ symmetric scores, finite bounded deltas, alpha zero exact rankings with stable ties (0.96267ms)
+✔ broad-only profiles cannot open canonical gate even when families match (0.339636ms)
+✔ 100 tracks / 4950 pairs validated; coordinate-off is exact; move layout deterministic and disposable (587.684655ms)
+✔ snapshot preserves score and rank evidence; rejects ambiguous or unsafe inputs (2.880186ms)
+✔ layout is deterministic across input order and preserves nearest-neighbor scores (65.127098ms)
+✔ supplied communities and geometry survive; bridge diagnostics are structural (9.76853ms)
+✔ empty and isolated snapshots remain valid (0.402164ms)
+✔ audio byte ranges include seeking, suffixes, clipping and rejection (0.458181ms)
+✔ quarantined source remains visible as an isolated song with its reason (23.285316ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1005.947163

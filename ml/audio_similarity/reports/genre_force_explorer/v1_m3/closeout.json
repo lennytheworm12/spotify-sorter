@@ -1,0 +1,47 @@
+{
+  "api_or_inference_calls": 0,
+  "audio_baseline": "M3_C_PLUS_FIXED_MUQ",
+  "baseline_selection": "Implementation interpretation of existing frozen C + M; no owner-confirmed comparison or outcome-based selection",
+  "coordinates": "Recreated original frozen100 CLAP C view; fixed when Move graph is off",
+  "default_settings": {
+    "alpha": 0,
+    "beta": 0.05,
+    "eta": 0.25,
+    "forceMode": "pull_only",
+    "genreMode": "canonical_plus_residual"
+  },
+  "evidence_limits": [
+    "Interactive development only; no accuracy or held-out improvement claim.",
+    "Gemini label errors and mapper uncertainty are preserved, not corrected by this scorer.",
+    "M4 full-song MuQ is available via exporter but was not selected or compared here.",
+    "Known broad-family-only profile and its 99 pairs receive zero genre contribution.",
+    "Screenshots show manual test settings, not recommended parameters."
+  ],
+  "human_ratings_read_or_written": 0,
+  "insufficient_style_tracks": [
+    {
+      "canonical": {
+        "family:classical": 0.25,
+        "family:pop": 0.5
+      },
+      "id": "5l45vVLs4JKkhzN0tvkWJv",
+      "raw_labels": {
+        "primary_family": "Pop",
+        "primary_style": "Korean Ballad",
+        "secondary_families": [
+          "Classical"
+        ],
+        "secondary_styles": [
+          "Piano Ballad"
+        ]
+      },
+      "title": "Love Always Leaves Me"
+    }
+  ],
+  "pairs": 4950,
+  "per_anchor_candidates": 99,
+  "production_activation": false,
+  "specific_style_tracks": 99,
+  "status": "DEVELOPMENT_EXPLORER_READY",
+  "tracks": 100
+}

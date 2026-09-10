@@ -1,6 +1,7 @@
 /** Finish a new genre run using the unchanged Song Space layout, never old files. */
 import { readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { createHash } from 'node:crypto'
 import { buildLayout } from '../src/song-space/layout.ts'
 import { parseDataset } from '../src/song-space/data.ts'
@@ -29,6 +30,19 @@ function freeze(name: string, value: unknown) {
     if (readFileSync(p, 'utf8') !== text) throw Error('Frozen output differs: ' + name)
   } else writeFileSync(p, text, { flag: 'wx' })
 }
+packet.provenance.frontendImplementationHashes = Object.fromEntries(
+  [
+    'src/genre-force/scoring.ts',
+    'src/genre-force/graph.ts',
+    'src/song-space/layout.ts',
+    'dev/freezeGenreForce.ts',
+    'package.json',
+    'pnpm-lock.yaml',
+  ].map((name) => [
+    name,
+    hash(readFileSync(fileURLToPath(new URL('../' + name, import.meta.url)))),
+  ]),
+)
 const byId = new Map(packet.songs.map((s) => [s.id, s]))
 const evidence = packet.pairs.map((p) => ({
   ...p,

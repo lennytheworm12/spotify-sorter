@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "url": "http://127.0.0.1:5174",
+  "synthetic": false,
+  "tracks": 100,
+  "neighbors_per_anchor": 99,
+  "all_modes": true,
+  "parameter_controls": true,
+  "alpha_zero_restores": true,
+  "fixed_coordinates_unchanged": true,
+  "temporary_graph_changes_and_restores": true,
+  "keyboard_search_audio_seek": true,
+  "http_range": true,
+  "write_rejected": true,
+  "console_errors": [],
+  "review_writes": 0
+}
