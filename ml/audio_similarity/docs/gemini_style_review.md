@@ -108,3 +108,27 @@ playlist ratings or rankings, and makes no model calls.
 For isolated browser verification, start the server with a fresh `--state-dir`
 and run `tests/browser_genre_neighborhood_review.py --url http://127.0.0.1:8796
 --output-dir /tmp/neighborhood-browser-evidence` against that disposable port.
+
+## Frozen 100 with unchanged mapper v1
+
+Open **http://127.0.0.1:8798/neighborhood**. This separate instance uses the exact
+100 saved Gemini classifications and prepared full-recording FLACs, without new
+API calls. Its source is `reports/gemini_style_pilot/frozen100_free_genre_v1/`;
+its frozen mapping packet is `reports/genre_neighborhood_map/v1/frozen100/`.
+The original 16-song instance and answers remain separate. Prior answers are not
+silently treated as decisions about this expanded review.
+
+```sh
+.venv/bin/python -m audio_similarity.genre_neighborhood_frozen100 --serve --port 8798
+```
+
+Answers autosave to `artifacts/genre_neighborhood_review/frozen100/`, with the
+same CSV export and finish behavior. To reproduce the offline mapping artifacts:
+
+```sh
+.venv/bin/python -m audio_similarity.genre_neighborhood_frozen100 --output /tmp/neighborhood100-replay
+```
+
+Mapper v1 is unchanged. Unknown/ambiguous labels stay review-required; this run
+measures mapping coverage for manual inspection, not musical accuracy or ranking
+improvement. No genre penalties, reranking or production changes are enabled.

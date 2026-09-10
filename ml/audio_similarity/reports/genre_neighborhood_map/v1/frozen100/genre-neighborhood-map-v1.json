@@ -1,0 +1,888 @@
+{
+  "broad_families": {
+    "electronic": "Electronic music lineage (does not imply club function or fast tempo)",
+    "hip_hop": "Hip-hop lineage (does not assert rap vocals or instrumental role)",
+    "pop": "Pop lineage (does not imply identical mood, production or use)",
+    "rnb_soul": "R&B / soul umbrella (does not equate all R&B with soul or all substyles)"
+  },
+  "concepts": [
+    {
+      "aliases": [
+        "Alternative pop",
+        "alt-pop",
+        "alt pop",
+        "alt_pop"
+      ],
+      "broad_families": [
+        "pop"
+      ],
+      "id": "alternative_pop",
+      "kind": "style",
+      "label": "Alternative pop",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "alternative_pop"
+      ]
+    },
+    {
+      "aliases": [
+        "Alternative R&B",
+        "alternative rnb",
+        "alt R&B",
+        "alt rnb",
+        "alternative_rnb"
+      ],
+      "broad_families": [
+        "rnb_soul"
+      ],
+      "id": "alternative_rnb",
+      "kind": "style",
+      "label": "Alternative R&B",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "modern_rnb",
+        "alternative_rnb"
+      ]
+    },
+    {
+      "aliases": [
+        "Ambient"
+      ],
+      "broad_families": [],
+      "id": "ambient",
+      "kind": "style_umbrella",
+      "label": "Ambient",
+      "mapping_status": "mapped",
+      "note": "Ambient may be electronic or acoustic; no broad family is guessed from this label alone.",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "ambient_related"
+      ]
+    },
+    {
+      "aliases": [
+        "Ambient pop",
+        "ambient_pop"
+      ],
+      "broad_families": [
+        "pop"
+      ],
+      "id": "ambient_pop",
+      "kind": "style",
+      "label": "Ambient pop",
+      "mapping_status": "mapped",
+      "note": "Pop with ambient-style associations; no electronic family inferred from the modifier alone.",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "atmospheric_pop"
+      ]
+    },
+    {
+      "aliases": [
+        "Bass music",
+        "bass_music"
+      ],
+      "broad_families": [],
+      "id": "bass_music",
+      "kind": "ambiguous_umbrella",
+      "label": "Bass music",
+      "mapping_status": "mapping_review_required",
+      "note": "Heterogeneous electronic/club/regional umbrella; do not equate with drum-and-bass, dubstep, or a single family.",
+      "review_candidates": [
+        "electronic bass styles",
+        "other regional bass-music usage"
+      ],
+      "scene_contexts": [],
+      "style_neighborhoods": []
+    },
+    {
+      "aliases": [
+        "Boom bap",
+        "boom-bap",
+        "boom_bap"
+      ],
+      "broad_families": [
+        "hip_hop"
+      ],
+      "id": "boom_bap",
+      "kind": "style",
+      "label": "Boom bap",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "hip_hop_beat_lineage",
+        "boom_bap"
+      ]
+    },
+    {
+      "aliases": [
+        "Chillhop",
+        "chill-hop",
+        "chill hop"
+      ],
+      "broad_families": [
+        "hip_hop"
+      ],
+      "id": "chillhop",
+      "kind": "style",
+      "label": "Chillhop",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "hip_hop_beat_lineage",
+        "lofi_chill_beats"
+      ]
+    },
+    {
+      "aliases": [
+        "Chillout",
+        "chill-out",
+        "chill out"
+      ],
+      "broad_families": [],
+      "id": "chillout",
+      "kind": "ambiguous_context_style",
+      "label": "Chillout",
+      "mapping_status": "mapping_review_required",
+      "note": "May denote a listening use or heterogeneous sonic styles. Retain the ambiguous umbrella; do not equate with downtempo or lo-fi.",
+      "review_candidates": [
+        "listening context",
+        "downtempo-oriented style umbrella"
+      ],
+      "scene_contexts": [
+        "chillout_umbrella"
+      ],
+      "style_neighborhoods": []
+    },
+    {
+      "aliases": [
+        "Conscious hip-hop",
+        "conscious hip hop",
+        "conscious_hip_hop",
+        "conscious rap"
+      ],
+      "broad_families": [
+        "hip_hop"
+      ],
+      "id": "conscious_hip_hop",
+      "kind": "scene_context",
+      "label": "Conscious hip-hop",
+      "mapping_status": "mapped",
+      "note": "Thematic/context concept only; no boom-bap or other sonic style inferred.",
+      "review_candidates": [],
+      "scene_contexts": [
+        "conscious_hip_hop_context"
+      ],
+      "style_neighborhoods": []
+    },
+    {
+      "aliases": [
+        "Contemporary R&B",
+        "contemporary rnb",
+        "contemporary rhythm and blues",
+        "contemporary_rnb"
+      ],
+      "broad_families": [
+        "rnb_soul"
+      ],
+      "id": "contemporary_rnb",
+      "kind": "style",
+      "label": "Contemporary R&B",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "modern_rnb"
+      ]
+    },
+    {
+      "aliases": [
+        "Dance-pop",
+        "dance pop",
+        "dance_pop"
+      ],
+      "broad_families": [
+        "pop"
+      ],
+      "id": "dance_pop",
+      "kind": "style",
+      "label": "Dance-pop",
+      "mapping_status": "mapped",
+      "note": "Electronic-pop neighborhood is a stylistic adjacency, not an instrumentation assertion or automatic electronic family.",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "pop_electronic",
+        "dance_pop"
+      ]
+    },
+    {
+      "aliases": [
+        "Dance"
+      ],
+      "broad_families": [],
+      "id": "dance_unspecified",
+      "kind": "ambiguous_umbrella",
+      "label": "Dance",
+      "mapping_status": "mapping_review_required",
+      "note": "Bare dance label does not distinguish function, dance-pop, or electronic dance music.",
+      "review_candidates": [
+        "dance/listening function",
+        "dance-pop",
+        "electronic dance music"
+      ],
+      "scene_contexts": [],
+      "style_neighborhoods": []
+    },
+    {
+      "aliases": [
+        "Downtempo",
+        "down-tempo",
+        "down tempo"
+      ],
+      "broad_families": [
+        "electronic"
+      ],
+      "id": "downtempo",
+      "kind": "style_umbrella",
+      "label": "Downtempo",
+      "mapping_status": "mapped",
+      "note": "A style-level umbrella even when Gemini puts it in a family slot; not a BPM measurement.",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "downtempo_related"
+      ]
+    },
+    {
+      "aliases": [
+        "Dream pop",
+        "dream-pop",
+        "dream_pop"
+      ],
+      "broad_families": [
+        "pop"
+      ],
+      "id": "dream_pop",
+      "kind": "style",
+      "label": "Dream pop",
+      "mapping_status": "mapped",
+      "note": "Operational non-exhaustive pop membership. Does not instantiate a rock family or infer guitar instrumentation without further labels.",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "indie_pop_related",
+        "atmospheric_pop"
+      ]
+    },
+    {
+      "aliases": [
+        "Drum and bass",
+        "drum & bass",
+        "drum n bass",
+        "drum and bass",
+        "dnb",
+        "d&b",
+        "d n b"
+      ],
+      "broad_families": [
+        "electronic"
+      ],
+      "id": "drum_and_bass",
+      "kind": "style",
+      "label": "Drum and bass",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "bass_electronic",
+        "drum_and_bass"
+      ]
+    },
+    {
+      "aliases": [
+        "Dub techno",
+        "dub_techno"
+      ],
+      "broad_families": [
+        "electronic"
+      ],
+      "id": "dub_techno",
+      "kind": "style",
+      "label": "Dub techno",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "techno_related",
+        "dub_electronic"
+      ]
+    },
+    {
+      "aliases": [
+        "Dubstep"
+      ],
+      "broad_families": [
+        "electronic"
+      ],
+      "id": "dubstep",
+      "kind": "style",
+      "label": "Dubstep",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "bass_electronic",
+        "dubstep"
+      ]
+    },
+    {
+      "aliases": [
+        "East Coast hip-hop",
+        "east coast hip hop",
+        "east_coast_hip_hop"
+      ],
+      "broad_families": [
+        "hip_hop"
+      ],
+      "id": "east_coast_hip_hop",
+      "kind": "scene_context",
+      "label": "East Coast hip-hop",
+      "mapping_status": "mapped",
+      "note": "The explicit hip-hop name supports its broad family; geography does not imply boom-bap.",
+      "review_candidates": [],
+      "scene_contexts": [
+        "east_coast_hip_hop_scene"
+      ],
+      "style_neighborhoods": []
+    },
+    {
+      "aliases": [
+        "Electronic"
+      ],
+      "broad_families": [
+        "electronic"
+      ],
+      "id": "electronic",
+      "kind": "family",
+      "label": "Electronic",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": []
+    },
+    {
+      "aliases": [
+        "Electropop",
+        "electro-pop",
+        "electro pop"
+      ],
+      "broad_families": [
+        "pop",
+        "electronic"
+      ],
+      "id": "electropop",
+      "kind": "style",
+      "label": "Electropop",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "pop_electronic"
+      ]
+    },
+    {
+      "aliases": [
+        "Emo rap",
+        "emo_rap"
+      ],
+      "broad_families": [
+        "hip_hop"
+      ],
+      "id": "emo_rap",
+      "kind": "style",
+      "label": "Emo rap",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "emo_rap"
+      ]
+    },
+    {
+      "aliases": [
+        "Hip-hop",
+        "hip hop",
+        "hip_hop",
+        "hiphop"
+      ],
+      "broad_families": [
+        "hip_hop"
+      ],
+      "id": "hip_hop",
+      "kind": "family",
+      "label": "Hip-hop",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": []
+    },
+    {
+      "aliases": [
+        "Indie pop",
+        "indie_pop"
+      ],
+      "broad_families": [
+        "pop"
+      ],
+      "id": "indie_pop",
+      "kind": "style",
+      "label": "Indie pop",
+      "mapping_status": "mapped",
+      "note": "Musical label, not evidence of an independent record contract; not automatically dreamy or lo-fi.",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "indie_pop_related"
+      ]
+    },
+    {
+      "aliases": [
+        "Instrumental hip-hop",
+        "instrumental hiphop"
+      ],
+      "broad_families": [
+        "hip_hop"
+      ],
+      "id": "instrumental_hip_hop",
+      "kind": "style",
+      "label": "Instrumental hip-hop",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "hip_hop_beat_lineage",
+        "instrumental_hip_hop"
+      ]
+    },
+    {
+      "aliases": [
+        "K-Pop",
+        "kpop",
+        "k pop",
+        "k_pop"
+      ],
+      "broad_families": [],
+      "id": "k_pop",
+      "kind": "scene_context",
+      "label": "K-Pop",
+      "mapping_status": "mapped",
+      "note": "Context only. No sonic neighborhood or broad family follows solely from the scene label.",
+      "review_candidates": [],
+      "scene_contexts": [
+        "korean_pop_scene"
+      ],
+      "style_neighborhoods": []
+    },
+    {
+      "aliases": [
+        "Lo-fi hip-hop",
+        "lofi hip hop",
+        "lo-fi hip hop",
+        "lo_fi_hip_hop",
+        "lofi_hip_hop",
+        "lofi hiphop"
+      ],
+      "broad_families": [
+        "hip_hop"
+      ],
+      "id": "lofi_hip_hop",
+      "kind": "style",
+      "label": "Lo-fi hip-hop",
+      "mapping_status": "mapped",
+      "note": "Does not assert boom-bap, instrumental-only status, or electronic instrumentation.",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "hip_hop_beat_lineage",
+        "lofi_chill_beats"
+      ]
+    },
+    {
+      "aliases": [
+        "Lo-fi",
+        "lofi",
+        "lo fi",
+        "lo_fi"
+      ],
+      "broad_families": [],
+      "id": "lofi_unspecified",
+      "kind": "ambiguous_umbrella",
+      "label": "Lo-fi",
+      "mapping_status": "mapping_review_required",
+      "note": "Production/aesthetic or genre shorthand; do not infer hip-hop from generic lo-fi.",
+      "review_candidates": [
+        "production aesthetic",
+        "lo-fi hip-hop",
+        "lo-fi rock/pop"
+      ],
+      "scene_contexts": [],
+      "style_neighborhoods": []
+    },
+    {
+      "aliases": [
+        "Melodic rap",
+        "melodic_rap"
+      ],
+      "broad_families": [
+        "hip_hop"
+      ],
+      "id": "melodic_rap",
+      "kind": "style",
+      "label": "Melodic rap",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "melodic_rap"
+      ]
+    },
+    {
+      "aliases": [
+        "Microhouse",
+        "micro-house",
+        "micro house"
+      ],
+      "broad_families": [
+        "electronic"
+      ],
+      "id": "microhouse",
+      "kind": "style",
+      "label": "Microhouse",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "house_related",
+        "minimal_club"
+      ]
+    },
+    {
+      "aliases": [
+        "Minimal techno",
+        "minimal_techno"
+      ],
+      "broad_families": [
+        "electronic"
+      ],
+      "id": "minimal_techno",
+      "kind": "style",
+      "label": "Minimal techno",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "techno_related",
+        "minimal_club"
+      ]
+    },
+    {
+      "aliases": [
+        "Neurofunk"
+      ],
+      "broad_families": [
+        "electronic"
+      ],
+      "id": "neurofunk",
+      "kind": "style",
+      "label": "Neurofunk",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "bass_electronic",
+        "drum_and_bass"
+      ]
+    },
+    {
+      "aliases": [
+        "Nu-disco",
+        "nu disco",
+        "nu_disco",
+        "nudisco"
+      ],
+      "broad_families": [
+        "electronic"
+      ],
+      "id": "nu_disco",
+      "kind": "style",
+      "label": "Nu-disco",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "disco_related"
+      ]
+    },
+    {
+      "aliases": [
+        "Plugg"
+      ],
+      "broad_families": [
+        "hip_hop"
+      ],
+      "id": "plugg",
+      "kind": "style",
+      "label": "Plugg",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "trap_related",
+        "plugg_related"
+      ]
+    },
+    {
+      "aliases": [
+        "Pop"
+      ],
+      "broad_families": [
+        "pop"
+      ],
+      "id": "pop",
+      "kind": "family",
+      "label": "Pop",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": []
+    },
+    {
+      "aliases": [
+        "Pop rap",
+        "pop-rap",
+        "pop_rap"
+      ],
+      "broad_families": [
+        "hip_hop",
+        "pop"
+      ],
+      "id": "pop_rap",
+      "kind": "style",
+      "label": "Pop rap",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "rap_pop_crossover"
+      ]
+    },
+    {
+      "aliases": [
+        "R&B",
+        "rnb",
+        "r and b",
+        "rhythm and blues"
+      ],
+      "broad_families": [
+        "rnb_soul"
+      ],
+      "id": "rnb",
+      "kind": "family",
+      "label": "R&B",
+      "mapping_status": "mapped",
+      "note": "R&B stays its own canonical concept; the broad family is a joint umbrella, not a synonym for soul.",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": []
+    },
+    {
+      "aliases": [
+        "R&B and Soul",
+        "R&B/Soul",
+        "R&B / Soul",
+        "rnb soul",
+        "rnb and soul"
+      ],
+      "broad_families": [
+        "rnb_soul"
+      ],
+      "id": "rnb_soul_umbrella",
+      "kind": "family_umbrella",
+      "label": "R&B and Soul",
+      "mapping_status": "mapped",
+      "note": "Combined family label preserved as an umbrella; not split into two independently predicted genres.",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": []
+    },
+    {
+      "aliases": [
+        "Synth-pop",
+        "synthpop",
+        "synth pop",
+        "synth_pop"
+      ],
+      "broad_families": [
+        "pop",
+        "electronic"
+      ],
+      "id": "synth_pop",
+      "kind": "style",
+      "label": "Synth-pop",
+      "mapping_status": "mapped",
+      "note": "",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "pop_electronic",
+        "synth_pop"
+      ]
+    },
+    {
+      "aliases": [
+        "Trap"
+      ],
+      "broad_families": [],
+      "id": "trap",
+      "kind": "style_umbrella",
+      "label": "Trap",
+      "mapping_status": "mapped",
+      "note": "Subtype unspecified. Do not derive a hip-hop or electronic family from this label alone.",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "trap_related"
+      ]
+    },
+    {
+      "aliases": [
+        "Trip-hop",
+        "trip hop",
+        "triphop",
+        "trip_hop"
+      ],
+      "broad_families": [
+        "electronic",
+        "hip_hop"
+      ],
+      "id": "trip_hop",
+      "kind": "style",
+      "label": "Trip-hop",
+      "mapping_status": "mapped",
+      "note": "Hip-hop membership denotes lineage, not rap-led vocals or automatic compatibility with rap.",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": [
+        "hip_hop_beat_lineage",
+        "downtempo_related"
+      ]
+    },
+    {
+      "aliases": [
+        "unknown",
+        "unclear",
+        "unresolved"
+      ],
+      "broad_families": [],
+      "id": "unknown",
+      "kind": "abstention",
+      "label": "unknown",
+      "mapping_status": "unresolved",
+      "note": "Explicit uncertainty contributes no family or neighborhood evidence.",
+      "review_candidates": [],
+      "scene_contexts": [],
+      "style_neighborhoods": []
+    }
+  ],
+  "normalization": {
+    "aliases": "Explicit unique lookup after lexical normalization; same-concept duplicate spellings are legal, cross-concept collisions fail.",
+    "case": "casefold",
+    "separators": "Unicode dash variants, hyphen and underscore become spaces; collapse whitespace; ampersand becomes and; preserve slash as a token. No substring, fuzzy, stemming or composite-label splitting.",
+    "unicode": "NFKC"
+  },
+  "policy": {
+    "aggregation": "Unweighted set union of explicit concept memberships; retain every primary/secondary label occurrence and evidence path. No confidence probabilities, weights, distance, compatibility scores or rejection.",
+    "context_fields_display_only": [
+      "vocal_role",
+      "arrangement_focus",
+      "texture_tags"
+    ],
+    "context_leakage": "No vocal role, arrangement, texture, density, audio evidence, metadata, owner judgment or pair rating is consulted by the mapper.",
+    "inputs": [
+      "primary_family",
+      "secondary_families",
+      "primary_style",
+      "secondary_styles"
+    ],
+    "scene_context": "Stored separately; scene/thematic labels cannot produce sonic-neighborhood memberships. An explicit genre in a context label may retain its broad family.",
+    "scope": "Memberships are curated, non-exhaustive operational relationships for inspection, not universal genre truth. Shared neighborhoods are not playlist ground truth; absent overlap is not incompatibility.",
+    "unknown_label": "Preserve verbatim with mapping_review_required and empty derived memberships. Do not guess from artist, song, owner notes, other model outputs or audio descriptions."
+  },
+  "purpose": "Manual inspection of the frozen free-form original 16; no numerical similarity or production use.",
+  "scene_contexts": {
+    "chillout_umbrella": "Ambiguous listening-context/style umbrella retained for review; no definite sonic neighborhood assigned.",
+    "conscious_hip_hop_context": "Thematic/cultural hip-hop label; no independent lyrical-content assessment.",
+    "east_coast_hip_hop_scene": "Regional hip-hop label; not an automatic boom-bap assignment or verified artist origin.",
+    "korean_pop_scene": "K-Pop scene/industry label, not a unique sonic style. No artist, nationality or language is independently inferred."
+  },
+  "schema_version": "genre-neighborhood-map-v1",
+  "style_neighborhoods": {
+    "alternative_pop": "Explicit alternative-pop branch; not synonymous with indie, dream or electronic pop.",
+    "alternative_rnb": "Explicit alternative R&B branch.",
+    "ambient_related": "Explicit ambient style; no inference from sparse density or hazy texture.",
+    "atmospheric_pop": "Explicit dream-pop and ambient-pop style neighborhood; not inferred from texture tags.",
+    "bass_electronic": "Named drum-and-bass/neurofunk/dubstep styles; a bare Bass Music label remains ambiguous.",
+    "boom_bap": "Explicit boom-bap style; not inferred from every hip-hop or lo-fi label.",
+    "dance_pop": "Explicit dance-pop branch; does not resolve a bare Dance label.",
+    "disco_related": "Nu-disco branch; does not automatically add pop membership.",
+    "downtempo_related": "Explicit downtempo and trip-hop style lineage; not a numeric BPM estimate.",
+    "drum_and_bass": "Drum-and-bass and its neurofunk branch.",
+    "dub_electronic": "Explicit dub-techno branch; does not infer reggae identity.",
+    "dubstep": "Explicit dubstep branch, separate from drum-and-bass.",
+    "emo_rap": "Explicit emo-rap style, not an inferred mood from audio or lyrics.",
+    "hip_hop_beat_lineage": "Boom-bap, lo-fi/chill-hop and trip-hop beat traditions; broad lineage, not a claim of the same groove or vocal role.",
+    "house_related": "Explicit microhouse branch; does not infer house from all dance labels.",
+    "indie_pop_related": "Indie-pop and dream-pop neighborhood; broad overlap, no dreamy/soft claim for all indie pop.",
+    "instrumental_hip_hop": "Explicit instrumental hip-hop label only; never inferred from a vocal-role field.",
+    "lofi_chill_beats": "Lo-fi hip-hop and chillhop neighborhood; no instrumental-only or measured-tempo claim.",
+    "melodic_rap": "Explicit melodic-rap style; does not add R&B or pop automatically.",
+    "minimal_club": "Minimal-techno / microhouse neighborhood; no measured density claim.",
+    "modern_rnb": "Contemporary and alternative R&B neighborhood; broad shared ancestry, not guaranteed compatibility.",
+    "plugg_related": "Explicit plugg style, overlapping the broader trap-related neighborhood.",
+    "pop_electronic": "Electropop, synth-pop and dance-pop adjacency; not all electronic or all pop music.",
+    "rap_pop_crossover": "Explicit pop-rap crossover, not all melodic rap.",
+    "synth_pop": "Explicit synth-pop branch.",
+    "techno_related": "Minimal-techno and dub-techno branches.",
+    "trap_related": "Broad trap-related style lineage spanning possible crossovers; no automatic hip-hop/electronic family or identical production claim."
+  }
+}
