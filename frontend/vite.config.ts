@@ -1,11 +1,19 @@
 import { defineConfig } from 'vite'
+import { resolve } from 'node:path'
 import react from '@vitejs/plugin-react'
 import { songSpacePlugin } from './dev/songSpacePlugin'
 
 // https://vite.dev/config/
 export default defineConfig({
   base: './',
-  plugins: [react(), songSpacePlugin(process.env.SONG_SPACE_DATA_DIR)],
+  plugins: [
+    react(),
+    songSpacePlugin(
+      process.env.SONG_SPACE_DATA_DIR,
+      resolve('../ml/audio_similarity/.research_audio'),
+      process.env.GENRE_FORCE_DATA_DIR,
+    ),
+  ],
   server: {
     // Bind all interfaces so Windows `netsh portproxy` forwarding to the WSL
     // private IP can reach the dev server. The browser still opens the app at

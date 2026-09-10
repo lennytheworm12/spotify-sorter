@@ -51,6 +51,7 @@ export function SongSpace({ provider = defaultProvider }: { provider?: SongSpace
         <div className="space-header-divider" />
         <span className="space-header-caption">A map of your listening world</span>
         <nav>
+          <a href="#/genre">Genre explorer ↗</a>
           <button onClick={() => file.current?.click()}>
             Open map <span>↗</span>
           </button>

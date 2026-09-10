@@ -1,4 +1,4 @@
-import { useEffect, useSyncExternalStore } from 'react'
+import { lazy, Suspense, useEffect, useSyncExternalStore } from 'react'
 import { SongSpace } from './song-space/SongSpace'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { useAuth } from './hooks/useAuth'
@@ -7,6 +7,8 @@ import { userFacingErrorMessage } from './api/client'
 import { ConnectScreen } from './components/ConnectScreen'
 import { Dashboard } from './components/Dashboard'
 import './App.css'
+
+const GenreForceExplorer = lazy(() => import('./genre-force/GenreForceExplorer'))
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -75,7 +77,11 @@ function App() {
   const isOrganizer = location.hash.startsWith('#/organize') || location.searchParams.has('auth')
   return (
     <QueryClientProvider client={queryClient}>
-      {isOrganizer ? (
+      {location.hash.startsWith('#/genre') ? (
+        <Suspense fallback={<p>Loading genre explorer…</p>}>
+          <GenreForceExplorer />
+        </Suspense>
+      ) : isOrganizer ? (
         <>
           <a
             className="organizer-return"

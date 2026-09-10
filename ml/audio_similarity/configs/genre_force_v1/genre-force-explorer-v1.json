@@ -1,0 +1,178 @@
+{
+  "schema_version": "genre-force-explorer-v1.2",
+  "status": "development_only_not_production_validated",
+  "revised_date": "2026-09-10",
+  "scoring_revision": "canonical-first-residual-v1",
+  "development_corpus": {
+    "name": "frozen100",
+    "tracks": 100,
+    "unordered_pairs": 4950,
+    "role": "primary interactive development/tuning surface for genre scoring",
+    "original_16_role": "optional mapper/Gemini semantic sanity subset only; not the primary scoring surface",
+    "confirmation_policy": "once inspected or used to choose alpha, beta, eta, polarity, or source mode, frozen100 is development data and cannot serve as fresh confirmatory evidence"
+  },
+  "mapper": {
+    "path": "Projects/Spotify Sorter/genre-neighborhood-map-v1.json",
+    "required_concepts": 138,
+    "required_neighborhoods": 29,
+    "scope": "Use concept/family/neighborhood/normalization/membership data. The mapper JSON's legacy scoring_boundary placeholder is not the current scoring contract."
+  },
+  "representations": {
+    "canonical": {
+      "role": "primary pairwise genre representation",
+      "description": "Sparse exact canonical musical concepts resolved from immutable Gemini labels.",
+      "eligible": ["family", "style", "style_umbrella"],
+      "excluded_from_sonic_score": ["scene_context", "facet", "ambiguous_or_unresolved", "review_required_without_specific_evidence"],
+      "field_weights": {
+        "primary_style": 1.0,
+        "secondary_styles": 0.5,
+        "primary_family": 0.5,
+        "secondary_families": 0.25
+      },
+      "duplicate_policy": "aliases and duplicate resolution routes never add duplicate mass",
+      "minimum_evidence_gate": "both tracks require at least one usable specific style-like concept; broad-family-only profiles are a no-op"
+    },
+    "neighborhood": {
+      "role": ["indexing", "candidate retrieval", "residual bridge between different but related canonical concepts", "diagnostic full-neighborhood comparison"],
+      "description": "Overlapping lower-dimensional style-neighborhood profile derived from canonical concepts. It supplements but does not replace exact concept identity."
+    }
+  },
+  "pairwise": {
+    "canonical": {
+      "name": "weighted_jaccard_canonical",
+      "symbol": "Jc",
+      "formula": "sum_k min(c_k(a), c_k(b)) / sum_k max(c_k(a), c_k(b))",
+      "range": [0, 1],
+      "empty_or_broad_only": 0,
+      "symmetry_required": true
+    },
+    "residual_neighborhood": {
+      "matched_mass": "m_k = min(c_k(a), c_k(b))",
+      "residual_a": "r_a[k] = c_k(a) - m_k",
+      "residual_b": "r_b[k] = c_k(b) - m_k",
+      "projection": "project only unmatched eligible style-like concepts through concept-to-neighborhood membership; broad family concepts do not create residual neighborhood support by themselves",
+      "name": "weighted_jaccard_residual_neighborhood",
+      "symbol": "Jnr",
+      "formula": "sum_n min(n_r(a), n_r(b)) / sum_n max(n_r(a), n_r(b))",
+      "range": [0, 1],
+      "no_usable_residual_evidence": 0,
+      "symmetry_required": true
+    },
+    "full_neighborhood_diagnostic": {
+      "name": "weighted_jaccard_full_neighborhood",
+      "symbol": "Jn",
+      "role": "diagnostic only; retained to compare against the earlier neighborhood-first proposal"
+    }
+  },
+  "genre_source_modes": {
+    "canonical_only": {
+      "genre_term": "G = Jc",
+      "description": "Exact canonical concepts only."
+    },
+    "canonical_plus_residual": {
+      "genre_term": "G = Jc + eta * (1 - Jc) * Jnr",
+      "description": "Preferred current development candidate. Exact concept agreement is primary; neighborhoods only fill part of the unmatched headroom."
+    },
+    "neighborhood_only_diagnostic": {
+      "genre_term": "G = Jn",
+      "description": "Earlier neighborhood-first style comparison retained for side-by-side diagnosis, not preferred by default."
+    }
+  },
+  "eta": {
+    "range": [0, 1],
+    "default": 0.25,
+    "meaning": "maximum fraction of remaining genre-similarity headroom that residual neighborhood relationships may fill",
+    "policy": "visible/configurable development parameter; exploration on frozen100 makes frozen100 development-only rather than fresh confirmation"
+  },
+  "audio_baseline": {
+    "symbol": "S_audio",
+    "definition": "existing frozen C + M score",
+    "policy": "take as-is; do not retrain, reweight, normalize, or multiply it by genre during this experiment"
+  },
+  "polarity_modes": {
+    "pull_only": {
+      "genre_term": "G_force = G",
+      "range": [0, 1],
+      "default": true,
+      "description": "shared canonical/related genre evidence can attract; lack of relationship does not repel"
+    },
+    "signed_experimental": {
+      "genre_term": "G_force = 2 * G - 1",
+      "range": [-1, 1],
+      "gate": "both tracks must have usable specific genre evidence; otherwise G_force = 0",
+      "description": "development low-overlap penalty ablation only; a negative value is not proof of genre incompatibility"
+    }
+  },
+  "combination": {
+    "formula": "S_adjusted = S_audio + alpha * beta * G_force",
+    "independent_additive_force": true,
+    "multiplicative_audio_scaling_prohibited": true,
+    "weighted_mixture_with_audio_prohibited": true
+  },
+  "alpha": {
+    "range": [0, 1],
+    "default": 0,
+    "ui": "slider",
+    "meaning": "fraction of the permitted genre force; zero is the exact original audio baseline",
+    "policy": "explore on frozen100; any chosen value must be frozen before fresh confirmation"
+  },
+  "beta": {
+    "default": 0.05,
+    "meaning": "maximum absolute genre contribution in score units for the first development explorer",
+    "policy": "visible/configurable development parameter; any chosen value must be frozen before fresh confirmation"
+  },
+  "retrieval": {
+    "neighborhood_index": true,
+    "candidate_union": "TopK_audio(anchor) union TopK_neighborhood(anchor)",
+    "deduplicate": true,
+    "current_frozen100_policy": "all 99 candidates per anchor may be scored exhaustively; retrieval view is diagnostic for eventual scale",
+    "policy": "neighborhood retrieval changes candidate availability only; retrieval score does not automatically become final pair score"
+  },
+  "orthogonal_context": {
+    "display_only": ["vocal_role", "arrangement_focus"],
+    "score_effect": 0,
+    "reason": "preserve for a later orthogonal ablation; do not mix vocal/arrangement evidence into the current genre-only experiment"
+  },
+  "frontend": {
+    "corpus": "all 100 frozen tracks",
+    "candidates_per_anchor": 99,
+    "optional_review_filter": "original 16 mapper/Gemini sanity subset",
+    "genre_source_switch": ["canonical_only", "canonical_plus_residual", "neighborhood_only_diagnostic"],
+    "polarity_switch": ["pull_only", "signed_experimental"],
+    "show_original_and_adjusted": true,
+    "show_per_pair": ["S_audio", "shared_canonical_concepts", "canonical_union", "unmatched_canonical_concepts", "Jc", "residual_contributing_neighborhoods", "Jnr", "eta", "G", "polarity_mode", "alpha", "beta", "genre_delta", "S_adjusted", "original_rank", "adjusted_rank", "raw_gemini_labels", "vocal_role_display_only", "arrangement_focus_display_only", "warnings"],
+    "aggregate_diagnostics": ["top_k_entries_and_exits", "largest_rank_movers", "genre_delta_distribution", "neighborhood_retrieval_only_candidates"],
+    "move_graph": {
+      "default": false,
+      "off": "keep frozen coordinates; update scores/ranks/diagnostics only",
+      "on": "derive temporary layout from adjusted edge weights",
+      "prohibited": "overwrite frozen graph artifacts",
+      "interpretation": "physical graph distance is approximate; pair scores and ranks are authoritative"
+    }
+  },
+  "sequence": [
+    "keep the 138-concept mapper unchanged",
+    "use original 16 and additional spot checks only for mapper/Gemini semantic sanity",
+    "implement canonical weighted-Jaccard across all 100 frozen tracks",
+    "implement residual-neighborhood bridge across the same frozen100 corpus",
+    "build the interactive 100-song explorer with 99-candidate rankings per anchor",
+    "compare canonical-only, canonical-plus-residual, and neighborhood-only diagnostic on frozen100",
+    "use pull-only as the default; retain signed mode only as a development ablation",
+    "treat all mode and parameter choices informed by frozen100 as development choices",
+    "freeze the selected scorer before evaluation on fresh held-out songs/pairs"
+  ],
+  "invariants": [
+    "no new Gemini calls",
+    "no Gemini prompt changes",
+    "raw Gemini outputs remain immutable",
+    "no song- or artist-specific mapper exceptions",
+    "canonical identity is never overwritten by neighborhood projection",
+    "scene/context/unresolved evidence is a sonic no-op by default",
+    "broad-family-only profiles are not a perfect pairwise match",
+    "neighborhood retrieval and pairwise scoring are separate responsibilities",
+    "vocal_role and arrangement_focus are display-only in this genre stage",
+    "signed mode is development-only",
+    "frozen100 is development data after interactive inspection/tuning",
+    "no production playlist activation"
+  ]
+}

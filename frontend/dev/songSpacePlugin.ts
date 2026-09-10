@@ -18,11 +18,12 @@ export function byteRange(header: string | undefined, size: number): [number, nu
 export function songSpacePlugin(
   directory?: string,
   mediaDirectory = resolve('../ml/audio_similarity/.research_audio'),
+  genreDirectory?: string,
 ): Plugin {
   return {
     name: 'local-song-space',
     apply: 'serve',
-    config: () => (directory ? { server: { host: '127.0.0.1' } } : undefined),
+    config: () => (directory || genreDirectory ? { server: { host: '127.0.0.1' } } : undefined),
     configureServer(server) {
       server.middlewares.use(async (req, res, next) => {
         const pathname = new URL(req.url ?? '/', 'http://127.0.0.1').pathname
@@ -44,18 +45,32 @@ export function songSpacePlugin(
         } catch {
           return send(403, { message: 'Invalid origin.' })
         }
-        if (!directory)
+        if (pathname === '/__song-space/genre/data') {
+          if (!genreDirectory) return send(503, { message: 'No genre research run configured.' })
+          try {
+            return send(
+              200,
+              JSON.parse(await readFile(resolve(genreDirectory, 'explorer.json'), 'utf8')),
+            )
+          } catch {
+            return send(503, { message: 'Genre research packet unavailable.' })
+          }
+        }
+        const isGenreAudio = pathname.startsWith('/__song-space/genre/audio/')
+        if (isGenreAudio && !genreDirectory)
+          return send(404, { message: 'Genre audio unavailable.' })
+        if (!directory && !isGenreAudio)
           return pathname === '/__song-space/catalog'
             ? send(200, [])
             : send(404, { message: 'No local map configured.' })
         try {
-          const folder = await realpath(resolve(directory))
+          const folder = await realpath(resolve(isGenreAudio ? genreDirectory! : directory!))
           if (pathname === '/__song-space/catalog')
             return send(200, JSON.parse(await readFile(resolve(folder, 'catalog.json'), 'utf8')))
           const data = /^\/__song-space\/data\/(library|clap-c)$/.exec(pathname)
           if (data)
             return send(200, JSON.parse(await readFile(resolve(folder, `${data[1]}.json`), 'utf8')))
-          const audio = /^\/__song-space\/audio\/([a-zA-Z0-9]{22})$/.exec(pathname)
+          const audio = /^\/__song-space\/(?:genre\/)?audio\/([a-zA-Z0-9]{22})$/.exec(pathname)
           if (!audio) return send(404, { message: 'Unknown resource.' })
           const index: Record<string, { path: string }> = JSON.parse(
             await readFile(resolve(folder, 'audio-index.json'), 'utf8'),
