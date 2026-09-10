@@ -1,0 +1,10 @@
+{
+  "command": ".venv/bin/python -m pytest -q",
+  "deselected": 12,
+  "duration_seconds": 192.8,
+  "exit_code": 0,
+  "passed": 1409,
+  "provider_calls": "None; provider fixtures are synthetic. Localhost access enabled for existing isolated HTTP tests.",
+  "source_commit": "069783f",
+  "warnings": 11
+}

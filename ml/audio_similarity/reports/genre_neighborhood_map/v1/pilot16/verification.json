@@ -1,0 +1,52 @@
+{
+  "csv_formula_scan": "PASS",
+  "csv_rows": 16,
+  "focused_tests": {
+    "duration_seconds": 0.54,
+    "passed": 19
+  },
+  "full100_mapping_performed": false,
+  "implementation_commit": "069783f",
+  "mapped_tracks": 16,
+  "network_guard": "socket.socket.connect raises if any connection is attempted during build_review replay",
+  "new_api_calls": 0,
+  "private_frozen_execution_checks": [
+    {
+      "existing_generation_requests": 18,
+      "frozen_execution_hashes_verified": 299,
+      "run": "style-pilot-v1-duration-v3"
+    },
+    {
+      "existing_generation_requests": 16,
+      "frozen_execution_hashes_verified": 195,
+      "run": "free-genre-point-v1"
+    },
+    {
+      "existing_generation_requests": 84,
+      "frozen_execution_hashes_verified": 1514,
+      "run": "frozen100-free-genre-v1"
+    }
+  ],
+  "production_changes": false,
+  "protected_input_hashes_verified": 2458,
+  "raw_context_preserved": true,
+  "raw_label_occurrences_preserved": 88,
+  "real_replay_byte_identical": true,
+  "replay_artifact_hashes_before_verification_file": {
+    "README.md": "f829bd794009297b6b331474efb7db2b7a2a4101f8e9fab1b51865b3bc97cbd4",
+    "classification_review_cases.json": "e4908d121dbd987fd5fcd2807fc772c2031d32d688493a57c1b5fbc99e2769db",
+    "genre-neighborhood-map-v1.json": "dae4ebe9b734a420e0f4fa041b9173c0da5ebe27f6242581c8d3a14e22ee716c",
+    "input_hashes.json": "237a0fcaca1075a74e71eafbd2fd0d3b3a6ae4c5fc36124b1b572d177561a619",
+    "label_audit.json": "3f9e4d2d28113780d1dd965b3a8cdaa0780ce58219723ff06bd50302a13f0b4f",
+    "manual_review.csv": "f2f1721baf8b1b3dc602e354c3aaa2635434e372212207aac4427f5809614e41",
+    "manual_review.md": "87ecf22bf7f4619a2359fbe75a4c627203d2b22c1d51c8adcb5f276c8b6c5b2d",
+    "mapped_review.json": "bc81e3918f6a6052100d3570cf4a4490a41a3a30af02f73e8508ec28dd767a87",
+    "mapping_reference.md": "05c44b8405299f5ce400ffd347480d6c0693f341bc8dff8f8851f942e87c768b",
+    "pair_context.json": "5a3d35a5eb3c532635115acd2f09509eb0992e6a10db1c9a1bf245474b6dacd4",
+    "scope.json": "fe17eb31d1d1a6ffdfbe57435030f5b7e91fd19c392f8e1a4a0d9f8a71ace5e4",
+    "summary.json": "330540f6c78b270d75f6be330dc5c9350246b4869aa7fc2213ea5f6bc16f1ffc"
+  },
+  "replay_digest": "e3b8a616bd6140ca0b323250965d7d4229b52f59a54bdfa531550c718cbababd",
+  "reranking_performed": false,
+  "status": "PASS"
+}

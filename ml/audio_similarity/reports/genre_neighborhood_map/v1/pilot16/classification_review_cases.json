@@ -1,0 +1,240 @@
+[
+  {
+    "assistant_review_note": "Classification-review priority: the free-form Drum and Bass / Neurofunk / Dubstep prediction differs substantially from the owner first-pass lo-fi electronic/gamey description and the older ontology-constrained lo-fi profile. Mapping those literal labels into bass-electronic neighborhoods is not a mapper bug. Do not remap them to lo-fi to repair this song. Bass Music is independently an ambiguous umbrella requiring mapping review.",
+    "classification_review_suggested": true,
+    "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+    "older_ontology_arm_labels_not_mapper_inputs": {
+      "family": "hip_hop_rap",
+      "styles": "lofi_hip_hop; chillhop; instrumental_hip_hop"
+    },
+    "owner_classification_decision": "",
+    "owner_first_pass_verbatim": "lofi electronic/gamey style",
+    "owner_followup_on_earlier_ontology_arm": "",
+    "owner_mapping_decision": "",
+    "owner_review_notes": "",
+    "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED",
+    "pilot_id": "A03",
+    "raw_genre_labels": {
+      "primary_family": "Electronic",
+      "primary_style": "Drum and Bass",
+      "secondary_families": [
+        "Bass Music"
+      ],
+      "secondary_styles": [
+        "Neurofunk",
+        "Dubstep"
+      ]
+    },
+    "song": "My Gamecube Broke. — .Uzu",
+    "spotify_track_id": "2Vu2hkPW7LxMHPqoMjSIEJ"
+  },
+  {
+    "assistant_review_note": "Classification-review question: the owner described dark alternative R&B, whereas Gemini foregrounds Trap / Pop Rap / Melodic Rap. Its explicit secondary R&B and Pop memberships are retained, yielding overlapping hip-hop / pop / R&B families. Do not insert Alternative R&B or a dark-mood attribute that Gemini did not label.",
+    "classification_review_suggested": true,
+    "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+    "older_ontology_arm_labels_not_mapper_inputs": {
+      "family": "hip_hop_rap",
+      "styles": "melodic_trap; trap; electropop"
+    },
+    "owner_classification_decision": "",
+    "owner_first_pass_verbatim": "dark alt rnb ",
+    "owner_followup_on_earlier_ontology_arm": "",
+    "owner_mapping_decision": "",
+    "owner_review_notes": "",
+    "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED",
+    "pilot_id": "A06",
+    "raw_genre_labels": {
+      "primary_family": "Hip Hop",
+      "primary_style": "Trap",
+      "secondary_families": [
+        "Pop",
+        "R&B"
+      ],
+      "secondary_styles": [
+        "Pop Rap",
+        "Melodic Rap"
+      ]
+    },
+    "song": "GET IT — keshi",
+    "spotify_track_id": "4LaZ8RpIP6DIgN73bXQVlO"
+  },
+  {
+    "assistant_review_note": "Context/classification-review question: the owner included K-Pop, but the current Gemini profile did not. Do not infer scene membership from the artist or owner note. Contemporary R&B is shared wording; Nu-Disco / Dance-Pop remain model claims for inspection.",
+    "classification_review_suggested": true,
+    "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+    "older_ontology_arm_labels_not_mapper_inputs": {
+      "family": "pop",
+      "styles": "dance_pop; indie_pop"
+    },
+    "owner_classification_decision": "",
+    "owner_first_pass_verbatim": "kpop contemporary rnb",
+    "owner_followup_on_earlier_ontology_arm": "",
+    "owner_mapping_decision": "",
+    "owner_review_notes": "",
+    "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED",
+    "pilot_id": "A09",
+    "raw_genre_labels": {
+      "primary_family": "Pop",
+      "primary_style": "Dance-Pop",
+      "secondary_families": [
+        "R&B",
+        "Electronic"
+      ],
+      "secondary_styles": [
+        "Contemporary R&B",
+        "Nu-Disco"
+      ]
+    },
+    "song": "Perfect Night — LE SSERAFIM",
+    "spotify_track_id": "74X2u8JMVooG2QbjRxXwR8"
+  },
+  {
+    "assistant_review_note": "Classification-review priority: minimal techno / dub techno / microhouse differs from both the initial owner lo-fi wording and the older hyperpop/digicore profile. The owner later found the older hyperpop interpretation more plausible; that clarification does not endorse this new minimal-techno profile. Preserve all three positions. No automatic model-error or corrected-false-positive claim follows.",
+    "classification_review_suggested": true,
+    "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+    "older_ontology_arm_labels_not_mapper_inputs": {
+      "family": "pop",
+      "styles": "hyperpop; digicore; electropop"
+    },
+    "owner_classification_decision": "",
+    "owner_first_pass_verbatim": "lofi",
+    "owner_followup_on_earlier_ontology_arm": "Hyperpop label seems more plausible; not a full-profile approval.",
+    "owner_mapping_decision": "",
+    "owner_review_notes": "",
+    "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED",
+    "pilot_id": "C01",
+    "raw_genre_labels": {
+      "primary_family": "electronic",
+      "primary_style": "minimal techno",
+      "secondary_families": [
+        "ambient"
+      ],
+      "secondary_styles": [
+        "dub techno",
+        "microhouse"
+      ]
+    },
+    "song": "Saturation in Delay, Love in Anger — City Girl, tiffi",
+    "spotify_track_id": "00njeQb198Lm7Jge2Rsrlg"
+  },
+  {
+    "assistant_review_note": "Classification-review question: the owner used lo-fi soft wording; the current model uses Indie Pop / Electropop / Alternative R&B. The mapper must not inject lo-fi. Its indie-pop neighborhood overlaps risk's explicit Dream Pop via a general genre relationship, not a pair-specific rule.",
+    "classification_review_suggested": true,
+    "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+    "older_ontology_arm_labels_not_mapper_inputs": {
+      "family": "rnb_soul",
+      "styles": "pop_rnb; contemporary_rnb"
+    },
+    "owner_classification_decision": "",
+    "owner_first_pass_verbatim": "lofi soft vibes",
+    "owner_followup_on_earlier_ontology_arm": "",
+    "owner_mapping_decision": "",
+    "owner_review_notes": "",
+    "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED",
+    "pilot_id": "C02",
+    "raw_genre_labels": {
+      "primary_family": "Pop",
+      "primary_style": "Indie Pop",
+      "secondary_families": [
+        "Electronic",
+        "R&B"
+      ],
+      "secondary_styles": [
+        "Electropop",
+        "Alternative R&B"
+      ]
+    },
+    "song": "Sit Around — City Girl, tiffi",
+    "spotify_track_id": "6pWqlKm9ugucgKNldCLigX"
+  },
+  {
+    "assistant_review_note": "Classification-review priority: owner electronic hyperpop versus the newer Trap / Emo Rap / Melodic Rap profile. Preserve the discrepancy. A shared trap-related label with The Peace is an exploratory model signal only, not owner-confirmed genre truth.",
+    "classification_review_suggested": true,
+    "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+    "older_ontology_arm_labels_not_mapper_inputs": {
+      "family": "electronic",
+      "styles": "digicore; hyperpop"
+    },
+    "owner_classification_decision": "",
+    "owner_first_pass_verbatim": "electronic hyperpop",
+    "owner_followup_on_earlier_ontology_arm": "",
+    "owner_mapping_decision": "",
+    "owner_review_notes": "",
+    "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED",
+    "pilot_id": "C04",
+    "raw_genre_labels": {
+      "primary_family": "Hip Hop",
+      "primary_style": "Trap",
+      "secondary_families": [
+        "Pop",
+        "R&B"
+      ],
+      "secondary_styles": [
+        "Emo Rap",
+        "Melodic Rap"
+      ]
+    },
+    "song": "boys dont cry — sysmint",
+    "spotify_track_id": "1ON9XudZFxwu43tQXBszIX"
+  },
+  {
+    "assistant_review_note": "Classification-review priority: owner alt-pop ballad / hyperpop versus current Contemporary R&B / Trap / Alternative R&B. Do not replace those labels to agree with the owner. The pairing with boys dont cry is owner-specific exploration without a new numeric or confirmatory genre label.",
+    "classification_review_suggested": true,
+    "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+    "older_ontology_arm_labels_not_mapper_inputs": {
+      "family": "rnb_soul",
+      "styles": "contemporary_rnb; pop_rnb; alternative_rnb"
+    },
+    "owner_classification_decision": "",
+    "owner_first_pass_verbatim": "alt pop ballad hyperpop",
+    "owner_followup_on_earlier_ontology_arm": "",
+    "owner_mapping_decision": "",
+    "owner_review_notes": "",
+    "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED",
+    "pilot_id": "C05",
+    "raw_genre_labels": {
+      "primary_family": "R&B and Soul",
+      "primary_style": "Contemporary R&B",
+      "secondary_families": [
+        "Hip-Hop",
+        "Pop"
+      ],
+      "secondary_styles": [
+        "Trap",
+        "Alternative R&B"
+      ]
+    },
+    "song": "The Peace — underscores",
+    "spotify_track_id": "6wm3t4VpTxSFfOUgTMlHZM"
+  },
+  {
+    "assistant_review_note": "Classification-review question: owner alt upbeat indie versus current Dance-Pop / Nu-Disco / Synth-Pop. The low-rated OMG pairing still shares pop/electronic-style neighborhoods; that is a compatibility limitation, not a reason to create a song exception.",
+    "classification_review_suggested": true,
+    "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+    "older_ontology_arm_labels_not_mapper_inputs": {
+      "family": "pop",
+      "styles": "dance_pop; synthpop"
+    },
+    "owner_classification_decision": "",
+    "owner_first_pass_verbatim": "alt upbeat indie",
+    "owner_followup_on_earlier_ontology_arm": "",
+    "owner_mapping_decision": "",
+    "owner_review_notes": "",
+    "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED",
+    "pilot_id": "C06",
+    "raw_genre_labels": {
+      "primary_family": "Pop",
+      "primary_style": "Dance-Pop",
+      "secondary_families": [
+        "R&B",
+        "Electronic"
+      ],
+      "secondary_styles": [
+        "Nu-Disco",
+        "Synth-Pop"
+      ]
+    },
+    "song": "Die Right Here — david hugo",
+    "spotify_track_id": "7fXYFuCTmNrYRGwEUUf5iz"
+  }
+]

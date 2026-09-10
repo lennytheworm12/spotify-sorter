@@ -1,0 +1,886 @@
+{
+  "cross_concept_alias_collisions": 0,
+  "field_or_duplication_warnings": [
+    {
+      "code": "style_concept_in_family_slot",
+      "message": "Resolve by explicit concept, not by the model field name; original slot retained.",
+      "pilot_id": "C01",
+      "trace_id": "label-02"
+    },
+    {
+      "code": "style_concept_in_family_slot",
+      "message": "Resolve by explicit concept, not by the model field name; original slot retained.",
+      "pilot_id": "C03",
+      "trace_id": "label-03"
+    },
+    {
+      "code": "repeated_concept_not_extra_weight",
+      "message": "All raw occurrences retained; one set membership, no extra vote or confidence.",
+      "pilot_id": "C03",
+      "trace_ids": [
+        "label-03",
+        "label-05"
+      ]
+    }
+  ],
+  "multiple_raw_spellings": [
+    "downtempo",
+    "electronic",
+    "hip_hop",
+    "lofi_hip_hop",
+    "trap"
+  ],
+  "note": "Counts concern deterministic label handling, not musical classification accuracy.",
+  "observed_alias_groups": {
+    "alternative_pop": {
+      "Alt-Pop": [
+        {
+          "pilot_id": "A08",
+          "song": "Shouldn't Be — Luke Chiang",
+          "source_path": "secondary_styles[0]",
+          "spotify_track_id": "7F6PtLP6fJPVtA1FWVkl8K",
+          "trace_id": "label-05"
+        }
+      ]
+    },
+    "alternative_rnb": {
+      "Alternative R&B": [
+        {
+          "pilot_id": "A07",
+          "song": "The Hills — The Weeknd",
+          "source_path": "secondary_styles[1]",
+          "spotify_track_id": "7fBv7CLKzipRk6EC6TWHOB",
+          "trace_id": "label-06"
+        },
+        {
+          "pilot_id": "C02",
+          "song": "Sit Around — City Girl, tiffi",
+          "source_path": "secondary_styles[1]",
+          "spotify_track_id": "6pWqlKm9ugucgKNldCLigX",
+          "trace_id": "label-06"
+        },
+        {
+          "pilot_id": "C05",
+          "song": "The Peace — underscores",
+          "source_path": "secondary_styles[1]",
+          "spotify_track_id": "6wm3t4VpTxSFfOUgTMlHZM",
+          "trace_id": "label-06"
+        }
+      ]
+    },
+    "ambient": {
+      "ambient": [
+        {
+          "pilot_id": "C01",
+          "song": "Saturation in Delay, Love in Anger — City Girl, tiffi",
+          "source_path": "secondary_families[0]",
+          "spotify_track_id": "00njeQb198Lm7Jge2Rsrlg",
+          "trace_id": "label-02"
+        }
+      ]
+    },
+    "ambient_pop": {
+      "Ambient Pop": [
+        {
+          "pilot_id": "A08",
+          "song": "Shouldn't Be — Luke Chiang",
+          "source_path": "secondary_styles[1]",
+          "spotify_track_id": "7F6PtLP6fJPVtA1FWVkl8K",
+          "trace_id": "label-06"
+        }
+      ]
+    },
+    "bass_music": {
+      "Bass Music": [
+        {
+          "pilot_id": "A03",
+          "song": "My Gamecube Broke. — .Uzu",
+          "source_path": "secondary_families[0]",
+          "spotify_track_id": "2Vu2hkPW7LxMHPqoMjSIEJ",
+          "trace_id": "label-02"
+        }
+      ]
+    },
+    "boom_bap": {
+      "Boom Bap": [
+        {
+          "pilot_id": "A01",
+          "song": "Wet Dreamz — J. Cole",
+          "source_path": "primary_style",
+          "spotify_track_id": "4tqcoej1zPvwePZCzuAjJd",
+          "trace_id": "label-03"
+        }
+      ]
+    },
+    "chillhop": {
+      "chillhop": [
+        {
+          "pilot_id": "A05",
+          "song": "Tea Time — Disvstxr",
+          "source_path": "secondary_styles[0]",
+          "spotify_track_id": "5sEeuhYWHNczuPKek1zJeG",
+          "trace_id": "label-04"
+        }
+      ]
+    },
+    "chillout": {
+      "Chillout": [
+        {
+          "pilot_id": "A04",
+          "song": "She loves the color green and I love her — City Girl",
+          "source_path": "secondary_styles[1]",
+          "spotify_track_id": "7hFW5IN7mQ99PuO86r38Sf",
+          "trace_id": "label-05"
+        }
+      ]
+    },
+    "conscious_hip_hop": {
+      "Conscious Hip Hop": [
+        {
+          "pilot_id": "A01",
+          "song": "Wet Dreamz — J. Cole",
+          "source_path": "secondary_styles[0]",
+          "spotify_track_id": "4tqcoej1zPvwePZCzuAjJd",
+          "trace_id": "label-04"
+        }
+      ]
+    },
+    "contemporary_rnb": {
+      "Contemporary R&B": [
+        {
+          "pilot_id": "A07",
+          "song": "The Hills — The Weeknd",
+          "source_path": "primary_style",
+          "spotify_track_id": "7fBv7CLKzipRk6EC6TWHOB",
+          "trace_id": "label-04"
+        },
+        {
+          "pilot_id": "A08",
+          "song": "Shouldn't Be — Luke Chiang",
+          "source_path": "primary_style",
+          "spotify_track_id": "7F6PtLP6fJPVtA1FWVkl8K",
+          "trace_id": "label-04"
+        },
+        {
+          "pilot_id": "A09",
+          "song": "Perfect Night — LE SSERAFIM",
+          "source_path": "secondary_styles[0]",
+          "spotify_track_id": "74X2u8JMVooG2QbjRxXwR8",
+          "trace_id": "label-05"
+        },
+        {
+          "pilot_id": "A10",
+          "song": "OMG — NewJeans",
+          "source_path": "secondary_styles[0]",
+          "spotify_track_id": "65FftemJ1DbbZ45DUfHJXE",
+          "trace_id": "label-05"
+        },
+        {
+          "pilot_id": "C05",
+          "song": "The Peace — underscores",
+          "source_path": "primary_style",
+          "spotify_track_id": "6wm3t4VpTxSFfOUgTMlHZM",
+          "trace_id": "label-04"
+        }
+      ]
+    },
+    "dance_pop": {
+      "Dance-Pop": [
+        {
+          "pilot_id": "A09",
+          "song": "Perfect Night — LE SSERAFIM",
+          "source_path": "primary_style",
+          "spotify_track_id": "74X2u8JMVooG2QbjRxXwR8",
+          "trace_id": "label-04"
+        },
+        {
+          "pilot_id": "C06",
+          "song": "Die Right Here — david hugo",
+          "source_path": "primary_style",
+          "spotify_track_id": "7fXYFuCTmNrYRGwEUUf5iz",
+          "trace_id": "label-04"
+        }
+      ]
+    },
+    "dance_unspecified": {
+      "Dance": [
+        {
+          "pilot_id": "A10",
+          "song": "OMG — NewJeans",
+          "source_path": "secondary_families[1]",
+          "spotify_track_id": "65FftemJ1DbbZ45DUfHJXE",
+          "trace_id": "label-03"
+        }
+      ]
+    },
+    "downtempo": {
+      "Downtempo": [
+        {
+          "pilot_id": "A04",
+          "song": "She loves the color green and I love her — City Girl",
+          "source_path": "secondary_styles[0]",
+          "spotify_track_id": "7hFW5IN7mQ99PuO86r38Sf",
+          "trace_id": "label-04"
+        },
+        {
+          "pilot_id": "C03",
+          "song": "risk — lace",
+          "source_path": "secondary_families[1]",
+          "spotify_track_id": "2js0td9w2MzNUVPlMKYOEs",
+          "trace_id": "label-03"
+        },
+        {
+          "pilot_id": "C03",
+          "song": "risk — lace",
+          "source_path": "secondary_styles[0]",
+          "spotify_track_id": "2js0td9w2MzNUVPlMKYOEs",
+          "trace_id": "label-05"
+        }
+      ],
+      "downtempo": [
+        {
+          "pilot_id": "A05",
+          "song": "Tea Time — Disvstxr",
+          "source_path": "secondary_styles[1]",
+          "spotify_track_id": "5sEeuhYWHNczuPKek1zJeG",
+          "trace_id": "label-05"
+        }
+      ]
+    },
+    "dream_pop": {
+      "Dream Pop": [
+        {
+          "pilot_id": "C03",
+          "song": "risk — lace",
+          "source_path": "secondary_styles[1]",
+          "spotify_track_id": "2js0td9w2MzNUVPlMKYOEs",
+          "trace_id": "label-06"
+        }
+      ]
+    },
+    "drum_and_bass": {
+      "Drum and Bass": [
+        {
+          "pilot_id": "A03",
+          "song": "My Gamecube Broke. — .Uzu",
+          "source_path": "primary_style",
+          "spotify_track_id": "2Vu2hkPW7LxMHPqoMjSIEJ",
+          "trace_id": "label-03"
+        }
+      ]
+    },
+    "dub_techno": {
+      "dub techno": [
+        {
+          "pilot_id": "C01",
+          "song": "Saturation in Delay, Love in Anger — City Girl, tiffi",
+          "source_path": "secondary_styles[0]",
+          "spotify_track_id": "00njeQb198Lm7Jge2Rsrlg",
+          "trace_id": "label-04"
+        }
+      ]
+    },
+    "dubstep": {
+      "Dubstep": [
+        {
+          "pilot_id": "A03",
+          "song": "My Gamecube Broke. — .Uzu",
+          "source_path": "secondary_styles[1]",
+          "spotify_track_id": "2Vu2hkPW7LxMHPqoMjSIEJ",
+          "trace_id": "label-05"
+        }
+      ]
+    },
+    "east_coast_hip_hop": {
+      "East Coast Hip Hop": [
+        {
+          "pilot_id": "A01",
+          "song": "Wet Dreamz — J. Cole",
+          "source_path": "secondary_styles[1]",
+          "spotify_track_id": "4tqcoej1zPvwePZCzuAjJd",
+          "trace_id": "label-05"
+        }
+      ]
+    },
+    "electronic": {
+      "Electronic": [
+        {
+          "pilot_id": "A03",
+          "song": "My Gamecube Broke. — .Uzu",
+          "source_path": "primary_family",
+          "spotify_track_id": "2Vu2hkPW7LxMHPqoMjSIEJ",
+          "trace_id": "label-01"
+        },
+        {
+          "pilot_id": "A04",
+          "song": "She loves the color green and I love her — City Girl",
+          "source_path": "secondary_families[0]",
+          "spotify_track_id": "7hFW5IN7mQ99PuO86r38Sf",
+          "trace_id": "label-02"
+        },
+        {
+          "pilot_id": "A08",
+          "song": "Shouldn't Be — Luke Chiang",
+          "source_path": "secondary_families[1]",
+          "spotify_track_id": "7F6PtLP6fJPVtA1FWVkl8K",
+          "trace_id": "label-03"
+        },
+        {
+          "pilot_id": "A09",
+          "song": "Perfect Night — LE SSERAFIM",
+          "source_path": "secondary_families[1]",
+          "spotify_track_id": "74X2u8JMVooG2QbjRxXwR8",
+          "trace_id": "label-03"
+        },
+        {
+          "pilot_id": "C02",
+          "song": "Sit Around — City Girl, tiffi",
+          "source_path": "secondary_families[0]",
+          "spotify_track_id": "6pWqlKm9ugucgKNldCLigX",
+          "trace_id": "label-02"
+        },
+        {
+          "pilot_id": "C03",
+          "song": "risk — lace",
+          "source_path": "primary_family",
+          "spotify_track_id": "2js0td9w2MzNUVPlMKYOEs",
+          "trace_id": "label-01"
+        },
+        {
+          "pilot_id": "C06",
+          "song": "Die Right Here — david hugo",
+          "source_path": "secondary_families[1]",
+          "spotify_track_id": "7fXYFuCTmNrYRGwEUUf5iz",
+          "trace_id": "label-03"
+        }
+      ],
+      "electronic": [
+        {
+          "pilot_id": "A05",
+          "song": "Tea Time — Disvstxr",
+          "source_path": "secondary_families[0]",
+          "spotify_track_id": "5sEeuhYWHNczuPKek1zJeG",
+          "trace_id": "label-02"
+        },
+        {
+          "pilot_id": "C01",
+          "song": "Saturation in Delay, Love in Anger — City Girl, tiffi",
+          "source_path": "primary_family",
+          "spotify_track_id": "00njeQb198Lm7Jge2Rsrlg",
+          "trace_id": "label-01"
+        }
+      ]
+    },
+    "electropop": {
+      "Electropop": [
+        {
+          "pilot_id": "C02",
+          "song": "Sit Around — City Girl, tiffi",
+          "source_path": "secondary_styles[0]",
+          "spotify_track_id": "6pWqlKm9ugucgKNldCLigX",
+          "trace_id": "label-05"
+        }
+      ]
+    },
+    "emo_rap": {
+      "Emo Rap": [
+        {
+          "pilot_id": "C04",
+          "song": "boys dont cry — sysmint",
+          "source_path": "secondary_styles[0]",
+          "spotify_track_id": "1ON9XudZFxwu43tQXBszIX",
+          "trace_id": "label-05"
+        }
+      ]
+    },
+    "hip_hop": {
+      "Hip Hop": [
+        {
+          "pilot_id": "A01",
+          "song": "Wet Dreamz — J. Cole",
+          "source_path": "primary_family",
+          "spotify_track_id": "4tqcoej1zPvwePZCzuAjJd",
+          "trace_id": "label-01"
+        },
+        {
+          "pilot_id": "A04",
+          "song": "She loves the color green and I love her — City Girl",
+          "source_path": "primary_family",
+          "spotify_track_id": "7hFW5IN7mQ99PuO86r38Sf",
+          "trace_id": "label-01"
+        },
+        {
+          "pilot_id": "A06",
+          "song": "GET IT — keshi",
+          "source_path": "primary_family",
+          "spotify_track_id": "4LaZ8RpIP6DIgN73bXQVlO",
+          "trace_id": "label-01"
+        },
+        {
+          "pilot_id": "C04",
+          "song": "boys dont cry — sysmint",
+          "source_path": "primary_family",
+          "spotify_track_id": "1ON9XudZFxwu43tQXBszIX",
+          "trace_id": "label-01"
+        }
+      ],
+      "Hip-Hop": [
+        {
+          "pilot_id": "A07",
+          "song": "The Hills — The Weeknd",
+          "source_path": "secondary_families[0]",
+          "spotify_track_id": "7fBv7CLKzipRk6EC6TWHOB",
+          "trace_id": "label-02"
+        },
+        {
+          "pilot_id": "C05",
+          "song": "The Peace — underscores",
+          "source_path": "secondary_families[0]",
+          "spotify_track_id": "6wm3t4VpTxSFfOUgTMlHZM",
+          "trace_id": "label-02"
+        }
+      ],
+      "hip hop": [
+        {
+          "pilot_id": "A02",
+          "song": "Shoota (feat. Lil Uzi Vert) — Playboi Carti, Lil Uzi Vert",
+          "source_path": "primary_family",
+          "spotify_track_id": "2BJSMvOGABRxokHKB0OI8i",
+          "trace_id": "label-01"
+        }
+      ],
+      "hip_hop": [
+        {
+          "pilot_id": "A05",
+          "song": "Tea Time — Disvstxr",
+          "source_path": "primary_family",
+          "spotify_track_id": "5sEeuhYWHNczuPKek1zJeG",
+          "trace_id": "label-01"
+        }
+      ]
+    },
+    "indie_pop": {
+      "Indie Pop": [
+        {
+          "pilot_id": "C02",
+          "song": "Sit Around — City Girl, tiffi",
+          "source_path": "primary_style",
+          "spotify_track_id": "6pWqlKm9ugucgKNldCLigX",
+          "trace_id": "label-04"
+        }
+      ]
+    },
+    "k_pop": {
+      "K-Pop": [
+        {
+          "pilot_id": "A10",
+          "song": "OMG — NewJeans",
+          "source_path": "primary_style",
+          "spotify_track_id": "65FftemJ1DbbZ45DUfHJXE",
+          "trace_id": "label-04"
+        }
+      ]
+    },
+    "lofi_hip_hop": {
+      "Lo-Fi Hip Hop": [
+        {
+          "pilot_id": "A04",
+          "song": "She loves the color green and I love her — City Girl",
+          "source_path": "primary_style",
+          "spotify_track_id": "7hFW5IN7mQ99PuO86r38Sf",
+          "trace_id": "label-03"
+        }
+      ],
+      "lo_fi_hip_hop": [
+        {
+          "pilot_id": "A05",
+          "song": "Tea Time — Disvstxr",
+          "source_path": "primary_style",
+          "spotify_track_id": "5sEeuhYWHNczuPKek1zJeG",
+          "trace_id": "label-03"
+        }
+      ]
+    },
+    "melodic_rap": {
+      "Melodic Rap": [
+        {
+          "pilot_id": "A06",
+          "song": "GET IT — keshi",
+          "source_path": "secondary_styles[1]",
+          "spotify_track_id": "4LaZ8RpIP6DIgN73bXQVlO",
+          "trace_id": "label-06"
+        },
+        {
+          "pilot_id": "C04",
+          "song": "boys dont cry — sysmint",
+          "source_path": "secondary_styles[1]",
+          "spotify_track_id": "1ON9XudZFxwu43tQXBszIX",
+          "trace_id": "label-06"
+        }
+      ]
+    },
+    "microhouse": {
+      "microhouse": [
+        {
+          "pilot_id": "C01",
+          "song": "Saturation in Delay, Love in Anger — City Girl, tiffi",
+          "source_path": "secondary_styles[1]",
+          "spotify_track_id": "00njeQb198Lm7Jge2Rsrlg",
+          "trace_id": "label-05"
+        }
+      ]
+    },
+    "minimal_techno": {
+      "minimal techno": [
+        {
+          "pilot_id": "C01",
+          "song": "Saturation in Delay, Love in Anger — City Girl, tiffi",
+          "source_path": "primary_style",
+          "spotify_track_id": "00njeQb198Lm7Jge2Rsrlg",
+          "trace_id": "label-03"
+        }
+      ]
+    },
+    "neurofunk": {
+      "Neurofunk": [
+        {
+          "pilot_id": "A03",
+          "song": "My Gamecube Broke. — .Uzu",
+          "source_path": "secondary_styles[0]",
+          "spotify_track_id": "2Vu2hkPW7LxMHPqoMjSIEJ",
+          "trace_id": "label-04"
+        }
+      ]
+    },
+    "nu_disco": {
+      "Nu-Disco": [
+        {
+          "pilot_id": "A09",
+          "song": "Perfect Night — LE SSERAFIM",
+          "source_path": "secondary_styles[1]",
+          "spotify_track_id": "74X2u8JMVooG2QbjRxXwR8",
+          "trace_id": "label-06"
+        },
+        {
+          "pilot_id": "C06",
+          "song": "Die Right Here — david hugo",
+          "source_path": "secondary_styles[0]",
+          "spotify_track_id": "7fXYFuCTmNrYRGwEUUf5iz",
+          "trace_id": "label-05"
+        }
+      ]
+    },
+    "plugg": {
+      "plugg": [
+        {
+          "pilot_id": "A02",
+          "song": "Shoota (feat. Lil Uzi Vert) — Playboi Carti, Lil Uzi Vert",
+          "source_path": "secondary_styles[0]",
+          "spotify_track_id": "2BJSMvOGABRxokHKB0OI8i",
+          "trace_id": "label-03"
+        }
+      ]
+    },
+    "pop": {
+      "Pop": [
+        {
+          "pilot_id": "A06",
+          "song": "GET IT — keshi",
+          "source_path": "secondary_families[0]",
+          "spotify_track_id": "4LaZ8RpIP6DIgN73bXQVlO",
+          "trace_id": "label-02"
+        },
+        {
+          "pilot_id": "A07",
+          "song": "The Hills — The Weeknd",
+          "source_path": "secondary_families[1]",
+          "spotify_track_id": "7fBv7CLKzipRk6EC6TWHOB",
+          "trace_id": "label-03"
+        },
+        {
+          "pilot_id": "A08",
+          "song": "Shouldn't Be — Luke Chiang",
+          "source_path": "secondary_families[0]",
+          "spotify_track_id": "7F6PtLP6fJPVtA1FWVkl8K",
+          "trace_id": "label-02"
+        },
+        {
+          "pilot_id": "A09",
+          "song": "Perfect Night — LE SSERAFIM",
+          "source_path": "primary_family",
+          "spotify_track_id": "74X2u8JMVooG2QbjRxXwR8",
+          "trace_id": "label-01"
+        },
+        {
+          "pilot_id": "A10",
+          "song": "OMG — NewJeans",
+          "source_path": "primary_family",
+          "spotify_track_id": "65FftemJ1DbbZ45DUfHJXE",
+          "trace_id": "label-01"
+        },
+        {
+          "pilot_id": "C02",
+          "song": "Sit Around — City Girl, tiffi",
+          "source_path": "primary_family",
+          "spotify_track_id": "6pWqlKm9ugucgKNldCLigX",
+          "trace_id": "label-01"
+        },
+        {
+          "pilot_id": "C03",
+          "song": "risk — lace",
+          "source_path": "secondary_families[0]",
+          "spotify_track_id": "2js0td9w2MzNUVPlMKYOEs",
+          "trace_id": "label-02"
+        },
+        {
+          "pilot_id": "C04",
+          "song": "boys dont cry — sysmint",
+          "source_path": "secondary_families[0]",
+          "spotify_track_id": "1ON9XudZFxwu43tQXBszIX",
+          "trace_id": "label-02"
+        },
+        {
+          "pilot_id": "C05",
+          "song": "The Peace — underscores",
+          "source_path": "secondary_families[1]",
+          "spotify_track_id": "6wm3t4VpTxSFfOUgTMlHZM",
+          "trace_id": "label-03"
+        },
+        {
+          "pilot_id": "C06",
+          "song": "Die Right Here — david hugo",
+          "source_path": "primary_family",
+          "spotify_track_id": "7fXYFuCTmNrYRGwEUUf5iz",
+          "trace_id": "label-01"
+        }
+      ]
+    },
+    "pop_rap": {
+      "Pop Rap": [
+        {
+          "pilot_id": "A06",
+          "song": "GET IT — keshi",
+          "source_path": "secondary_styles[0]",
+          "spotify_track_id": "4LaZ8RpIP6DIgN73bXQVlO",
+          "trace_id": "label-05"
+        }
+      ]
+    },
+    "rnb": {
+      "R&B": [
+        {
+          "pilot_id": "A01",
+          "song": "Wet Dreamz — J. Cole",
+          "source_path": "secondary_families[0]",
+          "spotify_track_id": "4tqcoej1zPvwePZCzuAjJd",
+          "trace_id": "label-02"
+        },
+        {
+          "pilot_id": "A06",
+          "song": "GET IT — keshi",
+          "source_path": "secondary_families[1]",
+          "spotify_track_id": "4LaZ8RpIP6DIgN73bXQVlO",
+          "trace_id": "label-03"
+        },
+        {
+          "pilot_id": "A07",
+          "song": "The Hills — The Weeknd",
+          "source_path": "primary_family",
+          "spotify_track_id": "7fBv7CLKzipRk6EC6TWHOB",
+          "trace_id": "label-01"
+        },
+        {
+          "pilot_id": "A08",
+          "song": "Shouldn't Be — Luke Chiang",
+          "source_path": "primary_family",
+          "spotify_track_id": "7F6PtLP6fJPVtA1FWVkl8K",
+          "trace_id": "label-01"
+        },
+        {
+          "pilot_id": "A09",
+          "song": "Perfect Night — LE SSERAFIM",
+          "source_path": "secondary_families[0]",
+          "spotify_track_id": "74X2u8JMVooG2QbjRxXwR8",
+          "trace_id": "label-02"
+        },
+        {
+          "pilot_id": "C02",
+          "song": "Sit Around — City Girl, tiffi",
+          "source_path": "secondary_families[1]",
+          "spotify_track_id": "6pWqlKm9ugucgKNldCLigX",
+          "trace_id": "label-03"
+        },
+        {
+          "pilot_id": "C04",
+          "song": "boys dont cry — sysmint",
+          "source_path": "secondary_families[1]",
+          "spotify_track_id": "1ON9XudZFxwu43tQXBszIX",
+          "trace_id": "label-03"
+        },
+        {
+          "pilot_id": "C06",
+          "song": "Die Right Here — david hugo",
+          "source_path": "secondary_families[0]",
+          "spotify_track_id": "7fXYFuCTmNrYRGwEUUf5iz",
+          "trace_id": "label-02"
+        }
+      ]
+    },
+    "rnb_soul_umbrella": {
+      "R&B and Soul": [
+        {
+          "pilot_id": "A10",
+          "song": "OMG — NewJeans",
+          "source_path": "secondary_families[0]",
+          "spotify_track_id": "65FftemJ1DbbZ45DUfHJXE",
+          "trace_id": "label-02"
+        },
+        {
+          "pilot_id": "C05",
+          "song": "The Peace — underscores",
+          "source_path": "primary_family",
+          "spotify_track_id": "6wm3t4VpTxSFfOUgTMlHZM",
+          "trace_id": "label-01"
+        }
+      ]
+    },
+    "synth_pop": {
+      "Synth-Pop": [
+        {
+          "pilot_id": "A10",
+          "song": "OMG — NewJeans",
+          "source_path": "secondary_styles[1]",
+          "spotify_track_id": "65FftemJ1DbbZ45DUfHJXE",
+          "trace_id": "label-06"
+        },
+        {
+          "pilot_id": "C06",
+          "song": "Die Right Here — david hugo",
+          "source_path": "secondary_styles[1]",
+          "spotify_track_id": "7fXYFuCTmNrYRGwEUUf5iz",
+          "trace_id": "label-06"
+        }
+      ]
+    },
+    "trap": {
+      "Trap": [
+        {
+          "pilot_id": "A06",
+          "song": "GET IT — keshi",
+          "source_path": "primary_style",
+          "spotify_track_id": "4LaZ8RpIP6DIgN73bXQVlO",
+          "trace_id": "label-04"
+        },
+        {
+          "pilot_id": "A07",
+          "song": "The Hills — The Weeknd",
+          "source_path": "secondary_styles[0]",
+          "spotify_track_id": "7fBv7CLKzipRk6EC6TWHOB",
+          "trace_id": "label-05"
+        },
+        {
+          "pilot_id": "C04",
+          "song": "boys dont cry — sysmint",
+          "source_path": "primary_style",
+          "spotify_track_id": "1ON9XudZFxwu43tQXBszIX",
+          "trace_id": "label-04"
+        },
+        {
+          "pilot_id": "C05",
+          "song": "The Peace — underscores",
+          "source_path": "secondary_styles[0]",
+          "spotify_track_id": "6wm3t4VpTxSFfOUgTMlHZM",
+          "trace_id": "label-05"
+        }
+      ],
+      "trap": [
+        {
+          "pilot_id": "A02",
+          "song": "Shoota (feat. Lil Uzi Vert) — Playboi Carti, Lil Uzi Vert",
+          "source_path": "primary_style",
+          "spotify_track_id": "2BJSMvOGABRxokHKB0OI8i",
+          "trace_id": "label-02"
+        }
+      ]
+    },
+    "trip_hop": {
+      "Trip Hop": [
+        {
+          "pilot_id": "C03",
+          "song": "risk — lace",
+          "source_path": "primary_style",
+          "spotify_track_id": "2js0td9w2MzNUVPlMKYOEs",
+          "trace_id": "label-04"
+        }
+      ]
+    }
+  },
+  "unresolved_or_review_required": [
+    {
+      "broad_families": [],
+      "canonical_concept_id": "bass_music",
+      "canonical_label": "Bass music",
+      "kind": "ambiguous_umbrella",
+      "mapping_status": "mapping_review_required",
+      "normalized_lookup": "bass music",
+      "note": "Heterogeneous electronic/club/regional umbrella; do not equate with drum-and-bass, dubstep, or a single family.",
+      "pilot_id": "A03",
+      "raw_label": "Bass Music",
+      "review_candidates": [
+        "electronic bass styles",
+        "other regional bass-music usage"
+      ],
+      "scene_contexts": [],
+      "song": "My Gamecube Broke. — .Uzu",
+      "source_path": "secondary_families[0]",
+      "spotify_track_id": "2Vu2hkPW7LxMHPqoMjSIEJ",
+      "style_neighborhoods": [],
+      "trace_id": "label-02"
+    },
+    {
+      "broad_families": [],
+      "canonical_concept_id": "chillout",
+      "canonical_label": "Chillout",
+      "kind": "ambiguous_context_style",
+      "mapping_status": "mapping_review_required",
+      "normalized_lookup": "chillout",
+      "note": "May denote a listening use or heterogeneous sonic styles. Retain the ambiguous umbrella; do not equate with downtempo or lo-fi.",
+      "pilot_id": "A04",
+      "raw_label": "Chillout",
+      "review_candidates": [
+        "listening context",
+        "downtempo-oriented style umbrella"
+      ],
+      "scene_contexts": [
+        "chillout_umbrella"
+      ],
+      "song": "She loves the color green and I love her — City Girl",
+      "source_path": "secondary_styles[1]",
+      "spotify_track_id": "7hFW5IN7mQ99PuO86r38Sf",
+      "style_neighborhoods": [],
+      "trace_id": "label-05"
+    },
+    {
+      "broad_families": [],
+      "canonical_concept_id": "dance_unspecified",
+      "canonical_label": "Dance",
+      "kind": "ambiguous_umbrella",
+      "mapping_status": "mapping_review_required",
+      "normalized_lookup": "dance",
+      "note": "Bare dance label does not distinguish function, dance-pop, or electronic dance music.",
+      "pilot_id": "A10",
+      "raw_label": "Dance",
+      "review_candidates": [
+        "dance/listening function",
+        "dance-pop",
+        "electronic dance music"
+      ],
+      "scene_contexts": [],
+      "song": "OMG — NewJeans",
+      "source_path": "secondary_families[1]",
+      "spotify_track_id": "65FftemJ1DbbZ45DUfHJXE",
+      "style_neighborhoods": [],
+      "trace_id": "label-03"
+    }
+  ]
+}

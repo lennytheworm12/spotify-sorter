@@ -1,0 +1,3813 @@
+[
+  {
+    "broad_families": [
+      "hip_hop",
+      "rnb_soul"
+    ],
+    "canonical_labels": [
+      {
+        "id": "hip_hop",
+        "label": "Hip-hop",
+        "trace_ids": [
+          "label-01"
+        ]
+      },
+      {
+        "id": "rnb",
+        "label": "R&B",
+        "trace_ids": [
+          "label-02"
+        ]
+      },
+      {
+        "id": "boom_bap",
+        "label": "Boom bap",
+        "trace_ids": [
+          "label-03"
+        ]
+      },
+      {
+        "id": "conscious_hip_hop",
+        "label": "Conscious hip-hop",
+        "trace_ids": [
+          "label-04"
+        ]
+      },
+      {
+        "id": "east_coast_hip_hop",
+        "label": "East Coast hip-hop",
+        "trace_ids": [
+          "label-05"
+        ]
+      }
+    ],
+    "gemini_certainty_display_only": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "gemini_context_display_only": {
+      "arrangement_focus": "lead_vocal",
+      "texture_tags": [
+        "sample_based",
+        "layered"
+      ],
+      "vocal_role": "rap_led"
+    },
+    "gemini_status": "classified",
+    "has_unresolved_labels": false,
+    "input_profile_sha256": "a33aedb934308f6cfad7f8bfc00db562dd416809b95b8854a1a035ed228d3e70",
+    "mapping_review_required": false,
+    "membership_evidence": {
+      "broad_families": {
+        "hip_hop": [
+          "label-01",
+          "label-03",
+          "label-04",
+          "label-05"
+        ],
+        "rnb_soul": [
+          "label-02"
+        ]
+      },
+      "scene_contexts": {
+        "conscious_hip_hop_context": [
+          "label-04"
+        ],
+        "east_coast_hip_hop_scene": [
+          "label-05"
+        ]
+      },
+      "style_neighborhoods": {
+        "boom_bap": [
+          "label-03"
+        ],
+        "hip_hop_beat_lineage": [
+          "label-03"
+        ]
+      }
+    },
+    "pilot_id": "A01",
+    "raw_genre_labels": {
+      "primary_family": "Hip Hop",
+      "primary_style": "Boom Bap",
+      "secondary_families": [
+        "R&B"
+      ],
+      "secondary_styles": [
+        "Conscious Hip Hop",
+        "East Coast Hip Hop"
+      ]
+    },
+    "review_context_not_mapper_inputs": {
+      "assistant_review_note": "Boom-bap and the lo-fi/chillhop labels share hip-hop beat lineage, while only explicit Boom Bap supplies the narrow boom_bap neighborhood. Conscious and East Coast tags stay context-only; neither is a synonym for boom-bap. The raw secondary R&B family remains present.",
+      "classification_review_suggested": false,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "older_ontology_arm_labels_not_mapper_inputs": {
+        "family": "hip_hop_rap",
+        "styles": "boom_bap"
+      },
+      "owner_classification_decision": "",
+      "owner_first_pass_verbatim": "the song sounds like boom bap/ golden age rap ",
+      "owner_followup_on_earlier_ontology_arm": "",
+      "owner_mapping_decision": "",
+      "owner_review_notes": "",
+      "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED"
+    },
+    "scene_contexts": [
+      "conscious_hip_hop_context",
+      "east_coast_hip_hop_scene"
+    ],
+    "song": "Wet Dreamz — J. Cole",
+    "source_profile": "reports/gemini_style_pilot/v1/free_genre_v1/profiles/A01.json",
+    "spotify_track_id": "4tqcoej1zPvwePZCzuAjJd",
+    "style_neighborhoods": [
+      "boom_bap",
+      "hip_hop_beat_lineage"
+    ],
+    "trace": [
+      {
+        "broad_families": [
+          "hip_hop"
+        ],
+        "canonical_concept_id": "hip_hop",
+        "canonical_label": "Hip-hop",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "hip hop",
+        "note": "",
+        "raw_label": "Hip Hop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_family",
+        "style_neighborhoods": [],
+        "trace_id": "label-01"
+      },
+      {
+        "broad_families": [
+          "rnb_soul"
+        ],
+        "canonical_concept_id": "rnb",
+        "canonical_label": "R&B",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "r and b",
+        "note": "R&B stays its own canonical concept; the broad family is a joint umbrella, not a synonym for soul.",
+        "raw_label": "R&B",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[0]",
+        "style_neighborhoods": [],
+        "trace_id": "label-02"
+      },
+      {
+        "broad_families": [
+          "hip_hop"
+        ],
+        "canonical_concept_id": "boom_bap",
+        "canonical_label": "Boom bap",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "boom bap",
+        "note": "",
+        "raw_label": "Boom Bap",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_style",
+        "style_neighborhoods": [
+          "hip_hop_beat_lineage",
+          "boom_bap"
+        ],
+        "trace_id": "label-03"
+      },
+      {
+        "broad_families": [
+          "hip_hop"
+        ],
+        "canonical_concept_id": "conscious_hip_hop",
+        "canonical_label": "Conscious hip-hop",
+        "kind": "scene_context",
+        "mapping_status": "mapped",
+        "normalized_lookup": "conscious hip hop",
+        "note": "Thematic/context concept only; no boom-bap or other sonic style inferred.",
+        "raw_label": "Conscious Hip Hop",
+        "review_candidates": [],
+        "scene_contexts": [
+          "conscious_hip_hop_context"
+        ],
+        "source_path": "secondary_styles[0]",
+        "style_neighborhoods": [],
+        "trace_id": "label-04"
+      },
+      {
+        "broad_families": [
+          "hip_hop"
+        ],
+        "canonical_concept_id": "east_coast_hip_hop",
+        "canonical_label": "East Coast hip-hop",
+        "kind": "scene_context",
+        "mapping_status": "mapped",
+        "normalized_lookup": "east coast hip hop",
+        "note": "The explicit hip-hop name supports its broad family; geography does not imply boom-bap.",
+        "raw_label": "East Coast Hip Hop",
+        "review_candidates": [],
+        "scene_contexts": [
+          "east_coast_hip_hop_scene"
+        ],
+        "source_path": "secondary_styles[1]",
+        "style_neighborhoods": [],
+        "trace_id": "label-05"
+      }
+    ],
+    "warnings": [
+      {
+        "code": "context_separate_from_sonic_style",
+        "message": "Thematic/context concept only; no boom-bap or other sonic style inferred.",
+        "trace_id": "label-04"
+      },
+      {
+        "code": "context_separate_from_sonic_style",
+        "message": "The explicit hip-hop name supports its broad family; geography does not imply boom-bap.",
+        "trace_id": "label-05"
+      }
+    ]
+  },
+  {
+    "broad_families": [
+      "hip_hop"
+    ],
+    "canonical_labels": [
+      {
+        "id": "hip_hop",
+        "label": "Hip-hop",
+        "trace_ids": [
+          "label-01"
+        ]
+      },
+      {
+        "id": "trap",
+        "label": "Trap",
+        "trace_ids": [
+          "label-02"
+        ]
+      },
+      {
+        "id": "plugg",
+        "label": "Plugg",
+        "trace_ids": [
+          "label-03"
+        ]
+      }
+    ],
+    "gemini_certainty_display_only": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "gemini_context_display_only": {
+      "arrangement_focus": "lead_vocal",
+      "texture_tags": [
+        "electronic",
+        "clean"
+      ],
+      "vocal_role": "rap_led"
+    },
+    "gemini_status": "classified",
+    "has_unresolved_labels": false,
+    "input_profile_sha256": "3ba595eb6ca45c7e8dd44a111b3df8c79b55a09b0c98ee85c5479a990c86d3c1",
+    "mapping_review_required": false,
+    "membership_evidence": {
+      "broad_families": {
+        "hip_hop": [
+          "label-01",
+          "label-03"
+        ]
+      },
+      "scene_contexts": {},
+      "style_neighborhoods": {
+        "plugg_related": [
+          "label-03"
+        ],
+        "trap_related": [
+          "label-02",
+          "label-03"
+        ]
+      }
+    },
+    "pilot_id": "A02",
+    "raw_genre_labels": {
+      "primary_family": "hip hop",
+      "primary_style": "trap",
+      "secondary_families": [],
+      "secondary_styles": [
+        "plugg"
+      ]
+    },
+    "review_context_not_mapper_inputs": {
+      "assistant_review_note": "Trap and plugg overlap through a general trap-related neighborhood. Plugg is a model label, not newly owner-confirmed. No fast/aggressive property is inferred from the owner note or the genre labels.",
+      "classification_review_suggested": false,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "older_ontology_arm_labels_not_mapper_inputs": {
+        "family": "hip_hop_rap",
+        "styles": "trap; melodic_trap"
+      },
+      "owner_classification_decision": "",
+      "owner_first_pass_verbatim": "trap rap heavy fast/aggressive",
+      "owner_followup_on_earlier_ontology_arm": "",
+      "owner_mapping_decision": "",
+      "owner_review_notes": "",
+      "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED"
+    },
+    "scene_contexts": [],
+    "song": "Shoota (feat. Lil Uzi Vert) — Playboi Carti, Lil Uzi Vert",
+    "source_profile": "reports/gemini_style_pilot/v1/free_genre_v1/profiles/A02.json",
+    "spotify_track_id": "2BJSMvOGABRxokHKB0OI8i",
+    "style_neighborhoods": [
+      "plugg_related",
+      "trap_related"
+    ],
+    "trace": [
+      {
+        "broad_families": [
+          "hip_hop"
+        ],
+        "canonical_concept_id": "hip_hop",
+        "canonical_label": "Hip-hop",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "hip hop",
+        "note": "",
+        "raw_label": "hip hop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_family",
+        "style_neighborhoods": [],
+        "trace_id": "label-01"
+      },
+      {
+        "broad_families": [],
+        "canonical_concept_id": "trap",
+        "canonical_label": "Trap",
+        "kind": "style_umbrella",
+        "mapping_status": "mapped",
+        "normalized_lookup": "trap",
+        "note": "Subtype unspecified. Do not derive a hip-hop or electronic family from this label alone.",
+        "raw_label": "trap",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_style",
+        "style_neighborhoods": [
+          "trap_related"
+        ],
+        "trace_id": "label-02"
+      },
+      {
+        "broad_families": [
+          "hip_hop"
+        ],
+        "canonical_concept_id": "plugg",
+        "canonical_label": "Plugg",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "plugg",
+        "note": "",
+        "raw_label": "plugg",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[0]",
+        "style_neighborhoods": [
+          "trap_related",
+          "plugg_related"
+        ],
+        "trace_id": "label-03"
+      }
+    ],
+    "warnings": [
+      {
+        "code": "broad_style_subtype_unspecified",
+        "message": "Subtype unspecified. Do not derive a hip-hop or electronic family from this label alone.",
+        "trace_id": "label-02"
+      }
+    ]
+  },
+  {
+    "broad_families": [
+      "electronic"
+    ],
+    "canonical_labels": [
+      {
+        "id": "electronic",
+        "label": "Electronic",
+        "trace_ids": [
+          "label-01"
+        ]
+      },
+      {
+        "id": "bass_music",
+        "label": "Bass music",
+        "trace_ids": [
+          "label-02"
+        ]
+      },
+      {
+        "id": "drum_and_bass",
+        "label": "Drum and bass",
+        "trace_ids": [
+          "label-03"
+        ]
+      },
+      {
+        "id": "neurofunk",
+        "label": "Neurofunk",
+        "trace_ids": [
+          "label-04"
+        ]
+      },
+      {
+        "id": "dubstep",
+        "label": "Dubstep",
+        "trace_ids": [
+          "label-05"
+        ]
+      }
+    ],
+    "gemini_certainty_display_only": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "gemini_context_display_only": {
+      "arrangement_focus": "beat_or_instrumental",
+      "texture_tags": [
+        "electronic",
+        "distorted",
+        "layered"
+      ],
+      "vocal_role": "vocal_samples_only"
+    },
+    "gemini_status": "classified",
+    "has_unresolved_labels": false,
+    "input_profile_sha256": "3538bb1635acbcb022a71c9875b7b77f6fdd5cbcedc9d764db410715c1e06342",
+    "mapping_review_required": true,
+    "membership_evidence": {
+      "broad_families": {
+        "electronic": [
+          "label-01",
+          "label-03",
+          "label-04",
+          "label-05"
+        ]
+      },
+      "scene_contexts": {},
+      "style_neighborhoods": {
+        "bass_electronic": [
+          "label-03",
+          "label-04",
+          "label-05"
+        ],
+        "drum_and_bass": [
+          "label-03",
+          "label-04"
+        ],
+        "dubstep": [
+          "label-05"
+        ]
+      }
+    },
+    "pilot_id": "A03",
+    "raw_genre_labels": {
+      "primary_family": "Electronic",
+      "primary_style": "Drum and Bass",
+      "secondary_families": [
+        "Bass Music"
+      ],
+      "secondary_styles": [
+        "Neurofunk",
+        "Dubstep"
+      ]
+    },
+    "review_context_not_mapper_inputs": {
+      "assistant_review_note": "Classification-review priority: the free-form Drum and Bass / Neurofunk / Dubstep prediction differs substantially from the owner first-pass lo-fi electronic/gamey description and the older ontology-constrained lo-fi profile. Mapping those literal labels into bass-electronic neighborhoods is not a mapper bug. Do not remap them to lo-fi to repair this song. Bass Music is independently an ambiguous umbrella requiring mapping review.",
+      "classification_review_suggested": true,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "older_ontology_arm_labels_not_mapper_inputs": {
+        "family": "hip_hop_rap",
+        "styles": "lofi_hip_hop; chillhop; instrumental_hip_hop"
+      },
+      "owner_classification_decision": "",
+      "owner_first_pass_verbatim": "lofi electronic/gamey style",
+      "owner_followup_on_earlier_ontology_arm": "",
+      "owner_mapping_decision": "",
+      "owner_review_notes": "",
+      "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED"
+    },
+    "scene_contexts": [],
+    "song": "My Gamecube Broke. — .Uzu",
+    "source_profile": "reports/gemini_style_pilot/v1/free_genre_v1/profiles/A03.json",
+    "spotify_track_id": "2Vu2hkPW7LxMHPqoMjSIEJ",
+    "style_neighborhoods": [
+      "bass_electronic",
+      "drum_and_bass",
+      "dubstep"
+    ],
+    "trace": [
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "electronic",
+        "canonical_label": "Electronic",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "electronic",
+        "note": "",
+        "raw_label": "Electronic",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_family",
+        "style_neighborhoods": [],
+        "trace_id": "label-01"
+      },
+      {
+        "broad_families": [],
+        "canonical_concept_id": "bass_music",
+        "canonical_label": "Bass music",
+        "kind": "ambiguous_umbrella",
+        "mapping_status": "mapping_review_required",
+        "normalized_lookup": "bass music",
+        "note": "Heterogeneous electronic/club/regional umbrella; do not equate with drum-and-bass, dubstep, or a single family.",
+        "raw_label": "Bass Music",
+        "review_candidates": [
+          "electronic bass styles",
+          "other regional bass-music usage"
+        ],
+        "scene_contexts": [],
+        "source_path": "secondary_families[0]",
+        "style_neighborhoods": [],
+        "trace_id": "label-02"
+      },
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "drum_and_bass",
+        "canonical_label": "Drum and bass",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "drum and bass",
+        "note": "",
+        "raw_label": "Drum and Bass",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_style",
+        "style_neighborhoods": [
+          "bass_electronic",
+          "drum_and_bass"
+        ],
+        "trace_id": "label-03"
+      },
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "neurofunk",
+        "canonical_label": "Neurofunk",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "neurofunk",
+        "note": "",
+        "raw_label": "Neurofunk",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[0]",
+        "style_neighborhoods": [
+          "bass_electronic",
+          "drum_and_bass"
+        ],
+        "trace_id": "label-04"
+      },
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "dubstep",
+        "canonical_label": "Dubstep",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "dubstep",
+        "note": "",
+        "raw_label": "Dubstep",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[1]",
+        "style_neighborhoods": [
+          "bass_electronic",
+          "dubstep"
+        ],
+        "trace_id": "label-05"
+      }
+    ],
+    "warnings": [
+      {
+        "code": "mapping_review_required",
+        "message": "Heterogeneous electronic/club/regional umbrella; do not equate with drum-and-bass, dubstep, or a single family.",
+        "trace_id": "label-02"
+      }
+    ]
+  },
+  {
+    "broad_families": [
+      "electronic",
+      "hip_hop"
+    ],
+    "canonical_labels": [
+      {
+        "id": "hip_hop",
+        "label": "Hip-hop",
+        "trace_ids": [
+          "label-01"
+        ]
+      },
+      {
+        "id": "electronic",
+        "label": "Electronic",
+        "trace_ids": [
+          "label-02"
+        ]
+      },
+      {
+        "id": "lofi_hip_hop",
+        "label": "Lo-fi hip-hop",
+        "trace_ids": [
+          "label-03"
+        ]
+      },
+      {
+        "id": "downtempo",
+        "label": "Downtempo",
+        "trace_ids": [
+          "label-04"
+        ]
+      },
+      {
+        "id": "chillout",
+        "label": "Chillout",
+        "trace_ids": [
+          "label-05"
+        ]
+      }
+    ],
+    "gemini_certainty_display_only": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "gemini_context_display_only": {
+      "arrangement_focus": "beat_or_instrumental",
+      "texture_tags": [
+        "sample_based",
+        "electronic",
+        "hazy"
+      ],
+      "vocal_role": "vocal_samples_only"
+    },
+    "gemini_status": "classified",
+    "has_unresolved_labels": false,
+    "input_profile_sha256": "ddf163a8d12a00aaed9ade00e2a4ae39dfa4d32b7f6c3068676c4d3c04977f9b",
+    "mapping_review_required": true,
+    "membership_evidence": {
+      "broad_families": {
+        "electronic": [
+          "label-02",
+          "label-04"
+        ],
+        "hip_hop": [
+          "label-01",
+          "label-03"
+        ]
+      },
+      "scene_contexts": {
+        "chillout_umbrella": [
+          "label-05"
+        ]
+      },
+      "style_neighborhoods": {
+        "downtempo_related": [
+          "label-04"
+        ],
+        "hip_hop_beat_lineage": [
+          "label-03"
+        ],
+        "lofi_chill_beats": [
+          "label-03"
+        ]
+      }
+    },
+    "pilot_id": "A04",
+    "raw_genre_labels": {
+      "primary_family": "Hip Hop",
+      "primary_style": "Lo-Fi Hip Hop",
+      "secondary_families": [
+        "Electronic"
+      ],
+      "secondary_styles": [
+        "Downtempo",
+        "Chillout"
+      ]
+    },
+    "review_context_not_mapper_inputs": {
+      "assistant_review_note": "Lo-Fi Hip Hop normalizes to the same concept as Tea Time's lo_fi_hip_hop. Downtempo contributes its own neighborhood. Chillout remains an ambiguous context/style umbrella. No instrumental role is inferred from the genre map or copied vocal context.",
+      "classification_review_suggested": false,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "older_ontology_arm_labels_not_mapper_inputs": {
+        "family": "hip_hop_rap",
+        "styles": "lofi_hip_hop; chillhop; instrumental_hip_hop"
+      },
+      "owner_classification_decision": "",
+      "owner_first_pass_verbatim": "soft studying lofi sound",
+      "owner_followup_on_earlier_ontology_arm": "",
+      "owner_mapping_decision": "",
+      "owner_review_notes": "",
+      "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED"
+    },
+    "scene_contexts": [
+      "chillout_umbrella"
+    ],
+    "song": "She loves the color green and I love her — City Girl",
+    "source_profile": "reports/gemini_style_pilot/v1/free_genre_v1/profiles/A04.json",
+    "spotify_track_id": "7hFW5IN7mQ99PuO86r38Sf",
+    "style_neighborhoods": [
+      "downtempo_related",
+      "hip_hop_beat_lineage",
+      "lofi_chill_beats"
+    ],
+    "trace": [
+      {
+        "broad_families": [
+          "hip_hop"
+        ],
+        "canonical_concept_id": "hip_hop",
+        "canonical_label": "Hip-hop",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "hip hop",
+        "note": "",
+        "raw_label": "Hip Hop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_family",
+        "style_neighborhoods": [],
+        "trace_id": "label-01"
+      },
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "electronic",
+        "canonical_label": "Electronic",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "electronic",
+        "note": "",
+        "raw_label": "Electronic",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[0]",
+        "style_neighborhoods": [],
+        "trace_id": "label-02"
+      },
+      {
+        "broad_families": [
+          "hip_hop"
+        ],
+        "canonical_concept_id": "lofi_hip_hop",
+        "canonical_label": "Lo-fi hip-hop",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "lo fi hip hop",
+        "note": "Does not assert boom-bap, instrumental-only status, or electronic instrumentation.",
+        "raw_label": "Lo-Fi Hip Hop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_style",
+        "style_neighborhoods": [
+          "hip_hop_beat_lineage",
+          "lofi_chill_beats"
+        ],
+        "trace_id": "label-03"
+      },
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "downtempo",
+        "canonical_label": "Downtempo",
+        "kind": "style_umbrella",
+        "mapping_status": "mapped",
+        "normalized_lookup": "downtempo",
+        "note": "A style-level umbrella even when Gemini puts it in a family slot; not a BPM measurement.",
+        "raw_label": "Downtempo",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[0]",
+        "style_neighborhoods": [
+          "downtempo_related"
+        ],
+        "trace_id": "label-04"
+      },
+      {
+        "broad_families": [],
+        "canonical_concept_id": "chillout",
+        "canonical_label": "Chillout",
+        "kind": "ambiguous_context_style",
+        "mapping_status": "mapping_review_required",
+        "normalized_lookup": "chillout",
+        "note": "May denote a listening use or heterogeneous sonic styles. Retain the ambiguous umbrella; do not equate with downtempo or lo-fi.",
+        "raw_label": "Chillout",
+        "review_candidates": [
+          "listening context",
+          "downtempo-oriented style umbrella"
+        ],
+        "scene_contexts": [
+          "chillout_umbrella"
+        ],
+        "source_path": "secondary_styles[1]",
+        "style_neighborhoods": [],
+        "trace_id": "label-05"
+      }
+    ],
+    "warnings": [
+      {
+        "code": "mapping_review_required",
+        "message": "May denote a listening use or heterogeneous sonic styles. Retain the ambiguous umbrella; do not equate with downtempo or lo-fi.",
+        "trace_id": "label-05"
+      },
+      {
+        "code": "context_separate_from_sonic_style",
+        "message": "May denote a listening use or heterogeneous sonic styles. Retain the ambiguous umbrella; do not equate with downtempo or lo-fi.",
+        "trace_id": "label-05"
+      }
+    ]
+  },
+  {
+    "broad_families": [
+      "electronic",
+      "hip_hop"
+    ],
+    "canonical_labels": [
+      {
+        "id": "hip_hop",
+        "label": "Hip-hop",
+        "trace_ids": [
+          "label-01"
+        ]
+      },
+      {
+        "id": "electronic",
+        "label": "Electronic",
+        "trace_ids": [
+          "label-02"
+        ]
+      },
+      {
+        "id": "lofi_hip_hop",
+        "label": "Lo-fi hip-hop",
+        "trace_ids": [
+          "label-03"
+        ]
+      },
+      {
+        "id": "chillhop",
+        "label": "Chillhop",
+        "trace_ids": [
+          "label-04"
+        ]
+      },
+      {
+        "id": "downtempo",
+        "label": "Downtempo",
+        "trace_ids": [
+          "label-05"
+        ]
+      }
+    ],
+    "gemini_certainty_display_only": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "gemini_context_display_only": {
+      "arrangement_focus": "beat_or_instrumental",
+      "texture_tags": [
+        "sample_based",
+        "hazy",
+        "clean"
+      ],
+      "vocal_role": "vocal_samples_only"
+    },
+    "gemini_status": "classified",
+    "has_unresolved_labels": false,
+    "input_profile_sha256": "14fe29e0e44652faff29515d34507d389e787fa0f99a7eb17ad79abc7ba5f473",
+    "mapping_review_required": false,
+    "membership_evidence": {
+      "broad_families": {
+        "electronic": [
+          "label-02",
+          "label-05"
+        ],
+        "hip_hop": [
+          "label-01",
+          "label-03",
+          "label-04"
+        ]
+      },
+      "scene_contexts": {},
+      "style_neighborhoods": {
+        "downtempo_related": [
+          "label-05"
+        ],
+        "hip_hop_beat_lineage": [
+          "label-03",
+          "label-04"
+        ],
+        "lofi_chill_beats": [
+          "label-03",
+          "label-04"
+        ]
+      }
+    },
+    "pilot_id": "A05",
+    "raw_genre_labels": {
+      "primary_family": "hip_hop",
+      "primary_style": "lo_fi_hip_hop",
+      "secondary_families": [
+        "electronic"
+      ],
+      "secondary_styles": [
+        "chillhop",
+        "downtempo"
+      ]
+    },
+    "review_context_not_mapper_inputs": {
+      "assistant_review_note": "Alias normalization agrees with the other explicit lo-fi hip-hop example. The good Tea Time / Sit Around rating does not require equal mapped neighborhoods; do not broaden the mapper just to manufacture that overlap.",
+      "classification_review_suggested": false,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "older_ontology_arm_labels_not_mapper_inputs": {
+        "family": "hip_hop_rap",
+        "styles": "lofi_hip_hop; chillhop"
+      },
+      "owner_classification_decision": "",
+      "owner_first_pass_verbatim": "lofi hip hop ",
+      "owner_followup_on_earlier_ontology_arm": "",
+      "owner_mapping_decision": "",
+      "owner_review_notes": "",
+      "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED"
+    },
+    "scene_contexts": [],
+    "song": "Tea Time — Disvstxr",
+    "source_profile": "reports/gemini_style_pilot/v1/free_genre_v1/profiles/A05.json",
+    "spotify_track_id": "5sEeuhYWHNczuPKek1zJeG",
+    "style_neighborhoods": [
+      "downtempo_related",
+      "hip_hop_beat_lineage",
+      "lofi_chill_beats"
+    ],
+    "trace": [
+      {
+        "broad_families": [
+          "hip_hop"
+        ],
+        "canonical_concept_id": "hip_hop",
+        "canonical_label": "Hip-hop",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "hip hop",
+        "note": "",
+        "raw_label": "hip_hop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_family",
+        "style_neighborhoods": [],
+        "trace_id": "label-01"
+      },
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "electronic",
+        "canonical_label": "Electronic",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "electronic",
+        "note": "",
+        "raw_label": "electronic",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[0]",
+        "style_neighborhoods": [],
+        "trace_id": "label-02"
+      },
+      {
+        "broad_families": [
+          "hip_hop"
+        ],
+        "canonical_concept_id": "lofi_hip_hop",
+        "canonical_label": "Lo-fi hip-hop",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "lo fi hip hop",
+        "note": "Does not assert boom-bap, instrumental-only status, or electronic instrumentation.",
+        "raw_label": "lo_fi_hip_hop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_style",
+        "style_neighborhoods": [
+          "hip_hop_beat_lineage",
+          "lofi_chill_beats"
+        ],
+        "trace_id": "label-03"
+      },
+      {
+        "broad_families": [
+          "hip_hop"
+        ],
+        "canonical_concept_id": "chillhop",
+        "canonical_label": "Chillhop",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "chillhop",
+        "note": "",
+        "raw_label": "chillhop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[0]",
+        "style_neighborhoods": [
+          "hip_hop_beat_lineage",
+          "lofi_chill_beats"
+        ],
+        "trace_id": "label-04"
+      },
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "downtempo",
+        "canonical_label": "Downtempo",
+        "kind": "style_umbrella",
+        "mapping_status": "mapped",
+        "normalized_lookup": "downtempo",
+        "note": "A style-level umbrella even when Gemini puts it in a family slot; not a BPM measurement.",
+        "raw_label": "downtempo",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[1]",
+        "style_neighborhoods": [
+          "downtempo_related"
+        ],
+        "trace_id": "label-05"
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "broad_families": [
+      "hip_hop",
+      "pop",
+      "rnb_soul"
+    ],
+    "canonical_labels": [
+      {
+        "id": "hip_hop",
+        "label": "Hip-hop",
+        "trace_ids": [
+          "label-01"
+        ]
+      },
+      {
+        "id": "pop",
+        "label": "Pop",
+        "trace_ids": [
+          "label-02"
+        ]
+      },
+      {
+        "id": "rnb",
+        "label": "R&B",
+        "trace_ids": [
+          "label-03"
+        ]
+      },
+      {
+        "id": "trap",
+        "label": "Trap",
+        "trace_ids": [
+          "label-04"
+        ]
+      },
+      {
+        "id": "pop_rap",
+        "label": "Pop rap",
+        "trace_ids": [
+          "label-05"
+        ]
+      },
+      {
+        "id": "melodic_rap",
+        "label": "Melodic rap",
+        "trace_ids": [
+          "label-06"
+        ]
+      }
+    ],
+    "gemini_certainty_display_only": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "gemini_context_display_only": {
+      "arrangement_focus": "balanced",
+      "texture_tags": [
+        "electronic",
+        "layered",
+        "clean"
+      ],
+      "vocal_role": "mixed_rap_and_singing"
+    },
+    "gemini_status": "classified",
+    "has_unresolved_labels": false,
+    "input_profile_sha256": "0a8ee3ec3cefeb205c1acfd73bf6c60bdf5af41cee22a0893e50b40b8fa73293",
+    "mapping_review_required": false,
+    "membership_evidence": {
+      "broad_families": {
+        "hip_hop": [
+          "label-01",
+          "label-05",
+          "label-06"
+        ],
+        "pop": [
+          "label-02",
+          "label-05"
+        ],
+        "rnb_soul": [
+          "label-03"
+        ]
+      },
+      "scene_contexts": {},
+      "style_neighborhoods": {
+        "melodic_rap": [
+          "label-06"
+        ],
+        "rap_pop_crossover": [
+          "label-05"
+        ],
+        "trap_related": [
+          "label-04"
+        ]
+      }
+    },
+    "pilot_id": "A06",
+    "raw_genre_labels": {
+      "primary_family": "Hip Hop",
+      "primary_style": "Trap",
+      "secondary_families": [
+        "Pop",
+        "R&B"
+      ],
+      "secondary_styles": [
+        "Pop Rap",
+        "Melodic Rap"
+      ]
+    },
+    "review_context_not_mapper_inputs": {
+      "assistant_review_note": "Classification-review question: the owner described dark alternative R&B, whereas Gemini foregrounds Trap / Pop Rap / Melodic Rap. Its explicit secondary R&B and Pop memberships are retained, yielding overlapping hip-hop / pop / R&B families. Do not insert Alternative R&B or a dark-mood attribute that Gemini did not label.",
+      "classification_review_suggested": true,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "older_ontology_arm_labels_not_mapper_inputs": {
+        "family": "hip_hop_rap",
+        "styles": "melodic_trap; trap; electropop"
+      },
+      "owner_classification_decision": "",
+      "owner_first_pass_verbatim": "dark alt rnb ",
+      "owner_followup_on_earlier_ontology_arm": "",
+      "owner_mapping_decision": "",
+      "owner_review_notes": "",
+      "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED"
+    },
+    "scene_contexts": [],
+    "song": "GET IT — keshi",
+    "source_profile": "reports/gemini_style_pilot/v1/free_genre_v1/profiles/A06.json",
+    "spotify_track_id": "4LaZ8RpIP6DIgN73bXQVlO",
+    "style_neighborhoods": [
+      "melodic_rap",
+      "rap_pop_crossover",
+      "trap_related"
+    ],
+    "trace": [
+      {
+        "broad_families": [
+          "hip_hop"
+        ],
+        "canonical_concept_id": "hip_hop",
+        "canonical_label": "Hip-hop",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "hip hop",
+        "note": "",
+        "raw_label": "Hip Hop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_family",
+        "style_neighborhoods": [],
+        "trace_id": "label-01"
+      },
+      {
+        "broad_families": [
+          "pop"
+        ],
+        "canonical_concept_id": "pop",
+        "canonical_label": "Pop",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "pop",
+        "note": "",
+        "raw_label": "Pop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[0]",
+        "style_neighborhoods": [],
+        "trace_id": "label-02"
+      },
+      {
+        "broad_families": [
+          "rnb_soul"
+        ],
+        "canonical_concept_id": "rnb",
+        "canonical_label": "R&B",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "r and b",
+        "note": "R&B stays its own canonical concept; the broad family is a joint umbrella, not a synonym for soul.",
+        "raw_label": "R&B",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[1]",
+        "style_neighborhoods": [],
+        "trace_id": "label-03"
+      },
+      {
+        "broad_families": [],
+        "canonical_concept_id": "trap",
+        "canonical_label": "Trap",
+        "kind": "style_umbrella",
+        "mapping_status": "mapped",
+        "normalized_lookup": "trap",
+        "note": "Subtype unspecified. Do not derive a hip-hop or electronic family from this label alone.",
+        "raw_label": "Trap",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_style",
+        "style_neighborhoods": [
+          "trap_related"
+        ],
+        "trace_id": "label-04"
+      },
+      {
+        "broad_families": [
+          "hip_hop",
+          "pop"
+        ],
+        "canonical_concept_id": "pop_rap",
+        "canonical_label": "Pop rap",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "pop rap",
+        "note": "",
+        "raw_label": "Pop Rap",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[0]",
+        "style_neighborhoods": [
+          "rap_pop_crossover"
+        ],
+        "trace_id": "label-05"
+      },
+      {
+        "broad_families": [
+          "hip_hop"
+        ],
+        "canonical_concept_id": "melodic_rap",
+        "canonical_label": "Melodic rap",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "melodic rap",
+        "note": "",
+        "raw_label": "Melodic Rap",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[1]",
+        "style_neighborhoods": [
+          "melodic_rap"
+        ],
+        "trace_id": "label-06"
+      }
+    ],
+    "warnings": [
+      {
+        "code": "broad_style_subtype_unspecified",
+        "message": "Subtype unspecified. Do not derive a hip-hop or electronic family from this label alone.",
+        "trace_id": "label-04"
+      }
+    ]
+  },
+  {
+    "broad_families": [
+      "hip_hop",
+      "pop",
+      "rnb_soul"
+    ],
+    "canonical_labels": [
+      {
+        "id": "rnb",
+        "label": "R&B",
+        "trace_ids": [
+          "label-01"
+        ]
+      },
+      {
+        "id": "hip_hop",
+        "label": "Hip-hop",
+        "trace_ids": [
+          "label-02"
+        ]
+      },
+      {
+        "id": "pop",
+        "label": "Pop",
+        "trace_ids": [
+          "label-03"
+        ]
+      },
+      {
+        "id": "contemporary_rnb",
+        "label": "Contemporary R&B",
+        "trace_ids": [
+          "label-04"
+        ]
+      },
+      {
+        "id": "trap",
+        "label": "Trap",
+        "trace_ids": [
+          "label-05"
+        ]
+      },
+      {
+        "id": "alternative_rnb",
+        "label": "Alternative R&B",
+        "trace_ids": [
+          "label-06"
+        ]
+      }
+    ],
+    "gemini_certainty_display_only": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "gemini_context_display_only": {
+      "arrangement_focus": "lead_vocal",
+      "texture_tags": [
+        "electronic",
+        "layered"
+      ],
+      "vocal_role": "sung_led"
+    },
+    "gemini_status": "classified",
+    "has_unresolved_labels": false,
+    "input_profile_sha256": "e00ed95b1d519761dd107e20a299a937d4204760195809500878ba13a6fecc57",
+    "mapping_review_required": false,
+    "membership_evidence": {
+      "broad_families": {
+        "hip_hop": [
+          "label-02"
+        ],
+        "pop": [
+          "label-03"
+        ],
+        "rnb_soul": [
+          "label-01",
+          "label-04",
+          "label-06"
+        ]
+      },
+      "scene_contexts": {},
+      "style_neighborhoods": {
+        "alternative_rnb": [
+          "label-06"
+        ],
+        "modern_rnb": [
+          "label-04",
+          "label-06"
+        ],
+        "trap_related": [
+          "label-05"
+        ]
+      }
+    },
+    "pilot_id": "A07",
+    "raw_genre_labels": {
+      "primary_family": "R&B",
+      "primary_style": "Contemporary R&B",
+      "secondary_families": [
+        "Hip-Hop",
+        "Pop"
+      ],
+      "secondary_styles": [
+        "Trap",
+        "Alternative R&B"
+      ]
+    },
+    "review_context_not_mapper_inputs": {
+      "assistant_review_note": "The current free-form profile has Contemporary R&B / Trap / Alternative R&B. The earlier owner objection to the original ontology-constrained hyperpop label is historical context, not a rejection of this newer free-form profile. Shared modern-R&B membership with Shouldn't Be preserves the different narrower styles.",
+      "classification_review_suggested": false,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "older_ontology_arm_labels_not_mapper_inputs": {
+        "family": "electronic",
+        "styles": "hyperpop; digicore; trap"
+      },
+      "owner_classification_decision": "",
+      "owner_first_pass_verbatim": "dark heavy rnb",
+      "owner_followup_on_earlier_ontology_arm": "Hyperpop identity still does not fit.",
+      "owner_mapping_decision": "",
+      "owner_review_notes": "",
+      "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED"
+    },
+    "scene_contexts": [],
+    "song": "The Hills — The Weeknd",
+    "source_profile": "reports/gemini_style_pilot/v1/free_genre_v1/profiles/A07.json",
+    "spotify_track_id": "7fBv7CLKzipRk6EC6TWHOB",
+    "style_neighborhoods": [
+      "alternative_rnb",
+      "modern_rnb",
+      "trap_related"
+    ],
+    "trace": [
+      {
+        "broad_families": [
+          "rnb_soul"
+        ],
+        "canonical_concept_id": "rnb",
+        "canonical_label": "R&B",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "r and b",
+        "note": "R&B stays its own canonical concept; the broad family is a joint umbrella, not a synonym for soul.",
+        "raw_label": "R&B",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_family",
+        "style_neighborhoods": [],
+        "trace_id": "label-01"
+      },
+      {
+        "broad_families": [
+          "hip_hop"
+        ],
+        "canonical_concept_id": "hip_hop",
+        "canonical_label": "Hip-hop",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "hip hop",
+        "note": "",
+        "raw_label": "Hip-Hop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[0]",
+        "style_neighborhoods": [],
+        "trace_id": "label-02"
+      },
+      {
+        "broad_families": [
+          "pop"
+        ],
+        "canonical_concept_id": "pop",
+        "canonical_label": "Pop",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "pop",
+        "note": "",
+        "raw_label": "Pop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[1]",
+        "style_neighborhoods": [],
+        "trace_id": "label-03"
+      },
+      {
+        "broad_families": [
+          "rnb_soul"
+        ],
+        "canonical_concept_id": "contemporary_rnb",
+        "canonical_label": "Contemporary R&B",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "contemporary r and b",
+        "note": "",
+        "raw_label": "Contemporary R&B",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_style",
+        "style_neighborhoods": [
+          "modern_rnb"
+        ],
+        "trace_id": "label-04"
+      },
+      {
+        "broad_families": [],
+        "canonical_concept_id": "trap",
+        "canonical_label": "Trap",
+        "kind": "style_umbrella",
+        "mapping_status": "mapped",
+        "normalized_lookup": "trap",
+        "note": "Subtype unspecified. Do not derive a hip-hop or electronic family from this label alone.",
+        "raw_label": "Trap",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[0]",
+        "style_neighborhoods": [
+          "trap_related"
+        ],
+        "trace_id": "label-05"
+      },
+      {
+        "broad_families": [
+          "rnb_soul"
+        ],
+        "canonical_concept_id": "alternative_rnb",
+        "canonical_label": "Alternative R&B",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "alternative r and b",
+        "note": "",
+        "raw_label": "Alternative R&B",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[1]",
+        "style_neighborhoods": [
+          "modern_rnb",
+          "alternative_rnb"
+        ],
+        "trace_id": "label-06"
+      }
+    ],
+    "warnings": [
+      {
+        "code": "broad_style_subtype_unspecified",
+        "message": "Subtype unspecified. Do not derive a hip-hop or electronic family from this label alone.",
+        "trace_id": "label-05"
+      }
+    ]
+  },
+  {
+    "broad_families": [
+      "electronic",
+      "pop",
+      "rnb_soul"
+    ],
+    "canonical_labels": [
+      {
+        "id": "rnb",
+        "label": "R&B",
+        "trace_ids": [
+          "label-01"
+        ]
+      },
+      {
+        "id": "pop",
+        "label": "Pop",
+        "trace_ids": [
+          "label-02"
+        ]
+      },
+      {
+        "id": "electronic",
+        "label": "Electronic",
+        "trace_ids": [
+          "label-03"
+        ]
+      },
+      {
+        "id": "contemporary_rnb",
+        "label": "Contemporary R&B",
+        "trace_ids": [
+          "label-04"
+        ]
+      },
+      {
+        "id": "alternative_pop",
+        "label": "Alternative pop",
+        "trace_ids": [
+          "label-05"
+        ]
+      },
+      {
+        "id": "ambient_pop",
+        "label": "Ambient pop",
+        "trace_ids": [
+          "label-06"
+        ]
+      }
+    ],
+    "gemini_certainty_display_only": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "gemini_context_display_only": {
+      "arrangement_focus": "lead_vocal",
+      "texture_tags": [
+        "electronic",
+        "clean",
+        "layered"
+      ],
+      "vocal_role": "sung_led"
+    },
+    "gemini_status": "classified",
+    "has_unresolved_labels": false,
+    "input_profile_sha256": "15fc66fb8b8e999ee0926893e9214a577c407c23e795fe25d2d1713c7c388c3a",
+    "mapping_review_required": false,
+    "membership_evidence": {
+      "broad_families": {
+        "electronic": [
+          "label-03"
+        ],
+        "pop": [
+          "label-02",
+          "label-05",
+          "label-06"
+        ],
+        "rnb_soul": [
+          "label-01",
+          "label-04"
+        ]
+      },
+      "scene_contexts": {},
+      "style_neighborhoods": {
+        "alternative_pop": [
+          "label-05"
+        ],
+        "atmospheric_pop": [
+          "label-06"
+        ],
+        "modern_rnb": [
+          "label-04"
+        ]
+      }
+    },
+    "pilot_id": "A08",
+    "raw_genre_labels": {
+      "primary_family": "R&B",
+      "primary_style": "Contemporary R&B",
+      "secondary_families": [
+        "Pop",
+        "Electronic"
+      ],
+      "secondary_styles": [
+        "Alt-Pop",
+        "Ambient Pop"
+      ]
+    },
+    "review_context_not_mapper_inputs": {
+      "assistant_review_note": "Contemporary R&B shares a broad neighborhood with The Hills, while Alt-Pop / Ambient Pop add different style memberships. The owner's soul wording is retained separately; it does not cause the mapper to append a Soul label.",
+      "classification_review_suggested": false,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "older_ontology_arm_labels_not_mapper_inputs": {
+        "family": "rnb_soul",
+        "styles": "alternative_rnb; contemporary_rnb; pop_rnb"
+      },
+      "owner_classification_decision": "",
+      "owner_first_pass_verbatim": "soul rnb",
+      "owner_followup_on_earlier_ontology_arm": "",
+      "owner_mapping_decision": "",
+      "owner_review_notes": "",
+      "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED"
+    },
+    "scene_contexts": [],
+    "song": "Shouldn't Be — Luke Chiang",
+    "source_profile": "reports/gemini_style_pilot/v1/free_genre_v1/profiles/A08.json",
+    "spotify_track_id": "7F6PtLP6fJPVtA1FWVkl8K",
+    "style_neighborhoods": [
+      "alternative_pop",
+      "atmospheric_pop",
+      "modern_rnb"
+    ],
+    "trace": [
+      {
+        "broad_families": [
+          "rnb_soul"
+        ],
+        "canonical_concept_id": "rnb",
+        "canonical_label": "R&B",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "r and b",
+        "note": "R&B stays its own canonical concept; the broad family is a joint umbrella, not a synonym for soul.",
+        "raw_label": "R&B",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_family",
+        "style_neighborhoods": [],
+        "trace_id": "label-01"
+      },
+      {
+        "broad_families": [
+          "pop"
+        ],
+        "canonical_concept_id": "pop",
+        "canonical_label": "Pop",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "pop",
+        "note": "",
+        "raw_label": "Pop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[0]",
+        "style_neighborhoods": [],
+        "trace_id": "label-02"
+      },
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "electronic",
+        "canonical_label": "Electronic",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "electronic",
+        "note": "",
+        "raw_label": "Electronic",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[1]",
+        "style_neighborhoods": [],
+        "trace_id": "label-03"
+      },
+      {
+        "broad_families": [
+          "rnb_soul"
+        ],
+        "canonical_concept_id": "contemporary_rnb",
+        "canonical_label": "Contemporary R&B",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "contemporary r and b",
+        "note": "",
+        "raw_label": "Contemporary R&B",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_style",
+        "style_neighborhoods": [
+          "modern_rnb"
+        ],
+        "trace_id": "label-04"
+      },
+      {
+        "broad_families": [
+          "pop"
+        ],
+        "canonical_concept_id": "alternative_pop",
+        "canonical_label": "Alternative pop",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "alt pop",
+        "note": "",
+        "raw_label": "Alt-Pop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[0]",
+        "style_neighborhoods": [
+          "alternative_pop"
+        ],
+        "trace_id": "label-05"
+      },
+      {
+        "broad_families": [
+          "pop"
+        ],
+        "canonical_concept_id": "ambient_pop",
+        "canonical_label": "Ambient pop",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "ambient pop",
+        "note": "Pop with ambient-style associations; no electronic family inferred from the modifier alone.",
+        "raw_label": "Ambient Pop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[1]",
+        "style_neighborhoods": [
+          "atmospheric_pop"
+        ],
+        "trace_id": "label-06"
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "broad_families": [
+      "electronic",
+      "pop",
+      "rnb_soul"
+    ],
+    "canonical_labels": [
+      {
+        "id": "pop",
+        "label": "Pop",
+        "trace_ids": [
+          "label-01"
+        ]
+      },
+      {
+        "id": "rnb",
+        "label": "R&B",
+        "trace_ids": [
+          "label-02"
+        ]
+      },
+      {
+        "id": "electronic",
+        "label": "Electronic",
+        "trace_ids": [
+          "label-03"
+        ]
+      },
+      {
+        "id": "dance_pop",
+        "label": "Dance-pop",
+        "trace_ids": [
+          "label-04"
+        ]
+      },
+      {
+        "id": "contemporary_rnb",
+        "label": "Contemporary R&B",
+        "trace_ids": [
+          "label-05"
+        ]
+      },
+      {
+        "id": "nu_disco",
+        "label": "Nu-disco",
+        "trace_ids": [
+          "label-06"
+        ]
+      }
+    ],
+    "gemini_certainty_display_only": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "gemini_context_display_only": {
+      "arrangement_focus": "lead_vocal",
+      "texture_tags": [
+        "electronic",
+        "clean",
+        "layered"
+      ],
+      "vocal_role": "sung_led"
+    },
+    "gemini_status": "classified",
+    "has_unresolved_labels": false,
+    "input_profile_sha256": "390c7eb960c1d8e9e1a438910cbc647c1b22a821a07373d71392adb28f726f68",
+    "mapping_review_required": false,
+    "membership_evidence": {
+      "broad_families": {
+        "electronic": [
+          "label-03",
+          "label-06"
+        ],
+        "pop": [
+          "label-01",
+          "label-04"
+        ],
+        "rnb_soul": [
+          "label-02",
+          "label-05"
+        ]
+      },
+      "scene_contexts": {},
+      "style_neighborhoods": {
+        "dance_pop": [
+          "label-04"
+        ],
+        "disco_related": [
+          "label-06"
+        ],
+        "modern_rnb": [
+          "label-05"
+        ],
+        "pop_electronic": [
+          "label-04"
+        ]
+      }
+    },
+    "pilot_id": "A09",
+    "raw_genre_labels": {
+      "primary_family": "Pop",
+      "primary_style": "Dance-Pop",
+      "secondary_families": [
+        "R&B",
+        "Electronic"
+      ],
+      "secondary_styles": [
+        "Contemporary R&B",
+        "Nu-Disco"
+      ]
+    },
+    "review_context_not_mapper_inputs": {
+      "assistant_review_note": "Context/classification-review question: the owner included K-Pop, but the current Gemini profile did not. Do not infer scene membership from the artist or owner note. Contemporary R&B is shared wording; Nu-Disco / Dance-Pop remain model claims for inspection.",
+      "classification_review_suggested": true,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "older_ontology_arm_labels_not_mapper_inputs": {
+        "family": "pop",
+        "styles": "dance_pop; indie_pop"
+      },
+      "owner_classification_decision": "",
+      "owner_first_pass_verbatim": "kpop contemporary rnb",
+      "owner_followup_on_earlier_ontology_arm": "",
+      "owner_mapping_decision": "",
+      "owner_review_notes": "",
+      "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED"
+    },
+    "scene_contexts": [],
+    "song": "Perfect Night — LE SSERAFIM",
+    "source_profile": "reports/gemini_style_pilot/v1/free_genre_v1/profiles/A09.json",
+    "spotify_track_id": "74X2u8JMVooG2QbjRxXwR8",
+    "style_neighborhoods": [
+      "dance_pop",
+      "disco_related",
+      "modern_rnb",
+      "pop_electronic"
+    ],
+    "trace": [
+      {
+        "broad_families": [
+          "pop"
+        ],
+        "canonical_concept_id": "pop",
+        "canonical_label": "Pop",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "pop",
+        "note": "",
+        "raw_label": "Pop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_family",
+        "style_neighborhoods": [],
+        "trace_id": "label-01"
+      },
+      {
+        "broad_families": [
+          "rnb_soul"
+        ],
+        "canonical_concept_id": "rnb",
+        "canonical_label": "R&B",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "r and b",
+        "note": "R&B stays its own canonical concept; the broad family is a joint umbrella, not a synonym for soul.",
+        "raw_label": "R&B",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[0]",
+        "style_neighborhoods": [],
+        "trace_id": "label-02"
+      },
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "electronic",
+        "canonical_label": "Electronic",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "electronic",
+        "note": "",
+        "raw_label": "Electronic",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[1]",
+        "style_neighborhoods": [],
+        "trace_id": "label-03"
+      },
+      {
+        "broad_families": [
+          "pop"
+        ],
+        "canonical_concept_id": "dance_pop",
+        "canonical_label": "Dance-pop",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "dance pop",
+        "note": "Electronic-pop neighborhood is a stylistic adjacency, not an instrumentation assertion or automatic electronic family.",
+        "raw_label": "Dance-Pop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_style",
+        "style_neighborhoods": [
+          "pop_electronic",
+          "dance_pop"
+        ],
+        "trace_id": "label-04"
+      },
+      {
+        "broad_families": [
+          "rnb_soul"
+        ],
+        "canonical_concept_id": "contemporary_rnb",
+        "canonical_label": "Contemporary R&B",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "contemporary r and b",
+        "note": "",
+        "raw_label": "Contemporary R&B",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[0]",
+        "style_neighborhoods": [
+          "modern_rnb"
+        ],
+        "trace_id": "label-05"
+      },
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "nu_disco",
+        "canonical_label": "Nu-disco",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "nu disco",
+        "note": "",
+        "raw_label": "Nu-Disco",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[1]",
+        "style_neighborhoods": [
+          "disco_related"
+        ],
+        "trace_id": "label-06"
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "broad_families": [
+      "electronic",
+      "pop",
+      "rnb_soul"
+    ],
+    "canonical_labels": [
+      {
+        "id": "pop",
+        "label": "Pop",
+        "trace_ids": [
+          "label-01"
+        ]
+      },
+      {
+        "id": "rnb_soul_umbrella",
+        "label": "R&B and Soul",
+        "trace_ids": [
+          "label-02"
+        ]
+      },
+      {
+        "id": "dance_unspecified",
+        "label": "Dance",
+        "trace_ids": [
+          "label-03"
+        ]
+      },
+      {
+        "id": "k_pop",
+        "label": "K-Pop",
+        "trace_ids": [
+          "label-04"
+        ]
+      },
+      {
+        "id": "contemporary_rnb",
+        "label": "Contemporary R&B",
+        "trace_ids": [
+          "label-05"
+        ]
+      },
+      {
+        "id": "synth_pop",
+        "label": "Synth-pop",
+        "trace_ids": [
+          "label-06"
+        ]
+      }
+    ],
+    "gemini_certainty_display_only": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "gemini_context_display_only": {
+      "arrangement_focus": "lead_vocal",
+      "texture_tags": [
+        "electronic",
+        "clean",
+        "layered"
+      ],
+      "vocal_role": "mixed_rap_and_singing"
+    },
+    "gemini_status": "classified",
+    "has_unresolved_labels": false,
+    "input_profile_sha256": "bd8bb0e5a6f52232dd7be385e02e255c18b9370bea66edfab8089c94e5f72b6e",
+    "mapping_review_required": true,
+    "membership_evidence": {
+      "broad_families": {
+        "electronic": [
+          "label-06"
+        ],
+        "pop": [
+          "label-01",
+          "label-06"
+        ],
+        "rnb_soul": [
+          "label-02",
+          "label-05"
+        ]
+      },
+      "scene_contexts": {
+        "korean_pop_scene": [
+          "label-04"
+        ]
+      },
+      "style_neighborhoods": {
+        "modern_rnb": [
+          "label-05"
+        ],
+        "pop_electronic": [
+          "label-06"
+        ],
+        "synth_pop": [
+          "label-06"
+        ]
+      }
+    },
+    "pilot_id": "A10",
+    "raw_genre_labels": {
+      "primary_family": "Pop",
+      "primary_style": "K-Pop",
+      "secondary_families": [
+        "R&B and Soul",
+        "Dance"
+      ],
+      "secondary_styles": [
+        "Contemporary R&B",
+        "Synth-Pop"
+      ]
+    },
+    "review_context_not_mapper_inputs": {
+      "assistant_review_note": "K-Pop is stored separately as scene/context. Contemporary R&B and Synth-Pop supply sonic neighborhoods. Bare Dance is ambiguous and contributes no guessed EDM/dance-pop membership. Do not infer hip-hop from mixed rap/singing context or owner wording.",
+      "classification_review_suggested": false,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "older_ontology_arm_labels_not_mapper_inputs": {
+        "family": "pop",
+        "styles": "pop_rnb; dance_pop"
+      },
+      "owner_classification_decision": "",
+      "owner_first_pass_verbatim": "kpop hip hop contemporary rnb",
+      "owner_followup_on_earlier_ontology_arm": "",
+      "owner_mapping_decision": "",
+      "owner_review_notes": "",
+      "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED"
+    },
+    "scene_contexts": [
+      "korean_pop_scene"
+    ],
+    "song": "OMG — NewJeans",
+    "source_profile": "reports/gemini_style_pilot/v1/free_genre_v1/profiles/A10.json",
+    "spotify_track_id": "65FftemJ1DbbZ45DUfHJXE",
+    "style_neighborhoods": [
+      "modern_rnb",
+      "pop_electronic",
+      "synth_pop"
+    ],
+    "trace": [
+      {
+        "broad_families": [
+          "pop"
+        ],
+        "canonical_concept_id": "pop",
+        "canonical_label": "Pop",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "pop",
+        "note": "",
+        "raw_label": "Pop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_family",
+        "style_neighborhoods": [],
+        "trace_id": "label-01"
+      },
+      {
+        "broad_families": [
+          "rnb_soul"
+        ],
+        "canonical_concept_id": "rnb_soul_umbrella",
+        "canonical_label": "R&B and Soul",
+        "kind": "family_umbrella",
+        "mapping_status": "mapped",
+        "normalized_lookup": "r and b and soul",
+        "note": "Combined family label preserved as an umbrella; not split into two independently predicted genres.",
+        "raw_label": "R&B and Soul",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[0]",
+        "style_neighborhoods": [],
+        "trace_id": "label-02"
+      },
+      {
+        "broad_families": [],
+        "canonical_concept_id": "dance_unspecified",
+        "canonical_label": "Dance",
+        "kind": "ambiguous_umbrella",
+        "mapping_status": "mapping_review_required",
+        "normalized_lookup": "dance",
+        "note": "Bare dance label does not distinguish function, dance-pop, or electronic dance music.",
+        "raw_label": "Dance",
+        "review_candidates": [
+          "dance/listening function",
+          "dance-pop",
+          "electronic dance music"
+        ],
+        "scene_contexts": [],
+        "source_path": "secondary_families[1]",
+        "style_neighborhoods": [],
+        "trace_id": "label-03"
+      },
+      {
+        "broad_families": [],
+        "canonical_concept_id": "k_pop",
+        "canonical_label": "K-Pop",
+        "kind": "scene_context",
+        "mapping_status": "mapped",
+        "normalized_lookup": "k pop",
+        "note": "Context only. No sonic neighborhood or broad family follows solely from the scene label.",
+        "raw_label": "K-Pop",
+        "review_candidates": [],
+        "scene_contexts": [
+          "korean_pop_scene"
+        ],
+        "source_path": "primary_style",
+        "style_neighborhoods": [],
+        "trace_id": "label-04"
+      },
+      {
+        "broad_families": [
+          "rnb_soul"
+        ],
+        "canonical_concept_id": "contemporary_rnb",
+        "canonical_label": "Contemporary R&B",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "contemporary r and b",
+        "note": "",
+        "raw_label": "Contemporary R&B",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[0]",
+        "style_neighborhoods": [
+          "modern_rnb"
+        ],
+        "trace_id": "label-05"
+      },
+      {
+        "broad_families": [
+          "pop",
+          "electronic"
+        ],
+        "canonical_concept_id": "synth_pop",
+        "canonical_label": "Synth-pop",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "synth pop",
+        "note": "",
+        "raw_label": "Synth-Pop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[1]",
+        "style_neighborhoods": [
+          "pop_electronic",
+          "synth_pop"
+        ],
+        "trace_id": "label-06"
+      }
+    ],
+    "warnings": [
+      {
+        "code": "mapping_review_required",
+        "message": "Bare dance label does not distinguish function, dance-pop, or electronic dance music.",
+        "trace_id": "label-03"
+      },
+      {
+        "code": "context_separate_from_sonic_style",
+        "message": "Context only. No sonic neighborhood or broad family follows solely from the scene label.",
+        "trace_id": "label-04"
+      }
+    ]
+  },
+  {
+    "broad_families": [
+      "electronic"
+    ],
+    "canonical_labels": [
+      {
+        "id": "electronic",
+        "label": "Electronic",
+        "trace_ids": [
+          "label-01"
+        ]
+      },
+      {
+        "id": "ambient",
+        "label": "Ambient",
+        "trace_ids": [
+          "label-02"
+        ]
+      },
+      {
+        "id": "minimal_techno",
+        "label": "Minimal techno",
+        "trace_ids": [
+          "label-03"
+        ]
+      },
+      {
+        "id": "dub_techno",
+        "label": "Dub techno",
+        "trace_ids": [
+          "label-04"
+        ]
+      },
+      {
+        "id": "microhouse",
+        "label": "Microhouse",
+        "trace_ids": [
+          "label-05"
+        ]
+      }
+    ],
+    "gemini_certainty_display_only": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "gemini_context_display_only": {
+      "arrangement_focus": "beat_or_instrumental",
+      "texture_tags": [
+        "electronic",
+        "sample_based",
+        "clean"
+      ],
+      "vocal_role": "vocal_samples_only"
+    },
+    "gemini_status": "classified",
+    "has_unresolved_labels": false,
+    "input_profile_sha256": "70852fef238c2b1eda7ddbd60c6681643a9547bd9a5b92dee312770fcd893a7f",
+    "mapping_review_required": false,
+    "membership_evidence": {
+      "broad_families": {
+        "electronic": [
+          "label-01",
+          "label-03",
+          "label-04",
+          "label-05"
+        ]
+      },
+      "scene_contexts": {},
+      "style_neighborhoods": {
+        "ambient_related": [
+          "label-02"
+        ],
+        "dub_electronic": [
+          "label-04"
+        ],
+        "house_related": [
+          "label-05"
+        ],
+        "minimal_club": [
+          "label-03",
+          "label-05"
+        ],
+        "techno_related": [
+          "label-03",
+          "label-04"
+        ]
+      }
+    },
+    "pilot_id": "C01",
+    "raw_genre_labels": {
+      "primary_family": "electronic",
+      "primary_style": "minimal techno",
+      "secondary_families": [
+        "ambient"
+      ],
+      "secondary_styles": [
+        "dub techno",
+        "microhouse"
+      ]
+    },
+    "review_context_not_mapper_inputs": {
+      "assistant_review_note": "Classification-review priority: minimal techno / dub techno / microhouse differs from both the initial owner lo-fi wording and the older hyperpop/digicore profile. The owner later found the older hyperpop interpretation more plausible; that clarification does not endorse this new minimal-techno profile. Preserve all three positions. No automatic model-error or corrected-false-positive claim follows.",
+      "classification_review_suggested": true,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "older_ontology_arm_labels_not_mapper_inputs": {
+        "family": "pop",
+        "styles": "hyperpop; digicore; electropop"
+      },
+      "owner_classification_decision": "",
+      "owner_first_pass_verbatim": "lofi",
+      "owner_followup_on_earlier_ontology_arm": "Hyperpop label seems more plausible; not a full-profile approval.",
+      "owner_mapping_decision": "",
+      "owner_review_notes": "",
+      "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED"
+    },
+    "scene_contexts": [],
+    "song": "Saturation in Delay, Love in Anger — City Girl, tiffi",
+    "source_profile": "reports/gemini_style_pilot/v1/free_genre_v1/profiles/C01.json",
+    "spotify_track_id": "00njeQb198Lm7Jge2Rsrlg",
+    "style_neighborhoods": [
+      "ambient_related",
+      "dub_electronic",
+      "house_related",
+      "minimal_club",
+      "techno_related"
+    ],
+    "trace": [
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "electronic",
+        "canonical_label": "Electronic",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "electronic",
+        "note": "",
+        "raw_label": "electronic",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_family",
+        "style_neighborhoods": [],
+        "trace_id": "label-01"
+      },
+      {
+        "broad_families": [],
+        "canonical_concept_id": "ambient",
+        "canonical_label": "Ambient",
+        "kind": "style_umbrella",
+        "mapping_status": "mapped",
+        "normalized_lookup": "ambient",
+        "note": "Ambient may be electronic or acoustic; no broad family is guessed from this label alone.",
+        "raw_label": "ambient",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[0]",
+        "style_neighborhoods": [
+          "ambient_related"
+        ],
+        "trace_id": "label-02"
+      },
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "minimal_techno",
+        "canonical_label": "Minimal techno",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "minimal techno",
+        "note": "",
+        "raw_label": "minimal techno",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_style",
+        "style_neighborhoods": [
+          "techno_related",
+          "minimal_club"
+        ],
+        "trace_id": "label-03"
+      },
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "dub_techno",
+        "canonical_label": "Dub techno",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "dub techno",
+        "note": "",
+        "raw_label": "dub techno",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[0]",
+        "style_neighborhoods": [
+          "techno_related",
+          "dub_electronic"
+        ],
+        "trace_id": "label-04"
+      },
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "microhouse",
+        "canonical_label": "Microhouse",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "microhouse",
+        "note": "",
+        "raw_label": "microhouse",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[1]",
+        "style_neighborhoods": [
+          "house_related",
+          "minimal_club"
+        ],
+        "trace_id": "label-05"
+      }
+    ],
+    "warnings": [
+      {
+        "code": "style_concept_in_family_slot",
+        "message": "Resolve by explicit concept, not by the model field name; original slot retained.",
+        "trace_id": "label-02"
+      }
+    ]
+  },
+  {
+    "broad_families": [
+      "electronic",
+      "pop",
+      "rnb_soul"
+    ],
+    "canonical_labels": [
+      {
+        "id": "pop",
+        "label": "Pop",
+        "trace_ids": [
+          "label-01"
+        ]
+      },
+      {
+        "id": "electronic",
+        "label": "Electronic",
+        "trace_ids": [
+          "label-02"
+        ]
+      },
+      {
+        "id": "rnb",
+        "label": "R&B",
+        "trace_ids": [
+          "label-03"
+        ]
+      },
+      {
+        "id": "indie_pop",
+        "label": "Indie pop",
+        "trace_ids": [
+          "label-04"
+        ]
+      },
+      {
+        "id": "electropop",
+        "label": "Electropop",
+        "trace_ids": [
+          "label-05"
+        ]
+      },
+      {
+        "id": "alternative_rnb",
+        "label": "Alternative R&B",
+        "trace_ids": [
+          "label-06"
+        ]
+      }
+    ],
+    "gemini_certainty_display_only": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "gemini_context_display_only": {
+      "arrangement_focus": "lead_vocal",
+      "texture_tags": [
+        "electronic",
+        "clean",
+        "layered"
+      ],
+      "vocal_role": "sung_led"
+    },
+    "gemini_status": "classified",
+    "has_unresolved_labels": false,
+    "input_profile_sha256": "bbd39af64d47e0d639fb4d5844db1f8a66b8be003d61807a92a0424ece1d9b0f",
+    "mapping_review_required": false,
+    "membership_evidence": {
+      "broad_families": {
+        "electronic": [
+          "label-02",
+          "label-05"
+        ],
+        "pop": [
+          "label-01",
+          "label-04",
+          "label-05"
+        ],
+        "rnb_soul": [
+          "label-03",
+          "label-06"
+        ]
+      },
+      "scene_contexts": {},
+      "style_neighborhoods": {
+        "alternative_rnb": [
+          "label-06"
+        ],
+        "indie_pop_related": [
+          "label-04"
+        ],
+        "modern_rnb": [
+          "label-06"
+        ],
+        "pop_electronic": [
+          "label-05"
+        ]
+      }
+    },
+    "pilot_id": "C02",
+    "raw_genre_labels": {
+      "primary_family": "Pop",
+      "primary_style": "Indie Pop",
+      "secondary_families": [
+        "Electronic",
+        "R&B"
+      ],
+      "secondary_styles": [
+        "Electropop",
+        "Alternative R&B"
+      ]
+    },
+    "review_context_not_mapper_inputs": {
+      "assistant_review_note": "Classification-review question: the owner used lo-fi soft wording; the current model uses Indie Pop / Electropop / Alternative R&B. The mapper must not inject lo-fi. Its indie-pop neighborhood overlaps risk's explicit Dream Pop via a general genre relationship, not a pair-specific rule.",
+      "classification_review_suggested": true,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "older_ontology_arm_labels_not_mapper_inputs": {
+        "family": "rnb_soul",
+        "styles": "pop_rnb; contemporary_rnb"
+      },
+      "owner_classification_decision": "",
+      "owner_first_pass_verbatim": "lofi soft vibes",
+      "owner_followup_on_earlier_ontology_arm": "",
+      "owner_mapping_decision": "",
+      "owner_review_notes": "",
+      "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED"
+    },
+    "scene_contexts": [],
+    "song": "Sit Around — City Girl, tiffi",
+    "source_profile": "reports/gemini_style_pilot/v1/free_genre_v1/profiles/C02.json",
+    "spotify_track_id": "6pWqlKm9ugucgKNldCLigX",
+    "style_neighborhoods": [
+      "alternative_rnb",
+      "indie_pop_related",
+      "modern_rnb",
+      "pop_electronic"
+    ],
+    "trace": [
+      {
+        "broad_families": [
+          "pop"
+        ],
+        "canonical_concept_id": "pop",
+        "canonical_label": "Pop",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "pop",
+        "note": "",
+        "raw_label": "Pop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_family",
+        "style_neighborhoods": [],
+        "trace_id": "label-01"
+      },
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "electronic",
+        "canonical_label": "Electronic",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "electronic",
+        "note": "",
+        "raw_label": "Electronic",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[0]",
+        "style_neighborhoods": [],
+        "trace_id": "label-02"
+      },
+      {
+        "broad_families": [
+          "rnb_soul"
+        ],
+        "canonical_concept_id": "rnb",
+        "canonical_label": "R&B",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "r and b",
+        "note": "R&B stays its own canonical concept; the broad family is a joint umbrella, not a synonym for soul.",
+        "raw_label": "R&B",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[1]",
+        "style_neighborhoods": [],
+        "trace_id": "label-03"
+      },
+      {
+        "broad_families": [
+          "pop"
+        ],
+        "canonical_concept_id": "indie_pop",
+        "canonical_label": "Indie pop",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "indie pop",
+        "note": "Musical label, not evidence of an independent record contract; not automatically dreamy or lo-fi.",
+        "raw_label": "Indie Pop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_style",
+        "style_neighborhoods": [
+          "indie_pop_related"
+        ],
+        "trace_id": "label-04"
+      },
+      {
+        "broad_families": [
+          "pop",
+          "electronic"
+        ],
+        "canonical_concept_id": "electropop",
+        "canonical_label": "Electropop",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "electropop",
+        "note": "",
+        "raw_label": "Electropop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[0]",
+        "style_neighborhoods": [
+          "pop_electronic"
+        ],
+        "trace_id": "label-05"
+      },
+      {
+        "broad_families": [
+          "rnb_soul"
+        ],
+        "canonical_concept_id": "alternative_rnb",
+        "canonical_label": "Alternative R&B",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "alternative r and b",
+        "note": "",
+        "raw_label": "Alternative R&B",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[1]",
+        "style_neighborhoods": [
+          "modern_rnb",
+          "alternative_rnb"
+        ],
+        "trace_id": "label-06"
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "broad_families": [
+      "electronic",
+      "hip_hop",
+      "pop"
+    ],
+    "canonical_labels": [
+      {
+        "id": "electronic",
+        "label": "Electronic",
+        "trace_ids": [
+          "label-01"
+        ]
+      },
+      {
+        "id": "pop",
+        "label": "Pop",
+        "trace_ids": [
+          "label-02"
+        ]
+      },
+      {
+        "id": "downtempo",
+        "label": "Downtempo",
+        "trace_ids": [
+          "label-03",
+          "label-05"
+        ]
+      },
+      {
+        "id": "trip_hop",
+        "label": "Trip-hop",
+        "trace_ids": [
+          "label-04"
+        ]
+      },
+      {
+        "id": "dream_pop",
+        "label": "Dream pop",
+        "trace_ids": [
+          "label-06"
+        ]
+      }
+    ],
+    "gemini_certainty_display_only": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "gemini_context_display_only": {
+      "arrangement_focus": "lead_vocal",
+      "texture_tags": [
+        "electronic",
+        "hazy",
+        "layered"
+      ],
+      "vocal_role": "sung_led"
+    },
+    "gemini_status": "classified",
+    "has_unresolved_labels": false,
+    "input_profile_sha256": "eab65cca3b97c8cdc432306f2a6ff101af3a82a88e4313ae1b6836288f2fc604",
+    "mapping_review_required": false,
+    "membership_evidence": {
+      "broad_families": {
+        "electronic": [
+          "label-01",
+          "label-03",
+          "label-04",
+          "label-05"
+        ],
+        "hip_hop": [
+          "label-04"
+        ],
+        "pop": [
+          "label-02",
+          "label-06"
+        ]
+      },
+      "scene_contexts": {},
+      "style_neighborhoods": {
+        "atmospheric_pop": [
+          "label-06"
+        ],
+        "downtempo_related": [
+          "label-03",
+          "label-04",
+          "label-05"
+        ],
+        "hip_hop_beat_lineage": [
+          "label-04"
+        ],
+        "indie_pop_related": [
+          "label-06"
+        ]
+      }
+    },
+    "pilot_id": "C03",
+    "raw_genre_labels": {
+      "primary_family": "Electronic",
+      "primary_style": "Trip Hop",
+      "secondary_families": [
+        "Pop",
+        "Downtempo"
+      ],
+      "secondary_styles": [
+        "Downtempo",
+        "Dream Pop"
+      ]
+    },
+    "review_context_not_mapper_inputs": {
+      "assistant_review_note": "Downtempo occurs in both a family and style slot: retain both traces, deduplicate membership without extra weight. Trip Hop adds hip-hop lineage, not a rap-vocal claim. Dream Pop supplies indie-pop / atmospheric-pop memberships; no bedroom-pop label is invented.",
+      "classification_review_suggested": false,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "older_ontology_arm_labels_not_mapper_inputs": {
+        "family": "rnb_soul",
+        "styles": "alternative_rnb; contemporary_rnb; ambient"
+      },
+      "owner_classification_decision": "",
+      "owner_first_pass_verbatim": "dreamy whisper dream pop bedroom pop",
+      "owner_followup_on_earlier_ontology_arm": "",
+      "owner_mapping_decision": "",
+      "owner_review_notes": "",
+      "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED"
+    },
+    "scene_contexts": [],
+    "song": "risk — lace",
+    "source_profile": "reports/gemini_style_pilot/v1/free_genre_v1/profiles/C03.json",
+    "spotify_track_id": "2js0td9w2MzNUVPlMKYOEs",
+    "style_neighborhoods": [
+      "atmospheric_pop",
+      "downtempo_related",
+      "hip_hop_beat_lineage",
+      "indie_pop_related"
+    ],
+    "trace": [
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "electronic",
+        "canonical_label": "Electronic",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "electronic",
+        "note": "",
+        "raw_label": "Electronic",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_family",
+        "style_neighborhoods": [],
+        "trace_id": "label-01"
+      },
+      {
+        "broad_families": [
+          "pop"
+        ],
+        "canonical_concept_id": "pop",
+        "canonical_label": "Pop",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "pop",
+        "note": "",
+        "raw_label": "Pop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[0]",
+        "style_neighborhoods": [],
+        "trace_id": "label-02"
+      },
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "downtempo",
+        "canonical_label": "Downtempo",
+        "kind": "style_umbrella",
+        "mapping_status": "mapped",
+        "normalized_lookup": "downtempo",
+        "note": "A style-level umbrella even when Gemini puts it in a family slot; not a BPM measurement.",
+        "raw_label": "Downtempo",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[1]",
+        "style_neighborhoods": [
+          "downtempo_related"
+        ],
+        "trace_id": "label-03"
+      },
+      {
+        "broad_families": [
+          "electronic",
+          "hip_hop"
+        ],
+        "canonical_concept_id": "trip_hop",
+        "canonical_label": "Trip-hop",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "trip hop",
+        "note": "Hip-hop membership denotes lineage, not rap-led vocals or automatic compatibility with rap.",
+        "raw_label": "Trip Hop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_style",
+        "style_neighborhoods": [
+          "hip_hop_beat_lineage",
+          "downtempo_related"
+        ],
+        "trace_id": "label-04"
+      },
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "downtempo",
+        "canonical_label": "Downtempo",
+        "kind": "style_umbrella",
+        "mapping_status": "mapped",
+        "normalized_lookup": "downtempo",
+        "note": "A style-level umbrella even when Gemini puts it in a family slot; not a BPM measurement.",
+        "raw_label": "Downtempo",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[0]",
+        "style_neighborhoods": [
+          "downtempo_related"
+        ],
+        "trace_id": "label-05"
+      },
+      {
+        "broad_families": [
+          "pop"
+        ],
+        "canonical_concept_id": "dream_pop",
+        "canonical_label": "Dream pop",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "dream pop",
+        "note": "Operational non-exhaustive pop membership. Does not instantiate a rock family or infer guitar instrumentation without further labels.",
+        "raw_label": "Dream Pop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[1]",
+        "style_neighborhoods": [
+          "indie_pop_related",
+          "atmospheric_pop"
+        ],
+        "trace_id": "label-06"
+      }
+    ],
+    "warnings": [
+      {
+        "code": "style_concept_in_family_slot",
+        "message": "Resolve by explicit concept, not by the model field name; original slot retained.",
+        "trace_id": "label-03"
+      },
+      {
+        "code": "repeated_concept_not_extra_weight",
+        "message": "All raw occurrences retained; one set membership, no extra vote or confidence.",
+        "trace_ids": [
+          "label-03",
+          "label-05"
+        ]
+      }
+    ]
+  },
+  {
+    "broad_families": [
+      "hip_hop",
+      "pop",
+      "rnb_soul"
+    ],
+    "canonical_labels": [
+      {
+        "id": "hip_hop",
+        "label": "Hip-hop",
+        "trace_ids": [
+          "label-01"
+        ]
+      },
+      {
+        "id": "pop",
+        "label": "Pop",
+        "trace_ids": [
+          "label-02"
+        ]
+      },
+      {
+        "id": "rnb",
+        "label": "R&B",
+        "trace_ids": [
+          "label-03"
+        ]
+      },
+      {
+        "id": "trap",
+        "label": "Trap",
+        "trace_ids": [
+          "label-04"
+        ]
+      },
+      {
+        "id": "emo_rap",
+        "label": "Emo rap",
+        "trace_ids": [
+          "label-05"
+        ]
+      },
+      {
+        "id": "melodic_rap",
+        "label": "Melodic rap",
+        "trace_ids": [
+          "label-06"
+        ]
+      }
+    ],
+    "gemini_certainty_display_only": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "gemini_context_display_only": {
+      "arrangement_focus": "lead_vocal",
+      "texture_tags": [
+        "electronic",
+        "layered",
+        "sample_based"
+      ],
+      "vocal_role": "mixed_rap_and_singing"
+    },
+    "gemini_status": "classified",
+    "has_unresolved_labels": false,
+    "input_profile_sha256": "bf346d88c7e42e07e059073f46d665afe817fecd290ab73cc9b46209a94b4ff1",
+    "mapping_review_required": false,
+    "membership_evidence": {
+      "broad_families": {
+        "hip_hop": [
+          "label-01",
+          "label-05",
+          "label-06"
+        ],
+        "pop": [
+          "label-02"
+        ],
+        "rnb_soul": [
+          "label-03"
+        ]
+      },
+      "scene_contexts": {},
+      "style_neighborhoods": {
+        "emo_rap": [
+          "label-05"
+        ],
+        "melodic_rap": [
+          "label-06"
+        ],
+        "trap_related": [
+          "label-04"
+        ]
+      }
+    },
+    "pilot_id": "C04",
+    "raw_genre_labels": {
+      "primary_family": "Hip Hop",
+      "primary_style": "Trap",
+      "secondary_families": [
+        "Pop",
+        "R&B"
+      ],
+      "secondary_styles": [
+        "Emo Rap",
+        "Melodic Rap"
+      ]
+    },
+    "review_context_not_mapper_inputs": {
+      "assistant_review_note": "Classification-review priority: owner electronic hyperpop versus the newer Trap / Emo Rap / Melodic Rap profile. Preserve the discrepancy. A shared trap-related label with The Peace is an exploratory model signal only, not owner-confirmed genre truth.",
+      "classification_review_suggested": true,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "older_ontology_arm_labels_not_mapper_inputs": {
+        "family": "electronic",
+        "styles": "digicore; hyperpop"
+      },
+      "owner_classification_decision": "",
+      "owner_first_pass_verbatim": "electronic hyperpop",
+      "owner_followup_on_earlier_ontology_arm": "",
+      "owner_mapping_decision": "",
+      "owner_review_notes": "",
+      "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED"
+    },
+    "scene_contexts": [],
+    "song": "boys dont cry — sysmint",
+    "source_profile": "reports/gemini_style_pilot/v1/free_genre_v1/profiles/C04.json",
+    "spotify_track_id": "1ON9XudZFxwu43tQXBszIX",
+    "style_neighborhoods": [
+      "emo_rap",
+      "melodic_rap",
+      "trap_related"
+    ],
+    "trace": [
+      {
+        "broad_families": [
+          "hip_hop"
+        ],
+        "canonical_concept_id": "hip_hop",
+        "canonical_label": "Hip-hop",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "hip hop",
+        "note": "",
+        "raw_label": "Hip Hop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_family",
+        "style_neighborhoods": [],
+        "trace_id": "label-01"
+      },
+      {
+        "broad_families": [
+          "pop"
+        ],
+        "canonical_concept_id": "pop",
+        "canonical_label": "Pop",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "pop",
+        "note": "",
+        "raw_label": "Pop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[0]",
+        "style_neighborhoods": [],
+        "trace_id": "label-02"
+      },
+      {
+        "broad_families": [
+          "rnb_soul"
+        ],
+        "canonical_concept_id": "rnb",
+        "canonical_label": "R&B",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "r and b",
+        "note": "R&B stays its own canonical concept; the broad family is a joint umbrella, not a synonym for soul.",
+        "raw_label": "R&B",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[1]",
+        "style_neighborhoods": [],
+        "trace_id": "label-03"
+      },
+      {
+        "broad_families": [],
+        "canonical_concept_id": "trap",
+        "canonical_label": "Trap",
+        "kind": "style_umbrella",
+        "mapping_status": "mapped",
+        "normalized_lookup": "trap",
+        "note": "Subtype unspecified. Do not derive a hip-hop or electronic family from this label alone.",
+        "raw_label": "Trap",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_style",
+        "style_neighborhoods": [
+          "trap_related"
+        ],
+        "trace_id": "label-04"
+      },
+      {
+        "broad_families": [
+          "hip_hop"
+        ],
+        "canonical_concept_id": "emo_rap",
+        "canonical_label": "Emo rap",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "emo rap",
+        "note": "",
+        "raw_label": "Emo Rap",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[0]",
+        "style_neighborhoods": [
+          "emo_rap"
+        ],
+        "trace_id": "label-05"
+      },
+      {
+        "broad_families": [
+          "hip_hop"
+        ],
+        "canonical_concept_id": "melodic_rap",
+        "canonical_label": "Melodic rap",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "melodic rap",
+        "note": "",
+        "raw_label": "Melodic Rap",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[1]",
+        "style_neighborhoods": [
+          "melodic_rap"
+        ],
+        "trace_id": "label-06"
+      }
+    ],
+    "warnings": [
+      {
+        "code": "broad_style_subtype_unspecified",
+        "message": "Subtype unspecified. Do not derive a hip-hop or electronic family from this label alone.",
+        "trace_id": "label-04"
+      }
+    ]
+  },
+  {
+    "broad_families": [
+      "hip_hop",
+      "pop",
+      "rnb_soul"
+    ],
+    "canonical_labels": [
+      {
+        "id": "rnb_soul_umbrella",
+        "label": "R&B and Soul",
+        "trace_ids": [
+          "label-01"
+        ]
+      },
+      {
+        "id": "hip_hop",
+        "label": "Hip-hop",
+        "trace_ids": [
+          "label-02"
+        ]
+      },
+      {
+        "id": "pop",
+        "label": "Pop",
+        "trace_ids": [
+          "label-03"
+        ]
+      },
+      {
+        "id": "contemporary_rnb",
+        "label": "Contemporary R&B",
+        "trace_ids": [
+          "label-04"
+        ]
+      },
+      {
+        "id": "trap",
+        "label": "Trap",
+        "trace_ids": [
+          "label-05"
+        ]
+      },
+      {
+        "id": "alternative_rnb",
+        "label": "Alternative R&B",
+        "trace_ids": [
+          "label-06"
+        ]
+      }
+    ],
+    "gemini_certainty_display_only": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "gemini_context_display_only": {
+      "arrangement_focus": "lead_vocal",
+      "texture_tags": [
+        "sample_based",
+        "electronic",
+        "layered"
+      ],
+      "vocal_role": "sung_led"
+    },
+    "gemini_status": "classified",
+    "has_unresolved_labels": false,
+    "input_profile_sha256": "0ba2bf5e52e854dc1f9b2fa205e901b817bea337c9483ed142f43b957375b64e",
+    "mapping_review_required": false,
+    "membership_evidence": {
+      "broad_families": {
+        "hip_hop": [
+          "label-02"
+        ],
+        "pop": [
+          "label-03"
+        ],
+        "rnb_soul": [
+          "label-01",
+          "label-04",
+          "label-06"
+        ]
+      },
+      "scene_contexts": {},
+      "style_neighborhoods": {
+        "alternative_rnb": [
+          "label-06"
+        ],
+        "modern_rnb": [
+          "label-04",
+          "label-06"
+        ],
+        "trap_related": [
+          "label-05"
+        ]
+      }
+    },
+    "pilot_id": "C05",
+    "raw_genre_labels": {
+      "primary_family": "R&B and Soul",
+      "primary_style": "Contemporary R&B",
+      "secondary_families": [
+        "Hip-Hop",
+        "Pop"
+      ],
+      "secondary_styles": [
+        "Trap",
+        "Alternative R&B"
+      ]
+    },
+    "review_context_not_mapper_inputs": {
+      "assistant_review_note": "Classification-review priority: owner alt-pop ballad / hyperpop versus current Contemporary R&B / Trap / Alternative R&B. Do not replace those labels to agree with the owner. The pairing with boys dont cry is owner-specific exploration without a new numeric or confirmatory genre label.",
+      "classification_review_suggested": true,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "older_ontology_arm_labels_not_mapper_inputs": {
+        "family": "rnb_soul",
+        "styles": "contemporary_rnb; pop_rnb; alternative_rnb"
+      },
+      "owner_classification_decision": "",
+      "owner_first_pass_verbatim": "alt pop ballad hyperpop",
+      "owner_followup_on_earlier_ontology_arm": "",
+      "owner_mapping_decision": "",
+      "owner_review_notes": "",
+      "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED"
+    },
+    "scene_contexts": [],
+    "song": "The Peace — underscores",
+    "source_profile": "reports/gemini_style_pilot/v1/free_genre_v1/profiles/C05.json",
+    "spotify_track_id": "6wm3t4VpTxSFfOUgTMlHZM",
+    "style_neighborhoods": [
+      "alternative_rnb",
+      "modern_rnb",
+      "trap_related"
+    ],
+    "trace": [
+      {
+        "broad_families": [
+          "rnb_soul"
+        ],
+        "canonical_concept_id": "rnb_soul_umbrella",
+        "canonical_label": "R&B and Soul",
+        "kind": "family_umbrella",
+        "mapping_status": "mapped",
+        "normalized_lookup": "r and b and soul",
+        "note": "Combined family label preserved as an umbrella; not split into two independently predicted genres.",
+        "raw_label": "R&B and Soul",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_family",
+        "style_neighborhoods": [],
+        "trace_id": "label-01"
+      },
+      {
+        "broad_families": [
+          "hip_hop"
+        ],
+        "canonical_concept_id": "hip_hop",
+        "canonical_label": "Hip-hop",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "hip hop",
+        "note": "",
+        "raw_label": "Hip-Hop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[0]",
+        "style_neighborhoods": [],
+        "trace_id": "label-02"
+      },
+      {
+        "broad_families": [
+          "pop"
+        ],
+        "canonical_concept_id": "pop",
+        "canonical_label": "Pop",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "pop",
+        "note": "",
+        "raw_label": "Pop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[1]",
+        "style_neighborhoods": [],
+        "trace_id": "label-03"
+      },
+      {
+        "broad_families": [
+          "rnb_soul"
+        ],
+        "canonical_concept_id": "contemporary_rnb",
+        "canonical_label": "Contemporary R&B",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "contemporary r and b",
+        "note": "",
+        "raw_label": "Contemporary R&B",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_style",
+        "style_neighborhoods": [
+          "modern_rnb"
+        ],
+        "trace_id": "label-04"
+      },
+      {
+        "broad_families": [],
+        "canonical_concept_id": "trap",
+        "canonical_label": "Trap",
+        "kind": "style_umbrella",
+        "mapping_status": "mapped",
+        "normalized_lookup": "trap",
+        "note": "Subtype unspecified. Do not derive a hip-hop or electronic family from this label alone.",
+        "raw_label": "Trap",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[0]",
+        "style_neighborhoods": [
+          "trap_related"
+        ],
+        "trace_id": "label-05"
+      },
+      {
+        "broad_families": [
+          "rnb_soul"
+        ],
+        "canonical_concept_id": "alternative_rnb",
+        "canonical_label": "Alternative R&B",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "alternative r and b",
+        "note": "",
+        "raw_label": "Alternative R&B",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[1]",
+        "style_neighborhoods": [
+          "modern_rnb",
+          "alternative_rnb"
+        ],
+        "trace_id": "label-06"
+      }
+    ],
+    "warnings": [
+      {
+        "code": "broad_style_subtype_unspecified",
+        "message": "Subtype unspecified. Do not derive a hip-hop or electronic family from this label alone.",
+        "trace_id": "label-05"
+      }
+    ]
+  },
+  {
+    "broad_families": [
+      "electronic",
+      "pop",
+      "rnb_soul"
+    ],
+    "canonical_labels": [
+      {
+        "id": "pop",
+        "label": "Pop",
+        "trace_ids": [
+          "label-01"
+        ]
+      },
+      {
+        "id": "rnb",
+        "label": "R&B",
+        "trace_ids": [
+          "label-02"
+        ]
+      },
+      {
+        "id": "electronic",
+        "label": "Electronic",
+        "trace_ids": [
+          "label-03"
+        ]
+      },
+      {
+        "id": "dance_pop",
+        "label": "Dance-pop",
+        "trace_ids": [
+          "label-04"
+        ]
+      },
+      {
+        "id": "nu_disco",
+        "label": "Nu-disco",
+        "trace_ids": [
+          "label-05"
+        ]
+      },
+      {
+        "id": "synth_pop",
+        "label": "Synth-pop",
+        "trace_ids": [
+          "label-06"
+        ]
+      }
+    ],
+    "gemini_certainty_display_only": {
+      "family": "clear",
+      "style": "clear"
+    },
+    "gemini_context_display_only": {
+      "arrangement_focus": "lead_vocal",
+      "texture_tags": [
+        "electronic",
+        "clean",
+        "layered"
+      ],
+      "vocal_role": "sung_led"
+    },
+    "gemini_status": "classified",
+    "has_unresolved_labels": false,
+    "input_profile_sha256": "0451a452dc366a3dfee1b34fdc79785169bf415e9b05f48beed718ea4a3309d4",
+    "mapping_review_required": false,
+    "membership_evidence": {
+      "broad_families": {
+        "electronic": [
+          "label-03",
+          "label-05",
+          "label-06"
+        ],
+        "pop": [
+          "label-01",
+          "label-04",
+          "label-06"
+        ],
+        "rnb_soul": [
+          "label-02"
+        ]
+      },
+      "scene_contexts": {},
+      "style_neighborhoods": {
+        "dance_pop": [
+          "label-04"
+        ],
+        "disco_related": [
+          "label-05"
+        ],
+        "pop_electronic": [
+          "label-04",
+          "label-06"
+        ],
+        "synth_pop": [
+          "label-06"
+        ]
+      }
+    },
+    "pilot_id": "C06",
+    "raw_genre_labels": {
+      "primary_family": "Pop",
+      "primary_style": "Dance-Pop",
+      "secondary_families": [
+        "R&B",
+        "Electronic"
+      ],
+      "secondary_styles": [
+        "Nu-Disco",
+        "Synth-Pop"
+      ]
+    },
+    "review_context_not_mapper_inputs": {
+      "assistant_review_note": "Classification-review question: owner alt upbeat indie versus current Dance-Pop / Nu-Disco / Synth-Pop. The low-rated OMG pairing still shares pop/electronic-style neighborhoods; that is a compatibility limitation, not a reason to create a song exception.",
+      "classification_review_suggested": true,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "older_ontology_arm_labels_not_mapper_inputs": {
+        "family": "pop",
+        "styles": "dance_pop; synthpop"
+      },
+      "owner_classification_decision": "",
+      "owner_first_pass_verbatim": "alt upbeat indie",
+      "owner_followup_on_earlier_ontology_arm": "",
+      "owner_mapping_decision": "",
+      "owner_review_notes": "",
+      "owner_verdict_on_current_gemini_profile": "NOT_REVIEWED"
+    },
+    "scene_contexts": [],
+    "song": "Die Right Here — david hugo",
+    "source_profile": "reports/gemini_style_pilot/v1/free_genre_v1/profiles/C06.json",
+    "spotify_track_id": "7fXYFuCTmNrYRGwEUUf5iz",
+    "style_neighborhoods": [
+      "dance_pop",
+      "disco_related",
+      "pop_electronic",
+      "synth_pop"
+    ],
+    "trace": [
+      {
+        "broad_families": [
+          "pop"
+        ],
+        "canonical_concept_id": "pop",
+        "canonical_label": "Pop",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "pop",
+        "note": "",
+        "raw_label": "Pop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_family",
+        "style_neighborhoods": [],
+        "trace_id": "label-01"
+      },
+      {
+        "broad_families": [
+          "rnb_soul"
+        ],
+        "canonical_concept_id": "rnb",
+        "canonical_label": "R&B",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "r and b",
+        "note": "R&B stays its own canonical concept; the broad family is a joint umbrella, not a synonym for soul.",
+        "raw_label": "R&B",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[0]",
+        "style_neighborhoods": [],
+        "trace_id": "label-02"
+      },
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "electronic",
+        "canonical_label": "Electronic",
+        "kind": "family",
+        "mapping_status": "mapped",
+        "normalized_lookup": "electronic",
+        "note": "",
+        "raw_label": "Electronic",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_families[1]",
+        "style_neighborhoods": [],
+        "trace_id": "label-03"
+      },
+      {
+        "broad_families": [
+          "pop"
+        ],
+        "canonical_concept_id": "dance_pop",
+        "canonical_label": "Dance-pop",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "dance pop",
+        "note": "Electronic-pop neighborhood is a stylistic adjacency, not an instrumentation assertion or automatic electronic family.",
+        "raw_label": "Dance-Pop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "primary_style",
+        "style_neighborhoods": [
+          "pop_electronic",
+          "dance_pop"
+        ],
+        "trace_id": "label-04"
+      },
+      {
+        "broad_families": [
+          "electronic"
+        ],
+        "canonical_concept_id": "nu_disco",
+        "canonical_label": "Nu-disco",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "nu disco",
+        "note": "",
+        "raw_label": "Nu-Disco",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[0]",
+        "style_neighborhoods": [
+          "disco_related"
+        ],
+        "trace_id": "label-05"
+      },
+      {
+        "broad_families": [
+          "pop",
+          "electronic"
+        ],
+        "canonical_concept_id": "synth_pop",
+        "canonical_label": "Synth-pop",
+        "kind": "style",
+        "mapping_status": "mapped",
+        "normalized_lookup": "synth pop",
+        "note": "",
+        "raw_label": "Synth-Pop",
+        "review_candidates": [],
+        "scene_contexts": [],
+        "source_path": "secondary_styles[1]",
+        "style_neighborhoods": [
+          "pop_electronic",
+          "synth_pop"
+        ],
+        "trace_id": "label-06"
+      }
+    ],
+    "warnings": []
+  }
+]
