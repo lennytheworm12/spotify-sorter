@@ -1,0 +1,118 @@
+{
+  "notes": [
+    {
+      "assistant_review_note": "Boom-bap and the lo-fi/chillhop labels share hip-hop beat lineage, while only explicit Boom Bap supplies the narrow boom_bap neighborhood. Conscious and East Coast tags stay context-only; neither is a synonym for boom-bap. The raw secondary R&B family remains present.",
+      "classification_review_suggested": false,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "pilot_id": "A01",
+      "spotify_track_id": "4tqcoej1zPvwePZCzuAjJd"
+    },
+    {
+      "assistant_review_note": "Trap and plugg overlap through a general trap-related neighborhood. Plugg is a model label, not newly owner-confirmed. No fast/aggressive property is inferred from the owner note or the genre labels.",
+      "classification_review_suggested": false,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "pilot_id": "A02",
+      "spotify_track_id": "2BJSMvOGABRxokHKB0OI8i"
+    },
+    {
+      "assistant_review_note": "Classification-review priority: the free-form Drum and Bass / Neurofunk / Dubstep prediction differs substantially from the owner first-pass lo-fi electronic/gamey description and the older ontology-constrained lo-fi profile. Mapping those literal labels into bass-electronic neighborhoods is not a mapper bug. Do not remap them to lo-fi to repair this song. Bass Music is independently an ambiguous umbrella requiring mapping review.",
+      "classification_review_suggested": true,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "pilot_id": "A03",
+      "spotify_track_id": "2Vu2hkPW7LxMHPqoMjSIEJ"
+    },
+    {
+      "assistant_review_note": "Lo-Fi Hip Hop normalizes to the same concept as Tea Time's lo_fi_hip_hop. Downtempo contributes its own neighborhood. Chillout remains an ambiguous context/style umbrella. No instrumental role is inferred from the genre map or copied vocal context.",
+      "classification_review_suggested": false,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "pilot_id": "A04",
+      "spotify_track_id": "7hFW5IN7mQ99PuO86r38Sf"
+    },
+    {
+      "assistant_review_note": "Alias normalization agrees with the other explicit lo-fi hip-hop example. The good Tea Time / Sit Around rating does not require equal mapped neighborhoods; do not broaden the mapper just to manufacture that overlap.",
+      "classification_review_suggested": false,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "pilot_id": "A05",
+      "spotify_track_id": "5sEeuhYWHNczuPKek1zJeG"
+    },
+    {
+      "assistant_review_note": "Classification-review question: the owner described dark alternative R&B, whereas Gemini foregrounds Trap / Pop Rap / Melodic Rap. Its explicit secondary R&B and Pop memberships are retained, yielding overlapping hip-hop / pop / R&B families. Do not insert Alternative R&B or a dark-mood attribute that Gemini did not label.",
+      "classification_review_suggested": true,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "pilot_id": "A06",
+      "spotify_track_id": "4LaZ8RpIP6DIgN73bXQVlO"
+    },
+    {
+      "assistant_review_note": "The current free-form profile has Contemporary R&B / Trap / Alternative R&B. The earlier owner objection to the original ontology-constrained hyperpop label is historical context, not a rejection of this newer free-form profile. Shared modern-R&B membership with Shouldn't Be preserves the different narrower styles.",
+      "classification_review_suggested": false,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "pilot_id": "A07",
+      "spotify_track_id": "7fBv7CLKzipRk6EC6TWHOB"
+    },
+    {
+      "assistant_review_note": "Contemporary R&B shares a broad neighborhood with The Hills, while Alt-Pop / Ambient Pop add different style memberships. The owner's soul wording is retained separately; it does not cause the mapper to append a Soul label.",
+      "classification_review_suggested": false,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "pilot_id": "A08",
+      "spotify_track_id": "7F6PtLP6fJPVtA1FWVkl8K"
+    },
+    {
+      "assistant_review_note": "Context/classification-review question: the owner included K-Pop, but the current Gemini profile did not. Do not infer scene membership from the artist or owner note. Contemporary R&B is shared wording; Nu-Disco / Dance-Pop remain model claims for inspection.",
+      "classification_review_suggested": true,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "pilot_id": "A09",
+      "spotify_track_id": "74X2u8JMVooG2QbjRxXwR8"
+    },
+    {
+      "assistant_review_note": "K-Pop is stored separately as scene/context. Contemporary R&B and Synth-Pop supply sonic neighborhoods. Bare Dance is ambiguous and contributes no guessed EDM/dance-pop membership. Do not infer hip-hop from mixed rap/singing context or owner wording.",
+      "classification_review_suggested": false,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "pilot_id": "A10",
+      "spotify_track_id": "65FftemJ1DbbZ45DUfHJXE"
+    },
+    {
+      "assistant_review_note": "Classification-review priority: minimal techno / dub techno / microhouse differs from both the initial owner lo-fi wording and the older hyperpop/digicore profile. The owner later found the older hyperpop interpretation more plausible; that clarification does not endorse this new minimal-techno profile. Preserve all three positions. No automatic model-error or corrected-false-positive claim follows.",
+      "classification_review_suggested": true,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "pilot_id": "C01",
+      "spotify_track_id": "00njeQb198Lm7Jge2Rsrlg"
+    },
+    {
+      "assistant_review_note": "Classification-review question: the owner used lo-fi soft wording; the current model uses Indie Pop / Electropop / Alternative R&B. The mapper must not inject lo-fi. Its indie-pop neighborhood overlaps risk's explicit Dream Pop via a general genre relationship, not a pair-specific rule.",
+      "classification_review_suggested": true,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "pilot_id": "C02",
+      "spotify_track_id": "6pWqlKm9ugucgKNldCLigX"
+    },
+    {
+      "assistant_review_note": "Downtempo occurs in both a family and style slot: retain both traces, deduplicate membership without extra weight. Trip Hop adds hip-hop lineage, not a rap-vocal claim. Dream Pop supplies indie-pop / atmospheric-pop memberships; no bedroom-pop label is invented.",
+      "classification_review_suggested": false,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "pilot_id": "C03",
+      "spotify_track_id": "2js0td9w2MzNUVPlMKYOEs"
+    },
+    {
+      "assistant_review_note": "Classification-review priority: owner electronic hyperpop versus the newer Trap / Emo Rap / Melodic Rap profile. Preserve the discrepancy. A shared trap-related label with The Peace is an exploratory model signal only, not owner-confirmed genre truth.",
+      "classification_review_suggested": true,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "pilot_id": "C04",
+      "spotify_track_id": "1ON9XudZFxwu43tQXBszIX"
+    },
+    {
+      "assistant_review_note": "Classification-review priority: owner alt-pop ballad / hyperpop versus current Contemporary R&B / Trap / Alternative R&B. Do not replace those labels to agree with the owner. The pairing with boys dont cry is owner-specific exploration without a new numeric or confirmatory genre label.",
+      "classification_review_suggested": true,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "pilot_id": "C05",
+      "spotify_track_id": "6wm3t4VpTxSFfOUgTMlHZM"
+    },
+    {
+      "assistant_review_note": "Classification-review question: owner alt upbeat indie versus current Dance-Pop / Nu-Disco / Synth-Pop. The low-rated OMG pairing still shares pop/electronic-style neighborhoods; that is a compatibility limitation, not a reason to create a song exception.",
+      "classification_review_suggested": true,
+      "note_type": "assistant comparison of frozen model labels and existing owner notes; not a new listening verdict",
+      "pilot_id": "C06",
+      "spotify_track_id": "7fXYFuCTmNrYRGwEUUf5iz"
+    }
+  ],
+  "purpose": "Post-mapping manual review commentary only. Never consumed by the label mapper.",
+  "scope_note": "Pray — City Girl, tiffi (2yQY2IzeQtUKanVo78Fg23) is in the original frozen 100 but not in the original 16-song pilot. It is deferred: no Pray classification or mapping is analyzed here."
+}
