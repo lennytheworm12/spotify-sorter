@@ -132,3 +132,27 @@ same CSV export and finish behavior. To reproduce the offline mapping artifacts:
 Mapper v1 is unchanged. Unknown/ambiguous labels stay review-required; this run
 measures mapping coverage for manual inspection, not musical accuracy or ranking
 improvement. No genre penalties, reranking or production changes are enabled.
+
+## Compare the larger vault registry
+
+Open **http://127.0.0.1:8798/compare**, or choose **Compare old mapper / new vault
+mapper** in the 100-song review. Old, New vault and Side by side views preserve
+the selected song. Search, original Gemini labels, audio, coverage counts and
+per-label contribution traces are available. This is read-only; existing answers
+remain in the existing review section.
+
+The vault's 138-concept / 29-neighborhood registry and reference implementation
+are pinned verbatim in `configs/genre_registry_v1/`, separately from the old
+41-concept mapper. The reference mapper uses explicit aliases/composites,
+field/relation weights and coordinatewise maximum. Broad concepts, facets,
+contexts and gated concepts have no sonic vote. Unknowns are retained.
+
+```sh
+.venv/bin/python -m audio_similarity.genre_registry_review
+.venv/bin/python -m audio_similarity.genre_neighborhood_frozen100 --serve --port 8798
+```
+
+Derived outputs live in `reports/genre_registry_review/v1/frozen100/`. Repeat
+mapping verifies existing outputs; use `--output /tmp/registry-replay` for a
+separate replay. No API calls, score adjustment, graph movement or reranking
+are implemented. Membership weights are not similarity or probability values.

@@ -100,8 +100,14 @@ def main():
 
     class Handler(base):
         def do_GET(self):
+            if self.path.split('?')[0] == '/compare':
+                return self._bytes(STATIC.with_name('genre_registry_compare.html').read_bytes(), 'text/html; charset=utf-8')
+            if self.path.split('?')[0] == '/api/registry-comparison':
+                from .genre_registry_review import load_comparison
+                return self._json(load_comparison(root))
             if self.path.split('?')[0] in ('/', '/neighborhood', '/neighborhood/'):
                 page = STATIC.with_name('genre_neighborhood_review.html').read_text()
+                page = page.replace('<h1>Genre neighborhoods</h1>', '<p><a href="/compare">Compare old mapper / new vault mapper →</a></p><h1>Genre neighborhoods</h1>')
                 page = page.replace('A quick check of 16 songs:', 'A review of the frozen 100 songs:')
                 page = page.replace('href="/">← Earlier audio-style review',
                                     'href="http://127.0.0.1:8794/neighborhood">← Original 16-song review')

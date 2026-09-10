@@ -1,0 +1,471 @@
+{
+  "notice": "Synthetic label-only fixtures, NOT classifications of real recordings.",
+  "rnb_a": {
+    "mapping_version": "genre-neighborhood-v1-draft",
+    "raw_genre_fields": {
+      "primary_family": "R&B",
+      "primary_style": "Alt-R&B",
+      "secondary_families": null,
+      "secondary_styles": [
+        "Ambient Pop"
+      ]
+    },
+    "canonical_concepts": [
+      "family:rnb_soul",
+      "style:alternative_rnb",
+      "style:ambient_pop"
+    ],
+    "families": [
+      "electronic",
+      "pop",
+      "rnb_soul"
+    ],
+    "neighborhood_memberships": {
+      "ambient_drone": 0.25,
+      "indie_dream_pop": 0.5,
+      "rnb_soul": 1.0
+    },
+    "mapping_status": "mapped",
+    "unresolved_labels": [],
+    "label_traces": [
+      {
+        "raw_label": "R&B",
+        "normalized_key": "r and b",
+        "status": "mapped",
+        "concept_ids": [
+          "family:rnb_soul"
+        ],
+        "rule": "registered_alias",
+        "source_field": "primary_family",
+        "contributions": []
+      },
+      {
+        "raw_label": "Alt-R&B",
+        "normalized_key": "alt r and b",
+        "status": "mapped",
+        "concept_ids": [
+          "style:alternative_rnb"
+        ],
+        "rule": "registered_alias",
+        "source_field": "primary_style",
+        "contributions": [
+          {
+            "neighborhood": "rnb_soul",
+            "strength": 1.0,
+            "relation": "core",
+            "concept_id": "style:alternative_rnb"
+          }
+        ]
+      },
+      {
+        "raw_label": "Ambient Pop",
+        "normalized_key": "ambient pop",
+        "status": "mapped",
+        "concept_ids": [
+          "style:ambient_pop"
+        ],
+        "rule": "registered_alias",
+        "source_field": "secondary_styles",
+        "contributions": [
+          {
+            "neighborhood": "indie_dream_pop",
+            "strength": 0.5,
+            "relation": "core",
+            "concept_id": "style:ambient_pop"
+          },
+          {
+            "neighborhood": "ambient_drone",
+            "strength": 0.25,
+            "relation": "related",
+            "concept_id": "style:ambient_pop"
+          }
+        ]
+      }
+    ],
+    "classification_accuracy": "not_assessed",
+    "score_adjustment": null
+  },
+  "rnb_b": {
+    "mapping_version": "genre-neighborhood-v1-draft",
+    "raw_genre_fields": {
+      "primary_family": "R&B and Soul",
+      "primary_style": "Neo Soul",
+      "secondary_families": null,
+      "secondary_styles": [
+        "Pop Soul"
+      ]
+    },
+    "canonical_concepts": [
+      "family:rnb_soul",
+      "style:neo_soul",
+      "style:pop_soul"
+    ],
+    "families": [
+      "pop",
+      "rnb_soul"
+    ],
+    "neighborhood_memberships": {
+      "pop_song": 0.25,
+      "rnb_soul": 1.0
+    },
+    "mapping_status": "mapped",
+    "unresolved_labels": [],
+    "label_traces": [
+      {
+        "raw_label": "R&B and Soul",
+        "normalized_key": "r and b and soul",
+        "status": "mapped",
+        "concept_ids": [
+          "family:rnb_soul"
+        ],
+        "rule": "Explicit alias of the chosen broad R&B/soul family.",
+        "source_field": "primary_family",
+        "contributions": []
+      },
+      {
+        "raw_label": "Neo Soul",
+        "normalized_key": "neo soul",
+        "status": "mapped",
+        "concept_ids": [
+          "style:neo_soul"
+        ],
+        "rule": "registered_alias",
+        "source_field": "primary_style",
+        "contributions": [
+          {
+            "neighborhood": "rnb_soul",
+            "strength": 1.0,
+            "relation": "core",
+            "concept_id": "style:neo_soul"
+          }
+        ]
+      },
+      {
+        "raw_label": "Pop Soul",
+        "normalized_key": "pop soul",
+        "status": "mapped",
+        "concept_ids": [
+          "style:pop_soul"
+        ],
+        "rule": "registered_alias",
+        "source_field": "secondary_styles",
+        "contributions": [
+          {
+            "neighborhood": "rnb_soul",
+            "strength": 0.5,
+            "relation": "core",
+            "concept_id": "style:pop_soul"
+          },
+          {
+            "neighborhood": "pop_song",
+            "strength": 0.25,
+            "relation": "related",
+            "concept_id": "style:pop_soul"
+          }
+        ]
+      }
+    ],
+    "classification_accuracy": "not_assessed",
+    "score_adjustment": null
+  },
+  "lofi": {
+    "mapping_version": "genre-neighborhood-v1-draft",
+    "raw_genre_fields": {
+      "primary_family": "Hip Hop",
+      "primary_style": "Lo-Fi Hip Hop",
+      "secondary_families": null,
+      "secondary_styles": [
+        "Chillhop"
+      ]
+    },
+    "canonical_concepts": [
+      "family:hip_hop",
+      "style:chillhop",
+      "style:lofi_hip_hop"
+    ],
+    "families": [
+      "hip_hop"
+    ],
+    "neighborhood_memberships": {
+      "boom_bap_jazz_hop": 0.5,
+      "downtempo_trip_hop": 0.5,
+      "lofi_chillhop": 1.0
+    },
+    "mapping_status": "mapped",
+    "unresolved_labels": [],
+    "label_traces": [
+      {
+        "raw_label": "Hip Hop",
+        "normalized_key": "hip hop",
+        "status": "mapped",
+        "concept_ids": [
+          "family:hip_hop"
+        ],
+        "rule": "registered_alias",
+        "source_field": "primary_family",
+        "contributions": []
+      },
+      {
+        "raw_label": "Lo-Fi Hip Hop",
+        "normalized_key": "lo fi hip hop",
+        "status": "mapped",
+        "concept_ids": [
+          "style:lofi_hip_hop"
+        ],
+        "rule": "registered_alias",
+        "source_field": "primary_style",
+        "contributions": [
+          {
+            "neighborhood": "lofi_chillhop",
+            "strength": 1.0,
+            "relation": "core",
+            "concept_id": "style:lofi_hip_hop"
+          },
+          {
+            "neighborhood": "boom_bap_jazz_hop",
+            "strength": 0.5,
+            "relation": "related",
+            "concept_id": "style:lofi_hip_hop"
+          },
+          {
+            "neighborhood": "downtempo_trip_hop",
+            "strength": 0.5,
+            "relation": "related",
+            "concept_id": "style:lofi_hip_hop"
+          }
+        ]
+      },
+      {
+        "raw_label": "Chillhop",
+        "normalized_key": "chillhop",
+        "status": "mapped",
+        "concept_ids": [
+          "style:chillhop"
+        ],
+        "rule": "registered_alias",
+        "source_field": "secondary_styles",
+        "contributions": [
+          {
+            "neighborhood": "lofi_chillhop",
+            "strength": 0.5,
+            "relation": "core",
+            "concept_id": "style:chillhop"
+          },
+          {
+            "neighborhood": "boom_bap_jazz_hop",
+            "strength": 0.25,
+            "relation": "related",
+            "concept_id": "style:chillhop"
+          },
+          {
+            "neighborhood": "downtempo_trip_hop",
+            "strength": 0.25,
+            "relation": "related",
+            "concept_id": "style:chillhop"
+          }
+        ]
+      }
+    ],
+    "classification_accuracy": "not_assessed",
+    "score_adjustment": null
+  },
+  "boom_bap": {
+    "mapping_version": "genre-neighborhood-v1-draft",
+    "raw_genre_fields": {
+      "primary_family": "Hip-Hop",
+      "primary_style": "Boom Bap",
+      "secondary_families": null,
+      "secondary_styles": [
+        "Jazz Rap"
+      ]
+    },
+    "canonical_concepts": [
+      "family:hip_hop",
+      "style:boom_bap",
+      "style:jazz_rap"
+    ],
+    "families": [
+      "hip_hop",
+      "jazz"
+    ],
+    "neighborhood_memberships": {
+      "boom_bap_jazz_hop": 1.0,
+      "jazz": 0.25
+    },
+    "mapping_status": "mapped",
+    "unresolved_labels": [],
+    "label_traces": [
+      {
+        "raw_label": "Hip-Hop",
+        "normalized_key": "hip hop",
+        "status": "mapped",
+        "concept_ids": [
+          "family:hip_hop"
+        ],
+        "rule": "registered_alias",
+        "source_field": "primary_family",
+        "contributions": []
+      },
+      {
+        "raw_label": "Boom Bap",
+        "normalized_key": "boom bap",
+        "status": "mapped",
+        "concept_ids": [
+          "style:boom_bap"
+        ],
+        "rule": "registered_alias",
+        "source_field": "primary_style",
+        "contributions": [
+          {
+            "neighborhood": "boom_bap_jazz_hop",
+            "strength": 1.0,
+            "relation": "core",
+            "concept_id": "style:boom_bap"
+          }
+        ]
+      },
+      {
+        "raw_label": "Jazz Rap",
+        "normalized_key": "jazz rap",
+        "status": "mapped",
+        "concept_ids": [
+          "style:jazz_rap"
+        ],
+        "rule": "registered_alias",
+        "source_field": "secondary_styles",
+        "contributions": [
+          {
+            "neighborhood": "boom_bap_jazz_hop",
+            "strength": 0.5,
+            "relation": "core",
+            "concept_id": "style:jazz_rap"
+          },
+          {
+            "neighborhood": "jazz",
+            "strength": 0.25,
+            "relation": "related",
+            "concept_id": "style:jazz_rap"
+          }
+        ]
+      }
+    ],
+    "classification_accuracy": "not_assessed",
+    "score_adjustment": null
+  },
+  "broad_only": {
+    "mapping_version": "genre-neighborhood-v1-draft",
+    "raw_genre_fields": {
+      "primary_family": "Electronic / Dance",
+      "primary_style": "Electronica",
+      "secondary_families": null,
+      "secondary_styles": []
+    },
+    "canonical_concepts": [
+      "facet:dance",
+      "family:electronic",
+      "style:electronica"
+    ],
+    "families": [
+      "electronic"
+    ],
+    "neighborhood_memberships": {},
+    "mapping_status": "no_specific_style_signal",
+    "unresolved_labels": [],
+    "label_traces": [
+      {
+        "raw_label": "Electronic / Dance",
+        "normalized_key": "electronic / dance",
+        "status": "mapped",
+        "concept_ids": [
+          "family:electronic",
+          "facet:dance"
+        ],
+        "rule": "Broad combined catalog bucket; no specific dance neighborhood follows.",
+        "source_field": "primary_family",
+        "contributions": []
+      },
+      {
+        "raw_label": "Electronica",
+        "normalized_key": "electronica",
+        "status": "mapped",
+        "concept_ids": [
+          "style:electronica"
+        ],
+        "rule": "registered_alias",
+        "source_field": "primary_style",
+        "contributions": []
+      }
+    ],
+    "classification_accuracy": "not_assessed",
+    "score_adjustment": null
+  },
+  "korean_rnb": {
+    "mapping_version": "genre-neighborhood-v1-draft",
+    "raw_genre_fields": {
+      "primary_family": "Pop",
+      "primary_style": "K-Pop",
+      "secondary_families": null,
+      "secondary_styles": [
+        "Contemporary R&B"
+      ]
+    },
+    "canonical_concepts": [
+      "context:k_pop",
+      "family:pop",
+      "style:contemporary_rnb"
+    ],
+    "families": [
+      "pop",
+      "rnb_soul"
+    ],
+    "neighborhood_memberships": {
+      "rnb_soul": 0.5
+    },
+    "mapping_status": "mapped",
+    "unresolved_labels": [],
+    "label_traces": [
+      {
+        "raw_label": "Pop",
+        "normalized_key": "pop",
+        "status": "mapped",
+        "concept_ids": [
+          "family:pop"
+        ],
+        "rule": "registered_alias",
+        "source_field": "primary_family",
+        "contributions": []
+      },
+      {
+        "raw_label": "K-Pop",
+        "normalized_key": "k pop",
+        "status": "mapped",
+        "concept_ids": [
+          "context:k_pop"
+        ],
+        "rule": "registered_alias",
+        "source_field": "primary_style",
+        "contributions": []
+      },
+      {
+        "raw_label": "Contemporary R&B",
+        "normalized_key": "contemporary r and b",
+        "status": "mapped",
+        "concept_ids": [
+          "style:contemporary_rnb"
+        ],
+        "rule": "registered_alias",
+        "source_field": "secondary_styles",
+        "contributions": [
+          {
+            "neighborhood": "rnb_soul",
+            "strength": 0.5,
+            "relation": "core",
+            "concept_id": "style:contemporary_rnb"
+          }
+        ]
+      }
+    ],
+    "classification_accuracy": "not_assessed",
+    "score_adjustment": null
+  }
+}
