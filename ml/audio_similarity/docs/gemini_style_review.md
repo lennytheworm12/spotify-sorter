@@ -85,3 +85,26 @@ mobile layout and console errors. No synthetic answers enter the real dataset.
 Verification output and screenshots are recorded separately in
 `reports/gemini_style_pilot_review/v1/`; the frozen inference package remains
 unchanged.
+
+## Genre-neighborhood inspection
+
+Open **http://127.0.0.1:8794/neighborhood**, or choose **Open genre-neighborhood
+review** on the earlier review page. The same launch command serves both views.
+This view contains only the original 16 songs and their frozen free-form Gemini
+labels. It shows canonical concepts, broad families, overlapping neighborhoods,
+separate scene/context labels, warnings and every raw-label mapping trace.
+Vocal, arrangement and texture descriptions are context only.
+
+Answer two separate questions: whether the mapping is reasonable given the raw
+labels, and whether those original labels fit the audio. Optional notes autosave;
+CSV export and offline recovery work as in the earlier review. No per-song Submit
+is needed. Finish freezes the answers when both questions are covered for all 16.
+
+This review saves separately to `artifacts/genre_neighborhood_review/pilot16/`
+(`answers.sqlite`, `owner-review-answers.csv`, and completed `owner_snapshot.json`).
+It does not change the earlier listening answers, frozen mapping, Gemini outputs,
+playlist ratings or rankings, and makes no model calls.
+
+For isolated browser verification, start the server with a fresh `--state-dir`
+and run `tests/browser_genre_neighborhood_review.py --url http://127.0.0.1:8796
+--output-dir /tmp/neighborhood-browser-evidence` against that disposable port.

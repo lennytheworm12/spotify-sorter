@@ -11,7 +11,7 @@ from audio_similarity.cli.stage5b1b_review_server import ReviewHTTPServer, make_
 STATIC = Path(__file__).resolve().parents[3] / 'evaluation/static/gemini_style_review.html'
 
 
-def handler(store, *, disposable=False):
+def handler(store, *, disposable=False, neighborhood=None):
     base = make_review_handler(store, static=STATIC,
         mode='gemini_style_disposable' if disposable else 'gemini_style_owner_review',
         export_filename='gemini-style-owner-review.csv')
@@ -19,6 +19,12 @@ def handler(store, *, disposable=False):
     class Handler(base):
         def do_GET(self):
             path = urlparse(self.path).path
+            if neighborhood and path in ('/neighborhood', '/neighborhood/'):
+                return self._bytes(STATIC.with_name('genre_neighborhood_review.html').read_bytes(), 'text/html; charset=utf-8')
+            if neighborhood and path == '/api/neighborhood/session':
+                return self._json(neighborhood.session())
+            if neighborhood and path == '/api/neighborhood/export':
+                return self._bytes(neighborhood.review_path.read_bytes(), 'text/csv; charset=utf-8', download='genre-neighborhood-review.csv')
             if path.startswith('/api/profile/'):
                 try:
                     return self._json(store.profile(unquote(path.removeprefix('/api/profile/'))))
@@ -28,7 +34,8 @@ def handler(store, *, disposable=False):
 
         def do_POST(self):
             path = urlparse(self.path).path
-            if path not in ('/api/answer', '/api/advance'):
+            mapping_request = neighborhood and path in ('/api/neighborhood/answer', '/api/neighborhood/advance')
+            if path not in ('/api/answer', '/api/advance') and not mapping_request:
                 return self._json({'error': 'not found'}, 404)
             try:
                 host, origin = self.headers.get('Host'), self.headers.get('Origin')
@@ -42,7 +49,8 @@ def handler(store, *, disposable=False):
                 data = json.loads(self.rfile.read(size))
                 if not isinstance(data, dict):
                     raise Stage5B1AValidationError('Expected an object.')
-                result = store.save(data.get('pilot_id'), data.get('fields'), data.get('revision')) if path == '/api/answer' else store.advance(data.get('revisions'))
+                target = neighborhood if mapping_request else store
+                result = target.save(data.get('pilot_id'), data.get('fields'), data.get('revision')) if path.endswith('/answer') else target.advance(data.get('revisions'))
                 return self._json(result)
             except (ValueError, Stage5B1AValidationError) as exc:
                 return self._json({'error': str(exc)}, 400)
@@ -57,12 +65,16 @@ def main():
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[3]
     real = (root / STATE).resolve()
-    if args.state_dir and args.state_dir.resolve() == real:
+    from audio_similarity.genre_neighborhood_review_store import GenreNeighborhoodReviewStore, STATE as MAPPING_STATE
+    protected = (real, (root / MAPPING_STATE).resolve())
+    if args.state_dir and any(args.state_dir.resolve() == p or p in args.state_dir.resolve().parents for p in protected):
         parser.error('Disposable state must not target the real owner review.')
     store = GeminiStyleReviewStore(root, args.state_dir or real)
-    server = ReviewHTTPServer(('127.0.0.1', args.port), handler(store, disposable=bool(args.state_dir)))
+    neighborhood = GenreNeighborhoodReviewStore(root, args.state_dir / 'neighborhood' if args.state_dir else root / MAPPING_STATE)
+    server = ReviewHTTPServer(('127.0.0.1', args.port), handler(store, disposable=bool(args.state_dir), neighborhood=neighborhood))
     print(f'Gemini audio review: http://127.0.0.1:{server.server_port}', flush=True)
     print(f'Answers save to {store.review_path}', flush=True)
+    print(f'Genre neighborhood review: http://127.0.0.1:{server.server_port}/neighborhood', flush=True)
     try:
         server.serve_forever()
     except KeyboardInterrupt:
@@ -70,6 +82,7 @@ def main():
     finally:
         server.server_close()
         store.close()
+        neighborhood.close()
 
 
 if __name__ == '__main__':
