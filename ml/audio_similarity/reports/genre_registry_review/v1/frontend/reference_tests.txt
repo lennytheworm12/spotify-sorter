@@ -1,0 +1,45 @@
+test_01_ids_unique (__main__.MappingTests.test_01_ids_unique) ... ok
+test_02_all_source_references (__main__.MappingTests.test_02_all_source_references) ... ok
+test_03_rnb_aliases (__main__.MappingTests.test_03_rnb_aliases) ... ok
+test_04_hyphen_case (__main__.MappingTests.test_04_hyphen_case) ... ok
+test_05_dnb_aliases (__main__.MappingTests.test_05_dnb_aliases) ... ok
+test_06_afrobeat_not_afrobeats (__main__.MappingTests.test_06_afrobeat_not_afrobeats) ... ok
+test_07_lofi_not_lofi_hiphop (__main__.MappingTests.test_07_lofi_not_lofi_hiphop) ... ok
+test_08_chillwave_not_chillhop (__main__.MappingTests.test_08_chillwave_not_chillhop) ... ok
+test_09_hyperpop_not_electropop (__main__.MappingTests.test_09_hyperpop_not_electropop) ... ok
+test_10_soul_not_rnb_alias (__main__.MappingTests.test_10_soul_not_rnb_alias) ... ok
+test_11_electronica_not_electronic_alias (__main__.MappingTests.test_11_electronica_not_electronic_alias) ... ok
+test_12_subgenre_not_parent_alias (__main__.MappingTests.test_12_subgenre_not_parent_alias) ... ok
+test_13_raw_preserved (__main__.MappingTests.test_13_raw_preserved) ... ok
+test_14_order_independence (__main__.MappingTests.test_14_order_independence) ... ok
+test_15_alias_dedup (__main__.MappingTests.test_15_alias_dedup) ... ok
+test_16_unknown_noop (__main__.MappingTests.test_16_unknown_noop) ... ok
+test_17_missing_noop (__main__.MappingTests.test_17_missing_noop) ... ok
+test_18_empty_noop (__main__.MappingTests.test_18_empty_noop) ... ok
+test_19_broad_pop_noop (__main__.MappingTests.test_19_broad_pop_noop) ... ok
+test_20_generic_experimental_noop (__main__.MappingTests.test_20_generic_experimental_noop) ... ok
+test_21_context_only_noop (__main__.MappingTests.test_21_context_only_noop) ... ok
+test_22_scene_does_not_change_sonic_profile (__main__.MappingTests.test_22_scene_does_not_change_sonic_profile) ... ok
+test_23_all_electronic_not_dance (__main__.MappingTests.test_23_all_electronic_not_dance) ... ok
+test_24_hyperpop_not_ambient (__main__.MappingTests.test_24_hyperpop_not_ambient) ... ok
+test_25_instrumental_not_lofi (__main__.MappingTests.test_25_instrumental_not_lofi) ... ok
+test_26_neurofunk_not_funk (__main__.MappingTests.test_26_neurofunk_not_funk) ... ok
+test_27_future_bass_not_techno (__main__.MappingTests.test_27_future_bass_not_techno) ... ok
+test_28_rnb_substyles_overlap (__main__.MappingTests.test_28_rnb_substyles_overlap) ... ok
+test_29_lofi_boom_bap_related_not_identical (__main__.MappingTests.test_29_lofi_boom_bap_related_not_identical) ... ok
+test_30_unknown_does_not_penalize_known (__main__.MappingTests.test_30_unknown_does_not_penalize_known) ... ok
+test_31_specific_style_in_family_field (__main__.MappingTests.test_31_specific_style_in_family_field) ... ok
+test_32_wrong_type_rejected (__main__.MappingTests.test_32_wrong_type_rejected) ... ok
+test_33_no_fuzzy_guess (__main__.MappingTests.test_33_no_fuzzy_guess) ... ok
+test_34_no_arbitrary_slash_split (__main__.MappingTests.test_34_no_arbitrary_slash_split) ... ok
+test_35_review_required_compound (__main__.MappingTests.test_35_review_required_compound) ... ok
+test_36_mapping_review_gate (__main__.MappingTests.test_36_mapping_review_gate) ... ok
+test_37_metadata_not_classifier (__main__.MappingTests.test_37_metadata_not_classifier) ... ok
+test_38_no_score_implemented (__main__.MappingTests.test_38_no_score_implemented) ... ok
+test_39_deterministic_replay (__main__.MappingTests.test_39_deterministic_replay) ... ok
+test_40_all_strengths_bounded (__main__.MappingTests.test_40_all_strengths_bounded) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.003s
+
+OK
