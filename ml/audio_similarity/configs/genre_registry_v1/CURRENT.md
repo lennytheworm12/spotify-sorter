@@ -1,5 +1,15 @@
 # Genre Registry v1 — Current Operational Contract
 
+## Status after mechanical verification — 2026-09-10
+
+The full frozen100 explorer mechanical gate is PASS, reported in `ml/audio_similarity/reports/genre_force_mechanical_gate/v1/REPORT.md` at commit `c6fb6de`. This verifies the implementation, not genre usefulness or optimal weights.
+
+The next proposed study is [Playlist Reconstruction — Joint Audio and Genre Calibration](../../../../docs/genre-force/playlist-reconstruction-calibration-v1.md), which links the authoritative full vault protocol. Start with source permission/access and data-feasibility Gate A. Do not assume public playlists are permitted calibration data or that Development Mode can fetch their contents.
+
+That future study may jointly select the C/M mixture and two genre coefficients while keeping encoders, the mapper, and prompt fixed. It does not change the explorer contract below, original baseline, historical results, or production behavior. New inference requires its separate rights/budget gate.
+
+## Explorer contract
+
 This folder contains the larger **138-concept / 29-neighborhood** genre mapper and its historical research bundle.
 
 For current development work, use the following precedence:
@@ -117,7 +127,7 @@ A negative signed result is not evidence of true genre incompatibility.
 
 Keep `vocal_role` and `arrangement_focus` visible in the UI but score-neutral during this stage. They are reserved for a later orthogonal ablation.
 
-## Development sequence
+## Explorer development sequence — retained for reference
 
 1. Keep the 138-concept mapper unchanged.
 2. Use the original 16 plus spot checks only for mapper/Gemini semantic sanity.
@@ -130,4 +140,4 @@ Keep `vocal_role` and `arrangement_focus` visible in the UI but score-neutral du
 9. Treat any mode/parameter choice informed by frozen100 as development tuning.
 10. Freeze the chosen rule before fresh confirmatory evaluation on new held-out songs/pairs.
 
-No new Gemini calls, Gemini prompt changes, song-specific mapper hacks, or production playlist activation are allowed in this stage.
+No new Gemini calls, Gemini prompt changes, song-specific mapper hacks, or production playlist activation are allowed in the explorer stage. The separate proposed reconstruction protocol governs the next dataset/calibration study.
