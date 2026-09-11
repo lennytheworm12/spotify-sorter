@@ -122,3 +122,44 @@ actual test output and browser screenshots. Audio stays local. The initial
 full-suite replay failure was resolved by preserving the original mapper test's
 frozen input membership; the full rerun passed 1,422 tests (12 heavy deselections).
 Frontend: 14 tests, build and lint passed.
+
+## Exhaustive mechanical QA gate
+
+The separate QA gate checks the current scorer against an independent Python
+reference, checks every pair's displayed values in Chromium, and compares browser
+worker coordinates with the expected adjusted-score layouts. It does not choose
+parameters or evaluate musical usefulness. Fixed boundary probes are test cases;
+the explorer defaults and mapper remain unchanged.
+
+From `frontend`:
+
+```sh
+node --import tsx dev/genreMechanicalGate.ts \
+  ../ml/audio_similarity/.research_audio/genre_force/v1_m3 \
+  ../ml/audio_similarity/.research_audio/genre_force_qa/mechanical_v1
+node --import tsx dev/genreMechanicalGraphs.ts \
+  ../ml/audio_similarity/.research_audio/genre_force/v1_m3 \
+  ../ml/audio_similarity/.research_audio/genre_force_qa/mechanical_v1
+```
+
+From the repository root, with the explorer running on port 5174:
+
+```sh
+ml/audio_similarity/.venv/bin/python frontend/dev/genre_mechanical_audit.py \
+  ml/audio_similarity/.research_audio/genre_force/v1_m3 \
+  ml/audio_similarity/.research_audio/genre_force_qa/mechanical_v1
+ml/audio_similarity/.venv/bin/python frontend/tests/browser_genre_mechanical.py \
+  --run ml/audio_similarity/.research_audio/genre_force/v1_m3 \
+  --qa ml/audio_similarity/.research_audio/genre_force_qa/mechanical_v1 \
+  --output ml/audio_similarity/.research_audio/genre_force_qa/mechanical_v1/browser
+ml/audio_similarity/.venv/bin/python frontend/tests/browser_genre_mechanical_graph.py \
+  --qa ml/audio_similarity/.research_audio/genre_force_qa/mechanical_v1
+```
+
+The gate records failing pair IDs, scenario settings, expected/actual values and
+source hashes. Numeric reconstruction uses the unrounded components. UI scores
+are checked against their exact six-decimal formatting (table G uses four);
+rounded display strings are not substitutes for full-precision inputs. A new
+implementation needs a new QA output directory; existing runs refuse changed
+replay results. The report is in
+`ml/audio_similarity/reports/genre_force_mechanical_gate/v1/`.

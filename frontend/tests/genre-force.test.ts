@@ -73,6 +73,54 @@ test('unequal shared mass is removed before projection; duplicate neighborhoods 
   assert.deepEqual(e.residualNeighborhoodA, { rnb: 0.5 })
   assert.equal(e.jnr, 0)
 })
+test('partial canonical overlap uses weighted mass rather than label counts', () => {
+  const e = pairEvidence(
+    song('a', { soul: 1, alt: 0.5 }),
+    song('b', { soul: 0.5, trap: 0.5 }),
+    concepts,
+  )
+  assert.equal(e.jc, 0.25)
+  assert.equal(e.jnr, 0)
+  assert.equal(adjustedScore(0.6, e, settings).genre, 0.25)
+})
+test('shared exact mass cannot manufacture residual overlap on the other side', () => {
+  const a = song('a', { soul: 1 }),
+    b = song('b', { soul: 1, alt: 0.5 })
+  const e = pairEvidence(a, b, concepts)
+  assert.equal(e.jc, 2 / 3)
+  assert.deepEqual(e.residualA, {})
+  assert.deepEqual(e.residualB, { alt: 0.5 })
+  assert.equal(e.jnr, 0)
+  assert.equal(e.jn, 1)
+  assert.equal(adjustedScore(0.6, e, settings).genre, 2 / 3)
+})
+test('display-only context, unresolved labels and vocal metadata are neutral in every mode', () => {
+  const a = song('a', { soul: 1 }),
+    b = song('b', { alt: 0.5 })
+  const decorated = {
+    ...a,
+    raw: { primary_family: 'Imaginary genre', vocal_role: 'rap', arrangement_focus: 'beat' },
+    excluded: [{ id: 'context:k_pop', label: 'K-pop', reason: 'context only' }],
+    warnings: ['Unresolved: Imaginary genre'],
+  }
+  assert.deepEqual(pairEvidence(a, b, concepts), pairEvidence(decorated, b, concepts))
+  const empty = { ...decorated, canonical: {}, specificStyleIds: [], neighborhoods: {} }
+  for (const genreMode of [
+    'canonical_only',
+    'canonical_plus_residual',
+    'neighborhood_only_diagnostic',
+  ] as const)
+    for (const forceMode of ['pull_only', 'signed_experimental'] as const) {
+      const result = adjustedScore(0.61, pairEvidence(empty, b, concepts), {
+        ...settings,
+        genreMode,
+        forceMode,
+      })
+      assert.equal(result.genre, 0)
+      assert.equal(result.delta, 0)
+      assert.equal(result.adjusted, 0.61)
+    }
+})
 test('unknown no-op in signed mode; known disjoint pull-only does not repel', () => {
   const e = pairEvidence(song('a', {}), song('b', { soul: 1 }), concepts)
   assert.equal(

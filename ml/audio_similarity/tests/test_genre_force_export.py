@@ -37,3 +37,27 @@ def test_audio_matrix_selection_explicit_and_symmetric():
     with pytest.raises(ValueError):load_audio(ROOT,'automatic')
     ids,matrix=load_audio(ROOT,'M3_C_PLUS_FIXED_MUQ')
     assert len(ids)==100 and matrix.shape==(100,100)
+
+
+def test_secondary_label_strength_and_duplicate_aliases_preserve_max_mass():
+    engine=mapper(ROOT);force=read(ROOT/CONFIG/'genre-force-explorer-v1.json')
+    original=profile('Neo-Soul', secondary_styles=['Alt-R&B'])
+    duplicated=profile('Neo-Soul', secondary_styles=['Alt-R&B','Alternative R&B','Alt-R&B'])
+    a=canonical_profile(original,engine,force)
+    b=canonical_profile(duplicated,engine,force)
+    assert a['canonical']==b['canonical']=={
+        'family:rnb_soul':.5,'style:neo_soul':1,'style:alternative_rnb':.5}
+    assert a['neighborhoods']==b['neighborhoods']
+    primary=canonical_profile(profile('Alt-R&B', secondary_styles=['Alternative R&B']),engine,force)
+    assert primary['canonical']['style:alternative_rnb']==1
+
+
+@pytest.mark.parametrize('style,family', [('K-Pop','J-Pop'), ('Imaginary genre','Unknown')])
+def test_context_only_and_unresolved_profiles_cannot_supply_sonic_mass(style,family):
+    engine=mapper(ROOT);force=read(ROOT/CONFIG/'genre-force-explorer-v1.json')
+    raw=profile(style,primary_family=family);before=deepcopy(raw)
+    result=canonical_profile(raw,engine,force)
+    assert raw==before
+    assert result['canonical']=={} and result['specificStyleIds']==[]
+    assert result['neighborhoods']=={}
+    assert result['excluded'] or result['warnings']
