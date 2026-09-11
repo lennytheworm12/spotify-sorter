@@ -1,0 +1,124 @@
+{
+  "status": "PASS",
+  "pairs": 4950,
+  "scenarios": 15,
+  "pairScoreChecks": 74250,
+  "alphaZeroRanks": 59400,
+  "topKPrefixChecks": 59400,
+  "graphChecks": [
+    {
+      "scenario": "canonical_only:pull_only:alpha1",
+      "edges": 875,
+      "layoutSha256": "b1178d925f70e8d51eb2065fa5ac0d3b6aa2a74d7801a7d02df4c4c8cb21cc24",
+      "deterministic": true
+    },
+    {
+      "scenario": "canonical_only:signed_experimental:alpha1",
+      "edges": 865,
+      "layoutSha256": "8af6cd9b3c96e4219a872b47592cca19d25a2176918e36af22015739a73b5ac7",
+      "deterministic": true
+    },
+    {
+      "scenario": "canonical_plus_residual:pull_only:alpha1",
+      "edges": 872,
+      "layoutSha256": "e7c7ce024fdfcd84c400f24420ed367de49fafba19d20f6d6e5d4e9ea839b61c",
+      "deterministic": true
+    },
+    {
+      "scenario": "canonical_plus_residual:signed_experimental:alpha1",
+      "edges": 863,
+      "layoutSha256": "85d7108fdcf8327cd557b1edf6cba1620102d59a185cb0657f30727036b7b886",
+      "deterministic": true
+    },
+    {
+      "scenario": "neighborhood_only_diagnostic:pull_only:alpha1",
+      "edges": 860,
+      "layoutSha256": "0c264bf16522c7702ab03d8d471c56dbf7296f4503897e2ebf24bca40f6efb24",
+      "deterministic": true
+    },
+    {
+      "scenario": "neighborhood_only_diagnostic:signed_experimental:alpha1",
+      "edges": 853,
+      "layoutSha256": "2580ef43bfd63902e25048bc4605c59905b2e5a01f7ca984b89944c023a62b67",
+      "deterministic": true
+    }
+  ],
+  "frozenRunBefore": {
+    "input.json": {
+      "sha256": "941e2f903d3b9efa5156702dda463f86980982e5a2b59aa533623ca48f4f85ce",
+      "mtimeMs": 1789035363152.8635
+    },
+    "audio-index.json": {
+      "sha256": "2b12e28a206b9f810e192bf53efc94dfae8f8e7b8ecca4c2c03ca86e61ee82bf",
+      "mtimeMs": 1789035363160.8635
+    },
+    "base-map.json": {
+      "sha256": "273bb37766bbe86518cc2697874a197ef5f7694d8459da1495c110d2757a6f70",
+      "mtimeMs": 1789035363172.8635
+    },
+    "input_manifest.json": {
+      "sha256": "d1fd0f473937652bb32480f85dcb0f1dbf4d175125423bbcd281ed293dca76a7",
+      "mtimeMs": 1789035363180.8635
+    },
+    "explorer.json": {
+      "sha256": "3532f89e65c934c594bb2aa0e1a3f2db70573bd1b3059e8944b93162ac3afad4",
+      "mtimeMs": 1789035375980.8633
+    },
+    "baseline_rankings.json": {
+      "sha256": "ad22d59a2b3afc4b67bef00fd640f0ee6585f24a1523aec0a93381809dc5fe65",
+      "mtimeMs": 1789035376016.8633
+    },
+    "pair_genre_evidence.json": {
+      "sha256": "dee5a587048cb5890d0312174dcc048f930e9fac6216cf875dd82feb0319b90b",
+      "mtimeMs": 1789035376024.8633
+    },
+    "engineering_checks.json": {
+      "sha256": "24d370e7e5ab49882a1e8bb0b95da4fbaeaab935cdf75ed38c6d46fb26c5a539",
+      "mtimeMs": 1789035376040.8633
+    },
+    "artifact_manifest.json": {
+      "sha256": "32d21a74c17609c7ed49e6d46a92570194adaa85dada26d6349ab398b9a88687",
+      "mtimeMs": 1789035376048.8633
+    }
+  },
+  "frozenRunAfter": {
+    "input.json": {
+      "sha256": "941e2f903d3b9efa5156702dda463f86980982e5a2b59aa533623ca48f4f85ce",
+      "mtimeMs": 1789035363152.8635
+    },
+    "audio-index.json": {
+      "sha256": "2b12e28a206b9f810e192bf53efc94dfae8f8e7b8ecca4c2c03ca86e61ee82bf",
+      "mtimeMs": 1789035363160.8635
+    },
+    "base-map.json": {
+      "sha256": "273bb37766bbe86518cc2697874a197ef5f7694d8459da1495c110d2757a6f70",
+      "mtimeMs": 1789035363172.8635
+    },
+    "input_manifest.json": {
+      "sha256": "d1fd0f473937652bb32480f85dcb0f1dbf4d175125423bbcd281ed293dca76a7",
+      "mtimeMs": 1789035363180.8635
+    },
+    "explorer.json": {
+      "sha256": "3532f89e65c934c594bb2aa0e1a3f2db70573bd1b3059e8944b93162ac3afad4",
+      "mtimeMs": 1789035375980.8633
+    },
+    "baseline_rankings.json": {
+      "sha256": "ad22d59a2b3afc4b67bef00fd640f0ee6585f24a1523aec0a93381809dc5fe65",
+      "mtimeMs": 1789035376016.8633
+    },
+    "pair_genre_evidence.json": {
+      "sha256": "dee5a587048cb5890d0312174dcc048f930e9fac6216cf875dd82feb0319b90b",
+      "mtimeMs": 1789035376024.8633
+    },
+    "engineering_checks.json": {
+      "sha256": "24d370e7e5ab49882a1e8bb0b95da4fbaeaab935cdf75ed38c6d46fb26c5a539",
+      "mtimeMs": 1789035376040.8633
+    },
+    "artifact_manifest.json": {
+      "sha256": "32d21a74c17609c7ed49e6d46a92570194adaa85dada26d6349ab398b9a88687",
+      "mtimeMs": 1789035376048.8633
+    }
+  },
+  "scoreBinarySha256": "07a97bc0253e817d18bfc0bd781544ea700e2c29f134741a7ff8a1cb69edda07",
+  "failureCount": 0
+}

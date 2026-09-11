@@ -1,0 +1,123 @@
+{
+  "alpha_zero_topk_checks": 3000,
+  "directed_display_rows_checked": 118800,
+  "display_precision": "score/audio/delta/Jc/Jnr/G_force 6 decimals; table G 4 decimals; exact toFixed-equivalent strings checked against independent unrounded components",
+  "errors": [],
+  "failure_count": 0,
+  "frozen_after": {
+    "artifact_manifest.json": {
+      "mtime_ns": 1789035376048863214,
+      "sha256": "32d21a74c17609c7ed49e6d46a92570194adaa85dada26d6349ab398b9a88687"
+    },
+    "audio-index.json": {
+      "mtime_ns": 1789035363160863633,
+      "sha256": "2b12e28a206b9f810e192bf53efc94dfae8f8e7b8ecca4c2c03ca86e61ee82bf"
+    },
+    "base-map.json": {
+      "mtime_ns": 1789035363172863633,
+      "sha256": "273bb37766bbe86518cc2697874a197ef5f7694d8459da1495c110d2757a6f70"
+    },
+    "baseline_rankings.json": {
+      "mtime_ns": 1789035376016863214,
+      "sha256": "ad22d59a2b3afc4b67bef00fd640f0ee6585f24a1523aec0a93381809dc5fe65"
+    },
+    "engineering_checks.json": {
+      "mtime_ns": 1789035376040863214,
+      "sha256": "24d370e7e5ab49882a1e8bb0b95da4fbaeaab935cdf75ed38c6d46fb26c5a539"
+    },
+    "explorer.json": {
+      "mtime_ns": 1789035375980863212,
+      "sha256": "3532f89e65c934c594bb2aa0e1a3f2db70573bd1b3059e8944b93162ac3afad4"
+    },
+    "input.json": {
+      "mtime_ns": 1789035363152863633,
+      "sha256": "941e2f903d3b9efa5156702dda463f86980982e5a2b59aa533623ca48f4f85ce"
+    },
+    "input_manifest.json": {
+      "mtime_ns": 1789035363180863633,
+      "sha256": "d1fd0f473937652bb32480f85dcb0f1dbf4d175125423bbcd281ed293dca76a7"
+    },
+    "pair_genre_evidence.json": {
+      "mtime_ns": 1789035376024863214,
+      "sha256": "dee5a587048cb5890d0312174dcc048f930e9fac6216cf875dd82feb0319b90b"
+    }
+  },
+  "frozen_before": {
+    "artifact_manifest.json": {
+      "mtime_ns": 1789035376048863214,
+      "sha256": "32d21a74c17609c7ed49e6d46a92570194adaa85dada26d6349ab398b9a88687"
+    },
+    "audio-index.json": {
+      "mtime_ns": 1789035363160863633,
+      "sha256": "2b12e28a206b9f810e192bf53efc94dfae8f8e7b8ecca4c2c03ca86e61ee82bf"
+    },
+    "base-map.json": {
+      "mtime_ns": 1789035363172863633,
+      "sha256": "273bb37766bbe86518cc2697874a197ef5f7694d8459da1495c110d2757a6f70"
+    },
+    "baseline_rankings.json": {
+      "mtime_ns": 1789035376016863214,
+      "sha256": "ad22d59a2b3afc4b67bef00fd640f0ee6585f24a1523aec0a93381809dc5fe65"
+    },
+    "engineering_checks.json": {
+      "mtime_ns": 1789035376040863214,
+      "sha256": "24d370e7e5ab49882a1e8bb0b95da4fbaeaab935cdf75ed38c6d46fb26c5a539"
+    },
+    "explorer.json": {
+      "mtime_ns": 1789035375980863212,
+      "sha256": "3532f89e65c934c594bb2aa0e1a3f2db70573bd1b3059e8944b93162ac3afad4"
+    },
+    "input.json": {
+      "mtime_ns": 1789035363152863633,
+      "sha256": "941e2f903d3b9efa5156702dda463f86980982e5a2b59aa533623ca48f4f85ce"
+    },
+    "input_manifest.json": {
+      "mtime_ns": 1789035363180863633,
+      "sha256": "d1fd0f473937652bb32480f85dcb0f1dbf4d175125423bbcd281ed293dca76a7"
+    },
+    "pair_genre_evidence.json": {
+      "mtime_ns": 1789035376024863214,
+      "sha256": "dee5a587048cb5890d0312174dcc048f930e9fac6216cf875dd82feb0319b90b"
+    }
+  },
+  "graph_checks": [
+    {
+      "repeated_coordinates_exact": true,
+      "restored": true,
+      "scenario": "canonical_only:pull_only:alpha1"
+    },
+    {
+      "repeated_coordinates_exact": true,
+      "restored": true,
+      "scenario": "canonical_only:signed_experimental:alpha1"
+    },
+    {
+      "repeated_coordinates_exact": true,
+      "restored": true,
+      "scenario": "canonical_plus_residual:pull_only:alpha1"
+    },
+    {
+      "repeated_coordinates_exact": true,
+      "restored": true,
+      "scenario": "canonical_plus_residual:signed_experimental:alpha1"
+    },
+    {
+      "repeated_coordinates_exact": true,
+      "restored": true,
+      "scenario": "neighborhood_only_diagnostic:pull_only:alpha1"
+    },
+    {
+      "repeated_coordinates_exact": true,
+      "restored": true,
+      "scenario": "neighborhood_only_diagnostic:signed_experimental:alpha1"
+    }
+  ],
+  "inspector_pairs_checked": 1200,
+  "packet_sha256": "3532f89e65c934c594bb2aa0e1a3f2db70573bd1b3059e8944b93162ac3afad4",
+  "rounded_display_values_are_not_full_precision_inputs": true,
+  "scenarios": 12,
+  "status": "PASS",
+  "unordered_pairs_per_scenario": 4950,
+  "url": "http://127.0.0.1:5174",
+  "write_or_external_requests": []
+}

@@ -1,0 +1,37 @@
+{
+  "browser_errors": [],
+  "checks": [
+    {
+      "exact_adjusted_coordinates": true,
+      "scenario": "canonical_only:pull_only:alpha1",
+      "tracks": 100
+    },
+    {
+      "exact_adjusted_coordinates": true,
+      "scenario": "canonical_only:signed_experimental:alpha1",
+      "tracks": 100
+    },
+    {
+      "exact_adjusted_coordinates": true,
+      "scenario": "canonical_plus_residual:pull_only:alpha1",
+      "tracks": 100
+    },
+    {
+      "exact_adjusted_coordinates": true,
+      "scenario": "canonical_plus_residual:signed_experimental:alpha1",
+      "tracks": 100
+    },
+    {
+      "exact_adjusted_coordinates": true,
+      "scenario": "neighborhood_only_diagnostic:pull_only:alpha1",
+      "tracks": 100
+    },
+    {
+      "exact_adjusted_coordinates": true,
+      "scenario": "neighborhood_only_diagnostic:signed_experimental:alpha1",
+      "tracks": 100
+    }
+  ],
+  "failures": [],
+  "status": "PASS"
+}

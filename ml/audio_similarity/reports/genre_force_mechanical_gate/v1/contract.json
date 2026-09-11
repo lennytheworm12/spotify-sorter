@@ -1,0 +1,180 @@
+{
+  "purpose": "Mechanical QA only; no parameter choice, calibration or human-outcome evaluation",
+  "inputPacketSha256": "3532f89e65c934c594bb2aa0e1a3f2db70573bd1b3059e8944b93162ac3afad4",
+  "scenarios": [
+    {
+      "id": "canonical_only:pull_only:alpha0",
+      "settings": {
+        "alpha": 0,
+        "beta": 0.05,
+        "eta": 0.25,
+        "forceMode": "pull_only",
+        "genreMode": "canonical_only"
+      }
+    },
+    {
+      "id": "canonical_only:pull_only:alpha1",
+      "settings": {
+        "alpha": 1,
+        "beta": 0.05,
+        "eta": 0.25,
+        "forceMode": "pull_only",
+        "genreMode": "canonical_only"
+      }
+    },
+    {
+      "id": "canonical_only:signed_experimental:alpha0",
+      "settings": {
+        "alpha": 0,
+        "beta": 0.05,
+        "eta": 0.25,
+        "forceMode": "signed_experimental",
+        "genreMode": "canonical_only"
+      }
+    },
+    {
+      "id": "canonical_only:signed_experimental:alpha1",
+      "settings": {
+        "alpha": 1,
+        "beta": 0.05,
+        "eta": 0.25,
+        "forceMode": "signed_experimental",
+        "genreMode": "canonical_only"
+      }
+    },
+    {
+      "id": "canonical_plus_residual:pull_only:alpha0",
+      "settings": {
+        "alpha": 0,
+        "beta": 0.05,
+        "eta": 0.25,
+        "forceMode": "pull_only",
+        "genreMode": "canonical_plus_residual"
+      }
+    },
+    {
+      "id": "canonical_plus_residual:pull_only:alpha1",
+      "settings": {
+        "alpha": 1,
+        "beta": 0.05,
+        "eta": 0.25,
+        "forceMode": "pull_only",
+        "genreMode": "canonical_plus_residual"
+      }
+    },
+    {
+      "id": "canonical_plus_residual:signed_experimental:alpha0",
+      "settings": {
+        "alpha": 0,
+        "beta": 0.05,
+        "eta": 0.25,
+        "forceMode": "signed_experimental",
+        "genreMode": "canonical_plus_residual"
+      }
+    },
+    {
+      "id": "canonical_plus_residual:signed_experimental:alpha1",
+      "settings": {
+        "alpha": 1,
+        "beta": 0.05,
+        "eta": 0.25,
+        "forceMode": "signed_experimental",
+        "genreMode": "canonical_plus_residual"
+      }
+    },
+    {
+      "id": "neighborhood_only_diagnostic:pull_only:alpha0",
+      "settings": {
+        "alpha": 0,
+        "beta": 0.05,
+        "eta": 0.25,
+        "forceMode": "pull_only",
+        "genreMode": "neighborhood_only_diagnostic"
+      }
+    },
+    {
+      "id": "neighborhood_only_diagnostic:pull_only:alpha1",
+      "settings": {
+        "alpha": 1,
+        "beta": 0.05,
+        "eta": 0.25,
+        "forceMode": "pull_only",
+        "genreMode": "neighborhood_only_diagnostic"
+      }
+    },
+    {
+      "id": "neighborhood_only_diagnostic:signed_experimental:alpha0",
+      "settings": {
+        "alpha": 0,
+        "beta": 0.05,
+        "eta": 0.25,
+        "forceMode": "signed_experimental",
+        "genreMode": "neighborhood_only_diagnostic"
+      }
+    },
+    {
+      "id": "neighborhood_only_diagnostic:signed_experimental:alpha1",
+      "settings": {
+        "alpha": 1,
+        "beta": 0.05,
+        "eta": 0.25,
+        "forceMode": "signed_experimental",
+        "genreMode": "neighborhood_only_diagnostic"
+      }
+    },
+    {
+      "id": "zero_beta",
+      "settings": {
+        "alpha": 1,
+        "beta": 0,
+        "eta": 0.25,
+        "forceMode": "pull_only",
+        "genreMode": "canonical_plus_residual"
+      }
+    },
+    {
+      "id": "zero_eta",
+      "settings": {
+        "alpha": 1,
+        "beta": 0.05,
+        "eta": 0,
+        "forceMode": "pull_only",
+        "genreMode": "canonical_plus_residual"
+      }
+    },
+    {
+      "id": "fractional_alpha_boundary",
+      "settings": {
+        "alpha": 0.37,
+        "beta": 0.2,
+        "eta": 1,
+        "forceMode": "pull_only",
+        "genreMode": "canonical_plus_residual"
+      }
+    }
+  ],
+  "binary": {
+    "path": "scores.f64",
+    "order": "scenario then packet pair then field",
+    "fields": [
+      "genre",
+      "force",
+      "delta",
+      "adjusted"
+    ],
+    "format": "IEEE754 float64 little-endian"
+  },
+  "node": "v24.12.0",
+  "implementationHashes": {
+    "dev/genreMechanicalGate.ts": "40631465225caaf1a1851108e3a51976832eff8377214e509a21014a7a878c95",
+    "src/genre-force/scoring.ts": "a8229ce567524b4abcfce68034566bf1eab60b5c8d3aa2afec55e6523cc02065",
+    "src/genre-force/graph.ts": "12d9bc6daeb877aae7a4f132f676ca0c1bb01a602f77eba14c7c77e753893c62",
+    "src/genre-force/data.ts": "75972c6562c6e86cbdba0f500d1f7e51426cf7866aeb661cddf77507f94e5ffd",
+    "src/genre-force/GenreForceExplorer.tsx": "e8b9b89ce9f067cafcaa75abf0f39d18fea7ad92d3b0cd568619aff11e6187f7",
+    "src/genre-force/PairInspector.tsx": "e9e9c8487c14982f0420b2fafa2b7969feda8b8e69338b1d8a47a7376cbfd278",
+    "src/song-space/layout.ts": "001c253b4d1ac860b4368d3280132f6e5f5f8f3dd7fe9e045becfbbb6ae31234",
+    "src/song-space/useLayout.ts": "a7bf389e94ae29c4f7ba3f1043789cfb46d15fb40be9026fd988b936a8a91fca",
+    "src/song-space/SpaceCanvas.tsx": "9ce302fef4fbe192d8706c0ea55d181bdcf48bb01555480c7fc8833af85cdf38",
+    "pnpm-lock.yaml": "6f0d352a0aed1ce455120298faccace038477cb239c2fdcb42be7127d72d6b23"
+  }
+}

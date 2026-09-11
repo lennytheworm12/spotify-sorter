@@ -1,0 +1,26 @@
+{
+  "focused_mapping_tests": {
+    "passed": 7
+  },
+  "frontend": {
+    "build": "PASS",
+    "lint": "PASS",
+    "passed": 17
+  },
+  "full_suite": [
+    {
+      "completed_result": false,
+      "reason": "Local/private network access to 127.0.0.1 blocked; process confirmed exited before rerun",
+      "status": "SANDBOX_INTERRUPTED"
+    },
+    {
+      "deselected": 12,
+      "duration_seconds": 227.0,
+      "local_server_access": true,
+      "passed": 1425,
+      "status": "PASS",
+      "warnings": 11
+    }
+  ],
+  "numerical_replay": "Identical frozen output bytes; replay scripts completed with exit 0"
+}

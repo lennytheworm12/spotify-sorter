@@ -1,0 +1,30 @@
+{
+  "current_residual_and_canonical_vectors_compared": 4950,
+  "failure_count": 0,
+  "float64_score_components_compared_exactly": 297000,
+  "initial_frozen_audit": {
+    "arithmetic_oracle": "independent Python weighted Jaccard / mass subtraction / max projection",
+    "arithmetic_tolerance": 1e-15,
+    "audio_matrix_key": "M3_C_PLUS_FIXED_MUQ",
+    "directed_baseline_ranks_exact": 9900,
+    "frontend_implementation_hashes_verified": 6,
+    "human_outcome_evaluation": "not performed; development explorer only",
+    "input_hashes_verified": 11,
+    "matrix_sha256": "efea93bb95cb1b7addb74b3816d2757ad93bdbec583215a7b43e8de004c93e97",
+    "new_model_calls": 0,
+    "pairs_with_insufficient_specific_style": 99,
+    "raw_gemini_profiles_unchanged": 100,
+    "run_manifest_sha256": "32d21a74c17609c7ed49e6d46a92570194adaa85dada26d6349ab398b9a88687",
+    "source_identity_matches": 100,
+    "status": "PASS",
+    "tracks": 100,
+    "unordered_pairs": 4950
+  },
+  "network_disabled": true,
+  "new_model_calls": 0,
+  "pairs": 4950,
+  "scenarios": 15,
+  "scope": "Mechanical correctness only; no human labels read or parameter choice made",
+  "source_profiles_rematerialized_without_inference": 100,
+  "status": "PASS"
+}
