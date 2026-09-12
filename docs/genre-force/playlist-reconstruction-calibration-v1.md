@@ -1,121 +1,107 @@
-# Playlist Reconstruction — Joint Audio and Genre Calibration v1.1
+# Playlist Reconstruction — Joint Audio and Genre Calibration v1.2
 
-Status: **proposed; source permission/access and feasibility must pass before data collection or calibration**. No scorer change, new inference, coefficient selection, or production activation is included in this documentation update.
+Status: **proposed; no model or output calibration result is asserted**. This documentation update changes no runtime scorer, feature pipeline, mapper, Gemini prompt, frozen score, or playlist.
 
-## Authoritative full protocol
+## Current protocol and retained reference
 
-Vault note:
+Full current vault note:
 
 `Projects/Spotify Sorter/Spotify Playlist Reconstruction — Joint Audio and Genre Weight Calibration Design.md`
 
-Pinned publication: vault commit `76533ea6d3988f3a436a35ce27525c6702d10001`.
+Pinned publication: vault commit `1be145263f0e6405a68b3d9a0949ce7218ddc6a4`.
 
-[Read the full protocol](https://github.com/lennytheworm12/obsidian-vault/blob/76533ea6d3988f3a436a35ce27525c6702d10001/Projects/Spotify%20Sorter/Spotify%20Playlist%20Reconstruction%20%E2%80%94%20Joint%20Audio%20and%20Genre%20Weight%20Calibration%20Design.md).
+[Read ranking protocol v1.2](https://github.com/lennytheworm12/obsidian-vault/blob/1be145263f0e6405a68b3d9a0949ce7218ddc6a4/Projects/Spotify%20Sorter/Spotify%20Playlist%20Reconstruction%20%E2%80%94%20Joint%20Audio%20and%20Genre%20Weight%20Calibration%20Design.md).
 
-This file is a repository entry point, not a replacement for the full protocol. Preserve historical explorer contracts and results.
+The previous complete v1.1 protocol is preserved byte-for-byte as:
 
-## Starting point
+`Projects/Spotify Sorter/Spotify Playlist Reconstruction — v1.1 Protocol Reference.md`
 
-The frozen100 mechanical gate is PASS in `ml/audio_similarity/reports/genre_force_mechanical_gate/v1/REPORT.md`, reported commit `c6fb6de`. It verifies mechanics, not music usefulness.
+[Read retained source/data/split protocol](https://github.com/lennytheworm12/obsidian-vault/blob/1be145263f0e6405a68b3d9a0949ce7218ddc6a4/Projects/Spotify%20Sorter/Spotify%20Playlist%20Reconstruction%20%E2%80%94%20v1.1%20Protocol%20Reference.md).
 
-The exact current audio baseline is `M3_C_PLUS_FIXED_MUQ`: CLAP C plus the existing centered30 MuQ arm. The original map is CLAP-C-based, not a C+MuQ distance display. Do not silently substitute full-song MuQ M4.
+Read both: unchanged source permissions, anti-circularity, collection, split, metric, and three-layer requirements remain applicable. v1.2 supersedes the old fixed-CLAP restriction and adds explicit representation selection and an output-calibration handoff.
 
-## Anti-circularity rule
+Next output stage: [Output Calibration — Scores, Admission and User Strictness](output-calibration-v1.md), linking its full pinned vault design.
 
-Reference membership and source intent must exist independently of our model.
+## Existing baseline versus proposed alternatives
 
-Use playlist title, description, curator/source statement, and observed membership as external supervision. Search terms such as `neo soul`, `alternative R&B`, or `hyperpop` are **discovery strata**, not the ground-truth ontology. Do not use Gemini, the canonical mapper, neighborhoods, CLAP/MuQ scores, or the Song Space map to remove “wrong-genre” songs before the benchmark is frozen.
+The reported frozen100 mechanical gate at `c6fb6de` verifies arithmetic and UI/graph behavior only.
 
-A source playlist saying `Neo Soul` while our mapper later calls some tracks `Alternative R&B` is useful disagreement, not dataset contamination.
+The documented explorer baseline is `M3_C_PLUS_FIXED_MUQ`: CLAP Method C plus centered30 MuQ. Original map coordinates are CLAP-C-based. A newer acquisition batch with `centered30_v1` CLAP/MuQ embeddings is a separate artifact even if it retains full audio. Full-song MuQ M4 must not be silently substituted.
 
-## Three benchmark layers
+Cache centered30 CLAP and Method C separately over the same approved, validated recordings. Reuse source hashes and exact caches. An authorized bounded extraction worker may overlap acquisition; this document starts no job. Retaining full audio permits later feature extraction without another download, but does not imply those features already exist.
 
-### Layer A — original source playlists
+Freeze corpus rules independently of model outputs. Representation manifests must identify checkpoints, sampling, pooling, source identity, and feature hashes. Common-population comparisons and coverage/attrition reporting remain required.
 
-Primary v1 calibration and confirmation.
+## Source-defined benchmark layers
 
-Preserve every human playlist boundary independently, even when several sources use the same genre/style name. Fit the global C/M/genre weights only on these original source playlists using grouped nested validation.
+Reference membership comes from the original curator/source, not our mapper. Freeze title, description, declared intent, source ID, membership, and discovery reasons before inspecting predictions. Search genre names are strata, not model-generated truth. Keep source disagreements and unusual members unless a predeclared non-model exclusion applies.
 
-### Layer B — pooled same-label cohorts
+- **Layer A:** original source playlists; primary ranking calibration/confirmation.
+- **Layer B:** pooled same-declared-label cohorts; derived post-selection diagnostics with original boundaries preserved.
+- **Layer C:** real mixed playlists and controlled synthetic mixtures; post-freeze product stress tests.
 
-Secondary post-fit diagnostic.
+The user's 4–5 playlists remain a separate transfer cohort. More masks or synthetic mixtures do not increase independent curator evidence. Source/access and audio-use prerequisites remain in the retained v1.1 protocol; this revision does not authorize acquisition.
 
-If three independent sources all describe lists as `Alternative R&B`, derive a union such as:
+Keep the twelve discovery strata, original metadata schema, approximate 12-playlist feasibility pilot and 60-source-playlist resource target in that reference. These are planning targets, not guarantees. The old approximate 48/12 split does not automatically satisfy the later output-fit/policy/final-test requirements.
 
-```text
-alt_rnb_pool = union(source_A, source_B, source_C)
-```
-
-but never replace A/B/C with the pool. Preserve source provenance and report source-consensus counts. The pool measures a broader shared style region; it does not assert that every A song should strongly match every C song. Do not tune v1 weights on Layer B.
-
-### Layer C — mixed playlists
-
-Post-freeze product/generalization stress test.
-
-Most real playlists are heterogeneous, so evaluate the frozen v1 model later on real mixed human playlists and controlled synthetic mixtures such as 50% pop + 50% R&B. Mixed playlists are intentionally not the first calibration target because they make signal attribution harder.
-
-Synthetic mixtures test whether the playlist aggregator can recover multiple modes; they are not human ground truth. If mixed-playlist results expose a major failure, preregister a v2 mixed/product objective and obtain a fresh holdout rather than silently retuning v1 on the stress test.
-
-The user's existing 4–5 playlists remain a separate personal-transfer cohort.
-
-## Collection scope
-
-The twelve discovery strata remain:
-
-- alternative R&B
-- neo soul
-- contemporary/pop R&B
-- boom bap/jazz rap
-- melodic trap/cloud rap
-- lo-fi/chillhop/instrumental hip hop
-- downtempo/trip-hop
-- indie/bedroom/dream pop
-- synth-pop/electropop/dance-pop
-- hyperpop/digicore
-- house/deep house/nu-disco
-- drum & bass/liquid dnb/jungle
-
-These are search strata only. Human/source wording like `late night r&b`, `modern soul`, `dreamy indie`, or `internet pop` can be kept exactly as the source-defined intent.
-
-Collecting a source means recording title, description, creator/curator, platform/reference, source-declared intent, date observed, membership/reference, discovery query/reason, and permission/status **before joining model outputs**.
-
-Proposed feasibility pilot remains ~12 source playlists × 20 tracks. Proposed main Layer A target remains ~60 original source playlists × up to 30 sampled tracks, at least 30 curator/source groups, with an approximately 48/12 development/lockbox split when feasible. Derived pools and synthetic mixtures do not increase the independent human-source count.
-
-## Source restrictions are a real prerequisite
-
-Spotify's [Developer Policy](https://developer.spotify.com/policy), especially III.13–14, restricts analysis and ML/AI use of Platform/Content. Its [Development Mode migration guide](https://developer.spotify.com/documentation/web-api/tutorials/february-2026-migration-guide) also restricts access to others' playlist contents. Public visibility or manual transcription does not automatically establish permitted model-calibration use.
-
-Separate discovery references from eligible membership/audio sources. Do not evade access restrictions by scraping or copying playlists into an owned account. Independently supplied authorized groupings, manually authored reference sets, or appropriately licensed research sources may be eligible after the applicable checks.
-
-## Joint model and controls
-
-Freeze per-track feature pipelines and the mapper. Fit only:
+## Joint representation and weight search
 
 ```text
+h ∈ {centered30_v1, Method_C}
 R = (1 - Jc) * Jnr
-F = (1 - rho) * C + rho * M + w_c * Jc + w_n * R
+F_theta = (1-rho) * C_h + rho * M + w_c * Jc + w_n * R
 0 <= rho <= 1
 0 <= w_n <= w_c <= 0.10
 ```
 
-This leaves three effective parameters. Joint fitting is the main Layer A candidate once data readiness passes; refitted ablations accompany it. Compare exact frozen M3, CLAP, MuQ, tuned audio fusion, fixed-M3 genre additions, and joint audio/genre alternatives. Zero genre/neighborhood contribution is a valid result.
-
-For candidate x and seed S:
+Search h jointly with the audio mixture and genre weights **inside inner validation**. Keep MuQ extraction, the verified canonical/residual scorer, top-three aggregator, candidate catalog, and prompt fixed.
 
 ```text
-Q_theta(x,S) = mean(top-3 combined pair scores F_theta(x,s), s in S)
+rho: 0.0, 0.1, ..., 1.0
+w_c: 0, 0.005, 0.010, 0.020, 0.035, 0.050, 0.075, 0.100
+eta: 0, 0.25, 0.50, 0.75, 1.0
+w_n = w_c * eta
 ```
 
-The top-three operation happens after the complete pair score is computed. Keep aggregation fixed during v1. This same aggregator is later stress-tested on Layer C multimodal playlists.
+There are 880 nominal configurations across the two CLAP methods before deduplicating inactive eta at w_c=0 and inactive h at rho=1. Alpha/beta are not fitted separately; their product is the effective genre coefficient.
 
-Use fixed candidate catalogs across methods, grouped/nested validation, record purging, and an untouched Layer A lockbox. Primary selection metric is observed-membership NDCG@20; report Recall@10/20 and per-source/per-stratum results. Nonmembership is unlabeled, not proven incompatibility.
+Precompute each encoder/profile once per recording/configuration; searches combine cached features. Large-catalog ranking still needs measured runtime and bounded-memory evaluation. Preserve exact M3 as a separate baseline whether or not it equals a grid configuration.
 
-Layer B, personal playlists, and Layer C do not choose v1 coefficients. They diagnose broader generalization after the Layer A model is frozen.
+Refit each ablation: each CLAP method alone, MuQ alone, each audio mixture, audio+canonical, audio+canonical+residual, plus fixed-M3 genre additions. Zero added genre is a valid result. No signed-force tuning, vocal/arrangement scoring, per-genre production weights, or mapper edits in the main search.
 
-## Immediate Codex goal — Gate A only
+## Reconstruction and selection
 
-Read the full v1.1 protocol and verified artifacts. Implement a permission-aware playlist/reference-set intake manifest and validator, the twelve-stratum source-discovery/nomination register, and source metadata capture that freezes title, description, creator, declared intent, original playlist identity, and membership before model outputs are joined.
+Hide 20% of each eligible evaluation source playlist and use the remaining seed context. Rank hidden members among the same larger evaluation catalog for every model, never among only the hidden positives.
 
-Preserve separate source playlists even when several share one declared label. Support derived same-label pools only as later Layer B artifacts. Accept mixed playlists as `layer_c_candidate`, excluded from v1 calibration. Add curator/duplicate grouping preflight and a feature-overlap/cost report.
+```text
+Q(x,S) = mean(top min(3,|S|) complete pair scores F(x,s))
+```
 
-Do not scrape restricted sources, collect new audio, make model calls, fit weights, alter the mapper, use mapper predictions to clean membership, or activate production. If real sources are not cleared, build synthetic fixtures and return `SOURCE_NOT_READY` rather than a musical verdict.
+Select the top three after combining all pair features. Exclude self/duplicate recording support. Save full ranks and scores.
+
+Use curator/duplicate-group nested splits and recording/version purges at each fitting/evaluation boundary. Primary metric remains observed-membership NDCG@20, with Recall@10/20, source/stratum macro results, uncertainty, and coverage. Nonmembership is unlabeled, not validated rejection. Prefer a simpler, smaller intervention within the retained uncertainty/recall guardrails; report boundary-limited and inconclusive outcomes.
+
+Log per-stratum surfaces on development only. They are exploratory evidence for a future hierarchical model, not permission to select genre-specific settings using the final test. Source-adjacency discovery notes remain qualitative, not labels.
+
+## Handoff to output calibration
+
+Freeze `ranking_model_id`: CLAP/MuQ manifests, rho, genre coefficients, mapper, source policy, aggregator and tie breaking. Then follow the output protocol:
+
+```text
+frozen F/Q -> descriptive distributions/reference percentiles
+           -> suitability-label readiness
+           -> optional probability mapping
+           -> policy/strictness development
+           -> untouched end-to-end confirmation
+```
+
+Percentiles are not acceptance probabilities. Genre-distant candidates are not automatic negatives. Thresholds can be validated directly on raw Q, but precision claims still need a justified suitability target. User strictness changes qualification, not the ranker or the score order. Top-three local support does not guarantee whole-playlist compactness.
+
+Do not reuse an opened ranking lockbox as an untouched final threshold test. Reserve suitable independent data roles or collect more permitted sources. If no selected ranker or labels exist, output work stays descriptive/scaffold-only.
+
+Ranking artifacts: `ml/audio_similarity/reports/playlist_weight_calibration/v1/`.
+Output artifacts: `ml/audio_similarity/reports/output_calibration/v1/`.
+
+## Immediate implementation boundary
+
+Continue only the source/feature/readiness work already authorized by the user. No new inference, coefficient fit, output threshold, or production activation is created by this documentation update. The full vault ranking and output notes include the next scoped Codex tasks and all prerequisite checks.
