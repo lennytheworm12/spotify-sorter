@@ -163,3 +163,10 @@ rounded display strings are not substitutes for full-precision inputs. A new
 implementation needs a new QA output directory; existing runs refuse changed
 replay results. The report is in
 `ml/audio_similarity/reports/genre_force_mechanical_gate/v1/`.
+
+## Ranking and output calibration scaffolding
+
+The separate [offline calibration scaffold](calibration-scaffold.md) implements
+ranking v1.2/output v1 contracts, synthetic nested-search proofs and a read-only
+corpus readiness command. It selects no real weights, representation or admission
+policy and leaves this explorer's scorer and defaults unchanged.
