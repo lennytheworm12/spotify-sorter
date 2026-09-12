@@ -1,0 +1,23 @@
+{
+  "implementation_commit": "6ee42ee0f666b182168d7532c9caf44954f30356",
+  "new_audio_or_model_calls": 0,
+  "production_changes": false,
+  "protocol_sha256": {
+    "Spotify Output Calibration \u2014 Scores, Admission and User Strictness.md": "1b6f9bc31d59fcbf1b8b3d7c11386c9606cec769dc135a7ce6d31a7a69c5ad3d",
+    "Spotify Playlist Reconstruction \u2014 Joint Audio and Genre Weight Calibration Design.md": "d87ddb2e125fd4aa7404a8bc2cfb683c68e3a3df53db4e90fb9c656b5a2b69d4",
+    "Spotify Playlist Reconstruction \u2014 v1.1 Protocol Reference.md": "e0f3af8315d1474649545b1c3a0488351c1c6d8d454939982ec0810f31330502"
+  },
+  "protocol_vault_commit": "1be145263f0e6405a68b3d9a0949ce7218ddc6a4",
+  "real_parameter_selection": false,
+  "real_suitability_labels_created": 0,
+  "validation": {
+    "compileall": "PASS",
+    "focused_final": 48,
+    "frontend": "NOT_TOUCHED",
+    "full_nonheavy": 1449,
+    "git_diff_check": "PASS",
+    "heavy_deselected": 12,
+    "note": "Full regression followed by final focused tests after additional source/mask/domain guards.",
+    "warnings": 11
+  }
+}
