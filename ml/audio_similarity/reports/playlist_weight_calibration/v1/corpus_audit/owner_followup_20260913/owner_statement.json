@@ -1,0 +1,13 @@
+{
+  "calibration_started": false,
+  "deletion_executed": false,
+  "deletion_schedule_frozen": false,
+  "owner_message": "i dont have any perms or license im planning on deleting the audio files after the weight fitting im just keeping them right now so we dont have to redownload deciding between decisions like which clap embedding to use etc",
+  "prior_audit_artifacts_modified": false,
+  "prior_draft_sha256": "35b92afd6a803b3cb293be1f17fc6848796a180e9f5f60b8ae2ff7d1fae7f728",
+  "recorded_date": "2026-09-13",
+  "retention_plan": "Owner intends to keep retained audio through representation selection and weight fitting, then delete audio to avoid repeated acquisition during experimentation.",
+  "schema": "calibration-owner-provenance-followup-v1",
+  "source_use_documentation": "OWNER_REPORTS_NO_PERMISSION_OR_LICENSE",
+  "source_use_gate": "SOURCE_NOT_READY under the existing ranking protocol; retention intent does not supply its required source-use record."
+}

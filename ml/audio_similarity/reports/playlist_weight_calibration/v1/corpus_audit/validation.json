@@ -1,0 +1,30 @@
+{
+  "calibration_runs": 0,
+  "capture_file_sha256": "9f68729ad6aef94d3ff89fbed138e141b0651cb019796a78449e2226eaa481ba",
+  "compile_and_whitespace": "PASS",
+  "focused_tests": {
+    "command": ".venv/bin/python -m pytest tests/calibration tests/test_stage5a_cache.py tests/test_reference_batches.py tests/test_reference_dedupe.py -q",
+    "passed": 35,
+    "seconds": 1.51
+  },
+  "frontend": "not touched by this audit",
+  "full_suite": "not run; bounded audit change, relevant focused suite passed",
+  "inference_calls": 0,
+  "network_calls": 0,
+  "new_audit_tests": 8,
+  "production_changes": false,
+  "protected_inputs": {
+    "changed": [],
+    "changed_sources": [],
+    "retained_sources": 1927,
+    "status": "PASS",
+    "text_files": 2044
+  },
+  "replay": {
+    "REPORT.md": true,
+    "artifact_manifest.json": true,
+    "audit.private.json": true,
+    "draft_execution_manifest.json": true,
+    "source_inventory.private.csv": true
+  }
+}

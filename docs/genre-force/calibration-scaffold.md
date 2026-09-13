@@ -6,6 +6,12 @@ choose thresholds, or activate production behavior. All executable parameter
 searches reject real evidence. Existing acquisition may continue independently;
 these commands do not start or modify it.
 
+The [real corpus audit](../../ml/audio_similarity/reports/playlist_weight_calibration/v1/corpus_audit/README.md)
+adds a read-only capture/replay command, per-source attrition, conditional grouped
+split preflight and a draft execution manifest. Owner-confirmed Markdown tables
+preserve external playlist membership; copied lists retain their source curator.
+The audit does not enable real parameter selection or freeze an incomplete bundle.
+
 ## Run now
 
 From `ml/audio_similarity`:
