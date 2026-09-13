@@ -3,7 +3,7 @@
 This implements deterministic mechanics for ranking v1.2 and output v1. It does
 not select real weights or CLAP representations, fit probabilities, create labels,
 choose thresholds, or activate production behavior. All executable parameter
-searches reject real evidence. Existing acquisition may continue independently;
+searches in the original scaffolding reject real evidence. Existing acquisition may continue independently;
 these commands do not start or modify it.
 
 The [real corpus audit](../../ml/audio_similarity/reports/playlist_weight_calibration/v1/corpus_audit/README.md)
@@ -11,6 +11,13 @@ adds a read-only capture/replay command, per-source attrition, conditional group
 split preflight and a draft execution manifest. Owner-confirmed Markdown tables
 preserve external playlist membership; copied lists retain their source curator.
 The audit does not enable real parameter selection or freeze an incomplete bundle.
+
+The subsequent, separately authorized [personal development run](../../ml/audio_similarity/reports/playlist_weight_calibration/v1/development_run/INTERPRETATION.md)
+materializes a fixed sample and executes grouped nested comparisons through its
+own explicit entrypoint. It preserves the scaffold's synthetic-only guard, keeps
+source-use documentation pending, and activates no production settings. Its
+report records the actual coverage, selected development candidates, and replay
+evidence; it is not a confirmatory lockbox result.
 
 ## Run now
 
