@@ -36,8 +36,10 @@ incomplete. Display labels alone do not verify independent curator identities.
 ## Proposed roles and feasibility
 
 Four Spotify genre lists are development-expansion candidates. Eight Spotify
-Mix lists remain source-type-review/later-stress candidates in the same
-**development-only curator group**. They add no independent development curator.
+Mix lists are **personalized/generated**, confirmed by the owner on 2026-09-14:
+Dance Pop, Digicore, Drum And Bass, Drum and Bass Jungle, Electric Pop, House,
+Hyperpop and Synthpop. They remain later-stress candidates outside primary Layer A
+in the same **development-only curator group** and add no independent development curator.
 Five credited groups remain provisionally reserved:
 
 | Source | Credited curator | Usable original hash samples |
@@ -55,10 +57,12 @@ attrition is not replaced. Five conditional groups, only three retaining 30
 samples, fall below the retained planning targets: **independent confirmation is
 not established**. No frozen split was changed, activated or merged.
 
-Remaining owner decisions concern the source-use basis and curator links, whether
-the eight Mix sources are generated/personalized or fixed editorial lists,
-adjudication of the four version-family links, and acceptance of the smaller
-confirmation scope. These assignments remain provisional without that evidence.
+The owner reports no source-use documentation or curator-link evidence for the
+five reserved sources. Their provenance remains unresolved; lack of evidence does
+not establish independence. Remaining decisions concern the source-use basis and
+curator links, adjudication of the four version-family links, and acceptance of
+the smaller confirmation scope. Mix source type is resolved. These assignments
+remain provisional without the remaining evidence.
 
 ## Features and API accounting
 
@@ -96,10 +100,11 @@ No reservation was released or charged against another corpus's allowance.
 
 Inventory and draft root:
 `.research_audio/playlist_calibration_extension_preparation_v1/`.
-Current roles: `role_split_manifest_v3.private.json`; superseded drafts are indexed
-in `draft_version_index.json`. Full feature snapshot:
+Current roles: `.research_audio/playlist_calibration_extension_source_followup_01/role_split_manifest_v4.private.json`.
+This owner-evidence update preserves v3, its index, every membership, the draft
+partition and all feature artifacts. Full feature snapshot:
 `.research_audio/playlist_calibration_extension_recovery_03/feature_snapshot_v2/`.
-[Final readiness and artifact hashes](readiness_report_v2.json) identify the
+[Final readiness and artifact hashes](readiness_report_v3.json) identify the
 contracts, source proofs, matrices, execution ledgers and replay evidence.
 
 Separate role artifacts contain 485 proposed-confirmation and 737 development
