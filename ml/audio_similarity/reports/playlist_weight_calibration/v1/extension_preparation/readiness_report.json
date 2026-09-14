@@ -1,0 +1,348 @@
+{
+  "FEATURE_READY": false,
+  "READY_FOR_WEIGHT_SEARCH": false,
+  "SPLIT_READY": false,
+  "accounting": {
+    "extension": {
+      "actual_cost_usd": "3.05938650",
+      "cap_usd": "10",
+      "generation_attempts": 597,
+      "settled_attempts": 597,
+      "unresolved_upper_usd": "0",
+      "unsettled": []
+    },
+    "original_all_continuations": {
+      "cap_usd": "15",
+      "separate_from_extension": true,
+      "settled_usd": "9.04152825",
+      "unresolved_reservations": 3,
+      "unresolved_upper_usd": "2.45145600"
+    },
+    "recovery_scope": {
+      "approved_cleanup_or_continuation": false,
+      "automatic_retries": 0,
+      "estimated_additional_generation_usd": "2.757035070351758793969849246",
+      "existing_total_cap_usd": "10",
+      "new_calls_after_stop": 0,
+      "remaining_profiles": 538,
+      "temporary_remote_deletions_after_stop": 0
+    },
+    "terminal_failure": {
+      "http_status": 429,
+      "quota_limit_bytes": 21474836480,
+      "quota_metric": "file_storage_bytes",
+      "source_response_sha256": "c786d9eb4622b627a337b205144a319d026d127e1525767eb3c525fffa2ff2a5",
+      "stage": "UPLOAD_START_BEFORE_GENERATION_RESERVATION",
+      "successful_extension_upload_bytes": 14131822159,
+      "successful_extension_uploads": 597
+    }
+  },
+  "boundaries": {
+    "confirmation_membership_results": false,
+    "frozen_split_activation_or_merge": false,
+    "mapper_prompt_or_scoring_changes": false,
+    "performance_based_selection": false,
+    "playlist_writes": false,
+    "production_changes": false,
+    "restricted_content_added_to_git": false,
+    "weight_search": false
+  },
+  "draft_roles": {
+    "confirmation_feasibility": "CONDITIONAL_SMALL_COHORT_GEOMETRY_ONLY; source rights/curator independence/version review unresolved; not the 30-curator target",
+    "counts": {
+      "broader_version_links_touching_extension": 4,
+      "confirmation_candidate_curator_groups": 5,
+      "confirmation_candidate_playlists": 5,
+      "confirmation_playlists_with_30_usable_samples": 3,
+      "confirmation_sample_recordings": 145,
+      "development_expansion_playlists": 4,
+      "development_sample_recordings": 394,
+      "extension_pilot_broad_version_overlap": 0,
+      "extension_playlists": 17,
+      "extension_prior_inspected_broad_version_overlap": 12,
+      "full_development_purges": 20,
+      "sample_development_purges": 8,
+      "source_type_review_playlists": 8
+    },
+    "existing_frozen_split_changed": false,
+    "existing_pilot_sample_preserved": true,
+    "feature_catalogs": {
+      "confirmation_candidates": {
+        "manifest_sha256": "68c042ebc9b9a819c1cd62fd9b995039bbff72a896273fc3fb87bd330dba39f2",
+        "membership_results_allowed": false,
+        "missing_profiles": 233,
+        "retained_recordings": 485,
+        "selection_input": false,
+        "valid_profiles": 252
+      },
+      "development_candidates": {
+        "manifest_sha256": "007e9e6f55876eb0d00041254256ad1a99538c73c153ca85bcdb7dfb972039e7",
+        "membership_results_allowed": false,
+        "missing_profiles": 343,
+        "retained_recordings": 737,
+        "selection_input": false,
+        "valid_profiles": 394
+      }
+    },
+    "remaining_decisions": [
+      "source-use documentation and curator independence",
+      "Mix-source curation type",
+      "conservative version-family adjudication",
+      "owner scope decision for undersized conditional confirmation"
+    ],
+    "shared_role_catalog_recordings": 87,
+    "status": "MODEL_BLIND_DRAFT_ONLY"
+  },
+  "features": {
+    "centered30_clap_retained_comparison": {
+      "missing": 0,
+      "new": 0,
+      "reused": 1135
+    },
+    "centered30_muq": {
+      "missing": 0,
+      "new": 0,
+      "reused": 1135
+    },
+    "gemini_and_canonical_neighborhoods": {
+      "missing": 538,
+      "new": 597,
+      "reused": 0,
+      "statuses": {
+        "MISSING_NOT_ATTEMPTED": 537,
+        "UPLOAD_QUOTA_BLOCKED_NO_PROFILE": 1,
+        "VALID_NONINFORMATIVE": 72,
+        "VALID_SPECIFIC_STYLE": 525
+      }
+    },
+    "matrix_hashes": {
+      "C_center30": "6f40228ab2888244b1b411a73a345e822611e8729c654c1fe2353572e83af09c",
+      "C_method_c": "ed22dc86cd2cbac8fd7e3190e436c559eb89b45ea1e6af56cd703bf699637293",
+      "Jc": "1afaade6c6c5753edef74a60f9e6c2eda0f4d6b38778127e13158eb389dfe99c",
+      "Jnr": "abb1af909e09c1890c4abb9670566829f07a6ea8d1690079d3ca40e3c0d4a867",
+      "M": "9d360adf1dc23d636fc665388f20f19a9a473bdcc40bbe30cd1c78be106a4ebf",
+      "R": "1ae54f32f08d4755178af49e02cab67d986df31d222ab94ded0031642740ed01",
+      "genre_pair_valid": "9c10c6d3f44be11982244d0da7952896ea4c1575897372f18e72c0811fa7d854"
+    },
+    "matrix_path_prefix": ".research_audio/playlist_calibration_extension_preparation_v1/feature_snapshot_v1",
+    "method_c": {
+      "failed_inferences": 0,
+      "missing": 0,
+      "new": 1123,
+      "new_chunk_inference_calls": 22501,
+      "reused": 12
+    },
+    "missing_semantics": "NaN plus false validity mask; never zero or valid unknown. No new deferrals approved.",
+    "new_deferrals_approved": 0,
+    "ordering_sha256": "514390a4441f219433c739dfa4cb840e9b782fbfc18a42034242fc76f9ef26e5",
+    "original_approved_deferrals_preserved": 2,
+    "representation_ids": {
+      "C_center30": "centered30_v1",
+      "C_method_c": "method_c_full_song",
+      "Jc": "canonical_weighted_jaccard_v1",
+      "Jnr": "unmatched_neighborhood_jaccard_v1",
+      "M": "muq_centered30_v1",
+      "R": "canonical_residual_v1"
+    },
+    "source_order_sha256": "b8d7d7c7df58a46b97d4eb70f0c096979940b9d7840676cbe65ba69092f331d1"
+  },
+  "inventory": {
+    "acquired_for_extension_before_task": 1108,
+    "acquisition_failed_requests": 10,
+    "acquisition_reused_older_local_sources": 27,
+    "conservative_retained_version_groups": 1131,
+    "credited_curator_labels": 6,
+    "independently_verified_curator_identity": false,
+    "invalid_retained_audio": 0,
+    "manual_tail_requests": 24,
+    "membership_slots": 1314,
+    "new_audio_downloads_this_task": 0,
+    "playlists": 17,
+    "requests": 1169,
+    "retained_recording_ids": 1135,
+    "source_description_and_use_documentation_pending": 17,
+    "source_urls_present": 17,
+    "unclear_curator_display_names": 0,
+    "unique_audio_hashes": 1134
+  },
+  "overlap": {
+    "additional_history_affects_confirmation": false,
+    "additional_older_source_review_recordings": 2,
+    "broader_version_links_for_review": 4,
+    "confirmation_playlist_ids_found_in_checked_prior_manifests": 0,
+    "earlier_frozen_retrieval_recordings": 12,
+    "historical_input_review_manifests_checked": 17,
+    "original_corpus_conservative_version": 0,
+    "original_corpus_exact_id": 0,
+    "original_corpus_source_hash": 0,
+    "undocumented_history_ruled_out": false,
+    "used_development_pilot_exact_or_conservative_version": 0
+  },
+  "private_artifacts": {
+    ".research_audio/playlist_calibration_extension_preparation_v1/artifact_manifest.private.json": "d41b99b6777f9397a7eee4d9a407f3188470efbae556da2a2d1161867a9ddce7",
+    ".research_audio/playlist_calibration_extension_preparation_v1/audio_matrix_replay_verification.json": "b472e5eb7a0b59179e60ae89563b8c4a0de41376fe4e50b97410f43335373b3d",
+    ".research_audio/playlist_calibration_extension_preparation_v1/audio_replay_verification.json": "1aef9e0b0ef352ce01dbeeb0f24179f5aabce5500fe011e1e32bd9ae4ddfaf95",
+    ".research_audio/playlist_calibration_extension_preparation_v1/companion_features.json": "aeebbd3fa6d4bfa2165e0e2aa5e7ba3ce1d4d8ba4434d271d970a92f2f8edd06",
+    ".research_audio/playlist_calibration_extension_preparation_v1/configuration.json": "b9ecd3e0b90bbe9d0ab51fa4986912e2aa0b123bba929fd15c52e49aef136e01",
+    ".research_audio/playlist_calibration_extension_preparation_v1/corpus.json": "0d83e2d089f1259462874939bc481d7920b6f62820444e07a19356b0846b2f51",
+    ".research_audio/playlist_calibration_extension_preparation_v1/draft_version_index.json": "3744022d0f86d23e486d540d08563d708b7d146b7af6bcb0a39eb23f9caa7ce8",
+    ".research_audio/playlist_calibration_extension_preparation_v1/execution_manifest.json": "b8f3773cceec842a971196337093cba9a941409c6a997e59cb9996624d0b7b79",
+    ".research_audio/playlist_calibration_extension_preparation_v1/feature_replay_verification.json": "cc7a98f7a8671eca3335d7633a6ecbf473daf443cd07a6f04cb991a32e238166",
+    ".research_audio/playlist_calibration_extension_preparation_v1/feature_snapshot_v1/manifest.json": "4c7606066757a5ce186b82ff1c3f44ef5af656527ca34d17af03427a07e05dd0",
+    ".research_audio/playlist_calibration_extension_preparation_v1/feature_snapshot_v1/mapped_profiles.private.json": "8d3de050d2e5a30955dcaf01f6af53bf2d7ab00582163b2e5935314e0486e143",
+    ".research_audio/playlist_calibration_extension_preparation_v1/feature_snapshot_v1/profile_snapshot.private.json": "15506a1109d42a18744936f39dbac446ad8d643b37a6c26d7bbbfb8aa9d31a02",
+    ".research_audio/playlist_calibration_extension_preparation_v1/feature_snapshot_v1/profile_status.json": "d46d2e724dbb844805e5fa2a689a22fbae2dc694344b5e8c1918f459924177a3",
+    ".research_audio/playlist_calibration_extension_preparation_v1/feature_snapshot_v1/recording_ids.json": "514390a4441f219433c739dfa4cb840e9b782fbfc18a42034242fc76f9ef26e5",
+    ".research_audio/playlist_calibration_extension_preparation_v1/feature_snapshot_v1/roles/confirmation_candidates/manifest.json": "68c042ebc9b9a819c1cd62fd9b995039bbff72a896273fc3fb87bd330dba39f2",
+    ".research_audio/playlist_calibration_extension_preparation_v1/feature_snapshot_v1/roles/development_candidates/manifest.json": "007e9e6f55876eb0d00041254256ad1a99538c73c153ca85bcdb7dfb972039e7",
+    ".research_audio/playlist_calibration_extension_preparation_v1/final_historical_integrity.json": "9f70e58115b31c953cd87825ffcee07aeff0242420b1fdaec4d10cd782b1fcef",
+    ".research_audio/playlist_calibration_extension_preparation_v1/genre_scorer_parity.json": "646b9a33e7c912a3890d5e87b355859d1645df22ba733b909b1d1d47aade93a4",
+    ".research_audio/playlist_calibration_extension_preparation_v1/global_policy.json": "5772aa3a936bfbcfc3c9f0d8225c1e485ea76551650f376e4842b81af835c2ea",
+    ".research_audio/playlist_calibration_extension_preparation_v1/gpu_parity_reuse.json": "b3572181057cec633cb0bf0dbacebb3aae404e0a1c59ab6983b24dd10131a3c8",
+    ".research_audio/playlist_calibration_extension_preparation_v1/history_followup.json": "d870a5f6621d56512fd656d407888e0751ca9a61453a1358cdaf832e680fafe1",
+    ".research_audio/playlist_calibration_extension_preparation_v1/matrix_verification.json": "acad759ae1faa1deeeabca96501ad41f63918e70b217dba211f80d82fa9707cf",
+    ".research_audio/playlist_calibration_extension_preparation_v1/preparation_readiness.json": "ec9390d7a083959f26affbf58d0748d24436a32d08eae25cd5d578276c1e536c",
+    ".research_audio/playlist_calibration_extension_preparation_v1/preparation_verification.json": "b0cfd247bc649ad112719bd915aef4665394490a62be782e7e16f1350f43c2fe",
+    ".research_audio/playlist_calibration_extension_preparation_v1/profile_input_hashes.json": "e5b9292e5e25aa3df82c1717bf2b05613e4f6c039571c2d126425b673bd76829",
+    ".research_audio/playlist_calibration_extension_preparation_v1/protocols/manifest.json": "a575ff2e5b5c94d1e31b67bc686267de6947a0df3e0110b7c2780abf074aceb6",
+    ".research_audio/playlist_calibration_extension_preparation_v1/recipe_version_index.json": "a98e06b462a87aeb1c7e8cb45169dadff9da97194ddbe231d1854607ce0799c1",
+    ".research_audio/playlist_calibration_extension_preparation_v1/reviewed_recovery_scope.private.json": "3fc0f6461f789dd6d884e6a6f824d8dfab9500de5e97dbc46525f90fbec59c37",
+    ".research_audio/playlist_calibration_extension_preparation_v1/role_split_manifest_v3.private.json": "8a89db96c1b72ae40ad9847326456523ac85d674e80a3ba9b667375fa4cbe0cc",
+    ".research_audio/playlist_calibration_extension_preparation_v1/source_invariant_checks.json": "871aed9186b34c594f72b896373f35f60091137639c13a67029e2dce33a22c70",
+    ".research_audio/playlist_calibration_extension_preparation_v1/terminal_transport_audit.private.json": "cbfe75c9cb41144845e3a228c0e15d29bf8401dbcf11119bcd821e981d295c96",
+    ".research_audio/playlist_calibration_extension_preparation_v1/upload_authorization.json": "b76e9e587ea20e405da023e106217f380f69f83e9d14c738b5306f7ee0988216",
+    ".research_audio/playlist_calibration_extension_preparation_v1/validation/extension-focused-tests.log": "50a87e2c43622ed6eb14d03079cf224c90cce691d4ff9a5d68b3d244c2a3acb7",
+    ".research_audio/playlist_calibration_extension_preparation_v1/validation/extension-nonheavy-tests.log": "9172d5c98923a99ccf507b6e55510442441f4cb098e61c65231506f6d9e6e587",
+    ".research_audio/playlist_calibration_extension_preparation_v1/verified_models.json": "385aef6b0c83a1bd719e9f265ccfcdde26330d1755996440cf0ef5a35f3b3b0d"
+  },
+  "schema": "extension-preparation-readiness-report-v1",
+  "status": "OFFLINE_PREPARATION_VERIFIED_PAID_PHASE_BLOCKED",
+  "verification": {
+    "feature_replay": {
+      "all_snapshot_bytes_identical": true,
+      "api_calls": 0,
+      "audio_inference_calls": 0,
+      "execution_files_unchanged": 10753,
+      "feature_manifest_sha256": "4c7606066757a5ce186b82ff1c3f44ef5af656527ca34d17af03427a07e05dd0",
+      "full_profile_completion": false,
+      "genre_arithmetic_recomputed": true,
+      "network_connect_and_create_connection_patched_to_raise": true,
+      "recipe_sha256": "81b81e209190f831c9728a78f9329c50e8fd484fce97a3d3f3f2ade0120d2c96",
+      "retained_recordings": 1135,
+      "snapshot_files_verified": 88,
+      "status": "PASS_COMPLETED_ARTIFACTS",
+      "verified_profile_count": 597
+    },
+    "final_historical_integrity": {
+      "historical_development_files_unchanged": 7346,
+      "historical_publications": {
+        "changed": [],
+        "checked_original_manifests": {
+          "reports/gemini_style_pilot/frozen100_free_genre_v1": 1963,
+          "reports/genre_force_mechanical_gate/v1": 21,
+          "reports/stage5e1_four_arm_retrieval": 25,
+          "reports/stage5e3_full_song_muq_playlist_compatibility/frozen100_v3": 40
+        },
+        "status": "PASS"
+      },
+      "historical_sources": {
+        "active_extension_state_excluded": true,
+        "changed_sources": [],
+        "changed_text_files": [],
+        "protected_text_files": 2044,
+        "retained_source_files": 1927,
+        "status": "PASS"
+      },
+      "new_api_calls": 0,
+      "new_inference_calls": 0,
+      "protected_extension_input_files": 3176,
+      "status": "PASS"
+    },
+    "focused_tests_passed": 74,
+    "matrix_checks": {
+      "checks": {
+        "C_center30": {
+          "exact_symmetry": true,
+          "finite_cells": 1288225,
+          "max_finite": 1.0,
+          "min_finite": 0.05841556023606802,
+          "sha256": "6f40228ab2888244b1b411a73a345e822611e8729c654c1fe2353572e83af09c"
+        },
+        "C_method_c": {
+          "exact_symmetry": true,
+          "finite_cells": 1288225,
+          "max_finite": 1.0,
+          "min_finite": -0.08961011630145883,
+          "sha256": "ed22dc86cd2cbac8fd7e3190e436c559eb89b45ea1e6af56cd703bf699637293"
+        },
+        "Jc": {
+          "exact_symmetry": true,
+          "finite_cells": 356409,
+          "max_finite": 1.0,
+          "min_finite": 0.0,
+          "sha256": "1afaade6c6c5753edef74a60f9e6c2eda0f4d6b38778127e13158eb389dfe99c"
+        },
+        "Jnr": {
+          "exact_symmetry": true,
+          "finite_cells": 356409,
+          "max_finite": 1.0,
+          "min_finite": 0.0,
+          "sha256": "abb1af909e09c1890c4abb9670566829f07a6ea8d1690079d3ca40e3c0d4a867"
+        },
+        "M": {
+          "exact_symmetry": true,
+          "finite_cells": 1288225,
+          "max_finite": 1.0,
+          "min_finite": -0.33167076421007513,
+          "sha256": "9d360adf1dc23d636fc665388f20f19a9a473bdcc40bbe30cd1c78be106a4ebf"
+        },
+        "R": {
+          "exact_symmetry": true,
+          "finite_cells": 356409,
+          "max_finite": 1.0,
+          "min_finite": 0.0,
+          "sha256": "1ae54f32f08d4755178af49e02cab67d986df31d222ab94ded0031642740ed01"
+        },
+        "genre_pair_valid": {
+          "exact_symmetry": true,
+          "finite_cells": 1288225,
+          "max_finite": 1.0,
+          "min_finite": 0.0,
+          "sha256": "9c10c6d3f44be11982244d0da7952896ea4c1575897372f18e72c0811fa7d854"
+        }
+      },
+      "exact_R_identity": true,
+      "missing_pair_mask_exact": true,
+      "missing_profiles": 538,
+      "new_api_calls": 0,
+      "new_inference_calls": 0,
+      "recordings": 1135,
+      "roles": {
+        "confirmation_candidates": {
+          "manifest_sha256": "68c042ebc9b9a819c1cd62fd9b995039bbff72a896273fc3fb87bd330dba39f2",
+          "membership_results_allowed": false,
+          "missing_profiles": 233,
+          "retained_recordings": 485,
+          "selection_input": false,
+          "valid_profiles": 252
+        },
+        "development_candidates": {
+          "manifest_sha256": "007e9e6f55876eb0d00041254256ad1a99538c73c153ca85bcdb7dfb972039e7",
+          "membership_results_allowed": false,
+          "missing_profiles": 343,
+          "retained_recordings": 737,
+          "selection_input": false,
+          "valid_profiles": 394
+        }
+      },
+      "status": "PASS",
+      "valid_noninformative_gate_preserved": true,
+      "valid_noninformative_profiles": 72,
+      "valid_profiles": 597
+    },
+    "mechanical_gate_pairs_exact": 4950,
+    "nonheavy_regressions_passed": 1502,
+    "nonheavy_tests_deselected": 12,
+    "sealed_private_files": 62712
+  }
+}
