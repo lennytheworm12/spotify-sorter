@@ -1,0 +1,68 @@
+{
+  "schema": "extension-preparation-inventory-milestone-v1",
+  "counts": {
+    "already_queued_extension_requests": 0,
+    "blocked_recordings": 0,
+    "credited_curator_labels": 6,
+    "exact_original_recordings": 0,
+    "extension_playlists": 17,
+    "extension_requests": 1169,
+    "extension_version_groups": 1168,
+    "membership_slots": 1314,
+    "new_queue_requests": 1169,
+    "pilot_overlap_requests": 0,
+    "pilot_overlap_version_groups": 0,
+    "queue_states": {
+      "ACQUISITION_FAILED": 10,
+      "COMPLETE": 1135,
+      "MANUAL_TAIL": 24
+    },
+    "unavailable_requests": 34,
+    "unique_retained_recordings": 1135,
+    "unresolved_curators": 0,
+    "unique_retained_source_hashes": 1134,
+    "broader_original_version_overlap": 0
+  },
+  "draft_split_counts": {
+    "broader_version_links_touching_extension": 4,
+    "confirmation_candidate_curator_groups": 5,
+    "confirmation_candidate_playlists": 5,
+    "confirmation_playlists_with_30_usable_samples": 3,
+    "confirmation_sample_recordings": 145,
+    "development_expansion_playlists": 4,
+    "development_sample_recordings": 394,
+    "extension_pilot_broad_version_overlap": 0,
+    "extension_playlists": 17,
+    "extension_prior_inspected_broad_version_overlap": 12,
+    "full_development_purges": 20,
+    "sample_development_purges": 8,
+    "source_type_review_playlists": 8
+  },
+  "FEATURE_READY": false,
+  "SPLIT_READY": false,
+  "READY_FOR_WEIGHT_SEARCH": false,
+  "feature_status": "METHOD_C_RUNNING_GEMINI_OFFLINE_PREPARATION_RUNNING",
+  "paid_status": {
+    "status": "BLOCKED_EXTENSION_UPLOAD_AND_SPENDING_APPROVAL_REQUIRED",
+    "prior_settled_usd": "9.04152825",
+    "prior_unresolved_upper_usd": "2.45145600",
+    "prior_conservative_total_usd": "11.49298425",
+    "extension_new_paid_calls": 0,
+    "extension_spend_usd": "0",
+    "proposed_extension_cap_usd": "10",
+    "estimated_extension_cost_usd": "6.265039416208791208791208791",
+    "max_new_profiles": 1135
+  },
+  "focused_tests": {
+    "passed": 74,
+    "log_sha256": "50a87e2c43622ed6eb14d03079cf224c90cce691d4ff9a5d68b3d244c2a3acb7"
+  },
+  "private_artifacts": {
+    ".research_audio/playlist_calibration_extension_preparation_v1/corpus.json": "0d83e2d089f1259462874939bc481d7920b6f62820444e07a19356b0846b2f51",
+    ".research_audio/playlist_calibration_extension_preparation_v1/role_split_manifest_v3.private.json": "8a89db96c1b72ae40ad9847326456523ac85d674e80a3ba9b667375fa4cbe0cc",
+    ".research_audio/playlist_calibration_extension_preparation_v1/centered30_inventory.private.json": "21bf7c8b2865378fa0a806f6b09a530a78ddbd402c9559d433c687f1f2470c05",
+    ".research_audio/playlist_calibration_extension_preparation_v1/preflight.json": "6ba4667f87e928e7a8ed73e091ed66fc213212fe5a1f86e2f0d3ed841438495e",
+    ".research_audio/playlist_calibration_extension_preparation_v1/paid_phase_status.json": "ea5af3bdfb168c9e187de2311168eb7a46caabaf1738d2a0501b9e0cb0cce024"
+  },
+  "scope": "Inventory checkpoint only; extraction incomplete. No ranking results, tuning, or playlist writes."
+}
