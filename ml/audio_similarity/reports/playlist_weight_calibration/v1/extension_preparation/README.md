@@ -2,10 +2,10 @@
 
 **FEATURE_READY=false · SPLIT_READY=false · READY_FOR_WEIGHT_SEARCH=false**
 
-Latest: automatic cleanup removed all 597 earlier temporary uploads. After 205
-more valid profiles, a generation request timed out. Its **$0.817152** reservation
-remains preserved. A [reviewed continuation](continuation_timeout_milestone.json)
-is processing the remaining 333 profiles under the owner's instruction to finish
+Latest: automatic cleanup removed all 597 earlier temporary uploads. After 279
+more valid profiles, two generation timeouts have left **$1.634304** in preserved
+reservations. A [reviewed continuation](continuation_timeout_02_milestone.json)
+is processing the remaining 259 profiles under the owner's instruction to finish
 the batch and the same $10 total cap. The stopped-phase report below records the
 preserved checkpoint; final readiness follows completion.
 
