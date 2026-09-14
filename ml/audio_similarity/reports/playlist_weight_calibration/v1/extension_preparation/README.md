@@ -2,10 +2,12 @@
 
 **FEATURE_READY=false · SPLIT_READY=false · READY_FOR_WEIGHT_SEARCH=false**
 
-Latest: the owner approved temporary-upload cleanup and completion of the remaining
-538 profiles under the same $10 total cap. The [continuation](continuation_milestone.json)
-is running with automatic cleanup after each verified response. The stopped-phase
-report below records the preserved checkpoint; final readiness follows completion.
+Latest: automatic cleanup removed all 597 earlier temporary uploads. After 205
+more valid profiles, a generation request timed out. Its **$0.817152** reservation
+remains preserved. A [reviewed continuation](continuation_timeout_milestone.json)
+is processing the remaining 333 profiles under the owner's instruction to finish
+the batch and the same $10 total cap. The stopped-phase report below records the
+preserved checkpoint; final readiness follows completion.
 
 The audio features are complete. Gemini stopped on a file-storage quota error
 before upload 598; no automatic retry was made. The 597 valid profiles and all

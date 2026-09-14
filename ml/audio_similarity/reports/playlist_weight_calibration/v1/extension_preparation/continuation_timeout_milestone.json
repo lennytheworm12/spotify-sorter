@@ -1,0 +1,23 @@
+{
+  "FEATURE_READY": false,
+  "READY_FOR_WEIGHT_SEARCH": false,
+  "SPLIT_READY": false,
+  "authorization_scope": "Owner instructed automatic temporary-upload cleanup and processing until this batch is complete; same total cap.",
+  "generation_contract_changed": false,
+  "preserved_unresolved_upper_usd": "0.81715200",
+  "private_artifacts": {
+    ".research_audio/playlist_calibration_extension_recovery_02/authorization.json": "cffaa411cdd52c19a42fbd17bec0af0f859c496349382ffbb7eb7c03d20f605f",
+    ".research_audio/playlist_calibration_extension_recovery_02/deferred_cleanup.private.json": "0815399b7b1910241d02832f69452b70cefa15ac7592e82a1131d0a6000f65e4",
+    ".research_audio/playlist_calibration_extension_recovery_02/global_policy.json": "4e9ee0fec8f0502ed9f352fbc9b86ae888eaa7e1d002133d976403f8963f2885",
+    ".research_audio/playlist_calibration_extension_recovery_02/manifest.json": "a816d96398a75b03d6c643030d96050aeaec6be0ee5c020706f9d8a5b0321388",
+    ".research_audio/playlist_calibration_extension_recovery_02/recipes/continue_extension.py": "385e61046fb9054f08e1c678508dafd6c553193e6df947dbc1cdef3b524fe0aa"
+  },
+  "remaining_phase_cap_usd": "5.05782400",
+  "remaining_profiles": 333,
+  "reviewed_timeout_retry_count": 1,
+  "settled_at_start_usd": "4.12502400",
+  "source_or_profile_reclassification": false,
+  "status": "REVIEWED_TIMEOUT_CONTINUATION_RUNNING",
+  "total_cap_usd": "10",
+  "valid_profiles_at_continuation_start": 802
+}
