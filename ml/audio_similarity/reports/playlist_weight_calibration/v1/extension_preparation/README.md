@@ -1,6 +1,11 @@
-# Extension preparation — stopped paid phase, verified partial artifacts
+# Extension preparation — approved continuation running
 
 **FEATURE_READY=false · SPLIT_READY=false · READY_FOR_WEIGHT_SEARCH=false**
+
+Latest: the owner approved temporary-upload cleanup and completion of the remaining
+538 profiles under the same $10 total cap. The [continuation](continuation_milestone.json)
+is running with automatic cleanup after each verified response. The stopped-phase
+report below records the preserved checkpoint; final readiness follows completion.
 
 The audio features are complete. Gemini stopped on a file-storage quota error
 before upload 598; no automatic retry was made. The 597 valid profiles and all

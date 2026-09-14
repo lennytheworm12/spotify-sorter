@@ -1,0 +1,23 @@
+{
+  "FEATURE_READY": false,
+  "READY_FOR_WEIGHT_SEARCH": false,
+  "SPLIT_READY": false,
+  "automatic_cleanup": "Only verified temporary extension uploads; each new upload deleted after its valid response is saved and verified. Local audio and evidence retained.",
+  "cleanup_tests": "PASS: owned resource scope, durable idempotency, 404, bounded transient retry, invalid path rejection. Zero API test calls.",
+  "continuation_cap_usd": "6.94061350",
+  "existing_total_cap_usd": "10",
+  "existing_valid_profiles": 597,
+  "generation_contract_changed": false,
+  "initial_cleanup_files": 597,
+  "original_stopped_evidence_preserved": true,
+  "prior_settled_usd": "3.05938650",
+  "private_artifacts": {
+    ".research_audio/playlist_calibration_extension_recovery_01/authorization.json": "2c83109e142e7ad436f5be42c1a7e57bb7a4562379ffeb6652ada15b59c4f0e7",
+    ".research_audio/playlist_calibration_extension_recovery_01/cleanup_plan.private.json": "ffdb15f38a69bceed1debb397ec7e4d578f985cc0c0282b31ad2de8764432912",
+    ".research_audio/playlist_calibration_extension_recovery_01/global_policy.json": "ca931bf978c5c68b243dd08919bf6d8b8e3c53907c859e318d2a3140046f146c",
+    ".research_audio/playlist_calibration_extension_recovery_01/manifest.json": "904ab8db6678994d76ef853497e4251363645acaa2529c1e667b61fb486b38b7",
+    ".research_audio/playlist_calibration_extension_recovery_01/recipes/continue_extension.py": "36d88bc32d93e2e9cea89e1b2a7da2a1cec18906929c2048b76f286881f198b2"
+  },
+  "remaining_profiles": 538,
+  "status": "APPROVED_CONTINUATION_RUNNING"
+}
