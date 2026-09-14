@@ -2,6 +2,8 @@
 
 Status: **FEATURE_READY=false; SPLIT_READY=false; READY_FOR_WEIGHT_SEARCH=false.**
 This is an in-progress preparation checkpoint, not a calibration result.
+Latest: [verified audio milestone](audio_milestone.json); Gemini calls are now
+authorized and running. [Source/history checks and tests](source_authorization_milestone.json).
 
 The completed extension contains **17 source playlists**, **six credited curator
 labels**, **1,314 membership slots**, and **1,169 recording requests**. Its twelve
