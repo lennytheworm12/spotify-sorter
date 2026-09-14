@@ -1,9 +1,10 @@
-# Extension preparation — inventory checkpoint
+# Extension preparation — audio complete, profiles running
 
 Status: **FEATURE_READY=false; SPLIT_READY=false; READY_FOR_WEIGHT_SEARCH=false.**
 This is an in-progress preparation checkpoint, not a calibration result.
 Latest: [verified audio milestone](audio_milestone.json); Gemini calls are now
-authorized and running. [Source/history checks and tests](source_authorization_milestone.json).
+authorized and running. [All three audio matrices and exact replay](audio_matrices_milestone.json).
+[Source/history checks and tests](source_authorization_milestone.json).
 
 The completed extension contains **17 source playlists**, **six credited curator
 labels**, **1,314 membership slots**, and **1,169 recording requests**. Its twelve
@@ -42,16 +43,20 @@ version adjudication remain unresolved. No split is activated or overwritten.
 ## Feature preparation and accounting
 
 All 1,135 centered30 CLAP and MuQ caches passed the existing read-only verifier.
-Twelve exact historical Method C caches are reused; 1,123 missing Method C
-features are being computed by the unchanged single GPU worker, with its exact
-pinned configuration and prior parity evidence. No new audio is downloaded.
+Twelve exact historical Method C caches were reused and 1,123 missing Method C
+features completed through the unchanged single GPU worker (22,501 chunk
+inferences). All 1,135 features passed source/configuration checks and
+zero-inference replay. No new audio was downloaded.
 
 No compatible exact-source Gemini profile was found for this extension.
-Metadata-stripped local preparation for 1,135 profiles is in progress. Paid
-execution is blocked pending extension-specific upload approval and a cap.
-The historical-usage estimate is **$6.27**, with a proposed separate **$10 cap**.
+Metadata-stripped local preparation and upload checks passed for all 1,135
+recordings. The owner approved extension uploads under a separate **$10 cap**
+and no automatic retries; the existing sequential paid worker is running.
+The historical-usage estimate is **$6.27**.
 The original run retains **$9.04152825 settled + $2.451456 unresolved exposure**;
-its $15 approval does not cover the extension. Extension spend and calls are zero.
+its $15 approval remains separate from the extension. Live extension spending
+and unresolved reservations are recorded in the private execution ledger; final
+accounting will be published when the worker terminates.
 
 The two original approved profile deferrals remain unchanged. Missing extension
 profiles are not valid unknown-genre profiles and must not receive fabricated
@@ -62,5 +67,6 @@ Private run: `.research_audio/playlist_calibration_extension_preparation_v1/`.
 Current draft: `role_split_manifest_v3.private.json`; role catalogs:
 `role_catalogs_v3/`. Restricted memberships, audio, recipes and cache ledgers
 remain ignored. `inventory_milestone.json` records aggregate counts and hashes.
-Focused existing calibration/cache/deduplication tests: **74 passed**. Final
-matrix checks and zero-inference/API replay will follow completed extraction.
+Focused existing calibration/cache/deduplication tests: **74 passed**. The
+applicable nonheavy regression suite also passed: **1,502 passed, 12 deselected**.
+Final genre matrix checks and zero-API replay will follow completed profiles.
