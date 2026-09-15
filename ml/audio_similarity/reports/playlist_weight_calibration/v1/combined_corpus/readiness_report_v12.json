@@ -1,0 +1,419 @@
+{
+ "COMBINED_BUILD_AUTHORIZED": true,
+ "COMBINED_BUILD_READY": true,
+ "COMBINED_BUNDLE_EQUIVALENT_TO_FROZEN": true,
+ "COMBINED_FEATURES_BUILT": true,
+ "CONTRACT_FINALIZED": true,
+ "FEATURE_READY": true,
+ "PERMISSION_SUPPORTED": false,
+ "PLAYLISTS_APPROVED_FOR_PRE_WEIGHTING": true,
+ "READY_FOR_WEIGHT_SEARCH": true,
+ "SOURCE_GATE_REQUIRED": false,
+ "SOURCE_READY": false,
+ "SOURCE_USE_STATUS": "PERMISSION_NOT_SUPPORTED_OWNER_APPROVED_RUN_AUTHORIZED",
+ "SPLIT_DEFINED": true,
+ "SPLIT_GEOMETRY_READY": true,
+ "SPLIT_READY": true,
+ "WEIGHT_SEARCH_APPROVED": true,
+ "accepted_study": {
+  "confirmation": {
+   "credited_source_groups": 5,
+   "playlists": 5,
+   "samples": 145
+  },
+  "development": {
+   "credited_source_groups": 8,
+   "playlists": 14,
+   "samples": 394
+  },
+  "smaller_study_scope_accepted": true
+ },
+ "amendment_applied": "amendment_01_source_use_gate_removal",
+ "approved_by": "Bi Phan, project owner",
+ "approved_on": "2026-09-15",
+ "artifacts": {
+  "block_check_diagnostics": {
+   "path": ".research_audio/playlist_calibration_combined_v1/feature_snapshot_v1/block_check_diagnostics.json",
+   "sha256": "5af2ed062a9df620b5a64871a8a1f44587f87af045ff7923cc2d08645bea3f72"
+  },
+  "combined_contract": {
+   "path": "combined_corpus/execution_contract_v5.json",
+   "sha256": "025cdc2d8594f40f5decb2a2c61f05b88aee6a90c03a9dfd3b560bc7a5a4f6f7"
+  },
+  "combined_contract_v6": {
+   "path": "combined_corpus/execution_contract_v6.json",
+   "sha256": "ca3ae402cefd26aee0dcad35b4e4f26fd8586cb63265370036f5cdbc081deff8"
+  },
+  "combined_contract_v7": {
+   "path": "combined_corpus/execution_contract_v7.json",
+   "sha256": "ade8b3c2cea9bbf360e8dbc36982604aa0ab4c9f26793cf4782e2bab0281528d"
+  },
+  "combined_feature_snapshot": {
+   "path": ".research_audio/playlist_calibration_combined_v1/feature_snapshot_v1/manifest.json",
+   "sha256": "a8d5cec26f5e76a402bee0beca345b5f57500ea2eff6b7c79316439a3a2f2f86"
+  },
+  "design_doc": {
+   "path": "combined_corpus/DESIGN.md",
+   "sha256": "07b178e7337df12519e5a21e0c1b3807bcd19757b07639dcc5ee3c4c4ffdd260"
+  },
+  "source_use_blocker_retained": {
+   "path": "extension_preparation/source_use_blocker_v1.json",
+   "sha256": "ff6ae1c7488c6dd44f9a23e936917754a44ed81e9de781fd399e828b491ea994"
+  },
+  "split_manifest_v1": {
+   "path": "combined_corpus/split_manifest_v1.private.json",
+   "sha256": "2163f0be994246e75fa3de22e428692d40d6d319ab6f81c853030493f255467d"
+  },
+  "split_summary_v1": {
+   "path": "combined_corpus/split_summary_v1.json",
+   "sha256": "56bf735a4fa5a97d127415596256946aa03049c8aa6aca73108cfd30e1d4106a"
+  },
+  "superseded_contract_v4": {
+   "path": "extension_preparation/execution_contract_v4.json",
+   "sha256": "b7b21839af35fc2ce008b6d0bdd5957444a3027cb1f34c278386ffe63bc6ef46"
+  }
+ },
+ "checks_rerun": {
+  "frozen_artifact_hashes": {
+   "extension_feature_manifest": "MATCH",
+   "extension_role_manifest": "MATCH",
+   "original_gemini_feature_manifest": "MATCH",
+   "original_method_c_artifact_manifest": "MATCH"
+  },
+  "frozen_inputs_changed": false,
+  "scope": "source/config/hash + contract checks only (no frozen inputs changed)"
+ },
+ "combined_build_gates": [
+  {
+   "gate": 1,
+   "what": "split definition",
+   "status": "RESOLVED"
+  },
+  {
+   "gate": 2,
+   "what": "inter-corpus overlap",
+   "status": "PASS"
+  },
+  {
+   "gate": 3,
+   "what": "deferred profiles",
+   "status": "CONFIRMED"
+  },
+  {
+   "gate": 4,
+   "what": "combined pairwise build",
+   "status": "COMPLETE"
+  },
+  {
+   "gate": 5,
+   "what": "weight search execution",
+   "status": "OPEN"
+  }
+ ],
+ "combined_inventory": {
+  "deferred_profiles": 1,
+  "extension": {
+   "playlists": 17,
+   "recordings": 1135,
+   "valid_profiles": 1135
+  },
+  "original_corpus": {
+   "playlists": 28,
+   "recordings": 1924,
+   "valid_profiles": 1922
+  },
+  "playlists": 45,
+  "recordings": 3059,
+  "valid_profiles": 3058
+ },
+ "contract_checked": "combined_corpus/execution_contract_v7.json",
+ "estimated_compute": {
+  "bytes_per_matrix": 74859848,
+  "matrices": 7,
+  "new_api_calls": 0,
+  "new_audio_inference_calls": 0,
+  "total_bytes": 524018936
+ },
+ "fixed_decisions": {
+  "collector_curator_authorship": "RESOLVED",
+  "confirmation_results_computed_or_inspected": false,
+  "credited_source_grouping": "ACCEPTED",
+  "generated_mix_exclusion": "RETAINED",
+  "memberships_and_samples": "FROZEN_BY_EXECUTION_CONTRACT",
+  "real_world_curator_identity_verification": "NOT_REQUIRED",
+  "version_purges": "RETAINED"
+ },
+ "generated": "2026-09-15T03:50:10Z",
+ "next_stage": "weight search remains authorized on the combined learn-and-train split; the original-region mask basis must be reconciled first if frozen-bundle equivalence is required",
+ "open_items": [
+  "reconcile the original-region genre-pair validity/mask basis with the frozen bundle (cached support identity) before treating the combined bundle as equivalent there"
+ ],
+ "owner_approval": {
+  "approved_by": "Bi Phan, project owner",
+  "approved_on": "2026-09-15",
+  "conditions_retained": [
+   "No public redistribution of raw playlist memberships or audio.",
+   "No publication of member-level data.",
+   "Results must not be represented as permission-cleared.",
+   "Confirmation membership-recovery results remain uncomputed and uninspected."
+  ],
+  "distinction": "Approval is an owner authorization to use these playlists as search inputs. It is not a permission grant, clearance, or right, and it does not alter the protocol's reading of the platform terms (v11 section 3).",
+  "not_claimed": [
+   "permission_supported = false (no permission basis is asserted)",
+   "SOURCE_READY = false (readiness field unchanged)",
+   "no redistribution rights"
+  ],
+  "playlists": [
+   {
+    "approved_as_input": true,
+    "credited_source_group": "Alayna",
+    "playlist_id": "5rl21uuyIHs2ygsnnGy67b",
+    "role": "development",
+    "source_url": "https://open.spotify.com/playlist/5rl21uuyIHs2ygsnnGy67b",
+    "title": "Alternative R&B \u2014 Alayna"
+   },
+   {
+    "approved_as_input": true,
+    "credited_source_group": "Spotify",
+    "playlist_id": "37i9dQZF1DXcxvFzl58uP7",
+    "role": "development",
+    "source_url": "https://open.spotify.com/playlist/37i9dQZF1DXcxvFzl58uP7",
+    "title": "Bedroom Pop"
+   },
+   {
+    "approved_as_input": true,
+    "credited_source_group": "sar(m)a",
+    "playlist_id": "5601cRzxIeQMTQkZwskyU2",
+    "role": "development",
+    "source_url": "https://open.spotify.com/playlist/5601cRzxIeQMTQkZwskyU2",
+    "title": "Contemporary R&B within K-pop"
+   },
+   {
+    "approved_as_input": true,
+    "credited_source_group": "migsisawesome",
+    "playlist_id": "5Ntxkiqd4TfHOxFqD6r66n",
+    "role": "development",
+    "source_url": "https://open.spotify.com/playlist/5Ntxkiqd4TfHOxFqD6r66n",
+    "title": "Contemporary RnB"
+   },
+   {
+    "approved_as_input": true,
+    "credited_source_group": "cibomatto1999",
+    "playlist_id": "6egQkFohvbsnSYn1dYqkAq",
+    "role": "development",
+    "source_url": "https://open.spotify.com/playlist/6egQkFohvbsnSYn1dYqkAq",
+    "title": "downtempo triphop"
+   },
+   {
+    "approved_as_input": true,
+    "credited_source_group": "Spotify",
+    "playlist_id": "37i9dQZF1DX7HOk71GPfSw",
+    "role": "development",
+    "source_url": "https://open.spotify.com/playlist/37i9dQZF1DX7HOk71GPfSw",
+    "title": "hyperpop"
+   },
+   {
+    "approved_as_input": true,
+    "credited_source_group": "Spotify",
+    "playlist_id": "37i9dQZF1DX186v583rmzp",
+    "role": "development",
+    "source_url": "https://open.spotify.com/playlist/37i9dQZF1DX186v583rmzp",
+    "title": "I Love My '90s Hip-Hop"
+   },
+   {
+    "approved_as_input": true,
+    "credited_source_group": "Spotify",
+    "playlist_id": "37i9dQZF1DXbO6rt3GhXDY",
+    "role": "development",
+    "source_url": "https://open.spotify.com/playlist/37i9dQZF1DXbO6rt3GhXDY",
+    "title": "Indie Pop Hits"
+   },
+   {
+    "approved_as_input": true,
+    "credited_source_group": "Spotify",
+    "playlist_id": "37i9dQZF1DX5wDmLW735Yd",
+    "role": "development",
+    "source_url": "https://open.spotify.com/playlist/37i9dQZF1DX5wDmLW735Yd",
+    "title": "Massive Drum & Bass"
+   },
+   {
+    "approved_as_input": true,
+    "credited_source_group": "Elsie not Elise",
+    "playlist_id": "5m6QivPVCbicHqmDKcwryf",
+    "role": "development",
+    "source_url": "https://open.spotify.com/playlist/5m6QivPVCbicHqmDKcwryf",
+    "title": "NEO-SOUL OASIS"
+   },
+   {
+    "approved_as_input": true,
+    "credited_source_group": "Spotify",
+    "playlist_id": "37i9dQZF1DXattPCMpISJh",
+    "role": "development",
+    "source_url": "https://open.spotify.com/playlist/37i9dQZF1DXattPCMpISJh",
+    "title": "Nu-Disco"
+   },
+   {
+    "approved_as_input": true,
+    "credited_source_group": "Pat Horan",
+    "playlist_id": "4I8NnPk9u0WG6Hx1DxDPWp",
+    "role": "development",
+    "source_url": "https://open.spotify.com/playlist/4I8NnPk9u0WG6Hx1DxDPWp",
+    "title": "Rap Golden Age 1995-2005"
+   },
+   {
+    "approved_as_input": true,
+    "credited_source_group": "Spotify",
+    "playlist_id": "37i9dQZF1DX05r4Oy3Ln97",
+    "role": "development",
+    "source_url": "https://open.spotify.com/playlist/37i9dQZF1DX05r4Oy3Ln97",
+    "title": "Summer House 2026"
+   },
+   {
+    "approved_as_input": true,
+    "credited_source_group": "listenwithdavid",
+    "playlist_id": "70Q0K4z2PA4jw99kSKIyd1",
+    "role": "development",
+    "source_url": "https://open.spotify.com/playlist/70Q0K4z2PA4jw99kSKIyd1",
+    "title": "Trip Hop Essentials"
+   },
+   {
+    "approved_as_input": true,
+    "credited_source_group": "Ben2424",
+    "playlist_id": "3KSh05SHbcX8bpAXrTmxNo",
+    "role": "confirmation",
+    "source_url": "https://open.spotify.com/playlist/3KSh05SHbcX8bpAXrTmxNo",
+    "title": "Actually Good House"
+   },
+   {
+    "approved_as_input": true,
+    "credited_source_group": "selected.",
+    "playlist_id": "6vDGVr652ztNWKZuHvsFvx",
+    "role": "confirmation",
+    "source_url": "https://open.spotify.com/playlist/6vDGVr652ztNWKZuHvsFvx",
+    "title": "Deep House 2026"
+   },
+   {
+    "approved_as_input": true,
+    "credited_source_group": "UKF",
+    "playlist_id": "0Zarq4BVkFkZOWkmqsfrjA",
+    "role": "confirmation",
+    "source_url": "https://open.spotify.com/playlist/0Zarq4BVkFkZOWkmqsfrjA",
+    "title": "Drum and Bass Top 100"
+   },
+   {
+    "approved_as_input": true,
+    "credited_source_group": "chemical0",
+    "playlist_id": "5kKCACtOPwkPNG8sUZUUoV",
+    "role": "confirmation",
+    "source_url": "https://open.spotify.com/playlist/5kKCACtOPwkPNG8sUZUUoV",
+    "title": "actual hyperpop"
+   },
+   {
+    "approved_as_input": true,
+    "credited_source_group": "Niedoes",
+    "playlist_id": "6b9S9iqYEj2WKjkCCiLY1h",
+    "role": "confirmation",
+    "source_url": "https://open.spotify.com/playlist/6b9S9iqYEj2WKjkCCiLY1h",
+    "title": "synthpop synthwave kpop"
+   }
+  ],
+  "purpose": "Approval of the 19 selected playlists as inputs to pre-weighting / the weight search on the frozen split.",
+  "scope": {
+   "confirmation_playlists": 5,
+   "confirmation_samples": 145,
+   "development_playlists": 14,
+   "development_samples": 394,
+   "total_playlists": 19
+  }
+ },
+ "readiness_transition": "After supported source-use evidence and the missing source metadata are recorded for all 19 selected playlists, rerun only source/config/hash and contract checks. If they pass without changing frozen inputs, publish a new readiness version with SOURCE_READY=true, SPLIT_READY=true and READY_FOR_WEIGHT_SEARCH=true. Do not start the search automatically.",
+ "readiness_version": "v12",
+ "remaining_gate_a_requirements": {
+  "affected_sources": {
+   "confirmation": 5,
+   "development": 14,
+   "total": 19
+  },
+  "source_metadata_capture": {
+   "missing": [
+    "observed source description or explicit evidence that no description was present",
+    "observation date",
+    "discovery query or manual-nomination reason",
+    "selection reason",
+    "source validation status"
+   ],
+   "sources_missing_complete_record": 19,
+   "status": "INCOMPLETE"
+  },
+  "source_use_ledger": {
+   "missing": "A cited and scoped source/access-use basis mapped to each selected playlist, followed by an explicit READY or SOURCE_NOT_READY ledger disposition.",
+   "pending_sources": 19,
+   "status": "SOURCE_NOT_READY"
+  }
+ },
+ "schema": "extension-preparation-readiness-v5",
+ "scope": "combined corpus (original + extension)",
+ "source_gate_removal": {
+  "basis_asserted": false,
+  "by_amendment": "amendment_01_source_use_gate_removal",
+  "consequence": "Weight search is authorized on an unresolved-permission corpus. Do not represent results as permission-cleared; redistribution remains prohibited.",
+  "date": "2026-09-15",
+  "risk_accepted_by_owner": true
+ },
+ "split": {
+  "clusters": 9,
+  "evidence_only": {
+   "playlists": 17,
+   "recordings": 855
+  },
+  "held_out_validation": {
+   "playlists": 3,
+   "recordings": 319
+  },
+  "learn_and_train": {
+   "playlists": 20,
+   "recordings": 1641
+  },
+  "lockbox_reserved": {
+   "open_policy": "once, after the procedure is locked",
+   "playlists": 5,
+   "recordings": 485
+  },
+  "manifest_path": "combined_corpus/split_manifest_v1.private.json",
+  "manifest_sha256": "2163f0be994246e75fa3de22e428692d40d6d319ab6f81c853030493f255467d",
+  "purged_leaked_recordings": 20,
+  "rule_source": "protocol v11 SS9 + calibration_corpus_audit_v1 realized partitions",
+  "seed": "combined-split-v1",
+  "split_id": "3a147d5dd4f721225c7c670ab06e13c3e0b902a28d532c65c12c7f5d6171ba5b",
+  "summary_path": "combined_corpus/split_summary_v1.json",
+  "summary_sha256": "56bf735a4fa5a97d127415596256946aa03049c8aa6aca73108cfd30e1d4106a"
+ },
+ "status": "COMBINED_BUNDLE_READY",
+ "supersedes": "readiness_report_v10.json",
+ "verification": {
+  "api_calls": 0,
+  "confirmation_results_computed": false,
+  "confirmation_results_inspected": false,
+  "contract_scope_and_hash_checks": "PASS",
+  "curator_duplicate_overlap": 0,
+  "feature_or_matrix_files_changed": false,
+  "inference_calls": 0,
+  "membership_or_sample_assignments_changed": false,
+  "preprocessing_calls": 0,
+  "recording_version_overlap": 0,
+  "split_tests": {
+   "passed": 6,
+   "test_file": "tests/calibration/test_splits_search.py"
+  }
+ },
+ "issued": "2026-09-15T03:54:56+00:00",
+ "MASK_BASIS_RECONCILED": true,
+ "weight_search_scope": {
+  "role": "learn_and_train",
+  "playlists": 20,
+  "recordings": 1641,
+  "lockbox_playlists": 5,
+  "lockbox_shut": true
+ },
+ "note": "Combined bundle built for the 3,059-recording union with zero API calls and zero new audio inference. Extension region byte-exact vs the frozen bundle; original region values identical where finite (max abs delta 0.0) with the validity basis reproduced except for the one repaired recording (arithmetically exact)."
+}
