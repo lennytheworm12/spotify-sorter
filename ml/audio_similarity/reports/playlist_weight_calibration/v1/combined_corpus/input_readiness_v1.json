@@ -1,0 +1,56 @@
+{
+  "gate_1_extension_catalogs": {
+    "confirmation": true,
+    "development": true
+  },
+  "gate_1_original_catalog_candidates": [],
+  "gate_1_status": "OPEN",
+  "gate_2_audio_sha_overlap": {
+    "extension_hashes": 1135,
+    "original_hashes": 1924,
+    "overlap_count": 0,
+    "sample": []
+  },
+  "gate_2_id_overlap": {
+    "count": 0,
+    "sample": []
+  },
+  "gate_3_deferred_profiles": {
+    "extension_missing": 0,
+    "original_expected": 2,
+    "original_manifest_missing": 2
+  },
+  "inputs": {
+    "extension_method_c_features_dir": {
+      "count": 1135,
+      "exists": true,
+      "path": ".research_audio/playlist_calibration_extension_preparation_v1/features"
+    },
+    "extension_profiles": {
+      "exists": true,
+      "path": ".research_audio/playlist_calibration_extension_recovery_03/feature_snapshot_v2/profile_snapshot.private.json"
+    },
+    "original_bundle_matrices": {
+      "Jc.npy": true,
+      "Jnr.npy": true,
+      "R.npy": true,
+      "genre_pair_valid.npy": true
+    },
+    "original_per_recording_vectors": [
+      ".research_audio/playlist_calibration_development_v1/features",
+      ".research_audio/playlist_calibration_extension_preparation_v1/companion_features.json",
+      ".research_audio/playlist_calibration_extension_preparation_v1/features",
+      ".research_audio/playlist_calibration_gemini_full_v1/audio_features",
+      ".research_audio/playlist_calibration_method_c_full_v1/features"
+    ],
+    "original_profiles": {
+      "exists": false,
+      "path": ".research_audio/playlist_calibration_gemini_full_v1/profiles_frozen.json"
+    }
+  },
+  "inventory": {
+    "combined": 3059,
+    "extension": 1135,
+    "original": 1924
+  }
+}

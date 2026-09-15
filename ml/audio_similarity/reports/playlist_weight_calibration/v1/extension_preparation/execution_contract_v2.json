@@ -1,0 +1,136 @@
+{
+  "accepted_scope": {
+    "confirmation": {
+      "credited_source_groups": 5,
+      "playlists": 5,
+      "samples": 145
+    },
+    "development": {
+      "credited_source_groups": 8,
+      "playlists": 14,
+      "samples": 394
+    },
+    "owner_acceptance_date": "2026-09-14",
+    "scope_exception": "The owner accepts this smaller sampled first experiment in place of the retained planning targets."
+  },
+  "amendment": {
+    "amendment_id": "amendment_01_source_use_gate_removal",
+    "authorized_by": "Bi Phan, project owner",
+    "consequence_recorded": "Any downstream artifact, write-up or publication derived from this corpus must not be represented as permission-cleared. The protocol's own reading of the platform terms (v11 section 3) remains part of the record.",
+    "date": "2026-09-15",
+    "direction": "Owner declined to record a source-use basis statement and directed that the source-use readiness precondition be removed from the retained protocol.",
+    "not_asserted": [
+      "source_use_basis (no cited permission, license, platform/access term or creator authorization is claimed)",
+      "SOURCE_READY = true (the field means permission is supported; it is not)",
+      "redistribution rights (unchanged: prohibited)"
+    ],
+    "owner_acknowledged_risk": true,
+    "retained_constraints": [
+      "No public redistribution of raw playlist memberships or audio.",
+      "No publication of member-level data.",
+      "Confirmation membership-recovery results remain uncomputed and uninspected.",
+      "The existing source_use_blocker_v1.json remains the historical record that no basis was asserted."
+    ],
+    "supersedes_scope": "Gate A source-use precondition only. Membership, sample, curator/duplicate-grouping, version-purge, feature-input, scorer, grid, mask and confirmation policies remain frozen."
+  },
+  "artifact_contract": {
+    "extension_feature_manifest": {
+      "path": ".research_audio/playlist_calibration_extension_recovery_03/feature_snapshot_v2/manifest.json",
+      "sha256": "4f092ca5bb25f897052accb430c7d11fb2988f7b9389598670344f2572c019e4"
+    },
+    "extension_role_manifest": {
+      "path": ".research_audio/playlist_calibration_extension_source_followup_02/role_split_manifest_v5.private.json",
+      "sha256": "f0596e939c085c3d2b3f2ed9b589d1d8332b13c8195282da3c82e9ff02059888"
+    },
+    "original_gemini_feature_manifest": {
+      "path": ".research_audio/playlist_calibration_gemini_full_v1/masked_bundle_v1/manifest.json",
+      "sha256": "4bdbb1afb2d027bfecdb3f40b69152535f321f2fdd858b56155e84bff5d5d36d"
+    },
+    "original_method_c_artifact_manifest": {
+      "path": "reports/playlist_weight_calibration/v1/method_c_full/artifact_manifest.json",
+      "sha256": "0eb1d4ce8826c8c3700c0dbd9617a1664fdbac2d44ea294ca2aad3c8c8216a3f"
+    },
+    "partition_seed": "extension-preparation-v1/DRAFT-NOT-ACTIVATED",
+    "partition_split_id": "c44b40aa1ce4dcf42f159eb782bdcd4959e71e04140be2146c3da3d843f2220d"
+  },
+  "confirmation_access": {
+    "membership_recovery_results_computed": false,
+    "membership_recovery_results_inspected": false,
+    "policy": "Do not compute, open, summarize or use confirmation membership-recovery results during development or weight selection. Run the five reserved groups once only after a ranking candidate is frozen under the retained protocol."
+  },
+  "contract_change_policy": "Any change to source roles, memberships, samples, curator/duplicate groups, version purges, feature inputs, scorer, grid, masks or confirmation policy requires a new versioned contract and new hashes before execution.",
+  "contract_version": "v2",
+  "execution_authorization": {
+    "authorization_basis": "Owner direction 2026-09-15: proceed without a source-use basis statement; the source-use readiness precondition is removed from the retained protocol. No permission basis is asserted by this amendment.",
+    "contract_finalized": true,
+    "source_gate_must_be_ready_before_search": false,
+    "source_use_basis_asserted": false,
+    "source_use_status": "PERMISSION_UNRESOLVED_OWNER_RISK_ACCEPTED",
+    "weight_search_authorized_now": true
+  },
+  "fixed_data_policy": {
+    "collector_is_not_grouping_author": true,
+    "collector_role": "collector/transcriber",
+    "confirmation_assignments_frozen": true,
+    "credited_creator_account_is_curator_group_key": true,
+    "development_assignments_frozen": true,
+    "generated_mix_playlists_excluded_from_primary_human_curated_cohort": 8,
+    "known_duplicate_source_relationships_retained": true,
+    "original_memberships_and_source_links_preserved": true,
+    "real_world_identity_verification_required": false,
+    "sample_assignments_frozen": true,
+    "version_policy": "Retain the conservative recording/version relationships and all existing boundary purges; do not relax or adjudicate them during the search."
+  },
+  "fixed_ranking_protocol": {
+    "candidate_selection": "Use development evidence only, with the retained nested curator/duplicate-group split and recording/version purges.",
+    "comparison_population": "Use the same eligible feature-complete population for every applicable arm and preserve approved missing-profile behavior.",
+    "execution_draft_reference": {
+      "path": "reports/playlist_weight_calibration/v1/corpus_audit/draft_execution_manifest.json",
+      "sha256": "35b92afd6a803b3cb293be1f17fc6848796a180e9f5f60b8ae2ff7d1fae7f728"
+    },
+    "formula": "F=(1-rho)*C_h + rho*M + w_c*Jc + w_n*((1-Jc)*Jnr)",
+    "protocol_entry_point": {
+      "path": "docs/genre-force/playlist-reconstruction-calibration-v1.md",
+      "sha256": "6b1d4dfb8f0edd9427cfc4b077f6c4525678a19f1e1f0e9c2d89e07c7d9cc1ed"
+    },
+    "search_space": "Reuse the existing pinned h/rho/w_c/eta grid, scorer, top-three aggregator, masks, tie breaking, uncertainty procedure and ablations without modification."
+  },
+  "prohibited_scope": [
+    "new inference or preprocessing",
+    "confirmation performance computation or inspection before candidate freeze",
+    "performance-based dataset selection",
+    "mapper, prompt, scorer or historical-artifact changes",
+    "output, admission, probability, suitability or strictness calibration",
+    "production or playlist writes"
+  ],
+  "readiness": {
+    "CONTRACT_FINALIZED": true,
+    "FEATURE_READY": true,
+    "READY_FOR_WEIGHT_SEARCH": false,
+    "SOURCE_READY": false,
+    "SPLIT_GEOMETRY_READY": true,
+    "SPLIT_READY": false,
+    "blocking_gate": "SOURCE_NOT_READY"
+  },
+  "schema": "playlist-calibration-execution-contract-v1",
+  "source_use_blocker": {
+    "path": "reports/playlist_weight_calibration/v1/extension_preparation/source_use_blocker_v1.json",
+    "sha256": "ff6ae1c7488c6dd44f9a23e936917754a44ed81e9de781fd399e828b491ea994",
+    "status": "SOURCE_NOT_READY"
+  },
+  "status": "FINALIZED_BLOCKED_ON_SOURCE_GATE",
+  "verification": {
+    "api_calls": 0,
+    "confirmation_results_computed": false,
+    "confirmation_results_inspected": false,
+    "curator_duplicate_overlap": 0,
+    "feature_artifacts_changed": false,
+    "full_development_catalog_purges": 20,
+    "inference_calls": 0,
+    "membership_or_sample_assignments_changed": false,
+    "preprocessing_calls": 0,
+    "recording_version_overlap": 0,
+    "sample_development_purges": 8,
+    "source_links_changed": false
+  }
+}

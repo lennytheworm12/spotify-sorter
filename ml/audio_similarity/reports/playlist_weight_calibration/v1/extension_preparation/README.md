@@ -1,12 +1,35 @@
-# Extension preparation — execution contract finalized, source gate remains
+# Extension preparation — weight search approved
 
 **CONTRACT_FINALIZED=true · FEATURE_READY=true · SPLIT_GEOMETRY_READY=true ·
-SOURCE_READY=false · SPLIT_READY=false · READY_FOR_WEIGHT_SEARCH=false**
+SPLIT_READY=true · PLAYLISTS_APPROVED_FOR_PRE_WEIGHTING=true ·
+PERMISSION_SUPPORTED=false · SOURCE_READY=false · SOURCE_GATE_REQUIRED=false ·
+READY_FOR_WEIGHT_SEARCH=true · WEIGHT_SEARCH_APPROVED=true**
 
-All **1,135 retained recording IDs** have the pinned audio features, validated
-Gemini profiles, canonical/neighborhood support and ordered `Jc`, `Jnr` and
-`R=(1-Jc)*Jnr` artifacts. The extension remains separate from the original corpus.
-No tuning, performance-based selection or confirmation membership evaluation ran.
+The weight search is **approved by the project owner (2026-09-15)** to run on the frozen
+14-playlist / 394-sample development split. The 5 confirmation playlists / 145 samples
+stay reserved: not computed, not inspected.
+
+**Permission is not claimed.** `permission_supported=false` and `SOURCE_READY=false` are
+deliberate: no permission basis is asserted for the source playlists, and this approval
+is an owner authorization to proceed, not a clearance. Results must not be represented
+as permission-cleared, and no memberships, audio or member-level data may be
+redistributed or published. See `contract_amendment_01.md`–`03.md`.
+
+## Approval and change record
+
+| Artifact | Role |
+| --- | --- |
+| `execution_contract_v4.json` | **current contract** — weight search approved |
+| `readiness_report_v8.json` | **current readiness** — v8 |
+| `contract_amendment_01.md` | source-use precondition removed (owner direction) |
+| `contract_amendment_02.md` | 19 playlists approved for pre-weighting; `permission_supported=false` |
+| `contract_amendment_03.md` | authorization rewritten as an explicit approval of the run |
+| `execution_contract_v1.json`–`v3.json` | superseded contracts, retained |
+| `source_use_blocker_v1.json` | retained record: no source-use basis was asserted |
+| `source_metadata_capture_v1.json` | factual source metadata captured for the 19 playlists |
+
+No code path enforces the source-use fields (they are reporting surfaces), so the
+contract is the operative authorization for the run.
 
 ## Inventory and overlap
 
