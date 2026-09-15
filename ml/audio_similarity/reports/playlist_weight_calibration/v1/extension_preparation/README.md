@@ -1,6 +1,7 @@
-# Extension preparation — features verified, split remains draft
+# Extension preparation — execution contract finalized, source gate remains
 
-**FEATURE_READY=true · SPLIT_READY=false · READY_FOR_WEIGHT_SEARCH=false**
+**CONTRACT_FINALIZED=true · FEATURE_READY=true · SPLIT_GEOMETRY_READY=true ·
+SOURCE_READY=false · SPLIT_READY=false · READY_FOR_WEIGHT_SEARCH=false**
 
 All **1,135 retained recording IDs** have the pinned audio features, validated
 Gemini profiles, canonical/neighborhood support and ordered `Jc`, `Jnr` and
@@ -38,14 +39,14 @@ verification is not required. Collection by one person does not collapse sources
 into one curator group. Source descriptions and source-use documentation remain
 incomplete and are separate from this resolved authorship interpretation.
 
-## Proposed roles and feasibility
+## Finalized roles and feasibility
 
-Four Spotify genre lists are development-expansion candidates. Eight Spotify
+Four Spotify genre lists expand development. Eight Spotify
 Mix lists are **personalized/generated**, confirmed by the owner on 2026-09-14:
 Dance Pop, Digicore, Drum And Bass, Drum and Bass Jungle, Electric Pop, House,
 Hyperpop and Synthpop. They remain later-stress candidates outside primary Layer A
 in the same **development-only curator group** and add no independent development curator.
-Five credited source groups remain reserved in the draft:
+Five credited source groups are reserved for confirmation:
 
 | Source | Credited curator | Usable original hash samples |
 | --- | --- | ---: |
@@ -64,23 +65,35 @@ existing eight sampled purges and 20 full-development-catalog purges. All origin
 memberships, source links, pilot samples and conservative version relationships
 remain unchanged. The eight generated Mixes remain outside this primary cohort.
 
-Collector authorship and the curator-grouping policy are resolved. Remaining
-issues are separate:
+The owner accepts this smaller first experiment. The [execution
+contract](execution_contract_v1.json) freezes these roles and samples, the eight
+sampled and 20 full-development version purges, feature inputs, generated-Mix
+exclusions and confirmation-access policy. Collector authorship, credited-source
+grouping, study size, version policy and split geometry are resolved for this
+experiment. No confirmation membership-recovery result was computed or inspected.
 
-- **Study scope:** five reserved groups, only three retaining 30 usable samples,
-  remain below planning targets. A smaller confirmation study needs an explicit
-  scope decision; additional masks do not add independent source groups.
-- **Source-use readiness:** the owner has no supporting source-use documentation.
-  This is a retained protocol prerequisite, separate from curator authorship;
-  the prior approved feature processing is complete.
-- **Version review:** conservative remix-family purges remain in force; they do
-  not assert recording equivalence. No purge is relaxed by this clarification.
-- **Freeze:** split/catalog/mask configuration remains draft and has not been
-  activated. Original development evidence remains development-only.
+One prerequisite gate remains open. The current v1.2 protocol says source/access
+permission and audio-processing approval are prerequisites and manual collection
+does not settle permitted use. Retained v1.1 Gate A requires a permission/access
+ledger, source title/description/intent and discovery records, ending in `READY`
+or `SOURCE_NOT_READY`. All **19 selected playlists**—14 development and five
+confirmation—still have pending permission fields. They also lack observation
+dates, discovery/nomination and selection records, explicit validation status,
+and an observed description or evidence that no description was present.
 
-These are not a failed curator-group separation check. **FEATURE_READY=true**;
-**SPLIT_READY=false** and **READY_FOR_WEIGHT_SEARCH=false** pending the separate
-readiness decisions. No frozen split was changed and no tuning was started.
+The [source-use blocker](source_use_blocker_v1.json) lists every affected source,
+the exact pinned requirements and the evidence needed: a cited, scoped use/access
+basis mapped to each playlist, plus the missing source metadata and a ledger
+disposition. Prior audio-processing and upload approvals are documented separately
+and do not establish use of playlist membership as ranking evidence. Real-world
+curator identity verification is not required, and collector identity is not an
+authorship blocker.
+
+The contract is final but cannot execute while Gate A is `SOURCE_NOT_READY`.
+After supported evidence is recorded, only source/config/hash checks need rerun;
+if they pass without changing frozen inputs, `SOURCE_READY`, `SPLIT_READY` and
+`READY_FOR_WEIGHT_SEARCH` can become true. The search will not start automatically.
+No tuning ran.
 
 ## Features and API accounting
 
@@ -123,14 +136,17 @@ This owner-evidence update preserves prior drafts, every membership and all
 feature artifacts. The recomputed partition retains the same assignments and
 purges; its identifier records the revised provenance. Full feature snapshot:
 `.research_audio/playlist_calibration_extension_recovery_03/feature_snapshot_v2/`.
-[Final readiness and artifact hashes](readiness_report_v4.json) identify the
-contracts, source proofs, matrices, execution ledgers and replay evidence.
+[Current readiness](readiness_report_v5.json), the [execution
+contract](execution_contract_v1.json), and the [source-use
+blocker](source_use_blocker_v1.json) identify the frozen roles, exact open gate,
+source proofs, matrices, execution ledgers and replay evidence. The complete prior
+feature report remains in `readiness_report_v4.json`.
 
 Separate role artifacts contain 485 proposed-confirmation and 737 development
 candidate recording IDs, with 87 shared IDs in these **raw feature catalogs**.
-Draft selection purges remain separate. Both artifacts are explicitly marked
+Selection purges remain separate. Both artifacts are explicitly marked
 `selection_input=false` and `membership_results_allowed=false`; neither is a
-frozen tuning or confirmation input.
+ranking-result input.
 
 Ordering, hashes, exact symmetry, bounds, the residual identity and role-submatrix
 checks passed. The 356,409 previously valid genre cells and all three audio-matrix
@@ -146,8 +162,10 @@ runner replay also forbade credential access and transport initialization.
 Original sources, development artifacts, historical reports and stopped execution
 evidence passed integrity checks. Focused tests: **74 passed**; applicable
 regressions: **1,502 passed, 12 deselected**. Cleanup scope/idempotency checks passed.
+Contract hash/scope/privacy checks and the six focused split tests also passed
+without inference, preprocessing, API use or confirmation-result access.
 
 Restricted memberships, raw audio, credentials, responses and provider resource
 identifiers remain outside Git. No mapper, prompt, scoring-rule, production or
-playlist changes were made. Preparation stops here; source/split decisions remain
-open and weight search is not authorized or started.
+playlist changes were made. Preparation stops here; the source gate remains open
+and weight search is not authorized or started.

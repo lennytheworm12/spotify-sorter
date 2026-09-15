@@ -1,0 +1,86 @@
+{
+  "CONTRACT_FINALIZED": true,
+  "FEATURE_READY": true,
+  "READY_FOR_WEIGHT_SEARCH": false,
+  "SOURCE_READY": false,
+  "SPLIT_GEOMETRY_READY": true,
+  "SPLIT_READY": false,
+  "accepted_study": {
+    "confirmation": {
+      "credited_source_groups": 5,
+      "playlists": 5,
+      "samples": 145
+    },
+    "development": {
+      "credited_source_groups": 8,
+      "playlists": 14,
+      "samples": 394
+    },
+    "smaller_study_scope_accepted": true
+  },
+  "artifacts": {
+    "execution_contract": {
+      "path": "execution_contract_v1.json",
+      "sha256": "bf36c249a4b8fdc6bcd3832bc76a654ed63e8853208c84970fb89f129c553853"
+    },
+    "prior_complete_feature_report": {
+      "path": "readiness_report_v4.json",
+      "sha256": "a005838b181053a80ee65036a5dcdd969fcd2762b1b7e0ac5255b149242270a5"
+    },
+    "source_use_blocker": {
+      "path": "source_use_blocker_v1.json",
+      "sha256": "ff6ae1c7488c6dd44f9a23e936917754a44ed81e9de781fd399e828b491ea994"
+    }
+  },
+  "fixed_decisions": {
+    "collector_curator_authorship": "RESOLVED",
+    "confirmation_results_computed_or_inspected": false,
+    "credited_source_grouping": "ACCEPTED",
+    "generated_mix_exclusion": "RETAINED",
+    "memberships_and_samples": "FROZEN_BY_EXECUTION_CONTRACT",
+    "real_world_curator_identity_verification": "NOT_REQUIRED",
+    "version_purges": "RETAINED"
+  },
+  "remaining_gate_a_requirements": {
+    "affected_sources": {
+      "confirmation": 5,
+      "development": 14,
+      "total": 19
+    },
+    "source_metadata_capture": {
+      "missing": [
+        "observed source description or explicit evidence that no description was present",
+        "observation date",
+        "discovery query or manual-nomination reason",
+        "selection reason",
+        "source validation status"
+      ],
+      "sources_missing_complete_record": 19,
+      "status": "INCOMPLETE"
+    },
+    "source_use_ledger": {
+      "missing": "A cited and scoped source/access-use basis mapped to each selected playlist, followed by an explicit READY or SOURCE_NOT_READY ledger disposition.",
+      "pending_sources": 19,
+      "status": "SOURCE_NOT_READY"
+    }
+  },
+  "readiness_transition": "After supported source-use evidence and the missing source metadata are recorded for all 19 selected playlists, rerun only source/config/hash and contract checks. If they pass without changing frozen inputs, publish a new readiness version with SOURCE_READY=true, SPLIT_READY=true and READY_FOR_WEIGHT_SEARCH=true. Do not start the search automatically.",
+  "schema": "extension-preparation-readiness-v5",
+  "status": "EXECUTION_CONTRACT_FINALIZED_SOURCE_GATE_OPEN",
+  "verification": {
+    "api_calls": 0,
+    "confirmation_results_computed": false,
+    "confirmation_results_inspected": false,
+    "contract_scope_and_hash_checks": "PASS",
+    "curator_duplicate_overlap": 0,
+    "feature_or_matrix_files_changed": false,
+    "inference_calls": 0,
+    "membership_or_sample_assignments_changed": false,
+    "preprocessing_calls": 0,
+    "recording_version_overlap": 0,
+    "split_tests": {
+      "passed": 6,
+      "test_file": "tests/calibration/test_splits_search.py"
+    }
+  }
+}
