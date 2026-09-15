@@ -26,12 +26,17 @@ extension recordings occur in earlier frozen retrieval inputs. Two additional
 recordings occur in older source-review queues, both from Dance Pop Mix; they
 do not affect proposed confirmation samples. The five proposed confirmation
 playlist IDs were absent from all 17 checked historical input/review manifests.
-This supports the owner's belief that these lists are new; undocumented listening
-history and curator links cannot be ruled out from repository evidence.
+This supports the owner's statement that these lists are new; the history check
+remains bounded by the captured project evidence.
 
-Every extension list has a source URL and credited curator label. Substantive
-source descriptions/selection criteria and source-use documentation remain
-incomplete. Display labels alone do not verify independent curator identities.
+Every extension list has a source URL and credited curator label. The owner
+collected existing Spotify playlists and manually transcribed their track lists
+into Markdown; the owner is recorded as **collector/transcriber, not grouping
+author**. This study uses each original credited creator/account as its curator
+key, with known duplicate/source relationships retained. Real-world identity
+verification is not required. Collection by one person does not collapse sources
+into one curator group. Source descriptions and source-use documentation remain
+incomplete and are separate from this resolved authorship interpretation.
 
 ## Proposed roles and feasibility
 
@@ -40,7 +45,7 @@ Mix lists are **personalized/generated**, confirmed by the owner on 2026-09-14:
 Dance Pop, Digicore, Drum And Bass, Drum and Bass Jungle, Electric Pop, House,
 Hyperpop and Synthpop. They remain later-stress candidates outside primary Layer A
 in the same **development-only curator group** and add no independent development curator.
-Five credited groups remain provisionally reserved:
+Five credited source groups remain reserved in the draft:
 
 | Source | Credited curator | Usable original hash samples |
 | --- | --- | ---: |
@@ -50,19 +55,32 @@ Five credited groups remain provisionally reserved:
 | actual hyperpop | chemical0 | 30 |
 | synthpop synthwave kpop | Niedoes | 26 |
 
-The model-blind draft preserves the used pilot samples. It proposes **145
-confirmation samples and 394 development samples**, after eight sampled purges;
-20 requests require purging from the full development catalog. Technical sample
-attrition is not replaced. Five conditional groups, only three retaining 30
-samples, fall below the retained planning targets: **independent confirmation is
-not established**. No frozen split was changed, activated or merged.
+The existing grouping and partition helpers were rerun using the accepted
+credited-source policy, without ranking results. **Grouped split geometry passes:**
+14 development playlists in eight credited/duplicate groups retain **394 samples**;
+five reserved playlists in five groups retain **145 samples**. Curator/duplicate
+and recording/version overlap across the boundary are both **zero** after the
+existing eight sampled purges and 20 full-development-catalog purges. All original
+memberships, source links, pilot samples and conservative version relationships
+remain unchanged. The eight generated Mixes remain outside this primary cohort.
 
-The owner reports no source-use documentation or curator-link evidence for the
-five reserved sources. Their provenance remains unresolved; lack of evidence does
-not establish independence. Remaining decisions concern the source-use basis and
-curator links, adjudication of the four version-family links, and acceptance of
-the smaller confirmation scope. Mix source type is resolved. These assignments
-remain provisional without the remaining evidence.
+Collector authorship and the curator-grouping policy are resolved. Remaining
+issues are separate:
+
+- **Study scope:** five reserved groups, only three retaining 30 usable samples,
+  remain below planning targets. A smaller confirmation study needs an explicit
+  scope decision; additional masks do not add independent source groups.
+- **Source-use readiness:** the owner has no supporting source-use documentation.
+  This is a retained protocol prerequisite, separate from curator authorship;
+  the prior approved feature processing is complete.
+- **Version review:** conservative remix-family purges remain in force; they do
+  not assert recording equivalence. No purge is relaxed by this clarification.
+- **Freeze:** split/catalog/mask configuration remains draft and has not been
+  activated. Original development evidence remains development-only.
+
+These are not a failed curator-group separation check. **FEATURE_READY=true**;
+**SPLIT_READY=false** and **READY_FOR_WEIGHT_SEARCH=false** pending the separate
+readiness decisions. No frozen split was changed and no tuning was started.
 
 ## Features and API accounting
 
@@ -100,11 +118,12 @@ No reservation was released or charged against another corpus's allowance.
 
 Inventory and draft root:
 `.research_audio/playlist_calibration_extension_preparation_v1/`.
-Current roles: `.research_audio/playlist_calibration_extension_source_followup_01/role_split_manifest_v4.private.json`.
-This owner-evidence update preserves v3, its index, every membership, the draft
-partition and all feature artifacts. Full feature snapshot:
+Current roles: `.research_audio/playlist_calibration_extension_source_followup_02/role_split_manifest_v5.private.json`.
+This owner-evidence update preserves prior drafts, every membership and all
+feature artifacts. The recomputed partition retains the same assignments and
+purges; its identifier records the revised provenance. Full feature snapshot:
 `.research_audio/playlist_calibration_extension_recovery_03/feature_snapshot_v2/`.
-[Final readiness and artifact hashes](readiness_report_v3.json) identify the
+[Final readiness and artifact hashes](readiness_report_v4.json) identify the
 contracts, source proofs, matrices, execution ledgers and replay evidence.
 
 Separate role artifacts contain 485 proposed-confirmation and 737 development
