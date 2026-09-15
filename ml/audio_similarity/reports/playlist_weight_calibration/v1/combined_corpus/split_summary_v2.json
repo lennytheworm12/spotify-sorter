@@ -1,0 +1,21 @@
+{
+ "schema": "combined-corpus-split-summary-v2",
+ "split_id": "ba41d65be340df749fe9beb4a9741ccc26415225c0db27afda3341b4156f168f",
+ "learn_and_train_recordings": 1484,
+ "outer_validation_recordings": 297,
+ "lockbox_reserved_recordings": 485,
+ "universe_recordings": 3059,
+ "purged_from_learn": 157,
+ "invariants": {
+  "lockbox_disjoint_from_learn": true,
+  "validation_disjoint_from_learn": true,
+  "lockbox_disjoint_from_validation": true,
+  "all_roles_subset_of_snapshot": true
+ },
+ "sanitation_findings": {
+  "lockbox_leaked_into_learn_raw": 87,
+  "learn_not_in_snapshot_raw": 70,
+  "lockbox_not_in_snapshot": 0,
+  "validation_not_in_snapshot": 22
+ }
+}
