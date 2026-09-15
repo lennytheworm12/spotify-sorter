@@ -1,0 +1,19 @@
+{
+ "clusters": 9,
+ "evidence_only_excluded_recordings": 855,
+ "evidence_only_playlists": 17,
+ "held_out_playlists": 3,
+ "held_out_validation_recordings": 319,
+ "learn_and_train_playlists": 20,
+ "learn_and_train_recordings": 1641,
+ "lockbox_playlists": 5,
+ "lockbox_reserved_recordings": 485,
+ "multi_playlist_overlap_recordings": 117,
+ "purged_leaked": 20,
+ "schema": "combined-corpus-split-summary-v1",
+ "seed": "combined-split-v1",
+ "split_id": "3a147d5dd4f721225c7c670ab06e13c3e0b902a28d532c65c12c7f5d6171ba5b",
+ "sum_of_group_recordings": 3300,
+ "unique_recordings_across_all_groups": 3167,
+ "unique_recordings_in_any_fit_or_eval_group": 1960
+}
