@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        // File Layout
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
+        "target": "esnext",
+        // Outputs
+        "sourceMap": true,
+        "declaration": true,
+        "declarationMap": true,
+        // Stricter Typechecking Options
+        "noUncheckedIndexedAccess": true,
+        "exactOptionalPropertyTypes": true,
+        "esModuleInterop": true,
+        "strict": true,
+        // package.json has no "type": "module", so NodeNext emits CommonJS;
+        // allow ESM syntax that TypeScript transpiles down to CJS.
+        "verbatimModuleSyntax": false,
+        "isolatedModules": true,
+        "noUncheckedSideEffectImports": true,
+        "moduleDetection": "force",
+        "skipLibCheck": true
+    },
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "src/__tests__",
+        "src/coverage"
+    ]
+}

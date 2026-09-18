@@ -1,0 +1,50 @@
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+backend/src/coverage/
+
+# Local configuration and data
+.env
+.env.*
+!.env.example
+backend/mongo-data/
+
+# Local agent/tool artifacts (development only)
+.agents/
+.claude/
+.codex
+prompts/
+
+# Tooling and OS noise
+.DS_Store
+*.log
+
+# Phase 1 ML experiment (ml/audio_similarity)
+# data/: FMA audio + manifests (large, reproducible)
+# artifacts/: embeddings, indexes, reports (regenerable)
+# models/: downloaded MERIT heads
+ml/**/.venv/
+ml/**/__pycache__/
+ml/**/*.pyc
+ml/**/.pytest_cache/
+ml/**/data/
+ml/**/artifacts/
+ml/**/models/
+
+# Persistent local research sources and playback derivatives. These files may
+# contain copyrighted owner-library audio and must never enter Git or Git LFS.
+ml/audio_similarity/.research_audio/
+
+# Private owner-library export used to freeze the Stage 5B representative
+# benchmark. The sanitized 100-track manifest is committed; the full library
+# snapshot is intentionally local-only.
+ml/audio_similarity/reports/stage5b_representative_library_v1/library_snapshot.private.json
+
+# Fly.io deploy bundle (contains audio subset)
+ml/**/deploy_bundle/
+
+# Research workspace is intentionally NOT in this repository.
+ml/
+.research_audio/
+*.private.json

@@ -1,0 +1,13 @@
+node_modules
+dist
+.env
+
+
+mongo-data/
+coverage/
+
+# Compiler output must never land in src (keep dist as the only emit target)
+src/**/*.js
+src/**/*.js.map
+src/**/*.d.ts
+src/**/*.d.ts.map
